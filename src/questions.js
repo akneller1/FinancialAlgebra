@@ -8,7 +8,7 @@ export function makeQuestion(unitId,level='cp1',index=0) {
   if(!Number.isInteger(index)||index<0) throw new RangeError('Invalid item index');
   const n=index%12, t=Math.floor(index/12);
   let prompt, answer, solution, skill=0, type='money';
-  const lift=(n*37+t*19);
+  const lift=n+2*t;
   if(unitId==='budgeting') {
     if(level==='cp2') {
       const income=2600+100*lift, rent=850+20*n, transport=180+10*n, essentials=620+5*n;
