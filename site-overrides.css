@@ -69,3 +69,10 @@
 .outline-objective-group h3{font-size:1rem;margin:.25rem 0 .6rem}
 .outline-objective-group li{margin:.35rem 0}
 .outline-curriculum-note{margin:1rem 0 0;padding:.8rem 1rem;border:1px solid var(--line);border-radius:10px;background:var(--card);line-height:1.5}
+
+/* Grade 3: teal course accent on the shared Classroom-style outline. */
+[data-course="math3"][data-color]{--course-hue:175;--c-bg:hsl(175 60% 84%);--c-fg:#17213d;--c-tint:hsl(175 70% 94%);--c-text:hsl(175 64% 26%)}
+.unit[data-course="math3"]{background:var(--c-tint)}
+.unit[data-course="math3"] .unit-open-link,.unit[data-course="math3"] .unit-title-link:hover,.unit[data-course="math3"] .unit-lesson-details summary{color:var(--c-text)}
+.outline-guiding ul{padding-left:1.5rem}
+.outline-guiding li{margin:.55rem 0;line-height:1.5}

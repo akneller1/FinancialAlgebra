@@ -6,6 +6,12 @@
 
 The independent project now uses the **actual Mr. K's Classroom course CSS and shared Interactive Math framework**, not a separately designed calculator dashboard. The new Financial Algebra course will ultimately be imported into the original site only after quality review and approval.
 
+## New: Grade 3 Mathematics (outline-only staging)
+
+**[Open Grade 3](https://akneller1.github.io/FinancialAlgebra/grade3.html)**
+
+Eight units in source order, covering multiplication/division, multi-digit addition/subtraction, fractions, measurement, area, geometry, and computational fluency. Standards, guiding questions, unit dates and learning targets are included. No live question banks or activities yet; see `GRADE3_BANK_HANDOFF.md`.
+
 ## New: Grade 4 Mathematics (outline-only staging)
 
 **[Open the Grade 4 course outline](https://akneller1.github.io/FinancialAlgebra/grade4.html)**

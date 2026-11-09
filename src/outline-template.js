@@ -107,6 +107,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
    '<ol class="outline-lesson-list" data-course-id="'+course.id+'" data-unit-id="'+u.id+'">'+lessonItems+'</ol>'+
    (u.resourceNote?'<p class="outline-curriculum-note"><strong>Source resource note:</strong> '+esc(u.resourceNote)+'</p>':'')+'</section>'+
    standards(u)+
+   (u.guidingQuestions?.length?'<section class="algebra-unit-section outline-guiding"><h2>Essential &amp; Guiding Questions</h2><ul>'+u.guidingQuestions.map(q=>'<li>'+esc(q)+'</li>').join('')+'</ul></section>':'')+
    '<section class="algebra-unit-section"><h2>Games, Study Guides &amp; Interactive Math</h2>'+
    '<div class="empty"><h2>Coming soon</h2><p>The outline is ready. Question banks, generators, and activities will be created separately and tested before being linked here.</p></div>'+
    '</section>'+unitPager(u)+'</div></section>';
