@@ -6,6 +6,7 @@ The FinancialAlgebra GitHub repository now also hosts the **Grade 5 Math** curri
 
 - Financial Algebra: \`index.html\` · live pilot activities
 - Grade 5 Math: \`grade5.html\` · outline only
+- Grade 4 Math: \`grade4.html\` · outline only, with pacing and source objective categories
 - Both are independent from the production \`akneller1/classroom\` repository.
 
 ## How to add another course

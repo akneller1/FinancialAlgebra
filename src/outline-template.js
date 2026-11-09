@@ -16,6 +16,8 @@ export function validateOutline(course){
 }
 export function mountOutline(course,{page='grade5.html'}={}){
  const stats=validateOutline(course);
+ const hasObjectives=Boolean(course.units.some(u=>Array.isArray(u.objectiveGroups)&&u.objectiveGroups.length));
+ const targetLabel=hasObjectives?'learning targets':'lessons';
  const main=document.getElementById('main');
  const search=document.getElementById('q');
  const back=document.getElementById('backBtn');
@@ -28,7 +30,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
  const crumb=links=>'<nav class="crumbs" aria-label="Breadcrumb"><ol>'+
  links.map(([text,link])=>'<li>'+anchor(text,link)+'</li>').join('')+'</ol></nav>';
  function artwork(){
-  return '<svg class="outline-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 195" role="img" aria-label="Decorative fifth grade mathematics illustration">'+
+  return '<svg class="outline-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 195" role="img" aria-label="Decorative math course illustration">'+
   '<rect x="19" y="26" width="191" height="147" rx="16" stroke="currentColor" stroke-width="5" fill="none"/>'+
   '<path d="M45 74h56M73 46v56" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>'+
   '<circle cx="161" cy="71" r="30" stroke="currentColor" stroke-width="5" fill="none"/>'+
@@ -43,7 +45,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
  function skillsCompact(u){
   function list(xs){return '<ul class="unit-skills">'+xs.map(s=>'<li class="unit-skill">'+esc(s)+'</li>').join('')+'</ul>';}
   return list(u.skills.slice(0,4))+(u.skills.length>4?'<details class="unit-lesson-details"><summary>'+
-  '<span class="show-label">Show all '+u.skills.length+' lessons</span><span class="hide-label">Show fewer lessons</span>'+
+  '<span class="show-label">Show all '+u.skills.length+' '+targetLabel+'</span><span class="hide-label">Show fewer '+targetLabel</span>'+
   '</summary>'+list(u.skills.slice(4))+'</details>':'');
  }
  function card(u){
@@ -78,6 +80,15 @@ export function mountOutline(course,{page='grade5.html'}={}){
    link(course.units[idx-1],'prev')+link(course.units[idx+1],'next')+'</nav>';
  }
  function standards(u){
+  if(Array.isArray(u.objectiveGroups)&&u.objectiveGroups.length){
+   const n=u.objectiveGroups.reduce((total,g)=>total+g.items.length,0);
+   return '<section class="algebra-unit-section outline-standards"><h2>Source Objectives by Category</h2>'+
+   '<p class="course-skill-hint">The target labels above condense the source objectives; the original document does not give individual textbook lesson titles.</p>'+
+   '<details class="outline-standards-detail"><summary>Show '+n+' source-based statements in '+u.objectiveGroups.length+' categories</summary>'+
+   u.objectiveGroups.map(g=>'<section class="outline-objective-group"><h3>'+esc(g.category)+'</h3><ul>'+
+   g.items.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul></section>').join('')+'</details>'+
+   '<p class="outline-source">Source: '+esc(course.source.filename)+' · PDF page'+(u.sourcePages.length>1?'s ':' ')+u.sourcePages.join(', ')+'</p></section>';
+  }
   return '<section class="algebra-unit-section outline-standards"><h2>Standards &amp; Eligible Content</h2>'+
    '<p class="course-skill-hint">References transcribed from the attached Grade 5 scope and sequence, not independently revised or remapped.</p>'+
    '<details class="outline-standards-detail"><summary>Show '+u.standards.length+' source references</summary>'+
@@ -86,14 +97,15 @@ export function mountOutline(course,{page='grade5.html'}={}){
  }
  function unitPage(u){
   const lead=crumb([[course.name,page],[title(u),null]])+'<h1 tabindex="-1">'+esc(title(u))+'</h1>'+
-   '<p class="band-meta">'+u.skills.length+' lessons · course outline · resources coming soon</p>';
+   '<p class="band-meta">'+u.skills.length+' '+targetLabel+(u.estimatedDays?' · '+u.estimatedDays+' estimated instructional days':'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · resources coming soon</p>';
   const lessonItems=u.skills.map((s,i)=>'<li class="outline-lesson" data-skill-id="'+skillId(u.id,i)+'">'+
    '<span class="outline-lesson-number">'+String(i+1).padStart(2,'0')+'</span><span>'+esc(s)+'</span></li>').join('');
   return band(lead)+'<section class="section"><div class="wrap algebra-unit-layout">'+
    unitPager(u)+shortcuts()+
-   '<section class="algebra-unit-section"><h2>Lessons and Subskills</h2>'+
-   '<p class="course-skill-hint">The lesson sequence follows the supplied curriculum. Stable skill IDs are reserved for the later question banks.</p>'+
-   '<ol class="outline-lesson-list" data-course-id="'+course.id+'" data-unit-id="'+u.id+'">'+lessonItems+'</ol></section>'+
+   '<section class="algebra-unit-section"><h2>'+(hasObjectives?'Learning Targets & Subskills':'Lessons and Subskills')+'</h2>'+
+   '<p class="course-skill-hint">'+(hasObjectives?'Source-based learning targets are editorial groupings; textbook lessons are not individually named in the attachment.':'The lesson sequence follows the supplied curriculum.')+' Stable skill IDs are reserved for later question banks.</p>'+
+   '<ol class="outline-lesson-list" data-course-id="'+course.id+'" data-unit-id="'+u.id+'">'+lessonItems+'</ol>'+
+   (u.resourceNote?'<p class="outline-curriculum-note"><strong>Source resource note:</strong> '+esc(u.resourceNote)+'</p>':'')+'</section>'+
    standards(u)+
    '<section class="algebra-unit-section"><h2>Games, Study Guides &amp; Interactive Math</h2>'+
    '<div class="empty"><h2>Coming soon</h2><p>The outline is ready. Question banks, generators, and activities will be created separately and tested before being linked here.</p></div>'+
@@ -104,12 +116,12 @@ export function mountOutline(course,{page='grade5.html'}={}){
   const matching=course.units.filter(u=>!q||(u.name+' '+u.skills.join(' ')+' '+u.standards.join(' ')).toLocaleLowerCase().includes(q));
   const lead=crumb([[course.name,null]])+'<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
    '<p class="band-blurb">'+esc(course.description)+'</p>'+
-   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' lessons · question banks and activities coming later</p>';
+   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasObjectives?' · '+course.units.reduce((n,u)=>n+(u.estimatedDays||0),0)+' estimated instructional days':'')+' · question banks and activities coming later</p>';
   return band(lead,true)+'<section class="section"><div class="wrap">'+
    '<h2 class="course-units-title">Browse by unit</h2>'+
-   '<p class="course-units-status">Unit names and lesson order reflect the attached scope and sequence. Expand the lesson lists or open a unit to see its standards.</p>'+
+   '<p class="course-units-status">'+(hasObjectives?'Unit sequence and reported pacing follow the attached scope and sequence. Learning targets summarize the source objectives; open a unit to see the original objective categories.':'Unit names and lesson order reflect the attached scope and sequence. Expand the lesson lists or open a unit to see its standards.')+'</p>'+
    (matching.length?'<ul class="units">'+matching.map(card).join('')+'</ul>':
-   '<div class="empty"><h2>No matching units</h2><p>Try another topic or standard code.</p></div>')+'</div></section>';
+   '<div class="empty"><h2>No matching units</h2><p>Try another topic or learning target.</p></div>')+'</div></section>';
  }
  function current(){
   const slug=decodeURIComponent(location.hash.replace(/^#/,''));

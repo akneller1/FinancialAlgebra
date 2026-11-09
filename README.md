@@ -6,6 +6,17 @@
 
 The independent project now uses the **actual Mr. K's Classroom course CSS and shared Interactive Math framework**, not a separately designed calculator dashboard. The new Financial Algebra course will ultimately be imported into the original site only after quality review and approval.
 
+## New: Grade 4 Mathematics (outline-only staging)
+
+**[Open the Grade 4 course outline](https://akneller1.github.io/FinancialAlgebra/grade4.html)**
+
+- Based on the user's supplied 15-page \`Grade4ScopeandSequence.pdf\` (\`Math Expressions Grade 4 – Scope and Sequence\`).
+- Preserves all **12 units in sequence** plus each unit's estimated instructional days and reported textbook lesson count.
+- Summarizes the source learning objectives as **107 source-based learning targets**; the attached document does **not** provide individual lesson titles, so these targets must not be mistaken for the book's numbered lessons.
+- Each unit includes categorized source objectives and page references. Original notes to skip lessons **3.2** and **8.5** are preserved.
+- Uses the shared classroom design/renderer, with games and generators clearly marked Coming soon.
+- JSON data: \`course-outlines/grade4.json\`. Claude handoff: \`GRADE4_BANK_HANDOFF.md\`.
+
 ## New: Grade 5 Mathematics (outline-only staging)
 
 **[Open the Grade 5 course outline](https://akneller1.github.io/FinancialAlgebra/grade5.html)**

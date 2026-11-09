@@ -59,3 +59,13 @@
 .outline-source{font-size:.81rem;color:var(--ink-soft);margin-top:.65rem}
 .site-header .main-nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}
 @media(max-width:700px){.outline-lesson-list{grid-template-columns:1fr}}
+
+/* Grade 4: classroom cards with a separate coral accent. */
+[data-course="math4"][data-color]{--course-hue:20;--c-bg:hsl(20 76% 88%);--c-fg:#17213d;--c-tint:hsl(20 80% 95%);--c-text:hsl(20 66% 30%)}
+.unit[data-course="math4"]{background:var(--c-tint)}
+.unit[data-course="math4"] .unit-open-link,.unit[data-course="math4"] .unit-title-link:hover,.unit[data-course="math4"] .unit-lesson-details summary{color:var(--c-text)}
+.outline-objective-group{border-top:1px solid var(--line);padding:.8rem 0}
+.outline-objective-group:first-of-type{margin-top:.8rem}
+.outline-objective-group h3{font-size:1rem;margin:.25rem 0 .6rem}
+.outline-objective-group li{margin:.35rem 0}
+.outline-curriculum-note{margin:1rem 0 0;padding:.8rem 1rem;border:1px solid var(--line);border-radius:10px;background:var(--card);line-height:1.5}
