@@ -1,44 +1,40 @@
-# Financial Algebra — standalone development
+# Financial Algebra — standalone development site
 
-A separate, browser-only Financial Algebra course prototype for eventual integration into [Mr. K's Classroom](https://mrksclassroom.com/).
+An independent Financial Algebra course for eventual integration into [Mr. K's Classroom](https://mrksclassroom.com/).
 
-**Status: Phase 1 pilot.** The site contains a 10-unit course outline. Budgeting, Credit Cards, and Investing are the only functional pilot units. Other units are clearly marked as planned.
+**Status: early pilot, not a complete course.** We copied the live Classroom course-page stylesheet and adapted its actual course overview, unit cards, lesson details, generator shortcuts, activity groups, and unit navigation. The working simulations and question generators live behind their corresponding resource cards, not on a different-looking dashboard.
 
-## Current functionality
+## Open the preview
 
-- Matching 10-unit outline and CP2 / CP1 / Honors difficulty levels.
-- Three configurable, deterministic simulations: monthly budgeting, credit-card repayment, compound investing.
-- Parametric short-answer practice across each pilot unit and level; student checks reveal worked solutions only after submitting.
-- Print-friendly six-question student worksheets and matching teacher answer keys.
-- No runtime AI, login, external API, database, paid hosting, or third-party JavaScript dependency.
-- Built-in automated financial mathematics and question generation tests.
+Enable GitHub Pages for main / (root), then visit:
+- [Financial Algebra course page](https://akneller1.github.io/FinancialAlgebra/)
+- [Budgeting unit](https://akneller1.github.io/FinancialAlgebra/#financial-algebra.budgeting)
+- [Budgeting interactive lab](https://akneller1.github.io/FinancialAlgebra/lab.html#budgeting)
 
-## View the site
+The separate development repository is [akneller1/FinancialAlgebra](https://github.com/akneller1/FinancialAlgebra). The live \`akneller1/classroom\` repository has **not** been modified.
 
-Publish this repo as a **GitHub Pages** site:
-1. Open repository **Settings → Pages**.
-2. In **Build and deployment**, choose **Deploy from a branch**.
-3. Set Branch to **main**, directory to **/(root)**, then **Save**.
-4. Use the URL GitHub displays under Pages. Typical project URL format: \`https://akneller1.github.io/FinancialAlgebra/\`.
+## What currently works
 
-To work locally, serve the repo from any basic local HTTP server, e.g. \`python -m http.server 8000\`, and visit \`http://localhost:8000\`. Opening \`index.html\` directly with \`file://\` is not supported because browser ES modules require HTTP(S).
+- Ten-unit course overview with classroom-style unit cards, unit banners, lesson lists, next/previous navigation.
+- Budgeting, Credit Cards, and Investing pilot units with interactive simulations and deterministic questions at CP2/CP1/Honors levels.
+- Interactive practice, six-item printed student worksheets, and teacher keys.
+- Financial math validation through GitHub Actions \`npm test\`.
+- Same visual design system as the live site in \`styles.css\` (copied source), with minimal project-specific changes in \`site-overrides.css\`.
 
-## Testing
+## What is explicitly still under development
 
-Requires Node.js 20+: \`npm test\`.
+Lesson Planner, Activity Generator, Assessment Generator, Games, complete Study Guides, all other seven units, curriculum validation, and full question coverage. The course pages show disabled “Coming soon” shortcuts rather than sending users to broken tools. Prototype keys are public and cannot be treated as access-controlled assessments.
 
-## Architecture
+## Project structure
 
-- \`src/course.js\` — course and stable unit/skill IDs.
-- \`src/engine.js\` — pure reusable financial formulas; no UI dependency.
-- \`src/questions.js\` — reproducible scenarios, answer keys, feedback, worksheets.
-- \`src/app.js\` — standalone interface and print views.
-- \`style.css\` — responsive visual design.
-- \`tests/\` — automated calculations, syllabus, and question checks.
-- \`INTEGRATION.md\` — eventual integration plan for Mr. K's Classroom.
+- \`index.html\` + \`src/site.js\`: Classroom-style course/unit navigation.
+- \`styles.css\`: copied live Classroom design CSS; \`site-overrides.css\` adds a unique course hue.
+- \`lab.html\`, \`lab.css\`, \`src/app.js\`: original working financial calculators and practice.
+- \`src/engine.js\`: deterministic models; \`src/questions.js\`: parametric question/answer generator.
+- \`src/course.js\`: curriculum metadata and stable unit/skill identifiers.
+- \`tests/\`: arithmetic, question, and parity assertions.
+- \`INTEGRATION.md\`: future reviewed integration plan.
 
-## Important limitations
+## Validation and accuracy
 
-This is **not yet a complete course**. There are no lesson-plan or activity generators, standards mappings, long-form written responses, games, full question banks, or interactive tools for the other seven units yet. Keys are public in this prototype and are not secure for controlled student assessments. Models are simplified, educational illustrations: credit interest is calculated monthly (real credit card interest usually uses daily balances), investing assumes constant hypothetical returns, and budgeting withholding is not a tax calculation.
-
-**Production isolation:** This repository is independent of \`akneller1/classroom\`. No code was changed in the production classroom repo for this pilot.
+Run \`npm test\` on Node.js 20+. Current models simplify interest timing, tax withholding, and investment returns for teaching, and clearly state their assumptions. No real student financial data or external financial accounts are used. Runtime AI is not required.

@@ -1,16 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Financial Algebra — practice real-world financial math with budgeting, credit, and investing simulations. A standalone Mr. K's Classroom pilot.">
-  <meta name="theme-color" content="#132f46">
-  <title>Financial Algebra · Mr. K's Classroom</title>
-  <link rel="stylesheet" href="./style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Financial Algebra | Mr. K's Classroom — Development</title>
+<meta name="description" content="Financial Algebra course development: math-based budgeting, credit, investing, printable worksheets and interactive explorations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+<link rel="stylesheet" href="./styles.css?v=classroom-parity-1">
+<link rel="stylesheet" href="./site-overrides.css?v=1">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to main content</a>
-  <div id="app"><p class="loading">Loading Financial Algebra…</p></div>
-  <script type="module" src="./src/app.js"></script>
+<button type="button" class="skip" id="skip">Skip to content</button>
+<header class="site-header">
+  <div class="wrap bar">
+    <button type="button" class="back-btn" id="backBtn" aria-label="Back to the course"><span aria-hidden="true">←</span> Back</button>
+    <a class="brand" href="#" aria-label="Financial Algebra course home">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <polygon class="m-g m-o" points="18,4 30,27 6,27" stroke-linejoin="round"></polygon>
+        <circle class="m-a m-o" cx="11" cy="21" r="8"></circle>
+        <rect class="m-s m-o" x="19" y="3" width="9" height="9" rx="1.5"></rect>
+      </svg>
+      <span>Mr. K's Classroom</span>
+      <span class="brand-tagline">Built for Teachers</span>
+    </a>
+    <form class="search" id="searchForm" role="search">
+      <label for="q" class="sr">Find units or topics</label>
+      <input id="q" type="search" placeholder="Search Financial Algebra topics…">
+    </form>
+    <nav class="main-nav" id="nav" aria-label="Main navigation">
+      <a href="#" aria-current="page">Financial Algebra</a>
+      <a href="https://mrksclassroom.com/" target="_blank" rel="noopener">Main Classroom ↗</a>
+      <span class="course-wip-label">Separate development site</span>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1"><div class="wrap"><p>Loading course…</p></div></main>
+<footer class="site-footer"><div class="wrap"><p>Financial Algebra development environment · Built from Mr. K's Classroom course-page design. No changes to the live Classroom website.</p><div class="footer-bottom"><span>© 2026 Mr. K's Classroom</span><a href="https://github.com/akneller1/FinancialAlgebra" target="_blank" rel="noopener">Development repository ↗</a></div></div></footer>
+<script type="module" src="./src/site.js?v=1"></script>
 </body>
 </html>
