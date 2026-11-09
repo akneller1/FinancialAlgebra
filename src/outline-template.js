@@ -18,6 +18,10 @@ export function mountOutline(course,{page='grade5.html'}={}){
  const stats=validateOutline(course);
  const hasObjectives=Boolean(course.units.some(u=>Array.isArray(u.objectiveGroups)&&u.objectiveGroups.length));
  const targetLabel=hasObjectives?'learning targets':'lessons';
+ const hasPacing=course.units.some(u=>Number.isFinite(u.estimatedDays));
+ const pacingLow=course.units.reduce((n,u)=>n+(u.estimatedDays||0),0);
+ const pacingHigh=course.units.reduce((n,u)=>n+(u.estimatedDaysMax||u.estimatedDays||0),0);
+ const paceLabel=(low,high)=>String(low)+(high&&high!==low?'–'+high:'');
  const main=document.getElementById('main');
  const search=document.getElementById('q');
  const back=document.getElementById('backBtn');
@@ -80,6 +84,14 @@ export function mountOutline(course,{page='grade5.html'}={}){
    link(course.units[idx-1],'prev')+link(course.units[idx+1],'next')+'</nav>';
  }
  function standards(u){
+  if(Array.isArray(u.sections)&&u.sections.length){
+   return '<section class="algebra-unit-section outline-standards"><h2>Curriculum Sections &amp; Standards</h2>'+
+   '<p class="course-skill-hint">Section headings and standard codes come from the cited scope and sequence. Skills within each section are paraphrased learning targets.</p>'+
+   u.sections.map(sec=>'<details class="outline-standards-detail im-section"><summary><strong>Section '+esc(sec.letter)+': '+esc(sec.name)+'</strong> · '+sec.skills.length+' targets</summary>'+
+   '<ul>'+sec.skills.map(skill=>'<li>'+esc(skill)+'</li>').join('')+'</ul>'+
+   '<p class="outline-standard-codes"><strong>Standards:</strong> '+sec.standards.map(esc).join(', ')+'</p></details>').join('')+
+   '<p class="outline-source">Source: <a target="_blank" rel="noopener" href="'+esc(course.source.url)+'">'+esc(course.source.title)+'</a> · Illustrative Mathematics, CC BY 4.0</p></section>';
+  }
   if(Array.isArray(u.objectiveGroups)&&u.objectiveGroups.length){
    const n=u.objectiveGroups.reduce((total,g)=>total+g.items.length,0);
    return '<section class="algebra-unit-section outline-standards"><h2>Source Objectives by Category</h2>'+
@@ -97,13 +109,13 @@ export function mountOutline(course,{page='grade5.html'}={}){
  }
  function unitPage(u){
   const lead=crumb([[course.name,page],[title(u),null]])+'<h1 tabindex="-1">'+esc(title(u))+'</h1>'+
-   '<p class="band-meta">'+u.skills.length+' '+targetLabel+(u.estimatedDays?' · '+u.estimatedDays+' estimated instructional days':'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · resources coming soon</p>';
+   '<p class="band-meta">'+u.skills.length+' '+targetLabel+(Number.isFinite(u.estimatedDays)?' · '+paceLabel(u.estimatedDays,u.estimatedDaysMax)+' estimated instructional days':'')+(u.sourceMonth?' · '+esc(u.sourceMonth):'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · resources coming soon</p>';
   const lessonItems=u.skills.map((s,i)=>'<li class="outline-lesson" data-skill-id="'+skillId(u.id,i)+'">'+
    '<span class="outline-lesson-number">'+String(i+1).padStart(2,'0')+'</span><span>'+esc(s)+'</span></li>').join('');
   return band(lead)+'<section class="section"><div class="wrap algebra-unit-layout">'+
    unitPager(u)+shortcuts()+
    '<section class="algebra-unit-section"><h2>'+(hasObjectives?'Learning Targets & Subskills':'Lessons and Subskills')+'</h2>'+
-   '<p class="course-skill-hint">'+(hasObjectives?'Source-based learning targets are editorial groupings; textbook lessons are not individually named in the attachment.':'The lesson sequence follows the supplied curriculum.')+' Stable skill IDs are reserved for later question banks.</p>'+
+   '<p class="course-skill-hint">'+(hasObjectives?'Source-based learning targets are editorial groupings; Individual lesson titles are not listed in the source; sections and learning targets are shown here.':'The lesson sequence follows the supplied curriculum.')+' Stable skill IDs are reserved for later question banks.</p>'+
    '<ol class="outline-lesson-list" data-course-id="'+course.id+'" data-unit-id="'+u.id+'">'+lessonItems+'</ol>'+
    (u.resourceNote?'<p class="outline-curriculum-note"><strong>Source resource note:</strong> '+esc(u.resourceNote)+'</p>':'')+'</section>'+
    standards(u)+
@@ -117,10 +129,10 @@ export function mountOutline(course,{page='grade5.html'}={}){
   const matching=course.units.filter(u=>!q||(u.name+' '+u.skills.join(' ')+' '+u.standards.join(' ')).toLocaleLowerCase().includes(q));
   const lead=crumb([[course.name,null]])+'<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
    '<p class="band-blurb">'+esc(course.description)+'</p>'+
-   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasObjectives?' · '+course.units.reduce((n,u)=>n+(u.estimatedDays||0),0)+' estimated instructional days':'')+' · question banks and activities coming later</p>';
+   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasPacing?' · '+paceLabel(pacingLow,pacingHigh)+' estimated instructional days':'')+' · question banks and activities coming later</p>';
   return band(lead,true)+'<section class="section"><div class="wrap">'+
    '<h2 class="course-units-title">Browse by unit</h2>'+
-   '<p class="course-units-status">'+(hasObjectives?'Unit sequence and reported pacing follow the attached scope and sequence. Learning targets summarize the source objectives; open a unit to see the original objective categories.':'Unit names and lesson order reflect the attached scope and sequence. Expand the lesson lists or open a unit to see its standards.')+'</p>'+
+   '<p class="course-units-status">'+(hasObjectives?'Unit sequence and available pacing come from the source curriculum. Target labels summarize the stated goals; open a unit for the original section headings and standards when provided.':'Unit names and lesson order reflect the attached scope and sequence. Expand the lesson lists or open a unit to see its standards.')+'</p>'+
    (matching.length?'<ul class="units">'+matching.map(card).join('')+'</ul>':
    '<div class="empty"><h2>No matching units</h2><p>Try another topic or learning target.</p></div>')+'</div></section>';
  }

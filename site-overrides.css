@@ -76,3 +76,17 @@
 .unit[data-course="math3"] .unit-open-link,.unit[data-course="math3"] .unit-title-link:hover,.unit[data-course="math3"] .unit-lesson-details summary{color:var(--c-text)}
 .outline-guiding ul{padding-left:1.5rem}
 .outline-guiding li{margin:.55rem 0;line-height:1.5}
+
+/* Elementary grade-level course accents; source framework comes from main Classroom. */
+[data-course="math2"][data-color] {--course-hue:43;--c-bg:hsl(43 72% 85%);--c-fg:#17213d;--c-tint:hsl(43 80% 94%);--c-text:hsl(43 72% 28%);}
+.unit[data-course="math2"] {background:var(--c-tint);}
+.unit[data-course="math2"] .unit-open-link,.unit[data-course="math2"] .unit-title-link:hover,.unit[data-course="math2"] .unit-lesson-details summary{color:var(--c-text);}
+[data-course="math1"][data-color] {--course-hue:215;--c-bg:hsl(215 70% 86%);--c-fg:#17213d;--c-tint:hsl(215 70% 95%);--c-text:hsl(215 65% 32%);}
+.unit[data-course="math1"] {background:var(--c-tint);}
+.unit[data-course="math1"] .unit-open-link,.unit[data-course="math1"] .unit-title-link:hover,.unit[data-course="math1"] .unit-lesson-details summary{color:var(--c-text);}
+.site-header .main-nav {flex-wrap:wrap;gap:.3rem .55rem;}
+.im-section{margin-top:.7rem;}
+.im-section > summary{line-height:1.45;}
+.im-section ul {margin:1rem 0;padding-left:1.5rem;}
+.im-section li {margin:.4rem 0;}
+.outline-standard-codes {font-size:.84rem;color:var(--ink-soft);margin:1rem 0 .2rem;}

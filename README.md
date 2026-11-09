@@ -6,6 +6,13 @@
 
 The independent project now uses the **actual Mr. K's Classroom course CSS and shared Interactive Math framework**, not a separately designed calculator dashboard. The new Financial Algebra course will ultimately be imported into the original site only after quality review and approval.
 
+## New: Grade 1 and Grade 2 Mathematics (outline-only)
+
+- [Grade 1 course](https://akneller1.github.io/FinancialAlgebra/grade1.html) — 8 Illustrative Mathematics units with 27 section headings, source pacing ranges, alignment codes, and paraphrased target skills.
+- [Grade 2 course](https://akneller1.github.io/FinancialAlgebra/grade2.html) — 9 units with 25 named sections, source pacing and standards, and generated readiness target labels.
+- Source pages: [Grade 1](https://im.kendallhunt.com/k5/teachers/grade-1/course-guide/scope-and-sequence.html) and [Grade 2](https://im.kendallhunt.com/k5/teachers/grade-2/course-guide/scope-and-sequence.html), Illustrative Mathematics (CC BY 4.0).
+- No complete lesson plans, question banks, activities, games or assessment materials exist for these two grades yet. The development pages keep these links disabled. See `GRADE1_BANK_HANDOFF.md` and `GRADE2_BANK_HANDOFF.md`.
+
 ## New: Grade 3 Mathematics (outline-only staging)
 
 **[Open Grade 3](https://akneller1.github.io/FinancialAlgebra/grade3.html)**
