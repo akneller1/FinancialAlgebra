@@ -43,3 +43,19 @@
 .lab-card .card-body {gap:.6rem;}
 .site-footer .footer-bottom {display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;}
 @media(max-width:700px){.site-header .main-nav{flex-basis:100%;}.site-header .main-nav .course-wip-label{display:none;}}
+
+/* Grade 5 uses the same visual system and unit cards as Financial Algebra. */
+[data-course="math5"][data-color]{--course-hue:340;--c-bg:hsl(340 60% 88%);--c-fg:#17213d;--c-tint:hsl(340 60% 95%);--c-text:hsl(340 48% 30%)}
+.unit[data-course="math5"]{background:var(--c-tint)}
+.unit[data-course="math5"] .unit-open-link,.unit[data-course="math5"] .unit-title-link:hover,.unit[data-course="math5"] .unit-lesson-details summary{color:var(--c-text)}
+.outline-art{display:block;width:100%;height:auto}
+.outline-lesson-list{margin:.8rem 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(19rem,100%),1fr));gap:.65rem}
+.outline-lesson{display:flex;align-items:start;gap:.75rem;background:var(--card);padding:.85rem 1rem;border:1px solid var(--line);border-radius:10px;line-height:1.4}
+.outline-lesson-number{flex:none;font-size:.76rem;font-weight:800;color:var(--c-text);padding-top:.2rem}
+.outline-standards-detail{padding:1rem;border:1px solid var(--line);border-radius:13px;background:var(--card)}
+.outline-standards-detail summary{cursor:pointer;font-weight:800}
+.outline-standards-detail ul{margin:1rem 0 0;padding-left:1.4rem}
+.outline-standards-detail li{margin:.7rem 0;line-height:1.5}
+.outline-source{font-size:.81rem;color:var(--ink-soft);margin-top:.65rem}
+.site-header .main-nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+@media(max-width:700px){.outline-lesson-list{grid-template-columns:1fr}}

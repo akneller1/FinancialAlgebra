@@ -6,6 +6,19 @@
 
 The independent project now uses the **actual Mr. K's Classroom course CSS and shared Interactive Math framework**, not a separately designed calculator dashboard. The new Financial Algebra course will ultimately be imported into the original site only after quality review and approval.
 
+## New: Grade 5 Mathematics (outline-only staging)
+
+**[Open the Grade 5 course outline](https://akneller1.github.io/FinancialAlgebra/grade5.html)**
+
+- Based on the user's attached four-page \`Grade_5_Math_Scope_and_Sequence.pdf\`, retaining **all 13 units and all 80 listed skills** in their instructional order.
+- Reuses the original Classroom course cards, expandable unit skills, unit headers, next/previous navigation, and generator shortcut visuals.
+- Standards and eligible-content codes are available inside each unit, alongside source page references.
+- Activities, question banks, lesson plans, and generators are **not yet built** and therefore are clearly marked Coming soon rather than linked to unrelated tools.
+- JSON source of truth: \`course-outlines/grade5.json\`. The reusable outline renderer is \`src/outline-template.js\`.
+- See \`COURSE_TEMPLATE.md\` to add more future classes and \`GRADE5_BANK_HANDOFF.md\` for later Claude question-bank development.
+
+Financial Algebra remains fully available at \`index.html\`; the live \`akneller1/classroom\` production site is unchanged.
+
 ## What's built (pilot)
 
 - Course overview and 10 unit outlines in the same visual design as the production site.
