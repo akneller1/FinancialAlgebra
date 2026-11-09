@@ -45,7 +45,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
  function skillsCompact(u){
   function list(xs){return '<ul class="unit-skills">'+xs.map(s=>'<li class="unit-skill">'+esc(s)+'</li>').join('')+'</ul>';}
   return list(u.skills.slice(0,4))+(u.skills.length>4?'<details class="unit-lesson-details"><summary>'+
-  '<span class="show-label">Show all '+u.skills.length+' '+targetLabel+'</span><span class="hide-label">Show fewer '+targetLabel</span>'+
+  '<span class="show-label">Show all '+u.skills.length+' '+targetLabel+'</span><span class="hide-label">Show fewer '+targetLabel+'</span>'+
   '</summary>'+list(u.skills.slice(4))+'</details>':'');
  }
  function card(u){
