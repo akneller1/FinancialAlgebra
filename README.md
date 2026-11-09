@@ -1,40 +1,46 @@
-# Financial Algebra — standalone development site
+# Financial Algebra — Independent Course Development
 
-An independent Financial Algebra course for eventual integration into [Mr. K's Classroom](https://mrksclassroom.com/).
+**Live classroom site:** https://mrksclassroom.com/ (unchanged)
 
-**Status: early pilot, not a complete course.** We copied the live Classroom course-page stylesheet and adapted its actual course overview, unit cards, lesson details, generator shortcuts, activity groups, and unit navigation. The working simulations and question generators live behind their corresponding resource cards, not on a different-looking dashboard.
+**Financial Algebra development preview:** https://akneller1.github.io/FinancialAlgebra/
 
-## Open the preview
+The independent project now uses the **actual Mr. K's Classroom course CSS and shared Interactive Math framework**, not a separately designed calculator dashboard. The new Financial Algebra course will ultimately be imported into the original site only after quality review and approval.
 
-Enable GitHub Pages for main / (root), then visit:
-- [Financial Algebra course page](https://akneller1.github.io/FinancialAlgebra/)
-- [Budgeting unit](https://akneller1.github.io/FinancialAlgebra/#financial-algebra.budgeting)
-- [Budgeting interactive lab](https://akneller1.github.io/FinancialAlgebra/lab.html#budgeting)
+## What's built (pilot)
 
-The separate development repository is [akneller1/FinancialAlgebra](https://github.com/akneller1/FinancialAlgebra). The live \`akneller1/classroom\` repository has **not** been modified.
+- Course overview and 10 unit outlines in the same visual design as the production site.
+- **One Financial Algebra level for all learners** (no CP2/CP1/Honors options).
+- Pilot units: Budgeting, Credit Cards, and Investing.
+- For each pilot:
+  - One Interactive Math activity with live graphs, adjustable sliders, reset, five "Try this" challenges, and a collapsible "What should I notice?" explanation.
+  - Matching printable **Explore & Reflect** worksheet and teacher guide (HTML print or Save as PDF).
+  - A Worksheet Generator with unit/skill selection, question count, preview, student/teacher versions, regenerate, and printing.
+  - An Assessment Readiness Check with numbered questions, input and scoring, and worked solutions.
+- Deterministic offline financial calculations and question scenarios; no AI, data feed, student account, or external service is needed at runtime.
+- GitHub Actions tests run on every push.
 
-## What currently works
+## Layout and reusable pieces
 
-- Ten-unit course overview with classroom-style unit cards, unit banners, lesson lists, next/previous navigation.
-- Budgeting, Credit Cards, and Investing pilot units with interactive simulations and deterministic questions at CP2/CP1/Honors levels.
-- Interactive practice, six-item printed student worksheets, and teacher keys.
-- Financial math validation through GitHub Actions \`npm test\`.
-- Same visual design system as the live site in \`styles.css\` (copied source), with minimal project-specific changes in \`site-overrides.css\`.
+- \`index.html\`, \`src/site.js\`, \`styles.css\`: Classroom course/unit navigation and copied design system.
+- \`artifacts/interactive-math/lab.css\` and \`lab.js\`: Shared Interactive Math components copied from the main site.
+- \`artifacts/financial-algebra-*-explorer/index.html\`: Unit-specific Interactive Math pages.
+- \`src/finance-lab.js\`: Shared financial interactive behavior.
+- \`src/engine.js\`: Deterministic budgets, installment payoff, and investing models.
+- \`src/questions.js\`: Parameterized scenarios with one common level and checked math.
+- \`worksheet.html\`, \`src/worksheet.js\`: Classroom-style worksheet generator.
+- \`practice.html\`, \`src/practice.js\`: Classroom-style Assessment Readiness Check.
+- \`print.html\`, \`src/print.js\`: Printable student and teacher reflection materials.
+- \`shared/*\`: Original worksheet/practice design CSS copied from main Classroom.
+- \`INTEGRATION.md\`: Future compatibility and migration plan.
 
-## What is explicitly still under development
+## Development limits
 
-Lesson Planner, Activity Generator, Assessment Generator, Games, complete Study Guides, all other seven units, curriculum validation, and full question coverage. The course pages show disabled “Coming soon” shortcuts rather than sending users to broken tools. Prototype keys are public and cannot be treated as access-controlled assessments.
+This is still an early pilot, **not a finished course**. Lesson Planner, Activity Generator, Assessment Generator, Games, full Study Guides, and seven units are still incomplete, so their links are explicitly disabled. The working readiness check is separate from a configurable Assessment Generator. Numerical questions are currently short-answer only; rich decision scenarios and rubrics are future work.
 
-## Project structure
+All financial data are hypothetical. Credit uses a monthly rather than daily interest model; investing assumes a constant illustrative return and no taxes or fees. Teacher keys on a static public Pages site are not access-controlled.
 
-- \`index.html\` + \`src/site.js\`: Classroom-style course/unit navigation.
-- \`styles.css\`: copied live Classroom design CSS; \`site-overrides.css\` adds a unique course hue.
-- \`lab.html\`, \`lab.css\`, \`src/app.js\`: original working financial calculators and practice.
-- \`src/engine.js\`: deterministic models; \`src/questions.js\`: parametric question/answer generator.
-- \`src/course.js\`: curriculum metadata and stable unit/skill identifiers.
-- \`tests/\`: arithmetic, question, and parity assertions.
-- \`INTEGRATION.md\`: future reviewed integration plan.
+## Testing
 
-## Validation and accuracy
+Use Node.js 20+ and run \`npm test\`. Github Actions checks calculations, generated answers, site components, and shared assets.
 
-Run \`npm test\` on Node.js 20+. Current models simplify interest timing, tax withholding, and investment returns for teaching, and clearly state their assumptions. No real student financial data or external financial accounts are used. Runtime AI is not required.
+GitHub Pages requires Settings → Pages → Deploy from a branch → \`main\` / \`(root)\`.

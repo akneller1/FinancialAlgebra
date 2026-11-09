@@ -63,20 +63,22 @@ function courseView(){
 }
 const options=[
  {label:'Lesson Plan',icon:'▤',status:'planned'},
- {label:'Worksheet',icon:'≡',status:'live',url:'lab'},
+ {label:'Worksheet',icon:'≡',status:'live',url:'worksheet'},
  {label:'Activity',icon:'✦',status:'planned'},
  {label:'Assessment',icon:'☑',status:'planned'},
  {label:'Games',icon:'◈',status:'planned'},
- {label:'Study Guides',icon:'▤',status:'live',url:'lab'},
- {label:'Interactive Math',icon:'⟡',status:'live',url:'lab'}
+ {label:'Study Guides',icon:'▤',status:'live',url:'practice'},
+ {label:'Interactive Math',icon:'⟡',status:'live',url:'interactive'}
 ];
+const interactiveUrl=u=>'artifacts/financial-algebra-'+u.id+'-explorer/index.html';
 function shortcutBanner(u){
  return '<div class="generator-banner compact"><div class="generator-banner-heading"><h2>Create Resources for This Unit</h2></div>'+
  '<ul class="generator-shortcuts">'+options.map(o=>{
-   const active=isPilot(u)&&o.status==='live';
-   const tag=active?'a':'span',attr=active?'href="lab.html#'+u.id+'"':'aria-disabled="true" title="Not built yet"';
-   const subtitle=active?'':'<small class="build-badge">Coming soon</small>';
-   return '<li><'+tag+' class="generator-shortcut'+(o.url==='lab'?' resource-shortcut':'')+'" '+attr+'>'+
+  const active=isPilot(u)&&o.status==='live',tag=active?'a':'span';
+  const url=o.url==='worksheet'?'worksheet.html?unit='+u.id:o.url==='practice'?'practice.html?unit='+u.id:interactiveUrl(u);
+  const attr=active?'href="'+url+'"':'aria-disabled="true" title="Not built yet"';
+  const subtitle=active?'':'<small class="build-badge">Coming soon</small>';
+  return '<li><'+tag+' class="generator-shortcut'+(o.url==='interactive'?' resource-shortcut':'')+'" '+attr+'>'+
    '<span class="generator-shortcut-icon" aria-hidden="true">'+o.icon+'</span>'+
    '<span class="generator-shortcut-copy"><strong>'+o.label+'</strong>'+subtitle+'</span></'+tag+'></li>';
  }).join('')+'</ul></div>';
@@ -116,22 +118,23 @@ function unitView(u){
  '<p class="band-meta">'+(isPilot(u)?'Create custom practice resources or explore interactive financial mathematics for this unit.':'Course outline · Activities coming soon')+'</p>';
  let body=pager(u);
  if(isPilot(u)){
-   const url='lab.html#'+u.id,worksheet='lab.html?print=worksheet&unit='+u.id+'&level=cp1';
-   const key='lab.html?print=key&unit='+u.id+'&level=cp1';
+   const url=interactiveUrl(u),worksheet='worksheet.html?unit='+u.id,practice='practice.html?unit='+u.id;
+   const key='print.html?kind=explore-key&unit='+u.id;
+   const kind=u.id==='budgeting'?'budget':u.id==='credit'?'credit':'investing';
    body+=shortcutBanner(u);
    body+=cardSection('Study Guides',[resourceCard(u,{
-      title:'Financial Math Practice',kind:u.id==='budgeting'?'budget':u.id==='credit'?'credit':'investing',
-      desc:'Generated CP2, CP1, and Honors questions with worked solutions and immediate feedback.',
-      url,button:'Practice'} )]);
+      title:'Assessment Readiness Check',kind,
+      desc:'An interactive practice assessment with one common course level, progress tracking, scoring, and fully worked solutions.',
+      url:practice,button:'Take practice test'})]);
    body+=cardSection('Interactive Math',[resourceCard(u,{
-      title:(u.id==='budgeting'?'Budget Builder':u.id==='credit'?'Debt Repayment Explorer':'Compound Growth Explorer'),kind:u.id==='budgeting'?'budget':u.id==='credit'?'credit':'investing',
-      desc:'Adjust realistic financial assumptions to observe their mathematical consequences.',
-      url,button:'Explore'} )]);
+      title:(u.id==='budgeting'?'Budget Builder':u.id==='credit'?'Debt Repayment Explorer':'Compound Growth Explorer'),kind,
+      desc:'Use the same Interactive Math layout as other courses: a visual model, sliders, reset, five challenges, and printable Explore & Reflect materials.',
+      url,button:'Explore'})]);
    body+=cardSection('Practice Activities',[resourceCard(u,{
-      title:'Printable Financial Algebra Worksheet',kind:u.id==='budgeting'?'budget':u.id==='credit'?'credit':'investing',
-      desc:'Six parameterized practice questions, with a separate teacher key. Opens the CP1 worksheet; the lab supports all difficulty levels.',
-      url:worksheet,button:'Open printable'} )]);
-   body+='<p class="unit-notes"><a href="'+key+'">Open the CP1 teacher answer key →</a> · Games, full lesson plans, activity generators, and assessments are not yet implemented.</p>';
+      title:'Worksheet Generator',kind,
+      desc:'Choose the financial skills and question count, then preview and print a student worksheet or worked teacher key. One level for the whole course.',
+      url:worksheet,button:'Create worksheet'})]);
+   body+='<p class="unit-notes"><a href="'+key+'">Explore & Reflect teacher key →</a> · Games, activity generator, lesson planner, and assessment generator are still in development.</p>';
  }else{
    body+='<section class="algebra-unit-section"><h2>Topics in this unit</h2>'+
    '<ul class="unit-skills">'+u.skills.map(s=>'<li class="unit-skill">'+esc(s)+'</li>').join('')+'</ul>'+

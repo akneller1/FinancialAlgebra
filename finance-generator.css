@@ -1,0 +1,31 @@
+/* Classroom-aligned finance practice and worksheets. Core styles are copied from the live site. */
+.fa-paper{background:#fff;color:#17213d;margin:0 auto;max-width:820px;padding:35px 43px;text-align:left;font-family:"Atkinson Hyperlegible",sans-serif;box-shadow:0 4px 12px #1d233a22;min-height:1030px;}
+.fa-paper-head{border-bottom:3px solid #17213d;padding-bottom:12px;margin-bottom:25px}
+.fa-paper-head span{font-size:.72rem;font-weight:800;letter-spacing:.11em}
+.fa-paper-head h2{font:800 1.75rem "Bricolage Grotesque",sans-serif;margin:8px 0}
+.fa-paper-head p{margin:6px 0;font-size:.96rem}
+.fa-paper-item{font-size:1rem;line-height:1.55;margin:0 0 28px;break-inside:avoid}
+.fa-paper-solution{background:#f1f3fc;border-left:3px solid #304cc9;margin:10px 0;padding:10px 14px}
+.fa-paper-solution p{margin:7px 0}
+.fa-answer-lines{margin:18px 0 30px;display:grid;gap:20px}
+.fa-answer-lines i{display:block;border-bottom:1px solid #b3bed2}
+.fa-paper-foot{margin:22px 0;color:#53627c;font-size:.8rem}
+.fa-footer-actions{padding-top:15px}
+.mm-view-setup>.card{min-width:0}
+.mm-view-setup .lrow{gap:12px;margin:6px 0;cursor:pointer}
+.mm-view-setup .lrow input{width:20px;height:20px}
+#pagesWrap{max-height:none;overflow:auto}
+#pages{display:block}
+#pages>.fa-paper{display:block}
+.pt-response input{display:block;width:100%;margin-top:9px;max-width:260px;padding:11px 12px;border:1px solid #b7c9d8;border-radius:9px;color:#17324c;background:#fff}
+.pt-response{font-size:15px}
+@media print{
+ body{background:#fff!important;color:#17213d!important}
+ .topbar,.mm-stepnav,.mm-summary,.ptool,.fa-footer-actions,.mm-view-setup,.btn,.mm-toast{display:none!important}
+ .mm-app{padding:0;margin:0;max-width:none}
+ #pagesWrap{border:0;padding:0;background:#fff;overflow:visible;max-height:none}
+ #pages{display:block}
+ .fa-paper{min-height:0;padding:0;max-width:none;box-shadow:none;margin:0}
+ .fa-paper-item{break-inside:avoid}
+ @page{size:letter;margin:.55in}
+}

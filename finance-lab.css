@@ -1,0 +1,9 @@
+/* Light customization of the exact shared Mr. K's Classroom Interactive Math framework. */
+.stage h2{font-family:var(--display);font-size:1.05rem}
+.stage .table-wrap{margin:14px 4px 6px}
+.stage .legend{margin:10px 12px}
+.panel .note{border-radius:12px}
+.lab-page a.btn{display:inline-block;text-decoration:none;text-align:center}
+.box details,.box summary{cursor:pointer}
+.lab-page .stage svg{max-height:none}
+@media print{.panel,.lab-head,.note,.challenges{display:none!important}.lab-grid{display:block}}

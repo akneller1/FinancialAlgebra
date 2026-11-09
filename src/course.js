@@ -2,7 +2,7 @@ export const course = {
   id: 'financial-algebra',
   name: 'Financial Algebra',
   subtitle: 'Learn the mathematics behind real financial decisions.',
-  levels: ['cp2', 'cp1', 'honors'],
+  levels: ['standard'],
   units: [
     {id:'income', name:'Careers & Income', status:'planned', skills:['Compare salary and hourly pay','Calculate gross and net income','Interpret pay stubs','Model income taxes']},
     {id:'budgeting', name:'Budgeting & Spending', status:'pilot', skills:['Calculate monthly cash flow','Analyze fixed and variable expenses','Model financial constraints','Compare spending decisions']},
@@ -16,8 +16,8 @@ export const course = {
     {id:'retirement', name:'Retirement & Inflation', status:'planned', skills:['Model inflation','Estimate retirement savings','Compare account contributions','Analyze purchasing power']}
   ]
 };
-export function getUnit(id) { return course.units.find(unit => unit.id === id); }
-export function getSkillRecords(unitId) {
+export function getUnit(id){return course.units.find(unit=>unit.id===id);}
+export function getSkillRecords(unitId){
   const unit=getUnit(unitId);
-  return unit ? unit.skills.map((name,i) => ({id:unitId+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})) : [];
+  return unit?unit.skills.map((name,i)=>({id:unitId+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})):[];
 }

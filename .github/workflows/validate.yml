@@ -10,5 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Run deterministic financial model and question bank tests
+      - name: Check browser JavaScript syntax
+        run: |
+          for file in src/*.js; do node --check "$file"; done
+      - name: Test finance calculations, questions, and UI integration assets
         run: npm test

@@ -1,16 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Financial Algebra interactive pilot: budgeting, credit, and investing.">
-  <meta name="theme-color" content="#132f46">
-  <title>Financial Algebra Lab · Mr. K's Classroom</title>
-  <link rel="stylesheet" href="./lab.css">
-</head>
-<body>
-  <a class="skip" href="#main">Skip to main content</a>
-  <div id="app"><p class="loading">Loading Financial Algebra Lab…</p></div>
-  <script type="module" src="./src/app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Financial Algebra</title></head>
+<body><p>Opening the matching Financial Algebra activity… <a id="go" href="index.html">Return to course</a></p>
+<script>
+(function(){
+ const units=['budgeting','credit','investing'],params=new URLSearchParams(location.search);
+ const target=params.get('unit')||location.hash.slice(1),unit=units.includes(target)?target:'budgeting';
+ const legacy=params.get('print');
+ const href=legacy==='worksheet'||legacy==='key'?'print.html?kind='+legacy+'&unit='+unit:
+ 'artifacts/financial-algebra-'+unit+'-explorer/index.html';
+ document.getElementById('go').href=href;
+ location.replace(href);
+})();
+</script></body></html>

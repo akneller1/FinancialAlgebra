@@ -1,33 +1,32 @@
-# Integration contract: Financial Algebra → Mr. K's Classroom
+# Financial Algebra integration plan
 
-The pilot must be developed here first. Integration into \`akneller1/classroom\` should occur later through a separate, reviewed staging branch and regression tests; never edit the main site while experimenting.
+The Financial Algebra repository is the separate build-and-test environment for a future new course at [Mr. K's Classroom](https://mrksclassroom.com/). The production \`akneller1/classroom\` repository must remain untouched while this course is in development.
 
-## Existing classroom interfaces (inspected 2026-11-08)
+## Current production interfaces examined
 
-- Course metadata: \`data.js\` stores \`window.LIBRARY.courses\` with \`id\`, \`name\`, \`color\`, \`art\`, \`units\`, \`artifacts\`.
-- Course router: \`app.js\` includes a course order map and course handling.
-- Skills: \`course-catalog.js\` maps course + unit IDs to skill strings, creating \`unitId-skill-01\`, etc.
-- Question banks: \`question-bank-adapter.js\` expects \`schemaVersion:1\`, \`courseId\`, \`unitId\`, \`questions\`, and for each item \`id\`, \`skillId\`, \`level\` (cp2,cp1,honors), \`format\` (short-answer,multiple-choice,select-all,open-response), \`prompt\`, \`answer\`, \`solutionSteps\`.
-- Bank loader: \`question-banks/manifest.json\` approves entries by course/unit for student-facing use.
+- \`data.js\`: \`window.LIBRARY.courses\` contains courses, units, artifacts, and paths.
+- \`app.js\`: Routes course/unit pages, generator cards, Games/Study Guides/Interactive Math groups.
+- \`course-catalog.js\`: Stable skills generated as \`unitId-skill-01\`, etc.
+- \`question-bank-adapter.js\`: Schema v1 of approved question banks with cp2/cp1/honors internal levels.
+- \`question-bank-loader.js\`: Loads approved banks from a manifest.
+- \`styles.css\`: Course/unit styling (copied into this standalone project).
+- \`artifacts/interactive-math/lab.js\` and \`lab.css\`: Interactive Math shell, controls, charts, and challenges. Copies included here.
+- Worksheet Generator and Assessment Readiness Check CSS copied from \`worksheet-generator/\`.
 
-## Stable identifiers
+## Stable standalone IDs
 
-Use \`financial-algebra\` as the **course ID**, regardless of the repository's capitalization. Pilot unit IDs are \`budgeting\`, \`credit\`, and \`investing\`. Do not change these once content is authored.
+Course ID: \`financial-algebra\`.
+Pilot unit IDs: \`budgeting\`, \`credit\`, \`investing\`.
 
-## Future integration workflow
+**One difficulty only:** All Financial Algebra question APIs are a single standard level. Do not reintroduce CP2/CP1/Honors controls. Production adapters currently require one of the legacy level names in bank JSON, so a later import adapter may have to write an internal compatibility tag while hiding differentiation from students and teachers, or extend the adapter's schema safely. Do not change other courses' levels.
 
-1. Confirm the curriculum and grade-level expectations with a teacher.
-2. Expand and independently validate question families and nuanced financial assumptions; add written justification rubrics.
-3. Produce a separate export tool converting verified parameterized items into the classroom bank schema, retaining skill IDs, answer explanations, and checked solutions.
-4. Wrap each standalone simulation as an independently routable \`artifacts/financial-algebra-*/index.html\` tool with responsive styling and a worksheet + teacher key.
-5. Add a course entry, course-catalog skill map, activity links, and the approved bank manifest on a **new staging branch** of \`akneller1/classroom\`.
-6. Run site-wide regression tests for existing courses, generators, printable pages, games, student links, and deployment paths; merge only after explicit approval.
+## Later integration
 
-Do not merely rename prototype files and expect automatic compatibility. User-facing generators have their own constraints, including multi-part open responses and activity-specific rendering. Reuse math engines, authored content, and styles, while adapting the interfaces.
+1. Review pilot activities with a teacher. Confirm finance facts, accessibility, print layout, and assumptions.
+2. Expand scenario banks and decision-based tasks, including rubrics and explanations.
+3. Preserve skill IDs. Build an adapter to export approved questions in the production schema without converting one public level into three.
+4. Wrap each interactive tool with its local worksheet and teacher guide in separate \`artifacts/financial-algebra-*/\` folders.
+5. Add the course on a **staging branch** of the production repository; run full site tests and inspect generators, navigation, assets, answer keys, and student links.
+6. Integrate only after explicit approval.
 
-## Security and accuracy
-
-- No secret teacher keys may be assumed private on a static public GitHub Pages site.
-- Financial statements and investment returns are hypothetical unless verified otherwise.
-- Use deterministic, independently tested calculations with explicit compounding, payment timing, tax, and rounding assumptions.
-- Do not use student financial data in published examples.
+No production code was changed during this standalone development.
