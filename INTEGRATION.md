@@ -1,32 +1,28 @@
-# Financial Algebra integration plan
+# Integrating new courses into Mr. K's Classroom
 
-The Financial Algebra repository is the separate build-and-test environment for a future new course at [Mr. K's Classroom](https://mrksclassroom.com/). The production \`akneller1/classroom\` repository must remain untouched while this course is in development.
+This repository is a separate staging area. Production is akneller1/classroom, which must remain untouched while new courses are developed.
 
-## Current production interfaces examined
+## Financial Algebra baseline
 
-- \`data.js\`: \`window.LIBRARY.courses\` contains courses, units, artifacts, and paths.
-- \`app.js\`: Routes course/unit pages, generator cards, Games/Study Guides/Interactive Math groups.
-- \`course-catalog.js\`: Stable skills generated as \`unitId-skill-01\`, etc.
-- \`question-bank-adapter.js\`: Schema v1 of approved question banks with cp2/cp1/honors internal levels.
-- \`question-bank-loader.js\`: Loads approved banks from a manifest.
-- \`styles.css\`: Course/unit styling (copied into this standalone project).
-- \`artifacts/interactive-math/lab.js\` and \`lab.css\`: Interactive Math shell, controls, charts, and challenges. Copies included here.
-- Worksheet Generator and Assessment Readiness Check CSS copied from \`worksheet-generator/\`.
+- Financial Algebra is **outline only**. All early pilot simulators, finance calculators, worksheet and assessment prototypes, practice tests, and printable materials have been removed from this staging repository.
+- The ten unit IDs and forty proposed skill labels remain stable.
+- Course ID: financial-algebra.
+- One course level: standard. No CP2/CP1/Honors choices for this subject.
+- Generators, Games, Study Guides, and Interactive Math are non-clickable Coming soon placeholders.
+- See FINANCIAL_ALGEBRA_ACTIVITY_HANDOFF.md for Claude's activity-planning brief.
 
-## Stable standalone IDs
+## Production interfaces to preserve
 
-Course ID: \`financial-algebra\`.
-Pilot unit IDs: \`budgeting\`, \`credit\`, \`investing\`.
+- data.js and app.js: course metadata, routing, activity cards and generators.
+- course-catalog.js: skill ID convention, e.g. budgeting-skill-01.
+- question-bank-adapter.js and question-bank-loader.js: approved question-bank schema and manifest.
+- styles.css: Classroom visual framework.
+- artifacts/interactive-math/lab.js and lab.css: interactive math framework **in the production repository**. Their previous copies were removed here with the pilots.
 
-**One difficulty only:** All Financial Algebra question APIs are a single standard level. Do not reintroduce CP2/CP1/Honors controls. Production adapters currently require one of the legacy level names in bank JSON, so a later import adapter may have to write an internal compatibility tag while hiding differentiation from students and teachers, or extend the adapter's schema safely. Do not change other courses' levels.
+## Integration sequence
 
-## Later integration
+Plan course activities; prepare and test question families; implement and validate stage-only activities; adapt to the production schema; connect on a staging branch of production; run all existing course and student-view regression tests; request approval before merging to the live site.
 
-1. Review pilot activities with a teacher. Confirm finance facts, accessibility, print layout, and assumptions.
-2. Expand scenario banks and decision-based tasks, including rubrics and explanations.
-3. Preserve skill IDs. Build an adapter to export approved questions in the production schema without converting one public level into three.
-4. Wrap each interactive tool with its local worksheet and teacher guide in separate \`artifacts/financial-algebra-*/\` folders.
-5. Add the course on a **staging branch** of the production repository; run full site tests and inspect generators, navigation, assets, answer keys, and student links.
-6. Integrate only after explicit approval.
+The financial curriculum must make interest, payment timing, return assumptions, rounding, and uncertainty explicit. Do not collect real student financial data.
 
-No production code was changed during this standalone development.
+No production changes were made as part of this cleanup.

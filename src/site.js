@@ -1,14 +1,15 @@
 import {course,getUnit} from './course.js';
 
+// Financial Algebra is an outline-only course while its activities are being planned.
 const main=document.getElementById('main');
 const search=document.getElementById('q');
 const back=document.getElementById('backBtn');
 const courseId=course.id;
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const titleFor=(unit)=>'Unit '+(course.units.indexOf(unit)+1)+': '+unit.name;
-const linkFor=(unit)=>'#'+courseId+'.'+unit.id;
-const isPilot=(u)=>u.status==='pilot';
-function art(){
+const esc=value=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const titleFor=unit=>'Unit '+(course.units.indexOf(unit)+1)+': '+unit.name;
+const linkFor=unit=>'#'+courseId+'.'+unit.id;
+
+function artwork(){
  return '<svg class="finance-art" viewBox="0 0 230 195" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">'+
  '<rect x="30" y="53" width="176" height="115" rx="13" stroke="currentColor" stroke-width="5"/>'+
  '<rect x="46" y="72" width="76" height="14" rx="7" fill="currentColor" opacity=".24"/>'+
@@ -20,146 +21,88 @@ function art(){
  '</svg>';
 }
 function crumbs(items){
- return '<nav class="crumbs" aria-label="Breadcrumb"><ol>'+items.map((item,i)=>
- '<li>'+(i===items.length-1?'<span aria-current="page">'+esc(item[0])+'</span>':'<a href="'+item[1]+'">'+esc(item[0])+'</a>')+'</li>').join('')+'</ol></nav>';
+ return '<nav class="crumbs" aria-label="Breadcrumb"><ol>'+
+ items.map((item,i)=>'<li>'+(i===items.length-1?'<span aria-current="page">'+esc(item[0])+'</span>':'<a href="'+esc(item[1])+'">'+esc(item[0])+'</a>')+'</li>').join('')+'</ol></nav>';
 }
-function band(inner,withArt=false){
+function band(content,withArtwork=false){
  return '<section class="band" data-color="purple" data-course="'+courseId+'"><div class="wrap">'+
- (withArt?'<div class="band-grid"><div>'+inner+'</div><div class="band-art">'+art()+'</div></div>':inner)+
- '</div></section>';
+ (withArtwork?'<div class="band-grid"><div>'+content+'</div><div class="band-art">'+artwork()+'</div></div>':content)+'</div></section>';
 }
-function skillList(u){
- const n=4;
- const list=x=>'<ul class="unit-skills">'+x.map(s=>'<li class="unit-skill">'+esc(s)+'</li>').join('')+'</ul>';
- return list(u.skills.slice(0,n))+(u.skills.length>n?
- '<details class="unit-lesson-details"><summary><span>Show all '+u.skills.length+' lessons</span></summary>'+list(u.skills.slice(n))+'</details>':'');
+function skillList(unit){
+ const list=items=>'<ul class="unit-skills">'+items.map(skill=>'<li class="unit-skill">'+esc(skill)+'</li>').join('')+'</ul>';
+ const first=unit.skills.slice(0,4);
+ const extra=unit.skills.slice(4);
+ return list(first)+(extra.length?
+  '<details class="unit-lesson-details"><summary>Show all '+unit.skills.length+' topics</summary>'+list(extra)+'</details>':'');
 }
-function unitCard(u,i){
- return '<li><div class="unit algebra-unit-card" data-color="purple" data-course="'+courseId+'"><h3>'+
- '<a class="unit-title-link" href="'+linkFor(u)+'"><span class="unit-num">Unit '+(i+1)+'</span>'+esc(u.name)+'</a></h3>'+
- '<div class="unit-meta" data-lesson-list="true">'+skillList(u)+'</div>'+
- '<span class="unit-course-status">'+(isPilot(u)?'Interactive pilot available':'Development planned')+'</span>'+
- '<a class="unit-open-link" href="'+linkFor(u)+'">Open unit →</a></div></li>';
+function unitCard(unit,index){
+ return '<li><div class="unit algebra-unit-card" data-color="purple" data-course="'+courseId+'">'+
+ '<h3><a class="unit-title-link" href="'+linkFor(unit)+'"><span class="unit-num">Unit '+(index+1)+'</span>'+esc(unit.name)+'</a></h3>'+
+ '<div class="unit-meta" data-lesson-list="true">'+skillList(unit)+'</div>'+
+ '<span class="unit-course-status">Activities coming soon</span>'+
+ '<a class="unit-open-link" href="'+linkFor(unit)+'">Open unit →</a></div></li>';
 }
-function filteredUnits(){
- const q=search.value.trim().toLocaleLowerCase();
- return course.units.filter(u=>!q||(u.name+' '+u.skills.join(' ')).toLocaleLowerCase().includes(q));
+const shortcuts=[
+ ['Lesson Plan','▤'],['Worksheet','≡'],['Activity','✦'],['Assessment','☑'],
+ ['Games','◈'],['Study Guides','▤'],['Interactive Math','⟡']
+];
+function shortcutBanner(){
+ return '<section class="generator-banner compact"><div class="generator-banner-heading"><h2>Create Resources for This Unit</h2></div>'+
+ '<ul class="generator-shortcuts">'+shortcuts.map(([name,icon])=>
+ '<li><span class="generator-shortcut" aria-disabled="true" title="Activities have not been planned and built yet">'+
+ '<span class="generator-shortcut-icon" aria-hidden="true">'+icon+'</span>'+
+ '<span class="generator-shortcut-copy"><strong>'+name+'</strong><small class="build-badge">Coming soon</small></span></span></li>').join('')+
+ '</ul></section>';
+}
+function pager(unit){
+ const i=course.units.indexOf(unit);
+ const link=(u,dir)=>u?'<a class="pager-link pager-'+dir+'" href="'+linkFor(u)+'" rel="'+dir+'">'+
+ (dir==='prev'?'<span class="pager-arrow" aria-hidden="true">←</span>':'')+
+ '<span class="pager-text"><span class="pager-dir">'+(dir==='prev'?'Previous unit':'Next unit')+
+ '</span><span class="pager-name">'+esc(titleFor(u))+'</span></span>'+
+ (dir==='next'?'<span class="pager-arrow" aria-hidden="true">→</span>':'')+'</a>':'<span class="pager-spot"></span>';
+ return '<nav class="unit-pager" data-color="purple" data-course="'+courseId+'" aria-label="Unit navigation">'+
+ link(course.units[i-1],'prev')+link(course.units[i+1],'next')+'</nav>';
 }
 function courseView(){
- const filtered=filteredUnits();
+ const term=search.value.trim().toLocaleLowerCase();
+ const shown=course.units.filter(unit=>!term||(unit.name+' '+unit.skills.join(' ')).toLocaleLowerCase().includes(term));
  const lead=crumbs([['Home','#'],[course.name,null]])+
  '<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
  '<p class="band-blurb">Apply algebra to income, budgeting, banking, borrowing, investing, and everyday financial choices.</p>'+
- '<p class="band-meta">10 units with lessons, financial scenarios, generators, games, and interactive investigations planned · 3 units in pilot development</p>';
- const intro=band(lead,true);
- const cards=filtered.map(u=>unitCard(u,course.units.indexOf(u))).join('');
- return intro+
- '<section class="section"><div class="wrap">'+
+ '<p class="band-meta">'+course.units.length+' units · one shared course level · activity planning underway</p>';
+ return band(lead,true)+'<section class="section"><div class="wrap">'+
  '<h2 class="course-units-title">Browse by unit</h2>'+
- '<p class="course-units-status">Same unit cards and expandable lesson lists as Mr. K’s Classroom. Units marked as planned do not yet have functional resources.</p>'+
- (cards?'<ul class="units">'+cards+'</ul>':
- '<div class="empty"><h2>No matching units</h2><p>Try searching a different financial topic.</p></div>')+
+ '<p class="course-units-status">The unit outline and skills are ready for curriculum review. All pilot activities have been removed so future learning tools can be designed from scratch.</p>'+
+ (shown.length?'<ul class="units">'+shown.map(unit=>unitCard(unit,course.units.indexOf(unit))).join('')+'</ul>':
+ '<div class="empty"><h2>No matching units</h2><p>Try another financial topic.</p></div>')+
  '</div></section>';
 }
-const options=[
- {label:'Lesson Plan',icon:'▤',status:'planned'},
- {label:'Worksheet',icon:'≡',status:'live',url:'worksheet'},
- {label:'Activity',icon:'✦',status:'planned'},
- {label:'Assessment',icon:'☑',status:'planned'},
- {label:'Games',icon:'◈',status:'planned'},
- {label:'Study Guides',icon:'▤',status:'live',url:'practice'},
- {label:'Interactive Math',icon:'⟡',status:'live',url:'interactive'}
-];
-const interactiveUrl=u=>'artifacts/financial-algebra-'+u.id+'-explorer/index.html';
-function shortcutBanner(u){
- return '<div class="generator-banner compact"><div class="generator-banner-heading"><h2>Create Resources for This Unit</h2></div>'+
- '<ul class="generator-shortcuts">'+options.map(o=>{
-  const active=isPilot(u)&&o.status==='live',tag=active?'a':'span';
-  const url=o.url==='worksheet'?'worksheet.html?unit='+u.id:o.url==='practice'?'practice.html?unit='+u.id:interactiveUrl(u);
-  const attr=active?'href="'+url+'"':'aria-disabled="true" title="Not built yet"';
-  const subtitle=active?'':'<small class="build-badge">Coming soon</small>';
-  return '<li><'+tag+' class="generator-shortcut'+(o.url==='interactive'?' resource-shortcut':'')+'" '+attr+'>'+
-   '<span class="generator-shortcut-icon" aria-hidden="true">'+o.icon+'</span>'+
-   '<span class="generator-shortcut-copy"><strong>'+o.label+'</strong>'+subtitle+'</span></'+tag+'></li>';
- }).join('')+'</ul></div>';
+function unitView(unit){
+ const lead=crumbs([['Home','#'],[course.name,'#'],[titleFor(unit),null]])+
+ '<h1 tabindex="-1">'+esc(titleFor(unit))+'</h1>'+
+ '<p class="band-meta">Course outline · financial concepts · activities coming soon</p>';
+ const body=pager(unit)+shortcutBanner()+
+ '<section class="algebra-unit-section"><h2>Topics in this unit</h2>'+
+ '<ul class="unit-skills">'+unit.skills.map(skill=>'<li class="unit-skill">'+esc(skill)+'</li>').join('')+'</ul>'+
+ '<div class="empty"><h2>Activities coming soon</h2><p>Interactive math, games, worksheets, practice tests, and simulations are being planned. No pilot activities remain on the site.</p></div>'+
+ '</section>'+pager(unit);
+ return band(lead)+'<section class="section"><div class="wrap algebra-unit-layout">'+body+'</div></section>';
 }
-function thumb(kind){
- const shapes={
-  budget:'<rect x="24" y="28" width="106" height="13" rx="6" fill="#5d7bc2"/><rect x="24" y="53" width="162" height="12" rx="6" fill="#68ad9f"/><rect x="24" y="76" width="82" height="12" rx="6" fill="#d89f75"/><rect x="24" y="101" width="139" height="12" rx="6" fill="#ab92d4"/>',
-  credit:'<path d="M18 30h175v94H18z" rx="12" fill="#f7fafc" stroke="#6474a2" stroke-width="3"/><path d="M37 49h130M37 68h110" stroke="#bfcee5" stroke-width="9" stroke-linecap="round"/><path d="M40 104l38-12 29 5 38-24 26 3" stroke="#a27cc7" stroke-width="5" stroke-linecap="round" fill="none"/>',
-  investing:'<path d="M24 112h159M24 30v82" stroke="#7185a2" stroke-width="4"/><path d="M34 104l28-16 24 5 26-30 26 10 39-46" stroke="#319a89" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 104l28-16 24 5 26-30 26 10 39-46v79H34z" fill="#80cdb9" opacity=".23"/>'
- };
- return '<svg class="lab-thumb" viewBox="0 0 210 138" role="img" aria-label="Financial data illustration" xmlns="http://www.w3.org/2000/svg">'+
- '<rect width="210" height="138" rx="12" fill="#f0f4ff"/>'+
- (shapes[kind]||shapes.budget)+'</svg>';
-}
-function resourceCard(u,{title,desc,kind,url,button='Open activity'}){
- return '<li class="card lab-card" data-color="purple" data-course="'+courseId+'">'+
- '<a class="thumb" href="'+esc(url)+'" tabindex="-1" aria-hidden="true">'+thumb(kind)+'</a>'+
- '<div class="card-body"><p class="development-pill">Working pilot</p>'+
- '<h3><a href="'+esc(url)+'">'+esc(title)+'</a></h3>'+
- '<p class="desc">'+esc(desc)+'</p>'+
- '<div class="actions"><a class="btn btn-open" href="'+esc(url)+'">'+esc(button)+'</a></div></div></li>';
-}
-function cardSection(title,cards){
- return '<section class="algebra-unit-section"><h2>'+esc(title)+'</h2><ul class="cards grouped-cards">'+cards.join('')+'</ul></section>';
-}
-function pager(u){
- const i=course.units.indexOf(u);
- const item=(unit,dir)=>unit?'<a class="pager-link pager-'+dir+'" href="'+linkFor(unit)+'" rel="'+dir+'">'+
- (dir==='prev'?'<span class="pager-arrow" aria-hidden="true">←</span>':'')+
- '<span class="pager-text"><span class="pager-dir">'+(dir==='prev'?'Previous unit':'Next unit')+'</span><span class="pager-name">'+esc(titleFor(unit))+'</span></span>'+
- (dir==='next'?'<span class="pager-arrow" aria-hidden="true">→</span>':'')+'</a>':'<span class="pager-spot"></span>';
- return '<nav class="unit-pager" data-color="purple" data-course="'+courseId+'" aria-label="Unit navigation">'+item(course.units[i-1],'prev')+item(course.units[i+1],'next')+'</nav>';
-}
-function unitView(u){
- const lead=crumbs([['Home','#'],[course.name,'#'],[titleFor(u),null]])+
- '<h1 tabindex="-1">'+esc(titleFor(u))+'</h1>'+
- '<p class="band-meta">'+(isPilot(u)?'Create custom practice resources or explore interactive financial mathematics for this unit.':'Course outline · Activities coming soon')+'</p>';
- let body=pager(u);
- if(isPilot(u)){
-   const url=interactiveUrl(u),worksheet='worksheet.html?unit='+u.id,practice='practice.html?unit='+u.id;
-   const key='print.html?kind=explore-key&unit='+u.id;
-   const kind=u.id==='budgeting'?'budget':u.id==='credit'?'credit':'investing';
-   body+=shortcutBanner(u);
-   body+=cardSection('Study Guides',[resourceCard(u,{
-      title:'Assessment Readiness Check',kind,
-      desc:'An interactive practice assessment with one common course level, progress tracking, scoring, and fully worked solutions.',
-      url:practice,button:'Take practice test'})]);
-   body+=cardSection('Interactive Math',[resourceCard(u,{
-      title:(u.id==='budgeting'?'Budget Builder':u.id==='credit'?'Debt Repayment Explorer':'Compound Growth Explorer'),kind,
-      desc:'Use the same Interactive Math layout as other courses: a visual model, sliders, reset, five challenges, and printable Explore & Reflect materials.',
-      url,button:'Explore'})]);
-   body+=cardSection('Practice Activities',[resourceCard(u,{
-      title:'Worksheet Generator',kind,
-      desc:'Choose the financial skills and question count, then preview and print a student worksheet or worked teacher key. One level for the whole course.',
-      url:worksheet,button:'Create worksheet'})]);
-   body+='<p class="unit-notes"><a href="'+key+'">Explore & Reflect teacher key →</a> · Games, activity generator, lesson planner, and assessment generator are still in development.</p>';
- }else{
-   body+='<section class="algebra-unit-section"><h2>Topics in this unit</h2>'+
-   '<ul class="unit-skills">'+u.skills.map(s=>'<li class="unit-skill">'+esc(s)+'</li>').join('')+'</ul>'+
-   '<div class="empty"><h2>Activities coming soon</h2><p>These lessons, games, and practice resources have not yet been built. Try one of the three working pilot units.</p></div></section>';
- }
- body+=pager(u);
- return band(lead) + '<section class="section"><div class="wrap algebra-unit-layout">'+body+'</div></section>';
-}
-function routeUnit(){
+function currentUnit(){
  const slug=decodeURIComponent(location.hash.slice(1));
- const prefix=courseId+'.';
- return slug.startsWith(prefix)?getUnit(slug.slice(prefix.length)):null;
+ return slug.startsWith(courseId+'.')?getUnit(slug.slice(courseId.length+1)):null;
 }
 function render(){
- const u=routeUnit();
- main.innerHTML=u?unitView(u):courseView();
- const heading=main.querySelector('h1');
- document.title=(u?titleFor(u)+' | ':'')+'Financial Algebra | Mr. K’s Classroom';
- back.style.visibility=u?'visible':'hidden';
- search.style.visibility=u?'hidden':'visible';
- if(heading) heading.setAttribute('tabindex','-1');
+ const unit=currentUnit();
+ main.innerHTML=unit?unitView(unit):courseView();
+ document.title=(unit?titleFor(unit)+' | ':'')+'Financial Algebra | Mr. K’s Classroom';
+ back.style.visibility=unit?'visible':'hidden';
+ search.style.visibility=unit?'hidden':'visible';
 }
-document.getElementById('backBtn').addEventListener('click',()=>{location.hash='';render();window.scrollTo(0,0)});
+back.addEventListener('click',()=>{location.hash='';render();window.scrollTo(0,0);});
 document.getElementById('skip').addEventListener('click',()=>main.focus());
-document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();location.hash='';render();main.focus();});
-search.addEventListener('input',()=>{if(!routeUnit())render();});
-window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0)});
+document.getElementById('searchForm').addEventListener('submit',event=>{event.preventDefault();location.hash='';render();main.focus();});
+search.addEventListener('input',()=>{if(!currentUnit())render();});
+window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0);});
 render();

@@ -1,33 +1,47 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
-const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
-test('standalone course and units reuse actual classroom course-page design',()=>{
- const shell=read('index.html'),site=read('src/site.js'),css=read('styles.css');
- for(const name of ['site-header','brand','band','algebra-unit-card','generator-banner','algebra-unit-section','grouped-cards','unit-pager']){
-  assert.ok(site.includes(name)||shell.includes(name),'Missing classroom component '+name);
-  assert.ok(css.includes(name),'Missing original classroom styling '+name);
+
+const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
+const exists=path=>existsSync(new URL('../'+path,import.meta.url));
+
+test('Financial Algebra keeps the Classroom design with only disabled resource shortcuts',()=>{
+ const site=read('src/site.js'),index=read('index.html'),css=read('styles.css');
+ for(const className of ['site-header','band','algebra-unit-card','generator-banner','algebra-unit-section','unit-pager']){
+  assert.ok(index.includes(className)||site.includes(className),'Missing course style '+className);
+  assert.ok(css.includes(className),'Original style missing '+className);
+ }
+ assert.ok(site.includes('Activities coming soon'));
+ assert.ok(site.includes('aria-disabled="true"'));
+ for(const forbidden of ['Interactive pilot available','href="lab.html','worksheet.html?unit=','practice.html?unit=','financial-algebra-budgeting-explorer']){
+  assert.equal(site.includes(forbidden),false,'Unwanted activity link remains: '+forbidden);
+ }
+ for(const path of ['worksheet.html','practice.html','print.html','lab.html',
+ 'src/finance-lab.js','src/questions.js','src/engine.js',
+ 'artifacts/financial-algebra-budgeting-explorer/index.html',
+ 'artifacts/financial-algebra-credit-explorer/index.html',
+ 'artifacts/financial-algebra-investing-explorer/index.html']){
+  assert.equal(exists(path),false,'Unused pilot file remains: '+path);
  }
 });
-test('single-level worksheets, practice and labs are actually linked',()=>{
- const site=read('src/site.js'),course=read('src/course.js'),questions=read('src/questions.js');
- assert.ok(course.includes("levels: ['standard']"));
- assert.ok(!questions.includes('cp2')&&!questions.includes('cp1')&&!questions.includes('honors'));
- assert.ok(site.includes("worksheet.html?unit="));
- assert.ok(site.includes("practice.html?unit="));
- assert.ok(site.includes("interactiveUrl(u)"));
- assert.ok(!site.includes("lab.html#"));
- for(const file of ['practice.html','worksheet.html','print.html','lab.html',
-  'src/practice.js','src/worksheet.js','src/print.js','src/finance-lab.js',
-  'artifacts/interactive-math/lab.css','artifacts/interactive-math/lab.js',
-  'artifacts/financial-algebra-budgeting-explorer/index.html',
-  'artifacts/financial-algebra-credit-explorer/index.html',
-  'artifacts/financial-algebra-investing-explorer/index.html'])
-  assert.ok(existsSync(new URL('../'+file,import.meta.url)),'Missing '+file);
-});
-test('pilot math labs reuse actual Classroom Lab.layout and challenges framework',()=>{
- const core=read('artifacts/interactive-math/lab.js'),lab=read('src/finance-lab.js');
- assert.ok(core.includes('function layout('));
- assert.ok(core.includes('function challenges('));
- for(const name of ['L.layout','L.slider','L.challenges','L.table','L.graph'])assert.ok(lab.includes(name));
+test('All Grades 1–5 have their own SVG icons and nav references',()=>{
+ const renderer=read('src/outline-template.js');
+ const navPages=['index.html',...Array.from({length:5},(_,i)=>'grade'+(i+1)+'.html')];
+ const iconContents=[];
+ for(let n=1;n<=5;n++){
+  const iconPath='assets/course-icons/grade'+n+'.svg';
+  assert.ok(exists(iconPath));
+  const icon=read(iconPath);
+  assert.match(icon,/^<svg/);
+  assert.ok(icon.includes('Grade '+n));
+  assert.ok(icon.includes('viewBox="0 0 230 195"'));
+  iconContents.push(icon);
+  for(const page of navPages){
+   assert.ok(read(page).includes('src="./assets/course-icons/grade'+n+'.svg"'),page+' missing icon '+n);
+  }
+ }
+ assert.equal(new Set(iconContents).size,5);
+ assert.ok(renderer.includes('function artwork()'));
+ assert.ok(renderer.includes('assets/course-icons/grade'));
+ assert.ok(renderer.includes('return band(lead,true)'));
 });

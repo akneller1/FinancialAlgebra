@@ -34,13 +34,11 @@ export function mountOutline(course,{page='grade5.html'}={}){
  const crumb=links=>'<nav class="crumbs" aria-label="Breadcrumb"><ol>'+
  links.map(([text,link])=>'<li>'+anchor(text,link)+'</li>').join('')+'</ol></nav>';
  function artwork(){
-  return '<svg class="outline-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 195" role="img" aria-label="Decorative math course illustration">'+
-  '<rect x="19" y="26" width="191" height="147" rx="16" stroke="currentColor" stroke-width="5" fill="none"/>'+
-  '<path d="M45 74h56M73 46v56" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>'+
-  '<circle cx="161" cy="71" r="30" stroke="currentColor" stroke-width="5" fill="none"/>'+
-  '<text x="161" y="80" fill="currentColor" font-size="26" font-weight="800" text-anchor="middle">⅗</text>'+
-  '<path d="M45 137h38M44 145h38M100 116h79M100 139h79" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>'+
-  '</svg>';
+  const match=/^math([1-5])$/.exec(course.id);
+  if(!match)return '';
+  const grade=match[1];
+  const motifs={'1':'counting beads','2':'base-ten blocks','3':'multiplication array','4':'geometric shapes','5':'fraction circle'};
+  return '<img class="outline-art" src="./assets/course-icons/grade'+grade+'.svg" alt="Grade '+grade+' '+motifs[grade]+' icon" width="230" height="195">';
  }
  function band(contents,art=false){
   return '<section class="band" data-course="'+course.id+'" data-color="purple"><div class="wrap">'+
@@ -112,7 +110,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
    '<p class="band-meta">'+u.skills.length+' '+targetLabel+(Number.isFinite(u.estimatedDays)?' · '+paceLabel(u.estimatedDays,u.estimatedDaysMax)+' estimated instructional days':'')+(u.sourceMonth?' · '+esc(u.sourceMonth):'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · resources coming soon</p>';
   const lessonItems=u.skills.map((s,i)=>'<li class="outline-lesson" data-skill-id="'+skillId(u.id,i)+'">'+
    '<span class="outline-lesson-number">'+String(i+1).padStart(2,'0')+'</span><span>'+esc(s)+'</span></li>').join('');
-  return band(lead)+'<section class="section"><div class="wrap algebra-unit-layout">'+
+  return band(lead,true)+'<section class="section"><div class="wrap algebra-unit-layout">'+
    unitPager(u)+shortcuts()+
    '<section class="algebra-unit-section"><h2>'+(hasObjectives?'Learning Targets & Subskills':'Lessons and Subskills')+'</h2>'+
    '<p class="course-skill-hint">'+(hasObjectives?'Source-based learning targets are editorial groupings; Individual lesson titles are not listed in the source; sections and learning targets are shown here.':'The lesson sequence follows the supplied curriculum.')+' Stable skill IDs are reserved for later question banks.</p>'+
