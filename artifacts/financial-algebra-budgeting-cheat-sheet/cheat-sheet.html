@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Budgeting &amp; Spending Cheat Sheet | Financial Algebra</title><style>
+:root{--display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;--purple-bg:#7448ff;--purple-text:#5a2fd6;--purple-tint:#ebe3ff;--ink:#14173a;--line:#cfd3ea;--card:#fff;--edge:#14173a;--shadow:#14173a;--sun:#ffd23f}
+body{margin:0;background:#f4f5fb;font-family:var(--body);color:#14173a;line-height:1.45}/* Financial Algebra components. Loads after the Classroom styles.css and reuses its tokens. */
+:root{--fa-accent:var(--purple-bg,#7448ff);--fa-accent-text:var(--purple-text,#5a2fd6);--fa-tint:var(--purple-tint,#ebe3ff);--fa-good:#0c7a55;--fa-bad:#b3261e;--fa-paper:var(--card,#fff);--fa-ink:var(--ink,#14173a);--fa-line:var(--line,#cfd3ea)}
+.fa-page{max-width:1080px;margin:0 auto;padding:20px 16px 60px;font-family:var(--body,system-ui);color:var(--fa-ink)}
+.fa-page h1,.fa-page h2,.fa-page h3{font-family:var(--display,system-ui);line-height:1.15}
+.fa-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.fa-top a{color:var(--fa-accent-text);font-weight:700}
+.fa-panel{background:var(--fa-paper);border:3px solid var(--edge,#14173a);border-radius:14px;box-shadow:5px 5px 0 var(--shadow,#14173a);padding:16px 18px;margin:0 0 18px}
+.fa-panel.flat{box-shadow:none;border-width:2px}
+.fa-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.fa-btn{font:inherit;font-weight:700;border:3px solid var(--edge,#14173a);background:var(--fa-paper);color:var(--fa-ink);border-radius:10px;padding:8px 14px;cursor:pointer;min-height:44px}
+.fa-btn.primary{background:var(--fa-accent);color:#fff}
+.fa-btn:focus-visible,.fa-page input:focus-visible,.fa-page select:focus-visible,.fa-page textarea:focus-visible{outline:3px solid var(--sun,#ffd23f);outline-offset:2px}
+.fa-btn[disabled]{opacity:.5;cursor:not-allowed}
+.fa-field{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.95rem}
+.fa-field select,.fa-field input,.fa-page textarea{font:inherit;font-weight:400;padding:8px 10px;border:2px solid var(--fa-line);border-radius:8px;background:var(--fa-paper);color:var(--fa-ink)}
+.fa-page textarea{width:100%;min-height:90px;box-sizing:border-box}
+.fa-checks{display:flex;flex-wrap:wrap;gap:6px 14px}
+.fa-checks label{display:flex;gap:6px;align-items:center;font-weight:400}
+.fa-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.fa-tabs button[aria-selected=true]{background:var(--fa-accent);color:#fff}
+.fa-pill{display:inline-block;background:var(--fa-tint);color:var(--fa-accent-text);border-radius:999px;padding:2px 10px;font-size:.82rem;font-weight:700}
+.fa-note{background:#fff8d6;border-left:5px solid var(--sun,#ffd23f);padding:8px 12px;border-radius:6px;font-size:.92rem}
+/* fractions */
+.fa-frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 .15em;font-size:.92em;line-height:1.1}
+.fa-frac .fa-num{border-bottom:1.5px solid currentColor;padding:0 .2em}
+.fa-frac .fa-den{padding:0 .2em}
+/* tables & documents */
+.fa-table-wrap{overflow-x:auto;margin:8px 0}
+.fa-table{border-collapse:collapse;width:100%;font-size:.93rem;background:var(--fa-paper)}
+.fa-table caption{text-align:left;font-weight:700;padding:4px 0}
+.fa-table th,.fa-table td{border:1px solid var(--fa-line);padding:5px 8px;text-align:left;vertical-align:top}
+.fa-table thead th{background:var(--fa-tint)}
+.fa-table tbody th{font-weight:600}
+.fa-doc{border:2px dashed #8a8fb5;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fbfbff}
+.fa-doc figcaption{display:flex;flex-direction:column;gap:2px;margin-bottom:6px}
+.fa-doc-kind{text-transform:uppercase;font-size:.72rem;letter-spacing:.06em;color:#6b6f96;font-weight:700}
+.fa-doc-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:0 0 6px}
+.fa-doc-meta div{display:flex;gap:6px}.fa-doc-meta dt{font-weight:700}.fa-doc-meta dd{margin:0}
+.fa-doc-notes{font-size:.86rem;margin:6px 0 0;padding-left:18px}
+/* questions */
+.fa-q{border-top:1px solid var(--fa-line);padding:12px 0;break-inside:avoid}
+.fa-q-head{display:flex;gap:8px;align-items:center;margin-bottom:4px}
+.fa-q-num{font-family:var(--display);font-weight:800;background:var(--fa-ink);color:#fff;border-radius:6px;min-width:26px;text-align:center;padding:0 6px}
+.fa-q-tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#6b6f96;font-weight:700}
+.fa-q-pts{margin-left:auto;font-size:.8rem;font-weight:700}
+.fa-opts{margin:6px 0 0 4px;padding-left:30px;list-style:upper-alpha}.fa-parts{padding-left:28px;list-style:lower-alpha}.fa-sol ol,.fa-page ol.steps{padding-left:24px;list-style:decimal}.fa-page ul{list-style:disc;padding-left:22px}.fa-opts li{margin:3px 0}
+.fa-box{display:inline-block;width:.9em;height:.9em;border:1.5px solid currentColor;margin-right:6px;vertical-align:-1px}
+.fa-correct{font-weight:700;color:var(--fa-good)}.fa-correct::after{content:" ✓"}
+.fa-parts li{margin:6px 0}
+.fa-lines .fa-line{border-bottom:1px solid #b9bdd8;height:1.9em}
+.fa-key{background:#e8f7ef;border-left:4px solid var(--fa-good);padding:6px 10px;margin:6px 0;border-radius:4px}
+.fa-model{background:#eef1ff;border-left:4px solid var(--fa-accent);padding:6px 10px;margin:6px 0;border-radius:4px}
+.fa-mis{font-size:.9rem;color:#7a3a00;margin:4px 0}
+.fa-sol summary{cursor:pointer;font-weight:700}
+.fa-rubric{margin-top:8px;font-size:.85rem}
+/* print sheet */
+.fa-sheet{background:#fff;color:#14173a;padding:28px 34px;max-width:8.5in;margin:0 auto 20px;box-shadow:0 2px 10px rgba(0,0,0,.12);border-radius:4px}
+.fa-sheet-head{display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid #14173a;padding-bottom:8px;margin-bottom:10px}
+.fa-sheet-head h2{margin:0;font-size:1.4rem}
+.fa-sheet-head .fa-name{font-size:.9rem;white-space:nowrap}
+.fa-section-h{font-family:var(--display);font-size:1.05rem;border-bottom:2px solid var(--fa-accent);padding-bottom:2px;margin:16px 0 4px;color:var(--fa-accent-text)}
+.fa-pagebreak{break-before:page}
+@media print{
+ body{background:#fff!important}.fa-noprint,.site-header,.site-footer{display:none!important}
+ .fa-page{padding:0;max-width:none}.fa-sheet{box-shadow:none;padding:0;max-width:none;margin:0}
+ .fa-panel{box-shadow:none;border-width:1px}
+ @page{size:letter;margin:.6in}
+}
+@media (max-width:600px){.fa-sheet{padding:16px}.fa-sheet-head{flex-direction:column}}
+@media (prefers-color-scheme:dark){.fa-doc{background:#16183a}.fa-key{background:#123826;color:#e6fff1}.fa-model{background:#1d2150;color:#eef}.fa-note{background:#3a3210;color:#fff}.fa-sheet{background:#fff;color:#14173a}}
+
+.cs{display:block;font-size:.9rem}.cs::after{content:"";display:block;clear:both}.cs>div{width:48.5%;float:left}.cs>div+div{float:right}.cs .box{break-inside:avoid;border:2px solid #14173a;border-radius:10px;padding:8px 10px;margin:0 0 12px}.cs h3{margin:0 0 4px;font-family:var(--display);color:var(--purple-text);font-size:1rem}
+.cs .fa-table{font-size:.82rem}.cs ul{margin:2px 0;padding-left:18px;font-size:.88rem}
+.banner{background:#7448ff;color:#fff;padding:14px 18px;border-radius:12px;margin-bottom:12px}.banner h1{margin:0;font-family:var(--display)}.banner p{margin:4px 0 0}
+.meta{display:flex;gap:8px;flex-wrap:wrap}.meta span{background:#ebe3ff;color:#5a2fd6;border-radius:99px;padding:2px 10px;font-weight:700;font-size:.85rem}
+.task{border:2px solid #14173a;border-radius:10px;padding:10px 14px;margin:10px 0;break-inside:avoid}.task h3{margin:0 0 4px;font-family:var(--display)}
+.work{border:1px dashed #9aa0c8;min-height:1.6in;border-radius:8px;margin:6px 0}
+.chk li{list-style:"☐  "}
+</style></head><body><main class="fa-page"><section class="fa-sheet"><div class="banner"><h1>Budgeting &amp; Spending — Cheat Sheet</h1><p>Financial Algebra · Unit 2: Budgeting &amp; Spending</p></div><div class="cs"><div><div class="box" style="break-inside:auto"><h3>Essential vocabulary</h3><dl style="margin:0;font-size:.84rem"><dt><strong>Budget</strong></dt><dd style="margin:0 0 3px">A plan that assigns expected income to spending, saving, and debt payments for a period of time</dd><dt><strong>Cash flow</strong></dt><dd style="margin:0 0 3px">Money coming in minus money going out during a period</dd><dt><strong>Surplus</strong></dt><dd style="margin:0 0 3px">The amount left over when income is greater than expenses</dd><dt><strong>Deficit</strong></dt><dd style="margin:0 0 3px">The shortfall when expenses are greater than income</dd><dt><strong>Net income (take-home pay)</strong></dt><dd style="margin:0 0 3px">Pay remaining after taxes and other deductions; the amount a budget should be built on</dd><dt><strong>Sinking fund</strong></dt><dd style="margin:0 0 3px">Money set aside each month for a known, irregular future expense</dd><dt><strong>Fixed expense</strong></dt><dd style="margin:0 0 3px">A cost that stays the same amount each period</dd><dt><strong>Variable expense</strong></dt><dd style="margin:0 0 3px">A cost whose amount changes from period to period</dd><dt><strong>Discretionary expense</strong></dt><dd style="margin:0 0 3px">Spending on wants that could be reduced or eliminated without affecting basic needs</dd><dt><strong>Essential expense (need)</strong></dt><dd style="margin:0 0 3px">Spending required for basic living or to keep earning income</dd><dt><strong>50/30/20 guideline</strong></dt><dd style="margin:0 0 3px">A starting-point plan that directs about 50% of take-home pay to needs, 30% to wants, and 20% to savings and extra debt payments</dd><dt><strong>Emergency fund</strong></dt><dd style="margin:0 0 3px">Savings reserved for unexpected expenses or income loss, often targeted at 3–6 months of essential expenses</dd><dt><strong>Financial constraint</strong></dt><dd style="margin:0 0 3px">A limit, such as income or a savings target, that restricts which spending choices are possible</dd><dt><strong>Savings goal</strong></dt><dd style="margin:0 0 3px">A specific amount of money to accumulate by a target date</dd><dt><strong>Opportunity cost</strong></dt><dd style="margin:0 0 3px">The value of the next-best alternative given up when making a choice</dd><dt><strong>Unit price</strong></dt><dd style="margin:0 0 3px">The cost per single unit (ounce, item, load) used to compare package sizes fairly</dd><dt><strong>Impulse purchase</strong></dt><dd style="margin:0 0 3px">An unplanned purchase made on the spot, often influenced by marketing or emotion</dd><dt><strong>Buy now, pay later (BNPL)</strong></dt><dd style="margin:0 0 3px">A short-term financing plan that splits a purchase into installments, sometimes with late fees or interest</dd><dt><strong>Sales tax</strong></dt><dd style="margin:0 0 3px">A percent of the purchase price collected by the state at the time of sale</dd></dl></div><div class="box"><h3>Common misconceptions</h3><ul><li>Budgeting with gross pay instead of take-home pay.</li><li>“Biweekly” ≠ “twice a month” (26 vs 24 checks).</li><li>A sale is savings only if you planned to buy the item.</li><li>A lower monthly payment does not mean a lower total cost.</li></ul></div></div><div><div class="box"><h3>Core formulas</h3><div class="fa-table-wrap"><table class="fa-table "><tbody><tr><th scope="row">Monthly income (biweekly)</th><td>paycheck × <span class="fa-frac" role="math" aria-label="26 divided by 12"><span class="fa-num">26</span><span class="fa-den">12</span></span></td></tr><tr><th scope="row">Monthly income (weekly)</th><td>paycheck × <span class="fa-frac" role="math" aria-label="52 divided by 12"><span class="fa-num">52</span><span class="fa-den">12</span></span></td></tr><tr><th scope="row">Cash flow</th><td>income − expenses</td></tr><tr><th scope="row">Sinking fund</th><td><span class="fa-frac" role="math" aria-label="irregular bill divided by months until due"><span class="fa-num">irregular bill</span><span class="fa-den">months until due</span></span></td></tr><tr><th scope="row">Percent of budget</th><td><span class="fa-frac" role="math" aria-label="category divided by take-home pay"><span class="fa-num">category</span><span class="fa-den">take-home pay</span></span> × 100</td></tr><tr><th scope="row">Annual cost of a habit</th><td>price × times/week × 52</td></tr><tr><th scope="row">Break-even uses</th><td><span class="fa-frac" role="math" aria-label="fixed cost divided by savings per use"><span class="fa-num">fixed cost</span><span class="fa-den">savings per use</span></span> (round up)</td></tr><tr><th scope="row">Unit price</th><td><span class="fa-frac" role="math" aria-label="price divided by quantity"><span class="fa-num">price</span><span class="fa-den">quantity</span></span></td></tr></tbody></table></div></div><div class="box"><h3>Classify every expense twice</h3><div class="fa-table-wrap"><table class="fa-table "><tbody><tr><th scope="row">Fixed need</th><td>rent, car payment, insurance</td></tr><tr><th scope="row">Fixed want</th><td>streaming, gym contract</td></tr><tr><th scope="row">Variable need</th><td>groceries, utilities, gas</td></tr><tr><th scope="row">Variable want</th><td>dining out, shopping, events</td></tr></tbody></table></div></div><div class="box"><h3>50/30/20 reference point</h3><div class="fa-table-wrap"><table class="fa-table "><tbody><tr><th scope="row">Needs</th><td>≈ 50% of take-home</td></tr><tr><th scope="row">Wants</th><td>≈ 30%</td></tr><tr><th scope="row">Savings &amp; extra debt payments</th><td>≈ 20%</td></tr></tbody></table></div><p style="font-size:.82rem;margin:4px 0 0">A starting guideline, not a rule. High-cost areas often push needs above 50%.</p></div><div class="box"><h3>Worked example</h3><ol class="steps"><li>Biweekly take-home $1,300 → 1,300 × <span class="fa-frac" role="math" aria-label="26 divided by 12"><span class="fa-num">26</span><span class="fa-den">12</span></span> = $2,816.67/month</li><li>Expenses $2,640 → cash flow +$176.67</li><li>Car insurance $780 every 6 months → set aside $130/month</li><li>True cash flow = 176.67 − 130 = +$46.67 (thin margin!)</li></ol></div><div class="box"><h3>Questions to ask before deciding</h3><ul><li>Is this a need or a want — and who decides?</li><li>What will this cost per year?</li><li>What am I giving up (opportunity cost)?</li><li>Which irregular bills are coming in the next 12 months?</li><li>What will I do if income drops for a month?</li></ul></div><div class="box"><h3>Decision tips</h3><ul><li>Pay yourself first: automate savings on payday.</li><li>Round hours and months UP; round maximum spending DOWN.</li><li>Review subscriptions every 3 months.</li><li>Keep a starter emergency fund before extra spending.</li></ul></div></div></div><p class="fa-doc-kind">Values and rates are illustrative. All examples are fictional. Mr. K's Classroom · Financial Algebra</p></section></main></body></html>

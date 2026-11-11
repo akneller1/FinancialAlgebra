@@ -1,0 +1,743 @@
+{
+ "schema": "fa-resources-1",
+ "courseId": "financial-algebra",
+ "level": "standard",
+ "classroomLevelCode": "cp1",
+ "generated": "scripts/build-hub.mjs",
+ "units": [
+  {
+   "unitId": "income",
+   "unitNum": 1,
+   "name": "Careers & Income",
+   "skills": [
+    {
+     "id": "income-skill-01",
+     "name": "Compare salary and hourly pay"
+    },
+    {
+     "id": "income-skill-02",
+     "name": "Calculate gross and net income"
+    },
+    {
+     "id": "income-skill-03",
+     "name": "Interpret pay stubs"
+    },
+    {
+     "id": "income-skill-04",
+     "name": "Model income taxes"
+    }
+   ],
+   "questionCount": 165,
+   "classroomExportCount": 146,
+   "flashcards": 24,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=income&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=income&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=income&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=income&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=income",
+    "cheatSheet": "artifacts/financial-algebra-income-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Job Offer Comparison Lab",
+     "path": "financial/decision-lab/index.html?lab=income",
+     "teacherPath": "financial/decision-lab/index.html?lab=income&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "job-offer-showdown",
+      "title": "The Job Offer Showdown",
+      "grouping": "Pairs",
+      "days": "2–3 class periods",
+      "path": "artifacts/financial-algebra-project-job-offer-showdown/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/income.json",
+    "extendedBank": "financial/banks/income.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "budgeting",
+   "unitNum": 2,
+   "name": "Budgeting & Spending",
+   "skills": [
+    {
+     "id": "budgeting-skill-01",
+     "name": "Calculate monthly cash flow"
+    },
+    {
+     "id": "budgeting-skill-02",
+     "name": "Analyze fixed and variable expenses"
+    },
+    {
+     "id": "budgeting-skill-03",
+     "name": "Model financial constraints"
+    },
+    {
+     "id": "budgeting-skill-04",
+     "name": "Compare spending decisions"
+    }
+   ],
+   "questionCount": 202,
+   "classroomExportCount": 183,
+   "flashcards": 26,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=budgeting&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=budgeting&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=budgeting&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=budgeting&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=budgeting",
+    "cheatSheet": "artifacts/financial-algebra-budgeting-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Real-Life Budget Challenge",
+     "path": "financial/decision-lab/index.html?lab=budgeting",
+     "teacherPath": "financial/decision-lab/index.html?lab=budgeting&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "survive-on-your-salary",
+      "title": "Survive on Your Salary",
+      "grouping": "Individual (best) or pairs",
+      "days": "3–4 class periods",
+      "path": "artifacts/financial-algebra-project-survive-on-your-salary/index.html"
+     },
+     {
+      "slug": "twelve-month-goal-plan",
+      "title": "The 12-Month Goal Plan",
+      "grouping": "Pairs",
+      "days": "2–3 class periods",
+      "path": "artifacts/financial-algebra-project-twelve-month-goal-plan/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/budgeting.json",
+    "extendedBank": "financial/banks/budgeting.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "banking",
+   "unitNum": 3,
+   "name": "Banking & Saving",
+   "skills": [
+    {
+     "id": "banking-skill-01",
+     "name": "Understand account fees"
+    },
+    {
+     "id": "banking-skill-02",
+     "name": "Calculate simple interest"
+    },
+    {
+     "id": "banking-skill-03",
+     "name": "Compare savings products"
+    },
+    {
+     "id": "banking-skill-04",
+     "name": "Interpret bank statements"
+    }
+   ],
+   "questionCount": 143,
+   "classroomExportCount": 126,
+   "flashcards": 24,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=banking&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=banking&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=banking&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=banking&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=banking",
+    "cheatSheet": "artifacts/financial-algebra-banking-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Choose a Bank & Build an Emergency Fund",
+     "path": "financial/decision-lab/index.html?lab=banking",
+     "teacherPath": "financial/decision-lab/index.html?lab=banking&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "emergency-fund-plan",
+      "title": "Choose a Bank, Build an Emergency Fund",
+      "grouping": "Individual or pairs",
+      "days": "2–3 class periods",
+      "path": "artifacts/financial-algebra-project-emergency-fund-plan/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/banking.json",
+    "extendedBank": "financial/banks/banking.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "credit",
+   "unitNum": 4,
+   "name": "Credit Cards & Debt",
+   "skills": [
+    {
+     "id": "credit-skill-01",
+     "name": "Calculate monthly interest"
+    },
+    {
+     "id": "credit-skill-02",
+     "name": "Evaluate credit card repayment"
+    },
+    {
+     "id": "credit-skill-03",
+     "name": "Compare repayment strategies"
+    },
+    {
+     "id": "credit-skill-04",
+     "name": "Interpret credit costs"
+    }
+   ],
+   "questionCount": 134,
+   "classroomExportCount": 109,
+   "flashcards": 22,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=credit&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=credit&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=credit&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=credit&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=credit",
+    "cheatSheet": "artifacts/financial-algebra-credit-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Credit Card Payoff Explorer",
+     "path": "financial/decision-lab/index.html?lab=credit",
+     "teacherPath": "financial/decision-lab/index.html?lab=credit&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "escape-the-debt-trap",
+      "title": "Escape the Debt Trap",
+      "grouping": "Small groups (3)",
+      "days": "3 class periods",
+      "path": "artifacts/financial-algebra-project-escape-the-debt-trap/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/credit.json",
+    "extendedBank": "financial/banks/credit.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "borrowing",
+   "unitNum": 5,
+   "name": "Auto Loans & Borrowing",
+   "skills": [
+    {
+     "id": "borrowing-skill-01",
+     "name": "Model installment loans"
+    },
+    {
+     "id": "borrowing-skill-02",
+     "name": "Compare APR and loan term"
+    },
+    {
+     "id": "borrowing-skill-03",
+     "name": "Build amortization schedules"
+    },
+    {
+     "id": "borrowing-skill-04",
+     "name": "Analyze total borrowing cost"
+    }
+   ],
+   "questionCount": 125,
+   "classroomExportCount": 107,
+   "flashcards": 22,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=borrowing&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=borrowing&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=borrowing&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=borrowing&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=borrowing",
+    "cheatSheet": "artifacts/financial-algebra-borrowing-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Your First Car: Buy Used, Finance New, or Lease?",
+     "path": "financial/decision-lab/index.html?lab=borrowing",
+     "teacherPath": "financial/decision-lab/index.html?lab=borrowing&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "your-first-car",
+      "title": "Your First Car",
+      "grouping": "Pairs",
+      "days": "3 class periods",
+      "path": "artifacts/financial-algebra-project-your-first-car/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/borrowing.json",
+    "extendedBank": "financial/banks/borrowing.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "investing",
+   "unitNum": 6,
+   "name": "Investing & Compound Growth",
+   "skills": [
+    {
+     "id": "investing-skill-01",
+     "name": "Calculate compound growth"
+    },
+    {
+     "id": "investing-skill-02",
+     "name": "Model recurring contributions"
+    },
+    {
+     "id": "investing-skill-03",
+     "name": "Compare investment scenarios"
+    },
+    {
+     "id": "investing-skill-04",
+     "name": "Interpret investment risk"
+    }
+   ],
+   "questionCount": 140,
+   "classroomExportCount": 129,
+   "flashcards": 22,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=investing&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=investing&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=investing&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=investing&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=investing",
+    "cheatSheet": "artifacts/financial-algebra-investing-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "The Cost of Waiting",
+     "path": "financial/decision-lab/index.html?lab=investing",
+     "teacherPath": "financial/decision-lab/index.html?lab=investing&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "investment-plan",
+      "title": "Build an Investment Plan: The Cost of Waiting",
+      "grouping": "Individual",
+      "days": "2–3 class periods",
+      "path": "artifacts/financial-algebra-project-investment-plan/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/investing.json",
+    "extendedBank": "financial/banks/investing.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "housing",
+   "unitNum": 7,
+   "name": "Housing: Rent or Buy",
+   "skills": [
+    {
+     "id": "housing-skill-01",
+     "name": "Compare rental and ownership costs"
+    },
+    {
+     "id": "housing-skill-02",
+     "name": "Model a mortgage"
+    },
+    {
+     "id": "housing-skill-03",
+     "name": "Estimate ownership expenses"
+    },
+    {
+     "id": "housing-skill-04",
+     "name": "Analyze opportunity cost"
+    }
+   ],
+   "questionCount": 137,
+   "classroomExportCount": 126,
+   "flashcards": 23,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=housing&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=housing&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=housing&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=housing&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=housing",
+    "cheatSheet": "artifacts/financial-algebra-housing-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Rent or Buy a Home?",
+     "path": "financial/decision-lab/index.html?lab=housing",
+     "teacherPath": "financial/decision-lab/index.html?lab=housing&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "rent-or-buy",
+      "title": "Rent or Buy? The Housing Decision",
+      "grouping": "Pairs or small groups",
+      "days": "3–4 class periods",
+      "path": "artifacts/financial-algebra-project-rent-or-buy/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/housing.json",
+    "extendedBank": "financial/banks/housing.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "insurance",
+   "unitNum": 8,
+   "name": "Insurance & Risk",
+   "skills": [
+    {
+     "id": "insurance-skill-01",
+     "name": "Compare premiums and deductibles"
+    },
+    {
+     "id": "insurance-skill-02",
+     "name": "Model out-of-pocket costs"
+    },
+    {
+     "id": "insurance-skill-03",
+     "name": "Calculate expected value"
+    },
+    {
+     "id": "insurance-skill-04",
+     "name": "Evaluate financial risk"
+    }
+   ],
+   "questionCount": 136,
+   "classroomExportCount": 117,
+   "flashcards": 22,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=insurance&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=insurance&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=insurance&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=insurance&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=insurance",
+    "cheatSheet": "artifacts/financial-algebra-insurance-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Insurance Decision Lab: Choose a Health Plan",
+     "path": "financial/decision-lab/index.html?lab=insurance",
+     "teacherPath": "financial/decision-lab/index.html?lab=insurance&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "protect-a-household",
+      "title": "Protect a Household",
+      "grouping": "Small groups (3–4)",
+      "days": "3 class periods",
+      "path": "artifacts/financial-algebra-project-protect-a-household/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/insurance.json",
+    "extendedBank": "financial/banks/insurance.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "college",
+   "unitNum": 9,
+   "name": "College & Career ROI",
+   "skills": [
+    {
+     "id": "college-skill-01",
+     "name": "Estimate education costs"
+    },
+    {
+     "id": "college-skill-02",
+     "name": "Model student loan payments"
+    },
+    {
+     "id": "college-skill-03",
+     "name": "Compare career earnings"
+    },
+    {
+     "id": "college-skill-04",
+     "name": "Analyze payback periods"
+    }
+   ],
+   "questionCount": 132,
+   "classroomExportCount": 110,
+   "flashcards": 22,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=college&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=college&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=college&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=college&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=college",
+    "cheatSheet": "artifacts/financial-algebra-college-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "College & Career ROI Explorer",
+     "path": "financial/decision-lab/index.html?lab=college",
+     "teacherPath": "financial/decision-lab/index.html?lab=college&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "compare-education-pathways",
+      "title": "Is It Worth It? Compare Education Pathways",
+      "grouping": "Individual or pairs",
+      "days": "3 class periods",
+      "path": "artifacts/financial-algebra-project-compare-education-pathways/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/college.json",
+    "extendedBank": "financial/banks/college.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  },
+  {
+   "unitId": "retirement",
+   "unitNum": 10,
+   "name": "Retirement & Inflation",
+   "skills": [
+    {
+     "id": "retirement-skill-01",
+     "name": "Model inflation"
+    },
+    {
+     "id": "retirement-skill-02",
+     "name": "Estimate retirement savings"
+    },
+    {
+     "id": "retirement-skill-03",
+     "name": "Compare account contributions"
+    },
+    {
+     "id": "retirement-skill-04",
+     "name": "Analyze purchasing power"
+    }
+   ],
+   "questionCount": 131,
+   "classroomExportCount": 121,
+   "flashcards": 21,
+   "resources": {
+    "lessonPlan": "financial/generators/index.html?unit=retirement&mode=lesson",
+    "worksheet": "financial/generators/index.html?unit=retirement&mode=worksheet",
+    "assessment": "financial/generators/index.html?unit=retirement&mode=assessment",
+    "practiceTest": "financial/generators/index.html?unit=retirement&mode=practice",
+    "flashcards": "financial/flashcards/index.html?unit=retirement",
+    "cheatSheet": "artifacts/financial-algebra-retirement-cheat-sheet/cheat-sheet.pdf",
+    "decisionLab": {
+     "title": "Retirement & Inflation Explorer",
+     "path": "financial/decision-lab/index.html?lab=retirement",
+     "teacherPath": "financial/decision-lab/index.html?lab=retirement&teacher=1"
+    },
+    "projects": [
+     {
+      "slug": "retirement-strategy",
+      "title": "Design a Retirement Strategy",
+      "grouping": "Individual",
+      "days": "2–3 class periods",
+      "path": "artifacts/financial-algebra-project-retirement-strategy/index.html"
+     },
+     {
+      "slug": "build-your-financial-future",
+      "title": "Capstone: Build Your Financial Future",
+      "grouping": "Individual (with peer review)",
+      "days": "5–8 class periods (or a 2–3 week project)",
+      "path": "artifacts/financial-algebra-project-build-your-financial-future/index.html"
+     }
+    ],
+    "classroomBank": "question-banks/financial-algebra/retirement.json",
+    "extendedBank": "financial/banks/retirement.json",
+    "classroomGames": [
+     {
+      "game": "showdown",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "connect-four",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "tic-tac-toe",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "picture-reveal",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     },
+     {
+      "game": "detective",
+      "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
+     }
+    ]
+   }
+  }
+ ]
+}

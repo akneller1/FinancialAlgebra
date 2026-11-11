@@ -4,16 +4,16 @@ export const course = {
   subtitle: 'Learn the mathematics behind real financial decisions.',
   levels: ['standard'],
   units: [
-    {id:'income', name:'Careers & Income', status:'outline', skills:['Compare salary and hourly pay','Calculate gross and net income','Interpret pay stubs','Model income taxes']},
-    {id:'budgeting', name:'Budgeting & Spending', status:'outline', skills:['Calculate monthly cash flow','Analyze fixed and variable expenses','Model financial constraints','Compare spending decisions']},
-    {id:'banking', name:'Banking & Saving', status:'outline', skills:['Understand account fees','Calculate simple interest','Compare savings products','Interpret bank statements']},
-    {id:'credit', name:'Credit Cards & Debt', status:'outline', skills:['Calculate monthly interest','Evaluate credit card repayment','Compare repayment strategies','Interpret credit costs']},
-    {id:'borrowing', name:'Auto Loans & Borrowing', status:'outline', skills:['Model installment loans','Compare APR and loan term','Build amortization schedules','Analyze total borrowing cost']},
-    {id:'investing', name:'Investing & Compound Growth', status:'outline', skills:['Calculate compound growth','Model recurring contributions','Compare investment scenarios','Interpret investment risk']},
-    {id:'housing', name:'Housing: Rent or Buy', status:'outline', skills:['Compare rental and ownership costs','Model a mortgage','Estimate ownership expenses','Analyze opportunity cost']},
-    {id:'insurance', name:'Insurance & Risk', status:'outline', skills:['Compare premiums and deductibles','Model out-of-pocket costs','Calculate expected value','Evaluate financial risk']},
-    {id:'college', name:'College & Career ROI', status:'outline', skills:['Estimate education costs','Model student loan payments','Compare career earnings','Analyze payback periods']},
-    {id:'retirement', name:'Retirement & Inflation', status:'outline', skills:['Model inflation','Estimate retirement savings','Compare account contributions','Analyze purchasing power']}
+    {id:'income', name:'Careers & Income', status:'ready', skills:['Compare salary and hourly pay','Calculate gross and net income','Interpret pay stubs','Model income taxes']},
+    {id:'budgeting', name:'Budgeting & Spending', status:'ready', skills:['Calculate monthly cash flow','Analyze fixed and variable expenses','Model financial constraints','Compare spending decisions']},
+    {id:'banking', name:'Banking & Saving', status:'ready', skills:['Understand account fees','Calculate simple interest','Compare savings products','Interpret bank statements']},
+    {id:'credit', name:'Credit Cards & Debt', status:'ready', skills:['Calculate monthly interest','Evaluate credit card repayment','Compare repayment strategies','Interpret credit costs']},
+    {id:'borrowing', name:'Auto Loans & Borrowing', status:'ready', skills:['Model installment loans','Compare APR and loan term','Build amortization schedules','Analyze total borrowing cost']},
+    {id:'investing', name:'Investing & Compound Growth', status:'ready', skills:['Calculate compound growth','Model recurring contributions','Compare investment scenarios','Interpret investment risk']},
+    {id:'housing', name:'Housing: Rent or Buy', status:'ready', skills:['Compare rental and ownership costs','Model a mortgage','Estimate ownership expenses','Analyze opportunity cost']},
+    {id:'insurance', name:'Insurance & Risk', status:'ready', skills:['Compare premiums and deductibles','Model out-of-pocket costs','Calculate expected value','Evaluate financial risk']},
+    {id:'college', name:'College & Career ROI', status:'ready', skills:['Estimate education costs','Model student loan payments','Compare career earnings','Analyze payback periods']},
+    {id:'retirement', name:'Retirement & Inflation', status:'ready', skills:['Model inflation','Estimate retirement savings','Compare account contributions','Analyze purchasing power']}
   ]
 };
 export function getUnit(id){return course.units.find(unit=>unit.id===id);}

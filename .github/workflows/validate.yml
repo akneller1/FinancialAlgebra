@@ -12,6 +12,6 @@ jobs:
           node-version: '22'
       - name: Check browser JavaScript syntax
         run: |
-          for file in src/*.js; do node --check "$file"; done
+          find src financial scripts -type f \( -name "*.js" -o -name "*.mjs" \) -exec node --check {} \;
       - name: Test finance calculations, questions, and UI integration assets
         run: npm test

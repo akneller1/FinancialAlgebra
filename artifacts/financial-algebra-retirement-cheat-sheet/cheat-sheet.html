@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Retirement &amp; Inflation Cheat Sheet | Financial Algebra</title><style>
+:root{--display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;--purple-bg:#7448ff;--purple-text:#5a2fd6;--purple-tint:#ebe3ff;--ink:#14173a;--line:#cfd3ea;--card:#fff;--edge:#14173a;--shadow:#14173a;--sun:#ffd23f}
+body{margin:0;background:#f4f5fb;font-family:var(--body);color:#14173a;line-height:1.45}/* Financial Algebra components. Loads after the Classroom styles.css and reuses its tokens. */
+:root{--fa-accent:var(--purple-bg,#7448ff);--fa-accent-text:var(--purple-text,#5a2fd6);--fa-tint:var(--purple-tint,#ebe3ff);--fa-good:#0c7a55;--fa-bad:#b3261e;--fa-paper:var(--card,#fff);--fa-ink:var(--ink,#14173a);--fa-line:var(--line,#cfd3ea)}
+.fa-page{max-width:1080px;margin:0 auto;padding:20px 16px 60px;font-family:var(--body,system-ui);color:var(--fa-ink)}
+.fa-page h1,.fa-page h2,.fa-page h3{font-family:var(--display,system-ui);line-height:1.15}
+.fa-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.fa-top a{color:var(--fa-accent-text);font-weight:700}
+.fa-panel{background:var(--fa-paper);border:3px solid var(--edge,#14173a);border-radius:14px;box-shadow:5px 5px 0 var(--shadow,#14173a);padding:16px 18px;margin:0 0 18px}
+.fa-panel.flat{box-shadow:none;border-width:2px}
+.fa-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.fa-btn{font:inherit;font-weight:700;border:3px solid var(--edge,#14173a);background:var(--fa-paper);color:var(--fa-ink);border-radius:10px;padding:8px 14px;cursor:pointer;min-height:44px}
+.fa-btn.primary{background:var(--fa-accent);color:#fff}
+.fa-btn:focus-visible,.fa-page input:focus-visible,.fa-page select:focus-visible,.fa-page textarea:focus-visible{outline:3px solid var(--sun,#ffd23f);outline-offset:2px}
+.fa-btn[disabled]{opacity:.5;cursor:not-allowed}
+.fa-field{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.95rem}
+.fa-field select,.fa-field input,.fa-page textarea{font:inherit;font-weight:400;padding:8px 10px;border:2px solid var(--fa-line);border-radius:8px;background:var(--fa-paper);color:var(--fa-ink)}
+.fa-page textarea{width:100%;min-height:90px;box-sizing:border-box}
+.fa-checks{display:flex;flex-wrap:wrap;gap:6px 14px}
+.fa-checks label{display:flex;gap:6px;align-items:center;font-weight:400}
+.fa-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.fa-tabs button[aria-selected=true]{background:var(--fa-accent);color:#fff}
+.fa-pill{display:inline-block;background:var(--fa-tint);color:var(--fa-accent-text);border-radius:999px;padding:2px 10px;font-size:.82rem;font-weight:700}
+.fa-note{background:#fff8d6;border-left:5px solid var(--sun,#ffd23f);padding:8px 12px;border-radius:6px;font-size:.92rem}
+/* fractions */
+.fa-frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 .15em;font-size:.92em;line-height:1.1}
+.fa-frac .fa-num{border-bottom:1.5px solid currentColor;padding:0 .2em}
+.fa-frac .fa-den{padding:0 .2em}
+/* tables & documents */
+.fa-table-wrap{overflow-x:auto;margin:8px 0}
+.fa-table{border-collapse:collapse;width:100%;font-size:.93rem;background:var(--fa-paper)}
+.fa-table caption{text-align:left;font-weight:700;padding:4px 0}
+.fa-table th,.fa-table td{border:1px solid var(--fa-line);padding:5px 8px;text-align:left;vertical-align:top}
+.fa-table thead th{background:var(--fa-tint)}
+.fa-table tbody th{font-weight:600}
+.fa-doc{border:2px dashed #8a8fb5;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fbfbff}
+.fa-doc figcaption{display:flex;flex-direction:column;gap:2px;margin-bottom:6px}
+.fa-doc-kind{text-transform:uppercase;font-size:.72rem;letter-spacing:.06em;color:#6b6f96;font-weight:700}
+.fa-doc-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:0 0 6px}
+.fa-doc-meta div{display:flex;gap:6px}.fa-doc-meta dt{font-weight:700}.fa-doc-meta dd{margin:0}
+.fa-doc-notes{font-size:.86rem;margin:6px 0 0;padding-left:18px}
+/* questions */
+.fa-q{border-top:1px solid var(--fa-line);padding:12px 0;break-inside:avoid}
+.fa-q-head{display:flex;gap:8px;align-items:center;margin-bottom:4px}
+.fa-q-num{font-family:var(--display);font-weight:800;background:var(--fa-ink);color:#fff;border-radius:6px;min-width:26px;text-align:center;padding:0 6px}
+.fa-q-tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#6b6f96;font-weight:700}
+.fa-q-pts{margin-left:auto;font-size:.8rem;font-weight:700}
+.fa-opts{margin:6px 0 0 4px;padding-left:30px;list-style:upper-alpha}.fa-parts{padding-left:28px;list-style:lower-alpha}.fa-sol ol,.fa-page ol.steps{padding-left:24px;list-style:decimal}.fa-page ul{list-style:disc;padding-left:22px}.fa-opts li{margin:3px 0}
+.fa-box{display:inline-block;width:.9em;height:.9em;border:1.5px solid currentColor;margin-right:6px;vertical-align:-1px}
+.fa-correct{font-weight:700;color:var(--fa-good)}.fa-correct::after{content:" ✓"}
+.fa-parts li{margin:6px 0}
+.fa-lines .fa-line{border-bottom:1px solid #b9bdd8;height:1.9em}
+.fa-key{background:#e8f7ef;border-left:4px solid var(--fa-good);padding:6px 10px;margin:6px 0;border-radius:4px}
+.fa-model{background:#eef1ff;border-left:4px solid var(--fa-accent);padding:6px 10px;margin:6px 0;border-radius:4px}
+.fa-mis{font-size:.9rem;color:#7a3a00;margin:4px 0}
+.fa-sol summary{cursor:pointer;font-weight:700}
+.fa-rubric{margin-top:8px;font-size:.85rem}
+/* print sheet */
+.fa-sheet{background:#fff;color:#14173a;padding:28px 34px;max-width:8.5in;margin:0 auto 20px;box-shadow:0 2px 10px rgba(0,0,0,.12);border-radius:4px}
+.fa-sheet-head{display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid #14173a;padding-bottom:8px;margin-bottom:10px}
+.fa-sheet-head h2{margin:0;font-size:1.4rem}
+.fa-sheet-head .fa-name{font-size:.9rem;white-space:nowrap}
+.fa-section-h{font-family:var(--display);font-size:1.05rem;border-bottom:2px solid var(--fa-accent);padding-bottom:2px;margin:16px 0 4px;color:var(--fa-accent-text)}
+.fa-pagebreak{break-before:page}
+@media print{
+ body{background:#fff!important}.fa-noprint,.site-header,.site-footer{display:none!important}
+ .fa-page{padding:0;max-width:none}.fa-sheet{box-shadow:none;padding:0;max-width:none;margin:0}
+ .fa-panel{box-shadow:none;border-width:1px}
+ @page{size:letter;margin:.6in}
+}
+@media (max-width:600px){.fa-sheet{padding:16px}.fa-sheet-head{flex-direction:column}}
+@media (prefers-color-scheme:dark){.fa-doc{background:#16183a}.fa-key{background:#123826;color:#e6fff1}.fa-model{background:#1d2150;color:#eef}.fa-note{background:#3a3210;color:#fff}.fa-sheet{background:#fff;color:#14173a}}
+
+.cs{display:block;font-size:.9rem}.cs::after{content:"";display:block;clear:both}.cs>div{width:48.5%;float:left}.cs>div+div{float:right}.cs .box{break-inside:avoid;border:2px solid #14173a;border-radius:10px;padding:8px 10px;margin:0 0 12px}.cs h3{margin:0 0 4px;font-family:var(--display);color:var(--purple-text);font-size:1rem}
+.cs .fa-table{font-size:.82rem}.cs ul{margin:2px 0;padding-left:18px;font-size:.88rem}
+.banner{background:#7448ff;color:#fff;padding:14px 18px;border-radius:12px;margin-bottom:12px}.banner h1{margin:0;font-family:var(--display)}.banner p{margin:4px 0 0}
+.meta{display:flex;gap:8px;flex-wrap:wrap}.meta span{background:#ebe3ff;color:#5a2fd6;border-radius:99px;padding:2px 10px;font-weight:700;font-size:.85rem}
+.task{border:2px solid #14173a;border-radius:10px;padding:10px 14px;margin:10px 0;break-inside:avoid}.task h3{margin:0 0 4px;font-family:var(--display)}
+.work{border:1px dashed #9aa0c8;min-height:1.6in;border-radius:8px;margin:6px 0}
+.chk li{list-style:"☐  "}
+</style></head><body><main class="fa-page"><section class="fa-sheet"><div class="banner"><h1>Retirement &amp; Inflation — Cheat Sheet</h1><p>Financial Algebra · Unit 10: Retirement &amp; Inflation</p></div><div class="cs"><div><div class="box" style="break-inside:auto"><h3>Essential vocabulary</h3><dl style="margin:0;font-size:.84rem"><dt><strong>Inflation</strong></dt><dd style="margin:0 0 3px">A general rise in prices over time, which reduces what each dollar can buy</dd><dt><strong>Consumer Price Index (CPI)</strong></dt><dd style="margin:0 0 3px">A government measure of the average change in prices paid by consumers for a basket of goods and services</dd><dt><strong>Purchasing power</strong></dt><dd style="margin:0 0 3px">The amount of goods and services a sum of money can buy</dd><dt><strong>Real value (today’s dollars)</strong></dt><dd style="margin:0 0 3px">A future amount converted into what it would buy at today’s prices</dd><dt><strong>Nominal value</strong></dt><dd style="margin:0 0 3px">An amount in the dollars of the time, not adjusted for inflation</dd><dt><strong>401(k)</strong></dt><dd style="margin:0 0 3px">An employer-sponsored retirement savings plan funded by payroll contributions, often with an employer match</dd><dt><strong>Employer match</strong></dt><dd style="margin:0 0 3px">Money an employer contributes based on the employee’s own contributions, up to a limit</dd><dt><strong>Vesting</strong></dt><dd style="margin:0 0 3px">The schedule by which an employee gains full ownership of employer contributions</dd><dt><strong>Traditional (pre-tax) account</strong></dt><dd style="margin:0 0 3px">A retirement account funded with pre-tax dollars; withdrawals in retirement are taxed</dd><dt><strong>Roth account</strong></dt><dd style="margin:0 0 3px">A retirement account funded with after-tax dollars; qualified withdrawals in retirement are tax-free</dd><dt><strong>IRA</strong></dt><dd style="margin:0 0 3px">An Individual Retirement Account opened by a person rather than through an employer</dd><dt><strong>Nest egg</strong></dt><dd style="margin:0 0 3px">The total savings accumulated for retirement</dd><dt><strong>4% guideline</strong></dt><dd style="margin:0 0 3px">A planning rule of thumb that withdrawing about 4% of savings in the first year of retirement (adjusted for inflation after) may last about 30 years</dd><dt><strong>Social Security</strong></dt><dd style="margin:0 0 3px">A federal program funded by payroll taxes that provides retirement, disability, and survivor benefits</dd><dt><strong>Real rate of return</strong></dt><dd style="margin:0 0 3px">A return adjusted for inflation: <span class="fa-frac" role="math" aria-label="(1 + nominal) divided by (1"><span class="fa-num">(1 + nominal)</span><span class="fa-den">(1</span></span> + inflation) − 1</dd></dl></div><div class="box"><h3>Common misconceptions</h3><ul><li>Small inflation does not matter.</li><li>Cash is safest for decades.</li><li>Social Security covers everything.</li><li>Future-dollar projections show real wealth.</li></ul></div></div><div><div class="box"><h3>Key formulas</h3><div class="fa-table-wrap"><table class="fa-table "><tbody><tr><th scope="row">Future price</th><td>price × (1 + i)^t</td></tr><tr><th scope="row">Today’s dollars</th><td><span class="fa-frac" role="math" aria-label="future amount divided by (1 + i)^t"><span class="fa-num">future amount</span><span class="fa-den">(1 + i)^t</span></span></td></tr><tr><th scope="row">Inflation from CPI</th><td><span class="fa-frac" role="math" aria-label="CPI₂ − CPI₁ divided by CPI₁"><span class="fa-num">CPI₂ − CPI₁</span><span class="fa-den">CPI₁</span></span></td></tr><tr><th scope="row">Real return</th><td><span class="fa-frac" role="math" aria-label="1 + nominal divided by 1 + inflation"><span class="fa-num">1 + nominal</span><span class="fa-den">1 + inflation</span></span> − 1</td></tr><tr><th scope="row">Employer match</th><td>match rate × min(your %, limit) × salary</td></tr><tr><th scope="row">Nest egg</th><td><span class="fa-frac" role="math" aria-label="spending − other income divided by 0.04"><span class="fa-num">spending − other income</span><span class="fa-den">0.04</span></span></td></tr><tr><th scope="row">Balance projection</th><td>FV = PMT · <span class="fa-frac" role="math" aria-label="(1 + i)^N − 1 divided by i"><span class="fa-num">(1 + i)^N − 1</span><span class="fa-den">i</span></span></td></tr></tbody></table></div></div><div class="box"><h3>Account types</h3><div class="fa-table-wrap"><table class="fa-table "><tbody><tr><th scope="row">Traditional 401(k)/IRA</th><td>Tax break now; taxed at withdrawal</td></tr><tr><th scope="row">Roth 401(k)/IRA</th><td>Taxed now; qualified withdrawals tax-free</td></tr><tr><th scope="row">Employer match</th><td>Part of pay; may vest over time</td></tr><tr><th scope="row">Social Security</th><td>Partial income replacement</td></tr></tbody></table></div></div><div class="box"><h3>Worked example</h3><ol class="steps"><li>Age 25, $50,000 salary, 6% + 50% match → $375/month</li><li>At a hypothetical 6% for 42 years ≈ $851,000 (future $)</li><li>At 2.5% inflation ≈ $302,000 in today’s dollars</li><li>4% guideline → ≈ $12,000/yr (today’s $) + Social Security</li></ol></div><div class="box"><h3>Questions to ask before deciding</h3><ul><li>Am I getting the full match?</li><li>What is this projection in today’s dollars?</li><li>Roth or traditional — is my tax rate higher now or later?</li><li>When does the match vest?</li><li>What return and inflation are assumed?</li></ul></div><div class="box"><h3>Decision tips</h3><ul><li>Start early and automate.</li><li>Increase contributions 1% per year.</li><li>Always capture the full match.</li><li>Check projections in today’s dollars.</li></ul></div></div></div><p class="fa-doc-kind">Values and rates are illustrative. All examples are fictional. Mr. K's Classroom · Financial Algebra</p></section></main></body></html>

@@ -5,14 +5,17 @@ import {readFileSync,existsSync} from 'node:fs';
 const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
 const exists=path=>existsSync(new URL('../'+path,import.meta.url));
 
-test('Financial Algebra keeps the Classroom design with only disabled resource shortcuts',()=>{
+test('Financial Algebra connects the complete resource library with the Classroom design',()=>{
  const site=read('src/site.js'),index=read('index.html'),css=read('styles.css');
  for(const className of ['site-header','band','algebra-unit-card','generator-banner','algebra-unit-section','unit-pager']){
   assert.ok(index.includes(className)||site.includes(className),'Missing course style '+className);
   assert.ok(css.includes(className),'Original style missing '+className);
  }
- assert.ok(site.includes('Activities coming soon'));
- assert.ok(site.includes('aria-disabled="true"'));
+ assert.ok(site.includes('resourcesFor(unit)'));
+ assert.ok(site.includes('resourceSections(unit)'));
+ assert.ok(site.includes('financial/resources.json'));
+ assert.equal(site.includes('aria-disabled="true"'),false);
+ assert.equal(site.includes('Activities coming soon'),false);
  for(const forbidden of ['Interactive pilot available','href="lab.html','worksheet.html?unit=','practice.html?unit=','financial-algebra-budgeting-explorer']){
   assert.equal(site.includes(forbidden),false,'Unwanted activity link remains: '+forbidden);
  }

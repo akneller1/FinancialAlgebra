@@ -1,0 +1,6031 @@
+{
+ "schema": "fa-bank-1",
+ "courseId": "financial-algebra",
+ "unitId": "college",
+ "unitName": "College & Career ROI",
+ "level": "standard",
+ "generated": "deterministic",
+ "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
+ "skills": [
+  {
+   "id": "college-skill-01",
+   "name": "Estimate education costs"
+  },
+  {
+   "id": "college-skill-02",
+   "name": "Model student loan payments"
+  },
+  {
+   "id": "college-skill-03",
+   "name": "Compare career earnings"
+  },
+  {
+   "id": "college-skill-04",
+   "name": "Analyze payback periods"
+  }
+ ],
+ "vocab": [
+  {
+   "term": "Cost of attendance (COA)",
+   "skill": 1,
+   "def": "The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+   "example": "Tuition $12,400 + housing/food $13,800 + other $4,300 = $30,500 COA."
+  },
+  {
+   "term": "Sticker price",
+   "skill": 1,
+   "def": "The published cost of attendance before any financial aid",
+   "example": "A private college listed at $68,000 per year."
+  },
+  {
+   "term": "Net price",
+   "skill": 1,
+   "def": "Cost of attendance minus grants and scholarships — what the family must actually pay or borrow",
+   "example": "$30,500 − $11,000 in grants = $19,500.",
+   "mis": "Loans and work-study are not subtracted to find net price; loans must be repaid."
+  },
+  {
+   "term": "Grant",
+   "skill": 1,
+   "def": "Financial aid, usually need-based, that does not have to be repaid",
+   "example": "A federal Pell Grant."
+  },
+  {
+   "term": "Scholarship",
+   "skill": 1,
+   "def": "Gift aid, often merit-based, that does not have to be repaid",
+   "example": "A $4,000 academic scholarship renewable with a 3.0 GPA."
+  },
+  {
+   "term": "Work-study",
+   "skill": 1,
+   "def": "A financial aid program that provides part-time jobs to help students earn money for college costs",
+   "example": "$2,500 earned working at the campus library."
+  },
+  {
+   "term": "Subsidized loan",
+   "skill": 2,
+   "def": "A federal student loan for which the government pays the interest while the student is enrolled at least half-time",
+   "example": "A $3,500 Direct Subsidized Loan for a first-year student."
+  },
+  {
+   "term": "Unsubsidized loan",
+   "skill": 2,
+   "def": "A student loan that accrues interest from the time it is disbursed, including during school",
+   "example": "Interest builds while in school unless paid."
+  },
+  {
+   "term": "Capitalized interest",
+   "skill": 2,
+   "def": "Unpaid interest that is added to the loan principal, so future interest is charged on it",
+   "example": "$1,400 of in-school interest added to a $10,000 balance."
+  },
+  {
+   "term": "FAFSA",
+   "skill": 1,
+   "def": "The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+   "example": "Completing the FAFSA in senior year."
+  },
+  {
+   "term": "Return on investment (ROI)",
+   "skill": 4,
+   "def": "The gain from an investment compared with its cost, often expressed as a percent or a payback period",
+   "example": "Earning $18,000 more per year after a $54,000 program."
+  },
+  {
+   "term": "Payback period",
+   "skill": 4,
+   "def": "The time needed for extra earnings to cover the cost of an investment",
+   "example": "$54,000 ÷ $18,000 per year = 3 years."
+  },
+  {
+   "term": "Opportunity cost of education",
+   "skill": 3,
+   "def": "Earnings given up while in school instead of working full-time",
+   "example": "Four years at $32,000 per year = $128,000 of forgone earnings."
+  },
+  {
+   "term": "Apprenticeship",
+   "skill": 3,
+   "def": "A paid training program combining on-the-job learning with instruction, leading to a credential",
+   "example": "A 4-year electrician apprenticeship with rising pay."
+  },
+  {
+   "term": "Lifetime earnings",
+   "skill": 3,
+   "def": "The total income earned over a working career",
+   "example": "Summing yearly salaries from age 22 to 65."
+  },
+  {
+   "term": "Completion rate",
+   "skill": 4,
+   "def": "The share of students who finish a program within a set time",
+   "example": "A 60% six-year graduation rate means many students borrow without finishing."
+  }
+ ],
+ "lessons": [
+  {
+   "skill": 1,
+   "title": "What College Really Costs",
+   "minutes": 55,
+   "objectives": [
+    "Compute cost of attendance and net price.",
+    "Interpret a financial aid offer.",
+    "Project four-year costs."
+   ],
+   "vocab": [
+    "Cost of attendance (COA)",
+    "Sticker price",
+    "Net price",
+    "Grant",
+    "Scholarship",
+    "Work-study",
+    "FAFSA"
+   ],
+   "hook": "Two schools: $31,000 and $68,000 sticker prices. Which is cheaper? Reveal aid offers.",
+   "notes": [
+    {
+     "h": "COA",
+     "body": "Tuition, fees, housing, food, books, transportation, personal."
+    },
+    {
+     "h": "Net price",
+     "body": "COA − grants − scholarships."
+    },
+    {
+     "h": "Aid offers",
+     "body": "Categorize every line: gift, earned, loan (and whose loan)."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "COA $30,500; grants $11,000; scholarship $2,000; loans $5,500.",
+     "steps": [
+      "Net price = 30,500 − 13,000 = $17,500"
+     ],
+     "answer": "$17,500 (loans help pay it)"
+    }
+   ],
+   "discussion": [
+    "Why might the sticker price mislead families?"
+   ],
+   "misconceptions": [
+    [
+     "Loans reduce the cost.",
+     "Color-code aid types."
+    ]
+   ],
+   "reflection": [
+    "What questions would you ask a college’s financial aid office?"
+   ],
+   "extension": "Use a college’s net price calculator with a fictional family profile.",
+   "differentiation": {
+    "support": [
+     "Aid offer highlighter key."
+    ],
+    "extend": [
+     "Compare 4-year totals with tuition inflation."
+    ]
+   },
+   "realWorld": "Every college must post a net price calculator on its website."
+  },
+  {
+   "skill": 2,
+   "title": "Student Loans and Repayment",
+   "minutes": 55,
+   "objectives": [
+    "Calculate student-loan payments and total interest.",
+    "Explain subsidized vs. unsubsidized loans and capitalization.",
+    "Evaluate debt relative to income."
+   ],
+   "vocab": [
+    "Subsidized loan",
+    "Unsubsidized loan",
+    "Capitalized interest"
+   ],
+   "hook": "“I’ll worry about loans after graduation.” What could go wrong?",
+   "notes": [
+    {
+     "h": "Payments",
+     "body": "Use the installment formula; standard federal plan is 10 years."
+    },
+    {
+     "h": "Capitalization",
+     "body": "Unpaid interest added to principal increases future interest."
+    },
+    {
+     "h": "Affordability",
+     "body": "Payments around 10% of gross income or less are often considered manageable."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$27,000 at 6.5% for 10 years.",
+     "steps": [
+      "PMT ≈ $306.58",
+      "Interest ≈ $9,789.60"
+     ],
+     "answer": "$306.58/month"
+    }
+   ],
+   "discussion": [
+    "How might loan payments affect other life goals?"
+   ],
+   "misconceptions": [
+    [
+     "Student loans can be ignored.",
+     "Discuss interest accrual and collection consequences."
+    ]
+   ],
+   "reflection": [
+    "What is the most you would be willing to borrow, and why?"
+   ],
+   "extension": "Research income-driven repayment plans on studentaid.gov.",
+   "differentiation": {
+    "support": [
+     "Payment calculator walkthrough."
+    ],
+    "extend": [
+     "Compare 10- and 20-year plans’ total cost."
+    ]
+   },
+   "realWorld": "Federal loan rates are set each year; private loans vary by credit."
+  },
+  {
+   "skill": 3,
+   "title": "Comparing Career Earnings",
+   "minutes": 55,
+   "objectives": [
+    "Compute lifetime earnings with raises.",
+    "Include forgone earnings and costs in comparisons.",
+    "Compare pathways over time."
+   ],
+   "vocab": [
+    "Lifetime earnings",
+    "Opportunity cost of education",
+    "Apprenticeship"
+   ],
+   "hook": "Graph: degree vs. apprenticeship cumulative earnings. Where do the lines cross?",
+   "notes": [
+    {
+     "h": "Earnings with raises",
+     "body": "Geometric growth: salary × (1 + g)^k."
+    },
+    {
+     "h": "Cumulative net",
+     "body": "Earnings − education costs − loan payments over time."
+    },
+    {
+     "h": "Uncertainty",
+     "body": "Salaries vary by region, field, and person."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$50,000 growing 3% for 20 years.",
+     "steps": [
+      "50,000(1.03^20 − 1) ÷ 0.03 ≈ $1,343,519"
+     ],
+     "answer": "≈ $1.34 million"
+    }
+   ],
+   "discussion": [
+    "What makes earnings projections uncertain?"
+   ],
+   "misconceptions": [
+    [
+     "Starting salary decides everything.",
+     "Compare growth rates."
+    ]
+   ],
+   "reflection": [
+    "What matters to you in a career beyond pay?"
+   ],
+   "extension": "Use the Decision Lab “College & Career ROI Explorer”.",
+   "differentiation": {
+    "support": [
+     "Year-by-year table template."
+    ],
+    "extend": [
+     "Find the year when cumulative earnings cross."
+    ]
+   },
+   "realWorld": "The BLS Occupational Outlook Handbook lists median pay and outlook by occupation."
+  },
+  {
+   "skill": 4,
+   "title": "Payback and ROI of Education",
+   "minutes": 55,
+   "objectives": [
+    "Compute payback periods.",
+    "Account for completion risk.",
+    "Recommend a pathway with justification."
+   ],
+   "vocab": [
+    "Return on investment (ROI)",
+    "Payback period",
+    "Completion rate"
+   ],
+   "hook": "Claim: “College is always worth it.” Students sort evidence cards into support/refute.",
+   "notes": [
+    {
+     "h": "Payback",
+     "body": "Total investment ÷ yearly earnings gain."
+    },
+    {
+     "h": "Risk",
+     "body": "Completion rates, job placement, and debt load."
+    },
+    {
+     "h": "Fit",
+     "body": "Interest and aptitude affect success and earnings."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "HVAC certificate $14,000; +$11,000/yr.",
+     "steps": [
+      "14,000 ÷ 11,000 ≈ 1.3 years"
+     ],
+     "answer": "≈ 1.3 years"
+    }
+   ],
+   "discussion": [
+    "Why might two students choose differently with the same data?"
+   ],
+   "misconceptions": [
+    [
+     "Payback ignores risk.",
+     "Adjust gains by completion rate."
+    ]
+   ],
+   "reflection": [
+    "Which pathway are you considering, and what is its ROI?"
+   ],
+   "extension": "Research a real program’s completion rate on the College Scorecard.",
+   "differentiation": {
+    "support": [
+     "ROI organizer."
+    ],
+    "extend": [
+     "Include loan interest in payback."
+    ]
+   },
+   "realWorld": "The federal College Scorecard reports costs, debt, and earnings by program."
+  }
+ ],
+ "cheatSheet": {
+  "title": "College & Career ROI",
+  "sections": [
+   {
+    "h": "Key formulas",
+    "rows": [
+     [
+      "Cost of attendance",
+      "tuition + fees + housing + food + books + other"
+     ],
+     [
+      "Net price",
+      "COA − grants − scholarships"
+     ],
+     [
+      "Loan payment",
+      "PMT = [[P · i || 1 − (1 + i)^(−n)]]"
+     ],
+     [
+      "Capitalized balance",
+      "principal + unpaid interest"
+     ],
+     [
+      "Earnings with raises",
+      "S = [[a((1 + g)^n − 1) || g]]"
+     ],
+     [
+      "Payback period",
+      "[[total cost || yearly earnings gain]]"
+     ],
+     [
+      "Debt-to-income (loans)",
+      "[[yearly loan payments || gross income]]"
+     ]
+    ]
+   },
+   {
+    "h": "Types of aid",
+    "rows": [
+     [
+      "Gift",
+      "Grants, scholarships — no repayment"
+     ],
+     [
+      "Earned",
+      "Work-study"
+     ],
+     [
+      "Borrowed (student)",
+      "Subsidized, unsubsidized"
+     ],
+     [
+      "Borrowed (parent)",
+      "Parent PLUS"
+     ]
+    ]
+   }
+  ],
+  "example": {
+   "title": "Worked example",
+   "lines": [
+    "COA $30,500 − grants $13,000 = $17,500 net",
+    "Borrow $5,500 × 4 = $22,000 at 6.5%, 10 yr",
+    "Payment ≈ $249.81/month",
+    "Starting salary $55,000 → payments ≈ 5.5% of gross"
+   ]
+  },
+  "misconceptions": [
+   "Loans reduce the price.",
+   "College is always/never worth it.",
+   "Sticker price = what you pay.",
+   "Starting salary is the only number that matters."
+  ],
+  "questions": [
+   "What is the net price for me?",
+   "How much will I borrow in total?",
+   "What do graduates of this program earn?",
+   "What is the completion rate?",
+   "What are my alternatives (transfer, apprenticeship, certificate)?"
+  ],
+  "tips": [
+   "File the FAFSA every year.",
+   "Compare net prices, not sticker prices.",
+   "Borrow no more than your expected first-year salary.",
+   "Pay interest during school if you can."
+  ]
+ },
+ "questions": [
+  {
+   "id": "fa-college-s01-vocab-def-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Cost of attendance (COA)** mean?",
+   "format": "multiple-choice",
+   "answer": "The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+   "options": [
+    {
+     "text": "Financial aid, usually need-based, that does not have to be repaid",
+     "correct": false
+    },
+    {
+     "text": "The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+     "correct": true
+    },
+    {
+     "text": "A financial aid program that provides part-time jobs to help students earn money for college costs",
+     "correct": false
+    },
+    {
+     "text": "The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Cost of attendance (COA): The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+    "Example: Tuition $12,400 + housing/food $13,800 + other $4,300 = $30,500 COA."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-term-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses”",
+   "format": "multiple-choice",
+   "answer": "Cost of attendance (COA)",
+   "options": [
+    {
+     "text": "Return on investment (ROI)",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": false
+    },
+    {
+     "text": "Sticker price",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Cost of attendance (COA).",
+    "Example: Tuition $12,400 + housing/food $13,800 + other $4,300 = $30,500 COA."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-ex-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Tuition $12,400 + housing/food $13,800 + other $4,300 = $30,500 COA.",
+   "format": "multiple-choice",
+   "answer": "Cost of attendance (COA)",
+   "options": [
+    {
+     "text": "Scholarship",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": true
+    },
+    {
+     "text": "Return on investment (ROI)",
+     "correct": false
+    },
+    {
+     "text": "Lifetime earnings",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Cost of attendance (COA): The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-def-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Sticker price** mean?",
+   "format": "multiple-choice",
+   "answer": "The published cost of attendance before any financial aid",
+   "options": [
+    {
+     "text": "A paid training program combining on-the-job learning with instruction, leading to a credential",
+     "correct": false
+    },
+    {
+     "text": "The published cost of attendance before any financial aid",
+     "correct": true
+    },
+    {
+     "text": "A student loan that accrues interest from the time it is disbursed, including during school",
+     "correct": false
+    },
+    {
+     "text": "The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Sticker price: The published cost of attendance before any financial aid",
+    "Example: A private college listed at $68,000 per year."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-term-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The published cost of attendance before any financial aid”",
+   "format": "multiple-choice",
+   "answer": "Sticker price",
+   "options": [
+    {
+     "text": "Sticker price",
+     "correct": true
+    },
+    {
+     "text": "Lifetime earnings",
+     "correct": false
+    },
+    {
+     "text": "Net price",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Sticker price.",
+    "Example: A private college listed at $68,000 per year."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-ex-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A private college listed at $68,000 per year.",
+   "format": "multiple-choice",
+   "answer": "Sticker price",
+   "options": [
+    {
+     "text": "Completion rate",
+     "correct": false
+    },
+    {
+     "text": "Sticker price",
+     "correct": true
+    },
+    {
+     "text": "Grant",
+     "correct": false
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Sticker price: The published cost of attendance before any financial aid"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-def-03",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Net price** mean?",
+   "format": "multiple-choice",
+   "answer": "Cost of attendance minus grants and scholarships — what the family must actually pay or borrow",
+   "options": [
+    {
+     "text": "The total income earned over a working career",
+     "correct": false
+    },
+    {
+     "text": "The time needed for extra earnings to cover the cost of an investment",
+     "correct": false
+    },
+    {
+     "text": "A paid training program combining on-the-job learning with instruction, leading to a credential",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance minus grants and scholarships — what the family must actually pay or borrow",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Net price: Cost of attendance minus grants and scholarships — what the family must actually pay or borrow",
+    "Example: $30,500 − $11,000 in grants = $19,500."
+   ],
+   "misconceptions": [
+    "Loans and work-study are not subtracted to find net price; loans must be repaid."
+   ],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-term-03",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Cost of attendance minus grants and scholarships — what the family must actually pay or borrow”",
+   "format": "multiple-choice",
+   "answer": "Net price",
+   "options": [
+    {
+     "text": "Opportunity cost of education",
+     "correct": false
+    },
+    {
+     "text": "Net price",
+     "correct": true
+    },
+    {
+     "text": "Lifetime earnings",
+     "correct": false
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Net price.",
+    "Example: $30,500 − $11,000 in grants = $19,500."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-ex-03",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $30,500 − $11,000 in grants = $19,500.",
+   "format": "multiple-choice",
+   "answer": "Net price",
+   "options": [
+    {
+     "text": "Completion rate",
+     "correct": false
+    },
+    {
+     "text": "Net price",
+     "correct": true
+    },
+    {
+     "text": "Scholarship",
+     "correct": false
+    },
+    {
+     "text": "Payback period",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Net price: Cost of attendance minus grants and scholarships — what the family must actually pay or borrow"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-def-04",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Grant** mean?",
+   "format": "multiple-choice",
+   "answer": "Financial aid, usually need-based, that does not have to be repaid",
+   "options": [
+    {
+     "text": "Gift aid, often merit-based, that does not have to be repaid",
+     "correct": false
+    },
+    {
+     "text": "Financial aid, usually need-based, that does not have to be repaid",
+     "correct": true
+    },
+    {
+     "text": "The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+     "correct": false
+    },
+    {
+     "text": "The total income earned over a working career",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Grant: Financial aid, usually need-based, that does not have to be repaid",
+    "Example: A federal Pell Grant."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-term-04",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Financial aid, usually need-based, that does not have to be repaid”",
+   "format": "multiple-choice",
+   "answer": "Grant",
+   "options": [
+    {
+     "text": "Sticker price",
+     "correct": false
+    },
+    {
+     "text": "Apprenticeship",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": false
+    },
+    {
+     "text": "Grant",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Grant.",
+    "Example: A federal Pell Grant."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-ex-04",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A federal Pell Grant.",
+   "format": "multiple-choice",
+   "answer": "Grant",
+   "options": [
+    {
+     "text": "Grant",
+     "correct": true
+    },
+    {
+     "text": "Apprenticeship",
+     "correct": false
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost of education",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Grant: Financial aid, usually need-based, that does not have to be repaid"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-def-05",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Scholarship** mean?",
+   "format": "multiple-choice",
+   "answer": "Gift aid, often merit-based, that does not have to be repaid",
+   "options": [
+    {
+     "text": "The gain from an investment compared with its cost, often expressed as a percent or a payback period",
+     "correct": false
+    },
+    {
+     "text": "Financial aid, usually need-based, that does not have to be repaid",
+     "correct": false
+    },
+    {
+     "text": "The time needed for extra earnings to cover the cost of an investment",
+     "correct": false
+    },
+    {
+     "text": "Gift aid, often merit-based, that does not have to be repaid",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Scholarship: Gift aid, often merit-based, that does not have to be repaid",
+    "Example: A $4,000 academic scholarship renewable with a 3.0 GPA."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-term-05",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Gift aid, often merit-based, that does not have to be repaid”",
+   "format": "multiple-choice",
+   "answer": "Scholarship",
+   "options": [
+    {
+     "text": "Scholarship",
+     "correct": true
+    },
+    {
+     "text": "Sticker price",
+     "correct": false
+    },
+    {
+     "text": "Apprenticeship",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Scholarship.",
+    "Example: A $4,000 academic scholarship renewable with a 3.0 GPA."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-ex-05",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A $4,000 academic scholarship renewable with a 3.0 GPA.",
+   "format": "multiple-choice",
+   "answer": "Scholarship",
+   "options": [
+    {
+     "text": "Opportunity cost of education",
+     "correct": false
+    },
+    {
+     "text": "Scholarship",
+     "correct": true
+    },
+    {
+     "text": "Completion rate",
+     "correct": false
+    },
+    {
+     "text": "Return on investment (ROI)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Scholarship: Gift aid, often merit-based, that does not have to be repaid"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-def-06",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Work-study** mean?",
+   "format": "multiple-choice",
+   "answer": "A financial aid program that provides part-time jobs to help students earn money for college costs",
+   "options": [
+    {
+     "text": "Unpaid interest that is added to the loan principal, so future interest is charged on it",
+     "correct": false
+    },
+    {
+     "text": "A financial aid program that provides part-time jobs to help students earn money for college costs",
+     "correct": true
+    },
+    {
+     "text": "The gain from an investment compared with its cost, often expressed as a percent or a payback period",
+     "correct": false
+    },
+    {
+     "text": "A federal student loan for which the government pays the interest while the student is enrolled at least half-time",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Work-study: A financial aid program that provides part-time jobs to help students earn money for college costs",
+    "Example: $2,500 earned working at the campus library."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-term-06",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A financial aid program that provides part-time jobs to help students earn money for college costs”",
+   "format": "multiple-choice",
+   "answer": "Work-study",
+   "options": [
+    {
+     "text": "Net price",
+     "correct": false
+    },
+    {
+     "text": "Work-study",
+     "correct": true
+    },
+    {
+     "text": "Opportunity cost of education",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Work-study.",
+    "Example: $2,500 earned working at the campus library."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-ex-06",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $2,500 earned working at the campus library.",
+   "format": "multiple-choice",
+   "answer": "Work-study",
+   "options": [
+    {
+     "text": "Apprenticeship",
+     "correct": false
+    },
+    {
+     "text": "Work-study",
+     "correct": true
+    },
+    {
+     "text": "Completion rate",
+     "correct": false
+    },
+    {
+     "text": "Lifetime earnings",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Work-study: A financial aid program that provides part-time jobs to help students earn money for college costs"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-def-07",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Subsidized loan** mean?",
+   "format": "multiple-choice",
+   "answer": "A federal student loan for which the government pays the interest while the student is enrolled at least half-time",
+   "options": [
+    {
+     "text": "The share of students who finish a program within a set time",
+     "correct": false
+    },
+    {
+     "text": "A federal student loan for which the government pays the interest while the student is enrolled at least half-time",
+     "correct": true
+    },
+    {
+     "text": "A paid training program combining on-the-job learning with instruction, leading to a credential",
+     "correct": false
+    },
+    {
+     "text": "Earnings given up while in school instead of working full-time",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Subsidized loan: A federal student loan for which the government pays the interest while the student is enrolled at least half-time",
+    "Example: A $3,500 Direct Subsidized Loan for a first-year student."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-term-07",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A federal student loan for which the government pays the interest while the student is enrolled at least half-time”",
+   "format": "multiple-choice",
+   "answer": "Subsidized loan",
+   "options": [
+    {
+     "text": "Return on investment (ROI)",
+     "correct": false
+    },
+    {
+     "text": "Payback period",
+     "correct": false
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": true
+    },
+    {
+     "text": "Work-study",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Subsidized loan.",
+    "Example: A $3,500 Direct Subsidized Loan for a first-year student."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-ex-07",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A $3,500 Direct Subsidized Loan for a first-year student.",
+   "format": "multiple-choice",
+   "answer": "Subsidized loan",
+   "options": [
+    {
+     "text": "Return on investment (ROI)",
+     "correct": false
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": true
+    },
+    {
+     "text": "Net price",
+     "correct": false
+    },
+    {
+     "text": "Sticker price",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Subsidized loan: A federal student loan for which the government pays the interest while the student is enrolled at least half-time"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-def-08",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Unsubsidized loan** mean?",
+   "format": "multiple-choice",
+   "answer": "A student loan that accrues interest from the time it is disbursed, including during school",
+   "options": [
+    {
+     "text": "Gift aid, often merit-based, that does not have to be repaid",
+     "correct": false
+    },
+    {
+     "text": "The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+     "correct": false
+    },
+    {
+     "text": "A student loan that accrues interest from the time it is disbursed, including during school",
+     "correct": true
+    },
+    {
+     "text": "Earnings given up while in school instead of working full-time",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Unsubsidized loan: A student loan that accrues interest from the time it is disbursed, including during school",
+    "Example: Interest builds while in school unless paid."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-term-08",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A student loan that accrues interest from the time it is disbursed, including during school”",
+   "format": "multiple-choice",
+   "answer": "Unsubsidized loan",
+   "options": [
+    {
+     "text": "Sticker price",
+     "correct": false
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Unsubsidized loan",
+     "correct": true
+    },
+    {
+     "text": "Payback period",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Unsubsidized loan.",
+    "Example: Interest builds while in school unless paid."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-ex-08",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Interest builds while in school unless paid.",
+   "format": "multiple-choice",
+   "answer": "Unsubsidized loan",
+   "options": [
+    {
+     "text": "Lifetime earnings",
+     "correct": false
+    },
+    {
+     "text": "Unsubsidized loan",
+     "correct": true
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Unsubsidized loan: A student loan that accrues interest from the time it is disbursed, including during school"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-def-09",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Capitalized interest** mean?",
+   "format": "multiple-choice",
+   "answer": "Unpaid interest that is added to the loan principal, so future interest is charged on it",
+   "options": [
+    {
+     "text": "A paid training program combining on-the-job learning with instruction, leading to a credential",
+     "correct": false
+    },
+    {
+     "text": "The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+     "correct": false
+    },
+    {
+     "text": "The time needed for extra earnings to cover the cost of an investment",
+     "correct": false
+    },
+    {
+     "text": "Unpaid interest that is added to the loan principal, so future interest is charged on it",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Capitalized interest: Unpaid interest that is added to the loan principal, so future interest is charged on it",
+    "Example: $1,400 of in-school interest added to a $10,000 balance."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-term-09",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Unpaid interest that is added to the loan principal, so future interest is charged on it”",
+   "format": "multiple-choice",
+   "answer": "Capitalized interest",
+   "options": [
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    },
+    {
+     "text": "Capitalized interest",
+     "correct": true
+    },
+    {
+     "text": "Grant",
+     "correct": false
+    },
+    {
+     "text": "Apprenticeship",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Capitalized interest.",
+    "Example: $1,400 of in-school interest added to a $10,000 balance."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-vocab-ex-09",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $1,400 of in-school interest added to a $10,000 balance.",
+   "format": "multiple-choice",
+   "answer": "Capitalized interest",
+   "options": [
+    {
+     "text": "Lifetime earnings",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": false
+    },
+    {
+     "text": "Scholarship",
+     "correct": false
+    },
+    {
+     "text": "Capitalized interest",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Capitalized interest: Unpaid interest that is added to the loan principal, so future interest is charged on it"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-def-10",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **FAFSA** mean?",
+   "format": "multiple-choice",
+   "answer": "The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+   "options": [
+    {
+     "text": "A financial aid program that provides part-time jobs to help students earn money for college costs",
+     "correct": false
+    },
+    {
+     "text": "The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+     "correct": true
+    },
+    {
+     "text": "The share of students who finish a program within a set time",
+     "correct": false
+    },
+    {
+     "text": "The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "FAFSA: The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study",
+    "Example: Completing the FAFSA in senior year."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-term-10",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study”",
+   "format": "multiple-choice",
+   "answer": "FAFSA",
+   "options": [
+    {
+     "text": "Work-study",
+     "correct": false
+    },
+    {
+     "text": "Grant",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines FAFSA.",
+    "Example: Completing the FAFSA in senior year."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-vocab-ex-10",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Completing the FAFSA in senior year.",
+   "format": "multiple-choice",
+   "answer": "FAFSA",
+   "options": [
+    {
+     "text": "FAFSA",
+     "correct": true
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    },
+    {
+     "text": "Work-study",
+     "correct": false
+    },
+    {
+     "text": "Capitalized interest",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of FAFSA: The Free Application for Federal Student Aid, used to determine eligibility for federal grants, loans, and work-study"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-def-11",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Return on investment (ROI)** mean?",
+   "format": "multiple-choice",
+   "answer": "The gain from an investment compared with its cost, often expressed as a percent or a payback period",
+   "options": [
+    {
+     "text": "The gain from an investment compared with its cost, often expressed as a percent or a payback period",
+     "correct": true
+    },
+    {
+     "text": "Financial aid, usually need-based, that does not have to be repaid",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance minus grants and scholarships — what the family must actually pay or borrow",
+     "correct": false
+    },
+    {
+     "text": "A federal student loan for which the government pays the interest while the student is enrolled at least half-time",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Return on investment (ROI): The gain from an investment compared with its cost, often expressed as a percent or a payback period",
+    "Example: Earning $18,000 more per year after a $54,000 program."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-term-11",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The gain from an investment compared with its cost, often expressed as a percent or a payback period”",
+   "format": "multiple-choice",
+   "answer": "Return on investment (ROI)",
+   "options": [
+    {
+     "text": "Return on investment (ROI)",
+     "correct": true
+    },
+    {
+     "text": "Opportunity cost of education",
+     "correct": false
+    },
+    {
+     "text": "Payback period",
+     "correct": false
+    },
+    {
+     "text": "Unsubsidized loan",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Return on investment (ROI).",
+    "Example: Earning $18,000 more per year after a $54,000 program."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-ex-11",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Earning $18,000 more per year after a $54,000 program.",
+   "format": "multiple-choice",
+   "answer": "Return on investment (ROI)",
+   "options": [
+    {
+     "text": "Work-study",
+     "correct": false
+    },
+    {
+     "text": "Unsubsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Grant",
+     "correct": false
+    },
+    {
+     "text": "Return on investment (ROI)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Return on investment (ROI): The gain from an investment compared with its cost, often expressed as a percent or a payback period"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-def-12",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Payback period** mean?",
+   "format": "multiple-choice",
+   "answer": "The time needed for extra earnings to cover the cost of an investment",
+   "options": [
+    {
+     "text": "Financial aid, usually need-based, that does not have to be repaid",
+     "correct": false
+    },
+    {
+     "text": "The time needed for extra earnings to cover the cost of an investment",
+     "correct": true
+    },
+    {
+     "text": "A student loan that accrues interest from the time it is disbursed, including during school",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance minus grants and scholarships — what the family must actually pay or borrow",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payback period: The time needed for extra earnings to cover the cost of an investment",
+    "Example: $54,000 ÷ $18,000 per year = 3 years."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-term-12",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The time needed for extra earnings to cover the cost of an investment”",
+   "format": "multiple-choice",
+   "answer": "Payback period",
+   "options": [
+    {
+     "text": "Net price",
+     "correct": false
+    },
+    {
+     "text": "Capitalized interest",
+     "correct": false
+    },
+    {
+     "text": "Payback period",
+     "correct": true
+    },
+    {
+     "text": "Grant",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Payback period.",
+    "Example: $54,000 ÷ $18,000 per year = 3 years."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-ex-12",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $54,000 ÷ $18,000 per year = 3 years.",
+   "format": "multiple-choice",
+   "answer": "Payback period",
+   "options": [
+    {
+     "text": "FAFSA",
+     "correct": false
+    },
+    {
+     "text": "Sticker price",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost of education",
+     "correct": false
+    },
+    {
+     "text": "Payback period",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Payback period: The time needed for extra earnings to cover the cost of an investment"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-def-13",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Opportunity cost of education** mean?",
+   "format": "multiple-choice",
+   "answer": "Earnings given up while in school instead of working full-time",
+   "options": [
+    {
+     "text": "Earnings given up while in school instead of working full-time",
+     "correct": true
+    },
+    {
+     "text": "The share of students who finish a program within a set time",
+     "correct": false
+    },
+    {
+     "text": "A financial aid program that provides part-time jobs to help students earn money for college costs",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance minus grants and scholarships — what the family must actually pay or borrow",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Opportunity cost of education: Earnings given up while in school instead of working full-time",
+    "Example: Four years at $32,000 per year = $128,000 of forgone earnings."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-term-13",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Earnings given up while in school instead of working full-time”",
+   "format": "multiple-choice",
+   "answer": "Opportunity cost of education",
+   "options": [
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    },
+    {
+     "text": "Net price",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost of education",
+     "correct": true
+    },
+    {
+     "text": "Unsubsidized loan",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Opportunity cost of education.",
+    "Example: Four years at $32,000 per year = $128,000 of forgone earnings."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-ex-13",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Four years at $32,000 per year = $128,000 of forgone earnings.",
+   "format": "multiple-choice",
+   "answer": "Opportunity cost of education",
+   "options": [
+    {
+     "text": "Subsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Return on investment (ROI)",
+     "correct": false
+    },
+    {
+     "text": "Grant",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost of education",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Opportunity cost of education: Earnings given up while in school instead of working full-time"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-def-14",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Apprenticeship** mean?",
+   "format": "multiple-choice",
+   "answer": "A paid training program combining on-the-job learning with instruction, leading to a credential",
+   "options": [
+    {
+     "text": "The gain from an investment compared with its cost, often expressed as a percent or a payback period",
+     "correct": false
+    },
+    {
+     "text": "The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+     "correct": false
+    },
+    {
+     "text": "A paid training program combining on-the-job learning with instruction, leading to a credential",
+     "correct": true
+    },
+    {
+     "text": "Earnings given up while in school instead of working full-time",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Apprenticeship: A paid training program combining on-the-job learning with instruction, leading to a credential",
+    "Example: A 4-year electrician apprenticeship with rising pay."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-term-14",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A paid training program combining on-the-job learning with instruction, leading to a credential”",
+   "format": "multiple-choice",
+   "answer": "Apprenticeship",
+   "options": [
+    {
+     "text": "Payback period",
+     "correct": false
+    },
+    {
+     "text": "Apprenticeship",
+     "correct": true
+    },
+    {
+     "text": "Subsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Capitalized interest",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Apprenticeship.",
+    "Example: A 4-year electrician apprenticeship with rising pay."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-ex-14",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A 4-year electrician apprenticeship with rising pay.",
+   "format": "multiple-choice",
+   "answer": "Apprenticeship",
+   "options": [
+    {
+     "text": "Unsubsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Apprenticeship",
+     "correct": true
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Apprenticeship: A paid training program combining on-the-job learning with instruction, leading to a credential"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-def-15",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Lifetime earnings** mean?",
+   "format": "multiple-choice",
+   "answer": "The total income earned over a working career",
+   "options": [
+    {
+     "text": "The total estimated yearly cost of college: tuition, fees, housing, food, books, transportation, and personal expenses",
+     "correct": false
+    },
+    {
+     "text": "The total income earned over a working career",
+     "correct": true
+    },
+    {
+     "text": "Financial aid, usually need-based, that does not have to be repaid",
+     "correct": false
+    },
+    {
+     "text": "Gift aid, often merit-based, that does not have to be repaid",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Lifetime earnings: The total income earned over a working career",
+    "Example: Summing yearly salaries from age 22 to 65."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-term-15",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The total income earned over a working career”",
+   "format": "multiple-choice",
+   "answer": "Lifetime earnings",
+   "options": [
+    {
+     "text": "Grant",
+     "correct": false
+    },
+    {
+     "text": "Sticker price",
+     "correct": false
+    },
+    {
+     "text": "Net price",
+     "correct": false
+    },
+    {
+     "text": "Lifetime earnings",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Lifetime earnings.",
+    "Example: Summing yearly salaries from age 22 to 65."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-vocab-ex-15",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Summing yearly salaries from age 22 to 65.",
+   "format": "multiple-choice",
+   "answer": "Lifetime earnings",
+   "options": [
+    {
+     "text": "Completion rate",
+     "correct": false
+    },
+    {
+     "text": "FAFSA",
+     "correct": false
+    },
+    {
+     "text": "Lifetime earnings",
+     "correct": true
+    },
+    {
+     "text": "Unsubsidized loan",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Lifetime earnings: The total income earned over a working career"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-def-16",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Completion rate** mean?",
+   "format": "multiple-choice",
+   "answer": "The share of students who finish a program within a set time",
+   "options": [
+    {
+     "text": "A federal student loan for which the government pays the interest while the student is enrolled at least half-time",
+     "correct": false
+    },
+    {
+     "text": "Unpaid interest that is added to the loan principal, so future interest is charged on it",
+     "correct": false
+    },
+    {
+     "text": "The published cost of attendance before any financial aid",
+     "correct": false
+    },
+    {
+     "text": "The share of students who finish a program within a set time",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Completion rate: The share of students who finish a program within a set time",
+    "Example: A 60% six-year graduation rate means many students borrow without finishing."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-term-16",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The share of students who finish a program within a set time”",
+   "format": "multiple-choice",
+   "answer": "Completion rate",
+   "options": [
+    {
+     "text": "Completion rate",
+     "correct": true
+    },
+    {
+     "text": "Unsubsidized loan",
+     "correct": false
+    },
+    {
+     "text": "Apprenticeship",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost of education",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Completion rate.",
+    "Example: A 60% six-year graduation rate means many students borrow without finishing."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-vocab-ex-16",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A 60% six-year graduation rate means many students borrow without finishing.",
+   "format": "multiple-choice",
+   "answer": "Completion rate",
+   "options": [
+    {
+     "text": "Work-study",
+     "correct": false
+    },
+    {
+     "text": "Cost of attendance (COA)",
+     "correct": false
+    },
+    {
+     "text": "Completion rate",
+     "correct": true
+    },
+    {
+     "text": "Return on investment (ROI)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Completion rate: The share of students who finish a program within a set time"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-concept-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Which aid reduces the net price of college?",
+   "format": "multiple-choice",
+   "answer": "Grants and scholarships",
+   "options": [
+    {
+     "text": "Parent PLUS loans",
+     "correct": false
+    },
+    {
+     "text": "Grants and scholarships",
+     "correct": true
+    },
+    {
+     "text": "Federal student loans",
+     "correct": false
+    },
+    {
+     "text": "Private loans",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Gift aid lowers net price; loans only change how the cost is paid."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-concept-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Select ALL items included in cost of attendance.",
+   "format": "select-all",
+   "answer": [
+    "Tuition and fees",
+    "Housing and food",
+    "Books and supplies",
+    "Transportation"
+   ],
+   "options": [
+    {
+     "text": "Tuition and fees",
+     "correct": true
+    },
+    {
+     "text": "Books and supplies",
+     "correct": true
+    },
+    {
+     "text": "Housing and food",
+     "correct": true
+    },
+    {
+     "text": "Transportation",
+     "correct": true
+    },
+    {
+     "text": "Expected future salary",
+     "correct": false
+    },
+    {
+     "text": "Scholarships",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "COA is total yearly cost before aid."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-college-s02-concept-03",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why can an unsubsidized loan balance be larger than the amount borrowed at graduation?",
+   "format": "multiple-choice",
+   "answer": "Interest accrues during school and may be capitalized",
+   "options": [
+    {
+     "text": "Interest accrues during school and may be capitalized",
+     "correct": true
+    },
+    {
+     "text": "Balances always double",
+     "correct": false
+    },
+    {
+     "text": "Fees are charged on every payment",
+     "correct": false
+    },
+    {
+     "text": "The government adds a penalty",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Unpaid interest is added to the principal."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-concept-04",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why should forgone earnings be counted when comparing education pathways?",
+   "format": "multiple-choice",
+   "answer": "Time in school is time not earning full-time wages — an opportunity cost",
+   "options": [
+    {
+     "text": "It is required by the FAFSA",
+     "correct": false
+    },
+    {
+     "text": "Students never work during school",
+     "correct": false
+    },
+    {
+     "text": "Forgone earnings are taxed",
+     "correct": false
+    },
+    {
+     "text": "Time in school is time not earning full-time wages — an opportunity cost",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "A full comparison includes what you give up."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-concept-05",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "A $40,000 credential increases yearly earnings by $10,000. What is the simple payback period?",
+   "format": "multiple-choice",
+   "answer": "4 years",
+   "options": [
+    {
+     "text": "40 years",
+     "correct": false
+    },
+    {
+     "text": "10 years",
+     "correct": false
+    },
+    {
+     "text": "0.25 years",
+     "correct": false
+    },
+    {
+     "text": "4 years",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "40,000 ÷ 10,000 = 4."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-concept-06",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why is a program’s completion rate important to ROI?",
+   "format": "multiple-choice",
+   "answer": "Students who borrow but do not finish carry debt without the earnings boost",
+   "options": [
+    {
+     "text": "Only completers pay tuition",
+     "correct": false
+    },
+    {
+     "text": "Students who borrow but do not finish carry debt without the earnings boost",
+     "correct": true
+    },
+    {
+     "text": "Completion rates set tuition",
+     "correct": false
+    },
+    {
+     "text": "It changes interest rates",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "ROI depends on actually earning the credential."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-concept-07",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "A common guideline says total student debt should not exceed what?",
+   "format": "multiple-choice",
+   "answer": "Your expected first-year salary",
+   "options": [
+    {
+     "text": "Your expected first-year salary",
+     "correct": true
+    },
+    {
+     "text": "Your parents’ income",
+     "correct": false
+    },
+    {
+     "text": "The sticker price of college",
+     "correct": false
+    },
+    {
+     "text": "Twice your expected salary",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Keeping debt at or below starting salary keeps payments manageable (roughly 10–15% of income)."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-claim-01",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “College is always worth it.”",
+   "format": "multiple-choice",
+   "answer": "Sometimes true — it depends on the situation",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": true
+    },
+    {
+     "text": "Never true",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Sometimes — usually, on average, but it depends on cost, field, completion, and debt. A degree that is not finished or that costs far more than its earnings boost can have poor ROI; many trades and certificates have strong ROI."
+   ],
+   "modelResponse": "Sometimes — usually, on average, but it depends on cost, field, completion, and debt. A degree that is not finished or that costs far more than its earnings boost can have poor ROI; many trades and certificates have strong ROI.",
+   "misconceptions": [
+    "College is always worth it."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s04-claim-cer-01",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “College is always worth it.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Sometimes true — it depends on the situation"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "Answers vary; see model response."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Sometimes — usually, on average, but it depends on cost, field, completion, and debt. A degree that is not finished or that costs far more than its earnings boost can have poor ROI; many trades and certificates have strong ROI."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Sometimes true — it depends on the situation",
+   "solutionSteps": [
+    "Sometimes — usually, on average, but it depends on cost, field, completion, and debt. A degree that is not finished or that costs far more than its earnings boost can have poor ROI; many trades and certificates have strong ROI."
+   ],
+   "modelResponse": "Sometimes — usually, on average, but it depends on cost, field, completion, and debt. A degree that is not finished or that costs far more than its earnings boost can have poor ROI; many trades and certificates have strong ROI.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-college-s01-claim-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “Private colleges are always more expensive than public colleges.”",
+   "format": "multiple-choice",
+   "answer": "Sometimes true — it depends on the situation",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": true
+    },
+    {
+     "text": "Never true",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Sometimes. Sticker prices are higher, but generous aid can make a private college’s net price lower than a public school’s for some students. Compare net price, not sticker price."
+   ],
+   "modelResponse": "Sometimes. Sticker prices are higher, but generous aid can make a private college’s net price lower than a public school’s for some students. Compare net price, not sticker price.",
+   "misconceptions": [
+    "Private colleges are always more expensive than public colleges."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s01-claim-cer-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “Private colleges are always more expensive than public colleges.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Sometimes true — it depends on the situation"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "$68,000 sticker − $52,000 grants = $16,000 net vs. $30,500 − $8,000 = $22,500 at a public school."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Sometimes. Sticker prices are higher, but generous aid can make a private college’s net price lower than a public school’s for some students. Compare net price, not sticker price."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Sometimes true — it depends on the situation",
+   "solutionSteps": [
+    "Sometimes. Sticker prices are higher, but generous aid can make a private college’s net price lower than a public school’s for some students. Compare net price, not sticker price."
+   ],
+   "modelResponse": "Sometimes. Sticker prices are higher, but generous aid can make a private college’s net price lower than a public school’s for some students. Compare net price, not sticker price. Example: $68,000 sticker − $52,000 grants = $16,000 net vs. $30,500 − $8,000 = $22,500 at a public school.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-college-s02-claim-03",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “Student loans are “good debt,” so the amount does not matter.”",
+   "format": "multiple-choice",
+   "answer": "Never true",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": false
+    },
+    {
+     "text": "Never true",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Never true. Education debt can pay off, but large balances relative to income lead to high payments and long repayment."
+   ],
+   "modelResponse": "Never true. Education debt can pay off, but large balances relative to income lead to high payments and long repayment.",
+   "misconceptions": [
+    "Student loans are “good debt,” so the amount does not matter."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s02-claim-cer-03",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “Student loans are “good debt,” so the amount does not matter.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Never true"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "$60,000 at 6.5% for 10 years ≈ $681/month."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Never true. Education debt can pay off, but large balances relative to income lead to high payments and long repayment."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Never true",
+   "solutionSteps": [
+    "Never true. Education debt can pay off, but large balances relative to income lead to high payments and long repayment."
+   ],
+   "modelResponse": "Never true. Education debt can pay off, but large balances relative to income lead to high payments and long repayment. Example: $60,000 at 6.5% for 10 years ≈ $681/month.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-college-s03-claim-04",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “A higher starting salary always means a better career financially.”",
+   "format": "multiple-choice",
+   "answer": "Sometimes true — it depends on the situation",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": true
+    },
+    {
+     "text": "Never true",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Sometimes. Growth rate, training cost, debt, job stability, and years worked all matter."
+   ],
+   "modelResponse": "Sometimes. Growth rate, training cost, debt, job stability, and years worked all matter.",
+   "misconceptions": [
+    "A higher starting salary always means a better career financially."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-college-s03-claim-cer-04",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “A higher starting salary always means a better career financially.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Sometimes true — it depends on the situation"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "$50,000 growing 4% passes $56,000 growing 2% after about 6 years."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Sometimes. Growth rate, training cost, debt, job stability, and years worked all matter."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Sometimes true — it depends on the situation",
+   "solutionSteps": [
+    "Sometimes. Growth rate, training cost, debt, job stability, and years worked all matter."
+   ],
+   "modelResponse": "Sometimes. Growth rate, training cost, debt, job stability, and years worked all matter. Example: $50,000 growing 4% passes $56,000 growing 2% after about 6 years.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-college-s01-net-price-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Riley is admitted to Lakeview Private College: tuition and fees $46,500, housing and food $12,600, books/transportation/personal $2,800. The aid offer includes $1,000 in grants, $3,500 in scholarships, a $5,500 federal loan, and $2,500 in work-study. What is the net price for the year?",
+   "format": "short-answer",
+   "answer": "$57,400.00",
+   "numeric": {
+    "value": 57400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "COA = $46,500 + $12,600 + $2,800 = $61,900.",
+    "Net price = COA − grants − scholarships = $61,900 − $1,000 − $3,500 = $57,400.",
+    "Loans and work-study help pay the net price; they do not reduce it."
+   ],
+   "misconceptions": [
+    "Subtracting loans from COA."
+   ]
+  },
+  {
+   "id": "fa-college-s01-net-price-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Mei is admitted to Harbor City Technical Institute: tuition and fees $9,200, housing and food $11,000, books/transportation/personal $3,500. The aid offer includes $8,500 in grants, $6,000 in scholarships, a $5,500 federal loan, and $2,500 in work-study. What is the net price for the year?",
+   "format": "short-answer",
+   "answer": "$9,200.00",
+   "numeric": {
+    "value": 9200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "COA = $9,200 + $11,000 + $3,500 = $23,700.",
+    "Net price = COA − grants − scholarships = $23,700 − $8,500 − $6,000 = $9,200.",
+    "Loans and work-study help pay the net price; they do not reduce it."
+   ],
+   "misconceptions": [
+    "Subtracting loans from COA."
+   ]
+  },
+  {
+   "id": "fa-college-s01-net-price-03",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Grace is admitted to Lakeview Private College: tuition and fees $46,500, housing and food $15,000, books/transportation/personal $4,700. The aid offer includes $10,500 in grants, $5,000 in scholarships, a $5,500 federal loan, and $2,500 in work-study. What is the net price for the year?",
+   "format": "short-answer",
+   "answer": "$50,700.00",
+   "numeric": {
+    "value": 50700,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "COA = $46,500 + $15,000 + $4,700 = $66,200.",
+    "Net price = COA − grants − scholarships = $66,200 − $10,500 − $5,000 = $50,700.",
+    "Loans and work-study help pay the net price; they do not reduce it."
+   ],
+   "misconceptions": [
+    "Subtracting loans from COA."
+   ]
+  },
+  {
+   "id": "fa-college-s01-net-price-04",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Hana is admitted to Lakeview Private College: tuition and fees $46,500, housing and food $9,800, books/transportation/personal $2,600. The aid offer includes $2,500 in grants, $4,000 in scholarships, a $5,500 federal loan, and $2,500 in work-study. What is the net price for the year?",
+   "format": "short-answer",
+   "answer": "$52,400.00",
+   "numeric": {
+    "value": 52400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "COA = $46,500 + $9,800 + $2,600 = $58,900.",
+    "Net price = COA − grants − scholarships = $58,900 − $2,500 − $4,000 = $52,400.",
+    "Loans and work-study help pay the net price; they do not reduce it."
+   ],
+   "misconceptions": [
+    "Subtracting loans from COA."
+   ]
+  },
+  {
+   "id": "fa-college-s01-net-price-05",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Riley is admitted to Lakeview Private College: tuition and fees $46,500, housing and food $12,200, books/transportation/personal $2,800. The aid offer includes $9,500 in grants, $1,500 in scholarships, a $5,500 federal loan, and $2,500 in work-study. What is the net price for the year?",
+   "format": "short-answer",
+   "answer": "$50,500.00",
+   "numeric": {
+    "value": 50500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "COA = $46,500 + $12,200 + $2,800 = $61,500.",
+    "Net price = COA − grants − scholarships = $61,500 − $9,500 − $1,500 = $50,500.",
+    "Loans and work-study help pay the net price; they do not reduce it."
+   ],
+   "misconceptions": [
+    "Subtracting loans from COA."
+   ]
+  },
+  {
+   "id": "fa-college-s01-net-price-06",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Noah is admitted to State University at Riverton: tuition and fees $12,400, housing and food $13,400, books/transportation/personal $3,700. The aid offer includes $6,500 in grants, $4,500 in scholarships, a $5,500 federal loan, and $2,500 in work-study. What is the net price for the year?",
+   "format": "short-answer",
+   "answer": "$18,500.00",
+   "numeric": {
+    "value": 18500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "COA = $12,400 + $13,400 + $3,700 = $29,500.",
+    "Net price = COA − grants − scholarships = $29,500 − $6,500 − $4,500 = $18,500.",
+    "Loans and work-study help pay the net price; they do not reduce it."
+   ],
+   "misconceptions": [
+    "Subtracting loans from COA."
+   ]
+  },
+  {
+   "id": "fa-college-s01-net-price-07",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Mateo is admitted to State University at Riverton: tuition and fees $12,400, housing and food $10,400, books/transportation/personal $2,600. The aid offer includes $6,000 in grants, $5,500 in scholarships, a $5,500 federal loan, and $2,500 in work-study. What is the net price for the year?",
+   "format": "short-answer",
+   "answer": "$13,900.00",
+   "numeric": {
+    "value": 13900,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "COA = $12,400 + $10,400 + $2,600 = $25,400.",
+    "Net price = COA − grants − scholarships = $25,400 − $6,000 − $5,500 = $13,900.",
+    "Loans and work-study help pay the net price; they do not reduce it."
+   ],
+   "misconceptions": [
+    "Subtracting loans from COA."
+   ]
+  },
+  {
+   "id": "fa-college-s01-aid-letter-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "aid-letter",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Read Mei's fictional financial aid offer. If the family accepts all loans offered, how much is borrowed this year?",
+   "scenario": {
+    "document": {
+     "kind": "aid-offer",
+     "title": "State University at Riverton — Financial Aid Offer (fictional)",
+     "meta": [
+      [
+       "Student",
+       "Mei"
+      ],
+      [
+       "Year",
+       "First year"
+      ],
+      [
+       "Estimated cost of attendance",
+       "$30,400"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Aid",
+       "Type",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Federal Pell Grant",
+        "Grant (gift)",
+        "$5,500"
+       ],
+       [
+        "Presidential Award",
+        "Grant (gift)",
+        "$8,000"
+       ],
+       [
+        "Direct Subsidized Loan",
+        "Loan",
+        "$3,500"
+       ],
+       [
+        "Direct Unsubsidized Loan",
+        "Loan",
+        "$2,000"
+       ],
+       [
+        "Parent PLUS Loan",
+        "Loan (parent)",
+        "$10,000"
+       ],
+       [
+        "Federal Work-Study",
+        "Earned",
+        "$2,500"
+       ]
+      ]
+     },
+     "notes": [
+      "Loans must be repaid with interest. Work-study is paid as you work."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$15,500.00",
+   "numeric": {
+    "value": 15500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,500 + $2,000 + $10,000 = $15,500 (the Parent PLUS loan is the parent’s debt)."
+   ]
+  },
+  {
+   "id": "fa-college-s01-aid-letter-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "aid-letter",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Read Diego's fictional financial aid offer. After all aid listed (including loans), how much must the family still pay?",
+   "scenario": {
+    "document": {
+     "kind": "aid-offer",
+     "title": "Harbor City Technical Institute — Financial Aid Offer (fictional)",
+     "meta": [
+      [
+       "Student",
+       "Diego"
+      ],
+      [
+       "Year",
+       "First year"
+      ],
+      [
+       "Estimated cost of attendance",
+       "$27,200"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Aid",
+       "Type",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Federal Pell Grant",
+        "Grant (gift)",
+        "$5,500"
+       ],
+       [
+        "Presidential Award",
+        "Grant (gift)",
+        "$8,500"
+       ],
+       [
+        "Direct Subsidized Loan",
+        "Loan",
+        "$3,500"
+       ],
+       [
+        "Direct Unsubsidized Loan",
+        "Loan",
+        "$2,000"
+       ],
+       [
+        "Parent PLUS Loan",
+        "Loan (parent)",
+        "$0"
+       ],
+       [
+        "Federal Work-Study",
+        "Earned",
+        "$2,500"
+       ]
+      ]
+     },
+     "notes": [
+      "Loans must be repaid with interest. Work-study is paid as you work."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$7,700.00",
+   "numeric": {
+    "value": 7700,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$27,200 − $14,000 gifts − $5,500 loans = $7,700."
+   ]
+  },
+  {
+   "id": "fa-college-s01-aid-letter-03",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "aid-letter",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Read Leah's fictional financial aid offer. How much of this offer is free money (does not need to be repaid or earned)?",
+   "scenario": {
+    "document": {
+     "kind": "aid-offer",
+     "title": "Pine Ridge Community College — Financial Aid Offer (fictional)",
+     "meta": [
+      [
+       "Student",
+       "Leah"
+      ],
+      [
+       "Year",
+       "First year"
+      ],
+      [
+       "Estimated cost of attendance",
+       "$22,800"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Aid",
+       "Type",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Federal Pell Grant",
+        "Grant (gift)",
+        "$5,500"
+       ],
+       [
+        "Presidential Award",
+        "Grant (gift)",
+        "$3,500"
+       ],
+       [
+        "Direct Subsidized Loan",
+        "Loan",
+        "$3,500"
+       ],
+       [
+        "Direct Unsubsidized Loan",
+        "Loan",
+        "$2,000"
+       ],
+       [
+        "Parent PLUS Loan",
+        "Loan (parent)",
+        "$10,000"
+       ],
+       [
+        "Federal Work-Study",
+        "Earned",
+        "$2,500"
+       ]
+      ]
+     },
+     "notes": [
+      "Loans must be repaid with interest. Work-study is paid as you work."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$9,000.00",
+   "numeric": {
+    "value": 9000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Pell $5,500 + institutional grant $3,500 = $9,000."
+   ]
+  },
+  {
+   "id": "fa-college-s01-aid-letter-04",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "aid-letter",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Read Grace's fictional financial aid offer. If the family accepts all loans offered, how much is borrowed this year?",
+   "scenario": {
+    "document": {
+     "kind": "aid-offer",
+     "title": "Pine Ridge Community College — Financial Aid Offer (fictional)",
+     "meta": [
+      [
+       "Student",
+       "Grace"
+      ],
+      [
+       "Year",
+       "First year"
+      ],
+      [
+       "Estimated cost of attendance",
+       "$22,800"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Aid",
+       "Type",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Federal Pell Grant",
+        "Grant (gift)",
+        "$5,500"
+       ],
+       [
+        "Presidential Award",
+        "Grant (gift)",
+        "$11,500"
+       ],
+       [
+        "Direct Subsidized Loan",
+        "Loan",
+        "$3,500"
+       ],
+       [
+        "Direct Unsubsidized Loan",
+        "Loan",
+        "$2,000"
+       ],
+       [
+        "Parent PLUS Loan",
+        "Loan (parent)",
+        "$10,000"
+       ],
+       [
+        "Federal Work-Study",
+        "Earned",
+        "$2,500"
+       ]
+      ]
+     },
+     "notes": [
+      "Loans must be repaid with interest. Work-study is paid as you work."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$15,500.00",
+   "numeric": {
+    "value": 15500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,500 + $2,000 + $10,000 = $15,500 (the Parent PLUS loan is the parent’s debt)."
+   ]
+  },
+  {
+   "id": "fa-college-s01-aid-letter-05",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "aid-letter",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Read Priya's fictional financial aid offer. After all aid listed (including loans), how much must the family still pay?",
+   "scenario": {
+    "document": {
+     "kind": "aid-offer",
+     "title": "Pine Ridge Community College — Financial Aid Offer (fictional)",
+     "meta": [
+      [
+       "Student",
+       "Priya"
+      ],
+      [
+       "Year",
+       "First year"
+      ],
+      [
+       "Estimated cost of attendance",
+       "$22,800"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Aid",
+       "Type",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Federal Pell Grant",
+        "Grant (gift)",
+        "$5,500"
+       ],
+       [
+        "Presidential Award",
+        "Grant (gift)",
+        "$4,000"
+       ],
+       [
+        "Direct Subsidized Loan",
+        "Loan",
+        "$3,500"
+       ],
+       [
+        "Direct Unsubsidized Loan",
+        "Loan",
+        "$2,000"
+       ],
+       [
+        "Parent PLUS Loan",
+        "Loan (parent)",
+        "$10,000"
+       ],
+       [
+        "Federal Work-Study",
+        "Earned",
+        "$2,500"
+       ]
+      ]
+     },
+     "notes": [
+      "Loans must be repaid with interest. Work-study is paid as you work."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$0.00",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$22,800 − $9,500 gifts − $15,500 loans = $0."
+   ]
+  },
+  {
+   "id": "fa-college-s01-aid-letter-06",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "aid-letter",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Read Priya's fictional financial aid offer. How much of this offer is free money (does not need to be repaid or earned)?",
+   "scenario": {
+    "document": {
+     "kind": "aid-offer",
+     "title": "Harbor City Technical Institute — Financial Aid Offer (fictional)",
+     "meta": [
+      [
+       "Student",
+       "Priya"
+      ],
+      [
+       "Year",
+       "First year"
+      ],
+      [
+       "Estimated cost of attendance",
+       "$27,200"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Aid",
+       "Type",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Federal Pell Grant",
+        "Grant (gift)",
+        "$5,500"
+       ],
+       [
+        "Presidential Award",
+        "Grant (gift)",
+        "$12,000"
+       ],
+       [
+        "Direct Subsidized Loan",
+        "Loan",
+        "$3,500"
+       ],
+       [
+        "Direct Unsubsidized Loan",
+        "Loan",
+        "$2,000"
+       ],
+       [
+        "Parent PLUS Loan",
+        "Loan (parent)",
+        "$6,000"
+       ],
+       [
+        "Federal Work-Study",
+        "Earned",
+        "$2,500"
+       ]
+      ]
+     },
+     "notes": [
+      "Loans must be repaid with interest. Work-study is paid as you work."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$17,500.00",
+   "numeric": {
+    "value": 17500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Pell $5,500 + institutional grant $12,000 = $17,500."
+   ]
+  },
+  {
+   "id": "fa-college-s01-four-year-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "four-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's first-year net price is $17,000, and it is expected to rise 5% each year. What is the estimated total net price for four years?",
+   "format": "short-answer",
+   "answer": "$73,272.13",
+   "numeric": {
+    "value": 73272.13,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum of $17,000(1 + 0.05)^k for k = 0 to 3 = $73,272.13."
+   ]
+  },
+  {
+   "id": "fa-college-s01-four-year-02",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "four-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam's first-year net price is $12,500, and it is expected to rise 4% each year. What is the estimated total net price for four years?",
+   "format": "short-answer",
+   "answer": "$53,080.80",
+   "numeric": {
+    "value": 53080.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum of $12,500(1 + 0.04)^k for k = 0 to 3 = $53,080.80."
+   ]
+  },
+  {
+   "id": "fa-college-s01-four-year-03",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "four-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's first-year net price is $16,000, and it is expected to rise 5% each year. What is the estimated total net price for four years?",
+   "format": "short-answer",
+   "answer": "$68,962.00",
+   "numeric": {
+    "value": 68962,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum of $16,000(1 + 0.05)^k for k = 0 to 3 = $68,962.00."
+   ]
+  },
+  {
+   "id": "fa-college-s01-four-year-04",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "four-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's first-year net price is $28,000, and it is expected to rise 5% each year. What is the estimated total net price for four years?",
+   "format": "short-answer",
+   "answer": "$120,683.50",
+   "numeric": {
+    "value": 120683.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum of $28,000(1 + 0.05)^k for k = 0 to 3 = $120,683.50."
+   ]
+  },
+  {
+   "id": "fa-college-s01-four-year-05",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "four-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis's first-year net price is $11,500, and it is expected to rise 4% each year. What is the estimated total net price for four years?",
+   "format": "short-answer",
+   "answer": "$48,834.34",
+   "numeric": {
+    "value": 48834.34,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum of $11,500(1 + 0.04)^k for k = 0 to 3 = $48,834.34."
+   ]
+  },
+  {
+   "id": "fa-college-s02-loan-pmt-01",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila graduates owing $44,500 in student loans at 5.53%. On a 20-year repayment plan, what is the monthly payment and total interest?",
+   "format": "short-answer",
+   "answer": "$306.86 per month; total interest $29,146.40",
+   "numeric": {
+    "value": 306.86,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = [[0.0553 || 12]], n = 240.",
+    "PMT = $306.86.",
+    "Interest = $306.86 × 240 − $44,500 = $29,146.40."
+   ]
+  },
+  {
+   "id": "fa-college-s02-loan-pmt-02",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego graduates owing $18,500 in student loans at 6.5%. On a 10-year repayment plan, what is the monthly payment and total interest?",
+   "format": "short-answer",
+   "answer": "$210.06 per month; total interest $6,707.20",
+   "numeric": {
+    "value": 210.06,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = [[0.065 || 12]], n = 120.",
+    "PMT = $210.06.",
+    "Interest = $210.06 × 120 − $18,500 = $6,707.20."
+   ]
+  },
+  {
+   "id": "fa-college-s02-loan-pmt-03",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani graduates owing $28,500 in student loans at 6.5%. On a 20-year repayment plan, what is the monthly payment and total interest?",
+   "format": "short-answer",
+   "answer": "$212.49 per month; total interest $22,497.60",
+   "numeric": {
+    "value": 212.49,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = [[0.065 || 12]], n = 240.",
+    "PMT = $212.49.",
+    "Interest = $212.49 × 240 − $28,500 = $22,497.60."
+   ]
+  },
+  {
+   "id": "fa-college-s02-loan-pmt-04",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam graduates owing $44,500 in student loans at 7.05%. On a 20-year repayment plan, what is the monthly payment and total interest?",
+   "format": "short-answer",
+   "answer": "$346.34 per month; total interest $38,621.60",
+   "numeric": {
+    "value": 346.34,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = [[0.0705 || 12]], n = 240.",
+    "PMT = $346.34.",
+    "Interest = $346.34 × 240 − $44,500 = $38,621.60."
+   ]
+  },
+  {
+   "id": "fa-college-s02-loan-pmt-05",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia graduates owing $33,000 in student loans at 5.53%. On a 15-year repayment plan, what is the monthly payment and total interest?",
+   "format": "short-answer",
+   "answer": "$270.16 per month; total interest $15,628.80",
+   "numeric": {
+    "value": 270.16,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = [[0.0553 || 12]], n = 180.",
+    "PMT = $270.16.",
+    "Interest = $270.16 × 180 − $33,000 = $15,628.80."
+   ]
+  },
+  {
+   "id": "fa-college-s02-loan-pmt-06",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace graduates owing $28,500 in student loans at 7.05%. On a 10-year repayment plan, what is the monthly payment and total interest?",
+   "format": "short-answer",
+   "answer": "$331.64 per month; total interest $11,296.80",
+   "numeric": {
+    "value": 331.64,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = [[0.0705 || 12]], n = 120.",
+    "PMT = $331.64.",
+    "Interest = $331.64 × 120 − $28,500 = $11,296.80."
+   ]
+  },
+  {
+   "id": "fa-college-s02-loan-pmt-07",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima graduates owing $36,000 in student loans at 6.5%. On a 15-year repayment plan, what is the monthly payment and total interest?",
+   "format": "short-answer",
+   "answer": "$313.60 per month; total interest $20,448.00",
+   "numeric": {
+    "value": 313.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = [[0.065 || 12]], n = 180.",
+    "PMT = $313.60.",
+    "Interest = $313.60 × 180 − $36,000 = $20,448.00."
+   ]
+  },
+  {
+   "id": "fa-college-s02-capitalize-01",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "capitalize",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima borrows $3,000 in an unsubsidized loan at 6.5% simple interest at the start of college and makes no payments for 5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
+   "format": "short-answer",
+   "answer": "$3,975.00",
+   "numeric": {
+    "value": 3975,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $3,000 × 0.065 × 5 = $975.00.",
+    "New balance = $3,975.00; future interest is charged on this larger amount.",
+    "Paying interest during school prevents capitalization."
+   ]
+  },
+  {
+   "id": "fa-college-s02-capitalize-02",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "capitalize",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev borrows $5,500 in an unsubsidized loan at 5.53% simple interest at the start of college and makes no payments for 4.5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
+   "format": "short-answer",
+   "answer": "$6,868.68",
+   "numeric": {
+    "value": 6868.68,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $5,500 × 0.0553 × 4.5 = $1,368.68.",
+    "New balance = $6,868.68; future interest is charged on this larger amount.",
+    "Paying interest during school prevents capitalization."
+   ]
+  },
+  {
+   "id": "fa-college-s02-capitalize-03",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "capitalize",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan borrows $4,000 in an unsubsidized loan at 6.5% simple interest at the start of college and makes no payments for 4 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
+   "format": "short-answer",
+   "answer": "$5,040.00",
+   "numeric": {
+    "value": 5040,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $4,000 × 0.065 × 4 = $1,040.00.",
+    "New balance = $5,040.00; future interest is charged on this larger amount.",
+    "Paying interest during school prevents capitalization."
+   ]
+  },
+  {
+   "id": "fa-college-s02-capitalize-04",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "capitalize",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia borrows $5,500 in an unsubsidized loan at 5.53% simple interest at the start of college and makes no payments for 5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
+   "format": "short-answer",
+   "answer": "$7,020.75",
+   "numeric": {
+    "value": 7020.75,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $5,500 × 0.0553 × 5 = $1,520.75.",
+    "New balance = $7,020.75; future interest is charged on this larger amount.",
+    "Paying interest during school prevents capitalization."
+   ]
+  },
+  {
+   "id": "fa-college-s02-capitalize-05",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "capitalize",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev borrows $7,000 in an unsubsidized loan at 6.5% simple interest at the start of college and makes no payments for 4.5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
+   "format": "short-answer",
+   "answer": "$9,047.50",
+   "numeric": {
+    "value": 9047.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $7,000 × 0.065 × 4.5 = $2,047.50.",
+    "New balance = $9,047.50; future interest is charged on this larger amount.",
+    "Paying interest during school prevents capitalization."
+   ]
+  },
+  {
+   "id": "fa-college-s02-capitalize-06",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "capitalize",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani borrows $3,000 in an unsubsidized loan at 5.53% simple interest at the start of college and makes no payments for 4 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
+   "format": "short-answer",
+   "answer": "$3,663.60",
+   "numeric": {
+    "value": 3663.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $3,000 × 0.0553 × 4 = $663.60.",
+    "New balance = $3,663.60; future interest is charged on this larger amount.",
+    "Paying interest during school prevents capitalization."
+   ]
+  },
+  {
+   "id": "fa-college-s02-debt-income-01",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "debt-income",
+   "type": "scenario",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler expects a starting salary of $66,000 and will owe $19,000 at 6.5% on a 10-year plan. What percent of gross income will the loan payments take?",
+   "format": "multiple-choice",
+   "answer": "3.9%",
+   "options": [
+    {
+     "text": "5.9%",
+     "correct": false
+    },
+    {
+     "text": "2%",
+     "correct": false
+    },
+    {
+     "text": "3.9%",
+     "correct": true
+    },
+    {
+     "text": "2.9%",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payment = $215.74 per month = $2,588.88 per year.",
+    "$2,588.88 ÷ $66,000 = 3.9%.",
+    "Within a commonly cited manageable range."
+   ]
+  },
+  {
+   "id": "fa-college-s02-debt-income-02",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "debt-income",
+   "type": "scenario",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei expects a starting salary of $70,000 and will owe $44,000 at 6.5% on a 10-year plan. What percent of gross income will the loan payments take?",
+   "format": "multiple-choice",
+   "answer": "8.6%",
+   "options": [
+    {
+     "text": "4.3%",
+     "correct": false
+    },
+    {
+     "text": "6.3%",
+     "correct": false
+    },
+    {
+     "text": "8.6%",
+     "correct": true
+    },
+    {
+     "text": "12.8%",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payment = $499.61 per month = $5,995.32 per year.",
+    "$5,995.32 ÷ $70,000 = 8.6%.",
+    "Within a commonly cited manageable range."
+   ]
+  },
+  {
+   "id": "fa-college-s02-debt-income-03",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "debt-income",
+   "type": "scenario",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler expects a starting salary of $53,000 and will owe $23,000 at 6.5% on a 10-year plan. What percent of gross income will the loan payments take?",
+   "format": "multiple-choice",
+   "answer": "5.9%",
+   "options": [
+    {
+     "text": "4.3%",
+     "correct": false
+    },
+    {
+     "text": "5.9%",
+     "correct": true
+    },
+    {
+     "text": "3%",
+     "correct": false
+    },
+    {
+     "text": "8.9%",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payment = $261.16 per month = $3,133.92 per year.",
+    "$3,133.92 ÷ $53,000 = 5.9%.",
+    "Within a commonly cited manageable range."
+   ]
+  },
+  {
+   "id": "fa-college-s02-debt-income-04",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "debt-income",
+   "type": "scenario",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya expects a starting salary of $51,000 and will owe $50,000 at 6.5% on a 10-year plan. What percent of gross income will the loan payments take?",
+   "format": "multiple-choice",
+   "answer": "13.4%",
+   "options": [
+    {
+     "text": "13.4%",
+     "correct": true
+    },
+    {
+     "text": "20%",
+     "correct": false
+    },
+    {
+     "text": "9.8%",
+     "correct": false
+    },
+    {
+     "text": "6.7%",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payment = $567.74 per month = $6,812.88 per year.",
+    "$6,812.88 ÷ $51,000 = 13.4%.",
+    "Above ~10–12% of gross income can strain a budget."
+   ]
+  },
+  {
+   "id": "fa-college-s02-debt-income-05",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "debt-income",
+   "type": "scenario",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley expects a starting salary of $65,000 and will owe $60,000 at 6.5% on a 10-year plan. What percent of gross income will the loan payments take?",
+   "format": "multiple-choice",
+   "answer": "12.6%",
+   "options": [
+    {
+     "text": "12.6%",
+     "correct": true
+    },
+    {
+     "text": "6.3%",
+     "correct": false
+    },
+    {
+     "text": "9.2%",
+     "correct": false
+    },
+    {
+     "text": "18.9%",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payment = $681.29 per month = $8,175.48 per year.",
+    "$8,175.48 ÷ $65,000 = 12.6%.",
+    "Above ~10–12% of gross income can strain a budget."
+   ]
+  },
+  {
+   "id": "fa-college-s02-debt-income-06",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "debt-income",
+   "type": "scenario",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam expects a starting salary of $41,000 and will owe $26,000 at 6.5% on a 10-year plan. What percent of gross income will the loan payments take?",
+   "format": "multiple-choice",
+   "answer": "8.6%",
+   "options": [
+    {
+     "text": "13%",
+     "correct": false
+    },
+    {
+     "text": "8.6%",
+     "correct": true
+    },
+    {
+     "text": "6.3%",
+     "correct": false
+    },
+    {
+     "text": "4.3%",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payment = $295.22 per month = $3,542.64 per year.",
+    "$3,542.64 ÷ $41,000 = 8.6%.",
+    "Within a commonly cited manageable range."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-01",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi starts a career at $45,000 per year with 2% annual raises. What are total earnings over the first 20 years?",
+   "format": "short-answer",
+   "answer": "$1,093,381.64",
+   "numeric": {
+    "value": 1093381.64,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $45,000((1 + 0.02)^20 − 1) ÷ 0.02 = $1,093,381.64."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-02",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya starts a career at $56,000 per year with 4% annual raises. What are total earnings over the first 30 years?",
+   "format": "short-answer",
+   "answer": "$3,140,756.51",
+   "numeric": {
+    "value": 3140756.51,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $56,000((1 + 0.04)^30 − 1) ÷ 0.04 = $3,140,756.51."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-03",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus starts a career at $49,000 per year with 2% annual raises. What are total earnings over the first 30 years?",
+   "format": "short-answer",
+   "answer": "$1,987,835.88",
+   "numeric": {
+    "value": 1987835.88,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $49,000((1 + 0.02)^30 − 1) ÷ 0.02 = $1,987,835.88."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-04",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya starts a career at $59,000 per year with 3% annual raises. What are total earnings over the first 30 years?",
+   "format": "short-answer",
+   "answer": "$2,806,949.53",
+   "numeric": {
+    "value": 2806949.53,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $59,000((1 + 0.03)^30 − 1) ÷ 0.03 = $2,806,949.53."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-05",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego starts a career at $41,000 per year with 4% annual raises. What are total earnings over the first 30 years?",
+   "format": "short-answer",
+   "answer": "$2,299,482.45",
+   "numeric": {
+    "value": 2299482.45,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $41,000((1 + 0.04)^30 − 1) ÷ 0.04 = $2,299,482.45."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-06",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace starts a career at $67,000 per year with 4% annual raises. What are total earnings over the first 30 years?",
+   "format": "short-answer",
+   "answer": "$3,757,690.83",
+   "numeric": {
+    "value": 3757690.83,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $67,000((1 + 0.04)^30 − 1) ÷ 0.04 = $3,757,690.83."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-07",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima starts a career at $52,000 per year with 3% annual raises. What are total earnings over the first 10 years?",
+   "format": "short-answer",
+   "answer": "$596,121.72",
+   "numeric": {
+    "value": 596121.72,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $52,000((1 + 0.03)^10 − 1) ÷ 0.03 = $596,121.72."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-08",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah starts a career at $50,000 per year with 2% annual raises. What are total earnings over the first 10 years?",
+   "format": "short-answer",
+   "answer": "$547,486.05",
+   "numeric": {
+    "value": 547486.05,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $50,000((1 + 0.02)^10 − 1) ÷ 0.02 = $547,486.05."
+   ]
+  },
+  {
+   "id": "fa-college-s03-lifetime-09",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "lifetime",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah starts a career at $55,000 per year with 3% annual raises. What are total earnings over the first 20 years?",
+   "format": "short-answer",
+   "answer": "$1,477,870.60",
+   "numeric": {
+    "value": 1477870.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
+    "S = $55,000((1 + 0.03)^20 − 1) ÷ 0.03 = $1,477,870.60."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-01",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 40. Path A: 4-year degree (total cost $70,000, part-time earnings $6,000/yr in school, then $58,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $56,000 at 22 growing 3%). Which path is ahead at 40, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $77,226.29",
+   "options": [
+    {
+     "text": "Path A, by $77,226.29",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $147,226.29",
+     "correct": false
+    },
+    {
+     "text": "They are exactly even",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $77,226.29",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $1,374,982.10.",
+    "Path B net = $1,452,208.38.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-02",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 35. Path A: 4-year degree (total cost $55,000, part-time earnings $6,000/yr in school, then $57,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $52,000 at 22 growing 3%). Which path is ahead at 35, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $65,682.38",
+   "options": [
+    {
+     "text": "They are exactly even",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $65,682.38",
+     "correct": true
+    },
+    {
+     "text": "Path A, by $65,682.38",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $120,682.38",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $887,442.73.",
+    "Path B net = $953,125.10.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-03",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 30. Path A: 4-year degree (total cost $75,000, part-time earnings $6,000/yr in school, then $60,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $52,000 at 22 growing 3%). Which path is ahead at 30, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $111,300.27",
+   "options": [
+    {
+     "text": "Path B, by $186,300.27",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $111,300.27",
+     "correct": true
+    },
+    {
+     "text": "Path A, by $111,300.27",
+     "correct": false
+    },
+    {
+     "text": "They are exactly even",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $492,101.21.",
+    "Path B net = $603,401.47.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-04",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 40. Path A: 4-year degree (total cost $55,000, part-time earnings $6,000/yr in school, then $57,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $49,000 at 22 growing 3%). Which path is ahead at 40, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path A, by $77,175.07",
+   "options": [
+    {
+     "text": "They are exactly even",
+     "correct": false
+    },
+    {
+     "text": "Path A, by $77,175.07",
+     "correct": true
+    },
+    {
+     "text": "Path A, by $132,175.07",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $77,175.07",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $1,365,482.40.",
+    "Path B net = $1,288,307.33.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-05",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 40. Path A: 4-year degree (total cost $50,000, part-time earnings $6,000/yr in school, then $55,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $52,000 at 22 growing 3%). Which path is ahead at 40, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $37,067.62",
+   "options": [
+    {
+     "text": "They are exactly even",
+     "correct": false
+    },
+    {
+     "text": "Path A, by $37,067.62",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $37,067.62",
+     "correct": true
+    },
+    {
+     "text": "Path B, by $87,067.62",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $1,321,483.02.",
+    "Path B net = $1,358,550.64.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-06",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 30. Path A: 4-year degree (total cost $65,000, part-time earnings $6,000/yr in school, then $58,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $53,000 at 22 growing 3%). Which path is ahead at 30, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $128,295.98",
+   "options": [
+    {
+     "text": "Path B, by $128,295.98",
+     "correct": true
+    },
+    {
+     "text": "Path A, by $128,295.98",
+     "correct": false
+    },
+    {
+     "text": "They are exactly even",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $193,295.98",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $483,997.83.",
+    "Path B net = $612,293.81.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-07",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 30. Path A: 4-year degree (total cost $60,000, part-time earnings $6,000/yr in school, then $62,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $60,000 at 22 growing 3%). Which path is ahead at 30, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $149,335.58",
+   "options": [
+    {
+     "text": "They are exactly even",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $209,335.58",
+     "correct": false
+    },
+    {
+     "text": "Path A, by $149,335.58",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $149,335.58",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $525,204.58.",
+    "Path B net = $674,540.16.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-08",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 40. Path A: 4-year degree (total cost $85,000, part-time earnings $6,000/yr in school, then $52,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $58,000 at 22 growing 3%). Which path is ahead at 40, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $286,053.30",
+   "options": [
+    {
+     "text": "Path B, by $371,053.30",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $286,053.30",
+     "correct": true
+    },
+    {
+     "text": "Path A, by $286,053.30",
+     "correct": false
+    },
+    {
+     "text": "They are exactly even",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $1,212,983.95.",
+    "Path B net = $1,499,037.25.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s03-path-compare-09",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "path-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Compare cumulative net earnings from 18 to 40. Path A: 4-year degree (total cost $60,000, part-time earnings $6,000/yr in school, then $58,000 at 22 growing 3.5%). Path B: paid apprenticeship ($3,000 tools/fees, $36,000/yr from 18–21, then $59,000 at 22 growing 3%). Which path is ahead at 40, and by how much?",
+   "format": "multiple-choice",
+   "answer": "Path B, by $137,469.59",
+   "options": [
+    {
+     "text": "Path B, by $137,469.59",
+     "correct": true
+    },
+    {
+     "text": "They are exactly even",
+     "correct": false
+    },
+    {
+     "text": "Path B, by $197,469.59",
+     "correct": false
+    },
+    {
+     "text": "Path A, by $137,469.59",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Path A net = −cost + school-year earnings + salaries = $1,384,982.10.",
+    "Path B net = $1,522,451.69.",
+    "Long-run results depend on growth rates and completion; later years may change the leader."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-01",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah considers a 2-year associate degree in nursing costing $32,000 plus $30,000 in forgone earnings while studying. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "2.4 years",
+   "numeric": {
+    "value": 2.4,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $62,000.",
+    "Payback = $62,000 ÷ $26,000 ≈ 2.4 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-02",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen considers a 6-month coding bootcamp costing $15,000. It is expected to raise yearly earnings by $9,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "1.7 years",
+   "numeric": {
+    "value": 1.7,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $15,000.",
+    "Payback = $15,000 ÷ $9,000 ≈ 1.7 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-03",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace considers a CDL truck-driving program costing $6,500. It is expected to raise yearly earnings by $14,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "0.5 years",
+   "numeric": {
+    "value": 0.5,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $6,500.",
+    "Payback = $6,500 ÷ $14,000 ≈ 0.5 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-04",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila considers a CDL truck-driving program costing $6,500 plus $15,000 in forgone earnings while studying. It is expected to raise yearly earnings by $14,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "1.5 years",
+   "numeric": {
+    "value": 1.5,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $21,500.",
+    "Payback = $21,500 ÷ $14,000 ≈ 1.5 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-05",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah considers a 1-year HVAC certificate costing $14,000. It is expected to raise yearly earnings by $11,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "1.3 years",
+   "numeric": {
+    "value": 1.3,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $14,000.",
+    "Payback = $14,000 ÷ $11,000 ≈ 1.3 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-06",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler considers a 2-year associate degree in nursing costing $32,000 plus $30,000 in forgone earnings while studying. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "2.4 years",
+   "numeric": {
+    "value": 2.4,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $62,000.",
+    "Payback = $62,000 ÷ $26,000 ≈ 2.4 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-07",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya considers a 2-year associate degree in nursing costing $32,000. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "1.2 years",
+   "numeric": {
+    "value": 1.2,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $32,000.",
+    "Payback = $32,000 ÷ $26,000 ≈ 1.2 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-08",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima considers a bachelor’s in accounting costing $72,000 plus $30,000 in forgone earnings while studying. It is expected to raise yearly earnings by $19,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "5.4 years",
+   "numeric": {
+    "value": 5.4,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $102,000.",
+    "Payback = $102,000 ÷ $19,000 ≈ 5.4 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-09",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi considers a 2-year associate degree in nursing costing $32,000. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "1.2 years",
+   "numeric": {
+    "value": 1.2,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $32,000.",
+    "Payback = $32,000 ÷ $26,000 ≈ 1.2 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-payback-10",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei considers a 6-month coding bootcamp costing $15,000 plus $15,000 in forgone earnings while studying. It is expected to raise yearly earnings by $9,000. What is the payback period in years (nearest tenth)?",
+   "format": "short-answer",
+   "answer": "3.3 years",
+   "numeric": {
+    "value": 3.3,
+    "tolerance": 0.1,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Total investment = $30,000.",
+    "Payback = $30,000 ÷ $9,000 ≈ 3.3 years.",
+    "Ignores interest and raises; uncertain earnings make this an estimate."
+   ]
+  },
+  {
+   "id": "fa-college-s04-roi-or-01",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "roi-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Owen is comparing three pathways. Use the data to evaluate ROI and risk.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Pathway",
+      "Total cost (before aid)",
+      "Expected starting salary",
+      "Completion rate"
+     ],
+     "rows": [
+      [
+       "Community college → transfer",
+       "$49,000",
+       "$58,000",
+       "60%"
+      ],
+      [
+       "4-year state university",
+       "$78,000",
+       "$58,000",
+       "65%"
+      ],
+      [
+       "Electrician apprenticeship",
+       "$3,000",
+       "$62,000",
+       "75%"
+      ]
+     ]
+    },
+    "text": "High-school-only baseline salary: $34,000."
+   },
+   "parts": [
+    {
+     "prompt": "Compute the yearly earnings gain over the baseline for each pathway.",
+     "answer": "Community college → transfer: $24,000; 4-year state university: $24,000; Electrician apprenticeship: $28,000"
+    },
+    {
+     "prompt": "Compute a simple payback period for each.",
+     "answer": "Community college → transfer: 2 yr; 4-year state university: 3.3 yr; Electrician apprenticeship: 0.1 yr"
+    },
+    {
+     "prompt": "How do completion rates change the risk of each pathway?",
+     "answer": "Lower completion means a higher chance of cost without the salary gain."
+    },
+    {
+     "prompt": "Recommend a pathway for Owen, stating what personal information would change your answer.",
+     "answer": "Answers vary; interests, aid, and local job markets matter."
+    }
+   ],
+   "answer": "Community college → transfer payback 2 yr; 4-year state university payback 3.3 yr; Electrician apprenticeship payback 0.1 yr",
+   "solutionSteps": [
+    "Community college → transfer: gain $24,000; payback $49,000 ÷ $24,000 ≈ 2 years.",
+    "4-year state university: gain $24,000; payback $78,000 ÷ $24,000 ≈ 3.3 years.",
+    "Electrician apprenticeship: gain $28,000; payback $3,000 ÷ $28,000 ≈ 0.1 years."
+   ],
+   "modelResponse": "The apprenticeship has the fastest payback (0.1 years) and the highest completion rate, so it is lowest-risk financially. The transfer path reaches the same degree outcome as the university for less money (payback 2 vs 3.3 years). The best choice depends on Owen's interests and career goals; if Owen wants a field that requires a degree, the transfer path offers the best value.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-college-s04-roi-or-02",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "roi-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Nadia is comparing three pathways. Use the data to evaluate ROI and risk.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Pathway",
+      "Total cost (before aid)",
+      "Expected starting salary",
+      "Completion rate"
+     ],
+     "rows": [
+      [
+       "Community college → transfer",
+       "$49,000",
+       "$58,000",
+       "60%"
+      ],
+      [
+       "4-year state university",
+       "$78,000",
+       "$58,000",
+       "65%"
+      ],
+      [
+       "Electrician apprenticeship",
+       "$3,000",
+       "$62,000",
+       "75%"
+      ]
+     ]
+    },
+    "text": "High-school-only baseline salary: $34,000."
+   },
+   "parts": [
+    {
+     "prompt": "Compute the yearly earnings gain over the baseline for each pathway.",
+     "answer": "Community college → transfer: $24,000; 4-year state university: $24,000; Electrician apprenticeship: $28,000"
+    },
+    {
+     "prompt": "Compute a simple payback period for each.",
+     "answer": "Community college → transfer: 2 yr; 4-year state university: 3.3 yr; Electrician apprenticeship: 0.1 yr"
+    },
+    {
+     "prompt": "How do completion rates change the risk of each pathway?",
+     "answer": "Lower completion means a higher chance of cost without the salary gain."
+    },
+    {
+     "prompt": "Recommend a pathway for Nadia, stating what personal information would change your answer.",
+     "answer": "Answers vary; interests, aid, and local job markets matter."
+    }
+   ],
+   "answer": "Community college → transfer payback 2 yr; 4-year state university payback 3.3 yr; Electrician apprenticeship payback 0.1 yr",
+   "solutionSteps": [
+    "Community college → transfer: gain $24,000; payback $49,000 ÷ $24,000 ≈ 2 years.",
+    "4-year state university: gain $24,000; payback $78,000 ÷ $24,000 ≈ 3.3 years.",
+    "Electrician apprenticeship: gain $28,000; payback $3,000 ÷ $28,000 ≈ 0.1 years."
+   ],
+   "modelResponse": "The apprenticeship has the fastest payback (0.1 years) and the highest completion rate, so it is lowest-risk financially. The transfer path reaches the same degree outcome as the university for less money (payback 2 vs 3.3 years). The best choice depends on Nadia's interests and career goals; if Nadia wants a field that requires a degree, the transfer path offers the best value.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-college-s04-roi-or-03",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "roi-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Mateo is comparing three pathways. Use the data to evaluate ROI and risk.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Pathway",
+      "Total cost (before aid)",
+      "Expected starting salary",
+      "Completion rate"
+     ],
+     "rows": [
+      [
+       "Community college → transfer",
+       "$49,000",
+       "$58,000",
+       "60%"
+      ],
+      [
+       "4-year state university",
+       "$78,000",
+       "$58,000",
+       "65%"
+      ],
+      [
+       "Electrician apprenticeship",
+       "$3,000",
+       "$62,000",
+       "75%"
+      ]
+     ]
+    },
+    "text": "High-school-only baseline salary: $34,000."
+   },
+   "parts": [
+    {
+     "prompt": "Compute the yearly earnings gain over the baseline for each pathway.",
+     "answer": "Community college → transfer: $24,000; 4-year state university: $24,000; Electrician apprenticeship: $28,000"
+    },
+    {
+     "prompt": "Compute a simple payback period for each.",
+     "answer": "Community college → transfer: 2 yr; 4-year state university: 3.3 yr; Electrician apprenticeship: 0.1 yr"
+    },
+    {
+     "prompt": "How do completion rates change the risk of each pathway?",
+     "answer": "Lower completion means a higher chance of cost without the salary gain."
+    },
+    {
+     "prompt": "Recommend a pathway for Mateo, stating what personal information would change your answer.",
+     "answer": "Answers vary; interests, aid, and local job markets matter."
+    }
+   ],
+   "answer": "Community college → transfer payback 2 yr; 4-year state university payback 3.3 yr; Electrician apprenticeship payback 0.1 yr",
+   "solutionSteps": [
+    "Community college → transfer: gain $24,000; payback $49,000 ÷ $24,000 ≈ 2 years.",
+    "4-year state university: gain $24,000; payback $78,000 ÷ $24,000 ≈ 3.3 years.",
+    "Electrician apprenticeship: gain $28,000; payback $3,000 ÷ $28,000 ≈ 0.1 years."
+   ],
+   "modelResponse": "The apprenticeship has the fastest payback (0.1 years) and the highest completion rate, so it is lowest-risk financially. The transfer path reaches the same degree outcome as the university for less money (payback 2 vs 3.3 years). The best choice depends on Mateo's interests and career goals; if Mateo wants a field that requires a degree, the transfer path offers the best value.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-college-s04-roi-or-04",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "roi-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Noah is comparing three pathways. Use the data to evaluate ROI and risk.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Pathway",
+      "Total cost (before aid)",
+      "Expected starting salary",
+      "Completion rate"
+     ],
+     "rows": [
+      [
+       "Community college → transfer",
+       "$49,000",
+       "$58,000",
+       "60%"
+      ],
+      [
+       "4-year state university",
+       "$78,000",
+       "$58,000",
+       "65%"
+      ],
+      [
+       "Electrician apprenticeship",
+       "$3,000",
+       "$62,000",
+       "75%"
+      ]
+     ]
+    },
+    "text": "High-school-only baseline salary: $34,000."
+   },
+   "parts": [
+    {
+     "prompt": "Compute the yearly earnings gain over the baseline for each pathway.",
+     "answer": "Community college → transfer: $24,000; 4-year state university: $24,000; Electrician apprenticeship: $28,000"
+    },
+    {
+     "prompt": "Compute a simple payback period for each.",
+     "answer": "Community college → transfer: 2 yr; 4-year state university: 3.3 yr; Electrician apprenticeship: 0.1 yr"
+    },
+    {
+     "prompt": "How do completion rates change the risk of each pathway?",
+     "answer": "Lower completion means a higher chance of cost without the salary gain."
+    },
+    {
+     "prompt": "Recommend a pathway for Noah, stating what personal information would change your answer.",
+     "answer": "Answers vary; interests, aid, and local job markets matter."
+    }
+   ],
+   "answer": "Community college → transfer payback 2 yr; 4-year state university payback 3.3 yr; Electrician apprenticeship payback 0.1 yr",
+   "solutionSteps": [
+    "Community college → transfer: gain $24,000; payback $49,000 ÷ $24,000 ≈ 2 years.",
+    "4-year state university: gain $24,000; payback $78,000 ÷ $24,000 ≈ 3.3 years.",
+    "Electrician apprenticeship: gain $28,000; payback $3,000 ÷ $28,000 ≈ 0.1 years."
+   ],
+   "modelResponse": "The apprenticeship has the fastest payback (0.1 years) and the highest completion rate, so it is lowest-risk financially. The transfer path reaches the same degree outcome as the university for less money (payback 2 vs 3.3 years). The best choice depends on Noah's interests and career goals; if Noah wants a field that requires a degree, the transfer path offers the best value.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  }
+ ]
+}

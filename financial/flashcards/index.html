@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Algebra Flashcards | Mr. K's Classroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../lib/fa.css?v=fa-1">
+<style>
+.fc-card{perspective:1200px;max-width:640px;margin:0 auto;height:320px;cursor:pointer}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.fc-card.flipped .fc-inner{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;border:3px solid var(--edge,#14173a);border-radius:16px;box-shadow:6px 6px 0 var(--shadow,#14173a);background:var(--card,#fff);display:flex;flex-direction:column;justify-content:center;padding:22px;text-align:center;overflow:auto}
+.fc-front{font-family:var(--display);font-size:1.8rem;font-weight:800}
+.fc-back{transform:rotateY(180deg);font-size:1.08rem;text-align:left}
+.fc-kind{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--fa-accent-text);font-weight:700;margin-bottom:8px}
+.fc-bar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+.fc-print{display:none}
+@media (prefers-reduced-motion:reduce){.fc-inner{transition:none}}
+@media print{.fc-app{display:none}.fc-print{display:grid;grid-template-columns:1fr 1fr;gap:0}.fc-print div{border:1px dashed #888;padding:14px;min-height:1.9in;break-inside:avoid;font-size:11pt}.fc-print strong{font-size:14pt}}
+</style>
+</head>
+<body>
+<main class="fa-page" id="main" tabindex="-1">
+ <div class="fa-top fa-noprint"><a href="../../index.html">← Financial Algebra</a><label class="fa-field" style="flex-direction:row;align-items:center;gap:8px">Unit <select id="unit"></select></label></div>
+ <div class="fc-app">
+  <h1 id="title">Flashcards</h1>
+  <details class="fa-panel flat"><summary><strong>Choose skills</strong></summary><div class="fa-checks" id="skills"></div></details>
+  <p id="status" role="status" style="text-align:center"></p>
+  <div class="fc-card" id="card" role="button" tabindex="0" aria-label="Flashcard. Press Enter or Space to flip."><div class="fc-inner"><div class="fc-face fc-front" id="front"></div><div class="fc-face fc-back" id="back"></div></div></div>
+  <div class="fc-bar"><button class="fa-btn" id="prev">← Previous</button><button class="fa-btn" id="flip">Flip</button><button class="fa-btn" id="next">Next →</button></div>
+  <div class="fc-bar"><button class="fa-btn" id="again">Review again</button><button class="fa-btn primary" id="know">I know it ✓</button><button class="fa-btn" id="shuffle">Shuffle</button><button class="fa-btn" id="mode">Show definition first</button><button class="fa-btn" onclick="window.print()">Print cards</button></div>
+ </div>
+ <section class="fc-print" id="printCards" aria-hidden="true"></section>
+</main>
+<script src="../lib/render.js?v=fa-1"></script>
+<script src="decks.js?v=fa-1"></script>
+<script>
+(function(){'use strict';
+var R=FA_RENDER,D=window.FA_DECKS||{},ids=Object.keys(D),p=new URLSearchParams(location.search),unit=ids.indexOf(p.get('unit'))>=0?p.get('unit'):ids[0];
+var deck=D[unit],cards=[],i=0,known={},reverse=false,$=function(s){return document.getElementById(s)};
+$('unit').innerHTML=ids.map(function(u){return '<option value="'+u+'"'+(u===unit?' selected':'')+'>'+R.esc(D[u].unit)+'</option>'}).join('');
+$('unit').onchange=function(){location.search='?unit='+this.value};
+$('title').textContent=deck.unit+' Flashcards';document.title=deck.unit+' Flashcards | Financial Algebra';
+var skills=[];deck.cards.forEach(function(c){if(skills.indexOf(c.skillId)<0)skills.push(c.skillId)});skills.sort();
+$('skills').innerHTML=skills.map(function(s){return '<label><input type="checkbox" value="'+s+'" checked> Skill '+(+s.slice(-2))+'</label>'}).join('');
+function build(){var on=[].map.call(document.querySelectorAll('#skills input:checked'),function(x){return x.value});cards=deck.cards.filter(function(c){return on.indexOf(c.skillId)>=0&&!known[c.id]});i=0;show()}
+function show(){var c=$('card');c.classList.remove('flipped');if(!cards.length){$('front').textContent='All done! 🎉';$('back').textContent='';$('status').textContent='You marked every selected card as known. Shuffle or reload to review again.';return}
+var k=cards[i],term='<div class="fc-kind">'+(k.kind?R.esc(k.kind):'Vocabulary')+'</div>'+R.rich(k.front),def='<div><strong>'+R.rich(k.back)+'</strong></div>'+(k.example?'<p><em>Example:</em> '+R.rich(k.example)+'</p>':'')+(k.watch?'<p class="fa-mis"><strong>Watch out:</strong> '+R.rich(k.watch)+'</p>':'');
+$('front').innerHTML=reverse?def:term;$('back').innerHTML=reverse?'<div style="text-align:center;font-family:var(--display);font-size:1.6rem;font-weight:800">'+R.rich(k.front)+'</div>':def;
+$('status').textContent='Card '+(i+1)+' of '+cards.length+' · '+Object.keys(known).length+' known'}
+function flip(){$('card').classList.toggle('flipped')}
+$('card').onclick=flip;$('card').onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();flip()}if(e.key==='ArrowRight')$('next').click();if(e.key==='ArrowLeft')$('prev').click()};
+$('flip').onclick=flip;$('next').onclick=function(){i=(i+1)%Math.max(cards.length,1);show()};$('prev').onclick=function(){i=(i-1+cards.length)%Math.max(cards.length,1);show()};
+$('know').onclick=function(){if(!cards.length)return;known[cards[i].id]=1;cards.splice(i,1);if(i>=cards.length)i=0;show()};
+$('again').onclick=function(){if(!cards.length)return;cards.push(cards.splice(i,1)[0]);show()};
+$('shuffle').onclick=function(){known={};build();for(var a=cards.length-1;a>0;a--){var b=Math.floor(Math.random()*(a+1)),t=cards[a];cards[a]=cards[b];cards[b]=t}show()};
+$('mode').onclick=function(){reverse=!reverse;this.textContent=reverse?'Show term first':'Show definition first';show()};
+$('skills').onchange=build;
+$('printCards').innerHTML=deck.cards.map(function(c){return '<div><strong>'+R.esc(c.front)+'</strong><p>'+R.rich(c.back)+'</p>'+(c.example?'<p><em>'+R.rich(c.example)+'</em></p>':'')+'</div>'}).join('');
+build();})();
+</script>
+</body>
+</html>

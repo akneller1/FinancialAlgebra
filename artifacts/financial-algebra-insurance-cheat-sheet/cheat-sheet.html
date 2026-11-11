@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Insurance &amp; Risk Cheat Sheet | Financial Algebra</title><style>
+:root{--display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;--purple-bg:#7448ff;--purple-text:#5a2fd6;--purple-tint:#ebe3ff;--ink:#14173a;--line:#cfd3ea;--card:#fff;--edge:#14173a;--shadow:#14173a;--sun:#ffd23f}
+body{margin:0;background:#f4f5fb;font-family:var(--body);color:#14173a;line-height:1.45}/* Financial Algebra components. Loads after the Classroom styles.css and reuses its tokens. */
+:root{--fa-accent:var(--purple-bg,#7448ff);--fa-accent-text:var(--purple-text,#5a2fd6);--fa-tint:var(--purple-tint,#ebe3ff);--fa-good:#0c7a55;--fa-bad:#b3261e;--fa-paper:var(--card,#fff);--fa-ink:var(--ink,#14173a);--fa-line:var(--line,#cfd3ea)}
+.fa-page{max-width:1080px;margin:0 auto;padding:20px 16px 60px;font-family:var(--body,system-ui);color:var(--fa-ink)}
+.fa-page h1,.fa-page h2,.fa-page h3{font-family:var(--display,system-ui);line-height:1.15}
+.fa-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.fa-top a{color:var(--fa-accent-text);font-weight:700}
+.fa-panel{background:var(--fa-paper);border:3px solid var(--edge,#14173a);border-radius:14px;box-shadow:5px 5px 0 var(--shadow,#14173a);padding:16px 18px;margin:0 0 18px}
+.fa-panel.flat{box-shadow:none;border-width:2px}
+.fa-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.fa-btn{font:inherit;font-weight:700;border:3px solid var(--edge,#14173a);background:var(--fa-paper);color:var(--fa-ink);border-radius:10px;padding:8px 14px;cursor:pointer;min-height:44px}
+.fa-btn.primary{background:var(--fa-accent);color:#fff}
+.fa-btn:focus-visible,.fa-page input:focus-visible,.fa-page select:focus-visible,.fa-page textarea:focus-visible{outline:3px solid var(--sun,#ffd23f);outline-offset:2px}
+.fa-btn[disabled]{opacity:.5;cursor:not-allowed}
+.fa-field{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.95rem}
+.fa-field select,.fa-field input,.fa-page textarea{font:inherit;font-weight:400;padding:8px 10px;border:2px solid var(--fa-line);border-radius:8px;background:var(--fa-paper);color:var(--fa-ink)}
+.fa-page textarea{width:100%;min-height:90px;box-sizing:border-box}
+.fa-checks{display:flex;flex-wrap:wrap;gap:6px 14px}
+.fa-checks label{display:flex;gap:6px;align-items:center;font-weight:400}
+.fa-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.fa-tabs button[aria-selected=true]{background:var(--fa-accent);color:#fff}
+.fa-pill{display:inline-block;background:var(--fa-tint);color:var(--fa-accent-text);border-radius:999px;padding:2px 10px;font-size:.82rem;font-weight:700}
+.fa-note{background:#fff8d6;border-left:5px solid var(--sun,#ffd23f);padding:8px 12px;border-radius:6px;font-size:.92rem}
+/* fractions */
+.fa-frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 .15em;font-size:.92em;line-height:1.1}
+.fa-frac .fa-num{border-bottom:1.5px solid currentColor;padding:0 .2em}
+.fa-frac .fa-den{padding:0 .2em}
+/* tables & documents */
+.fa-table-wrap{overflow-x:auto;margin:8px 0}
+.fa-table{border-collapse:collapse;width:100%;font-size:.93rem;background:var(--fa-paper)}
+.fa-table caption{text-align:left;font-weight:700;padding:4px 0}
+.fa-table th,.fa-table td{border:1px solid var(--fa-line);padding:5px 8px;text-align:left;vertical-align:top}
+.fa-table thead th{background:var(--fa-tint)}
+.fa-table tbody th{font-weight:600}
+.fa-doc{border:2px dashed #8a8fb5;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fbfbff}
+.fa-doc figcaption{display:flex;flex-direction:column;gap:2px;margin-bottom:6px}
+.fa-doc-kind{text-transform:uppercase;font-size:.72rem;letter-spacing:.06em;color:#6b6f96;font-weight:700}
+.fa-doc-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px 14px;margin:0 0 6px}
+.fa-doc-meta div{display:flex;gap:6px}.fa-doc-meta dt{font-weight:700}.fa-doc-meta dd{margin:0}
+.fa-doc-notes{font-size:.86rem;margin:6px 0 0;padding-left:18px}
+/* questions */
+.fa-q{border-top:1px solid var(--fa-line);padding:12px 0;break-inside:avoid}
+.fa-q-head{display:flex;gap:8px;align-items:center;margin-bottom:4px}
+.fa-q-num{font-family:var(--display);font-weight:800;background:var(--fa-ink);color:#fff;border-radius:6px;min-width:26px;text-align:center;padding:0 6px}
+.fa-q-tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#6b6f96;font-weight:700}
+.fa-q-pts{margin-left:auto;font-size:.8rem;font-weight:700}
+.fa-opts{margin:6px 0 0 4px;padding-left:30px;list-style:upper-alpha}.fa-parts{padding-left:28px;list-style:lower-alpha}.fa-sol ol,.fa-page ol.steps{padding-left:24px;list-style:decimal}.fa-page ul{list-style:disc;padding-left:22px}.fa-opts li{margin:3px 0}
+.fa-box{display:inline-block;width:.9em;height:.9em;border:1.5px solid currentColor;margin-right:6px;vertical-align:-1px}
+.fa-correct{font-weight:700;color:var(--fa-good)}.fa-correct::after{content:" ✓"}
+.fa-parts li{margin:6px 0}
+.fa-lines .fa-line{border-bottom:1px solid #b9bdd8;height:1.9em}
+.fa-key{background:#e8f7ef;border-left:4px solid var(--fa-good);padding:6px 10px;margin:6px 0;border-radius:4px}
+.fa-model{background:#eef1ff;border-left:4px solid var(--fa-accent);padding:6px 10px;margin:6px 0;border-radius:4px}
+.fa-mis{font-size:.9rem;color:#7a3a00;margin:4px 0}
+.fa-sol summary{cursor:pointer;font-weight:700}
+.fa-rubric{margin-top:8px;font-size:.85rem}
+/* print sheet */
+.fa-sheet{background:#fff;color:#14173a;padding:28px 34px;max-width:8.5in;margin:0 auto 20px;box-shadow:0 2px 10px rgba(0,0,0,.12);border-radius:4px}
+.fa-sheet-head{display:flex;justify-content:space-between;gap:12px;border-bottom:3px solid #14173a;padding-bottom:8px;margin-bottom:10px}
+.fa-sheet-head h2{margin:0;font-size:1.4rem}
+.fa-sheet-head .fa-name{font-size:.9rem;white-space:nowrap}
+.fa-section-h{font-family:var(--display);font-size:1.05rem;border-bottom:2px solid var(--fa-accent);padding-bottom:2px;margin:16px 0 4px;color:var(--fa-accent-text)}
+.fa-pagebreak{break-before:page}
+@media print{
+ body{background:#fff!important}.fa-noprint,.site-header,.site-footer{display:none!important}
+ .fa-page{padding:0;max-width:none}.fa-sheet{box-shadow:none;padding:0;max-width:none;margin:0}
+ .fa-panel{box-shadow:none;border-width:1px}
+ @page{size:letter;margin:.6in}
+}
+@media (max-width:600px){.fa-sheet{padding:16px}.fa-sheet-head{flex-direction:column}}
+@media (prefers-color-scheme:dark){.fa-doc{background:#16183a}.fa-key{background:#123826;color:#e6fff1}.fa-model{background:#1d2150;color:#eef}.fa-note{background:#3a3210;color:#fff}.fa-sheet{background:#fff;color:#14173a}}
+
+.cs{display:block;font-size:.9rem}.cs::after{content:"";display:block;clear:both}.cs>div{width:48.5%;float:left}.cs>div+div{float:right}.cs .box{break-inside:avoid;border:2px solid #14173a;border-radius:10px;padding:8px 10px;margin:0 0 12px}.cs h3{margin:0 0 4px;font-family:var(--display);color:var(--purple-text);font-size:1rem}
+.cs .fa-table{font-size:.82rem}.cs ul{margin:2px 0;padding-left:18px;font-size:.88rem}
+.banner{background:#7448ff;color:#fff;padding:14px 18px;border-radius:12px;margin-bottom:12px}.banner h1{margin:0;font-family:var(--display)}.banner p{margin:4px 0 0}
+.meta{display:flex;gap:8px;flex-wrap:wrap}.meta span{background:#ebe3ff;color:#5a2fd6;border-radius:99px;padding:2px 10px;font-weight:700;font-size:.85rem}
+.task{border:2px solid #14173a;border-radius:10px;padding:10px 14px;margin:10px 0;break-inside:avoid}.task h3{margin:0 0 4px;font-family:var(--display)}
+.work{border:1px dashed #9aa0c8;min-height:1.6in;border-radius:8px;margin:6px 0}
+.chk li{list-style:"☐  "}
+</style></head><body><main class="fa-page"><section class="fa-sheet"><div class="banner"><h1>Insurance &amp; Risk — Cheat Sheet</h1><p>Financial Algebra · Unit 8: Insurance &amp; Risk</p></div><div class="cs"><div><div class="box" style="break-inside:auto"><h3>Essential vocabulary</h3><dl style="margin:0;font-size:.84rem"><dt><strong>Premium</strong></dt><dd style="margin:0 0 3px">The amount paid regularly to keep an insurance policy active, whether or not you file a claim</dd><dt><strong>Deductible</strong></dt><dd style="margin:0 0 3px">The amount you pay for covered costs before the insurer starts paying</dd><dt><strong>Copay</strong></dt><dd style="margin:0 0 3px">A fixed amount paid for a covered service, such as a doctor visit</dd><dt><strong>Coinsurance</strong></dt><dd style="margin:0 0 3px">Your percent share of covered costs after the deductible is met</dd><dt><strong>Out-of-pocket maximum</strong></dt><dd style="margin:0 0 3px">The most you pay for covered care in a plan year; after that, the plan pays 100% of covered costs</dd><dt><strong>Claim</strong></dt><dd style="margin:0 0 3px">A formal request to an insurer to pay for a covered loss</dd><dt><strong>Policy limit</strong></dt><dd style="margin:0 0 3px">The maximum amount an insurer will pay for a covered loss</dd><dt><strong>Expected value</strong></dt><dd style="margin:0 0 3px">The probability-weighted average of all possible outcomes</dd><dt><strong>Risk pooling</strong></dt><dd style="margin:0 0 3px">Many people pay premiums so the losses of the few who have claims can be covered</dd><dt><strong>Liability insurance</strong></dt><dd style="margin:0 0 3px">Coverage that pays for injuries or damage you cause to others</dd><dt><strong>Collision coverage</strong></dt><dd style="margin:0 0 3px">Auto coverage that pays to repair your own car after an accident, minus the deductible</dd><dt><strong>Comprehensive coverage</strong></dt><dd style="margin:0 0 3px">Auto coverage for non-collision damage such as theft, hail, or hitting a deer</dd><dt><strong>Network (in-network)</strong></dt><dd style="margin:0 0 3px">Doctors and facilities that have agreed to a health plan’s negotiated prices</dd><dt><strong>Health savings account (HSA)</strong></dt><dd style="margin:0 0 3px">A tax-advantaged account paired with an eligible high-deductible health plan to save for medical costs</dd><dt><strong>Self-insure</strong></dt><dd style="margin:0 0 3px">Choosing to cover a possible loss with your own savings instead of buying insurance</dd><dt><strong>Risk tolerance (insurance)</strong></dt><dd style="margin:0 0 3px">How much financial uncertainty a person can handle; affects deductible and coverage choices</dd></dl></div><div class="box"><h3>Common misconceptions</h3><ul><li>Lowest premium = cheapest plan.</li><li>Insurance is wasted if you never claim.</li><li>After the deductible, insurance pays everything.</li><li>Always choose the lowest deductible.</li></ul></div></div><div><div class="box"><h3>Key formulas</h3><div class="fa-table-wrap"><table class="fa-table "><tbody><tr><th scope="row">Claim payout</th><td>min(loss − deductible, limit)</td></tr><tr><th scope="row">Health out-of-pocket</th><td>min(bills, ded) + coins × (bills − ded) + copays, ≤ OOP max</td></tr><tr><th scope="row">Total yearly cost</th><td>premium × 12 + out-of-pocket</td></tr><tr><th scope="row">Expected value</th><td>Σ p × outcome</td></tr><tr><th scope="row">Fair premium (insurer)</th><td>expected claim × (1 + load)</td></tr><tr><th scope="row">Deductible break-even</th><td><span class="fa-frac" role="math" aria-label="extra deductible divided by yearly premium savings"><span class="fa-num">extra deductible</span><span class="fa-den">yearly premium savings</span></span></td></tr></tbody></table></div></div><div class="box"><h3>Coverage map</h3><div class="fa-table-wrap"><table class="fa-table "><tbody><tr><th scope="row">Your health</th><td>Health insurance</td></tr><tr><th scope="row">Others you injure</th><td>Liability (auto, renters/home)</td></tr><tr><th scope="row">Your car in a crash</th><td>Collision</td></tr><tr><th scope="row">Theft, hail, deer</th><td>Comprehensive</td></tr><tr><th scope="row">Your belongings (renting)</th><td>Renters insurance</td></tr></tbody></table></div></div><div class="box"><h3>Worked example</h3><ol class="steps"><li>Silver plan: $2,000 deductible, 20%, $6,000 max; premium $210/mo</li><li>$9,000 in bills: 2,000 + 0.2 × 7,000 = $3,400</li><li>Premiums: $2,520</li><li>Total yearly cost: $5,920</li></ol></div><div class="box"><h3>Questions to ask before deciding</h3><ul><li>What is the worst-case yearly cost?</li><li>Can my savings cover the deductible?</li><li>Are my doctors in network?</li><li>Are my liability limits high enough to protect my savings?</li><li>Which small risks can I self-insure?</li></ul></div><div class="box"><h3>Decision tips</h3><ul><li>Insure catastrophes; self-insure small losses.</li><li>Keep the deductible in your emergency fund.</li><li>Review coverage yearly.</li><li>Get several quotes.</li></ul></div></div></div><p class="fa-doc-kind">Values and rates are illustrative. All examples are fictional. Mr. K's Classroom · Financial Algebra</p></section></main></body></html>

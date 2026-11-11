@@ -95,3 +95,11 @@
 .outline-art{display:block;width:min(100%,230px);height:auto;margin:auto;filter:drop-shadow(0 8px 8px rgba(0,0,0,.06));}
 .course-nav-icon{display:inline-block;width:22px;height:20px;object-fit:contain;vertical-align:middle;margin-right:.27rem;}
 @media(max-width:680px){.course-nav-icon{width:20px;height:18px;}}
+
+/* Financial Algebra resource cards follow the shared unit layout. */
+.finance-resource-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem;padding:0;margin:1rem 0}
+.finance-resource-card{display:flex;flex-direction:column;gap:.65rem;height:100%;padding:1.25rem;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);text-decoration:none;box-sizing:border-box}
+.finance-resource-card strong{font-family:var(--display);font-size:1.15rem}
+.finance-resource-card span{line-height:1.5}
+.finance-resource-card span:last-child{margin-top:auto;font-weight:800;color:hsl(315 48% 30%)}
+.finance-resource-card:hover,.finance-resource-card:focus-visible{border-color:hsl(315 48% 30%);box-shadow:0 3px 10px #25112a15}

@@ -2,14 +2,11 @@
 
 This repository is a separate staging area. Production is akneller1/classroom, which must remain untouched while new courses are developed.
 
-## Financial Algebra baseline
+## Financial Algebra resources
 
-- Financial Algebra is **outline only**. All early pilot simulators, finance calculators, worksheet and assessment prototypes, practice tests, and printable materials have been removed from this staging repository.
-- The ten unit IDs and forty proposed skill labels remain stable.
-- Course ID: financial-algebra.
-- One course level: standard. No CP2/CP1/Honors choices for this subject.
-- Generators, Games, Study Guides, and Interactive Math are non-clickable Coming soon placeholders.
-- See FINANCIAL_ALGEBRA_ACTIVITY_HANDOFF.md for Claude's activity-planning brief.
+The complete resource library is integrated into the ten unit pages. Each unit links to native generators, a Decision Lab and teacher view, study guides, and project packets. The single visible course level is Standard. Exported Classroom banks use `cp1` solely for schema compatibility; they are not connected to production games.
+
+See `FA_INTEGRATION_MANIFEST.md` and `financial/resources.json` for resource paths and rebuild instructions. Grades 1–5 remain independent outlines. The removed pilot files remain absent.
 
 ## Production interfaces to preserve
 

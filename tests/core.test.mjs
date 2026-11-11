@@ -2,11 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {course,getUnit,getSkillRecords} from '../src/course.js';
 
-test('Financial Algebra has ten outline units and one level',()=>{
+test('Financial Algebra has ten resource-ready units and one level',()=>{
  assert.equal(course.id,'financial-algebra');
  assert.deepEqual(course.levels,['standard']);
  assert.equal(course.units.length,10);
- assert.ok(course.units.every(u=>u.status==='outline'));
+ assert.ok(course.units.every(u=>u.status==='ready'));
  assert.equal(course.units.reduce((n,u)=>n+u.skills.length,0),40);
 });
 test('Financial Algebra IDs are unchanged and stable for future questions',()=>{

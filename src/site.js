@@ -1,6 +1,10 @@
 import {course,getUnit} from './course.js';
 
-// Financial Algebra is an outline-only course while its activities are being planned.
+// Unit resources share one manifest with the library hub and content validation.
+const response=await fetch(new URL('../financial/resources.json',import.meta.url));
+if(!response.ok) throw new Error('Unable to load Financial Algebra resources');
+const library=await response.json();
+const resourcesFor=unit=>library.units.find(record=>record.unitId===unit.id).resources;
 const main=document.getElementById('main');
 const search=document.getElementById('q');
 const back=document.getElementById('backBtn');
@@ -39,20 +43,36 @@ function unitCard(unit,index){
  return '<li><div class="unit algebra-unit-card" data-color="purple" data-course="'+courseId+'">'+
  '<h3><a class="unit-title-link" href="'+linkFor(unit)+'"><span class="unit-num">Unit '+(index+1)+'</span>'+esc(unit.name)+'</a></h3>'+
  '<div class="unit-meta" data-lesson-list="true">'+skillList(unit)+'</div>'+
- '<span class="unit-course-status">Activities coming soon</span>'+
+ '<span class="unit-course-status">Generators · Decision Lab · Study Guides · Projects</span>'+
  '<a class="unit-open-link" href="'+linkFor(unit)+'">Open unit →</a></div></li>';
 }
 const shortcuts=[
- ['Lesson Plan','▤'],['Worksheet','≡'],['Activity','✦'],['Assessment','☑'],
- ['Games','◈'],['Study Guides','▤'],['Interactive Math','⟡']
+ ['Lesson Plan','▤','lessonPlan'],['Worksheet','≡','worksheet'],['Assessment','☑','assessment'],
+ ['Decision Lab','⟡','decisionLab'],['Practice Test','✓','practiceTest'],['Flashcards','▤','flashcards'],['Cheat Sheet','▧','cheatSheet']
 ];
-function shortcutBanner(){
+function shortcutBanner(unit){
+ const resources=resourcesFor(unit);
  return '<section class="generator-banner compact"><div class="generator-banner-heading"><h2>Create Resources for This Unit</h2></div>'+
- '<ul class="generator-shortcuts">'+shortcuts.map(([name,icon])=>
- '<li><span class="generator-shortcut" aria-disabled="true" title="Activities have not been planned and built yet">'+
+ '<ul class="generator-shortcuts">'+shortcuts.map(([name,icon,key])=>
+ '<li><a class="generator-shortcut" href="'+esc(key==='decisionLab'?resources[key].path:resources[key])+'">'+
  '<span class="generator-shortcut-icon" aria-hidden="true">'+icon+'</span>'+
- '<span class="generator-shortcut-copy"><strong>'+name+'</strong><small class="build-badge">Coming soon</small></span></span></li>').join('')+
+ '<span class="generator-shortcut-copy"><strong>'+name+'</strong></span></a></li>').join('')+
  '</ul></section>';
+}
+function resourceCard(title,path,description){
+ return '<li><a class="finance-resource-card" href="'+esc(path)+'"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a></li>';
+}
+function resourceSections(unit){
+ const r=resourcesFor(unit);
+ return '<section class="algebra-unit-section"><h2>Decision Lab</h2><p>Compare real-life choices, explore assumptions, and explain your decision.</p><ul class="finance-resource-grid">'+
+ resourceCard(r.decisionLab.title,r.decisionLab.path,'A guided seven-step investigation with a printable summary.')+
+ resourceCard('Teacher guide',r.decisionLab.teacherPath,'Teaching prompts, model reasoning, and discussion guidance.')+'</ul></section>'+
+ '<section class="algebra-unit-section"><h2>Study Guides</h2><ul class="finance-resource-grid">'+
+ resourceCard('Flashcards',r.flashcards,'Study financial vocabulary, formulas, and principles.')+
+ resourceCard('Cheat Sheet',r.cheatSheet,'A two-page printable reference.')+
+ resourceCard('Practice Test',r.practiceTest,'Check understanding with explanations and model responses.')+'</ul></section>'+
+ '<section class="algebra-unit-section"><h2>Projects</h2><ul class="finance-resource-grid">'+
+ r.projects.map(p=>resourceCard(p.title,p.path,p.grouping+' · '+p.days+' · Student packet, slides, teacher guide, and rubric')).join('')+'</ul></section>';
 }
 function pager(unit){
  const i=course.units.indexOf(unit);
@@ -70,10 +90,10 @@ function courseView(){
  const lead=crumbs([['Home','#'],[course.name,null]])+
  '<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
  '<p class="band-blurb">Apply algebra to income, budgeting, banking, borrowing, investing, and everyday financial choices.</p>'+
- '<p class="band-meta">'+course.units.length+' units · one shared course level · activity planning underway</p>';
+ '<p class="band-meta">'+course.units.length+' units · 40 skills · one course level: Standard</p>';
  return band(lead,true)+'<section class="section"><div class="wrap">'+
  '<h2 class="course-units-title">Browse by unit</h2>'+
- '<p class="course-units-status">The unit outline and skills are ready for curriculum review. All pilot activities have been removed so future learning tools can be designed from scratch.</p>'+
+ '<p class="course-units-status">Explore lesson plans, worksheets, assessments, Decision Labs, study guides, and projects. All scenarios use fictional financial information and illustrative rates.</p>'+
  (shown.length?'<ul class="units">'+shown.map(unit=>unitCard(unit,course.units.indexOf(unit))).join('')+'</ul>':
  '<div class="empty"><h2>No matching units</h2><p>Try another financial topic.</p></div>')+
  '</div></section>';
@@ -81,12 +101,11 @@ function courseView(){
 function unitView(unit){
  const lead=crumbs([['Home','#'],[course.name,'#'],[titleFor(unit),null]])+
  '<h1 tabindex="-1">'+esc(titleFor(unit))+'</h1>'+
- '<p class="band-meta">Course outline · financial concepts · activities coming soon</p>';
- const body=pager(unit)+shortcutBanner()+
+ '<p class="band-meta">Standard · financial concepts · real-life decisions</p>';
+ const body=pager(unit)+shortcutBanner(unit)+
  '<section class="algebra-unit-section"><h2>Topics in this unit</h2>'+
  '<ul class="unit-skills">'+unit.skills.map(skill=>'<li class="unit-skill">'+esc(skill)+'</li>').join('')+'</ul>'+
- '<div class="empty"><h2>Activities coming soon</h2><p>Interactive math, games, worksheets, practice tests, and simulations are being planned. No pilot activities remain on the site.</p></div>'+
- '</section>'+pager(unit);
+ '</section>'+resourceSections(unit)+pager(unit);
  return band(lead)+'<section class="section"><div class="wrap algebra-unit-layout">'+body+'</div></section>';
 }
 function currentUnit(){

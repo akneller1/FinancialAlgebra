@@ -1,0 +1,6224 @@
+{
+ "schema": "fa-bank-1",
+ "courseId": "financial-algebra",
+ "unitId": "housing",
+ "unitName": "Housing: Rent or Buy",
+ "level": "standard",
+ "generated": "deterministic",
+ "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
+ "skills": [
+  {
+   "id": "housing-skill-01",
+   "name": "Compare rental and ownership costs"
+  },
+  {
+   "id": "housing-skill-02",
+   "name": "Model a mortgage"
+  },
+  {
+   "id": "housing-skill-03",
+   "name": "Estimate ownership expenses"
+  },
+  {
+   "id": "housing-skill-04",
+   "name": "Analyze opportunity cost"
+  }
+ ],
+ "vocab": [
+  {
+   "term": "Lease (rental)",
+   "skill": 1,
+   "def": "A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+   "example": "A 12-month apartment lease at $1,650 per month."
+  },
+  {
+   "term": "Security deposit",
+   "skill": 1,
+   "def": "Money paid to a landlord up front to cover damage or unpaid rent, generally refundable",
+   "example": "One month’s rent held until move-out."
+  },
+  {
+   "term": "Renters insurance",
+   "skill": 1,
+   "def": "Insurance that covers a tenant’s belongings and liability, not the building",
+   "example": "$15 per month for $25,000 of personal property coverage."
+  },
+  {
+   "term": "Mortgage",
+   "skill": 2,
+   "def": "A loan used to buy real estate, secured by the property",
+   "example": "A 30-year fixed mortgage at 6.75%."
+  },
+  {
+   "term": "Principal and interest (P&I)",
+   "skill": 2,
+   "def": "The portion of a mortgage payment that repays the loan and pays interest",
+   "example": "P&I of $2,075 on a $320,000 loan at 6.75%."
+  },
+  {
+   "term": "PITI",
+   "skill": 3,
+   "def": "Principal, interest, property taxes, and homeowners insurance — the full monthly housing payment",
+   "example": "$2,075 P&I + $380 tax + $125 insurance = $2,580."
+  },
+  {
+   "term": "Down payment",
+   "skill": 2,
+   "def": "The part of a home’s price paid in cash at purchase",
+   "example": "20% of $350,000 = $70,000."
+  },
+  {
+   "term": "Private mortgage insurance (PMI)",
+   "skill": 3,
+   "def": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+   "example": "0.5–1% of the loan per year until enough equity is built."
+  },
+  {
+   "term": "Closing costs",
+   "skill": 3,
+   "def": "Fees paid to complete a home purchase, often 2–5% of the price",
+   "example": "Appraisal, title insurance, origination fees."
+  },
+  {
+   "term": "Property tax",
+   "skill": 3,
+   "def": "A local tax on real estate based on its assessed value",
+   "example": "1.2% of a $300,000 home = $3,600 per year."
+  },
+  {
+   "term": "Equity",
+   "skill": 4,
+   "def": "The part of a home’s value that the owner truly owns: market value minus loan balance",
+   "example": "Worth $360,000 with a $290,000 mortgage → $70,000 equity."
+  },
+  {
+   "term": "Appreciation",
+   "skill": 4,
+   "def": "An increase in the value of an asset over time",
+   "example": "A home rising 3% per year.",
+   "mis": "Home prices can also fall."
+  },
+  {
+   "term": "Opportunity cost (housing)",
+   "skill": 4,
+   "def": "The return given up by tying cash up in a down payment and closing costs instead of investing it",
+   "example": "$60,000 down could have earned about $3,000 a year at 5%."
+  },
+  {
+   "term": "Front-end ratio",
+   "skill": 1,
+   "def": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+   "example": "$2,100 ÷ $7,500 = 28%."
+  },
+  {
+   "term": "Debt-to-income ratio (DTI)",
+   "skill": 1,
+   "def": "All monthly debt payments, including housing, divided by gross monthly income",
+   "example": "($2,100 + $400 car) ÷ $7,500 ≈ 33%."
+  },
+  {
+   "term": "HOA fee",
+   "skill": 3,
+   "def": "A monthly fee paid to a homeowners association for shared maintenance and amenities",
+   "example": "$250 per month for a townhouse community."
+  },
+  {
+   "term": "Maintenance reserve",
+   "skill": 3,
+   "def": "Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year",
+   "example": "1% of $350,000 = $3,500 per year."
+  }
+ ],
+ "lessons": [
+  {
+   "skill": 1,
+   "title": "What Can You Afford? Renting vs. Owning Costs",
+   "minutes": 55,
+   "objectives": [
+    "Apply 28/36 affordability guidelines.",
+    "Total the costs of renting over time with rent increases.",
+    "List the monthly costs of owning beyond the mortgage."
+   ],
+   "vocab": [
+    "Lease (rental)",
+    "Security deposit",
+    "Renters insurance",
+    "Front-end ratio",
+    "Debt-to-income ratio (DTI)"
+   ],
+   "hook": "Two fictional listings: $1,950/month apartment vs. $340,000 townhouse. Which costs more per month? Vote.",
+   "notes": [
+    {
+     "h": "Affordability",
+     "body": "Lenders often use 28% (housing) and 36% (all debt) of gross income; your budget may require less."
+    },
+    {
+     "h": "Renting costs",
+     "body": "Rent, renters insurance, utilities, deposit; rent can rise at renewal."
+    },
+    {
+     "h": "Owning costs",
+     "body": "P&I, taxes, insurance, PMI, HOA, maintenance, utilities."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "Gross $90,000; car payment $420. Max housing payment?",
+     "steps": [
+      "Monthly $7,500",
+      "28%: $2,100",
+      "36% − 420: $2,280",
+      "Max = $2,100"
+     ],
+     "answer": "$2,100"
+    }
+   ],
+   "discussion": [
+    "What non-financial factors affect renting vs. owning?"
+   ],
+   "misconceptions": [
+    [
+     "Mortgage payment = cost of owning.",
+     "List all ownership costs on the board."
+    ]
+   ],
+   "reflection": [
+    "What would you look for in your first apartment lease?"
+   ],
+   "extension": "Compare two real listings in your area (public sites).",
+   "differentiation": {
+    "support": [
+     "Affordability calculator template."
+    ],
+    "extend": [
+     "Find the income needed for a given home price."
+    ]
+   },
+   "realWorld": "Many landlords require gross income of about 3× the monthly rent."
+  },
+  {
+   "skill": 2,
+   "title": "Modeling a Mortgage",
+   "minutes": 55,
+   "objectives": [
+    "Calculate mortgage P&I.",
+    "Compare 15- and 30-year loans.",
+    "Analyze the first payments in an amortization schedule."
+   ],
+   "vocab": [
+    "Mortgage",
+    "Principal and interest (P&I)",
+    "Down payment"
+   ],
+   "hook": "“How much of your first $2,200 mortgage payment goes toward owning the house?” Predict.",
+   "notes": [
+    {
+     "h": "Payment formula",
+     "body": "Same installment formula as auto loans with n = 180 or 360."
+    },
+    {
+     "h": "Interest-heavy early years",
+     "body": "First payments are mostly interest; equity from paydown builds slowly at first."
+    },
+    {
+     "h": "Rates matter",
+     "body": "A 1-point rate change can shift payments by hundreds of dollars."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$320,000 at 6.75% for 30 years.",
+     "steps": [
+      "i = 0.005625, n = 360",
+      "P&I ≈ $2,075.51",
+      "Month 1 interest = $1,800"
+     ],
+     "answer": "$2,075.51; only $275.51 principal in month 1"
+    }
+   ],
+   "discussion": [
+    "Why might someone choose a 30-year loan even if they can afford a 15-year payment?"
+   ],
+   "misconceptions": [
+    [
+     "Half the payments = half the loan paid.",
+     "Check the balance after 180 payments."
+    ]
+   ],
+   "reflection": [
+    "How does a mortgage rate change affect a buyer?"
+   ],
+   "extension": "Graph remaining balance vs. year for 15- and 30-year loans.",
+   "differentiation": {
+    "support": [
+     "Labeled formula and calculator steps."
+    ],
+    "extend": [
+     "Compute the effect of one extra payment per year."
+    ]
+   },
+   "realWorld": "Mortgage rates change daily and depend on credit, down payment, and loan type."
+  },
+  {
+   "skill": 3,
+   "title": "The Full Cost of Owning a Home",
+   "minutes": 55,
+   "objectives": [
+    "Compute PITI including PMI and HOA.",
+    "Estimate cash needed to close.",
+    "Interpret a Loan Estimate."
+   ],
+   "vocab": [
+    "PITI",
+    "Private mortgage insurance (PMI)",
+    "Closing costs",
+    "Property tax",
+    "HOA fee",
+    "Maintenance reserve"
+   ],
+   "hook": "Show a fictional Loan Estimate; students circle every number that is not P&I.",
+   "notes": [
+    {
+     "h": "PITI and more",
+     "body": "Taxes and insurance often add 20–35% to P&I; PMI applies below 20% down."
+    },
+    {
+     "h": "Cash to close",
+     "body": "Down payment + closing costs (2–5%) + moving + reserves."
+    },
+    {
+     "h": "Maintenance",
+     "body": "Budget 1–2% of value per year."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$350,000, 10% down, 6.5%, tax 1.1%, ins. $1,800, PMI 0.7%.",
+     "steps": [
+      "Loan $315,000; P&I $1,991.01",
+      "Tax $320.83; ins. $150; PMI $183.75",
+      "Total ≈ $2,645.59"
+     ],
+     "answer": "$2,645.59 per month"
+    }
+   ],
+   "discussion": [
+    "Why might a buyer put down less than 20%?"
+   ],
+   "misconceptions": [
+    [
+     "Closing costs are optional.",
+     "Show a closing-cost breakdown."
+    ]
+   ],
+   "reflection": [
+    "How much would you want saved before buying a home?"
+   ],
+   "extension": "Research the typical property tax rate in your town.",
+   "differentiation": {
+    "support": [
+     "PITI worksheet template."
+    ],
+    "extend": [
+     "Find when PMI can be removed (80% loan-to-value)."
+    ]
+   },
+   "realWorld": "Lenders must give a Loan Estimate within three business days of an application."
+  },
+  {
+   "skill": 4,
+   "title": "Rent or Buy? Equity and Opportunity Cost",
+   "minutes": 60,
+   "objectives": [
+    "Compute equity from appreciation and paydown.",
+    "Calculate the opportunity cost of a down payment.",
+    "Compare the net cost of renting and buying over a horizon."
+   ],
+   "vocab": [
+    "Equity",
+    "Appreciation",
+    "Opportunity cost (housing)"
+   ],
+   "hook": "Claim: “Renting is throwing money away.” Debate briefly, then use the Decision Lab “Rent or Buy a Home?”.",
+   "notes": [
+    {
+     "h": "Net cost of buying",
+     "body": "All outflows − equity at sale + opportunity cost of cash."
+    },
+    {
+     "h": "Break-even horizon",
+     "body": "Buying usually needs several years to overcome transaction costs."
+    },
+    {
+     "h": "Assumptions rule",
+     "body": "Appreciation, rent growth, rates, and horizon drive the answer."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$60,000 down payment invested at 5% for 7 years.",
+     "steps": [
+      "60,000 × (1.05^7 − 1) ≈ $24,426"
+     ],
+     "answer": "Opportunity cost ≈ $24,426"
+    }
+   ],
+   "discussion": [
+    "Under what assumptions does renting win? Buying?"
+   ],
+   "misconceptions": [
+    [
+     "Equity = everything paid.",
+     "Subtract interest, taxes, and fees that are gone."
+    ]
+   ],
+   "reflection": [
+    "Would you rent or buy at 25? At 35? Why?"
+   ],
+   "extension": "Run the Decision Lab with pessimistic and optimistic markets and write a memo.",
+   "differentiation": {
+    "support": [
+     "Rent-vs-buy organizer."
+    ],
+    "extend": [
+     "Model a home price decline scenario."
+    ]
+   },
+   "realWorld": "Online rent-vs-buy calculators use the same structure with more detail (e.g., taxes)."
+  }
+ ],
+ "cheatSheet": {
+  "title": "Housing: Rent or Buy",
+  "sections": [
+   {
+    "h": "Key formulas",
+    "rows": [
+     [
+      "Max housing payment",
+      "0.28 × gross monthly income"
+     ],
+     [
+      "DTI",
+      "[[all monthly debt payments || gross monthly income]]"
+     ],
+     [
+      "Mortgage P&I",
+      "PMT = [[L · i || 1 − (1 + i)^(−n)]]"
+     ],
+     [
+      "PITI",
+      "P&I + [[annual tax || 12]] + [[annual insurance || 12]] (+ PMI, HOA)"
+     ],
+     [
+      "Equity",
+      "value − loan balance"
+     ],
+     [
+      "Opportunity cost",
+      "cash × ((1 + r)^t − 1)"
+     ],
+     [
+      "Net cost of buying",
+      "outflows − equity at sale + opportunity cost"
+     ]
+    ]
+   },
+   {
+    "h": "Typical cost ranges (illustrative)",
+    "rows": [
+     [
+      "Closing costs",
+      "2–5% of price"
+     ],
+     [
+      "Selling costs",
+      "5–7% of sale price"
+     ],
+     [
+      "Maintenance",
+      "1–2% of value per year"
+     ],
+     [
+      "PMI",
+      "≈ 0.5–1% of loan per year if < 20% down"
+     ]
+    ]
+   }
+  ],
+  "example": {
+   "title": "Worked example",
+   "lines": [
+    "$350,000 home, 20% down → $280,000 loan at 6.75%, 30 yr",
+    "P&I ≈ $1,816.07",
+    "Tax 1.2% → $350/mo; insurance $1,500 → $125/mo",
+    "PITI ≈ $2,291.07; + maintenance ≈ $291.67 → ≈ $2,582.74"
+   ]
+  },
+  "misconceptions": [
+   "Renting is always a waste.",
+   "Homes always appreciate.",
+   "Mortgage payment = cost of owning.",
+   "Approval = affordability."
+  ],
+  "questions": [
+   "How long will I stay?",
+   "What is the full monthly cost (PITI + maintenance)?",
+   "How much cash do I need to close and still keep an emergency fund?",
+   "What could the down payment earn elsewhere?",
+   "What if prices fall?"
+  ],
+  "tips": [
+   "Get preapproved and compare lenders.",
+   "Keep an emergency fund after closing.",
+   "Budget maintenance from day one.",
+   "Run optimistic and pessimistic scenarios."
+  ]
+ },
+ "questions": [
+  {
+   "id": "fa-housing-s01-vocab-def-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Lease (rental)** mean?",
+   "format": "multiple-choice",
+   "answer": "A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+   "options": [
+    {
+     "text": "Insurance that covers a tenant’s belongings and liability, not the building",
+     "correct": false
+    },
+    {
+     "text": "All monthly debt payments, including housing, divided by gross monthly income",
+     "correct": false
+    },
+    {
+     "text": "An increase in the value of an asset over time",
+     "correct": false
+    },
+    {
+     "text": "A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Lease (rental): A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+    "Example: A 12-month apartment lease at $1,650 per month."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-term-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord”",
+   "format": "multiple-choice",
+   "answer": "Lease (rental)",
+   "options": [
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    },
+    {
+     "text": "Down payment",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Lease (rental)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Lease (rental).",
+    "Example: A 12-month apartment lease at $1,650 per month."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-ex-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A 12-month apartment lease at $1,650 per month.",
+   "format": "multiple-choice",
+   "answer": "Lease (rental)",
+   "options": [
+    {
+     "text": "Closing costs",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Lease (rental)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Lease (rental): A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-def-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Security deposit** mean?",
+   "format": "multiple-choice",
+   "answer": "Money paid to a landlord up front to cover damage or unpaid rent, generally refundable",
+   "options": [
+    {
+     "text": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+     "correct": false
+    },
+    {
+     "text": "Money paid to a landlord up front to cover damage or unpaid rent, generally refundable",
+     "correct": true
+    },
+    {
+     "text": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+     "correct": false
+    },
+    {
+     "text": "A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Security deposit: Money paid to a landlord up front to cover damage or unpaid rent, generally refundable",
+    "Example: One month’s rent held until move-out."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-term-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Money paid to a landlord up front to cover damage or unpaid rent, generally refundable”",
+   "format": "multiple-choice",
+   "answer": "Security deposit",
+   "options": [
+    {
+     "text": "Property tax",
+     "correct": false
+    },
+    {
+     "text": "PITI",
+     "correct": false
+    },
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Security deposit.",
+    "Example: One month’s rent held until move-out."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-ex-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? One month’s rent held until move-out.",
+   "format": "multiple-choice",
+   "answer": "Security deposit",
+   "options": [
+    {
+     "text": "Mortgage",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": true
+    },
+    {
+     "text": "Renters insurance",
+     "correct": false
+    },
+    {
+     "text": "PITI",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Security deposit: Money paid to a landlord up front to cover damage or unpaid rent, generally refundable"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-def-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Renters insurance** mean?",
+   "format": "multiple-choice",
+   "answer": "Insurance that covers a tenant’s belongings and liability, not the building",
+   "options": [
+    {
+     "text": "Principal, interest, property taxes, and homeowners insurance — the full monthly housing payment",
+     "correct": false
+    },
+    {
+     "text": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+     "correct": false
+    },
+    {
+     "text": "A monthly fee paid to a homeowners association for shared maintenance and amenities",
+     "correct": false
+    },
+    {
+     "text": "Insurance that covers a tenant’s belongings and liability, not the building",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Renters insurance: Insurance that covers a tenant’s belongings and liability, not the building",
+    "Example: $15 per month for $25,000 of personal property coverage."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-term-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Insurance that covers a tenant’s belongings and liability, not the building”",
+   "format": "multiple-choice",
+   "answer": "Renters insurance",
+   "options": [
+    {
+     "text": "HOA fee",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Renters insurance",
+     "correct": true
+    },
+    {
+     "text": "PITI",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Renters insurance.",
+    "Example: $15 per month for $25,000 of personal property coverage."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-ex-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $15 per month for $25,000 of personal property coverage.",
+   "format": "multiple-choice",
+   "answer": "Renters insurance",
+   "options": [
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Renters insurance",
+     "correct": true
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Renters insurance: Insurance that covers a tenant’s belongings and liability, not the building"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-def-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Mortgage** mean?",
+   "format": "multiple-choice",
+   "answer": "A loan used to buy real estate, secured by the property",
+   "options": [
+    {
+     "text": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+     "correct": false
+    },
+    {
+     "text": "The return given up by tying cash up in a down payment and closing costs instead of investing it",
+     "correct": false
+    },
+    {
+     "text": "A loan used to buy real estate, secured by the property",
+     "correct": true
+    },
+    {
+     "text": "Insurance that covers a tenant’s belongings and liability, not the building",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Mortgage: A loan used to buy real estate, secured by the property",
+    "Example: A 30-year fixed mortgage at 6.75%."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-term-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A loan used to buy real estate, secured by the property”",
+   "format": "multiple-choice",
+   "answer": "Mortgage",
+   "options": [
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Down payment",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Mortgage",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Mortgage.",
+    "Example: A 30-year fixed mortgage at 6.75%."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-ex-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A 30-year fixed mortgage at 6.75%.",
+   "format": "multiple-choice",
+   "answer": "Mortgage",
+   "options": [
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Lease (rental)",
+     "correct": false
+    },
+    {
+     "text": "Mortgage",
+     "correct": true
+    },
+    {
+     "text": "Opportunity cost (housing)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Mortgage: A loan used to buy real estate, secured by the property"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-def-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Principal and interest (P&I)** mean?",
+   "format": "multiple-choice",
+   "answer": "The portion of a mortgage payment that repays the loan and pays interest",
+   "options": [
+    {
+     "text": "An increase in the value of an asset over time",
+     "correct": false
+    },
+    {
+     "text": "Money paid to a landlord up front to cover damage or unpaid rent, generally refundable",
+     "correct": false
+    },
+    {
+     "text": "The portion of a mortgage payment that repays the loan and pays interest",
+     "correct": true
+    },
+    {
+     "text": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Principal and interest (P&I): The portion of a mortgage payment that repays the loan and pays interest",
+    "Example: P&I of $2,075 on a $320,000 loan at 6.75%."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-term-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The portion of a mortgage payment that repays the loan and pays interest”",
+   "format": "multiple-choice",
+   "answer": "Principal and interest (P&I)",
+   "options": [
+    {
+     "text": "Closing costs",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "Principal and interest (P&I)",
+     "correct": true
+    },
+    {
+     "text": "Front-end ratio",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Principal and interest (P&I).",
+    "Example: P&I of $2,075 on a $320,000 loan at 6.75%."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-ex-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? P&I of $2,075 on a $320,000 loan at 6.75%.",
+   "format": "multiple-choice",
+   "answer": "Principal and interest (P&I)",
+   "options": [
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "Principal and interest (P&I)",
+     "correct": true
+    },
+    {
+     "text": "HOA fee",
+     "correct": false
+    },
+    {
+     "text": "Renters insurance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Principal and interest (P&I): The portion of a mortgage payment that repays the loan and pays interest"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-def-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **PITI** mean?",
+   "format": "multiple-choice",
+   "answer": "Principal, interest, property taxes, and homeowners insurance — the full monthly housing payment",
+   "options": [
+    {
+     "text": "Principal, interest, property taxes, and homeowners insurance — the full monthly housing payment",
+     "correct": true
+    },
+    {
+     "text": "A monthly fee paid to a homeowners association for shared maintenance and amenities",
+     "correct": false
+    },
+    {
+     "text": "A loan used to buy real estate, secured by the property",
+     "correct": false
+    },
+    {
+     "text": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "PITI: Principal, interest, property taxes, and homeowners insurance — the full monthly housing payment",
+    "Example: $2,075 P&I + $380 tax + $125 insurance = $2,580."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-term-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Principal, interest, property taxes, and homeowners insurance — the full monthly housing payment”",
+   "format": "multiple-choice",
+   "answer": "PITI",
+   "options": [
+    {
+     "text": "Mortgage",
+     "correct": false
+    },
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "PITI",
+     "correct": true
+    },
+    {
+     "text": "HOA fee",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines PITI.",
+    "Example: $2,075 P&I + $380 tax + $125 insurance = $2,580."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-ex-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $2,075 P&I + $380 tax + $125 insurance = $2,580.",
+   "format": "multiple-choice",
+   "answer": "PITI",
+   "options": [
+    {
+     "text": "Lease (rental)",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "HOA fee",
+     "correct": false
+    },
+    {
+     "text": "PITI",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of PITI: Principal, interest, property taxes, and homeowners insurance — the full monthly housing payment"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-def-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Down payment** mean?",
+   "format": "multiple-choice",
+   "answer": "The part of a home’s price paid in cash at purchase",
+   "options": [
+    {
+     "text": "Money paid to a landlord up front to cover damage or unpaid rent, generally refundable",
+     "correct": false
+    },
+    {
+     "text": "A loan used to buy real estate, secured by the property",
+     "correct": false
+    },
+    {
+     "text": "Insurance that covers a tenant’s belongings and liability, not the building",
+     "correct": false
+    },
+    {
+     "text": "The part of a home’s price paid in cash at purchase",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Down payment: The part of a home’s price paid in cash at purchase",
+    "Example: 20% of $350,000 = $70,000."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-term-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The part of a home’s price paid in cash at purchase”",
+   "format": "multiple-choice",
+   "answer": "Down payment",
+   "options": [
+    {
+     "text": "PITI",
+     "correct": false
+    },
+    {
+     "text": "Property tax",
+     "correct": false
+    },
+    {
+     "text": "Down payment",
+     "correct": true
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Down payment.",
+    "Example: 20% of $350,000 = $70,000."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-vocab-ex-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? 20% of $350,000 = $70,000.",
+   "format": "multiple-choice",
+   "answer": "Down payment",
+   "options": [
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    },
+    {
+     "text": "Down payment",
+     "correct": true
+    },
+    {
+     "text": "Property tax",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost (housing)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Down payment: The part of a home’s price paid in cash at purchase"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-def-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Private mortgage insurance (PMI)** mean?",
+   "format": "multiple-choice",
+   "answer": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+   "options": [
+    {
+     "text": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+     "correct": true
+    },
+    {
+     "text": "The part of a home’s price paid in cash at purchase",
+     "correct": false
+    },
+    {
+     "text": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+     "correct": false
+    },
+    {
+     "text": "The portion of a mortgage payment that repays the loan and pays interest",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Private mortgage insurance (PMI): Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+    "Example: 0.5–1% of the loan per year until enough equity is built."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-term-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan”",
+   "format": "multiple-choice",
+   "answer": "Private mortgage insurance (PMI)",
+   "options": [
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "Private mortgage insurance (PMI)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Private mortgage insurance (PMI).",
+    "Example: 0.5–1% of the loan per year until enough equity is built."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-ex-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? 0.5–1% of the loan per year until enough equity is built.",
+   "format": "multiple-choice",
+   "answer": "Private mortgage insurance (PMI)",
+   "options": [
+    {
+     "text": "PITI",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    },
+    {
+     "text": "Private mortgage insurance (PMI)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Private mortgage insurance (PMI): Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-def-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Closing costs** mean?",
+   "format": "multiple-choice",
+   "answer": "Fees paid to complete a home purchase, often 2–5% of the price",
+   "options": [
+    {
+     "text": "Fees paid to complete a home purchase, often 2–5% of the price",
+     "correct": true
+    },
+    {
+     "text": "A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+     "correct": false
+    },
+    {
+     "text": "Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year",
+     "correct": false
+    },
+    {
+     "text": "The part of a home’s value that the owner truly owns: market value minus loan balance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Closing costs: Fees paid to complete a home purchase, often 2–5% of the price",
+    "Example: Appraisal, title insurance, origination fees."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-term-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Fees paid to complete a home purchase, often 2–5% of the price”",
+   "format": "multiple-choice",
+   "answer": "Closing costs",
+   "options": [
+    {
+     "text": "Down payment",
+     "correct": false
+    },
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "Closing costs",
+     "correct": true
+    },
+    {
+     "text": "Mortgage",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Closing costs.",
+    "Example: Appraisal, title insurance, origination fees."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-ex-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Appraisal, title insurance, origination fees.",
+   "format": "multiple-choice",
+   "answer": "Closing costs",
+   "options": [
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "Private mortgage insurance (PMI)",
+     "correct": false
+    },
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Closing costs",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Closing costs: Fees paid to complete a home purchase, often 2–5% of the price"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-def-10",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Property tax** mean?",
+   "format": "multiple-choice",
+   "answer": "A local tax on real estate based on its assessed value",
+   "options": [
+    {
+     "text": "A local tax on real estate based on its assessed value",
+     "correct": true
+    },
+    {
+     "text": "A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+     "correct": false
+    },
+    {
+     "text": "The part of a home’s price paid in cash at purchase",
+     "correct": false
+    },
+    {
+     "text": "Insurance that covers a tenant’s belongings and liability, not the building",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Property tax: A local tax on real estate based on its assessed value",
+    "Example: 1.2% of a $300,000 home = $3,600 per year."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-term-10",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A local tax on real estate based on its assessed value”",
+   "format": "multiple-choice",
+   "answer": "Property tax",
+   "options": [
+    {
+     "text": "Property tax",
+     "correct": true
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost (housing)",
+     "correct": false
+    },
+    {
+     "text": "HOA fee",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Property tax.",
+    "Example: 1.2% of a $300,000 home = $3,600 per year."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-ex-10",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? 1.2% of a $300,000 home = $3,600 per year.",
+   "format": "multiple-choice",
+   "answer": "Property tax",
+   "options": [
+    {
+     "text": "Renters insurance",
+     "correct": false
+    },
+    {
+     "text": "Property tax",
+     "correct": true
+    },
+    {
+     "text": "Principal and interest (P&I)",
+     "correct": false
+    },
+    {
+     "text": "PITI",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Property tax: A local tax on real estate based on its assessed value"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-def-11",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Equity** mean?",
+   "format": "multiple-choice",
+   "answer": "The part of a home’s value that the owner truly owns: market value minus loan balance",
+   "options": [
+    {
+     "text": "A contract to rent a home for a set term at a set rent, with rules for both tenant and landlord",
+     "correct": false
+    },
+    {
+     "text": "The return given up by tying cash up in a down payment and closing costs instead of investing it",
+     "correct": false
+    },
+    {
+     "text": "A local tax on real estate based on its assessed value",
+     "correct": false
+    },
+    {
+     "text": "The part of a home’s value that the owner truly owns: market value minus loan balance",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Equity: The part of a home’s value that the owner truly owns: market value minus loan balance",
+    "Example: Worth $360,000 with a $290,000 mortgage → $70,000 equity."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-term-11",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The part of a home’s value that the owner truly owns: market value minus loan balance”",
+   "format": "multiple-choice",
+   "answer": "Equity",
+   "options": [
+    {
+     "text": "HOA fee",
+     "correct": false
+    },
+    {
+     "text": "Front-end ratio",
+     "correct": false
+    },
+    {
+     "text": "Equity",
+     "correct": true
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Equity.",
+    "Example: Worth $360,000 with a $290,000 mortgage → $70,000 equity."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-ex-11",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Worth $360,000 with a $290,000 mortgage → $70,000 equity.",
+   "format": "multiple-choice",
+   "answer": "Equity",
+   "options": [
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "Equity",
+     "correct": true
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Private mortgage insurance (PMI)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Equity: The part of a home’s value that the owner truly owns: market value minus loan balance"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-def-12",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Appreciation** mean?",
+   "format": "multiple-choice",
+   "answer": "An increase in the value of an asset over time",
+   "options": [
+    {
+     "text": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+     "correct": false
+    },
+    {
+     "text": "All monthly debt payments, including housing, divided by gross monthly income",
+     "correct": false
+    },
+    {
+     "text": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+     "correct": false
+    },
+    {
+     "text": "An increase in the value of an asset over time",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Appreciation: An increase in the value of an asset over time",
+    "Example: A home rising 3% per year."
+   ],
+   "misconceptions": [
+    "Home prices can also fall."
+   ],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-term-12",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “An increase in the value of an asset over time”",
+   "format": "multiple-choice",
+   "answer": "Appreciation",
+   "options": [
+    {
+     "text": "Appreciation",
+     "correct": true
+    },
+    {
+     "text": "Principal and interest (P&I)",
+     "correct": false
+    },
+    {
+     "text": "Private mortgage insurance (PMI)",
+     "correct": false
+    },
+    {
+     "text": "Mortgage",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Appreciation.",
+    "Example: A home rising 3% per year."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-ex-12",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A home rising 3% per year.",
+   "format": "multiple-choice",
+   "answer": "Appreciation",
+   "options": [
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Property tax",
+     "correct": false
+    },
+    {
+     "text": "Appreciation",
+     "correct": true
+    },
+    {
+     "text": "Mortgage",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Appreciation: An increase in the value of an asset over time"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-def-13",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Opportunity cost (housing)** mean?",
+   "format": "multiple-choice",
+   "answer": "The return given up by tying cash up in a down payment and closing costs instead of investing it",
+   "options": [
+    {
+     "text": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+     "correct": false
+    },
+    {
+     "text": "A loan used to buy real estate, secured by the property",
+     "correct": false
+    },
+    {
+     "text": "The return given up by tying cash up in a down payment and closing costs instead of investing it",
+     "correct": true
+    },
+    {
+     "text": "Fees paid to complete a home purchase, often 2–5% of the price",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Opportunity cost (housing): The return given up by tying cash up in a down payment and closing costs instead of investing it",
+    "Example: $60,000 down could have earned about $3,000 a year at 5%."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-term-13",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The return given up by tying cash up in a down payment and closing costs instead of investing it”",
+   "format": "multiple-choice",
+   "answer": "Opportunity cost (housing)",
+   "options": [
+    {
+     "text": "Property tax",
+     "correct": false
+    },
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost (housing)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Opportunity cost (housing).",
+    "Example: $60,000 down could have earned about $3,000 a year at 5%."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-vocab-ex-13",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $60,000 down could have earned about $3,000 a year at 5%.",
+   "format": "multiple-choice",
+   "answer": "Opportunity cost (housing)",
+   "options": [
+    {
+     "text": "Closing costs",
+     "correct": false
+    },
+    {
+     "text": "Principal and interest (P&I)",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost (housing)",
+     "correct": true
+    },
+    {
+     "text": "HOA fee",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Opportunity cost (housing): The return given up by tying cash up in a down payment and closing costs instead of investing it"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-def-14",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Front-end ratio** mean?",
+   "format": "multiple-choice",
+   "answer": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+   "options": [
+    {
+     "text": "Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+     "correct": true
+    },
+    {
+     "text": "Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year",
+     "correct": false
+    },
+    {
+     "text": "Fees paid to complete a home purchase, often 2–5% of the price",
+     "correct": false
+    },
+    {
+     "text": "The part of a home’s value that the owner truly owns: market value minus loan balance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Front-end ratio: Housing payment divided by gross monthly income; many lenders prefer about 28% or less",
+    "Example: $2,100 ÷ $7,500 = 28%."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-term-14",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Housing payment divided by gross monthly income; many lenders prefer about 28% or less”",
+   "format": "multiple-choice",
+   "answer": "Front-end ratio",
+   "options": [
+    {
+     "text": "PITI",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "Front-end ratio",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Front-end ratio.",
+    "Example: $2,100 ÷ $7,500 = 28%."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-ex-14",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $2,100 ÷ $7,500 = 28%.",
+   "format": "multiple-choice",
+   "answer": "Front-end ratio",
+   "options": [
+    {
+     "text": "Lease (rental)",
+     "correct": false
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "Front-end ratio",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Front-end ratio: Housing payment divided by gross monthly income; many lenders prefer about 28% or less"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-def-15",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Debt-to-income ratio (DTI)** mean?",
+   "format": "multiple-choice",
+   "answer": "All monthly debt payments, including housing, divided by gross monthly income",
+   "options": [
+    {
+     "text": "All monthly debt payments, including housing, divided by gross monthly income",
+     "correct": true
+    },
+    {
+     "text": "A monthly fee paid to a homeowners association for shared maintenance and amenities",
+     "correct": false
+    },
+    {
+     "text": "An increase in the value of an asset over time",
+     "correct": false
+    },
+    {
+     "text": "The return given up by tying cash up in a down payment and closing costs instead of investing it",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Debt-to-income ratio (DTI): All monthly debt payments, including housing, divided by gross monthly income",
+    "Example: ($2,100 + $400 car) ÷ $7,500 ≈ 33%."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-term-15",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “All monthly debt payments, including housing, divided by gross monthly income”",
+   "format": "multiple-choice",
+   "answer": "Debt-to-income ratio (DTI)",
+   "options": [
+    {
+     "text": "Principal and interest (P&I)",
+     "correct": false
+    },
+    {
+     "text": "Appreciation",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": true
+    },
+    {
+     "text": "Closing costs",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Debt-to-income ratio (DTI).",
+    "Example: ($2,100 + $400 car) ÷ $7,500 ≈ 33%."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-vocab-ex-15",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? ($2,100 + $400 car) ÷ $7,500 ≈ 33%.",
+   "format": "multiple-choice",
+   "answer": "Debt-to-income ratio (DTI)",
+   "options": [
+    {
+     "text": "Maintenance reserve",
+     "correct": false
+    },
+    {
+     "text": "Lease (rental)",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": true
+    },
+    {
+     "text": "Front-end ratio",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Debt-to-income ratio (DTI): All monthly debt payments, including housing, divided by gross monthly income"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-def-16",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **HOA fee** mean?",
+   "format": "multiple-choice",
+   "answer": "A monthly fee paid to a homeowners association for shared maintenance and amenities",
+   "options": [
+    {
+     "text": "A monthly fee paid to a homeowners association for shared maintenance and amenities",
+     "correct": true
+    },
+    {
+     "text": "All monthly debt payments, including housing, divided by gross monthly income",
+     "correct": false
+    },
+    {
+     "text": "A local tax on real estate based on its assessed value",
+     "correct": false
+    },
+    {
+     "text": "The portion of a mortgage payment that repays the loan and pays interest",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "HOA fee: A monthly fee paid to a homeowners association for shared maintenance and amenities",
+    "Example: $250 per month for a townhouse community."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-term-16",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A monthly fee paid to a homeowners association for shared maintenance and amenities”",
+   "format": "multiple-choice",
+   "answer": "HOA fee",
+   "options": [
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Private mortgage insurance (PMI)",
+     "correct": false
+    },
+    {
+     "text": "HOA fee",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines HOA fee.",
+    "Example: $250 per month for a townhouse community."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-ex-16",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $250 per month for a townhouse community.",
+   "format": "multiple-choice",
+   "answer": "HOA fee",
+   "options": [
+    {
+     "text": "Equity",
+     "correct": false
+    },
+    {
+     "text": "Property tax",
+     "correct": false
+    },
+    {
+     "text": "HOA fee",
+     "correct": true
+    },
+    {
+     "text": "Appreciation",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of HOA fee: A monthly fee paid to a homeowners association for shared maintenance and amenities"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-def-17",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Maintenance reserve** mean?",
+   "format": "multiple-choice",
+   "answer": "Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year",
+   "options": [
+    {
+     "text": "Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year",
+     "correct": true
+    },
+    {
+     "text": "Insurance protecting the lender, typically required when the down payment is under 20% on a conventional loan",
+     "correct": false
+    },
+    {
+     "text": "A local tax on real estate based on its assessed value",
+     "correct": false
+    },
+    {
+     "text": "Money paid to a landlord up front to cover damage or unpaid rent, generally refundable",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Maintenance reserve: Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year",
+    "Example: 1% of $350,000 = $3,500 per year."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-term-17",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year”",
+   "format": "multiple-choice",
+   "answer": "Maintenance reserve",
+   "options": [
+    {
+     "text": "Closing costs",
+     "correct": false
+    },
+    {
+     "text": "Debt-to-income ratio (DTI)",
+     "correct": false
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": true
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Maintenance reserve.",
+    "Example: 1% of $350,000 = $3,500 per year."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-vocab-ex-17",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? 1% of $350,000 = $3,500 per year.",
+   "format": "multiple-choice",
+   "answer": "Maintenance reserve",
+   "options": [
+    {
+     "text": "Closing costs",
+     "correct": false
+    },
+    {
+     "text": "PITI",
+     "correct": false
+    },
+    {
+     "text": "Front-end ratio",
+     "correct": false
+    },
+    {
+     "text": "Maintenance reserve",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Maintenance reserve: Money set aside for home repairs; a common rule of thumb is 1–2% of home value per year"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-concept-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "A household earns $6,000 gross per month. Using a 28% front-end ratio, what is the maximum housing payment?",
+   "format": "multiple-choice",
+   "answer": "$1,680",
+   "options": [
+    {
+     "text": "$2,160",
+     "correct": false
+    },
+    {
+     "text": "$1,680",
+     "correct": true
+    },
+    {
+     "text": "$1,500",
+     "correct": false
+    },
+    {
+     "text": "$1,800",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "0.28 × 6,000 = $1,680."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s01-concept-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Which cost does a renter usually NOT pay directly?",
+   "format": "multiple-choice",
+   "answer": "Property taxes",
+   "options": [
+    {
+     "text": "Monthly rent",
+     "correct": false
+    },
+    {
+     "text": "Security deposit",
+     "correct": false
+    },
+    {
+     "text": "Property taxes",
+     "correct": true
+    },
+    {
+     "text": "Renters insurance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Owners pay property tax (it is built into rent indirectly)."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-concept-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why does a 15-year mortgage have higher payments than a 30-year mortgage for the same loan?",
+   "format": "multiple-choice",
+   "answer": "The principal is repaid over half as many months",
+   "options": [
+    {
+     "text": "It includes PMI",
+     "correct": false
+    },
+    {
+     "text": "The principal is repaid over half as many months",
+     "correct": true
+    },
+    {
+     "text": "Taxes are higher on 15-year loans",
+     "correct": false
+    },
+    {
+     "text": "15-year mortgages always have higher rates",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Fewer payments → each repays more principal; total interest is much lower."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-concept-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Select ALL costs of owning a home that are not part of principal and interest.",
+   "format": "select-all",
+   "answer": [
+    "Property taxes",
+    "Homeowners insurance",
+    "Maintenance and repairs",
+    "HOA fees (if any)"
+   ],
+   "options": [
+    {
+     "text": "HOA fees (if any)",
+     "correct": true
+    },
+    {
+     "text": "Homeowners insurance",
+     "correct": true
+    },
+    {
+     "text": "Security deposit refund",
+     "correct": false
+    },
+    {
+     "text": "Maintenance and repairs",
+     "correct": true
+    },
+    {
+     "text": "Renters insurance",
+     "correct": false
+    },
+    {
+     "text": "Property taxes",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Ownership costs extend well beyond the mortgage payment."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-housing-s03-concept-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "PMI is typically required on a conventional loan when…",
+   "format": "multiple-choice",
+   "answer": "the down payment is less than 20%",
+   "options": [
+    {
+     "text": "the home is new",
+     "correct": false
+    },
+    {
+     "text": "the loan is under 15 years",
+     "correct": false
+    },
+    {
+     "text": "the buyer has excellent credit",
+     "correct": false
+    },
+    {
+     "text": "the down payment is less than 20%",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "PMI protects the lender when the borrower has less equity."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-concept-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "A home bought for $300,000 with a $270,000 loan is worth $330,000 when the balance is $255,000. What is the equity?",
+   "format": "multiple-choice",
+   "answer": "$75,000",
+   "options": [
+    {
+     "text": "$30,000",
+     "correct": false
+    },
+    {
+     "text": "$60,000",
+     "correct": false
+    },
+    {
+     "text": "$330,000",
+     "correct": false
+    },
+    {
+     "text": "$75,000",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "330,000 − 255,000 = $75,000."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-concept-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why can renting be cheaper than buying for someone who will move in 2 years?",
+   "format": "multiple-choice",
+   "answer": "Closing and selling costs can exceed the equity built in a short time",
+   "options": [
+    {
+     "text": "Closing and selling costs can exceed the equity built in a short time",
+     "correct": true
+    },
+    {
+     "text": "Homes always lose value in 2 years",
+     "correct": false
+    },
+    {
+     "text": "Renters build equity faster",
+     "correct": false
+    },
+    {
+     "text": "Rent never increases",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Transaction costs of 8–10% need years of appreciation and principal paydown to recover."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-claim-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “Renting is always a waste of money.”",
+   "format": "multiple-choice",
+   "answer": "Never true",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": false
+    },
+    {
+     "text": "Never true",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Never true. Owners also pay unrecoverable costs — interest, property tax, insurance, maintenance, and transaction costs — and give up returns on the down payment. Renting buys flexibility and can be cheaper over short horizons."
+   ],
+   "modelResponse": "Never true. Owners also pay unrecoverable costs — interest, property tax, insurance, maintenance, and transaction costs — and give up returns on the down payment. Renting buys flexibility and can be cheaper over short horizons.",
+   "misconceptions": [
+    "Renting is always a waste of money."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-claim-cer-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “Renting is always a waste of money.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Never true"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "In the first year of a $342,000 loan at 6.75%, about $23,000 of payments is interest, plus taxes and maintenance."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Never true. Owners also pay unrecoverable costs — interest, property tax, insurance, maintenance, and transaction costs — and give up returns on the down payment. Renting buys flexibility and can be cheaper over short horizons."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Never true",
+   "solutionSteps": [
+    "Never true. Owners also pay unrecoverable costs — interest, property tax, insurance, maintenance, and transaction costs — and give up returns on the down payment. Renting buys flexibility and can be cheaper over short horizons."
+   ],
+   "modelResponse": "Never true. Owners also pay unrecoverable costs — interest, property tax, insurance, maintenance, and transaction costs — and give up returns on the down payment. Renting buys flexibility and can be cheaper over short horizons. Example: In the first year of a $342,000 loan at 6.75%, about $23,000 of payments is interest, plus taxes and maintenance.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-housing-s04-claim-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “A house is always a great investment because home prices go up.”",
+   "format": "multiple-choice",
+   "answer": "Sometimes true — it depends on the situation",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": true
+    },
+    {
+     "text": "Never true",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Sometimes. Prices can stagnate or fall, and ownership costs eat into gains. Over long periods homes have often appreciated, but not everywhere or every decade."
+   ],
+   "modelResponse": "Sometimes. Prices can stagnate or fall, and ownership costs eat into gains. Over long periods homes have often appreciated, but not everywhere or every decade.",
+   "misconceptions": [
+    "A house is always a great investment because home prices go up."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s04-claim-cer-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “A house is always a great investment because home prices go up.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Sometimes true — it depends on the situation"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "Answers vary; see model response."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Sometimes. Prices can stagnate or fall, and ownership costs eat into gains. Over long periods homes have often appreciated, but not everywhere or every decade."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Sometimes true — it depends on the situation",
+   "solutionSteps": [
+    "Sometimes. Prices can stagnate or fall, and ownership costs eat into gains. Over long periods homes have often appreciated, but not everywhere or every decade."
+   ],
+   "modelResponse": "Sometimes. Prices can stagnate or fall, and ownership costs eat into gains. Over long periods homes have often appreciated, but not everywhere or every decade.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-housing-s02-claim-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “If the bank approves me for a mortgage, I can afford the house.”",
+   "format": "multiple-choice",
+   "answer": "Never true",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": false
+    },
+    {
+     "text": "Never true",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Never a safe assumption. Lender limits ignore many goals (saving, childcare, emergency fund) and maintenance surprises. Budget the full PITI plus maintenance."
+   ],
+   "modelResponse": "Never a safe assumption. Lender limits ignore many goals (saving, childcare, emergency fund) and maintenance surprises. Budget the full PITI plus maintenance.",
+   "misconceptions": [
+    "If the bank approves me for a mortgage, I can afford the house."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s02-claim-cer-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “If the bank approves me for a mortgage, I can afford the house.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Never true"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "Answers vary; see model response."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Never a safe assumption. Lender limits ignore many goals (saving, childcare, emergency fund) and maintenance surprises. Budget the full PITI plus maintenance."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Never true",
+   "solutionSteps": [
+    "Never a safe assumption. Lender limits ignore many goals (saving, childcare, emergency fund) and maintenance surprises. Budget the full PITI plus maintenance."
+   ],
+   "modelResponse": "Never a safe assumption. Lender limits ignore many goals (saving, childcare, emergency fund) and maintenance surprises. Budget the full PITI plus maintenance.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-housing-s03-claim-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “My mortgage payment is my only housing cost as an owner.”",
+   "format": "multiple-choice",
+   "answer": "Never true",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": false
+    },
+    {
+     "text": "Never true",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Never true. Taxes, insurance, maintenance, utilities, HOA fees, and possibly PMI add substantially."
+   ],
+   "modelResponse": "Never true. Taxes, insurance, maintenance, utilities, HOA fees, and possibly PMI add substantially.",
+   "misconceptions": [
+    "My mortgage payment is my only housing cost as an owner."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-housing-s03-claim-cer-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “My mortgage payment is my only housing cost as an owner.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Never true"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "$2,075 P&I + $380 tax + $125 insurance + $290 maintenance = $2,870."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Never true. Taxes, insurance, maintenance, utilities, HOA fees, and possibly PMI add substantially."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Never true",
+   "solutionSteps": [
+    "Never true. Taxes, insurance, maintenance, utilities, HOA fees, and possibly PMI add substantially."
+   ],
+   "modelResponse": "Never true. Taxes, insurance, maintenance, utilities, HOA fees, and possibly PMI add substantially. Example: $2,075 P&I + $380 tax + $125 insurance + $290 maintenance = $2,870.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-housing-s01-afford-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "afford",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo earns $93,000 per year and has $0 in other monthly debt payments. A lender wants housing ≤ 28% of gross monthly income and total debt ≤ 36%. What is the maximum monthly housing payment?",
+   "format": "short-answer",
+   "answer": "$2,170.00",
+   "numeric": {
+    "value": 2170,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Gross monthly = $7,750.00.",
+    "Front-end: 0.28 × $7,750.00 = $2,170.00.",
+    "Back-end: 0.36 × $7,750.00 − $0 = $2,790.00.",
+    "Maximum = smaller value = $2,170.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-afford-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "afford",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya earns $125,000 per year and has $650 in other monthly debt payments. A lender wants housing ≤ 28% of gross monthly income and total debt ≤ 36%. What is the maximum monthly housing payment?",
+   "format": "short-answer",
+   "answer": "$2,916.67",
+   "numeric": {
+    "value": 2916.67,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Gross monthly = $10,416.67.",
+    "Front-end: 0.28 × $10,416.67 = $2,916.67.",
+    "Back-end: 0.36 × $10,416.67 − $650 = $3,100.00.",
+    "Maximum = smaller value = $2,916.67."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-afford-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "afford",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya earns $60,000 per year and has $450 in other monthly debt payments. A lender wants housing ≤ 28% of gross monthly income and total debt ≤ 36%. What is the maximum monthly housing payment?",
+   "format": "short-answer",
+   "answer": "$1,350.00",
+   "numeric": {
+    "value": 1350,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Gross monthly = $5,000.00.",
+    "Front-end: 0.28 × $5,000.00 = $1,400.00.",
+    "Back-end: 0.36 × $5,000.00 − $450 = $1,350.00.",
+    "Maximum = smaller value = $1,350.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-afford-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "afford",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus earns $86,000 per year and has $50 in other monthly debt payments. A lender wants housing ≤ 28% of gross monthly income and total debt ≤ 36%. What is the maximum monthly housing payment?",
+   "format": "short-answer",
+   "answer": "$2,006.67",
+   "numeric": {
+    "value": 2006.67,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Gross monthly = $7,166.67.",
+    "Front-end: 0.28 × $7,166.67 = $2,006.67.",
+    "Back-end: 0.36 × $7,166.67 − $50 = $2,530.00.",
+    "Maximum = smaller value = $2,006.67."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-afford-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "afford",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei earns $91,000 per year and has $0 in other monthly debt payments. A lender wants housing ≤ 28% of gross monthly income and total debt ≤ 36%. What is the maximum monthly housing payment?",
+   "format": "short-answer",
+   "answer": "$2,123.33",
+   "numeric": {
+    "value": 2123.33,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Gross monthly = $7,583.33.",
+    "Front-end: 0.28 × $7,583.33 = $2,123.33.",
+    "Back-end: 0.36 × $7,583.33 − $0 = $2,730.00.",
+    "Maximum = smaller value = $2,123.33."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-afford-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "afford",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley earns $123,000 per year and has $100 in other monthly debt payments. A lender wants housing ≤ 28% of gross monthly income and total debt ≤ 36%. What is the maximum monthly housing payment?",
+   "format": "short-answer",
+   "answer": "$2,870.00",
+   "numeric": {
+    "value": 2870,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Gross monthly = $10,250.00.",
+    "Front-end: 0.28 × $10,250.00 = $2,870.00.",
+    "Back-end: 0.36 × $10,250.00 − $100 = $3,590.00.",
+    "Maximum = smaller value = $2,870.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-total-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah rents for $1,400 per month plus $18 renters insurance. Rent rises 2% each year. What is the total spent over 5 years?",
+   "format": "short-answer",
+   "answer": "$88,507.87",
+   "numeric": {
+    "value": 88507.87,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year k rent = $1,400 × (1 + 0.02)^(k−1).",
+    "Sum over 5 years of 12 × (rent + $18) = $88,507.87."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-total-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia rents for $2,500 per month plus $15 renters insurance. Rent rises 5% each year. What is the total spent over 3 years?",
+   "format": "short-answer",
+   "answer": "$95,115.00",
+   "numeric": {
+    "value": 95115,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year k rent = $2,500 × (1 + 0.05)^(k−1).",
+    "Sum over 3 years of 12 × (rent + $15) = $95,115.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-total-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre rents for $1,775 per month plus $12 renters insurance. Rent rises 3% each year. What is the total spent over 4 years?",
+   "format": "short-answer",
+   "answer": "$89,687.26",
+   "numeric": {
+    "value": 89687.26,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year k rent = $1,775 × (1 + 0.03)^(k−1).",
+    "Sum over 4 years of 12 × (rent + $12) = $89,687.26."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-total-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah rents for $1,750 per month plus $18 renters insurance. Rent rises 5% each year. What is the total spent over 3 years?",
+   "format": "short-answer",
+   "answer": "$66,850.50",
+   "numeric": {
+    "value": 66850.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year k rent = $1,750 × (1 + 0.05)^(k−1).",
+    "Sum over 3 years of 12 × (rent + $18) = $66,850.50."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-total-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego rents for $2,375 per month plus $15 renters insurance. Rent rises 5% each year. What is the total spent over 3 years?",
+   "format": "short-answer",
+   "answer": "$90,386.25",
+   "numeric": {
+    "value": 90386.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year k rent = $2,375 × (1 + 0.05)^(k−1).",
+    "Sum over 3 years of 12 × (rent + $15) = $90,386.25."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-total-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani rents for $1,800 per month plus $12 renters insurance. Rent rises 4% each year. What is the total spent over 4 years?",
+   "format": "short-answer",
+   "answer": "$92,299.62",
+   "numeric": {
+    "value": 92299.62,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year k rent = $1,800 × (1 + 0.04)^(k−1).",
+    "Sum over 4 years of 12 × (rent + $12) = $92,299.62."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-vs-own-mo-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-vs-own-mo",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Luis can rent a home for $1,417.50 per month or buy a similar one for $315,000 with 20% down at 6.75% for 30 years. Taxes are 1.2% of price per year, insurance $1,500 per year, and maintenance 1% of price per year. What is the monthly cost of owning (PITI + maintenance), and how does it compare with rent?",
+   "format": "multiple-choice",
+   "answer": "$2,336.97; $919.47 more than rent",
+   "options": [
+    {
+     "text": "$2,636.97; $1,219.47 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$2,336.97; $919.47 more than rent",
+     "correct": true
+    },
+    {
+     "text": "$2,074.47; $656.97 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$1,634.47; $216.97 more than rent",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "P&I on $252,000 = $1,634.47.",
+    "Tax $315.00 + insurance $125.00 + maintenance $262.50.",
+    "Owning ≈ $2,336.97 vs. rent $1,417.50. Part of P&I builds equity — compare net costs over time, not just monthly payments."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-vs-own-mo-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-vs-own-mo",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Nadia can rent a home for $1,192.50 per month or buy a similar one for $265,000 with 20% down at 6.75% for 30 years. Taxes are 1.2% of price per year, insurance $1,500 per year, and maintenance 1% of price per year. What is the monthly cost of owning (PITI + maintenance), and how does it compare with rent?",
+   "format": "multiple-choice",
+   "answer": "$1,985.86; $793.36 more than rent",
+   "options": [
+    {
+     "text": "$1,375.03; $182.53 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$2,285.86; $1,093.36 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$1,985.86; $793.36 more than rent",
+     "correct": true
+    },
+    {
+     "text": "$1,765.03; $572.53 more than rent",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "P&I on $212,000 = $1,375.03.",
+    "Tax $265.00 + insurance $125.00 + maintenance $220.83.",
+    "Owning ≈ $1,985.86 vs. rent $1,192.50. Part of P&I builds equity — compare net costs over time, not just monthly payments."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-vs-own-mo-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-vs-own-mo",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Elijah can rent a home for $1,595.00 per month or buy a similar one for $290,000 with 20% down at 6.75% for 30 years. Taxes are 1.2% of price per year, insurance $1,500 per year, and maintenance 1% of price per year. What is the monthly cost of owning (PITI + maintenance), and how does it compare with rent?",
+   "format": "multiple-choice",
+   "answer": "$2,161.42; $566.42 more than rent",
+   "options": [
+    {
+     "text": "$1,919.75; $324.75 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$2,461.42; $866.42 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$1,504.75; $90.25 less than rent",
+     "correct": false
+    },
+    {
+     "text": "$2,161.42; $566.42 more than rent",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "P&I on $232,000 = $1,504.75.",
+    "Tax $290.00 + insurance $125.00 + maintenance $241.67.",
+    "Owning ≈ $2,161.42 vs. rent $1,595.00. Part of P&I builds equity — compare net costs over time, not just monthly payments."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-vs-own-mo-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-vs-own-mo",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Mei can rent a home for $2,025.00 per month or buy a similar one for $450,000 with 20% down at 6.75% for 30 years. Taxes are 1.2% of price per year, insurance $1,500 per year, and maintenance 1% of price per year. What is the monthly cost of owning (PITI + maintenance), and how does it compare with rent?",
+   "format": "multiple-choice",
+   "answer": "$3,284.95; $1,259.95 more than rent",
+   "options": [
+    {
+     "text": "$3,584.95; $1,559.95 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$3,284.95; $1,259.95 more than rent",
+     "correct": true
+    },
+    {
+     "text": "$2,909.95; $884.95 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$2,334.95; $309.95 more than rent",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "P&I on $360,000 = $2,334.95.",
+    "Tax $450.00 + insurance $125.00 + maintenance $375.00.",
+    "Owning ≈ $3,284.95 vs. rent $2,025.00. Part of P&I builds equity — compare net costs over time, not just monthly payments."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-vs-own-mo-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-vs-own-mo",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Diego can rent a home for $1,870.00 per month or buy a similar one for $340,000 with 20% down at 6.75% for 30 years. Taxes are 1.2% of price per year, insurance $1,500 per year, and maintenance 1% of price per year. What is the monthly cost of owning (PITI + maintenance), and how does it compare with rent?",
+   "format": "multiple-choice",
+   "answer": "$2,512.52; $642.52 more than rent",
+   "options": [
+    {
+     "text": "$2,512.52; $642.52 more than rent",
+     "correct": true
+    },
+    {
+     "text": "$2,812.52; $942.52 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$2,229.19; $359.19 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$1,764.19; $105.81 less than rent",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "P&I on $272,000 = $1,764.19.",
+    "Tax $340.00 + insurance $125.00 + maintenance $283.33.",
+    "Owning ≈ $2,512.52 vs. rent $1,870.00. Part of P&I builds equity — compare net costs over time, not just monthly payments."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-rent-vs-own-mo-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "rent-vs-own-mo",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Dev can rent a home for $2,075.00 per month or buy a similar one for $415,000 with 20% down at 6.75% for 30 years. Taxes are 1.2% of price per year, insurance $1,500 per year, and maintenance 1% of price per year. What is the monthly cost of owning (PITI + maintenance), and how does it compare with rent?",
+   "format": "multiple-choice",
+   "answer": "$3,039.18; $964.18 more than rent",
+   "options": [
+    {
+     "text": "$3,339.18; $1,264.18 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$3,039.18; $964.18 more than rent",
+     "correct": true
+    },
+    {
+     "text": "$2,153.35; $78.35 more than rent",
+     "correct": false
+    },
+    {
+     "text": "$2,693.35; $618.35 more than rent",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "P&I on $332,000 = $2,153.35.",
+    "Tax $415.00 + insurance $125.00 + maintenance $345.83.",
+    "Owning ≈ $3,039.18 vs. rent $2,075.00. Part of P&I builds equity — compare net costs over time, not just monthly payments."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace buys a $400,000 home with 10% down and a 30-year fixed mortgage at 7%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$2,395.09",
+   "numeric": {
+    "value": 2395.09,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $400,000 × 0.9 = $360,000.",
+    "i = [[0.07 || 12]], n = 360.",
+    "P&I = $2,395.09."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani buys a $280,000 home with 5% down and a 15-year fixed mortgage at 6.75%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$2,353.86",
+   "numeric": {
+    "value": 2353.86,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $280,000 × 0.95 = $266,000.",
+    "i = [[0.0675 || 12]], n = 180.",
+    "P&I = $2,353.86."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan buys a $380,000 home with 5% down and a 30-year fixed mortgage at 6.25%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$2,222.74",
+   "numeric": {
+    "value": 2222.74,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $380,000 × 0.95 = $361,000.",
+    "i = [[0.0625 || 12]], n = 360.",
+    "P&I = $2,222.74."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler buys a $240,000 home with 5% down and a 30-year fixed mortgage at 7%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$1,516.89",
+   "numeric": {
+    "value": 1516.89,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $240,000 × 0.95 = $228,000.",
+    "i = [[0.07 || 12]], n = 360.",
+    "P&I = $1,516.89."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev buys a $270,000 home with 20% down and a 30-year fixed mortgage at 7%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$1,437.05",
+   "numeric": {
+    "value": 1437.05,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $270,000 × 0.8 = $216,000.",
+    "i = [[0.07 || 12]], n = 360.",
+    "P&I = $1,437.05."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler buys a $220,000 home with 5% down and a 15-year fixed mortgage at 6.75%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$1,849.46",
+   "numeric": {
+    "value": 1849.46,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $220,000 × 0.95 = $209,000.",
+    "i = [[0.0675 || 12]], n = 180.",
+    "P&I = $1,849.46."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego buys a $305,000 home with 20% down and a 30-year fixed mortgage at 7%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$1,623.34",
+   "numeric": {
+    "value": 1623.34,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $305,000 × 0.8 = $244,000.",
+    "i = [[0.07 || 12]], n = 360.",
+    "P&I = $1,623.34."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-mortgage-pmt-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah buys a $315,000 home with 10% down and a 30-year fixed mortgage at 6.25%. What is the monthly principal and interest payment?",
+   "format": "short-answer",
+   "answer": "$1,745.56",
+   "numeric": {
+    "value": 1745.56,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $315,000 × 0.9 = $283,500.",
+    "i = [[0.0625 || 12]], n = 360.",
+    "P&I = $1,745.56."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-term-15-30-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "term-15-30",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Compare a $400,000 mortgage: 30 years at 6.75% or 15 years at 6%. How much total interest does the 15-year loan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Option",
+      "Payment",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "30-year",
+       "$2,594.39",
+       "$533,980.40"
+      ],
+      [
+       "15-year",
+       "$3,375.43",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$326,403.00",
+   "numeric": {
+    "value": 326403,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "15-year payment = $3,375.43; interest ≈ $3,375.43 × 180 − $400,000 = $207,577.40.",
+    "Savings = $326,403.00, but the payment is $781.04 higher each month."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-term-15-30-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "term-15-30",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Compare a $310,000 mortgage: 30 years at 6.75% or 15 years at 6%. How much total interest does the 15-year loan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Option",
+      "Payment",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "30-year",
+       "$2,010.65",
+       "$413,834.00"
+      ],
+      [
+       "15-year",
+       "$2,615.96",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$252,961.20",
+   "numeric": {
+    "value": 252961.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "15-year payment = $2,615.96; interest ≈ $2,615.96 × 180 − $310,000 = $160,872.80.",
+    "Savings = $252,961.20, but the payment is $605.31 higher each month."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-term-15-30-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "term-15-30",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Compare a $375,000 mortgage: 30 years at 7% or 15 years at 6.25%. How much total interest does the 15-year loan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Option",
+      "Payment",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "30-year",
+       "$2,494.88",
+       "$523,156.80"
+      ],
+      [
+       "15-year",
+       "$3,215.34",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$319,395.60",
+   "numeric": {
+    "value": 319395.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "15-year payment = $3,215.34; interest ≈ $3,215.34 × 180 − $375,000 = $203,761.20.",
+    "Savings = $319,395.60, but the payment is $720.46 higher each month."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-term-15-30-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "term-15-30",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Compare a $375,000 mortgage: 30 years at 6.5% or 15 years at 5.75%. How much total interest does the 15-year loan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Option",
+      "Payment",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "30-year",
+       "$2,370.26",
+       "$478,293.60"
+      ],
+      [
+       "15-year",
+       "$3,114.04",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$292,766.40",
+   "numeric": {
+    "value": 292766.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "15-year payment = $3,114.04; interest ≈ $3,114.04 × 180 − $375,000 = $185,527.20.",
+    "Savings = $292,766.40, but the payment is $743.78 higher each month."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-term-15-30-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "term-15-30",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Compare a $260,000 mortgage: 30 years at 7% or 15 years at 6.25%. How much total interest does the 15-year loan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Option",
+      "Payment",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "30-year",
+       "$1,729.79",
+       "$362,724.40"
+      ],
+      [
+       "15-year",
+       "$2,229.30",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$221,450.40",
+   "numeric": {
+    "value": 221450.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "15-year payment = $2,229.30; interest ≈ $2,229.30 × 180 − $260,000 = $141,274.00.",
+    "Savings = $221,450.40, but the payment is $499.51 higher each month."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-term-15-30-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "term-15-30",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Compare a $225,000 mortgage: 30 years at 6.5% or 15 years at 5.75%. How much total interest does the 15-year loan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Option",
+      "Payment",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "30-year",
+       "$1,422.15",
+       "$286,974.00"
+      ],
+      [
+       "15-year",
+       "$1,868.42",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$175,658.40",
+   "numeric": {
+    "value": 175658.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "15-year payment = $1,868.42; interest ≈ $1,868.42 × 180 − $225,000 = $111,315.60.",
+    "Savings = $175,658.40, but the payment is $446.27 higher each month."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-first-pmt-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "first-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "On a $315,000, 30-year mortgage at 7% (payment $2,095.70), how much of the first payment is interest, and how much reduces principal?",
+   "format": "short-answer",
+   "answer": "Interest $1,837.50; principal $258.20",
+   "numeric": {
+    "value": 1837.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $315,000 × [[0.07 || 12]] = $1,837.50.",
+    "Principal = $2,095.70 − $1,837.50 = $258.20.",
+    "Only 12.3% of the first payment builds equity."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-first-pmt-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "first-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "On a $305,000, 30-year mortgage at 6.75% (payment $1,978.22), how much of the first payment is interest, and how much reduces principal?",
+   "format": "short-answer",
+   "answer": "Interest $1,715.63; principal $262.59",
+   "numeric": {
+    "value": 1715.63,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $305,000 × [[0.0675 || 12]] = $1,715.63.",
+    "Principal = $1,978.22 − $1,715.63 = $262.59.",
+    "Only 13.3% of the first payment builds equity."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-first-pmt-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "first-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "On a $260,000, 30-year mortgage at 7% (payment $1,729.79), how much of the first payment is interest, and how much reduces principal?",
+   "format": "short-answer",
+   "answer": "Interest $1,516.67; principal $213.12",
+   "numeric": {
+    "value": 1516.67,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $260,000 × [[0.07 || 12]] = $1,516.67.",
+    "Principal = $1,729.79 − $1,516.67 = $213.12.",
+    "Only 12.3% of the first payment builds equity."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-first-pmt-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "first-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "On a $340,000, 30-year mortgage at 6% (payment $2,038.47), how much of the first payment is interest, and how much reduces principal?",
+   "format": "short-answer",
+   "answer": "Interest $1,700.00; principal $338.47",
+   "numeric": {
+    "value": 1700,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $340,000 × [[0.06 || 12]] = $1,700.00.",
+    "Principal = $2,038.47 − $1,700.00 = $338.47.",
+    "Only 16.6% of the first payment builds equity."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-first-pmt-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "first-pmt",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "On a $330,000, 30-year mortgage at 6.75% (payment $2,140.37), how much of the first payment is interest, and how much reduces principal?",
+   "format": "short-answer",
+   "answer": "Interest $1,856.25; principal $284.12",
+   "numeric": {
+    "value": 1856.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $330,000 × [[0.0675 || 12]] = $1,856.25.",
+    "Principal = $2,140.37 − $1,856.25 = $284.12.",
+    "Only 13.3% of the first payment builds equity."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-piti-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "piti",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima buys a $355,000 home with 10% down, 30-year fixed at 6.25%. Property tax is 1.5% of price per year, insurance $1,600 per year, PMI 0.7% of the loan per year if down payment < 20%. What is the total monthly payment?",
+   "format": "short-answer",
+   "answer": "$2,730.68",
+   "numeric": {
+    "value": 2730.68,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "P&I = $1,967.22.",
+    "Tax = $443.75; insurance = $133.33; PMI = $186.38.",
+    "Total = $2,730.68."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-piti-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "piti",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah buys a $380,000 home with 20% down, 30-year fixed at 6.5%. Property tax is 1.3% of price per year, insurance $1,400 per year, PMI 0.7% of the loan per year if down payment < 20%. What is the total monthly payment?",
+   "format": "short-answer",
+   "answer": "$2,449.83",
+   "numeric": {
+    "value": 2449.83,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "P&I = $1,921.49.",
+    "Tax = $411.67; insurance = $116.67; PMI = $0.00.",
+    "Total = $2,449.83."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-piti-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "piti",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah buys a $445,000 home with 5% down, 30-year fixed at 6.25%. Property tax is 0.9% of price per year, insurance $2,200 per year, PMI 0.7% of the loan per year if down payment < 20%, and the HOA fee is $275/month. What is the total monthly payment?",
+   "format": "short-answer",
+   "answer": "$3,641.62",
+   "numeric": {
+    "value": 3641.62,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "P&I = $2,602.94.",
+    "Tax = $333.75; insurance = $183.33; PMI = $246.60; HOA = $275.",
+    "Total = $3,641.62."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-piti-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "piti",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah buys a $270,000 home with 20% down, 30-year fixed at 6.5%. Property tax is 1.5% of price per year, insurance $1,900 per year, PMI 0.7% of the loan per year if down payment < 20%, and the HOA fee is $275/month. What is the total monthly payment?",
+   "format": "short-answer",
+   "answer": "$2,136.10",
+   "numeric": {
+    "value": 2136.1,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "P&I = $1,365.27.",
+    "Tax = $337.50; insurance = $158.33; PMI = $0.00; HOA = $275.",
+    "Total = $2,136.10."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-piti-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "piti",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana buys a $445,000 home with 10% down, 30-year fixed at 6.5%. Property tax is 1.3% of price per year, insurance $2,200 per year, PMI 0.7% of the loan per year if down payment < 20%. What is the total monthly payment?",
+   "format": "short-answer",
+   "answer": "$3,430.47",
+   "numeric": {
+    "value": 3430.47,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "P&I = $2,531.43.",
+    "Tax = $482.08; insurance = $183.33; PMI = $233.63.",
+    "Total = $3,430.47."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-piti-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "piti",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah buys a $430,000 home with 20% down, 30-year fixed at 6.75%. Property tax is 1.5% of price per year, insurance $1,900 per year, PMI 0.7% of the loan per year if down payment < 20%, and the HOA fee is $275/month. What is the total monthly payment?",
+   "format": "short-answer",
+   "answer": "$3,202.01",
+   "numeric": {
+    "value": 3202.01,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "P&I = $2,231.18.",
+    "Tax = $537.50; insurance = $158.33; PMI = $0.00; HOA = $275.",
+    "Total = $3,202.01."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-piti-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "piti",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo buys a $430,000 home with 20% down, 30-year fixed at 6.75%. Property tax is 1.1% of price per year, insurance $2,000 per year, PMI 0.7% of the loan per year if down payment < 20%, and the HOA fee is $150/month. What is the total monthly payment?",
+   "format": "short-answer",
+   "answer": "$2,942.02",
+   "numeric": {
+    "value": 2942.02,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "P&I = $2,231.18.",
+    "Tax = $394.17; insurance = $166.67; PMI = $0.00; HOA = $150.",
+    "Total = $2,942.02."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-cash-close-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "cash-close",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah buys a $260,000 home with 20% down. Closing costs are 2% of the price and moving costs are $4,000. How much cash is needed at purchase?",
+   "format": "short-answer",
+   "answer": "$61,200.00",
+   "numeric": {
+    "value": 61200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = $52,000.00.",
+    "Closing costs = $5,200.00.",
+    "Total = $61,200.00 (plus an emergency fund for repairs!)."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-cash-close-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "cash-close",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima buys a $300,000 home with 20% down. Closing costs are 3% of the price and moving costs are $1,500. How much cash is needed at purchase?",
+   "format": "short-answer",
+   "answer": "$70,500.00",
+   "numeric": {
+    "value": 70500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = $60,000.00.",
+    "Closing costs = $9,000.00.",
+    "Total = $70,500.00 (plus an emergency fund for repairs!)."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-cash-close-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "cash-close",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia buys a $255,000 home with 3.5% down. Closing costs are 3% of the price and moving costs are $2,500. How much cash is needed at purchase?",
+   "format": "short-answer",
+   "answer": "$19,075.00",
+   "numeric": {
+    "value": 19075,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = $8,925.00.",
+    "Closing costs = $7,650.00.",
+    "Total = $19,075.00 (plus an emergency fund for repairs!)."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-cash-close-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "cash-close",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo buys a $275,000 home with 5% down. Closing costs are 2% of the price and moving costs are $2,500. How much cash is needed at purchase?",
+   "format": "short-answer",
+   "answer": "$21,750.00",
+   "numeric": {
+    "value": 21750,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = $13,750.00.",
+    "Closing costs = $5,500.00.",
+    "Total = $21,750.00 (plus an emergency fund for repairs!)."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-cash-close-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "cash-close",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis buys a $360,000 home with 3.5% down. Closing costs are 3% of the price and moving costs are $2,500. How much cash is needed at purchase?",
+   "format": "short-answer",
+   "answer": "$25,900.00",
+   "numeric": {
+    "value": 25900,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = $12,600.00.",
+    "Closing costs = $10,800.00.",
+    "Total = $25,900.00 (plus an emergency fund for repairs!)."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-cash-close-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "cash-close",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima buys a $340,000 home with 20% down. Closing costs are 3% of the price and moving costs are $1,500. How much cash is needed at purchase?",
+   "format": "short-answer",
+   "answer": "$79,700.00",
+   "numeric": {
+    "value": 79700,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = $68,000.00.",
+    "Closing costs = $10,200.00.",
+    "Total = $79,700.00 (plus an emergency fund for repairs!)."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-estimate-doc-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "estimate-doc",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Elijah's fictional Loan Estimate. What is the total of all monthly payments for one year?",
+   "scenario": {
+    "document": {
+     "kind": "mortgage-estimate",
+     "title": "Brookside Home Lending — Loan Estimate (fictional)",
+     "meta": [
+      [
+       "Applicant",
+       "Elijah"
+      ],
+      [
+       "Property price",
+       "$380,000"
+      ],
+      [
+       "Loan term",
+       "30 years, fixed"
+      ],
+      [
+       "Interest rate",
+       "6.75%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Projected payments",
+       "Monthly"
+      ],
+      "rows": [
+       [
+        "Principal & interest",
+        "$2,218.21"
+       ],
+       [
+        "Mortgage insurance (PMI)",
+        "$171.00"
+       ],
+       [
+        "Estimated taxes",
+        "$380.00"
+       ],
+       [
+        "Estimated homeowners insurance",
+        "$140.00"
+       ],
+       [
+        "Estimated total monthly payment",
+        "$2,909.21"
+       ],
+       [
+        "Loan amount",
+        "$342,000"
+       ],
+       [
+        "Estimated closing costs",
+        "$10,640.00"
+       ],
+       [
+        "Down payment",
+        "$38,000.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Taxes and insurance can change. PMI may be removed after reaching 20% equity."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$34,910.52",
+   "numeric": {
+    "value": 34910.52,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,909.21 × 12 = $34,910.52."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-estimate-doc-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "estimate-doc",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Maya's fictional Loan Estimate. How much of the monthly payment is NOT principal and interest?",
+   "scenario": {
+    "document": {
+     "kind": "mortgage-estimate",
+     "title": "Brookside Home Lending — Loan Estimate (fictional)",
+     "meta": [
+      [
+       "Applicant",
+       "Maya"
+      ],
+      [
+       "Property price",
+       "$350,000"
+      ],
+      [
+       "Loan term",
+       "30 years, fixed"
+      ],
+      [
+       "Interest rate",
+       "7%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Projected payments",
+       "Monthly"
+      ],
+      "rows": [
+       [
+        "Principal & interest",
+        "$2,095.70"
+       ],
+       [
+        "Mortgage insurance (PMI)",
+        "$157.50"
+       ],
+       [
+        "Estimated taxes",
+        "$350.00"
+       ],
+       [
+        "Estimated homeowners insurance",
+        "$140.00"
+       ],
+       [
+        "Estimated total monthly payment",
+        "$2,743.20"
+       ],
+       [
+        "Loan amount",
+        "$315,000"
+       ],
+       [
+        "Estimated closing costs",
+        "$9,800.00"
+       ],
+       [
+        "Down payment",
+        "$35,000.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Taxes and insurance can change. PMI may be removed after reaching 20% equity."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$647.50",
+   "numeric": {
+    "value": 647.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Tax $350.00 + insurance $140.00 + PMI $157.50 = $647.50."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-estimate-doc-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "estimate-doc",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Mateo's fictional Loan Estimate. How much of the monthly payment is NOT principal and interest?",
+   "scenario": {
+    "document": {
+     "kind": "mortgage-estimate",
+     "title": "Brookside Home Lending — Loan Estimate (fictional)",
+     "meta": [
+      [
+       "Applicant",
+       "Mateo"
+      ],
+      [
+       "Property price",
+       "$375,000"
+      ],
+      [
+       "Loan term",
+       "30 years, fixed"
+      ],
+      [
+       "Interest rate",
+       "6.75%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Projected payments",
+       "Monthly"
+      ],
+      "rows": [
+       [
+        "Principal & interest",
+        "$2,189.02"
+       ],
+       [
+        "Mortgage insurance (PMI)",
+        "$168.75"
+       ],
+       [
+        "Estimated taxes",
+        "$375.00"
+       ],
+       [
+        "Estimated homeowners insurance",
+        "$140.00"
+       ],
+       [
+        "Estimated total monthly payment",
+        "$2,872.77"
+       ],
+       [
+        "Loan amount",
+        "$337,500"
+       ],
+       [
+        "Estimated closing costs",
+        "$10,500.00"
+       ],
+       [
+        "Down payment",
+        "$37,500.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Taxes and insurance can change. PMI may be removed after reaching 20% equity."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$683.75",
+   "numeric": {
+    "value": 683.75,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Tax $375.00 + insurance $140.00 + PMI $168.75 = $683.75."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-estimate-doc-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "estimate-doc",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Diego's fictional Loan Estimate. How much cash is needed to close (down payment + closing costs)?",
+   "scenario": {
+    "document": {
+     "kind": "mortgage-estimate",
+     "title": "Brookside Home Lending — Loan Estimate (fictional)",
+     "meta": [
+      [
+       "Applicant",
+       "Diego"
+      ],
+      [
+       "Property price",
+       "$385,000"
+      ],
+      [
+       "Loan term",
+       "30 years, fixed"
+      ],
+      [
+       "Interest rate",
+       "6.75%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Projected payments",
+       "Monthly"
+      ],
+      "rows": [
+       [
+        "Principal & interest",
+        "$2,247.39"
+       ],
+       [
+        "Mortgage insurance (PMI)",
+        "$173.25"
+       ],
+       [
+        "Estimated taxes",
+        "$385.00"
+       ],
+       [
+        "Estimated homeowners insurance",
+        "$140.00"
+       ],
+       [
+        "Estimated total monthly payment",
+        "$2,945.64"
+       ],
+       [
+        "Loan amount",
+        "$346,500"
+       ],
+       [
+        "Estimated closing costs",
+        "$10,780.00"
+       ],
+       [
+        "Down payment",
+        "$38,500.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Taxes and insurance can change. PMI may be removed after reaching 20% equity."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$49,280.00",
+   "numeric": {
+    "value": 49280,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$38,500.00 + $10,780.00 = $49,280.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-estimate-doc-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "estimate-doc",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Riley's fictional Loan Estimate. How much of the monthly payment is NOT principal and interest?",
+   "scenario": {
+    "document": {
+     "kind": "mortgage-estimate",
+     "title": "Brookside Home Lending — Loan Estimate (fictional)",
+     "meta": [
+      [
+       "Applicant",
+       "Riley"
+      ],
+      [
+       "Property price",
+       "$380,000"
+      ],
+      [
+       "Loan term",
+       "30 years, fixed"
+      ],
+      [
+       "Interest rate",
+       "6.75%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Projected payments",
+       "Monthly"
+      ],
+      "rows": [
+       [
+        "Principal & interest",
+        "$2,218.21"
+       ],
+       [
+        "Mortgage insurance (PMI)",
+        "$171.00"
+       ],
+       [
+        "Estimated taxes",
+        "$380.00"
+       ],
+       [
+        "Estimated homeowners insurance",
+        "$140.00"
+       ],
+       [
+        "Estimated total monthly payment",
+        "$2,909.21"
+       ],
+       [
+        "Loan amount",
+        "$342,000"
+       ],
+       [
+        "Estimated closing costs",
+        "$10,640.00"
+       ],
+       [
+        "Down payment",
+        "$38,000.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Taxes and insurance can change. PMI may be removed after reaching 20% equity."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$691.00",
+   "numeric": {
+    "value": 691,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Tax $380.00 + insurance $140.00 + PMI $171.00 = $691.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-equity-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "equity",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana bought a $315,000 home with 20% down (30-year, 6%). After 3 years the home has appreciated 4% per year. What is her equity?",
+   "format": "short-answer",
+   "answer": "$112,200.41",
+   "numeric": {
+    "value": 112200.41,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $315,000 × (1 + 0.04)^3 = $354,332.16.",
+    "Loan balance after 36 payments ≈ $242,131.75.",
+    "Equity = $112,200.41."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-equity-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "equity",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan bought a $315,000 home with 20% down (30-year, 7%). After 5 years the home has depreciated 1% per year. What is their equity?",
+   "format": "short-answer",
+   "answer": "$62,350.10",
+   "numeric": {
+    "value": 62350.1,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $315,000 × (1 − 0.01)^5 = $299,561.87.",
+    "Loan balance after 60 payments ≈ $237,211.77.",
+    "Equity = $62,350.10."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-equity-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "equity",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan bought a $285,000 home with 20% down (30-year, 6.5%). After 3 years the home has depreciated 1% per year. What is their equity?",
+   "format": "short-answer",
+   "answer": "$56,704.10",
+   "numeric": {
+    "value": 56704.1,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $285,000 × (1 − 0.01)^3 = $276,535.22.",
+    "Loan balance after 36 payments ≈ $219,831.12.",
+    "Equity = $56,704.10."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-equity-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "equity",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya bought a $340,000 home with 10% down (30-year, 6.5%). After 10 years the home has appreciated 2% per year. What is her equity?",
+   "format": "short-answer",
+   "answer": "$155,043.47",
+   "numeric": {
+    "value": 155043.47,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $340,000 × (1 + 0.02)^10 = $414,458.10.",
+    "Loan balance after 120 payments ≈ $259,414.64.",
+    "Equity = $155,043.47."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-equity-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "equity",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya bought a $420,000 home with 10% down (30-year, 6%). After 3 years the home has depreciated 1% per year. What is her equity?",
+   "format": "short-answer",
+   "answer": "$44,327.76",
+   "numeric": {
+    "value": 44327.76,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $420,000 × (1 − 0.01)^3 = $407,525.58.",
+    "Loan balance after 36 payments ≈ $363,197.82.",
+    "Equity = $44,327.76."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-equity-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "equity",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan bought a $365,000 home with 5% down (30-year, 6.5%). After 10 years the home has appreciated 4% per year. What is their equity?",
+   "format": "short-answer",
+   "answer": "$246,328.64",
+   "numeric": {
+    "value": 246328.64,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $365,000 × (1 + 0.04)^10 = $540,289.16.",
+    "Loan balance after 120 payments ≈ $293,960.52.",
+    "Equity = $246,328.64."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-opp-cost-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "opp-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen uses $70,000 for a down payment and closing costs. If that money had instead been invested at a hypothetical 4% per year for 10 years, how much growth would it have earned? (This is the opportunity cost of the cash.)",
+   "format": "short-answer",
+   "answer": "$33,617.10",
+   "numeric": {
+    "value": 33617.1,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$70,000(1 + 0.04)^10 − $70,000 = $33,617.10.",
+    "A fair rent-vs-buy comparison includes this lost growth."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-opp-cost-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "opp-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam uses $85,000 for a down payment and closing costs. If that money had instead been invested at a hypothetical 6% per year for 10 years, how much growth would it have earned? (This is the opportunity cost of the cash.)",
+   "format": "short-answer",
+   "answer": "$67,222.05",
+   "numeric": {
+    "value": 67222.05,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$85,000(1 + 0.06)^10 − $85,000 = $67,222.05.",
+    "A fair rent-vs-buy comparison includes this lost growth."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-opp-cost-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "opp-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila uses $55,000 for a down payment and closing costs. If that money had instead been invested at a hypothetical 6% per year for 7 years, how much growth would it have earned? (This is the opportunity cost of the cash.)",
+   "format": "short-answer",
+   "answer": "$27,699.66",
+   "numeric": {
+    "value": 27699.66,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$55,000(1 + 0.06)^7 − $55,000 = $27,699.66.",
+    "A fair rent-vs-buy comparison includes this lost growth."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-opp-cost-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "opp-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia uses $90,000 for a down payment and closing costs. If that money had instead been invested at a hypothetical 5% per year for 5 years, how much growth would it have earned? (This is the opportunity cost of the cash.)",
+   "format": "short-answer",
+   "answer": "$24,865.34",
+   "numeric": {
+    "value": 24865.34,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$90,000(1 + 0.05)^5 − $90,000 = $24,865.34.",
+    "A fair rent-vs-buy comparison includes this lost growth."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-opp-cost-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "opp-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler uses $35,000 for a down payment and closing costs. If that money had instead been invested at a hypothetical 4% per year for 7 years, how much growth would it have earned? (This is the opportunity cost of the cash.)",
+   "format": "short-answer",
+   "answer": "$11,057.61",
+   "numeric": {
+    "value": 11057.61,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$35,000(1 + 0.04)^7 − $35,000 = $11,057.61.",
+    "A fair rent-vs-buy comparison includes this lost growth."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-opp-cost-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "opp-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan uses $70,000 for a down payment and closing costs. If that money had instead been invested at a hypothetical 5% per year for 7 years, how much growth would it have earned? (This is the opportunity cost of the cash.)",
+   "format": "short-answer",
+   "answer": "$28,497.03",
+   "numeric": {
+    "value": 28497.03,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$70,000(1 + 0.05)^7 − $70,000 = $28,497.03.",
+    "A fair rent-vs-buy comparison includes this lost growth."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-rvb-or-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "rvb-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Maya expects to live in the area about 3 years. Should she rent or buy?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Assumption",
+      "Value"
+     ],
+     "rows": [
+      [
+       "Rent (+$15 insurance)",
+       "$2,145.00/month, rising 3%/yr"
+      ],
+      [
+       "Home price",
+       "$390,000"
+      ],
+      [
+       "Down payment / closing",
+       "20% / 3%"
+      ],
+      [
+       "Mortgage",
+       "30-yr fixed at 6.75%"
+      ],
+      [
+       "Taxes / insurance / maintenance",
+       "1.2% / $1,500 per yr / 1% per yr"
+      ],
+      [
+       "Appreciation / selling cost",
+       "3% per yr / 6% of sale price"
+      ],
+      [
+       "Alternative return on cash",
+       "5% per yr"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Total rent paid over 3 years.",
+     "answer": "$80,099.77"
+    },
+    {
+     "prompt": "Total cash paid out by the owner (down, closing, PITI, maintenance).",
+     "answer": "$193,145.19"
+    },
+    {
+     "prompt": "Equity at sale and opportunity cost of the cash.",
+     "answer": "Equity $99,279.96; opportunity cost $14,138.96"
+    },
+    {
+     "prompt": "Net cost of buying vs. renting and your recommendation.",
+     "answer": "Buy net $108,004.19 vs rent $80,099.77"
+    }
+   ],
+   "answer": "3 yrs: rent $80,099.77; buy net $108,004.19.",
+   "solutionSteps": [
+    "Rent total = $80,099.77.",
+    "Owner outflows = $193,145.19; equity at sale = $99,279.96; opportunity cost = $14,138.96.",
+    "Net buy = outflows − equity + opportunity cost = $108,004.19."
+   ],
+   "modelResponse": "Over 3 years, renting costs $80,099.77 and buying has a net cost of $108,004.19 after recovering $99,279.96 of equity. Renting comes out ahead under these assumptions. The answer is sensitive to appreciation and how long Maya stays; with a shorter stay or flat prices, renting gains the edge, and renting also preserves flexibility.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-housing-s04-rvb-or-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "rvb-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Grace expects to live in the area about 3 years. Should she rent or buy?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Assumption",
+      "Value"
+     ],
+     "rows": [
+      [
+       "Rent (+$15 insurance)",
+       "$2,310.00/month, rising 3%/yr"
+      ],
+      [
+       "Home price",
+       "$420,000"
+      ],
+      [
+       "Down payment / closing",
+       "20% / 3%"
+      ],
+      [
+       "Mortgage",
+       "30-yr fixed at 6.75%"
+      ],
+      [
+       "Taxes / insurance / maintenance",
+       "1.2% / $1,500 per yr / 1% per yr"
+      ],
+      [
+       "Appreciation / selling cost",
+       "3% per yr / 6% of sale price"
+      ],
+      [
+       "Alternative return on cash",
+       "5% per yr"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Total rent paid over 3 years.",
+     "answer": "$86,219.75"
+    },
+    {
+     "prompt": "Total cash paid out by the owner (down, closing, PITI, maintenance).",
+     "answer": "$207,656.22"
+    },
+    {
+     "prompt": "Equity at sale and opportunity cost of the cash.",
+     "answer": "Equity $106,916.73; opportunity cost $15,226.58"
+    },
+    {
+     "prompt": "Net cost of buying vs. renting and your recommendation.",
+     "answer": "Buy net $115,966.06 vs rent $86,219.75"
+    }
+   ],
+   "answer": "3 yrs: rent $86,219.75; buy net $115,966.06.",
+   "solutionSteps": [
+    "Rent total = $86,219.75.",
+    "Owner outflows = $207,656.22; equity at sale = $106,916.73; opportunity cost = $15,226.58.",
+    "Net buy = outflows − equity + opportunity cost = $115,966.06."
+   ],
+   "modelResponse": "Over 3 years, renting costs $86,219.75 and buying has a net cost of $115,966.06 after recovering $106,916.73 of equity. Renting comes out ahead under these assumptions. The answer is sensitive to appreciation and how long Grace stays; with a shorter stay or flat prices, renting gains the edge, and renting also preserves flexibility.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-housing-s04-rvb-or-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "rvb-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Kofi expects to live in the area about 3 years. Should he rent or buy?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Assumption",
+      "Value"
+     ],
+     "rows": [
+      [
+       "Rent (+$15 insurance)",
+       "$1,980.00/month, rising 3%/yr"
+      ],
+      [
+       "Home price",
+       "$360,000"
+      ],
+      [
+       "Down payment / closing",
+       "20% / 3%"
+      ],
+      [
+       "Mortgage",
+       "30-yr fixed at 6.75%"
+      ],
+      [
+       "Taxes / insurance / maintenance",
+       "1.2% / $1,500 per yr / 1% per yr"
+      ],
+      [
+       "Appreciation / selling cost",
+       "3% per yr / 6% of sale price"
+      ],
+      [
+       "Alternative return on cash",
+       "5% per yr"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Total rent paid over 3 years.",
+     "answer": "$73,979.78"
+    },
+    {
+     "prompt": "Total cash paid out by the owner (down, closing, PITI, maintenance).",
+     "answer": "$178,633.80"
+    },
+    {
+     "prompt": "Equity at sale and opportunity cost of the cash.",
+     "answer": "Equity $91,642.80; opportunity cost $13,051.35"
+    },
+    {
+     "prompt": "Net cost of buying vs. renting and your recommendation.",
+     "answer": "Buy net $100,042.35 vs rent $73,979.78"
+    }
+   ],
+   "answer": "3 yrs: rent $73,979.78; buy net $100,042.35.",
+   "solutionSteps": [
+    "Rent total = $73,979.78.",
+    "Owner outflows = $178,633.80; equity at sale = $91,642.80; opportunity cost = $13,051.35.",
+    "Net buy = outflows − equity + opportunity cost = $100,042.35."
+   ],
+   "modelResponse": "Over 3 years, renting costs $73,979.78 and buying has a net cost of $100,042.35 after recovering $91,642.80 of equity. Renting comes out ahead under these assumptions. The answer is sensitive to appreciation and how long Kofi stays; with a shorter stay or flat prices, renting gains the edge, and renting also preserves flexibility.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-housing-s04-rvb-or-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "rvb-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Sam expects to live in the area about 10 years. Should they rent or buy?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Assumption",
+      "Value"
+     ],
+     "rows": [
+      [
+       "Rent (+$15 insurance)",
+       "$1,925.00/month, rising 3%/yr"
+      ],
+      [
+       "Home price",
+       "$350,000"
+      ],
+      [
+       "Down payment / closing",
+       "20% / 3%"
+      ],
+      [
+       "Mortgage",
+       "30-yr fixed at 6.75%"
+      ],
+      [
+       "Taxes / insurance / maintenance",
+       "1.2% / $1,500 per yr / 1% per yr"
+      ],
+      [
+       "Appreciation / selling cost",
+       "3% per yr / 6% of sale price"
+      ],
+      [
+       "Alternative return on cash",
+       "5% per yr"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Total rent paid over 10 years.",
+     "answer": "$266,615.61"
+    },
+    {
+     "prompt": "Total cash paid out by the owner (down, closing, PITI, maintenance).",
+     "answer": "$395,551.98"
+    },
+    {
+     "prompt": "Equity at sale and opportunity cost of the cash.",
+     "answer": "Equity $203,304.89; opportunity cost $50,626.02"
+    },
+    {
+     "prompt": "Net cost of buying vs. renting and your recommendation.",
+     "answer": "Buy net $242,873.10 vs rent $266,615.61"
+    }
+   ],
+   "answer": "10 yrs: rent $266,615.61; buy net $242,873.10.",
+   "solutionSteps": [
+    "Rent total = $266,615.61.",
+    "Owner outflows = $395,551.98; equity at sale = $203,304.89; opportunity cost = $50,626.02.",
+    "Net buy = outflows − equity + opportunity cost = $242,873.10."
+   ],
+   "modelResponse": "Over 10 years, renting costs $266,615.61 and buying has a net cost of $242,873.10 after recovering $203,304.89 of equity. Buying comes out ahead under these assumptions. The answer is sensitive to appreciation and how long Sam stays; with a shorter stay or flat prices, renting gains the edge, and renting also preserves flexibility.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  }
+ ]
+}

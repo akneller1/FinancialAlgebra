@@ -1,0 +1,6639 @@
+{
+ "schema": "fa-bank-1",
+ "courseId": "financial-algebra",
+ "unitId": "credit",
+ "unitName": "Credit Cards & Debt",
+ "level": "standard",
+ "generated": "deterministic",
+ "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
+ "skills": [
+  {
+   "id": "credit-skill-01",
+   "name": "Calculate monthly interest"
+  },
+  {
+   "id": "credit-skill-02",
+   "name": "Evaluate credit card repayment"
+  },
+  {
+   "id": "credit-skill-03",
+   "name": "Compare repayment strategies"
+  },
+  {
+   "id": "credit-skill-04",
+   "name": "Interpret credit costs"
+  }
+ ],
+ "vocab": [
+  {
+   "term": "APR (annual percentage rate)",
+   "skill": 1,
+   "def": "The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+   "example": "A card with 24% APR charges about 2% per month.",
+   "mis": "APR is not charged once a year; it is divided into periodic (monthly or daily) rates."
+  },
+  {
+   "term": "Periodic rate",
+   "skill": 1,
+   "def": "The APR divided into the rate for one billing period or day",
+   "example": "21% APR ÷ 12 = 1.75% per month."
+  },
+  {
+   "term": "Balance",
+   "skill": 1,
+   "def": "The amount owed on an account at a given time",
+   "example": "A $1,240 balance after this month’s purchases."
+  },
+  {
+   "term": "Grace period",
+   "skill": 1,
+   "def": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+   "example": "Paying the full statement balance by the due date avoids interest on purchases."
+  },
+  {
+   "term": "Average daily balance",
+   "skill": 1,
+   "def": "A method of computing interest by averaging the balance owed on each day of the billing cycle",
+   "example": "$800 for 10 days and $1,100 for 20 days → about $1,000 average."
+  },
+  {
+   "term": "Minimum payment",
+   "skill": 2,
+   "def": "The smallest payment required by the due date to keep the account in good standing",
+   "example": "1% of the balance plus interest, at least $25.",
+   "mis": "The minimum payment is not a recommended payment; paying only it keeps you in debt for years."
+  },
+  {
+   "term": "Credit limit",
+   "skill": 4,
+   "def": "The maximum balance a lender allows on a credit account",
+   "example": "A $3,000 limit on a first credit card."
+  },
+  {
+   "term": "Credit utilization",
+   "skill": 4,
+   "def": "The percent of available revolving credit currently being used",
+   "example": "$900 balance ÷ $3,000 limit = 30% utilization."
+  },
+  {
+   "term": "Credit score",
+   "skill": 4,
+   "def": "A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix",
+   "example": "On-time payments and low utilization help raise a score."
+  },
+  {
+   "term": "Credit report",
+   "skill": 4,
+   "def": "A record of a person’s credit accounts and payment history kept by credit bureaus",
+   "example": "You can request free reports from each of the three nationwide bureaus."
+  },
+  {
+   "term": "Late fee",
+   "skill": 4,
+   "def": "A charge for paying less than the minimum by the due date",
+   "example": "A $35 fee plus possible penalty APR."
+  },
+  {
+   "term": "Debt avalanche",
+   "skill": 3,
+   "def": "A repayment strategy that sends extra money to the debt with the highest interest rate first",
+   "example": "Extra $100 goes to a 27% card before a 9% loan."
+  },
+  {
+   "term": "Debt snowball",
+   "skill": 3,
+   "def": "A repayment strategy that sends extra money to the smallest balance first for quick wins",
+   "example": "Pay off the $300 store card first, then roll that payment into the next debt."
+  },
+  {
+   "term": "Balance transfer",
+   "skill": 3,
+   "def": "Moving a balance to another card, often at a low promotional rate with a transfer fee",
+   "example": "0% for 15 months with a 3% fee."
+  },
+  {
+   "term": "Cash advance",
+   "skill": 4,
+   "def": "Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+   "example": "$200 advance with a $10 fee and 29.99% APR starting immediately."
+  },
+  {
+   "term": "Revolving credit",
+   "skill": 2,
+   "def": "Credit that can be borrowed, repaid, and borrowed again up to a limit",
+   "example": "A credit card, unlike a car loan."
+  }
+ ],
+ "lessons": [
+  {
+   "skill": 1,
+   "title": "How Credit Card Interest Works",
+   "minutes": 55,
+   "objectives": [
+    "Convert APR to monthly and daily periodic rates.",
+    "Compute interest on a balance and with the average daily balance method.",
+    "Explain the grace period."
+   ],
+   "vocab": [
+    "APR (annual percentage rate)",
+    "Periodic rate",
+    "Balance",
+    "Grace period",
+    "Average daily balance"
+   ],
+   "hook": "“Buy now, pay later” poster vs. “Buy now, pay full price later.” Which costs more and why?",
+   "notes": [
+    {
+     "h": "APR to periodic rate",
+     "body": "Monthly = APR ÷ 12; daily = APR ÷ 365."
+    },
+    {
+     "h": "Average daily balance",
+     "body": "Average the balance across each day of the cycle, then multiply by the daily rate and the number of days."
+    },
+    {
+     "h": "Grace period",
+     "body": "Pay the full statement balance by the due date → no interest on purchases."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$1,850 balance at 21.99% APR. Monthly interest?",
+     "steps": [
+      "1,850 × 0.2199 ÷ 12 = $33.90"
+     ],
+     "answer": "$33.90"
+    },
+    {
+     "problem": "$600 for 12 days and $900 for 18 days, APR 24%.",
+     "steps": [
+      "ADB = (600·12 + 900·18) ÷ 30 = $780",
+      "Interest = 780 × 0.24 ÷ 365 × 30 = $15.39"
+     ],
+     "answer": "$15.39"
+    }
+   ],
+   "discussion": [
+    "Why might card companies prefer customers who carry a balance?"
+   ],
+   "misconceptions": [
+    [
+     "APR charged monthly as-is.",
+     "Divide by 12 and compare."
+    ]
+   ],
+   "reflection": [
+    "How would you use a credit card to avoid ever paying interest?"
+   ],
+   "extension": "Find the APR range in a real card’s disclosure table (Schumer box).",
+   "differentiation": {
+    "support": [
+     "Rate conversion table."
+    ],
+    "extend": [
+     "Derive the ADB formula as a weighted average."
+    ]
+   },
+   "realWorld": "The disclosure table on every application shows APRs, fees, and the grace period."
+  },
+  {
+   "skill": 2,
+   "title": "The Minimum Payment Trap",
+   "minutes": 55,
+   "objectives": [
+    "Compute minimum payments.",
+    "Simulate repayment month by month.",
+    "Find the payment needed to be debt-free by a target date."
+   ],
+   "vocab": [
+    "Minimum payment",
+    "Revolving credit"
+   ],
+   "hook": "Show the statement warning box: “If you make only the minimum payment… 17 years.” Is that real?",
+   "notes": [
+    {
+     "h": "Minimum formula (course model)",
+     "body": "1% of balance + interest, at least $25."
+    },
+    {
+     "h": "Simulation",
+     "body": "Each month: add interest, subtract payment. Spreadsheets make this fast."
+    },
+    {
+     "h": "Payment for a target date",
+     "body": "Use the installment formula PMT = P·i ÷ (1 − (1 + i)^−n)."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$2,500 at 24.99%: first minimum?",
+     "steps": [
+      "Interest = $52.06",
+      "1% = $25.00",
+      "Minimum = $77.06"
+     ],
+     "answer": "$77.06"
+    },
+    {
+     "problem": "Pay $2,500 in 24 months at 24.99%.",
+     "steps": [
+      "i = 0.020825; n = 24",
+      "PMT ≈ $133.42"
+     ],
+     "answer": "$133.42/month"
+    }
+   ],
+   "discussion": [
+    "Who benefits from low minimum payments?"
+   ],
+   "misconceptions": [
+    [
+     "Minimum = recommended.",
+     "Compare payoff times side by side."
+    ]
+   ],
+   "reflection": [
+    "What monthly payment would you commit to on a $2,000 balance?"
+   ],
+   "extension": "Build a payoff spreadsheet and graph the balance.",
+   "differentiation": {
+    "support": [
+     "Partially completed simulation table."
+    ],
+    "extend": [
+     "Model new monthly purchases while paying off."
+    ]
+   },
+   "realWorld": "The CARD Act requires statements to show minimum-payment payoff time."
+  },
+  {
+   "skill": 3,
+   "title": "Strategies for Getting Out of Debt",
+   "minutes": 55,
+   "objectives": [
+    "Compare avalanche and snowball methods.",
+    "Evaluate balance-transfer offers including fees and promo periods.",
+    "Recommend a plan for a fictional borrower."
+   ],
+   "vocab": [
+    "Debt avalanche",
+    "Debt snowball",
+    "Balance transfer"
+   ],
+   "hook": "Three debts on index cards. Which would you attack first? Vote and defend.",
+   "notes": [
+    {
+     "h": "Avalanche",
+     "body": "Minimums on everything; extra to the highest APR. Minimizes interest."
+    },
+    {
+     "h": "Snowball",
+     "body": "Extra to the smallest balance. Fast wins can improve follow-through."
+    },
+    {
+     "h": "Balance transfers",
+     "body": "Fee (3–5%) + promo length + post-promo APR + approval + discipline."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$3,000 transferred at 0% for 15 months with 3% fee; pay $180/month.",
+     "steps": [
+      "Balance = $3,090",
+      "Paid in promo = $2,700",
+      "Left = $390"
+     ],
+     "answer": "$390 remains after the promo"
+    }
+   ],
+   "discussion": [
+    "Is the mathematically best strategy always the best for a person?"
+   ],
+   "misconceptions": [
+    [
+     "Transfers erase debt.",
+     "Show the fee and the remaining balance."
+    ]
+   ],
+   "reflection": [
+    "Which strategy would work best for you and why?"
+   ],
+   "extension": "Research a nonprofit credit counseling option and describe what it offers.",
+   "differentiation": {
+    "support": [
+     "Strategy flowchart."
+    ],
+    "extend": [
+     "Simulate both methods in a spreadsheet."
+    ]
+   },
+   "realWorld": "Nonprofit credit counselors can help set up debt management plans."
+  },
+  {
+   "skill": 4,
+   "title": "Reading the Fine Print: Statements, Scores, and Fees",
+   "minutes": 55,
+   "objectives": [
+    "Interpret a credit card statement.",
+    "Calculate utilization and the cost of cash advances and fees.",
+    "Explain the factors in a credit score."
+   ],
+   "vocab": [
+    "Credit limit",
+    "Credit utilization",
+    "Credit score",
+    "Credit report",
+    "Late fee",
+    "Cash advance"
+   ],
+   "hook": "Two fictional people with identical incomes get different loan rates. Why?",
+   "notes": [
+    {
+     "h": "Statement",
+     "body": "Verify: previous balance − payments + purchases + interest + fees = new balance."
+    },
+    {
+     "h": "Credit score factors",
+     "body": "Payment history, amounts owed (utilization), length of history, new credit, mix."
+    },
+    {
+     "h": "Costly features",
+     "body": "Cash advances, late fees, penalty APRs, annual fees."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "Balances $450 and $1,050 on limits $1,500 and $3,500.",
+     "steps": [
+      "Total 1,500 ÷ 5,000 = 30%"
+     ],
+     "answer": "30% utilization"
+    }
+   ],
+   "discussion": [
+    "How might a credit score affect renting an apartment or getting a car loan?"
+   ],
+   "misconceptions": [
+    [
+     "Carrying a balance builds credit.",
+     "Paying in full builds the same history."
+    ]
+   ],
+   "reflection": [
+    "What three habits will protect your credit?"
+   ],
+   "extension": "Visit annualcreditreport.com (the official free site) and describe what a report includes — no personal data in class.",
+   "differentiation": {
+    "support": [
+     "Statement with labeled callouts."
+    ],
+    "extend": [
+     "Model how a late fee and penalty APR change a year of costs."
+    ]
+   },
+   "realWorld": "Landlords, insurers, and lenders may use credit information."
+  }
+ ],
+ "cheatSheet": {
+  "title": "Credit Cards & Debt",
+  "sections": [
+   {
+    "h": "Key formulas",
+    "rows": [
+     [
+      "Monthly rate",
+      "[[APR || 12]]"
+     ],
+     [
+      "Monthly interest",
+      "balance × [[APR || 12]]"
+     ],
+     [
+      "Average daily balance",
+      "[[sum of (balance × days) || days in cycle]]"
+     ],
+     [
+      "Payment to finish in n months",
+      "PMT = [[P · i || 1 − (1 + i)^(−n)]]"
+     ],
+     [
+      "Utilization",
+      "[[balances || limits]] × 100"
+     ]
+    ]
+   },
+   {
+    "h": "Repayment strategies",
+    "rows": [
+     [
+      "Avalanche",
+      "Highest APR first → least interest"
+     ],
+     [
+      "Snowball",
+      "Smallest balance first → quick wins"
+     ],
+     [
+      "Balance transfer",
+      "Fee + promo length + later APR"
+     ],
+     [
+      "Minimum only",
+      "Slowest and most expensive"
+     ]
+    ]
+   }
+  ],
+  "example": {
+   "title": "Worked example",
+   "lines": [
+    "$3,000 at 24.99% APR",
+    "First month interest = 3,000 × 0.2499 ÷ 12 = $62.48",
+    "Minimum (1% + interest) = $92.48",
+    "Fixed $150/month → about 26 months; minimum-only → many years"
+   ]
+  },
+  "misconceptions": [
+   "APR is charged monthly as-is.",
+   "Minimum payment is the recommended payment.",
+   "Carrying a balance builds credit.",
+   "0% transfer offers are always free."
+  ],
+  "questions": [
+   "What is the APR — and what is the monthly rate?",
+   "Can I pay the full balance by the due date?",
+   "What fees apply (annual, late, cash advance, transfer)?",
+   "How long will repayment take at my planned payment?",
+   "How will this affect my utilization?"
+  ],
+  "tips": [
+   "Pay the full statement balance whenever possible.",
+   "Set autopay for at least the minimum to avoid late fees.",
+   "Keep utilization low.",
+   "Avoid cash advances."
+  ]
+ },
+ "questions": [
+  {
+   "id": "fa-credit-s01-vocab-def-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **APR (annual percentage rate)** mean?",
+   "format": "multiple-choice",
+   "answer": "The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+   "options": [
+    {
+     "text": "The smallest payment required by the due date to keep the account in good standing",
+     "correct": false
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the smallest balance first for quick wins",
+     "correct": false
+    },
+    {
+     "text": "The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+     "correct": true
+    },
+    {
+     "text": "A method of computing interest by averaging the balance owed on each day of the billing cycle",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "APR (annual percentage rate): The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+    "Example: A card with 24% APR charges about 2% per month."
+   ],
+   "misconceptions": [
+    "APR is not charged once a year; it is divided into periodic (monthly or daily) rates."
+   ],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-term-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The yearly cost of borrowing expressed as a percent, used to compute interest on a balance”",
+   "format": "multiple-choice",
+   "answer": "APR (annual percentage rate)",
+   "options": [
+    {
+     "text": "Minimum payment",
+     "correct": false
+    },
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Revolving credit",
+     "correct": false
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines APR (annual percentage rate).",
+    "Example: A card with 24% APR charges about 2% per month."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-ex-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A card with 24% APR charges about 2% per month.",
+   "format": "multiple-choice",
+   "answer": "APR (annual percentage rate)",
+   "options": [
+    {
+     "text": "Balance transfer",
+     "correct": false
+    },
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Debt avalanche",
+     "correct": false
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of APR (annual percentage rate): The yearly cost of borrowing expressed as a percent, used to compute interest on a balance"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-def-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Periodic rate** mean?",
+   "format": "multiple-choice",
+   "answer": "The APR divided into the rate for one billing period or day",
+   "options": [
+    {
+     "text": "A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix",
+     "correct": false
+    },
+    {
+     "text": "The APR divided into the rate for one billing period or day",
+     "correct": true
+    },
+    {
+     "text": "A charge for paying less than the minimum by the due date",
+     "correct": false
+    },
+    {
+     "text": "The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Periodic rate: The APR divided into the rate for one billing period or day",
+    "Example: 21% APR ÷ 12 = 1.75% per month."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-term-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The APR divided into the rate for one billing period or day”",
+   "format": "multiple-choice",
+   "answer": "Periodic rate",
+   "options": [
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Periodic rate",
+     "correct": true
+    },
+    {
+     "text": "Credit utilization",
+     "correct": false
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Periodic rate.",
+    "Example: 21% APR ÷ 12 = 1.75% per month."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-ex-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? 21% APR ÷ 12 = 1.75% per month.",
+   "format": "multiple-choice",
+   "answer": "Periodic rate",
+   "options": [
+    {
+     "text": "Cash advance",
+     "correct": false
+    },
+    {
+     "text": "Periodic rate",
+     "correct": true
+    },
+    {
+     "text": "Credit utilization",
+     "correct": false
+    },
+    {
+     "text": "Revolving credit",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Periodic rate: The APR divided into the rate for one billing period or day"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-def-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Balance** mean?",
+   "format": "multiple-choice",
+   "answer": "The amount owed on an account at a given time",
+   "options": [
+    {
+     "text": "A charge for paying less than the minimum by the due date",
+     "correct": false
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the smallest balance first for quick wins",
+     "correct": false
+    },
+    {
+     "text": "The amount owed on an account at a given time",
+     "correct": true
+    },
+    {
+     "text": "A method of computing interest by averaging the balance owed on each day of the billing cycle",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Balance: The amount owed on an account at a given time",
+    "Example: A $1,240 balance after this month’s purchases."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-term-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The amount owed on an account at a given time”",
+   "format": "multiple-choice",
+   "answer": "Balance",
+   "options": [
+    {
+     "text": "Balance",
+     "correct": true
+    },
+    {
+     "text": "Late fee",
+     "correct": false
+    },
+    {
+     "text": "Periodic rate",
+     "correct": false
+    },
+    {
+     "text": "Credit score",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Balance.",
+    "Example: A $1,240 balance after this month’s purchases."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-ex-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A $1,240 balance after this month’s purchases.",
+   "format": "multiple-choice",
+   "answer": "Balance",
+   "options": [
+    {
+     "text": "Balance transfer",
+     "correct": false
+    },
+    {
+     "text": "Average daily balance",
+     "correct": false
+    },
+    {
+     "text": "Balance",
+     "correct": true
+    },
+    {
+     "text": "Credit report",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Balance: The amount owed on an account at a given time"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-def-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Grace period** mean?",
+   "format": "multiple-choice",
+   "answer": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+   "options": [
+    {
+     "text": "The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+     "correct": false
+    },
+    {
+     "text": "Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+     "correct": false
+    },
+    {
+     "text": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+     "correct": true
+    },
+    {
+     "text": "A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Grace period: The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+    "Example: Paying the full statement balance by the due date avoids interest on purchases."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-term-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid”",
+   "format": "multiple-choice",
+   "answer": "Grace period",
+   "options": [
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": false
+    },
+    {
+     "text": "Average daily balance",
+     "correct": false
+    },
+    {
+     "text": "Credit score",
+     "correct": false
+    },
+    {
+     "text": "Grace period",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Grace period.",
+    "Example: Paying the full statement balance by the due date avoids interest on purchases."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-ex-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Paying the full statement balance by the due date avoids interest on purchases.",
+   "format": "multiple-choice",
+   "answer": "Grace period",
+   "options": [
+    {
+     "text": "Grace period",
+     "correct": true
+    },
+    {
+     "text": "Revolving credit",
+     "correct": false
+    },
+    {
+     "text": "Credit utilization",
+     "correct": false
+    },
+    {
+     "text": "Debt avalanche",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Grace period: The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-def-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Average daily balance** mean?",
+   "format": "multiple-choice",
+   "answer": "A method of computing interest by averaging the balance owed on each day of the billing cycle",
+   "options": [
+    {
+     "text": "The amount owed on an account at a given time",
+     "correct": false
+    },
+    {
+     "text": "The APR divided into the rate for one billing period or day",
+     "correct": false
+    },
+    {
+     "text": "Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+     "correct": false
+    },
+    {
+     "text": "A method of computing interest by averaging the balance owed on each day of the billing cycle",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Average daily balance: A method of computing interest by averaging the balance owed on each day of the billing cycle",
+    "Example: $800 for 10 days and $1,100 for 20 days → about $1,000 average."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-term-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A method of computing interest by averaging the balance owed on each day of the billing cycle”",
+   "format": "multiple-choice",
+   "answer": "Average daily balance",
+   "options": [
+    {
+     "text": "Average daily balance",
+     "correct": true
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": false
+    },
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Periodic rate",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Average daily balance.",
+    "Example: $800 for 10 days and $1,100 for 20 days → about $1,000 average."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-vocab-ex-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $800 for 10 days and $1,100 for 20 days → about $1,000 average.",
+   "format": "multiple-choice",
+   "answer": "Average daily balance",
+   "options": [
+    {
+     "text": "Credit score",
+     "correct": false
+    },
+    {
+     "text": "Credit limit",
+     "correct": false
+    },
+    {
+     "text": "Average daily balance",
+     "correct": true
+    },
+    {
+     "text": "Balance transfer",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Average daily balance: A method of computing interest by averaging the balance owed on each day of the billing cycle"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-vocab-def-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Minimum payment** mean?",
+   "format": "multiple-choice",
+   "answer": "The smallest payment required by the due date to keep the account in good standing",
+   "options": [
+    {
+     "text": "The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+     "correct": false
+    },
+    {
+     "text": "The smallest payment required by the due date to keep the account in good standing",
+     "correct": true
+    },
+    {
+     "text": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+     "correct": false
+    },
+    {
+     "text": "A charge for paying less than the minimum by the due date",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Minimum payment: The smallest payment required by the due date to keep the account in good standing",
+    "Example: 1% of the balance plus interest, at least $25."
+   ],
+   "misconceptions": [
+    "The minimum payment is not a recommended payment; paying only it keeps you in debt for years."
+   ],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-vocab-term-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The smallest payment required by the due date to keep the account in good standing”",
+   "format": "multiple-choice",
+   "answer": "Minimum payment",
+   "options": [
+    {
+     "text": "Periodic rate",
+     "correct": false
+    },
+    {
+     "text": "Minimum payment",
+     "correct": true
+    },
+    {
+     "text": "Credit utilization",
+     "correct": false
+    },
+    {
+     "text": "Debt avalanche",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Minimum payment.",
+    "Example: 1% of the balance plus interest, at least $25."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-vocab-ex-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? 1% of the balance plus interest, at least $25.",
+   "format": "multiple-choice",
+   "answer": "Minimum payment",
+   "options": [
+    {
+     "text": "Minimum payment",
+     "correct": true
+    },
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Revolving credit",
+     "correct": false
+    },
+    {
+     "text": "Grace period",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Minimum payment: The smallest payment required by the due date to keep the account in good standing"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-def-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Credit limit** mean?",
+   "format": "multiple-choice",
+   "answer": "The maximum balance a lender allows on a credit account",
+   "options": [
+    {
+     "text": "A method of computing interest by averaging the balance owed on each day of the billing cycle",
+     "correct": false
+    },
+    {
+     "text": "Credit that can be borrowed, repaid, and borrowed again up to a limit",
+     "correct": false
+    },
+    {
+     "text": "The yearly cost of borrowing expressed as a percent, used to compute interest on a balance",
+     "correct": false
+    },
+    {
+     "text": "The maximum balance a lender allows on a credit account",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Credit limit: The maximum balance a lender allows on a credit account",
+    "Example: A $3,000 limit on a first credit card."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-term-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The maximum balance a lender allows on a credit account”",
+   "format": "multiple-choice",
+   "answer": "Credit limit",
+   "options": [
+    {
+     "text": "Grace period",
+     "correct": false
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": false
+    },
+    {
+     "text": "Minimum payment",
+     "correct": false
+    },
+    {
+     "text": "Credit limit",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Credit limit.",
+    "Example: A $3,000 limit on a first credit card."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-ex-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A $3,000 limit on a first credit card.",
+   "format": "multiple-choice",
+   "answer": "Credit limit",
+   "options": [
+    {
+     "text": "Average daily balance",
+     "correct": false
+    },
+    {
+     "text": "Cash advance",
+     "correct": false
+    },
+    {
+     "text": "Credit limit",
+     "correct": true
+    },
+    {
+     "text": "Grace period",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Credit limit: The maximum balance a lender allows on a credit account"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-def-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Credit utilization** mean?",
+   "format": "multiple-choice",
+   "answer": "The percent of available revolving credit currently being used",
+   "options": [
+    {
+     "text": "A repayment strategy that sends extra money to the smallest balance first for quick wins",
+     "correct": false
+    },
+    {
+     "text": "The smallest payment required by the due date to keep the account in good standing",
+     "correct": false
+    },
+    {
+     "text": "The percent of available revolving credit currently being used",
+     "correct": true
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the debt with the highest interest rate first",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Credit utilization: The percent of available revolving credit currently being used",
+    "Example: $900 balance ÷ $3,000 limit = 30% utilization."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-term-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “The percent of available revolving credit currently being used”",
+   "format": "multiple-choice",
+   "answer": "Credit utilization",
+   "options": [
+    {
+     "text": "Credit utilization",
+     "correct": true
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": false
+    },
+    {
+     "text": "Minimum payment",
+     "correct": false
+    },
+    {
+     "text": "Late fee",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Credit utilization.",
+    "Example: $900 balance ÷ $3,000 limit = 30% utilization."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-ex-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $900 balance ÷ $3,000 limit = 30% utilization.",
+   "format": "multiple-choice",
+   "answer": "Credit utilization",
+   "options": [
+    {
+     "text": "Balance transfer",
+     "correct": false
+    },
+    {
+     "text": "Credit limit",
+     "correct": false
+    },
+    {
+     "text": "Credit utilization",
+     "correct": true
+    },
+    {
+     "text": "Revolving credit",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Credit utilization: The percent of available revolving credit currently being used"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-def-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Credit score** mean?",
+   "format": "multiple-choice",
+   "answer": "A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix",
+   "options": [
+    {
+     "text": "Credit that can be borrowed, repaid, and borrowed again up to a limit",
+     "correct": false
+    },
+    {
+     "text": "A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix",
+     "correct": true
+    },
+    {
+     "text": "A charge for paying less than the minimum by the due date",
+     "correct": false
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the debt with the highest interest rate first",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Credit score: A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix",
+    "Example: On-time payments and low utilization help raise a score."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-term-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix”",
+   "format": "multiple-choice",
+   "answer": "Credit score",
+   "options": [
+    {
+     "text": "Periodic rate",
+     "correct": false
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": false
+    },
+    {
+     "text": "Credit score",
+     "correct": true
+    },
+    {
+     "text": "Balance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Credit score.",
+    "Example: On-time payments and low utilization help raise a score."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-ex-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? On-time payments and low utilization help raise a score.",
+   "format": "multiple-choice",
+   "answer": "Credit score",
+   "options": [
+    {
+     "text": "Cash advance",
+     "correct": false
+    },
+    {
+     "text": "Credit utilization",
+     "correct": false
+    },
+    {
+     "text": "Credit score",
+     "correct": true
+    },
+    {
+     "text": "Minimum payment",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Credit score: A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-def-10",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Credit report** mean?",
+   "format": "multiple-choice",
+   "answer": "A record of a person’s credit accounts and payment history kept by credit bureaus",
+   "options": [
+    {
+     "text": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+     "correct": false
+    },
+    {
+     "text": "The percent of available revolving credit currently being used",
+     "correct": false
+    },
+    {
+     "text": "A number (commonly 300–850) summarizing credit risk based on payment history, amounts owed, length of history, new credit, and credit mix",
+     "correct": false
+    },
+    {
+     "text": "A record of a person’s credit accounts and payment history kept by credit bureaus",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Credit report: A record of a person’s credit accounts and payment history kept by credit bureaus",
+    "Example: You can request free reports from each of the three nationwide bureaus."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-term-10",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A record of a person’s credit accounts and payment history kept by credit bureaus”",
+   "format": "multiple-choice",
+   "answer": "Credit report",
+   "options": [
+    {
+     "text": "Grace period",
+     "correct": false
+    },
+    {
+     "text": "Balance transfer",
+     "correct": false
+    },
+    {
+     "text": "Credit score",
+     "correct": false
+    },
+    {
+     "text": "Credit report",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Credit report.",
+    "Example: You can request free reports from each of the three nationwide bureaus."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-ex-10",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? You can request free reports from each of the three nationwide bureaus.",
+   "format": "multiple-choice",
+   "answer": "Credit report",
+   "options": [
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Credit report",
+     "correct": true
+    },
+    {
+     "text": "Grace period",
+     "correct": false
+    },
+    {
+     "text": "Late fee",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Credit report: A record of a person’s credit accounts and payment history kept by credit bureaus"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-def-11",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Late fee** mean?",
+   "format": "multiple-choice",
+   "answer": "A charge for paying less than the minimum by the due date",
+   "options": [
+    {
+     "text": "The amount owed on an account at a given time",
+     "correct": false
+    },
+    {
+     "text": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+     "correct": false
+    },
+    {
+     "text": "A charge for paying less than the minimum by the due date",
+     "correct": true
+    },
+    {
+     "text": "Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Late fee: A charge for paying less than the minimum by the due date",
+    "Example: A $35 fee plus possible penalty APR."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-term-11",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A charge for paying less than the minimum by the due date”",
+   "format": "multiple-choice",
+   "answer": "Late fee",
+   "options": [
+    {
+     "text": "Debt snowball",
+     "correct": false
+    },
+    {
+     "text": "Credit limit",
+     "correct": false
+    },
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Late fee",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Late fee.",
+    "Example: A $35 fee plus possible penalty APR."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-ex-11",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A $35 fee plus possible penalty APR.",
+   "format": "multiple-choice",
+   "answer": "Late fee",
+   "options": [
+    {
+     "text": "Late fee",
+     "correct": true
+    },
+    {
+     "text": "Grace period",
+     "correct": false
+    },
+    {
+     "text": "Debt avalanche",
+     "correct": false
+    },
+    {
+     "text": "Credit limit",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Late fee: A charge for paying less than the minimum by the due date"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-def-12",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Debt avalanche** mean?",
+   "format": "multiple-choice",
+   "answer": "A repayment strategy that sends extra money to the debt with the highest interest rate first",
+   "options": [
+    {
+     "text": "The smallest payment required by the due date to keep the account in good standing",
+     "correct": false
+    },
+    {
+     "text": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+     "correct": false
+    },
+    {
+     "text": "Credit that can be borrowed, repaid, and borrowed again up to a limit",
+     "correct": false
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the debt with the highest interest rate first",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Debt avalanche: A repayment strategy that sends extra money to the debt with the highest interest rate first",
+    "Example: Extra $100 goes to a 27% card before a 9% loan."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-term-12",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A repayment strategy that sends extra money to the debt with the highest interest rate first”",
+   "format": "multiple-choice",
+   "answer": "Debt avalanche",
+   "options": [
+    {
+     "text": "Grace period",
+     "correct": false
+    },
+    {
+     "text": "Debt avalanche",
+     "correct": true
+    },
+    {
+     "text": "Periodic rate",
+     "correct": false
+    },
+    {
+     "text": "Debt snowball",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Debt avalanche.",
+    "Example: Extra $100 goes to a 27% card before a 9% loan."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-ex-12",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Extra $100 goes to a 27% card before a 9% loan.",
+   "format": "multiple-choice",
+   "answer": "Debt avalanche",
+   "options": [
+    {
+     "text": "Debt snowball",
+     "correct": false
+    },
+    {
+     "text": "Debt avalanche",
+     "correct": true
+    },
+    {
+     "text": "Periodic rate",
+     "correct": false
+    },
+    {
+     "text": "Cash advance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Debt avalanche: A repayment strategy that sends extra money to the debt with the highest interest rate first"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-def-13",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Debt snowball** mean?",
+   "format": "multiple-choice",
+   "answer": "A repayment strategy that sends extra money to the smallest balance first for quick wins",
+   "options": [
+    {
+     "text": "The APR divided into the rate for one billing period or day",
+     "correct": false
+    },
+    {
+     "text": "The amount owed on an account at a given time",
+     "correct": false
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the smallest balance first for quick wins",
+     "correct": true
+    },
+    {
+     "text": "The time between the end of a billing cycle and the due date during which new purchases are not charged interest if the full balance is paid",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Debt snowball: A repayment strategy that sends extra money to the smallest balance first for quick wins",
+    "Example: Pay off the $300 store card first, then roll that payment into the next debt."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-term-13",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “A repayment strategy that sends extra money to the smallest balance first for quick wins”",
+   "format": "multiple-choice",
+   "answer": "Debt snowball",
+   "options": [
+    {
+     "text": "Balance transfer",
+     "correct": false
+    },
+    {
+     "text": "Debt snowball",
+     "correct": true
+    },
+    {
+     "text": "Periodic rate",
+     "correct": false
+    },
+    {
+     "text": "Credit utilization",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Debt snowball.",
+    "Example: Pay off the $300 store card first, then roll that payment into the next debt."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-ex-13",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? Pay off the $300 store card first, then roll that payment into the next debt.",
+   "format": "multiple-choice",
+   "answer": "Debt snowball",
+   "options": [
+    {
+     "text": "Debt snowball",
+     "correct": true
+    },
+    {
+     "text": "Credit utilization",
+     "correct": false
+    },
+    {
+     "text": "Debt avalanche",
+     "correct": false
+    },
+    {
+     "text": "Late fee",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Debt snowball: A repayment strategy that sends extra money to the smallest balance first for quick wins"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-def-14",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Balance transfer** mean?",
+   "format": "multiple-choice",
+   "answer": "Moving a balance to another card, often at a low promotional rate with a transfer fee",
+   "options": [
+    {
+     "text": "A method of computing interest by averaging the balance owed on each day of the billing cycle",
+     "correct": false
+    },
+    {
+     "text": "The APR divided into the rate for one billing period or day",
+     "correct": false
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the smallest balance first for quick wins",
+     "correct": false
+    },
+    {
+     "text": "Moving a balance to another card, often at a low promotional rate with a transfer fee",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Balance transfer: Moving a balance to another card, often at a low promotional rate with a transfer fee",
+    "Example: 0% for 15 months with a 3% fee."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-term-14",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Moving a balance to another card, often at a low promotional rate with a transfer fee”",
+   "format": "multiple-choice",
+   "answer": "Balance transfer",
+   "options": [
+    {
+     "text": "Grace period",
+     "correct": false
+    },
+    {
+     "text": "Credit score",
+     "correct": false
+    },
+    {
+     "text": "APR (annual percentage rate)",
+     "correct": false
+    },
+    {
+     "text": "Balance transfer",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Balance transfer.",
+    "Example: 0% for 15 months with a 3% fee."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-vocab-ex-14",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? 0% for 15 months with a 3% fee.",
+   "format": "multiple-choice",
+   "answer": "Balance transfer",
+   "options": [
+    {
+     "text": "Debt avalanche",
+     "correct": false
+    },
+    {
+     "text": "Credit limit",
+     "correct": false
+    },
+    {
+     "text": "Balance transfer",
+     "correct": true
+    },
+    {
+     "text": "Average daily balance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Balance transfer: Moving a balance to another card, often at a low promotional rate with a transfer fee"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-def-15",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Cash advance** mean?",
+   "format": "multiple-choice",
+   "answer": "Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+   "options": [
+    {
+     "text": "The smallest payment required by the due date to keep the account in good standing",
+     "correct": false
+    },
+    {
+     "text": "Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+     "correct": true
+    },
+    {
+     "text": "A repayment strategy that sends extra money to the debt with the highest interest rate first",
+     "correct": false
+    },
+    {
+     "text": "Moving a balance to another card, often at a low promotional rate with a transfer fee",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Cash advance: Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+    "Example: $200 advance with a $10 fee and 29.99% APR starting immediately."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-term-15",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period”",
+   "format": "multiple-choice",
+   "answer": "Cash advance",
+   "options": [
+    {
+     "text": "Credit limit",
+     "correct": false
+    },
+    {
+     "text": "Cash advance",
+     "correct": true
+    },
+    {
+     "text": "Revolving credit",
+     "correct": false
+    },
+    {
+     "text": "Minimum payment",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Cash advance.",
+    "Example: $200 advance with a $10 fee and 29.99% APR starting immediately."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-vocab-ex-15",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? $200 advance with a $10 fee and 29.99% APR starting immediately.",
+   "format": "multiple-choice",
+   "answer": "Cash advance",
+   "options": [
+    {
+     "text": "Credit score",
+     "correct": false
+    },
+    {
+     "text": "Average daily balance",
+     "correct": false
+    },
+    {
+     "text": "Balance transfer",
+     "correct": false
+    },
+    {
+     "text": "Cash advance",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Cash advance: Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-vocab-def-16",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Revolving credit** mean?",
+   "format": "multiple-choice",
+   "answer": "Credit that can be borrowed, repaid, and borrowed again up to a limit",
+   "options": [
+    {
+     "text": "A repayment strategy that sends extra money to the debt with the highest interest rate first",
+     "correct": false
+    },
+    {
+     "text": "Withdrawing cash using a credit card, usually with a fee, a higher APR, and no grace period",
+     "correct": false
+    },
+    {
+     "text": "Credit that can be borrowed, repaid, and borrowed again up to a limit",
+     "correct": true
+    },
+    {
+     "text": "A charge for paying less than the minimum by the due date",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Revolving credit: Credit that can be borrowed, repaid, and borrowed again up to a limit",
+    "Example: A credit card, unlike a car loan."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-vocab-term-16",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "vocab-term",
+   "type": "vocabulary",
+   "prompt": "Which term matches this description? “Credit that can be borrowed, repaid, and borrowed again up to a limit”",
+   "format": "multiple-choice",
+   "answer": "Revolving credit",
+   "options": [
+    {
+     "text": "Debt avalanche",
+     "correct": false
+    },
+    {
+     "text": "Periodic rate",
+     "correct": false
+    },
+    {
+     "text": "Average daily balance",
+     "correct": false
+    },
+    {
+     "text": "Revolving credit",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The description defines Revolving credit.",
+    "Example: A credit card, unlike a car loan."
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-vocab-ex-16",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "vocab-ex",
+   "type": "concept",
+   "prompt": "Which financial term is illustrated? A credit card, unlike a car loan.",
+   "format": "multiple-choice",
+   "answer": "Revolving credit",
+   "options": [
+    {
+     "text": "Cash advance",
+     "correct": false
+    },
+    {
+     "text": "Minimum payment",
+     "correct": false
+    },
+    {
+     "text": "Balance",
+     "correct": false
+    },
+    {
+     "text": "Revolving credit",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "This is an example of Revolving credit: Credit that can be borrowed, repaid, and borrowed again up to a limit"
+   ],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-concept-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "A card has a 22.8% APR. What is the monthly periodic rate?",
+   "format": "multiple-choice",
+   "answer": "1.9%",
+   "options": [
+    {
+     "text": "0.19%",
+     "correct": false
+    },
+    {
+     "text": "2.28%",
+     "correct": false
+    },
+    {
+     "text": "22.8%",
+     "correct": false
+    },
+    {
+     "text": "1.9%",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "22.8% ÷ 12 = 1.9%."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-concept-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "When can you avoid all interest on new credit card purchases?",
+   "format": "multiple-choice",
+   "answer": "By paying the full statement balance by the due date each month",
+   "options": [
+    {
+     "text": "By paying the minimum on time",
+     "correct": false
+    },
+    {
+     "text": "By paying the full statement balance by the due date each month",
+     "correct": true
+    },
+    {
+     "text": "By making purchases early in the cycle",
+     "correct": false
+    },
+    {
+     "text": "By paying half the balance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The grace period applies only when the full balance is paid."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-concept-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why does paying only the minimum take so long?",
+   "format": "multiple-choice",
+   "answer": "Most of each minimum payment goes to interest, so the balance falls slowly",
+   "options": [
+    {
+     "text": "Banks add new purchases automatically",
+     "correct": false
+    },
+    {
+     "text": "Most of each minimum payment goes to interest, so the balance falls slowly",
+     "correct": true
+    },
+    {
+     "text": "The APR rises every month",
+     "correct": false
+    },
+    {
+     "text": "Minimum payments are not applied to the balance",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "When the minimum is interest + 1%, only about 1% reduces principal."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-concept-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Which strategy minimizes total interest when paying off several debts?",
+   "format": "multiple-choice",
+   "answer": "Avalanche — highest interest rate first",
+   "options": [
+    {
+     "text": "Avalanche — highest interest rate first",
+     "correct": true
+    },
+    {
+     "text": "Pay all debts equally",
+     "correct": false
+    },
+    {
+     "text": "Pay the newest debt first",
+     "correct": false
+    },
+    {
+     "text": "Snowball — smallest balance first",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Eliminating the most expensive rate first saves the most interest; snowball can help motivation."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-concept-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "A $4,000 limit card has a $1,600 balance. What is the utilization rate?",
+   "format": "multiple-choice",
+   "answer": "40%",
+   "options": [
+    {
+     "text": "16%",
+     "correct": false
+    },
+    {
+     "text": "25%",
+     "correct": false
+    },
+    {
+     "text": "60%",
+     "correct": false
+    },
+    {
+     "text": "40%",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "1,600 ÷ 4,000 = 40%."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-concept-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Select ALL actions that generally help a credit score.",
+   "format": "select-all",
+   "answer": [
+    "Paying every bill on time",
+    "Keeping utilization low",
+    "Keeping older accounts open in good standing"
+   ],
+   "options": [
+    {
+     "text": "Opening many new cards at once",
+     "correct": false
+    },
+    {
+     "text": "Maxing out a card and paying the minimum",
+     "correct": false
+    },
+    {
+     "text": "Keeping older accounts open in good standing",
+     "correct": true
+    },
+    {
+     "text": "Keeping utilization low",
+     "correct": true
+    },
+    {
+     "text": "Paying every bill on time",
+     "correct": true
+    },
+    {
+     "text": "Making a late payment then paying it off",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payment history and amounts owed are the largest factors."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-credit-s04-concept-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why is a cash advance usually more expensive than a purchase?",
+   "format": "multiple-choice",
+   "answer": "It has an up-front fee, a higher APR, and interest starts immediately",
+   "options": [
+    {
+     "text": "It is charged sales tax",
+     "correct": false
+    },
+    {
+     "text": "It reduces your credit limit permanently",
+     "correct": false
+    },
+    {
+     "text": "It has an up-front fee, a higher APR, and interest starts immediately",
+     "correct": true
+    },
+    {
+     "text": "It is not reported to credit bureaus",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "No grace period plus fees and higher rates."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-concept-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "A student pays a $600 balance in full every month. How much interest does the student pay?",
+   "format": "multiple-choice",
+   "answer": "$0",
+   "options": [
+    {
+     "text": "$12",
+     "correct": false
+    },
+    {
+     "text": "It depends on the credit limit",
+     "correct": false
+    },
+    {
+     "text": "$600 × APR",
+     "correct": false
+    },
+    {
+     "text": "$0",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Paying in full within the grace period means no purchase interest."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-claim-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “Paying only the minimum on a credit card is an efficient repayment strategy.”",
+   "format": "multiple-choice",
+   "answer": "Never true",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": false
+    },
+    {
+     "text": "Never true",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Never true for saving money. Minimum payments are designed to keep the account current, not to repay quickly. A $3,000 balance at 24.99% with minimum payments (interest + 1%) takes well over a decade and costs thousands in interest."
+   ],
+   "modelResponse": "Never true for saving money. Minimum payments are designed to keep the account current, not to repay quickly. A $3,000 balance at 24.99% with minimum payments (interest + 1%) takes well over a decade and costs thousands in interest.",
+   "misconceptions": [
+    "Paying only the minimum on a credit card is an efficient repayment strategy."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s02-claim-cer-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “Paying only the minimum on a credit card is an efficient repayment strategy.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Never true"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "$3,000 at 24.99%: minimums ≈ 190+ months; a fixed $150 takes about 26 months."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Never true for saving money. Minimum payments are designed to keep the account current, not to repay quickly. A $3,000 balance at 24.99% with minimum payments (interest + 1%) takes well over a decade and costs thousands in interest."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Never true",
+   "solutionSteps": [
+    "Never true for saving money. Minimum payments are designed to keep the account current, not to repay quickly. A $3,000 balance at 24.99% with minimum payments (interest + 1%) takes well over a decade and costs thousands in interest."
+   ],
+   "modelResponse": "Never true for saving money. Minimum payments are designed to keep the account current, not to repay quickly. A $3,000 balance at 24.99% with minimum payments (interest + 1%) takes well over a decade and costs thousands in interest. Example: $3,000 at 24.99%: minimums ≈ 190+ months; a fixed $150 takes about 26 months.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-credit-s04-claim-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “Carrying a balance helps build credit.”",
+   "format": "multiple-choice",
+   "answer": "Never true",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": false
+    },
+    {
+     "text": "Never true",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Never true. On-time payments and low utilization build credit; paying interest does not. Paying in full each month builds the same history for free."
+   ],
+   "modelResponse": "Never true. On-time payments and low utilization build credit; paying interest does not. Paying in full each month builds the same history for free.",
+   "misconceptions": [
+    "Carrying a balance helps build credit."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s04-claim-cer-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “Carrying a balance helps build credit.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Never true"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "Answers vary; see model response."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Never true. On-time payments and low utilization build credit; paying interest does not. Paying in full each month builds the same history for free."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Never true",
+   "solutionSteps": [
+    "Never true. On-time payments and low utilization build credit; paying interest does not. Paying in full each month builds the same history for free."
+   ],
+   "modelResponse": "Never true. On-time payments and low utilization build credit; paying interest does not. Paying in full each month builds the same history for free.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-credit-s03-claim-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “A 0% balance transfer always saves money.”",
+   "format": "multiple-choice",
+   "answer": "Sometimes true — it depends on the situation",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": true
+    },
+    {
+     "text": "Never true",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Sometimes. Transfer fees (often 3–5%), what happens after the promo, approval, and new spending on the old card can erase savings."
+   ],
+   "modelResponse": "Sometimes. Transfer fees (often 3–5%), what happens after the promo, approval, and new spending on the old card can erase savings.",
+   "misconceptions": [
+    "A 0% balance transfer always saves money."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s03-claim-cer-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “A 0% balance transfer always saves money.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Sometimes true — it depends on the situation"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "$2,000 × 3% = $60 fee; if the balance remains after the promo at 22%, savings shrink."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Sometimes. Transfer fees (often 3–5%), what happens after the promo, approval, and new spending on the old card can erase savings."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Sometimes true — it depends on the situation",
+   "solutionSteps": [
+    "Sometimes. Transfer fees (often 3–5%), what happens after the promo, approval, and new spending on the old card can erase savings."
+   ],
+   "modelResponse": "Sometimes. Transfer fees (often 3–5%), what happens after the promo, approval, and new spending on the old card can erase savings. Example: $2,000 × 3% = $60 fee; if the balance remains after the promo at 22%, savings shrink.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-credit-s01-claim-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “A 20% APR means I pay 20% of my balance in interest every month.”",
+   "format": "multiple-choice",
+   "answer": "Never true",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": false
+    },
+    {
+     "text": "Never true",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Never true. 20% is annual; the monthly rate is about 20% ÷ 12 ≈ 1.67%."
+   ],
+   "modelResponse": "Never true. 20% is annual; the monthly rate is about 20% ÷ 12 ≈ 1.67%.",
+   "misconceptions": [
+    "A 20% APR means I pay 20% of my balance in interest every month."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-credit-s01-claim-cer-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “A 20% APR means I pay 20% of my balance in interest every month.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Never true"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "$1,000 × 0.20 ÷ 12 ≈ $16.67 per month."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Never true. 20% is annual; the monthly rate is about 20% ÷ 12 ≈ 1.67%."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Never true",
+   "solutionSteps": [
+    "Never true. 20% is annual; the monthly rate is about 20% ÷ 12 ≈ 1.67%."
+   ],
+   "modelResponse": "Never true. 20% is annual; the monthly rate is about 20% ÷ 12 ≈ 1.67%. Example: $1,000 × 0.20 ÷ 12 ≈ $16.67 per month.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-credit-s01-mo-interest-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "mo-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah carries a balance of $3,961.52 on a card with 23.99% APR. Using the monthly periodic rate, how much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$79.20",
+   "numeric": {
+    "value": 79.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly rate = 23.99% ÷ 12 = 1.9992%.",
+    "$3,961.52 × 0.2399 ÷ 12 = $79.20."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-mo-interest-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "mo-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus carries a balance of $2,369.89 on a card with 26.99% APR. Using the monthly periodic rate, how much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$53.30",
+   "numeric": {
+    "value": 53.3,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly rate = 26.99% ÷ 12 = 2.2492%.",
+    "$2,369.89 × 0.2699 ÷ 12 = $53.30."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-mo-interest-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "mo-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev carries a balance of $5,480.16 on a card with 17.99% APR. Using the monthly periodic rate, how much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$82.16",
+   "numeric": {
+    "value": 82.16,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly rate = 17.99% ÷ 12 = 1.4992%.",
+    "$5,480.16 × 0.1799 ÷ 12 = $82.16."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-mo-interest-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "mo-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev carries a balance of $1,194.89 on a card with 23.99% APR. Using the monthly periodic rate, how much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$23.89",
+   "numeric": {
+    "value": 23.89,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly rate = 23.99% ÷ 12 = 1.9992%.",
+    "$1,194.89 × 0.2399 ÷ 12 = $23.89."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-mo-interest-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "mo-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei carries a balance of $475.82 on a card with 21.49% APR. Using the monthly periodic rate, how much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$8.52",
+   "numeric": {
+    "value": 8.52,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly rate = 21.49% ÷ 12 = 1.7908%.",
+    "$475.82 × 0.2149 ÷ 12 = $8.52."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-mo-interest-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "mo-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei carries a balance of $3,678.00 on a card with 21.49% APR. Using the monthly periodic rate, how much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$65.87",
+   "numeric": {
+    "value": 65.87,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly rate = 21.49% ÷ 12 = 1.7908%.",
+    "$3,678.00 × 0.2149 ÷ 12 = $65.87."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-mo-interest-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "mo-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo carries a balance of $3,887.98 on a card with 17.99% APR. Using the monthly periodic rate, how much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$58.29",
+   "numeric": {
+    "value": 58.29,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly rate = 17.99% ÷ 12 = 1.4992%.",
+    "$3,887.98 × 0.1799 ÷ 12 = $58.29."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-adb-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "adb",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day billing cycle, Isaiah's balance was $1,030 for 11 days, then $1,145 for 19 days after a purchase. Find the average daily balance and the interest using a daily rate of APR ÷ 365 (APR 18.99%).",
+   "format": "short-answer",
+   "answer": "ADB $1,102.83; interest $17.21",
+   "numeric": {
+    "value": 17.21,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1030 × 11 + 1145 × 19) ÷ 30 = $1,102.83.",
+    "Interest = $1,102.83 × 0.1899 ÷ 365 × 30 = $17.21."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-adb-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "adb",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day billing cycle, Kofi's balance was $1,280 for 9 days, then $1,845 for 21 days after a purchase. Find the average daily balance and the interest using a daily rate of APR ÷ 365 (APR 21.99%).",
+   "format": "short-answer",
+   "answer": "ADB $1,675.50; interest $30.28",
+   "numeric": {
+    "value": 30.28,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1280 × 9 + 1845 × 21) ÷ 30 = $1,675.50.",
+    "Interest = $1,675.50 × 0.2199 ÷ 365 × 30 = $30.28."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-adb-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "adb",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day billing cycle, Marcus's balance was $1,110 for 15 days, then $1,425 for 15 days after a purchase. Find the average daily balance and the interest using a daily rate of APR ÷ 365 (APR 24.99%).",
+   "format": "short-answer",
+   "answer": "ADB $1,267.50; interest $26.03",
+   "numeric": {
+    "value": 26.03,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1110 × 15 + 1425 × 15) ÷ 30 = $1,267.50.",
+    "Interest = $1,267.50 × 0.2499 ÷ 365 × 30 = $26.03."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-adb-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "adb",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day billing cycle, Kofi's balance was $1,240 for 9 days, then $1,825 for 21 days after a purchase. Find the average daily balance and the interest using a daily rate of APR ÷ 365 (APR 24.99%).",
+   "format": "short-answer",
+   "answer": "ADB $1,649.50; interest $33.88",
+   "numeric": {
+    "value": 33.88,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1240 × 9 + 1825 × 21) ÷ 30 = $1,649.50.",
+    "Interest = $1,649.50 × 0.2499 ÷ 365 × 30 = $33.88."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-adb-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "adb",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day billing cycle, Tyler's balance was $810 for 15 days, then $1,200 for 15 days after a purchase. Find the average daily balance and the interest using a daily rate of APR ÷ 365 (APR 21.99%).",
+   "format": "short-answer",
+   "answer": "ADB $1,005.00; interest $18.16",
+   "numeric": {
+    "value": 18.16,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (810 × 15 + 1200 × 15) ÷ 30 = $1,005.00.",
+    "Interest = $1,005.00 × 0.2199 ÷ 365 × 30 = $18.16."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-adb-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "adb",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day billing cycle, Fatima's balance was $910 for 9 days, then $1,480 for 21 days after a purchase. Find the average daily balance and the interest using a daily rate of APR ÷ 365 (APR 24.99%).",
+   "format": "short-answer",
+   "answer": "ADB $1,309.00; interest $26.89",
+   "numeric": {
+    "value": 26.89,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (910 × 9 + 1480 × 21) ÷ 30 = $1,309.00.",
+    "Interest = $1,309.00 × 0.2499 ÷ 365 × 30 = $26.89."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-min-pay-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "min-pay",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya's card requires a minimum payment of 1% of the balance plus that month’s interest (at least $25). The balance is $6,011.35 at 22.99% APR. What is the minimum payment, and how much of it reduces the balance?",
+   "format": "short-answer",
+   "answer": "$175.28; only $60.11 reduces the balance",
+   "numeric": {
+    "value": 175.28,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $115.17.",
+    "1% of balance = $60.11.",
+    "Minimum = $175.28; principal reduction = $60.11."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-min-pay-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "min-pay",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's card requires a minimum payment of 1% of the balance plus that month’s interest (at least $25). The balance is $4,160.57 at 19.99% APR. What is the minimum payment, and how much of it reduces the balance?",
+   "format": "short-answer",
+   "answer": "$110.92; only $41.61 reduces the balance",
+   "numeric": {
+    "value": 110.92,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $69.31.",
+    "1% of balance = $41.61.",
+    "Minimum = $110.92; principal reduction = $41.61."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-min-pay-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "min-pay",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya's card requires a minimum payment of 1% of the balance plus that month’s interest (at least $25). The balance is $819.22 at 19.99% APR. What is the minimum payment, and how much of it reduces the balance?",
+   "format": "short-answer",
+   "answer": "$25.00; only $11.35 reduces the balance",
+   "numeric": {
+    "value": 25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $13.65.",
+    "1% of balance = $8.19.",
+    "Minimum = $25.00; principal reduction = $11.35."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-min-pay-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "min-pay",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's card requires a minimum payment of 1% of the balance plus that month’s interest (at least $25). The balance is $4,248.61 at 25.99% APR. What is the minimum payment, and how much of it reduces the balance?",
+   "format": "short-answer",
+   "answer": "$134.51; only $42.49 reduces the balance",
+   "numeric": {
+    "value": 134.51,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $92.02.",
+    "1% of balance = $42.49.",
+    "Minimum = $134.51; principal reduction = $42.49."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-min-pay-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "min-pay",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen's card requires a minimum payment of 1% of the balance plus that month’s interest (at least $25). The balance is $1,646.44 at 22.99% APR. What is the minimum payment, and how much of it reduces the balance?",
+   "format": "short-answer",
+   "answer": "$48.00; only $16.46 reduces the balance",
+   "numeric": {
+    "value": 48,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $31.54.",
+    "1% of balance = $16.46.",
+    "Minimum = $48.00; principal reduction = $16.46."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-min-pay-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "min-pay",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley's card requires a minimum payment of 1% of the balance plus that month’s interest (at least $25). The balance is $3,264.43 at 19.99% APR. What is the minimum payment, and how much of it reduces the balance?",
+   "format": "short-answer",
+   "answer": "$87.02; only $32.64 reduces the balance",
+   "numeric": {
+    "value": 87.02,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $54.38.",
+    "1% of balance = $32.64.",
+    "Minimum = $87.02; principal reduction = $32.64."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-payoff-compare-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "payoff-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Dev owes $3,500 at 22.99% APR and stops using the card. Compare (A) minimum payments (interest + 1%, at least $25) with (B) a fixed $200 per month. How much interest does the fixed plan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Plan",
+      "Months to pay off",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "A: Minimum payments",
+       "197",
+       "$5,615.32"
+      ],
+      [
+       "B: Fixed $200",
+       "22",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$4,810.98",
+   "numeric": {
+    "value": 4810.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Simulate plan B month by month (interest = balance × APR ÷ 12): 22 months, interest $804.34.",
+    "Savings = $5,615.32 − $804.34 = $4,810.98.",
+    "Plan B also finishes 175 months (14.6 years) sooner."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-payoff-compare-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "payoff-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Fatima owes $2,800 at 19.99% APR and stops using the card. Compare (A) minimum payments (interest + 1%, at least $25) with (B) a fixed $250 per month. How much interest does the fixed plan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Plan",
+      "Months to pay off",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "A: Minimum payments",
+       "169",
+       "$3,648.00"
+      ],
+      [
+       "B: Fixed $250",
+       "13",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,322.71",
+   "numeric": {
+    "value": 3322.71,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Simulate plan B month by month (interest = balance × APR ÷ 12): 13 months, interest $325.29.",
+    "Savings = $3,648.00 − $325.29 = $3,322.71.",
+    "Plan B also finishes 156 months (13.0 years) sooner."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-payoff-compare-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "payoff-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Imani owes $5,800 at 22.99% APR and stops using the card. Compare (A) minimum payments (interest + 1%, at least $25) with (B) a fixed $150 per month. How much interest does the fixed plan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Plan",
+      "Months to pay off",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "A: Minimum payments",
+       "247",
+       "$10,021.78"
+      ],
+      [
+       "B: Fixed $150",
+       "72",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$5,149.98",
+   "numeric": {
+    "value": 5149.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Simulate plan B month by month (interest = balance × APR ÷ 12): 72 months, interest $4,871.80.",
+    "Savings = $10,021.78 − $4,871.80 = $5,149.98.",
+    "Plan B also finishes 175 months (14.6 years) sooner."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-payoff-compare-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "payoff-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Nadia owes $2,800 at 24.99% APR and stops using the card. Compare (A) minimum payments (interest + 1%, at least $25) with (B) a fixed $250 per month. How much interest does the fixed plan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Plan",
+      "Months to pay off",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "A: Minimum payments",
+       "178",
+       "$4,696.32"
+      ],
+      [
+       "B: Fixed $250",
+       "13",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$4,274.72",
+   "numeric": {
+    "value": 4274.72,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Simulate plan B month by month (interest = balance × APR ÷ 12): 13 months, interest $421.60.",
+    "Savings = $4,696.32 − $421.60 = $4,274.72.",
+    "Plan B also finishes 165 months (13.8 years) sooner."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-payoff-compare-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "payoff-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Aaliyah owes $1,800 at 22.99% APR and stops using the card. Compare (A) minimum payments (interest + 1%, at least $25) with (B) a fixed $200 per month. How much interest does the fixed plan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Plan",
+      "Months to pay off",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "A: Minimum payments",
+       "131",
+       "$2,358.33"
+      ],
+      [
+       "B: Fixed $200",
+       "10",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,163.72",
+   "numeric": {
+    "value": 2163.72,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Simulate plan B month by month (interest = balance × APR ÷ 12): 10 months, interest $194.61.",
+    "Savings = $2,358.33 − $194.61 = $2,163.72.",
+    "Plan B also finishes 121 months (10.1 years) sooner."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-payoff-compare-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "payoff-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Hana owes $3,700 at 19.99% APR and stops using the card. Compare (A) minimum payments (interest + 1%, at least $25) with (B) a fixed $125 per month. How much interest does the fixed plan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Plan",
+      "Months to pay off",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "A: Minimum payments",
+       "196",
+       "$5,147.28"
+      ],
+      [
+       "B: Fixed $125",
+       "42",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,706.61",
+   "numeric": {
+    "value": 3706.61,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Simulate plan B month by month (interest = balance × APR ÷ 12): 42 months, interest $1,440.67.",
+    "Savings = $5,147.28 − $1,440.67 = $3,706.61.",
+    "Plan B also finishes 154 months (12.8 years) sooner."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-payoff-compare-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "payoff-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Nadia owes $5,000 at 22.99% APR and stops using the card. Compare (A) minimum payments (interest + 1%, at least $25) with (B) a fixed $200 per month. How much interest does the fixed plan save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Plan",
+      "Months to pay off",
+      "Total interest"
+     ],
+     "rows": [
+      [
+       "A: Minimum payments",
+       "232",
+       "$8,488.89"
+      ],
+      [
+       "B: Fixed $200",
+       "35",
+       "?"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6,617.79",
+   "numeric": {
+    "value": 6617.79,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Simulate plan B month by month (interest = balance × APR ÷ 12): 35 months, interest $1,871.10.",
+    "Savings = $8,488.89 − $1,871.10 = $6,617.79.",
+    "Plan B also finishes 197 months (16.4 years) sooner."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-pay-needed-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "pay-needed",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus wants to pay off a $1,300 balance at 21.99% APR in exactly 36 equal monthly payments with no new charges. What payment is needed?",
+   "format": "short-answer",
+   "answer": "$49.64",
+   "numeric": {
+    "value": 49.64,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.2199 || 12]], n = 36.",
+    "PMT = $49.64.",
+    "Total interest ≈ $487.04."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-pay-needed-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "pay-needed",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia wants to pay off a $2,100 balance at 21.99% APR in exactly 18 equal monthly payments with no new charges. What payment is needed?",
+   "format": "short-answer",
+   "answer": "$138.02",
+   "numeric": {
+    "value": 138.02,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.2199 || 12]], n = 18.",
+    "PMT = $138.02.",
+    "Total interest ≈ $384.36."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-pay-needed-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "pay-needed",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila wants to pay off a $1,400 balance at 18.99% APR in exactly 24 equal monthly payments with no new charges. What payment is needed?",
+   "format": "short-answer",
+   "answer": "$70.57",
+   "numeric": {
+    "value": 70.57,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.1899 || 12]], n = 24.",
+    "PMT = $70.57.",
+    "Total interest ≈ $293.68."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-pay-needed-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "pay-needed",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah wants to pay off a $3,500 balance at 18.99% APR in exactly 36 equal monthly payments with no new charges. What payment is needed?",
+   "format": "short-answer",
+   "answer": "$128.28",
+   "numeric": {
+    "value": 128.28,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.1899 || 12]], n = 36.",
+    "PMT = $128.28.",
+    "Total interest ≈ $1,118.08."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-pay-needed-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "pay-needed",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah wants to pay off a $4,700 balance at 21.99% APR in exactly 12 equal monthly payments with no new charges. What payment is needed?",
+   "format": "short-answer",
+   "answer": "$439.87",
+   "numeric": {
+    "value": 439.87,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.2199 || 12]], n = 12.",
+    "PMT = $439.87.",
+    "Total interest ≈ $578.44."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-pay-needed-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "standard",
+   "family": "pay-needed",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia wants to pay off a $5,000 balance at 18.99% APR in exactly 36 equal monthly payments with no new charges. What payment is needed?",
+   "format": "short-answer",
+   "answer": "$183.25",
+   "numeric": {
+    "value": 183.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.1899 || 12]], n = 36.",
+    "PMT = $183.25.",
+    "Total interest ≈ $1,597.00."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Fatima has three debts and $350 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$550",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$2,900",
+       "23.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,000",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$179.10",
+   "numeric": {
+    "value": 179.1,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $778.28 in 18 months.",
+    "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $957.38 in 19 months.",
+    "Avalanche saves $179.10.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Sofia has three debts and $400 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$500",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$3,400",
+       "23.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,600",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$279.42",
+   "numeric": {
+    "value": 279.42,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $907.67 in 19 months.",
+    "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $1,187.09 in 20 months.",
+    "Avalanche saves $279.42.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Kofi has three debts and $450 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$500",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$2,300",
+       "21.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,300",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$114.94",
+   "numeric": {
+    "value": 114.94,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $423.31 in 13 months.",
+    "Snowball order (smallest balance): Store card → Visa → Personal loan; total interest $538.25 in 13 months.",
+    "Avalanche saves $114.94.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Noah has three debts and $350 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$400",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$3,200",
+       "21.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,200",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$197.17",
+   "numeric": {
+    "value": 197.17,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $806.55 in 19 months.",
+    "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $1,003.72 in 20 months.",
+    "Avalanche saves $197.17.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Riley has three debts and $350 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$650",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$2,300",
+       "21.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,000",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$112.80",
+   "numeric": {
+    "value": 112.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $565.40 in 16 months.",
+    "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $678.20 in 17 months.",
+    "Avalanche saves $112.80.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Andre has three debts and $450 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$400",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$3,400",
+       "23.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,500",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$237.88",
+   "numeric": {
+    "value": 237.88,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $740.52 in 16 months.",
+    "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $978.40 in 17 months.",
+    "Avalanche saves $237.88.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Aaliyah has three debts and $450 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$600",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$2,100",
+       "23.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,500",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$0.00",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $447.77 in 13 months.",
+    "Snowball order (smallest balance): Store card → Visa → Personal loan; total interest $447.77 in 13 months.",
+    "Avalanche saves $0.00.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-aval-snow-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "aval-snow",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Diego has three debts and $350 per month for payments. Compare the avalanche and snowball strategies. How much interest does the avalanche method save?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Debt",
+      "Balance",
+      "APR",
+      "Minimum"
+     ],
+     "rows": [
+      [
+       "Store card",
+       "$650",
+       "28.99%",
+       "$25"
+      ],
+      [
+       "Visa",
+       "$1,800",
+       "21.99%",
+       "$60"
+      ],
+      [
+       "Personal loan",
+       "$2,700",
+       "9.9%",
+       "$75"
+      ]
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$0.00",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $525.28 in 17 months.",
+    "Snowball order (smallest balance): Store card → Visa → Personal loan; total interest $525.28 in 17 months.",
+    "Avalanche saves $0.00.",
+    "When the smallest balance also has the highest APR, both methods start the same way."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus owes $3,000 at 24.99% APR and can pay $200 per month. A balance-transfer card offers 0% for 18 months with a 5% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$0.00",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $3,000 × 1.05 = $3,150.00.",
+    "Paid during promo: $200 × 18 = $3,600.",
+    "Remaining = $0.00 — paid off during the promo.",
+    "For comparison, staying at 24.99% costs $634.37 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego owes $2,600 at 24.99% APR and can pay $200 per month. A balance-transfer card offers 0% for 18 months with a 5% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$0.00",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $2,600 × 1.05 = $2,730.00.",
+    "Paid during promo: $200 × 18 = $3,600.",
+    "Remaining = $0.00 — paid off during the promo.",
+    "For comparison, staying at 24.99% costs $463.90 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya owes $4,200 at 24.99% APR and can pay $200 per month. A balance-transfer card offers 0% for 18 months with a 3% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$726.00",
+   "numeric": {
+    "value": 726,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $4,200 × 1.03 = $4,326.00.",
+    "Paid during promo: $200 × 18 = $3,600.",
+    "Remaining = $726.00 (now charged the regular APR).",
+    "For comparison, staying at 24.99% costs $1,380.22 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah owes $4,200 at 24.99% APR and can pay $250 per month. A balance-transfer card offers 0% for 18 months with a 3% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$0.00",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $4,200 × 1.03 = $4,326.00.",
+    "Paid during promo: $250 × 18 = $4,500.",
+    "Remaining = $0.00 — paid off during the promo.",
+    "For comparison, staying at 24.99% costs $1,022.78 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah owes $1,600 at 24.99% APR and can pay $150 per month. A balance-transfer card offers 0% for 15 months with a 4% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$0.00",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $1,600 × 1.04 = $1,664.00.",
+    "Paid during promo: $150 × 15 = $2,250.",
+    "Remaining = $0.00 — paid off during the promo.",
+    "For comparison, staying at 24.99% costs $228.37 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia owes $3,700 at 24.99% APR and can pay $200 per month. A balance-transfer card offers 0% for 18 months with a 4% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$248.00",
+   "numeric": {
+    "value": 248,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $3,700 × 1.04 = $3,848.00.",
+    "Paid during promo: $200 × 18 = $3,600.",
+    "Remaining = $248.00 (now charged the regular APR).",
+    "For comparison, staying at 24.99% costs $1,021.82 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley owes $4,300 at 24.99% APR and can pay $250 per month. A balance-transfer card offers 0% for 15 months with a 4% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$722.00",
+   "numeric": {
+    "value": 722,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $4,300 × 1.04 = $4,472.00.",
+    "Paid during promo: $250 × 15 = $3,750.",
+    "Remaining = $722.00 (now charged the regular APR).",
+    "For comparison, staying at 24.99% costs $1,079.58 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah owes $2,900 at 24.99% APR and can pay $150 per month. A balance-transfer card offers 0% for 15 months with a 5% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$795.00",
+   "numeric": {
+    "value": 795,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $2,900 × 1.05 = $3,045.00.",
+    "Paid during promo: $150 × 15 = $2,250.",
+    "Remaining = $795.00 (now charged the regular APR).",
+    "For comparison, staying at 24.99% costs $849.44 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-bt-mc-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "standard",
+   "family": "bt-mc",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah owes $4,100 at 24.99% APR and can pay $200 per month. A balance-transfer card offers 0% for 12 months with a 3% fee (added to the balance). About how much will still be owed when the promotion ends?",
+   "format": "short-answer",
+   "answer": "$1,823.00",
+   "numeric": {
+    "value": 1823,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Transferred balance = $4,100 × 1.03 = $4,223.00.",
+    "Paid during promo: $200 × 12 = $2,400.",
+    "Remaining = $1,823.00 (now charged the regular APR).",
+    "For comparison, staying at 24.99% costs $1,302.11 in interest."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Sofia's fictional credit card statement. What is the credit utilization after this statement (nearest tenth of a percent)?",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Bayline Cash Back Mastercard — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Sofia"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "27.99%"
+      ],
+      [
+       "Credit limit",
+       "$5,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$1,385.99"
+       ],
+       [
+        "Payment — thank you",
+        "−$215.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$136.13"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$45.71"
+       ],
+       [
+        "Interest charged",
+        "$27.31"
+       ],
+       [
+        "Late fee",
+        "$35.00"
+       ],
+       [
+        "New balance",
+        "$1,415.14"
+       ],
+       [
+        "Minimum payment due",
+        "$47.16"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "28.3%",
+   "numeric": {
+    "value": 28.3,
+    "tolerance": 0.1,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "$1,415.14 ÷ $5,000 = 28.3%."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Leah's fictional credit card statement. How was the interest charge calculated? Verify it.",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Northstar Rewards Visa — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Leah"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "27.99%"
+      ],
+      [
+       "Credit limit",
+       "$5,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$2,302.02"
+       ],
+       [
+        "Payment — thank you",
+        "−$140.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$118.14"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$53.76"
+       ],
+       [
+        "Interest charged",
+        "$50.43"
+       ],
+       [
+        "New balance",
+        "$2,384.35"
+       ],
+       [
+        "Minimum payment due",
+        "$79.45"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$50.43",
+   "numeric": {
+    "value": 50.43,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "($2,302.02 − $140.00) × 0.2799 ÷ 12 = $50.43."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Zara's fictional credit card statement. Verify the new balance.",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Summit Student Card — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Zara"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "22.99%"
+      ],
+      [
+       "Credit limit",
+       "$5,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$954.29"
+       ],
+       [
+        "Payment — thank you",
+        "−$160.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$103.47"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$51.59"
+       ],
+       [
+        "Purchase: Online Electronics",
+        "$80.34"
+       ],
+       [
+        "Purchase: Pizza Palace",
+        "$30.40"
+       ],
+       [
+        "Interest charged",
+        "$15.22"
+       ],
+       [
+        "New balance",
+        "$1,075.31"
+       ],
+       [
+        "Minimum payment due",
+        "$31.35"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,075.31",
+   "numeric": {
+    "value": 1075.31,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$954.29 − $160.00 + purchases $265.80 + interest $15.22 = $1,075.31."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Owen's fictional credit card statement. Verify the new balance.",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Northstar Rewards Visa — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Owen"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "22.99%"
+      ],
+      [
+       "Credit limit",
+       "$3,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$1,099.93"
+       ],
+       [
+        "Payment — thank you",
+        "−$70.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$75.41"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$58.69"
+       ],
+       [
+        "Purchase: Online Electronics",
+        "$105.19"
+       ],
+       [
+        "Interest charged",
+        "$19.73"
+       ],
+       [
+        "Late fee",
+        "$35.00"
+       ],
+       [
+        "New balance",
+        "$1,323.95"
+       ],
+       [
+        "Minimum payment due",
+        "$38.60"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,323.95",
+   "numeric": {
+    "value": 1323.95,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,099.93 − $70.00 + purchases $239.29 + interest $19.73 + late fee $35 = $1,323.95."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Tyler's fictional credit card statement. Verify the new balance.",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Northstar Rewards Visa — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Tyler"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "27.99%"
+      ],
+      [
+       "Credit limit",
+       "$5,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$1,644.70"
+       ],
+       [
+        "Payment — thank you",
+        "−$260.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$42.14"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$35.81"
+       ],
+       [
+        "Purchase: Online Electronics",
+        "$356.23"
+       ],
+       [
+        "Purchase: Pizza Palace",
+        "$33.07"
+       ],
+       [
+        "Interest charged",
+        "$32.30"
+       ],
+       [
+        "New balance",
+        "$1,884.25"
+       ],
+       [
+        "Minimum payment due",
+        "$62.79"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,884.25",
+   "numeric": {
+    "value": 1884.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,644.70 − $260.00 + purchases $467.25 + interest $32.30 = $1,884.25."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Grace's fictional credit card statement. What is the credit utilization after this statement (nearest tenth of a percent)?",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Crestview Platinum — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Grace"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "19.99%"
+      ],
+      [
+       "Credit limit",
+       "$1,500"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$1,479.10"
+       ],
+       [
+        "Payment — thank you",
+        "−$225.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$94.66"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$54.86"
+       ],
+       [
+        "Interest charged",
+        "$20.89"
+       ],
+       [
+        "Late fee",
+        "$35.00"
+       ],
+       [
+        "New balance",
+        "$1,459.51"
+       ],
+       [
+        "Minimum payment due",
+        "$38.91"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "97.3%",
+   "numeric": {
+    "value": 97.3,
+    "tolerance": 0.1,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "$1,459.51 ÷ $1,500 = 97.3%."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Dev's fictional credit card statement. What is the credit utilization after this statement (nearest tenth of a percent)?",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Summit Student Card — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Dev"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "22.99%"
+      ],
+      [
+       "Credit limit",
+       "$3,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$444.12"
+       ],
+       [
+        "Payment — thank you",
+        "−$175.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$129.90"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$42.49"
+       ],
+       [
+        "Purchase: Online Electronics",
+        "$170.28"
+       ],
+       [
+        "Purchase: Pizza Palace",
+        "$38.18"
+       ],
+       [
+        "Interest charged",
+        "$5.16"
+       ],
+       [
+        "New balance",
+        "$655.13"
+       ],
+       [
+        "Minimum payment due",
+        "$25.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "21.84%",
+   "numeric": {
+    "value": 21.84,
+    "tolerance": 0.1,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "$655.13 ÷ $3,000 = 21.8%."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Aaliyah's fictional credit card statement. How was the interest charge calculated? Verify it.",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Summit Student Card — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Aaliyah"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "19.99%"
+      ],
+      [
+       "Credit limit",
+       "$3,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$634.16"
+       ],
+       [
+        "Payment — thank you",
+        "−$250.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$87.32"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$44.44"
+       ],
+       [
+        "Interest charged",
+        "$6.40"
+       ],
+       [
+        "Late fee",
+        "$35.00"
+       ],
+       [
+        "New balance",
+        "$557.32"
+       ],
+       [
+        "Minimum payment due",
+        "$25.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6.40",
+   "numeric": {
+    "value": 6.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "($634.16 − $250.00) × 0.1999 ÷ 12 = $6.40."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Nadia's fictional credit card statement. Verify the new balance.",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Northstar Rewards Visa — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Nadia"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "27.99%"
+      ],
+      [
+       "Credit limit",
+       "$5,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$739.81"
+       ],
+       [
+        "Payment — thank you",
+        "−$170.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$59.67"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$31.80"
+       ],
+       [
+        "Purchase: Online Electronics",
+        "$153.97"
+       ],
+       [
+        "Purchase: Pizza Palace",
+        "$31.69"
+       ],
+       [
+        "Interest charged",
+        "$13.29"
+       ],
+       [
+        "New balance",
+        "$860.23"
+       ],
+       [
+        "Minimum payment due",
+        "$28.66"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$860.23",
+   "numeric": {
+    "value": 860.23,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$739.81 − $170.00 + purchases $277.13 + interest $13.29 = $860.23."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-stmt-read-10",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "stmt-read",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Andre's fictional credit card statement. Verify the new balance.",
+   "scenario": {
+    "document": {
+     "kind": "credit-card-statement",
+     "title": "Summit Student Card — Monthly Statement",
+     "meta": [
+      [
+       "Cardholder",
+       "Andre"
+      ],
+      [
+       "Billing cycle",
+       "Sep 3 – Oct 2"
+      ],
+      [
+       "Purchase APR",
+       "22.99%"
+      ],
+      [
+       "Credit limit",
+       "$3,000"
+      ],
+      [
+       "Payment due",
+       "Oct 28"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Item",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Previous balance",
+        "$1,596.79"
+       ],
+       [
+        "Payment — thank you",
+        "−$135.00"
+       ],
+       [
+        "Purchase: Grocery Mart",
+        "$93.08"
+       ],
+       [
+        "Purchase: Gas & Go",
+        "$40.13"
+       ],
+       [
+        "Interest charged",
+        "$28.01"
+       ],
+       [
+        "Late fee",
+        "$35.00"
+       ],
+       [
+        "New balance",
+        "$1,658.01"
+       ],
+       [
+        "Minimum payment due",
+        "$48.34"
+       ]
+      ]
+     },
+     "notes": [
+      "Minimum payment warning: If you make only the minimum payment each period, you will pay more in interest and it will take longer to pay off your balance.",
+      "Course model: interest = (previous balance − payment) × APR ÷ 12."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,658.01",
+   "numeric": {
+    "value": 1658.01,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,596.79 − $135.00 + purchases $133.21 + interest $28.01 + late fee $35 = $1,658.01."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-cash-adv-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "cash-adv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah takes a $240 cash advance. The fee is 5% (minimum $10), the cash-advance APR is 27.99%, and interest accrues daily from day one. If he repays after 60 days, what is the total cost of borrowing?",
+   "format": "short-answer",
+   "answer": "$23.04",
+   "numeric": {
+    "value": 23.04,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10, 0.05 × $240) = $12.00.",
+    "Interest = $240 × 0.2799 ÷ 365 × 60 = $11.04.",
+    "Total = $23.04 (≈ 9.6% of the amount borrowed)."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-cash-adv-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "cash-adv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre takes a $420 cash advance. The fee is 5% (minimum $10), the cash-advance APR is 29.99%, and interest accrues daily from day one. If he repays after 30 days, what is the total cost of borrowing?",
+   "format": "short-answer",
+   "answer": "$31.35",
+   "numeric": {
+    "value": 31.35,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10, 0.05 × $420) = $21.00.",
+    "Interest = $420 × 0.2999 ÷ 365 × 30 = $10.35.",
+    "Total = $31.35 (≈ 7.5% of the amount borrowed)."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-cash-adv-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "cash-adv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan takes a $220 cash advance. The fee is 5% (minimum $10), the cash-advance APR is 29.99%, and interest accrues daily from day one. If they repays after 30 days, what is the total cost of borrowing?",
+   "format": "short-answer",
+   "answer": "$16.42",
+   "numeric": {
+    "value": 16.42,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10, 0.05 × $220) = $11.00.",
+    "Interest = $220 × 0.2999 ÷ 365 × 30 = $5.42.",
+    "Total = $16.42 (≈ 7.5% of the amount borrowed)."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-cash-adv-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "cash-adv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya takes a $160 cash advance. The fee is 5% (minimum $10), the cash-advance APR is 27.99%, and interest accrues daily from day one. If she repays after 45 days, what is the total cost of borrowing?",
+   "format": "short-answer",
+   "answer": "$15.52",
+   "numeric": {
+    "value": 15.52,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10, 0.05 × $160) = $10.00.",
+    "Interest = $160 × 0.2799 ÷ 365 × 45 = $5.52.",
+    "Total = $15.52 (≈ 9.7% of the amount borrowed)."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-cash-adv-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "cash-adv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre takes a $140 cash advance. The fee is 5% (minimum $10), the cash-advance APR is 29.99%, and interest accrues daily from day one. If he repays after 30 days, what is the total cost of borrowing?",
+   "format": "short-answer",
+   "answer": "$13.45",
+   "numeric": {
+    "value": 13.45,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10, 0.05 × $140) = $10.00.",
+    "Interest = $140 × 0.2999 ÷ 365 × 30 = $3.45.",
+    "Total = $13.45 (≈ 9.6% of the amount borrowed)."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-cash-adv-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "cash-adv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani takes a $200 cash advance. The fee is 5% (minimum $10), the cash-advance APR is 27.99%, and interest accrues daily from day one. If she repays after 30 days, what is the total cost of borrowing?",
+   "format": "short-answer",
+   "answer": "$14.60",
+   "numeric": {
+    "value": 14.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10, 0.05 × $200) = $10.00.",
+    "Interest = $200 × 0.2799 ÷ 365 × 30 = $4.60.",
+    "Total = $14.60 (≈ 7.3% of the amount borrowed)."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-cash-adv-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "cash-adv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara takes a $100 cash advance. The fee is 5% (minimum $10), the cash-advance APR is 29.99%, and interest accrues daily from day one. If she repays after 30 days, what is the total cost of borrowing?",
+   "format": "short-answer",
+   "answer": "$12.46",
+   "numeric": {
+    "value": 12.46,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10, 0.05 × $100) = $10.00.",
+    "Interest = $100 × 0.2999 ÷ 365 × 30 = $2.46.",
+    "Total = $12.46 (≈ 12.5% of the amount borrowed)."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-card-choose-or-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "card-choose-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Fatima spends about $1,100 per month on a card and usually carries a $1,500 balance. Compare the two cards.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Feature",
+      "Northstar Rewards",
+      "Summit Basic"
+     ],
+     "rows": [
+      [
+       "Annual fee",
+       "$95",
+       "$0"
+      ],
+      [
+       "Cash back",
+       "2%",
+       "1%"
+      ],
+      [
+       "Purchase APR",
+       "26.99%",
+       "17.99%"
+      ],
+      [
+       "Late fee",
+       "$40",
+       "$30"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Find yearly cash back for each card.",
+     "answer": "Northstar Rewards $264.00; Summit Basic $132.00"
+    },
+    {
+     "prompt": "Estimate yearly interest on the carried balance for each card.",
+     "answer": "$404.85 vs $269.85"
+    },
+    {
+     "prompt": "Compute net yearly value (cash back − annual fee − interest).",
+     "answer": "Northstar Rewards −$235.85; Summit Basic −$137.85"
+    },
+    {
+     "prompt": "Recommend a card and explain how Fatima’s habits drive the decision.",
+     "answer": "Rewards matter only when the balance is paid in full."
+    }
+   ],
+   "answer": "Net value: Northstar Rewards −$235.85, Summit Basic −$137.85.",
+   "solutionSteps": [
+    "Cash back: $264.00 vs $132.00.",
+    "Interest ≈ balance × APR: $404.85 vs $269.85.",
+    "Net: −$235.85 vs −$137.85."
+   ],
+   "modelResponse": "Because Fatima carries a balance, interest dominates: the lower-APR Summit Basic card is worth −$137.85 versus −$235.85. The better card depends on habits — rewards are valuable only for people who never pay interest.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-credit-s04-card-choose-or-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "card-choose-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Sofia spends about $650 per month on a card and pays in full every month. Compare the two cards.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Feature",
+      "Northstar Rewards",
+      "Summit Basic"
+     ],
+     "rows": [
+      [
+       "Annual fee",
+       "$95",
+       "$0"
+      ],
+      [
+       "Cash back",
+       "2%",
+       "1%"
+      ],
+      [
+       "Purchase APR",
+       "26.99%",
+       "17.99%"
+      ],
+      [
+       "Late fee",
+       "$40",
+       "$30"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Find yearly cash back for each card.",
+     "answer": "Northstar Rewards $156.00; Summit Basic $78.00"
+    },
+    {
+     "prompt": "Estimate yearly interest on the carried balance for each card.",
+     "answer": "$0 for both (paid in full)"
+    },
+    {
+     "prompt": "Compute net yearly value (cash back − annual fee − interest).",
+     "answer": "Northstar Rewards $61.00; Summit Basic $78.00"
+    },
+    {
+     "prompt": "Recommend a card and explain how Sofia’s habits drive the decision.",
+     "answer": "Rewards matter only when the balance is paid in full."
+    }
+   ],
+   "answer": "Net value: Northstar Rewards $61.00, Summit Basic $78.00.",
+   "solutionSteps": [
+    "Cash back: $156.00 vs $78.00.",
+    "No interest when paid in full.",
+    "Net: $61.00 vs $78.00."
+   ],
+   "modelResponse": "Because Sofia pays in full, interest is $0 and the comparison is cash back minus fees: $61.00 vs $78.00. The better card depends on habits — rewards are valuable only for people who never pay interest.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-credit-s04-card-choose-or-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "card-choose-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Marcus spends about $900 per month on a card and usually carries a $800 balance. Compare the two cards.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Feature",
+      "Northstar Rewards",
+      "Summit Basic"
+     ],
+     "rows": [
+      [
+       "Annual fee",
+       "$95",
+       "$0"
+      ],
+      [
+       "Cash back",
+       "2%",
+       "1%"
+      ],
+      [
+       "Purchase APR",
+       "26.99%",
+       "17.99%"
+      ],
+      [
+       "Late fee",
+       "$40",
+       "$30"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Find yearly cash back for each card.",
+     "answer": "Northstar Rewards $216.00; Summit Basic $108.00"
+    },
+    {
+     "prompt": "Estimate yearly interest on the carried balance for each card.",
+     "answer": "$215.92 vs $143.92"
+    },
+    {
+     "prompt": "Compute net yearly value (cash back − annual fee − interest).",
+     "answer": "Northstar Rewards −$94.92; Summit Basic −$35.92"
+    },
+    {
+     "prompt": "Recommend a card and explain how Marcus’s habits drive the decision.",
+     "answer": "Rewards matter only when the balance is paid in full."
+    }
+   ],
+   "answer": "Net value: Northstar Rewards −$94.92, Summit Basic −$35.92.",
+   "solutionSteps": [
+    "Cash back: $216.00 vs $108.00.",
+    "Interest ≈ balance × APR: $215.92 vs $143.92.",
+    "Net: −$94.92 vs −$35.92."
+   ],
+   "modelResponse": "Because Marcus carries a balance, interest dominates: the lower-APR Summit Basic card is worth −$35.92 versus −$94.92. The better card depends on habits — rewards are valuable only for people who never pay interest.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  },
+  {
+   "id": "fa-credit-s04-card-choose-or-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "standard",
+   "family": "card-choose-or",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "project-practice"
+   ],
+   "gameEligible": false,
+   "format": "open-response",
+   "prompt": "Nadia spends about $1,100 per month on a card and pays in full every month. Compare the two cards.",
+   "scenario": {
+    "table": {
+     "headers": [
+      "Feature",
+      "Northstar Rewards",
+      "Summit Basic"
+     ],
+     "rows": [
+      [
+       "Annual fee",
+       "$95",
+       "$0"
+      ],
+      [
+       "Cash back",
+       "2%",
+       "1%"
+      ],
+      [
+       "Purchase APR",
+       "26.99%",
+       "17.99%"
+      ],
+      [
+       "Late fee",
+       "$40",
+       "$30"
+      ]
+     ]
+    }
+   },
+   "parts": [
+    {
+     "prompt": "Find yearly cash back for each card.",
+     "answer": "Northstar Rewards $264.00; Summit Basic $132.00"
+    },
+    {
+     "prompt": "Estimate yearly interest on the carried balance for each card.",
+     "answer": "$0 for both (paid in full)"
+    },
+    {
+     "prompt": "Compute net yearly value (cash back − annual fee − interest).",
+     "answer": "Northstar Rewards $169.00; Summit Basic $132.00"
+    },
+    {
+     "prompt": "Recommend a card and explain how Nadia’s habits drive the decision.",
+     "answer": "Rewards matter only when the balance is paid in full."
+    }
+   ],
+   "answer": "Net value: Northstar Rewards $169.00, Summit Basic $132.00.",
+   "solutionSteps": [
+    "Cash back: $264.00 vs $132.00.",
+    "No interest when paid in full.",
+    "Net: $169.00 vs $132.00."
+   ],
+   "modelResponse": "Because Nadia pays in full, interest is $0 and the comparison is cash back minus fees: $169.00 vs $132.00. The better card depends on habits — rewards are valuable only for people who never pay interest.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Cites specific numbers from the scenario or document to support each claim.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ]
+  }
+ ]
+}
