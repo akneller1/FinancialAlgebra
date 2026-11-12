@@ -73,12 +73,22 @@
       (priority[b.title]===undefined?99:priority[b.title]);});
   }
   function resourceCard(a,category){
+    var levelChoices = (G.MK_GRADE5_STUDENT_LINKS && G.MK_GRADE5_STUDENT_LINKS.hasLevel(a)) ?
+      '<label class="g5-student-level-label">Student level <select class="g5-student-level" aria-label="Student link level for '+escape(a.title)+'">'+
+      '<option value="cp2">Remedial</option><option value="cp1" selected>Standard</option><option value="honors">Advanced</option>'+
+      '</select></label>' : '';
     return '<li class="card g5-resource-card" data-course="math5" data-color="sunshine">'+
-      '<div class="thumb"><img src="'+escape(a.thumb)+'" alt="" width="720" height="450" loading="lazy" decoding="async"></div>'+
+      '<a class="thumb g5-resource-image-link" href="'+escape(a.path)+'" aria-label="Open '+escape(a.title)+'">'+
+      '<img src="'+escape(a.thumb)+'" alt="" width="720" height="450" loading="lazy" decoding="async"></a>'+
       '<div class="card-body"><div class="where">'+escape(category)+'</div>'+
       '<h3><a href="'+escape(a.path)+'">'+escape(a.title)+'</a></h3>'+
       '<p class="desc">'+escape(a.description||'')+'</p>'+
-      '<div class="actions"><span class="btn btn-open">Open resource →</span></div></div></li>';
+      '<div class="actions g5-card-actions"><a class="btn btn-open" href="'+escape(a.path)+'">Open resource →</a></div>'+
+      '<div class="g5-student-share">'+levelChoices+
+      '<button type="button" class="g5-student-copy" data-g5-share="1" data-path="'+escape(a.path)+'"'+
+      ' data-type="'+escape(a.type)+'" data-title="'+escape(a.title)+'">Copy student link</button>'+
+      '<span class="g5-student-status" role="status" aria-live="polite"></span></div>'+
+      '</div></li>';
   }
   function sectionHtml(u,group){
     var items=sortCards(u.artifacts.filter(function(a){return a.type===group.key;}),group.key);
@@ -157,6 +167,29 @@
   }
   document.getElementById('skip').addEventListener('click',function(){main.focus();});
   main.addEventListener('click',function(e){
+    var share=e.target.closest('button[data-g5-share]');
+    if(share){
+      var card=share.closest('.g5-resource-card');
+      var status=card.querySelector('.g5-student-status');
+      var levelSelect=card.querySelector('.g5-student-level');
+      var resource={path:share.getAttribute('data-path'),type:share.getAttribute('data-type'),
+        title:share.getAttribute('data-title')};
+      var url;
+      try{
+        url=G.MK_GRADE5_STUDENT_LINKS.destination(resource,levelSelect?levelSelect.value:'cp1',G.location.href);
+      }catch(err){status.textContent='Unable to make this link.';return;}
+      function manual(){
+        status.textContent='Copy the student link from the dialog.';
+        if(typeof G.prompt==='function') G.prompt('Copy student link:',url);
+        else status.textContent='Copy this student link: '+url;
+      }
+      if(G.navigator && G.navigator.clipboard && G.navigator.clipboard.writeText){
+        G.navigator.clipboard.writeText(url).then(function(){
+          status.textContent='Student link copied!';
+        }).catch(manual);
+      }else manual();
+      return;
+    }
     var button=e.target.closest('[data-g5-scroll]');
     if(!button)return;
     var target=document.getElementById(button.getAttribute('data-g5-scroll'));
