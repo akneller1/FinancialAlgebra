@@ -21,6 +21,17 @@ The FinancialAlgebra GitHub repository now also hosts the **Grade 5 Math** curri
 5. Write tests matching the source document's unit and skill counts, topic order, standards references, page continuations and stable IDs.
 6. Only after teacher review, begin adding authentic question families and activity integrations. Never show disabled tools as if they already work.
 
+## Standard unit card — Geometry design (all present and future courses)
+
+All course landing pages must use the Geometry-style `unit algebra-unit-card` pattern. This includes Grades 1–5, Financial Algebra, and every new class staged here and later published to Mr. K’s Classroom.
+
+- Keep the three-column responsive `ul.units` grid, course-specific tint, dark outlined rounded cards, and shadow.
+- Show `Unit N`, the unit title, up to four real curriculum lesson/skill names as bullet points, and an `Open unit →` link anchored at the bottom.
+- With more than four lessons, include accessible `details.unit-lesson-details` and an expandable `Show all N lessons` / `Show fewer lessons` control. Never list fake lesson names.
+- Do not put activity counts, thumbnail strips, games, resource inventories, or development badges inside the unit cards. These belong on the unit page or in page-level notices.
+- Use `src/outline-template.js` for outline-only grades, the established Grade 5 renderer for ready Grade 5 content, and the shared Classroom renderer on production. When integrating, add accurate course-unit skill arrays to the Classroom catalog so cards never display blank lesson previews.
+- Do not create per-course unit-card layouts or conditionals: future courses inherit the common format.
+
 ## Stable content contract
 
 The skill ID for item index \`i\` (zero-based) in a unit is \`<unit-id>-skill-<two-digit-number>\`. Example: \`place-value-skill-01\`.
