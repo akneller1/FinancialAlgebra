@@ -44,7 +44,6 @@ function unitCard(unit,index){
  return '<li><div class="unit algebra-unit-card" data-color="purple" data-course="'+courseId+'">'+
  '<h3><a class="unit-title-link" href="'+linkFor(unit)+'"><span class="unit-num">Unit '+(index+1)+'</span>'+esc(unit.name)+'</a></h3>'+
  '<div class="unit-meta" data-lesson-list="true">'+skillList(unit)+'</div>'+
- '<span class="unit-course-status">Generators · Games · Decision Lab · Study Guides · Projects</span>'+
  '<a class="unit-open-link" href="'+linkFor(unit)+'">Open unit →</a></div></li>';
 }
 const shortcuts=[
