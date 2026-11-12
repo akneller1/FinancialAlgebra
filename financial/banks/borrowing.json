@@ -2795,7 +2795,7 @@
    "type": "claim",
    "prompt": "Evaluate the claim: “The lowest monthly payment is the cheapest financing option.”",
    "format": "multiple-choice",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "options": [
     {
      "text": "Always true",
@@ -2803,17 +2803,17 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Never true by itself. A lower payment often comes from a longer term, which adds interest. Compare total of payments plus fees and down payment over the same horizon."
+    "Sometimes true. If two loans have the same term, the one with the lower payment (lower APR or smaller amount) is cheaper. But a lower payment often comes from a longer term, which adds interest. Compare the total of payments plus fees and down payment."
    ],
-   "modelResponse": "Never true by itself. A lower payment often comes from a longer term, which adds interest. Compare total of payments plus fees and down payment over the same horizon.",
+   "modelResponse": "Sometimes true. If two loans have the same term, the one with the lower payment (lower APR or smaller amount) is cheaper. But a lower payment often comes from a longer term, which adds interest. Compare the total of payments plus fees and down payment.",
    "misconceptions": [
     "The lowest monthly payment is the cheapest financing option."
    ],
@@ -2837,26 +2837,26 @@
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
-     "answer": "$22,000 at 6.9%: 48 months ≈ $25,237 total; 84 months ≈ $27,795 total."
+     "answer": "$22,000 at 6.9%: 48 months ≈ $25,239 total; 84 months has a lower payment but ≈ $27,790 total."
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true by itself. A lower payment often comes from a longer term, which adds interest. Compare total of payments plus fees and down payment over the same horizon."
+     "answer": "Sometimes true. If two loans have the same term, the one with the lower payment (lower APR or smaller amount) is cheaper. But a lower payment often comes from a longer term, which adds interest. Compare the total of payments plus fees and down payment."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
      "answer": "Answers vary; accept any defensible situation."
     }
    ],
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true by itself. A lower payment often comes from a longer term, which adds interest. Compare total of payments plus fees and down payment over the same horizon."
+    "Sometimes true. If two loans have the same term, the one with the lower payment (lower APR or smaller amount) is cheaper. But a lower payment often comes from a longer term, which adds interest. Compare the total of payments plus fees and down payment."
    ],
-   "modelResponse": "Never true by itself. A lower payment often comes from a longer term, which adds interest. Compare total of payments plus fees and down payment over the same horizon. Example: $22,000 at 6.9%: 48 months ≈ $25,237 total; 84 months ≈ $27,795 total.",
+   "modelResponse": "Sometimes true. If two loans have the same term, the one with the lower payment (lower APR or smaller amount) is cheaper. But a lower payment often comes from a longer term, which adds interest. Compare the total of payments plus fees and down payment. Example: $22,000 at 6.9%: 48 months ≈ $25,239 total; 84 months has a lower payment but ≈ $27,790 total.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
@@ -3011,7 +3011,7 @@
    "type": "claim",
    "prompt": "Evaluate the claim: “Paying an extra $50 a month on a car loan barely makes a difference.”",
    "format": "multiple-choice",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "options": [
     {
      "text": "Always true",
@@ -3019,17 +3019,17 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Never true in general. Extra principal reduces every future interest charge and shortens the loan."
+    "Sometimes true. Near the end of a loan, or on a very small balance, $50 extra changes little. Early in a typical car loan, extra principal reduces every future interest charge and can save hundreds of dollars and several months."
    ],
-   "modelResponse": "Never true in general. Extra principal reduces every future interest charge and shortens the loan.",
+   "modelResponse": "Sometimes true. Near the end of a loan, or on a very small balance, $50 extra changes little. Early in a typical car loan, extra principal reduces every future interest charge and can save hundreds of dollars and several months.",
    "misconceptions": [
     "Paying an extra $50 a month on a car loan barely makes a difference."
    ],
@@ -3053,26 +3053,26 @@
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
-     "answer": "$20,000 at 7.5% for 60 months: an extra $50/month saves several hundred dollars and several months."
+     "answer": "$20,000 at 7.5% for 60 months: an extra $50/month from the start saves several hundred dollars and several months."
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true in general. Extra principal reduces every future interest charge and shortens the loan."
+     "answer": "Sometimes true. Near the end of a loan, or on a very small balance, $50 extra changes little. Early in a typical car loan, extra principal reduces every future interest charge and can save hundreds of dollars and several months."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
      "answer": "Answers vary; accept any defensible situation."
     }
    ],
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true in general. Extra principal reduces every future interest charge and shortens the loan."
+    "Sometimes true. Near the end of a loan, or on a very small balance, $50 extra changes little. Early in a typical car loan, extra principal reduces every future interest charge and can save hundreds of dollars and several months."
    ],
-   "modelResponse": "Never true in general. Extra principal reduces every future interest charge and shortens the loan. Example: $20,000 at 7.5% for 60 months: an extra $50/month saves several hundred dollars and several months.",
+   "modelResponse": "Sometimes true. Near the end of a loan, or on a very small balance, $50 extra changes little. Early in a typical car loan, extra principal reduces every future interest charge and can save hundreds of dollars and several months. Example: $20,000 at 7.5% for 60 months: an extra $50/month from the start saves several hundred dollars and several months.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
@@ -3119,7 +3119,7 @@
    "type": "claim",
    "prompt": "Evaluate the claim: “If I qualify for a loan, I can afford the car.”",
    "format": "multiple-choice",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "options": [
     {
      "text": "Always true",
@@ -3127,17 +3127,17 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Never a safe assumption. Approval reflects the lender’s risk, not your full budget: insurance, fuel, maintenance, and savings goals also need room."
+    "Sometimes true. Approval reflects the lender’s risk, not your full budget. Some approved buyers can afford the car; others cannot once insurance, fuel, maintenance, and savings goals are included. Check the whole budget, not just the approval."
    ],
-   "modelResponse": "Never a safe assumption. Approval reflects the lender’s risk, not your full budget: insurance, fuel, maintenance, and savings goals also need room.",
+   "modelResponse": "Sometimes true. Approval reflects the lender’s risk, not your full budget. Some approved buyers can afford the car; others cannot once insurance, fuel, maintenance, and savings goals are included. Check the whole budget, not just the approval.",
    "misconceptions": [
     "If I qualify for a loan, I can afford the car."
    ],
@@ -3161,7 +3161,7 @@
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
@@ -3169,18 +3169,18 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never a safe assumption. Approval reflects the lender’s risk, not your full budget: insurance, fuel, maintenance, and savings goals also need room."
+     "answer": "Sometimes true. Approval reflects the lender’s risk, not your full budget. Some approved buyers can afford the car; others cannot once insurance, fuel, maintenance, and savings goals are included. Check the whole budget, not just the approval."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
      "answer": "Answers vary; accept any defensible situation."
     }
    ],
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never a safe assumption. Approval reflects the lender’s risk, not your full budget: insurance, fuel, maintenance, and savings goals also need room."
+    "Sometimes true. Approval reflects the lender’s risk, not your full budget. Some approved buyers can afford the car; others cannot once insurance, fuel, maintenance, and savings goals are included. Check the whole budget, not just the approval."
    ],
-   "modelResponse": "Never a safe assumption. Approval reflects the lender’s risk, not your full budget: insurance, fuel, maintenance, and savings goals also need room.",
+   "modelResponse": "Sometimes true. Approval reflects the lender’s risk, not your full budget. Some approved buyers can afford the car; others cannot once insurance, fuel, maintenance, and savings goals are included. Check the whole budget, not just the approval.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
