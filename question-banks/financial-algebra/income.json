@@ -2166,10 +2166,10 @@
    "level": "cp1",
    "format": "multiple-choice",
    "prompt": "Evaluate the claim: “Hourly jobs always pay less than salaried jobs.”",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true. Skilled hourly work with overtime can out-earn many salaries; salaried workers may work unpaid extra hours.",
-    "Model response: Never true. Skilled hourly work with overtime can out-earn many salaries; salaried workers may work unpaid extra hours."
+    "Sometimes true. Many hourly jobs pay less than salaried jobs, but skilled hourly work — especially with overtime — can out-earn many salaries, and salaried workers may work unpaid extra hours that lower their effective hourly rate.",
+    "Model response: Sometimes true. Many hourly jobs pay less than salaried jobs, but skilled hourly work — especially with overtime — can out-earn many salaries, and salaried workers may work unpaid extra hours that lower their effective hourly rate."
    ],
    "options": [
     {
@@ -2178,11 +2178,11 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "sourceNotes": "Financial Algebra original item (family claim; type claim). Fictional scenario; hypothetical values. Single course level \"standard\" stored as cp1 for Classroom schema compatibility."
@@ -2193,28 +2193,28 @@
    "level": "cp1",
    "format": "open-response",
    "prompt": "A friend says: “Hourly jobs always pay less than salaried jobs.” Do you agree? Use a specific numerical example to support or refute the claim.",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true. Skilled hourly work with overtime can out-earn many salaries; salaried workers may work unpaid extra hours.",
+    "Sometimes true. Many hourly jobs pay less than salaried jobs, but skilled hourly work — especially with overtime — can out-earn many salaries, and salaried workers may work unpaid extra hours that lower their effective hourly rate.",
     "Rubric (16 pts):",
     "Financial accuracy (4): All calculations correct, labeled, and rounded to cents where money is reported.",
     "Use of evidence (4): Supports the verdict with a correct, specific numerical example.",
     "Reasoning & tradeoffs (4): Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
     "Recommendation & communication (4): Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
-    "Model response: Never true. Skilled hourly work with overtime can out-earn many salaries; salaried workers may work unpaid extra hours. Example: $30/hour with 5 overtime hours weekly = $73,710 per year."
+    "Model response: Sometimes true. Many hourly jobs pay less than salaried jobs, but skilled hourly work — especially with overtime — can out-earn many salaries, and salaried workers may work unpaid extra hours that lower their effective hourly rate. Example: A part-time retail job at $15/hour pays less than a $45,000 salary, but an electrician at $34/hour pays more."
    ],
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
-     "answer": "$30/hour with 5 overtime hours weekly = $73,710 per year."
+     "answer": "A part-time retail job at $15/hour pays less than a $45,000 salary, but an electrician at $34/hour pays more."
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true. Skilled hourly work with overtime can out-earn many salaries; salaried workers may work unpaid extra hours."
+     "answer": "Sometimes true. Many hourly jobs pay less than salaried jobs, but skilled hourly work — especially with overtime — can out-earn many salaries, and salaried workers may work unpaid extra hours that lower their effective hourly rate."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
