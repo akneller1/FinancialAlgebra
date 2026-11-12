@@ -168,7 +168,11 @@
       for (var i = 0; i <= L; i++) { var x = 80 + i * (W - 160) / L; s += '<line x1="' + x + '" y1="20" x2="' + x + '" y2="' + (H - 20) + '" stroke="#fff" stroke-width="' + (i === L ? 8 : 2) + '" stroke-dasharray="' + (i === L ? '8 8' : '0') + '"/>'; }
       for (var t = 0; t < teams; t++) {
         var y = 20 + t * lane + lane / 2;
-        s += '<text x="' + (80 + pos[t] * (W - 160) / L) + '" y="' + (y + 14) + '" text-anchor="middle" font-size="40">🏎️</text>';
+        // The race advances rightward: mirror the default left-facing emoji around its center.
+        // SVG transforms preserve the car's race position as it moves between lanes/steps.
+        var carX = 80 + pos[t] * (W - 160) / L;
+        s += '<text x="' + carX + '" y="' + (y + 14) + '" text-anchor="middle" font-size="40"' +
+          ' transform="translate(' + (2 * carX) + ' 0) scale(-1 1)">🏎️</text>';
         s += '<rect x="8" y="' + (y - 16) + '" width="64" height="32" rx="10" fill="' + TEAM_COLORS[t] + '" stroke="' + (t === turn ? '#ffd34d' : 'none') + '" stroke-width="5"/>';
         s += '<text x="40" y="' + (y + 7) + '" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">' + (t + 1) + '</text>';
       }

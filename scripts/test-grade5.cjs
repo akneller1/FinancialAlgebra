@@ -73,6 +73,10 @@ assert.ok(units.every(u => themes['math5/' + u]), 'escape themes');
 for (const f of ['grade5-games.html', 'grade5-flashcards.html', 'grade5-understanding-check.html', 'grade5/g5-core.js', 'grade5/g5-games.js', 'grade5/flashcards.js', 'grade5/understanding-check.js', 'grade5/g5.css'])
   assert.ok(exists('worksheet-generator/' + f), 'missing ' + f);
 for (const f of ['grade5/g5-core.js', 'grade5/g5-games.js', 'grade5/flashcards.js', 'grade5/understanding-check.js', 'grade5/tool-shell.js']) new vm.Script(read('worksheet-generator/' + f), { filename: f });
+// Cars progress to the right; flipping the default left-facing race-car emoji must remain scoped to Math Race.
+const raceSource=read('worksheet-generator/grade5/g5-games.js');
+assert.match(raceSource,/var carX = 80 \+ pos\[t\]/,'Math Race car must track the progress position');
+assert.match(raceSource,/transform="translate\(' \+ \(2 \* carX\) \+ ' 0\) scale\(-1 1\)"/,'Math Race car must face right');
 
 // Verify all local assets referenced by seven interactive tool entry pages.
 const models=['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
