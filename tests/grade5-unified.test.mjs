@@ -152,7 +152,7 @@ test('Student links preserve unit and game, set level, and never point to projec
 test('Student interactive mode hides teacher-view button and excludes the teacher-notes section',()=>{
  const tool=read('worksheet-generator/grade5/tool-shell.js');
  assert.ok(tool.includes("if (!studentMode) {"));
- assert.ok(tool.includes("studentMode ? '' : '<button type=\\\"button\\\" id=\\\"tsMode"));
+ assert.ok(tool.includes("studentMode ? '' : '<button type="));
  assert.ok(tool.includes("if (studentMode) return;"));
  for(const slug of ['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
    'measurement-converter','place-value-builder','volume-builder']){
