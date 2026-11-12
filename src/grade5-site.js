@@ -22,7 +22,6 @@
     var catalog=G.MK_COURSE_CATALOG;
     return catalog&&catalog.getSkills?catalog.getSkills(C,u.id):[];
   };
-  var counts=function(u){return u.artifacts.length;};
   function crumbs(items){
     return '<nav class="crumbs" aria-label="Breadcrumb"><ol>'+items.map(function(item,i){
       return '<li>'+(i===items.length-1?'<span aria-current="page">'+escape(item[0])+'</span>':
@@ -43,8 +42,9 @@
     return '<li><div class="unit algebra-unit-card" data-course="math5" data-color="sunshine">'+
       '<h3><a class="unit-title-link" href="'+unitLink(u)+'"><span class="unit-num">Unit '+(course.units.indexOf(u)+1)+'</span>'+escape(u.name)+'</a></h3>'+
       '<div class="unit-meta" data-lesson-list="true">'+skillChips(first)+
-      (more.length?'<details class="unit-lesson-details"><summary>Show all '+skills.length+' skills</summary>'+skillChips(more)+'</details>':'')+
-      '</div><span class="unit-course-status">'+counts(u)+' resources · Remedial / Standard / Advanced</span>'+
+      (more.length?'<details class="unit-lesson-details"><summary><span class="show-label">Show all '+skills.length+' lessons</span>'+
+        '<span class="hide-label">Show fewer lessons</span></summary>'+skillChips(more)+'</details>':'')+
+      '</div>'+
       '<a class="unit-open-link" href="'+unitLink(u)+'">Open unit →</a></div></li>';
   }
   function unitPager(u){
