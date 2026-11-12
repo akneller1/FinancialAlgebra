@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Coordinate Plane Explorer · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Plot points in the first quadrant by clicking or typing, connect them into shapes, measure distances along grid lines, and graph two-rule patterns.">
-<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<link rel="stylesheet" href="../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../worksheet-generator/core/math-display.css">
 <style>
 .ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
 .ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
@@ -17,7 +17,7 @@ details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:i
 <div class="g5-row"><div class="g5-field"><label for="cpRa">Pattern: x adds</label><input type="number" id="cpRa" min="1" max="5" value="1"></div><div class="g5-field"><label for="cpRb">y adds</label><input type="number" id="cpRb" min="1" max="5" value="2"></div><div class="g5-actions" style="margin:0"><button class="g5-btn alt" id="cpPat">Make pattern points</button></div></div>
 <div class="ts-model" id="cpGrid" style="max-width:520px;margin:auto"></div><div class="ts-out" id="cpOut" aria-live="polite"></div></section>
 <aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
-<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script src="../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
 <script>
 
 var P=[],st={pattern:false};function reset(){P=[];st={pattern:false};TOOL.$('cpConnect').checked=false;draw();}
