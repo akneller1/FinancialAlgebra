@@ -17,6 +17,16 @@
 
     function add(node, section, wrappers) {
       wrappers = wrappers || [];
+      // Error Analysis groups three tall cards inside one CSS grid. Treating
+      // the entire grid as a single piece pushes it to the next page and can
+      // leave page 1 nearly empty. Split at card boundaries, retaining the
+      // layout wrapper for each card. Never split a card itself.
+      if (node.classList && node.classList.contains('g5errors')) {
+        Array.prototype.forEach.call(node.children, function (child) {
+          add(child, section, wrappers.concat([node]));
+        });
+        return;
+      }
       if (node.classList && node.classList.contains('nt')) {
         Array.prototype.forEach.call(node.children, function (child) {
           add(child, section, wrappers.concat([node]));
