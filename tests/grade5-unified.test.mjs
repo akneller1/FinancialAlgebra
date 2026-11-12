@@ -14,11 +14,11 @@ function runPage(hash=''){
     searchForm:{addEventListener(name,fn){listeners['search:'+name]=fn;}}
   };
   const document={title:'',getElementById(name){return elements[name]||null;}};
-  const win={document,location:{hash},addEventListener(name,fn){listeners[name]=fn;},scrollTo(){},
+  const win={document,location:{hash,href:'https://akneller1.github.io/FinancialAlgebra/grade5.html'},addEventListener(name,fn){listeners[name]=fn;},scrollTo(){},
     fetch:async()=>({ok:true,json:async()=>JSON.parse(read('course-outlines/grade5.json'))})};
   win.window=win;
-  const context=vm.createContext({window:win,document,console,location:win.location,URLSearchParams});
-  for(const file of ['data.js','course-catalog.js','grade5-resource-catalog.js','src/grade5-site.js']){
+  const context=vm.createContext({window:win,document,console,location:win.location,URL,URLSearchParams});
+  for(const file of ['data.js','course-catalog.js','grade5-resource-catalog.js','src/grade5-student-links.js','src/grade5-site.js']){
     vm.runInContext(read(file),context,{filename:file});
   }
   return {html:elements.main.innerHTML,elements,win,listeners};
@@ -88,4 +88,75 @@ test('All return links stay inside the unified Grade 5 class',()=>{
     assert.ok(p.includes('href="../grade5.html#math5.'),slug+' return to unit');
     assert.equal(p.includes('grade5-resources.html'),false,slug+' legacy return');
   }
+});
+
+test('Open resource is a real anchor and each Grade 5 activity has a working student link control',()=>{
+ const {win}=runPage();
+ const css=read('site-overrides.css');
+ assert.ok(css.includes('.g5-resource-card h3 a::after{content:none!important'), 'Main card overlay must not block the action controls');
+ for(const u of win.MK_GRADE5_RESOURCES.course.units){
+  const page=runPage('#math5.'+u.id).html;
+  const openLinks=[...page.matchAll(/<a class="btn btn-open" href="([^"]+)">Open resource →<\/a>/g)];
+  const copyControls=[...page.matchAll(/<button type="button" class="g5-student-copy"[^>]*>Copy student link<\/button>/g)];
+  const explicitThumbLinks=[...page.matchAll(/<a class="thumb g5-resource-image-link" href="([^"]+)"/g)];
+  assert.equal(openLinks.length,u.artifacts.length,'Open resource links: '+u.id);
+  assert.equal(copyControls.length,u.artifacts.length,'Student share controls: '+u.id);
+  assert.equal(explicitThumbLinks.length,u.artifacts.length,'Clickable thumbnails: '+u.id);
+  assert.ok(page.includes('<option value="cp1" selected>Standard</option>'),u.id+' has a level selector');
+ }
+ const page=read('grade5.html');
+ assert.ok(page.includes('src/grade5-student-links.js'),'Shared Grade 5 URL builder loaded');
+ assert.ok(page.indexOf('src/grade5-student-links.js')<page.indexOf('src/grade5-site.js'),'URL builder loads first');
+});
+
+test('Student links preserve unit and game, set level, and never point to project teacher guides',()=>{
+ const {win}=runPage();
+ const {destination,hasLevel}=win.MK_GRADE5_STUDENT_LINKS;
+ const base='https://akneller1.github.io/FinancialAlgebra/grade5.html';
+ const grade5=win.MK_GRADE5_RESOURCES.course;
+ let tested=0;
+ for(const unit of grade5.units)for(const resource of unit.artifacts){
+  const level=hasLevel(resource)?'honors':'cp1';
+  const absolute=destination(resource,level,base);
+  const u=new URL(absolute);
+  assert.equal(u.origin,'https://akneller1.github.io');
+  assert.ok(u.pathname.startsWith('/FinancialAlgebra/'));
+  const rootPath=u.pathname.replace(/^\/FinancialAlgebra\//,'');
+  assert.ok(existsSync(new URL('../'+rootPath,import.meta.url)),unit.id+' missing student destination '+rootPath);
+  if(resource.type==='Project'){
+   assert.match(rootPath,/math5-project-[a-z0-9-]+\/[a-z0-9-]+-honors\.pdf$/);
+   assert.ok(!u.href.includes('teacher-guide'));
+  }else if(resource.type==='Game'){
+   assert.equal(u.searchParams.get('unit'),unit.id);
+   assert.ok(u.searchParams.has('game'));
+   assert.equal(u.searchParams.get('student'),'1');
+   assert.equal(u.searchParams.get('level'),'honors');
+  }else if(resource.type==='Study Guide'&&resource.title==='Cheat Sheet'){
+   assert.match(rootPath,/worksheet\.pdf$/);
+   assert.ok(!u.searchParams.has('student'));
+  }else{
+   assert.equal(u.searchParams.get('student'),'1');
+  }
+  assert.notEqual(u.searchParams.get('mode'),'teacher');
+  tested++;
+ }
+ assert.ok(tested>100,'every unit has many student resources');
+ const project=grade5.units.flatMap(u=>u.artifacts).find(a=>a.type==='Project');
+ for(const grade of ['cp2','cp1','honors']){
+  const uri=new URL(destination(project,grade,base));
+  assert.ok(uri.pathname.endsWith('-'+grade+'.pdf'));
+  assert.ok(existsSync(new URL('../'+uri.pathname.replace(/^\/FinancialAlgebra\//,''),import.meta.url)));
+ }
+});
+
+test('Student interactive mode hides teacher-view button and excludes the teacher-notes section',()=>{
+ const tool=read('worksheet-generator/grade5/tool-shell.js');
+ assert.ok(tool.includes("if (!studentMode) {"));
+ assert.ok(tool.includes("studentMode ? '' : '<button type=\\\"button\\\" id=\\\"tsMode"));
+ assert.ok(tool.includes("if (studentMode) return;"));
+ for(const slug of ['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
+   'measurement-converter','place-value-builder','volume-builder']){
+  const html=read('math5-'+slug+'/index.html');
+  assert.ok(html.includes('tool-shell.js?v=student-links-20261112'),slug+' needs updated student-mode tool shell');
+ }
 });
