@@ -273,7 +273,13 @@
       plan.items = plan.items.filter(function (x) { return x.wrong; });
       if (plan.items.length < want) warnings.push('Only ' + plan.items.length + ' error-analysis prompts were available.');
     } else if (kind === 'color') {
-      var cq = pickQuestions(list, Math.max(6, Math.min(12, want)), seed + 'c');
+      var seenColorAnswers = {};
+      var cq = pickQuestions(list, list.length, seed + 'c').filter(function (q) {
+        var answer = norm(answerText(q));
+        if (seenColorAnswers[answer]) return false;
+        seenColorAnswers[answer] = true;
+        return true;
+      }).slice(0, Math.max(6, Math.min(12, want)));
       var colors = (G.G5_GENERATOR_CONTENT && G.G5_GENERATOR_CONTENT.colorNames) || [['Red', '#e94b3c'], ['Blue', '#2f7fd8'], ['Green', '#1aa37a'], ['Orange', '#f08c1a'], ['Purple', '#8a4fd6'], ['Yellow', '#f2c94c']];
       var colorSet = colors.slice(0, 6);
       var pattern = [
@@ -282,7 +288,7 @@
         [1, 3, 4, 4, 3, 1],
         [1, 2, 3, 3, 2, 1],
         [0, 1, 2, 2, 1, 0],
-        [0, 0, 1, 1, 0, 0]
+        [5, 5, 1, 1, 5, 5]
       ];
       plan.colorItems = cq.map(function (q) { return clone(q); });
       plan.colorSet = colorSet.map(function (c) { return { name: c[0], hex: c[1] }; });
@@ -302,7 +308,7 @@
         cell.qid = q.id;
       });
       plan.items = plan.colorItems;
-      if (cq.length < 12) warnings.push('Only ' + cq.length + ' color-by-number problems were available.');
+      if (cq.length < 12) warnings.push('Only ' + cq.length + ' unique-answer color-by-number problems were available.');
     } else {
       var mq = pickQuestions(list, want, seed + 'z');
       plan.rooms = mq.map(function (q) {
