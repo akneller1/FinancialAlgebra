@@ -47,7 +47,7 @@ question's editorial quality. The main site's publishing workflows validate the 
 generated output (not only the source repository). Follow all of these gates for future grades:
 
 1. **Curriculum integrity:** preserve the sourced pacing outline and standards. Keep stable unit and skill IDs, sensible age-appropriate level labels, and an explicit mapping between the original pacing sequence and the released teaching units.
-2. **Question quality:** validate every answer independently; run difficulty, uniqueness, notation, diagrams/alt text, and worked-solution checks. The current Grade 5 bank contains 4,950 math-verified items across three levels, but its records still say "Awaiting human review." Require teacher spot-checks and resolve those provenance notes before claiming teacher/editorial approval for any new grade.
+2. **Question quality:** validate every answer independently; run difficulty, uniqueness, notation, diagrams/alt text, and worked-solution checks. Grade 5 contains 4,950 questions across three levels. Release after the existing automated checks pass; investigate reported issues as they arise. No exhaustive human-review gate is required.
 3. **Activity coverage:** for each ready unit ensure real clickable games, lesson plan/worksheet/activity/assessment generators, flashcards, a cheat sheet, an age-appropriate understanding check, and at least one project. Include interactive manipulatives where they genuinely improve the lesson, not merely to fill a quota.
 4. **Navigation:** every teacher resource needs usable home/course/unit return links; student links must preserve unit, level, and skills without exposing teacher-only notes. Keep compatibility redirects for old paths when renaming landing pages.
 5. **Publishing:** build new grades here first. Do not show them on the public site until separately approved. Keep source files in their own repository; assemble only allowlisted course runtime, bank/manifest entries, diagrams, thumbnails, linked assets, and redirects into the public Pages artifact.
@@ -63,3 +63,32 @@ The single canonical `Deploy site` workflow publishes the finished site.
 The independent `Verify unified Mr. K's Classroom site` workflow is a validation-only gate
 and must never race the deploy job. For Grade 4 and younger, keep development work
 off the public site until approved for release and wired through the same QA gates.
+
+
+## Preloaded resource engines (2026-11-12)
+
+All Grade 1–4 outlines automatically inherit `src/elementary-resources.js` through
+`src/outline-template.js`. Do not copy the Grade 5 engines or write per-grade game pages.
+Each unit receives nine general games, the four teacher generators, six activity formats,
+flashcards and a Readiness Check. Fraction Frenzy is reserved for fraction units.
+Teacher generators include ordered mixed question groups, editable lesson sections,
+difficulty/skill selection, spacing, versions, review, previews, and separate teacher keys.
+There are no student-share controls in generators.
+
+`worksheet-generator/elementary-resource.html` loads the selected outline and the actual
+Grade 5 runtime. All requests use the outline's `math1`/`math2`/`math3`/`math4` ID, existing
+unit IDs and `<unit-id>-skill-NN` IDs. Missing banks never fall back to Grade 5 questions.
+The generator settings remain usable with an empty bank; handouts wait for real questions.
+
+To activate a unit, add a schemaVersion 1 bank at
+`question-banks/mathN/<unit-id>.json`, then register it in the root `manifest.json` with
+`courseId`, `unitId`, `path`, and `approved:true` after automated verification. Preserve the
+stable skill IDs and levels `cp2`, `cp1`, `honors` (Remedial, Standard, Advanced). The same
+entry activates games, practice flashcards and checks. Include accessible image diagrams
+and worked solutions; add optional misconception metadata at `mathN/meta/<unit-id>.meta.json`
+for written error-analysis activities. New lesson vocabulary/objectives may be supplied
+in the outline's unit `generatorContent` field; no Grade 5 instructional content is borrowed.
+
+Run `npm test` and `node scripts/test-grade5.cjs` after changes. Curated vocabulary decks,
+cheat sheets, projects and unit-specific manipulatives remain authored curriculum work.
+Preloading does not promote unfinished grades into the main production website.

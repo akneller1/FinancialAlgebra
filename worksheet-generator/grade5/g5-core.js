@@ -5,7 +5,8 @@
   'use strict';
   var D = G.document;
   var P = new URLSearchParams(G.location.search);
-  var COURSE = 'math5';
+  var COURSE = G.MK_ELEMENTARY_COURSE ? G.MK_ELEMENTARY_COURSE.id : 'math5';
+  var COURSE_NAME = G.MK_ELEMENTARY_COURSE ? G.MK_ELEMENTARY_COURSE.shortName : 'Grade 5';
   var LEVELS = [['cp2', 'Remedial'], ['cp1', 'Standard'], ['honors', 'Advanced']];
   var PRAISE = ['Great thinking!', 'You got it!', 'Nice work!', 'Super job!', 'Way to go!', 'That’s right!', 'Excellent reasoning!', 'You nailed it!'];
   var NUDGE = ['Almost! Let’s try another strategy.', 'Not quite yet. Check each step.', 'Good try! Look at the hint.', 'Keep going — you can do this!', 'Check your place values.', 'Try using a picture to help.'];
@@ -85,7 +86,7 @@
     if (!G.MK_BANK_LOADER) return Promise.reject(new Error('Question bank loader missing'));
     return G.MK_BANK_LOADER.loadUnitFromSite(COURSE, unitId, null, '../').then(function (ids) {
       if (!ids.length) throw new Error('This unit’s questions are not published yet.');
-      return G.fetch('../math5/meta/' + unitId + '.meta.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+      return G.fetch('../' + COURSE + '/meta/' + unitId + '.meta.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     }).then(function (meta) { META = meta || {}; return G.MK_QUESTION_BANKS.select({ courseId: COURSE, unitId: unitId }); });
   }
   function unitInfo(unitId) {
@@ -237,7 +238,9 @@
     var student = P.get('student') === '1';
     var head = el('header', D.body.firstChild ? null : D.body, 'g5-top');
     D.body.insertBefore(head, D.body.firstChild);
-    if (!student) { var home = el('a', head, 'g5-home', '← Mr. K’s Classroom'); home.href = 'https://mrksclassroom.com/'; }
+    if (!student) { var home = el('a', head, 'g5-home', '← Mr. K’s Classroom'); home.href = 'https://mrksclassroom.com/';
+      if (G.MK_ELEMENTARY_COURSE) home.href = '../grade' + COURSE.slice(4) + '.html#' + COURSE + '.' + P.get('unit');
+      if (G.MK_ELEMENTARY_COURSE) home.textContent = '← ' + COURSE_NAME; }
     var t = el('div', head, 'g5-title'); el('strong', t, null, title); if (sub) el('span', t, null, sub);
     var z = el('div', head, 'g5-zoom'); z.setAttribute('role', 'group'); z.setAttribute('aria-label', 'Display size');
     var level = 1;
@@ -302,9 +305,9 @@
     if (G.TeacherSkills && G.TeacherSkills.choose) G.TeacherSkills.choose(skills, start);
     else start(skills.map(function (s) { return s.id; }));
   }
-  function errorBox(host, msg) { host.innerHTML = ''; var p = el('div', host, 'g5-panel'); el('h2', p, null, 'Oops!'); el('p', p, null, msg); }
+  function errorBox(host, msg) { host.innerHTML = ''; var p = el('div', host, 'g5-panel'); el('h2', p, null, /not published|coming soon/i.test(msg) ? 'Question bank coming soon' : 'Unable to open resource'); el('p', p, null, msg); }
 
-  G.G5 = { P: P, COURSE: COURSE, LEVELS: LEVELS, PRAISE: PRAISE, NUDGE: NUDGE, el: el, math: math, esc: esc, pick: pick, shuffle: shuffle,
+  G.G5 = { P: P, COURSE: COURSE, COURSE_NAME: COURSE_NAME, LEVELS: LEVELS, PRAISE: PRAISE, NUDGE: NUDGE, el: el, math: math, esc: esc, pick: pick, shuffle: shuffle,
     parseNum: parseNum, matches: matches, load: load, unitInfo: unitInfo, prepare: prepare, asChoice: asChoice, card: card,
     chrome: chrome, setupPanel: setupPanel, chooseSkills: chooseSkills, levelName: levelName, errorBox: errorBox };
 })(window);

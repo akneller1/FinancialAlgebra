@@ -125,7 +125,7 @@
       h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">Watch for these misconceptions</div><table class="g5vocab"><thead><tr><th>If a student thinks…</th><th>Redirect with…</th></tr></thead><tbody>' +
         c.misconceptions.map(function (m) { return '<tr><td>' + rich(m[0]) + '</td><td>' + rich(m[1]) + '</td></tr>'; }).join('') + '</tbody></table></section>';
     }
-    if (teacher) h += '<p class="g5foot">Answers and worked steps come from the approved Grade 5 question bank. Written explanations should be judged for reasoning, not exact wording. ' + esc(c.bigIdea || '') + '</p>';
+    if (teacher) h += '<p class="g5foot">Answers and worked steps come from this unit’s question bank. Written explanations should be judged for reasoning, not exact wording. ' + esc(c.bigIdea || '') + '</p>';
     return h + '</section>';
   }
 

@@ -1,6 +1,6 @@
 # Grade 4 Math — question-bank development handoff
 
-**Status: outline only. No question banks, games, generators, or interactive activities have been built for Grade 4.**
+**Status:** Shared Grade 5 game, generator, flashcard and readiness-check engines are preloaded for every unit in staging. Question banks have not been authored; these resources display a pending-bank state.
 
 ## Source and curriculum contract
 

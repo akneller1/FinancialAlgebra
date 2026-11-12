@@ -1,6 +1,6 @@
 # Grade 1 Mathematics — Question Bank Development Handoff
 
-**Status:** Course outline published on independent staging. **No question banks or games have been added to Grade 1.**
+**Status:** Shared Grade 5 game, generator, flashcard and readiness-check engines are preloaded for every unit in staging. Question banks have not been authored; these resources display a pending-bank state.
 
 ## Authoritative source
 

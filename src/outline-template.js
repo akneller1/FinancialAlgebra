@@ -1,3 +1,4 @@
+import {unitResources, resourceUrl} from './elementary-resources.js?v=preload-20261112';
 /* Reusable course-outline renderer for new classes.
    Data is supplied as JSON; no questions, activities, or unsupported links are fabricated. */
 export function skillId(unitId,index){return unitId+'-skill-'+String(index+1).padStart(2,'0');}
@@ -60,12 +61,15 @@ export function mountOutline(course,{page='grade5.html'}={}){
   ['Lesson Plan','▤'],['Worksheet','≡'],['Activity','✦'],['Assessment','☑'],
   ['Games','◈'],['Study Guides','▤'],['Interactive Math','⟡']
  ];
- function shortcuts(){
-  return '<section class="generator-banner compact"><div class="generator-banner-heading"><h2>Create Resources for This Unit</h2></div>'+
-   '<ul class="generator-shortcuts">'+actions.map(([name,icon])=>
-   '<li><span class="generator-shortcut" aria-disabled="true" title="Question banks and activities have not been added">'+
-   '<span class="generator-shortcut-icon" aria-hidden="true">'+icon+'</span>'+
-   '<span class="generator-shortcut-copy"><strong>'+name+'</strong><small class="build-badge">Coming soon</small></span></span></li>').join('')+'</ul></section>';
+ function shortcuts(u){
+  const links=[['Lesson Plan','generators',{mode:'lesson'}],['Worksheet','generators',{mode:'worksheet'}],['Activity','generators',{mode:'activity'}],['Assessment','generators',{mode:'assessment'}],['Games','games',{}],['Study Guides','flashcards',{}]];
+  return '<section class="generator-banner compact"><div class="generator-banner-heading"><h2>Create Resources for This Unit</h2></div><ul class="generator-shortcuts">'+links.map(([name,tool,extra])=>
+   '<li><a class="generator-shortcut" href="'+esc(resourceUrl(course,u,tool,extra))+'"><span class="generator-shortcut-copy"><strong>'+name+'</strong><small>Settings ready</small></span></a></li>').join('')+'</ul></section>';
+ }
+ function resources(u){
+  const all=unitResources(course,u);
+  return ['Generators','Games','Study Guides'].map(group=>'<section class="algebra-unit-section"><h2>'+group+'</h2><ul class="cards grouped-cards">'+all.filter(a=>a.group===group).map(a=>
+   '<li class="card"><a class="thumb" href="'+esc(a.path)+'" tabindex="-1" aria-hidden="true"><img src="'+esc(a.thumb)+'" alt="" loading="lazy"></a><div class="card-body"><h3><a href="'+esc(a.path)+'">'+esc(a.title)+'</a></h3><p>Shared Grade 5 format. Questions coming soon.</p><div class="actions"><a class="btn btn-open" href="'+esc(a.path)+'">Open '+(group==='Generators'?'settings':'resource')+'</a></div></div></li>').join('')+'</ul></section>').join('');
  }
  function unitPager(u){
   const idx=course.units.indexOf(u);
@@ -106,27 +110,25 @@ export function mountOutline(course,{page='grade5.html'}={}){
  }
  function unitPage(u){
   const lead=crumb([[course.name,page],[title(u),null]])+'<h1 tabindex="-1">'+esc(title(u))+'</h1>'+
-   '<p class="band-meta">'+u.skills.length+' '+targetLabel+(Number.isFinite(u.estimatedDays)?' · '+paceLabel(u.estimatedDays,u.estimatedDaysMax)+' estimated instructional days':'')+(u.sourceMonth?' · '+esc(u.sourceMonth):'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · resources coming soon</p>';
+   '<p class="band-meta">'+u.skills.length+' '+targetLabel+(Number.isFinite(u.estimatedDays)?' · '+paceLabel(u.estimatedDays,u.estimatedDaysMax)+' estimated instructional days':'')+(u.sourceMonth?' · '+esc(u.sourceMonth):'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · resource templates ready</p>';
   const lessonItems=u.skills.map((s,i)=>'<li class="outline-lesson" data-skill-id="'+skillId(u.id,i)+'">'+
    '<span class="outline-lesson-number">'+String(i+1).padStart(2,'0')+'</span><span>'+esc(s)+'</span></li>').join('');
   return band(lead,true,true)+'<section class="section"><div class="wrap algebra-unit-layout">'+
-   unitPager(u)+shortcuts()+
+   unitPager(u)+shortcuts(u)+
    '<section class="algebra-unit-section"><h2>'+(hasObjectives?'Learning Targets & Subskills':'Lessons and Subskills')+'</h2>'+
    '<p class="course-skill-hint">'+(hasObjectives?'Source-based learning targets are editorial groupings; Individual lesson titles are not listed in the source; sections and learning targets are shown here.':'The lesson sequence follows the supplied curriculum.')+' Stable skill IDs are reserved for later question banks.</p>'+
    '<ol class="outline-lesson-list" data-course-id="'+course.id+'" data-unit-id="'+u.id+'">'+lessonItems+'</ol>'+
    (u.resourceNote?'<p class="outline-curriculum-note"><strong>Source resource note:</strong> '+esc(u.resourceNote)+'</p>':'')+'</section>'+
    standards(u)+
    (u.guidingQuestions?.length?'<section class="algebra-unit-section outline-guiding"><h2>Essential &amp; Guiding Questions</h2><ul>'+u.guidingQuestions.map(q=>'<li>'+esc(q)+'</li>').join('')+'</ul></section>':'')+
-   '<section class="algebra-unit-section"><h2>Games, Study Guides &amp; Interactive Math</h2>'+
-   '<div class="empty"><h2>Coming soon</h2><p>The outline is ready. Question banks, generators, and activities will be created separately and tested before being linked here.</p></div>'+
-   '</section>'+unitPager(u)+'</div></section>';
+   resources(u)+unitPager(u)+'</div></section>';
  }
  function overview(){
   const q=search.value.trim().toLocaleLowerCase();
   const matching=course.units.filter(u=>!q||(u.name+' '+u.skills.join(' ')+' '+u.standards.join(' ')).toLocaleLowerCase().includes(q));
   const lead=crumb([[course.name,null]])+'<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
    '<p class="band-blurb">'+esc(course.description)+'</p>'+
-   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasPacing?' · '+paceLabel(pacingLow,pacingHigh)+' estimated instructional days':'')+' · question banks and activities coming later</p>';
+   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasPacing?' · '+paceLabel(pacingLow,pacingHigh)+' estimated instructional days':'')+' · resource templates ready · question banks coming soon</p>';
   return band(lead,true,'course')+'<section class="section"><div class="wrap">'+
    '<h2 class="course-units-title">Browse by unit</h2>'+
    '<p class="course-units-status">'+(hasObjectives?'Unit sequence and available pacing come from the source curriculum. Target labels summarize the stated goals; open a unit for the original section headings and standards when provided.':'Unit names and lesson order reflect the attached scope and sequence. Expand the lesson lists or open a unit to see its standards.')+'</p>'+

@@ -172,10 +172,10 @@
   function boot() {
     main = D.getElementById('app');
     var unitId = P.get('unit'), info = g5.unitInfo(unitId);
-    if (!info.unit) { g5.errorBox(main, 'Choose a Grade 5 unit from Mr. K’s Classroom.'); return; }
+    if (!info.unit) { g5.errorBox(main, 'Choose a ' + g5.COURSE_NAME + ' unit from Mr. K’s Classroom.'); return; }
     st.info = info;
-    D.title = 'Understanding Check · ' + info.unit.name + ' · Grade 5';
-    g5.chrome('✅ Understanding Check', 'Grade 5 · Unit ' + info.number + ': ' + info.unit.name);
+    D.title = 'Understanding Check · ' + info.unit.name + ' · ' + g5.COURSE_NAME;
+    g5.chrome('✅ Understanding Check', g5.COURSE_NAME + ' · Unit ' + info.number + ': ' + info.unit.name);
     var loading = el('div', main, 'g5-panel', 'Loading questions…');
     g5.load(unitId).then(function (qs) {
       loading.remove(); st.all = qs;

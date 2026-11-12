@@ -42,6 +42,7 @@
     var f = el('div', btn, 'fc-face fc-front');
     el('span', f, 'fc-kind', label(c.kind));
     g5.math(el('div', f, 'fc-front-text' + (c.front.length > 40 ? ' long' : '')), c.front);
+    if (c.picture) picture(f, c.picture);
     if (c.svg) { var sv = el('div', f, 'fc-svg'); sv.innerHTML = c.svg; var s = sv.querySelector('svg'); if (s) { s.setAttribute('role', 'img'); s.setAttribute('aria-label', 'Picture for: ' + c.front); } }
     el('span', f, 'fc-tap', 'Tap or press Space to flip');
     var b = el('div', btn, 'fc-face fc-back');
@@ -81,19 +82,33 @@
     el('h2', pr, null, st.data.unitName + ' · Flashcards');
     var t = el('table', pr);
     st.data.cards.forEach(function (c) {
-      var r = el('tr', t); var a = el('td', r); g5.math(el('strong', a), c.front); if (c.svg) { var s = el('div', a, 'fc-svg'); s.innerHTML = c.svg; }
+      var r = el('tr', t); var a = el('td', r); g5.math(el('strong', a), c.front); if (c.picture) picture(a, c.picture); if (c.svg) { var s = el('div', a, 'fc-svg'); s.innerHTML = c.svg; }
       var b = el('td', r); g5.math(el('div', b), c.back); if (c.example) g5.math(el('div', b, 'fc-ex'), 'Example: ' + c.example);
     });
   }
 
+  function picture(host, spec) {
+    var image = el('img', host, 'fc-svg'); image.src = '../' + spec.src; image.alt = spec.alt || '';
+  }
+  function loadCards(unitId) {
+    if (g5.COURSE === 'math5') return fetch('grade5/flashcards/' + unitId + '.json').then(function (r) {
+      if (!r.ok) throw new Error('These flashcards could not be found.'); return r.json();
+    });
+    return g5.load(unitId).then(function (questions) {
+      var info = g5.unitInfo(unitId);
+      return {unitName:info.unit.name, number:info.number, cards:questions.map(function (q) {
+        return {front:q.prompt, back:String(q.answer), example:(q.solutionSteps || []).join(' '), kind:q.diagram && q.diagram.type === 'image' ? 'visual' : 'concept', picture:q.diagram && q.diagram.type === 'image' ? q.diagram.spec : null, skillId:q.skillId};
+      })};
+    });
+  }
   function boot() {
     main = D.getElementById('app');
     var unitId = P.get('unit');
-    if (!unitId || !/^[a-z0-9-]+$/.test(unitId)) { g5.errorBox(main, 'Choose a Grade 5 unit from Mr. K’s Classroom.'); return; }
-    fetch('grade5/flashcards/' + unitId + '.json').then(function (r) { if (!r.ok) throw new Error('These flashcards could not be found.'); return r.json(); }).then(function (data) {
+    if (!unitId || !/^[a-z0-9-]+$/.test(unitId)) { g5.errorBox(main, 'Choose a ' + g5.COURSE_NAME + ' unit from Mr. K’s Classroom.'); return; }
+    loadCards(unitId).then(function (data) {
       st.data = data;
-      D.title = 'Flashcards · ' + data.unitName + ' · Grade 5';
-      g5.chrome('🃏 Flashcards', 'Grade 5 · Unit ' + data.number + ': ' + data.unitName);
+      D.title = 'Flashcards · ' + data.unitName + ' · ' + g5.COURSE_NAME;
+      g5.chrome('🃏 Flashcards', g5.COURSE_NAME + ' · Unit ' + data.number + ': ' + data.unitName);
       var top = el('section', main, 'g5-panel');
       var fs = el('fieldset', top, 'g5-pills'); el('legend', fs, null, 'Which cards?');
       KINDS.forEach(function (k) {
@@ -125,7 +140,7 @@
         else if (e.key === 'p' || e.key === 'P') mark(false);
         else if (e.key === 's' || e.key === 'S') { st.deck = g5.shuffle(st.deck); st.i = 0; st.flipped = false; show(); }
       });
-    }).catch(function (e) { g5.chrome('🃏 Flashcards', 'Grade 5'); g5.errorBox(main, e.message); });
+    }).catch(function (e) { g5.chrome('🃏 Flashcards', g5.COURSE_NAME); g5.errorBox(main, e.message); });
   }
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })(window);

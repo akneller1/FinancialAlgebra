@@ -5,6 +5,8 @@
   var doc = G.document, C = G.G5_GENERATORS_CORE, R = G.G5_GENERATORS_RENDER;
   var Content = G.G5_GENERATOR_CONTENT || { units: {}, themes: {} };
   var P = new URLSearchParams(G.location.search);
+  var COURSE = G.MK_ELEMENTARY_COURSE ? G.MK_ELEMENTARY_COURSE.id : 'math5';
+  var COURSE_NAME = G.MK_ELEMENTARY_COURSE ? G.MK_ELEMENTARY_COURSE.shortName : 'Grade 5';
   var MODES = { lesson: 'Lesson Plan', worksheet: 'Worksheet', assessment: 'Assessment', activity: 'Activity' };
   var $ = function (id) { return doc.getElementById(id); };
   var STUDENT = P.get('student') === '1';
@@ -13,11 +15,11 @@
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function readPrefs() {
-    try { return JSON.parse(G.localStorage.getItem('g5-generator-options-v1') || '{}'); } catch (e) { return {}; }
+    try { return JSON.parse(G.localStorage.getItem(('g5-generator-options-v1' + (COURSE === 'math5' ? '' : '-' + COURSE))) || '{}'); } catch (e) { return {}; }
   }
   function savePrefs() {
     try {
-      G.localStorage.setItem('g5-generator-options-v1', JSON.stringify({
+      G.localStorage.setItem(('g5-generator-options-v1' + (COURSE === 'math5' ? '' : '-' + COURSE)), JSON.stringify({
         level: state.opts.level, notes: state.opts.notes, worked: state.opts.worked, space: state.opts.space,
         theme: state.opts.theme, showName: state.opts.showName, showStandards: state.opts.showStandards,
         sections: state.opts.sections, duration: state.opts.duration, groups: state.opts.groups
@@ -75,8 +77,8 @@
 
   function renderControls() {
     var u = state.unit, o = state.opts, info = unitInfo(u.id);
-    doc.title = modeLabel() + ' · ' + u.name + ' | Grade 5 Generators';
-    var h = '<div class="g5gen-card"><h1>Grade 5 Generators</h1><p class="g5gen-hint">5th Grade Math · ' + info.number + ' of 11 units · approved question bank</p>' +
+    doc.title = modeLabel() + ' · ' + u.name + ' | ' + COURSE_NAME + ' Generators';
+    var h = '<div class="g5gen-card"><h1>' + esc(COURSE_NAME) + ' Generators</h1><p class="g5gen-hint">' + esc(state.course.name) + ' · ' + info.number + ' of ' + state.course.units.length + ' units</p>' +
       '<div class="g5gen-tabs" aria-label="Generator type">' + Object.keys(MODES).map(function (k) {
         return '<button type="button" class="g5gen-tab" data-mode="' + k + '" aria-pressed="' + (state.mode === k) + '">' + MODES[k] + '</button>';
       }).join('') + '</div>' +
@@ -84,7 +86,7 @@
       field('level', 'Level', select('level', [['cp2', 'Remedial'], ['cp1', 'Standard'], ['honors', 'Advanced'], ['mixed', 'Mixed levels']], o.level)) +
       '<p class="g5gen-hint">Use with <a href="grade5-games.html?unit=' + encodeURIComponent(u.id) + '">games</a> · <a href="grade5-flashcards.html?unit=' + encodeURIComponent(u.id) + '">flashcards</a> · <a href="grade5-understanding-check.html?unit=' + encodeURIComponent(u.id) + '">Understanding Check</a> · <a href="../grade5.html#math5.' + encodeURIComponent(u.id) + '">unit page</a></p></div>';
 
-    h += '<div class="g5gen-card"><h2><span class="g5gen-step">1</span> Choose skills</h2><p class="g5gen-hint">Every question comes from the approved Grade 5 bank for these skills.</p><div class="g5gen-skills">' +
+    h += '<div class="g5gen-card"><h2><span class="g5gen-step">1</span> Choose skills</h2><p class="g5gen-hint">Questions use this course’s bank and the selected skills.</p><div class="g5gen-skills">' +
       u.skills.map(function (s) { return '<label class="g5gen-check"><input type="checkbox" data-skill="' + esc(s.id) + '"' + (o.skills.indexOf(s.id) >= 0 ? ' checked' : '') + '><span>' + esc(s.name) + '</span></label>'; }).join('') +
       '</div><button class="g5gen-linkbtn" type="button" data-all-skills="1">Select all</button><button class="g5gen-linkbtn" type="button" data-all-skills="0">Clear</button></div>';
 
@@ -127,6 +129,12 @@
     }
     h += '<div class="g5gen-card g5gen-editor" id="questionEditor"><h2>Review questions</h2><p class="g5gen-hint">Generate a handout to review, replace or edit its questions.</p></div>';
     $('config').innerHTML = h;
+    if (G.MK_ELEMENTARY_COURSE) $('config').querySelectorAll('a').forEach(function (a) {
+      var url = new URL(a.href), file = url.pathname.split('/').pop();
+      var tool = {'grade5-games.html':'games','grade5-flashcards.html':'flashcards','grade5-understanding-check.html':'check'}[file];
+      if (tool) { url.pathname = url.pathname.replace(file, 'elementary-resource.html'); url.searchParams.set('course', COURSE); url.searchParams.set('tool', tool); a.href = url.href; }
+      if (file === 'grade5.html') a.href = '../grade' + COURSE.slice(4) + '.html#' + COURSE + '.' + u.id;
+    });
     renderQuestionEditor();
   }
 
@@ -229,6 +237,12 @@
 
   function generate() {
     syncOptions();
+    if (!state.unit.questions.length) {
+      state.plan = null; $('output').replaceChildren(); $('previewTools').replaceChildren(); $('printRoot').replaceChildren();
+      $('notice').className = 'g5gen-notice';
+      $('notice').textContent = 'Question bank coming soon. Your generator settings are ready; handouts and teacher keys will be available when this unit’s questions are added.';
+      return;
+    }
     if (!state.opts.skills.length) { $('notice').className = 'g5gen-notice warn'; $('notice').textContent = 'Choose at least one skill.'; return; }
     if (state.mode === 'assessment' && state.opts.total < state.opts.count) {
       $('notice').className = 'g5gen-notice warn'; $('notice').textContent = 'Total points must be at least the number of questions. Increase the total or reduce the question count.'; return;
@@ -245,7 +259,7 @@
     try { state.plan = C.build(state.unit, state.opts, state.mode, seed); }
     catch (e) { $('notice').className = 'g5gen-notice warn'; $('notice').textContent = e.message; return; }
     state.audience = 'student'; showPreview();
-    G.history.replaceState(null, '', '?unit=' + encodeURIComponent(state.unit.id) + '&mode=' + state.mode +
+    G.history.replaceState(null, '', (G.MK_ELEMENTARY_COURSE ? '?course=' + COURSE + '&tool=generators&unit=' : '?unit=') + encodeURIComponent(state.unit.id) + '&mode=' + state.mode +
       (state.mode === 'activity' ? '&kind=' + encodeURIComponent(state.opts.activity) : '') + '&level=' + encodeURIComponent(state.opts.level) +
       (STUDENT ? '&student=1' : '') + '&skills=' + encodeURIComponent(JSON.stringify(state.opts.skills)) + '&version=' + encodeURIComponent(state.opts.version));
   }
@@ -336,12 +350,13 @@
     var course = state.course, u = course.units.filter(function (x) { return x.id === id; })[0];
     if (!u) return showError(new Error('Unknown unit'));
     var pref = readPrefs();
-    return G.MK_BANK_LOADER.loadUnitFromSite('math5', id, null, '../').then(function (ids) {
-      if (!ids.length) throw new Error('This unit’s questions are not published yet.');
+    return G.MK_BANK_LOADER.loadUnitFromSite(COURSE, id, null, '../').then(function (ids) {
+      if (!ids.length && !G.MK_ELEMENTARY_COURSE) throw new Error('This unit’s questions are not published yet.');
+      if (!ids.length) return {};
       // Error Analysis relies on vetted misconceptions stored separately from
       // the question bank. Do not silently erase them on a network/cache error.
       // The independent source URL is a fallback for older main-site builds.
-      var metadataPath = '../math5/meta/' + encodeURIComponent(id) + '.meta.json';
+      var metadataPath = '../' + COURSE + '/meta/' + encodeURIComponent(id) + '.meta.json';
       function readMetadata(url) {
         return G.fetch(url, { cache: 'no-store' }).then(function (response) {
           if (!response.ok) throw new Error('HTTP ' + response.status + ' for ' + url);
@@ -354,20 +369,22 @@
         });
       }
       return readMetadata(metadataPath).catch(function (primaryError) {
+        if (COURSE !== 'math5') return { __loadError: primaryError.message };
         return readMetadata('https://akneller1.github.io/FinancialAlgebra/math5/meta/' +
           encodeURIComponent(id) + '.meta.json').catch(function (fallbackError) {
           // Preserve ordinary generators even if both metadata sources fail.
           return { __loadError: primaryError.message + '; ' + fallbackError.message };
         });
-      }).then(function (meta) {
+      });
+    }).then(function (meta) {
         state.unitId = id;
         state.unit = {
           id: id, name: u.name, number: course.units.indexOf(u) + 1,
-          skills: G.MK_COURSE_CATALOG.getSkillRecords('math5', id),
-          questions: G.MK_QUESTION_BANKS.select({ courseId: 'math5', unitId: id }),
+          skills: G.MK_COURSE_CATALOG.getSkillRecords(COURSE, id),
+          questions: G.MK_QUESTION_BANKS.select({ courseId: COURSE, unitId: id }),
           meta: meta && !meta.__loadError ? meta : {},
           metaError: meta && meta.__loadError || '',
-          content: Content.units[id] || {}
+          content: G.MK_ELEMENTARY_COURSE ? (u.generatorContent || {}) : (Content.units[id] || {})
         };
         var overrides = {
           level: P.get('level') || pref.level || 'cp1', version: P.get('version') || undefined,
@@ -384,8 +401,17 @@
           ? sharedSkills.filter(function (id) { return availableSkills.indexOf(id) >= 0; })
           : availableSkills;
         state.plan = null;
+        if (G.MK_ELEMENTARY_COURSE) {
+          var url = new URL(G.location.href);
+          url.searchParams.set('unit', id); url.searchParams.set('mode', state.mode);
+          G.history.replaceState(null, '', url.href);
+          doc.querySelectorAll('body > .g5-top [data-tool]').forEach(function (a) {
+            var target = new URL(a.href); target.searchParams.set('unit', id); a.href = target.href;
+          });
+          var home = doc.querySelector('body > .g5-top .g5-home');
+          if (home) home.href = '../grade' + COURSE.slice(4) + '.html#' + COURSE + '.' + id;
+        }
         renderControls(); generate();
-      });
     });
   }
   function showError(e) {
@@ -408,7 +434,7 @@
   G.addEventListener('afterprint', function () { state.printPrepared = false; });
 
   state.mode = MODES[P.get('mode')] ? P.get('mode') : 'lesson';
-  var course = G.LIBRARY && G.LIBRARY.courses.filter(function (c) { return c.id === 'math5'; })[0];
+  var course = G.LIBRARY && G.LIBRARY.courses.filter(function (c) { return c.id === COURSE; })[0];
   if (!course) { showError(new Error('The Grade 5 course catalog is unavailable.')); return; }
   state.course = course;
   var start = P.get('unit') || course.units[0].id;

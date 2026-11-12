@@ -1,6 +1,6 @@
 # Grade 3 Mathematics — Question-bank handoff
 
-**Status:** Curriculum outline only. Questions and interactive tools are not yet authored.
+**Status:** Shared Grade 5 game, generator, flashcard and readiness-check engines are preloaded for every unit in staging. Question banks have not been authored; these resources display a pending-bank state.
 
 ## Source and identifiers
 - Source document: [3rd Grade Mathematics Scope & Sequence](https://resources.finalsite.net/images/v1652384560/carrollk12org/q67evpht5bth0b4vor14/3rdGradeMathematicsScopeandSequence.pdf) (14 pages).

@@ -59,7 +59,7 @@ test('Grade 4 page reuses the existing generic outline renderer and does not adv
  assert.ok(read('grade3.html').includes('href="grade4.html"'));
  assert.ok(template.includes('objectiveGroups'));
  assert.ok(template.includes('Source Objectives by Category'));
- assert.ok(template.includes('Coming soon'));
- assert.ok(template.includes('aria-disabled="true"'));
+ assert.ok(template.includes('Questions coming soon'));
+ assert.ok(template.includes('resource templates ready'));
  assert.ok(existsSync(new URL('../styles.css',import.meta.url)));
 });

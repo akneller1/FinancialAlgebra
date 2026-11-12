@@ -365,12 +365,12 @@
     var unitId = P.get('unit'), gameId = P.get('game') || 'math-quest', cfg = GAMES[gameId];
     if (!cfg) { g5.errorBox(main, 'Unknown game.'); return; }
     var info = g5.unitInfo(unitId);
-    if (!info.unit) { g5.errorBox(main, 'Choose a Grade 5 unit from Mr. K’s Classroom.'); return; }
+    if (!info.unit) { g5.errorBox(main, 'Choose a ' + g5.COURSE_NAME + ' unit from Mr. K’s Classroom.'); return; }
     state.info = info;
-    D.title = cfg.title + ' · ' + info.unit.name + ' · Grade 5';
-    g5.chrome(cfg.icon + ' ' + cfg.title, 'Grade 5 · Unit ' + info.number + ': ' + info.unit.name);
+    D.title = cfg.title + ' · ' + info.unit.name + ' · ' + g5.COURSE_NAME;
+    g5.chrome(cfg.icon + ' ' + cfg.title, g5.COURSE_NAME + ' · Unit ' + info.number + ': ' + info.unit.name);
     var loading = el('div', main, 'g5-panel', 'Loading questions…');
-    var bankP = cfg.engine === 'frenzy' ? Promise.resolve([]) : g5.load(unitId);
+    var bankP = cfg.engine === 'frenzy' && g5.COURSE === 'math5' ? Promise.resolve([]) : g5.load(unitId);
     bankP.then(function (qs) {
       loading.remove();
       function afterSkills(ids) {
