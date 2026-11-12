@@ -153,20 +153,45 @@
     var html = R.render(state.plan, teacher);
     return G.MKPLAN.paginateStudent(html);
   }
+  var previewTicket = 0, previewReady = Promise.resolve();
   function showPreview() {
     if (!state.plan) return;
     previewTools();
-    var out = $('output'); out.replaceChildren();
-    var pages = makePages(state.audience === 'teacher');
-    pages.forEach(function (p) { out.appendChild(p); });
-    out.style.zoom = state.zoom / 100;
-    var oversize = pages.some(function (p) { return p.classList.contains('pl-page-oversize'); });
-    var warnings = (state.plan.warnings || []).slice();
-    if (oversize) warnings.push('One long item exceeds a single sheet. Reduce work space or remove that question before printing.');
-    $('notice').className = 'g5gen-notice' + (warnings.length ? ' warn' : '');
-    $('notice').textContent = warnings.concat(pages.length + ' Letter-size page' + (pages.length === 1 ? '' : 's') + ' · ' + (state.audience === 'teacher' ? 'Teacher key' : 'Student handout') + ' · Version ' + state.opts.version).join(' ');
-    doc.body.classList.toggle('g5gen-teacher', state.audience === 'teacher');
+    var ticket = ++previewTicket, plan = state.plan;
+    var out = $('output');
+    function drawPreview() {
+      if (ticket !== previewTicket || plan !== state.plan) return;
+      out.replaceChildren();
+      var pages = makePages(state.audience === 'teacher');
+      pages.forEach(function (p) { out.appendChild(p); });
+      out.style.zoom = state.zoom / 100;
+      var oversize = pages.some(function (p) { return p.classList.contains('pl-page-oversize'); });
+      var warnings = (state.plan.warnings || []).slice();
+      if (oversize) warnings.push('One long item exceeds a single sheet. Reduce work space or remove that question before printing.');
+      $('notice').className = 'g5gen-notice' + (warnings.length ? ' warn' : '');
+      $('notice').textContent = warnings.concat(pages.length + ' Letter-size page' + (pages.length === 1 ? '' : 's') + ' · ' + (state.audience === 'teacher' ? 'Teacher key' : 'Student handout') + ' · Version ' + state.opts.version).join(' ');
+      doc.body.classList.toggle('g5gen-teacher', state.audience === 'teacher');
+    }
+    drawPreview();
     renderQuestionEditor();
+    /* Fonts and images can complete after the first synchronous layout.
+       Reflow before printing so the page count and printed layout agree. */
+    var images = Array.prototype.slice.call(out.querySelectorAll('img'));
+    var imageReady = images.map(function (img) {
+      if (typeof img.decode === 'function') return img.decode().catch(function () {});
+      if (img.complete) return Promise.resolve();
+      return new Promise(function (resolve) {
+        img.addEventListener('load', resolve, {once:true});
+        img.addEventListener('error', resolve, {once:true});
+      });
+    });
+    previewReady = Promise.all([Promise.resolve(doc.fonts && doc.fonts.ready)].concat(imageReady))
+      .then(function () {
+        return new Promise(function (resolve) {
+          if (typeof G.requestAnimationFrame === 'function') G.requestAnimationFrame(resolve);
+          else resolve();
+        });
+      }).then(drawPreview);
   }
 
   function generate() {
@@ -186,11 +211,16 @@
 
   function printHandout(which) {
     if (!state.plan) return;
-    var root = $('printRoot'); root.replaceChildren();
-    makePages(which === 'teacher').forEach(function (p) { root.appendChild(p); });
-    state.printPrepared = true;
-    G.print();
+    var plan = state.plan;
+    Promise.resolve(previewReady).then(function () {
+      if (plan !== state.plan) return;
+      var root = $('printRoot'); root.replaceChildren();
+      makePages(which === 'teacher').forEach(function (p) { root.appendChild(p); });
+      state.printPrepared = true;
+      G.print();
+    });
   }
+
   function copyStudentLink() {
     var url = new URL(G.location.href);
     url.searchParams.set('student', '1'); url.searchParams.set('level', state.opts.level);
