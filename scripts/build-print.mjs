@@ -3,10 +3,11 @@
  * Usage: node scripts/build-print.mjs [unitId ...] */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
-const { chromium } = createRequire(import.meta.url)('playwright');
+const { chromium } = createRequire(new URL('./financial-cheat-sheets/package.json', import.meta.url))('playwright');
 import '../financial/lib/render.js';
 import { course } from '../src/course.js';
 import { loadContent } from './build-banks.mjs';
+import { writeCheatSheet } from './build-cheat-sheets.mjs';
 const R = globalThis.FA_RENDER;
 const root = new URL('../', import.meta.url), P = p => new URL(p, root).pathname;
 const CSS = readFileSync(P('financial/lib/fa.css'), 'utf8');
@@ -24,16 +25,6 @@ body{margin:0;background:#f4f5fb;font-family:var(--body);color:#14173a;line-heig
 .work{border:1px dashed #9aa0c8;min-height:1.6in;border-radius:8px;margin:6px 0}
 .chk li{list-style:"☐  "}
 ${extra}</style></head><body><main class="fa-page">${body}</main></body></html>`;
-
-/* ---------- Cheat sheet ---------- */
-function cheatSheet(unit, n, cs, vocab) {
-  const sec = s => `<div class="box"><h3>${esc(s.h)}</h3>${R.table({ headers: ['', ''], rows: s.rows }).replace(/<thead>[\s\S]*?<\/thead>/, '')}${s.note ? '<p style="font-size:.82rem;margin:4px 0 0">' + rich(s.note) + '</p>' : ''}</div>`;
-  const vocabBox = `<div class="box" style="break-inside:auto"><h3>Essential vocabulary</h3><dl style="margin:0;font-size:.84rem">${vocab.map(v => `<dt><strong>${esc(v.term)}</strong></dt><dd style="margin:0 0 3px">${rich(v.def)}</dd>`).join('')}</dl></div>`;
-  const left = [vocabBox, `<div class="box"><h3>Common misconceptions</h3>${ul(cs.misconceptions)}</div>`];
-  const right = cs.sections.map(sec).concat(`<div class="box"><h3>${esc(cs.example.title)}</h3>${ol(cs.example.lines)}</div>`, cs.diagram ? `<div class="box"><h3>${esc(cs.diagram.title)}</h3>${cs.diagram.svg}</div>` : '', `<div class="box"><h3>Questions to ask before deciding</h3>${ul(cs.questions)}</div>`, `<div class="box"><h3>Decision tips</h3>${ul(cs.tips)}</div>`);
-  const body = `<section class="fa-sheet"><div class="banner"><h1>${esc(cs.title)} — Cheat Sheet</h1><p>Financial Algebra · Unit ${n}: ${esc(unit.name)}</p></div><div class="cs"><div>${left.join('')}</div><div>${right.join('')}</div></div><p class="fa-doc-kind">Values and rates are illustrative. All examples are fictional. Mr. K's Classroom · Financial Algebra</p></section>`;
-  return page(`${cs.title} Cheat Sheet | Financial Algebra`, body);
-}
 
 /* ---------- Project packet & guide ---------- */
 function rubricTable(rub) {
@@ -95,9 +86,6 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-s
 <article class="card"><h2 style="background:#14173a">Teacher guide</h2><p>Pacing, worked calculations, sample responses, misconceptions, differentiation, and the 100-point rubric.</p><div class="btns"><a class="btn primary" style="background:#14173a;border-color:#14173a" href="${f}-teacher-guide.pdf">View / print PDF</a><a class="btn" style="color:#14173a" href="${f}-teacher-guide.docx" download>Word (.docx), editable</a></div></article></section>
 </div></body></html>`;
 }
-function csLanding(unit, n) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(unit.name)} Cheat Sheet</title><style>body{margin:0;font-family:system-ui,sans-serif;background:#f4f5fb}header{padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}a{color:#5a2fd6;font-weight:700}iframe{width:100%;height:calc(100vh - 60px);border:0}</style></head><body><header><strong>Unit ${n}: ${esc(unit.name)} — Cheat Sheet</strong><a href="cheat-sheet.pdf">Open PDF</a><a href="cheat-sheet.html">Printable web version</a></header><iframe src="cheat-sheet.pdf" title="${esc(unit.name)} cheat sheet PDF"></iframe></body></html>`;
-}
 export async function buildPrint(ids) {
   const browser = await chromium.launch(); const pg = await browser.newPage();
   const pdf = async (html, out) => { await pg.setContent(html, { waitUntil: 'load' }); await pg.pdf({ path: out, format: 'Letter', margin: { top: '0.5in', bottom: '0.55in', left: '0.5in', right: '0.5in' }, printBackground: true, displayHeaderFooter: true, headerTemplate: '<span></span>', footerTemplate: '<div style="font-size:8px;width:100%;text-align:center;color:#666">Mr. K\'s Classroom · Financial Algebra · Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>' }); };
@@ -105,10 +93,7 @@ export async function buildPrint(ids) {
   for (const id of ids) {
     const content = await loadContent(id); if (!content) continue;
     const unit = course.units.find(u => u.id === id), n = course.units.indexOf(unit) + 1;
-    const csDir = P(`artifacts/financial-algebra-${id}-cheat-sheet/`); mkdirSync(csDir, { recursive: true });
-    const csHtml = cheatSheet(unit, n, content.cheatSheet, content.vocab);
-    writeFileSync(csDir + 'cheat-sheet.html', csHtml); writeFileSync(csDir + 'index.html', csLanding(unit, n));
-    await pdf(csHtml, csDir + 'cheat-sheet.pdf'); made.push(csDir + 'cheat-sheet.pdf');
+    made.push(await writeCheatSheet(unit, n, content.cheatSheet, pg));
     const pf = P(`financial/content/projects/${id}.mjs`);
     if (!existsSync(pf)) continue;
     const projects = (await import(new URL(`financial/content/projects/${id}.mjs`, root).href)).default;

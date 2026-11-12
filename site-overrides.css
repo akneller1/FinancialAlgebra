@@ -97,9 +97,13 @@
 @media(max-width:680px){.course-nav-icon{width:20px;height:18px;}}
 
 /* Financial Algebra resource cards follow the shared unit layout. */
-.finance-resource-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem;padding:0;margin:1rem 0}
+.finance-resource-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1rem;padding:0;margin:1rem 0}
 .finance-resource-card{display:flex;flex-direction:column;gap:.65rem;height:100%;padding:1.25rem;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);text-decoration:none;box-sizing:border-box}
 .finance-resource-card strong{font-family:var(--display);font-size:1.15rem}
 .finance-resource-card span{line-height:1.5}
 .finance-resource-card span:last-child{margin-top:auto;font-weight:800;color:hsl(315 48% 30%)}
 .finance-resource-card:hover,.finance-resource-card:focus-visible{border-color:hsl(315 48% 30%);box-shadow:0 3px 10px #25112a15}
+
+/* Resource previews preserve a uniform Classroom card ratio on every unit. */
+.finance-resource-thumb{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:8 / 5;object-fit:contain;background:#f4f5fb;margin:0 0 .35rem;border-bottom:1px solid var(--line);border-radius:10px 10px 0 0}
+.finance-resource-card{overflow:hidden}

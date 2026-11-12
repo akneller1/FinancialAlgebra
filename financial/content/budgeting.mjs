@@ -1,3 +1,4 @@
+import { sheets } from './cheat-sheets.mjs';
 /* Unit 2 — Budgeting & Spending (reference unit). */
 import { M, money, $, $0, pct, person, TOWNS, JOBS, mc, selectAll, numeric, table, an } from './kit.mjs';
 
@@ -285,16 +286,5 @@ export default {
       differentiation: { support: ['Unit-price calculation organizer.', 'Calculator allowed.'], extend: ['Include time value: compare saving the money at 4% APY for 5 years.'] },
       realWorld: 'Many states require shelf tags to show unit prices; students can check them on their next store trip.' }
   ],
-  cheatSheet: {
-    title: 'Budgeting & Spending',
-    sections: [
-      { h: 'Core formulas', rows: [['Monthly income (biweekly)', 'paycheck × 26 ÷ 12'], ['Monthly income (weekly)', 'paycheck × 52 ÷ 12'], ['Cash flow', 'income − expenses'], ['Sinking fund', '[[irregular bill || months until due]]'], ['Percent of budget', '[[category || take-home pay]] × 100'], ['Annual cost of a habit', 'price × times/week × 52'], ['Break-even uses', '[[fixed cost || savings per use]] (round up)'], ['Unit price', '[[price || quantity]]']] },
-      { h: 'Classify every expense twice', rows: [['Fixed need', 'rent, car payment, insurance'], ['Fixed want', 'streaming, gym contract'], ['Variable need', 'groceries, utilities, gas'], ['Variable want', 'dining out, shopping, events']] },
-      { h: '50/30/20 reference point', rows: [['Needs', '≈ 50% of take-home'], ['Wants', '≈ 30%'], ['Savings & extra debt payments', '≈ 20%']], note: 'A starting guideline, not a rule. High-cost areas often push needs above 50%.' }
-    ],
-    example: { title: 'Worked example', lines: ['Biweekly take-home $1,300 → 1,300 × 26 ÷ 12 = $2,816.67/month', 'Expenses $2,640 → cash flow +$176.67', 'Car insurance $780 every 6 months → set aside $130/month', 'True cash flow = 176.67 − 130 = +$46.67 (thin margin!)'] },
-    misconceptions: ['Budgeting with gross pay instead of take-home pay.', '“Biweekly” ≠ “twice a month” (26 vs 24 checks).', 'A sale is savings only if you planned to buy the item.', 'A lower monthly payment does not mean a lower total cost.'],
-    questions: ['Is this a need or a want — and who decides?', 'What will this cost per year?', 'What am I giving up (opportunity cost)?', 'Which irregular bills are coming in the next 12 months?', 'What will I do if income drops for a month?'],
-    tips: ['Pay yourself first: automate savings on payday.', 'Round hours and months UP; round maximum spending DOWN.', 'Review subscriptions every 3 months.', 'Keep a starter emergency fund before extra spending.']
-  }
+  cheatSheet: { title: 'Budgeting & Spending', ...sheets.budgeting }
 };

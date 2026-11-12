@@ -40,7 +40,10 @@ test('all ten units have extended banks with valid, unique, complete items', () 
     }
     for (const s of skills) assert.ok(counts[s] >= 25, `${s} has only ${counts[s]} items`);
     assert.ok(b.lessons.length === 4 && b.lessons.every(l => l.objectives.length && l.examples.length && l.misconceptions.length), u.id + ' lessons');
-    assert.ok(b.cheatSheet.sections.length >= 2 && b.cheatSheet.misconceptions.length, u.id + ' cheat sheet');
+    if (b.cheatSheet.front) {
+      assert.equal(b.cheatSheet.front.length, 6, u.id + ' front panels');
+      assert.equal(b.cheatSheet.back.length, 6, u.id + ' back panels');
+    } else assert.ok(b.cheatSheet.sections.length >= 2 && b.cheatSheet.misconceptions.length, u.id + ' legacy bank cheat-sheet snapshot');
     assert.ok(b.vocab.length >= 14, u.id + ' vocab');
     for (const t of ['vocabulary', 'calculation', 'claim', 'document']) assert.ok(b.questions.some(q => q.type === t), `${u.id} lacks ${t}`);
     assert.ok(b.questions.some(q => q.type === 'comparison'), u.id + ' comparison');
@@ -120,4 +123,17 @@ test('shared renderer shows division as stacked fractions and escapes HTML', () 
 
 test('no files collide with the removed-pilot paths guarded by the existing site test', () => {
   for (const p of ['worksheet.html', 'practice.html', 'print.html', 'lab.html', 'src/finance-lab.js', 'src/questions.js', 'src/engine.js']) assert.equal(existsSync(P(p)), false, p);
+});
+
+test('authored cheat sheets use the shared twelve-panel renderer', async () => {
+  for (const u of course.units) {
+    const {default: content} = await import(new URL(`financial/content/${u.id}.mjs`, root));
+    const cs = content.cheatSheet;
+    assert.ok(cs.title && cs.focus && cs.morefocus, u.id);
+    for (const side of [cs.front, cs.back]) {
+      assert.equal(side.length, 6, u.id);
+      assert.equal(new Set(side.map(s => s.color)).size, 6, u.id);
+      assert.ok(side.every(s => s.title && s.kind), u.id);
+    }
+  }
 });

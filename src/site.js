@@ -1,4 +1,5 @@
 import {course,getUnit} from './course.js';
+import {resourceThumbnail} from '../financial/lib/resource-previews.mjs';
 
 // Unit resources share one manifest with the library hub and content validation.
 const response=await fetch(new URL('../financial/resources.json',import.meta.url));
@@ -59,20 +60,24 @@ function shortcutBanner(unit){
  '<span class="generator-shortcut-copy"><strong>'+name+'</strong></span></a></li>').join('')+
  '</ul></section>';
 }
-function resourceCard(title,path,description){
- return '<li><a class="finance-resource-card" href="'+esc(path)+'"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a></li>';
+function resourceCard(title,path,description,unit){
+ return '<li><a class="finance-resource-card" href="'+esc(path)+'"><img class="finance-resource-thumb" src="'+esc(resourceThumbnail(path,unit.id))+'" width="720" height="450" alt="" loading="lazy" decoding="async"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a></li>';
 }
 function resourceSections(unit){
  const r=resourcesFor(unit);
- return '<section class="algebra-unit-section"><h2>Decision Lab</h2><p>Compare real-life choices, explore assumptions, and explain your decision.</p><ul class="finance-resource-grid">'+
- resourceCard(r.decisionLab.title,r.decisionLab.path,'A guided seven-step investigation with a printable summary.')+
- resourceCard('Teacher guide',r.decisionLab.teacherPath,'Teaching prompts, model reasoning, and discussion guidance.')+'</ul></section>'+
+ return '<section class="algebra-unit-section"><h2>Generators</h2><ul class="finance-resource-grid">'+
+ resourceCard('Lesson Plan',r.lessonPlan,'Build notes, examples, practice and an exit ticket.',unit)+
+ resourceCard('Worksheet',r.worksheet,'Choose skills and create practice with an answer key.',unit)+
+ resourceCard('Assessment',r.assessment,'Create a unit assessment with worked solutions.',unit)+'</ul></section>'+
+ '<section class="algebra-unit-section"><h2>Decision Lab</h2><p>Compare real-life choices, explore assumptions, and explain your decision.</p><ul class="finance-resource-grid">'+
+ resourceCard(r.decisionLab.title,r.decisionLab.path,'A guided seven-step investigation with a printable summary.',unit)+
+ resourceCard('Teacher guide',r.decisionLab.teacherPath,'Teaching prompts, model reasoning, and discussion guidance.',unit)+'</ul></section>'+
  '<section class="algebra-unit-section"><h2>Study Guides</h2><ul class="finance-resource-grid">'+
- resourceCard('Flashcards',r.flashcards,'Study financial vocabulary, formulas, and principles.')+
- resourceCard('Cheat Sheet',r.cheatSheet,'A two-page printable reference.')+
- resourceCard('Practice Test',r.practiceTest,'Check understanding with explanations and model responses.')+'</ul></section>'+
+ resourceCard('Flashcards',r.flashcards,'Study financial vocabulary, formulas, and principles.',unit)+
+ resourceCard('Cheat Sheet',r.cheatSheet,'A two-page printable reference.',unit)+
+ resourceCard('Practice Test',r.practiceTest,'Check understanding with explanations and model responses.',unit)+'</ul></section>'+
  '<section class="algebra-unit-section"><h2>Projects</h2><ul class="finance-resource-grid">'+
- r.projects.map(p=>resourceCard(p.title,p.path,p.grouping+' · '+p.days+' · Student packet, slides, teacher guide, and rubric')).join('')+'</ul></section>';
+ r.projects.map(p=>resourceCard(p.title,p.path,p.grouping+' · '+p.days+' · Student packet, slides, teacher guide, and rubric',unit)).join('')+'</ul></section>';
 }
 function pager(unit){
  const i=course.units.indexOf(unit);
