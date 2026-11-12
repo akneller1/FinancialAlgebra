@@ -85,7 +85,7 @@
     if (!G.MK_BANK_LOADER) return Promise.reject(new Error('Question bank loader missing'));
     return G.MK_BANK_LOADER.loadUnitFromSite(COURSE, unitId, null, '../').then(function (ids) {
       if (!ids.length) throw new Error('This unit’s questions are not published yet.');
-      return G.fetch('../question-banks/math5/meta/' + unitId + '.meta.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+      return G.fetch('../math5/meta/' + unitId + '.meta.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
     }).then(function (meta) { META = meta || {}; return G.MK_QUESTION_BANKS.select({ courseId: COURSE, unitId: unitId }); });
   }
   function unitInfo(unitId) {
