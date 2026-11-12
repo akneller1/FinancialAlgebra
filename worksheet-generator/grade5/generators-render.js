@@ -78,8 +78,8 @@
     var h = '<section class="pl-sheet">' + sheetHead(plan, teacher, title,
       'Big idea: ' + (c.bigIdea || '') + '\nTime: ' + o.duration + ' minutes · Level: ' + Core.levelName(o.level) + ' · Skills: ' + plan.skills.map(function (s) { return s.name; }).join(' · '));
     plan.sections.forEach(function (sec) {
-      var head = sec.title + (sec.id === 'vocabulary' ? ' <small>· ' + (teacher || o.notes === 'completed' ? 'Completed' : o.notes === 'blank' ? 'Blank organizer' : 'Guided notes') + '</small>' : '');
-      h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">' + esc(head) + '</div>';
+      var head = esc(sec.title) + (sec.id === 'vocabulary' ? ' <small>· ' + esc(teacher || o.notes === 'completed' ? 'Completed' : o.notes === 'blank' ? 'Blank organizer' : 'Guided notes') + '</small>' : '');
+      h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">' + head + '</div>';
       sec.blocks.forEach(function (b) {
         if (b.kind === 'objectives') {
           h += '<div class="g5bigidea"><b>Big idea:</b> ' + rich(b.bigIdea) + '</div><ul class="g5obj">' + b.items.map(function (x) { return '<li>' + rich(x) + '</li>'; }).join('') + '</ul>';
