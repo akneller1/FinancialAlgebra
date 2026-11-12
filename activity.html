@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Activity | Mr. K’s Classroom</title>
+<link rel="stylesheet" href="activity.css?v=nav-20261025">
+<script src="data.js?v=grade5-20261111" defer></script>
+<script src="unit-specific-arcade.js?v=featured-unit-games-20261105" defer></script>
+<script src="resource-details.js?v=grade5-20261111" defer></script>
+<script src="student-game-share.js?v=interactive-math-20261107" defer></script>
+<script src="activity.js?v=interactive-math-20261105" defer></script>
+<script>
+  /* Back to the page this activity was opened from (a unit page, a search…); home when there is none. */
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('back-button').addEventListener('click', function () {
+      if (history.length > 1 && document.referrer) history.back(); else location.href = './';
+    });
+  });
+</script>
+<style>
+body.student-focus .activity-bar{justify-content:center}body.student-focus #back-button,body.student-focus .activity-bar a,body.student-focus #share-student,body.student-focus .resource-toolbar,body.student-focus #teacher-key-dialog{display:none!important}body.student-focus .activity-bar h1{text-align:center}body.student-focus .activity-frame{min-height:calc(100vh - 90px)}
+</style>
+<script src="analytics.js?v=analytics-20261108" defer></script>
+</head>
+<body>
+<header class="activity-bar" id="activity-header">
+  <button type="button" class="home-button back-button" id="back-button" aria-label="Back to the previous page"><span aria-hidden="true">←</span> Back</button>
+  <a class="home-button" href="./" aria-label="Home — Mr. K’s Classroom"><span aria-hidden="true">⌂</span> Home</a>
+  <h1 id="activity-title">Mr. K’s Classroom</h1>
+  <a class="original-link" id="original-link" target="_blank" rel="noopener" hidden>Open original</a>
+  <button type="button" class="home-button" id="share-student" hidden>Copy student link</button>
+</header>
+<div class="resource-toolbar"><p id="resource-details"></p><a id="report-problem" target="_blank" rel="noopener" hidden>Report a problem (GitHub account required) ↗</a></div>
+<main id="activity-content">
+  <p class="activity-message" id="activity-message" role="status">Loading activity…</p>
+</main>
+<noscript><p class="activity-message">Enable JavaScript to load this activity, or <a href="./">return to the homepage</a>.</p></noscript>
+</body>
+</html>
+

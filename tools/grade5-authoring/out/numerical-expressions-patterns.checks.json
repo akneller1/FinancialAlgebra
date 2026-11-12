@@ -1,0 +1,6068 @@
+{
+"m5-ep-s01-cp2-001": {
+"q": {
+"k": "expr",
+"e": "(88 + 32) ÷ 8"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-002": {
+"q": {
+"k": "expr",
+"e": "(2 × (8 + 5))-(2 × 8 + 5)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-003": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"3 + 9 × 7",
+"(3 + 9) × 7",
+"3 × 9 + 7",
+"3 × (9 + 7)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-cp2-004": {
+"q": {
+"k": "key",
+"accept": [
+"8 − 1"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-cp2-005": {
+"q": {
+"k": "expr",
+"e": "10 × (5 + 10)"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-006": {
+"q": {
+"k": "expr",
+"e": "(2 × (3 + 2))-(2 × 3 + 2)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-007": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"7 + 8 × 3",
+"(7 + 8) × 3",
+"7 × 8 + 3",
+"7 × (8 + 3)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-cp2-008": {
+"q": {
+"k": "key",
+"accept": [
+"8 + 5"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-cp2-009": {
+"q": {
+"k": "expr",
+"e": "(24 + 9) ÷ 3"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-010": {
+"q": {
+"k": "expr",
+"e": "(6 × (8 + 9))-(6 × 8 + 9)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"2 + 5 × 9",
+"(2 + 5) × 9",
+"2 × 5 + 9",
+"2 × (5 + 9)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-cp2-012": {
+"q": {
+"k": "key",
+"accept": [
+"3 − 1"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-cp2-013": {
+"q": {
+"k": "expr",
+"e": "(10 + 4) × 3"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-014": {
+"q": {
+"k": "expr",
+"e": "(9 × (4 + 4))-(9 × 4 + 4)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"7 + 5 × 2",
+"(7 + 5) × 2",
+"7 × 5 + 2",
+"7 × (5 + 2)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-cp2-016": {
+"q": {
+"k": "key",
+"accept": [
+"7 − 1"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-cp2-017": {
+"q": {
+"k": "expr",
+"e": "(45 + 27) ÷ 9"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-018": {
+"q": {
+"k": "expr",
+"e": "(4 × (3 + 9))-(4 × 3 + 9)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-019": {
+"q": {
+"k": "expr",
+"e": "3 × (4 + 8)"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-020": {
+"q": {
+"k": "expr",
+"e": "(7 × (6 + 6))-(7 × 6 + 6)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-021": {
+"q": {
+"k": "expr",
+"e": "28 - (12 + 9)"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-022": {
+"q": {
+"k": "expr",
+"e": "(4 × (5 + 2))-(4 × 5 + 2)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-023": {
+"q": {
+"k": "expr",
+"e": "18 - (9 + 3)"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp2-024": {
+"q": {
+"k": "expr",
+"e": "(9 × (8 + 7))-(9 × 8 + 7)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp2-025": {
+"q": {
+"k": "expr",
+"e": "8 + 8 × 4"
+},
+"family": "o_eval_error"
+},
+"m5-ep-s01-cp2-026": {
+"q": {
+"k": "expr",
+"e": "(5 × (7 + 2))-(5 × 7 + 2)"
+},
+"family": "o_diff_error"
+},
+"m5-ep-s01-cp2-027": {
+"q": {
+"k": "expr",
+"e": "(42 + 48) ÷ 6"
+},
+"family": "o_eval_error"
+},
+"m5-ep-s01-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "25 - (11 + 11)"
+},
+"shown": "3",
+"answer": "3"
+},
+"family": "o_eval_tf"
+},
+"m5-ep-s01-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"32 − (8 + 12) = → 36": {
+"inner": {
+"k": "expr",
+"e": "32 - (8 + 12)"
+},
+"shown": "36"
+},
+"2 × (2 + 8) = → 22": {
+"inner": {
+"k": "expr",
+"e": "2 × (2 + 8)"
+},
+"shown": "22"
+},
+"9 × (11 + 11) = → 198": {
+"inner": {
+"k": "expr",
+"e": "9 × (11 + 11)"
+},
+"shown": "198"
+},
+"9 × (7 + 8) = → 135": {
+"inner": {
+"k": "expr",
+"e": "9 × (7 + 8)"
+},
+"shown": "135"
+}
+}
+},
+"family": "o_eval_sel"
+},
+"m5-ep-s01-cp2-030": {
+"q": null,
+"family": "o_eval_open",
+"parts": [
+{
+"k": "expr",
+"e": "10 - (4 + 4)"
+},
+{
+"k": "expr",
+"e": "(16 + 22) ÷ 2"
+},
+{
+"k": "expr",
+"e": "(70 + 56) ÷ 7"
+},
+{
+"k": "expr",
+"e": "(108 + 60) ÷ 12"
+}
+]
+},
+"m5-ep-s01-cp1-001": {
+"q": {
+"k": "expr",
+"e": "8 × [3 + (12 × 5)]"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-002": {
+"q": {
+"k": "expr",
+"e": "(6 × (7 + 5))-(6 × 7 + 5)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp1-003": {
+"q": {
+"k": "key",
+"accept": [
+"9 + 4"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-cp1-004": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"5 + 6 × 9",
+"(5 + 6) × 9",
+"5 × 6 + 9",
+"5 × (6 + 9)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-cp1-005": {
+"q": {
+"k": "key",
+"accept": [
+"A, C, B"
+]
+},
+"family": "o_steps"
+},
+"m5-ep-s01-cp1-006": {
+"q": {
+"k": "expr",
+"e": "[(10 + 12) × 10] - 12"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-007": {
+"q": {
+"k": "expr",
+"e": "(4 × (4 + 3))-(4 × 4 + 3)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp1-008": {
+"q": {
+"k": "key",
+"accept": [
+"5 − 1"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"4 + 9 × 8",
+"(4 + 9) × 8",
+"4 × 9 + 8",
+"4 × (9 + 8)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-cp1-010": {
+"q": {
+"k": "key",
+"accept": [
+"C, A, B"
+]
+},
+"family": "o_steps"
+},
+"m5-ep-s01-cp1-011": {
+"q": {
+"k": "expr",
+"e": "[(9 + 7) × 5] - 8"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-012": {
+"q": {
+"k": "expr",
+"e": "(6 × (7 + 2))-(6 × 7 + 2)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp1-013": {
+"q": {
+"k": "key",
+"accept": [
+"21 ÷ 3"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"7 + 2 × 9",
+"(7 + 2) × 9",
+"7 × 2 + 9",
+"7 × (2 + 9)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-cp1-015": {
+"q": {
+"k": "key",
+"accept": [
+"B, C, A"
+]
+},
+"family": "o_steps"
+},
+"m5-ep-s01-cp1-016": {
+"q": {
+"k": "expr",
+"e": "(11 + 2) × (6 + 11)"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-017": {
+"q": {
+"k": "expr",
+"e": "(7 × (5 + 6))-(7 × 5 + 6)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp1-018": {
+"q": {
+"k": "expr",
+"e": "88 ÷ (8 × 1) + 6 × 11"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-019": {
+"q": {
+"k": "expr",
+"e": "(3 × (9 + 4))-(3 × 9 + 4)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp1-020": {
+"q": {
+"k": "expr",
+"e": "36 ÷ (3 × 1) + 2 × 5"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-021": {
+"q": {
+"k": "expr",
+"e": "(2 × (8 + 9))-(2 × 8 + 9)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp1-022": {
+"q": {
+"k": "expr",
+"e": "60 ÷ (12 × 1) + 5 × 10"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-023": {
+"q": {
+"k": "expr",
+"e": "(8 × (9 + 8))-(8 × 9 + 8)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-cp1-024": {
+"q": {
+"k": "expr",
+"e": "(9 + 12) × (5 + 3)"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-cp1-025": {
+"q": {
+"k": "expr",
+"e": "28 ÷ (4 × 1) + 3 × 12"
+},
+"family": "o_eval_error"
+},
+"m5-ep-s01-cp1-026": {
+"q": {
+"k": "expr",
+"e": "(5 × (2 + 7))-(5 × 2 + 7)"
+},
+"family": "o_diff_error"
+},
+"m5-ep-s01-cp1-027": {
+"q": {
+"k": "expr",
+"e": "12 × [11 + (5 × 2)]"
+},
+"family": "o_eval_error"
+},
+"m5-ep-s01-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "63 ÷ (7 × 1) + 8 × 7"
+},
+"shown": "65",
+"answer": "65"
+},
+"family": "o_eval_tf"
+},
+"m5-ep-s01-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"9 ÷ (3 × 1) + 7 × 2 = → 17": {
+"inner": {
+"k": "expr",
+"e": "9 ÷ (3 × 1) + 7 × 2"
+},
+"shown": "17"
+},
+"(7 + 4) × (4 + 2) = → 67": {
+"inner": {
+"k": "expr",
+"e": "(7 + 4) × (4 + 2)"
+},
+"shown": "67"
+},
+"(11 + 12) × (10 + 5) = → 690": {
+"inner": {
+"k": "expr",
+"e": "(11 + 12) × (10 + 5)"
+},
+"shown": "690"
+},
+"49 ÷ (7 × 1) + 10 × 6 = → 67": {
+"inner": {
+"k": "expr",
+"e": "49 ÷ (7 × 1) + 10 × 6"
+},
+"shown": "67"
+}
+}
+},
+"family": "o_eval_sel"
+},
+"m5-ep-s01-cp1-030": {
+"q": null,
+"family": "o_eval_open",
+"parts": [
+{
+"k": "expr",
+"e": "(10 + 7) × (7 + 11)"
+},
+{
+"k": "expr",
+"e": "[(4 + 9) × 10] - 11"
+},
+{
+"k": "expr",
+"e": "[(12 + 12) × 4] - 6"
+},
+{
+"k": "expr",
+"e": "[(4 + 5) × 6] - 4"
+}
+]
+},
+"m5-ep-s01-honors-001": {
+"q": {
+"k": "expr",
+"e": "{[3 + 6] × 5} - 6 × 2"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-honors-002": {
+"q": {
+"k": "expr",
+"e": "([2 + 4] × (5 + 3))-(2 + 4 × 5 + 3)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-honors-003": {
+"q": {
+"k": "key",
+"accept": [
+"7 − 1"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-honors-004": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"3 + 2 × 8",
+"(3 + 2) × 8",
+"3 × 2 + 8",
+"3 × (2 + 8)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-honors-005": {
+"q": {
+"k": "expr",
+"e": "(7*60)+(7*1/2)",
+"form": "mixed"
+},
+"family": "o_fraction"
+},
+"m5-ep-s01-honors-006": {
+"q": {
+"k": "key",
+"accept": [
+"B, C, A"
+]
+},
+"family": "o_steps"
+},
+"m5-ep-s01-honors-007": {
+"q": {
+"k": "expr",
+"e": "{12 × [6 + (8 - 1)]} ÷ 1"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-honors-008": {
+"q": {
+"k": "expr",
+"e": "([8 + 5] × (3 + 4))-(8 + 5 × 3 + 4)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-honors-009": {
+"q": {
+"k": "key",
+"accept": [
+"6 − 1"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-honors-010": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"9 + 7 × 4",
+"(9 + 7) × 4",
+"9 × 7 + 4",
+"9 × (7 + 4)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-honors-011": {
+"q": {
+"k": "expr",
+"e": "(4*80)+(4*1/4)",
+"form": "mixed"
+},
+"family": "o_fraction"
+},
+"m5-ep-s01-honors-012": {
+"q": {
+"k": "key",
+"accept": [
+"C, B, A"
+]
+},
+"family": "o_steps"
+},
+"m5-ep-s01-honors-013": {
+"q": {
+"k": "expr",
+"e": "[20 - (4 + 2)] × 11"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-honors-014": {
+"q": {
+"k": "expr",
+"e": "([4 + 3] × (2 + 5))-(4 + 3 × 2 + 5)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-honors-015": {
+"q": {
+"k": "key",
+"accept": [
+"7 − 1"
+]
+},
+"family": "o_first"
+},
+"m5-ep-s01-honors-016": {
+"q": {
+"k": "fn",
+"fn": "extreme_expr",
+"exprs": [
+"3 + 4 × 8",
+"(3 + 4) × 8",
+"3 × 4 + 8",
+"3 × (4 + 8)"
+],
+"which": "max"
+},
+"family": "o_greatest"
+},
+"m5-ep-s01-honors-017": {
+"q": {
+"k": "expr",
+"e": "(4*20)+(4*1/2)",
+"form": "mixed"
+},
+"family": "o_fraction"
+},
+"m5-ep-s01-honors-018": {
+"q": {
+"k": "key",
+"accept": [
+"B, A, C"
+]
+},
+"family": "o_steps"
+},
+"m5-ep-s01-honors-019": {
+"q": {
+"k": "expr",
+"e": "[48 - (10 + 10)] × 4"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-honors-020": {
+"q": {
+"k": "expr",
+"e": "([9 + 3] × (9 + 5))-(9 + 3 × 9 + 5)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-honors-021": {
+"q": {
+"k": "expr",
+"e": "(9*40)+(9*1/5)",
+"form": "mixed"
+},
+"family": "o_fraction"
+},
+"m5-ep-s01-honors-022": {
+"q": {
+"k": "expr",
+"e": "([4 + 4] × (8 + 3))-(4 + 4 × 8 + 3)"
+},
+"family": "o_diff"
+},
+"m5-ep-s01-honors-023": {
+"q": {
+"k": "expr",
+"e": "(2*90)+(2*1/5)",
+"form": "mixed"
+},
+"family": "o_fraction"
+},
+"m5-ep-s01-honors-024": {
+"q": {
+"k": "expr",
+"e": "{2 × [2 + (4 - 1)]} ÷ 1"
+},
+"family": "o_eval"
+},
+"m5-ep-s01-honors-025": {
+"q": {
+"k": "expr",
+"e": "{[11 + 2] × 12} - 7 × 2"
+},
+"family": "o_eval_error"
+},
+"m5-ep-s01-honors-026": {
+"q": {
+"k": "expr",
+"e": "([3 + 9] × (5 + 4))-(3 + 9 × 5 + 4)"
+},
+"family": "o_diff_error"
+},
+"m5-ep-s01-honors-027": {
+"q": {
+"k": "expr",
+"e": "(8*60)+(8*1/4)",
+"form": "mixed"
+},
+"family": "o_fraction_error"
+},
+"m5-ep-s01-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "{5 × [9 + (10 - 1)]} ÷ 1"
+},
+"shown": "54",
+"answer": "90"
+},
+"family": "o_eval_tf"
+},
+"m5-ep-s01-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"11 + {11 × [5 + (2 ÷ 1)]} = → 88": {
+"inner": {
+"k": "expr",
+"e": "11 + {11 × [5 + (2 ÷ 1)]}"
+},
+"shown": "88"
+},
+"11 + {5 × [10 + (7 ÷ 1)]} = → 98": {
+"inner": {
+"k": "expr",
+"e": "11 + {5 × [10 + (7 ÷ 1)]}"
+},
+"shown": "98"
+},
+"{[6 + 10] × 12} − 12 × 2 = → 336": {
+"inner": {
+"k": "expr",
+"e": "{[6 + 10] × 12} - 12 × 2"
+},
+"shown": "336"
+},
+"[40 − (3 + 2)] × 12 = → 420": {
+"inner": {
+"k": "expr",
+"e": "[40 - (3 + 2)] × 12"
+},
+"shown": "420"
+}
+}
+},
+"family": "o_eval_sel"
+},
+"m5-ep-s01-honors-030": {
+"q": null,
+"family": "o_eval_open",
+"parts": [
+{
+"k": "expr",
+"e": "12 + {12 × [10 + (11 ÷ 1)]}"
+},
+{
+"k": "expr",
+"e": "528 ÷ [8 × (11 + 0)]"
+},
+{
+"k": "expr",
+"e": "{[5 + 8] × 6} - 10 × 2"
+},
+{
+"k": "expr",
+"e": "4 + {9 × [6 + (6 ÷ 1)]}"
+}
+]
+},
+"m5-ep-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "20 × 9 - 8"
+},
+"family": "w_words"
+},
+"m5-ep-s02-cp2-002": {
+"q": {
+"k": "expr",
+"e": "2 × (19 + 8)"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp2-003": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "3 + 10 × 5"
+},
+"family": "w_context"
+},
+"m5-ep-s02-cp2-004": {
+"q": {
+"k": "key",
+"accept": [
+"add 18 and 11, then multiply by 7"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-cp2-005": {
+"q": {
+"k": "expr",
+"e": "4 × 7 + 9"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "multiply 6 by 5, then subtract 15",
+"expr": "6 × 5 − ___"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp2-007": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(42 - 6) ÷ 4"
+},
+"family": "w_words"
+},
+"m5-ep-s02-cp2-008": {
+"q": {
+"k": "expr",
+"e": "3 × (12 + 3)"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "5 × 4 - 2"
+},
+"family": "w_context"
+},
+"m5-ep-s02-cp2-010": {
+"q": {
+"k": "key",
+"accept": [
+"add 16 and 10, then multiply by 8"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-cp2-011": {
+"q": {
+"k": "expr",
+"e": "7 × 4 + 4"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp2-012": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 12 and 6, then multiply by 5",
+"expr": "___ × (12 + 6)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp2-013": {
+"q": {
+"k": "expr",
+"e": "3 × (25 + 3)"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "9 × 6 - 6"
+},
+"family": "w_context"
+},
+"m5-ep-s02-cp2-015": {
+"q": {
+"k": "key",
+"accept": [
+"add 10 and 11, then multiply by 9"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-cp2-016": {
+"q": {
+"k": "expr",
+"e": "7 × 12 - 5"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp2-017": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "multiply 7 by 8, then subtract 11",
+"expr": "7 × 8 − ___"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp2-018": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "3 × (21 + 8)"
+},
+"family": "w_words"
+},
+"m5-ep-s02-cp2-019": {
+"q": {
+"k": "expr",
+"e": "16 × 9 - 8"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp2-020": {
+"q": {
+"k": "expr",
+"e": "4 × 8 - 8"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 20 and 6, then multiply by 2",
+"expr": "___ × (20 + 6)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp2-022": {
+"q": {
+"k": "expr",
+"e": "3 × (14 + 5)"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp2-023": {
+"q": {
+"k": "expr",
+"e": "3 × 7 - 7"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 19 and 12, then multiply by 7",
+"expr": "___ × (19 + 12)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp2-025": {
+"q": {
+"k": "expr",
+"e": "3 × (19 + 8)"
+},
+"family": "w_value_error",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp2-026": {
+"q": {
+"k": "expr",
+"e": "7 × 8 + 8"
+},
+"family": "w_context_value_error"
+},
+"m5-ep-s02-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "multiply 7 by 9, then subtract 16",
+"expr": "7 × 9 − ___"
+},
+"family": "w_blank_error"
+},
+"m5-ep-s02-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "3 × (24 + 6)"
+},
+"shown": "90",
+"answer": "90"
+},
+"family": "w_value_tf"
+},
+"m5-ep-s02-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Write an expression for “add 25 and 4, then multiply by 9.” Then find its value. → 61": {
+"inner": {
+"k": "expr",
+"e": "9 × (25 + 4)"
+},
+"shown": "61"
+},
+"Write an expression for “add 9 and 10, then multiply by 4.” Then find its value. → 76": {
+"inner": {
+"k": "expr",
+"e": "4 × (9 + 10)"
+},
+"shown": "76"
+},
+"Write an expression for “add 18 and 7, then multiply by 7.” Then find its value. → 133": {
+"inner": {
+"k": "expr",
+"e": "7 × (18 + 7)"
+},
+"shown": "133"
+},
+"Write an expression for “add 21 and 7, then multiply by 7.” Then find its value. → 196": {
+"inner": {
+"k": "expr",
+"e": "7 × (21 + 7)"
+},
+"shown": "196"
+}
+}
+},
+"family": "w_value_sel"
+},
+"m5-ep-s02-cp2-030": {
+"q": null,
+"family": "w_value_open",
+"parts": [
+{
+"k": "expr",
+"e": "15 × 9 - 7"
+},
+{
+"k": "expr",
+"e": "18 × 11 - 4"
+},
+{
+"k": "expr",
+"e": "3 × (16 + 2)"
+},
+{
+"k": "expr",
+"e": "9 × (17 + 12)"
+}
+]
+},
+"m5-ep-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(6 - 2) ÷ 2"
+},
+"family": "w_words"
+},
+"m5-ep-s02-cp1-002": {
+"q": {
+"k": "expr",
+"e": "26 + 9 × 9"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp1-003": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "9 + 5 × 2"
+},
+"family": "w_context"
+},
+"m5-ep-s02-cp1-004": {
+"q": {
+"k": "key",
+"accept": [
+"add 7 and 7, then multiply by 4"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-cp1-005": {
+"q": {
+"k": "expr",
+"e": "7 + 7 × 5"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "multiply 9 by 3, then subtract 17",
+"expr": "9 × 3 − ___"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp1-007": {
+"q": {
+"k": "expr",
+"e": "2 × (11 + 8)"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(44 - 8) ÷ 4"
+},
+"family": "w_context"
+},
+"m5-ep-s02-cp1-009": {
+"q": {
+"k": "key",
+"accept": [
+"add 13 and 10, then multiply by 6"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-cp1-010": {
+"q": {
+"k": "expr",
+"e": "5 × 10 - 4"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 12 and 8, then multiply by 7",
+"expr": "___ × (12 + 8)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp1-012": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(27 - 3) ÷ 3"
+},
+"family": "w_words"
+},
+"m5-ep-s02-cp1-013": {
+"q": {
+"k": "expr",
+"e": "24 + 9 × 5"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "9 + 11 × 6"
+},
+"family": "w_context"
+},
+"m5-ep-s02-cp1-015": {
+"q": {
+"k": "key",
+"accept": [
+"add 17 and 8, then multiply by 6"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-cp1-016": {
+"q": {
+"k": "expr",
+"e": "4 + 8 × 7"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "multiply 2 by 7, then subtract 7",
+"expr": "2 × 7 − ___"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp1-018": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(9 - 5) ÷ 2"
+},
+"family": "w_words"
+},
+"m5-ep-s02-cp1-019": {
+"q": {
+"k": "expr",
+"e": "8 × (21 + 8)"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp1-020": {
+"q": {
+"k": "expr",
+"e": "6 + 8 × 3"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 11 and 11, then multiply by 7",
+"expr": "___ × (11 + 11)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp1-022": {
+"q": {
+"k": "expr",
+"e": "21 × 4 - 2"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-cp1-023": {
+"q": {
+"k": "expr",
+"e": "(33 - 5) ÷ 7"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 10 and 7, then multiply by 7",
+"expr": "___ × (10 + 7)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-cp1-025": {
+"q": {
+"k": "expr",
+"e": "6 + 6 × 7"
+},
+"family": "w_context_value_error"
+},
+"m5-ep-s02-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 16 and 9, then multiply by 3",
+"expr": "___ × (16 + 9)"
+},
+"family": "w_blank_error"
+},
+"m5-ep-s02-cp1-027": {
+"q": {
+"k": "expr",
+"e": "8 + 11 × 4"
+},
+"family": "w_context_value_error"
+},
+"m5-ep-s02-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "(18 - 6) ÷ 2"
+},
+"shown": "15",
+"answer": "6"
+},
+"family": "w_value_tf"
+},
+"m5-ep-s02-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Write an expression for “half of the difference of 24 and 8.” Then find its value. → 16": {
+"inner": {
+"k": "expr",
+"e": "(24 - 8) ÷ 2"
+},
+"shown": "16"
+},
+"Write an expression for “multiply 19 by 2, then subtract 7.” Then find its value. → 31": {
+"inner": {
+"k": "expr",
+"e": "19 × 2 - 7"
+},
+"shown": "31"
+},
+"Write an expression for “add 22 and 12, then multiply by 5.” Then find its value. → 82": {
+"inner": {
+"k": "expr",
+"e": "5 × (22 + 12)"
+},
+"shown": "82"
+},
+"Write an expression for “multiply 16 by 6, then subtract 8.” Then find its value. → 88": {
+"inner": {
+"k": "expr",
+"e": "16 × 6 - 8"
+},
+"shown": "88"
+}
+}
+},
+"family": "w_value_sel"
+},
+"m5-ep-s02-cp1-030": {
+"q": null,
+"family": "w_value_open",
+"parts": [
+{
+"k": "expr",
+"e": "18 × 12 - 5"
+},
+{
+"k": "expr",
+"e": "3 × (24 + 5)"
+},
+{
+"k": "expr",
+"e": "27 × 10 - 7"
+},
+{
+"k": "expr",
+"e": "14 + 5 × 3"
+}
+]
+},
+"m5-ep-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(21 - 3) ÷ 2"
+},
+"family": "w_words"
+},
+"m5-ep-s02-honors-002": {
+"q": {
+"k": "expr",
+"e": "(11 - 9) ÷ 2"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-honors-003": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(32 - 8) ÷ 8"
+},
+"family": "w_context"
+},
+"m5-ep-s02-honors-004": {
+"q": {
+"k": "key",
+"accept": [
+"add 10 and 10, then multiply by 3"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-honors-005": {
+"q": {
+"k": "expr",
+"e": "5 + 4 × 9"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-honors-006": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "multiply 12 by 6, then subtract 13",
+"expr": "12 × 6 − ___"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-honors-007": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "13 + 6 × 4"
+},
+"family": "w_words"
+},
+"m5-ep-s02-honors-008": {
+"q": {
+"k": "expr",
+"e": "25 + 3 × 5"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-honors-009": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(40 - 12) ÷ 7"
+},
+"family": "w_context"
+},
+"m5-ep-s02-honors-010": {
+"q": {
+"k": "key",
+"accept": [
+"add 6 and 4, then multiply by 6"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-honors-011": {
+"q": {
+"k": "expr",
+"e": "3 × 9 - 9"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-honors-012": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 17 and 12, then multiply by 3",
+"expr": "___ × (17 + 12)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-honors-013": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "23 × 10 - 4"
+},
+"family": "w_words"
+},
+"m5-ep-s02-honors-014": {
+"q": {
+"k": "expr",
+"e": "23 × 2 - 3"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-honors-015": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "6 × 7 - 7"
+},
+"family": "w_context"
+},
+"m5-ep-s02-honors-016": {
+"q": {
+"k": "key",
+"accept": [
+"add 5 and 8, then multiply by 5"
+]
+},
+"family": "w_to_words"
+},
+"m5-ep-s02-honors-017": {
+"q": {
+"k": "expr",
+"e": "8 × 6 + 6"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-honors-018": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 16 and 2, then multiply by 4",
+"expr": "___ × (16 + 2)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-honors-019": {
+"q": {
+"k": "expr",
+"e": "(19 - 5) ÷ 2"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-honors-020": {
+"q": {
+"k": "expr",
+"e": "(32 - 8) ÷ 8"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-honors-021": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 8 and 10, then multiply by 2",
+"expr": "___ × (8 + 10)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-honors-022": {
+"q": {
+"k": "expr",
+"e": "20 + 9 × 2"
+},
+"family": "w_value",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-honors-023": {
+"q": {
+"k": "expr",
+"e": "8 + 9 × 3"
+},
+"family": "w_context_value"
+},
+"m5-ep-s02-honors-024": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 20 and 4, then multiply by 2",
+"expr": "___ × (20 + 4)"
+},
+"family": "w_blank"
+},
+"m5-ep-s02-honors-025": {
+"q": {
+"k": "expr",
+"e": "16 × 2 - 3"
+},
+"family": "w_value_error",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-ep-s02-honors-026": {
+"q": {
+"k": "expr",
+"e": "(19 - 5) ÷ 2"
+},
+"family": "w_context_value_error"
+},
+"m5-ep-s02-honors-027": {
+"q": {
+"k": "fn",
+"fn": "blank_is",
+"words": "add 11 and 4, then multiply by 2",
+"expr": "___ × (11 + 4)"
+},
+"family": "w_blank_error"
+},
+"m5-ep-s02-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "blank_is",
+"words": "multiply 9 by 2, then subtract 10",
+"expr": "9 × 2 − ___"
+},
+"shown": "9",
+"answer": "10"
+},
+"family": "w_blank_tf"
+},
+"m5-ep-s02-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Write an expression for “the sum of 11 and the product of 6 and 3.” Then find its value. → 20": {
+"inner": {
+"k": "expr",
+"e": "11 + 6 × 3"
+},
+"shown": "20"
+},
+"Write an expression for “multiply 13 by 6, then subtract 4.” Then find its value. → 74": {
+"inner": {
+"k": "expr",
+"e": "13 × 6 - 4"
+},
+"shown": "74"
+},
+"Write an expression for “multiply 18 by 10, then subtract 7.” Then find its value. → 173": {
+"inner": {
+"k": "expr",
+"e": "18 × 10 - 7"
+},
+"shown": "173"
+},
+"Write an expression for “triple the sum of 24 and 5.” Then find its value. → 32": {
+"inner": {
+"k": "expr",
+"e": "3 × (24 + 5)"
+},
+"shown": "32"
+}
+}
+},
+"family": "w_value_sel"
+},
+"m5-ep-s02-honors-030": {
+"q": null,
+"family": "w_value_open",
+"parts": [
+{
+"k": "expr",
+"e": "3 × (16 + 7)"
+},
+{
+"k": "expr",
+"e": "7 × (23 + 5)"
+},
+{
+"k": "expr",
+"e": "(12 - 4) ÷ 2"
+},
+{
+"k": "expr",
+"e": "9 × (23 + 4)"
+}
+]
+},
+"m5-ep-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*(7,140 + 600)",
+"b": "7,140 + 600"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "304 + 560",
+"mult": 5
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp2-003": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "38*152",
+"b": "38*38"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp2-004": {
+"q": {
+"k": "key",
+"accept": [
+"7 × (697 + 888) is 7 times as large as 697 + 888."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-cp2-005": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 65,
+"b": 21,
+"mult": 8
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp2-006": {
+"q": {
+"k": "expr",
+"e": "3*(90+70)-2*(90+70)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp2-007": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(7,071 + 673)",
+"b": "7,071 + 673"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp2-008": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "822 + 551",
+"mult": 2
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*650",
+"b": "3*65"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp2-010": {
+"q": {
+"k": "key",
+"accept": [
+"4 × (985 + 482) is 4 times as large as 985 + 482."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 88,
+"b": 87,
+"mult": 6
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp2-012": {
+"q": {
+"k": "expr",
+"e": "9*(66+38)-8*(66+38)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp2-013": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(9,288 + 775)",
+"b": "9,288 + 775"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "362 + 395",
+"mult": 5
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "18*620",
+"b": "18*62"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp2-016": {
+"q": {
+"k": "key",
+"accept": [
+"5 × (448 + 604) is 5 times as large as 448 + 604."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-cp2-017": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 21,
+"b": 91,
+"mult": 7
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp2-018": {
+"q": {
+"k": "expr",
+"e": "8*(65+65)-7*(65+65)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "8*(8,523 + 534)",
+"b": "8,523 + 534"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "287 + 844",
+"mult": 5
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "26*60",
+"b": "26*30"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp2-022": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 21,
+"b": 70,
+"mult": 8
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp2-023": {
+"q": {
+"k": "expr",
+"e": "6*(30+39)-5*(30+39)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(3,508 + 220)",
+"b": "3,508 + 220"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*(1,613 + 682)",
+"b": "1,613 + 682"
+},
+"family": "i_times_error"
+},
+"m5-ep-s03-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "29*450",
+"b": "29*45"
+},
+"family": "i_change_error"
+},
+"m5-ep-s03-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 84,
+"b": 43,
+"mult": 8
+},
+"family": "i_fill_error"
+},
+"m5-ep-s03-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "5*(6,081 + 892)",
+"b": "6,081 + 892"
+},
+"shown": "5",
+"answer": "5"
+},
+"family": "i_times_tf"
+},
+"m5-ep-s03-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Without calculating, how many times as large is 8 × (3,819 + 420) as 3,819 + 420? → 8": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "8*(3,819 + 420)",
+"b": "3,819 + 420"
+},
+"shown": "8"
+},
+"Without calculating, how many times as large is 6 × (5,377 + 914) as 5,377 + 914? → 1/6": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "6*(5,377 + 914)",
+"b": "5,377 + 914"
+},
+"shown": "1/6"
+},
+"Without calculating, how many times as large is 2 × (2,053 + 315) as 2,053 + 315? → 3": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(2,053 + 315)",
+"b": "2,053 + 315"
+},
+"shown": "3"
+},
+"Without calculating, how many times as large is 3 × (4,561 + 362) as 4,561 + 362? → 3": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*(4,561 + 362)",
+"b": "4,561 + 362"
+},
+"shown": "3"
+}
+}
+},
+"family": "i_times_sel"
+},
+"m5-ep-s03-cp2-030": {
+"q": null,
+"family": "i_times_open",
+"parts": [
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "5*(7,098 + 816)",
+"b": "7,098 + 816"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(545 + 921)",
+"b": "545 + 921"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "7*(9,916 + 956)",
+"b": "9,916 + 956"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "7*(7,884 + 858)",
+"b": "7,884 + 858"
+}
+]
+},
+"m5-ep-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(7,428 - 415)",
+"b": "7,428 - 415"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "540 + 175",
+"mult": 4
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp1-003": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "37*700",
+"b": "37*70"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp1-004": {
+"q": {
+"k": "key",
+"accept": [
+"7 × (513 + 628) is 7 times as large as 513 + 628."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 38,
+"b": 67,
+"mult": 2
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp1-006": {
+"q": {
+"k": "expr",
+"e": "7*(34+22)-6*(34+22)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(824 - 823)",
+"b": "824 - 823"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "432 + 934",
+"mult": 6
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "16*84",
+"b": "16*28"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp1-010": {
+"q": {
+"k": "key",
+"accept": [
+"7 × (455 + 192) is 7 times as large as 455 + 192."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 31,
+"b": 75,
+"mult": 5
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp1-012": {
+"q": {
+"k": "expr",
+"e": "8*(42+55)-7*(42+55)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(372 + 965)",
+"b": "372 + 965"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "826 + 215",
+"mult": 2
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp1-015": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "33*190",
+"b": "33*19"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp1-016": {
+"q": {
+"k": "key",
+"accept": [
+"(790 + 4,625) ÷ 5 is 1/5 as large as 790 + 4,625."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 58,
+"b": 41,
+"mult": 8
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp1-018": {
+"q": {
+"k": "expr",
+"e": "9*(77+71)-8*(77+71)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp1-019": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "5*(3,602 - 154)",
+"b": "3,602 - 154"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "644 + 962",
+"mult": 5
+},
+"family": "i_which"
+},
+"m5-ep-s03-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "34*216",
+"b": "34*54"
+},
+"family": "i_change"
+},
+"m5-ep-s03-cp1-022": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 95,
+"b": 99,
+"mult": 6
+},
+"family": "i_fill"
+},
+"m5-ep-s03-cp1-023": {
+"q": {
+"k": "expr",
+"e": "9*(65+82)-8*(65+82)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*(547 - 317)",
+"b": "547 - 317"
+},
+"family": "i_times"
+},
+"m5-ep-s03-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(615 + 688)",
+"b": "615 + 688"
+},
+"family": "i_times_error"
+},
+"m5-ep-s03-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "25*204",
+"b": "25*68"
+},
+"family": "i_change_error"
+},
+"m5-ep-s03-cp1-027": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 35,
+"b": 55,
+"mult": 4
+},
+"family": "i_fill_error"
+},
+"m5-ep-s03-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "7*(5,161 - 530)",
+"b": "5,161 - 530"
+},
+"shown": "8",
+"answer": "7"
+},
+"family": "i_times_tf"
+},
+"m5-ep-s03-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Without calculating, how many times as large is 9 × (4,739 − 345) as 4,739 − 345? → 1/9": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "9*(4,739 - 345)",
+"b": "4,739 - 345"
+},
+"shown": "1/9"
+},
+"Without calculating, how many times as large is 9 × (2,395 − 430) as 2,395 − 430? → 9": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "9*(2,395 - 430)",
+"b": "2,395 - 430"
+},
+"shown": "9"
+},
+"Without calculating, how many times as large is 4 × (4,450 + 229) as 4,450 + 229? → 4,450": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(4,450 + 229)",
+"b": "4,450 + 229"
+},
+"shown": "4,450"
+},
+"Without calculating, how many times as large is 6 × (9,234 − 514) as 9,234 − 514? → 6": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "6*(9,234 - 514)",
+"b": "9,234 - 514"
+},
+"shown": "6"
+}
+}
+},
+"family": "i_times_sel"
+},
+"m5-ep-s03-cp1-030": {
+"q": null,
+"family": "i_times_open",
+"parts": [
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(5,970 - 201)",
+"b": "5,970 - 201"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*(9,643 - 533)",
+"b": "9,643 - 533"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(4,709 + 616)",
+"b": "4,709 + 616"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "6*(5,914 - 977)",
+"b": "5,914 - 977"
+}
+]
+},
+"m5-ep-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "7*(3,413 + 191)",
+"b": "3,413 + 191"
+},
+"family": "i_times"
+},
+"m5-ep-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "377 + 313",
+"mult": 5
+},
+"family": "i_which"
+},
+"m5-ep-s03-honors-003": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "22*320",
+"b": "22*32"
+},
+"family": "i_change"
+},
+"m5-ep-s03-honors-004": {
+"q": {
+"k": "key",
+"accept": [
+"(1,170 + 1,256) ÷ 2 is 1/2 as large as 1,170 + 1,256."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-honors-005": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 34,
+"b": 40,
+"mult": 6
+},
+"family": "i_fill"
+},
+"m5-ep-s03-honors-006": {
+"q": {
+"k": "expr",
+"e": "7*(90+14)-4*(90+14)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-honors-007": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "7*(2,231 - 378)",
+"b": "2,231 - 378"
+},
+"family": "i_times"
+},
+"m5-ep-s03-honors-008": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "827 + 235",
+"mult": 6
+},
+"family": "i_which"
+},
+"m5-ep-s03-honors-009": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "14*144",
+"b": "14*72"
+},
+"family": "i_change"
+},
+"m5-ep-s03-honors-010": {
+"q": {
+"k": "key",
+"accept": [
+"(848 + 522) ÷ 2 is 1/2 as large as 848 + 522."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-honors-011": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 41,
+"b": 86,
+"mult": 4
+},
+"family": "i_fill"
+},
+"m5-ep-s03-honors-012": {
+"q": {
+"k": "expr",
+"e": "10*(24+88)-8*(24+88)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-honors-013": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "5*(5,457 - 756)",
+"b": "5,457 - 756"
+},
+"family": "i_times"
+},
+"m5-ep-s03-honors-014": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "495 + 640",
+"mult": 6
+},
+"family": "i_which"
+},
+"m5-ep-s03-honors-015": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "12*71",
+"b": "12*142"
+},
+"family": "i_change"
+},
+"m5-ep-s03-honors-016": {
+"q": {
+"k": "key",
+"accept": [
+"(3,456 + 5,238) ÷ 9 is 1/9 as large as 3,456 + 5,238."
+]
+},
+"family": "i_compare"
+},
+"m5-ep-s03-honors-017": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 49,
+"b": 74,
+"mult": 2
+},
+"family": "i_fill"
+},
+"m5-ep-s03-honors-018": {
+"q": {
+"k": "expr",
+"e": "9*(44+60)-7*(44+60)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-honors-019": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(7,440 + 633)",
+"b": "7,440 + 633"
+},
+"family": "i_times"
+},
+"m5-ep-s03-honors-020": {
+"q": {
+"k": "fn",
+"fn": "expr_times",
+"base": "948 + 323",
+"mult": 3
+},
+"family": "i_which"
+},
+"m5-ep-s03-honors-021": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "38*66",
+"b": "38*22"
+},
+"family": "i_change"
+},
+"m5-ep-s03-honors-022": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 30,
+"b": 68,
+"mult": 6
+},
+"family": "i_fill"
+},
+"m5-ep-s03-honors-023": {
+"q": {
+"k": "expr",
+"e": "10*(27+25)-8*(27+25)"
+},
+"family": "i_how_much"
+},
+"m5-ep-s03-honors-024": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "5*(7,075 - 527)",
+"b": "7,075 - 527"
+},
+"family": "i_times"
+},
+"m5-ep-s03-honors-025": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(9,583 + 319)",
+"b": "9,583 + 319"
+},
+"family": "i_times_error"
+},
+"m5-ep-s03-honors-026": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "28*28",
+"b": "28*140"
+},
+"family": "i_change_error"
+},
+"m5-ep-s03-honors-027": {
+"q": {
+"k": "fn",
+"fn": "expr_ratio_blank",
+"a": 37,
+"b": 51,
+"mult": 3
+},
+"family": "i_fill_error"
+},
+"m5-ep-s03-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "9*(8,434 - 497)",
+"b": "8,434 - 497"
+},
+"shown": "9",
+"answer": "9"
+},
+"family": "i_times_tf"
+},
+"m5-ep-s03-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Without calculating, how many times as large is 6 × (9,090 − 134) as 9,090 − 134? → 9,090": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "6*(9,090 - 134)",
+"b": "9,090 - 134"
+},
+"shown": "9,090"
+},
+"Without calculating, how many times as large is 4 × (2,693 − 230) as 2,693 − 230? → 5": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(2,693 - 230)",
+"b": "2,693 - 230"
+},
+"shown": "5"
+},
+"Without calculating, how many times as large is 2 × (7,446 − 166) as 7,446 − 166? → 2": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(7,446 - 166)",
+"b": "7,446 - 166"
+},
+"shown": "2"
+},
+"Without calculating, how many times as large is 3 × (8,553 − 815) as 8,553 − 815? → 3": {
+"inner": {
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*(8,553 - 815)",
+"b": "8,553 - 815"
+},
+"shown": "3"
+}
+}
+},
+"family": "i_times_sel"
+},
+"m5-ep-s03-honors-030": {
+"q": null,
+"family": "i_times_open",
+"parts": [
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "5*(9,804 + 338)",
+"b": "9,804 + 338"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "4*(9,820 + 400)",
+"b": "9,820 + 400"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "2*(656 + 197)",
+"b": "656 + 197"
+},
+{
+"k": "fn",
+"fn": "expr_ratio",
+"a": "3*(1,120 + 460)",
+"b": "1,120 + 460"
+}
+]
+},
+"m5-ep-s04-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "8",
+"op": "add",
+"step": "7",
+"n": 5
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "1",
+"op": "add",
+"step": "3",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp2-003": {
+"q": {
+"k": "key",
+"accept": [
+"Add 8"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp2-004": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "add",
+"step": "3",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"4",
+"7",
+"10",
+"13",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp2-005": {
+"q": {
+"k": "expr",
+"e": "20+4*7",
+"unit": "$"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "8",
+"op": "add",
+"step": "3",
+"n": 7
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp2-007": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "0",
+"op": "add",
+"step": "3",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp2-008": {
+"q": {
+"k": "key",
+"accept": [
+"Add 8"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "6",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"0",
+"6",
+"12",
+"18",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp2-010": {
+"q": {
+"k": "expr",
+"e": "13+9*10",
+"unit": "$"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "7",
+"op": "add",
+"step": "3",
+"n": 7
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp2-012": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "10",
+"op": "add",
+"step": "6",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp2-013": {
+"q": {
+"k": "key",
+"accept": [
+"Add 5"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "5",
+"op": "add",
+"step": "6",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"5",
+"11",
+"17",
+"23",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp2-015": {
+"q": {
+"k": "expr",
+"e": "24+4*6",
+"unit": "$"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp2-016": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "10",
+"op": "add",
+"step": "2",
+"n": 7
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp2-017": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "7",
+"op": "add",
+"step": "4",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp2-018": {
+"q": {
+"k": "key",
+"accept": [
+"Add 7"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "2",
+"op": "add",
+"step": "9",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"2",
+"11",
+"20",
+"29",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp2-020": {
+"q": {
+"k": "expr",
+"e": "20+6*6",
+"unit": "centimeters"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp2-021": {
+"q": {
+"k": "key",
+"accept": [
+"Add 9"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp2-022": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "add",
+"step": "2",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"4",
+"6",
+"8",
+"10",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp2-023": {
+"q": {
+"k": "expr",
+"e": "2+8*8",
+"unit": "stamps"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp2-024": {
+"q": {
+"k": "key",
+"accept": [
+"Add 9"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "3",
+"op": "add",
+"step": "6",
+"n": 8
+},
+"family": "p_term_error"
+},
+"m5-ep-s04-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "0",
+"op": "add",
+"step": "6",
+"count": 5
+},
+"family": "p_list_error"
+},
+"m5-ep-s04-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "8",
+"op": "add",
+"step": "5",
+"n": 5
+},
+"family": "p_table_error",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"8",
+"13",
+"18",
+"23",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "15+7*4",
+"unit": "$"
+},
+"shown": "$47",
+"answer": "$43"
+},
+"family": "p_word_tf"
+},
+"m5-ep-s04-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"A pattern starts at 3. The rule is “Add 2.” What is term 7? → 17": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "3",
+"op": "add",
+"step": "2",
+"n": 7
+},
+"shown": "17"
+},
+"A pattern starts at 7. The rule is “Add 4.” What is term 6? → 23": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "7",
+"op": "add",
+"step": "4",
+"n": 6
+},
+"shown": "23"
+},
+"A pattern starts at 4. The rule is “Add 6.” What is term 6? → 34": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "add",
+"step": "6",
+"n": 6
+},
+"shown": "34"
+},
+"A pattern starts at 5. The rule is “Add 3.” What is term 5? → 17": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "5",
+"op": "add",
+"step": "3",
+"n": 5
+},
+"shown": "17"
+}
+}
+},
+"family": "p_term_sel"
+},
+"m5-ep-s04-cp2-030": {
+"q": null,
+"family": "p_term_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "8",
+"op": "add",
+"step": "9",
+"n": 5
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "8",
+"op": "add",
+"step": "5",
+"n": 7
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "2",
+"op": "add",
+"step": "7",
+"n": 8
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "7",
+"op": "add",
+"step": "6",
+"n": 8
+}
+]
+},
+"m5-ep-s04-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "6",
+"op": "add",
+"step": "15",
+"n": 8
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "9",
+"op": "add",
+"step": "3",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp1-003": {
+"q": {
+"k": "key",
+"accept": [
+"Add 11"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp1-004": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "11",
+"op": "add",
+"step": "15",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"11",
+"26",
+"41",
+"56",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp1-005": {
+"q": {
+"k": "expr",
+"e": "30+5*4",
+"unit": "centimeters"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "17",
+"op": "add",
+"step": "7",
+"n": 6
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "3",
+"op": "mul",
+"step": "3",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp1-008": {
+"q": {
+"k": "key",
+"accept": [
+"Multiply by 3"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "23",
+"op": "add",
+"step": "9",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"23",
+"32",
+"41",
+"50",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp1-010": {
+"q": {
+"k": "expr",
+"e": "8+7*9",
+"unit": "centimeters"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "10",
+"op": "add",
+"step": "13",
+"n": 8
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp1-012": {
+"q": {
+"k": "key",
+"accept": [
+"Multiply by 3"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "11",
+"op": "add",
+"step": "12",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"11",
+"23",
+"35",
+"47",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp1-014": {
+"q": {
+"k": "expr",
+"e": "9+9*2",
+"unit": "$"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp1-015": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "29",
+"op": "add",
+"step": "4",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "mul",
+"step": "3",
+"n": 7
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp1-017": {
+"q": {
+"k": "key",
+"accept": [
+"Add 11"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp1-018": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "mul",
+"step": "3",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"4",
+"12",
+"36",
+"108",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp1-019": {
+"q": {
+"k": "expr",
+"e": "27+7*9",
+"unit": "centimeters"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "27",
+"op": "add",
+"step": "5",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "1",
+"op": "mul",
+"step": "3",
+"n": 8
+},
+"family": "p_term"
+},
+"m5-ep-s04-cp1-022": {
+"q": {
+"k": "key",
+"accept": [
+"Add 4"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-cp1-023": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "12",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"0",
+"12",
+"24",
+"36",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp1-024": {
+"q": {
+"k": "expr",
+"e": "6+9*8",
+"unit": "stamps"
+},
+"family": "p_word"
+},
+"m5-ep-s04-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "1",
+"op": "mul",
+"step": "3",
+"n": 7
+},
+"family": "p_term_error"
+},
+"m5-ep-s04-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "4",
+"op": "add",
+"step": "10",
+"count": 5
+},
+"family": "p_list_error"
+},
+"m5-ep-s04-cp1-027": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "28",
+"op": "add",
+"step": "7",
+"n": 5
+},
+"family": "p_table_error",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"28",
+"35",
+"42",
+"49",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "28+7*11",
+"unit": "stamps"
+},
+"shown": "116 stamps",
+"answer": "105 stamps"
+},
+"family": "p_word_tf"
+},
+"m5-ep-s04-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"A pattern starts at 3. The rule is “Multiply by 2.” What is term 7? → 192": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "3",
+"op": "mul",
+"step": "2",
+"n": 7
+},
+"shown": "192"
+},
+"A pattern starts at 30. The rule is “Add 11.” What is term 5? → 74": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "30",
+"op": "add",
+"step": "11",
+"n": 5
+},
+"shown": "74"
+},
+"A pattern starts at 24. The rule is “Add 4.” What is term 7? → 44": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "24",
+"op": "add",
+"step": "4",
+"n": 7
+},
+"shown": "44"
+},
+"A pattern starts at 4. The rule is “Multiply by 3.” What is term 8? → 96": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "mul",
+"step": "3",
+"n": 8
+},
+"shown": "96"
+}
+}
+},
+"family": "p_term_sel"
+},
+"m5-ep-s04-cp1-030": {
+"q": null,
+"family": "p_term_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "mul",
+"step": "2",
+"n": 6
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "2",
+"op": "mul",
+"step": "2",
+"n": 5
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "3",
+"op": "mul",
+"step": "3",
+"n": 5
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "13",
+"op": "add",
+"step": "4",
+"n": 6
+}
+]
+},
+"m5-ep-s04-honors-001": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "5",
+"op": "mul",
+"step": "2",
+"n": 8
+},
+"family": "p_term"
+},
+"m5-ep-s04-honors-002": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "4",
+"op": "add",
+"step": "3/4",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-honors-003": {
+"q": {
+"k": "key",
+"accept": [
+"Add 0.9"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-honors-004": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "2",
+"op": "add",
+"step": "1/4",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"2",
+"2 1/4",
+"2 1/2",
+"2 3/4",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-honors-005": {
+"q": {
+"k": "expr",
+"e": "11+4*2",
+"unit": "stamps"
+},
+"family": "p_word"
+},
+"m5-ep-s04-honors-006": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0.2",
+"op": "add",
+"step": "4/5",
+"n": 7
+},
+"family": "p_term"
+},
+"m5-ep-s04-honors-007": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "0",
+"op": "add",
+"step": "3/4",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-honors-008": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "mul",
+"step": "2",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"4",
+"8",
+"16",
+"32",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-honors-009": {
+"q": {
+"k": "expr",
+"e": "5+5*8",
+"unit": "stamps"
+},
+"family": "p_word"
+},
+"m5-ep-s04-honors-010": {
+"q": {
+"k": "key",
+"accept": [
+"Add 0.5"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-honors-011": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "1/2",
+"n": 6
+},
+"family": "p_term"
+},
+"m5-ep-s04-honors-012": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "5",
+"op": "mul",
+"step": "3",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-honors-013": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "9/10",
+"op": "add",
+"step": "3/10",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"0.9",
+"1.2",
+"1.5",
+"1.8",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-honors-014": {
+"q": {
+"k": "expr",
+"e": "9+6*12",
+"unit": "$"
+},
+"family": "p_word"
+},
+"m5-ep-s04-honors-015": {
+"q": {
+"k": "key",
+"accept": [
+"Multiply by 2"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-honors-016": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "2",
+"op": "add",
+"step": "3/4",
+"n": 6
+},
+"family": "p_term"
+},
+"m5-ep-s04-honors-017": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "1/10",
+"op": "add",
+"step": "3/10",
+"count": 5
+},
+"family": "p_list"
+},
+"m5-ep-s04-honors-018": {
+"q": {
+"k": "expr",
+"e": "3+5*12",
+"unit": "centimeters"
+},
+"family": "p_word"
+},
+"m5-ep-s04-honors-019": {
+"q": {
+"k": "key",
+"accept": [
+"Add 0.7"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-honors-020": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "5",
+"op": "mul",
+"step": "3",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"5",
+"15",
+"45",
+"135",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-honors-021": {
+"q": {
+"k": "expr",
+"e": "15+7*10",
+"unit": "stamps"
+},
+"family": "p_word"
+},
+"m5-ep-s04-honors-022": {
+"q": {
+"k": "key",
+"accept": [
+"Add 0.2"
+]
+},
+"family": "p_rule"
+},
+"m5-ep-s04-honors-023": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "2",
+"op": "mul",
+"step": "2",
+"n": 5
+},
+"family": "p_table",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"2",
+"4",
+"8",
+"16",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-honors-024": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "5",
+"op": "mul",
+"step": "10",
+"n": 5
+},
+"family": "p_term"
+},
+"m5-ep-s04-honors-025": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0.4",
+"op": "add",
+"step": "7/10",
+"n": 5
+},
+"family": "p_term_error"
+},
+"m5-ep-s04-honors-026": {
+"q": {
+"k": "fn",
+"fn": "pattern_list",
+"start": "3",
+"op": "add",
+"step": "1/4",
+"count": 5
+},
+"family": "p_list_error"
+},
+"m5-ep-s04-honors-027": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "2",
+"op": "mul",
+"step": "2",
+"n": 5
+},
+"family": "p_table_error",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern",
+[
+"2",
+"4",
+"8",
+"16",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s04-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "5",
+"op": "mul",
+"step": "3",
+"n": 6
+},
+"shown": "405",
+"answer": "1,215"
+},
+"family": "p_term_tf"
+},
+"m5-ep-s04-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"A pattern starts at 4. The rule is “Add 3/4.” What is term 7? → 8 1/2": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "4",
+"op": "add",
+"step": "3/4",
+"n": 7
+},
+"shown": "8 1/2"
+},
+"A pattern starts at 0.3. The rule is “Add 0.4.” What is term 6? → 2.3": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0.3",
+"op": "add",
+"step": "2/5",
+"n": 6
+},
+"shown": "2.3"
+},
+"A pattern starts at 1.6. The rule is “Add 0.7.” What is term 6? → 5.8": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "1.6",
+"op": "add",
+"step": "7/10",
+"n": 6
+},
+"shown": "5.8"
+},
+"A pattern starts at 0. The rule is “Add 1/4.” What is term 6? → 1": {
+"inner": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "1/4",
+"n": 6
+},
+"shown": "1"
+}
+}
+},
+"family": "p_term_sel"
+},
+"m5-ep-s04-honors-030": {
+"q": null,
+"family": "p_term_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "1.5",
+"op": "add",
+"step": "7/10",
+"n": 7
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "1.4",
+"op": "add",
+"step": "4/5",
+"n": 5
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "1/2",
+"n": 7
+},
+{
+"k": "fn",
+"fn": "pattern_term",
+"start": "0.7",
+"op": "add",
+"step": "7/10",
+"n": 5
+}
+]
+},
+"m5-ep-s05-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 1,
+"b": 2
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 5,
+"b": 10,
+"n": 3
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp2-003": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 2 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"5",
+"10",
+"15",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"10",
+"20",
+"30",
+"40"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-004": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "8",
+"n": 6
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"4",
+"8",
+"12",
+"16",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"8",
+"16",
+"24",
+"32",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-005": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 2,
+"b": 4
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 3,
+"b": 12,
+"n": 3
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp2-007": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 4 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"5",
+"10",
+"15",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"20",
+"40",
+"60",
+"80"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-008": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "10",
+"n": 5
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"5",
+"10",
+"15",
+"20",
+"25"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"10",
+"20",
+"30",
+"?",
+"50"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 2,
+"b": 8
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-cp2-010": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 4,
+"b": 16
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 5,
+"b": 20,
+"n": 4
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp2-012": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 3 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"3",
+"6",
+"9",
+"12"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"9",
+"18",
+"27",
+"36"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-013": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 4,
+"b": 8
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 4,
+"b": 8
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "12",
+"n": 6
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"4",
+"8",
+"12",
+"16",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"12",
+"24",
+"36",
+"48",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-016": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 4,
+"b": 8,
+"n": 6
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp2-017": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 4 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"2",
+"4",
+"6",
+"8"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"8",
+"16",
+"24",
+"32"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-018": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 6,
+"b": 18
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 6,
+"b": 18
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "4",
+"n": 5
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"2",
+"4",
+"6",
+"8",
+"10"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"4",
+"8",
+"12",
+"?",
+"20"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 3,
+"n": 5
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp2-022": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 6,
+"b": 12
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp2-023": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "15",
+"n": 4
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"5",
+"10",
+"15",
+"20",
+"25"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"15",
+"30",
+"?",
+"60",
+"75"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 2,
+"b": 6,
+"n": 4
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 6,
+"b": 24
+},
+"family": "rel_times_error"
+},
+"m5-ep-s05-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 3,
+"b": 12,
+"n": 5
+},
+"family": "rel_pair_error"
+},
+"m5-ep-s05-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "8",
+"n": 4
+},
+"family": "rel_missing_error",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"4",
+"8",
+"12",
+"16",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"8",
+"16",
+"?",
+"32",
+"40"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 6,
+"b": 12,
+"n": 4
+},
+"shown": "(18, 36)",
+"answer": "(18, 36)"
+},
+"family": "rel_pair_tf"
+},
+"m5-ep-s05-cp2-029": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 4 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"1",
+"2",
+"3",
+"4"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"4",
+"8",
+"12",
+"16"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp2-030": {
+"q": null,
+"family": "rel_times_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 3,
+"b": 6
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 4,
+"b": 8
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 5,
+"b": 10
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 1,
+"b": 4
+}
+]
+},
+"m5-ep-s05-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 6,
+"b": 18,
+"n": 5
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp1-002": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 2 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"6",
+"12",
+"18",
+"24"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"12",
+"24",
+"36",
+"48"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-003": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "3",
+"n": 6
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"1",
+"2",
+"3",
+"4",
+"5"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"3",
+"6",
+"9",
+"12",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-004": {
+"q": {
+"k": "key",
+"accept": [
+"Both start at 0, and Pattern B adds 24 each time, which is 4 times the 6 that Pattern A adds."
+]
+},
+"family": "rel_why"
+},
+"m5-ep-s05-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 2,
+"b": 4
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 5,
+"b": 15
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 3,
+"b": 9,
+"n": 5
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp1-008": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 3 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"6",
+"12",
+"18",
+"24"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"18",
+"36",
+"54",
+"72"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "10",
+"n": 6
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"5",
+"10",
+"15",
+"20",
+"25"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"10",
+"20",
+"30",
+"40",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-010": {
+"q": {
+"k": "key",
+"accept": [
+"Both start at 0, and Pattern B adds 9 each time, which is 3 times the 3 that Pattern A adds."
+]
+},
+"family": "rel_why"
+},
+"m5-ep-s05-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 6,
+"b": 18
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-cp1-012": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 3,
+"b": 6
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 5,
+"b": 10,
+"n": 6
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "24",
+"n": 6
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"6",
+"12",
+"18",
+"24",
+"30"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"24",
+"48",
+"72",
+"96",
+"?"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-015": {
+"q": {
+"k": "key",
+"accept": [
+"Both start at 0, and Pattern B adds 16 each time, which is 4 times the 4 that Pattern A adds."
+]
+},
+"family": "rel_why"
+},
+"m5-ep-s05-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 2,
+"b": 6
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 3,
+"b": 9
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp1-018": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 2 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"3",
+"6",
+"9",
+"12"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"6",
+"12",
+"18",
+"24"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-019": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 2,
+"b": 8,
+"n": 4
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "12",
+"n": 5
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"4",
+"8",
+"12",
+"16",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"12",
+"24",
+"36",
+"?",
+"60"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 5,
+"b": 10
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp1-022": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 4,
+"b": 12,
+"n": 5
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-cp1-023": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "12",
+"n": 4
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"6",
+"12",
+"18",
+"24",
+"30"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"12",
+"24",
+"?",
+"48",
+"60"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 5,
+"b": 20
+},
+"family": "rel_times"
+},
+"m5-ep-s05-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 2,
+"b": 8
+},
+"family": "rel_times_error"
+},
+"m5-ep-s05-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 5,
+"b": 10,
+"n": 4
+},
+"family": "rel_pair_error"
+},
+"m5-ep-s05-cp1-027": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "2",
+"n": 5
+},
+"family": "rel_missing_error",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"1",
+"2",
+"3",
+"4",
+"5"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"2",
+"4",
+"6",
+"?",
+"10"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 6,
+"b": 18,
+"n": 6
+},
+"shown": "(90, 30)",
+"answer": "(30, 90)"
+},
+"family": "rel_pair_tf"
+},
+"m5-ep-s05-cp1-029": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 4 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"3",
+"6",
+"9",
+"12"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"12",
+"24",
+"36",
+"48"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-cp1-030": {
+"q": null,
+"family": "rel_times_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 5,
+"b": 20
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 2,
+"b": 8
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 3,
+"b": 12
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 6,
+"b": 24
+}
+]
+},
+"m5-ep-s05-honors-001": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 4,
+"b": 8,
+"n": 5
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-honors-002": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "24",
+"n": 4
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"4",
+"8",
+"12",
+"16",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"24",
+"48",
+"?",
+"96",
+"120"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-003": {
+"q": {
+"k": "key",
+"accept": [
+"Both start at 0, and Pattern B adds 35 each time, which is 5 times the 7 that Pattern A adds."
+]
+},
+"family": "rel_why"
+},
+"m5-ep-s05-honors-004": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 2,
+"b": 12
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-honors-005": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 4,
+"b": 24
+},
+"family": "rel_times"
+},
+"m5-ep-s05-honors-006": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 4 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"9",
+"18",
+"27",
+"36"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"36",
+"72",
+"108",
+"144"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-007": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 4,
+"b": 24,
+"n": 4
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-honors-008": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "16",
+"n": 4
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"4",
+"8",
+"12",
+"16",
+"20"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"16",
+"32",
+"?",
+"64",
+"80"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-009": {
+"q": {
+"k": "key",
+"accept": [
+"Both start at 0, and Pattern B adds 12 each time, which is 6 times the 2 that Pattern A adds."
+]
+},
+"family": "rel_why"
+},
+"m5-ep-s05-honors-010": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 2,
+"b": 4
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-honors-011": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 2,
+"b": 10
+},
+"family": "rel_times"
+},
+"m5-ep-s05-honors-012": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 6 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"2",
+"4",
+"6",
+"8"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"12",
+"24",
+"36",
+"48"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-013": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 9,
+"b": 27,
+"n": 6
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-honors-014": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "6",
+"n": 4
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"2",
+"4",
+"6",
+"8",
+"10"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"6",
+"12",
+"?",
+"24",
+"30"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-015": {
+"q": {
+"k": "key",
+"accept": [
+"Both start at 0, and Pattern B adds 30 each time, which is 6 times the 5 that Pattern A adds."
+]
+},
+"family": "rel_why"
+},
+"m5-ep-s05-honors-016": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair_any",
+"a": 2,
+"b": 12
+},
+"family": "rel_which_pair"
+},
+"m5-ep-s05-honors-017": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 3,
+"b": 12
+},
+"family": "rel_times"
+},
+"m5-ep-s05-honors-018": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 4 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"6",
+"12",
+"18",
+"24"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"24",
+"48",
+"72",
+"96"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-019": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 3,
+"b": 18,
+"n": 6
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-honors-020": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "18",
+"n": 4
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"6",
+"12",
+"18",
+"24",
+"30"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"18",
+"36",
+"?",
+"72",
+"90"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-021": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 2,
+"b": 6
+},
+"family": "rel_times"
+},
+"m5-ep-s05-honors-022": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 4,
+"b": 12,
+"n": 3
+},
+"family": "rel_pair"
+},
+"m5-ep-s05-honors-023": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "25",
+"n": 5
+},
+"family": "rel_missing",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"5",
+"10",
+"15",
+"20",
+"25"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"25",
+"50",
+"75",
+"?",
+"125"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-024": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 5,
+"b": 25
+},
+"family": "rel_times"
+},
+"m5-ep-s05-honors-025": {
+"q": {
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 7,
+"b": 35
+},
+"family": "rel_times_error"
+},
+"m5-ep-s05-honors-026": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 9,
+"b": 54,
+"n": 3
+},
+"family": "rel_pair_error"
+},
+"m5-ep-s05-honors-027": {
+"q": {
+"k": "fn",
+"fn": "pattern_term",
+"start": "0",
+"op": "add",
+"step": "35",
+"n": 5
+},
+"family": "rel_missing_error",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"7",
+"14",
+"21",
+"28",
+"35"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"35",
+"70",
+"105",
+"?",
+"175"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 2,
+"b": 12,
+"n": 5
+},
+"shown": "(48, 8)",
+"answer": "(8, 48)"
+},
+"family": "rel_pair_tf"
+},
+"m5-ep-s05-honors-029": {
+"q": {
+"k": "key",
+"accept": [
+"Each term in Pattern B is 5 times the matching term in Pattern A."
+]
+},
+"family": "rel_statement",
+"diagram": {
+"kind": "two_tables",
+"data": {
+"rows": [
+[
+"Pattern A",
+[
+"0",
+"7",
+"14",
+"21",
+"28"
+]
+],
+[
+"Pattern B",
+[
+"0",
+"35",
+"70",
+"105",
+"140"
+]
+]
+]
+}
+}
+},
+"m5-ep-s05-honors-030": {
+"q": null,
+"family": "rel_times_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 9,
+"b": 45
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 4,
+"b": 20
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 5,
+"b": 25
+},
+{
+"k": "fn",
+"fn": "pattern_ratio",
+"a": 6,
+"b": 36
+}
+]
+}
+}

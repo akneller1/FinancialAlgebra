@@ -609,6 +609,10 @@ body { background:var(--paper); }
 }
 [data-color="coral"] { --c-bg: var(--coral-bg); --c-fg: var(--coral-fg); --c-tint: var(--coral-tint); --c-text: var(--coral-text); }
 [data-color="teal"] { --c-bg: var(--teal-bg); --c-fg: var(--teal-fg); --c-tint: var(--teal-tint); --c-text: var(--teal-text); }
+/* 5th Grade Math: bright sunshine palette and a unit illustration on every unit card. */
+:root { --sunshine-bg: #f5b301; --sunshine-fg: #2b1d00; --sunshine-tint: #fff4cc; --sunshine-text: #8a5a00; }
+[data-color="sunshine"] { --c-bg: var(--sunshine-bg); --c-fg: var(--sunshine-fg); --c-tint: var(--sunshine-tint); --c-text: var(--sunshine-text); }
+.g5-unit-icon { display:block; width:100%; max-width:160px; height:auto; margin:0 0 .4rem; border-radius:14px; }
 
 /* Header: logo/title on left, search at right, full-width course navigation below. */
 .site-header .bar { display:flex; flex-wrap:wrap; align-items:center; }
@@ -1047,4 +1051,19 @@ body { background:var(--paper); }
     --c-tint:hsl(var(--course-hue) 28% 22%);
     --c-text:hsl(var(--course-hue) 65% 78%);
   }
+}
+
+/* Mobile course menu: keep all courses discoverable without horizontal scrolling. */
+@media (max-width:760px) {
+  .site-header .main-nav .course-menu > summary { min-height:44px; gap:.5rem; }
+  .site-header .main-nav .course-menu-hint { flex-shrink:0; }
+  .site-header .main-nav .course-nav-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .site-header .main-nav .course-nav-card { padding:.65rem 2.8rem .65rem .7rem; min-height:4.75rem; }
+  .site-header .main-nav .course-nav-card .art { width:3rem; opacity:.4; }
+  .site-header .main-nav .course-nav-copy strong { overflow-wrap:anywhere; }
+}
+@media (max-width:400px) {
+  .site-header .main-nav .course-menu-current { display:none; }
+  .site-header .main-nav .course-menu-hint { font-size:.73rem; }
+  .site-header .main-nav .course-nav-grid { gap:.4rem; }
 }

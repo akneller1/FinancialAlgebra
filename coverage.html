@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Question Coverage · Mr. K's Classroom</title>
+<link rel="stylesheet" href="styles.css?v=coverage-1">
+<style>
+.coverage-wrap{max-width:1150px;margin:auto;padding:1.5rem 1rem 4rem}
+.coverage-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.2rem}
+.coverage-header h1{font-size:clamp(1.6rem,4vw,2.6rem)}
+.coverage-note{max-width:900px;line-height:1.55;margin-bottom:1.5rem}
+.coverage-controls{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;margin-bottom:1.2rem}
+.coverage-controls select,.coverage-controls button{font:inherit;padding:.55rem .75rem;border:2px solid var(--edge);border-radius:9px;background:var(--card);color:var(--ink)}
+.coverage-controls button{cursor:pointer}
+.coverage-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem;margin-bottom:1.5rem}
+.coverage-stat{border:2px solid var(--edge);border-radius:12px;padding:1rem;background:var(--card)}
+.coverage-stat strong{font-size:1.6rem;display:block}
+.coverage-unit{border:2px solid var(--edge);border-radius:13px;background:var(--card);margin:1rem 0;overflow:hidden}
+.coverage-unit summary{cursor:pointer;padding:1rem;font-weight:700;display:flex;justify-content:space-between;gap:1rem}
+.coverage-unit summary small{font-weight:400}
+.coverage-table{width:100%;border-collapse:collapse;min-width:640px}
+.coverage-table th,.coverage-table td{padding:.65rem .7rem;text-align:left;border-top:1px solid var(--edge)}
+.coverage-table thead th{font-size:.8rem}
+.coverage-table td:not(:first-child),.coverage-table th:not(:first-child){text-align:center}
+.coverage-table-wrap{overflow:auto}
+.coverage-empty{color:var(--ink-soft)}
+.coverage-strong{font-weight:700}
+.coverage-courses{font-size:1.1rem;margin-top:1.6rem}
+@media print{.coverage-controls{display:none}.coverage-unit{break-inside:avoid}.coverage-unit:not([open])>summary{display:none}}
+</style><script src="analytics.js?v=analytics-20261108" defer></script>
+</head>
+<body>
+<main class="coverage-wrap">
+<header class="coverage-header"><h1>Question-bank coverage</h1><a href="index.html">← Back to Mr. K's Classroom</a></header>
+<p class="coverage-note"><strong>Content development dashboard.</strong> This report measures <em>approved questions registered through the new shared question-bank adapter</em>, not all existing Algebra 1, Geometry, or Algebra 2 questions in legacy generators. A zero means no approved content has been loaded into the new adapter—not necessarily that the course has no working resources. Questions must pass independent mathematical review before being marked approved.</p>
+<div class="coverage-controls"><label for="course">Course</label><select id="course"><option value="">All six courses</option></select><button type="button" id="csv">Export CSV</button><button type="button" id="expand">Expand units</button></div>
+<section class="coverage-summary" id="summary" aria-live="polite"></section>
+<div id="units"></div>
+</main>
+<script src="data.js?v=statistics-bank-20261107"></script><script src="course-catalog.js?v=shared-course-skills-20261030"></script>
+<script src="question-bank-adapter.js?v=resource-ready-1"></script><script src="coverage-report.js?v=1"></script>
+<script src="question-bank-loader.js?v=1"></script>
+<script>
+(function(){
+'use strict';
+var course=document.getElementById('course'),summary=document.getElementById('summary'),units=document.getElementById('units');
+var search=new URLSearchParams(location.search);var requested=search.get('course')||'';
+window.LIBRARY.courses.forEach(function(c){var o=document.createElement('option');o.value=c.id;o.textContent=c.name;course.appendChild(o)});
+if(window.LIBRARY.courses.some(function(c){return c.id===requested}))course.value=requested;
+function el(tag,txt,parent,cls){var n=document.createElement(tag);if(txt!==null)n.textContent=txt;if(cls)n.className=cls;if(parent)parent.appendChild(n);return n}
+function rows(){return window.MK_COVERAGE_REPORT.report(window.LIBRARY,course.value)}
+function isMiddleSchool(id){return ['math5','math6','prealgebra7','prealgebra'].indexOf(id)>=0}
+function levels(id){return isMiddleSchool(id)?['Remedial','Standard','Advanced']:['CP2','CP1','Honors']}
+function stat(label,value){var box=el('div',null,summary,'coverage-stat');el('strong',String(value),box);el('span',label,box)}
+function render(){
+summary.replaceChildren();units.replaceChildren();
+var reports=rows(),allUnits=reports.reduce(function(a,c){return a.concat(c.units.map(function(u){return {course:c,unit:u}}))},[]);
+stat('Courses',reports.length);stat('Units',allUnits.length);
+stat('Subskills',reports.reduce(function(n,c){return n+c.skillCount},0));
+stat('Approved questions',reports.reduce(function(n,c){return n+c.approvedQuestions},0));
+stat('Covered at all three levels',reports.reduce(function(n,c){return n+c.fullyCovered},0));
+reports.forEach(function(c){
+ el('h2',c.name,units,'coverage-courses');
+ c.units.forEach(function(u){
+ var details=el('details',null,units,'coverage-unit');
+ var head=el('summary',null,details);el('span',u.name,head);
+ el('small',u.fullyCovered+'/'+u.skillCount+' skills across '+levels(c.id).join(', '),head);
+ var scroll=el('div',null,details,'coverage-table-wrap'),table=el('table',null,scroll,'coverage-table');
+ var thead=el('thead',null,table),hr=el('tr',null,thead);
+ ['Lesson / Subskill'].concat(levels(c.id),['Status']).forEach(function(t){el('th',t,hr)});
+ var body=el('tbody',null,table);
+ u.skills.forEach(function(s){
+ var tr=el('tr',null,body);el('td',s.name,tr);
+ ['cp2','cp1','honors'].forEach(function(k){el('td',String(s.verified?s.counts[k]:0),tr,'coverage-strong')});
+ var ok=s.verified&&['cp2','cp1','honors'].every(function(k){return s.counts[k]>0});
+ el('td',ok?'Three levels covered':s.verified?'Needs questions at some levels':'Not approved in shared bank',tr,ok?'':'coverage-empty');
+ });
+ });
+});
+}
+course.addEventListener('change',function(){var url=new URL(location.href);if(course.value)url.searchParams.set('course',course.value);else url.searchParams.delete('course');history.replaceState(null,'',url);render()});
+document.getElementById('expand').addEventListener('click',function(){var all=[].slice.call(document.querySelectorAll('details.coverage-unit'));var opening=all.some(function(d){return !d.open});all.forEach(function(d){d.open=opening});this.textContent=opening?'Collapse units':'Expand units'});
+document.getElementById('csv').addEventListener('click',function(){
+ var content=[['Course','Unit','Skill ID','Skill','Remedial / CP2 approved','Standard / CP1 approved','Advanced / Honors approved','All levels covered']];
+ rows().forEach(function(c){c.units.forEach(function(u){u.skills.forEach(function(s){var q=s.verified?s.counts:{cp2:0,cp1:0,honors:0};content.push([c.name,u.name,s.id,s.name,q.cp2,q.cp1,q.honors,s.verified&&q.cp2>0&&q.cp1>0&&q.honors>0?'Yes':'No'])})})});
+ var csv=content.map(function(row){return row.map(function(v){return '"'+String(v).replace(/"/g,'""')+'"'}).join(',')}).join('\r\n');
+ var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='mk-question-coverage.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},1000);
+});
+render();
+window.MK_BANK_LOADER.loadFromSite().then(render).catch(function(e){console.warn("Approved bank loading unavailable:",e.message);});
+})();
+</script></body></html>

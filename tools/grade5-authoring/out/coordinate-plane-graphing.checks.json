@@ -1,0 +1,8795 @@
+{
+"m5-cp-s01-cp2-001": {
+"q": {
+"k": "key",
+"accept": [
+"how far to move along the x‑axis (right) from the origin"
+]
+},
+"family": "cs_vocab"
+},
+"m5-cp-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "0",
+"y": "10"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp2-003": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(1, 0)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp2-004": {
+"q": {
+"k": "key",
+"accept": [
+"Right 9, then up 7"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-cp2-005": {
+"q": {
+"k": "key",
+"accept": [
+"No. (6, 4) is 6 right and 4 up, but (4, 6) is 4 right and 6 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4+1",
+"y": "1+3"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp2-007": {
+"q": {
+"k": "key",
+"accept": [
+"how far to move along the y‑axis (up) from the origin"
+]
+},
+"family": "cs_vocab"
+},
+"m5-cp-s01-cp2-008": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7",
+"y": "1"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(6, 0)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp2-010": {
+"q": {
+"k": "key",
+"accept": [
+"Right 4, then up 6"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-cp2-011": {
+"q": {
+"k": "key",
+"accept": [
+"No. (9, 8) is 9 right and 8 up, but (8, 9) is 8 right and 9 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-cp2-012": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4+1",
+"y": "2+3"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp2-013": {
+"q": {
+"k": "key",
+"accept": [
+"the x‑axis"
+]
+},
+"family": "cs_vocab"
+},
+"m5-cp-s01-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "7"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 10)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp2-016": {
+"q": {
+"k": "key",
+"accept": [
+"Right 7, then up 9"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-cp2-017": {
+"q": {
+"k": "key",
+"accept": [
+"No. (8, 5) is 8 right and 5 up, but (5, 8) is 5 right and 8 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-cp2-018": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5+3",
+"y": "7+4"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "6"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(5, 0)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8+5",
+"y": "3+4"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp2-022": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6",
+"y": "1"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp2-023": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(9, 0)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4+3",
+"y": "7+1"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6",
+"y": "5"
+},
+"family": "cs_moves_error"
+},
+"m5-cp-s01-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(7, 0)"
+},
+"family": "cs_axis_error"
+},
+"m5-cp-s01-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2+3",
+"y": "4+5"
+},
+"family": "cs_from_point_error"
+},
+"m5-cp-s01-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pair",
+"x": "2+2",
+"y": "1+1"
+},
+"shown": "(3, 3)",
+"answer": "(4, 2)"
+},
+"family": "cs_from_point_tf"
+},
+"m5-cp-s01-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"On which axis does the point (0, 10) lie? → the y‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 10)"
+},
+"shown": "the y‑axis"
+},
+"On which axis does the point (0, 8) lie? → the y‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 8)"
+},
+"shown": "the y‑axis"
+},
+"On which axis does the point (0, 1) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 1)"
+},
+"shown": "the x‑axis"
+},
+"On which axis does the point (0, 2) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 2)"
+},
+"shown": "the x‑axis"
+}
+}
+},
+"family": "cs_axis_sel"
+},
+"m5-cp-s01-cp2-030": {
+"q": null,
+"family": "cs_moves_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "6"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "2"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "6"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "0",
+"y": "9"
+}
+]
+},
+"m5-cp-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "2"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 1)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp1-003": {
+"q": {
+"k": "key",
+"accept": [
+"Right 1, then up 9"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-cp1-004": {
+"q": {
+"k": "key",
+"accept": [
+"No. (6, 10) is 6 right and 10 up, but (10, 6) is 10 right and 6 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+2",
+"y": "6+4"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp1-006": {
+"q": {
+"k": "key",
+"accept": [
+"So every point can be located by moving one direction along each axis, at right angles."
+]
+},
+"family": "cs_vocab"
+},
+"m5-cp-s01-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "7"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp1-008": {
+"q": {
+"k": "key",
+"accept": [
+"Right 1, then up 8"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-cp1-009": {
+"q": {
+"k": "key",
+"accept": [
+"No. (1, 10) is 1 right and 10 up, but (10, 1) is 10 right and 1 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-cp1-010": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+3",
+"y": "1+3"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 8)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp1-012": {
+"q": {
+"k": "key",
+"accept": [
+"the origin"
+]
+},
+"family": "cs_vocab"
+},
+"m5-cp-s01-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "0"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp1-014": {
+"q": {
+"k": "key",
+"accept": [
+"No. (4, 9) is 4 right and 9 up, but (9, 4) is 9 right and 4 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-cp1-015": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5+4",
+"y": "3+2"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp1-016": {
+"q": {
+"k": "key",
+"accept": [
+"Right 5, then up 6"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 3)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp1-018": {
+"q": {
+"k": "key",
+"accept": [
+"(0, 0)"
+]
+},
+"family": "cs_vocab"
+},
+"m5-cp-s01-cp1-019": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "9",
+"y": "5"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7+3",
+"y": "5+4"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(2, 0)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp1-022": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+4",
+"y": "5+5"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-cp1-023": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "10"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 6)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5",
+"y": "2"
+},
+"family": "cs_moves_error"
+},
+"m5-cp-s01-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 1)"
+},
+"family": "cs_axis_error"
+},
+"m5-cp-s01-cp1-027": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7+2",
+"y": "5+1"
+},
+"family": "cs_from_point_error"
+},
+"m5-cp-s01-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pair",
+"x": "5",
+"y": "10"
+},
+"shown": "(5, 10)",
+"answer": "(5, 10)"
+},
+"family": "cs_moves_tf"
+},
+"m5-cp-s01-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"On which axis does the point (0, 10) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 10)"
+},
+"shown": "the x‑axis"
+},
+"On which axis does the point (9, 0) lie? → the y‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(9, 0)"
+},
+"shown": "the y‑axis"
+},
+"On which axis does the point (0, 10) lie? → the y‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 10)"
+},
+"shown": "the y‑axis"
+},
+"On which axis does the point (6, 0) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(6, 0)"
+},
+"shown": "the x‑axis"
+}
+}
+},
+"family": "cs_axis_sel"
+},
+"m5-cp-s01-cp1-030": {
+"q": null,
+"family": "cs_moves_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "10"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "3",
+"y": "5"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "3",
+"y": "0"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "7"
+}
+]
+},
+"m5-cp-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "3"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"Right 6, then up 7"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-honors-003": {
+"q": {
+"k": "key",
+"accept": [
+"No. (6, 1) is 6 right and 1 up, but (1, 6) is 1 right and 6 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-honors-004": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+1",
+"y": "4+1"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-honors-005": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 2)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-honors-006": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "0"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-honors-007": {
+"q": {
+"k": "key",
+"accept": [
+"Right 3, then up 4"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-honors-008": {
+"q": {
+"k": "key",
+"accept": [
+"No. (3, 8) is 3 right and 8 up, but (8, 3) is 8 right and 3 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-honors-009": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+2",
+"y": "3+5"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-honors-010": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 4)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-honors-011": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "9",
+"y": "2"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-honors-012": {
+"q": {
+"k": "key",
+"accept": [
+"Right 3, then up 2"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-honors-013": {
+"q": {
+"k": "key",
+"accept": [
+"No. (7, 4) is 7 right and 4 up, but (4, 7) is 4 right and 7 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-honors-014": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6+1",
+"y": "4+4"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-honors-015": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 9)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-honors-016": {
+"q": {
+"k": "key",
+"accept": [
+"Right 6, then up 5"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-honors-017": {
+"q": {
+"k": "key",
+"accept": [
+"No. (2, 10) is 2 right and 10 up, but (10, 2) is 10 right and 2 up."
+]
+},
+"family": "cs_swap"
+},
+"m5-cp-s01-honors-018": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8+1",
+"y": "2+2"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-honors-019": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "9",
+"y": "0"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-honors-020": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(10, 0)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-honors-021": {
+"q": {
+"k": "key",
+"accept": [
+"Right 3, then up 10"
+]
+},
+"family": "cs_directions"
+},
+"m5-cp-s01-honors-022": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+1",
+"y": "7+5"
+},
+"family": "cs_from_point"
+},
+"m5-cp-s01-honors-023": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "5"
+},
+"family": "cs_moves"
+},
+"m5-cp-s01-honors-024": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(8, 0)"
+},
+"family": "cs_axis"
+},
+"m5-cp-s01-honors-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "1"
+},
+"family": "cs_moves_error"
+},
+"m5-cp-s01-honors-026": {
+"q": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(10, 0)"
+},
+"family": "cs_axis_error"
+},
+"m5-cp-s01-honors-027": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7+3",
+"y": "6+1"
+},
+"family": "cs_from_point_error"
+},
+"m5-cp-s01-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "1"
+},
+"shown": "(1, 2)",
+"answer": "(2, 1)"
+},
+"family": "cs_moves_tf"
+},
+"m5-cp-s01-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"On which axis does the point (0, 7) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 7)"
+},
+"shown": "the x‑axis"
+},
+"On which axis does the point (0, 8) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(0, 8)"
+},
+"shown": "the x‑axis"
+},
+"On which axis does the point (4, 0) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(4, 0)"
+},
+"shown": "the x‑axis"
+},
+"On which axis does the point (10, 0) lie? → the x‑axis": {
+"inner": {
+"k": "fn",
+"fn": "axis_of",
+"p": "(10, 0)"
+},
+"shown": "the x‑axis"
+}
+}
+},
+"family": "cs_axis_sel"
+},
+"m5-cp-s01-honors-030": {
+"q": null,
+"family": "cs_moves_open",
+"parts": [
+{
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "10"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "0"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "10"
+},
+{
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "0"
+}
+]
+},
+"m5-cp-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5",
+"y": "4"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 6,
+"y": 6,
+"label": "A"
+},
+{
+"x": 5,
+"y": 4,
+"label": "B"
+},
+{
+"x": 2,
+"y": 6,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+8,
+2
+],
+"B": [
+10,
+5
+],
+"C": [
+8,
+10
+],
+"D": [
+7,
+2
+]
+},
+"x": "7",
+"y": "2"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 2,
+"label": "A"
+},
+{
+"x": 10,
+"y": 5,
+"label": "B"
+},
+{
+"x": 8,
+"y": 10,
+"label": "C"
+},
+{
+"x": 7,
+"y": 2,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-003": {
+"q": {
+"k": "expr",
+"e": "9-8",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp2-004": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6+(1)",
+"y": "4+(2)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp2-005": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "6"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 6,
+"y": 1,
+"label": "A"
+},
+{
+"x": 8,
+"y": 10,
+"label": "B"
+},
+{
+"x": 2,
+"y": 6,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-006": {
+"q": {
+"k": "expr",
+"e": "9-1",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp2-007": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+(1)",
+"y": "2+(3)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp2-008": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+5,
+9
+],
+"B": [
+10,
+6
+],
+"C": [
+4,
+2
+],
+"D": [
+8,
+6
+]
+},
+"x": "5",
+"y": "9"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 9,
+"label": "A"
+},
+{
+"x": 10,
+"y": 6,
+"label": "B"
+},
+{
+"x": 4,
+"y": 2,
+"label": "C"
+},
+{
+"x": 8,
+"y": 6,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "8"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 4,
+"y": 8,
+"label": "A"
+},
+{
+"x": 10,
+"y": 4,
+"label": "B"
+},
+{
+"x": 7,
+"y": 2,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-010": {
+"q": {
+"k": "expr",
+"e": "8-1",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6+(4)",
+"y": "8+(1)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp2-012": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+5,
+4
+],
+"B": [
+2,
+5
+],
+"C": [
+7,
+2
+],
+"D": [
+5,
+2
+]
+},
+"x": "7",
+"y": "2"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 4,
+"label": "A"
+},
+{
+"x": 2,
+"y": 5,
+"label": "B"
+},
+{
+"x": 7,
+"y": 2,
+"label": "C"
+},
+{
+"x": 5,
+"y": 2,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-013": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3",
+"y": "1"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 3,
+"y": 1,
+"label": "A"
+},
+{
+"x": 5,
+"y": 1,
+"label": "B"
+},
+{
+"x": 3,
+"y": 4,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-014": {
+"q": {
+"k": "expr",
+"e": "8-3",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+(2)",
+"y": "3+(1)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp2-016": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+5,
+4
+],
+"B": [
+6,
+3
+],
+"C": [
+10,
+1
+],
+"D": [
+4,
+8
+]
+},
+"x": "5",
+"y": "4"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 4,
+"label": "A"
+},
+{
+"x": 6,
+"y": 3,
+"label": "B"
+},
+{
+"x": 10,
+"y": 1,
+"label": "C"
+},
+{
+"x": 4,
+"y": 8,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-017": {
+"q": {
+"k": "expr",
+"e": "8-0",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp2-018": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "9",
+"y": "5"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 9,
+"y": 5,
+"label": "A"
+},
+{
+"x": 3,
+"y": 5,
+"label": "B"
+},
+{
+"x": 2,
+"y": 8,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7+(3)",
+"y": "5+(2)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp2-020": {
+"q": {
+"k": "expr",
+"e": "3-1",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "10",
+"y": "1"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 6,
+"y": 2,
+"label": "A"
+},
+{
+"x": 5,
+"y": 4,
+"label": "B"
+},
+{
+"x": 10,
+"y": 1,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-022": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4+(2)",
+"y": "5+(5)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp2-023": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "10",
+"y": "8"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 4,
+"y": 4,
+"label": "A"
+},
+{
+"x": 2,
+"y": 5,
+"label": "B"
+},
+{
+"x": 10,
+"y": 8,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-024": {
+"q": {
+"k": "expr",
+"e": "8-4",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "5"
+},
+"family": "pr_read_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 4,
+"y": 5,
+"label": "A"
+},
+{
+"x": 8,
+"y": 2,
+"label": "B"
+},
+{
+"x": 1,
+"y": 1,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp2-026": {
+"q": {
+"k": "expr",
+"e": "7-0",
+"unit": "units"
+},
+"family": "pr_distance_error"
+},
+"m5-cp-s02-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2+(6)",
+"y": "2+(8)"
+},
+"family": "pr_move_error"
+},
+"m5-cp-s02-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pair",
+"x": "5+(5)",
+"y": "7+(1)"
+},
+"shown": "(10, 8)",
+"answer": "(10, 8)"
+},
+"family": "pr_move_tf"
+},
+"m5-cp-s02-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Point A is at (5, 3) and point B is at (5, 6). How many units apart are they? → 9 units": {
+"inner": {
+"k": "expr",
+"e": "6-3",
+"unit": "units"
+},
+"shown": "9 units"
+},
+"Point A is at (6, 5) and point B is at (10, 5). How many units apart are they? → 4 units": {
+"inner": {
+"k": "expr",
+"e": "10-6",
+"unit": "units"
+},
+"shown": "4 units"
+},
+"Point A is at (1, 3) and point B is at (4, 3). How many units apart are they? → 5 units": {
+"inner": {
+"k": "expr",
+"e": "4-1",
+"unit": "units"
+},
+"shown": "5 units"
+},
+"Point A is at (2, 3) and point B is at (2, 7). How many units apart are they? → 4 units": {
+"inner": {
+"k": "expr",
+"e": "7-3",
+"unit": "units"
+},
+"shown": "4 units"
+}
+}
+},
+"family": "pr_distance_sel"
+},
+"m5-cp-s02-cp2-030": {
+"q": null,
+"family": "pr_distance_open",
+"parts": [
+{
+"k": "expr",
+"e": "5-4",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "6-3",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "10-4",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "8-1",
+"unit": "units"
+}
+]
+},
+"m5-cp-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "9",
+"y": "6"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 10,
+"y": 9,
+"label": "A"
+},
+{
+"x": 9,
+"y": 8,
+"label": "B"
+},
+{
+"x": 9,
+"y": 6,
+"label": "C"
+},
+{
+"x": 4,
+"y": 7,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+10,
+10
+],
+"B": [
+9,
+7
+],
+"C": [
+2,
+9
+],
+"D": [
+8,
+1
+]
+},
+"x": "8",
+"y": "1"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 10,
+"y": 10,
+"label": "A"
+},
+{
+"x": 9,
+"y": 7,
+"label": "B"
+},
+{
+"x": 2,
+"y": 9,
+"label": "C"
+},
+{
+"x": 8,
+"y": 1,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-003": {
+"q": {
+"k": "expr",
+"e": "10-0",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp1-004": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+8,
+2
+],
+[
+9,
+6
+],
+[
+8,
+6
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 2,
+"label": ""
+},
+{
+"x": 9,
+"y": 6,
+"label": ""
+},
+{
+"x": 8,
+"y": 6,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6+(-1)",
+"y": "7+(-3)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "5"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 10,
+"y": 5,
+"label": "A"
+},
+{
+"x": 5,
+"y": 5,
+"label": "B"
+},
+{
+"x": 2,
+"y": 5,
+"label": "C"
+},
+{
+"x": 1,
+"y": 4,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+2,
+3
+],
+"B": [
+9,
+10
+],
+"C": [
+2,
+6
+],
+"D": [
+5,
+1
+]
+},
+"x": "2",
+"y": "6"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 2,
+"y": 3,
+"label": "A"
+},
+{
+"x": 9,
+"y": 10,
+"label": "B"
+},
+{
+"x": 2,
+"y": 6,
+"label": "C"
+},
+{
+"x": 5,
+"y": 1,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-008": {
+"q": {
+"k": "expr",
+"e": "6-2",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+1,
+4
+],
+[
+4,
+4
+],
+[
+4,
+8
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 4,
+"label": ""
+},
+{
+"x": 4,
+"y": 4,
+"label": ""
+},
+{
+"x": 4,
+"y": 8,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-010": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4+(1)",
+"y": "8+(2)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "7"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 4,
+"y": 7,
+"label": "A"
+},
+{
+"x": 3,
+"y": 10,
+"label": "B"
+},
+{
+"x": 4,
+"y": 8,
+"label": "C"
+},
+{
+"x": 1,
+"y": 5,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-012": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+2,
+3
+],
+"B": [
+6,
+8
+],
+"C": [
+8,
+4
+],
+"D": [
+3,
+5
+]
+},
+"x": "8",
+"y": "4"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 2,
+"y": 3,
+"label": "A"
+},
+{
+"x": 6,
+"y": 8,
+"label": "B"
+},
+{
+"x": 8,
+"y": 4,
+"label": "C"
+},
+{
+"x": 3,
+"y": 5,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-013": {
+"q": {
+"k": "expr",
+"e": "1-0",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+8,
+2
+],
+[
+8,
+7
+],
+[
+3,
+7
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 2,
+"label": ""
+},
+{
+"x": 8,
+"y": 7,
+"label": ""
+},
+{
+"x": 3,
+"y": 7,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-015": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4+(3)",
+"y": "8+(-5)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7",
+"y": "10"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 7,
+"y": 10,
+"label": "A"
+},
+{
+"x": 9,
+"y": 5,
+"label": "B"
+},
+{
+"x": 10,
+"y": 6,
+"label": "C"
+},
+{
+"x": 9,
+"y": 4,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+1,
+1
+],
+[
+2,
+3
+],
+[
+1,
+3
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 1,
+"label": ""
+},
+{
+"x": 2,
+"y": 3,
+"label": ""
+},
+{
+"x": 1,
+"y": 3,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-018": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7+(-6)",
+"y": "3+(-2)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp1-019": {
+"q": {
+"k": "expr",
+"e": "6-5",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5",
+"y": "2"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 10,
+"y": 9,
+"label": "A"
+},
+{
+"x": 8,
+"y": 2,
+"label": "B"
+},
+{
+"x": 10,
+"y": 3,
+"label": "C"
+},
+{
+"x": 5,
+"y": 2,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+7,
+2
+],
+[
+9,
+6
+],
+[
+7,
+6
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 7,
+"y": 2,
+"label": ""
+},
+{
+"x": 9,
+"y": 6,
+"label": ""
+},
+{
+"x": 7,
+"y": 6,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-022": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+(-1)",
+"y": "6+(4)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-cp1-023": {
+"q": {
+"k": "expr",
+"e": "7-5",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5",
+"y": "6"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 3,
+"y": 7,
+"label": "A"
+},
+{
+"x": 5,
+"y": 4,
+"label": "B"
+},
+{
+"x": 1,
+"y": 6,
+"label": "C"
+},
+{
+"x": 5,
+"y": 6,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "7"
+},
+"family": "pr_read_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 7,
+"label": "A"
+},
+{
+"x": 6,
+"y": 3,
+"label": "B"
+},
+{
+"x": 4,
+"y": 7,
+"label": "C"
+},
+{
+"x": 3,
+"y": 6,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+7,
+9
+],
+"B": [
+8,
+2
+],
+"C": [
+2,
+9
+],
+"D": [
+7,
+4
+]
+},
+"x": "2",
+"y": "9"
+},
+"family": "pr_which_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 7,
+"y": 9,
+"label": "A"
+},
+{
+"x": 8,
+"y": 2,
+"label": "B"
+},
+{
+"x": 2,
+"y": 9,
+"label": "C"
+},
+{
+"x": 7,
+"y": 4,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-cp1-027": {
+"q": {
+"k": "expr",
+"e": "8-4",
+"unit": "units"
+},
+"family": "pr_distance_error"
+},
+"m5-cp-s02-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "7-5",
+"unit": "units"
+},
+"shown": "12 units",
+"answer": "2 units"
+},
+"family": "pr_distance_tf"
+},
+"m5-cp-s02-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Point A is at (4, 1) and point B is at (9, 1). How many units apart are they? → 5 units": {
+"inner": {
+"k": "expr",
+"e": "9-4",
+"unit": "units"
+},
+"shown": "5 units"
+},
+"Point A is at (4, 9) and point B is at (7, 9). How many units apart are they? → 11 units": {
+"inner": {
+"k": "expr",
+"e": "7-4",
+"unit": "units"
+},
+"shown": "11 units"
+},
+"Point A is at (6, 8) and point B is at (10, 8). How many units apart are they? → 5 units": {
+"inner": {
+"k": "expr",
+"e": "10-6",
+"unit": "units"
+},
+"shown": "5 units"
+},
+"Point A is at (7, 5) and point B is at (7, 6). How many units apart are they? → 1 unit": {
+"inner": {
+"k": "expr",
+"e": "6-5",
+"unit": "units"
+},
+"shown": "1 unit"
+}
+}
+},
+"family": "pr_distance_sel"
+},
+"m5-cp-s02-cp1-030": {
+"q": null,
+"family": "pr_distance_open",
+"parts": [
+{
+"k": "expr",
+"e": "6-5",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "7-0",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "7-2",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "9-3",
+"unit": "units"
+}
+]
+},
+"m5-cp-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "2"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 2,
+"label": "A"
+},
+{
+"x": 7,
+"y": 6,
+"label": "B"
+},
+{
+"x": 7,
+"y": 7,
+"label": "C"
+},
+{
+"x": 3,
+"y": 4,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-002": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+1,
+7
+],
+"B": [
+7,
+6
+],
+"C": [
+1,
+3
+],
+"D": [
+2,
+1
+]
+},
+"x": "2",
+"y": "1"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 7,
+"label": "A"
+},
+{
+"x": 7,
+"y": 6,
+"label": "B"
+},
+{
+"x": 1,
+"y": 3,
+"label": "C"
+},
+{
+"x": 2,
+"y": 1,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-003": {
+"q": {
+"k": "expr",
+"e": "2-1",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-honors-004": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+4,
+2
+],
+[
+5,
+3
+],
+[
+4,
+3
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 4,
+"y": 2,
+"label": ""
+},
+{
+"x": 5,
+"y": 3,
+"label": ""
+},
+{
+"x": 4,
+"y": 3,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-005": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8+(-6)",
+"y": "8+(-1)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-honors-006": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5",
+"y": "2"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 7,
+"y": 9,
+"label": "A"
+},
+{
+"x": 5,
+"y": 2,
+"label": "B"
+},
+{
+"x": 9,
+"y": 2,
+"label": "C"
+},
+{
+"x": 8,
+"y": 1,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-007": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+9,
+1
+],
+"B": [
+6,
+1
+],
+"C": [
+4,
+6
+],
+"D": [
+3,
+5
+]
+},
+"x": "3",
+"y": "5"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 9,
+"y": 1,
+"label": "A"
+},
+{
+"x": 6,
+"y": 1,
+"label": "B"
+},
+{
+"x": 4,
+"y": 6,
+"label": "C"
+},
+{
+"x": 3,
+"y": 5,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-008": {
+"q": {
+"k": "expr",
+"e": "8-7",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-honors-009": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+3,
+3
+],
+[
+9,
+7
+],
+[
+3,
+7
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 3,
+"y": 3,
+"label": ""
+},
+{
+"x": 9,
+"y": 7,
+"label": ""
+},
+{
+"x": 3,
+"y": 7,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-010": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3+(-1)",
+"y": "8+(1)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-honors-011": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "6"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 4,
+"y": 6,
+"label": "A"
+},
+{
+"x": 6,
+"y": 3,
+"label": "B"
+},
+{
+"x": 10,
+"y": 7,
+"label": "C"
+},
+{
+"x": 5,
+"y": 2,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-012": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+5,
+3
+],
+"B": [
+10,
+7
+],
+"C": [
+4,
+2
+],
+"D": [
+8,
+1
+]
+},
+"x": "8",
+"y": "1"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 3,
+"label": "A"
+},
+{
+"x": 10,
+"y": 7,
+"label": "B"
+},
+{
+"x": 4,
+"y": 2,
+"label": "C"
+},
+{
+"x": 8,
+"y": 1,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-013": {
+"q": {
+"k": "expr",
+"e": "7-4",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-honors-014": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+2,
+5
+],
+[
+4,
+8
+],
+[
+2,
+8
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 2,
+"y": 5,
+"label": ""
+},
+{
+"x": 4,
+"y": 8,
+"label": ""
+},
+{
+"x": 2,
+"y": 8,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-015": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6+(1)",
+"y": "8+(-6)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-honors-016": {
+"q": {
+"k": "expr",
+"e": "10-5",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-honors-017": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+1,
+5
+],
+[
+2,
+8
+],
+[
+1,
+8
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 5,
+"label": ""
+},
+{
+"x": 2,
+"y": 8,
+"label": ""
+},
+{
+"x": 1,
+"y": 8,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-018": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "9"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 10,
+"label": "A"
+},
+{
+"x": 8,
+"y": 10,
+"label": "B"
+},
+{
+"x": 1,
+"y": 9,
+"label": "C"
+},
+{
+"x": 10,
+"y": 3,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-019": {
+"q": {
+"k": "fn",
+"fn": "point_at",
+"points": {
+"A": [
+1,
+7
+],
+"B": [
+8,
+9
+],
+"C": [
+7,
+1
+],
+"D": [
+8,
+6
+]
+},
+"x": "8",
+"y": "9"
+},
+"family": "pr_which",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 7,
+"label": "A"
+},
+{
+"x": 8,
+"y": 9,
+"label": "B"
+},
+{
+"x": 7,
+"y": 1,
+"label": "C"
+},
+{
+"x": 8,
+"y": 6,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-020": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6+(-4)",
+"y": "7+(1)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-honors-021": {
+"q": {
+"k": "expr",
+"e": "10-2",
+"unit": "units"
+},
+"family": "pr_distance"
+},
+"m5-cp-s02-honors-022": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+3,
+3
+],
+[
+6,
+4
+],
+[
+3,
+4
+]
+]
+},
+"family": "pr_vertex",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 3,
+"y": 3,
+"label": ""
+},
+{
+"x": 6,
+"y": 4,
+"label": ""
+},
+{
+"x": 3,
+"y": 4,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-023": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "1"
+},
+"family": "pr_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 2,
+"label": "A"
+},
+{
+"x": 8,
+"y": 4,
+"label": "B"
+},
+{
+"x": 8,
+"y": 1,
+"label": "C"
+},
+{
+"x": 7,
+"y": 3,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-024": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2+(-1)",
+"y": "3+(2)"
+},
+"family": "pr_move"
+},
+"m5-cp-s02-honors-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "9"
+},
+"family": "pr_read_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 10,
+"y": 9,
+"label": "A"
+},
+{
+"x": 8,
+"y": 9,
+"label": "B"
+},
+{
+"x": 9,
+"y": 8,
+"label": "C"
+},
+{
+"x": 5,
+"y": 8,
+"label": "D"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-026": {
+"q": {
+"k": "expr",
+"e": "8-3",
+"unit": "units"
+},
+"family": "pr_distance_error"
+},
+"m5-cp-s02-honors-027": {
+"q": {
+"k": "fn",
+"fn": "rect_corner",
+"given": [
+[
+2,
+4
+],
+[
+8,
+6
+],
+[
+2,
+6
+]
+]
+},
+"family": "pr_vertex_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 2,
+"y": 4,
+"label": ""
+},
+{
+"x": 8,
+"y": 6,
+"label": ""
+},
+{
+"x": 2,
+"y": 6,
+"label": ""
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "fn",
+"fn": "pair",
+"x": "8+(-3)",
+"y": "3+(6)"
+},
+"shown": "(14, 0)",
+"answer": "(5, 9)"
+},
+"family": "pr_move_tf"
+},
+"m5-cp-s02-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Point A is at (9, 0) and point B is at (9, 8). How many units apart are they? → 8 units": {
+"inner": {
+"k": "expr",
+"e": "8-0",
+"unit": "units"
+},
+"shown": "8 units"
+},
+"Point A is at (3, 5) and point B is at (10, 5). How many units apart are they? → 8 units": {
+"inner": {
+"k": "expr",
+"e": "10-3",
+"unit": "units"
+},
+"shown": "8 units"
+},
+"Point A is at (2, 2) and point B is at (2, 4). How many units apart are they? → 2 units": {
+"inner": {
+"k": "expr",
+"e": "4-2",
+"unit": "units"
+},
+"shown": "2 units"
+},
+"Point A is at (7, 4) and point B is at (7, 9). How many units apart are they? → 7 units": {
+"inner": {
+"k": "expr",
+"e": "9-4",
+"unit": "units"
+},
+"shown": "7 units"
+}
+}
+},
+"family": "pr_distance_sel"
+},
+"m5-cp-s02-honors-030": {
+"q": null,
+"family": "pr_distance_open",
+"parts": [
+{
+"k": "expr",
+"e": "2-0",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "3-0",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "10-8",
+"unit": "units"
+},
+{
+"k": "expr",
+"e": "3-0",
+"unit": "units"
+}
+]
+},
+"m5-cp-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "3",
+"y": "10"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 6,
+"label": "Store"
+},
+{
+"x": 1,
+"y": 9,
+"label": "School"
+},
+{
+"x": 3,
+"y": 10,
+"label": "Museum"
+},
+{
+"x": 8,
+"y": 1,
+"label": "Zoo"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+2
+],
+[
+2,
+4
+],
+[
+3,
+6
+],
+[
+4,
+8
+]
+],
+"x": 4,
+"unit": "miles"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 8,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "2",
+"label": ""
+},
+{
+"x": 2,
+"y": "4",
+"label": ""
+},
+{
+"x": 3,
+"y": "6",
+"label": ""
+},
+{
+"x": 4,
+"y": "8",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"2"
+],
+[
+2,
+"4"
+],
+[
+3,
+"6"
+],
+[
+4,
+"8"
+]
+],
+"yscale": 1,
+"xlab": "Hours",
+"ylab": "Miles"
+}
+}
+},
+"m5-cp-s03-cp2-003": {
+"q": {
+"k": "key",
+"accept": [
+"After 3 games, 31 points have been scored in all."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp2-004": {
+"q": {
+"k": "expr",
+"e": "(6-2)+(9-4)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp2-005": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Monday": "2",
+"Friday": "8",
+"Tuesday": "3"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 2,
+"label": "Mon"
+},
+{
+"x": 2,
+"y": 8,
+"label": "Fri"
+},
+{
+"x": 3,
+"y": 3,
+"label": "Tue"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+7
+],
+[
+2,
+14
+],
+[
+3,
+21
+],
+[
+4,
+28
+],
+[
+5,
+35
+],
+[
+6,
+42
+]
+],
+"x": 5,
+"unit": "dollars"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 9,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "7/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "14/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "21/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "28/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "7",
+"label": ""
+},
+{
+"x": 6,
+"y": "42/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"7/5"
+],
+[
+2,
+"14/5"
+],
+[
+3,
+"21/5"
+],
+[
+4,
+"28/5"
+],
+[
+5,
+"7"
+],
+[
+6,
+"42/5"
+]
+],
+"yscale": 5,
+"xlab": "Weeks",
+"ylab": "Dollars saved"
+}
+}
+},
+"m5-cp-s03-cp2-007": {
+"q": {
+"k": "key",
+"accept": [
+"After 7 days, the plant has grown 56 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp2-008": {
+"q": {
+"k": "expr",
+"e": "(2-1)+(6-2)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Thursday": "9",
+"Monday": "4",
+"Friday": "5"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 9,
+"label": "Thu"
+},
+{
+"x": 2,
+"y": 4,
+"label": "Mon"
+},
+{
+"x": 3,
+"y": 5,
+"label": "Fri"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp2-010": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "9",
+"y": "5"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 2,
+"y": 3,
+"label": "Farm"
+},
+{
+"x": 9,
+"y": 5,
+"label": "Park"
+},
+{
+"x": 5,
+"y": 5,
+"label": "Pool"
+},
+{
+"x": 6,
+"y": 9,
+"label": "Museum"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+7
+],
+[
+2,
+14
+],
+[
+3,
+21
+],
+[
+4,
+28
+]
+],
+"x": 3,
+"unit": "dollars"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 6,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "7/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "14/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "21/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "28/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"7/5"
+],
+[
+2,
+"14/5"
+],
+[
+3,
+"21/5"
+],
+[
+4,
+"28/5"
+]
+],
+"yscale": 5,
+"xlab": "Weeks",
+"ylab": "Dollars saved"
+}
+}
+},
+"m5-cp-s03-cp2-012": {
+"q": {
+"k": "key",
+"accept": [
+"After 3 hours of work, 23 dollars were earned."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp2-013": {
+"q": {
+"k": "expr",
+"e": "(3-2)+(4-1)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Tuesday": "2",
+"Thursday": "6",
+"Friday": "9"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 2,
+"label": "Tue"
+},
+{
+"x": 2,
+"y": 6,
+"label": "Thu"
+},
+{
+"x": 3,
+"y": 9,
+"label": "Fri"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7",
+"y": "8"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 6,
+"y": 1,
+"label": "School"
+},
+{
+"x": 5,
+"y": 6,
+"label": "Library"
+},
+{
+"x": 6,
+"y": 10,
+"label": "Pool"
+},
+{
+"x": 7,
+"y": 8,
+"label": "Store"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp2-016": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+2
+],
+[
+2,
+4
+],
+[
+3,
+6
+],
+[
+4,
+8
+],
+[
+5,
+10
+],
+[
+6,
+12
+]
+],
+"x": 2,
+"unit": "dollars"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 3,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "2/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "4/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "6/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "8/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "2",
+"label": ""
+},
+{
+"x": 6,
+"y": "12/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"2/5"
+],
+[
+2,
+"4/5"
+],
+[
+3,
+"6/5"
+],
+[
+4,
+"8/5"
+],
+[
+5,
+"2"
+],
+[
+6,
+"12/5"
+]
+],
+"yscale": 5,
+"xlab": "Weeks",
+"ylab": "Dollars saved"
+}
+}
+},
+"m5-cp-s03-cp2-017": {
+"q": {
+"k": "key",
+"accept": [
+"After 2 days, the plant has grown 39 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp2-018": {
+"q": {
+"k": "expr",
+"e": "(6-2)+(6-2)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Thursday": "7",
+"Friday": "5",
+"Monday": "8"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 7,
+"label": "Thu"
+},
+{
+"x": 2,
+"y": 5,
+"label": "Fri"
+},
+{
+"x": 3,
+"y": 8,
+"label": "Mon"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "10",
+"y": "2"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 2,
+"label": "Library"
+},
+{
+"x": 6,
+"y": 2,
+"label": "Museum"
+},
+{
+"x": 9,
+"y": 1,
+"label": "Store"
+},
+{
+"x": 10,
+"y": 2,
+"label": "Pool"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+9
+],
+[
+2,
+18
+],
+[
+3,
+27
+],
+[
+4,
+36
+],
+[
+5,
+45
+]
+],
+"x": 2,
+"unit": "dollars"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 9,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "9/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "18/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "27/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "36/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "9",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"9/5"
+],
+[
+2,
+"18/5"
+],
+[
+3,
+"27/5"
+],
+[
+4,
+"36/5"
+],
+[
+5,
+"9"
+]
+],
+"yscale": 5,
+"xlab": "Weeks",
+"ylab": "Dollars saved"
+}
+}
+},
+"m5-cp-s03-cp2-022": {
+"q": {
+"k": "key",
+"accept": [
+"After 8 days, the plant has grown 50 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp2-023": {
+"q": {
+"k": "expr",
+"e": "(10-5)+(10-5)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "2",
+"y": "6"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 10,
+"label": "Store"
+},
+{
+"x": 1,
+"y": 3,
+"label": "Museum"
+},
+{
+"x": 3,
+"y": 9,
+"label": "Park"
+},
+{
+"x": 2,
+"y": 6,
+"label": "Library"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6",
+"y": "3"
+},
+"family": "rw_map_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 6,
+"y": 3,
+"label": "Store"
+},
+{
+"x": 7,
+"y": 8,
+"label": "Pool"
+},
+{
+"x": 10,
+"y": 8,
+"label": "Park"
+},
+{
+"x": 1,
+"y": 4,
+"label": "Library"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+4
+],
+[
+2,
+8
+],
+[
+3,
+12
+],
+[
+4,
+16
+],
+[
+5,
+20
+]
+],
+"x": 3,
+"unit": "dollars"
+},
+"family": "rw_graph_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 4,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "4/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "8/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "12/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "16/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "4",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"4/5"
+],
+[
+2,
+"8/5"
+],
+[
+3,
+"12/5"
+],
+[
+4,
+"16/5"
+],
+[
+5,
+"4"
+]
+],
+"yscale": 5,
+"xlab": "Weeks",
+"ylab": "Dollars saved"
+}
+}
+},
+"m5-cp-s03-cp2-027": {
+"q": {
+"k": "expr",
+"e": "(2-1)+(8-5)",
+"unit": "blocks"
+},
+"family": "rw_route_error"
+},
+"m5-cp-s03-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "(4-3)+(4-1)",
+"unit": "blocks"
+},
+"shown": "8 blocks",
+"answer": "4 blocks"
+},
+"family": "rw_route_tf"
+},
+"m5-cp-s03-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Friday": "9",
+"Thursday": "1",
+"Monday": "5"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 9,
+"label": "Fri"
+},
+{
+"x": 2,
+"y": 1,
+"label": "Thu"
+},
+{
+"x": 3,
+"y": 5,
+"label": "Mon"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp2-030": {
+"q": null,
+"family": "rw_route_open",
+"parts": [
+{
+"k": "expr",
+"e": "(8-4)+(4-3)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(4-3)+(5-0)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(7-3)+(4-1)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(5-3)+(3-0)",
+"unit": "blocks"
+}
+]
+},
+"m5-cp-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "5",
+"y": "2"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 2,
+"y": 3,
+"label": "Park"
+},
+{
+"x": 8,
+"y": 3,
+"label": "Store"
+},
+{
+"x": 1,
+"y": 5,
+"label": "School"
+},
+{
+"x": 5,
+"y": 2,
+"label": "Museum"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+2
+],
+[
+2,
+4
+],
+[
+3,
+6
+],
+[
+4,
+8
+]
+],
+"x": 1,
+"unit": "miles"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 8,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "2",
+"label": ""
+},
+{
+"x": 2,
+"y": "4",
+"label": ""
+},
+{
+"x": 3,
+"y": "6",
+"label": ""
+},
+{
+"x": 4,
+"y": "8",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"2"
+],
+[
+2,
+"4"
+],
+[
+3,
+"6"
+],
+[
+4,
+"8"
+]
+],
+"yscale": 1,
+"xlab": "Hours",
+"ylab": "Miles"
+}
+}
+},
+"m5-cp-s03-cp1-003": {
+"q": {
+"k": "key",
+"accept": [
+"After 5 days, the plant has grown 12 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp1-004": {
+"q": {
+"k": "expr",
+"e": "(5-1)+(4-2)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Friday": "2",
+"Wednesday": "7",
+"Thursday": "9"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 2,
+"label": "Fri"
+},
+{
+"x": 2,
+"y": 7,
+"label": "Wed"
+},
+{
+"x": 3,
+"y": 9,
+"label": "Thu"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7",
+"y": "8"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 4,
+"label": "Museum"
+},
+{
+"x": 6,
+"y": 2,
+"label": "Library"
+},
+{
+"x": 2,
+"y": 6,
+"label": "School"
+},
+{
+"x": 7,
+"y": 8,
+"label": "Pool"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+6
+],
+[
+2,
+12
+],
+[
+3,
+18
+],
+[
+4,
+24
+],
+[
+5,
+30
+],
+[
+6,
+36
+]
+],
+"x": 1,
+"unit": "pages"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 8,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "6/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "12/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "18/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "24/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "6",
+"label": ""
+},
+{
+"x": 6,
+"y": "36/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"6/5"
+],
+[
+2,
+"12/5"
+],
+[
+3,
+"18/5"
+],
+[
+4,
+"24/5"
+],
+[
+5,
+"6"
+],
+[
+6,
+"36/5"
+]
+],
+"yscale": 5,
+"xlab": "Minutes",
+"ylab": "Pages read"
+}
+}
+},
+"m5-cp-s03-cp1-008": {
+"q": {
+"k": "key",
+"accept": [
+"After 9 games, 49 points have been scored in all."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp1-009": {
+"q": {
+"k": "expr",
+"e": "(5-0)+(9-4)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp1-010": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Friday": "3",
+"Tuesday": "1",
+"Thursday": "2"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 3,
+"label": "Fri"
+},
+{
+"x": 2,
+"y": 1,
+"label": "Tue"
+},
+{
+"x": 3,
+"y": 2,
+"label": "Thu"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "8",
+"y": "2"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 2,
+"label": "Pool"
+},
+{
+"x": 8,
+"y": 3,
+"label": "Park"
+},
+{
+"x": 5,
+"y": 5,
+"label": "Store"
+},
+{
+"x": 6,
+"y": 1,
+"label": "Library"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp1-012": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+3
+],
+[
+2,
+6
+],
+[
+3,
+9
+],
+[
+4,
+12
+],
+[
+5,
+15
+],
+[
+6,
+18
+]
+],
+"x": 6,
+"unit": "miles"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 4,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "3/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "6/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "9/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "12/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "3",
+"label": ""
+},
+{
+"x": 6,
+"y": "18/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"3/5"
+],
+[
+2,
+"6/5"
+],
+[
+3,
+"9/5"
+],
+[
+4,
+"12/5"
+],
+[
+5,
+"3"
+],
+[
+6,
+"18/5"
+]
+],
+"yscale": 5,
+"xlab": "Hours",
+"ylab": "Miles"
+}
+}
+},
+"m5-cp-s03-cp1-013": {
+"q": {
+"k": "expr",
+"e": "(8-3)+(3-2)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Friday": "5",
+"Monday": "2",
+"Wednesday": "4"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 5,
+"label": "Fri"
+},
+{
+"x": 2,
+"y": 2,
+"label": "Mon"
+},
+{
+"x": 3,
+"y": 4,
+"label": "Wed"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp1-015": {
+"q": {
+"k": "key",
+"accept": [
+"After 3 games, 16 points have been scored in all."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "6"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 6,
+"y": 6,
+"label": "School"
+},
+{
+"x": 1,
+"y": 6,
+"label": "Farm"
+},
+{
+"x": 10,
+"y": 7,
+"label": "Store"
+},
+{
+"x": 1,
+"y": 10,
+"label": "Park"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+9
+],
+[
+2,
+18
+],
+[
+3,
+27
+],
+[
+4,
+36
+]
+],
+"x": 1,
+"unit": "miles"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 8,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "9/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "18/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "27/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "36/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"9/5"
+],
+[
+2,
+"18/5"
+],
+[
+3,
+"27/5"
+],
+[
+4,
+"36/5"
+]
+],
+"yscale": 5,
+"xlab": "Hours",
+"ylab": "Miles"
+}
+}
+},
+"m5-cp-s03-cp1-018": {
+"q": {
+"k": "expr",
+"e": "(8-3)+(5-4)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp1-019": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Thursday": "9",
+"Friday": "5",
+"Monday": "8"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 9,
+"label": "Thu"
+},
+{
+"x": 2,
+"y": 5,
+"label": "Fri"
+},
+{
+"x": 3,
+"y": 8,
+"label": "Mon"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp1-020": {
+"q": {
+"k": "key",
+"accept": [
+"After 6 days, the plant has grown 47 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7",
+"y": "6"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 3,
+"label": "Zoo"
+},
+{
+"x": 7,
+"y": 6,
+"label": "Store"
+},
+{
+"x": 3,
+"y": 5,
+"label": "Farm"
+},
+{
+"x": 8,
+"y": 7,
+"label": "Pool"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp1-022": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+2
+],
+[
+2,
+4
+],
+[
+3,
+6
+],
+[
+4,
+8
+],
+[
+5,
+10
+],
+[
+6,
+12
+]
+],
+"x": 3,
+"unit": "pages"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 3,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "2/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "4/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "6/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "8/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "2",
+"label": ""
+},
+{
+"x": 6,
+"y": "12/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"2/5"
+],
+[
+2,
+"4/5"
+],
+[
+3,
+"6/5"
+],
+[
+4,
+"8/5"
+],
+[
+5,
+"2"
+],
+[
+6,
+"12/5"
+]
+],
+"yscale": 5,
+"xlab": "Minutes",
+"ylab": "Pages read"
+}
+}
+},
+"m5-cp-s03-cp1-023": {
+"q": {
+"k": "expr",
+"e": "(2-0)+(4-1)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-cp1-024": {
+"q": {
+"k": "key",
+"accept": [
+"After 7 days, the plant has grown 52 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "6"
+},
+"family": "rw_map_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 6,
+"label": "Zoo"
+},
+{
+"x": 9,
+"y": 8,
+"label": "Store"
+},
+{
+"x": 10,
+"y": 6,
+"label": "Farm"
+},
+{
+"x": 6,
+"y": 10,
+"label": "School"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+2
+],
+[
+2,
+4
+],
+[
+3,
+6
+],
+[
+4,
+8
+],
+[
+5,
+10
+]
+],
+"x": 1,
+"unit": "dollars"
+},
+"family": "rw_graph_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 10,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "2",
+"label": ""
+},
+{
+"x": 2,
+"y": "4",
+"label": ""
+},
+{
+"x": 3,
+"y": "6",
+"label": ""
+},
+{
+"x": 4,
+"y": "8",
+"label": ""
+},
+{
+"x": 5,
+"y": "10",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"2"
+],
+[
+2,
+"4"
+],
+[
+3,
+"6"
+],
+[
+4,
+"8"
+],
+[
+5,
+"10"
+]
+],
+"yscale": 1,
+"xlab": "Weeks",
+"ylab": "Dollars saved"
+}
+}
+},
+"m5-cp-s03-cp1-027": {
+"q": {
+"k": "expr",
+"e": "(3-1)+(4-1)",
+"unit": "blocks"
+},
+"family": "rw_route_error"
+},
+"m5-cp-s03-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "(10-5)+(9-5)",
+"unit": "blocks"
+},
+"shown": "19 blocks",
+"answer": "9 blocks"
+},
+"family": "rw_route_tf"
+},
+"m5-cp-s03-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Tuesday": "4",
+"Friday": "8",
+"Monday": "2"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 4,
+"label": "Tue"
+},
+{
+"x": 2,
+"y": 8,
+"label": "Fri"
+},
+{
+"x": 3,
+"y": 2,
+"label": "Mon"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-cp1-030": {
+"q": null,
+"family": "rw_route_open",
+"parts": [
+{
+"k": "expr",
+"e": "(8-4)+(3-2)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(6-5)+(5-0)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(7-2)+(7-5)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(5-2)+(4-0)",
+"unit": "blocks"
+}
+]
+},
+"m5-cp-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "3"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 6,
+"label": "Pool"
+},
+{
+"x": 3,
+"y": 10,
+"label": "Farm"
+},
+{
+"x": 1,
+"y": 4,
+"label": "Zoo"
+},
+{
+"x": 4,
+"y": 3,
+"label": "Library"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+6
+],
+[
+2,
+12
+],
+[
+3,
+18
+],
+[
+4,
+24
+],
+[
+5,
+30
+]
+],
+"x": 2,
+"unit": "pages"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 6,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "6/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "12/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "18/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "24/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "6",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"6/5"
+],
+[
+2,
+"12/5"
+],
+[
+3,
+"18/5"
+],
+[
+4,
+"24/5"
+],
+[
+5,
+"6"
+]
+],
+"yscale": 5,
+"xlab": "Minutes",
+"ylab": "Pages read"
+}
+}
+},
+"m5-cp-s03-honors-003": {
+"q": {
+"k": "key",
+"accept": [
+"After 8 days, the plant has grown 36 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-honors-004": {
+"q": {
+"k": "expr",
+"e": "(6-5)+(5-0)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-honors-005": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Thursday": "8",
+"Wednesday": "2",
+"Monday": "1"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 8,
+"label": "Thu"
+},
+{
+"x": 2,
+"y": 2,
+"label": "Wed"
+},
+{
+"x": 3,
+"y": 1,
+"label": "Mon"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-honors-006": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+12
+],
+[
+2,
+24
+],
+[
+3,
+36
+],
+[
+4,
+48
+],
+[
+5,
+60
+]
+],
+"x": 5,
+"unit": "pages"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 6,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "6/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "12/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "18/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "24/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "6",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"6/5"
+],
+[
+2,
+"12/5"
+],
+[
+3,
+"18/5"
+],
+[
+4,
+"24/5"
+],
+[
+5,
+"6"
+]
+],
+"yscale": 10,
+"xlab": "Minutes",
+"ylab": "Pages read"
+}
+}
+},
+"m5-cp-s03-honors-007": {
+"q": {
+"k": "key",
+"accept": [
+"After 7 games, 45 points have been scored in all."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-honors-008": {
+"q": {
+"k": "expr",
+"e": "(2-1)+(3-2)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-honors-009": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Monday": "9",
+"Thursday": "6",
+"Wednesday": "4"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 9,
+"label": "Mon"
+},
+{
+"x": 2,
+"y": 6,
+"label": "Thu"
+},
+{
+"x": 3,
+"y": 4,
+"label": "Wed"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-honors-010": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "6",
+"y": "10"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 10,
+"y": 5,
+"label": "Store"
+},
+{
+"x": 6,
+"y": 9,
+"label": "Museum"
+},
+{
+"x": 6,
+"y": 10,
+"label": "Zoo"
+},
+{
+"x": 4,
+"y": 3,
+"label": "Library"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-honors-011": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+9
+],
+[
+2,
+18
+],
+[
+3,
+27
+],
+[
+4,
+36
+],
+[
+5,
+45
+],
+[
+6,
+54
+]
+],
+"x": 6,
+"unit": "pages"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 6,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "9/10",
+"label": ""
+},
+{
+"x": 2,
+"y": "9/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "27/10",
+"label": ""
+},
+{
+"x": 4,
+"y": "18/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "9/2",
+"label": ""
+},
+{
+"x": 6,
+"y": "27/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"9/10"
+],
+[
+2,
+"9/5"
+],
+[
+3,
+"27/10"
+],
+[
+4,
+"18/5"
+],
+[
+5,
+"9/2"
+],
+[
+6,
+"27/5"
+]
+],
+"yscale": 10,
+"xlab": "Minutes",
+"ylab": "Pages read"
+}
+}
+},
+"m5-cp-s03-honors-012": {
+"q": {
+"k": "key",
+"accept": [
+"After 5 hours of work, 10 dollars were earned."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-honors-013": {
+"q": {
+"k": "expr",
+"e": "(7-2)+(7-3)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-honors-014": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Monday": "2",
+"Thursday": "6",
+"Tuesday": "8"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 2,
+"label": "Mon"
+},
+{
+"x": 2,
+"y": 6,
+"label": "Thu"
+},
+{
+"x": 3,
+"y": 8,
+"label": "Tue"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-honors-015": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "7",
+"y": "10"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 7,
+"y": 10,
+"label": "School"
+},
+{
+"x": 7,
+"y": 7,
+"label": "Farm"
+},
+{
+"x": 1,
+"y": 10,
+"label": "Museum"
+},
+{
+"x": 5,
+"y": 2,
+"label": "Zoo"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-honors-016": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+15
+],
+[
+2,
+30
+],
+[
+3,
+45
+],
+[
+4,
+60
+],
+[
+5,
+75
+]
+],
+"x": 4,
+"unit": "pages"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 8,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "3/2",
+"label": ""
+},
+{
+"x": 2,
+"y": "3",
+"label": ""
+},
+{
+"x": 3,
+"y": "9/2",
+"label": ""
+},
+{
+"x": 4,
+"y": "6",
+"label": ""
+},
+{
+"x": 5,
+"y": "15/2",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"3/2"
+],
+[
+2,
+"3"
+],
+[
+3,
+"9/2"
+],
+[
+4,
+"6"
+],
+[
+5,
+"15/2"
+]
+],
+"yscale": 10,
+"xlab": "Minutes",
+"ylab": "Pages read"
+}
+}
+},
+"m5-cp-s03-honors-017": {
+"q": {
+"k": "key",
+"accept": [
+"After 8 days, the plant has grown 37 centimeters."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-honors-018": {
+"q": {
+"k": "expr",
+"e": "(8-5)+(7-2)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-honors-019": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Friday": "7",
+"Thursday": "1",
+"Wednesday": "5"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 7,
+"label": "Fri"
+},
+{
+"x": 2,
+"y": 1,
+"label": "Thu"
+},
+{
+"x": 3,
+"y": 5,
+"label": "Wed"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-honors-020": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "3"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 6,
+"label": "Park"
+},
+{
+"x": 1,
+"y": 3,
+"label": "Farm"
+},
+{
+"x": 2,
+"y": 1,
+"label": "Store"
+},
+{
+"x": 6,
+"y": 5,
+"label": "Museum"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-honors-021": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+7
+],
+[
+2,
+14
+],
+[
+3,
+21
+],
+[
+4,
+28
+]
+],
+"x": 3,
+"unit": "miles"
+},
+"family": "rw_graph",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 6,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "7/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "14/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "21/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "28/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"7/5"
+],
+[
+2,
+"14/5"
+],
+[
+3,
+"21/5"
+],
+[
+4,
+"28/5"
+]
+],
+"yscale": 5,
+"xlab": "Hours",
+"ylab": "Miles"
+}
+}
+},
+"m5-cp-s03-honors-022": {
+"q": {
+"k": "key",
+"accept": [
+"After 8 hours of work, 60 dollars were earned."
+]
+},
+"family": "rw_meaning"
+},
+"m5-cp-s03-honors-023": {
+"q": {
+"k": "expr",
+"e": "(5-4)+(2-0)",
+"unit": "blocks"
+},
+"family": "rw_route"
+},
+"m5-cp-s03-honors-024": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "4",
+"y": "6"
+},
+"family": "rw_map",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 8,
+"y": 8,
+"label": "Park"
+},
+{
+"x": 4,
+"y": 6,
+"label": "Library"
+},
+{
+"x": 2,
+"y": 6,
+"label": "School"
+},
+{
+"x": 4,
+"y": 2,
+"label": "Farm"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-honors-025": {
+"q": {
+"k": "fn",
+"fn": "pair",
+"x": "1",
+"y": "8"
+},
+"family": "rw_map_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 7,
+"y": 4,
+"label": "Park"
+},
+{
+"x": 2,
+"y": 10,
+"label": "Library"
+},
+{
+"x": 1,
+"y": 8,
+"label": "School"
+},
+{
+"x": 4,
+"y": 8,
+"label": "Pool"
+}
+],
+"xlab": "Blocks east",
+"ylab": "Blocks north"
+}
+}
+},
+"m5-cp-s03-honors-026": {
+"q": {
+"k": "fn",
+"fn": "graph_value",
+"data": [
+[
+0,
+0
+],
+[
+1,
+8
+],
+[
+2,
+16
+],
+[
+3,
+24
+],
+[
+4,
+32
+],
+[
+5,
+40
+],
+[
+6,
+48
+]
+],
+"x": 6,
+"unit": "dollars"
+},
+"family": "rw_graph_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 10,
+"points": [
+{
+"x": 0,
+"y": "0",
+"label": ""
+},
+{
+"x": 1,
+"y": "8/5",
+"label": ""
+},
+{
+"x": 2,
+"y": "16/5",
+"label": ""
+},
+{
+"x": 3,
+"y": "24/5",
+"label": ""
+},
+{
+"x": 4,
+"y": "32/5",
+"label": ""
+},
+{
+"x": 5,
+"y": "8",
+"label": ""
+},
+{
+"x": 6,
+"y": "48/5",
+"label": ""
+}
+],
+"path": [
+[
+0,
+"0"
+],
+[
+1,
+"8/5"
+],
+[
+2,
+"16/5"
+],
+[
+3,
+"24/5"
+],
+[
+4,
+"32/5"
+],
+[
+5,
+"8"
+],
+[
+6,
+"48/5"
+]
+],
+"yscale": 5,
+"xlab": "Weeks",
+"ylab": "Dollars saved"
+}
+}
+},
+"m5-cp-s03-honors-027": {
+"q": {
+"k": "expr",
+"e": "(5-0)+(5-2)",
+"unit": "blocks"
+},
+"family": "rw_route_error"
+},
+"m5-cp-s03-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "(4-1)+(7-3)",
+"unit": "blocks"
+},
+"shown": "11 blocks",
+"answer": "7 blocks"
+},
+"family": "rw_route_tf"
+},
+"m5-cp-s03-honors-029": {
+"q": {
+"k": "fn",
+"fn": "extreme",
+"values": {
+"Thursday": "9",
+"Tuesday": "8",
+"Friday": "1"
+},
+"which": "max"
+},
+"family": "rw_compare",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 9,
+"label": "Thu"
+},
+{
+"x": 2,
+"y": 8,
+"label": "Tue"
+},
+{
+"x": 3,
+"y": 1,
+"label": "Fri"
+}
+],
+"xlab": "Day",
+"ylab": "Snow (cm)"
+}
+}
+},
+"m5-cp-s03-honors-030": {
+"q": null,
+"family": "rw_route_open",
+"parts": [
+{
+"k": "expr",
+"e": "(10-5)+(6-4)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(5-2)+(5-4)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(5-0)+(9-5)",
+"unit": "blocks"
+},
+{
+"k": "expr",
+"e": "(8-3)+(6-5)",
+"unit": "blocks"
+}
+]
+},
+"m5-cp-s04-cp2-001": {
+"q": {
+"k": "key",
+"accept": [
+"Each y‑coordinate is 3 times the x‑coordinate."
+]
+},
+"family": "gp_rule",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 11,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 3,
+"label": ""
+},
+{
+"x": 2,
+"y": 6,
+"label": ""
+},
+{
+"x": 3,
+"y": 9,
+"label": ""
+}
+],
+"step": 1
+}
+}
+},
+"m5-cp-s04-cp2-002": {
+"q": {
+"k": "expr",
+"e": "7*3+0"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"0"
+]
+},
+"m5-cp-s04-cp2-003": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 2,
+"b": 4
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp2-004": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"1",
+"5"
+],
+[
+"3",
+"15"
+],
+[
+"5",
+"25"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"1",
+"5"
+],
+[
+"3",
+"15"
+],
+[
+"5",
+"25"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp2-005": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 3,
+"n": 4
+},
+"family": "gp_next",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 10,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 3,
+"label": ""
+},
+{
+"x": 2,
+"y": 6,
+"label": ""
+}
+],
+"step": 1
+}
+}
+},
+"m5-cp-s04-cp2-006": {
+"q": {
+"k": "key",
+"accept": [
+"Each y‑coordinate is 4 times the x‑coordinate."
+]
+},
+"family": "gp_rule",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 14,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 4,
+"label": ""
+},
+{
+"x": 2,
+"y": 8,
+"label": ""
+},
+{
+"x": 3,
+"y": 12,
+"label": ""
+}
+],
+"step": 2
+}
+}
+},
+"m5-cp-s04-cp2-007": {
+"q": {
+"k": "expr",
+"e": "11*6+0"
+},
+"family": "gp_predict",
+"consts": [
+"6",
+"0"
+]
+},
+"m5-cp-s04-cp2-008": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 3,
+"b": 6
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"3",
+"9"
+],
+[
+"5",
+"15"
+],
+[
+"6",
+"18"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"3",
+"9"
+],
+[
+"5",
+"15"
+],
+[
+"6",
+"18"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp2-010": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 3,
+"n": 5
+},
+"family": "gp_next",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 13,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 3,
+"label": ""
+},
+{
+"x": 2,
+"y": 6,
+"label": ""
+},
+{
+"x": 3,
+"y": 9,
+"label": ""
+}
+],
+"step": 2
+}
+}
+},
+"m5-cp-s04-cp2-011": {
+"q": {
+"k": "expr",
+"e": "11*3+0"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"0"
+]
+},
+"m5-cp-s04-cp2-012": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 3,
+"b": 12
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp2-013": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"3",
+"6"
+],
+[
+"5",
+"10"
+],
+[
+"7",
+"14"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"3",
+"6"
+],
+[
+"5",
+"10"
+],
+[
+"7",
+"14"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 2,
+"n": 6
+},
+"family": "gp_next",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 6,
+"ymax": 11,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 2,
+"label": ""
+},
+{
+"x": 2,
+"y": 4,
+"label": ""
+},
+{
+"x": 3,
+"y": 6,
+"label": ""
+},
+{
+"x": 4,
+"y": 8,
+"label": ""
+}
+],
+"step": 1
+}
+}
+},
+"m5-cp-s04-cp2-015": {
+"q": {
+"k": "key",
+"accept": [
+"Each y‑coordinate is 2 times the x‑coordinate."
+]
+},
+"family": "gp_rule",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 8,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 2,
+"label": ""
+},
+{
+"x": 2,
+"y": 4,
+"label": ""
+},
+{
+"x": 3,
+"y": 6,
+"label": ""
+}
+],
+"step": 1
+}
+}
+},
+"m5-cp-s04-cp2-016": {
+"q": {
+"k": "expr",
+"e": "6*6+0"
+},
+"family": "gp_predict",
+"consts": [
+"6",
+"0"
+]
+},
+"m5-cp-s04-cp2-017": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 2,
+"b": 4,
+"n": 4
+},
+"family": "gp_next",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 7,
+"ymax": 13,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 2,
+"y": 4,
+"label": ""
+},
+{
+"x": 4,
+"y": 8,
+"label": ""
+}
+],
+"step": 2
+}
+}
+},
+"m5-cp-s04-cp2-018": {
+"q": {
+"k": "expr",
+"e": "9*5+0"
+},
+"family": "gp_predict",
+"consts": [
+"5",
+"0"
+]
+},
+"m5-cp-s04-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 2,
+"n": 4
+},
+"family": "gp_next",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 7,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 2,
+"label": ""
+},
+{
+"x": 2,
+"y": 4,
+"label": ""
+}
+],
+"step": 1
+}
+}
+},
+"m5-cp-s04-cp2-020": {
+"q": {
+"k": "expr",
+"e": "7*5+0"
+},
+"family": "gp_predict",
+"consts": [
+"5",
+"0"
+]
+},
+"m5-cp-s04-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 2,
+"n": 5
+},
+"family": "gp_next",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 9,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 2,
+"label": ""
+},
+{
+"x": 2,
+"y": 4,
+"label": ""
+},
+{
+"x": 3,
+"y": 6,
+"label": ""
+}
+],
+"step": 1
+}
+}
+},
+"m5-cp-s04-cp2-022": {
+"q": {
+"k": "expr",
+"e": "10*2+0"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"0"
+]
+},
+"m5-cp-s04-cp2-023": {
+"q": {
+"k": "expr",
+"e": "7*4+0"
+},
+"family": "gp_predict",
+"consts": [
+"4",
+"0"
+]
+},
+"m5-cp-s04-cp2-024": {
+"q": {
+"k": "expr",
+"e": "10*6+0"
+},
+"family": "gp_predict",
+"consts": [
+"6",
+"0"
+]
+},
+"m5-cp-s04-cp2-025": {
+"q": {
+"k": "expr",
+"e": "10*5+0"
+},
+"family": "gp_predict_error",
+"consts": [
+"5",
+"0"
+]
+},
+"m5-cp-s04-cp2-026": {
+"q": {
+"k": "expr",
+"e": "11*4+0"
+},
+"family": "gp_predict_error",
+"consts": [
+"4",
+"0"
+]
+},
+"m5-cp-s04-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 2,
+"n": 4
+},
+"family": "gp_next_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 4,
+"ymax": 7,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 2,
+"label": ""
+},
+{
+"x": 2,
+"y": 4,
+"label": ""
+}
+],
+"step": 1
+}
+}
+},
+"m5-cp-s04-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "8*3+0"
+},
+"shown": "11",
+"answer": "24"
+},
+"family": "gp_predict_tf"
+},
+"m5-cp-s04-cp2-029": {
+"q": {
+"k": "key",
+"accept": [
+"Each y‑coordinate is 5 times the x‑coordinate."
+]
+},
+"family": "gp_rule",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 15,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 5,
+"label": ""
+},
+{
+"x": 2,
+"y": 10,
+"label": ""
+},
+{
+"x": 3,
+"y": 15,
+"label": ""
+}
+],
+"step": 2
+}
+}
+},
+"m5-cp-s04-cp2-030": {
+"q": null,
+"family": "gp_predict_match",
+"parts": [
+{
+"k": "expr",
+"e": "10*5+0"
+},
+{
+"k": "expr",
+"e": "6*5+0"
+},
+{
+"k": "expr",
+"e": "6*4+0"
+},
+{
+"k": "expr",
+"e": "10*6+0"
+}
+]
+},
+"m5-cp-s04-cp1-001": {
+"q": {
+"k": "expr",
+"e": "11*5+0"
+},
+"family": "gp_predict",
+"consts": [
+"5",
+"0"
+]
+},
+"m5-cp-s04-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 1,
+"b": 3
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp1-003": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"6",
+"30"
+],
+[
+"7",
+"35"
+],
+[
+"8",
+"40"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"6",
+"30"
+],
+[
+"7",
+"35"
+],
+[
+"8",
+"40"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp1-004": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 1,
+"b": 4
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"1",
+"3"
+],
+[
+"7",
+"21"
+],
+[
+"8",
+"24"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"1",
+"3"
+],
+[
+"7",
+"21"
+],
+[
+"8",
+"24"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp1-006": {
+"q": {
+"k": "expr",
+"e": "11*2+0"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"0"
+]
+},
+"m5-cp-s04-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 1,
+"b": 3
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"1",
+"2"
+],
+[
+"5",
+"10"
+],
+[
+"7",
+"14"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"1",
+"2"
+],
+[
+"5",
+"10"
+],
+[
+"7",
+"14"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp1-009": {
+"q": {
+"k": "expr",
+"e": "9*3+0"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"0"
+]
+},
+"m5-cp-s04-cp1-010": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 2,
+"b": 6
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"2",
+"10"
+],
+[
+"5",
+"25"
+],
+[
+"8",
+"40"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"2",
+"10"
+],
+[
+"5",
+"25"
+],
+[
+"8",
+"40"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp1-012": {
+"q": {
+"k": "expr",
+"e": "8*2+0"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"0"
+]
+},
+"m5-cp-s04-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 1,
+"b": 4
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"5",
+"15"
+],
+[
+"6",
+"18"
+],
+[
+"7",
+"21"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"5",
+"15"
+],
+[
+"6",
+"18"
+],
+[
+"7",
+"21"
+]
+]
+}
+}
+},
+"m5-cp-s04-cp1-015": {
+"q": {
+"k": "expr",
+"e": "7*2+0"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"0"
+]
+},
+"m5-cp-s04-cp1-016": {
+"q": {
+"k": "expr",
+"e": "12*5+0"
+},
+"family": "gp_predict",
+"consts": [
+"5",
+"0"
+]
+},
+"m5-cp-s04-cp1-017": {
+"q": {
+"k": "expr",
+"e": "10*4+0"
+},
+"family": "gp_predict",
+"consts": [
+"4",
+"0"
+]
+},
+"m5-cp-s04-cp1-018": {
+"q": {
+"k": "expr",
+"e": "12*3+0"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"0"
+]
+},
+"m5-cp-s04-cp1-019": {
+"q": {
+"k": "expr",
+"e": "8*5+0"
+},
+"family": "gp_predict",
+"consts": [
+"5",
+"0"
+]
+},
+"m5-cp-s04-cp1-020": {
+"q": {
+"k": "expr",
+"e": "8*6+0"
+},
+"family": "gp_predict",
+"consts": [
+"6",
+"0"
+]
+},
+"m5-cp-s04-cp1-021": {
+"q": {
+"k": "expr",
+"e": "9*4+0"
+},
+"family": "gp_predict",
+"consts": [
+"4",
+"0"
+]
+},
+"m5-cp-s04-cp1-022": {
+"q": {
+"k": "expr",
+"e": "8*4+0"
+},
+"family": "gp_predict",
+"consts": [
+"4",
+"0"
+]
+},
+"m5-cp-s04-cp1-023": {
+"q": {
+"k": "expr",
+"e": "11*4+0"
+},
+"family": "gp_predict",
+"consts": [
+"4",
+"0"
+]
+},
+"m5-cp-s04-cp1-024": {
+"q": {
+"k": "expr",
+"e": "10*3+0"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"0"
+]
+},
+"m5-cp-s04-cp1-025": {
+"q": {
+"k": "expr",
+"e": "6*3+0"
+},
+"family": "gp_predict_error",
+"consts": [
+"3",
+"0"
+]
+},
+"m5-cp-s04-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "pattern_pair",
+"a": 1,
+"b": 3,
+"n": 5
+},
+"family": "gp_next_error",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 5,
+"ymax": 13,
+"points": [
+{
+"x": 0,
+"y": 0,
+"label": ""
+},
+{
+"x": 1,
+"y": 3,
+"label": ""
+},
+{
+"x": 2,
+"y": 6,
+"label": ""
+},
+{
+"x": 3,
+"y": 9,
+"label": ""
+}
+],
+"step": 2
+}
+}
+},
+"m5-cp-s04-cp1-027": {
+"q": {
+"k": "expr",
+"e": "7*6+0"
+},
+"family": "gp_predict_error",
+"consts": [
+"6",
+"0"
+]
+},
+"m5-cp-s04-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "12*6+0"
+},
+"shown": "18",
+"answer": "72"
+},
+"family": "gp_predict_tf"
+},
+"m5-cp-s04-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 1,
+"b": 2
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-cp1-030": {
+"q": null,
+"family": "gp_predict_match",
+"parts": [
+{
+"k": "expr",
+"e": "7*4+0"
+},
+{
+"k": "expr",
+"e": "8*4+0"
+},
+{
+"k": "expr",
+"e": "12*3+0"
+},
+{
+"k": "expr",
+"e": "8*2+0"
+}
+]
+},
+"m5-cp-s04-honors-001": {
+"q": {
+"k": "expr",
+"e": "10*5+1"
+},
+"family": "gp_predict",
+"consts": [
+"5",
+"1"
+]
+},
+"m5-cp-s04-honors-002": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 1,
+"b": 4
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-honors-003": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"6",
+"18"
+],
+[
+"7",
+"21"
+],
+[
+"8",
+"24"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"6",
+"18"
+],
+[
+"7",
+"21"
+],
+[
+"8",
+"24"
+]
+]
+}
+}
+},
+"m5-cp-s04-honors-004": {
+"q": {
+"k": "expr",
+"e": "10*2+2"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"2"
+]
+},
+"m5-cp-s04-honors-005": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"1",
+"3"
+],
+[
+"2",
+"6"
+],
+[
+"3",
+"9"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"1",
+"3"
+],
+[
+"2",
+"6"
+],
+[
+"3",
+"9"
+]
+]
+}
+}
+},
+"m5-cp-s04-honors-006": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 2,
+"b": 4
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-honors-007": {
+"q": {
+"k": "expr",
+"e": "6*2+0"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"0"
+]
+},
+"m5-cp-s04-honors-008": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"1",
+"3"
+],
+[
+"5",
+"15"
+],
+[
+"7",
+"21"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"1",
+"3"
+],
+[
+"5",
+"15"
+],
+[
+"7",
+"21"
+]
+]
+}
+}
+},
+"m5-cp-s04-honors-009": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 2,
+"b": 8
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-honors-010": {
+"q": {
+"k": "expr",
+"e": "8*6+3"
+},
+"family": "gp_predict",
+"consts": [
+"6",
+"3"
+]
+},
+"m5-cp-s04-honors-011": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"1",
+"2"
+],
+[
+"4",
+"8"
+],
+[
+"6",
+"12"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"1",
+"2"
+],
+[
+"4",
+"8"
+],
+[
+"6",
+"12"
+]
+]
+}
+}
+},
+"m5-cp-s04-honors-012": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 1,
+"b": 2
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-honors-013": {
+"q": {
+"k": "expr",
+"e": "6*3+3"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"3"
+]
+},
+"m5-cp-s04-honors-014": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 2,
+"b": 4
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-honors-015": {
+"q": {
+"k": "fn",
+"fn": "pair_in_table",
+"rows": [
+[
+"3",
+"15"
+],
+[
+"4",
+"20"
+],
+[
+"5",
+"25"
+]
+]
+},
+"family": "gp_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x",
+"y"
+],
+"rows": [
+[
+"3",
+"15"
+],
+[
+"4",
+"20"
+],
+[
+"5",
+"25"
+]
+]
+}
+}
+},
+"m5-cp-s04-honors-016": {
+"q": {
+"k": "expr",
+"e": "11*4+4"
+},
+"family": "gp_predict",
+"consts": [
+"4",
+"4"
+]
+},
+"m5-cp-s04-honors-017": {
+"q": {
+"k": "expr",
+"e": "12*5+4"
+},
+"family": "gp_predict",
+"consts": [
+"5",
+"4"
+]
+},
+"m5-cp-s04-honors-018": {
+"q": {
+"k": "expr",
+"e": "12*3+3"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"3"
+]
+},
+"m5-cp-s04-honors-019": {
+"q": {
+"k": "expr",
+"e": "12*2+3"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"3"
+]
+},
+"m5-cp-s04-honors-020": {
+"q": {
+"k": "expr",
+"e": "7*2+4"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"4"
+]
+},
+"m5-cp-s04-honors-021": {
+"q": {
+"k": "expr",
+"e": "12*6+3"
+},
+"family": "gp_predict",
+"consts": [
+"6",
+"3"
+]
+},
+"m5-cp-s04-honors-022": {
+"q": {
+"k": "expr",
+"e": "12*2+4"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"4"
+]
+},
+"m5-cp-s04-honors-023": {
+"q": {
+"k": "expr",
+"e": "12*2+1"
+},
+"family": "gp_predict",
+"consts": [
+"2",
+"1"
+]
+},
+"m5-cp-s04-honors-024": {
+"q": {
+"k": "expr",
+"e": "11*3+3"
+},
+"family": "gp_predict",
+"consts": [
+"3",
+"3"
+]
+},
+"m5-cp-s04-honors-025": {
+"q": {
+"k": "expr",
+"e": "7*6+2"
+},
+"family": "gp_predict_error",
+"consts": [
+"6",
+"2"
+]
+},
+"m5-cp-s04-honors-026": {
+"q": {
+"k": "expr",
+"e": "12*6+3"
+},
+"family": "gp_predict_error",
+"consts": [
+"6",
+"3"
+]
+},
+"m5-cp-s04-honors-027": {
+"q": {
+"k": "expr",
+"e": "7*3+0"
+},
+"family": "gp_predict_error",
+"consts": [
+"3",
+"0"
+]
+},
+"m5-cp-s04-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "7*5+1"
+},
+"shown": "13",
+"answer": "36"
+},
+"family": "gp_predict_tf"
+},
+"m5-cp-s04-honors-029": {
+"q": {
+"k": "fn",
+"fn": "not_pattern_pair",
+"a": 2,
+"b": 6
+},
+"family": "gp_not_on"
+},
+"m5-cp-s04-honors-030": {
+"q": null,
+"family": "gp_predict_match",
+"parts": [
+{
+"k": "expr",
+"e": "12*5+1"
+},
+{
+"k": "expr",
+"e": "9*4+1"
+},
+{
+"k": "expr",
+"e": "12*4+0"
+},
+{
+"k": "expr",
+"e": "9*5+1"
+}
+]
+}
+}

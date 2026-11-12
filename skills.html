@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Browse Math Skills by Course | Mr. K's Classroom</title>
+<meta name="description" content="Find math lessons by topic or skill across grades 6–12 and open their free teaching resources.">
+<link rel="canonical" href="https://mrksclassroom.com/skills.html"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:light dark}*{box-sizing:border-box}body{font:17px/1.55 system-ui,-apple-system,sans-serif;margin:0;background:#f6f8fc;color:#19283d}header,footer{background:#142943;color:white;padding:16px max(16px,calc((100vw - 1000px)/2))}header a,footer a{color:white;margin-right:20px}main{max-width:1000px;margin:auto;padding:32px 16px 70px}h1{line-height:1.2}input,select{font:inherit;padding:.7rem;border:1px solid #71819a;border-radius:8px;max-width:100%;width:100%}.fields{display:grid;grid-template-columns:2fr 1fr;gap:16px}.item{border:1px solid #dce3ed;background:white;border-radius:12px;padding:18px 22px;margin:12px 0}a{color:#175aab}small{display:block;color:#526279;margin-top:6px}.note{background:#eaf0f9;padding:13px 16px;border-radius:8px}label{font-weight:600}input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #eeab42;outline-offset:3px}@media(max-width:650px){.fields{grid-template-columns:1fr}}@media(prefers-color-scheme:dark){body{background:#111b2a;color:#f3f5fa}.item{background:#1b2c42;border-color:#40536d}.note{background:#263c58}a{color:#9bcaff}small{color:#c4d1e1}}
+</style></head><body><header><nav aria-label="Site"><a href="/">Mr. K's Classroom</a><a href="/courses/">Courses</a><a href="/backup.html">Back Up Saved Work</a></nav></header>
+<main><h1>Browse by math skill</h1>
+<p>Find a skill and jump directly to its course unit. Search by topic, unit name, or course, or choose a subject.</p>
+<p class="note"><strong>Curriculum note:</strong> All ten courses now have unit-level Massachusetts Framework classifications. Exact lesson-to-standard matches remain separately identified, currently for selected Algebra 1 and Geometry lessons. Unit-level strands are broad topic connections, not individual standards. Calculus and some Discrete Math topics extend beyond the 2017 framework; related or prerequisite strands are labeled accordingly. Nothing here certifies the alignment of an individual question.</p>
+<div class="fields"><div><label for="find">Search lesson topics</label><input id="find" type="search" placeholder="e.g. slope, factoring, probability" autocomplete="off"></div><div><label for="subject">Course</label><select id="subject"><option value="">All courses</option></select></div></div>
+<div class="fields" style="margin-top:1rem"><div><label for="standard">Massachusetts standard</label><select id="standard"><option value="">All standards (including unmapped skills)</option></select></div><div><label for="mapping">Mapping coverage</label><select id="mapping"><option value="">All skills</option><option value="mapped">Curated matches only</option><option value="unmapped">Not yet mapped</option></select></div></div>
+<div class="fields" style="margin-top:1rem"><div><label for="strand">Framework strand (all courses)</label><select id="strand"><option value="">All framework strands</option><option value="__none__">No direct framework connection</option></select></div><div><label for="relation">Type of connection</label><select id="relation"><option value="">All connections</option><option value="grade-level">Grade-level strand</option><option value="course-strand">Model-course strand</option><option value="related">Related topic from another course/grade</option><option value="prerequisite">Prerequisite for an advanced course</option><option value="no-direct">Beyond direct framework coverage</option></select></div></div>
+<p id="count" aria-live="polite"></p><div id="results"></div>
+</main><footer><a href="/">Home</a> · <a href="/guide.html">Teacher Guide</a></footer>
+<script src="/data.js?v=discrete-math-20261108"></script><script src="/course-catalog.js?v=discrete-20261107"></script><script src="/massachusetts-standards.js?v=ma-standards-20261110"></script><script src="/massachusetts-framework-strands.js?v=all-courses-20261110"></script>
+<script>
+(function(){
+'use strict';
+var catalog=window.MK_COURSE_CATALOG,lib=window.LIBRARY,select=document.getElementById('subject'),input=document.getElementById('find'),results=document.getElementById('results'),count=document.getElementById('count'),standard=document.getElementById('standard'),mapping=document.getElementById('mapping'),ma=window.MK_MA_STANDARDS,framework=window.MK_MA_FRAMEWORK_STRANDS,strand=document.getElementById("strand"),relation=document.getElementById("relation");
+if(!catalog||!lib){count.textContent='The skill catalog could not be loaded.';return;}
+var order=['math5','math6','prealgebra7','prealgebra','algebra','geometry','algebra2','precalculus','calculus','statistics','discrete'];
+var courses=lib.courses.slice().sort(function(a,b){return order.indexOf(a.id)-order.indexOf(b.id);});
+var entries=[];courses.forEach(function(c){
+ var option=document.createElement('option');option.value=c.id;option.textContent=c.name;select.appendChild(option);
+ c.units.forEach(function(u){catalog.getSkills(c.id,u.id).forEach(function(skill){entries.push({course:c,unit:u,skill:skill,standards:ma?ma.forSkill(c.id,u.id,skill):[],framework:framework?framework.forUnit(c.id,u.id):null});});});
+});
+var codes=Object.create(null);
+entries.forEach(function(it){it.standards.forEach(function(r){codes[r.code]=true;});});
+Object.keys(codes).sort().forEach(function(code){var opt=document.createElement('option');opt.value=code;opt.textContent=code;standard.appendChild(opt);});
+var strands=Object.create(null);
+entries.forEach(function(it){if(it.framework&&it.framework.strand)strands[it.framework.strand]=true;});
+Object.keys(strands).sort().forEach(function(code){var opt=document.createElement("option");opt.value=code;opt.textContent=code;strand.appendChild(opt);});
+function match(item,q){return [item.skill,item.course.name,item.unit.name,item.framework&&item.framework.strand||""].concat(item.standards.map(function(x){return x.code;})).join(' ').toLowerCase().indexOf(q)>=0;}
+function render(){
+ var q=input.value.trim().toLowerCase(),subject=select.value,code=standard.value,coverage=mapping.value,strandCode=strand.value,relationType=relation.value;
+ var found=entries.filter(function(it){return (!subject||it.course.id===subject)&&(!q||match(it,q))&&(!code||it.standards.some(function(r){return r.code===code;}))&&(coverage!=='mapped'||it.standards.length>0)&&(coverage!=='unmapped'||it.standards.length===0)&&(!strandCode||(strandCode==='__none__'?!it.framework||!it.framework.strand:!!it.framework&&it.framework.strand===strandCode))&&(!relationType||!!it.framework&&it.framework.relationship===relationType);});
+ count.textContent=found.length+' lesson topics found'+(found.length>100?' · Showing the first 100':'')+'.';
+ results.replaceChildren();
+ found.slice(0,100).forEach(function(it){
+  var article=document.createElement('article');article.className='item';
+  var a=document.createElement('a');a.href='/#'+encodeURIComponent(it.course.id+'.'+it.unit.id).replace(/%2E/g,'.');a.textContent=it.skill;
+  var meta=document.createElement('small');meta.textContent=it.course.name+' · '+it.unit.name;
+  article.appendChild(a);article.appendChild(meta);
+  it.standards.forEach(function(record){
+   var small=document.createElement('small'),label=document.createElement('span');label.textContent='MA 2017: ';
+   var ref=document.createElement('a');ref.href=record.url;ref.textContent=record.code;ref.target='_blank';ref.rel='noopener noreferrer';
+   ref.setAttribute('aria-label','Open Massachusetts standard '+record.code+' in the DESE Standards Navigator (new tab)');
+   small.appendChild(label);small.appendChild(ref);article.appendChild(small);
+  });
+  if(it.framework){
+   var note=document.createElement('small'),label=it.framework.relationship;
+   var names={'grade-level':'Grade-level framework strand','course-strand':'Model-course framework strand','related':'Related framework topic (not direct course alignment)','prerequisite':'Prerequisite framework topic (not a Calculus standard)','no-direct':'No direct 2017 framework standard for this unit'};
+   if(it.framework.strand){
+    note.appendChild(document.createTextNode((names[label]||'Framework topic')+': '));
+    var frameLink=document.createElement('a');frameLink.href=framework.source;frameLink.textContent=it.framework.strand;
+    frameLink.target='_blank';frameLink.rel='noopener noreferrer';
+    frameLink.setAttribute('aria-label','Read the Massachusetts 2017 Mathematics Framework (new tab)');
+    note.appendChild(frameLink);
+   }else note.textContent=names[label]||'No direct framework connection';
+   article.appendChild(note);
+  }
+  results.appendChild(article);
+ });
+ if(!found.length){var p=document.createElement('p');p.textContent='No matching topics. Try another search or choose a different course.';results.appendChild(p);}
+}
+input.addEventListener('input',render);select.addEventListener('change',render);standard.addEventListener('change',render);mapping.addEventListener('change',render);strand.addEventListener('change',render);relation.addEventListener('change',render);
+render();
+})();
+</script></body></html>
