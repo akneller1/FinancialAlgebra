@@ -152,3 +152,18 @@
 .g5-resource-card .g5-student-copy{cursor:pointer;font:700 .79rem/1.25 var(--body);padding:.57rem .65rem;border:1px solid var(--blue-text);border-radius:8px;color:var(--blue-text);background:var(--paper);min-height:38px}
 .g5-resource-card .g5-student-copy:hover{background:var(--wash)}
 .g5-resource-card .g5-student-status:not(:empty){display:block;flex-basis:100%;font-size:.76rem;line-height:1.35;color:var(--ink-soft)}
+
+/* Grade 5 adopts the standard Classroom course breadcrumb + course selector. */
+.g5-course-navigation{border-bottom:2px solid #1e3155;background:var(--paper,#f7f8fd);color:var(--ink,#102143)}
+.g5-course-navigation-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:64px}
+.g5-course-breadcrumb{display:flex;align-items:center;gap:.45rem;font-size:1.05rem}
+.g5-course-breadcrumb a{font-weight:800;color:var(--ink,#102143);text-decoration:none}
+.g5-course-breadcrumb a:hover{text-decoration:underline}
+.g5-course-picker{position:relative;z-index:20}
+.g5-course-picker>summary{cursor:pointer;list-style:none;padding:.55rem .3rem;font-size:.85rem;color:var(--ink-soft,#455675)}
+.g5-course-picker>summary::-webkit-details-marker{display:none}
+.g5-course-picker>summary:focus-visible,.g5-course-picker-list a:focus-visible{outline:3px solid #3154db;outline-offset:2px}
+.g5-course-picker-list{position:absolute;right:0;top:100%;display:grid;min-width:220px;max-height:70vh;overflow:auto;padding:.45rem;background:var(--card,#fff);border:1px solid var(--line,#d9e0ee);border-radius:10px;box-shadow:0 10px 25px #16254422}
+.g5-course-picker-list a{display:block;padding:.58rem .8rem;border-radius:7px;color:var(--ink,#102143);text-decoration:none;font-weight:600;white-space:nowrap}
+.g5-course-picker-list a:hover,.g5-course-picker-list a[aria-current=page]{background:var(--wash,#eef2fc)}
+@media(max-width:560px){.g5-course-navigation-inner{min-height:58px;gap:.5rem}.g5-course-breadcrumb{font-size:.87rem}.g5-course-picker>summary{font-size:.78rem}.g5-course-picker-list{min-width:190px}}
