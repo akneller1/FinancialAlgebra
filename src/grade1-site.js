@@ -1,4 +1,4 @@
-import {mountOutline} from './outline-template.js';
+import {mountOutline} from './outline-template.js?v=compact-units-20261112';
 const root=document.getElementById('main');
 fetch('./course-outlines/grade1.json')
   .then(r=>{if(!r.ok)throw new Error('Grade 1 curriculum could not be loaded');return r.json()})
