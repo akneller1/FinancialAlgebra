@@ -5,12 +5,12 @@ The FinancialAlgebra GitHub repository now also hosts the **Grade 5 Math** curri
 ## Current development pages
 
 - Financial Algebra: \`index.html\` · live pilot activities
-- Grade 5 Math: \`grade5.html\` · outline only
+- Grade 5 Math: \`grade5.html\` · **released reference implementation** with 11 teaching units, approved-bank manifest, games, generators, study guides, interactive tools, and projects; the original 13-unit pacing outline remains available
 - Grade 1 Math: \`grade1.html\` · Illustrative Mathematics, sections and standards
 - Grade 2 Math: \`grade2.html\` · Illustrative Mathematics, sections and standards
 - Grade 3 Math: `grade3.html` · outline only, standards and guiding questions
 - Grade 4 Math: \`grade4.html\` · outline only, with pacing and source objective categories
-- Both are independent from the production \`akneller1/classroom\` repository.
+- All development source stays in this repository; the public Classroom site assembles **only released course files** into its Pages artifact.
 
 ## How to add another course
 
@@ -40,6 +40,26 @@ That ID pattern is intentionally consistent with the existing Classroom \`course
 
 The staging site's outline renderer and CSS may be reused without copying any Financial Algebra-specific simulations. Avoid mixing financial content into other grade levels.
 
-## Future import into main Classroom
+## Grade 5 release-quality checklist for Grades 1–4
 
-Do not push changes to \`akneller1/classroom\` while authoring in this staging repository. Import the finished course later into a staging branch of the production repository, adapt the question-bank manifest, integrate generators and activities, and run full regression checks. Production changes require a separate review.
+Grade 5 is the reusable **implementation pattern**, not a blanket certification of each
+question's editorial quality. The main site's publishing workflows validate the real
+generated output (not only the source repository). Follow all of these gates for future grades:
+
+1. **Curriculum integrity:** preserve the sourced pacing outline and standards. Keep stable unit and skill IDs, sensible age-appropriate level labels, and an explicit mapping between the original pacing sequence and the released teaching units.
+2. **Question quality:** validate every answer independently; run difficulty, uniqueness, notation, diagrams/alt text, and worked-solution checks. The current Grade 5 bank contains 4,950 math-verified items across three levels, but its records still say "Awaiting human review." Require teacher spot-checks and resolve those provenance notes before claiming teacher/editorial approval for any new grade.
+3. **Activity coverage:** for each ready unit ensure real clickable games, lesson plan/worksheet/activity/assessment generators, flashcards, a cheat sheet, an age-appropriate understanding check, and at least one project. Include interactive manipulatives where they genuinely improve the lesson, not merely to fill a quota.
+4. **Navigation:** every teacher resource needs usable home/course/unit return links; student links must preserve unit, level, and skills without exposing teacher-only notes. Keep compatibility redirects for old paths when renaming landing pages.
+5. **Publishing:** build new grades here first. Do not show them on the public site until separately approved. Keep source files in their own repository; assemble only allowlisted course runtime, bank/manifest entries, diagrams, thumbnails, linked assets, and redirects into the public Pages artifact.
+6. **Regression tests:** require the public release audit to find zero missing resource URLs, unloaded games, broken diagrams, orphan assets, missing banks, or dead internal navigation. Run real-browser checks for each game engine, course-page return flow, generator, study guide, interactive page, and project. Block releases on failures.
+7. **Document exceptions:** list editorial review remaining, any untested device/browser combinations, or quality gaps explicitly. Source-code checks and static link checks do not replace a teacher play-through in a real classroom.
+
+## Publishing into main Classroom
+
+`akneller1/classroom` is the site assembly/deployment repository. It runs
+`scripts/integrate-approved-courses.mjs` to incorporate released Grade 5 files from
+this separate development repository; the source files **do not move** into Classroom.
+The single canonical `Deploy site` workflow publishes the finished site.
+The independent `Verify unified Mr. K's Classroom site` workflow is a validation-only gate
+and must never race the deploy job. For Grade 4 and younger, keep development work
+off the public site until approved for release and wired through the same QA gates.
