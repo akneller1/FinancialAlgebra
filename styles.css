@@ -1134,3 +1134,46 @@ body { background:var(--paper); }
   .unit-band + .section .generator-banner.compact .generator-shortcut { padding: .36rem .42rem; }
   .unit-band + .section .generator-banner.compact .generator-shortcut-copy strong { font-size: .79rem; }
 }
+
+
+/* Ultra-compact unit landing view — consistent across subject families.
+   Scoped to unit pages only; course overviews and home dashboard are unchanged. */
+.band.unit-band { padding-block: .34rem .42rem; }
+.unit-band .crumbs ol { margin-bottom: .12rem; font-size: .72rem; line-height: 1.15; }
+.unit-band h1 { font-size: clamp(1.22rem, 2.05vw, 1.65rem); line-height: 1.1; }
+.unit-band .band-meta { margin-top: .12rem; font-size: .75rem; line-height: 1.2; }
+.unit-band .band-grid { gap: .3rem; }
+.unit-band .band-art { width: 2.5rem; max-width: 2.5rem; }
+.unit-band + .section { padding-block: .45rem 1.5rem; }
+.unit-band + .section .algebra-unit-layout { gap: .55rem; }
+.unit-band + .section .unit-pager { margin: 0; gap: .4rem; }
+.unit-band + .section .unit-pager:last-child { margin: .6rem 0 0; }
+.unit-band + .section .pager-link { padding: .3rem .52rem; gap: .4rem; border-width: 1px; border-radius: 9px; box-shadow: 1px 1px 0 var(--shadow); }
+.unit-band + .section .pager-link:hover { box-shadow: 2px 2px 0 var(--shadow); }
+.unit-band + .section .pager-arrow { width: 1.55rem; height: 1.55rem; font-size: .9rem; border-width: 1px; }
+.unit-band + .section .pager-dir { font-size: .66rem; line-height: 1.15; }
+.unit-band + .section .pager-name { font-size: .85rem; line-height: 1.15; }
+.unit-band + .section .generator-banner.compact { padding: .4rem .55rem; border-radius: 10px; }
+.unit-band + .section .generator-banner.compact .generator-banner-heading { margin-bottom: .3rem; }
+.unit-band + .section .generator-banner.compact .generator-banner-heading h2 { font-size: .9rem; line-height: 1.15; }
+.unit-band + .section .generator-banner.compact .generator-shortcuts,
+.unit-band + .section .g5-shortcuts .generator-shortcuts { gap: .35rem; }
+.unit-band + .section .generator-banner.compact .generator-shortcut {
+  min-height: 2.05rem;
+  padding: .25rem .4rem;
+  gap: .38rem;
+  border-radius: 7px;
+}
+.unit-band + .section .generator-banner.compact .generator-shortcut-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-basis: 1.35rem;
+  border-radius: 5px;
+  font-size: .85rem;
+}
+.unit-band + .section .generator-banner.compact .generator-shortcut-copy strong { font-size: .79rem; }
+.unit-band + .section .generator-banner.compact .generator-shortcut-copy small { font-size: .66rem; }
+@media (max-width: 750px) {
+  .unit-band + .section .generator-banner.compact .generator-shortcut { min-height: 2.7rem; }
+  .unit-band + .section .pager-link { min-height: 2.25rem; }
+}
