@@ -29,8 +29,8 @@
         '<a href="'+escape(item[1])+'">'+escape(item[0])+'</a>')+'</li>';
     }).join('')+'</ol></nav>';
   }
-  function hero(contents,showArt){
-    return '<section class="band" data-course="'+C+'" data-color="sunshine"><div class="wrap">'+
+  function hero(contents,showArt,unitPage){
+    return '<section class="band'+(unitPage?' unit-band':'')+'" data-course="'+C+'" data-color="sunshine"><div class="wrap">'+
       (showArt?'<div class="band-grid"><div>'+contents+'</div><div class="band-art" aria-hidden="true">'+
         '<img class="outline-art" width="230" height="195" src="./assets/course-icons/grade5.svg" alt=""></div></div>':contents)+
       '</div></section>';
@@ -119,7 +119,7 @@
       sections.map(function(group){return sectionHtml(u,group);}).join('')+
       '<section class="algebra-unit-section" id="g5-skills"><h2>Skills in this unit</h2>'+
       skillChips(skills)+'</section>'+unitPager(u);
-    return hero(intro,false)+'<section class="section"><div class="wrap algebra-unit-layout">'+body+'</div></section>';
+    return hero(intro,false,true)+'<section class="section"><div class="wrap algebra-unit-layout">'+body+'</div></section>';
   }
   function courseView(){
     var term=search.value.trim().toLocaleLowerCase();
