@@ -66,6 +66,11 @@
       add(mk(g[0]+' Generator','worksheet-generator/grade5-generators.html?unit='+e+'&mode='+g[1],
         'Printable',g[2],g[3]));
     });
+    // Error Analysis is its own discoverable resource in every unit.
+    // It shares the verified Grade 5 activity engine; do not create a second bank.
+    add(mk('Error Analysis','worksheet-generator/grade5-generators.html?unit='+e+'&mode=activity&kind=error',
+      'Printable','thumbs/math5-generator-activity.svg',
+      'Find and explain mistakes using verified Grade 5 misconceptions.'));
     (tools[id]||[]).forEach(function(slug){
       add(mk(title(slug),'math5-'+slug+'/index.html','Interactive',
         'thumbs/math5-'+slug+'.jpg','Explore an interactive model and its printable activity.'));
