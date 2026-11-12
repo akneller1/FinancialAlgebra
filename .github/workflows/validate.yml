@@ -19,4 +19,6 @@ jobs:
         run: |
           node --check grade5-resource-catalog.js
           node scripts/test-grade5.cjs
+      - name: Verify Grade 5 answers independently
+        run: python3 tools/grade5-authoring/verify.py
 
