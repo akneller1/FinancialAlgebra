@@ -45,6 +45,7 @@ body.g5 { background-color: #eef5ff; }
 .g5gen-zoom select { font: inherit; padding: .25rem; border: 2px solid var(--gen-line); border-radius: .5rem; }
 .g5gen-notice { margin: .6rem 0 0; font-size: .82rem; color: #55657a; }
 .g5gen-notice.warn { border-left: 4px solid #ad5e00; background: #fff2d7; color: #523400; padding: .5rem .7rem; border-radius: .4rem; }
+#printRoot { display: none; } /* Only the print stylesheet should reveal these pages. */
 #pagesWrap { margin-top: .8rem; background: #dfe7f3; border: 1px solid #b8c8de; border-radius: .9rem; padding: 18px; overflow: auto; }
 #output { display: flex; flex-direction: column; align-items: center; gap: 18px; width: max-content; min-width: 100%; }
 .g5gen-editor details { border-top: 1px solid var(--gen-line); padding: .45rem 0; }
@@ -190,6 +191,8 @@ body.g5gen-teacher .g5q-key { outline: 2px dashed #12613e; }
   #printRoot .pl-page { box-shadow: none; margin: 0; zoom: 1; break-after: page; page-break-after: always; overflow: visible; }
   #printRoot .pl-page:last-child { break-after: auto; page-break-after: auto; }
   .pl-page-oversize { height: auto; }
-  .pl-measure-stage { display: none !important; }
+  /* Keep the offscreen measuring stage layoutable: Ctrl+P triggers beforeprint
+     after print media activates, and display:none would collapse every height. */
+  .pl-measure-stage { display: block !important; visibility: hidden !important; }
   .g5swatch, .g5cell, .g5bigidea, .g5answer, .g5q-key, .g5example, .g5route { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
