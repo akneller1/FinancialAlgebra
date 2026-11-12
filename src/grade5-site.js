@@ -30,7 +30,7 @@
     }).join('')+'</ol></nav>';
   }
   function hero(contents,showArt,unitPage){
-    return '<section class="band'+(unitPage?' unit-band':'')+'" data-course="'+C+'" data-color="sunshine"><div class="wrap">'+
+    return '<section class="band'+(unitPage===true?' unit-band':unitPage==='course'?' course-band':'')+'" data-course="'+C+'" data-color="sunshine"><div class="wrap">'+
       (showArt?'<div class="band-grid"><div>'+contents+'</div><div class="band-art" aria-hidden="true">'+
         '<img class="outline-art" width="230" height="195" src="./assets/course-icons/grade5.svg" alt=""></div></div>':contents)+
       '</div></section>';
@@ -136,7 +136,7 @@
         '<div class="empty"><h2>No matching units</h2><p>Try a different skill or topic.</p></div>')+
       '<details class="g5-source-outline"><summary>Original curriculum sequence (13 pacing units)</summary>'+
       '<div id="g5OriginalOutline" class="g5-original-content">Loading source curriculum…</div></details>';
-    return hero(intro,true)+'<section class="section"><div class="wrap">'+body+'</div></section>';
+    return hero(intro,true,'course')+'<section class="section"><div class="wrap">'+body+'</div></section>';
   }
   function fillSourceOutline(){
     var node=document.getElementById('g5OriginalOutline');
