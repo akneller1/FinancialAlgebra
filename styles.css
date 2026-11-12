@@ -1251,21 +1251,28 @@ body { background:var(--paper); }
 }
 
 
-/* Centered 75%-scale course cards and resource cards.
-   The three-column design is retained at desktop widths; breakpoints avoid
-   illegible cards on small screens. Homepage tiles remain unaffected. */
-.course-band ~ .section .units,
-.unit-band ~ .section .cards.grouped-cards,
-.unit-band ~ .section .finance-resource-grid {
+/* Course overview cards stay compact (75%); activities use their own
+   ~80%-width, nearly square cards. The two systems are intentionally separate. */
+.course-band ~ .section .units {
   width: 75%;
   max-width: 1050px;
   margin-inline: auto;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
+.unit-band ~ .section .cards.grouped-cards,
+.unit-band ~ .section .finance-resource-grid,
+.activity-group > .cards.grouped-cards {
+  width: 80%;
+  max-width: 1120px;
+  margin-inline: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
 .course-band ~ .section .units > li,
 .unit-band ~ .section .cards.grouped-cards > li,
-.unit-band ~ .section .finance-resource-grid > li { min-width: 0; }
+.unit-band ~ .section .finance-resource-grid > li,
+.activity-group > .cards.grouped-cards > li { min-width: 0; }
 .course-band ~ .section .unit {
   padding: .85rem .9rem;
   gap: .48rem;
@@ -1274,39 +1281,130 @@ body { background:var(--paper); }
 .course-band ~ .section .unit h3 { font-size: 1.08rem; line-height: 1.25; }
 .course-band ~ .section .unit .unit-skill { font-size: .75rem; line-height: 1.3; }
 .course-band ~ .section .unit .unit-skills { margin-block: .3rem; }
-.unit-band ~ .section .cards.grouped-cards .thumb {
-  width: 108px;
-  height: 68px;
-  margin: .9rem .9rem 0;
+
+/* A near-square footprint, without fixed heights that would clip buttons. */
+.unit-band ~ .section .cards.grouped-cards > li.card,
+.unit-band ~ .section .finance-resource-grid > li.card,
+.activity-group > .cards.grouped-cards > li.card {
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1.06;
 }
-.unit-band ~ .section .cards.grouped-cards .card-body {
-  padding: .8rem .9rem .9rem;
-  gap: .48rem;
+.unit-band ~ .section .cards.grouped-cards .thumb,
+.activity-group > .cards.grouped-cards .thumb {
+  width: 116px;
+  height: 72px;
+  margin: .75rem .85rem 0;
 }
-.unit-band ~ .section .cards.grouped-cards .card h3 { font-size: 1.06rem; line-height: 1.25; }
-.unit-band ~ .section .cards.grouped-cards .desc { font-size: .84rem; line-height: 1.35; }
-.unit-band ~ .section .finance-resource-grid .finance-resource-card { border-radius: 11px; }
-.unit-band ~ .section .finance-resource-grid .finance-resource-image-link { margin: .8rem .8rem 0; }
-.unit-band ~ .section .finance-resource-grid .finance-resource-body { padding: .8rem .9rem .9rem; }
-/* Breathing room after the banner, before generators and resources. */
+.unit-band ~ .section .cards.grouped-cards .card-body,
+.activity-group > .cards.grouped-cards .card-body {
+  padding: .72rem .85rem .85rem;
+  gap: .4rem;
+}
+.unit-band ~ .section .cards.grouped-cards .card h3,
+.activity-group > .cards.grouped-cards .card h3 { font-size: 1.05rem; line-height: 1.23; }
+.unit-band ~ .section .cards.grouped-cards .desc,
+.activity-group > .cards.grouped-cards .desc {
+  font-size: .83rem;
+  line-height: 1.34;
+}
+.unit-band ~ .section .cards.grouped-cards .actions,
+.activity-group > .cards.grouped-cards .actions { gap: .35rem; padding-top: .2rem; }
+.unit-band ~ .section .cards.grouped-cards .actions .btn,
+.activity-group > .cards.grouped-cards .actions .btn {
+  padding: .36rem .6rem;
+  font-size: .83rem;
+}
+.unit-band ~ .section .cards.grouped-cards .report-problem,
+.activity-group > .cards.grouped-cards .report-problem {
+  margin-top: .18rem;
+  font-size: .76rem;
+}
+
+/* Financial Algebra uses different card internals: match the same scale. */
+.unit-band ~ .section .finance-resource-grid .finance-resource-item .finance-resource-image-link {
+  width: 116px;
+  height: 72px;
+  aspect-ratio: auto;
+  margin: .75rem .85rem 0;
+}
+.unit-band ~ .section .finance-resource-grid .finance-resource-item .finance-resource-body {
+  padding: .72rem .85rem .85rem;
+  gap: .4rem;
+}
+.unit-band ~ .section .finance-resource-grid .finance-resource-item .finance-resource-body h3 {
+  font-size: 1.05rem;
+  line-height: 1.23;
+}
+.unit-band ~ .section .finance-resource-grid .finance-resource-item .finance-resource-description {
+  font-size: .83rem;
+  line-height: 1.34;
+}
+.unit-band ~ .section .finance-resource-grid .finance-resource-item .finance-resource-actions {
+  gap: .35rem;
+  padding-top: .35rem;
+}
+.unit-band ~ .section .finance-resource-grid .finance-resource-item .finance-resource-actions .btn {
+  min-height: 34px;
+  padding: .34rem .58rem;
+  font-size: .83rem;
+}
+.unit-band ~ .section .finance-resource-grid .finance-resource-item .report-problem {
+  margin-top: .16rem;
+  font-size: .76rem;
+}
+
+/* Keep previews concise; never cut off actionable controls. */
+.unit-band ~ .section .cards.grouped-cards .desc,
+.unit-band ~ .section .finance-resource-grid .finance-resource-description,
+.activity-group > .cards.grouped-cards .desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.unit-band ~ .section .cards.grouped-cards .g5-student-share {
+  gap: .3rem .4rem;
+  padding-top: .45rem;
+  margin-top: .2rem;
+}
+/* Preserve breathing room after the banner. */
 .course-band + .section { padding-top: 1.15rem; }
 .course-band + .section + .section { padding-top: 1.1rem; }
 .unit-band + .section { padding-top: 1.05rem; }
+
 @media (max-width: 1050px) {
   .course-band ~ .section .units,
   .unit-band ~ .section .cards.grouped-cards,
-  .unit-band ~ .section .finance-resource-grid { width: 92%; }
+  .unit-band ~ .section .finance-resource-grid,
+  .activity-group > .cards.grouped-cards { width: 92%; }
+}
+@media (max-width: 950px) {
+  .unit-band ~ .section .cards.grouped-cards,
+  .unit-band ~ .section .finance-resource-grid,
+  .activity-group > .cards.grouped-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media (max-width: 790px) {
   .course-band ~ .section .units,
   .unit-band ~ .section .cards.grouped-cards,
-  .unit-band ~ .section .finance-resource-grid {
-    width: 100%;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .unit-band ~ .section .finance-resource-grid,
+  .activity-group > .cards.grouped-cards { width: 100%; }
+  .course-band ~ .section .units { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .unit-band ~ .section .cards.grouped-cards > li.card,
+  .unit-band ~ .section .finance-resource-grid > li.card,
+  .activity-group > .cards.grouped-cards > li.card { aspect-ratio: auto; }
 }
 @media (max-width: 540px) {
   .course-band ~ .section .units,
   .unit-band ~ .section .cards.grouped-cards,
-  .unit-band ~ .section .finance-resource-grid { grid-template-columns: minmax(0, 1fr); }
+  .unit-band ~ .section .finance-resource-grid,
+  .activity-group > .cards.grouped-cards { grid-template-columns: minmax(0, 1fr); }
+  .unit-band ~ .section .cards.grouped-cards .desc,
+  .unit-band ~ .section .finance-resource-grid .finance-resource-description,
+  .activity-group > .cards.grouped-cards .desc {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
 }
