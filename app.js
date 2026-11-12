@@ -565,7 +565,7 @@
   }
 
   function bandHtml(c, inner, extra) {
-    return '<section class="band"' + (c ? ' data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '"' : '') + '><div class="wrap">' + inner + '</div></section>';
+    return '<section class="band' + (extra === 'unit' ? ' unit-band' : '') + '"' + (c ? ' data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '"' : '') + '><div class="wrap">' + inner + '</div></section>';
   }
 
 
@@ -753,7 +753,7 @@
       '<p class="band-meta">Create custom resources or explore games and study guides for this unit.</p>';
     return {
       title: unitLabel(c, u) + ', ' + c.name,
-      html: bandHtml(c, inner) +
+      html: bandHtml(c, inner, 'unit') +
         '<section class="section"><div class="wrap algebra-unit-layout">' + unitPager(c, u) +
         generatorLinks(c, u, true) +
         category('games', 'Games', gameFormats) +
@@ -861,7 +861,7 @@
       var heading = crumbs([['Home', '#'], [c.name, href(courseToken(c))], [unitLabel(c, u), null]]) +
         '<h1 tabindex="-1">' + esc(unitLabel(c, u)) + '</h1><p class="band-meta">Course outline · Activities coming soon</p>';
       return { title: unitLabel(c, u) + ', ' + c.name,
-        html: bandHtml(c, heading) + '<section class="section"><div class="wrap">' + unitPager(c, u) +
+        html: bandHtml(c, heading, 'unit') + '<section class="section"><div class="wrap">' + unitPager(c, u) +
           '<h2>Topics in this unit</h2><ul class="unit-skills">' + outline.map(function (skill) {
             return '<li class="unit-skill">' + esc(skill) + '</li>';
           }).join('') + '</ul><div class="empty"><h2>Activities coming soon</h2>' +
@@ -875,7 +875,7 @@
         '<h1 tabindex="-1">' + esc(unitLabel(c, u)) + '</h1>' +
         '<p class="band-meta">' + skills.length + ' lessons · ' + esc(c.name) + ' curriculum</p>';
       return { title: unitLabel(c, u) + ', ' + c.name,
-        html: bandHtml(c, intro) + '<section class="section"><div class="wrap algebra-unit-layout">' +
+        html: bandHtml(c, intro, 'unit') + '<section class="section"><div class="wrap algebra-unit-layout">' +
           unitPager(c, u) + gradePracticeLinks(c, u) +
           unitPager(c, u) + '</div></section>' };
     }
@@ -893,7 +893,7 @@
       (menuGen ? '<div class="unit-generator"><a class="btn" href="' + esc(activityUrl(menuGen)) + '">Build an assessment</a><p>A standard test (multiple choice and short answer) or a choice menu. Choose skills and CP2, CP1 or Honors difficulty, then edit every problem before you print.</p></div>' : '');
     return {
       title: unitLabel(c, u) + ', ' + c.name,
-      html: bandHtml(c, inner) +
+      html: bandHtml(c, inner, 'unit') +
         '<section class="section"><div class="wrap">' + unitPager(c, u) +
         (items.length ? chipsHtml(items) + groupedCardsHtml(items, false)
                       : '<div class="empty"><h2>Coming soon</h2><p>No activities in this unit yet. <a href="' + href(courseToken(c)) + '">Back to ' + esc(c.name) + '</a></p></div>') +
