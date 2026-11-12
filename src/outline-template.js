@@ -54,7 +54,6 @@ export function mountOutline(course,{page='grade5.html'}={}){
   return '<li><div class="unit algebra-unit-card" data-color="purple" data-course="'+course.id+'">'+
    '<h3><a class="unit-title-link" href="'+href(u)+'"><span class="unit-num">Unit '+num(u)+'</span>'+esc(u.name)+'</a></h3>'+
    '<div class="unit-meta" data-lesson-list="true">'+skillsCompact(u)+'</div>'+
-   '<span class="unit-course-status">Question banks coming soon</span>'+
    '<a class="unit-open-link" href="'+href(u)+'">Open unit →</a></div></li>';
  }
  const actions=[
