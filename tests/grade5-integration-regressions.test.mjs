@@ -4,11 +4,8 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 const root = new URL('../', import.meta.url);
 const source = p => fs.readFileSync(new URL(p, root), 'utf8');
-test('generator student link preserves mode, selected skills, and student display flag', () => {
-  const c=source('worksheet-generator/grade5/generators.js');
-  assert.match(c, /url\.searchParams\.set\('mode', state\.mode\)/);
-  assert.match(c, /url\.searchParams\.set\('skills', JSON\.stringify\(state\.opts\.skills\)\)/);
-  assert.match(c, /STUDENT \? '&student=1'/);
+test('teacher generators do not offer student links', () => {
+  assert.doesNotMatch(source('worksheet-generator/grade5/generators.js'), /copyStudentLink|Copy student link/);
 });
 test('question metadata response is decoded before distractor lookup', () => {
   const c=source('worksheet-generator/grade5/generators.js');

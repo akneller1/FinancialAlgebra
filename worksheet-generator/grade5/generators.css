@@ -253,3 +253,8 @@ body.g5gen-teacher .g5q-key { outline: 2px dashed #12613e; }
   .g5sh, .g5sec > .g5sec-h { border-color: #16202e !important; }
   .g5q-key, .g5answer { background: #f5f6f7 !important; }
 }
+
+/* The group editor stacks at sidebar and phone widths. */
+.g5gen-group { min-width: 0; margin: .7rem 0; padding: .65rem; border: 2px solid var(--gen-line); border-radius: .75rem; }
+.g5gen-group legend { font-weight: 800; color: #22408a; padding: 0 .3rem; }
+.g5gen-group .g5gen-actions { gap: .3rem; }

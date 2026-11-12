@@ -85,10 +85,10 @@
       '<h3><a href="'+escape(a.path)+'">'+escape(a.title)+'</a></h3>'+
       '<p class="desc">'+escape(a.description||'')+'</p>'+
       '<div class="actions g5-card-actions"><a class="btn btn-open" href="'+escape(a.path)+'">Open resource →</a></div>'+
-      '<div class="g5-student-share">'+levelChoices+
+      (['Game','Study Guide'].indexOf(a.type)>=0 ? '<div class="g5-student-share">'+levelChoices+
       '<button type="button" class="g5-student-copy" data-g5-share="1" data-path="'+escape(a.path)+'"'+
       ' data-type="'+escape(a.type)+'" data-title="'+escape(a.title)+'">Copy student link</button>'+
-      '<span class="g5-student-status" role="status" aria-live="polite"></span></div>'+
+      '<span class="g5-student-status" role="status" aria-live="polite"></span></div>' : '')+
       '</div></li>';
   }
   function sectionHtml(u,group){

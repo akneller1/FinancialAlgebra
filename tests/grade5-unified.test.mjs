@@ -90,7 +90,7 @@ test('All return links stay inside the unified Grade 5 class',()=>{
   }
 });
 
-test('Open resource is a real anchor and each Grade 5 activity has a working student link control',()=>{
+test('Open resource is a real anchor and only games and study guides have student link controls',()=>{
  const {win}=runPage();
  const css=read('site-overrides.css');
  assert.ok(css.includes('.g5-resource-card h3 a::after{content:none!important'), 'Main card overlay must not block the action controls');
@@ -100,7 +100,7 @@ test('Open resource is a real anchor and each Grade 5 activity has a working stu
   const copyControls=[...page.matchAll(/<button type="button" class="g5-student-copy"[^>]*>Copy student link<\/button>/g)];
   const explicitThumbLinks=[...page.matchAll(/<a class="thumb g5-resource-image-link" href="([^"]+)"/g)];
   assert.equal(openLinks.length,u.artifacts.length,'Open resource links: '+u.id);
-  assert.equal(copyControls.length,u.artifacts.length,'Student share controls: '+u.id);
+  assert.equal(copyControls.length,u.artifacts.filter(a=>['Game','Study Guide'].includes(a.type)).length,'Student share controls: '+u.id);
   assert.equal(explicitThumbLinks.length,u.artifacts.length,'Clickable thumbnails: '+u.id);
   assert.ok(page.includes('<option value="cp1" selected>Standard</option>'),u.id+' has a level selector');
  }
@@ -154,8 +154,7 @@ test('Student interactive mode hides teacher-view button and excludes the teache
  assert.ok(tool.includes("if (!studentMode) {"));
  assert.ok(tool.includes("studentMode ? '' : '<button type="));
  assert.ok(tool.includes("if (studentMode) return;"));
- assert.ok(tool.includes('Copy student link'),'Teacher can copy links inside visual math tools');
- assert.ok(tool.includes("url.searchParams.set('student','1')"),'Visual math tool share button sets student mode');
+ assert.ok(!tool.includes('Copy student link'),'Student sharing is limited to games and study guides');
  const core=read('worksheet-generator/grade5/g5-core.js');
  assert.ok(core.includes('Copy student link'),'Games and study activities have an in-app student sharing button');
  assert.ok(core.includes("url.searchParams.set('student','1')"),'Games and checks share student view');

@@ -42,3 +42,7 @@ The reusable outline renderer is src/outline-template.js. The Financial Algebra 
 ## Validation
 
 Run npm test on Node.js 20+ (the GitHub workflow runs it and checks JavaScript syntax). Pages deploys from main at repository root.
+
+## Elementary generators
+
+Use the full Algebra 1 teacher engines for every new grade, as documented in [the elementary generator standard](docs/ELEMENTARY_GENERATORS.md). Grade 5 production routes all four teacher generators to the shared Classroom engines; the local Grade 5 generator remains a development fallback. Do not add student links to teacher generators.

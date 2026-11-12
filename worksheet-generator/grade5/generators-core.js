@@ -71,8 +71,36 @@
       sections: LESSON_SECTIONS.map(function (s) { return { id: s[0], count: s[2], on: s[3] }; })
     };
     var out = Object.assign(base, over || {});
+    if (over && over.groups) out.groups = questionGroups(over);
     out.sections = (over && over.sections ? over.sections : base.sections).map(function (s) { return Object.assign({}, s); });
     return out;
+  }
+
+  // Ordered question groups are the shared elementary printable contract.
+  function questionGroups(o) {
+    var input = Array.isArray(o.groups) && o.groups.length ? o.groups :
+      [{ format: o.format || 'mixed', response: o.response || 'mixed', count: o.count == null ? 12 : o.count }];
+    return input.slice(0, 12).map(function (g) {
+      return { format: Object.prototype.hasOwnProperty.call(FORMATS, g.format) ? g.format : 'mixed',
+        response: ['mixed', 'multiple-choice', 'short-answer', 'select-all', 'open-response'].indexOf(g.response) >= 0 ? g.response : 'mixed',
+        count: clamp(g.count, 1, 30) };
+    });
+  }
+  function groupCount(o) { return questionGroups(o).reduce(function (n, g) { return n + g.count; }, 0); }
+  function groupedQuestions(unit, o, seed, used, warnings) {
+    var groups = questionGroups(o), chosen = [], candidates = groups.map(function (g) {
+      return formatPool(unit, Object.assign({}, o, g)).filter(function (q) { return !used[q.id]; });
+    });
+    // Reserve restricted pools first; a mixed group must not consume all diagrams.
+    groups.map(function (g, i) { return i; }).sort(function (a, b) {
+      return candidates[a].length - candidates[b].length || a - b;
+    }).forEach(function (i) {
+      var g = groups[i];
+      chosen[i] = take(candidates[i], g.count, used, seed + '|group|' + i);
+      if (chosen[i].length < g.count) warnings.push('Group ' + (i + 1) + ' (' + FORMATS[g.format] + '): ' +
+        chosen[i].length + ' of ' + g.count + ' distinct matching questions available. Choose more skills or change the group.');
+    });
+    return chosen.map(function (items, i) { return { group: groups[i], items: items }; });
   }
 
   function selectedSkills(unit, o) {
@@ -177,8 +205,16 @@
       } else if (sec.id === 'differentiation') {
         blocks = [{ kind: 'differentiation', support: clone(content.support || []), extend: clone(content.extend || []) }];
       }
+      if (sec.groups && sec.groups.length && ['warmup', 'guided', 'practice', 'challenge', 'exit'].indexOf(sec.id) >= 0) {
+        // Undo the legacy draw before applying this section's explicit groups.
+        blocks.forEach(function (b) { delete used[b.q.id]; });
+        blocks = groupedQuestions(unit, Object.assign({}, o, { groups: sec.groups }), seed + sec.id, used, warnings)
+          .reduce(function (a, g) { return a.concat(g.items.map(function (q) {
+            return Object.assign(blockQuestion(q), { group: clone(g.group) });
+          })); }, []);
+      }
       if (blocks.length) sections.push({ id: sec.id, title: (LESSON_SECTIONS.filter(function (x) { return x[0] === sec.id; })[0] || [sec.id, sec.id])[1], blocks: blocks });
-      if (['warmup', 'teach', 'guided', 'practice', 'challenge', 'exit'].indexOf(sec.id) >= 0 && blocks.length < sec.count) {
+      if (['warmup', 'teach', 'guided', 'practice', 'challenge', 'exit'].indexOf(sec.id) >= 0 && !sec.groups && blocks.length < sec.count) {
         warnings.push('Only ' + blocks.length + ' matching questions were available for ' + sec.id + ' (requested ' + sec.count + ').');
       }
     });
@@ -191,14 +227,17 @@
 
   /* ---------------- Worksheet and assessment ---------------- */
   function buildPaper(unit, o, mode, seed) {
-    var list = formatPool(unit, o), items = pickQuestions(list, o.count, seed), warnings = [];
-    if (items.length < o.count) warnings.push(items.length + ' distinct matching questions were available; you requested ' + o.count + '. Choose more skills or a different format.');
-    if (!items.length) warnings.push('No questions match these choices. Select another skill, level or format.');
-    var points = mode === 'assessment' ? allocatePoints(items, o.total) : [];
+    var warnings = [], groups = groupedQuestions(unit, o, seed, {}, warnings);
+    var items = groups.reduce(function (a, g) { return a.concat(g.items); }, []);
+    var points = mode === 'assessment' ? allocatePoints(items, o.total) : [], n = 0;
     return {
       mode: mode, unit: unit, options: clone(o), warnings: warnings,
-      sections: [{ id: 'questions', title: mode === 'assessment' ? 'Assessment questions' : 'Practice questions',
-        blocks: items.map(function (q, i) { return { kind: 'question', q: clone(q), points: points[i] }; }) }]
+      sections: groups.map(function (g, i) {
+        return { id: 'questions-' + i, title: groups.length === 1 ?
+          (mode === 'assessment' ? 'Assessment questions' : 'Practice questions') :
+          'Group ' + (i + 1) + ' · ' + FORMATS[g.group.format],
+          blocks: g.items.map(function (q) { return { kind: 'question', q: clone(q), group: clone(g.group), points: points[n++] }; }) };
+      })
     };
   }
 
@@ -337,6 +376,7 @@
     version: 1, LEVELS: LEVELS, FORMATS: FORMATS, ACTIVITIES: ACTIVITIES, LESSON_SECTIONS: LESSON_SECTIONS,
     rng: rng, shuffle: shuffle, options: options, clamp: clamp, plain: plain, norm: norm, unique: unique,
     answerText: answerText, levelName: levelName, selectedSkills: selectedSkills, pool: pool, formatPool: formatPool,
+    questionGroups: questionGroups, groupCount: groupCount, groupedQuestions: groupedQuestions,
     pickQuestions: pickQuestions, allocatePoints: allocatePoints, wrongAnswers: wrongAnswers,
     buildLesson: buildLesson, buildPaper: buildPaper, buildActivity: buildActivity, build: build
   };

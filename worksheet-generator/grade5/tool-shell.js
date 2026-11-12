@@ -17,21 +17,6 @@
     $('tsFit').onclick = function () { var m = G.document.querySelector('main.g5'); setZoom(1); setZoom(Math.max(0.7, Math.min(1.8, G.innerHeight / (m.scrollHeight + top.offsetHeight + 16)))); };
     $('tsPresent').onclick = function () { var on = G.document.body.classList.toggle('present'); this.setAttribute('aria-pressed', on); };
     $('tsReset').onclick = function () { if (o.reset) o.reset(); };
-    if (!studentMode) {
-      var share = G.document.createElement('button');
-      share.type = 'button'; share.id = 'tsShare'; share.textContent = 'Copy student link';
-      share.setAttribute('aria-label','Copy a student-view link for this interactive math tool');
-      top.querySelector('.g5-tools').appendChild(share);
-      share.onclick = function () {
-        var url = new URL(G.location.href);
-        url.searchParams.set('student','1');
-        url.searchParams.delete('mode'); url.searchParams.delete('present');
-        function manual() { if (G.prompt) G.prompt('Copy student link:',url.href); else share.textContent='Copy from address bar'; }
-        if (G.navigator && G.navigator.clipboard && G.navigator.clipboard.writeText) {
-          G.navigator.clipboard.writeText(url.href).then(function () { share.textContent='Copied!'; }).catch(manual);
-        } else manual();
-      };
-    }
     if (new URLSearchParams(G.location.search).get('present') === '1') $('tsPresent').click();
     /* Student view (default): the tool, challenges and the closed "notice" panel. Teacher view adds teaching notes,
        opens the "notice" panel and links the printable worksheet and teacher key. Nothing is saved. */

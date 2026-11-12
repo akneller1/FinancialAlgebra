@@ -132,7 +132,7 @@
   /* ---------------- Worksheet / assessment ---------------- */
   function paperHTML(plan, teacher) {
     var o = plan.options, u = plan.unit, assessment = plan.mode === 'assessment';
-    var blocks = plan.sections[0].blocks;
+    var blocks = plan.sections.reduce(function (a, sec) { return a.concat(sec.blocks); }, []), qn = 0;
     var total = blocks.reduce(function (a, b) { return a + (b.points || 0); }, 0);
     var title = o.title.trim() || ((assessment ? 'Assessment' : 'Practice Worksheet') + ' · ' + u.name);
     var instr = assessment
@@ -140,12 +140,13 @@
       : 'Show your work. Circle the letter of each correct choice, or write your answer on the line.';
     var h = '<section class="pl-sheet">' + sheetHead(plan, teacher, title,
       instr + (assessment && o.showPoints ? '\nTotal: ' + total + ' points' : ''));
-    h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">' + esc(plan.sections[0].title) + (assessment ? ' <small>· ' + blocks.length + ' questions · ' + total + ' points</small>' : ' <small>· ' + blocks.length + ' questions</small>') + '</div>';
-    blocks.forEach(function (b, i) {
-      var q = cloneQ(b.q);
-      h += questionHTML(q, i + 1, { space: o.space, points: assessment && o.showPoints ? b.points : null }, teacher);
+    plan.sections.forEach(function (sec) {
+      h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">' + esc(sec.title) + ' <small>· ' + sec.blocks.length + ' questions</small></div>';
+      sec.blocks.forEach(function (b) {
+        h += questionHTML(b.q, ++qn, { space: o.space, points: assessment && o.showPoints ? b.points : null }, teacher);
+      });
+      h += '</section>';
     });
-    h += '</section>';
     if (teacher) {
       h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">Scoring guide</div><table class="g5rubric"><thead><tr><th>Question</th><th>Answer</th><th>Points</th></tr></thead><tbody>' +
         blocks.map(function (b, i) { return '<tr><td>' + (i + 1) + '</td><td>' + rich(answerOf(b.q)) + '</td><td>' + (assessment && o.showPoints ? b.points : '—') + '</td></tr>'; }).join('') +

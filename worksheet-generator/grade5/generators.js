@@ -20,7 +20,7 @@
       G.localStorage.setItem('g5-generator-options-v1', JSON.stringify({
         level: state.opts.level, notes: state.opts.notes, worked: state.opts.worked, space: state.opts.space,
         theme: state.opts.theme, showName: state.opts.showName, showStandards: state.opts.showStandards,
-        sections: state.opts.sections, duration: state.opts.duration
+        sections: state.opts.sections, duration: state.opts.duration, groups: state.opts.groups
       }));
     } catch (e) {}
   }
@@ -33,6 +33,37 @@
   }
   function numeric(id, value, min, max) { return '<input id="' + id + '" type="number" min="' + min + '" max="' + max + '" step="1" value="' + value + '">'; }
   function check(id, label, on) { return '<label class="g5gen-check"><input type="checkbox" id="' + id + '"' + (on ? ' checked' : '') + '><span>' + label + '</span></label>'; }
+  function groupControls(scope, opts) {
+    var groups = C.questionGroups(opts);
+    return '<div class="g5gen-groups" data-group-scope="' + scope + '"><p class="g5gen-hint">Add question types in the order you want them to appear.</p>' +
+      groups.map(function (g, i) {
+        var prefix = 'group-' + scope + '-' + i;
+        return '<fieldset class="g5gen-group"><legend>Group ' + (i + 1) + '</legend>' +
+          field(prefix + '-format', 'Question type', select(prefix + '-format', Object.keys(C.FORMATS).map(function (k) { return [k, C.FORMATS[k]]; }), g.format)) +
+          field(prefix + '-count', 'Questions', numeric(prefix + '-count', g.count, 1, 30)) +
+          '<div class="g5gen-actions">' + [-1, 1].map(function (dir) {
+            return '<button class="g5gen-btn sm ghost" type="button" data-group-action="move" data-scope="' + scope + '" data-index="' + i + '" data-dir="' + dir + '"' +
+              ((dir === -1 && i === 0 || dir === 1 && i === groups.length - 1) ? ' disabled' : '') + ' aria-label="Move group ' + (i + 1) + (dir === -1 ? ' up' : ' down') + '">' + (dir === -1 ? '↑' : '↓') + '</button>';
+          }).join('') + '<button type="button" class="g5gen-btn sm ghost" data-group-action="remove" data-scope="' + scope + '" data-index="' + i + '"' + (groups.length === 1 ? ' disabled' : '') + '>Remove group</button></div></fieldset>';
+      }).join('') + '<button type="button" class="g5gen-btn sm" data-group-action="add" data-scope="' + scope + '"' + (groups.length >= 12 ? ' disabled' : '') + '>+ Add question group</button>' +
+      '<p class="g5gen-hint" data-group-total="' + scope + '">Total: ' + C.groupCount(opts) + ' questions</p></div>';
+  }
+  function groupOptions(scope) {
+    return scope === 'paper' ? state.opts : state.opts.sections.find(function (s) { return s.id === scope; });
+  }
+  function syncGroups() {
+    doc.querySelectorAll('[data-group-scope]').forEach(function (host) {
+      var scope = host.dataset.groupScope, o = groupOptions(scope);
+      o.groups = Array.prototype.map.call(host.querySelectorAll('fieldset'), function (row, i) {
+        var prefix = 'group-' + scope + '-' + i;
+        var count = $(prefix + '-count');
+        return { format: $(prefix + '-format').value, response: 'mixed', count: C.clamp(count.value, 1, 30) };
+      });
+      o.count = C.groupCount(o);
+      host.querySelector('[data-group-total]').textContent = 'Total: ' + o.count + ' questions';
+    });
+  }
+
   function unitInfo(id) {
     var c = state.course, u = c.units.filter(function (x) { return x.id === id; })[0];
     return { unit: u, number: c.units.indexOf(u) + 1 };
@@ -70,9 +101,7 @@
         '<p class="g5gen-hint">' + esc((C.ACTIVITIES[o.activity] || C.ACTIVITIES.maze).blurb) + '</p>';
     } else {
       h += field('paperTitle', 'Handout title', '<input type="text" id="paperTitle" value="' + esc(o.title) + '" placeholder="Use the unit title">') +
-        field('activityFormat', 'Content', select('activityFormat', Object.keys(C.FORMATS).map(function (k) { return [k, C.FORMATS[k]]; }), o.format)) +
-        field('response', 'Question format', select('response', [['mixed', 'Mixed formats'], ['multiple-choice', 'Multiple choice'], ['short-answer', 'Short answer'], ['select-all', 'Select all'], ['open-response', 'Open response']], o.response)) +
-        field('count', 'Questions', numeric('count', o.count, 1, 30));
+        groupControls('paper', o);
       if (state.mode === 'assessment') {
         h += field('total', 'Total points', numeric('total', o.total, 10, 200)) + check('showPoints', 'Show point values', o.showPoints) +
           field('timeLimit', 'Time limit (minutes, optional)', '<input type="text" id="timeLimit" inputmode="numeric" value="' + esc(o.timeLimit) + '" placeholder="e.g. 40">');
@@ -91,7 +120,9 @@
           return '<div class="g5gen-section"><div class="g5gen-section-head"><label class="g5gen-check"><input type="checkbox" data-section="' + s.id + '"' + (s.on ? ' checked' : '') + '><span>' + esc(meta[1]) + '</span></label>' +
             '<button type="button" class="g5gen-btn sm ghost" data-move="' + i + '" data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Move ' + esc(meta[1]) + ' up">↑</button>' +
             '<button type="button" class="g5gen-btn sm ghost" data-move="' + i + '" data-dir="1"' + (i === o.sections.length - 1 ? ' disabled' : '') + ' aria-label="Move ' + esc(meta[1]) + ' down">↓</button></div>' +
-            (['warmup', 'teach', 'guided', 'practice', 'challenge', 'exit'].indexOf(s.id) >= 0 ? '<label class="g5gen-hint">Problems <input class="g5gen-section-count" type="number" min="0" max="20" data-section-count="' + s.id + '" value="' + s.count + '"></label>' : '') + '</div>';
+            (['warmup', 'guided', 'practice', 'challenge', 'exit'].indexOf(s.id) >= 0 ? groupControls(s.id, s) :
+              s.id === 'teach' ? '<label class="g5gen-hint">Examples <input class="g5gen-section-count" type="number" min="0" max="20" data-section-count="' + s.id + '" value="' + s.count + '"></label>' : '') + '</div>';
+
         }).join('') + '</div>';
     }
     h += '<div class="g5gen-card g5gen-editor" id="questionEditor"><h2>Review questions</h2><p class="g5gen-hint">Generate a handout to review, replace or edit its questions.</p></div>';
@@ -117,6 +148,7 @@
     // Error Analysis is a flexible written-response activity, not a six-piece puzzle.
     // Respect teacher-selected counts from 1 upward; preserve puzzle minimums elsewhere.
     if (state.mode === 'activity' && o.activity !== 'error' && o.count < 6) o.count = 6;
+    syncGroups();
     savePrefs();
   }
 
@@ -147,8 +179,7 @@
       (STUDENT ? '' : '<button type="button" class="g5gen-btn sm ghost" data-audience="teacher" aria-pressed="' + teacher + '">Teacher key</button>') + '</div>' +
       '<label class="g5gen-zoom">Zoom ' + select('zoom', [[65, '65%'], [80, '80%'], [100, '100%'], [125, '125%']], state.zoom) + '</label>' +
       '<button class="g5gen-btn" type="button" data-print="student">Print student</button>' +
-      (STUDENT ? '' : '<button class="g5gen-btn ghost" type="button" data-print="teacher">Print key</button>' +
-      '<button class="g5gen-btn ghost sm" type="button" id="copyStudentLink">Copy student link</button>') + '</div>';
+      (STUDENT ? '' : '<button class="g5gen-btn ghost" type="button" data-print="teacher">Print key</button>') + '</div>';
   }
 
   function makePages(teacher) {
@@ -231,21 +262,20 @@
     });
   }
 
-  function copyStudentLink() {
-    var url = new URL(G.location.href);
-    url.searchParams.set('student', '1'); url.searchParams.set('level', state.opts.level);
-    url.searchParams.set('mode', state.mode);
-    if (state.mode === 'activity') url.searchParams.set('kind', state.opts.activity);
-    url.searchParams.set('skills', JSON.stringify(state.opts.skills));
-    url.searchParams.set('version', state.opts.version);
-    function manual() { if (G.prompt) G.prompt('Copy student link:', url.href); }
-    if (G.navigator && G.navigator.clipboard && G.navigator.clipboard.writeText) {
-      G.navigator.clipboard.writeText(url.href).then(function () { $('notice').textContent = 'Student link copied.'; }).catch(manual);
-    } else manual();
-  }
-
   function handleClick(e) {
     var t = e.target.closest('button'); if (!t) return;
+    if (t.dataset.groupAction) {
+      syncOptions();
+      var targetOptions = groupOptions(t.dataset.scope), gs = C.questionGroups(targetOptions), index = +t.dataset.index;
+      if (t.dataset.groupAction === 'add' && gs.length < 12) gs.push({ format: 'mixed', response: 'mixed', count: 3 });
+      if (t.dataset.groupAction === 'remove' && gs.length > 1) gs.splice(index, 1);
+      if (t.dataset.groupAction === 'move') {
+        var next = index + (+t.dataset.dir);
+        if (next >= 0 && next < gs.length) { var moved = gs[index]; gs[index] = gs[next]; gs[next] = moved; }
+      }
+      targetOptions.groups = gs; targetOptions.count = C.groupCount(targetOptions);
+      savePrefs(); renderControls(); return;
+    }
     if (t.dataset.mode) {
       syncOptions();
       state.mode = MODES[t.dataset.mode] ? t.dataset.mode : 'lesson';
@@ -263,11 +293,10 @@
     }
     if (t.dataset.audience) { state.audience = t.dataset.audience; showPreview(); return; }
     if (t.dataset.print) { printHandout(t.dataset.print); return; }
-    if (t.id === 'copyStudentLink') { copyStudentLink(); return; }
     if (t.dataset.replace !== undefined) {
       var list = blocks(), block = list[+t.dataset.replace], used = {};
       list.forEach(function (b) { used[b.q.id] = true; });
-      var pool = state.unit.questions.filter(function (q) { return state.opts.skills.indexOf(q.skillId) >= 0 && q.format === block.q.format && !used[q.id]; });
+      var pool = C.formatPool(state.unit, Object.assign({}, state.plan.options, block.group || {}, { response: block.q.format })).filter(function (q) { return !used[q.id]; });
       var q = C.pickQuestions(pool, 1, 'replace' + Date.now())[0];
       if (q) { block.q = q; showPreview(); }
       else { $('notice').className = 'g5gen-notice warn'; $('notice').textContent = 'No other question matches this skill and format.'; }
@@ -286,6 +315,7 @@
 
   function handleInput(e) {
     var t = e.target, list = blocks();
+    if (t.closest('[data-group-scope]')) { syncGroups(); savePrefs(); return; }
     if (t.dataset.edit !== undefined) list[+t.dataset.edit].q.prompt = t.value;
     else if (t.dataset.answer !== undefined) {
       var q = list[+t.dataset.answer].q;
@@ -343,7 +373,7 @@
           level: P.get('level') || pref.level || 'cp1', version: P.get('version') || undefined,
           notes: pref.notes, worked: pref.worked, space: pref.space, theme: pref.theme,
           showName: pref.showName, showStandards: pref.showStandards, sections: pref.sections,
-          duration: pref.duration, activity: P.get('kind') || 'maze'
+          duration: pref.duration, groups: pref.groups, activity: P.get('kind') || 'maze'
         };
         Object.keys(overrides).forEach(function (k) { if (overrides[k] === undefined) delete overrides[k]; });
         state.opts = C.options(overrides);
