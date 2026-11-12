@@ -73,4 +73,35 @@ assert.ok(units.every(u => themes['math5/' + u]), 'escape themes');
 for (const f of ['grade5-games.html', 'grade5-flashcards.html', 'grade5-understanding-check.html', 'grade5/g5-core.js', 'grade5/g5-games.js', 'grade5/flashcards.js', 'grade5/understanding-check.js', 'grade5/g5.css'])
   assert.ok(exists('worksheet-generator/' + f), 'missing ' + f);
 for (const f of ['grade5/g5-core.js', 'grade5/g5-games.js', 'grade5/flashcards.js', 'grade5/understanding-check.js', 'grade5/tool-shell.js']) new vm.Script(read('worksheet-generator/' + f), { filename: f });
-console.log(`PASS math5: 11 units, ${total} questions (${byLevel.cp2} per level), ${diagrams} diagrams, flashcards, cheat sheets, games, Understanding Checks, projects and links`);
+
+// Verify all local assets referenced by seven interactive tool entry pages.
+const models=['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
+  'measurement-converter','place-value-builder','volume-builder'];
+for(const slug of models){
+  const base='math5-'+slug;
+  const html=read(base+'/index.html');
+  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
+    const raw=match[1].split(/[?#]/)[0];
+    if(!raw.startsWith('../'))continue;
+    const local=path.posix.normalize(base+'/'+raw);
+    assert.ok(!local.startsWith('..')&&exists(local),base+': missing local script or style '+raw);
+  }
+}
+assert.ok(exists('grade5-resources.html')&&exists('grade5-resource-catalog.js'),'Grade 5 resource hub missing');
+
+// Run the real browser-facing approved-bank loader against all 11 published banks.
+// A successful file inventory alone cannot prove the runtime adapter accepts a bank.
+win.fetch=async function(url){
+  const local=String(url).replace(/^\.\.\//,'').split(/[?#]/)[0];
+  return {ok:exists(local),json:async function(){return JSON.parse(read(local));}};
+};
+for(const mod of ['question-bank-adapter.js','question-bank-loader.js'])
+  vm.runInNewContext(read(mod),win,{filename:mod});
+Promise.all(units.map(u=>win.MK_BANK_LOADER.loadUnitFromSite('math5',u,null,'../'))).then(function(results){
+  assert.equal(results.length,11);
+  for(const u of units){
+    assert.ok(win.MK_QUESTION_BANKS.available('math5',u),u+': adapter could not load approved questions');
+  }
+  console.log(`PASS math5: 11 approved units, ${total} questions (${byLevel.cp2} per level), ${diagrams} diagrams, 7 models, games, checks, projects, correct URLs and runtime bank loading`);
+}).catch(function(e){console.error(e);process.exitCode=1;});
+
