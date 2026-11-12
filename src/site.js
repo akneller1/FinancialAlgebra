@@ -63,7 +63,7 @@ function shortcutBanner(unit){
 function resourceCard(title,path,description,unit){
  const href=esc(resourceHref(path));
  const thumbnail=esc(resourceThumbnail(path,unit.id));
- const studentLink=/financial\\/(games|decision-lab|flashcards|practice)\\//.test(path)&&!/[?&]teacher=1/.test(path);
+ const studentLink=/financial\/(games|decision-lab|flashcards|practice)\//.test(path)&&!/[?&]teacher=1/.test(path);
  return '<li class="finance-resource-item"><article class="finance-resource-card" data-course="'+esc(courseId)+'" data-color="purple">'+
   '<a class="finance-resource-image-link" href="'+href+'" aria-label="Open '+esc(title)+'"><img class="finance-resource-thumb" src="'+thumbnail+'" width="720" height="450" alt="" loading="lazy" decoding="async"></a>'+
   '<div class="finance-resource-body"><h3><a class="finance-resource-title" href="'+href+'">'+esc(title)+'</a></h3>'+
