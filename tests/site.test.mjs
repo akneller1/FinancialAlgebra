@@ -29,7 +29,16 @@ test('Financial Algebra connects the complete resource library with the Classroo
 });
 test('All Grades 1–5 have their own SVG icons and nav references',()=>{
  const renderer=read('src/outline-template.js');
- const navPages=['index.html',...Array.from({length:5},(_,i)=>'grade'+(i+1)+'.html')];
+ // Grades 1–4 remain development outlines: their own pages retain the
+ // icon navigation, while the Financial Algebra and finished Grade 5
+ // navigation deliberately does not advertise unfinished courses.
+ const navPages=Array.from({length:4},(_,i)=>'grade'+(i+1)+'.html');
+ assert.ok(read('index.html').includes('href="grade5.html"'));
+ for(const page of ['index.html','grade5.html']){
+  for(let n=1;n<=4;n++){
+   assert.ok(!read(page).includes('href="grade'+n+'.html"'),page+' publicly advertises unfinished Grade '+n);
+  }
+ }
  const iconContents=[];
  for(let n=1;n<=5;n++){
   const iconPath='assets/course-icons/grade'+n+'.svg';
