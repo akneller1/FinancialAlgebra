@@ -81,8 +81,8 @@ test('All return links stay inside the unified Grade 5 class',()=>{
   const shell=read('worksheet-generator/grade5/tool-shell.js');
   const gameChrome=read('worksheet-generator/grade5/g5-core.js');
   assert.ok(shell.includes('../grade5.html'));
-  assert.ok(gameChrome.includes('../grade5.html#math5'));
-  assert.equal(gameChrome.includes('../index.html#math5'),false);
+  assert.ok(gameChrome.includes("home.href = 'https://mrksclassroom.com/'"), 'Grade 5 game header should return to public Classroom homepage');
+  assert.equal(gameChrome.includes("home.href = '../grade5.html"),false,'Removed Grade 5 alias must not be the game homepage');
   for(const slug of Object.values(runPage().win.MK_GRADE5_RESOURCES.projects)){
     const p=read('math5-project-'+slug+'/index.html');
     assert.ok(p.includes('href="../grade5.html#math5.'),slug+' return to unit');
@@ -160,7 +160,7 @@ test('Student interactive mode hides teacher-view button and excludes the teache
  assert.ok(core.includes('Copy student link'),'Games and study activities have an in-app student sharing button');
  assert.ok(core.includes("url.searchParams.set('student','1')"),'Games and checks share student view');
  for(const page of ['grade5-games.html','grade5-flashcards.html','grade5-understanding-check.html']){
-   assert.ok(read('worksheet-generator/'+page).includes('g5-core.js?v=student-share-20261112'),page+' needs updated activity chrome');
+   assert.ok(read('worksheet-generator/'+page).includes('g5-core.js?v=grade5-home-link-20261112'),page+' needs updated activity chrome');
  }
  for(const slug of ['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
    'measurement-converter','place-value-builder','volume-builder']){

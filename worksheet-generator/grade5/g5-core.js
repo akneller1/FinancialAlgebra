@@ -232,7 +232,7 @@
     var student = P.get('student') === '1';
     var head = el('header', D.body.firstChild ? null : D.body, 'g5-top');
     D.body.insertBefore(head, D.body.firstChild);
-    if (!student) { var home = el('a', head, 'g5-home', '← Mr. K’s Classroom'); home.href = '../grade5.html#math5' + (P.get('unit') ? '.' + P.get('unit') : ''); }
+    if (!student) { var home = el('a', head, 'g5-home', '← Mr. K’s Classroom'); home.href = 'https://mrksclassroom.com/'; }
     var t = el('div', head, 'g5-title'); el('strong', t, null, title); if (sub) el('span', t, null, sub);
     var z = el('div', head, 'g5-zoom'); z.setAttribute('role', 'group'); z.setAttribute('aria-label', 'Display size');
     var level = 1;

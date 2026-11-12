@@ -102,7 +102,7 @@ function pager(unit){
 function courseView(){
  const term=search.value.trim().toLocaleLowerCase();
  const shown=course.units.filter(unit=>!term||(unit.name+' '+unit.skills.join(' ')).toLocaleLowerCase().includes(term));
- const lead=crumbs([['Home','#'],[course.name,null]])+
+ const lead=crumbs([['Home','https://mrksclassroom.com/'],[course.name,null]])+
  '<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
  '<p class="band-blurb">Apply algebra to income, budgeting, banking, borrowing, investing, and everyday financial choices.</p>'+
  '<p class="band-meta">'+course.units.length+' units · 40 skills · one course level: Standard</p>';
@@ -114,7 +114,7 @@ function courseView(){
  '</div></section>';
 }
 function unitView(unit){
- const lead=crumbs([['Home','#'],[course.name,'#'],[titleFor(unit),null]])+
+ const lead=crumbs([['Home','https://mrksclassroom.com/'],[course.name,'#'],[titleFor(unit),null]])+
  '<h1 tabindex="-1">'+esc(titleFor(unit))+'</h1>'+
  '<p class="band-meta">Standard · financial concepts · real-life decisions</p>';
  const body=pager(unit)+shortcutBanner(unit)+

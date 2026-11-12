@@ -12,6 +12,7 @@ test('Financial Algebra connects the complete resource library with the Classroo
   assert.ok(css.includes(className),'Original style missing '+className);
  }
  assert.ok(site.includes('resourcesFor(unit)'));
+ assert.equal((site.match(/\['Home','https:\/\/mrksclassroom\.com\/'\]/g)||[]).length,2,'Financial Algebra Home breadcrumbs must open the Classroom homepage');
  assert.ok(site.includes('resourceSections(unit)'));
  assert.ok(site.includes('financial/resources.json'));
  assert.equal(site.includes('aria-disabled="true"'),false);
