@@ -207,7 +207,7 @@
     if (teacher) {
       h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">Answer key</div><table class="g5pairs"><thead><tr><th>Problem</th><th>Answer</th><th>Letter</th></tr></thead><tbody>' +
         items.map(function (q, i) {
-          var letter = shuffled.map(function (x) { return x.a; }).indexOf(answers[i]);
+          var letter = shuffled.map(function (x) { return Core.norm(x.a); }).indexOf(Core.norm(answerOf(q)));
           return '<tr><td>' + (i + 1) + '</td><td>' + rich(answerOf(q)) + '</td><td>' + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[letter] + '</td></tr>';
         }).join('') + '</tbody></table>' + items.map(function (q) { return '<p class="g5sh-note"><b>' + (items.indexOf(q) + 1) + '.</b> ' + (q.solutionSteps || []).map(rich).join(' ') + '</p>'; }).join('') + '</section>';
     }
@@ -221,7 +221,7 @@
       activityIntro(plan) + '\nDirections: Move through the four stations with your group. Show your work and record each answer on the recording sheet.');
     stations.forEach(function (s) {
       h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">Station ' + s.n + ' <small>· ' + s.items.length + ' problems</small></div><div class="g5station">' +
-        s.items.map(function (q, i) { return '<div class="g5q"><div class="g5q-head"><span class="g5q-n">' + 'abc'[i] + '.</span><div class="g5q-body"><p class="g5q-prompt">' + rich(q.prompt) + '</p>' +
+        s.items.map(function (q, i) { return '<div class="g5q"><div class="g5q-head"><span class="g5q-n">' + 'abcdefghijklmnopqrstuvwxyz'[i] + '.</span><div class="g5q-body"><p class="g5q-prompt">' + rich(q.prompt) + '</p>' +
           (q.diagram && q.diagram.spec ? '<img class="g5q-fig" src="../' + esc(q.diagram.spec.src) + '" alt="' + esc(q.diagram.spec.alt || '') + '">' : '') +
           optionList(q, teacher) + (teacher ? '<div class="g5q-key"><b>Answer:</b> ' + rich(answerOf(q)) + '</div>' : workLines(plan.options)) + '</div></div></div>'; }).join('') +
         '</div></section>';
