@@ -1,8 +1,8 @@
 import {course,getUnit} from './course.js';
-import {resourceThumbnail,resourceHref} from '../financial/lib/resource-previews.mjs?v=distinct-2';
+import {resourceThumbnail,resourceHref} from '../financial/lib/resource-previews.mjs?v=fa-games-1';
 
 // Unit resources share one manifest with the library hub and content validation.
-const response=await fetch(new URL('../financial/resources.json?v=distinct-2',import.meta.url));
+const response=await fetch(new URL('../financial/resources.json?v=fa-games-1',import.meta.url));
 if(!response.ok) throw new Error('Unable to load Financial Algebra resources');
 const library=await response.json();
 const resourcesFor=unit=>library.units.find(record=>record.unitId===unit.id).resources;
@@ -44,7 +44,7 @@ function unitCard(unit,index){
  return '<li><div class="unit algebra-unit-card" data-color="purple" data-course="'+courseId+'">'+
  '<h3><a class="unit-title-link" href="'+linkFor(unit)+'"><span class="unit-num">Unit '+(index+1)+'</span>'+esc(unit.name)+'</a></h3>'+
  '<div class="unit-meta" data-lesson-list="true">'+skillList(unit)+'</div>'+
- '<span class="unit-course-status">Generators · Decision Lab · Study Guides · Projects</span>'+
+ '<span class="unit-course-status">Generators · Games · Decision Lab · Study Guides · Projects</span>'+
  '<a class="unit-open-link" href="'+linkFor(unit)+'">Open unit →</a></div></li>';
 }
 const shortcuts=[
@@ -69,6 +69,8 @@ function resourceSections(unit){
  resourceCard('Lesson Plan',r.lessonPlan,'Build notes, examples, practice and an exit ticket.',unit)+
  resourceCard('Worksheet',r.worksheet,'Choose skills and create practice with an answer key.',unit)+
  resourceCard('Assessment',r.assessment,'Create a unit assessment with worked solutions.',unit)+'</ul></section>'+
+ '<section class="algebra-unit-section" id="games"><h2>Games</h2><p>Play with financial vocabulary, concepts, calculations, and real-life choices. Standard level.</p><ul class="finance-resource-grid">'+
+ r.games.map(g=>resourceCard(g.title,g.path,g.description,unit)).join('')+'</ul></section>'+
  '<section class="algebra-unit-section"><h2>Decision Lab</h2><p>Compare real-life choices, explore assumptions, and explain your decision.</p><ul class="finance-resource-grid">'+
  resourceCard(r.decisionLab.title,r.decisionLab.path,'A guided seven-step investigation with a printable summary.',unit)+
  resourceCard('Teacher guide',r.decisionLab.teacherPath,'Teaching prompts, model reasoning, and discussion guidance.',unit)+'</ul></section>'+
@@ -98,7 +100,7 @@ function courseView(){
  '<p class="band-meta">'+course.units.length+' units · 40 skills · one course level: Standard</p>';
  return band(lead,true)+'<section class="section"><div class="wrap">'+
  '<h2 class="course-units-title">Browse by unit</h2>'+
- '<p class="course-units-status">Explore lesson plans, worksheets, assessments, Decision Labs, study guides, and projects. All scenarios use fictional financial information and illustrative rates.</p>'+
+ '<p class="course-units-status">Explore lesson plans, worksheets, assessments, games, Decision Labs, study guides, and projects. All scenarios use fictional financial information and illustrative rates.</p>'+
  (shown.length?'<ul class="units">'+shown.map(unit=>unitCard(unit,course.units.indexOf(unit))).join('')+'</ul>':
  '<div class="empty"><h2>No matching units</h2><p>Try another financial topic.</p></div>')+
  '</div></section>';
@@ -130,3 +132,4 @@ document.getElementById('searchForm').addEventListener('submit',event=>{event.pr
 search.addEventListener('input',()=>{if(!currentUnit())render();});
 window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0);});
 render();
+

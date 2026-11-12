@@ -1,0 +1,206 @@
+{
+  "unit": "foundations-algebra",
+  "eyebrow": "Case file No. 1",
+  "title": "The Midnight Library Mystery",
+  "tagline": "A priceless atlas vanished during Family Game Night. Solve each problem to earn a clue.",
+  "palette": {
+    "navy": "#1f2a4d",
+    "accent": "#f2c14e"
+  },
+  "labels": {
+    "p": "The Suspects",
+    "l": "The Places",
+    "m": "The Methods"
+  },
+  "placeholder": "Your answer",
+  "inputHint": "Type a number like -4, or an expression like 3x+5. Use ^ for exponents, like x^2.",
+  "symbols": [
+    "^",
+    "|"
+  ],
+  "intro": [
+    "It was Family Game Night at the Westbrook Public Library when the lights flickered. When they came back on, the glass case in the lobby was empty: <b>The Map of Everything</b>, a 200-year-old atlas, was gone!",
+    "Six people were in the building, each seen in a different room, and there are six sneaky ways to smuggle out a giant book. You are the lead detective. Find out <b>who</b> took it, <b>where</b> they were, and <b>how</b> they got it away."
+  ],
+  "rules": [
+    "Solve each problem correctly to unlock a clue. A wrong answer just means try again; hints appear if you get stuck.",
+    "Every clue rules out something on the case board: a suspect and the place they were seen, or a method.",
+    "The thief acted alone in a spot nobody else was in, so anyone with an alibi is cleared, and so is the place they were seen.",
+    "After all 10 clues, exactly one suspect, one place and one method are left. Make your accusation!"
+  ],
+  "suspects": [
+    {
+      "id": "s0",
+      "name": "Mr. Patel",
+      "role": "Head Librarian",
+      "skin": "#c68a5b",
+      "hair": "short",
+      "hairColor": "#1d1d1d",
+      "color": "#24406e",
+      "bg": "#d6e2f7",
+      "acc": "glasses"
+    },
+    {
+      "id": "s1",
+      "name": "Ms. Greene",
+      "role": "Book Club Leader",
+      "skin": "#f4d3b5",
+      "hair": "long",
+      "hairColor": "#7a4a21",
+      "color": "#2a7f6f",
+      "bg": "#d3f1ea",
+      "acc": "none"
+    },
+    {
+      "id": "s2",
+      "name": "Officer Ruiz",
+      "role": "Night Guard",
+      "skin": "#e0ac7e",
+      "hair": "short",
+      "hairColor": "#2a1a12",
+      "color": "#1f2a4d",
+      "bg": "#dfe3ee",
+      "acc": "cap"
+    },
+    {
+      "id": "s3",
+      "name": "Jada Brooks",
+      "role": "Teen Volunteer",
+      "skin": "#8d5a3b",
+      "hair": "bun",
+      "hairColor": "#15151a",
+      "color": "#7a3fb0",
+      "bg": "#e8d9f5",
+      "acc": "none"
+    },
+    {
+      "id": "s4",
+      "name": "Professor Hale",
+      "role": "Visiting Author",
+      "skin": "#f1c9a5",
+      "hair": "bald",
+      "hairColor": "#d9d9df",
+      "color": "#8a5a2b",
+      "bg": "#f1e4c9",
+      "acc": "bowtie"
+    },
+    {
+      "id": "s5",
+      "name": "Mr. Fox",
+      "role": "Game Night Host",
+      "skin": "#d9a074",
+      "hair": "short",
+      "hairColor": "#b5651d",
+      "color": "#c0392b",
+      "bg": "#fbdada",
+      "acc": "none"
+    }
+  ],
+  "places": [
+    {
+      "id": "p0",
+      "name": "Front Desk"
+    },
+    {
+      "id": "p1",
+      "name": "Reading Room"
+    },
+    {
+      "id": "p2",
+      "name": "Rare Books Vault"
+    },
+    {
+      "id": "p3",
+      "name": "Children\u2019s Corner"
+    },
+    {
+      "id": "p4",
+      "name": "Map Room"
+    },
+    {
+      "id": "p5",
+      "name": "Computer Lab"
+    }
+  ],
+  "methods": [
+    {
+      "id": "m0",
+      "name": "Hidden in a book cart"
+    },
+    {
+      "id": "m1",
+      "name": "Tucked in a backpack"
+    },
+    {
+      "id": "m2",
+      "name": "Slipped into a board-game box"
+    },
+    {
+      "id": "m3",
+      "name": "Rolled up in a poster tube"
+    },
+    {
+      "id": "m4",
+      "name": "Swapped with a fake cover"
+    },
+    {
+      "id": "m5",
+      "name": "Lowered out a window in a basket"
+    }
+  ],
+  "clues": [
+    {
+      "p": "s0",
+      "l": "p0",
+      "text": "Mr. Patel was checking out books at the Front Desk the whole time. Twelve families saw him there."
+    },
+    {
+      "m": "m0",
+      "text": "The book cart was searched at the door. It held only picture books."
+    },
+    {
+      "p": "s1",
+      "l": "p1",
+      "text": "Ms. Greene was leading a book club in the Reading Room. Her group never let her leave."
+    },
+    {
+      "m": "m1",
+      "text": "Every backpack was checked at the exit. No atlas would even fit."
+    },
+    {
+      "p": "s2",
+      "l": "p2",
+      "text": "Officer Ruiz was locked inside the Rare Books Vault doing inventory. The vault log shows the door never opened."
+    },
+    {
+      "m": "m2",
+      "text": "The board-game boxes were all opened for Game Night. Nothing but game pieces inside."
+    },
+    {
+      "p": "s3",
+      "l": "p3",
+      "text": "Jada Brooks was reading to toddlers in the Children\u2019s Corner. A dozen parents took videos."
+    },
+    {
+      "m": "m4",
+      "text": "The fake cover in the case is a decoy the library always uses. The real atlas was never swapped."
+    },
+    {
+      "p": "s5",
+      "l": "p5",
+      "text": "Mr. Fox was running a trivia contest from the Computer Lab. The livestream never shows him leaving."
+    },
+    {
+      "m": "m5",
+      "text": "All the windows are painted shut for the winter. Nothing went out in a basket."
+    }
+  ],
+  "culprit": {
+    "p": "s4",
+    "l": "p4",
+    "m": "m3"
+  },
+  "accuseTemplate": "Suspect: {p} \u00b7 Place: {l} \u00b7 Method: {m}",
+  "ending": "When the lights flickered, <b>Professor Hale</b> slipped into the <b>Map Room</b>, rolled the atlas into a <b>poster tube</b> labeled \u201cBook Tour Posters,\u201d and strolled toward the exit. Every alibi and every method you cleared pointed straight at him. Brilliant detective work!"
+}
+
