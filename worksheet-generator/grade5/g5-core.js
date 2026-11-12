@@ -124,6 +124,11 @@
     host.innerHTML = '';
     var box = el('div', host, 'g5-q');
     if (opts.label) el('div', box, 'g5-q-label', opts.label);
+    // Bank metadata, not altered question text, marks authentic multi-step work.
+    // Keeping the prompt unchanged preserves matching/maze/printable eligibility.
+    if (p.meta && p.meta.questionType === 'multi-step') {
+      el('div', box, 'g5-q-label', 'Multi-step challenge · Find an intermediate result before giving the final answer.');
+    }
     math(el('div', box, 'g5-prompt'), p.prompt);
     if (p.img) { var im = el('img', box, 'g5-fig'); im.src = p.img.src; im.alt = p.img.alt; im.loading = 'lazy'; }
     var area = el('div', box, 'g5-answer');
