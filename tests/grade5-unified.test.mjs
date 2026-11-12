@@ -164,6 +164,6 @@ test('Student interactive mode hides teacher-view button and excludes the teache
  for(const slug of ['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
    'measurement-converter','place-value-builder','volume-builder']){
   const html=read('math5-'+slug+'/index.html');
-  assert.ok(html.includes('tool-shell.js?v=student-share-20261112'),slug+' needs updated student-mode tool shell');
+  assert.ok(html.includes('tool-shell.js?v=games-guides-only-20261112'),slug+' needs updated student-mode tool shell');
  }
 });
