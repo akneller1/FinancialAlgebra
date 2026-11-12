@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Expression Builder · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Type or tap to build numerical expressions with parentheses, brackets and braces, then watch them evaluated one step at a time.">
+<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Expression Builder</h1><p class="g5-sub">Build an expression with the buttons (or type it). Press Evaluate to see each step in order.</p><div class="g5-field"><label for="exIn">Expression</label><input type="text" id="exIn" value="2 × [5 + (6 − 2)]" autocomplete="off" style="font-size:1.4rem"></div>
+<div class="g5-actions" id="exKeys"></div>
+<div class="g5-actions"><button class="g5-btn green" id="exGo">Evaluate step by step</button><button class="g5-btn alt" id="exBack">⌫</button><button class="g5-btn alt" id="exClr">Clear</button></div>
+<ol class="ts-out" id="exSteps" aria-live="polite" style="padding-left:2rem"></ol></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script>
+
+var used={};function reset(){TOOL.$('exIn').value='2 × [5 + (6 − 2)]';TOOL.$('exSteps').innerHTML='';used={};TOOL.update(O,{v:null,used:used,depth:0});}
+var KEYS=['7','8','9','+','(',')','4','5','6','−','[',']','1','2','3','×','{','}','0','÷',' '];
+TOOL.$('exKeys').innerHTML=KEYS.map(function(k){return '<button class="g5-btn alt" style="min-width:3rem" data-k="'+k+'">'+(k===' '?'space':k)+'</button>'}).join('');
+Array.prototype.forEach.call(document.querySelectorAll('#exKeys button'),function(b){b.onclick=function(){var i=TOOL.$('exIn');i.value+=(/[0-9]/.test(b.dataset.k)&&/[0-9]$/.test(i.value)?'':(i.value&&!/[ (\[{]$/.test(i.value)&&!/[)\]}]/.test(b.dataset.k)?' ':''))+b.dataset.k;i.focus();}});
+TOOL.$('exBack').onclick=function(){var i=TOOL.$('exIn');i.value=i.value.replace(/\s*\S\s*$/,'');};TOOL.$('exClr').onclick=function(){TOOL.$('exIn').value='';};
+function R(n,d){d=d||1;var g=TOOL.gcd(n,d)||1;if(d<0){n=-n;d=-d;}return {n:n/g,d:d/g};}
+function fmt(x){return x.d===1?String(x.n):(Math.abs(x.n)>x.d?TOOL.mixed(x.n,x.d):TOOL.frac(x.n,x.d));}
+function lex(s){var t=[],m,re=/\s*(\d+|[-−+×*÷/()\[\]{}])\s*/g,pos=0;s=s.trim();while(pos<s.length){re.lastIndex=pos;m=re.exec(s);if(!m||m.index!==pos)throw Error('I don’t understand “'+s.slice(pos,pos+3)+'”.');var v=m[1];if(/\d/.test(v))t.push({n:R(+v)});else t.push({o:{'-':'−','*':'×','/':'÷'}[v]||v});pos=re.lastIndex;}return t;}
+var OPEN='([{',CLOSE=')]}';
+function show(t,hi){return t.map(function(x,i){var s=x.n?fmt(x.n):x.o;return hi&&i>=hi[0]&&i<=hi[1]?'<mark style="background:#FDE68A;border-radius:6px;padding:0 3px">'+s+'</mark>':s;}).join(' ');}
+function opAt(t,a,b,ops){for(var i=a+1;i<b;i++)if(t[i].o&&ops.indexOf(t[i].o)>=0&&t[i-1].n&&t[i+1].n)return i;return -1;}
+function apply(x,o,y){if(o==='+')return R(x.n*y.d+y.n*x.d,x.d*y.d);if(o==='−')return R(x.n*y.d-y.n*x.d,x.d*y.d);if(o==='×')return R(x.n*y.n,x.d*y.d);if(y.n===0)throw Error('You can’t divide by 0.');return R(x.n*y.d,x.d*y.n);}
+function check(t){var st=[];t.forEach(function(x){if(x.o&&OPEN.indexOf(x.o)>=0)st.push(x.o);if(x.o&&CLOSE.indexOf(x.o)>=0){var o=st.pop();if(OPEN.indexOf(o)!==CLOSE.indexOf(x.o))throw Error('The grouping symbols don’t match.');}});if(st.length)throw Error('A grouping symbol is not closed.');
+ for(var i=0;i<t.length;i++){var a=t[i],b=t[i+1];if(b&&a.n&&b.n)throw Error('Two numbers are next to each other; add an operation.');if(b&&a.o&&b.o&&'+−×÷'.indexOf(a.o)>=0&&'+−×÷'.indexOf(b.o)>=0)throw Error('Two operations are next to each other.');}
+ if(!t.length||(t[0].o&&OPEN.indexOf(t[0].o)<0)||(t[t.length-1].o&&CLOSE.indexOf(t[t.length-1].o)<0))throw Error('An expression must start and end with a number or a grouping symbol.');}
+function depth(t){var d=0,m=0;t.forEach(function(x){if(x.o&&OPEN.indexOf(x.o)>=0){d++;m=Math.max(m,d)}if(x.o&&CLOSE.indexOf(x.o)>=0)d--;});return m;}
+function step(t){var open=-1;for(var i=0;i<t.length;i++){if(t[i].o&&OPEN.indexOf(t[i].o)>=0)open=i;if(t[i].o&&CLOSE.indexOf(t[i].o)>=0){var a=open,b=i;break;}}
+ if(a===undefined){a=-1;b=t.length;}
+ if(a>=0&&b-a===2)return {t:t.slice(0,a).concat([t[a+1]]).concat(t.slice(b+1)),hi:[a,b],why:'Remove the grouping symbols around a single number.'};
+ var k=opAt(t,a,b,['×','÷']),why=k>=0?'Multiply or divide (left to right)':'Add or subtract (left to right)';if(k<0)k=opAt(t,a,b,['+','−']);
+ var v=apply(t[k-1].n,t[k].o,t[k+1].n);return {t:t.slice(0,k-1).concat([{n:v}]).concat(t.slice(k+2)),hi:[k-1,k+1],why:(a>=0?'Inside '+t[a].o+' '+t[b].o+': ':'')+why+'.'};}
+TOOL.$('exGo').onclick=function(){var out=TOOL.$('exSteps');try{var t=lex(TOOL.$('exIn').value);check(t);var d=depth(t),lines=[],guard=0;var orig=t;
+ while(t.length>1&&guard++<60){var s=step(t);lines.push('<li>'+show(t,s.hi)+'<br><span class="g5-note">'+s.why+'</span></li>');t=s.t;}
+ lines.push('<li><b>= '+fmt(t[0].n)+'</b></li>');out.innerHTML=lines.join('');var key=orig.filter(function(x){return x.n}).map(function(x){return x.n.n}).sort().join(',');used[key]=used[key]||{};used[key][fmt(t[0].n)]=1;
+ TOOL.update(O,{v:t[0].n,depth:d,used:used,src:TOOL.$('exIn').value,ops:orig.filter(function(x){return x.o&&'+−×÷'.indexOf(x.o)>=0}).length});}catch(e){out.innerHTML='<li style="color:#9A3412">'+e.message+'</li>';}};
+TOOL.$('exIn').onkeydown=function(e){if(e.key==='Enter')TOOL.$('exGo').click();};
+var O={title:'Expression Builder',reset:reset,challenges:[
+ {text:'Evaluate the starting expression 2 × [5 + (6 − 2)].',test:function(s){return s.v&&s.v.n===18&&s.v.d===1&&/\[/.test(s.src||'')}},
+ {text:'Build an expression with ( ), [ ] AND { } and evaluate it.',test:function(s){return s.depth>=3}},
+ {text:'Build an expression that equals exactly 20 using at least three operations.',test:function(s){return s.v&&s.v.n===20&&s.v.d===1&&s.ops>=3}},
+ {text:'Use the same numbers, but move the parentheses to get a different answer.',test:function(s){return Object.keys(s.used||{}).some(function(k){return Object.keys(s.used[k]).length>=2})}},
+ {text:'Build an expression whose value is a fraction (not a whole number).',test:function(s){return s.v&&s.v.d>1}}],
+ notice:['Work from the inside out: ( ) first, then [ ], then { }.','Inside each group: multiply and divide left to right, then add and subtract left to right.','Moving the grouping symbols can change the value even with the same numbers.','3 × (a + b) is always 3 times as large as (a + b).']};
+TOOL.init(O);reset();
+</script></body></html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decimal Place-Value Builder · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Build numbers digit by digit in a place-value chart, multiply and divide by 10, and see expanded form, word form and base-ten blocks change.">
+<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Decimal Place-Value Builder</h1><p class="g5-sub">Use the + and − buttons to build a number. Then press × 10 or ÷ 10 and watch every digit move.</p><div id="pvRows" class="g5-row" style="justify-content:center;gap:.4rem"></div>
+<div class="ts-big" id="pvNum" aria-live="polite">0</div>
+<div class="g5-actions" style="justify-content:center"><button class="g5-btn" id="pvTimes">× 10</button><button class="g5-btn" id="pvDiv">÷ 10</button><button class="g5-btn alt" id="pvClear">Clear</button></div>
+<div class="ts-model" id="pvChart"></div><div class="ts-out" id="pvInfo"></div><div class="ts-model" id="pvBlocks"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script>
+
+var PL=[3,2,1,0,-1,-2,-3],NAMES={3:'thousands',2:'hundreds',1:'tens',0:'ones','-1':'tenths','-2':'hundredths','-3':'thousandths'};
+var d={},st={times:0,div:0};function reset(){PL.forEach(function(p){d[p]=0});d[0]=3;d[-1]=0;d[-2]=7;st={times:0,div:0};draw();}
+function val(){return PL.reduce(function(a,p){return a+d[p]*Math.pow(10,p+3)},0);} // in thousandths (exact integer)
+function str(){var v=val(),w=Math.floor(v/1000),f=String(v%1000).padStart(3,'0').replace(/0+$/,'');return w.toLocaleString('en-US')+(f?'.'+f:'');}
+var ONES='zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split(' '),TENS=',,twenty,thirty,forty,fifty,sixty,seventy,eighty,ninety'.split(',');
+function words(n){if(n<20)return ONES[n];if(n<100)return TENS[Math.floor(n/10)]+(n%10?'-'+ONES[n%10]:'');if(n<1000)return ONES[Math.floor(n/100)]+' hundred'+(n%100?' '+words(n%100):'');return words(Math.floor(n/1000))+' thousand'+(n%1000?' '+words(n%1000):'');}
+function wordForm(){var v=val(),w=Math.floor(v/1000),f=String(v%1000).padStart(3,'0').replace(/0+$/,'');if(!f)return words(w);var k=f.length,n=+f,u=['tenth','hundredth','thousandth'][k-1]+(n===1?'':'s');return (w?words(w)+' and ':'')+words(n)+' '+u;}
+function expanded(){var t=[];PL.forEach(function(p){if(d[p])t.push(d[p]+' × '+(p>=0?Math.pow(10,p).toLocaleString('en-US'):TOOL.frac(1,Math.pow(10,-p))))});return t.join(' + ')||'0';}
+function shift(dir){if(dir>0&&d[3])return alert('That would need a ten-thousands place. Try ÷ 10 first.');if(dir<0&&d[-3])return alert('That would need a ten-thousandths place. Try × 10 first.');
+ var nd={};PL.forEach(function(p){nd[p]=d[p-dir]||0});d=nd;if(dir>0)st.times++;else st.div++;draw();}
+function draw(){
+ TOOL.$('pvRows').innerHTML=PL.map(function(p){return '<div class="ts-step" style="flex-direction:column"><button aria-label="Increase '+NAMES[p]+'" data-p="'+p+'" data-s="1">+</button><span style="font-weight:800;font-size:1.3rem" aria-label="'+NAMES[p]+' digit">'+d[p]+'</span><button aria-label="Decrease '+NAMES[p]+'" data-p="'+p+'" data-s="-1">−</button><span class="g5-note" style="font-size:.7rem">'+NAMES[p]+'</span></div>'+(p===0?'<div style="font-size:2rem;align-self:center">.</div>':'');}).join('');
+ Array.prototype.forEach.call(document.querySelectorAll('#pvRows button'),function(b){b.onclick=function(){var p=+b.dataset.p;d[p]=(d[p]+(+b.dataset.s)+10)%10;draw();}});
+ TOOL.$('pvNum').textContent=str();
+ TOOL.$('pvChart').innerHTML=G5FIGS.pvchart(str().replace(/,/g,''),{lo:Math.min(-1,PL.filter(function(p){return d[p]}).reduce(function(a,p){return Math.min(a,p)},0))});
+ TOOL.$('pvInfo').innerHTML='<b>Expanded form:</b> '+expanded()+'<br><b>Word form:</b> '+wordForm();
+ var v=val();TOOL.$('pvBlocks').innerHTML=(v<10000&&v%10===0)?'<p class="g5-note">Base-ten blocks (flat = 1, rod = 0.1, small cube = 0.01)</p>'+G5FIGS.blocks(d[0],d[-1],d[-2],{decimal:true}):'<p class="g5-note">Blocks show numbers less than 10 with up to two decimal places.</p>';
+ TOOL.update(O,{v:val(),d:d,st:st});}
+var O={title:'Decimal Place-Value Builder',reset:reset,challenges:[
+ {text:'Build the number 4.06.',test:function(s){return s.v===4060}},
+ {text:'Build 0.125 (one hundred twenty-five thousandths).',test:function(s){return s.v===125}},
+ {text:'Build 5.55. How does each 5 compare with the 5 to its right?',test:function(s){return s.v===5550}},
+ {text:'Press × 10 two times. Where did each digit go?',test:function(s){return s.st.times>=2}},
+ {text:'Press ÷ 10 three times in a row.',test:function(s){return s.st.div>=3}},
+ {text:'Make a number between 2.4 and 2.5.',test:function(s){return s.v>2400&&s.v<2500}}],
+ notice:['Each place is worth 10 times the place to its right and 1/10 of the place to its left.','× 10 moves every digit one place left; ÷ 10 moves every digit one place right.','A zero at the end of a decimal (0.50) does not change its value.','The word form ends with the name of the last place: tenths, hundredths or thousandths.']};
+TOOL.init(O);reset();
+</script></body></html>

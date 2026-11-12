@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Measurement Converter · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Convert customary and metric measurements, see the conversion fact as a picture, and decide when to multiply or divide.">
+<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Measurement Converter</h1><p class="g5-sub">Pick a kind of measurement, type an amount, and choose the units. The picture shows how many small units fit in one big unit.</p><div class="g5-row"><div class="g5-field"><label for="mcKind">Measure</label><select id="mcKind"></select></div><div class="g5-field"><label for="mcAmt">Amount</label><input type="number" id="mcAmt" value="3" min="0" step="any"></div>
+<div class="g5-field"><label for="mcFrom">From</label><select id="mcFrom"></select></div><div class="g5-field"><label for="mcTo">To</label><select id="mcTo"></select></div></div>
+<div class="ts-big" id="mcRes" aria-live="polite"></div><div class="ts-out" id="mcSteps"></div><div class="ts-model" id="mcPic"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script>
+
+var K={'Customary length':{u:{in:1,ft:12,yd:36,mi:63360},names:{in:'inches',ft:'feet',yd:'yards',mi:'miles'}},'Customary weight':{u:{oz:1,lb:16,T:32000},names:{oz:'ounces',lb:'pounds',T:'tons'}},
+'Customary capacity':{u:{'fl oz':1,c:8,pt:16,qt:32,gal:128},names:{'fl oz':'fluid ounces',c:'cups',pt:'pints',qt:'quarts',gal:'gallons'}},'Metric length':{u:{mm:1,cm:10,m:1000,km:1000000},names:{mm:'millimeters',cm:'centimeters',m:'meters',km:'kilometers'}},
+'Metric mass':{u:{g:1,kg:1000},names:{g:'grams',kg:'kilograms'}},'Metric capacity':{u:{mL:1,L:1000},names:{mL:'milliliters',L:'liters'}}};
+var st={big2small:0,small2big:0,seen:{}};
+function fill(){var k=K[TOOL.$('mcKind').value],keys=Object.keys(k.u);TOOL.$('mcFrom').innerHTML=keys.map(function(u){return '<option value="'+u+'">'+k.names[u]+' ('+u+')</option>'}).join('');TOOL.$('mcTo').innerHTML=TOOL.$('mcFrom').innerHTML;TOOL.$('mcFrom').value=keys[1];TOOL.$('mcTo').value=keys[0];}
+function reset(){TOOL.$('mcKind').innerHTML=Object.keys(K).map(function(k){return '<option>'+k+'</option>'}).join('');TOOL.$('mcKind').value='Customary length';fill();TOOL.$('mcAmt').value=3;st={big2small:0,small2big:0,seen:{}};draw();}
+function dec(n){var s=(Math.round(n*1e6)/1e6).toLocaleString('en-US',{maximumFractionDigits:6});return s;}
+function draw(){var kn=TOOL.$('mcKind').value,k=K[kn],a=+TOOL.$('mcAmt').value,fr=TOOL.$('mcFrom').value,to=TOOL.$('mcTo').value,f=k.u[fr],t=k.u[to];
+ if(!(a>=0)){TOOL.$('mcRes').textContent='Type an amount';return;}
+ var res=a*f/t,metric=/Metric/.test(kn),fact,step;
+ if(f===t){fact='Same unit';step='No conversion needed.';}
+ else if(f>t){var r=f/t;fact='1 '+fr+' = '+r.toLocaleString('en-US')+' '+to;step='Bigger unit → smaller unit, so <b>multiply</b>: '+dec(a)+' × '+r.toLocaleString('en-US')+' = '+dec(res);st.big2small++;}
+ else{var r2=t/f;fact='1 '+to+' = '+r2.toLocaleString('en-US')+' '+fr;step='Smaller unit → bigger unit, so <b>divide</b>: '+dec(a)+' ÷ '+r2.toLocaleString('en-US')+' = '+dec(res);st.small2big++;}
+ var extra='';if(!metric&&f<t&&res%1){var whole=Math.floor(res),left=Math.round((res-whole)*t/f*1e6)/1e6;extra='<br>That is also <b>'+whole+' '+to+' '+dec(left)+' '+fr+'</b>.';}
+ TOOL.$('mcRes').textContent=dec(a)+' '+fr+' = '+dec(res)+' '+to;TOOL.$('mcSteps').innerHTML='<b>Fact:</b> '+fact+'<br>'+step+extra;
+ var big=f>t?fr:to,small=f>t?to:fr,n=k.u[big]/k.u[small];
+ TOOL.$('mcPic').innerHTML=f===t?'':(n<=16?G5FIGS.fbars([{d:1,n:1,color:'#14B8A6',label:''},{d:n,n:n,color:'#F59E0B',label:''}],{width:460,rowH:30})+'<p class="g5-note">Top: 1 '+k.names[big].replace(/s$/,'')+'. Bottom: '+n+' '+k.names[small]+'.</p>':'<p class="g5-note">1 '+k.names[big].replace(/s$/,'')+' = '+n.toLocaleString('en-US')+' '+k.names[small]+' (too many to draw!)</p>');
+ st.seen[kn+':'+fr+'>'+to]=res;TOOL.update(O,{kn:kn,fr:fr,to:to,a:a,res:res,st:st});}
+['mcAmt','mcFrom','mcTo'].forEach(function(id){TOOL.$(id).oninput=draw;});TOOL.$('mcKind').onchange=function(){fill();draw();};
+var O={title:'Measurement Converter',reset:reset,challenges:[
+ {text:'Convert 3 feet to inches.',test:function(s){return s.fr==='ft'&&s.to==='in'&&s.a===3}},
+ {text:'Convert from a smaller unit to a bigger unit.',test:function(s){return s.st.small2big>0}},
+ {text:'Find how many cups are in 1 gallon.',test:function(s){return s.fr==='gal'&&s.to==='c'&&s.a===1}},
+ {text:'Convert 5 centimeters to meters.',test:function(s){return s.fr==='cm'&&s.to==='m'&&s.a===5}},
+ {text:'Find a measurement that converts to 2,000 of a smaller unit.',test:function(s){return s.res===2000&&s.a<2000}}],
+ notice:['Bigger unit → smaller unit: multiply. Smaller unit → bigger unit: divide.','Metric units use powers of 10, so the digits just move places.','1 ft = 12 in, 1 yd = 3 ft, 1 lb = 16 oz, 1 gal = 4 qt, 1 qt = 2 pt, 1 pt = 2 c.','The amount gets bigger when you change to a smaller unit.']};
+TOOL.init(O);reset();
+</script></body></html>

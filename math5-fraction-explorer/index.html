@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fraction Explorer · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Build two fractions with fraction bars, find equivalent fractions and a common denominator, and compare, add or subtract them.">
+<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Fraction Explorer</h1><p class="g5-sub">Change the numerators and denominators. Choose Compare, Add or Subtract to see the common denominator at work.</p><div class="g5-row"><div class="g5-field"><label>Fraction A</label><div class="ts-step"><button data-k="a" data-s="-1" aria-label="A numerator down">−</button><b id="fxa"></b><button data-k="a" data-s="1" aria-label="A numerator up">+</button> / <button data-k="b" data-s="-1" aria-label="A denominator down">−</button><b id="fxb"></b><button data-k="b" data-s="1" aria-label="A denominator up">+</button></div></div>
+<div class="g5-field"><label>Fraction B</label><div class="ts-step"><button data-k="c" data-s="-1" aria-label="B numerator down">−</button><b id="fxc"></b><button data-k="c" data-s="1" aria-label="B numerator up">+</button> / <button data-k="d" data-s="-1" aria-label="B denominator down">−</button><b id="fxd"></b><button data-k="d" data-s="1" aria-label="B denominator up">+</button></div></div>
+<div class="g5-field"><label for="fxOp">Do this</label><select id="fxOp"><option value="cmp">Compare</option><option value="add">Add</option><option value="sub">Subtract</option></select></div></div>
+<div class="ts-model" id="fxModel"></div><div class="ts-out" id="fxOut" aria-live="polite"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script>
+
+var f;function reset(){f={a:1,b:2,c:1,d:3};TOOL.$('fxOp').value='add';draw();}
+function lcm(a,b){return a*b/TOOL.gcd(a,b);}
+function draw(){['a','b','c','d'].forEach(function(k){TOOL.$('fx'+k).textContent=f[k]});var op=TOOL.$('fxOp').value,L=lcm(f.b,f.d),A=f.a*L/f.b,C=f.c*L/f.d;
+ var rows=[{d:f.b,n:f.a,color:'#3B82F6',label:f.a+'/'+f.b},{d:f.d,n:f.c,color:'#F59E0B',label:f.c+'/'+f.d},{d:L,n:Math.min(A,L),color:'#93C5FD',label:A+'/'+L},{d:L,n:Math.min(C,L),color:'#FCD34D',label:C+'/'+L}];
+ var res,txt;if(op==='add'){res=A+C;txt=TOOL.frac(f.a,f.b)+' + '+TOOL.frac(f.c,f.d)+' = '+TOOL.frac(A,L)+' + '+TOOL.frac(C,L)+' = '+TOOL.frac(res,L)+' = <b>'+TOOL.mixed(res,L)+'</b>';}
+ else if(op==='sub'){res=A-C;txt=res<0?'The second fraction is bigger. Try switching them!':TOOL.frac(f.a,f.b)+' − '+TOOL.frac(f.c,f.d)+' = '+TOOL.frac(A,L)+' − '+TOOL.frac(C,L)+' = '+TOOL.frac(res,L)+' = <b>'+(res===0?'0':TOOL.mixed(res,L))+'</b>';}
+ else{txt=TOOL.frac(f.a,f.b)+' = '+TOOL.frac(A,L)+' and '+TOOL.frac(f.c,f.d)+' = '+TOOL.frac(C,L)+', so <b>'+TOOL.frac(f.a,f.b)+' '+(A>C?'&gt;':A<C?'&lt;':'=')+' '+TOOL.frac(f.c,f.d)+'</b>';}
+ if(op!=='cmp'&&res>=0&&res<=2*L){var whole=Math.floor(res/L),rem=res%L,rr=[];for(var w=0;w<whole;w++)rr.push({d:L,n:L,color:'#10B981',label:w===whole-1&&!rem?TOOL.mixed(res,L).replace(/<[^>]+>/g,'')+'':''});if(rem||!whole)rr.push({d:L,n:rem,color:'#10B981',label:''});rows=rows.concat(rr);}
+ TOOL.$('fxModel').innerHTML=G5FIGS.fbars(rows.map(function(r){return {d:r.d,n:r.n,color:r.color,label:r.label}}),{width:460,rowH:28});
+ TOOL.$('fxOut').innerHTML='<span class="g5-note">Least common denominator: '+L+'</span><br>'+txt;
+ TOOL.update(O,{f:f,op:op,A:A,C:C,L:L,res:res});}
+Array.prototype.forEach.call(document.querySelectorAll('#tool .ts-step button'),function(b){b.onclick=function(){var k=b.dataset.k;f[k]+=+b.dataset.s;f.b=Math.max(1,Math.min(12,f.b));f.d=Math.max(1,Math.min(12,f.d));f.a=Math.max(0,Math.min(f.b,f.a));f.c=Math.max(0,Math.min(f.d,f.c));draw();}});
+TOOL.$('fxOp').onchange=draw;
+var O={title:'Fraction Explorer',reset:reset,challenges:[
+ {text:'Show two equivalent fractions with different denominators.',test:function(s){return s.f.a*s.f.d===s.f.b*s.f.c&&s.f.b!==s.f.d&&s.f.a>0}},
+ {text:'Add two fractions with unlike denominators.',test:function(s){return s.op==='add'&&s.f.b!==s.f.d&&s.f.a>0&&s.f.c>0}},
+ {text:'Find two unlike fractions whose sum is exactly 1.',test:function(s){return s.op==='add'&&s.f.b!==s.f.d&&s.res===s.L}},
+ {text:'Make a subtraction whose answer is 1/6.',test:function(s){return s.op==='sub'&&s.res*6===s.L}},
+ {text:'Compare: find a case where the fraction with the bigger denominator is the bigger fraction.',test:function(s){return s.op==='cmp'&&((s.f.d>s.f.b&&s.C>s.A)||(s.f.b>s.f.d&&s.A>s.C))}}],
+ notice:['To add or subtract, the parts must be the same size: rename with a common denominator.','Equivalent fractions name the same amount with different-sized parts.','Add only the numerators; the common denominator stays the same.','1/2 + 1/3 is 5/6, not 2/5.']};
+TOOL.init(O);reset();
+</script></body></html>
