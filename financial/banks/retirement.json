@@ -2763,7 +2763,7 @@
    "type": "claim",
    "prompt": "Evaluate the claim: “I should skip the 401(k) match until I earn more.”",
    "format": "multiple-choice",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "options": [
     {
      "text": "Always true",
@@ -2771,17 +2771,17 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Rarely wise. A 50% or 100% match is an immediate return on your contribution that no ordinary investment guarantees. If possible, contribute at least enough to get the full match."
+    "Sometimes true, but rarely the best choice. If someone cannot cover rent, food, or essential bills, contributing may have to wait. Otherwise a 50% or 100% match is an immediate return that no ordinary investment guarantees, so contributing at least enough for the full match is usually wise."
    ],
-   "modelResponse": "Rarely wise. A 50% or 100% match is an immediate return on your contribution that no ordinary investment guarantees. If possible, contribute at least enough to get the full match.",
+   "modelResponse": "Sometimes true, but rarely the best choice. If someone cannot cover rent, food, or essential bills, contributing may have to wait. Otherwise a 50% or 100% match is an immediate return that no ordinary investment guarantees, so contributing at least enough for the full match is usually wise.",
    "misconceptions": [
     "I should skip the 401(k) match until I earn more."
    ],
@@ -2805,7 +2805,7 @@
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
@@ -2813,18 +2813,18 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Rarely wise. A 50% or 100% match is an immediate return on your contribution that no ordinary investment guarantees. If possible, contribute at least enough to get the full match."
+     "answer": "Sometimes true, but rarely the best choice. If someone cannot cover rent, food, or essential bills, contributing may have to wait. Otherwise a 50% or 100% match is an immediate return that no ordinary investment guarantees, so contributing at least enough for the full match is usually wise."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
      "answer": "Answers vary; accept any defensible situation."
     }
    ],
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Rarely wise. A 50% or 100% match is an immediate return on your contribution that no ordinary investment guarantees. If possible, contribute at least enough to get the full match."
+    "Sometimes true, but rarely the best choice. If someone cannot cover rent, food, or essential bills, contributing may have to wait. Otherwise a 50% or 100% match is an immediate return that no ordinary investment guarantees, so contributing at least enough for the full match is usually wise."
    ],
-   "modelResponse": "Rarely wise. A 50% or 100% match is an immediate return on your contribution that no ordinary investment guarantees. If possible, contribute at least enough to get the full match. Example: 6% of $45,000 = $2,700 contributed; a 50% match adds $1,350 per year.",
+   "modelResponse": "Sometimes true, but rarely the best choice. If someone cannot cover rent, food, or essential bills, contributing may have to wait. Otherwise a 50% or 100% match is an immediate return that no ordinary investment guarantees, so contributing at least enough for the full match is usually wise. Example: 6% of $45,000 = $2,700 contributed; a 50% match adds $1,350 per year.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
@@ -2871,7 +2871,7 @@
    "type": "claim",
    "prompt": "Evaluate the claim: “A 2% inflation rate is too small to matter.”",
    "format": "multiple-choice",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "options": [
     {
      "text": "Always true",
@@ -2879,17 +2879,17 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Never true over long periods: 2% per year raises prices about 49% in 20 years and doubles them in about 36 years."
+    "Sometimes true. Over a few months, 2% inflation barely changes prices. Over long periods it compounds: prices rise about 49% in 20 years and double in about 36 years — a big deal for retirement planning."
    ],
-   "modelResponse": "Never true over long periods: 2% per year raises prices about 49% in 20 years and doubles them in about 36 years.",
+   "modelResponse": "Sometimes true. Over a few months, 2% inflation barely changes prices. Over long periods it compounds: prices rise about 49% in 20 years and double in about 36 years — a big deal for retirement planning.",
    "misconceptions": [
     "A 2% inflation rate is too small to matter."
    ],
@@ -2913,7 +2913,7 @@
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
@@ -2921,18 +2921,18 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true over long periods: 2% per year raises prices about 49% in 20 years and doubles them in about 36 years."
+     "answer": "Sometimes true. Over a few months, 2% inflation barely changes prices. Over long periods it compounds: prices rise about 49% in 20 years and double in about 36 years — a big deal for retirement planning."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
      "answer": "Answers vary; accept any defensible situation."
     }
    ],
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true over long periods: 2% per year raises prices about 49% in 20 years and doubles them in about 36 years."
+    "Sometimes true. Over a few months, 2% inflation barely changes prices. Over long periods it compounds: prices rise about 49% in 20 years and double in about 36 years — a big deal for retirement planning."
    ],
-   "modelResponse": "Never true over long periods: 2% per year raises prices about 49% in 20 years and doubles them in about 36 years. Example: 1.02^20 ≈ 1.486.",
+   "modelResponse": "Sometimes true. Over a few months, 2% inflation barely changes prices. Over long periods it compounds: prices rise about 49% in 20 years and double in about 36 years — a big deal for retirement planning. Example: 1.02^20 ≈ 1.486.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
@@ -2979,7 +2979,7 @@
    "type": "claim",
    "prompt": "Evaluate the claim: “Social Security will cover all my retirement expenses.”",
    "format": "multiple-choice",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "options": [
     {
      "text": "Always true",
@@ -2987,17 +2987,17 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Never a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings fill the gap."
+    "Sometimes true for people with very low expenses, but it is not a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings usually fill the gap."
    ],
-   "modelResponse": "Never a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings fill the gap.",
+   "modelResponse": "Sometimes true for people with very low expenses, but it is not a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings usually fill the gap.",
    "misconceptions": [
     "Social Security will cover all my retirement expenses."
    ],
@@ -3021,7 +3021,7 @@
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
@@ -3029,18 +3029,18 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings fill the gap."
+     "answer": "Sometimes true for people with very low expenses, but it is not a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings usually fill the gap."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
      "answer": "Answers vary; accept any defensible situation."
     }
    ],
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings fill the gap."
+    "Sometimes true for people with very low expenses, but it is not a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings usually fill the gap."
    ],
-   "modelResponse": "Never a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings fill the gap.",
+   "modelResponse": "Sometimes true for people with very low expenses, but it is not a safe plan. Social Security is designed to replace only part of pre-retirement income for most workers; personal savings usually fill the gap.",
    "rubric": [
     {
      "criterion": "Financial accuracy",

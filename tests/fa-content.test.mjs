@@ -137,3 +137,18 @@ test('authored cheat sheets use the shared twelve-panel renderer', async () => {
     }
   }
 });
+
+
+test('claim verdict keys match their explanations and MC selections', () => {
+  const labels = { 'Always true': /^Always/, 'Sometimes true — it depends on the situation': /^Sometimes/, 'Never true': /^Never/ };
+  for (const u of course.units) {
+    for (const q of json(`financial/banks/${u.id}.json`).questions.filter(q => q.type === 'claim' && q.format === 'multiple-choice')) {
+      assert.ok(labels[q.answer], `${q.id}: unknown answer`);
+      assert.match(q.modelResponse, labels[q.answer], `${q.id}: explanation and key disagree`);
+      assert.equal(q.options.filter(o => o.correct).length, 1, `${q.id}: one correct option required`);
+      assert.equal(q.options.find(o => o.correct).text, q.answer, `${q.id}: selected option must match answer`);
+    }
+  }
+  const hourly = json('financial/banks/income.json').questions.find(q => q.id === 'fa-income-s01-claim-04');
+  assert.equal(hourly.answer, 'Sometimes true — it depends on the situation');
+});
