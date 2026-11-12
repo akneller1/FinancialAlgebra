@@ -248,9 +248,12 @@
       if (pairs.length < Math.floor(want / 2)) warnings.push('Only ' + pairs.length + ' matched-answer pairs were available for this selection.');
     } else if (kind === 'matching') {
       var used = {}, items = [];
-      pickQuestions(list, want, seed + 'm').forEach(function (q) {
+      /* Search the full eligible pool before limiting the set: selecting only
+         want questions first can produce needless short matching sheets when
+         repeated answer values happen to be drawn. */
+      pickQuestions(list, list.length, seed + 'm').forEach(function (q) {
         var k = norm(answerText(q));
-        if (!used[k]) { used[k] = true; items.push(q); }
+        if (!used[k] && items.length < want) { used[k] = true; items.push(q); }
       });
       var answers = shuffle(items.map(function (q) { return answerText(q); }), r);
       plan.items = items.map(clone);
