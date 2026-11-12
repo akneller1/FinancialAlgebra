@@ -1,8 +1,8 @@
 import {course,getUnit} from './course.js';
-import {resourceThumbnail} from '../financial/lib/resource-previews.mjs';
+import {resourceThumbnail,resourceHref} from '../financial/lib/resource-previews.mjs?v=distinct-2';
 
 // Unit resources share one manifest with the library hub and content validation.
-const response=await fetch(new URL('../financial/resources.json',import.meta.url));
+const response=await fetch(new URL('../financial/resources.json?v=distinct-2',import.meta.url));
 if(!response.ok) throw new Error('Unable to load Financial Algebra resources');
 const library=await response.json();
 const resourcesFor=unit=>library.units.find(record=>record.unitId===unit.id).resources;
@@ -55,13 +55,13 @@ function shortcutBanner(unit){
  const resources=resourcesFor(unit);
  return '<section class="generator-banner compact"><div class="generator-banner-heading"><h2>Create Resources for This Unit</h2></div>'+
  '<ul class="generator-shortcuts">'+shortcuts.map(([name,icon,key])=>
- '<li><a class="generator-shortcut" href="'+esc(key==='decisionLab'?resources[key].path:resources[key])+'">'+
+ '<li><a class="generator-shortcut" href="'+esc(resourceHref(key==='decisionLab'?resources[key].path:resources[key]))+'">'+
  '<span class="generator-shortcut-icon" aria-hidden="true">'+icon+'</span>'+
  '<span class="generator-shortcut-copy"><strong>'+name+'</strong></span></a></li>').join('')+
  '</ul></section>';
 }
 function resourceCard(title,path,description,unit){
- return '<li><a class="finance-resource-card" href="'+esc(path)+'"><img class="finance-resource-thumb" src="'+esc(resourceThumbnail(path,unit.id))+'" width="720" height="450" alt="" loading="lazy" decoding="async"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a></li>';
+ return '<li><a class="finance-resource-card" href="'+esc(resourceHref(path))+'"><img class="finance-resource-thumb" src="'+esc(resourceThumbnail(path,unit.id))+'" width="720" height="450" alt="" loading="lazy" decoding="async"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a></li>';
 }
 function resourceSections(unit){
  const r=resourcesFor(unit);

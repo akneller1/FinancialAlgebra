@@ -1,7 +1,7 @@
 """Verify generated PDF dimensions, local HTML assets and unchanged manifest links."""
 from pathlib import Path
 from html.parser import HTMLParser
-from urllib.parse import unquote
+from urllib.parse import unquote, urlsplit
 import json, re
 from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[2]
@@ -29,7 +29,7 @@ for unit in units:
         refs=parser.links+re.findall(r'url\(["\x27]?([^\)"\x27]+)',html)
         for ref in refs:
             assert not re.match(r'(https?:|file:|//)',ref),f'Nonportable asset: {ref}'
-            assert (folder/unquote(ref.split('#')[0])).is_file(),f'Missing local link: {ref}'
+            assert (folder/unquote(urlsplit(ref).path)).is_file(),f'Missing local link: {ref}'
         if name=='cheat-sheet.html':
             assert html.count('class="pg"')==2
             assert html.count('class="sec"')==12

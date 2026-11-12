@@ -1,7 +1,7 @@
 /* Writes financial/resources.json (integration manifest) and financial/index.html (resource hub for review/staging). */
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { course } from '../src/course.js';
-import {resourceThumbnail} from '../financial/lib/resource-previews.mjs';
+import {resourceThumbnail,resourceHref} from '../financial/lib/resource-previews.mjs';
 import '../financial/lib/render.js';
 import '../financial/lib/finance.js';
 import '../financial/decision-lab/scenarios.js';
@@ -31,7 +31,7 @@ for (const [i, u] of course.units.entries()) {
 }
 const manifest = { schema: 'fa-resources-1', courseId: 'financial-algebra', level: 'standard', classroomLevelCode: 'cp1', generated: 'scripts/build-hub.mjs', units };
 writeFileSync(P('financial/resources.json'), JSON.stringify(manifest, null, 1));
-const card = (t, href, sub, unitId) => `<a class="fa-panel flat hub-link" href="${href}"><img src="../${resourceThumbnail(href.replace(/^\.\.\//,''),unitId)}" alt="" width="720" height="450" loading="lazy" style="width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;border-radius:8px"><strong>${R.esc(t)}</strong>${sub ? `<span>${R.esc(sub)}</span>` : ''}</a>`;
+const card = (t, href, sub, unitId) => `<a class="fa-panel flat hub-link" href="${resourceHref(href)}"><img src="../${resourceThumbnail(href.replace(/^\.\.\//,''),unitId)}" alt="" width="720" height="450" loading="lazy" style="width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;border-radius:8px"><strong>${R.esc(t)}</strong>${sub ? `<span>${R.esc(sub)}</span>` : ''}</a>`;
 const body = units.map(u => { const r = u.resources; return `<section class="fa-panel" id="${u.unitId}"><h2><span class="fa-pill">Unit ${u.unitNum}</span> ${R.esc(u.name)}</h2><p>${u.skills.map(s => R.esc(s.name)).join(' · ')}</p><p class="fa-doc-kind">${u.questionCount} bank items · ${u.flashcards} flashcards · ${r.projects.length} project${r.projects.length === 1 ? '' : 's'}</p><div class="fa-grid">
 ${card('Lesson Plan', '../' + r.lessonPlan, 'Teacher plan or student notes',u.unitId)}${card('Worksheet', '../' + r.worksheet, '8 formats + key',u.unitId)}${card('Assessment', '../' + r.assessment, '20/20/30/30 blueprint + rubrics',u.unitId)}${card('Practice Test', '../' + r.practiceTest, 'Self-checking',u.unitId)}${card('Flashcards', '../' + r.flashcards, 'Terms, formulas, principles',u.unitId)}${card('Cheat Sheet', '../' + r.cheatSheet, 'Printable PDF',u.unitId)}${r.decisionLab ? card('Decision Lab: ' + r.decisionLab.title, '../' + r.decisionLab.path, '7-step guided decision',u.unitId) : ''}${r.projects.map(p => card('Project: ' + p.title, '../' + p.path, p.grouping + ' · ' + p.days,u.unitId)).join('')}</div></section>`; }).join('');
 writeFileSync(P('financial/index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Financial Algebra Resources | Mr. K's Classroom</title>
