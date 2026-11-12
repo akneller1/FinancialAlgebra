@@ -40,6 +40,7 @@ for (const u of units) {
     assert.ok(FORMATS.has(q.format), q.id + ': format');
     assert.ok(Array.isArray(q.standards) && q.standards.length && q.standards.every(s => /^5\.(OA|NBT|NF|MD|G)\.[A-C]\.\d+(\.[a-c])?$/.test(s)), q.id + ': standards');
     assert.ok(Array.isArray(q.solutionSteps) && q.solutionSteps.length, q.id + ': worked steps');
+    assert.ok(!/awaiting human review/i.test(q.sourceNotes || ''), q.id + ': legacy review-queue label must not be reintroduced');
     assert.ok(meta[q.id] && meta[q.id].questionType, q.id + ': meta');
     if (q.format === 'multiple-choice') {
       assert.equal(q.options.filter(o => o.correct).length, 1, q.id + ': exactly one correct choice');
