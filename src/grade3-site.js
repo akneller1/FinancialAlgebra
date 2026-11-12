@@ -1,4 +1,4 @@
-import {mountOutline} from './outline-template.js?v=compact-units-20261112';
+import {mountOutline} from './outline-template.js?v=geometry-unit-cards-20261112';
 const main=document.getElementById('main');
 fetch('./course-outlines/grade3.json')
  .then(response=>{if(!response.ok)throw Error('Could not load Grade 3 course data');return response.json();})
