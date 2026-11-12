@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volume Builder · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Stack unit cubes into rectangular prisms, see layers and base area, and connect counting cubes to V = l × w × h and composite figures.">
+<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Volume Builder</h1><p class="g5-sub">Use the sliders to set length, width and height. Turn on a second prism to build a composite figure.</p><div class="g5-row"><div class="g5-field"><label for="vbL">Length: <b id="vbLv"></b></label><input type="range" id="vbL" min="1" max="8" value="4"></div><div class="g5-field"><label for="vbW">Width: <b id="vbWv"></b></label><input type="range" id="vbW" min="1" max="6" value="3"></div><div class="g5-field"><label for="vbH">Height: <b id="vbHv"></b></label><input type="range" id="vbH" min="1" max="6" value="2"></div></div>
+<label class="g5-chip"><input type="checkbox" id="vbTwo"> Add a second prism</label>
+<div class="g5-row g5-hidden" id="vbTwoRow"><div class="g5-field"><label for="vbL2">Length 2: <b id="vbL2v"></b></label><input type="range" id="vbL2" min="1" max="6" value="2"></div><div class="g5-field"><label for="vbH2">Height 2: <b id="vbH2v"></b></label><input type="range" id="vbH2" min="1" max="6" value="4"></div></div>
+<div class="g5-row" style="justify-content:center;align-items:flex-end" id="vbModel"></div><div class="ts-out" id="vbOut" aria-live="polite"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script>
+
+var ids=['vbL','vbW','vbH','vbL2','vbH2'],made={};function reset(){TOOL.$('vbL').value=4;TOOL.$('vbW').value=3;TOOL.$('vbH').value=2;TOOL.$('vbL2').value=2;TOOL.$('vbH2').value=4;TOOL.$('vbTwo').checked=false;made={};draw();}
+function draw(){var l=+TOOL.$('vbL').value,w=+TOOL.$('vbW').value,h=+TOOL.$('vbH').value,two=TOOL.$('vbTwo').checked,l2=+TOOL.$('vbL2').value,h2=+TOOL.$('vbH2').value;
+ ids.forEach(function(i){TOOL.$(i+'v').textContent=TOOL.$(i).value});TOOL.$('vbTwoRow').classList.toggle('g5-hidden',!two);
+ var v1=l*w*h,v2=two?l2*w*h2:0;TOOL.$('vbModel').innerHTML='<div style="flex:1 1 260px">'+G5FIGS.cubes(l,w,h,{color:'#3B82F6'})+'<p class="g5-note">Prism A</p></div>'+(two?'<div style="flex:1 1 200px">'+G5FIGS.cubes(l2,w,h2,{color:'#F59E0B'})+'<p class="g5-note">Prism B (same width)</p></div>':'');
+ TOOL.$('vbOut').innerHTML='Prism A: base layer '+l+' × '+w+' = <b>'+(l*w)+'</b> cubes; '+h+' layer'+(h>1?'s':'')+'; V = '+l+' × '+w+' × '+h+' = <b>'+v1+' cubic units</b>'+(two?'<br>Prism B: V = '+l2+' × '+w+' × '+h2+' = <b>'+v2+' cubic units</b><br>Composite figure: '+v1+' + '+v2+' = <b>'+(v1+v2)+' cubic units</b>':'');
+ if(!two)made[l+'x'+w+'x'+h]=v1;TOOL.update(O,{l:l,w:w,h:h,v:v1,two:two,total:v1+v2,made:made});}
+ids.forEach(function(i){TOOL.$(i).oninput=draw;});TOOL.$('vbTwo').onchange=draw;
+var O={title:'Volume Builder',reset:reset,challenges:[
+ {text:'Build a prism with a volume of 24 cubic units.',test:function(s){return !s.two&&s.v===24}},
+ {text:'Build volume 24 a second, different way.',test:function(s){return Object.keys(s.made).filter(function(k){return s.made[k]===24}).length>=2}},
+ {text:'Build a cube with 27 unit cubes.',test:function(s){return !s.two&&s.l===3&&s.w===3&&s.h===3}},
+ {text:'Make a base area of 12 and a height of 3.',test:function(s){return !s.two&&s.l*s.w===12&&s.h===3}},
+ {text:'Build a composite figure with a total volume of 40 cubic units.',test:function(s){return s.two&&s.total===40}}],
+ notice:['Volume = cubes in one layer × number of layers = l × w × h = B × h.','Different prisms can have the same volume.','Volume is additive: add the volumes of parts that do not overlap.','Volume is measured in cubic units.']};
+TOOL.init(O);reset();
+</script></body></html>

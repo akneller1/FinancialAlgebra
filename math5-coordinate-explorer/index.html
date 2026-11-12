@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coordinate Plane Explorer · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Plot points in the first quadrant by clicking or typing, connect them into shapes, measure distances along grid lines, and graph two-rule patterns.">
+<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Coordinate Plane Explorer</h1><p class="g5-sub">Click the grid (or type an ordered pair) to plot points. Turn on Connect to make a shape, or make points from two patterns.</p><div class="g5-row"><div class="g5-field"><label for="cpX">x</label><input type="number" id="cpX" min="0" max="10" value="3"></div><div class="g5-field"><label for="cpY">y</label><input type="number" id="cpY" min="0" max="10" value="5"></div>
+<div class="g5-actions" style="margin:0"><button class="g5-btn" id="cpPlot">Plot point</button><button class="g5-btn alt" id="cpUndo">Undo</button><label class="g5-chip"><input type="checkbox" id="cpConnect"> Connect</label></div></div>
+<div class="g5-row"><div class="g5-field"><label for="cpRa">Pattern: x adds</label><input type="number" id="cpRa" min="1" max="5" value="1"></div><div class="g5-field"><label for="cpRb">y adds</label><input type="number" id="cpRb" min="1" max="5" value="2"></div><div class="g5-actions" style="margin:0"><button class="g5-btn alt" id="cpPat">Make pattern points</button></div></div>
+<div class="ts-model" id="cpGrid" style="max-width:520px;margin:auto"></div><div class="ts-out" id="cpOut" aria-live="polite"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script>
+
+var P=[],st={pattern:false};function reset(){P=[];st={pattern:false};TOOL.$('cpConnect').checked=false;draw();}
+function add(x,y){if(x<0||y<0||x>10||y>10||x%1||y%1)return alert('Use whole numbers from 0 to 10.');if(P.some(function(p){return p[0]===x&&p[1]===y}))return;P.push([x,y]);draw();}
+function draw(){var L='ABCDEFGHIJKLMNOP';TOOL.$('cpGrid').innerHTML=G5FIGS.q1({max:10,cell:44,points:P.map(function(p,i){return [p[0],p[1],L[i]||'']}),poly:TOOL.$('cpConnect').checked&&P.length>2?P:null,segs:TOOL.$('cpConnect').checked&&P.length===2?[[P[0][0],P[0][1],P[1][0],P[1][1]]]:[]});
+ var svg=TOOL.$('cpGrid').querySelector('svg');svg.style.cursor='crosshair';svg.onclick=function(e){var r=svg.getBoundingClientRect(),vb=svg.viewBox.baseVal,sx=(e.clientX-r.left)*vb.width/r.width,sy=(e.clientY-r.top)*vb.height/r.height,x=Math.round((sx-30)/44),y=Math.round((vb.height-26-sy)/44);add(x,y);};
+ var out=P.map(function(p,i){return '<b>'+(L[i]||'')+'</b> ('+p[0]+', '+p[1]+')'}).join(' · ')||'No points yet.';
+ if(P.length>=2){var a=P[P.length-2],b=P[P.length-1];if(a[0]===b[0])out+='<br>The last two points are on the same vertical line: '+Math.abs(a[1]-b[1])+' units apart.';else if(a[1]===b[1])out+='<br>The last two points are on the same horizontal line: '+Math.abs(a[0]-b[0])+' units apart.';}
+ TOOL.$('cpOut').innerHTML=out;TOOL.update(O,{P:P,st:st,connect:TOOL.$('cpConnect').checked});}
+TOOL.$('cpPlot').onclick=function(){add(+TOOL.$('cpX').value,+TOOL.$('cpY').value);};TOOL.$('cpUndo').onclick=function(){P.pop();draw();};TOOL.$('cpConnect').onchange=draw;
+TOOL.$('cpPat').onclick=function(){var a=+TOOL.$('cpRa').value,b=+TOOL.$('cpRb').value;P=[];for(var i=0;i*a<=10&&i*b<=10;i++)P.push([i*a,i*b]);st.pattern={a:a,b:b};draw();};
+function isRect(P){if(P.length!==4)return false;var xs=P.map(function(p){return p[0]}),ys=P.map(function(p){return p[1]}),ux=xs.filter(function(v,i){return xs.indexOf(v)===i}),uy=ys.filter(function(v,i){return ys.indexOf(v)===i});if(ux.length!==2||uy.length!==2)return false;return ux.every(function(x){return uy.every(function(y){return P.some(function(p){return p[0]===x&&p[1]===y})})});}
+var O={title:'Coordinate Plane Explorer',reset:reset,challenges:[
+ {text:'Plot the point (3, 5).',test:function(s){return s.P.some(function(p){return p[0]===3&&p[1]===5})}},
+ {text:'Plot a point on the x-axis (not the origin).',test:function(s){return s.P.some(function(p){return p[1]===0&&p[0]>0})}},
+ {text:'Plot two points that are 6 units apart on the same horizontal line.',test:function(s){return s.P.some(function(a){return s.P.some(function(b){return a[1]===b[1]&&Math.abs(a[0]-b[0])===6})})}},
+ {text:'Plot 4 points that are the corners of a rectangle, then connect them.',test:function(s){return s.connect&&isRect(s.P)}},
+ {text:'Make pattern points where each y-value is 3 times its x-value.',test:function(s){return s.st.pattern&&s.st.pattern.b===3*s.st.pattern.a}}],
+ notice:['The first number tells how far to move right; the second tells how far to move up.','(3, 5) and (5, 3) are different points.','Points on the same horizontal line have the same y-coordinate; subtract the x-coordinates to find the distance.','When x adds a and y adds b, the points line up in a straight path.']};
+TOOL.init(O);reset();
+</script></body></html>

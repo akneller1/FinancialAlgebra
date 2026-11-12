@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Area Model Explorer · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Split rectangles into partial products to multiply two-digit numbers, then switch to fractions and multiply parts of a whole.">
+<link rel="stylesheet" href="../../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Area Model Explorer</h1><p class="g5-sub">Choose the factors. The rectangle splits into parts by place value (or into equal fraction parts).</p><div class="g5-row"><div class="g5-field"><label for="amMode">Mode</label><select id="amMode"><option value="w">Whole numbers</option><option value="f">Fractions</option></select></div></div>
+<div id="amW" class="g5-row"><div class="g5-field"><label for="amA">First factor: <b id="amAv"></b></label><input type="range" id="amA" min="10" max="99" value="23"></div><div class="g5-field"><label for="amB">Second factor: <b id="amBv"></b></label><input type="range" id="amB" min="10" max="99" value="14"></div></div>
+<div id="amF" class="g5-row g5-hidden"><div class="g5-field"><label>First fraction</label><div class="ts-step"><button data-k="a" data-s="-1" aria-label="numerator down">−</button><b id="amfa"></b><button data-k="a" data-s="1" aria-label="numerator up">+</button> / <button data-k="b" data-s="-1" aria-label="denominator down">−</button><b id="amfb"></b><button data-k="b" data-s="1" aria-label="denominator up">+</button></div></div>
+<div class="g5-field"><label>Second fraction</label><div class="ts-step"><button data-k="c" data-s="-1" aria-label="numerator down">−</button><b id="amfc"></b><button data-k="c" data-s="1" aria-label="numerator up">+</button> / <button data-k="d" data-s="-1" aria-label="denominator down">−</button><b id="amfd"></b><button data-k="d" data-s="1" aria-label="denominator up">+</button></div></div></div>
+<div class="ts-model" id="amModel"></div><div class="ts-out" id="amOut" aria-live="polite"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../../worksheet-generator/grade5/tool-shell.js?v=grade5-20261111"></script>
+<script>
+
+var f={a:1,b:2,c:3,d:4};function reset(){TOOL.$('amMode').value='w';TOOL.$('amA').value=23;TOOL.$('amB').value=14;f={a:1,b:2,c:3,d:4};draw();}
+function grid(){var a=f.a,b=f.b,c=f.c,d=f.d,S=240,s='<svg viewBox="0 0 300 290">';
+ for(var i=0;i<b;i++)for(var j=0;j<d;j++){var inA=i<a,inC=j<c;s+='<rect x="'+(40+i*S/b)+'" y="'+(30+(d-1-j)*S/d)+'" width="'+(S/b)+'" height="'+(S/d)+'" fill="'+(inA&&inC?'#7C3AED':inA?'#FDE68A':inC?'#BFDBFE':'#fff')+'" stroke="#1E293B" stroke-width="1.2"/>';}
+ s+='<rect x="40" y="30" width="'+S+'" height="'+S+'" fill="none" stroke="#1E293B" stroke-width="3"/><text x="160" y="20" text-anchor="middle" font-size="13" font-weight="700">1 whole</text>';
+ s+='<text x="'+(40+a*S/b/2)+'" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#B45309">'+a+'/'+b+'</text><text x="30" y="'+(30+S-c*S/d/2)+'" text-anchor="end" font-size="14" font-weight="700" fill="#1D4ED8">'+c+'/'+d+'</text></svg>';return s;}
+function draw(){var m=TOOL.$('amMode').value;TOOL.$('amW').classList.toggle('g5-hidden',m!=='w');TOOL.$('amF').classList.toggle('g5-hidden',m!=='f');
+ if(m==='w'){var A=+TOOL.$('amA').value,B=+TOOL.$('amB').value,at=A-A%10,ao=A%10,bt=B-B%10,bo=B%10;TOOL.$('amAv').textContent=A;TOOL.$('amBv').textContent=B;
+  var top=ao?[at,ao]:[at],side=bo?[bt,bo]:[bt],cells=side.map(function(s){return top.map(function(t){return (s*t).toLocaleString('en-US')})});
+  TOOL.$('amModel').innerHTML=G5FIGS.area(top.map(String),side.map(String),cells);
+  var parts=[];side.forEach(function(s){top.forEach(function(t){parts.push(s*t)})});
+  TOOL.$('amOut').innerHTML='<b>'+A+' × '+B+'</b> = '+parts.map(function(p){return p.toLocaleString('en-US')}).join(' + ')+' = <b>'+(A*B).toLocaleString('en-US')+'</b>';
+  TOOL.update(O,{m:m,A:A,B:B,parts:parts});}
+ else{['a','b','c','d'].forEach(function(k){TOOL.$('amf'+k).textContent=f[k]});TOOL.$('amModel').innerHTML=grid();
+  var n=f.a*f.c,dd=f.b*f.d;TOOL.$('amOut').innerHTML=TOOL.frac(f.a,f.b)+' × '+TOOL.frac(f.c,f.d)+' = '+TOOL.frac(n,dd)+(TOOL.gcd(n,dd)>1?' = <b>'+TOOL.mixed(n,dd)+'</b>':'')+'<br><span class="g5-note">The whole is cut into '+f.b+' × '+f.d+' = '+dd+' equal parts; the purple part is '+f.a+' × '+f.c+' = '+n+' of them.</span>';
+  TOOL.update(O,{m:m,f:f,n:n,d:dd});}}
+Array.prototype.forEach.call(document.querySelectorAll('#amF button'),function(b){b.onclick=function(){var k=b.dataset.k,s=+b.dataset.s;f[k]+=s;if(f.b<2)f.b=2;if(f.d<2)f.d=2;if(f.b>10)f.b=10;if(f.d>10)f.d=10;if(f.a<1)f.a=1;if(f.c<1)f.c=1;if(f.a>f.b)f.a=f.b;if(f.c>f.d)f.c=f.d;draw();}});
+['amMode','amA','amB'].forEach(function(id){TOOL.$(id).oninput=draw;});
+var O={title:'Area Model Explorer',reset:reset,challenges:[
+ {text:'Show 23 × 14. Which part of the model is the biggest?',test:function(s){return s.m==='w'&&s.A===23&&s.B===14}},
+ {text:'Make a model with a partial product of 600.',test:function(s){return s.m==='w'&&s.parts.indexOf(600)>=0}},
+ {text:'Find two factors whose product is more than 5,000.',test:function(s){return s.m==='w'&&s.A*s.B>5000}},
+ {text:'Switch to fractions and show 1/2 × 1/3.',test:function(s){return s.m==='f'&&s.f.a===1&&s.f.b===2&&s.f.c===1&&s.f.d===3}},
+ {text:'Make a fraction product equal to 3/8.',test:function(s){return s.m==='f'&&s.n*8===s.d*3}},
+ {text:'Make a fraction product equal to 1/4 using two different fractions.',test:function(s){return s.m==='f'&&s.n*4===s.d&&!(s.f.a*s.f.d===s.f.b*s.f.c)}}],
+ notice:['Each box is one partial product: tens × tens, tens × ones, ones × tens, ones × ones.','Adding all the boxes gives the whole product.','For fractions, the whole is cut into (denominator × denominator) equal parts.','Multiplying two fractions less than 1 gives a product smaller than either fraction.']};
+TOOL.init(O);reset();
+</script></body></html>
