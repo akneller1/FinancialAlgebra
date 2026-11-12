@@ -10,12 +10,12 @@ const root = path.resolve(__dirname, '..');
 const read = f => fs.readFileSync(path.join(root, f), 'utf8');
 const exists = f => fs.existsSync(path.join(root, f.split(/[?#]/)[0]));
 const win = {}; win.window = win;
-for (const f of ['data.js', 'course-catalog.js']) vm.runInNewContext(read(f), win, { filename: f });
+for (const f of ['data.js', 'course-catalog.js', 'grade5-resource-catalog.js']) vm.runInNewContext(read(f), win, { filename: f });
 const course = win.LIBRARY.courses.find(c => c.id === 'math5');
 assert.ok(course, 'math5 course record missing from data.js');
 const units = course.units.map(u => u.id);
 assert.equal(units.length, 11, 'eleven units');
-const manifest = JSON.parse(read('question-banks/manifest.json')).banks.filter(b => b.courseId === 'math5');
+const manifest = JSON.parse(read('manifest.json')).banks.filter(b => b.courseId === 'math5');
 assert.equal(JSON.stringify(manifest.map(b => b.unitId).sort()), JSON.stringify(units.slice().sort()), 'every unit has a manifest entry');
 assert.ok(manifest.every(b => b.approved === true), 'math5 manifest entries are approved');
 
@@ -25,8 +25,8 @@ const ids = new Set(), prompts = new Set();
 let total = 0, diagrams = 0;
 const byLevel = { cp2: 0, cp1: 0, honors: 0 };
 for (const u of units) {
-  const bank = JSON.parse(read(`question-banks/math5/${u}.json`));
-  const meta = JSON.parse(read(`question-banks/math5/meta/${u}.meta.json`));
+  const bank = JSON.parse(read(`math5/${u}.json`));
+  const meta = JSON.parse(read(`math5/meta/${u}.meta.json`));
   const skills = win.MK_COURSE_CATALOG.getSkillRecords('math5', u).map(s => s.id);
   assert.equal(bank.courseId, 'math5'); assert.equal(bank.unitId, u);
   const count = {};
@@ -59,7 +59,7 @@ for (const u of units) {
 
   const fc = JSON.parse(read(`worksheet-generator/grade5/flashcards/${u}.json`));
   assert.ok(fc.cards.length >= 15 && fc.cards.every(c => c.front && c.back), u + ': flashcards');
-  assert.ok(exists(`artifacts/math5-${u}-cheat-sheet/worksheet.pdf`) && exists(`scripts/cheat-sheets/content/math5-${u}.cjs`), u + ': cheat sheet');
+  assert.ok(exists(`math5-${u}-cheat-sheet/worksheet.pdf`) && exists(`scripts/cheat-sheets/content/math5-${u}.cjs`), u + ': cheat sheet');
   const res = course.units.find(x => x.id === u).artifacts;
   for (const a of res) assert.ok(exists(a.path), u + ': missing resource target ' + a.path);
   for (const a of res) if (a.thumb) assert.ok(exists(a.thumb), u + ': missing thumbnail ' + a.thumb);
