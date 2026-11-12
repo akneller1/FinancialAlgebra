@@ -61,7 +61,16 @@ function shortcutBanner(unit){
  '</ul></section>';
 }
 function resourceCard(title,path,description,unit){
- return '<li><a class="finance-resource-card" href="'+esc(resourceHref(path))+'"><img class="finance-resource-thumb" src="'+esc(resourceThumbnail(path,unit.id))+'" width="720" height="450" alt="" loading="lazy" decoding="async"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a>' + (/financial\/(games|decision-lab|flashcards|practice)\//.test(path)&&!/[?&]teacher=1/.test(path)?'<button type="button" class="btn" data-student-link="'+esc(path)+'">Generate student link</button>':'')+'</li>';
+ const href=esc(resourceHref(path));
+ const thumbnail=esc(resourceThumbnail(path,unit.id));
+ const studentLink=/financial\\/(games|decision-lab|flashcards|practice)\\//.test(path)&&!/[?&]teacher=1/.test(path);
+ return '<li class="finance-resource-item"><article class="finance-resource-card" data-course="'+esc(courseId)+'" data-color="purple">'+
+  '<a class="finance-resource-image-link" href="'+href+'" aria-label="Open '+esc(title)+'"><img class="finance-resource-thumb" src="'+thumbnail+'" width="720" height="450" alt="" loading="lazy" decoding="async"></a>'+
+  '<div class="finance-resource-body"><h3><a class="finance-resource-title" href="'+href+'">'+esc(title)+'</a></h3>'+
+  '<p class="finance-resource-description">'+esc(description)+'</p>'+
+  '<div class="finance-resource-actions"><a class="finance-resource-open" href="'+href+'">Open resource →</a>'+
+  (studentLink?'<button type="button" class="finance-student-link" data-student-link="'+esc(path)+'">Generate student link</button>':'')+
+  '</div></div></article></li>';
 }
 function resourceSections(unit){
  const r=resourcesFor(unit);
