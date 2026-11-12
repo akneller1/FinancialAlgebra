@@ -245,6 +245,23 @@
     var pres = el('button', z, 'g5-btn ghost sm', '⛶'); pres.title = 'Presentation mode (full screen)'; pres.setAttribute('aria-label', 'Presentation mode');
     pres.onclick = function () { D.body.classList.toggle('g5-present'); if (D.fullscreenElement) D.exitFullscreen(); else if (D.documentElement.requestFullscreen) D.documentElement.requestFullscreen().catch(function () {}); };
     apply();
+    if (!student) {
+      var share = el('button', z, 'g5-btn ghost sm', 'Copy student link');
+      share.type = 'button'; share.setAttribute('aria-label','Copy link for students to use this activity');
+      share.onclick = function () {
+        var url = new URL(G.location.href);
+        var selected = D.querySelector('input[name=g5level]:checked');
+        var choice = selected ? selected.value : (G.G5_LAST_LEVEL || P.get('level') || 'cp1');
+        url.searchParams.set('student','1');
+        url.searchParams.set('level',choice);
+        url.searchParams.delete('mode');
+        url.searchParams.delete('present');
+        function manual() { if (G.prompt) G.prompt('Copy student link:',url.href); else share.textContent='Copy link from address bar'; }
+        if (G.navigator && G.navigator.clipboard && G.navigator.clipboard.writeText) {
+          G.navigator.clipboard.writeText(url.href).then(function () { share.textContent='Copied!'; }).catch(manual);
+        } else manual();
+      };
+    }
     return head;
   }
   function levelName(l) { return (LEVELS.filter(function (x) { return x[0] === l; })[0] || [l, l])[1]; }
@@ -268,6 +285,7 @@
     var go = el('button', p, 'g5-btn primary big', cfg.startLabel || 'Start ▶');
     go.onclick = function () {
       var l = (p.querySelector('input[name=g5level]:checked') || {}).value || 'cp1';
+      G.G5_LAST_LEVEL = l;
       var m = (p.querySelector('input[name=g5mode]:checked') || {}).value || modeVal;
       cfg.start({ level: l, mode: m, extra: extra });
     };
