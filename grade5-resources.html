@@ -1,63 +1,17 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>5th Grade Math Resource Library | Mr. K's Classroom — Development</title>
-<meta name="description" content="Staged Grade 5 practice library: math games, interactive models, flashcards, understanding checks, cheat sheets and printable projects.">
-<link rel="stylesheet" href="./styles.css?v=classroom-parity-1">
-<link rel="stylesheet" href="./site-overrides.css?v=1">
-<style>
-.g5lib{max-width:1100px;margin:auto;padding:1.3rem 1rem 3rem}
-.g5lib-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.3rem}
-.g5lib-nav{display:flex;flex-wrap:wrap;gap:.7rem}.g5lib-nav a{color:inherit;text-underline-offset:3px}
-.g5lib-lead{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1.2rem}
-.g5lib-lead h1{margin:.2rem 0 .5rem;font-size:clamp(1.55rem,3vw,2.4rem)}
-.g5lib-lead p{margin:.4rem 0;line-height:1.5}
-.g5lib-unit{border:1px solid var(--line);border-radius:14px;margin:.7rem 0;background:var(--card);overflow:hidden}
-.g5lib-unit>summary{cursor:pointer;padding:1rem;list-style:auto;font-weight:800;font-size:1.1rem;background:var(--c-tint,#edf6ff)}
-.g5lib-unit>summary small{font-weight:400;font-size:.85rem;margin-left:.5rem}
-.g5lib-inner{padding:1rem}
-.g5lib-group{margin:1.2rem 0}.g5lib-group h3{margin:0 0 .65rem}
-.g5lib-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,175px),1fr));gap:.65rem;list-style:none;padding:0;margin:0}
-.g5lib-card{display:flex;flex-direction:column;align-items:center;gap:.35rem;min-height:145px;text-align:center;background:var(--paper,#fff);color:#17213d;text-decoration:none;border:1px solid #cdd5e4;border-radius:12px;padding:.5rem}
-.g5lib-card:hover,.g5lib-card:focus-visible{box-shadow:0 3px 12px #17213d22;border-color:#5765ab}
-.g5lib-card img{display:block;width:100%;height:92px;object-fit:contain;border-radius:7px}
-.g5lib-card strong{font-size:.95rem;line-height:1.25}
-.g5lib-card small{font-size:.75rem;line-height:1.25}
-.g5lib-note{font-size:.9rem;color:var(--ink-soft,#334155)}
-@media(max-width:520px){.g5lib-card img{height:75px}.g5lib-unit>summary small{display:block;margin-left:0}}
-</style>
-</head>
-<body>
-<main class="g5lib" id="main">
-<header class="g5lib-header">
-  <a href="./grade5.html">← Grade 5 curriculum outline</a>
-  <nav class="g5lib-nav" aria-label="Development site"><a href="./index.html">Financial Algebra</a><a href="https://mrksclassroom.com/">Main Classroom</a></nav>
-</header>
-<section class="g5lib-lead">
-  <h1>5th Grade Math — Resource Library</h1>
-  <p>Explore 11 units of uploaded classroom resources: games, interactive math, flashcards, printable cheat sheets, understanding checks and projects.</p>
-  <p class="g5lib-note">This is a separate development site. The Grade 5 curriculum outline has 13 pacing units; the resource/question-bank library organizes topics into 11 skill-based units. Remedial, Standard and Advanced materials are available where applicable.</p>
-</section>
-<div id="g5libUnits" role="region" aria-label="Grade 5 resources"><p>Loading Grade 5 resources…</p></div>
-</main>
-<script src="./data.js?v=grade5-20261112"></script>
-<script src="./grade5-resource-catalog.js?v=grade5-20261112"></script>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5th Grade Math | Mr. K's Classroom</title>
+<link rel="canonical" href="./grade5.html">
 <script>
+/* Old bookmarks automatically open the consolidated Grade 5 class page. */
 (function(){
- 'use strict';
- var root=document.getElementById('g5libUnits'),bundle=window.MK_GRADE5_RESOURCES;
- if(!bundle){root.textContent='Grade 5 resources could not load. Refresh the page.';return;}
- var groups=[['Interactive','Interactive Math'],['Game','Games'],['Study Guide','Study Guides'],['Project','Projects']];
- function esc(x){return String(x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
- function card(a){return '<li><a class="g5lib-card" href="'+esc(a.path)+'"><img src="'+esc(a.thumb||'')+'" alt="" loading="lazy" decoding="async"><strong>'+esc(a.title)+'</strong><small>'+esc(a.description||'')+'</small></a></li>';}
- root.innerHTML=bundle.course.units.map(function(u,i){
-   var sections=groups.map(function(g){var items=u.artifacts.filter(function(a){return a.type===g[0];});
-     return items.length?'<section class="g5lib-group"><h3>'+g[1]+'</h3><ul class="g5lib-grid">'+items.map(card).join('')+'</ul></section>':'';}).join('');
-   return '<details class="g5lib-unit" id="'+esc(u.id)+'"'+(i===0?' open':'')+'><summary>Unit '+(i+1)+': '+esc(u.name)+' <small>'+u.artifacts.length+' resources</small></summary><div class="g5lib-inner">'+sections+'</div></details>';
- }).join('');
+ var slug=location.hash.slice(1).split('?')[0];
+ try{slug=decodeURIComponent(slug);}catch(e){}
+ var hash=/^math5\.[a-z0-9-]+$/.test(slug)?'#'+slug:
+   (/^[a-z0-9-]+$/.test(slug)?'#math5.'+slug:'');
+ location.replace('./grade5.html'+hash);
 })();
 </script>
-</body>
-</html>
+</head><body><p>Grade 5 activities and curriculum are now on one class page.
+<a href="./grade5.html">Open 5th Grade Math</a>.</p></body></html>
