@@ -891,9 +891,9 @@ def main():
     keyed = 0
     manifest_units = []
     for u in UNITS:
-        bf = os.path.join(ROOT, "question-banks", COURSE_ID, u["id"] + ".json")
+        bf = os.path.join(ROOT, COURSE_ID, u["id"] + ".json")
         cf = os.path.join(HERE, "out", u["id"] + ".checks.json")
-        mf = os.path.join(ROOT, "question-banks", COURSE_ID, "meta", u["id"] + ".meta.json")
+        mf = os.path.join(ROOT, COURSE_ID, "meta", u["id"] + ".meta.json")
         if not os.path.exists(bf):
             errors.append(f"missing bank {u['id']}")
             continue
