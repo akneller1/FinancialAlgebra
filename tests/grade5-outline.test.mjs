@@ -42,18 +42,23 @@ test('unit and skill IDs are deterministic and standards are source-mapped',()=>
  assert.ok(c.units[7].standards.includes('A-F.2.1.3'));
  assert.ok(c.units[2].standards.includes('M05.A-T.2.1.2'));
 });
-test('grade5 page uses the reusable Classroom outline renderer without unfinished links',()=>{
- const page=read('grade5.html'),script=read('src/grade5-site.js'),template=read('src/outline-template.js');
- assert.ok(page.includes('styles.css'));
- assert.ok(page.includes('site-overrides.css'));
+test('Grade 5 keeps the original source sequence within one Classroom-style class page',()=>{
+ const page=read('grade5.html'),site=read('src/grade5-site.js');
+ const catalog=read('grade5-resource-catalog.js'),legacy=read('grade5-resources.html');
+ assert.ok(page.includes('styles.css')&&page.includes('site-overrides.css'));
  assert.ok(page.includes('src/grade5-site.js'));
+ assert.ok(page.includes('grade5-resource-catalog.js'));
+ assert.ok(!page.includes('href="grade5-resources.html"'));
  assert.ok(read('index.html').includes('href="grade5.html"'));
- assert.ok(script.includes('course-outlines/grade5.json'));
- for(const className of ['algebra-unit-card','generator-banner','unit-pager','algebra-unit-section']){
-  assert.ok(template.includes(className));
+ assert.ok(site.includes('course-outlines/grade5.json'));
+ assert.ok(site.includes('Original curriculum sequence (13 pacing units)'));
+ assert.ok(site.includes('cards grouped-cards'));
+ assert.ok(site.includes('generator-banner compact'));
+ for(const section of ['Games','Study Guides','Interactive Math','Projects']){
+  assert.ok(site.includes('title:\''+section+'\''),section+' section');
  }
- assert.ok(template.includes('aria-disabled="true"'));
- assert.ok(!template.includes('worksheet.html?unit='));
- assert.ok(!template.includes('practice.html?unit='));
+ assert.ok(catalog.includes('worksheet-generator/grade5-games.html'));
+ assert.ok(catalog.includes('worksheet-generator/grade5-understanding-check.html'));
+ assert.ok(legacy.includes('location.replace'));
  assert.ok(existsSync(new URL('../styles.css',import.meta.url)));
 });
