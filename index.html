@@ -3,115 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Free Math Games, Worksheets &amp; Lesson Plans | Mr. K's Classroom</title>
-<meta name="description" content="Free math games, printable worksheets, lesson plans, assessments, flashcards and interactive activities for Algebra 1, Geometry, Algebra 2 and more.">
-<link rel="canonical" href="https://mrksclassroom.com/">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Mr. K's Classroom">
-<meta property="og:url" content="https://mrksclassroom.com/">
-<meta property="og:title" content="Free Math Games, Worksheets &amp; Lesson Plans | Mr. K's Classroom">
-<meta property="og:description" content="Free math games, worksheets, lesson plans, assessments, flashcards and interactive activities for teachers. Explore Algebra 1, Geometry, Algebra 2 and more.">
-<meta property="og:image" content="https://mrksclassroom.com/assets/social-preview.png">
-<meta property="og:image:secure_url" content="https://mrksclassroom.com/assets/social-preview.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Mr. K's Classroom - free math games, worksheets and lesson plans">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free Math Games, Worksheets &amp; Lesson Plans | Mr. K's Classroom">
-<meta name="twitter:description" content="Free classroom math games, worksheets, lesson plans and interactive learning resources.">
-<meta name="twitter:image" content="https://mrksclassroom.com/assets/social-preview.png">
+<title>Financial Algebra | Mr. K's Classroom — Development</title>
+<meta name="description" content="Financial Algebra: 10 units of lessons, worksheets, assessments, games, flashcards, Decision Labs, reference sheets and projects. Classroom development site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-<link rel="stylesheet" href="styles.css?v=mobile-courses-20261110">
-<script src="analytics.js?v=custom-domain-20261108" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Mr. K\u0027s Classroom","url":"https://mrksclassroom.com/","description":"Free math activities, worksheets, games, lesson plans and assessments for teachers.","publisher":{"@type":"Person","name":"Andrey Kneller"}}</script>
+<link rel="stylesheet" href="./styles.css?v=classroom-parity-1">
+<link rel="stylesheet" href="./site-overrides.css?v=1">
 </head>
 <body>
 <button type="button" class="skip" id="skip">Skip to content</button>
 <header class="site-header">
   <div class="wrap bar">
-    <button type="button" class="back-btn" id="backBtn" aria-label="Back to the previous page"><span aria-hidden="true">←</span> Back</button>
-    <a class="brand" href="#">
+    <button type="button" class="back-btn" id="backBtn" aria-label="Back to all Financial Algebra units"><span aria-hidden="true">←</span> Back</button>
+    <a class="brand" href="index.html" aria-label="Financial Algebra course home">
       <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-        <polygon class="m-g m-o" points="18,4 30,27 6,27" stroke-linejoin="round"/>
-        <circle class="m-a m-o" cx="11" cy="21" r="8"/>
-        <rect class="m-s m-o" x="19" y="3" width="9" height="9" rx="1.5"/>
+        <polygon class="m-g m-o" points="18,4 30,27 6,27" stroke-linejoin="round"></polygon>
+        <circle class="m-a m-o" cx="11" cy="21" r="8"></circle>
+        <rect class="m-s m-o" x="19" y="3" width="9" height="9" rx="1.5"></rect>
       </svg>
-      <span id="brandName">Mr. K's Classroom</span>
+      <span>Mr. K's Classroom</span>
       <span class="brand-tagline">Built for Teachers</span>
     </a>
-    <form class="search" id="searchForm" role="search" autocomplete="off">
-      <label class="sr" for="q">Search activities</label>
-      <input id="q" type="search" placeholder="Search slope, escape rooms, or flashcards…">
+    <form class="search" id="searchForm" role="search">
+      <label for="q" class="sr">Find units or topics</label>
+      <input id="q" type="search" placeholder="Search Financial Algebra units or skills…">
     </form>
-    <nav class="main-nav" id="nav" aria-label="Main"></nav>
+    <nav class="main-nav" id="nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Financial Algebra</a>
+      <a href="grade5.html"><img class="course-nav-icon" src="./assets/course-icons/grade5.svg" width="22" height="20" alt="" aria-hidden="true">Grade 5 Mathematics</a>
+      <a href="grade4.html"><img class="course-nav-icon" src="./assets/course-icons/grade4.svg" width="22" height="20" alt="" aria-hidden="true">Grade 4 Mathematics</a>
+      <a href="grade3.html"><img class="course-nav-icon" src="./assets/course-icons/grade3.svg" width="22" height="20" alt="" aria-hidden="true">Grade 3 Mathematics</a>
+      <a href="grade2.html"><img class="course-nav-icon" src="./assets/course-icons/grade2.svg" width="22" height="20" alt="" aria-hidden="true">Grade 2 Mathematics</a>
+      <a href="grade1.html"><img class="course-nav-icon" src="./assets/course-icons/grade1.svg" width="22" height="20" alt="" aria-hidden="true">Grade 1 Mathematics</a>
+      <a href="https://mrksclassroom.com/" target="_blank" rel="noopener">Main Classroom ↗</a>
+      <span class="course-wip-label">Separate development site</span>
+    </nav>
   </div>
 </header>
-<main id="main" tabindex="-1"></main>
-<aside class="support-banner" aria-label="Support these resources"><div class="wrap"><div class="support-row"><div><p class="support-heading">Help keep math resources free.</p><p>Enjoy these activities? Your support helps me create more.</p></div><a class="support-button" href="https://buymeacoffee.com/akneller" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">☕</span> Support Mr. K’s Classroom<span class="sr"> (opens in a new tab)</span></a></div></div></aside>
-<footer class="site-footer"><div class="wrap">
-  <p id="foot"></p>
-  <div class="footer-bottom">
-    <span>© 2026 Mr. K's Classroom</span>
-    <a href="about.html">About</a>
-    <a href="courses/">Courses</a>
-    <a href="skills.html">Browse by Skill</a>
-    <a href="backup.html">Back Up Saved Work</a>
-    <a data-feedback-chooser href="mailto:akneller@gmail.com?subject=Mr.%20K%27s%20Classroom%20%E2%80%94%20Feedback&amp;body=Feedback%20or%20issue%3A%0A%0APage%20or%20activity%20link%3A%0A%0ADetails%3A%0A">Feedback or report an issue<span class="sr"> (choose an email application)</span></a>
-  </div>
-</div></footer>
-
-<dialog id="feedbackChooser" class="feedback-chooser" aria-labelledby="feedbackChooserTitle" aria-describedby="feedbackChooserInfo">
-  <div class="feedback-chooser-header">
-    <div>
-      <h2 id="feedbackChooserTitle">Send feedback</h2>
-      <p id="feedbackChooserInfo">Choose how you would like to email your feedback to <strong>akneller@gmail.com</strong>.</p>
-    </div>
-    <button type="button" id="feedbackChooserClose" class="feedback-chooser-close" aria-label="Close feedback options">&times;</button>
-  </div>
-  <div class="feedback-chooser-options">
-    <a id="feedbackGmail" class="feedback-choice" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer"><span class="feedback-choice-icon feedback-gmail" aria-hidden="true">G</span><span class="feedback-choice-text"><strong>Gmail</strong><small>Open in Gmail on the web</small></span><span class="feedback-choice-arrow" aria-hidden="true">&#8250;</span></a>
-    <a id="feedbackOutlook" class="feedback-choice" href="https://outlook.live.com/" target="_blank" rel="noopener noreferrer"><span class="feedback-choice-icon feedback-outlook" aria-hidden="true">O</span><span class="feedback-choice-text"><strong>Outlook</strong><small>Open in Outlook on the web</small></span><span class="feedback-choice-arrow" aria-hidden="true">&#8250;</span></a>
-    <a id="feedbackDefault" class="feedback-choice" href="mailto:akneller@gmail.com"><span class="feedback-choice-icon feedback-default" aria-hidden="true">&#9993;</span><span class="feedback-choice-text"><strong>Default email application</strong><small>Use your computer or phone's email setting</small></span><span class="feedback-choice-arrow" aria-hidden="true">&#8250;</span></a>
-  </div>
-  <p class="feedback-chooser-note">Your message opens as a draft. Review it and click Send in your email app.</p>
-</dialog>
-<script src="feedback.js?v=email-choice-20261102"></script>
-<script src="data.js?v=grade5-20261111"></script>
-<script src="unit-specific-arcade.js?v=featured-unit-games-20261105"></script>
-<script src="resource-details.js?v=grade5-20261111"></script>
-<script src="course-catalog.js?v=discrete-20261107"></script>
-<script src="question-bank-adapter.js?v=resource-ready-1"></script>
-<script src="resource-eligibility.js?v=algebra2-integrated-20261031"></script>
-<script src="question-bank-loader.js?v=lazy-20261110"></script>
-<script src="skill-crosswalk.js?v=grade-practice-20261031"></script>
-<script src="thumbs/resource-previews.js?v=previews-540952543442fd65c58949c45be93e1233717007"></script><script src="resource-standards.js?v=thumbnail-selection-20261031"></script>
-<script src="app.js?v=grade5-20261111"></script>
-<script>
-/* Fetch only the bank required by the currently opened unit, not every bank on the homepage. */
-(function(){
- var last='';
- function loadCurrentUnit(){
-  var token=location.hash.slice(1);
-  try{token=decodeURIComponent(token);}catch(e){}
-  token=token.split('?')[0];
-  var parts=token.split('.');
-  if(parts.length!==2||!parts[0]||!parts[1])return;
-  var id=parts[0]+'/'+parts[1];
-  if(id===last)return;
-  last=id;
-  window.MK_BANK_LOADER.loadUnitFromSite(parts[0],parts[1]).then(function(ids){
-   if(ids.length&&location.hash.slice(1).split('?')[0]===token)window.dispatchEvent(new Event('mk-banks-ready'));
-  }).catch(function(e){console.warn('Unit bank loading unavailable:',e.message);last='';});
- }
- window.addEventListener('hashchange',loadCurrentUnit);
- loadCurrentUnit();
-})();
-</script>
-<script src="student-game-share.js?v=interactive-math-20261107"></script>
-<script src="student-share-cards.js?v=interactive-math-20261105"></script>
+<main id="main" tabindex="-1"><div class="wrap"><p>Loading course…</p></div></main>
+<footer class="site-footer"><div class="wrap"><p>Financial Algebra is a separate development course with ten units and classroom-ready resources. The live Classroom website is unchanged.</p><div class="footer-bottom"><span>© 2026 Mr. K's Classroom</span><a href="https://github.com/akneller1/FinancialAlgebra" target="_blank" rel="noopener">Development repository ↗</a></div></div></footer>
+<script type="module" src="./src/site.js?v=fa-staging-20261112"></script>
 </body>
 </html>
