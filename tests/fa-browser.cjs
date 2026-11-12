@@ -23,8 +23,8 @@ const units = JSON.parse(fs.readFileSync(path.join(root, 'financial/resources.js
   for (const u of units) {
     const r = u.resources;
     for (const mode of ['worksheet', 'assessment', 'lesson', 'practice']) await visit(r[{ worksheet: 'worksheet', assessment: 'assessment', lesson: 'lessonPlan', practice: 'practiceTest' }[mode]], async p => { if (await count(p, '.fa-q') < 3) throw Error(mode + ' rendered too few questions'); });
-    await visit(r.worksheet, async p => { for (const f of ['case-study', 'compare', 'document', 'analysis', 'decision', 'vocabulary', 'math', 'mixed']) { await p.selectOption('#wsFormat', f); await p.click('#go'); if (await count(p, '.fa-sheet:first-child .fa-q') < 2) throw Error('format ' + f + ' empty'); } });
-    await visit(r.lessonPlan, async p => { for (const o of await p.$$eval('#lessonSkill option', x => x.map(y => y.value))) { await p.selectOption('#lessonSkill', o); await p.click('#go'); if (!(await p.textContent('#output')).includes('Learning objectives')) throw Error('lesson ' + o); } });
+    await visit(r.worksheet, async p => { for (const f of ['case-study', 'compare', 'document', 'analysis', 'decision', 'vocabulary', 'math', 'mixed']) { await p.selectOption('#activityFormat', f); await p.click('#generate'); if (await count(p, '#output .fa-q') < 2) throw Error('format ' + f + ' empty'); } });
+    await visit(r.lessonPlan, async p => { for (const id of await p.$eval('[data-skill]', x => x.map(y => y.dataset.skill))) { for (const box of await p.$('[data-skill]')) await box.uncheck(); await p.check('[data-skill="' + id + '"]'); await p.click('#generate'); if (!(await p.textContent('#output')).includes('Learning goals')) throw Error('lesson ' + id); } });
     await visit(r.flashcards, async p => { await p.click('#card'); await p.click('#know'); if (!/Card 1 of/.test(await p.textContent('#status'))) throw Error('flashcards status'); });
     await visit(r.decisionLab.teacherPath, async p => { for (let s = 0; s < 7; s++) await p.click(`button[data-step="${s}"]`); await p.click('button[data-step="4"]'); const rng = await p.$('input[type=range]'); if (rng) { await rng.fill(await rng.getAttribute('max')); await rng.dispatchEvent('input'); } if (await count(p, '#live table') !== 1) throw Error('lab table'); });
     await visit(r.decisionLab.path, async () => {}, { width: 390, height: 844 });
@@ -38,3 +38,4 @@ const units = JSON.parse(fs.readFileSync(path.join(root, 'financial/resources.js
   console.log(`${checks} page checks, ${failures.length} failures`); failures.forEach(f => console.log('FAIL', f));
   process.exit(failures.length ? 1 : 0);
 })();
+

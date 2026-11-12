@@ -1,180 +1,124 @@
-/* Financial Algebra generators: Lesson Plan, Worksheet, Assessment, Practice Test.
- * Reads extended banks from ../banks/<unit>.json. No network beyond same-origin fetch; no AI. */
-(function (G) {
-  'use strict';
-  var R = G.FA_RENDER, $ = function (s, r) { return (r || document).querySelector(s); };
-  var params = new URLSearchParams(location.search);
-  var state = { unit: params.get('unit') || 'budgeting', mode: params.get('mode') || 'worksheet', bank: null, index: null };
-  var MODES = { lesson: 'Lesson Plan', worksheet: 'Worksheet', assessment: 'Assessment', practice: 'Practice Test' };
-  var FORMATS = {
-    'case-study': { label: 'Case Study', blurb: 'Warm-up items on one skill, then a multi-part case with data, calculations, and a written recommendation.' },
-    compare: { label: 'Compare Two Options', blurb: 'Side-by-side alternatives, total-cost math, and a justified choice.' },
-    document: { label: 'Financial Document Analysis', blurb: 'Fictional statements, stubs, and offers to read and interpret.' },
-    analysis: { label: 'Budget & Data Analysis', blurb: 'Tables of income, expenses, or costs to total, compare, and interpret.' },
-    decision: { label: 'Financial Decision Challenge', blurb: 'Open-ended decisions and claims that require evidence and reasoning.' },
-    vocabulary: { label: 'Vocabulary & Concept Review', blurb: 'Terms, definitions, examples, and common misconceptions.' },
-    math: { label: 'Mathematical Applications', blurb: 'Focused calculation practice that supports the decisions.' },
-    mixed: { label: 'Mixed Review', blurb: 'A balanced blend of every question type.' }
-  };
-  function rng(seed) { var a = 0; String(seed).split('').forEach(function (c) { a = Math.imul(a ^ c.charCodeAt(0), 2654435761) >>> 0; }); return function () { a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-  function shuffle(a, r) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
-  var isOpen = function (q) { return q.format === 'open-response'; };
-  var hasData = function (q) { return !!(q.scenario && (q.scenario.table || q.scenario.document)); };
-  var FILTERS = {
-    'case-study': null, compare: function (q) { return q.type === 'comparison'; }, document: function (q) { return q.type === 'document' || !!(q.scenario && q.scenario.document); },
-    analysis: function (q) { return hasData(q) && q.type !== 'vocabulary'; }, decision: function (q) { return isOpen(q) || q.type === 'claim' || q.type === 'reasoning'; },
-    vocabulary: function (q) { return q.type === 'vocabulary' || q.type === 'concept'; }, math: function (q) { return q.type === 'calculation' || (q.numeric && q.type !== 'document'); }, mixed: function () { return true; }
-  };
-  /* Pick n items across selected skills with family diversity (never two from the same family in a row when avoidable). */
-  function pick(pool, n, r, complexity) {
-    var weight = function (q) { var o = isOpen(q); return complexity === 'foundational' ? (o ? 0.3 : 1) : complexity === 'challenge' ? (o || hasData(q) ? 1 : 0.45) : 1; };
-    var byFam = {}; shuffle(pool, r).forEach(function (q) { if (r() <= weight(q)) (byFam[q.family] = byFam[q.family] || []).push(q); });
-    var fams = shuffle(Object.keys(byFam), r), out = [];
-    while (out.length < n && fams.some(function (f) { return byFam[f].length; })) fams.forEach(function (f) { if (out.length < n && byFam[f].length) out.push(byFam[f].pop()); });
-    return out;
-  }
-  function skillsChosen() { return Array.prototype.map.call(document.querySelectorAll('input[name=skill]:checked'), function (c) { return c.value; }); }
-  function val(id) { var e = $('#' + id); return e ? e.value : null; }
-  function sheet(title, sub, body, teacher) {
-    return '<section class="fa-sheet' + (teacher ? ' fa-pagebreak' : '') + '"><header class="fa-sheet-head"><div><div class="fa-pill">Financial Algebra · ' + R.esc(state.bank.unitName) + (teacher ? ' · TEACHER KEY' : '') + '</div><h2>' + R.esc(title) + '</h2><div>' + R.esc(sub) + '</div></div>' +
-      (teacher ? '' : '<div class="fa-name">Name ____________________<br>Date ______  Period ____</div>') + '</header>' + body + '<p class="fa-doc-kind" style="margin-top:14px">All people, companies, and numbers are fictional. Rates, taxes, and returns are illustrative assumptions, not guarantees.</p></section>';
-  }
-  /* ---------------- Worksheet ---------------- */
-  function caseStudy(pool, n, r) {
-    var anchors = shuffle(pool.filter(function (q) { return isOpen(q) && hasData(q); }), r), out = [];
-    var anchor = anchors[0] || shuffle(pool.filter(isOpen), r)[0], second = n >= 8 ? anchors.filter(function (q) { return q !== anchor && q.skillId !== (anchor || {}).skillId; })[0] : null;
-    var rel = pick(pool.filter(function (q) { return q !== anchor && !isOpen(q) && (!anchor || q.skillId === anchor.skillId); }), n - (anchor ? 1 : 0), r);
-    if (rel.length < n - 1) rel = rel.concat(pick(pool.filter(function (q) { return q !== anchor && !isOpen(q) && rel.indexOf(q) < 0; }), n - 1 - rel.length, r));
-    out = rel.slice(0, n - (anchor ? 1 : 0) - (second ? 1 : 0)).concat(anchor ? [anchor] : [], second ? [second] : []);
-    return out;
-  }
-  function worksheet() {
-    var fmt = val('wsFormat'), n = +val('count'), cx = val('complexity'), space = +val('space'), seed = val('version') + fmt + n + cx + skillsChosen().join();
-    var r = rng(seed), pool = state.bank.questions.filter(function (q) { return skillsChosen().indexOf(q.skillId) >= 0; });
-    var items = fmt === 'case-study' ? caseStudy(pool, n, r) : pick(pool.filter(FILTERS[fmt]), n, r, cx);
-    if (fmt !== 'case-study') items.sort(function (a, b) { return (isOpen(a) ? 1 : 0) - (isOpen(b) ? 1 : 0); });
-    if (!items.length) return '<p class="fa-note">No items match this format for the selected skills. Choose more skills or another format.</p>';
-    var intro = '<p class="fa-note">' + R.esc(FORMATS[fmt].blurb) + (items.some(isOpen) ? ' Written responses are scored with the rubric on the key; any well-supported recommendation can earn full credit.' : '') + '</p>';
-    var body = function (t) { return items.map(function (q, i) { return R.question(q, { n: i + 1, teacher: t, space: space }); }).join(''); };
-    var title = FORMATS[fmt].label + ' — Version ' + val('version');
-    return sheet(title, items.length + ' questions', intro + body(false)) + sheet(title, 'Answer key with worked solutions', body(true), true);
-  }
-  /* ---------------- Assessment ---------------- */
-  var BUCKETS = [
-    ['vocab', 'Vocabulary & concepts', function (q) { return (q.type === 'vocabulary' || q.type === 'concept') && !isOpen(q); }, 20],
-    ['math', 'Mathematical applications', function (q) { return q.type === 'calculation' && !isOpen(q); }, 20],
-    ['scenario', 'Financial scenario analysis', function (q) { return !isOpen(q) && (q.type === 'scenario' || q.type === 'document' || q.type === 'claim' || (q.type === 'comparison' && !isOpen(q))); }, 30],
-    ['justify', 'Comparison & written justification', isOpen, 30]
-  ];
-  function points(q) { return isOpen(q) ? 8 : q.format === 'short-answer' || q.format === 'select-all' ? 2 : 1; }
-  function assessment() {
-    var r = rng(val('version') + 'A' + skillsChosen().join() + val('total')), target = +val('total'), pool = state.bank.questions.filter(function (q) { return skillsChosen().indexOf(q.skillId) >= 0; });
-    var parts = [], used = {}, guide = [];
-    BUCKETS.forEach(function (b) {
-      var pctB = +val('w-' + b[0]) / 100, goal = Math.round(target * pctB), got = 0, sel = [];
-      var cand = pick(pool.filter(function (q) { return b[2](q) && !used[q.id]; }), 60, r);
-      for (var i = 0; i < cand.length && got < goal; i++) { var p = points(cand[i]); if (got + p <= goal + (b[0] === 'justify' ? 4 : 0)) { sel.push(cand[i]); used[cand[i].id] = 1; got += p; } }
-      parts.push({ label: b[1], items: sel, pts: got }); guide.push([b[1], (pctB * 100).toFixed(0) + '%', got]);
-    });
-    var tot = parts.reduce(function (s, p) { return s + p.pts; }, 0), k = 0;
-    var body = function (t) { k = 0; return parts.filter(function (p) { return p.items.length; }).map(function (p, i) { return '<h3 class="fa-section-h">Part ' + 'ABCD'[i] + ': ' + R.esc(p.label) + ' (' + p.pts + ' pts)</h3>' + p.items.map(function (q) { return R.question(q, { n: ++k, teacher: t, points: points(q), space: 1.2, showType: true }); }).join(''); }).join(''); };
-    var scoring = '<h3 class="fa-section-h">Scoring guide</h3>' + R.table({ headers: ['Component', 'Target', 'Points'], rows: guide.map(function (g) { return [g[0], g[1], String(g[2])]; }).concat([['Total', '100%', String(tot)]]) }) +
-      '<p>Multiple choice = 1 pt; short answer and select-all = 2 pts (1 pt for correct setup with a computation error); extended responses = 8 pts using the 4-criterion rubric (each criterion 0–2). Written responses are hand-scored: accept any defensible recommendation supported by accurate evidence.</p>';
-    return sheet('Unit Assessment — Form ' + val('version'), tot + ' points', body(false)) + sheet('Unit Assessment — Form ' + val('version'), 'Answer key, worked solutions, and rubrics', scoring + body(true), true);
-  }
-  /* ---------------- Lesson plan ---------------- */
-  function lesson() {
-    var sid = val('lessonSkill'), idx = +sid.slice(-2), L = (state.bank.lessons || []).find(function (l) { return l.skill === idx; });
-    if (!L) return '<p class="fa-note">Lesson content for this skill is not available yet.</p>';
-    var r = rng(val('version') + sid), qs = state.bank.questions.filter(function (q) { return q.skillId === sid; });
-    var vocab = state.bank.vocab.filter(function (v) { return L.vocab.indexOf(v.term) >= 0; });
-    var docQ = shuffle(qs.filter(function (q) { return q.scenario && q.scenario.document; }), r)[0] || shuffle(state.bank.questions.filter(function (q) { return q.scenario && q.scenario.document; }), r)[0];
-    var guided = shuffle(qs.filter(isOpen), r)[0], practice = pick(qs.filter(function (q) { return !isOpen(q) && q !== docQ; }), 5, r), exit = pick(qs.filter(function (q) { return q.format === 'multiple-choice' && practice.indexOf(q) < 0; }), 2, r);
-    var teacher = val('lessonView') === 'teacher', ed = ' contenteditable="true" spellcheck="true"';
-    var sec = function (h, inner) { return '<h3 class="fa-section-h">' + h + '</h3><div' + ed + '>' + inner + '</div>'; };
-    var ul = function (a) { return '<ul>' + a.map(function (x) { return '<li>' + R.rich(x) + '</li>'; }).join('') + '</ul>'; };
-    var h = '';
-    h += sec('Learning objectives', '<p>Students will be able to:</p>' + ul(L.objectives));
-    h += sec('Key vocabulary', '<dl>' + vocab.map(function (v) { return '<dt><strong>' + R.esc(v.term) + '</strong></dt><dd>' + (teacher ? R.rich(v.def) + (v.example ? '<br><em>Example:</em> ' + R.rich(v.example) : '') : R.lines(1)) + '</dd>'; }).join('') + '</dl>');
-    h += sec('Do Now / Hook (5 min)', '<p>' + R.rich(L.hook) + '</p>' + (teacher ? '' : R.lines(3)));
-    h += sec('Notes (15 min)', L.notes.map(function (n) { return '<p><strong>' + R.esc(n.h) + '.</strong> ' + (teacher ? R.rich(n.body) : R.rich(n.body.split('. ')[0]) + '. ' + R.lines(2)) + '</p>'; }).join(''));
-    h += sec('Worked examples (10 min)', L.examples.map(function (e, i) { return '<div class="fa-panel flat"><p><strong>Example ' + (i + 1) + '.</strong> ' + R.rich(e.problem) + '</p>' + (teacher ? '<ol>' + e.steps.map(function (s) { return '<li>' + R.rich(s) + '</li>'; }).join('') + '</ol><div class="fa-key"><strong>Answer:</strong> ' + R.rich(e.answer) + '</div>' : R.lines(4)) + '</div>'; }).join(''));
-    if (docQ) h += sec('Read the document (5 min)', R.question(docQ, { teacher: teacher, showType: false }));
-    if (guided) h += sec('Guided scenario analysis (10 min)', R.question(guided, { teacher: teacher, showType: false }));
-    h += sec('Independent practice', practice.map(function (q, i) { return R.question(q, { n: i + 1, teacher: teacher }); }).join(''));
-    h += sec('Discussion questions', ul(L.discussion));
-    h += sec('Exit ticket (5 min)', exit.map(function (q, i) { return R.question(q, { n: i + 1, teacher: teacher }); }).join(''));
-    h += sec('Reflection', ul(L.reflection) + (teacher ? '' : R.lines(3)));
-    if (teacher) {
-      h += sec('Common misconceptions & responses', '<table class="fa-table"><thead><tr><th>Misconception</th><th>Teacher move</th></tr></thead><tbody>' + L.misconceptions.map(function (m) { return '<tr><td>' + R.rich(m[0]) + '</td><td>' + R.rich(m[1]) + '</td></tr>'; }).join('') + '</tbody></table>');
-      h += sec('Differentiation & scaffolding', '<p><strong>Support:</strong></p>' + ul(L.differentiation.support) + '<p><strong>Extend:</strong></p>' + ul(L.differentiation.extend));
-      h += sec('Extension activity', '<p>' + R.rich(L.extension) + '</p>');
-      h += sec('Real-world connection', '<p>' + R.rich(L.realWorld) + '</p>');
-      h += sec('Facilitation notes', ul(['Ask: “What would change your answer?” after every calculation.', 'Cold-call for the assumption behind each number (rate, time, rounding).', 'Accept different recommendations when the evidence supports them; push for the tradeoff.']));
-    }
-    return sheet(L.title, (teacher ? 'Teacher lesson plan' : 'Student guided notes') + ' · about ' + L.minutes + ' minutes · ' + (state.bank.skills.find(function (s) { return s.id === sid; }) || {}).name, '<p class="fa-noprint fa-note">Every section below is editable — click to type before printing.</p>' + h);
-  }
-  /* ---------------- Practice test (interactive) ---------------- */
-  function practice() {
-    var r = rng(Date.now()), pool = state.bank.questions.filter(function (q) { return skillsChosen().indexOf(q.skillId) >= 0 && !isOpen(q) && (q.format !== 'short-answer' || q.numeric); });
-    var items = pick(pool, +val('count'), r), score = 0, done = 0;
-    var host = document.createElement('div');
-    host.innerHTML = '<div class="fa-panel"><h2>Practice Test — ' + R.esc(state.bank.unitName) + '</h2><p>Answer each question, then check it. Worked solutions appear after you check.</p><p role="status" id="ptScore">Score: 0 of ' + items.length + '</p></div>' +
-      items.map(function (q, i) {
-        var input = q.format === 'multiple-choice' ? q.options.map(function (o, j) { return '<label class="fa-opt"><input type="radio" name="pt' + i + '" value="' + j + '"> ' + R.rich(o.text) + '</label>'; }).join('<br>') :
-          q.format === 'select-all' ? q.options.map(function (o, j) { return '<label class="fa-opt"><input type="checkbox" name="pt' + i + '" value="' + j + '"> ' + R.rich(o.text) + '</label>'; }).join('<br>') :
-            '<label class="fa-field">Your answer<input name="pt' + i + '" inputmode="decimal" autocomplete="off"></label>';
-        var stripped = Object.assign({}, q, { options: null });
-        return '<div class="fa-panel flat" data-i="' + i + '">' + R.question(stripped, { n: i + 1 }).replace(/<div class="fa-lines"[\s\S]*?<\/div><\/div>/, '') + input + '<p><button class="fa-btn primary" data-check="' + i + '">Check</button></p><div class="fa-fb" aria-live="polite"></div></div>';
-      }).join('');
-    host.addEventListener('click', function (e) {
-      var i = e.target.getAttribute('data-check'); if (i == null) return;
-      var q = items[+i], box = host.querySelector('[data-i="' + i + '"]'), ok;
-      if (q.format === 'multiple-choice') { var c = box.querySelector('input:checked'); if (!c) return; ok = q.options[+c.value].correct; }
-      else if (q.format === 'select-all') { var chosen = Array.prototype.map.call(box.querySelectorAll('input:checked'), function (x) { return +x.value; }); ok = q.options.every(function (o, j) { return o.correct === (chosen.indexOf(j) >= 0); }); }
-      else ok = R.checkNumeric(q, box.querySelector('input').value);
-      e.target.disabled = true; done++; if (ok) score++;
-      box.querySelector('.fa-fb').innerHTML = '<div class="' + (ok ? 'fa-key' : 'fa-mis') + '"><strong>' + (ok ? 'Correct.' : 'Not quite.') + '</strong> Answer: ' + R.rich(Array.isArray(q.answer) ? q.answer.join('; ') : q.answer) + '</div><ol>' + q.solutionSteps.map(function (s) { return '<li>' + R.rich(s) + '</li>'; }).join('') + '</ol>';
-      $('#ptScore').textContent = 'Score: ' + score + ' of ' + items.length + (done === items.length ? ' — finished (' + Math.round(score / items.length * 100) + '%)' : '');
-    });
-    return host;
-  }
-  /* ---------------- UI ---------------- */
-  function controls() {
-    var b = state.bank, m = state.mode;
-    var skills = '<fieldset class="fa-field"><legend>Skills</legend><div class="fa-checks">' + b.skills.map(function (s) { return '<label><input type="checkbox" name="skill" value="' + s.id + '" checked> ' + R.esc(s.name) + '</label>'; }).join('') + '</div></fieldset>';
-    var version = '<label class="fa-field">Version<select id="version">' + 'ABCDEF'.split('').map(function (v) { return '<option>' + v + '</option>'; }).join('') + '</select></label>';
-    var h = '<div class="fa-tabs fa-noprint" role="tablist">' + Object.keys(MODES).map(function (k) { return '<button class="fa-btn" role="tab" aria-selected="' + (k === m) + '" data-mode="' + k + '">' + MODES[k] + '</button>'; }).join('') + '</div>';
-    if (m === 'worksheet') h += skills + '<div class="fa-grid"><label class="fa-field">Format<select id="wsFormat">' + Object.keys(FORMATS).map(function (k) { return '<option value="' + k + '">' + FORMATS[k].label + '</option>'; }).join('') + '</select></label><label class="fa-field">Questions<select id="count"><option>4</option><option selected>6</option><option>8</option><option>10</option><option>12</option></select></label><label class="fa-field">Complexity<select id="complexity"><option value="foundational">Foundational</option><option value="standard" selected>Standard</option><option value="challenge">Challenge</option></select></label><label class="fa-field">Writing space<select id="space"><option value="0.7">Compact</option><option value="1" selected>Standard</option><option value="1.6">Extra</option></select></label>' + version + '</div>';
-    if (m === 'assessment') h += skills + '<div class="fa-grid"><label class="fa-field">Target points<select id="total"><option>40</option><option selected>50</option><option>60</option><option>80</option></select></label>' + BUCKETS.map(function (bk) { return '<label class="fa-field">' + bk[1] + ' (%)<input id="w-' + bk[0] + '" type="number" min="0" max="100" step="5" value="' + bk[3] + '"></label>'; }).join('') + version + '</div>';
-    if (m === 'lesson') h += '<div class="fa-grid"><label class="fa-field">Lesson (skill)<select id="lessonSkill">' + b.skills.map(function (s) { return '<option value="' + s.id + '">' + R.esc(s.name) + '</option>'; }).join('') + '</select></label><label class="fa-field">Version<select id="lessonView"><option value="teacher">Teacher plan</option><option value="student">Student guided notes</option></select></label>' + version + '</div>';
-    if (m === 'practice') h += skills + '<div class="fa-grid"><label class="fa-field">Questions<select id="count"><option>8</option><option selected>12</option><option>16</option><option>20</option></select></label></div>';
-    h += '<p class="fa-noprint" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="fa-btn primary" id="go">' + (m === 'practice' ? 'Start practice test' : 'Generate') + '</button>' + (m === 'practice' ? '' : '<button class="fa-btn" id="print" onclick="window.print()">Print / Save PDF</button>') + '</p>';
-    return h;
-  }
-  function render() {
-    $('#controls').innerHTML = controls();
-    $('#title').textContent = 'Financial Algebra ' + MODES[state.mode] + ' — ' + state.bank.unitName;
-    document.title = MODES[state.mode] + ' · ' + state.bank.unitName + ' | Financial Algebra';
-    $('#controls').addEventListener('click', function (e) { var md = e.target.getAttribute('data-mode'); if (md) { state.mode = md; history.replaceState(null, '', '?unit=' + state.unit + '&mode=' + md); render(); } });
-    $('#go').onclick = generate; generate();
-  }
-  function generate() {
-    var out = $('#output');
-    if (state.mode !== 'lesson' && !skillsChosen().length) { out.innerHTML = '<p class="fa-note">Select at least one skill.</p>'; return; }
-    if (state.mode === 'practice') { out.replaceChildren(practice()); return; }
-    out.innerHTML = { worksheet: worksheet, assessment: assessment, lesson: lesson }[state.mode]();
-  }
-  function unitPicker(index) {
-    var sel = $('#unit'); sel.innerHTML = index.units.map(function (u) { return '<option value="' + u.unitId + '"' + (u.unitId === state.unit ? ' selected' : '') + '>' + R.esc(u.name) + '</option>'; }).join('');
-    sel.onchange = function () { location.search = '?unit=' + sel.value + '&mode=' + state.mode; };
-  }
-  G.FA_GENERATOR = { pick: pick, FILTERS: FILTERS, FORMATS: FORMATS, BUCKETS: BUCKETS, points: points };
-  if (typeof document === 'undefined' || !document.getElementById('output')) return;
-  fetch('../banks/index.json').then(function (r) { return r.json(); }).then(function (index) {
-    if (!index.units.some(function (u) { return u.unitId === state.unit; })) state.unit = index.units[0].unitId;
-    unitPicker(index);
-    return fetch('../banks/' + state.unit + '.json').then(function (r) { return r.json(); });
-  }).then(function (bank) { state.bank = bank; render(); })
-    .catch(function (e) { $('#output').innerHTML = '<p class="fa-note">Unable to load the question bank (' + R.esc(e.message) + '). Open this page from the website rather than the file system.</p>'; });
-})(typeof window !== 'undefined' ? window : globalThis);
+/* Financial Algebra handout builder. Shared Classroom appearance and Algebra's
+ * Letter pagination; financial banks remain authoritative. No runtime AI. */
+(function(G){
+'use strict';
+var R=G.FA_RENDER,doc=G.document,params=new URLSearchParams(G.location?G.location.search:'');
+var MODES={lesson:'Lesson Plan',worksheet:'Worksheet',assessment:'Assessment',practice:'Practice Test'};
+var FORMATS={'mixed':'Mixed Review','case-study':'Case Study',compare:'Compare Two Options',document:'Financial Document Analysis',analysis:'Budget & Data Analysis',decision:'Financial Decision Challenge',vocabulary:'Vocabulary & Concepts',math:'Mathematical Applications'};
+var isOpen=q=>q.format==='open-response',hasData=q=>!!(q.scenario&&(q.scenario.table||q.scenario.document));
+var FILTERS={'case-study':()=>true,mixed:()=>true,compare:q=>q.type==='comparison',document:q=>q.type==='document'||!!(q.scenario&&q.scenario.document),analysis:q=>hasData(q)&&q.type!=='vocabulary',decision:q=>isOpen(q)||q.type==='claim'||q.type==='reasoning',vocabulary:q=>q.type==='vocabulary'||q.type==='concept',math:q=>q.type==='calculation'||!!q.numeric};
+var SECTION_NAMES={objectives:'Learning goals',donow:'Do Now',vocab:'Vocabulary',notes:'Notes',examples:'Examples',practice:'Practice',challenge:'Challenge Problems',summary:'Lesson Summary',exit:'Exit Ticket'};
+var DEFAULT_SECTIONS=[['objectives',1,true],['donow',2,true],['vocab',0,true],['notes',0,true],['examples',2,true],['practice',6,true],['challenge',1,false],['summary',0,true],['exit',2,true]];
+function rng(seed){var a=0;String(seed).split('').forEach(c=>a=Math.imul(a^c.charCodeAt(0),2654435761)>>>0);return()=>{a+=0x6D2B79F5;var t=Math.imul(a^a>>>15,1|a);t^=t+Math.imul(t^t>>>7,61|t);return((t^t>>>14)>>>0)/4294967296;};}
+function shuffled(a,r){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(r()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function pick(pool,n,r){var groups={},out=[];shuffled(pool,r||rng('A')).forEach(q=>(groups[q.family||q.id]||(groups[q.family||q.id]=[])).push(q));var families=shuffled(Object.keys(groups),r||rng('B'));while(out.length<n&&families.some(f=>groups[f].length))families.forEach(f=>{if(out.length<n&&groups[f].length)out.push(groups[f].pop());});return out;}
+function clone(x){return JSON.parse(JSON.stringify(x));}
+function clamp(x,lo,hi){return Math.max(lo,Math.min(hi,Number(x)||0));}
+function options(overrides){return Object.assign({skills:[],notes:'guided',worked:true,space:'standard',format:'mixed',response:'mixed',count:12,total:50,showPoints:true,title:'',customNotes:'',sections:DEFAULT_SECTIONS.map(x=>({id:x[0],count:x[1],on:x[2]}))},overrides||{});}
+function filterPool(bank,o){return bank.questions.filter(q=>o.skills.includes(q.skillId)&&(FILTERS[o.format]||FILTERS.mixed)(q)&&(o.response==='mixed'||q.format===o.response));}
+function allocate(items,target){if(!items.length)return [];target=Math.round(target);if(target<items.length)throw new RangeError('Total points must be at least the number of questions.');var weights=items.map(q=>isOpen(q)?4:q.format==='multiple-choice'?1:2),sum=weights.reduce((a,b)=>a+b,0),left=target-items.length;var raw=weights.map(w=>left*w/sum),out=raw.map(v=>1+Math.floor(v)),remain=target-out.reduce((a,b)=>a+b,0);raw.map((v,i)=>({i,f:v-Math.floor(v)})).sort((a,b)=>b.f-a.f||a.i-b.i).slice(0,remain).forEach(x=>out[x.i]++);return out;}
+function buildLesson(bank,o,seed){var r=rng(seed),lessons=bank.lessons.filter(l=>o.skills.some(s=>Number(s.slice(-2))===l.skill)),sections=[],warnings=[],used=new Set(),pool=bank.questions.filter(q=>o.skills.includes(q.skillId));
+function take(n,p,label){var a=pick(p.filter(q=>!used.has(q.id)),n,r);a.forEach(q=>used.add(q.id));if(a.length<n)warnings.push(label+': '+a.length+' distinct matching questions available (requested '+n+').');return a.map(q=>({kind:'question',q:clone(q)}));}
+o.sections.filter(s=>s.on).forEach(s=>{var blocks=[];
+ if(s.id==='objectives')blocks=[{kind:'objectives',items:[...new Set(lessons.flatMap(l=>l.objectives))]}];
+ if(s.id==='donow')blocks=take(s.count,pool.filter(q=>!isOpen(q)&&q.type!=='document'),SECTION_NAMES[s.id]);
+ if(s.id==='vocab'){var terms=new Set(lessons.flatMap(l=>l.vocab));blocks=[{kind:'vocab',items:bank.vocab.filter(v=>terms.has(v.term))}];}
+ if(s.id==='notes'){blocks=lessons.flatMap(l=>l.notes.map(n=>({kind:'note',heading:n.h,body:n.body})));if(o.customNotes.trim())blocks.push({kind:'note',heading:'Additional notes',body:o.customNotes});}
+ if(s.id==='examples'){var authored=lessons.flatMap(l=>l.examples);blocks=authored.slice(0,s.count).map(e=>({kind:'example',example:clone(e)}));if(blocks.length<s.count)blocks=blocks.concat(take(s.count-blocks.length,pool.filter(q=>q.type==='calculation'||q.numeric),'Examples').map(x=>Object.assign(x,{worked:true})));}
+ if(s.id==='practice')blocks=take(s.count,pool.filter(q=>!isOpen(q)&&(o.response==='mixed'||q.format===o.response)),'Practice');
+ if(s.id==='challenge')blocks=take(s.count,pool.filter(q=>isOpen(q)||q.type==='comparison'),'Challenge');
+ if(s.id==='summary')blocks=[{kind:'reflection',items:[...new Set(lessons.flatMap(l=>l.reflection))]}];
+ if(s.id==='exit')blocks=take(s.count,pool.filter(q=>!isOpen(q)&&!hasData(q)),'Exit ticket');
+ if(blocks.length)sections.push({id:s.id,title:SECTION_NAMES[s.id],blocks:blocks});
+});
+return{mode:'lesson',bank:bank,options:clone(o),lessons:lessons,sections:sections,warnings:warnings};}
+function buildPaper(bank,o,mode,seed){var pool=filterPool(bank,o),r=rng(seed),items;
+ if(o.format==='case-study'&&o.response==='mixed'){var anchor=pick(pool.filter(q=>isOpen(q)&&hasData(q)),1,r);if(!anchor.length)anchor=pick(pool.filter(isOpen),1,r);items=pick(pool.filter(q=>!anchor.includes(q)&&!isOpen(q)),Math.max(0,o.count-anchor.length),r).concat(anchor);}
+ else items=pick(pool,o.count,r);
+ var weights=mode==='assessment'?allocate(items,o.total):[],warnings=[];
+ if(items.length<o.count)warnings.push(items.length+' distinct matching questions available; you requested '+o.count+'. Choose additional skills or a different format.');
+ if(!items.length)warnings.push('Select at least one skill and an available response format.');
+ return{mode:mode,bank:bank,options:clone(o),lessons:[],warnings:warnings,sections:[{id:'questions',title:mode==='assessment'?'Assessment':FORMATS[o.format],blocks:items.map((q,i)=>({kind:'question',q:clone(q),points:weights[i]}))}]};}
+function esc(x){return R.esc(x);}
+function rich(x){return R.rich(x).replace(/(\([^<>]{1,45}\)|\d+(?:\.\d+)?)\^([−-]?\d+)/g,'$1<sup>$2</sup>');}
+function lines(n){return R.lines(n);}
+function guided(text,terms){var out=String(text),changed=false;(terms||[]).slice().sort((a,b)=>b.length-a.length).forEach(term=>{var re=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');if(re.test(out)){out=out.replace(re,'________');changed=true;}});out=out.replace(/\$?\b\d+(?:[,.]\d+)*(?:%)?/g,()=>{changed=true;return'________';});return rich(out)+(changed?'':'<div class="fg-study-note">Explain this idea in your own words.</div>'+lines(2));}
+function points(q){return isOpen(q)?8:q.format==='multiple-choice'?1:2;}
+function questionHTML(block,n,teacher,o){var q=clone(block.q),answered=teacher||!!block.worked&&o.worked;
+ if(teacher&&q.rubric&&block.points){var old=q.rubric.reduce((a,c)=>a+c.points,0);q.rubric=q.rubric.map(c=>Object.assign(c,{points:Math.round(c.points*block.points/old*100)/100}));}
+ var out=R.question(q,{n:n,teacher:answered,space:o.space==='extra'?1.6:o.space==='compact'?.65:1,showType:false,points:o.showPoints&&block.points?block.points:null});
+ // Bank expressions already use explicit fraction markup; show powers as powers.
+ return out.replace(/(\d+(?:\.\d+)?)\^([−-]?\d+)/g,'$1<sup>$2</sup>');}
+function packetHTML(packet,teacher){var o=packet.options,b=packet.bank,complete=teacher||o.notes==='completed',n=0,exampleN=0;
+ var title=o.title.trim()||(packet.mode==='lesson'?(packet.lessons.length===1?packet.lessons[0].title:b.unitName+' — Lesson Handout'):MODES[packet.mode]+' — '+b.unitName);
+ var total=packet.sections.flatMap(s=>s.blocks).reduce((a,x)=>a+(x.points||0),0);
+ var h='<section class="pl-sheet"><header class="fg-sheet-head"><div class="fg-sheet-course">FINANCIAL ALGEBRA · '+esc(b.unitName)+(teacher?' · TEACHER KEY':' · STUDENT HANDOUT')+'</div><h1>'+esc(title)+'</h1><div class="fg-sheet-meta"><span>Name __________________________</span><span>Date __________ Period ____</span></div>'+(packet.mode==='assessment'&&o.showPoints?'<p>'+total+' points</p>':'')+'</header>';
+ packet.sections.forEach(s=>{h+='<section class="pl-sbox pl-s-'+s.id+'"><div class="pl-shd">'+esc(s.title)+(s.id==='notes'?' <small>· '+(complete?'Completed notes':o.notes==='blank'?'Notes organizer':'Guided notes')+'</small>':'')+'</div>';
+ s.blocks.forEach(block=>{
+ if(block.kind==='objectives')h+='<ul class="fg-objectives">'+block.items.map(x=>'<li>'+rich(x)+'</li>').join('')+'</ul>';
+ if(block.kind==='vocab')h+='<table class="fg-vocab"><thead><tr><th>Vocabulary</th><th>Meaning / example</th></tr></thead><tbody>'+block.items.map(v=>'<tr><th>'+esc(v.term)+'</th><td'+(!complete?' class="fg-vocab-blank"':'')+'>'+(complete?rich(v.def)+(v.example?'<br><em>'+rich(v.example)+'</em>':''):'')+'</td></tr>').join('')+'</tbody></table>';
+ if(block.kind==='note')h+='<div class="fg-note-block"><h3>'+esc(block.heading)+'</h3>'+(complete?rich(block.body):o.notes==='blank'?lines(4):guided(block.body,packet.bank.vocab.filter(v=>o.skills.includes(packet.bank.unitId+'-skill-'+String(v.skill).padStart(2,'0'))).map(v=>v.term)))+'</div>';
+ if(block.kind==='example'){var e=block.example;exampleN++;h+='<div class="fg-example"><p><strong>Example '+exampleN+'.</strong> '+rich(e.problem)+'</p>'+((teacher||o.worked)?'<ol>'+e.steps.map(x=>'<li>'+rich(x)+'</li>').join('')+'</ol><div class="fa-key"><b>Answer:</b> '+rich(e.answer)+'</div>':lines(o.space==='extra'?6:4))+'</div>';}
+ if(block.kind==='question')h+=questionHTML(block,++n,teacher,o);
+ if(block.kind==='reflection')h+=block.items.map(x=>'<div class="fg-note-block"><p>'+rich(x)+'</p>'+(!teacher?lines(2):'<p class="fg-study-note">Accept a clear response supported by the lesson.</p>')+'</div>').join('');
+ });h+='</section>';});
+ if(teacher&&packet.mode==='lesson'&&o.teacherNotes){h+='<section class="pl-sbox"><div class="pl-shd">Teaching notes</div>';packet.lessons.forEach(l=>{h+='<div class="fg-note-block"><h3>'+esc(l.title)+'</h3><p><b>Discussion:</b> '+l.discussion.map(rich).join(' · ')+'</p><p><b>Watch for:</b> '+l.misconceptions.map(m=>rich(m[0])+' — '+rich(m[1])).join('; ')+'</p><p><b>Support:</b> '+l.differentiation.support.map(rich).join(' · ')+'</p><p><b>Extend:</b> '+l.differentiation.extend.map(rich).join(' · ')+'</p></div>';});h+='</section>';}
+ h+='<p class="fg-assumptions">Fictional classroom scenarios. Rates, returns and tax tables are illustrative assumptions. '+(teacher?'Review written recommendations using the supporting evidence.':'Show your reasoning and label financial amounts.')+'</p></section>';return h;}
+var state={mode:MODES[params.get('mode')]?params.get('mode'):'lesson',unit:params.get('unit')||'income',bank:null,index:null,opts:null,packet:null,audience:'student',version:'A',zoom:100,build:0,practiceItems:[]};
+var $=id=>doc.getElementById(id);
+function readPrefs(){try{return JSON.parse(localStorage.getItem('fa-handout-options-v1')||'{}');}catch(e){return{};}}
+function savePrefs(){try{localStorage.setItem('fa-handout-options-v1',JSON.stringify({notes:state.opts.notes,worked:state.opts.worked,space:state.opts.space,sections:state.opts.sections,teacherNotes:state.opts.teacherNotes}));}catch(e){}}
+function field(id,label,control){return '<div class="field"><label for="'+id+'">'+label+'</label>'+control+'</div>';}
+function select(id,choices,value){return '<select id="'+id+'">'+choices.map(x=>{var v=Array.isArray(x)?x[0]:x,l=Array.isArray(x)?x[1]:x;return '<option value="'+esc(v)+'"'+(String(v)===String(value)?' selected':'')+'>'+esc(l)+'</option>';}).join('')+'</select>';}
+function numeric(id,value,min,max){return '<input id="'+id+'" type="number" min="'+min+'" max="'+max+'" step="1" value="'+value+'">';}
+function renderControls(){doc.title=MODES[state.mode]+' · '+state.bank.unitName+' | Financial Algebra';var o=state.opts,b=state.bank,lesson=state.mode==='lesson',paper=state.mode!=='practice';
+ var h='<div class="card"><h1>'+MODES[state.mode]+'</h1><p class="hint">Financial Algebra · Standard</p><div class="fg-tabs" aria-label="Generator type">'+Object.entries(MODES).map(([k,v])=>'<button type="button" class="btn ghost sm" data-mode="'+k+'" aria-pressed="'+(state.mode===k)+'">'+v+'</button>').join('')+'</div>'+field('unit','Unit',select('unit',state.index.units.map(u=>[u.unitId,u.name]),state.unit))+'</div>';
+ h+='<div class="card"><h2><span class="step">1</span> '+(lesson?'Choose lesson topics':'Choose skills')+'</h2>'+b.skills.map(s=>'<label class="fg-check"><input type="checkbox" data-skill="'+s.id+'"'+(o.skills.includes(s.id)?' checked':'')+'>'+esc(s.name)+'</label>').join('')+'<button class="link" type="button" data-all-skills="1">Select all</button> <button class="link" type="button" data-all-skills="0">Clear</button></div>';
+ h+='<div class="card"><h2><span class="step">2</span> Handout options</h2>';
+ if(paper)h+=field('paperTitle','Handout title', '<input type="text" id="paperTitle" value="'+esc(o.title)+'" placeholder="Use lesson or unit title">');
+ if(lesson){h+=field('notesMode','Student notes',select('notesMode',[['completed','Completed notes'],['guided','Guided notes — fill in the blanks'],['blank','Blank notes organizer']],o.notes));h+='<label class="fg-check"><input type="checkbox" id="worked"'+(o.worked?' checked':'')+'>Print worked example steps and answers on the student sheet</label><p class="hint">Practice and exit-ticket answers stay on the teacher key.</p>'+field('customNotes','Additional notes (optional)','<textarea id="customNotes" placeholder="Add your own explanation or reminder">'+esc(o.customNotes)+'</textarea>')+'<label class="fg-check"><input type="checkbox" id="teacherNotes"'+(o.teacherNotes?' checked':'')+'>Include teaching notes on the teacher key</label>';}
+ else{h+=field('activityFormat','Content',select('activityFormat',Object.entries(FORMATS),o.format))+field('response','Question format',select('response',[['mixed','Mixed formats'],['multiple-choice','Multiple choice'],['short-answer','Short answer'],['select-all','Select all'],...(state.mode==='practice'?[]:[['open-response','Open response (4+ parts)']])],o.response))+field('count','Questions',numeric('count',o.count,1,30));if(state.mode==='assessment')h+=field('total','Total points',numeric('total',o.total,10,200))+'<label class="fg-check"><input type="checkbox" id="showPoints"'+(o.showPoints?' checked':'')+'>Show point values</label>';}
+ if(paper)h+=field('space','Work space',select('space',[['compact','Compact'],['standard','Standard'],['extra','Extra writing space']],o.space));
+ h+=field('version','Version',select('version','ABCDEF'.split(''),state.version))+'<div class="fg-actions"><button type="button" class="btn" id="generate">'+(state.mode==='practice'?'Start practice':'Generate handout')+'</button></div><p class="hint">Changing options updates the next handout when you press Generate. Switching preview tabs keeps the same questions.</p></div>';
+ if(lesson)h+='<div class="card"><h2><span class="step">3</span> Include and arrange</h2><p class="hint">Select sections, set problem counts and change their order.</p>'+o.sections.map((s,i)=>'<div class="fg-section-control"><div class="fg-section-head"><label class="fg-check"><input type="checkbox" data-section="'+s.id+'"'+(s.on?' checked':'')+'>'+SECTION_NAMES[s.id]+'</label><button type="button" class="btn ghost sm" data-move="'+i+'" data-dir="-1"'+(i===0?' disabled':'')+' aria-label="Move '+SECTION_NAMES[s.id]+' up">↑</button><button type="button" class="btn ghost sm" data-move="'+i+'" data-dir="1"'+(i===o.sections.length-1?' disabled':'')+' aria-label="Move '+SECTION_NAMES[s.id]+' down">↓</button></div>'+(['donow','examples','practice','challenge','exit'].includes(s.id)?'<label class="hint">Problems <input type="number" min="0" max="20" data-section-count="'+s.id+'" value="'+s.count+'"></label>':'')+'</div>').join('')+'</div>';
+ h+='<div class="card" id="questionEditor"><h2>Review questions</h2><p class="hint">Generate a handout to review, replace or edit its questions.</p></div>';
+ $('config').innerHTML=h;renderQuestionEditor();}
+function syncOptions(){var o=state.opts;function v(id,defaultValue){return $(id)?$(id).value:defaultValue;}
+ o.skills=[...doc.querySelectorAll('[data-skill]:checked')].map(e=>e.dataset.skill);o.title=v('paperTitle',o.title);o.notes=v('notesMode',o.notes);o.customNotes=v('customNotes',o.customNotes);o.worked=$('worked')?$('worked').checked:o.worked;o.teacherNotes=$('teacherNotes')?$('teacherNotes').checked:o.teacherNotes;o.format=v('activityFormat',o.format);o.response=v('response',o.response);o.count=Math.round(clamp(v('count',o.count),1,30));o.total=Math.round(clamp(v('total',o.total),10,200));o.space=v('space',o.space);o.showPoints=$('showPoints')?$('showPoints').checked:o.showPoints;state.version=v('version',state.version);
+ doc.querySelectorAll('[data-section]').forEach(e=>{o.sections.find(s=>s.id===e.dataset.section).on=e.checked;});doc.querySelectorAll('[data-section-count]').forEach(e=>{o.sections.find(s=>s.id===e.dataset.sectionCount).count=Math.round(clamp(e.value,0,20));});savePrefs();}
+function blocks(){return state.packet?state.packet.sections.flatMap(s=>s.blocks).filter(b=>b.kind==='question'):[];}
+function renderQuestionEditor(){if(!$('questionEditor'))return;var qs=blocks();$('questionEditor').innerHTML='<h2>Review questions</h2>'+(!qs.length?'<p class="hint">Questions appear here after generation.</p>':qs.map((b,i)=>'<details class="fg-item-editor"><summary>Question '+(i+1)+' · '+esc((b.q.prompt||'').slice(0,65))+'</summary><label class="fg-label">Question wording<textarea data-edit="'+i+'">'+esc(b.q.prompt)+'</textarea></label><p class="hint">If you change numbers, also review and edit the answer and worked solution.</p><label class="fg-label">Answer<textarea data-answer="'+i+'">'+esc(Array.isArray(b.q.answer)?b.q.answer.join('; '):b.q.answer)+'</textarea></label><label class="fg-label">Worked solution (one step per line)<textarea data-solution="'+i+'">'+esc(b.q.solutionSteps.join('\n'))+'</textarea></label><div class="fg-item-actions"><button class="btn ghost sm" type="button" data-replace="'+i+'">New question</button><button class="btn ghost sm" type="button" data-remove="'+i+'">Remove</button></div></details>').join(''));}
+function previewTools(){var paper=state.mode!=='practice';$('previewTools').innerHTML='<div class="ptool"><div><h2 class="fg-title">'+esc(state.bank.unitName)+'</h2><p class="fg-meta">'+(paper?'Printable student handout and teacher key':'Self-checking practice')+'</p></div><span class="sp"></span>'+(paper?'<div class="fg-tabs"><button class="btn ghost sm" type="button" data-audience="student" aria-pressed="'+(state.audience==='student')+'">Student handout</button><button class="btn ghost sm" type="button" data-audience="teacher" aria-pressed="'+(state.audience==='teacher')+'">Teacher key</button></div><label>Zoom '+select('zoom',[[65,'65%'],[80,'80%'],[100,'100%']],state.zoom)+'</label><div class="fg-actions"><button class="btn" type="button" data-print="student">Print student</button><button class="btn ghost" type="button" data-print="teacher">Print key</button></div>':'')+'</div>';}
+function makePages(teacher){return G.MKPLAN.paginateStudent(packetHTML(state.packet,teacher)).map((page,i,all)=>{page.setAttribute('aria-label',(teacher?'Teacher key':'Student handout')+' page '+(i+1)+' of '+all.length);return page;});}
+function showPreview(){if(!state.packet)return;previewTools();var out=$('output');out.replaceChildren();var pages=makePages(state.audience==='teacher');pages.forEach(p=>out.appendChild(p));out.style.zoom=state.zoom/100;
+ var oversize=pages.some(p=>p.classList.contains('pl-page-oversize'));$('notice').className=state.packet.warnings.length||oversize?'fg-warning':'fg-meta';$('notice').textContent=state.packet.warnings.concat(oversize?'A long question exceeds one sheet. Reduce work space or remove it before printing.':[]).concat(pages.length+' Letter-size page'+(pages.length===1?'':'s')+' · '+(state.audience==='teacher'?'Teacher key':'Student handout')+' · Version '+state.version).join(' ');renderQuestionEditor();}
+function generate(){syncOptions();if(!state.opts.skills.length){$('notice').className='fg-warning';$('notice').textContent='Choose at least one lesson topic or skill.';return;}
+ if(state.mode==='assessment'&&state.opts.total<Math.min(state.opts.count,filterPool(state.bank,state.opts).length)){$('notice').className='fg-warning';$('notice').textContent='Total points must be at least the number of questions. Increase the total or reduce the question count.';return;}if(state.mode==='practice'){showPractice();return;}state.packet=state.mode==='lesson'?buildLesson(state.bank,state.opts,state.version+state.unit):buildPaper(state.bank,state.opts,state.mode,state.version+state.unit);state.audience='student';showPreview();}
+function gradeNumeric(q,input){var s=String(input).trim().replace(/[−–]/g,'-').replace(/^(-?)\s*\$\s*/,'$1').replace(/%$/,'').trim();if(!/^[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?$/.test(s))return false;var n=Number(s.replace(/,/g,''));return Number.isFinite(n)&&Math.abs(n-q.numeric.value)<=(q.numeric.tolerance||0)+1e-9;}
+function showPractice(){state.packet=null;previewTools();var pool=filterPool(state.bank,state.opts).filter(q=>!isOpen(q)&&(!q.numeric||!String(q.answer).includes(';'))),items=pick(pool,state.opts.count,rng(Date.now()));state.practiceItems=items;state.done={};$('notice').className='fg-meta';$('notice').textContent=items.length+' questions. Use the teacher handout for extended written responses.';$('output').style.zoom=1;
+ $('output').innerHTML='<div class="fg-practice"><div class="card"><h2>Practice Test</h2><p id="practiceScore" role="status">Score: 0 of '+items.length+'</p></div>'+items.map((q,i)=>'<div class="fa-panel"><div>'+R.question(Object.assign({},q,{options:null}),{n:i+1,showType:false})+'</div>'+(q.options?q.options.map((o,j)=>'<label><input type="'+(q.format==='select-all'?'checkbox':'radio')+'" name="practice'+i+'" value="'+j+'">'+rich(o.text)+'</label>').join(''):'<label>Your answer'+(q.numeric.unit==='USD'?' ($)':q.numeric.unit==='%'?' (%)':'')+'<input type="text" inputmode="decimal" data-practice-answer="'+i+'"></label>')+'<button class="btn" type="button" data-check="'+i+'">Check</button><div id="feedback'+i+'" role="status"></div></div>').join('')+'</div>';renderQuestionEditor();}
+function updatePoints(){if(state.mode==='assessment'){var bs=blocks(),ps=allocate(bs.map(b=>b.q),state.packet.options.total);bs.forEach((b,i)=>b.points=ps[i]);}}
+function handleClick(e){var t=e.target.closest('button');if(!t)return;
+ if(t.dataset.mode){syncOptions();var old=state.mode;state.mode=t.dataset.mode;state.packet=null;state.opts.title='';if(state.mode==='practice'){state.opts.format='mixed';state.opts.response='mixed';}if(state.mode==='lesson'&&old!=='lesson')state.opts.skills=[state.bank.skills[0].id];else if(state.mode!=='lesson'&&old==='lesson')state.opts.skills=state.bank.skills.map(s=>s.id);G.history.replaceState(null,'','?unit='+state.unit+'&mode='+state.mode);renderControls();generate();return;}
+ if(t.id==='generate'){generate();return;}
+ if(t.dataset.allSkills!==undefined){doc.querySelectorAll('[data-skill]').forEach(c=>c.checked=t.dataset.allSkills==='1');return;}
+ if(t.dataset.move!==undefined){syncOptions();var i=+t.dataset.move,j=i+(+t.dataset.dir),a=state.opts.sections;if(j>=0&&j<a.length){[a[i],a[j]]=[a[j],a[i]];renderControls();savePrefs();}return;}
+ if(t.dataset.audience){state.audience=t.dataset.audience;showPreview();return;}
+ if(t.dataset.print){if(!state.packet)return;var root=$('printRoot');root.replaceChildren();makePages(t.dataset.print==='teacher').forEach(p=>root.appendChild(p));state.printPrepared=true;G.print();return;}
+ if(t.dataset.replace!==undefined){var bs=blocks(),block=bs[+t.dataset.replace],used=new Set(bs.map(b=>b.q.id)),pool=state.bank.questions.filter(q=>state.packet.options.skills.includes(q.skillId)&&q.format===block.q.format&&!used.has(q.id)&&(state.mode==='lesson'||(FILTERS[state.packet.options.format]||FILTERS.mixed)(q)));var q=pick(pool,1,rng(Date.now()))[0];if(q){block.q=clone(q);showPreview();}else{$('notice').textContent='No additional distinct question matches this skill and format.';$('notice').className='fg-warning';}return;}
+ if(t.dataset.remove!==undefined){var b=blocks()[+t.dataset.remove];state.packet.sections.forEach(s=>s.blocks=s.blocks.filter(x=>x!==b));updatePoints();showPreview();return;}
+ if(t.dataset.check!==undefined){var k=+t.dataset.check,q=state.practiceItems[k],checked=[...doc.querySelectorAll('input[name="practice'+k+'"]:checked')].map(x=>+x.value),ok;if(q.options){if(q.format==='multiple-choice'&&!checked.length)return;ok=q.options.every((o,j)=>!!o.correct===checked.includes(j));}else ok=gradeNumeric(q,doc.querySelector('[data-practice-answer="'+k+'"]').value);state.done[k]=ok;t.disabled=true;$('feedback'+k).innerHTML='<p class="fa-key"><b>'+(ok?'Correct.':'Review this one.')+'</b> '+rich(Array.isArray(q.answer)?q.answer.join('; '):q.answer)+'</p><ol>'+q.solutionSteps.map(x=>'<li>'+rich(x)+'</li>').join('')+'</ol>';$('practiceScore').textContent='Score: '+Object.values(state.done).filter(Boolean).length+' of '+state.practiceItems.length+' · '+Object.keys(state.done).length+' checked';return;}
+ if(t.id==='themeBtn'){var root=doc.documentElement;root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';return;}
+}
+var editTimer;
+function handleInput(e){var t=e.target,bs=blocks();if(t.dataset.edit!==undefined)bs[+t.dataset.edit].q.prompt=t.value;else if(t.dataset.answer!==undefined){var q=bs[+t.dataset.answer].q;q.answer=q.format==='select-all'?t.value.split(';').map(s=>s.trim()):t.value;if(q.options&&q.format==='multiple-choice')q.options.find(o=>o.correct).text=t.value;}else if(t.dataset.solution!==undefined)bs[+t.dataset.solution].q.solutionSteps=t.value.split('\n').filter(Boolean);else return;
+ clearTimeout(editTimer);editTimer=setTimeout(()=>{var details=[...doc.querySelectorAll('#questionEditor details')].map(d=>d.open);showPreview();doc.querySelectorAll('#questionEditor details').forEach((d,i)=>d.open=details[i]);},700);}
+function loadUnit(id){$('notice').textContent='Loading unit…';return fetch('../banks/'+id+'.json').then(r=>{if(!r.ok)throw Error('Question bank unavailable');return r.json();}).then(b=>{state.unit=id;state.bank=b;state.packet=null;state.opts=options(readPrefs());state.opts.skills=state.mode==='lesson'?[b.skills[0].id]:b.skills.map(s=>s.id);G.history.replaceState(null,'','?unit='+id+'&mode='+state.mode);renderControls();generate();});}
+G.FA_GENERATOR={pick:pick,FILTERS:FILTERS,FORMATS:FORMATS,points:points,options:options,buildLesson:buildLesson,buildPaper:buildPaper,packetHTML:packetHTML,allocate:allocate,gradeNumeric:gradeNumeric};
+if(!doc||!doc.getElementById('output'))return;
+// Stable handlers are attached once; mode switches only rebuild controls.
+doc.addEventListener('click',handleClick);doc.addEventListener('input',handleInput);doc.addEventListener('change',function(e){if(e.target.id==='unit')loadUnit(e.target.value).catch(showError);if(e.target.id==='zoom'){state.zoom=+e.target.value;$('output').style.zoom=state.zoom/100;}});
+G.addEventListener('beforeprint',function(){if(state.printPrepared||!state.packet)return;var root=$('printRoot');root.replaceChildren();doc.querySelectorAll('#output .pl-page').forEach(page=>root.appendChild(page.cloneNode(true)));});G.addEventListener('afterprint',function(){state.printPrepared=false;});
+function showError(e){$('notice').className='fg-warning';$('notice').textContent='Unable to load resources: '+e.message;}
+fetch('../banks/index.json').then(r=>{if(!r.ok)throw Error('Course index unavailable');return r.json();}).then(index=>{state.index=index;var id=index.units.some(u=>u.unitId===state.unit)?state.unit:index.units[0].unitId;return loadUnit(id);}).catch(showError);
+})(typeof window!=='undefined'?window:globalThis);
