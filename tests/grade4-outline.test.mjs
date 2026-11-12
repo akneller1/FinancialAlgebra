@@ -56,7 +56,7 @@ test('Grade 4 page reuses the existing generic outline renderer and does not adv
  assert.ok(js.includes('course-outlines/grade4.json'));
  assert.ok(!read('index.html').includes('href="grade4.html"'),'Unfinished Grade 4 must stay off the staging homepage');
  assert.ok(!read('grade5.html').includes('href="grade4.html"'),'Grade 5 picker should not advertise unfinished Grade 4');
- assert.ok(read('grade3.html').includes('href="grade4.html'));
+ assert.ok(read('grade3.html').includes('href="grade4.html"'));
  assert.ok(template.includes('objectiveGroups'));
  assert.ok(template.includes('Source Objectives by Category'));
  assert.ok(template.includes('Coming soon'));
