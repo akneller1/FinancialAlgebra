@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../lib/fa.css?v=fa-1">
-<style>.fa-tabs button[aria-current=step]{background:var(--fa-accent);color:#fff}.fa-chart{margin:12px 0}.fa-page input[type=range]{width:100%;accent-color:var(--fa-accent)}output{font-weight:700;color:var(--fa-accent-text)}</style>
+<style>.fa-tabs button[aria-current=step]{background:var(--fa-accent);color:#fff}.fa-chart{margin:12px 0}.fa-page input[type=range]{width:100%;accent-color:var(--fa-accent)}output{font-weight:700;color:var(--fa-accent-text)}
+#printSummary{display:none}.lab-response{white-space:pre-wrap;overflow-wrap:anywhere}.lab-answer{margin:14px 0}.lab-answer h3{margin-bottom:6px}.lab-submission-tools input{max-width:100%;box-sizing:border-box}.lab-share-link{width:100%}
+@media print{body.lab-report #app>*:not(#printSummary){display:none!important}body.lab-report #printSummary{display:block!important}.lab-report,.lab-report .fa-sheet{background:#fff!important;color:#000!important}.lab-report .fa-table-wrap{overflow:visible}.lab-report .fa-table{width:100%;font-size:10pt}.lab-report h1{font-size:20pt}.lab-report h2{font-size:15pt}.lab-report h3{font-size:12pt}.lab-report tr,.lab-report figure{break-inside:avoid}.lab-report thead{display:table-header-group}.lab-report .lab-response{orphans:3;widows:3}}
+</style>
 </head>
 <body>
 <main class="fa-page" id="app" tabindex="-1"><p>Loading lab…</p></main>
@@ -16,6 +19,6 @@
 <script src="../lib/finance.js"></script>
 <script src="../lib/render.js?v=fa-1"></script>
 <script src="scenarios.js?v=fa-1"></script>
-<script src="lab.js?v=fa-1"></script>
+<script src="submissions.js?v=1"></script><script src="lab.js?v=submissions-1"></script>
 </body>
 </html>

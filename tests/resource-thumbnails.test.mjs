@@ -10,7 +10,7 @@ const manifest=JSON.parse(read('financial/resources.json'));
 
 test('all ten unit views show a local thumbnail on every resource card',async()=>{
  for(const unit of course.units){
-  const main={innerHTML:'',focus(){}};
+  const main={innerHTML:'',focus(){},addEventListener(){}};
   const elements={main,q:{value:'',style:{},addEventListener(){}},backBtn:{style:{},addEventListener(){}},skip:{addEventListener(){}},searchForm:{addEventListener(){}}};
   const document={getElementById:id=>elements[id]};
   const location={hash:'#financial-algebra.'+unit.id};

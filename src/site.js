@@ -1,8 +1,8 @@
 import {course,getUnit} from './course.js';
-import {resourceThumbnail,resourceHref} from '../financial/lib/resource-previews.mjs?v=fa-games-1';
+import {resourceThumbnail,resourceHref} from '../financial/lib/resource-previews.mjs?v=student-work-1';
 
 // Unit resources share one manifest with the library hub and content validation.
-const response=await fetch(new URL('../financial/resources.json?v=fa-games-1',import.meta.url));
+const response=await fetch(new URL('../financial/resources.json?v=student-work-1',import.meta.url));
 if(!response.ok) throw new Error('Unable to load Financial Algebra resources');
 const library=await response.json();
 const resourcesFor=unit=>library.units.find(record=>record.unitId===unit.id).resources;
@@ -61,7 +61,7 @@ function shortcutBanner(unit){
  '</ul></section>';
 }
 function resourceCard(title,path,description,unit){
- return '<li><a class="finance-resource-card" href="'+esc(resourceHref(path))+'"><img class="finance-resource-thumb" src="'+esc(resourceThumbnail(path,unit.id))+'" width="720" height="450" alt="" loading="lazy" decoding="async"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a></li>';
+ return '<li><a class="finance-resource-card" href="'+esc(resourceHref(path))+'"><img class="finance-resource-thumb" src="'+esc(resourceThumbnail(path,unit.id))+'" width="720" height="450" alt="" loading="lazy" decoding="async"><strong>'+esc(title)+'</strong><span>'+esc(description)+'</span><span aria-hidden="true">Open resource →</span></a>' + (/financial\/(games|decision-lab|flashcards|practice)\//.test(path)&&!/[?&]teacher=1/.test(path)?'<button type="button" class="btn" data-student-link="'+esc(path)+'">Generate student link</button>':'')+'</li>';
 }
 function resourceSections(unit){
  const r=resourcesFor(unit);
@@ -133,3 +133,9 @@ search.addEventListener('input',()=>{if(!currentUnit())render();});
 window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0);});
 render();
 
+
+main.addEventListener('click',async event=>{
+ const button=event.target.closest('[data-student-link]');if(!button)return;
+ const url=new URL(button.dataset.studentLink,location.href);url.searchParams.delete('teacher');url.searchParams.delete('teacherShare');url.searchParams.set('student','1');
+ try{await navigator.clipboard.writeText(url.href);button.textContent='Student link copied!';}catch{window.prompt('Copy student link:',url.href);}
+});

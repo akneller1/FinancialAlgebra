@@ -3,7 +3,8 @@
 (function(G){
 'use strict';
 var R=G.FA_RENDER,doc=G.document,params=new URLSearchParams(G.location?G.location.search:'');
-var MODES={lesson:'Lesson Plan',worksheet:'Worksheet',assessment:'Assessment',practice:'Practice Test'};
+if(params.get('mode')==='practice'){G.location.replace('../practice/index.html?unit='+encodeURIComponent(params.get('unit')||'income'));return;}
+var MODES={lesson:'Lesson Plan',worksheet:'Worksheet',assessment:'Assessment'};
 var FORMATS={'mixed':'Mixed Review','case-study':'Case Study',compare:'Compare Two Options',document:'Financial Document Analysis',analysis:'Budget & Data Analysis',decision:'Financial Decision Challenge',vocabulary:'Vocabulary & Concepts',math:'Mathematical Applications'};
 var isOpen=q=>q.format==='open-response',hasData=q=>!!(q.scenario&&(q.scenario.table||q.scenario.document));
 var FILTERS={'case-study':()=>true,mixed:()=>true,compare:q=>q.type==='comparison',document:q=>q.type==='document'||!!(q.scenario&&q.scenario.document),analysis:q=>hasData(q)&&q.type!=='vocabulary',decision:q=>isOpen(q)||q.type==='claim'||q.type==='reasoning',vocabulary:q=>q.type==='vocabulary'||q.type==='concept',math:q=>q.type==='calculation'||!!q.numeric};

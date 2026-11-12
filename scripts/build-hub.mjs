@@ -21,7 +21,7 @@ for (const [i, u] of course.units.entries()) {
       lessonPlan: `financial/generators/index.html?unit=${u.id}&mode=lesson`,
       worksheet: `financial/generators/index.html?unit=${u.id}&mode=worksheet`,
       assessment: `financial/generators/index.html?unit=${u.id}&mode=assessment`,
-      practiceTest: `financial/generators/index.html?unit=${u.id}&mode=practice`,
+      practiceTest: `financial/practice/index.html?unit=${u.id}`,
       flashcards: `financial/flashcards/index.html?unit=${u.id}`,
       cheatSheet: `artifacts/financial-algebra-${u.id}-cheat-sheet/cheat-sheet.pdf`,
       decisionLab: LABS[u.id] ? { title: LABS[u.id].title, path: `financial/decision-lab/index.html?lab=${u.id}`, teacherPath: `financial/decision-lab/index.html?lab=${u.id}&teacher=1` } : null,

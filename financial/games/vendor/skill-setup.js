@@ -37,7 +37,7 @@
     }
   }
   applyStudentFocus();
-  function choose(skills, start, note) {
+  function choose(skills, start, note, shareOnly) {
     var params = new URLSearchParams(G.location.search);
     if (params.get('student') === '1') {
       var requested;
@@ -52,6 +52,12 @@
       start(selected); return;
     }
     var sharing = params.get('teacherShare') === '1';
+    if (!sharing && !shareOnly && !G.document.getElementById('individual-game-share')) {
+      var bar=G.document.createElement('div'),shareButton=G.document.createElement('button');
+      bar.id='individual-game-share';bar.style.cssText='padding:12px 20px;background:#fff;color:#17233b';
+      shareButton.type='button';shareButton.className='gm-btn';shareButton.textContent='Generate student link';
+      shareButton.onclick=function(){choose(skills,function(){},note,true);};bar.appendChild(shareButton);G.document.body.appendChild(bar);
+    }
     if (sharing && G.parent !== G) G.parent.postMessage({ type: 'teacher-skills-ready', skills: skills }, G.location.origin);
     var doc = G.document, dialog = doc.createElement('dialog');
     dialog.className = 'teacher-skills';
@@ -80,12 +86,19 @@
       b.style.cssText = 'padding:9px 16px;margin:4px;border:1px solid #3456d1;border-radius:8px;background:#f2f5ff;color:#17233b;font:inherit;cursor:pointer;';
       b.onclick = fn; parent.appendChild(b); return b;
     }
-    var go = button(sharing ? 'Generate student link' : 'Continue', dialog, function () {
+    var go = button(sharing ? 'Generate student link' : shareOnly ? 'Close' : 'Continue', dialog, function () {
       var ids = inputs.filter(function (i) { return i.checked; }).map(function (i) { return i.value; });
       if (!ids.length && skills.length) return;
       dialog.close(); dialog.remove();
       if (sharing && G.parent !== G) G.parent.postMessage({ type: 'teacher-skills-selected', skills: ids }, G.location.origin);
-      else start(ids);
+      else if (!shareOnly) start(ids);
+    });
+    if (!sharing) button('Generate student link', dialog, function () {
+      var ids=inputs.filter(function(i){return i.checked;}).map(function(i){return i.value;});if(!ids.length)return;
+      var url=new URL(G.location.href);url.searchParams.delete('teacher');url.searchParams.delete('teacherShare');url.searchParams.set('student','1');url.searchParams.set('skills',JSON.stringify(ids));
+      var field=dialog.querySelector('[aria-label="Student link"]');if(!field){field=doc.createElement('input');field.readOnly=true;field.setAttribute('aria-label','Student link');field.style.cssText='display:block;box-sizing:border-box;width:100%;padding:12px;margin-top:12px';dialog.appendChild(field);}
+      field.value=url.href;field.focus();field.select();
+      if(G.navigator.clipboard&&G.navigator.clipboard.writeText)G.navigator.clipboard.writeText(url.href).then(function(){status.textContent='Student link copied!';},function(){status.textContent='Copy the selected student link.';});else status.textContent='Copy the selected student link.';
     });
     function update() {
       var n = inputs.filter(function (i) { return i.checked; }).length;

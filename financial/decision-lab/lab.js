@@ -7,9 +7,11 @@
   var STEPS = ['Situation', 'Options', 'Initial decision', 'Investigation', 'Change the variables', 'Final recommendation', 'Reflection'];
   var COLORS = ['#7448ff', '#0c7a55', '#d9480f', '#1c7ed6'];
   var p = new URLSearchParams(location.search), labId = p.get('lab'), lab = LABS[labId];
-  var teacher = p.get('teacher') === '1';
+  var student = p.get('student') === '1';
+  var teacher = !student && p.get('teacher') === '1';
+  var storageId = labId + (p.get('assignment') ? ':' + p.get('assignment') : '');
   var app = document.getElementById('app');
-  var store = { get: function (k) { try { return JSON.parse(localStorage.getItem('fa-lab:' + labId + ':' + k)); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem('fa-lab:' + labId + ':' + k, JSON.stringify(v)); } catch (e) { } } };
+  var store = { get: function (k) { try { return JSON.parse(localStorage.getItem('fa-lab:' + storageId + ':' + k)); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem('fa-lab:' + storageId + ':' + k, JSON.stringify(v)); } catch (e) { } } };
   function fmt(v, f) {
     if (v == null || isNaN(v)) return '—';
     if (v === Infinity) return 'Never';
@@ -30,10 +32,24 @@
   }
   var vars = {}; lab.vars.forEach(function (v) { vars[v.id] = v.value; });
   var defaults = Object.assign({}, vars);
-  var locked = store.get('locked') || false;
-  var step = Math.min(store.get('step') || 0, STEPS.length - 1);
+  var starting = Object.assign({}, defaults), shared;
+  try { shared = JSON.parse(p.get('settings') || '{}'); } catch (e) { shared = {}; }
+  function validVars(source, target) {
+    lab.vars.forEach(function (v) {
+      var x = source && source[v.id];
+      if (v.type === 'toggle' ? typeof x === 'boolean' : typeof x === 'number' && isFinite(x) && x >= v.min && x <= v.max) target[v.id] = x;
+    });
+  }
+  validVars(shared, starting); vars = Object.assign({}, starting);
+  var locked = student ? p.get('locked') === '1' : store.get('locked') || false;
+  if (!locked || !student) validVars(store.get('vars'), vars);
+  var step = Math.max(0, Math.min(Number(store.get('step')) || 0, STEPS.length - 1));
   var resp = store.get('resp') || {};
-  function save() { store.set('resp', resp); store.set('step', step); }
+  function save() {
+    store.set('resp', resp); store.set('step', step); store.set('vars', vars);
+    var status = document.getElementById('saveStatus');
+    if (status) status.textContent = JSON.stringify(store.get('resp')) === JSON.stringify(resp) && JSON.stringify(store.get('vars')) === JSON.stringify(vars) ? 'Progress saved on this device.' : 'Saving unavailable. Export your work before leaving.';
+  }
 
   /* ---------- pieces ---------- */
   function optionName(id) { return (lab.options.find(function (o) { return o.id === id; }) || {}).name || id; }
@@ -87,7 +103,7 @@
       case 4: return '<div class="fa-panel"><p>Move the sliders to test different assumptions. The table and chart update immediately.</p>' + varControls() + '<p><button class="fa-btn" id="resetVars">Reset to defaults</button></p><div id="live">' + resultsTable(vars) + '</div></div><div class="fa-panel"><h3>Challenges</h3>' + qBlock(lab.challenges, 'c', false) + area('sensitivity', 'Which assumption changed the result the most? Describe what happened.') + '</div>';
       case 5: return '<div class="fa-panel">' + choice('final') + area('finalWhy', 'Justify your recommendation using at least two numbers from your investigation and one non-financial factor.') +
         '<p><strong>A strong recommendation…</strong></p><ul>' + ['states the choice clearly', 'cites specific calculated costs or values', 'names the key assumption it depends on', 'weighs a tradeoff that is not just about money', 'explains what would change the decision'].map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>' + (teacher ? R.rubric(lab.rubric || defaultRubric()) : '') + '</div>';
-      case 6: return '<div class="fa-panel">' + lab.reflection.map(function (q, i) { return area('ref' + i, q); }).join('') + '<p><button class="fa-btn primary" id="summary">Create printable summary</button></p></div>';
+      case 6: return '<div class="fa-panel">' + lab.reflection.map(function (q, i) { return area('ref' + i, q); }).join('') + '<p><button class="fa-btn primary" id="summary">Export My Work / Save as PDF</button></p></div>';
     }
   }
   function defaultRubric() {
@@ -101,21 +117,20 @@
   }
   function render() {
     document.title = lab.title + ' | Financial Decision Lab';
-    app.innerHTML = '<p class="fa-noprint"><a href="?">All labs</a> · <a href="../../index.html#financial-algebra.' + lab.unit + '">Unit page</a>' + (teacher ? '' : ' · <a href="?lab=' + labId + '&teacher=1">Teacher view</a>') + '</p>' +
+    app.innerHTML = (student ? '' : '<p class="fa-noprint"><a href="?">All labs</a> · <a href="../../index.html#financial-algebra.' + lab.unit + '">Unit page</a>' + (teacher ? '' : ' · <a href="?lab=' + labId + '&teacher=1">Teacher view</a>') + '</p>') +
       '<header><span class="fa-pill">Unit ' + lab.unitNum + ' · Financial Decision Lab</span><h1>' + R.esc(lab.title) + '</h1><p>' + R.esc(lab.subtitle) + '</p></header>' + teacherPanel() +
       '<nav aria-label="Lab steps" class="fa-tabs fa-noprint">' + STEPS.map(function (s, i) { return '<button class="fa-btn" data-step="' + i + '" aria-current="' + (i === step ? 'step' : 'false') + '" aria-selected="' + (i === step) + '">' + (i + 1) + '. ' + s + '</button>'; }).join('') + '</nav>' +
       '<h2>Step ' + (step + 1) + ': ' + STEPS[step] + '</h2>' + stepBody() +
       '<p class="fa-noprint" style="display:flex;gap:8px;justify-content:space-between"><button class="fa-btn" data-step="' + (step - 1) + '"' + (step ? '' : ' disabled') + '>← Back</button><button class="fa-btn primary" data-step="' + (step + 1) + '"' + (step < STEPS.length - 1 ? '' : ' disabled') + '>Next →</button></p><div id="printSummary"></div>';
+    G.FA_SUBMISSIONS.attach({lab:lab,labId:labId,resp:resp,vars:vars,defaults:defaults,teacher:teacher,student:student,save:save,fmt:fmt,resultsTable:resultsTable,rubric:defaultRubric,
+      reset:function(){ resp={}; vars=Object.assign({},starting); step=0; save(); render(); }});
+    save();
   }
-  function summary() {
-    var rows = [['Initial choice', optionName(resp.initial || '—')], ['Initial reasoning', resp.initialWhy || ''], ['Final choice', optionName(resp.final || '—')], ['Justification', resp.finalWhy || ''], ['Sensitivity', resp.sensitivity || '']].concat(lab.reflection.map(function (q, i) { return [q, resp['ref' + i] || '']; }));
-    document.getElementById('printSummary').innerHTML = '<section class="fa-sheet"><header class="fa-sheet-head"><div><div class="fa-pill">Decision Lab summary</div><h2>' + R.esc(lab.title) + '</h2></div><div class="fa-name">Name ____________________</div></header>' + R.table({ headers: ['Prompt', 'Response'], rows: rows }) + '<h3 class="fa-section-h">Comparison at default assumptions</h3>' + resultsTable(defaults) + '</section>';
-    window.print();
-  }
+  function summary() { G.FA_SUBMISSIONS.print(false); }
   app.addEventListener('click', function (e) {
     var t = e.target, s = t.getAttribute('data-step');
     if (s != null && !t.disabled) { step = +s; save(); render(); window.scrollTo(0, 0); return; }
-    if (t.id === 'resetVars') { vars = Object.assign({}, defaults); render(); return; }
+    if (t.id === 'resetVars' && !(student && locked)) { vars = Object.assign({}, starting); save(); render(); return; }
     if (t.id === 'summary') { summary(); return; }
     var key = t.getAttribute('data-check');
     if (key) {
@@ -129,13 +144,13 @@
     var t = e.target, k = t.getAttribute('data-resp');
     if (k) { resp[k] = t.value; save(); return; }
     var v = t.getAttribute('data-var');
-    if (v) { var def = lab.vars.find(function (x) { return x.id === v; }); vars[v] = def.type === 'toggle' ? t.checked : +t.value; var o = document.getElementById('o-' + v); if (o) o.textContent = fmt(vars[v], def.fmt); document.getElementById('live').innerHTML = resultsTable(vars); }
+    if (v) { var def = lab.vars.find(function (x) { return x.id === v; }); vars[v] = def.type === 'toggle' ? t.checked : +t.value; var o = document.getElementById('o-' + v); if (o) o.textContent = fmt(vars[v], def.fmt); document.getElementById('live').innerHTML = resultsTable(vars); save(); }
   });
   app.addEventListener('change', function (e) {
     var t = e.target;
     if (t.type === 'radio') { resp[t.name] = t.value; save(); }
     if (t.id === 'lockVars') { locked = t.checked; store.set('locked', locked); }
-    if (t.getAttribute('data-var') && t.type === 'checkbox') { vars[t.getAttribute('data-var')] = t.checked; document.getElementById('live').innerHTML = resultsTable(vars); }
+    if (t.getAttribute('data-var') && t.type === 'checkbox') { vars[t.getAttribute('data-var')] = t.checked; document.getElementById('live').innerHTML = resultsTable(vars); save(); }
   });
   G.FA_LAB_ENGINE = { fmt: fmt };
   render();

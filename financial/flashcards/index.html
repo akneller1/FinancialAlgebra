@@ -28,6 +28,7 @@
  <div class="fc-app">
   <h1 id="title">Flashcards</h1>
   <details class="fa-panel flat"><summary><strong>Choose skills</strong></summary><div class="fa-checks" id="skills"></div></details>
+  <p id="shareTools"><button class="fa-btn" id="shareCards">Generate student link</button></p>
   <p id="status" role="status" style="text-align:center"></p>
   <div class="fc-card" id="card" role="button" tabindex="0" aria-label="Flashcard. Press Enter or Space to flip."><div class="fc-inner"><div class="fc-face fc-front" id="front"></div><div class="fc-face fc-back" id="back"></div></div></div>
   <div class="fc-bar"><button class="fa-btn" id="prev">← Previous</button><button class="fa-btn" id="flip">Flip</button><button class="fa-btn" id="next">Next →</button></div>
@@ -59,6 +60,10 @@ $('again').onclick=function(){if(!cards.length)return;cards.push(cards.splice(i,
 $('shuffle').onclick=function(){known={};build();for(var a=cards.length-1;a>0;a--){var b=Math.floor(Math.random()*(a+1)),t=cards[a];cards[a]=cards[b];cards[b]=t}show()};
 $('mode').onclick=function(){reverse=!reverse;this.textContent=reverse?'Show term first':'Show definition first';show()};
 $('skills').onchange=build;
+var assigned;try{assigned=JSON.parse(p.get('skills')||'null')}catch(e){assigned=[]}
+if(Array.isArray(assigned))[].forEach.call(document.querySelectorAll('#skills input'),function(x){x.checked=assigned.indexOf(x.value)>=0});
+if(p.get('student')==='1'){document.querySelector('.fa-top').hidden=true;$('shareTools').hidden=true;document.querySelector('details').hidden=true;}
+$('shareCards').onclick=function(){var selected=[].map.call(document.querySelectorAll('#skills input:checked'),function(x){return x.value});if(!selected.length){$('status').textContent='Select at least one skill.';return;}var url=new URL(location.href);url.search='';url.searchParams.set('unit',unit);url.searchParams.set('student','1');url.searchParams.set('skills',JSON.stringify(selected));function fallback(){window.prompt('Copy student link:',url.href)}if(navigator.clipboard)navigator.clipboard.writeText(url.href).then(function(){$('status').textContent='Student link copied!'},fallback);else fallback();};
 $('printCards').innerHTML=deck.cards.map(function(c){return '<div><strong>'+R.esc(c.front)+'</strong><p>'+R.rich(c.back)+'</p>'+(c.example?'<p><em>'+R.rich(c.example)+'</em></p>':'')+'</div>'}).join('');
 build();})();
 </script>
