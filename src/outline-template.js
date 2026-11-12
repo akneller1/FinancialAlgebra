@@ -41,7 +41,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
   return '<img class="outline-art" src="./assets/course-icons/grade'+grade+'.svg" alt="Grade '+grade+' '+motifs[grade]+' icon" width="230" height="195">';
  }
  function band(contents,art=false,unitPage=false){
-  return '<section class="band'+(unitPage?' unit-band':'')+'" data-course="'+course.id+'" data-color="purple"><div class="wrap">'+
+  return '<section class="band'+(unitPage===true?' unit-band':unitPage==='course'?' course-band':'')+'" data-course="'+course.id+'" data-color="purple"><div class="wrap">'+
    (art?'<div class="band-grid"><div>'+contents+'</div><div class="band-art">'+artwork()+'</div></div>':contents)+'</div></section>';
  }
  function skillsCompact(u){
@@ -128,7 +128,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
   const lead=crumb([[course.name,null]])+'<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
    '<p class="band-blurb">'+esc(course.description)+'</p>'+
    '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasPacing?' · '+paceLabel(pacingLow,pacingHigh)+' estimated instructional days':'')+' · question banks and activities coming later</p>';
-  return band(lead,true)+'<section class="section"><div class="wrap">'+
+  return band(lead,true,'course')+'<section class="section"><div class="wrap">'+
    '<h2 class="course-units-title">Browse by unit</h2>'+
    '<p class="course-units-status">'+(hasObjectives?'Unit sequence and available pacing come from the source curriculum. Target labels summarize the stated goals; open a unit for the original section headings and standards when provided.':'Unit names and lesson order reflect the attached scope and sequence. Expand the lesson lists or open a unit to see its standards.')+'</p>'+
    (matching.length?'<ul class="units">'+matching.map(card).join('')+'</ul>':
