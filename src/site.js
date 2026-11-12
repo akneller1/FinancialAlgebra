@@ -29,8 +29,8 @@ function crumbs(items){
  return '<nav class="crumbs" aria-label="Breadcrumb"><ol>'+
  items.map((item,i)=>'<li>'+(i===items.length-1?'<span aria-current="page">'+esc(item[0])+'</span>':'<a href="'+esc(item[1])+'">'+esc(item[0])+'</a>')+'</li>').join('')+'</ol></nav>';
 }
-function band(content,withArtwork=false,unitPage=false){
- return '<section class="band'+(unitPage?' unit-band':'')+'" data-color="purple" data-course="'+courseId+'"><div class="wrap">'+
+function band(content,withArtwork=false,pageType=''){
+ return '<section class="band'+(pageType==='unit'?' unit-band':pageType==='course'?' course-band':'')+'" data-color="purple" data-course="'+courseId+'"><div class="wrap">'+
  (withArtwork?'<div class="band-grid"><div>'+content+'</div><div class="band-art">'+artwork()+'</div></div>':content)+'</div></section>';
 }
 function skillList(unit){
@@ -107,7 +107,7 @@ function courseView(){
  '<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
  '<p class="band-blurb">Apply algebra to income, budgeting, banking, borrowing, investing, and everyday financial choices.</p>'+
  '<p class="band-meta">'+course.units.length+' units · 40 skills · one course level: Standard</p>';
- return band(lead,true)+'<section class="section"><div class="wrap">'+
+ return band(lead,true,'course')+'<section class="section"><div class="wrap">'+
  '<h2 class="course-units-title">Browse by unit</h2>'+
  '<p class="course-units-status">Explore lesson plans, worksheets, assessments, games, Decision Labs, study guides, and projects. All scenarios use fictional financial information and illustrative rates.</p>'+
  (shown.length?'<ul class="units">'+shown.map(unit=>unitCard(unit,course.units.indexOf(unit))).join('')+'</ul>':
@@ -122,7 +122,7 @@ function unitView(unit){
  '<section class="algebra-unit-section"><h2>Topics in this unit</h2>'+
  '<ul class="unit-skills">'+unit.skills.map(skill=>'<li class="unit-skill">'+esc(skill)+'</li>').join('')+'</ul>'+
  '</section>'+resourceSections(unit)+pager(unit);
- return band(lead,false,true)+'<section class="section"><div class="wrap algebra-unit-layout">'+body+'</div></section>';
+ return band(lead,false,'unit')+'<section class="section"><div class="wrap algebra-unit-layout">'+body+'</div></section>';
 }
 function currentUnit(){
  const slug=decodeURIComponent(location.hash.slice(1));
