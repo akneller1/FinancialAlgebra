@@ -565,7 +565,7 @@
   }
 
   function bandHtml(c, inner, extra) {
-    return '<section class="band' + (extra === 'unit' ? ' unit-band' : '') + '"' + (c ? ' data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '"' : '') + '><div class="wrap">' + inner + '</div></section>';
+    return '<section class="band' + (extra === 'unit' ? ' unit-band' : extra === 'course' ? ' course-band' : '') + '"' + (c ? ' data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '"' : '') + '><div class="wrap">' + inner + '</div></section>';
   }
 
 
@@ -620,7 +620,7 @@
       '</div>' + (c.art ? '<div class="band-art" aria-hidden="true">' + artFor(c) + '</div>' : '') + '</div>';
     return {
       title: c.name,
-      html: bandHtml(c, inner) +
+      html: bandHtml(c, inner, 'course') +
         (c.planned ? '' : '<section class="section"><div class="wrap">' + generatorLinks(c, null, true) + '</div></section>') +
         '<section class="section"><div class="wrap"><h2 class="course-units-title">Browse by unit</h2><ul class="units">' +
         c.units.map(function (u) {
