@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 <link rel="stylesheet" href="./styles.css?v=classroom-parity-1">
-<link rel="stylesheet" href="./site-overrides.css?v=grade5-student-links-20261112">
+<link rel="stylesheet" href="./site-overrides.css?v=grade5-nav-consistency-20261112">
 </head>
 <body>
 <button type="button" class="skip" id="skip">Skip to content</button>
@@ -29,18 +29,26 @@
       <label for="q" class="sr">Find units or topics</label>
       <input id="q" type="search" placeholder="Search Grade 5 units or skills…">
     </form>
-    <nav class="main-nav" id="nav" aria-label="Main navigation">
-      <a href="index.html">Financial Algebra</a>
-      <a href="grade5.html" aria-current="page"><img class="course-nav-icon" src="./assets/course-icons/grade5.svg" width="22" height="20" alt="" aria-hidden="true">Grade 5 Mathematics</a>
-      <a href="grade4.html"><img class="course-nav-icon" src="./assets/course-icons/grade4.svg" width="22" height="20" alt="" aria-hidden="true">Grade 4 Mathematics</a>
-      <a href="grade3.html"><img class="course-nav-icon" src="./assets/course-icons/grade3.svg" width="22" height="20" alt="" aria-hidden="true">Grade 3 Mathematics</a>
-      <a href="grade2.html"><img class="course-nav-icon" src="./assets/course-icons/grade2.svg" width="22" height="20" alt="" aria-hidden="true">Grade 2 Mathematics</a>
-      <a href="grade1.html"><img class="course-nav-icon" src="./assets/course-icons/grade1.svg" width="22" height="20" alt="" aria-hidden="true">Grade 1 Mathematics</a>
-      <a href="https://mrksclassroom.com/" target="_blank" rel="noopener">Main Classroom ↗</a>
-      <span class="course-wip-label">Separate development site</span>
-    </nav>
   </div>
 </header>
+<nav class="g5-course-navigation" aria-label="Course navigation">
+  <div class="wrap g5-course-navigation-inner">
+    <div class="g5-course-breadcrumb"><a href="https://mrksclassroom.com/#courses">Courses</a><span aria-hidden="true"> / </span><span aria-current="page">Grade 5 Mathematics</span></div>
+    <details class="g5-course-picker">
+      <summary>Choose your course <span aria-hidden="true">⌄</span></summary>
+      <div class="g5-course-picker-list">
+        <a href="https://mrksclassroom.com/#algebra">Algebra 1</a>
+        <a href="https://mrksclassroom.com/#geometry">Geometry</a>
+        <a href="https://mrksclassroom.com/#algebra2">Algebra 2</a>
+        <a href="https://mrksclassroom.com/#prealgebra">Pre-Algebra</a>
+        <a href="grade5.html" aria-current="page">Grade 5 Mathematics</a>
+        <a href="https://mrksclassroom.com/#statistics">Statistics</a>
+        <a href="https://mrksclassroom.com/#discrete">Discrete Math</a>
+        <a href="https://mrksclassroom.com/">All courses</a>
+      </div>
+    </details>
+  </div>
+</nav>
 <main id="main" tabindex="-1"><div class="wrap"><p>Loading course…</p></div></main>
 <footer class="site-footer"><div class="wrap"><p>Grade 5 resources are being developed and tested here before transfer to the main Classroom site. The original curriculum outline is preserved within the course page.</p><div class="footer-bottom"><span>© 2026 Mr. K's Classroom</span><a href="https://github.com/akneller1/FinancialAlgebra" target="_blank" rel="noopener">Development repository ↗</a></div></div></footer>
 <script src="./data.js?v=grade5-unified-20261112"></script>
