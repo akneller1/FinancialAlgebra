@@ -55,5 +55,7 @@ test('All Grades 1–5 have their own SVG icons and nav references',()=>{
  assert.equal(new Set(iconContents).size,5);
  assert.ok(renderer.includes('function artwork()'));
  assert.ok(renderer.includes('assets/course-icons/grade'));
- assert.ok(renderer.includes('return band(lead,true)'));
+ assert.ok(renderer.includes("return band(lead,true,'course')"));
+ assert.ok(renderer.includes('unit-band'), 'Outline unit pages should retain compact unit headers');
+ assert.ok(renderer.includes('course-band'), 'Course overviews should use matching compact headers');
 });
