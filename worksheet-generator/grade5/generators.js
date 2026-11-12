@@ -66,7 +66,7 @@
     } else if (state.mode === 'activity') {
       h += field('activityKind', 'Activity type', select('activityKind', Object.keys(C.ACTIVITIES).map(function (k) { return [k, C.ACTIVITIES[k].icon + ' ' + C.ACTIVITIES[k].name]; }), o.activity)) +
         field('theme', 'Theme', select('theme', Object.keys(Content.themes || {}).map(function (k) { return [k, Content.themes[k].icon + ' ' + Content.themes[k].name]; }), o.theme)) +
-        field('count', 'Problems', numeric('count', o.count, 6, 20)) +
+        field('count', 'Problems', numeric('count', o.count, o.activity === 'error' ? 1 : 6, 20)) +
         '<p class="g5gen-hint">' + esc((C.ACTIVITIES[o.activity] || C.ACTIVITIES.maze).blurb) + '</p>';
     } else {
       h += field('paperTitle', 'Handout title', '<input type="text" id="paperTitle" value="' + esc(o.title) + '" placeholder="Use the unit title">') +
@@ -114,7 +114,9 @@
     o.activity = value('activityKind', o.activity); o.theme = value('theme', o.theme);
     doc.querySelectorAll('[data-section]').forEach(function (e) { o.sections.find(function (s) { return s.id === e.dataset.section; }).on = e.checked; });
     doc.querySelectorAll('[data-section-count]').forEach(function (e) { o.sections.find(function (s) { return s.id === e.dataset.sectionCount; }).count = C.clamp(e.value, 0, 20); });
-    if (state.mode === 'activity' && o.count < 6) o.count = 6;
+    // Error Analysis is a flexible written-response activity, not a six-piece puzzle.
+    // Respect teacher-selected counts from 1 upward; preserve puzzle minimums elsewhere.
+    if (state.mode === 'activity' && o.activity !== 'error' && o.count < 6) o.count = 6;
     savePrefs();
   }
 
