@@ -589,8 +589,16 @@
     }).join('') + '</div>';
   }
 
+  // Shared Geometry-style lesson previews for every course and future additions.
   function subskillsHtml(u, courseId) {
     var skills = window.MK_COURSE_CATALOG.getSkills(courseId, u.id);
+    if (!skills.length) {
+      var candidates = u.skills || u.lessons || u.objectives || [];
+      if (Array.isArray(candidates)) skills = candidates.map(function (entry) {
+        return typeof entry === 'string' ? entry : (entry && (entry.name || entry.title || entry.text) || '');
+      }).filter(Boolean);
+    }
+    if (!skills.length) return '';
     function lines(list) {
       return '<ul class="unit-skills">' + list.map(function (skill) {
         return '<li class="unit-skill">' + esc(skill) + '</li>';
@@ -624,24 +632,14 @@
         (c.planned ? '' : '<section class="section"><div class="wrap">' + generatorLinks(c, null, true) + '</div></section>') +
         '<section class="section"><div class="wrap"><h2 class="course-units-title">Browse by unit</h2><ul class="units">' +
         c.units.map(function (u) {
-          var k = u.artifacts.filter(listed).length;
-          if (!k && !c.planned && c.id !== 'geometry' && c.id !== 'algebra2' && c.id !== 'prealgebra' && c.id !== 'prealgebra7' && c.id !== 'math6' && c.id !== 'math5') {
-            return '<li><div class="unit soon" data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '"><h3>' + '<span class="unit-num">Unit ' + unitNum(c, u) + '</span>' + esc(u.name) + '</h3>' +
-              '<div class="unit-meta"><span class="unit-count">Coming soon</span></div></div></li>';
-          }
-          var minis = u.artifacts.filter(listed).slice(0, 3).filter(function (a) { return a.thumb; }).map(function (a) {
-            return '<img src="' + esc(a.thumb) + '" alt="" loading="lazy">';
-          }).join('');
-          if (c.planned || c.id === 'algebra' || c.id === 'geometry' || c.id === 'algebra2' || c.id === 'precalculus' || c.id === 'calculus' || c.id === 'statistics' || c.id === 'discrete' || c.id === 'prealgebra' || c.id === 'prealgebra7' || c.id === 'math6' || c.id === 'math5') {
-            return '<li><div class="unit algebra-unit-card" data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '">' +
-              (c.id === 'math5' ? '<img class="g5-unit-icon" src="thumbs/math5-unit-' + esc(u.id) + '.svg" alt="" width="160" height="120" loading="lazy">' : '') +
-              '<h3><a class="unit-title-link" href="' + href(unitToken(c, u)) + '">' +
-              '<span class="unit-num">Unit ' + unitNum(c, u) + '</span>' + esc(u.name) + '</a></h3>' +
-              '<div class="unit-meta" data-lesson-list="true">' + subskillsHtml(u, c.id) + '</div>' +
-              '<a class="unit-open-link" href="' + href(unitToken(c, u)) + '">Open unit →</a></div></li>';
-          }
-          return '<li><a class="unit" data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '" href="' + href(unitToken(c, u)) + '"><h3>' + '<span class="unit-num">Unit ' + unitNum(c, u) + '</span>' + esc(u.name) + '</h3>' +
-            '<div class="unit-meta"><span class="unit-count">' + acts(k) + '</span>' + (minis ? '<span class="minis">' + minis + '</span>' : '') + '</div></a></li>';
+          var lessons = subskillsHtml(u, c.id);
+          var resourceCount = u.artifacts.filter(listed).length;
+          return '<li><div class="unit algebra-unit-card" data-color="' + esc(c.color || '') + '" data-course="' + esc(c.id) + '">' +
+            '<h3><a class="unit-title-link" href="' + href(unitToken(c, u)) + '">' +
+            '<span class="unit-num">Unit ' + unitNum(c, u) + '</span>' + esc(u.name) + '</a></h3>' +
+            (lessons ? '<div class="unit-meta" data-lesson-list="true">' + lessons + '</div>' :
+              '<p class="unit-outline-fallback">' + (resourceCount ? 'Explore the available resources in this unit.' : 'Lesson outline coming soon.') + '</p>') +
+            '<a class="unit-open-link" href="' + href(unitToken(c, u)) + '">Open unit →</a></div></li>';
         }).join('') + '</ul></div></section>'
     };
   }
