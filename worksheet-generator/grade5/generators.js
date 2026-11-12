@@ -201,6 +201,14 @@
       $('notice').className = 'g5gen-notice warn'; $('notice').textContent = 'Total points must be at least the number of questions. Increase the total or reduce the question count.'; return;
     }
     var seed = state.opts.version + '|' + state.unit.id + '|' + state.mode + '|' + (state.mode === 'activity' ? state.opts.activity : '') + '|' + state.build;
+    if (state.mode === 'activity' && (state.opts.activity === 'error' || state.opts.activity === 'maze') &&
+        state.unit.metaError && !state.unit.questions.some(function (q) {
+          return q.options && q.options.some(function (choice) { return !choice.correct; });
+        })) {
+      $('notice').className = 'g5gen-notice warn';
+      $('notice').textContent = 'Verified incorrect-answer data could not load. Reload the page and try again. ' + state.unit.metaError;
+      return;
+    }
     try { state.plan = C.build(state.unit, state.opts, state.mode, seed); }
     catch (e) { $('notice').className = 'g5gen-notice warn'; $('notice').textContent = e.message; return; }
     state.audience = 'student'; showPreview();
@@ -298,16 +306,35 @@
     var pref = readPrefs();
     return G.MK_BANK_LOADER.loadUnitFromSite('math5', id, null, '../').then(function (ids) {
       if (!ids.length) throw new Error('This unit’s questions are not published yet.');
-      return G.fetch('../math5/meta/' + id + '.meta.json').then(function (response) {
-        if (!response.ok) throw new Error('Metadata HTTP ' + response.status);
-        return response.json();
-      }).catch(function () { return {}; }).then(function (meta) {
+      // Error Analysis relies on vetted misconceptions stored separately from
+      // the question bank. Do not silently erase them on a network/cache error.
+      // The independent source URL is a fallback for older main-site builds.
+      var metadataPath = '../math5/meta/' + encodeURIComponent(id) + '.meta.json';
+      function readMetadata(url) {
+        return G.fetch(url, { cache: 'no-store' }).then(function (response) {
+          if (!response.ok) throw new Error('HTTP ' + response.status + ' for ' + url);
+          return response.json();
+        }).then(function (meta) {
+          if (!meta || typeof meta !== 'object' || Array.isArray(meta) ||
+              !Object.values(meta).some(function (record) { return record && record.distractors && Object.keys(record.distractors).length; }))
+            throw new Error('No verified misconceptions in ' + url);
+          return meta;
+        });
+      }
+      return readMetadata(metadataPath).catch(function (primaryError) {
+        return readMetadata('https://akneller1.github.io/FinancialAlgebra/math5/meta/' +
+          encodeURIComponent(id) + '.meta.json').catch(function (fallbackError) {
+          // Preserve ordinary generators even if both metadata sources fail.
+          return { __loadError: primaryError.message + '; ' + fallbackError.message };
+        });
+      }).then(function (meta) {
         state.unitId = id;
         state.unit = {
           id: id, name: u.name, number: course.units.indexOf(u) + 1,
           skills: G.MK_COURSE_CATALOG.getSkillRecords('math5', id),
           questions: G.MK_QUESTION_BANKS.select({ courseId: 'math5', unitId: id }),
-          meta: meta || {},
+          meta: meta && !meta.__loadError ? meta : {},
+          metaError: meta && meta.__loadError || '',
           content: Content.units[id] || {}
         };
         var overrides = {
