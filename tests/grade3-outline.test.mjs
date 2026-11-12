@@ -28,6 +28,8 @@ test('New Grade 3 page and all other courses link to one another',()=>{
  const html=read('grade3.html'),boot=read('src/grade3-site.js'),renderer=read('src/outline-template.js');
  assert.ok(html.includes('src/grade3-site.js'));assert.ok(boot.includes('course-outlines/grade3.json'));
  assert.ok(renderer.includes('guidingQuestions'));assert.ok(renderer.includes('Coming soon'));
- for(const path of ['index.html','grade4.html','grade5.html'])assert.ok(read(path).includes('href="grade3.html"'));
+ for(const path of ['grade1.html','grade2.html','grade4.html'])assert.ok(read(path).includes('href="grade3.html"'));
+ assert.ok(!read('index.html').includes('href="grade3.html"'),'Unfinished Grade 3 must stay off the staging homepage');
+ assert.ok(!read('grade5.html').includes('href="grade3.html"'),'Grade 5 picker should not advertise unfinished Grade 3');
  assert.ok(existsSync(new URL('../styles.css',import.meta.url)));
 });
