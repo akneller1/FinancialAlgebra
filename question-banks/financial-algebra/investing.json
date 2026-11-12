@@ -1794,8 +1794,8 @@
    "prompt": "Evaluate the claim: “I should wait until I earn more money to start investing.”",
    "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth.",
-    "Model response: Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth."
+    "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth.",
+    "Model response: Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth."
    ],
    "options": [
     {
@@ -1821,13 +1821,13 @@
    "prompt": "A friend says: “I should wait until I earn more money to start investing.” Do you agree? Use a specific numerical example to support or refute the claim.",
    "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth.",
+    "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth.",
     "Rubric (16 pts):",
     "Financial accuracy (4): All calculations correct, labeled, and rounded to cents where money is reported.",
     "Use of evidence (4): Supports the verdict with a correct, specific numerical example.",
     "Reasoning & tradeoffs (4): Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
     "Recommendation & communication (4): Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
-    "Model response: Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth. Example: $100/month from 22 to 65 at 6% ≈ $242,000; starting at 32 ≈ $124,000."
+    "Model response: Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth. Example: $100/month from 22 to 65 at 6% ≈ $242,000; starting at 32 ≈ $124,000."
    ],
    "parts": [
     {
@@ -1840,7 +1840,7 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth."
+     "answer": "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
@@ -1855,10 +1855,10 @@
    "level": "cp1",
    "format": "multiple-choice",
    "prompt": "Evaluate the claim: “A 1% fee is too small to matter.”",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%.",
-    "Model response: Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%."
+    "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot.",
+    "Model response: Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot."
    ],
    "options": [
     {
@@ -1867,11 +1867,11 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "sourceNotes": "Financial Algebra original item (family claim; type claim). Fictional scenario; hypothetical values. Single course level \"standard\" stored as cp1 for Classroom schema compatibility."
@@ -1882,28 +1882,28 @@
    "level": "cp1",
    "format": "open-response",
    "prompt": "A friend says: “A 1% fee is too small to matter.” Do you agree? Use a specific numerical example to support or refute the claim.",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%.",
+    "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot.",
     "Rubric (16 pts):",
     "Financial accuracy (4): All calculations correct, labeled, and rounded to cents where money is reported.",
     "Use of evidence (4): Supports the verdict with a correct, specific numerical example.",
     "Reasoning & tradeoffs (4): Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
     "Recommendation & communication (4): Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
-    "Model response: Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%. Example: $76,123 − $57,435 ≈ $18,688 lost to fees."
+    "Model response: Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot. Example: $10,000 growing 7% for 30 years ends near $76,123; at 6% (after a 1% fee) about $57,435 — roughly $18,688 lost to fees."
    ],
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
-     "answer": "$76,123 − $57,435 ≈ $18,688 lost to fees."
+     "answer": "$10,000 growing 7% for 30 years ends near $76,123; at 6% (after a 1% fee) about $57,435 — roughly $18,688 lost to fees."
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%."
+     "answer": "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
@@ -1920,8 +1920,8 @@
    "prompt": "Evaluate the claim: “Doubling the interest rate doubles the final amount.”",
    "answer": "Never true",
    "solutionSteps": [
-    "Never true for compound growth over multiple years — it more than doubles the growth because of exponents.",
-    "Model response: Never true for compound growth over multiple years — it more than doubles the growth because of exponents."
+    "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents.",
+    "Model response: Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents."
    ],
    "options": [
     {
@@ -1947,13 +1947,13 @@
    "prompt": "A friend says: “Doubling the interest rate doubles the final amount.” Do you agree? Use a specific numerical example to support or refute the claim.",
    "answer": "Never true",
    "solutionSteps": [
-    "Never true for compound growth over multiple years — it more than doubles the growth because of exponents.",
+    "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents.",
     "Rubric (16 pts):",
     "Financial accuracy (4): All calculations correct, labeled, and rounded to cents where money is reported.",
     "Use of evidence (4): Supports the verdict with a correct, specific numerical example.",
     "Reasoning & tradeoffs (4): Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
     "Recommendation & communication (4): Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
-    "Model response: Never true for compound growth over multiple years — it more than doubles the growth because of exponents. Example: $1,000 for 20 years: 5% → $2,653; 10% → $6,727."
+    "Model response: Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents. Example: $1,000 for 20 years: 5% → $2,653; 10% → $6,727."
    ],
    "parts": [
     {
@@ -1966,7 +1966,7 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true for compound growth over multiple years — it more than doubles the growth because of exponents."
+     "answer": "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",

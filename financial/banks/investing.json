@@ -2952,9 +2952,9 @@
     }
    ],
    "solutionSteps": [
-    "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth."
+    "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth."
    ],
-   "modelResponse": "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth.",
+   "modelResponse": "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth.",
    "misconceptions": [
     "I should wait until I earn more money to start investing."
    ],
@@ -2986,7 +2986,7 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth."
+     "answer": "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
@@ -2995,9 +2995,9 @@
    ],
    "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth."
+    "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth."
    ],
-   "modelResponse": "Usually false, though it depends. Small early contributions compound for decades; emergency savings and high-interest debt should come first, but waiting years costs growth. Example: $100/month from 22 to 65 at 6% ≈ $242,000; starting at 32 ≈ $124,000.",
+   "modelResponse": "Sometimes true — but waiting usually costs growth. Emergency savings and high-interest debt should come first, so waiting can make sense; otherwise small early contributions compound for decades, and waiting years costs growth. Example: $100/month from 22 to 65 at 6% ≈ $242,000; starting at 32 ≈ $124,000.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
@@ -3044,7 +3044,7 @@
    "type": "claim",
    "prompt": "Evaluate the claim: “A 1% fee is too small to matter.”",
    "format": "multiple-choice",
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "options": [
     {
      "text": "Always true",
@@ -3052,17 +3052,17 @@
     },
     {
      "text": "Sometimes true — it depends on the situation",
-     "correct": false
+     "correct": true
     },
     {
      "text": "Never true",
-     "correct": true
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%."
+    "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot."
    ],
-   "modelResponse": "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%.",
+   "modelResponse": "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot.",
    "misconceptions": [
     "A 1% fee is too small to matter."
    ],
@@ -3086,26 +3086,26 @@
    "parts": [
     {
      "prompt": "State whether the claim is always, sometimes, or never true.",
-     "answer": "Never true"
+     "answer": "Sometimes true — it depends on the situation"
     },
     {
      "prompt": "Give a specific numerical example.",
-     "answer": "$76,123 − $57,435 ≈ $18,688 lost to fees."
+     "answer": "$10,000 growing 7% for 30 years ends near $76,123; at 6% (after a 1% fee) about $57,435 — roughly $18,688 lost to fees."
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%."
+     "answer": "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
      "answer": "Answers vary; accept any defensible situation."
     }
    ],
-   "answer": "Never true",
+   "answer": "Sometimes true — it depends on the situation",
    "solutionSteps": [
-    "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%."
+    "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot."
    ],
-   "modelResponse": "Never true over long periods. A 1% yearly fee compounds: on $10,000 growing 7% for 30 years, ending balances are about $76,123 vs. $57,435 at 6%. Example: $76,123 − $57,435 ≈ $18,688 lost to fees.",
+   "modelResponse": "Sometimes true. On a small balance held for a short time, a 1% fee costs little. Over long periods it compounds into a large amount, so for long-term investing it matters a lot. Example: $10,000 growing 7% for 30 years ends near $76,123; at 6% (after a 1% fee) about $57,435 — roughly $18,688 lost to fees.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
@@ -3168,9 +3168,9 @@
     }
    ],
    "solutionSteps": [
-    "Never true for compound growth over multiple years — it more than doubles the growth because of exponents."
+    "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents."
    ],
-   "modelResponse": "Never true for compound growth over multiple years — it more than doubles the growth because of exponents.",
+   "modelResponse": "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents.",
    "misconceptions": [
     "Doubling the interest rate doubles the final amount."
    ],
@@ -3202,7 +3202,7 @@
     },
     {
      "prompt": "Explain the financial principle involved.",
-     "answer": "Never true for compound growth over multiple years — it more than doubles the growth because of exponents."
+     "answer": "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents."
     },
     {
      "prompt": "Describe a situation where a reasonable person might see it differently.",
@@ -3211,9 +3211,9 @@
    ],
    "answer": "Never true",
    "solutionSteps": [
-    "Never true for compound growth over multiple years — it more than doubles the growth because of exponents."
+    "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents."
    ],
-   "modelResponse": "Never true for compound growth over multiple years — it more than doubles the growth because of exponents. Example: $1,000 for 20 years: 5% → $2,653; 10% → $6,727.",
+   "modelResponse": "Never true. Doubling the rate does not double the final amount (the principal does not double), and over multiple years it more than doubles the growth because of exponents. Example: $1,000 for 20 years: 5% → $2,653; 10% → $6,727.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
