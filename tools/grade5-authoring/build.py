@@ -23,7 +23,7 @@ MODS = ["u01_place_value", "u02_mult_div", "u03_decimals", "u04_expressions", "u
         "u07_measurement", "u08_volume", "u09_coordinate", "u10_shapes", "u11_data"]
 QUOTA = {"sa": 12, "mc": 12, "err": 3, "tf": 1, "sel": 1, "open": 1}
 NOTE = ("Original Claude-authored Grade 5 item (family: {fam}). Answer computed by the authoring script and re-derived by the "
-        "independent verifier (tools/grade5-authoring/verify.py). Awaiting human review.")
+        "independent verifier (tools/grade5-authoring/verify.py).")
 TAGSET = {"modeling", "misconception", "challenge", "graph", "reasoning", "error-analysis", "connections", "multiple-representations", "multistep"}
 SEEN, NEAR, EXC = {}, Counter(), Counter()
 
