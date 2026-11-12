@@ -154,9 +154,17 @@ test('Student interactive mode hides teacher-view button and excludes the teache
  assert.ok(tool.includes("if (!studentMode) {"));
  assert.ok(tool.includes("studentMode ? '' : '<button type="));
  assert.ok(tool.includes("if (studentMode) return;"));
+ assert.ok(tool.includes('Copy student link'),'Teacher can copy links inside visual math tools');
+ assert.ok(tool.includes("url.searchParams.set('student','1')"),'Visual math tool share button sets student mode');
+ const core=read('worksheet-generator/grade5/g5-core.js');
+ assert.ok(core.includes('Copy student link'),'Games and study activities have an in-app student sharing button');
+ assert.ok(core.includes("url.searchParams.set('student','1')"),'Games and checks share student view');
+ for(const page of ['grade5-games.html','grade5-flashcards.html','grade5-understanding-check.html']){
+   assert.ok(read('worksheet-generator/'+page).includes('g5-core.js?v=student-share-20261112'),page+' needs updated activity chrome');
+ }
  for(const slug of ['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
    'measurement-converter','place-value-builder','volume-builder']){
   const html=read('math5-'+slug+'/index.html');
-  assert.ok(html.includes('tool-shell.js?v=student-links-20261112'),slug+' needs updated student-mode tool shell');
+  assert.ok(html.includes('tool-shell.js?v=student-share-20261112'),slug+' needs updated student-mode tool shell');
  }
 });
