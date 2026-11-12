@@ -1067,3 +1067,70 @@ body { background:var(--paper); }
   .site-header .main-nav .course-menu-hint { font-size:.73rem; }
   .site-header .main-nav .course-nav-grid { gap:.4rem; }
 }
+
+
+/* Compact, standardized UNIT views (course homepages intentionally unchanged).
+   Shared by every subject, including Grade 5, Financial Algebra, and outline units. */
+.band.unit-band {
+  padding-block: .68rem .8rem;
+  border-block-width: 1px;
+}
+.unit-band .crumbs ol { margin-bottom: .28rem; font-size: .8rem; gap: .2rem; }
+.unit-band h1 { font-size: clamp(1.4rem, 2.7vw, 2.05rem); line-height: 1.13; max-width: none; letter-spacing: -.02em; }
+.unit-band .band-meta { margin-top: .25rem; font-size: .86rem; line-height: 1.3; font-weight: 600; }
+.unit-band .band-grid { gap: .5rem; }
+.unit-band .band-art { width: 3.6rem; max-width: 3.6rem; }
+.unit-band + .section { padding-block: .8rem 1.8rem; }
+.unit-band + .section .algebra-unit-layout { gap: 1rem; }
+.unit-band + .section .unit-pager { margin-bottom: .25rem; gap: .45rem; }
+.unit-band + .section .unit-pager:last-child { margin: .8rem 0 0; }
+.unit-band + .section .generator-banner.compact {
+  padding: .65rem .8rem;
+  border-radius: 12px;
+  box-shadow: none;
+}
+.unit-band + .section .generator-banner.compact .generator-banner-heading { margin-bottom: .55rem; }
+.unit-band + .section .generator-banner.compact .generator-banner-heading h2 { font-size: 1.02rem; line-height: 1.2; }
+.unit-band + .section .generator-banner.compact .generator-shortcuts,
+.unit-band + .section .g5-shortcuts .generator-shortcuts {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .45rem;
+  grid-auto-rows: auto;
+}
+.unit-band + .section .generator-banner.compact .generator-shortcut {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 2.55rem;
+  gap: .45rem;
+  padding: .38rem .52rem;
+  border-radius: 9px;
+  box-shadow: none;
+}
+.unit-band + .section .generator-banner.compact .generator-shortcut-icon {
+  width: 1.65rem;
+  height: 1.65rem;
+  flex: 0 0 1.65rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1;
+}
+.unit-band + .section .generator-banner.compact .generator-shortcut-copy { min-width: 0; }
+.unit-band + .section .generator-banner.compact .generator-shortcut-copy strong {
+  font-size: .85rem;
+  line-height: 1.2;
+}
+.unit-band + .section .generator-banner.compact .generator-shortcut-copy small {
+  font-size: .7rem;
+  line-height: 1.2;
+}
+.unit-band + .section .algebra-unit-section > h2 { font-size: clamp(1.2rem, 2vw, 1.5rem); padding-bottom: .4rem; margin-bottom: .7rem; }
+@media (max-width: 750px) {
+  .unit-band + .section .generator-banner.compact .generator-shortcuts,
+  .unit-band + .section .g5-shortcuts .generator-shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .unit-band .band-art { display: none; }
+}
+@media (max-width: 430px) {
+  .unit-band + .section .generator-banner.compact .generator-shortcut { padding: .36rem .42rem; }
+  .unit-band + .section .generator-banner.compact .generator-shortcut-copy strong { font-size: .79rem; }
+}
