@@ -107,3 +107,27 @@
 /* Resource previews preserve a uniform Classroom card ratio on every unit. */
 .finance-resource-thumb{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:8 / 5;object-fit:contain;background:#f4f5fb;margin:0 0 .35rem;border-bottom:1px solid var(--line);border-radius:10px 10px 0 0}
 .finance-resource-card{overflow:hidden}
+
+
+/* Unified Grade 5 course pages use the existing Classroom unit/card system. */
+.g5-course-note{color:var(--ink-soft);line-height:1.55;margin:.4rem 0 1.3rem;max-width:68rem}
+.g5-shortcuts .generator-shortcuts{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g5-shortcuts .generator-shortcut{width:100%;min-width:0;cursor:pointer;text-align:left;font:inherit}
+.g5-shortcuts .generator-shortcut:hover{transform:translateY(-1px)}
+.g5-content-section{scroll-margin-top:6.5rem}
+.g5-resource-card .thumb{background:var(--c-tint,#f9f8f0)}
+.g5-resource-card .thumb img{object-fit:contain;background:var(--c-tint,#f9f8f0)}
+.g5-resource-card .where{font-size:.83rem}
+.g5-resource-card .desc{line-height:1.45}
+.g5-resource-card .btn-open{display:inline-block;padding:.4rem .8rem;border-radius:8px;font-size:.85rem;font-weight:800}
+.g5-source-outline{margin:2.2rem 0 0;padding:1.15rem 1.35rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.g5-source-outline>summary{cursor:pointer;font-weight:800;font-family:var(--display);font-size:1.08rem}
+.g5-original-content{padding-top:.9rem;line-height:1.55}
+.g5-original-units{padding-left:1.35rem;display:grid;gap:.5rem}
+.g5-original-units li{padding:.5rem .35rem}
+.g5-original-units span{color:var(--ink-soft);font-size:.87rem}
+.g5-original-units details{margin-top:.35rem}
+.g5-original-units details summary{cursor:pointer;color:var(--c-text)}
+.g5-original-units details .unit-skills{margin-top:.55rem}
+@media(max-width:760px){.g5-shortcuts .generator-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.g5-shortcuts .generator-shortcut{flex-direction:row;align-items:center}.g5-shortcuts .generator-shortcuts{gap:.5rem}}
