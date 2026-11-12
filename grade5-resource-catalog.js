@@ -38,7 +38,7 @@
   var title=function(slug){return slug.split('-').map(function(x){return x.charAt(0).toUpperCase()+x.slice(1)}).join(' ');};
   var mk=function(title,path,type,thumb,description){return {title:title,path:path,type:type,thumb:thumb,description:description};};
   course.units.forEach(function(u){
-    var id=u.id,e=encodeURIComponent(id),a=u.artifacts||[];
+    var id=u.id,e=encodeURIComponent(id),a=[]; // staged links only: omit copied Classroom generator URLs not deployed here
     function add(resource){
       if(!a.some(function(x){return x.path===resource.path;}))a.push(resource);
     }
