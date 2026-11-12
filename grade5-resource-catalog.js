@@ -35,6 +35,12 @@
     ['math-soccer','Math Soccer','soccer'],['connect-four','Connect 4','connect4'],
     ['puzzle-masters','Puzzle Masters','puzzle']
   ];
+  var generators=[
+    ['Lesson Plan','lesson','thumbs/math5-generator-lesson.svg','Build a complete lesson with kid-friendly goals, vocabulary, worked examples, guided practice, an exit ticket and a teacher key.'],
+    ['Worksheet','worksheet','thumbs/math5-generator-worksheet.svg','Choose skills, level, question format and work space, then print a Letter-size worksheet with a matching answer key.'],
+    ['Assessment','assessment','thumbs/math5-generator-assessment.svg','Build a points-based assessment with standards, a time limit and a separate teacher key that reconciles to the total.'],
+    ['Activity','activity','thumbs/math5-generator-activity.svg','Print a maze, color by number, matching puzzle, station set, error analysis or partner check with a teacher key.']
+  ];
   var title=function(slug){return slug.split('-').map(function(x){return x.charAt(0).toUpperCase()+x.slice(1)}).join(' ');};
   var mk=function(title,path,type,thumb,description){return {title:title,path:path,type:type,thumb:thumb,description:description};};
   course.units.forEach(function(u){
@@ -56,6 +62,10 @@
       'Study Guide','thumbs/math5-understanding-check.svg','Check your understanding with feedback and explanations.'));
     add(mk('Cheat Sheet','math5-'+id+'-cheat-sheet/worksheet.pdf',
       'Study Guide','thumbs/math5-'+id+'-cheat-sheet.jpg','Printable reference for this unit.'));
+    generators.forEach(function(g){
+      add(mk(g[0]+' Generator','worksheet-generator/grade5-generators.html?unit='+e+'&mode='+g[1],
+        'Printable',g[2],g[3]));
+    });
     (tools[id]||[]).forEach(function(slug){
       add(mk(title(slug),'math5-'+slug+'/index.html','Interactive',
         'thumbs/math5-'+slug+'.jpg','Explore an interactive model and its printable activity.'));
