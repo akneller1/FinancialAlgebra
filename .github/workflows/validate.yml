@@ -15,3 +15,8 @@ jobs:
           find src financial scripts -type f \( -name "*.js" -o -name "*.mjs" \) -exec node --check {} \;
       - name: Test finance calculations, questions, and UI integration assets
         run: npm test
+      - name: Validate Grade 5 banks, diagrams, resource navigation and JS
+        run: |
+          node --check grade5-resource-catalog.js
+          node scripts/test-grade5.cjs
+
