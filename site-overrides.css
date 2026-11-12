@@ -131,3 +131,24 @@
 .g5-original-units details .unit-skills{margin-top:.55rem}
 @media(max-width:760px){.g5-shortcuts .generator-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.g5-shortcuts .generator-shortcut{flex-direction:row;align-items:center}.g5-shortcuts .generator-shortcuts{gap:.5rem}}
+
+
+/* Grade 5 resource actions: real links and accessible student sharing. */
+/* Disable the main Classroom card-title overlay only here. The image, title,
+   Open resource link and Copy student link must be independent controls. */
+.g5-resource-card h3 a::after{content:none!important;display:none!important}
+.g5-resource-card .thumb{display:block;position:relative;text-decoration:none}
+.g5-resource-card .thumb:hover{filter:brightness(.98)}
+.g5-resource-card .thumb:focus-visible,
+.g5-resource-card h3 a:focus-visible,
+.g5-resource-card .btn-open:focus-visible,
+.g5-resource-card .g5-student-copy:focus-visible,
+.g5-resource-card .g5-student-level:focus-visible{outline:3px solid var(--blue-text);outline-offset:3px}
+.g5-resource-card .g5-card-actions{margin-top:auto;padding-top:.35rem}
+.g5-resource-card .btn-open{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:38px}
+.g5-resource-card .g5-student-share{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .5rem;margin-top:.4rem;padding-top:.75rem;border-top:1px solid var(--line)}
+.g5-resource-card .g5-student-level-label{display:flex;align-items:center;flex-wrap:wrap;gap:.3rem;color:var(--ink-soft);font-size:.78rem;line-height:1.25}
+.g5-resource-card .g5-student-level{font:inherit;font-size:.8rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:7px;padding:.4rem .45rem;min-height:38px;max-width:100%}
+.g5-resource-card .g5-student-copy{cursor:pointer;font:700 .79rem/1.25 var(--body);padding:.57rem .65rem;border:1px solid var(--blue-text);border-radius:8px;color:var(--blue-text);background:var(--paper);min-height:38px}
+.g5-resource-card .g5-student-copy:hover{background:var(--wash)}
+.g5-resource-card .g5-student-status:not(:empty){display:block;flex-basis:100%;font-size:.76rem;line-height:1.35;color:var(--ink-soft)}
