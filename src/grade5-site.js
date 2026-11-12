@@ -174,6 +174,7 @@
       var levelSelect=card.querySelector('.g5-student-level');
       var resource={path:share.getAttribute('data-path'),type:share.getAttribute('data-type'),
         title:share.getAttribute('data-title')};
+      if(G.MK_GRADE5_STUDENT_LINKS.chooseSkills(resource,levelSelect?levelSelect.value:'cp1',G.location.href))return;
       var url;
       try{
         url=G.MK_GRADE5_STUDENT_LINKS.destination(resource,levelSelect?levelSelect.value:'cp1',G.location.href);
