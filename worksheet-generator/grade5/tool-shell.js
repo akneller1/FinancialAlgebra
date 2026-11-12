@@ -8,7 +8,7 @@
   function setZoom(z) { zoom = Math.max(0.7, Math.min(2.2, z)); G.document.documentElement.style.fontSize = (17 * zoom) + 'px'; $('tsZoom').textContent = Math.round(zoom * 100) + '%'; }
   function init(o) {
     var top = G.document.createElement('header'); top.className = 'g5-top';
-    top.innerHTML = '<a href="../grade5-resources.html">← 5th Grade Math</a><span class="g5-title">' + o.title + '</span><div class="g5-tools" role="toolbar" aria-label="Display controls">' +
+    top.innerHTML = '<a href="../grade5.html">← 5th Grade Math</a><span class="g5-title">' + o.title + '</span><div class="g5-tools" role="toolbar" aria-label="Display controls">' +
       '<button type="button" id="tsOut" aria-label="Zoom out">A−</button><button type="button" id="tsZoom" aria-label="Reset zoom">100%</button><button type="button" id="tsIn" aria-label="Zoom in">A+</button>' +
       '<button type="button" id="tsMode" aria-pressed="false" title="Switch between the student view and the teacher view">Teacher view</button><button type="button" id="tsFit">Fit</button><button type="button" id="tsPresent" aria-pressed="false">Present</button><button type="button" id="tsReset">Reset</button></div>';
     G.document.body.insertBefore(top, G.document.body.firstChild);
