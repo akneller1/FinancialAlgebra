@@ -77,6 +77,20 @@
     var title = o.title.trim() || ('Lesson Plan · ' + u.name);
     var h = '<section class="pl-sheet">' + sheetHead(plan, teacher, title,
       'Big idea: ' + (c.bigIdea || '') + '\nTime: ' + o.duration + ' minutes · Level: ' + Core.levelName(o.level) + ' · Skills: ' + plan.skills.map(function (s) { return s.name; }).join(' · '));
+    if (teacher) {
+      var misconception = (c.misconceptions || [])[0];
+      var support = (c.support || [])[0];
+      var extend = (c.extend || [])[0];
+      h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">Teacher facilitation notes</div>' +
+        '<ol class="g5idealist">' +
+        '<li><b>Launch:</b> Ask students to explain the central idea in their own words: ' + rich(c.bigIdea || 'Describe what you notice.') + '</li>' +
+        (misconception ? '<li><b>Diagnose:</b> Pose this misconception without endorsing it: “' + rich(misconception[0]) + '” Ask students to agree or disagree and justify. <b>Listen for:</b> ' + rich(misconception[1]) + '</li>' : '') +
+        '<li><b>Model:</b> Work through the selected example aloud. Name each mathematical decision and invite an alternative strategy before revealing the final answer.</li>' +
+        (support ? '<li><b>Scaffold:</b> ' + rich(support) + '</li>' : '') +
+        '<li><b>Check for understanding:</b> After guided practice, ask a student to explain how they know their answer is reasonable. Use their explanation to decide whether to reteach or move to independent practice.</li>' +
+        (extend ? '<li><b>Extend:</b> ' + rich(extend) + '</li>' : '') +
+        '</ol></section>';
+    }
     plan.sections.forEach(function (sec) {
       var head = esc(sec.title) + (sec.id === 'vocabulary' ? ' <small>· ' + esc(teacher || o.notes === 'completed' ? 'Completed' : o.notes === 'blank' ? 'Blank organizer' : 'Guided notes') + '</small>' : '');
       h += '<section class="pl-sbox g5sec"><div class="pl-shd g5sec-h">' + head + '</div>';
