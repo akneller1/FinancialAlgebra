@@ -9,6 +9,10 @@
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function rich(s) {
     var text = String(s == null ? '' : s);
+    // Use the shared Classroom math display for stacked fractions instead of
+    // leaving slash-style or division-sign arithmetic in student worksheets.
+    // Preserve dates and prose; only convert numeric division expressions here.
+    text = text.replace(/(\d+(?:\.\d+)?)\s*÷\s*(\d+(?:\.\d+)?)/g, '[[$1 ; $2]]');
     if (G.MK_MATH_DISPLAY) return G.MK_MATH_DISPLAY.html(text);
     return esc(text).replace(/\n/g, '<br>');
   }
