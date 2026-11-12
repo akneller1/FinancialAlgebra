@@ -44,8 +44,10 @@ test('Grade 2: page, navigation, and source-based outline are wired',()=>{
  assert.ok(renderer.includes('Curriculum Sections &amp; Standards'));
  assert.ok(renderer.includes('estimatedDaysMax'));
  assert.ok(renderer.includes('aria-disabled="true"'));
- for(const existing of ['index.html','grade3.html','grade4.html','grade5.html']){
+ for(const existing of ['grade1.html','grade3.html','grade4.html']){
   assert.ok(read(existing).includes('href="grade2.html"'));
  }
+ assert.ok(!read('index.html').includes('href="grade2.html"'),'Unfinished Grade 2 must stay off the staging homepage');
+ assert.ok(!read('grade5.html').includes('href="grade2.html"'),'Grade 5 picker should not advertise unfinished Grade 2');
  assert.ok(existsSync(new URL('../styles.css',import.meta.url)));
 });
