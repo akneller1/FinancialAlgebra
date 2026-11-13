@@ -140,12 +140,12 @@ def rewrite_safe(q, record, meta):
             if item["text"] in seen:
                 ans=q["answer"]
                 candidates=[]
-                m=re.search(r"(\\d+) ten(?:s)? and (\\d+) one(?:s)?",str(ans))
+                m=re.search(r"(\d+) ten(?:s)? and (\d+) one(?:s)?",str(ans))
                 if m:
                     t,o=map(int,m.groups())
                     candidates=[f"{t} tens and {o+1} ones",f"{t+1} tens and {o} ones",
                                 f"{t} tens and {max(0,o-1)} ones"]
-                if re.fullmatch(r"\\d+",str(ans)):
+                if re.fullmatch(r"\d+",str(ans)):
                     n=int(ans)
                     candidates += [str(n+1),str(max(0,n-1)),str(n+2),str(n+3)]
                 pick=next((textual(x) for x in candidates if textual(x) not in seen and textual(x)!=ans),None)
