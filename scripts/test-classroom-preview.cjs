@@ -8,7 +8,8 @@ assert.equal((read('index.html').match(/src="elementary-preload-catalog/g)||[]).
 const context={window:{}};context.globalThis=context.window;
 for(const file of ['data.js','course-integrations.js','course-catalog.js','grade5/grade5-main-catalog.js','elementary-preload-catalog.js'])vm.runInNewContext(read(file),context,{filename:file});
 const G=context.window,grades=G.LIBRARY.courses.filter(c=>/^grade[1-4]$/.test(c.id));
-assert.equal(grades.length,4);assert.equal(grades.reduce((n,c)=>n+c.units.length,0),37);
+assert.equal(grades.length,4);const expectedUnits=[1,2,3,4].reduce((sum,n)=>sum+JSON.parse(fs.readFileSync(path.join(stage,'course-outlines/grade'+n+'.json'),'utf8')).units.length,0);
+assert.equal(grades.reduce((n,c)=>n+c.units.length,0),expectedUnits);
 for(const c of grades)for(const u of c.units){
  assert.equal(G.MK_COURSE_CATALOG.getSkills(c.id,u.id).length,G.MK_COURSE_CATALOG.getSkillRecords(c.id,u.id).length);
  for(const [format,page] of [['lesson-planner','lesson-planner.html'],['worksheet-generator','worksheet.html'],['assessment-generator','menu-assessment.html'],['printable-generator','printables.html']]){
@@ -20,7 +21,7 @@ for(const c of grades)for(const u of c.units){
   assert.ok(fs.existsSync(path.join(site,a.thumb)),a.thumb);
   assert.doesNotMatch(a.path,/grade5-generators\.html|tool=generators/);
  }
- assert.ok(u.artifacts.some(a=>a.title==='Flashcards'));assert.ok(u.artifacts.some(a=>a.title==='Readiness Check'));
+ assert.ok(u.artifacts.some(a=>a.title==='Flashcards'));assert.ok(u.artifacts.some(a=>a.title==='Understanding Check'));
 }
 for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html','printables.html']){
  const text=read('worksheet-generator/'+page);
@@ -40,7 +41,7 @@ native.MK_QUESTION_BANKS={available(){return false}};native.MK_COURSE_BANKS_READ
 vm.runInContext(read('worksheet-generator/elementary-preload-runtime.js'),native);
 (async()=>{
  await native.MK_COURSE_BANKS_READY;
- assert.equal(Object.keys(native.MK_PRELOADED_UNITS).length,37);
+ assert.equal(Object.keys(native.MK_PRELOADED_UNITS).length,expectedUnits);
  for(const c of grades)for(const u of c.units){
   const id=c.id+'-'+u.id,set=native.MKMENU.skillSets[id];assert.ok(set);
   assert.equal(native.MK_PRELOADED_PLANNER_UNIT(c.id,'u'+(c.units.indexOf(u)+1)),id);
@@ -50,5 +51,5 @@ vm.runInContext(read('worksheet-generator/elementary-preload-runtime.js'),native
   assert.equal(native.MKMENU.printables.capable(id,set.skills[0].id,'maze'),true);
   assert.match(native.MKMENU.printables.build({unitId:id,kind:'maze'}).error,/Question bank coming soon/);
  }
- console.log('PASS integrated Classroom preview: 37 units; actual native generators, production course/unit renderer, games, guides and scoped pending banks.');
+ console.log('PASS integrated Classroom preview: '+expectedUnits+' units; actual native generators, production course/unit renderer, games, guides and scoped pending banks.');
 })().catch(e=>{console.error(e);process.exitCode=1});
