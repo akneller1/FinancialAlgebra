@@ -29,6 +29,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate elementary player JavaScript syntax
+        run: |
+          node --check worksheet-generator/elementary/el-core.js
+          node --check worksheet-generator/elementary/el-games.js
+          node --check worksheet-generator/elementary/el-flashcards.js
+          node --check worksheet-generator/elementary/el-understanding-check.js
+          node --check worksheet-generator/grade2/config.js
       - name: Require complete preview package
         shell: bash
         run: |
