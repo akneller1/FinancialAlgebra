@@ -20,7 +20,8 @@ import build1, forms, figs1
 from build1 import Builder, MODS, mc_options
 from dupstats import ident, shape, norm
 from g1lib import Diagram, Reject, rng
-from outline import UNITS, COURSE_ID, skill_records
+_out = __import__(os.environ.get("G1_OUTLINE", "outline"))
+UNITS, COURSE_ID, skill_records = _out.UNITS, _out.COURSE_ID, _out.skill_records
 
 ROOT = build1.ROOT
 DRY = os.environ.get("G1_DRY") == "1"
@@ -36,7 +37,7 @@ def meta_path(u):
 
 
 def checks_path(u):
-    return os.path.join(HERE, "out", u["id"] + ".checks.json")
+    return os.path.join(os.environ.get("G1_OUT") or os.path.join(HERE, "out"), u["id"] + ".checks.json")
 
 
 def jload(p):

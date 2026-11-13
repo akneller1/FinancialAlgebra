@@ -18,14 +18,20 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(HERE, "units"))
 from g1lib import Reject, rng, LEVELS, err_of, tf_of, select_of, open_of, match_of, _norm
-from outline import UNITS, COURSE_ID, PREFIX, skill_records
+_OUTLINE = os.environ.get("G1_OUTLINE", "outline")
+_out = importlib.import_module(_OUTLINE)
+UNITS, COURSE_ID, PREFIX, skill_records = _out.UNITS, _out.COURSE_ID, _out.PREFIX, _out.skill_records
+LABEL = getattr(_out, "LABEL", "Grade 1")
 import figs1
 
 ROOT = os.environ.get("G1_ROOT", os.path.abspath(os.path.join(HERE, "..", "..")))
-MODS = ["u01_add_sub_data", "u02_story", "u03_within20", "u04_numbers99",
-        "u05_within100", "u06_length", "u07_geometry_time", "u08_together"]
+MODS = [m.strip() for m in os.environ.get(
+    "G1_MODS",
+    "u01_add_sub_data,u02_story,u03_within20,u04_numbers99,u05_within100,u06_length,u07_geometry_time,u08_together"
+).split(",") if m.strip()]
+OUT = os.environ.get("G1_OUT") or os.path.join(HERE, "out")
 QUOTA = {"sa": 12, "mc": 12, "err": 3, "tf": 1, "sel": 1, "open": 1}
-NOTE = ("Original Claude-authored Grade 1 item (family: {fam}). Answer computed by the authoring script and "
+NOTE = ("Original Claude-authored " + LABEL + " item (family: {fam}). Answer computed by the authoring script and "
         "re-derived by the independent verifier (tools/grade1-authoring/verify1.py).")
 TAGSET = {"fluency", "count-on", "unknown", "story", "equation", "place-value", "compare", "order", "counting",
           "geometry", "time", "measurement", "data", "reasoning", "make-ten", "multistep", "connections"}
@@ -308,7 +314,7 @@ class Builder:
 
         # Grade 1 extras are generated per domain (text-only), so picture-heavy skills still
         # get error analysis, true/false, select-all and open-response questions.
-        from extras import extras_for
+        extras_for = importlib.import_module(os.environ.get("G1_EXTRAS", "extras")).extras_for
         domain = spec.get("domain") or getattr(self.m, "DOMAIN", "oa")
         derived = {k: [v] for k, v in extras_for(domain).items()}
         fmt_of = {"err": "short-answer", "tf": "multiple-choice", "sel": "select-all", "open": "open-response"}
@@ -371,8 +377,8 @@ class Builder:
             json.dump(bank, fh, ensure_ascii=False, indent=1)
         with open(os.path.join(bdir, "meta", self.u["id"] + ".meta.json"), "w", encoding="utf-8") as fh:
             json.dump(self.meta, fh, ensure_ascii=False, indent=0)
-        os.makedirs(os.path.join(HERE, "out"), exist_ok=True)
-        with open(os.path.join(HERE, "out", self.u["id"] + ".checks.json"), "w", encoding="utf-8") as fh:
+        os.makedirs(OUT, exist_ok=True)
+        with open(os.path.join(OUT, self.u["id"] + ".checks.json"), "w", encoding="utf-8") as fh:
             json.dump(self.checks, fh, ensure_ascii=False, indent=0)
         if draw:
             draw_all(self.u["id"], self.diagrams)

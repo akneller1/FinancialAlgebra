@@ -24,11 +24,13 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, HERE)
-from outline import UNITS, COURSE_ID, skill_records, all_standards  # outline is data only
+_out = __import__(os.environ.get("G1_OUTLINE", "outline"))
+UNITS, COURSE_ID, skill_records, all_standards = _out.UNITS, _out.COURSE_ID, _out.skill_records, _out.all_standards
+COURSE_LABEL = getattr(_out, "UNIT_LABEL", "Grade 1 (math1)")
 
 BANK_DIR = os.path.join(ROOT, "question-banks", COURSE_ID)
 ASSET_DIR = os.path.join(ROOT, "question-banks", "assets", COURSE_ID)
-CHECKS = os.path.join(HERE, "out")
+CHECKS = os.environ.get("G1_OUT") or os.path.join(HERE, "out")
 LEVELS = ["cp2", "cp1", "honors"]
 SIDES = {"triangle": 3, "square": 4, "rectangle": 4, "hexagon": 6, "circle": 0}
 CORNERS = SIDES
@@ -546,7 +548,7 @@ def main():
             warn(f"{q['id']}: long multiple-choice option")
 
     print("=" * 72)
-    print(f"Grade 1 (math1) verification — {len(UNITS)} units, {STATS['questions']} questions")
+    print(f"{COURSE_LABEL} verification — {len(UNITS)} units, {STATS['questions']} questions")
     print("=" * 72)
     print("formats:", {k[4:]: v for k, v in sorted(STATS.items()) if k.startswith("fmt_")})
     print(f"diagrams: {STATS['diagrams']}   duplicate prompt groups capped: {len(over)}")

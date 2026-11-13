@@ -135,6 +135,42 @@ def _shape_kind_templates(kind, what, r):
             (f"Count the {what} on the {k}. How many are there?", True)]
 
 
+def _array_templates(r):
+    return [("How many dots are in this array?", True), ("Count the dots in the array. How many are there?", True),
+            ("This array has ___ dots.", True), ("Find the total number of dots.", True)]
+
+
+def _rows_templates(r):
+    return [("How many rows are in this array?", True), ("Count the rows in the array.", True),
+            ("The array has ___ rows.", True)]
+
+
+def _even_odd_templates(n, r):
+    return [(f"Is {n} even or odd?", False), (f"Look at {n}. Is it even or odd?", False),
+            (f"{n} counters are put into pairs. Is {n} even or odd?", False),
+            (f"Tell whether {n} is even or odd.", False)]
+
+
+def _polygon_templates(kind, what, r):
+    k = str(kind)
+    return [(f"How many {what} does this shape have?", True), (f"Count the {what}. How many are there?", True),
+            (f"This {k} has ___ {what}.", True), (f"How many {what} are on the {k}?", True)]
+
+
+def _parts_templates(r):
+    return [("What are the equal parts called?", True), ("Name the equal parts of this shape.", True),
+            ("Each part is one ___ of the whole.", True), ("What is this share called?", True)]
+
+
+def _count_templates(r):
+    return [("How many?", False), ("Count them. How many are there?", False), ("Count: ___ .", False)]
+
+
+def _money_templates(r):
+    return [("How much money is shown?", True), ("Count the coins. What is the total?", True),
+            ("These coins are worth ___ .", True), ("Find the value of the coins.", True)]
+
+
 def templates(check, r):
     """(text, needs_picture) pairs that re-ask the same mathematics in another form."""
     if check.get("k") != "fn":
@@ -151,6 +187,20 @@ def templates(check, r):
             return _place_templates(int(check["tens"]), int(check["ones"]), r)
         if fn in ("ones_of", "equiv_ones", "tens_from_ones"):
             return _ones_templates(int(check.get("n", check.get("ones", 0))), int(check.get("tens", 0)), r)
+        if fn == "array_total":
+            return _array_templates(r)
+        if fn == "array_rows":
+            return _rows_templates(r)
+        if fn == "even_odd":
+            return _even_odd_templates(int(check["n"]), r)
+        if fn in ("polygon_sides", "polygon_corners"):
+            return _polygon_templates(check.get("kind", "shape"), "sides" if fn == "polygon_sides" else "corners", r)
+        if fn == "part_name":
+            return _parts_templates(r)
+        if fn == "count":
+            return _count_templates(r)
+        if fn == "money_cents":
+            return _money_templates(r)
         if fn == "ten_ones":
             return _ten_ones_templates(r)
         if fn == "shape_attr_name":

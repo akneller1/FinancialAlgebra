@@ -7,9 +7,11 @@ cross-skill duplicate; the same identity inside one skill/level is a hard error 
 import json, os, re, sys
 from collections import Counter, defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.environ.get("G1_OUT") or os.path.join(HERE, "out")
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, HERE)
-from outline import UNITS, COURSE_ID
+_out = __import__(os.environ.get("G1_OUTLINE", "outline"))
+UNITS, COURSE_ID = _out.UNITS, _out.COURSE_ID
 
 
 def norm(t):
@@ -37,7 +39,7 @@ def load():
     out = []
     for u in UNITS:
         bank = json.load(open(os.path.join(ROOT, "question-banks", COURSE_ID, u["id"] + ".json"), encoding="utf-8"))
-        chk = json.load(open(os.path.join(HERE, "out", u["id"] + ".checks.json"), encoding="utf-8"))
+        chk = json.load(open(os.path.join(OUT, u["id"] + ".checks.json"), encoding="utf-8"))
         for q in bank["questions"]:
             q["_unit"] = u["id"]
             q["_fam"] = chk.get(q["id"], {}).get("family", "?")
@@ -100,4 +102,4 @@ def report(qs, dup_items, path):
 if __name__ == "__main__":
     qs = load()
     res, dup, vis = stats(qs)
-    report(qs, dup, os.path.join(HERE, "out", "dup_before.json"))
+    report(qs, dup, os.path.join(OUT, "dup_before.json"))
