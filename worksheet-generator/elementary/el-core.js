@@ -265,6 +265,11 @@
       var saved = G.sessionStorage.getItem('el-home-' + COURSE);
       if (saved) return saved;
     } catch (e) {}
+    // On the assembled site elementary players live one level deeper:
+    // /grade2/worksheet-generator/grade2-games.html -> /index.html.
+    // Preserve a project subpath (for example /FinancialAlgebra/) in staging.
+    var m = G.location.pathname.match(/^(.*)\/grade[1-5]\/worksheet-generator\//);
+    if (m) return m[1] + '/index.html';
     return '../index.html';
   }
 
@@ -273,7 +278,7 @@
     var student = P.get('student') === '1';
     var head = el('header', D.body.firstChild ? null : D.body, 'el-top');
     D.body.insertBefore(head, D.body.firstChild);
-    if (!student) { var home = el('a', head, 'el-home', '← Mr. K’s Classroom'); home.href = homeUrl() + '#' + COURSE + (P.get('unit') ? '.' + P.get('unit') : ''); }
+    if (!student) { var home = el('a', head, 'el-home', '← Mr. K’s Classroom'); home.href = homeUrl() + '#' + (/^math[1-5]$/.test(COURSE) ? 'grade' + COURSE.slice(4) : COURSE) + (P.get('unit') ? '.' + P.get('unit') : ''); }
     var t = el('div', head, 'el-title'); el('strong', t, null, title); if (sub) el('span', t, null, sub);
     var z = el('div', head, CFG.zoomKey); z.setAttribute('role', 'group'); z.setAttribute('aria-label', 'Display size');
     var level = 1;
