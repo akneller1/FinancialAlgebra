@@ -67,7 +67,7 @@ jobs:
         run: |
           python3 -m http.server 8766 --directory ../classroom/_site > /tmp/grade3-preview-http.log 2>&1 &
           echo $! > /tmp/grade3-preview-http.pid
-          node tools/grade3-authoring/tests/browser-generators.cjs
+          node tools/grade3-authoring/tests/browser-generators.cjs --all
           kill $(cat /tmp/grade3-preview-http.pid)
       - uses: actions/upload-pages-artifact@v3
         with:
