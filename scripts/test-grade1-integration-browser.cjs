@@ -14,7 +14,9 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
  }
  // All unit banks flow through the real loader into each study guide.
  for(const u of outline.units){
-  await open('flashcards',u.id);await page.locator('.fc-card').waitFor();await page.locator('.fc-card').click();pages++;
+  await open('flashcards',u.id);await page.locator('.fc-card').waitFor();await page.locator('.fc-card').click();
+  const expectedCards=await page.evaluate(()=>G5.load(G5.P.get('unit')).then(qs=>qs.filter(q=>q.format==='short-answer'||q.format==='multiple-choice').length));
+  if(await page.locator('.fc-progress').getAttribute('aria-valuemax')!==String(expectedCards))throw Error('Incomplete flashcard prompts were included');pages++;
   await open('check',u.id);await page.locator('.g5-q').first().waitFor();pages++;
  }
  // Every shared game boots with Grade 1 content in a single selected skill.

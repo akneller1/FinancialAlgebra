@@ -96,7 +96,9 @@
     });
     return g5.load(unitId).then(function (questions) {
       var info = g5.unitInfo(unitId);
-      return {unitName:info.unit.name, number:info.number, cards:questions.map(function (q) {
+      // Recall cards must contain a complete single-answer prompt. Select-all and
+      // multipart items need controls/part text that this card view does not render.
+      return {unitName:info.unit.name, number:info.number, cards:questions.filter(function(q){return q.format==='short-answer'||q.format==='multiple-choice';}).map(function (q) {
         return {front:q.prompt, back:String(q.answer), example:(q.solutionSteps || []).join(' '), kind:q.diagram && q.diagram.type === 'image' ? 'visual' : 'concept', picture:q.diagram && q.diagram.type === 'image' ? q.diagram.spec : null, skillId:q.skillId};
       })};
     });

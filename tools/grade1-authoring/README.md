@@ -119,3 +119,7 @@ formats and Error Analysis at every skill/level, plus representative game and gu
 Format-specific printables still need compatible arrangements: Partner Check requires
 explicit paired items, while mazes and Tarsia require enough short, distinct answers.
 The UI may offer fewer printable formats for narrow skills; unrelated filler is not added.
+
+Grade 1 flashcards are bank-derived practice cards, rather than a separately authored
+vocabulary deck. They include complete single-answer prompts and retain diagrams;
+select-all and multipart items remain in the readiness check and generators.
