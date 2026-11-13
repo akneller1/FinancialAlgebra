@@ -55,7 +55,7 @@ for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html'
  if(!match)throw Error('Missing shared course catalog in '+page);
  text=text.replace(match[0],match[0]+'\n<script src="../elementary-preload-catalog.js?v=integrated-model-20261113"></script>');
  const native=text.match(/<script src="algebra2-bank-native\.js[^>]*><\/script>/);
- if(native)text=text.replace(native[0],native[0]+'\n<script src="elementary-preload-runtime.js?v=integrated-model-20261113"></script>');
+ if(native)text=text.replace(native[0],native[0]+'\n<script src="elementary-preload-runtime.js?v=integrated-model-20261113-2"></script>');
  text=text.replace('</head>','<meta name="robots" content="noindex,nofollow"></head>');
  fs.writeFileSync(file,text);
 }

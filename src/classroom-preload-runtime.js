@@ -29,6 +29,11 @@
  var ready=G.MK_COURSE_BANKS_READY||Promise.resolve();
  G.MK_COURSE_BANKS_READY=ready.then(function(value){register();return value;});
  G.MK_ALGEBRA2_NATIVE_READY=G.MK_COURSE_BANKS_READY;
+ G.MK_PRELOADED_PLANNER_UNIT=function(courseId,key){
+  var course=G.MK_ELEMENTARY_PRELOAD.find(function(c){return c.id===courseId;}),match=/^u(\d+)$/.exec(key||'');
+  var unit=course&&match&&course.units[Number(match[1])-1];
+  return unit?courseId+'-'+unit.id:null;
+ };
  if(G.document){
   function message(){
    var hash=new URLSearchParams(G.location.hash.slice(1)),id=hash.get('unit');
@@ -36,7 +41,7 @@
    if(selected)id=selected.value;
    var course=hash.get('course')||G.MKPLAN_COURSE;
    var planner=G.document.getElementById('plUnit');
-   if(planner&&G.MKPLAN_SKILLS&&G.MKPLAN_SKILLS.SETS)id=G.MKPLAN_SKILLS.SETS[planner.value];
+   if(planner)id=G.MK_PRELOADED_PLANNER_UNIT(course,planner.value);
    var missing=!!pending[id];
    var notice=G.document.getElementById('preloadedBankNotice');
    if(!notice){notice=G.document.createElement('p');notice.id='preloadedBankNotice';notice.setAttribute('role','status');notice.style.cssText='margin:12px auto;padding:14px 20px;max-width:1200px;background:#fff4d6;color:#302a20;border:1px solid #ddc47c;border-radius:10px';G.document.body.insertBefore(notice,G.document.querySelector('main'));}
@@ -44,7 +49,7 @@
    return missing;
   }
   G.MK_COURSE_BANKS_READY.then(function(){
-   if(G.document.readyState==='loading')G.document.addEventListener('DOMContentLoaded',message);else message();
+   if(G.document.readyState==='loading')G.document.addEventListener('DOMContentLoaded',function(){G.setTimeout(message,0);});else G.setTimeout(message,0);
   });
   G.document.addEventListener('change',function(){Promise.resolve().then(message);});
   G.addEventListener('hashchange',function(){Promise.resolve().then(message);});

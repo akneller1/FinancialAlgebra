@@ -42,6 +42,7 @@ vm.runInContext(read('worksheet-generator/elementary-preload-runtime.js'),native
  assert.equal(Object.keys(native.MK_PRELOADED_UNITS).length,37);
  for(const c of grades)for(const u of c.units){
   const id=c.id+'-'+u.id,set=native.MKMENU.skillSets[id];assert.ok(set);
+  assert.equal(native.MK_PRELOADED_PLANNER_UNIT(c.id,'u'+(c.units.indexOf(u)+1)),id);
   assert.equal(set.skills.length,G.MK_COURSE_CATALOG.getSkills(c.id,u.id).length);
   const cfg=native.MKMENU.defaultConfig(id,'worksheet');assert.equal(cfg.unitId,id);
   assert.equal(native.MKMENU.generateProblem(id,set.skills[0].id,4,{level:'cp1'},'pending').failed,true);
