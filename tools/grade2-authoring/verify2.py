@@ -93,6 +93,10 @@ def h_polygon_corners(c, t):
     return num_eq(t, SIDES[str(c["kind"])])
 
 
+def h_array_cols(c, t):
+    return num_eq(t, int(c["cols"]))
+
+
 def h_array_total(c, t):
     return num_eq(t, int(c["rows"]) * int(c["cols"]))
 
@@ -127,6 +131,16 @@ def h_lineplot_at(c, t):
 
 def h_lineplot_total(c, t):
     return num_eq(t, sum(int(v) for v in c["values"]))
+
+
+def h_lineplot_least(c, t):
+    vals = [int(v) for v in c["values"]]
+    return num_eq(t, min(vals))
+
+
+def h_lineplot_diff(c, t):
+    vals = [int(v) for v in c["values"]]
+    return num_eq(t, vals.count(int(c["a"])) - vals.count(int(c["b"])))
 
 
 def h_lineplot_mode(c, t):
@@ -179,9 +193,9 @@ verify1.HANDLERS.update({
     "digit_value3": h_digit_value3, "expanded3": h_expanded3, "skip_seq": h_skip_seq,
     "round10": h_round10, "round_sum": h_round_sum, "money_cents": h_money_cents,
     "part_name": h_part_name, "polygon_sides": h_polygon_sides, "polygon_corners": h_polygon_corners,
-    "array_total": h_array_total, "array_rows": h_array_rows, "even_odd": h_even_odd,
+    "array_total": h_array_total, "array_cols": h_array_cols, "array_rows": h_array_rows, "even_odd": h_even_odd,
     "longer_lbl": h_longer_lbl, "shorter_lbl": h_shorter_lbl, "tape_diff": h_tape_diff,
-    "lineplot_at": h_lineplot_at, "lineplot_total": h_lineplot_total, "lineplot_mode": h_lineplot_mode,
+    "lineplot_at": h_lineplot_at, "lineplot_least": h_lineplot_least, "lineplot_diff": h_lineplot_diff, "lineplot_total": h_lineplot_total, "lineplot_mode": h_lineplot_mode,
     "repeat_add": h_repeat_add, "round100": h_round100, "build3": h_build3,
     "graph_least": h_graph_least, "graph_diff": h_graph_diff, "fraction_shaded": h_fraction_shaded, "clock_ampm": h_clock_ampm,
 })

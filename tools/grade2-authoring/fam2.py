@@ -9,7 +9,9 @@ reference, but Grade 2 items are built here so the ladder is explicit and testab
 Each item stores its inputs in the check, never the answer, so verify2.py can recompute.
 """
 from families import *          # noqa: F401,F403  (helpers: num, name, obj, wrong_numbers, Item, ...)
-from g1lib import Item, Diagram, FN, EX, KEY, need
+import re
+
+from g1lib import Item, Diagram, FN, EX, KEY, need, Reject
 from families import wrong_numbers, name, obj, num, clock_text
 
 THINGS = ["pencils", "markers", "stickers", "shells", "blocks", "beads", "cards", "tiles",
@@ -46,11 +48,10 @@ def add2_items(compose=None):
         else:
             a_t, b_t = r.randint(3, 7), r.randint(2, 4)
             a_o = r.randint(2, 9)
-            b_o = r.randint(max(2, 10 - a_o), 9)
+            b_o = r.randint(max(2, 10 - a_o), 9) if comp else r.randint(1, max(1, 9 - a_o))
         a, b = a_t * 10 + a_o, b_t * 10 + b_o
         need(a + b <= 100 and b >= 10)
-        if comp:
-            need(a_o + b_o >= 10)
+        need(a_o + b_o >= 10 if comp else a_o + b_o < 10)
         style = r.randrange(3)
         prompt = [f"{a} + {b} = ?", f"Add {a} and {b}."][style % 2]
         if style == 2:
@@ -84,11 +85,10 @@ def sub2_items(regroup=None):
         else:
             b_t, a_t = r.randint(2, 4), r.randint(5, 8)
             b_o = r.randint(3, 9)
-            a_o = r.randint(0, b_o - 1)
+            a_o = r.randint(0, b_o - 1) if reg else r.randint(b_o, 9)
         a, b = a_t * 10 + a_o, b_t * 10 + b_o
         need(a - b > 0 and a <= 100)
-        if reg:
-            need(a_o < b_o)
+        need(a_o < b_o if reg else a_o >= b_o)
         style = r.randrange(3)
         prompt = [f"{a} \u2212 {b} = ?", f"Subtract {b} from {a}."][style % 2]
         if style == 2:
@@ -104,63 +104,66 @@ def sub2_items(regroup=None):
 
 # ------------------------------------------------------------------ three-digit work
 def add3_items(rename=None):
-    """L0 no renaming, L1 rename the ones, L2 rename ones and tens."""
+    """L0 no composing, L1 compose a ten, L2 compose a ten and a hundred."""
     def f(r, L):
-        if L == 0:
-            a_h, b_h = r.randint(1, 4), r.randint(1, 3)
-            a_t, b_t = r.randint(1, 5), r.randint(1, 4)
-            a_o, b_o = r.randint(1, 5), r.randint(1, 4)
+        ren = (L >= 1) if rename is None else rename
+        a_h, b_h = r.randint(1, 4), r.randint(1, 3)
+        if not ren:
+            a_t, b_t = r.randint(1, 4), r.randint(1, 4)
+            a_o, b_o = r.randint(1, 4), r.randint(1, 4)
         elif L == 1:
-            a_h, b_h = r.randint(2, 5), r.randint(1, 3)
-            a_t, b_t = r.randint(1, 6), r.randint(1, 3)
+            a_t, b_t = r.randint(1, 4), r.randint(1, 4)
             a_o = r.randint(2, 9)
             b_o = r.randint(10 - a_o, 9)
         else:
-            a_h, b_h = r.randint(3, 7), r.randint(1, 2)
-            a_t = r.randint(5, 9)
+            a_t = r.randint(2, 8)
             b_t = r.randint(10 - a_t, 9)
             a_o = r.randint(2, 9)
             b_o = r.randint(10 - a_o, 9)
         a, b = a_h * 100 + a_t * 10 + a_o, b_h * 100 + b_t * 10 + b_o
         need(b >= 100 and a + b <= 1000)
+        need((a_o + b_o >= 10) if ren else (a_o + b_o < 10))
+        need((a_t + b_t >= 10) if (ren and L == 2) else (a_t + b_t < 10))
         style = r.randrange(3)
         prompt = [f"{a} + {b} = ?", f"Add {a} and {b}.",
                   f"{name(r)} reads {a} pages, then {b} more. How many pages in all?"][style]
         steps = [f"Add the ones: {a_o} + {b_o} = {a_o + b_o}."]
-        if a_o + b_o >= 10:
-            steps.append(f"{a_o + b_o} ones make 1 ten and {a_o + b_o - 10} ones.")
+        steps.append("Compose a ten or a hundred when a place has ten or more." if ren
+                     else "No place needs composing.")
         steps.append(f"{a} + {b} = {a + b}.")
-        return Item(prompt, num(a + b), steps, _w(a + b, [a + b - 100, a + b - 10, a + b + 100, abs(a - b)]),
-                    check=FN("add", a=a, b=b), qtype="procedural", tags=("place-value",))
+        return Item(prompt, num(a + b), steps, _w(a + b, [a + b - 10, a + b + 10, a - b if a > b else a + b + 100]),
+                    check=FN("add", a=a, b=b), qtype="procedural", tags=("addition",))
     return f
 
 
-def sub3_items():
-    """L0 no decomposing, L1 decompose a ten, L2 decompose a hundred or across a zero."""
+def sub3_items(decompose=None):
+    """L0 no decomposing, L1 decompose a ten, L2 decompose a hundred or a ten."""
     def f(r, L):
-        if L == 0:
-            a_h, b_h = r.randint(3, 8), r.randint(1, 2)
-            a_t, b_t = r.randint(5, 9), r.randint(1, 4)
-            a_o, b_o = r.randint(5, 9), r.randint(1, 4)
+        dec = (L >= 1) if decompose is None else decompose
+        a_h = r.randint(3, 8) if not dec else r.randint(4, 9)
+        b_h = r.randint(1, 2) if not dec else r.randint(1, 3)
+        if not dec:
+            a_t, b_t = r.randint(4, 9), r.randint(1, 3)
+            a_o, b_o = r.randint(4, 9), r.randint(1, 3)
         elif L == 1:
-            a_h, b_h = r.randint(4, 9), r.randint(1, 3)
             a_t, b_t = r.randint(4, 9), r.randint(1, 3)
             b_o = r.randint(2, 9)
             a_o = r.randint(0, b_o - 1)
         else:
-            a_h, b_h = r.randint(5, 9), r.randint(2, 4)
             a_t, b_t = r.randint(0, 2), r.randint(1, 4)
             b_o = r.randint(2, 9)
             a_o = r.randint(0, b_o - 1)
         a, b = a_h * 100 + a_t * 10 + a_o, b_h * 100 + b_t * 10 + b_o
         need(a - b > 0 and a <= 1000)
+        need((a_o < b_o) if dec else (a_o >= b_o and a_t >= b_t))
         style = r.randrange(3)
         prompt = [f"{a} \u2212 {b} = ?", f"Subtract {b} from {a}.",
                   f"A library has {a} books. {b} are borrowed. How many are left?"][style]
-        steps = ["Decompose a hundred or a ten when there are not enough of a unit."] if L else []
+        steps = ["Decompose a hundred or a ten only when a place has too few." if dec
+                 else "No place needs decomposing."]
         steps.append(f"{a} \u2212 {b} = {a - b}.")
-        return Item(prompt, num(a - b), steps, _w(a - b, [a - b + 100, a - b - 100, a - b + 10, a + b]),
-                    check=FN("sub", a=a, b=b), qtype="procedural", tags=("place-value",))
+        return Item(prompt, num(a - b), steps, _w(a - b, [a - b - 10 if a - b > 10 else a - b + 10, a + b, a - b + 100]),
+                    check=FN("sub", a=a, b=b), qtype="procedural", tags=("subtraction",))
     return f
 
 
@@ -173,7 +176,9 @@ def place3_items(kind="value"):
         if kind == "expanded":
             need(sum(1 for v in (h, t, o) if v) >= (3 if L == 2 else 2))
             chunks = [f"{h * 100}"] + ([f"{t * 10}"] if t else []) + ([f"{o}"] if o else [])
-            ans, prompt = " + ".join(chunks), f"Write {n} in expanded form."
+            ans = " + ".join(chunks)
+            prompt = r.choice([f"Write {n} in expanded form.", f"Which sum shows {n} in expanded form?",
+                               f"Break {n} into hundreds, tens and ones.", f"Write {n} as a sum of place values."])
             chk = FN("expanded3", n=n)
             wrong = [(" + ".join(str(v) for v in (h, t, o)), "used the digits, not their values"),
                      (f"{h * 100} + {t * 10}", "left out the ones"), (f"{h * 100} + {o}", "left out the tens")]
@@ -189,7 +194,10 @@ def place3_items(kind="value"):
             which = "hundreds" if (L == 0 and r.random() < 0.6) else r.choice(["hundreds", "tens", "ones"])
             val = {"hundreds": h * 100, "tens": t * 10, "ones": o}[which]
             ans = num(val)
-            prompt = f"In {n}, what is the value of the digit in the {which} place?"
+            prompt = r.choice([f"In {n}, what is the value of the digit in the {which} place?",
+                               f"What is the value of the {which} digit in {n}?",
+                               f"Find the value of the digit in the {which} place of {n}.",
+                               f"In {n}, what is the {which} digit worth?"])
             chk = FN("digit_value3", n=n, which=which)
             wrong = _w(val, [{"hundreds": h, "tens": t, "ones": o}[which], val * 10, max(1, val // 10)])
             tags = ("place-value", "reasoning")
@@ -215,7 +223,11 @@ def compare3_items(symbol=False):
         need(a != b)
         if symbol:
             ans = ">" if a > b else "<"
-            prompt = f"Compare. Write >, <, or =.  {a}  ___  {b}"
+            prompt = r.choice([f"Compare. Write >, <, or =.  {a}  ___  {b}",
+                               f"Which sign makes this true?  {a}  ___  {b}",
+                               f"Compare {a} and {b}. Use >, <, or =.",
+                               f"Write >, <, or = in the blank:  {a}  ___  {b}",
+                               f"Is {a} greater than, less than, or equal to {b}?"])
             chk = FN("symbol", a=a, b=b)
             wrong = [("<", "picked the wrong sign") if ans == ">" else (">", "picked the wrong sign"),
                      ("=", "the numbers are not equal")]
@@ -243,12 +255,48 @@ def order3_items(n=None):
     return f
 
 
-def skip_count_items(step=None):
+def order_choice_items(n=None):
+    """Multiple choice over whole lists, so ordering skills can also be tested by choosing."""
+    def f(r, L):
+        k = n or band(L, 3, 3, 4)
+        lo = band(L, 20, 100, 300)
+        vals = r.sample(range(lo, min(lo + 700, 999)), k)
+        want = ", ".join(str(v) for v in sorted(vals))
+        desc = ", ".join(str(v) for v in sorted(vals, reverse=True))
+        swapped = sorted(vals)
+        i = r.randrange(k - 1)
+        swapped[i], swapped[i + 1] = swapped[i + 1], swapped[i]
+        sh = sorted(vals)
+        r.shuffle(sh)
+        opts = [(want, True)]
+        for w in (desc, ", ".join(str(v) for v in swapped), ", ".join(str(v) for v in sh)):
+            if w != want and all(w != o[0] for o in opts):
+                opts.append((w, False))
+        while len(opts) < 4:
+            more = sorted(vals)
+            r.shuffle(more)
+            w = ", ".join(str(v) for v in more)
+            if all(w != o[0] for o in opts):
+                opts.append((w, False))
+        r.shuffle(opts)
+        prompt = "Which list is in order from least to greatest?\n" + ", ".join(str(v) for v in vals)
+        return Item(prompt, want, ["Compare the hundreds, then the tens, then the ones."],
+                    [(w, "this list is not in order from least to greatest") for w, ok in opts if not ok],
+                    check=FN("sorted", values=vals, direction="asc"), qtype="conceptual",
+                    tags=("place-value", "reasoning"), mode="mc", options=opts)
+    return f
+
+
+def skip_count_items(step=None, limit=None):
     """L0 multiples of 10 from a multiple of the step, L1 by 5s or 10s, L2 by 100 from any number."""
     def f(r, L):
         st = step or band(L, 10, 10, 100)
+        if limit:
+            st = min(st, 100)
         if L == 2:
-            start = r.randint(1, 8) * 100 + r.randint(1, 9) * 10 + r.randint(1, 9)
+            start = r.randint(1, 5) * 100 + r.randint(1, 9) * 10 + r.randint(1, 9)
+            if limit:
+                start = r.randint(1, max(1, int(limit) // 200)) * 100 + r.randint(1, 9) * 10
             st = 100
         else:
             start = st * r.randint(1, 9)
@@ -267,14 +315,17 @@ def skip_count_items(step=None):
     return f
 
 
-def numberline_items(kind="jump"):
+def numberline_items(kind="jump", limit=None):
     def f(r, L):
         hi = band(L, 100, 200, 1000)
+        if limit:
+            hi = min(hi, int(limit))
         step = 10 if hi <= 200 else 100
         if kind == "locate":
             p = r.randint(1, (hi // step) - 1) * step
             ans = num(p)
-            prompt = "Which number does the arrow point to?"
+            prompt = r.choice(["Which number does the arrow point to?", "What number is the arrow pointing to?",
+                               "Read the number line. Which number is marked?", "Where does the arrow land on the number line?"])
             chk = FN("count", n=p)
             wrong = _w(p, [p + step, p - step, p + 1])
             tags = ("counting",)
@@ -300,14 +351,23 @@ def numberline_items(kind="jump"):
 
 # ------------------------------------------------------------------ measurement
 def lineplot_items(kind="at"):
+    """Reading a line plot: total, most, least, one value, or a difference."""
+    CTX = [("pencil lengths in inches", "pencils", "inches"),
+           ("ribbon lengths in centimeters", "ribbons", "centimeters"),
+           ("plant heights in inches", "plants", "inches"),
+           ("string lengths in centimeters", "strings", "centimeters"),
+           ("leaf lengths in inches", "leaves", "inches")]
     def f(r, L):
         size = band(L, 6, 8, 10)
         spread = band(L, [2, 3, 4], [2, 3, 4, 5, 6], [3, 4, 5, 6, 7, 8])
         values = [r.choice(spread) for _ in range(size)]
         need(len(set(values)) >= 3)
+        where, things, unit = r.choice(CTX)
+        head = f"The line plot shows {where}."
         if kind == "total":
             ans = num(sum(values))
-            prompt = "The line plot shows pencil lengths in inches. What is the total length of all the pencils?"
+            prompt = r.choice([f"{head} What is the total length of all the {things}?",
+                               f"{head} Add all the x marks. What is the total length?"])
             chk = FN("lineplot_total", values=values)
             wrong = _w(sum(values), [sum(values) + 1, len(values), max(values) * len(values)])
         elif kind == "most":
@@ -316,50 +376,96 @@ def lineplot_items(kind="at"):
             need(list(counts.values()).count(best) == 1)
             mode = [v for v, c in counts.items() if c == best][0]
             ans = num(mode)
-            prompt = "Which length appears most often on the line plot?"
+            prompt = r.choice([f"{head} Which length appears most often?",
+                               f"{head} Which length has the most x marks?"])
             chk = FN("lineplot_mode", values=values)
             wrong = _w(mode, [max(values), min(values), mode + 1])
+        elif kind == "least":
+            ans = num(min(values))
+            prompt = r.choice([f"{head} Which length appears least often?",
+                               f"{head} Which is the shortest length shown?"])
+            chk = FN("lineplot_least", values=values)
+            wrong = _w(min(values), [max(values), min(values) + 1, min(values) + 2])
+        elif kind == "diff":
+            ordered = sorted(set(values))
+            a, b = ordered[-1], ordered[0]
+            ans = num(values.count(a) - values.count(b))
+            prompt = f"{head} How many more {things} are {a} {unit} than {b} {unit}?"
+            chk = FN("lineplot_diff", values=values, a=a, b=b)
+            wrong = _w(values.count(a) - values.count(b),
+                       [values.count(a) + values.count(b), values.count(a), a - b])
         else:
             v = r.choice(values)
             ans = num(values.count(v))
-            prompt = f"How many pencils are {v} inches long?"
+            prompt = r.choice([f"{head} How many {things} are {v} {unit} long?",
+                               f"{head} How many x marks are above {v}?"])
             chk = FN("lineplot_at", values=values, value=v)
             wrong = _w(values.count(v), [values.count(v) + 1, len(values), v])
         return Item(prompt, ans, ["Read the number of x marks above the value.", f"The answer is {ans}."], wrong,
                     check=chk, qtype="visual", tags=("data", "measurement"),
                     diagram=Diagram("lineplot", {"values": values, "min": min(values), "max": max(values)},
-                                    "A line plot of pencil lengths in inches: " +
-                                    ", ".join(f"{v} inches appears {values.count(v)} times" for v in sorted(set(values))) + "."))
+                                    f"A line plot of {where}: " +
+                                    ", ".join(f"{v} appears {values.count(v)} times" for v in sorted(set(values))) + "."))
     return f
 
 
 def measure_unit_items(kind="metric"):
+    """Choosing a unit or a tool, plus a rough estimate, in one measurement system."""
+    METRIC = [("a pencil", "centimeters", "meters", "a pencil is shorter than a meter", 0, 19, "centimeter ruler"),
+              ("a book", "centimeters", "meters", "a book is shorter than a meter", 0, 25, "centimeter ruler"),
+              ("a drinking glass", "centimeters", "meters", "a glass is shorter than a meter", 0, 12, "centimeter ruler"),
+              ("a spoon", "centimeters", "meters", "a spoon is shorter than a meter", 0, 15, "centimeter ruler"),
+              ("a door", "meters", "centimeters", "a door is taller than a meter", 1, 2, "meter stick"),
+              ("a desk", "meters", "centimeters", "a desk is about a meter long", 1, 1, "meter stick"),
+              ("a sofa", "meters", "centimeters", "a sofa is longer than a meter", 1, 2, "measuring tape"),
+              ("a playground", "meters", "centimeters", "a playground is much longer than a meter", 2, 30, "measuring tape"),
+              ("a gym", "meters", "centimeters", "a gym is much longer than a meter", 2, 25, "measuring tape"),
+              ("a soccer field", "meters", "centimeters", "a field is much longer than a meter", 2, 100, "measuring tape")]
+    CUSTOMARY = [("a crayon", "inches", "feet", "a crayon is shorter than a foot", 0, 4, "inch ruler"),
+                 ("a shoe", "inches", "feet", "a shoe is shorter than a foot", 0, 9, "inch ruler"),
+                 ("a phone", "inches", "feet", "a phone is shorter than a foot", 0, 6, "inch ruler"),
+                 ("a fork", "inches", "feet", "a fork is shorter than a foot", 0, 7, "inch ruler"),
+                 ("a room", "feet", "inches", "a room is taller than a foot", 1, 8, "yardstick"),
+                 ("a door", "feet", "inches", "a door is taller than a foot", 1, 7, "yardstick"),
+                 ("a sofa", "feet", "inches", "a sofa is longer than a foot", 1, 6, "measuring tape"),
+                 ("a school bus", "feet", "inches", "a bus is much longer than a foot", 2, 35, "measuring tape"),
+                 ("a flagpole", "feet", "inches", "a flagpole is much taller than a foot", 2, 20, "measuring tape"),
+                 ("a basketball court", "feet", "inches", "a court is much longer than a foot", 2, 94, "measuring tape")]
+    pool = METRIC if kind == "metric" else CUSTOMARY
+    unit2 = "{0} is too small a unit here" if kind == "metric" else "{0} is too small a unit here"
     def f(r, L):
-        metric = kind == "metric"
-        if metric:
-            pool = [("the length of a pencil", "centimeters", "meters", "a pencil is shorter than a meter", 0),
-                    ("the height of a door", "meters", "centimeters", "a door is taller than a meter", 0),
-                    ("the width of a book", "centimeters", "meters", "a book is shorter than a meter", 1),
-                    ("the length of a playground", "meters", "centimeters", "a playground is much longer than a meter", 1),
-                    ("the height of a drinking glass", "centimeters", "meters", "a glass is shorter than a meter", 2),
-                    ("the distance across a gym", "meters", "centimeters", "a gym is much longer than a meter", 2)]
-        else:
-            pool = [("the length of a crayon", "inches", "feet", "a crayon is shorter than a foot", 0),
-                    ("the height of a room", "feet", "inches", "a room is taller than a foot", 0),
-                    ("the length of a shoe", "inches", "feet", "a shoe is shorter than a foot", 1),
-                    ("the length of a school bus", "feet", "inches", "a bus is much longer than a foot", 1),
-                    ("the width of a book", "inches", "feet", "a book is shorter than a foot", 2),
-                    ("the height of a flagpole", "feet", "inches", "a flagpole is much taller than a foot", 2)]
         cands = [x for x in pool if x[4] <= L]
-        thing, ans, other, why, _ = r.choice(cands)
-        prompt = f"Which unit would you use to measure {thing}?"
-        return Item(prompt, ans, [f"{why.capitalize()}."], [(other, "chose the unit that is too large or too small")],
-                    check=KEY(ans), qtype="conceptual", tags=("measurement",), mode="mc",
-                    options=[(ans, True), (other, False)])
+        thing, unit, other, why, cls, about, tool = r.choice(cands)
+        pick = r.randrange(3)
+        if pick == 0:
+            ans = unit
+            prompt = r.choice([f"Which unit would you use to measure {thing}?",
+                               f"What unit fits best for {thing}?",
+                               f"Choose the unit you would use for {thing}."])
+            wrong = [(other, "chose the unit that is too large or too small")]
+            chk = KEY(ans)
+        elif pick == 1:
+            ans = tool
+            wrong_pool = [t for t in ("centimeter ruler", "meter stick", "measuring tape", "inch ruler", "yardstick")
+                          if t != tool]
+            r.shuffle(wrong_pool)
+            prompt = r.choice([f"Which tool would you use to measure {thing}?",
+                               f"What would you use to measure {thing}?",
+                               f"Choose the tool for measuring {thing}."])
+            wrong = [(w, "chose a tool that is too small or too large") for w in wrong_pool[:2]]
+            chk = KEY(ans)
+        else:
+            ans = num(about)
+            prompt = r.choice([f"About how many {unit} long is {thing}?",
+                               f"Estimate: {thing} is about how many {unit}?"])
+            wrong = _w(about, [about * 10, max(1, about * 100), max(1, about // 10)])
+            chk = FN("count", n=about)
+        return Item(prompt, ans, [f"{why.capitalize()}.", f"A good measure is about {about} {unit}."],
+                    wrong, check=chk, qtype="conceptual", tags=("measurement",))
     return f
 
 
-def measure_compare_items(kind="metric"):
+def measure_compare_items(kind="metric", limit=None):
     def f(r, L):
         unit = "centimeters" if kind == "metric" else "inches"
         lo, hi = band(L, (12, 30), (20, 60), (30, 95))
@@ -394,20 +500,31 @@ def measure_compare_items(kind="metric"):
 # ------------------------------------------------------------------ equal groups
 def array_items(kind="total"):
     def f(r, L):
-        rows, cols = band(L, (2, 3), (3, 4), (4, 5))[0], band(L, (2, 3), (3, 5), (5, 6))[0]
-        rows = r.randint(rows, band(L, 3, 4, 5))
-        cols = r.randint(cols, band(L, 3, 5, 6))
+        rows = r.randint(*((2, 4) if L == 0 else (2, 5) if L == 1 else (3, 5)))
+        cols = r.randint(*((2, 4) if L == 0 else (2, 5) if L == 1 else (3, 5)))
         total = rows * cols
+        thing, where = r.choice([("dots", "The array shows"), ("tiles", "The array shows"),
+                                 ("plants", "The garden rows show")])
         if kind == "rows":
             ans = num(rows)
-            prompt = f"The array shows {total} dots. How many rows are there?"
+            prompt = r.choice([f"{where} {total} {thing}. How many rows are there?",
+                               f"There are {total} {thing} in equal rows. How many rows?",
+                               f"How many rows of {thing} does the array show?"])
             chk = FN("array_rows", rows=rows, cols=cols)
             wrong = _w(rows, [cols, total - rows, rows + 1])
+        elif kind == "cols":
+            ans = num(cols)
+            prompt = r.choice([f"{where} {total} {thing}. How many are in each row?",
+                               f"There are {total} {thing} in equal rows. How many in each row?",
+                               f"How many {thing} are in one row of the array?"])
+            chk = FN("array_cols", rows=rows, cols=cols)
+            wrong = _w(cols, [rows, total - cols, cols + 1])
         else:
             ans = num(total)
             prompt = r.choice(["How many dots are in this array?",
                                f"There are {rows} rows with {cols} dots in each row. How many dots?",
-                               f"Write the total: {rows} rows of {cols}."])
+                               f"Write the total: {rows} rows of {cols}.",
+                               f"The array has {rows} rows of {cols}. How many in all?"])
             chk = FN("array_total", rows=rows, cols=cols)
             wrong = _w(total, [rows + cols, total - rows, total + cols])
         return Item(prompt, ans, [f"{rows} rows of {cols} is {rows} \u00d7 {cols} = {total}.", f"The answer is {ans}."],
@@ -419,20 +536,24 @@ def array_items(kind="total"):
 
 def repeated_add_items():
     def f(r, L):
-        groups, each = band(L, (2, 3), (3, 4), (4, 5))[0], band(L, (2, 3), (3, 4), (4, 5))[1]
-        groups = r.randint(groups, band(L, 3, 4, 5))
-        each = r.randint(each, band(L, 3, 4, 5))
+        groups = r.randint(*((2, 4) if L == 0 else (2, 4) if L == 1 else (3, 5)))
+        each = r.randint(*((2, 4) if L == 0 else (3, 4) if L == 1 else (4, 5)))
         total = groups * each
+        thing = r.choice(["dots", "stickers", "tiles", "apples"])
         ans = " + ".join([str(each)] * groups)
-        prompt = f"There are {groups} groups with {each} in each group. Which repeated addition shows the total?"
+        prompt = r.choice([f"There are {groups} groups with {each} {thing} in each group. "
+                           "Which repeated addition shows the total?",
+                           f"{groups} equal groups of {each}. Which repeated addition matches?",
+                           f"Each of {groups} rows has {each} {thing}. Which repeated addition finds the total?"])
         pool = [f"{groups} + {each}", " + ".join([str(each + 1)] * groups),
-                " + ".join([str(groups)] * each), " + ".join([str(each)] * (groups + 1))]
+                " + ".join([str(groups)] * each), " + ".join([str(each)] * (groups + 1)),
+                " + ".join([str(each)] * (groups - 1))]
         wrong = []
         for t in pool:
             if t != ans and t not in wrong:
                 wrong.append(t)
         return Item(prompt, ans, [f"{groups} groups of {each} is {ans} = {total}."],
-                    [(w, "wrote the groups and the size, not the size repeated") for w in wrong],
+                    [(w, "does not match the number of equal groups") for w in wrong],
                     check=FN("repeat_add", groups=groups, each=each), qtype="conceptual",
                     tags=("counting",), mode="mc", options=[(ans, True)] + [(w, False) for w in wrong])
     return f
@@ -442,11 +563,14 @@ def even_odd_items():
     def f(r, L):
         n = band(L, r.randint(2, 20), r.randint(10, 99), r.randint(100, 999))
         ans = "even" if n % 2 == 0 else "odd"
-        style = r.randrange(3)
+        style = r.randrange(4)
         prompt = [f"Is {n} even or odd?", f"Look at {n}. Is it even or odd?",
-                  f"{n} counters are put into pairs. Is {n} even or odd?"][style]
+                  f"{n} counters are put into pairs. Is {n} even or odd?",
+                  f"Tell whether {n} is even or odd."][style]
         return Item(prompt, ans, [f"Look at the ones digit: {n % 10}.", f"{n} is {ans}."],
-                    [("odd" if ans == "even" else "even", "read the ones digit incorrectly")],
+                    [("odd" if ans == "even" else "even", "read the ones digit incorrectly"),
+                     ("neither", "did not decide whether the number is even or odd"),
+                     ("both", "said the number is even and odd at once")],
                     check=FN("even_odd", n=n), qtype="conceptual", tags=("reasoning", "counting"))
     return f
 
@@ -477,6 +601,7 @@ def money_items(kind="count"):
                      {"value": 5, "count": r.randint(0, 2)}]
         coins = [c for c in coins if c["count"]]
         cents = sum(c["value"] * c["count"] for c in coins)
+        need(cents <= 100)
         ans = f"{cents}\u00a2" if cents < 100 else f"${cents // 100}.{cents % 100:02d}"
         if kind == "word":
             nm = name(r)
@@ -484,7 +609,8 @@ def money_items(kind="count"):
             prompt = f"{nm} has {desc}. How much money is that?"
             chk = FN("money_cents", cents=cents)
         else:
-            prompt = r.choice(["How much money is shown?", "Count the coins. What is the total?"])
+            prompt = r.choice(["How much money is shown?", "Count the coins. What is the total?",
+                               "Add the coins. How much is there?", "What is the total value of these coins?"])
             chk = FN("money_cents", cents=cents)
         wrong = _w(cents, [cents + 10, cents - 5 if cents > 5 else cents + 5, cents + 25])
         return Item(prompt, ans, [f"Add the coin values: {cents}\u00a2.", f"The total is {ans}."],
@@ -507,7 +633,8 @@ def time_items():
             m = m + r.choice([0, 1, 2]) if m not in (15, 30) else m
             m = min(m, 59)
         ans = clock_text(h, m)
-        prompt = ["What time is shown?", "Write the time on the clock.", "Read the clock. What time is it?"][r.randrange(3)]
+        prompt = r.choice(["What time is shown?", "Write the time on the clock.", "Read the clock. What time is it?",
+                           "What time does this clock show?", "Tell the time on this clock.", "Read the time and write it."])
         wrong = [(clock_text(h, (m + 5) % 60), "moved the minute hand too far"),
                  (clock_text((h % 12) + 1, m), "moved the hour hand"),
                  (clock_text((h % 12) + 1, (m + 5) % 60), "moved both hands")]
@@ -546,17 +673,21 @@ def polygon_items(kind="name"):
         if kind == "sides":
             ans = num(sides)
             prompt = r.choice(["How many sides does this shape have?", "Count the sides. How many are there?",
-                               "This shape has how many sides?"])
+                               "This shape has how many sides?", "How many straight sides does the shape have?",
+                               "Count the sides of the shape. What is the number?", "The shape has how many sides?"])
             chk = FN("polygon_sides", kind=k)
             wrong = _w(sides, [sides + 1, sides - 1, sides + 2])
         elif kind == "corners":
             ans = num(sides)
-            prompt = r.choice(["How many corners does this shape have?", "Count the corners. How many are there?"])
+            prompt = r.choice(["How many corners does this shape have?", "Count the corners. How many are there?",
+                               "How many vertices does this shape have?", "Count the corners of the shape.",
+                               "This shape has how many corners?", "How many corner points does the shape have?"])
             chk = FN("polygon_corners", kind=k)
             wrong = _w(sides, [sides + 1, sides - 1, 0])
         else:
             ans = k
-            prompt = r.choice(["What is the name of this shape?", "Name the shape.", "Which shape is shown?"])
+            prompt = r.choice(["What is the name of this shape?", "Name the shape.", "Which shape is shown?",
+                               "What is this shape called?", "Write the name of the shape.", "Which polygon is drawn?"])
             chk = KEY(k)
             others = [w for w in pool if w != k]
             r.shuffle(others)
@@ -612,7 +743,7 @@ def thirds_items(kind="name"):
 
 
 # ------------------------------------------------------------------ problem solving
-def two_step_items():
+def two_step_items(limit=None):
     def f(r, L):
         if L == 0:
             a, b, c = r.randint(6, 15), r.randint(2, 6), r.randint(1, 4)
@@ -620,6 +751,8 @@ def two_step_items():
             a, b, c = r.randint(20, 60), r.randint(5, 25), r.randint(3, 20)
         else:
             a, b, c = r.randint(60, 180), r.randint(10, 60), r.randint(5, 40)
+        if limit:
+            need(max(a, a + b) <= limit)
         ans = a + b - c
         need(ans > 0)
         nm, thing = name(r), r.choice(THINGS)
@@ -631,9 +764,15 @@ def two_step_items():
     return f
 
 
-def tape_compare_items():
+def tape_compare_items(limit=None):
     def f(r, L):
         lo, hi = band(L, (10, 40), (30, 90), (60, 180))
+        if limit:
+            hi = min(hi, limit)
+            lo = min(lo, hi - 5)
+        if limit:
+            hi = min(hi, limit)
+            lo = min(lo, hi - 5)
         a = r.randint(lo, hi)
         b = r.randint(max(1, lo // 2), a - 1)
         ans = a - b
@@ -692,8 +831,10 @@ def estimate_items():
     return f
 
 
-def strategy_items():
+def strategy_items(limit=None):
     def f(r, L):
+        if limit and int(limit) <= 20:
+            L = 0
         if L == 0:
             a, b = r.randint(6, 9), r.randint(2, 5)
             methods = [("make ten", f"Break {b} apart to make 10 with {a}."),
@@ -722,11 +863,13 @@ def strategy_items():
 
 
 # ------------------------------------------------------------------ reused Grade 1 strands, level-scaled
-def fluency_items():
+def fluency_items(limit=None):
     """Fact fluency: L0 within 10, L1 within 20, L2 within 20 with missing parts and three addends."""
     def f(r, L):
         kind = r.randrange(4 if L == 2 else 3)
         top = band(L, 10, 20, 20)
+        if limit:
+            top = min(top, int(limit))
         if kind == 0:
             a = r.randint(1, top - 1)
             b = r.randint(1, max(1, top - a))
@@ -747,19 +890,25 @@ def fluency_items():
                         _w(total - part, [total + part, total - part + 1, part]),
                         check=FN("missing_part", total=total, part=part), qtype="procedural", tags=("fluency", "unknown"))
         a, b, c = r.randint(2, 8), r.randint(2, 8), r.randint(1, 5)
+        if limit:
+            need(a + b + c <= int(limit))
         return Item(f"{a} + {b} + {c} = ?", num(a + b + c), [f"{a} + {b} = {a + b}.", f"{a + b} + {c} = {a + b + c}."],
                     _w(a + b + c, [a + b + c + 1, a + b, a + b + c - 1]),
                     check=FN("add3", a=a, b=b, c=c), qtype="procedural", tags=("fluency", "multistep"))
     return f
 
 
-def graph_data_items(kind="bargraph"):
+def graph_data_items(kind="bargraph", limit=None):
     """Reading picture/bar graphs; L0 single row, L1 most/fewest, L2 total and difference."""
     CATS = ["dogs", "cats", "fish", "birds", "apples", "pears"]
 
     def f(r, L):
         cats = CATS[:band(L, 3, 4, 5)]
+        if limit and len(cats) > 3:
+            cats = cats[:3]
         high = band(L, 5, 9, 12)
+        if limit:
+            high = max(2, min(high, int(limit) // max(1, len(cats))))
         counts = r.sample(range(2, high + 1), len(cats))
         rows = list(zip(cats, counts))
         which = r.randrange(3 if L == 0 else 4 if L == 1 else 5)
@@ -794,16 +943,23 @@ def graph_data_items(kind="bargraph"):
     return f
 
 
-def tally_data_items(kind="total"):
+def tally_data_items(kind="total", limit=None):
     CATS = ["red", "blue", "green", "yellow", "orange"]
 
     def f(r, L):
         cats = CATS[:band(L, 3, 3, 4)]
+        if limit and len(cats) > 3:
+            cats = cats[:3]
         high = band(L, 6, 10, 14)
+        if limit:
+            high = max(1, min(high, int(limit) // max(1, len(cats))))
         counts = r.sample(range(1, high + 1), len(cats))
         rows = list(zip(cats, counts))
         if kind == "total":
-            ans, prompt = num(sum(counts)), "The tally chart shows these counts. How many in all?"
+            ans = num(sum(counts))
+            prompt = r.choice(["The tally chart shows these counts. How many in all?",
+                               "Add the tally marks. What is the total?",
+                               "How many marks are there in all?", "What is the total shown in the tally chart?"])
             chk = FN("tally_total", rows=rows)
         elif kind == "count_one":
             i = r.randrange(len(rows))
@@ -823,7 +979,7 @@ def tally_data_items(kind="total"):
     return f
 
 
-def baseten_items(kind="value"):
+def baseten_items(kind="value", limit=None):
     def f(r, L):
         if L == 0:
             tens, ones = r.randint(1, 4), r.randint(1, 9)
@@ -833,6 +989,11 @@ def baseten_items(kind="value"):
             hundreds = 0
         else:
             hundreds, tens, ones = r.randint(1, 4), r.randint(0, 9), r.randint(0, 9)
+        if limit:
+            if int(limit) <= 99:
+                hundreds = 0
+            else:
+                hundreds = min(hundreds, int(limit) // 100)
         n = hundreds * 100 + tens * 10 + ones
         if kind == "regroup":
             need(tens >= 10 if L else True)
@@ -842,7 +1003,9 @@ def baseten_items(kind="value"):
             chk = FN("tens_ones", tens=tens, ones=ones)
         elif kind == "build":
             ans = num(n)
-            prompt = "What number do the blocks show?"
+            prompt = r.choice(["What number do the blocks show?", f"Count the blocks. What number is shown?",
+                               "Write the number the blocks show.", "What number is shown by these tens and ones?",
+                               f"How many is {tens} tens and {ones} ones?"])
             chk = FN("tens_ones", tens=tens, ones=ones) if not hundreds else FN("build3", n=n)
         else:
             which = r.choice(["hundreds", "tens", "ones"]) if hundreds else r.choice(["tens", "ones"])
@@ -853,7 +1016,7 @@ def baseten_items(kind="value"):
                       f"{hundreds} hundreds, {tens} tens and {ones} ones.")
               if hundreds else
               Diagram("baseten", {"tens": tens, "ones": ones, "caption": "Base-ten blocks"},
-                      f"{tens} tens rods and {ones} ones cubes."))
+                      f"{tens} tens rods and {ones} {'one' if ones == 1 else 'ones'} cubes."))
         return Item(prompt, ans, [f"{n} has {hundreds} hundreds, {tens} tens and {ones} ones.", f"The answer is {ans}."],
                     _w(ans, [ones, tens, n + 10] if str(ans).isdigit() else []),
                     check=chk, qtype="visual", tags=("place-value",), diagram=dg)
@@ -899,6 +1062,18 @@ def _distinct_families():
         def make(fn=fn, name=name):
             def factory(*args, **kwargs):
                 f = fn(*args, **kwargs)
+                limit = kwargs.get("limit")
+                if limit:
+                    inner = f
+
+                    def capped(r, L, _inner=inner, _lim=int(limit)):
+                        it = _inner(r, L)
+                        if it is not None:
+                            nums = [int(x) for x in re.findall(r"\d+", it.prompt + " " + str(it.answer))]
+                            if nums and max(nums) > _lim:
+                                raise Reject()
+                        return it
+                    f = capped
                 suffix = "_".join(str(a) for a in args if not callable(a))
                 try:
                     f.__name__ = f"{name}_{suffix}" if suffix else name

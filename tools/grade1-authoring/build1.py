@@ -321,8 +321,13 @@ class Builder:
         # Grade 1 extras are generated per domain (text-only), so picture-heavy skills still
         # get error analysis, true/false, select-all and open-response questions.
         extras_for = importlib.import_module(os.environ.get("G1_EXTRAS", "extras")).extras_for
-        domain = spec.get("domain") or getattr(self.m, "DOMAIN", "oa")
-        derived = {k: [v] for k, v in extras_for(domain).items()}
+        try:  # a course module may build its derived formats from the skill's own families
+            derived = {k: [v] for k, v in extras_for(domain_of(self, spec), cores).items()}
+        except TypeError:
+            derived = None
+        domain = domain_of(self, spec)
+        if derived is None:
+            derived = {k: [v] for k, v in extras_for(domain_of(self, spec)).items()}
         fmt_of = {"err": "short-answer", "tf": "multiple-choice", "sel": "select-all", "open": "open-response"}
         for kind in ("err", "tf", "sel", "open"):
             pool = derived.get(kind, [])
@@ -389,6 +394,10 @@ class Builder:
         if draw:
             draw_all(self.u["id"], self.diagrams)
         return len(self.questions), len(self.diagrams)
+
+
+def domain_of(builder, spec):
+    return spec.get("domain") or getattr(builder.m, "DOMAIN", "oa")
 
 
 def draw_all(unit_id, diagrams):

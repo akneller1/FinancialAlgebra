@@ -208,7 +208,7 @@ def h_shape_name(c, t):
 
 
 def h_solid_name(c, t):
-    return norm(t) in SOLIDS
+    return norm(t) == norm(str(c.get("kind", "")))
 
 
 def h_shape_attr_name(c, t):

@@ -6,13 +6,56 @@ measurement, shapes and arrays) so every skill and level gets all four extra for
 """
 import extras
 from extras import err_family, tf_family, sel_family, open_family, DOMAINS
-from g1lib import FN, need, pick
+from g1lib import FN, Reject, need, pick
 
 THINGS = ["stickers", "marbles", "shells", "beads", "cards", "tiles", "books", "buttons"]
 
 
+def tw2(word, n):
+    if n == 1:
+        return word
+    return {"penny": "pennies", "nickel": "nickels", "dime": "dimes", "quarter": "quarters"}[word]
+
+
 def _b(L, lo, mid, hi):
     return (lo, mid, hi)[max(0, min(2, int(L)))]
+
+
+_CURRENT = {"fams": ()}
+
+
+def _from_skill(r, L):
+    """Re-present one of this skill's own questions as a plain text fact.
+
+    Diagram alt text is written from the same data that draws the picture, so a
+    picture question can be re-asked in words without losing information.  This is
+    what keeps error analysis, true/false, select-all and open response on the
+    skill's own topic instead of falling back to generic domain drill.
+    """
+    fams = _CURRENT["fams"]
+    if not fams:
+        return None
+    for _ in range(40):
+        fam = r.choice(fams)
+        try:
+            it = fam(r, L)
+        except Reject:
+            continue
+        if it is None or it.answer is None or getattr(it, "parts", None):
+            continue
+        text = it.prompt
+        if getattr(it, "diagram", None) is not None:
+            text = f"{it.diagram.alt} {text}"
+        text = " ".join(text.split())
+        if len(text) > 230:
+            continue
+        wrong = [(w, why) for w, why in (it.wrong or []) if str(w) != str(it.answer)]
+        if not wrong:
+            continue
+        claim = text if "=" in text or "\u2212" in text else f"{text} The answer is {it.answer}."
+        return {"prompt": text, "answer": it.answer, "chk": it.check, "steps": list(it.steps),
+                "wrong": wrong, "claim": claim}
+    return None
 
 
 def _fact2(domain, r, L):
@@ -22,6 +65,13 @@ def _fact2(domain, r, L):
     two-digit regrouping or three-digit numbers, Advanced uses the largest numbers
     in the grade (three digits, carrying across two places, hundreds rounding).
     """
+    topical = _from_skill(r, L)
+    if topical is not None:
+        return topical
+    # derived formats only ever re-present the skill's own questions
+    from g1lib import Reject as _Reject
+    raise _Reject()
+
     if domain == "oa":
         kind = r.randrange(4)
         if kind == 0:  # addition that carries
@@ -34,6 +84,7 @@ def _fact2(domain, r, L):
             else:
                 a = r.randint(1, 8) * 100 + r.randint(1, 8) * 10 + a_o
                 b = r.randint(1, 4) * 100 + r.randint(1, 8) * 10 + b_o
+                need(a + b <= 999)
             ans = a + b
             carry = a_o + b_o - 10
             steps = [f"Add the ones: {a_o} + {b_o} = {a_o + b_o}, which is 1 ten and {carry} ones."]
@@ -74,7 +125,7 @@ def _fact2(domain, r, L):
                     "claim": f"{part} + {ans} = {total}"}
         step = _b(L, 10, 5, 100)
         if L == 2:
-            start = r.randint(1, 6) * 100 + r.randint(1, 9) * 10
+            start = r.randint(1, 5) * 100 + r.randint(1, 9) * 10
         else:
             start = step * r.randint(2, 9)
         seqv = [start + step * k for k in range(5)]
@@ -155,22 +206,23 @@ def _fact2(domain, r, L):
     if domain == "md":
         kind = r.randrange(4)
         if kind == 0:
-            if L == 0:
-                d, q = r.randint(1, 5), 0
-            elif L == 1:
-                d, q = r.randint(1, 6), r.randint(0, 3)
-            else:
-                d, q = r.randint(5, 9) + 10, r.randint(1, 3)
-            cents = d * 10 + q * 25
-            return {"prompt": f"How much money is {d} {'dime' if d == 1 else 'dimes'}"
-                              + (f" and {q} {'quarter' if q == 1 else 'quarters'}" if q else "") + "?",
-                    "answer": f"{cents}\u00a2",
+            # coins to one dollar; the level adds coin types and larger counts, not values past $1
+            nice = {1: "penny", 5: "nickel", 10: "dime", 25: "quarter"}
+            while True:
+                kinds = [10] if L == 0 else ([10, 5] if L == 1 else [25, 10, 5, 1])
+                coins = [(v, r.randint(1, 5 if L == 0 else 3)) for v in kinds]
+                cents = sum(v * c for v, c in coins)
+                if cents <= 100:
+                    break
+            desc = " and ".join(f"{c} {tw2(nice[v], c)}" for v, c in coins if c)
+            return {"prompt": f"How much money is {desc}?", "answer": f"{cents}\u00a2",
                     "chk": FN("money_cents", cents=cents),
-                    "steps": [f"{d} dimes is {d * 10}\u00a2"
-                              + (f" and {q} quarters is {q * 25}\u00a2." if q else "."), f"The total is {cents}\u00a2."],
+                    "steps": [f"Add the coin values: "
+                              + " + ".join(f"{c} \u00d7 {v}" for v, c in coins) + f" = {cents}\u00a2.",
+                              f"The total is {cents}\u00a2."],
                     "wrong": [(f"{cents + 10}\u00a2", "counted a dime twice"), (f"{cents + 25}\u00a2", "counted an extra quarter"),
-                              (f"{d * 10 + q}\u00a2", "counted quarters as pennies")],
-                    "claim": f"{d} dimes" + (f" and {q} quarters" if q else "") + f" make {cents}\u00a2"}
+                              (f"{cents - 5 if cents > 5 else cents + 1}\u00a2", "treated a nickel as a penny")],
+                    "claim": f"{desc} make {cents}\u00a2"}
         if kind == 1:
             h = r.randint(1, 12)
             m = r.choice([0, 30]) if L == 0 else r.choice([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55])
@@ -220,7 +272,7 @@ def _fact2(domain, r, L):
                           (others[2] if len(others) > 2 else "tenths", "used a fraction word that does not match")],
                 "claim": f"{parts} equal parts are {word}"}
     if kind == 2:
-        lo, hi = (2, 3) if L == 0 else (2, 6) if L == 1 else (3, 9)
+        lo, hi = (2, 3) if L == 0 else (2, 4) if L == 1 else (3, 5)
         rows, cols = r.randint(lo, hi), r.randint(lo, hi)
         return {"prompt": f"An array has {rows} rows and {cols} in each row. How many dots in all?", "answer": str(rows * cols),
                 "chk": FN("array_total", rows=rows, cols=cols),
@@ -241,7 +293,21 @@ def _fact2(domain, r, L):
 extras._fact = _fact2
 
 
-def extras_for(domain):
+def _open_topical(base):
+    """Spell the sub-questions into the prompt so an open-response item names its own task."""
+    def f(r, L):
+        it = base(r, L)
+        if it is not None and getattr(it, "parts", None):
+            body = "\n".join(f"({chr(97 + i)}) {p[0]}" for i, p in enumerate(it.parts))
+            it.prompt = "Answer each part. Show your work.\n" + body
+        return it
+    f.__name__ = base.__name__
+    f.levels, f.mode, f.qtype = base.levels, base.mode, base.qtype
+    return f
+
+
+def extras_for(domain, fams=None):
     domain = domain if domain in DOMAINS else "oa"
+    _CURRENT["fams"] = tuple(fams or ())
     return {"err": err_family(domain), "tf": tf_family(domain),
-            "sel": sel_family(domain), "open": open_family(domain)}
+            "sel": sel_family(domain), "open": _open_topical(open_family(domain))}

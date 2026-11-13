@@ -8,165 +8,167 @@ Advanced is at least 20% larger than Remedial.
 
 | Unit | Skill | R size/regroup/steps | S | A | verdict |
 | --- | --- | --- | --- | --- | --- |
-| adding-subtracting-100 | s01 | 34 / 100% / 1.00 | 62 / 75% / 1.00 | 441 / 100% / 1.00 | escalates |
-| adding-subtracting-100 | s02 | 60 / 38% / 1.00 | 65 / 25% / 1.00 | 434 / 100% / 1.00 | escalates |
-| adding-subtracting-100 | s03 | 53 / 100% / 1.00 | 62 / 100% / 1.00 | 420 / 100% / 1.00 | escalates |
-| adding-subtracting-100 | s04 | 35 / 70% / 1.00 | 54 / 56% / 1.00 | 322 / 83% / 1.00 | escalates |
-| adding-subtracting-100 | s05 | 35 / 83% / 1.00 | 64 / 100% / 1.00 | 502 / 100% / 1.00 | escalates |
-| adding-subtracting-100 | s06 | 37 / 100% / 1.00 | 47 / 100% / 1.00 | 400 / 50% / 1.00 | escalates |
-| adding-subtracting-100 | s07 | 39 / 75% / 1.00 | 53 / 71% / 1.00 | 477 / 93% / 1.00 | escalates |
-| adding-subtracting-100 | s08 | 30 / 100% / 1.00 | 60 / 100% / 1.00 | 335 / 100% / 1.00 | escalates |
-| adding-subtracting-100 | s09 | 50 / 75% / 1.00 | 70 / 50% / 1.00 | 391 / 100% / 1.00 | escalates |
-| adding-subtracting-100 | s10 | 30 / 100% / 1.00 | 51 / 100% / 1.00 | 368 / 100% / 1.00 | escalates |
-| adding-subtracting-100 | s11 | 24 / 80% / 1.00 | 39 / 33% / 1.00 | 409 / 62% / 1.00 | escalates |
-| adding-subtracting-1000 | s01 | 256 / 0% / 1.00 | 433 / 100% / 1.00 | 763 / 100% / 1.00 | escalates |
-| adding-subtracting-1000 | s02 | 278 / — / 1.00 | 534 / — / 1.00 | 738 / — / 1.00 | escalates |
-| adding-subtracting-1000 | s03 | 216 / 33% / 1.00 | 387 / 67% / 1.00 | 692 / 86% / 1.00 | escalates |
-| adding-subtracting-1000 | s04 | 268 / 0% / 1.00 | 496 / 100% / 1.00 | 713 / 100% / 1.00 | escalates |
-| adding-subtracting-1000 | s05 | 242 / 0% / 1.00 | 489 / 100% / 1.00 | 817 / 100% / 1.00 | escalates |
-| adding-subtracting-1000 | s06 | 49 / 100% / 1.00 | 292 / 38% / 1.00 | 637 / 50% / 1.00 | escalates |
-| adding-subtracting-1000 | s07 | 215 / — / 1.00 | 607 / — / 1.00 | 771 / — / 1.00 | escalates |
-| adding-subtracting-1000 | s08 | 343 / — / 1.00 | 366 / — / 1.00 | 557 / — / 1.00 | escalates |
-| adding-subtracting-1000 | s09 | 171 / — / 1.00 | 388 / — / 1.00 | 549 / — / 1.00 | escalates |
-| adding-subtracting-1000 | s10 | 218 / 67% / 1.00 | 432 / 17% / 1.00 | 616 / 100% / 1.00 | escalates |
-| adding-subtracting-working-data | s01 | 14 / 56% / 1.00 | 29 / 50% / 1.00 | 194 / 79% / 1.00 | escalates |
-| adding-subtracting-working-data | s02 | 22 / 62% / 1.00 | 26 / 67% / 1.00 | 147 / 44% / 1.00 | escalates |
-| adding-subtracting-working-data | s03 | 25 / 9% / 1.00 | 40 / 36% / 1.00 | 169 / 22% / 1.00 | escalates |
-| adding-subtracting-working-data | s04 | 12 / 33% / 1.00 | 20 / 25% / 1.00 | 161 / 25% / 1.00 | escalates |
-| adding-subtracting-working-data | s05 | 13 / 75% / 1.00 | 23 / 33% / 1.00 | 172 / 50% / 1.00 | escalates |
-| adding-subtracting-working-data | s06 | 17 / 100% / 1.00 | 27 / 50% / 1.00 | 147 / 75% / 1.00 | escalates |
-| adding-subtracting-working-data | s07 | 17 / 0% / 1.00 | 28 / 0% / 1.00 | 166 / 25% / 1.00 | escalates |
-| adding-subtracting-working-data | s08 | 24 / 50% / 1.00 | 49 / 0% / 1.00 | 242 / 33% / 1.00 | escalates |
-| adding-subtracting-working-data | s09 | 30 / 0% / 1.00 | 47 / 50% / 1.00 | 220 / 33% / 1.00 | escalates |
-| adding-subtracting-working-data | s10 | 22 / 40% / 1.00 | 40 / 14% / 1.00 | 123 / 40% / 1.00 | escalates |
-| adding-subtracting-working-data | s11 | 24 / 0% / 1.00 | 35 / 38% / 1.00 | 196 / 22% / 1.00 | escalates |
-| equal-groups | s01 | 36 / 100% / 1.00 | 64 / — / 1.00 | 629 / 100% / 1.00 | escalates |
-| equal-groups | s02 | 22 / 33% / 1.00 | 51 / 50% / 1.00 | 503 / 100% / 1.00 | escalates |
-| equal-groups | s03 | 34 / 62% / 1.00 | 42 / 83% / 1.00 | 496 / 67% / 1.00 | escalates |
-| equal-groups | s04 | 28 / 75% / 1.00 | 41 / 86% / 1.00 | 393 / 100% / 1.00 | escalates |
-| equal-groups | s05 | 23 / 75% / 1.00 | 42 / 100% / 1.00 | 440 / 100% / 1.00 | escalates |
-| equal-groups | s06 | 24 / 67% / 1.00 | 48 / 100% / 1.00 | 393 / 100% / 1.00 | escalates |
-| equal-groups | s07 | 30 / 100% / 1.00 | 43 / 89% / 1.00 | 442 / 100% / 1.00 | escalates |
-| geometry-time-money | s01 | 3 / — / 1.00 | 11 / — / 1.00 | 103 / — / 1.00 | escalates |
-| geometry-time-money | s02 | 7 / — / 1.00 | 12 / — / 1.00 | 71 / — / 1.00 | escalates |
-| geometry-time-money | s03 | 6 / — / 1.00 | 16 / — / 1.00 | 47 / — / 1.00 | escalates |
-| geometry-time-money | s04 | 5 / — / 1.00 | 10 / — / 1.00 | 107 / — / 1.00 | escalates |
-| geometry-time-money | s05 | 8 / — / 1.00 | 9 / — / 1.00 | 119 / — / 1.00 | escalates |
-| geometry-time-money | s06 | 5 / — / 1.00 | 6 / — / 1.00 | 37 / — / 1.00 | escalates |
-| geometry-time-money | s07 | 5 / — / 1.00 | 11 / — / 1.00 | 71 / — / 1.00 | escalates |
-| geometry-time-money | s08 | 11 / — / 1.00 | 26 / — / 1.00 | 77 / — / 1.00 | escalates |
-| geometry-time-money | s09 | 11 / — / 1.00 | 24 / — / 1.00 | 109 / — / 1.00 | escalates |
-| geometry-time-money | s10 | 11 / — / 1.00 | 27 / — / 1.00 | 47 / — / 1.00 | escalates |
-| geometry-time-money | s11 | 10 / — / 1.00 | 30 / — / 1.00 | 89 / — / 1.00 | escalates |
-| geometry-time-money | s12 | 10 / — / 1.00 | 42 / — / 1.00 | 89 / — / 1.00 | escalates |
-| geometry-time-money | s13 | 11 / — / 1.00 | 31 / — / 1.00 | 66 / — / 1.00 | escalates |
-| geometry-time-money | s14 | 12 / — / 1.00 | 33 / — / 1.00 | 111 / — / 1.00 | escalates |
-| geometry-time-money | s15 | 10 / — / 1.00 | 36 / — / 1.00 | 58 / — / 1.00 | escalates |
-| measuring-length | s01 | 12 / — / 1.00 | 29 / — / 1.00 | 72 / — / 1.00 | escalates |
-| measuring-length | s02 | 13 / — / 1.00 | 27 / — / 1.00 | 104 / — / 1.00 | escalates |
-| measuring-length | s03 | 13 / 100% / 1.00 | 49 / — / 1.00 | 148 / — / 1.00 | escalates |
-| measuring-length | s04 | 14 / — / 1.00 | 29 / — / 1.00 | 124 / — / 1.00 | escalates |
-| measuring-length | s05 | 8 / — / 1.00 | 29 / 100% / 1.00 | 126 / — / 1.00 | escalates |
-| measuring-length | s06 | 19 / — / 1.00 | 37 / 100% / 1.00 | 129 / — / 1.00 | escalates |
-| measuring-length | s07 | 15 / 100% / 1.00 | 35 / — / 1.00 | 84 / — / 1.00 | escalates |
-| measuring-length | s08 | 12 / — / 1.00 | 36 / — / 1.00 | 136 / — / 1.00 | escalates |
-| measuring-length | s09 | 12 / — / 1.00 | 38 / — / 1.00 | 79 / — / 1.00 | escalates |
-| measuring-length | s10 | 18 / 0% / 1.00 | 32 / — / 1.00 | 81 / — / 1.00 | escalates |
-| measuring-length | s11 | 16 / 100% / 1.00 | 36 / — / 1.00 | 81 / — / 1.00 | escalates |
-| number-line-addition-subtraction | s01 | 70 / — / 1.00 | 239 / — / 1.00 | 731 / — / 1.00 | escalates |
-| number-line-addition-subtraction | s02 | 49 / 25% / 1.00 | 199 / 38% / 1.00 | 460 / 55% / 1.00 | escalates |
-| number-line-addition-subtraction | s03 | 49 / — / 1.00 | 222 / — / 1.00 | 718 / — / 1.00 | escalates |
-| number-line-addition-subtraction | s04 | 65 / 14% / 1.00 | 255 / 50% / 1.00 | 660 / 80% / 1.00 | escalates |
-| number-line-addition-subtraction | s05 | 63 / 33% / 1.00 | 267 / 67% / 1.00 | 517 / 83% / 1.00 | escalates |
-| number-line-addition-subtraction | s06 | 59 / 25% / 1.00 | 215 / 33% / 1.00 | 553 / 67% / 1.00 | escalates |
-| number-line-addition-subtraction | s07 | 79 / 0% / 1.00 | 209 / 0% / 1.00 | 652 / 100% / 1.00 | escalates |
-| numbers-to-1000 | s01 | 116 / — / 1.00 | 457 / — / 1.00 | 811 / — / 1.00 | escalates |
-| numbers-to-1000 | s02 | 109 / — / 1.00 | 310 / — / 1.00 | 681 / — / 1.00 | escalates |
-| numbers-to-1000 | s03 | 195 / — / 1.00 | 473 / — / 1.00 | 841 / — / 1.00 | escalates |
-| numbers-to-1000 | s04 | 114 / — / 1.00 | 495 / — / 1.00 | 786 / — / 1.00 | escalates |
-| numbers-to-1000 | s05 | 288 / — / 1.00 | 438 / — / 1.00 | 835 / — / 1.00 | escalates |
-| numbers-to-1000 | s06 | 68 / — / 1.00 | 254 / — / 1.00 | 718 / — / 1.00 | escalates |
-| numbers-to-1000 | s07 | 129 / — / 1.00 | 399 / — / 1.00 | 687 / — / 1.00 | escalates |
-| numbers-to-1000 | s08 | 259 / — / 1.00 | 459 / — / 1.00 | 805 / — / 1.00 | escalates |
-| putting-it-all-together | s01 | 20 / 50% / 1.00 | 45 / 43% / 1.00 | 393 / 75% / 1.00 | escalates |
-| putting-it-all-together | s02 | 19 / 71% / 1.00 | 44 / 62% / 1.00 | 385 / 64% / 1.00 | escalates |
-| putting-it-all-together | s03 | 21 / 67% / 1.00 | 35 / 50% / 1.00 | 287 / 100% / 1.00 | escalates |
-| putting-it-all-together | s04 | 147 / 50% / 1.00 | 340 / 100% / 1.00 | 807 / 100% / 1.00 | escalates |
-| putting-it-all-together | s05 | 360 / 57% / 1.00 | 416 / 100% / 1.00 | 729 / 100% / 1.00 | escalates |
-| putting-it-all-together | s06 | 37 / 50% / 1.00 | 70 / 44% / 1.00 | 365 / 100% / 1.00 | escalates |
-| putting-it-all-together | s07 | 31 / 100% / 1.00 | 57 / 75% / 1.00 | 364 / 100% / 1.00 | escalates |
-| putting-it-all-together | s08 | 30 / 67% / 1.00 | 55 / 75% / 1.00 | 370 / 100% / 1.00 | escalates |
-| putting-it-all-together | s09 | 22 / 45% / 1.00 | 47 / 50% / 1.00 | 341 / 55% / 1.00 | escalates |
+| adding-subtracting-100 | s01 | 24 / — / 1.00 | 61 / — / 1.00 | 197 / — / 1.00 | escalates |
+| adding-subtracting-100 | s02 | 26 / 11% / 1.03 | 42 / 22% / 1.00 | 43 / 27% / 1.03 | escalates |
+| adding-subtracting-100 | s03 | 30 / 0% / 1.00 | 38 / 25% / 1.00 | 42 / 50% / 1.00 | escalates |
+| adding-subtracting-100 | s04 | 35 / 39% / 1.10 | 50 / 62% / 1.07 | 60 / 67% / 1.03 | escalates |
+| adding-subtracting-100 | s05 | 33 / — / 1.00 | 60 / — / 1.00 | 66 / — / 1.00 | escalates |
+| adding-subtracting-100 | s06 | 19 / — / 1.00 | 40 / — / 1.00 | 63 / — / 1.00 | escalates |
+| adding-subtracting-100 | s07 | 21 / 50% / 1.00 | 52 / 64% / 1.03 | 69 / 80% / 1.03 | escalates |
+| adding-subtracting-100 | s08 | 18 / — / 1.00 | 59 / — / 1.00 | 82 / — / 1.00 | escalates |
+| adding-subtracting-100 | s09 | 45 / 0% / 1.00 | 63 / 0% / 1.00 | 74 / 100% / 1.03 | escalates |
+| adding-subtracting-100 | s10 | 19 / — / 1.00 | 55 / — / 1.00 | 80 / — / 1.00 | escalates |
+| adding-subtracting-100 | s11 | 27 / 0% / 1.00 | 58 / 0% / 1.00 | 85 / 100% / 1.00 | escalates |
+| adding-subtracting-1000 | s01 | 396 / 0% / 1.00 | 590 / 0% / 1.00 | 743 / 0% / 1.00 | escalates |
+| adding-subtracting-1000 | s02 | 359 / — / 1.00 | 385 / — / 1.00 | 361 / — / 1.00 | flat |
+| adding-subtracting-1000 | s03 | 307 / 30% / 1.00 | 292 / 80% / 1.00 | 572 / 92% / 1.00 | flat |
+| adding-subtracting-1000 | s04 | 33 / — / 1.00 | 523 / 100% / 1.00 | 562 / 100% / 1.00 | escalates |
+| adding-subtracting-1000 | s05 | 29 / — / 1.00 | 512 / 100% / 1.00 | 615 / 100% / 1.00 | escalates |
+| adding-subtracting-1000 | s06 | 176 / 90% / 1.00 | 528 / 64% / 1.03 | 592 / 56% / 1.03 | escalates |
+| adding-subtracting-1000 | s07 | 401 / — / 1.00 | 703 / — / 1.00 | 714 / — / 1.00 | escalates |
+| adding-subtracting-1000 | s08 | 407 / — / 1.00 | 781 / — / 1.00 | 662 / — / 1.00 | flat |
+| adding-subtracting-1000 | s09 | 344 / — / 1.00 | 779 / — / 1.00 | 720 / — / 1.00 | flat |
+| adding-subtracting-1000 | s10 | 468 / 73% / 1.03 | 500 / 9% / 1.00 | 449 / 91% / 1.03 | flat |
+| adding-subtracting-working-data | s01 | 7 / 55% / 1.03 | 11 / 67% / 1.03 | 12 / 90% / 1.03 | escalates |
+| adding-subtracting-working-data | s02 | 9 / 60% / 1.03 | 17 / 58% / 1.03 | 19 / 58% / 1.03 | escalates |
+| adding-subtracting-working-data | s03 | 24 / 0% / 1.03 | 40 / 20% / 1.00 | 49 / 7% / 1.03 | escalates |
+| adding-subtracting-working-data | s04 | 3 / — / 1.00 | 7 / — / 1.00 | 10 / — / 1.00 | escalates |
+| adding-subtracting-working-data | s05 | 7 / — / 1.00 | 12 / — / 1.00 | 20 / — / 1.00 | escalates |
+| adding-subtracting-working-data | s06 | 2 / — / 1.00 | 10 / — / 1.00 | 13 / — / 1.00 | escalates |
+| adding-subtracting-working-data | s07 | 5 / — / 1.00 | 7 / — / 1.00 | 7 / — / 1.00 | flat |
+| adding-subtracting-working-data | s08 | 22 / — / 1.00 | 47 / — / 1.00 | 82 / — / 1.00 | escalates |
+| adding-subtracting-working-data | s09 | 36 / — / 1.00 | 62 / — / 1.00 | 77 / — / 1.00 | escalates |
+| adding-subtracting-working-data | s10 | 19 / 0% / 1.03 | 41 / 25% / 1.00 | 58 / 14% / 1.00 | escalates |
+| adding-subtracting-working-data | s11 | 18 / 0% / 1.00 | 40 / 14% / 1.00 | 80 / 11% / 1.03 | escalates |
+| equal-groups | s01 | 9 / 20% / 1.00 | 39 / 83% / 1.00 | 319 / 38% / 1.00 | escalates |
+| equal-groups | s02 | 11 / — / 1.00 | 37 / — / 1.00 | 290 / — / 1.00 | escalates |
+| equal-groups | s03 | 11 / 20% / 1.00 | 42 / 100% / 1.03 | 347 / 60% / 1.03 | escalates |
+| equal-groups | s04 | 9 / — / 1.00 | 9 / — / 1.00 | 14 / — / 1.00 | escalates |
+| equal-groups | s05 | 7 / 0% / 1.07 | 9 / 50% / 1.00 | 13 / 0% / 1.07 | escalates |
+| equal-groups | s06 | 7 / 0% / 1.07 | 10 / 0% / 1.03 | 14 / 50% / 1.00 | escalates |
+| equal-groups | s07 | 8 / — / 1.00 | 11 / — / 1.00 | 14 / — / 1.00 | escalates |
+| geometry-time-money | s01 | 3 / — / 1.00 | 3 / — / 1.00 | 3 / — / 1.00 | flat |
+| geometry-time-money | s02 | 3 / — / 1.00 | 4 / — / 1.00 | 3 / — / 1.00 | flat |
+| geometry-time-money | s03 | 1 / — / 1.00 | 0 / — / 1.00 | 1 / — / 1.00 | flat |
+| geometry-time-money | s04 | 2 / — / 1.00 | 3 / — / 1.00 | 4 / — / 1.00 | escalates |
+| geometry-time-money | s05 | 2 / — / 1.00 | 2 / — / 1.00 | 4 / — / 1.00 | escalates |
+| geometry-time-money | s06 | 2 / — / 1.00 | 3 / — / 1.00 | 4 / — / 1.00 | escalates |
+| geometry-time-money | s07 | 3 / — / 1.00 | 3 / — / 1.00 | 5 / — / 1.00 | escalates |
+| geometry-time-money | s08 | 17 / — / 1.00 | 30 / — / 1.00 | 34 / — / 1.00 | escalates |
+| geometry-time-money | s09 | 18 / — / 1.00 | 32 / — / 1.00 | 31 / — / 1.00 | flat |
+| geometry-time-money | s10 | 19 / — / 1.00 | 33 / — / 1.00 | 29 / — / 1.00 | flat |
+| geometry-time-money | s11 | 16 / — / 1.00 | 30 / — / 1.00 | 28 / — / 1.00 | flat |
+| geometry-time-money | s12 | 16 / — / 1.00 | 49 / — / 1.00 | 69 / — / 1.00 | escalates |
+| geometry-time-money | s13 | 16 / — / 1.00 | 46 / — / 1.00 | 70 / — / 1.00 | escalates |
+| geometry-time-money | s14 | 18 / — / 1.00 | 48 / — / 1.00 | 71 / — / 1.00 | escalates |
+| geometry-time-money | s15 | 16 / — / 1.00 | 50 / — / 1.00 | 67 / — / 1.00 | escalates |
+| measuring-length | s01 | 6 / — / 1.00 | 14 / — / 1.00 | 14 / — / 1.00 | flat |
+| measuring-length | s02 | 7 / — / 1.00 | 11 / — / 1.00 | 22 / — / 1.00 | escalates |
+| measuring-length | s03 | 9 / — / 1.00 | 96 / — / 1.00 | 26 / — / 1.00 | flat |
+| measuring-length | s04 | 9 / — / 1.00 | 28 / — / 1.00 | 43 / — / 1.00 | escalates |
+| measuring-length | s05 | 18 / — / 1.00 | 28 / — / 1.00 | 22 / — / 1.00 | flat |
+| measuring-length | s06 | 9 / — / 1.00 | 12 / — / 1.00 | 24 / — / 1.00 | escalates |
+| measuring-length | s07 | 8 / — / 1.00 | 12 / — / 1.00 | 197 / — / 1.00 | escalates |
+| measuring-length | s08 | 10 / — / 1.00 | 31 / — / 1.00 | 94 / — / 1.00 | escalates |
+| measuring-length | s09 | 7 / — / 1.00 | 10 / — / 1.00 | 21 / — / 1.00 | escalates |
+| measuring-length | s10 | 11 / — / 1.00 | 19 / — / 1.00 | 30 / — / 1.00 | escalates |
+| measuring-length | s11 | 11 / — / 1.00 | 19 / — / 1.00 | 33 / — / 1.00 | escalates |
+| number-line-addition-subtraction | s01 | 75 / — / 1.00 | 112 / — / 1.00 | 693 / — / 1.00 | escalates |
+| number-line-addition-subtraction | s02 | 69 / 56% / 1.00 | 72 / 38% / 1.00 | 73 / 44% / 1.00 | flat |
+| number-line-addition-subtraction | s03 | 52 / — / 1.00 | 94 / — / 1.00 | 621 / — / 1.00 | escalates |
+| number-line-addition-subtraction | s04 | 56 / 22% / 1.00 | 106 / 43% / 1.03 | 393 / 75% / 1.03 | escalates |
+| number-line-addition-subtraction | s05 | 63 / 38% / 1.00 | 108 / 88% / 1.00 | 410 / 75% / 1.00 | escalates |
+| number-line-addition-subtraction | s06 | 39 / 29% / 1.00 | 57 / 22% / 1.00 | 83 / 57% / 1.03 | escalates |
+| number-line-addition-subtraction | s07 | 62 / 0% / 1.00 | 84 / 0% / 1.00 | 426 / 100% / 1.00 | escalates |
+| numbers-to-1000 | s01 | 168 / — / 1.00 | 686 / — / 1.00 | 886 / — / 1.00 | escalates |
+| numbers-to-1000 | s02 | 259 / — / 1.00 | 318 / — / 1.00 | 830 / — / 1.00 | escalates |
+| numbers-to-1000 | s03 | 283 / 0% / 1.03 | 579 / 0% / 1.03 | 899 / 33% / 1.03 | escalates |
+| numbers-to-1000 | s04 | 144 / — / 1.00 | 550 / — / 1.00 | 837 / — / 1.00 | escalates |
+| numbers-to-1000 | s05 | 495 / — / 1.00 | 523 / — / 1.00 | 749 / — / 1.00 | escalates |
+| numbers-to-1000 | s06 | 66 / 57% / 1.00 | 118 / 33% / 1.00 | 542 / 80% / 1.03 | escalates |
+| numbers-to-1000 | s07 | 198 / — / 1.00 | 523 / — / 1.00 | 538 / — / 1.00 | escalates |
+| numbers-to-1000 | s08 | 589 / — / 1.00 | 618 / — / 1.00 | 882 / — / 1.00 | escalates |
+| putting-it-all-together | s01 | 8 / 33% / 1.03 | 15 / 45% / 1.00 | 19 / 50% / 1.03 | escalates |
+| putting-it-all-together | s02 | 8 / 72% / 1.03 | 24 / 33% / 1.03 | 35 / 58% / 1.03 | escalates |
+| putting-it-all-together | s03 | 7 / — / 1.00 | 13 / — / 1.00 | 18 / — / 1.00 | escalates |
+| putting-it-all-together | s04 | 251 / 0% / 1.00 | 711 / 0% / 1.00 | 1151 / 50% / 1.03 | escalates |
+| putting-it-all-together | s05 | 612 / 0% / 1.00 | 657 / 100% / 1.00 | 623 / 100% / 1.00 | flat |
+| putting-it-all-together | s06 | 42 / 0% / 1.03 | 69 / 0% / 1.03 | 75 / 100% / 1.03 | escalates |
+| putting-it-all-together | s07 | 19 / — / 1.00 | 51 / — / 1.00 | 82 / — / 1.00 | escalates |
+| putting-it-all-together | s08 | 18 / — / 1.00 | 59 / — / 1.00 | 78 / — / 1.00 | escalates |
+| putting-it-all-together | s09 | 21 / 11% / 1.00 | 39 / 14% / 1.00 | 89 / 40% / 1.00 | escalates |
 
 ## Families
 
 | Family | R size | S size | A size | R regroup | S regroup | A regroup |
 | --- | --- | --- | --- | --- | --- | --- |
-| err_g | 7 | 23 | 110 | — | — | — |
-| err_md | 27 | 52 | 163 | — | — | — |
-| err_nbt | 90 | 457 | 816 | — | — | — |
-| err_oa | 51 | 68 | 700 | 100% | 100% | 100% |
-| fam01_at | 3 | 4 | 5 | — | — | — |
-| fam01_bargraph | 2 | 8 | 14 | — | — | — |
-| fam01_build | 25 | 71 | 289 | — | — | — |
-| fam01_count | 10 | 29 | 33 | — | — | — |
-| fam01_customary | 2 | 2 | 1 | — | — | — |
-| fam01_expanded | 283 | 559 | 858 | — | — | — |
-| fam01_items | 171 | 205 | 267 | 33% | 46% | 70% |
-| fam01_jump | 75 | 102 | 537 | 25% | 58% | 67% |
-| fam01_locate | 52 | 96 | 500 | — | — | — |
-| fam01_metric | 2 | 4 | 7 | — | — | — |
+| err_g | 11 | 25 | 33 | — | — | — |
+| err_md | 27 | 55 | 145 | — | — | — |
+| err_nbt | 263 | 536 | 808 | 44% | 38% | 67% |
+| err_oa | 42 | 68 | 199 | 26% | 52% | 38% |
+| fam01_100 | 14 | 36 | 52 | — | — | — |
+| fam01_at | 3 | 4 | 6 | — | — | — |
+| fam01_bargraph | 2 | 6 | 5 | — | — | — |
+| fam01_build | 28 | 71 | 274 | — | — | — |
+| fam01_count | 11 | 29 | 49 | — | — | — |
+| fam01_customary | 3 | 5 | 16 | — | — | — |
+| fam01_expanded | 286 | 527 | 876 | — | — | — |
+| fam01_items | 163 | 237 | 278 | 33% | 51% | 69% |
+| fam01_jump | 73 | 88 | 315 | 40% | 62% | 62% |
+| fam01_locate | 57 | 93 | 456 | — | — | — |
+| fam01_metric | 10 | 6 | 22 | — | — | — |
 | fam01_most | 3 | 5 | 5 | — | — | — |
 | fam01_name | 1 | 1 | 1 | — | — | — |
-| fam01_pictograph | 2 | 7 | 11 | — | — | — |
-| fam01_regroup | 32 | — | — | — | — | — |
-| fam01_rows | 6 | 13 | 25 | — | — | — |
+| fam01_pictograph | 2 | 7 | 9 | — | — | — |
+| fam01_regroup | 29 | — | — | — | — | — |
+| fam01_rows | 8 | 7 | 13 | — | — | — |
 | fam01_shaded | 3 | 3 | 4 | — | — | — |
-| fam01_sides | 4 | 4 | 4 | — | — | — |
-| fam01_total | 6 | 14 | 25 | — | — | — |
-| fam01_value | 269 | 560 | 858 | — | — | — |
-| fam01_word | 14 | 45 | 58 | — | — | — |
-| fam02_100 | 888 | 900 | 851 | — | — | — |
-| fam02_20 | 12 | 21 | 24 | 75% | 75% | 50% |
-| fam02_4 | 659 | 645 | 852 | — | — | — |
-| fam02_bargraph | 2 | 16 | 8 | — | — | — |
-| fam02_build | 34 | 63 | 310 | — | — | — |
-| fam02_corners | 4 | 5 | 4 | — | — | — |
-| fam02_count | 7 | 17 | 25 | — | — | — |
-| fam02_customary | 4 | 3 | 7 | — | — | — |
-| fam02_facts_g | 8 | 28 | 130 | — | — | — |
-| fam02_facts_md | 13 | 48 | 183 | 100% | 100% | — |
-| fam02_facts_nbt | 57 | 353 | 751 | — | — | — |
-| fam02_facts_oa | 44 | 61 | 637 | 92% | 90% | 100% |
-| fam02_items | 51 | 83 | 225 | 30% | 21% | 71% |
-| fam02_jump | 77 | 98 | 541 | 38% | 45% | 73% |
-| fam02_metric | 3 | 7 | 5 | — | — | — |
-| fam02_more | 276 | 606 | 953 | — | — | — |
-| fam02_name | 1 | 0 | 1 | — | — | — |
+| fam01_sides | 4 | 5 | 4 | — | — | — |
+| fam01_total | 9 | 11 | 18 | — | — | — |
+| fam01_value | 242 | 549 | 841 | — | — | — |
+| fam01_word | 15 | 44 | 69 | — | — | — |
+| fam02_100 | 85 | 103 | 101 | 25% | 58% | 67% |
+| fam02_20 | 11 | 20 | 25 | 58% | 67% | 50% |
+| fam02_4 | 669 | 618 | 863 | — | — | — |
+| fam02_bargraph | 2 | 13 | 8 | — | — | — |
+| fam02_build | 33 | 61 | 342 | — | — | — |
+| fam02_corners | 4 | 4 | 4 | — | — | — |
+| fam02_count | 9 | 29 | 34 | — | — | — |
+| fam02_items | 54 | 94 | 189 | 36% | 33% | 48% |
+| fam02_jump | 70 | 95 | 354 | 44% | 45% | 71% |
+| fam02_locate | 48 | 56 | 56 | — | — | — |
+| fam02_metric | 11 | 8 | 24 | — | — | — |
+| fam02_more | 250 | 651 | 949 | — | — | — |
+| fam02_name | 1 | 1 | 1 | — | — | — |
 | fam02_one | 3 | 6 | 7 | — | — | — |
-| fam02_regroup | 32 | — | — | — | — | — |
-| fam02_rows | 4 | 9 | 21 | — | — | — |
-| fam02_shaded | 3 | 3 | 5 | — | — | — |
-| fam02_total | 10 | 20 | 35 | — | — | — |
-| fam02_value | 107 | 270 | 441 | — | — | — |
-| fam02_word | 15 | 49 | 58 | — | — | — |
-| fam03_facts_g | 9 | 22 | 162 | — | — | — |
-| fam03_facts_md | 15 | 44 | 167 | 67% | 100% | — |
-| fam03_facts_nbt | 60 | 351 | 772 | — | — | — |
-| fam03_facts_oa | 25 | 45 | 461 | 62% | 59% | 59% |
-| open_g | 6 | 17 | 25 | — | — | — |
-| open_md | 38 | 64 | 205 | — | — | — |
-| open_nbt | 82 | 564 | 870 | — | — | — |
-| open_oa | 77 | 77 | 901 | — | — | — |
-| sel_g | 7 | 37 | 278 | — | — | — |
-| sel_md | 27 | 77 | 151 | — | — | — |
-| sel_nbt | 78 | 451 | 820 | — | — | — |
-| sel_oa | 64 | 82 | 809 | — | — | — |
-| tf_g | 5 | 11 | 10 | — | — | — |
-| tf_md | 18 | 56 | 174 | — | — | — |
-| tf_nbt | 74 | 368 | 777 | — | — | — |
-| tf_oa | 48 | 64 | 590 | 81% | 80% | 88% |
+| fam02_pictograph | 2 | 5 | 4 | — | — | — |
+| fam02_regroup | 31 | — | — | — | — | — |
+| fam02_rows | 6 | 7 | 11 | — | — | — |
+| fam02_shaded | 3 | 3 | 4 | — | — | — |
+| fam02_sides | 4 | 4 | 4 | — | — | — |
+| fam02_total | 12 | 19 | 32 | — | — | — |
+| fam02_value | 117 | 342 | 553 | — | — | — |
+| fam02_word | 15 | 45 | 64 | — | — | — |
+| fam03_cols | 6 | 9 | 11 | — | — | — |
+| fam03_corners | 4 | 4 | 5 | — | — | — |
+| fam03_items | 507 | 669 | 879 | — | — | — |
+| fam03_name | 0 | 0 | 0 | — | — | — |
+| fam03_regroup | 28 | — | — | — | — | — |
+| fam03_total | 10 | 11 | 11 | — | — | — |
+| fam03_value | 267 | 564 | 837 | — | — | — |
+| open_g | 15 | 34 | 38 | — | — | — |
+| open_md | 21 | 41 | 64 | — | — | — |
+| open_nbt | 376 | 563 | 794 | 57% | 43% | 90% |
+| open_oa | 55 | 95 | 155 | 23% | 38% | 87% |
+| sel_g | 12 | 27 | 32 | — | — | — |
+| sel_md | 8 | 15 | 44 | — | — | — |
+| sel_nbt | 149 | 359 | 597 | — | — | — |
+| sel_oa | 35 | 61 | 122 | — | — | — |
+| tf_g | 14 | 24 | 34 | — | — | — |
+| tf_md | 21 | 255 | 287 | — | — | — |
+| tf_nbt | 246 | 446 | 648 | 33% | 33% | 67% |
+| tf_oa | 43 | 182 | 110 | 29% | 36% | 67% |
 
-Skills: 89, flat: 0. Families: 64, flat: 14.
+Skills: 89, flat: 17. Families: 66, flat: 19.
 
-Flat families: fam01_customary, fam01_name, fam01_regroup, fam01_sides, fam02_100, fam02_4, fam02_bargraph, fam02_corners, fam02_customary, fam02_metric, fam02_name, fam02_regroup, open_oa, tf_g
+Flat families: fam01_bargraph, fam01_metric, fam01_regroup, fam01_rows, fam01_sides, fam02_100, fam02_4, fam02_bargraph, fam02_corners, fam02_locate, fam02_metric, fam02_name, fam02_pictograph, fam02_regroup, fam02_sides, fam03_name, fam03_regroup, fam03_total, tf_oa

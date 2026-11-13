@@ -204,7 +204,8 @@ def _baseten(data):
     cap = data.get("caption")
     if cap:
         _center_text(d, W / 2, 60, cap, 28)
-    _text(d, 60, 430, f"{tens} tens and {ones} ones", 24, INK)
+    _text(d, 60, 430, f"{tens} {'ten' if tens == 1 else 'tens'} and "
+                      f"{ones} {'one' if ones == 1 else 'ones'}", 24, INK)
     return im
 
 
