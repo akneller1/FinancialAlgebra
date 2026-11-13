@@ -55,12 +55,17 @@ export function integrate({source,out}){
  const printableEngine=path.join(out,'worksheet-generator/menu/printables.js');
  let engineCode=fs.readFileSync(printableEngine,'utf8');
  engineCode=engineCode.replace('PR.buildWho = function (cfg, vIdx) {','PR.buildWho = function (cfg, vIdx, grade1Items) {').replace("var items = gather(cfg, vIdx, 10, 'who',", "var items = (/^grade1-/.test(cfg.unitId)&&grade1Items) || gather(cfg, vIdx, 10, 'who',");
+ engineCode=engineCode.replace('var size = [[4,4],[3,4],[3,3],[2,3],[2,2]].find(function(s){return s[0]*s[1]-1<=authoredItems.length;});', "var g1=/^grade1-/.test(cfg.unitId),sizes={small:[2,2],medium:[3,3],large:[4,4]},requested=g1&&sizes[cfg.grade1MazeSize],choices=requested?[requested]:g1?[[3,3],[2,3],[2,2]]:[[4,4],[3,4],[3,3],[2,3],[2,2]];var size=choices.find(function(s){return s[0]*s[1]-1<=authoredItems.length;});");
  fs.writeFileSync(printableEngine,engineCode);
  const printableUI=path.join(out,'worksheet-generator/menu/printables-ui.js');
  let printableCode=fs.readFileSync(printableUI,'utf8');
+ printableCode=printableCode.replace("story + st + (kind === 'tarsia'", "story + st + (kind==='maze'&&/^grade1-/.test(unit)?G.MK_GRADE1_PRINTABLES.mazeOptions(cfg):'') + (kind==='tarsia'&&/^grade1-/.test(unit)?G.MK_GRADE1_PRINTABLES.tarsiaOptions(cfg):'') + (kind === 'tarsia'");
+ printableCode=printableCode.replace("if ($('#prTarsiaLayout'))", "if ($('#prMazeSize')) $('#prMazeSize').onchange=function(e){cfg.grade1MazeSize=e.target.value;save();rebuild();};\n    if ($('#prTarsiaLayout'))");
+ printableCode=printableCode.replace('  function mazePages(cfg, B, v, nV, key) {', `  function mazePages(cfg, B, v, nV, key) {
+    if(B.grade1Maze){var cover={land:true,nofoot:true,html:'<div class="mm-body pc">'+classicHead(cfg,nV,v,key,title(cfg),'Start at the top left. Solve the numbered problem, then follow the door with its answer. Use the problem pages to show your thinking.')+mazeHtml(B,key)+'</div>'};return G.MK_GRADE1_PRINTABLES.mazePages(cfg,B,v,nV,key,cover);}
+  `);
  printableCode=printableCode.replace('  function whoPages(cfg, B, v, nV, key) {','  function whoPages(cfg, B, v, nV, key) {\n    if(B.grade1Who)return G.MK_GRADE1_PRINTABLES.whoPages(cfg,B,v,nV,key);');
  printableCode=printableCode.replace("var fs = large ? 13 : (sIn > 1.6 ? 8 : 7.4);", "var fs = B.grade1Tarsia ? (large ? 16 : (sIn > 1.6 ? 14 : 11)) : (large ? 13 : (sIn > 1.6 ? 8 : 7.4));");
- printableCode=printableCode.replace("story + st + (kind === 'tarsia'", "story + st + (kind==='tarsia'&&/^grade1-/.test(unit)?G.MK_GRADE1_PRINTABLES.tarsiaOptions(cfg):'') + (kind === 'tarsia'");
  printableCode=printableCode.replace("if ($('#prTarsiaLayout'))", "if ($('#prTarsiaSize')) $('#prTarsiaSize').onchange=function(e){cfg.tarsiaSize=e.target.value;save();rebuild();};\n    if ($('#prTarsiaLayout'))");
  printableCode=printableCode.replace('  function tarsiaPages(cfg, B, v, nV, key) {', `  function tarsiaPages(cfg, B, v, nV, key) {
     if(B.grade1Tarsia){

@@ -12,21 +12,26 @@ G.MK_BANK_LOADER={loadFromSite(){return Promise.resolve([])}};
 vm.runInContext(fs.readFileSync(path.join(site,'worksheet-generator/algebra2-bank-native.js'),'utf8'),G);
 (async()=>{
 await G.MK_COURSE_BANKS_READY;G.MK_GRADE1_STAGING={content:JSON.parse(fs.readFileSync(path.join(site,'grade1-staging/content-index.json')))};vm.runInContext(fs.readFileSync(path.join(site,'grade1-staging/printables.js'),'utf8'),G);const PR=G.MKMENU.printables;const results=[];
+function mazeCheck(B){if(!B.grade1Maze)return;assert.equal(B.items.length,B.R*B.C-1);assert.equal(new Set(B.items.map(it=>it.p.sourceId)).size,B.items.length);assert.deepEqual([...B.path[0]],[0,0]);assert.deepEqual([...B.path[B.path.length-1]],[B.R-1,B.C-1]);assert.equal(new Set(B.path.map(rc=>rc.join(','))).size,B.path.length);for(const r of B.rooms){if(r.finish)continue;assert(r.item.numberedRoom);const q=all.get(r.item.p.sourceId),touch=B.doors.filter(d=>[d.a,d.b].some(rc=>rc[0]===r.r&&rc[1]===r.c)),accepted=touch.filter(d=>G.MK_GRADE1_PRINTABLES.key(d.label)===G.MK_GRADE1_PRINTABLES.key(q.answer));if(r.step===null)assert.equal(accepted.length,0);else{assert.equal(accepted.length,1);const d=accepted[0],next=B.path[r.step+1];assert(d.correct);assert([d.a,d.b].some(rc=>rc[0]===next[0]&&rc[1]===next[1]));}}}
 function mystery(B){if(!B.grade1Who)return;assert.equal(B.cards.length,10);const cleared={p:new Set(),l:new Set(),m:new Set()};for(const c of B.cards){const q=all.get(c.item.p.sourceId);assert.equal(q.format,'multiple-choice');assert.deepEqual([...c.opts.map(o=>o.a)].sort(),q.options.map(o=>o.text).sort());assert.equal(c.opts.filter(o=>o.ok).length,1);assert(c.opts[c.pos].ok);assert.equal(c.opts[c.pos].a,q.answer);assert.equal(c.opts[c.pos].clue,c.truth.text);for(const k of ['p','l','m'])if(c.truth[k]!==undefined)cleared[k].add(c.truth[k]);}for(const k of ['p','l','m']){assert.equal(cleared[k].size,5);assert(!cleared[k].has(B.culprit[k]));}}
 function walk(x,out=new Set()){if(!x||typeof x!=='object')return out;if(x.sourceId)out.add(x.sourceId);for(const value of Object.values(x))if(value&&typeof value==='object')walk(value,out);return out;}
 for(const u of outline.units)for(const level of ['cp2','cp1','honors'])for(const kind of ['maze','color','tarsia','stations','error','who']){
  const cfg=PR.defaultConfig('grade1-'+u.id,kind);cfg.level=level;cfg.seed='full-activity-audit';const start=Date.now(),B=PR.build(cfg,0);
- mystery(B);const qs=[...walk(B)].map(id=>all.get(id));const borrowed=qs.filter(q=>q&&q.level!==level);assert.equal(borrowed.length,0,kind+' borrowed another level');assert(qs.every(q=>q&&q.skillId.startsWith(u.id+'-skill-')));
+ mazeCheck(B);mystery(B);const qs=[...walk(B)].map(id=>all.get(id));const borrowed=qs.filter(q=>q&&q.level!==level);assert.equal(borrowed.length,0,kind+' borrowed another level');assert(qs.every(q=>q&&q.skillId.startsWith(u.id+'-skill-')));
  if(B.grade1Color){assert.equal(new Set(B.code.map(c=>G.MK_GRADE1_PRINTABLES.key(c.answer))).size,B.code.length);assert.equal(B.code.length,B.items.length);assert(B.groupNum.every(n=>n>=1&&n<=B.items.length));}
  results.push({unit:u.id,level,kind,success:!B.error,error:B.error||null,items:qs.length,borrowed:borrowed.length,ms:Date.now()-start});
  if(results.length%15===0)console.log('Audited '+results.length+' unit/activity selections');
 }
-let scopes=0;const singles={stations:0,error:0,color:0,tarsia:0,who:0};
+let scopes=0;const singles={stations:0,error:0,color:0,tarsia:0,who:0,maze:0};
 for(const u of outline.units)for(const skill of G.MK_COURSE_CATALOG.getSkillRecords('grade1',u.id))for(const level of ['cp2','cp1','honors']){
- for(const kind of ['stations','error','color','tarsia','who']){
+ for(const kind of ['stations','error','color','tarsia','who','maze']){
   const cfg=PR.defaultConfig('grade1-'+u.id,kind);Object.assign(cfg,{skills:{[skill.id]:true},level,seed:'single-skill-audit'});const B=PR.build(cfg,0);
   if(['stations','error'].includes(kind))assert(!B.error,kind+' '+skill.id+'/'+level);
-  if(!B.error){mystery(B);singles[kind]++;for(const id of walk(B)){const q=all.get(id);assert(q);assert.equal(q.level,level);assert.equal(q.skillId,skill.id);}}
+  if(!B.error){mazeCheck(B);mystery(B);singles[kind]++;for(const id of walk(B)){const q=all.get(id);assert(q);assert.equal(q.level,level);assert.equal(q.skillId,skill.id);}}
+ }
+ for(const size of ['small','medium','large']){
+  const cfg={...PR.defaultConfig('grade1-'+u.id,'maze'),skills:{[skill.id]:true},level,seed:'maze-sizes',grade1MazeSize:size},B=PR.build(cfg,0);
+  if(!B.error){mazeCheck(B);assert.equal(B.items.length,{small:3,medium:8,large:15}[size]);for(const id of walk(B)){const q=all.get(id);assert.equal(q.level,level);assert.equal(q.skillId,skill.id);}}
  }scopes++;
 }
 assert.equal(scopes,279);assert.equal(singles.stations,279);assert.equal(singles.error,279);

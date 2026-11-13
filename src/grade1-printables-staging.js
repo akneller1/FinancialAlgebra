@@ -75,6 +75,16 @@
   var colors=palette.slice(0,qs.length),items=qs.map(function(q){return item(cfg.unitId,q);});
   return {kind:'color',grade1Color:true,levelNote:items.length<10?'This selection uses '+items.length+' questions and colors. Regions with the same problem number use the same color.':'',scene:scene,sceneName:sc.name,items:items,colorOf:colors,groupNum:sc.groups.map(function(g,i){return i%items.length+1;}),code:colors.map(function(c,i){return {color:c,hex:PR.SCENE_COLORS[c],num:i+1,answer:items[i].key};})};
  }
+ function mazeOptions(cfg){return '<label class="field"><span class="lbl">Maze size</span><select id="prMazeSize">'+[['auto','Automatic · up to 8 problems'],['small','Small · 3 problems'],['medium','Medium · 8 problems'],['large','Large · 15 problems']].map(function(o){return '<option value="'+o[0]+'"'+((cfg.grade1MazeSize||'auto')===o[0]?' selected':'')+'>'+o[1]+'</option>';}).join('')+'</select></label>';}
+ function maze(cfg,v){
+  var needed={small:3,medium:8,large:15}[cfg.grade1MazeSize]||3,distinct=new Set(selection(cfg).map(function(q){return key(q.answer);}));
+  if(distinct.size<needed)return {error:'This maze size needs '+needed+' different answers; the selected '+N.courseLevelName(cfg.unitId,cfg.level)+' questions provide '+distinct.size+'. Choose Automatic or a smaller maze, add compatible skills, or use Problem & Answer Matching.'};
+  var B;for(var retry=0;retry<3;retry++){
+   B=PR.buildMaze(Object.assign({},cfg,{seed:String(cfg.seed)+(retry?'|retry'+retry:'')}),v);
+   if(!B.error){B.grade1Maze=true;B.items.forEach(function(it){it.numberedRoom=true;});return B;}
+  }
+  return {error:B.error.replace(/Choose more skills[\s\S]*$/,'').trim()+' Questions stay at '+N.courseLevelName(cfg.unitId,cfg.level)+'. Choose Automatic or a smaller maze, add compatible skills, or use Problem & Answer Matching.'};
+ }
  function whoQuestions(cfg){
   var seen=new Set();return bank.select({courseId:'grade1',unitId:cfg.unitId.slice(7),level:cfg.level,formats:['multiple-choice']}).filter(function(q){
    if(!cfg.skills[q.skillId]||Number(q.id.slice(-3))>24)return false;
@@ -139,6 +149,7 @@
   if(cfg.kind==='stations')return stationWork(cfg,v||0);
   if(cfg.kind==='error')return errors(cfg,v||0);
   if(cfg.kind==='color')return coloring(cfg,v||0);
+  if(cfg.kind==='maze')return maze(cfg,v||0);
   if(cfg.kind==='who')return who(cfg,v||0);
   if(cfg.kind==='tarsia')return tarsia(cfg,v||0);
   var native={maze:PR.buildMaze,tarsia:PR.buildTarsia,who:PR.buildWho}[cfg.kind];
@@ -158,6 +169,10 @@
   return chunk(items,per,function(list,start){return page(title+(teacher?' · Teacher key':''),'<p>'+esc(N.skillSets[cfg.unitId].unitName)+' · '+esc(N.courseLevelName(cfg.unitId,cfg.level))+'</p>'+list.map(function(it,i){return '<section><h2>Problem '+(start+i+1)+'</h2>'+question(it)+(teacher?solution(it)+(extra?extra(it,start+i):''):'<div style="min-height:'+(per===1?170:85)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer: ____________________</p>'+(extra?extra(it,start+i):''))+'</section>';}).join(''));});
  }
  function colorPages(cfg,B,v,nV,teacher,cover){return [cover].concat(workPages(cfg,B.items,'Color by Number · Problems',teacher,function(it,i){return '<p>Color: '+(teacher?esc(B.colorOf[i]):'____________________')+'</p>';}));}
+ function mazePages(cfg,B,v,nV,teacher,cover){
+  var out=[cover];if(teacher)out.push(page('Maze · Route','<p>'+esc(N.skillSets[cfg.unitId].unitName)+' · '+esc(N.courseLevelName(cfg.unitId,cfg.level))+'</p><p>Start at the top left. Follow these numbered problems to the finish:</p><p style="font-size:22px;line-height:1.8">'+B.path.map(function(rc){var r=B.rooms.find(function(r){return r.r===rc[0]&&r.c===rc[1];});return r.finish?'FINISH':'Problem '+r.item.num;}).join(' → ')+'</p><p>The highlighted route is shown on the maze key. The following pages include solutions for every room, including dead ends.</p>'));
+  return out.concat(workPages(cfg,B.items,'Maze · Numbered problems',teacher));
+ }
  function whoPages(cfg,B,v,nV,teacher){
   var S=B.S,letter=function(n){return 'ABCD'[n];},heading=S.name+' · '+N.courseLevelName(cfg.unitId,cfg.level),out=[];
   function clears(t){return t.p!==undefined?S.suspects[t.p].n+' and '+S.places[t.l].n:S.methods[t.m].n;}
@@ -192,5 +207,5 @@
   return out.concat(chunk(B.items,per,function(items,i){return page('Problem & Answer Matching'+(teacher?' · Teacher key':''),'<p>'+esc(title)+'</p>'+(!teacher&&compactChoices?choices:'')+items.map(function(it,j){return '<section><h2>Problem '+(i+j+1)+'</h2>'+question(it)+(teacher?'<p><b>Answer letter: '+it.letter+'</b></p>'+solution(it):'<div style="min-height:'+(per===1?140:70)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer letter: __________</p>')+'</section>';}).join(''));}));
 
  }
- G.MK_GRADE1_PRINTABLES={pages:pages,partner:partner,matching:matching,colorPages:colorPages,tarsiaPages:tarsiaPages,whoPages:whoPages,tarsiaOptions:tarsiaOptions,key:key};
+ G.MK_GRADE1_PRINTABLES={pages:pages,partner:partner,matching:matching,colorPages:colorPages,tarsiaPages:tarsiaPages,whoPages:whoPages,mazePages:mazePages,mazeOptions:mazeOptions,tarsiaOptions:tarsiaOptions,key:key};
 })(window);

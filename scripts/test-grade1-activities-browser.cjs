@@ -44,6 +44,18 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
   }
   return {rendered,pages,images,blocked,mysteryStories};
  });
+ // Exercise the maze size control and capture a full illustrated source problem.
+ await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-within-100&kind=maze');await page.reload();
+ await page.locator('#prMazeSize').waitFor();
+ const mazeSkills=await page.locator('.prSkill').evaluateAll(xs=>xs.map(x=>x.value));
+ for(const id of mazeSkills)if(!id.endsWith('-05'))await page.locator('.prSkill[value="'+id+'"]').uncheck();
+ await page.locator('#prMazeSize').selectOption('small');await page.locator('#prPreview .pm-room').nth(3).waitFor();
+ if(await page.locator('#prPreview .pm-room').count()!==4)throw Error('Small maze size control failed');
+ fs.mkdirSync('grade1-integration-results',{recursive:true});
+ await page.locator('#prPreview .mm-page').first().screenshot({path:'grade1-integration-results/maze-student.png'});
+ await page.locator('#prPreview .mm-page').filter({has:page.locator('img')}).first().screenshot({path:'grade1-integration-results/maze-problem.png'});
+ await page.locator('[data-doc=key]').click();await page.locator('#prPreview .pm-path').waitFor();
+ await page.locator('#prPreview .mm-page').first().screenshot({path:'grade1-integration-results/maze-key.png'});
  // Capture an illustrated Grade 1 mystery card and its source-faithful key.
  await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-within-100&kind=who');await page.reload();
  await page.locator('#prPreview .g1-printable').first().waitFor();
