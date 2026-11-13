@@ -28,12 +28,13 @@ for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html'
  assert.ok(text.includes('elementary-preload-runtime.js'),page+' pending runtime');
  assert.ok(text.includes('grade5-main-catalog.js'),page+' integrated Grade 5');
 }
+assert.ok(read('worksheet-generator/vocabulary-builder.js').includes('u=>bankText(u[0])||/^grade[1-4]-/.test(u[0])'));
 assert.match(read('app.js'),/if \(c.preloaded\) return algebraUnitView\(c, u\)/);
 assert.match(read('index.html'),/elementary-preload-catalog/);
 assert.match(read('elementary/worksheet-generator/elementary-resource.html'),/location.replace\('\.\.\/\.\.\/worksheet-generator\//);
 for(let grade=1;grade<=4;grade++)assert.match(read('grade'+grade+'.html'),new RegExp('#grade'+grade));
 // Run the actual native registration against an empty set of future banks.
-const native=require(path.join(base,'worksheet-generator/menu/tests/load.cjs'))(['games/bank.js','menu/render.js']);
+const native=require(path.join(base,'worksheet-generator/menu/tests/load.cjs'))(['games/bank.js','menu/render.js','menu/printables.js']);
 native.LIBRARY=G.LIBRARY;native.MK_COURSE_CATALOG=G.MK_COURSE_CATALOG;native.MK_ELEMENTARY_PRELOAD=G.MK_ELEMENTARY_PRELOAD;
 native.MK_QUESTION_BANKS={available(){return false}};native.MK_COURSE_BANKS_READY=Promise.resolve();
 vm.runInContext(read('worksheet-generator/elementary-preload-runtime.js'),native);
@@ -46,6 +47,8 @@ vm.runInContext(read('worksheet-generator/elementary-preload-runtime.js'),native
   assert.equal(set.skills.length,G.MK_COURSE_CATALOG.getSkills(c.id,u.id).length);
   const cfg=native.MKMENU.defaultConfig(id,'worksheet');assert.equal(cfg.unitId,id);
   assert.equal(native.MKMENU.generateProblem(id,set.skills[0].id,4,{level:'cp1'},'pending').failed,true);
+  assert.equal(native.MKMENU.printables.capable(id,set.skills[0].id,'maze'),true);
+  assert.match(native.MKMENU.printables.build({unitId:id,kind:'maze'}).error,/Question bank coming soon/);
  }
  console.log('PASS integrated Classroom preview: 37 units; actual native generators, production course/unit renderer, games, guides and scoped pending banks.');
 })().catch(e=>{console.error(e);process.exitCode=1});

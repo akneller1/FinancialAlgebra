@@ -55,10 +55,18 @@ for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html'
  if(!match)throw Error('Missing shared course catalog in '+page);
  text=text.replace(match[0],match[0]+'\n<script src="../elementary-preload-catalog.js?v=integrated-model-20261113"></script>');
  const native=text.match(/<script src="algebra2-bank-native\.js[^>]*><\/script>/);
- if(native)text=text.replace(native[0],native[0]+'\n<script src="elementary-preload-runtime.js?v=integrated-model-20261113-2"></script>');
+ if(native)text=text.replace(native[0],native[0]+'\n<script src="elementary-preload-runtime.js?v=integrated-model-20261113-3"></script>');
  text=text.replace('</head>','<meta name="robots" content="noindex,nofollow"></head>');
  fs.writeFileSync(file,text);
 }
+// Keep a requested empty vocabulary unit selected instead of substituting Algebra 1.
+const vocabularyFile=path.join(out,'worksheet-generator/vocabulary-builder.js');
+let vocabulary=fs.readFileSync(vocabularyFile,'utf8');
+vocabulary=vocabulary.replace('u=>bankText(u[0])','u=>bankText(u[0])||/^grade[1-4]-/.test(u[0])');
+fs.writeFileSync(vocabularyFile,vocabulary);
+const vocabularyPage=path.join(out,'worksheet-generator/vocabulary.html');
+fs.writeFileSync(vocabularyPage,fs.readFileSync(vocabularyPage,'utf8').replace(/vocabulary-builder\.js[^"]*/g,'vocabulary-builder.js?v=elementary-preload-3'));
+
 // Package only shared elementary players and outlines; no standalone course renderer is used for browsing.
 const elementary=path.join(out,'elementary');fs.mkdirSync(elementary,{recursive:true});
 const copy=rel=>{const to=path.join(elementary,rel);fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(path.join(source,rel),to)};

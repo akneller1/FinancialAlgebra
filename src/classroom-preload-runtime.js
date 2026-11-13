@@ -26,6 +26,11 @@
  ['skillFormatOk','multiUnitSupported','multiCapable','mcCapable','mcasCapable'].forEach(function(name){
   var original=N[name];if(original)N[name]=function(id){return pending[id]?true:original.apply(this,arguments);};
  });
+ if(N.printables){
+  var capable=N.printables.capable,build=N.printables.build;
+  N.printables.capable=function(id){return pending[id]?true:capable.apply(this,arguments);};
+  N.printables.build=function(cfg){return pending[cfg.unitId]?{error:'Question bank coming soon. Configure the activity now; questions will be available when this unit is ready.'}:build.apply(this,arguments);};
+ }
  var ready=G.MK_COURSE_BANKS_READY||Promise.resolve();
  G.MK_COURSE_BANKS_READY=ready.then(function(value){register();return value;});
  G.MK_ALGEBRA2_NATIVE_READY=G.MK_COURSE_BANKS_READY;
