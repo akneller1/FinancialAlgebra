@@ -1,0 +1,58 @@
+name: Grade 2 preview validation
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'question-banks/math2/**'
+      - 'question-banks/assets/math2/**'
+      - 'tools/grade2-authoring/**'
+      - 'course-outlines/grade2.json'
+      - 'manifest.json'
+      - '.github/workflows/grade2-preview-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-grade2:
+    name: Validate Grade 2 source and answers
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require complete preview package
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('.')
+          m=json.loads((root/'manifest.json').read_text())
+          entries=[b for b in m['banks'] if b.get('courseId')=='math2']
+          assert len(entries)==12, f'Expected 12 Grade 2 banks, found {len(entries)}'
+          assert len({b['unitId'] for b in entries})==12, 'Duplicate unit IDs'
+          for b in entries:
+              assert b.get('approved') is False and b.get('preview') is True, f"Grade 2 release flag unsafe: {b['unitId']}"
+              p=pathlib.PurePosixPath(b['path'])
+              assert len(p.parts)>=3 and p.parts[:2]==('question-banks','math2') and '..' not in p.parts
+              assert (root/p).is_file(), f'Missing bank: {p}'
+          for path in (
+              'tools/grade2-authoring/verify.py',
+              'tools/grade2-authoring/checks2.py',
+              'tools/grade2-authoring/audit.py',
+              'tools/grade2-authoring/staging/assemble-grade2.mjs',
+              'course-outlines/grade2.json',
+          ):
+              assert (root/path).is_file(), f'Missing source: {path}'
+          print('All 12 Grade 2 preview banks and required sources are present')
+          PY
+      - name: Verify practice answer checks
+        working-directory: tools/grade2-authoring
+        run: python3 verify.py
+      - name: Verify independent Understanding Check answers
+        working-directory: tools/grade2-authoring
+        env:
+          VERIFY_CHECKS: '1'
+        run: python3 verify.py
+      - name: Audit Grade 2 content
+        working-directory: tools/grade2-authoring
+        run: python3 audit.py
