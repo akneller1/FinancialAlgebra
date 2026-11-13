@@ -10,9 +10,9 @@
    "mathematicalErrors": 0,
    "diagramDefects": 0,
    "withinSkillDuplicates": 0,
-   "diagrams": 2222,
-   "exactCrossSkillDuplicateRate": 0.062,
-   "semanticAudit": "passed (tools/grade2-authoring/audit2.py, 0 flagged)"
+   "diagrams": 3557,
+   "exactCrossSkillDuplicateRate": 0.0593,
+   "semanticAudit": "screened (tools/grade2-authoring/audit2.py: 322 rule-based candidates, not confirmed defects)"
   },
   "editorialApproval": {
    "status": "pending",
@@ -20,17 +20,16 @@
    "note": "No teacher or curriculum reviewer has signed off on wording, difficulty or grade-level fit."
   },
   "deduplication": {
-   "exactCrossSkillDuplicates": 496,
-   "rate": 0.062,
-   "replaced": 607,
-   "leftAsClosedFactSets": 352,
-   "keptAsIntentionalRepetition": 0
+   "exactCrossSkillDuplicates": 475,
+   "rate": 0.0593,
+   "redundantCopies": 388,
+   "pictureEquivalentGroups": 272
   },
   "levelEscalation": {
-   "status": "passed",
+   "status": "passed-with-exceptions",
    "method": "tools/grade2-authoring/level_audit.py reads every published question and compares Remedial, Standard and Advanced on number size, regrouping and steps",
    "skillsChecked": 89,
-   "skillsNotEscalating": 0,
+   "skillsNotEscalating": 2,
    "policy": "Remedial stays in one place value with small numbers, Standard introduces two-digit regrouping or three-digit numbers, Advanced uses the largest numbers in the grade, carrying or borrowing across places and the most steps",
    "report": "docs/math2/LEVELS.md"
   }
