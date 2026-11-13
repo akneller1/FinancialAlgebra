@@ -1,0 +1,29 @@
+--- a/scripts/assemble-classroom-preview.mjs
++++ b/scripts/assemble-classroom-preview.mjs
+@@ -6,6 +6,8 @@
+ import {execFileSync} from 'node:child_process';
+ import {fileURLToPath} from 'node:url';
+ import {assembleGrade4,grade4Ready} from '../tools/grade4-authoring/staging/assemble-grade4.mjs';
++import {assembleGrade3,grade3Ready} from '../tools/grade3-authoring/staging/assemble-grade3.mjs';
++import {assembleGrade2,grade2Ready} from '../tools/grade2-authoring/staging/assemble-grade2.mjs';
+ const source=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+ const classroom=path.resolve(process.env.CLASSROOM_SOURCE_DIR||path.join(source,'../classroom'));
+ const out=path.join(classroom,'_site');
+@@ -29,6 +31,8 @@
+ })}));
+ const skillData=Object.fromEntries(outlines.map((c,i)=>['grade'+(i+1),Object.fromEntries(c.units.map(u=>[u.id,u.skills]))]));
+ // Grade 4 has approved banks: its unit pages list the real resources (tools/grade4-authoring/staging/assemble-grade4.mjs).
++if(grade2Ready(source)){const g2=assembleGrade2({source,out}),i=courses.findIndex(c=>c.id==='grade2');skillData.grade2=g2.skills;delete g2.skills;courses[i]=g2;}
++if(grade3Ready(source)){const g3=assembleGrade3({source,out}),i=courses.findIndex(c=>c.id==='grade3');skillData.grade3=g3.skills;delete g3.skills;courses[i]=g3;}
+ if(grade4Ready(source)){const g4=assembleGrade4({source,out}),i=courses.findIndex(c=>c.id==='grade4');skillData.grade4=g4.skills;delete g4.skills;courses[i]=g4;}
+ const approvedGrades=courses.filter(c=>c.approved).map(c=>c.id.slice(5)),pendingGrades=courses.filter(c=>!c.approved).map(c=>c.id.slice(5));
+ const catalog=`/* Development artifact: production Classroom renderer, preloaded elementary courses. */\n(function(G){var courses=${JSON.stringify(courses)},skills=${JSON.stringify(skillData)};G.MK_ELEMENTARY_PRELOAD=courses;G.LIBRARY.courses=G.LIBRARY.courses.filter(c=>!courses.some(p=>p.id===c.id)).concat(courses);var C=G.MK_COURSE_CATALOG,old=C.getSkills,records=C.getSkillRecords;C.getSkills=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].slice():old(c,u)};C.getSkillRecords=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].map((name,i)=>({id:u+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})):records(c,u)};G.LIBRARY.courses.forEach(c=>c.units.forEach(u=>u.artifacts.forEach(a=>{for(var k of ['path','thumb'])if(typeof a[k]==='string')a[k]=a[k].replace(/^\\/grade5\\//,'grade5/')})));})(window);\n`;
+@@ -88,7 +92,7 @@
+ const manifest=JSON.parse(fs.readFileSync(path.join(source,'manifest.json'),'utf8'));
+ const nativePath=path.join(out,'question-banks/manifest.json'),native=JSON.parse(fs.readFileSync(nativePath,'utf8'));
+ const scoped=[];
+-for(const entry of manifest.banks.filter(b=>/^math[1-4]$/.test(b.courseId)&&b.approved===true)){
++for(const entry of manifest.banks.filter(b=>/^math[1-4]$/.test(b.courseId)&&(b.approved===true||(/^math[23]$/.test(b.courseId)&&b.preview===true)))){
+  const bank=JSON.parse(fs.readFileSync(path.join(source,entry.path),'utf8')),gradeId=entry.courseId.replace('math','grade');
+  const target='question-banks/'+gradeId+'/'+entry.unitId+'.json';
+  const adapted=structuredClone(bank);adapted.courseId=gradeId;

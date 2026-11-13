@@ -1,0 +1,450 @@
+{
+"m2c-tm-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 4,
+"m": 0
+},
+"family": "tm_read",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 4,
+"m": 0
+}
+}
+},
+"m2c-tm-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "min_point",
+"m": 10
+},
+"family": "tm_point",
+"diagram": {
+"kind": "digital",
+"data": {
+"h": 11,
+"m": 10
+}
+}
+},
+"m2c-tm-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "min_point",
+"m": 25
+},
+"family": "tm_point",
+"diagram": {
+"kind": "digital",
+"data": {
+"h": 9,
+"m": 25
+}
+}
+},
+"m2c-tm-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "clock_reason",
+"h": 6,
+"m": 35
+},
+"family": "tm_error",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 6,
+"m": 35
+}
+}
+},
+"m2c-tm-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 3,
+"m": 40
+},
+"family": "tm_read",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 3,
+"m": 40
+}
+}
+},
+"m2c-tm-s01-honors-002": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 5,
+"m": 5
+},
+"family": "tm_mc",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 5,
+"m": 5
+}
+}
+},
+"m2c-tm-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "ampm_of",
+"h24": 17
+},
+"family": "ap_event"
+},
+"m2c-tm-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "earlier",
+"times": [
+"1:25 PM",
+"2:35 AM"
+]
+},
+"family": "ap_first"
+},
+"m2c-tm-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "ampm_of",
+"h24": 17
+},
+"family": "ap_event"
+},
+"m2c-tm-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "earlier",
+"times": [
+"5:15 PM",
+"2:35 AM"
+]
+},
+"family": "ap_first"
+},
+"m2c-tm-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "ampm_of",
+"h24": 8
+},
+"family": "ap_event"
+},
+"m2c-tm-s02-honors-002": {
+"q": {
+"k": "fn",
+"fn": "earlier",
+"times": [
+"5:45 AM",
+"1:25 PM"
+]
+},
+"family": "ap_first"
+},
+"m2c-tm-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "coins_calc",
+"plus": [
+"dime",
+"penny",
+"penny"
+],
+"unit": "¢"
+},
+"family": "cc_count",
+"diagram": {
+"kind": "money",
+"data": {
+"coins": [
+"dime",
+"penny",
+"penny"
+],
+"show_value": true
+}
+}
+},
+"m2c-tm-s03-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "coins_calc",
+"plus": [
+"dime",
+"penny",
+"penny"
+],
+"unit": "¢"
+},
+"family": "cc_text"
+},
+"m2c-tm-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "coins_calc",
+"plus": [
+"quarter",
+"dime",
+"nickel",
+"penny"
+],
+"unit": "¢"
+},
+"family": "cc_count",
+"diagram": {
+"kind": "money",
+"data": {
+"coins": [
+"quarter",
+"dime",
+"nickel",
+"penny"
+],
+"show_value": false
+}
+}
+},
+"m2c-tm-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "coins_calc",
+"plus": [
+"dime",
+"nickel",
+"penny",
+"penny"
+],
+"unit": "¢"
+},
+"family": "cc_text"
+},
+"m2c-tm-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "coins_calc",
+"plus": [
+"quarter",
+"quarter",
+"dime",
+"nickel"
+],
+"unit": "¢"
+},
+"family": "cc_count",
+"diagram": {
+"kind": "money",
+"data": {
+"coins": [
+"quarter",
+"quarter",
+"dime",
+"nickel"
+],
+"show_value": false
+}
+}
+},
+"m2c-tm-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "coins_calc",
+"plus": [
+"dime",
+"dime",
+"nickel",
+"nickel",
+"nickel",
+"penny"
+],
+"unit": "¢"
+},
+"family": "cc_text"
+},
+"m2c-tm-s04-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "dollars_cents",
+"d": 6,
+"c": 41
+},
+"family": "bc_both",
+"diagram": {
+"kind": "money",
+"data": {
+"bills": [
+5,
+1
+],
+"coins": [
+"dime",
+"dime",
+"dime",
+"dime",
+"penny"
+],
+"show_value": true
+}
+}
+},
+"m2c-tm-s04-cp2-002": {
+"q": {
+"k": "expr",
+"e": "5+5+1",
+"unit": "$"
+},
+"family": "bc_text"
+},
+"m2c-tm-s04-cp1-001": {
+"q": {
+"k": "expr",
+"e": "20+10+1+1",
+"unit": "$"
+},
+"family": "bc_bills",
+"diagram": {
+"kind": "money",
+"data": {
+"bills": [
+20,
+10,
+1,
+1
+]
+}
+}
+},
+"m2c-tm-s04-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "dollars_cents",
+"d": 55,
+"c": 91
+},
+"family": "bc_both",
+"diagram": {
+"kind": "money",
+"data": {
+"bills": [
+20,
+20,
+10,
+5
+],
+"coins": [
+"quarter",
+"quarter",
+"quarter",
+"dime",
+"nickel",
+"penny"
+],
+"show_value": false
+}
+}
+},
+"m2c-tm-s04-honors-001": {
+"q": {
+"k": "expr",
+"e": "20+10+5+5",
+"unit": "$"
+},
+"family": "bc_bills",
+"diagram": {
+"kind": "money",
+"data": {
+"bills": [
+20,
+10,
+5,
+5
+]
+}
+}
+},
+"m2c-tm-s04-honors-002": {
+"q": {
+"k": "fn",
+"fn": "dollars_cents",
+"d": 61,
+"c": 70
+},
+"family": "bc_both",
+"diagram": {
+"kind": "money",
+"data": {
+"bills": [
+20,
+20,
+10,
+10,
+1
+],
+"coins": [
+"quarter",
+"quarter",
+"dime",
+"nickel",
+"nickel"
+],
+"show_value": false
+}
+}
+},
+"m2c-tm-s05-cp2-001": {
+"q": {
+"k": "expr",
+"e": "39+54",
+"unit": "¢"
+},
+"family": "mw_total"
+},
+"m2c-tm-s05-cp2-002": {
+"q": {
+"k": "expr",
+"e": "56-12",
+"unit": "¢"
+},
+"family": "mw_left"
+},
+"m2c-tm-s05-cp1-001": {
+"q": {
+"k": "expr",
+"e": "60+34",
+"unit": "¢"
+},
+"family": "mw_total"
+},
+"m2c-tm-s05-cp1-002": {
+"q": {
+"k": "expr",
+"e": "76-8",
+"unit": "¢"
+},
+"family": "mw_left"
+},
+"m2c-tm-s05-honors-001": {
+"q": {
+"k": "expr",
+"e": "37-25",
+"unit": "¢"
+},
+"family": "mw_left"
+},
+"m2c-tm-s05-honors-002": {
+"q": {
+"k": "expr",
+"e": "16-3",
+"unit": "$"
+},
+"family": "mw_more"
+}
+}
