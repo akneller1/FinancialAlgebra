@@ -47,7 +47,7 @@ const server=http.createServer((req,res)=>{
   await dialog.getByText('Cancel',{exact:true}).click();
   const student=await browser.newPage(),studentErrors=[];
   student.on('pageerror',e=>studentErrors.push(e.message));
-  await student.goto(new URL(parsed.pathname+parsed.search,base),{waitUntil:'load'});
+  await student.goto(new URL(parsed.pathname+parsed.search,base).href,{waitUntil:'load'});
   await student.waitForSelector('.el-setup, .el-stage',{timeout:25000});
   assert.deepEqual(studentErrors,[],'Student game must boot without JS errors');
   await student.close();
