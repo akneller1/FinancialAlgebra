@@ -98,6 +98,25 @@ def _partition_templates(parts, r):
             ("Each part is one ___ of the whole.", True), ("Two equal parts are called ___ .", True)]
 
 
+def _partition_count_templates(parts, r):
+    return [("How many equal parts are shown?", True),
+            ("Count the equal parts. How many are there?", True),
+            ("The whole is split into how many equal pieces?", True),
+            ("How many parts make this whole?", True)]
+
+
+def _tens_from_ones_templates(ones, r):
+    return [(f"How many groups of ten can be made from {ones} ones?", False),
+            (f"{ones} ones make how many tens?", False),
+            (f"Trade {ones} ones for tens. How many tens?", False)]
+
+
+def _shorter_templates(r):
+    return [("Which object is shorter?", True),
+            ("Look at the two objects. Which one is shorter?", True),
+            ("Which of the two is the shorter one?", True)]
+
+
 def _ruler_templates(r):
     return [("How long is the object?", True), ("Use the ruler. How many units long is it?", True),
             ("Measure the object with the ruler. How long is it?", True), ("The object is ___ units long.", True)]
@@ -125,8 +144,12 @@ def _ten_ones_templates(r):
 
 
 def _shape_attr_templates(sides, r):
-    return [(f"How many sides does this shape have?", True), ("Count the sides. How many are there?", True),
-            (f"This shape has ___ sides.", True), ("How many straight sides does it have?", True)]
+    if sides == 0:
+        return [("Which shape shown has no corners?", True), ("Name the shape without straight sides.", True),
+                ("Find the circle among these shapes.", True)]
+    return [(f"Which shape shown has {sides} sides?", True),
+            (f"Name a shape in the picture with {sides} sides.", True),
+            (f"Find the shape with {sides} sides.", True)]
 
 
 def _shape_kind_templates(kind, what, r):
@@ -149,8 +172,10 @@ def templates(check, r):
             return _missing_templates(int(check["total"]), int(check["part"]), r)
         if fn == "tens_ones":
             return _place_templates(int(check["tens"]), int(check["ones"]), r)
-        if fn in ("ones_of", "equiv_ones", "tens_from_ones"):
-            return _ones_templates(int(check.get("n", check.get("ones", 0))), int(check.get("tens", 0)), r)
+        if fn in ("ones_of", "equiv_ones"):
+            return _ones_templates(int(check.get("n", 0)), int(check.get("tens", 0)), r)
+        if fn == "tens_from_ones":
+            return _tens_from_ones_templates(int(check["ones"]), r)
         if fn == "ten_ones":
             return _ten_ones_templates(r)
         if fn == "shape_attr_name":
@@ -166,15 +191,19 @@ def templates(check, r):
             return _shape_templates(r)
         if fn == "solid_name":
             return _solid_templates(r)
-        if fn in ("partition_word", "partition_count"):
+        if fn == "partition_word":
             return _partition_templates(int(check.get("parts", 2)), r)
+        if fn == "partition_count":
+            return _partition_count_templates(int(check.get("parts", 2)), r)
         if fn == "ruler":
             return _ruler_templates(r)
         if fn.startswith("tally"):
             return _tally_templates(r)
         if fn.startswith("graph"):
             return _graph_templates(r)
-        if fn in ("longer_ab", "shorter", "longer", "which_group", "more_count"):
+        if fn == "shorter":
+            return _shorter_templates(r)
+        if fn in ("longer_ab", "longer", "which_group", "more_count"):
             return _compare_templates(r)
     except (KeyError, TypeError, ValueError):
         return []

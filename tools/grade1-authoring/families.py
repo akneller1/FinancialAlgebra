@@ -605,9 +605,9 @@ def story_items(kind="join"):
             ans, chk = total, FN("add", a=a, b=b)
             prompt = f"{nm} has {a} red {thing} and {b} blue {thing}. How many {thing} does {nm} have in all?"
         elif kind == "start-unknown":
-            start = a + b
-            ans, chk = start, FN("add", a=b, b=a)
-            prompt = f"{nm} had some {thing}. {nm2} gave {nm} {b} more. Now {nm} has {start} {thing}. How many {thing} did {nm} start with?"
+            total = a + b
+            ans, chk = a, FN("missing_part", total=total, part=b)
+            prompt = f"{nm} had some {thing}. {nm2} gave {nm} {b} more. Now {nm} has {total} {thing}. How many {thing} did {nm} start with?"
         else:  # change-unknown
             start = a + b
             ans, chk = b, FN("sub", a=start, b=a)
@@ -830,8 +830,10 @@ def shape_identify_items():
             prompt = f"Which shape has {SIDES[kind]} sides?" if kind != "circle" else "Which shape has no corners?"
             ans = kind
             chk = FN("shape_attr_name", sides=SIDES[kind] if kind != "circle" else 0)
-            dg = Diagram("shapes", {"shapes": [{"type": s, "color": pick(r, COLORS)} for s in r.sample(others, 3)]},
-                         "Three shapes of different kinds.")
+            choices = [kind] + r.sample(others, 2)
+            r.shuffle(choices)
+            dg = Diagram("shapes", {"shapes": [{"type": s, "color": pick(r, COLORS)} for s in choices]},
+                         f"Three different shapes, including one {kind}.")
         return Item(prompt, ans, [f"A {kind} is the shape that matches.", f"The answer is {kind}."],
                     [(s, "confused it with another shape") for s in others[:3]],
                     check=chk, qtype="visual", tags=("geometry",), diagram=dg)
@@ -1118,26 +1120,25 @@ def compose_items():
         style = r.randrange(3)
         if style == 0:
             ans = "hexagon"
-            prompt = "Two triangles are put together along one side. What shape can they make?"
+            prompt = "Six equal equilateral triangles meet at one center point. What shape do they make?"
             chk = FN("shape_attr_name", sides=6)
         elif style == 1:
             ans = "square"
-            prompt = "Two triangles are put together along their longest sides. What shape do they make?"
+            prompt = "Two matching right triangles cut from a square are joined along their longest sides. What shape do they make?"
             chk = FN("shape_attr_name", sides=4)
         else:
             ans = "cylinder"
             prompt = "Two circles and a rectangle can be folded to make which solid?"
             chk = FN("solid_name", kind="cylinder")
         if ans == "cylinder":
-            pieces = [{"type": "circle", "color": "blue"}, {"type": "rectangle", "color": "orange"}, {"type": "circle", "color": "blue"}]
-            alt = "Two circles and one rectangle, the pieces that fold into a cylinder."
+            diagram = Diagram("shapes", {"shapes": [{"type": "circle", "color": "blue"}, {"type": "rectangle", "color": "orange"}, {"type": "circle", "color": "blue"}], "caption": "Join the pieces"},
+                              "Two circles and one rectangle are pieces of a cylinder net.")
         else:
-            pieces = [{"type": "triangle", "color": "blue"}, {"type": "triangle", "color": "orange"}]
-            alt = "Two identical triangles side by side."
-        return Item(prompt, ans, [f"Picture the pieces joined edge to edge.", f"The pieces can make a {ans}."],
+            diagram = Diagram("composition", {"shape": ans}, f"A {ans} partitioned into congruent triangles.")
+        return Item(prompt, ans, ["Join the pieces as described.", f"The pieces make a {ans}."],
                     [(s, "chose a shape the pieces cannot make") for s in (["square", "circle", "triangle"] if ans == "hexagon" else ["triangle", "rectangle", "circle"])][:3],
                     check=chk, qtype="conceptual", tags=("geometry", "reasoning"),
-                    diagram=Diagram("shapes", {"shapes": pieces, "caption": "Join the pieces"}, alt))
+                    diagram=diagram)
     return f
 
 

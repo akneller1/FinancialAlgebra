@@ -479,10 +479,36 @@ def _sortbox(data):
     return im
 
 
+
+def _composition(data):
+    """A true joined composite with visible internal triangular boundaries."""
+    import math
+    shape = data.get("shape")
+    im, d = _canvas()
+    _center_text(d, W / 2, 60, "How do the triangle pieces fit?", 28)
+    cx, cy = W / 2, 255
+    if shape == "hexagon":
+        radius = 160
+        corners = [(cx + radius * math.cos(math.pi * k / 3 - math.pi / 6),
+                    cy + radius * math.sin(math.pi * k / 3 - math.pi / 6)) for k in range(6)]
+        for k in range(6):
+            pts = [(cx, cy), corners[k], corners[(k + 1) % 6]]
+            d.polygon(pts, fill=[SOFT_BLUE, SOFT_ORANGE, SOFT_BLUE, SOFT_ORANGE, SOFT_BLUE, SOFT_ORANGE][k],
+                      outline=INK, width=3)
+    elif shape == "square":
+        side = 285
+        x1, y1, x2, y2 = cx - side / 2, cy - side / 2, cx + side / 2, cy + side / 2
+        d.polygon([(x1, y1), (x2, y1), (x2, y2)], fill=SOFT_BLUE, outline=INK, width=4)
+        d.polygon([(x1, y1), (x2, y2), (x1, y2)], fill=SOFT_ORANGE, outline=INK, width=4)
+    else:
+        raise ValueError("Unsupported composition shape: " + str(shape))
+    _center_text(d, W / 2, H - 35, "The outline is formed by joining triangles.", 22)
+    return im
+
 _RENDERERS = {
     "tenframe": _tenframe, "counters": _counters, "numberline": _numberline, "baseten": _baseten,
     "tally": _tally, "pictograph": _pictograph, "bargraph": _bargraph, "shapes": _shapes,
-    "partition": _partition, "clock": _clock, "ruler": _ruler, "comparegroups": _comparegroups,
+    "partition": _partition, "composition": _composition, "clock": _clock, "ruler": _ruler, "comparegroups": _comparegroups,
     "placevalue": _placevalue, "numbercards": _numbercards, "array": _array, "sortbox": _sortbox,
 }
 
