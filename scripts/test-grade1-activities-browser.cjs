@@ -31,7 +31,18 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
     }
    }rendered++;
   }
-  return {rendered,pages,images,blocked};
+  let mysteryStories=0;
+  const unit=courses[0].units[0];
+  for(const story of Object.keys(PR.CASES)){
+   const cfg={...PR.defaultConfig('grade1-'+unit.id,'who'),level:'cp1',seed:'each-mystery-story',story},B=PR.build(cfg,0);if(B.error)throw Error(B.error);
+   for(const teacher of [false,true]){
+    const els=PR.pageEls(cfg,B,0,1,teacher);host.replaceChildren(...els);
+    for(const img of host.querySelectorAll('img'))await img.decode();
+    for(const body of host.querySelectorAll('.mm-body'))if(body.scrollHeight>body.clientHeight+2||body.scrollWidth>body.clientWidth+2)throw Error('Mystery story overflow '+story+'/'+teacher+' '+body.scrollHeight+'/'+body.clientHeight);
+    if(!teacher&&host.querySelector('.mm-ans'))throw Error('Mystery solution leak');
+   }mysteryStories++;
+  }
+  return {rendered,pages,images,blocked,mysteryStories};
  });
  // Capture an illustrated Grade 1 mystery card and its source-faithful key.
  await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-within-100&kind=who');await page.reload();
