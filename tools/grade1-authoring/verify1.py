@@ -93,7 +93,7 @@ def h_related(c, t):
 
 def h_teen_parts(c, t):
     n = int(c["n"])
-    return norm(t) == norm(f"1 ten and {n - 10} ones")
+    return norm(t) == norm(f"1 ten and {n - 10} {'one' if n == 11 else 'ones'}")
 
 
 def h_symbol(c, t):
@@ -207,6 +207,15 @@ def h_shape_name(c, t):
     return norm(t) in SHAPES
 
 
+def h_solid_faces(c, t):
+    # Preserve the source family's surface-count convention; independent of its answer text.
+    return num_eq(t, {"cube": 6, "cylinder": 3, "cone": 2}[str(c["kind"])])
+
+
+def h_solid_edges(c, t):
+    return num_eq(t, {"cube": 12}[str(c["kind"])])
+
+
 def h_solid_name(c, t):
     return norm(t) == norm(str(c.get("kind", "")))
 
@@ -235,7 +244,7 @@ def h_partition_word(c, t):
 
 def h_equal_parts(c, t):
     if c.get("kind") == "which":
-        return norm(t) == "the rectangle"
+        return norm(t) in ("rectangle", "the rectangle")
     return norm(t) == "equal parts make halves"
 
 
