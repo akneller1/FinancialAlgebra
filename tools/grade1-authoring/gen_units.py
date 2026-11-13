@@ -74,10 +74,10 @@ MAP = {
         13: ["write_numeral_items()", "count_collection_items(99)", "number_riddle_items()"],
     },
     "u05_within100": {
-        1: ["add_two_digit_items(compose=False)", "add_items(hi=20)"],
+        1: ["add_two_digit_items(compose=False, second_digits=1)"],
         2: ["add_two_digit_items(compose=False)", "add_multiple_of_ten_items()"],
         3: ["add_two_digit_items(compose=False)", "equation_items()"],
-        4: ["add_two_digit_items(compose=True)", "make_ten_items()"],
+        4: ["add_two_digit_items(compose=True, second_digits=1)"],
         5: ["add_two_digit_items(compose=True)", "base_ten_items('value')"],
         6: ["add_two_digit_items(compose=False)", "add_multiple_of_ten_items()"],
         7: ["add_two_digit_items(compose=True)"],

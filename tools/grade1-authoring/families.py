@@ -535,17 +535,28 @@ def add_multiple_of_ten_items():
     return f
 
 
-def add_two_digit_items(compose=False, hi=100):
+def add_two_digit_items(compose=False, hi=100, second_digits=2):
+    """Grade 1 place-value sums; exact addend width and carry are enforced.
+
+    second_digits=1: a two-digit and a one-digit addend (1.NBT.C.4).
+    second_digits=2: two two-digit addends.
+    Remedial / Standard / Advanced gradually allow more tens and larger totals.
+    """
+    assert second_digits in (1, 2)
     def f(r, L):
-        a_t = r.randint(1, 4)
-        a_o = r.randint(1, 7)
-        b_t = r.randint(1, 3)
-        b_o = r.randint(1, 9 if compose else max(1, 9 - a_o))
-        a, b = a_t * 10 + a_o, b_t * 10 + b_o
+        max_tens = (3, 6, 8)[L]
+        a_t = r.randint(1, max_tens)
+        a_o = r.randint(1, 8)
+        b_t = 0 if second_digits == 1 else r.randint(1, max(1, min(5, 9 - a_t)))
         if compose:
-            need(a_o + b_o >= 10)
+            b_o = r.randint(10 - a_o, 9)
+        else:
+            b_o = r.randint(1, 9 - a_o)
+        a, b = a_t * 10 + a_o, b_t * 10 + b_o
         need(a + b <= hi)
-        prompt = r.choice([f"{a} + {b} = ?", f"Add {a} and {b}.", f"{name(r)} has {a} stickers and gets {b} more. How many stickers in all?"])
+        need( (a_o + b_o >= 10) == bool(compose))
+        prompt = r.choice([f"{a} + {b} = ?", f"Add {a} and {b} using tens and ones.",
+                            f"{name(r)} has {a} stickers and gets {b} more. How many stickers in all?"])
         dg = Diagram("baseten", {"tens": (a + b) // 10, "ones": (a + b) % 10, "caption": f"{a} + {b}"},
                      f"Base-ten blocks for {a} and {b} combined, showing {(a + b) // 10} tens and {(a + b) % 10} ones.")
         steps = [f"Add the ones: {a_o} + {b_o} = {a_o + b_o}."]
