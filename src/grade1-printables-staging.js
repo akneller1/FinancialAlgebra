@@ -72,7 +72,7 @@
   var scene=cfg.picture&&PR.SCENES[cfg.picture]?cfg.picture:shuffled(ids,cfg.seed+'|scene|'+v)[0],sc=PR.SCENES[scene],palette=Array.from(new Set(sc.groups.map(function(g){return g.color;})));
   qs=balanced(qs,Math.min(10,palette.length),function(q){return q.skillId;});
   if(qs.length<2)return {error:'This coloring activity needs at least two different short answers at the selected level. Choose more skills, or use Problem & Answer Matching.'};
-  var colors=shuffled(palette,cfg.seed+'|palette|'+v).slice(0,qs.length),items=qs.map(function(q){return item(cfg.unitId,q);});
+  var colors=palette.slice(0,qs.length),items=qs.map(function(q){return item(cfg.unitId,q);});
   return {kind:'color',grade1Color:true,levelNote:items.length<10?'This selection uses '+items.length+' questions and colors. Regions with the same problem number use the same color.':'',scene:scene,sceneName:sc.name,items:items,colorOf:colors,groupNum:sc.groups.map(function(g,i){return i%items.length+1;}),code:colors.map(function(c,i){return {color:c,hex:PR.SCENE_COLORS[c],num:i+1,answer:items[i].key};})};
  }
  var capable=PR.capable,build=PR.build;
