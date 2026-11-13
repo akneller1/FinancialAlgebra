@@ -5,7 +5,6 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {assembleGrade4,grade4Ready} from '../tools/grade4-authoring/staging/assemble-grade4.mjs';
 const source=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const classroom=path.resolve(process.env.CLASSROOM_SOURCE_DIR||path.join(source,'../classroom'));
 const out=path.join(classroom,'_site');
@@ -28,8 +27,19 @@ const courses=outlines.map((c,i)=>({id:'grade'+(i+1),name:c.name,blurb:c.descrip
  return {id:u.id,name:u.name,artifacts};
 })}));
 const skillData=Object.fromEntries(outlines.map((c,i)=>['grade'+(i+1),Object.fromEntries(c.units.map(u=>[u.id,u.skills]))]));
-// Grade 4 has approved banks: its unit pages list the real resources (tools/grade4-authoring/staging/assemble-grade4.mjs).
-if(grade4Ready(source)){const g4=assembleGrade4({source,out}),i=courses.findIndex(c=>c.id==='grade4');skillData.grade4=g4.skills;delete g4.skills;courses[i]=g4;}
+// The Grade 4 authoring package is optional while its native bank is not yet
+// integrated. Import the assembler only when approved Grade 4 banks actually
+// exist; fail explicitly if approval is set but its staging module is absent.
+const manifest=JSON.parse(fs.readFileSync(path.join(source,'manifest.json'),'utf8'));
+const approvedGrade4Banks=manifest.banks.filter(b=>b.courseId==='math4'&&b.approved===true);
+if(approvedGrade4Banks.length){
+ const assembler=path.join(source,'tools/grade4-authoring/staging/assemble-grade4.mjs');
+ if(!fs.existsSync(assembler))throw Error('Approved Grade 4 banks require '+assembler+'; refusing to publish incomplete Grade 4 resources');
+ const {assembleGrade4,grade4Ready}=await import(new URL('../tools/grade4-authoring/staging/assemble-grade4.mjs',import.meta.url));
+ if(!grade4Ready(source))throw Error('Grade 4 banks approved but staging assembler reports course not ready');
+ const g4=assembleGrade4({source,out}),i=courses.findIndex(c=>c.id==='grade4');
+ skillData.grade4=g4.skills;delete g4.skills;courses[i]=g4;
+}
 const approvedGrades=courses.filter(c=>c.approved).map(c=>c.id.slice(5)),pendingGrades=courses.filter(c=>!c.approved).map(c=>c.id.slice(5));
 const catalog=`/* Development artifact: production Classroom renderer, preloaded elementary courses. */\n(function(G){var courses=${JSON.stringify(courses)},skills=${JSON.stringify(skillData)};G.MK_ELEMENTARY_PRELOAD=courses;G.LIBRARY.courses=G.LIBRARY.courses.filter(c=>!courses.some(p=>p.id===c.id)).concat(courses);var C=G.MK_COURSE_CATALOG,old=C.getSkills,records=C.getSkillRecords;C.getSkills=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].slice():old(c,u)};C.getSkillRecords=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].map((name,i)=>({id:u+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})):records(c,u)};G.LIBRARY.courses.forEach(c=>c.units.forEach(u=>u.artifacts.forEach(a=>{for(var k of ['path','thumb'])if(typeof a[k]==='string')a[k]=a[k].replace(/^\\/grade5\\//,'grade5/')})));})(window);\n`;
 fs.writeFileSync(path.join(out,'elementary-preload-catalog.js'),catalog);
@@ -85,7 +95,6 @@ for(let grade=1;grade<=4;grade++){
  fs.writeFileSync(path.join(elementary,'grade'+grade+'.html'),redirect('../'));
 }
 // Adapt future approved banks once, just as integrated Grade 5 does today.
-const manifest=JSON.parse(fs.readFileSync(path.join(source,'manifest.json'),'utf8'));
 const nativePath=path.join(out,'question-banks/manifest.json'),native=JSON.parse(fs.readFileSync(nativePath,'utf8'));
 const scoped=[];
 for(const entry of manifest.banks.filter(b=>/^math[1-4]$/.test(b.courseId)&&b.approved===true)){
