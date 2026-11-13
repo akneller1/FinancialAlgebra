@@ -43,6 +43,22 @@ jobs:
               'course-outlines/grade2.json',
           ):
               assert (root/path).is_file(), f'Missing source: {path}'
+          check_count=0
+          for entry in entries:
+              unit=entry['unitId']
+              practice=json.loads((root/entry['path']).read_text())
+              checks_path=root/'question-banks'/'math2'/'checks'/f'{unit}.json'
+              assert checks_path.is_file(), f'Missing separate Understanding Check bank: {unit}'
+              checks=json.loads(checks_path.read_text())
+              assert checks.get('courseId')=='math2' and checks.get('unitId')==unit, f'Wrong check bank course/unit: {unit}'
+              ids={q['id'] for q in practice['questions']}
+              check_ids=[q['id'] for q in checks['questions']]
+              assert len(check_ids)==len(set(check_ids)), f'Duplicate Understanding Check ID: {unit}'
+              assert not ids.intersection(check_ids), f'Understanding Check reuses practice question IDs: {unit}'
+              check_count+=len(check_ids)
+              assert (root/'question-banks'/'math2'/'checks'/'meta'/f'{unit}.meta.json').is_file(), f'Missing check metadata: {unit}'
+          assert check_count==318, f'Expected 318 separate Understanding Check questions; found {check_count}'
+          print('Validated 318 dedicated Understanding Check questions and metadata across 12 units')
           print('All 12 Grade 2 preview banks and required sources are present')
           PY
       - name: Require shared elementary player dependencies
