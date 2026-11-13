@@ -13,6 +13,6 @@ SKILLS = {
     7: {"name": 'Solve one- and two-step graph questions within 20', "fams": [graph_data_items('bargraph', limit=20), graph_data_items('pictograph', limit=20), tally_data_items('total', limit=20)]},
     8: {"name": 'Interpret the parts and totals in tape diagrams', "fams": [tape_compare_items(100), two_step_items(100)]},
     9: {"name": 'Find the difference between two quantities within 100', "fams": [sub2_items(regroup=False), tape_compare_items(limit=100)]},
-    10: {"name": 'Find an unknown larger or smaller quantity from a comparison', "fams": [tape_compare_items(), fluency_items()]},
+    10: {"name": 'Find an unknown larger or smaller quantity from a comparison', "fams": [tape_compare_items(), tape_compare_items(limit=100)]},
     11: {"name": 'Match equations to comparison diagrams', "fams": [tape_compare_items(), story_match_items()]},
 }

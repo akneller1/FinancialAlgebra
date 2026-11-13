@@ -213,12 +213,13 @@ def three_addend_items(hi=20):
     return f
 
 
-def fact_family_items(hi=10):
+def fact_family_items(hi=10, limit=None):
     """Related addition/subtraction facts (1.OA.B.3, 1.OA.C.6)."""
     def f(r, L):
         top = hi if L else max(6, hi // 2)
         a, b = r.randint(1, top - 1), r.randint(1, top - 1)
         s = a + b
+        need(s <= (int(limit) if limit else top))
         style = r.randrange(3)
         if style == 0:
             prompt = f"If {a} + {b} = {s}, what is {s} − {b}?"

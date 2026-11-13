@@ -3,17 +3,13 @@
 8010 questions screened against their skill names. Rule-based candidates, not
 confirmed defects; a candidate can be a wording mismatch rather than a wrong task.
 
-* **generic filler under a specific skill**: 142
-* **number outside the skill's stated range**: 84
-* **question topic does not match the skill**: 376
-* **regrouping structure does not match the skill**: 97
+* **generic filler under a specific skill**: 136
+* **number outside the skill's stated range**: 61
+* **question topic does not match the skill**: 402
+* **regrouping structure does not match the skill**: 82
 
-## generic filler under a specific skill (142)
+## generic filler under a specific skill (136)
 
-* m2-h100-s04-cp2-025 | Use related addition to find an unknown addend | Hiro solved this problem.
-Which fact belongs to the same fact family a
-* m2-h100-s04-cp2-026 | Use related addition to find an unknown addend | Rosa solved this problem.
-Which fact belongs to the same fact family a
 * m2-h100-s04-cp2-027 | Use related addition to find an unknown addend | Ava solved this problem.
 Which fact belongs to the same fact family as
 * m2-h100-s04-cp2-029 | Use related addition to find an unknown addend | Select ALL the problems that are matched with the correct answer.
@@ -31,63 +27,63 @@ Which fact belongs to the same fact family
 * m2-h100-s05-cp2-027 | Trade one ten for ten ones to subtract | Mateo solved this problem.
 1 ten rods and 7 ones cubes. The picture sh
 * m2-h100-s07-cp2-028 | Compare and explain different subtraction methods | True or false? 1 ten rods and 9 ones cubes. The picture shows 1 ten an
-* m2-h100-s08-cp2-025 | Use tape diagrams for addition and subtraction stories | Mei solved this problem.
-A tape diagram comparing 12 and 5. Leo has 12
-* m2-h100-s08-cp2-027 | Use tape diagrams for addition and subtraction stories | Jonah solved this problem.
-A tape diagram comparing 27 and 12. Mateo h
-* m2-h100-s08-cp2-030 | Use tape diagrams for addition and subtraction stories | Answer each part. Show your work.
-(a) Hiro had 14 buttons. Hiro got 4 
+* m2-h100-s07-cp2-029 | Compare and explain different subtraction methods | Select ALL the problems that are matched with the correct answer.
+* m2-h100-s07-cp1-027 | Compare and explain different subtraction methods | Yusuf solved this problem.
+How would you work out 46 + 28 efficiently?
+* m2-h100-s07-cp1-028 | Compare and explain different subtraction methods | True or false? Which method works best for 49 + 49? The answer is make
+* m2-h100-s07-honors-028 | Compare and explain different subtraction methods | True or false? Which is the best way to add 109 and 26? The answer is 
+* m2-h100-s07-honors-029 | Compare and explain different subtraction methods | Select ALL the problems that are matched with the correct answer.
 
-## number outside the skill's stated range (84)
+## number outside the skill's stated range (61)
 
 * m2-h100-s06-cp1-028 | Use place-value drawings to model subtraction within 100 | 105 | 100
 * m2-h100-s06-honors-025 | Use place-value drawings to model subtraction within 100 | 197 | 100
 * m2-h100-s06-honors-026 | Use place-value drawings to model subtraction within 100 | 132 | 100
 * m2-h100-s09-honors-027 | Solve one-step addition and subtraction problems within 100 | 109 | 100
-* m2-h100-s10-honors-026 | Solve two-step word problems within 100 | 112 | 100
-* m2-ad-s02-cp1-004 | Subtract within 20 using related addition facts | 22 | 20
-* m2-ad-s02-cp1-006 | Subtract within 20 using related addition facts | 24 | 20
-* m2-ad-s02-cp1-008 | Subtract within 20 using related addition facts | 30 | 20
-* m2-ad-s02-cp1-012 | Subtract within 20 using related addition facts | 26 | 20
-* m2-ad-s02-cp1-016 | Subtract within 20 using related addition facts | 21 | 20
-* m2-ad-s02-cp1-018 | Subtract within 20 using related addition facts | 29 | 20
-* m2-ad-s02-cp1-020 | Subtract within 20 using related addition facts | 30 | 20
-* m2-ad-s02-cp1-028 | Subtract within 20 using related addition facts | 25 | 20
-* m2-ad-s02-honors-002 | Subtract within 20 using related addition facts | 30 | 20
-* m2-ad-s02-honors-004 | Subtract within 20 using related addition facts | 29 | 20
+* m2-ad-s03-cp2-027 | Build fluency with mental addition within 50 | 64 | 50
+* m2-ad-s03-cp2-030 | Build fluency with mental addition within 50 | 55 | 50
+* m2-ad-s03-cp1-002 | Build fluency with mental addition within 50 | 57 | 50
+* m2-ad-s03-cp1-004 | Build fluency with mental addition within 50 | 65 | 50
+* m2-ad-s03-cp1-006 | Build fluency with mental addition within 50 | 59 | 50
+* m2-ad-s03-cp1-008 | Build fluency with mental addition within 50 | 89 | 50
+* m2-ad-s03-cp1-010 | Build fluency with mental addition within 50 | 67 | 50
+* m2-ad-s03-cp1-012 | Build fluency with mental addition within 50 | 56 | 50
+* m2-ad-s03-cp1-014 | Build fluency with mental addition within 50 | 69 | 50
+* m2-ad-s03-cp1-016 | Build fluency with mental addition within 50 | 77 | 50
+* m2-ad-s03-cp1-022 | Build fluency with mental addition within 50 | 87 | 50
 
-## question topic does not match the skill (376)
+## question topic does not match the skill (402)
 
 * m2-h100-s01-cp2-007 | Represent tens and ones using base-ten blocks | fam01_baseten_items_build | How many is 1 ten and 4 ones?
 * m2-h100-s04-cp2-002 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 12 + 21 = 33?
-* m2-h100-s04-cp2-006 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 40 + 16 = 56?
-* m2-h100-s04-cp2-010 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 38 + 31 = 69?
-* m2-h100-s04-cp2-012 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 39 + 40 = 79?
-* m2-h100-s04-cp2-014 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 13 + 24 = 37?
-* m2-h100-s04-cp2-018 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 12 + 35 = 47?
-* m2-h100-s04-cp2-024 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 41 + 22 = 63?
-* m2-h100-s04-cp1-002 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 24 + 89 = 113?
+* m2-h100-s04-cp2-006 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 13 + 24 = 37?
+* m2-h100-s04-cp2-010 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 12 + 35 = 47?
+* m2-h100-s04-cp2-020 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 21 + 13 = 34?
+* m2-h100-s04-cp2-024 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 19 + 19 = 38?
+* m2-h100-s04-cp1-004 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 11 + 71 = 82?
 * m2-h100-s04-cp1-005 | Use related addition to find an unknown addend | fam01_fam01_missing_addend_items | Sam has 2 blocks and needs 3 blocks in all. How many more blocks are n
-* m2-h100-s04-cp1-006 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 11 + 71 = 82?
-* m2-h100-s04-cp1-018 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 10 + 2 = 12?
+* m2-h100-s04-cp1-010 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 10 + 2 = 12?
+* m2-h100-s04-cp1-014 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 5 + 8 = 13?
+* m2-h100-s04-cp1-020 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 28 + 69 = 97?
+* m2-h100-s04-cp1-022 | Use related addition to find an unknown addend | fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 51 + 21 = 72?
 * m2-h100-s04-honors-002 | Use related addition to find an unknown addend | fam02_fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 9 + 38 = 47?
-* m2-h100-s04-honors-004 | Use related addition to find an unknown addend | fam02_fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 80 + 93 = 173?
-* m2-h100-s04-honors-008 | Use related addition to find an unknown addend | fam02_fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 4 + 46 = 50?
+* m2-h100-s04-honors-004 | Use related addition to find an unknown addend | fam02_fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 4 + 46 = 50?
+* m2-h100-s04-honors-008 | Use related addition to find an unknown addend | fam02_fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 17 + 45 = 62?
 
-## regrouping structure does not match the skill (97)
+## regrouping structure does not match the skill (82)
 
-* m2-h100-s02-cp2-008 | Add two-digit numbers without regrouping | 10 sub 6 | needs regrouping
-* m2-h100-s02-cp2-010 | Add two-digit numbers without regrouping | 6 add 4 | needs regrouping
-* m2-h100-s02-cp2-025 | Add two-digit numbers without regrouping | 9 add 1 | needs regrouping
-* m2-h100-s02-cp1-004 | Add two-digit numbers without regrouping | 20 sub 9 | needs regrouping
-* m2-h100-s02-cp1-006 | Add two-digit numbers without regrouping | 20 sub 6 | needs regrouping
-* m2-h100-s02-cp1-020 | Add two-digit numbers without regrouping | 9 add 8 | needs regrouping
-* m2-h100-s02-cp1-024 | Add two-digit numbers without regrouping | 8 add 12 | needs regrouping
-* m2-h100-s02-cp1-027 | Add two-digit numbers without regrouping | 13 sub 7 | needs regrouping
-* m2-h100-s02-honors-021 | Add two-digit numbers without regrouping | 11 sub 9 | needs regrouping
-* m2-h100-s03-cp2-010 | Subtract two-digit numbers without decomposing a ten | 10 sub 1 | needs regrouping
-* m2-h100-s03-cp2-016 | Subtract two-digit numbers without decomposing a ten | 10 sub 4 | needs regrouping
-* m2-h100-s03-cp1-012 | Subtract two-digit numbers without decomposing a ten | 15 sub 9 | needs regrouping
-* m2-h100-s03-cp1-020 | Subtract two-digit numbers without decomposing a ten | 9 add 2 | needs regrouping
-* m2-h100-s03-honors-006 | Subtract two-digit numbers without decomposing a ten | 16 sub 7 | needs regrouping
-* m2-h100-s03-honors-012 | Subtract two-digit numbers without decomposing a ten | 18 sub 9 | needs regrouping
+* m2-t1k-s07-cp2-002 | Decompose a hundred into tens when subtracting | 55 sub 21 | no regrouping
+* m2-t1k-s07-cp2-004 | Decompose a hundred into tens when subtracting | 33 sub 12 | no regrouping
+* m2-t1k-s07-cp2-006 | Decompose a hundred into tens when subtracting | 55 sub 23 | no regrouping
+* m2-t1k-s07-cp2-008 | Decompose a hundred into tens when subtracting | 75 sub 23 | no regrouping
+* m2-t1k-s07-cp2-010 | Decompose a hundred into tens when subtracting | 49 sub 24 | no regrouping
+* m2-t1k-s07-cp2-012 | Decompose a hundred into tens when subtracting | 69 sub 25 | no regrouping
+* m2-t1k-s07-cp2-014 | Decompose a hundred into tens when subtracting | 69 sub 17 | no regrouping
+* m2-t1k-s07-cp2-016 | Decompose a hundred into tens when subtracting | 67 sub 21 | no regrouping
+* m2-t1k-s07-cp2-018 | Decompose a hundred into tens when subtracting | 55 sub 22 | no regrouping
+* m2-t1k-s07-cp2-020 | Decompose a hundred into tens when subtracting | 33 sub 22 | no regrouping
+* m2-t1k-s07-cp2-022 | Decompose a hundred into tens when subtracting | 53 sub 12 | no regrouping
+* m2-t1k-s07-cp2-024 | Decompose a hundred into tens when subtracting | 77 sub 11 | no regrouping
+* m2-t1k-s07-cp2-027 | Decompose a hundred into tens when subtracting | 46 sub 14 | no regrouping
+* m2-t1k-s07-cp1-002 | Decompose a hundred into tens when subtracting | 46 sub 13 | no regrouping
+* m2-t1k-s07-cp1-004 | Decompose a hundred into tens when subtracting | 89 sub 21 | no regrouping

@@ -26,7 +26,7 @@ MAP = {
         7: ["graph_data_items('bargraph')", "graph_data_items('pictograph')", "tally_data_items('total')"],
         8: ["tape_compare_items(100)", "two_step_items(100)"],
         9: ["sub2_items(regroup=False)", "tape_compare_items()"],
-        10: ["tape_compare_items()", "fluency_items()"],
+        10: ["tape_compare_items()", "tape_compare_items(limit=100)"],
         11: ["tape_compare_items()", "story_match_items()"],
     },
     "u02_within100": {
@@ -39,7 +39,7 @@ MAP = {
         7: ["strategy_items()", "sub2_items(regroup=True)", "baseten_items('regroup')"],
         8: ["tape_compare_items(100)", "two_step_items(100)"],
         9: ["add2_items()", "sub2_items()"],
-        10: ["two_step_items(100)", "tape_compare_items(100)"],
+        10: ["two_step_items(100)", "two_step_items(limit=100)"],
         11: ["add2_items()", "two_step_items(100)"],
     },
     "u03_length": {
@@ -67,7 +67,7 @@ MAP = {
     "u05_numbers1000": {
         1: ["baseten_items('regroup')", "place3_items('value')"],
         2: ["place3_items('value')", "baseten_items('build')"],
-        3: ["place3_items('expanded')", "place3_items('hundred_more')"],
+        3: ["place3_items('expanded')", "place3_items('value')"],
         4: ["place3_items('value')", "baseten_items('regroup')"],
         5: ["skip_count_items()", "skip_count_items(100)"],
         6: ["numberline_items('locate')", "numberline_items('jump')"],
@@ -93,14 +93,14 @@ MAP = {
     },
     "u07_within1000": {
         1: ["add3_items(rename=False)", "place3_items('hundred_more')"],
-        2: ["sub3_items(decompose=False)", "sub2_items(regroup=False)"],
+        2: ["sub3_items(decompose=False, styles=(0, 1))", "sub3_items(decompose=False, styles=(2,))"],
         3: ["add3_items()", "numberline_items('jump')"],
-        4: ["add3_items(rename=True)", "add3_items()"],
-        5: ["add3_items(rename=True)", "add3_items()"],
+        4: ["add3_items(rename=True, styles=(0, 1))", "add3_items(rename=True, styles=(2,))"],
+        5: ["add3_items(rename=True, styles=(0, 1))", "add3_items(rename=True, styles=(2,))"],
         6: ["strategy_items()", "add3_items(rename=True)", "place3_items('value')"],
-        7: ["sub3_items(decompose=True)", "sub3_items()"],
-        8: ["sub3_items(decompose=True)", "sub3_items()"],
-        9: ["sub3_items(decompose=True)", "sub3_items()"],
+        7: ["sub3_items(decompose=True, styles=(0, 1))", "sub3_items(decompose=True, styles=(2,))"],
+        8: ["sub3_items(decompose=True, styles=(0, 1))", "sub3_items(decompose=True, styles=(2,))"],
+        9: ["sub3_items(decompose=True, styles=(0, 1))", "sub3_items(decompose=True, styles=(2,))"],
         10: ["sub3_items(decompose=True)", "strategy_items()"],
     },
     "u08_equal_groups": {
@@ -120,7 +120,7 @@ MAP = {
         5: ["add3_items()", "sub3_items()"],
         6: ["add2_items()", "sub2_items()"],
         7: ["tape_compare_items(100)", "two_step_items(100)"],
-        8: ["two_step_items(100)", "tape_compare_items(100)"],
+        8: ["two_step_items(100)", "two_step_items(limit=100)"],
         9: ["tape_compare_items()", "story_match_items()"],
     },
 }
@@ -129,6 +129,27 @@ MAP = {
 LIMITABLE = {"fluency_items", "numberline_items", "graph_data_items", "tally_data_items",
              "strategy_items", "baseten_items",
              "skip_count_items", "two_step_items", "tape_compare_items", "measure_compare_items"}
+
+
+# skills reviewed by hand and re-familied to match their stated task
+REVIEWED = {
+    ("u02_within100", 2): ["two_digit_items('add', styles=(0, 1))", "two_digit_items('add', styles=(2,))"],
+    ("u02_within100", 3): ["two_digit_items('sub', styles=(0, 1))", "two_digit_items('sub', styles=(2,))"],
+    ("u01_add_sub_data", 10): ["tape_compare_items()", "tape_compare_items(limit=100)"],
+    ("u05_numbers1000", 3): ["place3_items('expanded')", "place3_items('value')"],
+    ("u06_geometry_time_money", 11): ["time_items(marks=(15, 30, 45))", "time_word_items()"],
+    ("u08_equal_groups", 1): ["even_odd_items()", "skip_count_items(2, limit=20)"],
+    ("u02_within100", 10): ["two_step_items(100)", "two_step_items(limit=100)"],
+    ("u07_within1000", 1): ["add3_items(rename=False, styles=(0, 1))", "add3_items(rename=False, styles=(2,))"],
+    ("u07_within1000", 2): ["sub3_items(decompose=False, styles=(0, 1))", "sub3_items(decompose=False, styles=(2,))"],
+    ("u07_within1000", 4): ["add3_items(rename=True, styles=(0, 1))", "two_digit_items('add', compose=True, styles=(2,))"],
+    ("u07_within1000", 5): ["add3_items(rename=True, styles=(0, 1))", "two_digit_items('add', compose=True, styles=(2,))"],
+    ("u07_within1000", 7): ["sub3_items(decompose=True, styles=(0, 1))", "two_digit_items('sub', compose=True, styles=(2,))"],
+    ("u07_within1000", 8): ["sub3_items(decompose=True, styles=(0, 1))", "two_digit_items('sub', compose=True, styles=(2,))"],
+    ("u07_within1000", 9): ["sub3_items(decompose=True, styles=(0, 1))", "sub3_items(decompose=True, styles=(2,))"],
+}
+for (_unit, _idx), _fams in REVIEWED.items():
+    MAP[_unit][_idx] = _fams
 
 # a second on-topic family for skills that only listed one
 SECOND_FAMILY = {
@@ -139,6 +160,7 @@ SECOND_FAMILY = {
     ("u03_length", 6): "measure_compare_items('customary', 100)",
     ("u06_geometry_time_money", 8): "time_word_items()",
     ("u06_geometry_time_money", 11): "time_word_items()",
+    ("u02_within100", 10): ["two_step_items(100)", "two_step_items(limit=100)"],
     ("u07_within1000", 1): [],
     ("u07_within1000", 2): [],
     ("u07_within1000", 4): [],
@@ -168,6 +190,7 @@ def build_module(name):
                 sep = "" if base.endswith("(") else ", "
                 return f"{base}{sep}limit={n})"
             fams = [_with(f) for f in fams]
+        fams = [f for f in fams]
         if len(fams) < 2:
             extra = SECOND_FAMILY.get((name, i))
             if extra:

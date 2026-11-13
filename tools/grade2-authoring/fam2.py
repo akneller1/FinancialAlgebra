@@ -103,7 +103,7 @@ def sub2_items(regroup=None):
 
 
 # ------------------------------------------------------------------ three-digit work
-def add3_items(rename=None):
+def add3_items(rename=None, styles=None):
     """L0 no composing, L1 compose a ten, L2 compose a ten and a hundred."""
     def f(r, L):
         ren = (L >= 1) if rename is None else rename
@@ -124,7 +124,7 @@ def add3_items(rename=None):
         need(b >= 100 and a + b <= 1000)
         need((a_o + b_o >= 10) if ren else (a_o + b_o < 10))
         need((a_t + b_t >= 10) if (ren and L == 2) else (a_t + b_t < 10))
-        style = r.randrange(3)
+        style = r.choice(styles) if styles else r.randrange(3)
         prompt = [f"{a} + {b} = ?", f"Add {a} and {b}.",
                   f"{name(r)} reads {a} pages, then {b} more. How many pages in all?"][style]
         steps = [f"Add the ones: {a_o} + {b_o} = {a_o + b_o}."]
@@ -136,7 +136,7 @@ def add3_items(rename=None):
     return f
 
 
-def sub3_items(decompose=None):
+def sub3_items(decompose=None, styles=None):
     """L0 no decomposing, L1 decompose a ten, L2 decompose a hundred or a ten."""
     def f(r, L):
         dec = (L >= 1) if decompose is None else decompose
@@ -156,7 +156,7 @@ def sub3_items(decompose=None):
         a, b = a_h * 100 + a_t * 10 + a_o, b_h * 100 + b_t * 10 + b_o
         need(a - b > 0 and a <= 1000)
         need((a_o < b_o) if dec else (a_o >= b_o and a_t >= b_t))
-        style = r.randrange(3)
+        style = r.choice(styles) if styles else r.randrange(3)
         prompt = [f"{a} \u2212 {b} = ?", f"Subtract {b} from {a}.",
                   f"A library has {a} books. {b} are borrowed. How many are left?"][style]
         steps = ["Decompose a hundred or a ten only when a place has too few." if dec
@@ -563,10 +563,13 @@ def even_odd_items():
     def f(r, L):
         n = band(L, r.randint(2, 20), r.randint(10, 99), r.randint(100, 999))
         ans = "even" if n % 2 == 0 else "odd"
-        style = r.randrange(4)
+        style = r.randrange(7)
         prompt = [f"Is {n} even or odd?", f"Look at {n}. Is it even or odd?",
                   f"{n} counters are put into pairs. Is {n} even or odd?",
-                  f"Tell whether {n} is even or odd."][style]
+                  f"Tell whether {n} is even or odd.",
+                  f"Which word describes {n}: even or odd?",
+                  f"Sort {n} as even or odd.",
+                  f"{n} is even or odd?"][style]
         return Item(prompt, ans, [f"Look at the ones digit: {n % 10}.", f"{n} is {ans}."],
                     [("odd" if ans == "even" else "even", "read the ones digit incorrectly"),
                      ("neither", "did not decide whether the number is even or odd"),
@@ -620,11 +623,13 @@ def money_items(kind="count"):
     return f
 
 
-def time_items():
+def time_items(marks=None):
     """L0 hour and half hour, L1 five-minute marks, L2 five-minute marks in words/quarter past."""
     def f(r, L):
         h = r.randint(1, 12)
-        if L == 0:
+        if marks:
+            m = r.choice(list(marks))
+        elif L == 0:
             m = r.choice([0, 30])
         elif L == 1:
             m = r.choice([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55])
@@ -745,10 +750,15 @@ def thirds_items(kind="name"):
 # ------------------------------------------------------------------ problem solving
 def two_step_items(limit=None):
     def f(r, L):
+        top = int(limit) if limit else None
         if L == 0:
             a, b, c = r.randint(6, 15), r.randint(2, 6), r.randint(1, 4)
         elif L == 1:
             a, b, c = r.randint(20, 60), r.randint(5, 25), r.randint(3, 20)
+        elif top:
+            a = r.randint(20, max(21, top - 20))
+            b = r.randint(5, max(6, top - a - 1))
+            c = r.randint(1, max(1, a + b - 1))
         else:
             a, b, c = r.randint(60, 180), r.randint(10, 60), r.randint(5, 40)
         if limit:
@@ -832,37 +842,35 @@ def estimate_items():
 
 
 def strategy_items(limit=None):
+    """Make-a-ten is the recommended method, so the ones digits must force it."""
     def f(r, L):
-        if limit and int(limit) <= 20:
-            L = 0
+        lo = 1 if L == 0 else 21 if L == 1 else 101
+        hi = 5 if L == 0 else 60 if L == 1 else 480
+        a = r.randint(lo, hi) // 10 * 10 + r.randint(6, 9)
+        b = r.randint(1, 4) * 10 + r.randint(4, 9)
         if L == 0:
-            a, b = r.randint(6, 9), r.randint(2, 5)
-            methods = [("make ten", f"Break {b} apart to make 10 with {a}."),
-                       ("count on", f"Start at {a} and count on {b}."),
-                       ("use doubles", f"Double {a} and adjust.")]
-        elif L == 1:
-            a, b = r.randint(21, 60), r.randint(11, 19)
-            methods = [("make ten", f"Break {b} apart to make 10 with {a}."),
-                       ("break apart a ten", f"Split {b} into tens and ones, then add each part."),
-                       ("count on", f"Start at {a} and count on {b}.")]
-        else:
-            a, b = r.randint(45, 89), r.randint(23, 49)
-            methods = [("decompose a ten", f"Break {b} into tens and ones and trade a ten for ten ones."),
-                       ("make a hundred", f"Add to the next ten, then to the next hundred."),
-                       ("use a known fact", f"Start from a fact you know and adjust.")]
-        idx = r.randrange(len(methods))
-        ans = methods[idx][0]
-        wrong = [m[0] for i, m in enumerate(methods) if i != idx]
-        wrong.append("multiply the two numbers")
-        wrong = wrong[:3]
-        prompt = f"Which strategy would you use to find {a} + {b}?"
-        return Item(prompt, ans, [methods[idx][1]], [(w, "names a different strategy") for w in wrong],
-                    check=KEY(ans), qtype="explain", tags=("reasoning",), mode="mc",
-                    options=[(ans, True)] + [(w, False) for w in wrong])
+            need(a < 10)
+        if limit:
+            need(a + b <= int(limit))
+        methods = [("make ten", f"Break {b} apart so {a} makes the next ten."),
+                   ("count on by ones", f"Count on from {a} one at a time."),
+                   ("use doubles", f"Double one number and adjust."),
+                   ("guess and check", "Try numbers until one works.")]
+        r.shuffle(methods)
+        ans = "make ten"
+        prompt = r.choice([f"Which strategy would you use to find {a} + {b}?",
+                           f"Which is the best way to add {a} and {b}?",
+                           f"How would you work out {a} + {b} efficiently?",
+                           f"Which method works best for {a} + {b}?",
+                           f"What is the quickest strategy for {a} + {b}?",
+                           f"Choose a strategy for {a} + {b}."])
+        wrong = [(m, "a slower method") for m, _ in methods if m != ans]
+        return Item(prompt, ans, [f"The ones digits {a % 10} and {b % 10} make more than ten.",
+                                  f"Make a ten, then add the rest: {a} + {b} = {a + b}."],
+                    wrong, check=FN("strategy", a=a, b=b), qtype="reasoning",
+                    tags=("strategy",))
     return f
 
-
-# ------------------------------------------------------------------ reused Grade 1 strands, level-scaled
 def fluency_items(limit=None):
     """Fact fluency: L0 within 10, L1 within 20, L2 within 20 with missing parts and three addends."""
     def f(r, L):
@@ -911,6 +919,8 @@ def graph_data_items(kind="bargraph", limit=None):
             high = max(2, min(high, int(limit) // max(1, len(cats))))
         counts = r.sample(range(2, high + 1), len(cats))
         rows = list(zip(cats, counts))
+        if limit:
+            need(sum(counts) <= int(limit))
         which = r.randrange(3 if L == 0 else 4 if L == 1 else 5)
         if which == 0:
             i = r.randrange(len(rows))
@@ -1043,6 +1053,46 @@ def shape_items(kind="name"):
                     check=chk, qtype="visual", tags=("geometry",),
                     diagram=Diagram("polygon", {"shapes": [{"type": k, "color": "blue"}], "caption": "A shape"},
                                     f"A {k}."))
+    return f
+
+
+def two_digit_items(op="add", compose=False, styles=None, limit=None):
+    """Two-digit add/sub that keeps the structure the skill names."""
+    def f(r, L):
+        if op == "add":
+            a_t = r.randint(1, 7)
+            b_t = r.randint(1, 2)
+            if compose:
+                a_o = r.randint(2, 9)
+                b_o = r.randint(10 - a_o, 9)
+            else:
+                a_o = r.randint(1, 4)
+                b_o = r.randint(1, 9 - a_o)
+        else:
+            a_t = r.randint(3, 8)
+            b_t = r.randint(1, 2)
+            a_o = r.randint(3, 9)
+            b_o = r.randint(1, a_o - 1 if compose else a_o)
+        a, b = a_t * 10 + a_o, b_t * 10 + b_o
+        ans = a + b if op == "add" else a - b
+        need(ans > 0)
+        if limit:
+            need(max(a, b) <= int(limit))
+        kind = r.choice(list(styles)) if styles else r.randrange(3)
+        sign = "+" if op == "add" else "\u2212"
+        if kind == 0:
+            prompt = f"{a} {sign} {b} = ?"
+        elif kind == 1:
+            prompt = f"Add {a} and {b}." if op == "add" else f"Subtract {b} from {a}."
+        else:
+            nm, thing = name(r), obj(r)
+            prompt = (f"{nm} has {a} {thing} and gets {b} more. How many {thing} now?"
+                      if op == "add" else
+                      f"{nm} has {a} {thing} and gives {b} away. How many {thing} are left?")
+        return Item(prompt, num(ans), [f"{a} {sign} {b} = {ans}."],
+                    _w(ans, [ans + 10, max(1, ans - 10), a + b]),
+                    check=FN("add" if op == "add" else "sub", a=a, b=b),
+                    qtype="procedural", tags=("two-digit",))
     return f
 
 

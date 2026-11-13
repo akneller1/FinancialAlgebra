@@ -14,7 +14,7 @@ SKILLS = {
     8: {"name": 'Read analog clocks to five-minute intervals', "fams": [time_items(), time_word_items()]},
     9: {"name": 'Write time digitally and on analog clock faces', "fams": [time_items(), time_word_items()]},
     10: {"name": 'Use a.m. and p.m. in daily situations', "fams": [time_word_items(), time_items()]},
-    11: {"name": 'Relate half past and quarter past to clock partitions', "fams": [time_items(), time_word_items()]},
+    11: {"name": 'Relate half past and quarter past to clock partitions', "fams": [time_items(marks=(15, 30, 45)), time_word_items()]},
     12: {"name": 'Identify quarters, dimes, nickels, and pennies', "fams": [money_items('count'), money_items('word')]},
     13: {"name": 'Count combinations of coins and bills', "fams": [money_items('count'), money_items('word')]},
     14: {"name": 'Relate one dollar to 100 cents', "fams": [money_items('word'), money_items('count')]},

@@ -29,12 +29,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "What is double 4?",
-   "answer": "8",
+   "prompt": "Count by 2s. What number is missing?\n2, ___, 6, 8, 10",
+   "answer": "4",
    "solutionSteps": [
-    "Double 4 means 4 + 4.",
-    "4 + 4 = 8."
+    "The pattern adds 2 each time.",
+    "The missing number is 4."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-002.png",
+     "alt": "A number line from 2 to 10 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -43,7 +50,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-003",
@@ -89,30 +96,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "What is double 2?",
-   "answer": "4",
+   "prompt": "Count by 2s. What number is missing?\n2, 4, 6, 8, ___",
+   "answer": "10",
    "options": [
     {
-     "text": "3",
+     "text": "8",
      "correct": false
     },
     {
-     "text": "2",
+     "text": "11",
      "correct": false
     },
     {
-     "text": "5",
+     "text": "12",
      "correct": false
     },
     {
-     "text": "4",
+     "text": "10",
      "correct": true
     }
    ],
    "solutionSteps": [
-    "Double 2 means 2 + 2.",
-    "2 + 2 = 4."
+    "The pattern adds 2 each time.",
+    "The missing number is 10."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-004.png",
+     "alt": "A number line from 2 to 10 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -121,7 +135,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-005",
@@ -149,12 +163,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "4 + 4 = ?",
-   "answer": "8",
+   "prompt": "Count by 2s. What number is missing?\n8, ___, 12, 14, 16",
+   "answer": "10",
    "solutionSteps": [
-    "Double 4 means 4 + 4.",
-    "4 + 4 = 8."
+    "The pattern adds 2 each time.",
+    "The missing number is 10."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-006.png",
+     "alt": "A number line from 8 to 16 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -163,18 +184,18 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-007",
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "Look at 11. Is it even or odd?",
+   "prompt": "Sort 11 as even or odd.",
    "answer": "odd",
    "options": [
     {
-     "text": "even",
+     "text": "both",
      "correct": false
     },
     {
@@ -182,7 +203,7 @@
      "correct": false
     },
     {
-     "text": "both",
+     "text": "even",
      "correct": false
     },
     {
@@ -209,11 +230,11 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "5 + 5 = ?",
-   "answer": "10",
+   "prompt": "Count by 2s. What number is missing?\n4, ___, 8, 10, 12",
+   "answer": "6",
    "options": [
     {
-     "text": "11",
+     "text": "4",
      "correct": false
     },
     {
@@ -225,14 +246,21 @@
      "correct": false
     },
     {
-     "text": "10",
+     "text": "6",
      "correct": true
     }
    ],
    "solutionSteps": [
-    "Double 5 means 5 + 5.",
-    "5 + 5 = 10."
+    "The pattern adds 2 each time.",
+    "The missing number is 6."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-008.png",
+     "alt": "A number line from 4 to 12 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -241,14 +269,14 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-009",
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Tell whether 4 is even or odd.",
+   "prompt": "Which word describes 4: even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 4.",
@@ -269,12 +297,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "6 ribbons in a box and 6 more ribbons on the table. How many ribbons in all?",
-   "answer": "12",
+   "prompt": "Count by 2s. What number is missing?\n10, 12, 14, ___, 18",
+   "answer": "16",
    "solutionSteps": [
-    "Double 6 means 6 + 6.",
-    "6 + 6 = 12."
+    "The pattern adds 2 each time.",
+    "The missing number is 16."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-010.png",
+     "alt": "A number line from 10 to 18 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -283,7 +318,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-011",
@@ -329,30 +364,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "What is double 3?",
-   "answer": "6",
+   "prompt": "Count by 2s. What number is missing?\n8, 10, 12, 14, ___",
+   "answer": "16",
    "options": [
     {
-     "text": "4",
+     "text": "14",
      "correct": false
     },
     {
-     "text": "5",
+     "text": "17",
      "correct": false
     },
     {
-     "text": "7",
+     "text": "18",
      "correct": false
     },
     {
-     "text": "6",
+     "text": "16",
      "correct": true
     }
    ],
    "solutionSteps": [
-    "Double 3 means 3 + 3.",
-    "3 + 3 = 6."
+    "The pattern adds 2 each time.",
+    "The missing number is 16."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-012.png",
+     "alt": "A number line from 8 to 16 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -361,14 +403,14 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-013",
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Look at 2. Is it even or odd?",
+   "prompt": "Which word describes 2: even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 2.",
@@ -389,12 +431,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "3 + 3 = ?",
-   "answer": "6",
+   "prompt": "Count by 2s. What number is missing?\n10, 12, ___, 16, 18",
+   "answer": "14",
    "solutionSteps": [
-    "Double 3 means 3 + 3.",
-    "3 + 3 = 6."
+    "The pattern adds 2 each time.",
+    "The missing number is 14."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-014.png",
+     "alt": "A number line from 10 to 18 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -403,18 +452,18 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-015",
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "Is 7 even or odd?",
+   "prompt": "7 is even or odd?",
    "answer": "odd",
    "options": [
     {
-     "text": "even",
+     "text": "neither",
      "correct": false
     },
     {
@@ -422,7 +471,7 @@
      "correct": true
     },
     {
-     "text": "neither",
+     "text": "even",
      "correct": false
     },
     {
@@ -449,7 +498,7 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "What is double 5?",
+   "prompt": "Count by 2s. What number is missing?\n4, 6, 8, ___, 12",
    "answer": "10",
    "options": [
     {
@@ -461,7 +510,7 @@
      "correct": false
     },
     {
-     "text": "7",
+     "text": "12",
      "correct": false
     },
     {
@@ -470,9 +519,16 @@
     }
    ],
    "solutionSteps": [
-    "Double 5 means 5 + 5.",
-    "5 + 5 = 10."
+    "The pattern adds 2 each time.",
+    "The missing number is 10."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-016.png",
+     "alt": "A number line from 4 to 12 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -481,7 +537,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-017",
@@ -509,12 +565,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "What is double 6?",
+   "prompt": "Count by 2s. What number is missing?\n6, 8, 10, ___, 14",
    "answer": "12",
    "solutionSteps": [
-    "Double 6 means 6 + 6.",
-    "6 + 6 = 12."
+    "The pattern adds 2 each time.",
+    "The missing number is 12."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-018.png",
+     "alt": "A number line from 6 to 14 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -523,7 +586,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-019",
@@ -569,30 +632,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "2 + 2 = ?",
-   "answer": "4",
+   "prompt": "Count by 2s. What number is missing?\n8, 10, 12, ___, 16",
+   "answer": "14",
    "options": [
     {
-     "text": "4",
+     "text": "14",
      "correct": true
     },
     {
-     "text": "3",
+     "text": "15",
      "correct": false
     },
     {
-     "text": "5",
+     "text": "16",
      "correct": false
     },
     {
-     "text": "2",
+     "text": "12",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 2 means 2 + 2.",
-    "2 + 2 = 4."
+    "The pattern adds 2 each time.",
+    "The missing number is 14."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-020.png",
+     "alt": "A number line from 8 to 16 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -601,7 +671,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-021",
@@ -628,8 +698,36 @@
    "id": "m2-eg-s01-cp2-022",
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
+   "format": "short-answer",
+   "prompt": "Count by 2s. What number is missing?\n4, 6, ___, 10, 12",
+   "answer": "8",
+   "solutionSteps": [
+    "The pattern adds 2 each time.",
+    "The missing number is 8."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-022.png",
+     "alt": "A number line from 4 to 12 counting by 2s with one number hidden."
+    }
+   },
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-cp2-023",
+   "skillId": "equal-groups-skill-01",
+   "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "Tell whether 10 is even or odd.",
+   "prompt": "Sort 10 as even or odd.",
    "answer": "even",
    "options": [
     {
@@ -649,27 +747,6 @@
      "correct": false
     }
    ],
-   "solutionSteps": [
-    "Look at the ones digit: 0.",
-    "10 is even."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-cp2-023",
-   "skillId": "equal-groups-skill-01",
-   "level": "cp2",
-   "format": "short-answer",
-   "prompt": "Is 10 even or odd?",
-   "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 0.",
     "10 is even."
@@ -689,30 +766,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "Tell whether 8 is even or odd.",
-   "answer": "even",
+   "prompt": "Count by 2s. What number is missing?\n10, 12, 14, 16, ___",
+   "answer": "18",
    "options": [
     {
-     "text": "odd",
+     "text": "20",
      "correct": false
     },
     {
-     "text": "neither",
+     "text": "19",
      "correct": false
     },
     {
-     "text": "even",
+     "text": "18",
      "correct": true
     },
     {
-     "text": "both",
+     "text": "16",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Look at the ones digit: 8.",
-    "8 is even."
+    "The pattern adds 2 each time.",
+    "The missing number is 18."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp2-024.png",
+     "alt": "A number line from 10 to 18 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -721,7 +805,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp2-025",
@@ -751,10 +835,10 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Sam solved this problem.\nIs 12 even or odd?\nSam answered: odd\nFind the mistake. What is the correct answer?",
+   "prompt": "Elena solved this problem.\n12 is even or odd?\nElena answered: both\nFind the mistake. What is the correct answer?",
    "answer": "even",
    "solutionSteps": [
-    "The answer odd is not correct.",
+    "The answer both is not correct.",
     "Look at the ones digit: 2.",
     "12 is even.",
     "The correct answer is even."
@@ -774,13 +858,13 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Aisha solved this problem.\n4 + 4 = ?\nAisha answered: 6\nFind the mistake. What is the correct answer?",
-   "answer": "8",
+   "prompt": "Tariq solved this problem.\nA number line from 12 to 20 counting by 2s with one number hidden. Count by 2s. What number is missing? 12, 14, 16, 18, ___\nTariq answered: 21\nFind the mistake. What is the correct answer?",
+   "answer": "20",
    "solutionSteps": [
-    "The answer 6 is not correct.",
-    "Double 4 means 4 + 4.",
-    "4 + 4 = 8.",
-    "The correct answer is 8."
+    "The answer 21 is not correct.",
+    "The pattern adds 2 each time.",
+    "The missing number is 20.",
+    "The correct answer is 20."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -797,30 +881,30 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "True or false? What is double 6? The answer is 12.\nAnswer shown: 12\nChoose the best response.",
-   "answer": "True. 6 + 6 = 12.",
+   "prompt": "True or false? 4 counters are put into pairs. Is 4 even or odd? The answer is even.\nAnswer shown: odd\nChoose the best response.",
+   "answer": "False. The correct answer is even.",
    "options": [
     {
-     "text": "False. The correct answer is 8.",
+     "text": "True. odd is the correct answer.",
      "correct": false
     },
     {
-     "text": "False. The correct answer is 10.",
-     "correct": false
-    },
-    {
-     "text": "False. The correct answer is 13.",
-     "correct": false
-    },
-    {
-     "text": "True. 6 + 6 = 12.",
+     "text": "False. The correct answer is even.",
      "correct": true
+    },
+    {
+     "text": "False. The correct answer is both.",
+     "correct": false
+    },
+    {
+     "text": "False. The correct answer is neither.",
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 6 means 6 + 6.",
-    "6 + 6 = 12.",
-    "The answer 12 is correct."
+    "Look at the ones digit: 4.",
+    "4 is even.",
+    "The answer odd is not correct; it should be even."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -840,32 +924,32 @@
    "prompt": "Select ALL the problems that are matched with the correct answer.",
    "options": [
     {
-     "text": "4 counters are put into pairs. Is 4 even or odd? → even",
-     "correct": true
-    },
-    {
-     "text": "Tell whether 9 is even or odd. → neither",
+     "text": "Sort 9 as even or odd. → both",
      "correct": false
-    },
-    {
-     "text": "What is double 3? → 6",
-     "correct": true
     },
     {
      "text": "Look at 4. Is it even or odd? → neither",
      "correct": false
+    },
+    {
+     "text": "Look at 11. Is it even or odd? → odd",
+     "correct": true
+    },
+    {
+     "text": "4 counters are put into pairs. Is 4 even or odd? → even",
+     "correct": true
     }
    ],
    "answer": [
-    "4 counters are put into pairs. Is 4 even or odd? → even",
-    "What is double 3? → 6"
+    "Look at 11. Is it even or odd? → odd",
+    "4 counters are put into pairs. Is 4 even or odd? → even"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
-    "4 counters are put into pairs. Is 4 even or odd? → even: correct.",
-    "Tell whether 9 is even or odd. → neither: not correct.",
-    "What is double 3? → 6: correct.",
-    "Look at 4. Is it even or odd? → neither: not correct."
+    "Sort 9 as even or odd. → both: not correct.",
+    "Look at 4. Is it even or odd? → neither: not correct.",
+    "Look at 11. Is it even or odd? → odd: correct.",
+    "4 counters are put into pairs. Is 4 even or odd? → even: correct."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -882,31 +966,31 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp2",
    "format": "open-response",
-   "prompt": "Answer each part. Show your work.\n(a) What is double 4?\n(b) Is 13 even or odd?\n(c) What is double 2?\n(d) Is 20 even or odd?",
+   "prompt": "Answer each part. Show your work.\n(a) A number line from 12 to 20 counting by 2s with one number hidden. Count by 2s. What number is missing? 12, 14, ___, 18, 20\n(b) Which word describes 7: even or odd?\n(c) Look at 16. Is it even or odd?\n(d) Tell whether 3 is even or odd.",
    "parts": [
     {
-     "prompt": "What is double 4?",
-     "answer": "8"
+     "prompt": "A number line from 12 to 20 counting by 2s with one number hidden. Count by 2s. What number is missing? 12, 14, ___, 18, 20",
+     "answer": "16"
     },
     {
-     "prompt": "Is 13 even or odd?",
+     "prompt": "Which word describes 7: even or odd?",
      "answer": "odd"
     },
     {
-     "prompt": "What is double 2?",
-     "answer": "4"
+     "prompt": "Look at 16. Is it even or odd?",
+     "answer": "even"
     },
     {
-     "prompt": "Is 20 even or odd?",
-     "answer": "even"
+     "prompt": "Tell whether 3 is even or odd.",
+     "answer": "odd"
     }
    ],
-   "answer": "(a) 8; (b) odd; (c) 4; (d) even",
+   "answer": "(a) 16; (b) odd; (c) even; (d) odd",
    "solutionSteps": [
-    "(a) Double 4 means 4 + 4. 4 + 4 = 8.",
-    "(b) Look at the ones digit: 3. 13 is odd.",
-    "(c) Double 2 means 2 + 2. 2 + 2 = 4.",
-    "(d) Look at the ones digit: 0. 20 is even."
+    "(a) The pattern adds 2 each time. The missing number is 16.",
+    "(b) Look at the ones digit: 7. 7 is odd.",
+    "(c) Look at the ones digit: 6. 16 is even.",
+    "(d) Look at the ones digit: 3. 3 is odd."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -944,12 +1028,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "What is double 7?",
-   "answer": "14",
+   "prompt": "Count by 2s. What number is missing?\n4, 6, ___, 10, 12",
+   "answer": "8",
    "solutionSteps": [
-    "Double 7 means 7 + 7.",
-    "7 + 7 = 14."
+    "The pattern adds 2 each time.",
+    "The missing number is 8."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-002.png",
+     "alt": "A number line from 4 to 12 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -958,14 +1049,14 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-003",
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "Look at 83. Is it even or odd?",
+   "prompt": "Which word describes 83: even or odd?",
    "answer": "odd",
    "options": [
     {
@@ -973,7 +1064,7 @@
      "correct": false
     },
     {
-     "text": "even",
+     "text": "neither",
      "correct": false
     },
     {
@@ -981,7 +1072,7 @@
      "correct": true
     },
     {
-     "text": "neither",
+     "text": "even",
      "correct": false
     }
    ],
@@ -1004,30 +1095,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "What is double 8?",
-   "answer": "16",
+   "prompt": "Count by 2s. What number is missing?\n6, 8, 10, ___, 14",
+   "answer": "12",
    "options": [
     {
-     "text": "10",
+     "text": "13",
      "correct": false
-    },
-    {
-     "text": "17",
-     "correct": false
-    },
-    {
-     "text": "16",
-     "correct": true
     },
     {
      "text": "14",
      "correct": false
+    },
+    {
+     "text": "12",
+     "correct": true
+    },
+    {
+     "text": "10",
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 8 means 8 + 8.",
-    "8 + 8 = 16."
+    "The pattern adds 2 each time.",
+    "The missing number is 12."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-004.png",
+     "alt": "A number line from 6 to 14 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1036,7 +1134,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-005",
@@ -1064,12 +1162,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Ben has 4 marbles. Hana gives 4 more marbles. How many marbles does Ben have now?",
-   "answer": "8",
+   "prompt": "Count by 2s. What number is missing?\n4, 6, 8, ___, 12",
+   "answer": "10",
    "solutionSteps": [
-    "Double 4 means 4 + 4.",
-    "4 + 4 = 8."
+    "The pattern adds 2 each time.",
+    "The missing number is 10."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-006.png",
+     "alt": "A number line from 4 to 12 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1078,18 +1183,18 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-007",
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "Is 90 even or odd?",
+   "prompt": "Which word describes 90: even or odd?",
    "answer": "even",
    "options": [
     {
-     "text": "odd",
+     "text": "both",
      "correct": false
     },
     {
@@ -1101,7 +1206,7 @@
      "correct": false
     },
     {
-     "text": "both",
+     "text": "odd",
      "correct": false
     }
    ],
@@ -1124,30 +1229,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "10 + 10 = ?",
-   "answer": "20",
+   "prompt": "Count by 2s. What number is missing?\n8, 10, ___, 14, 16",
+   "answer": "12",
    "options": [
     {
-     "text": "20",
+     "text": "12",
      "correct": true
     },
     {
-     "text": "18",
+     "text": "14",
      "correct": false
     },
     {
-     "text": "12",
+     "text": "13",
      "correct": false
     },
     {
-     "text": "21",
+     "text": "10",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 10 means 10 + 10.",
-    "10 + 10 = 20."
+    "The pattern adds 2 each time.",
+    "The missing number is 12."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-008.png",
+     "alt": "A number line from 8 to 16 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1156,14 +1268,14 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-009",
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Look at 63. Is it even or odd?",
+   "prompt": "63 is even or odd?",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 3.",
@@ -1184,12 +1296,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "7 pretzels in a box and 7 more pretzels on the table. How many pretzels in all?",
-   "answer": "14",
+   "prompt": "Count by 2s. What number is missing?\n6, 8, ___, 12, 14",
+   "answer": "10",
    "solutionSteps": [
-    "Double 7 means 7 + 7.",
-    "7 + 7 = 14."
+    "The pattern adds 2 each time.",
+    "The missing number is 10."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-010.png",
+     "alt": "A number line from 6 to 14 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1198,7 +1317,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-011",
@@ -1244,30 +1363,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "7 + 7 = ?",
-   "answer": "14",
+   "prompt": "Count by 2s. What number is missing?\n8, 10, 12, 14, ___",
+   "answer": "16",
    "options": [
     {
-     "text": "12",
+     "text": "17",
      "correct": false
     },
     {
-     "text": "14",
+     "text": "16",
      "correct": true
     },
     {
-     "text": "15",
+     "text": "14",
      "correct": false
     },
     {
-     "text": "9",
+     "text": "18",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 7 means 7 + 7.",
-    "7 + 7 = 14."
+    "The pattern adds 2 each time.",
+    "The missing number is 16."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-012.png",
+     "alt": "A number line from 8 to 16 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1276,7 +1402,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-013",
@@ -1304,12 +1430,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "What is double 5?",
+   "prompt": "Count by 2s. What number is missing?\n2, 4, 6, 8, ___",
    "answer": "10",
    "solutionSteps": [
-    "Double 5 means 5 + 5.",
-    "5 + 5 = 10."
+    "The pattern adds 2 each time.",
+    "The missing number is 10."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-014.png",
+     "alt": "A number line from 2 to 10 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1318,7 +1451,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-015",
@@ -1364,30 +1497,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "What is double 6?",
-   "answer": "12",
+   "prompt": "Count by 2s. What number is missing?\n12, 14, 16, ___, 20",
+   "answer": "18",
    "options": [
     {
-     "text": "12",
+     "text": "18",
      "correct": true
     },
     {
-     "text": "13",
+     "text": "20",
      "correct": false
     },
     {
-     "text": "8",
+     "text": "19",
      "correct": false
     },
     {
-     "text": "10",
+     "text": "16",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 6 means 6 + 6.",
-    "6 + 6 = 12."
+    "The pattern adds 2 each time.",
+    "The missing number is 18."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-016.png",
+     "alt": "A number line from 12 to 20 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1396,7 +1536,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-017",
@@ -1424,12 +1564,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "What is double 9?",
+   "prompt": "Count by 2s. What number is missing?\n10, 12, 14, 16, ___",
    "answer": "18",
    "solutionSteps": [
-    "Double 9 means 9 + 9.",
-    "9 + 9 = 18."
+    "The pattern adds 2 each time.",
+    "The missing number is 18."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-018.png",
+     "alt": "A number line from 10 to 18 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1438,7 +1585,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-019",
@@ -1484,30 +1631,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "Uma has 8 crayons. Isla gives 8 more crayons. How many crayons does Uma have now?",
-   "answer": "16",
+   "prompt": "Count by 2s. What number is missing?\n10, 12, ___, 16, 18",
+   "answer": "14",
    "options": [
     {
      "text": "16",
-     "correct": true
-    },
-    {
-     "text": "26",
-     "correct": false
-    },
-    {
-     "text": "17",
      "correct": false
     },
     {
      "text": "15",
      "correct": false
+    },
+    {
+     "text": "14",
+     "correct": true
+    },
+    {
+     "text": "12",
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 8 means 8 + 8.",
-    "8 + 8 = 16."
+    "The pattern adds 2 each time.",
+    "The missing number is 14."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-020.png",
+     "alt": "A number line from 10 to 18 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1516,7 +1670,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-021",
@@ -1544,12 +1698,19 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "7 cards in a box and 7 more cards on the table. How many cards in all?",
+   "prompt": "Count by 2s. What number is missing?\n12, ___, 16, 18, 20",
    "answer": "14",
    "solutionSteps": [
-    "Double 7 means 7 + 7.",
-    "7 + 7 = 14."
+    "The pattern adds 2 each time.",
+    "The missing number is 14."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-022.png",
+     "alt": "A number line from 12 to 20 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1558,7 +1719,7 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-023",
@@ -1604,30 +1765,37 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "9 + 9 = ?",
-   "answer": "18",
+   "prompt": "Count by 2s. What number is missing?\n12, 14, ___, 18, 20",
+   "answer": "16",
    "options": [
     {
-     "text": "18",
+     "text": "16",
      "correct": true
     },
     {
-     "text": "11",
+     "text": "14",
      "correct": false
     },
     {
-     "text": "16",
+     "text": "18",
      "correct": false
     },
     {
-     "text": "19",
+     "text": "17",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 9 means 9 + 9.",
-    "9 + 9 = 18."
+    "The pattern adds 2 each time.",
+    "The missing number is 16."
    ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math2/equal-groups/m2-eg-s01-cp1-024.png",
+     "alt": "A number line from 12 to 20 counting by 2s with one number hidden."
+    }
+   },
    "standards": [
     "2.NBT.A.2",
     "2.NBT.B.7",
@@ -1636,20 +1804,20 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_skip_count_items_2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-cp1-025",
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Leo solved this problem.\n8 + 8 = ?\nLeo answered: 17\nFind the mistake. What is the correct answer?",
-   "answer": "16",
+   "prompt": "Dev solved this problem.\nWhich word describes 29: even or odd?\nDev answered: both\nFind the mistake. What is the correct answer?",
+   "answer": "odd",
    "solutionSteps": [
-    "The answer 17 is not correct.",
-    "Double 8 means 8 + 8.",
-    "8 + 8 = 16.",
-    "The correct answer is 16."
+    "The answer both is not correct.",
+    "Look at the ones digit: 9.",
+    "29 is odd.",
+    "The correct answer is odd."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -1666,12 +1834,12 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Tessa solved this problem.\n7 + 7 = ?\nTessa answered: 15\nFind the mistake. What is the correct answer?",
+   "prompt": "Tariq solved this problem.\nA number line from 6 to 14 counting by 2s with one number hidden. Count by 2s. What number is missing? 6, 8, 10, 12, ___\nTariq answered: 15\nFind the mistake. What is the correct answer?",
    "answer": "14",
    "solutionSteps": [
     "The answer 15 is not correct.",
-    "Double 7 means 7 + 7.",
-    "7 + 7 = 14.",
+    "The pattern adds 2 each time.",
+    "The missing number is 14.",
     "The correct answer is 14."
    ],
    "standards": [
@@ -1712,15 +1880,15 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "True or false? What is double 7? The answer is 14.\nAnswer shown: 14\nChoose the best response.",
-   "answer": "True. 7 + 7 = 14.",
+   "prompt": "True or false? A number line from 6 to 14 counting by 2s with one number hidden. Count by 2s. What number is missing? 6, 8, 10, 12, ___ The answer is 14.\nAnswer shown: 14\nChoose the best response.",
+   "answer": "True. The missing number is 14.",
    "options": [
     {
-     "text": "False. The correct answer is 12.",
+     "text": "False. The correct answer is 16.",
      "correct": false
     },
     {
-     "text": "False. The correct answer is 9.",
+     "text": "False. The correct answer is 12.",
      "correct": false
     },
     {
@@ -1728,13 +1896,13 @@
      "correct": false
     },
     {
-     "text": "True. 7 + 7 = 14.",
+     "text": "True. The missing number is 14.",
      "correct": true
     }
    ],
    "solutionSteps": [
-    "Double 7 means 7 + 7.",
-    "7 + 7 = 14.",
+    "The pattern adds 2 each time.",
+    "The missing number is 14.",
     "The answer 14 is correct."
    ],
    "standards": [
@@ -1755,32 +1923,32 @@
    "prompt": "Select ALL the problems that are matched with the correct answer.",
    "options": [
     {
-     "text": "What is double 5? → 7",
+     "text": "Which word describes 72: even or odd? → even",
+     "correct": true
+    },
+    {
+     "text": "Is 85 even or odd? → odd",
+     "correct": true
+    },
+    {
+     "text": "19 is even or odd? → both",
      "correct": false
     },
     {
-     "text": "What is double 4? → 8",
-     "correct": true
-    },
-    {
-     "text": "Tell whether 91 is even or odd. → odd",
-     "correct": true
-    },
-    {
-     "text": "What is double 7? → 9",
+     "text": "Tell whether 38 is even or odd. → neither",
      "correct": false
     }
    ],
    "answer": [
-    "What is double 4? → 8",
-    "Tell whether 91 is even or odd. → odd"
+    "Which word describes 72: even or odd? → even",
+    "Is 85 even or odd? → odd"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
-    "What is double 5? → 7: not correct.",
-    "What is double 4? → 8: correct.",
-    "Tell whether 91 is even or odd. → odd: correct.",
-    "What is double 7? → 9: not correct."
+    "Which word describes 72: even or odd? → even: correct.",
+    "Is 85 even or odd? → odd: correct.",
+    "19 is even or odd? → both: not correct.",
+    "Tell whether 38 is even or odd. → neither: not correct."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -1797,31 +1965,31 @@
    "skillId": "equal-groups-skill-01",
    "level": "cp1",
    "format": "open-response",
-   "prompt": "Answer each part. Show your work.\n(a) 7 + 7 = ?\n(b) 88 counters are put into pairs. Is 88 even or odd?\n(c) What is double 10?\n(d) What is double 8?",
+   "prompt": "Answer each part. Show your work.\n(a) A number line from 8 to 16 counting by 2s with one number hidden. Count by 2s. What number is missing? 8, 10, 12, 14, ___\n(b) Which word describes 14: even or odd?\n(c) A number line from 10 to 18 counting by 2s with one number hidden. Count by 2s. What number is missing? 10, 12, 14, ___, 18\n(d) Is 94 even or odd?",
    "parts": [
     {
-     "prompt": "7 + 7 = ?",
-     "answer": "14"
+     "prompt": "A number line from 8 to 16 counting by 2s with one number hidden. Count by 2s. What number is missing? 8, 10, 12, 14, ___",
+     "answer": "16"
     },
     {
-     "prompt": "88 counters are put into pairs. Is 88 even or odd?",
+     "prompt": "Which word describes 14: even or odd?",
      "answer": "even"
     },
     {
-     "prompt": "What is double 10?",
-     "answer": "20"
+     "prompt": "A number line from 10 to 18 counting by 2s with one number hidden. Count by 2s. What number is missing? 10, 12, 14, ___, 18",
+     "answer": "16"
     },
     {
-     "prompt": "What is double 8?",
-     "answer": "16"
+     "prompt": "Is 94 even or odd?",
+     "answer": "even"
     }
    ],
-   "answer": "(a) 14; (b) even; (c) 20; (d) 16",
+   "answer": "(a) 16; (b) even; (c) 16; (d) even",
    "solutionSteps": [
-    "(a) Double 7 means 7 + 7. 7 + 7 = 14.",
-    "(b) Look at the ones digit: 8. 88 is even.",
-    "(c) Double 10 means 10 + 10. 10 + 10 = 20.",
-    "(d) Double 8 means 8 + 8. 8 + 8 = 16."
+    "(a) The pattern adds 2 each time. The missing number is 16.",
+    "(b) Look at the ones digit: 4. 14 is even.",
+    "(c) The pattern adds 2 each time. The missing number is 16.",
+    "(d) Look at the ones digit: 4. 94 is even."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -1838,7 +2006,7 @@
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Tell whether 836 is even or odd.",
+   "prompt": "Sort 836 as even or odd.",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 6.",
@@ -1856,27 +2024,6 @@
   },
   {
    "id": "m2-eg-s01-honors-002",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "short-answer",
-   "prompt": "What is double 8?",
-   "answer": "16",
-   "solutionSteps": [
-    "Double 8 means 8 + 8.",
-    "8 + 8 = 16."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-003",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "multiple-choice",
@@ -1915,50 +2062,11 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-004",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "What is double 16?",
-   "answer": "32",
-   "options": [
-    {
-     "text": "32",
-     "correct": true
-    },
-    {
-     "text": "33",
-     "correct": false
-    },
-    {
-     "text": "18",
-     "correct": false
-    },
-    {
-     "text": "30",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "Double 16 means 16 + 16.",
-    "16 + 16 = 32."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-005",
+   "id": "m2-eg-s01-honors-003",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Look at 734. Is it even or odd?",
+   "prompt": "Sort 734 as even or odd.",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 4.",
@@ -1975,32 +2083,11 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-006",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "short-answer",
-   "prompt": "16 + 16 = ?",
-   "answer": "32",
-   "solutionSteps": [
-    "Double 16 means 16 + 16.",
-    "16 + 16 = 32."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-007",
+   "id": "m2-eg-s01-honors-004",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Look at 452. Is it even or odd?",
+   "prompt": "Sort 452 as even or odd.",
    "answer": "even",
    "options": [
     {
@@ -2012,11 +2099,11 @@
      "correct": false
     },
     {
-     "text": "odd",
+     "text": "neither",
      "correct": false
     },
     {
-     "text": "neither",
+     "text": "odd",
      "correct": false
     }
    ],
@@ -2035,46 +2122,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-008",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "11 + 11 = ?",
-   "answer": "22",
-   "options": [
-    {
-     "text": "22",
-     "correct": true
-    },
-    {
-     "text": "13",
-     "correct": false
-    },
-    {
-     "text": "23",
-     "correct": false
-    },
-    {
-     "text": "20",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "Double 11 means 11 + 11.",
-    "11 + 11 = 22."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-009",
+   "id": "m2-eg-s01-honors-005",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
@@ -2095,28 +2143,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-010",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "short-answer",
-   "prompt": "What is double 20?",
-   "answer": "40",
-   "solutionSteps": [
-    "Double 20 means 20 + 20.",
-    "20 + 20 = 40."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-011",
+   "id": "m2-eg-s01-honors-006",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "multiple-choice",
@@ -2124,12 +2151,12 @@
    "answer": "even",
    "options": [
     {
-     "text": "odd",
-     "correct": false
-    },
-    {
      "text": "even",
      "correct": true
+    },
+    {
+     "text": "odd",
+     "correct": false
     },
     {
      "text": "both",
@@ -2155,50 +2182,11 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-012",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "What is double 19?",
-   "answer": "38",
-   "options": [
-    {
-     "text": "21",
-     "correct": false
-    },
-    {
-     "text": "38",
-     "correct": true
-    },
-    {
-     "text": "36",
-     "correct": false
-    },
-    {
-     "text": "39",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "Double 19 means 19 + 19.",
-    "19 + 19 = 38."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-013",
+   "id": "m2-eg-s01-honors-007",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Tell whether 567 is even or odd.",
+   "prompt": "567 is even or odd?",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 7.",
@@ -2215,32 +2203,11 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-014",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "short-answer",
-   "prompt": "20 + 20 = ?",
-   "answer": "40",
-   "solutionSteps": [
-    "Double 20 means 20 + 20.",
-    "20 + 20 = 40."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-015",
+   "id": "m2-eg-s01-honors-008",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "954 counters are put into pairs. Is 954 even or odd?",
+   "prompt": "954 is even or odd?",
    "answer": "even",
    "options": [
     {
@@ -2248,7 +2215,7 @@
      "correct": true
     },
     {
-     "text": "both",
+     "text": "odd",
      "correct": false
     },
     {
@@ -2256,7 +2223,7 @@
      "correct": false
     },
     {
-     "text": "odd",
+     "text": "both",
      "correct": false
     }
    ],
@@ -2275,46 +2242,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-016",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "17 + 17 = ?",
-   "answer": "34",
-   "options": [
-    {
-     "text": "34",
-     "correct": true
-    },
-    {
-     "text": "35",
-     "correct": false
-    },
-    {
-     "text": "19",
-     "correct": false
-    },
-    {
-     "text": "32",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "Double 17 means 17 + 17.",
-    "17 + 17 = 34."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-017",
+   "id": "m2-eg-s01-honors-009",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
@@ -2335,42 +2263,13 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-018",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "short-answer",
-   "prompt": "What is double 17?",
-   "answer": "34",
-   "solutionSteps": [
-    "Double 17 means 17 + 17.",
-    "17 + 17 = 34."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-019",
+   "id": "m2-eg-s01-honors-010",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Tell whether 209 is even or odd.",
+   "prompt": "Sort 209 as even or odd.",
    "answer": "odd",
    "options": [
-    {
-     "text": "both",
-     "correct": false
-    },
-    {
-     "text": "neither",
-     "correct": false
-    },
     {
      "text": "even",
      "correct": false
@@ -2378,6 +2277,14 @@
     {
      "text": "odd",
      "correct": true
+    },
+    {
+     "text": "neither",
+     "correct": false
+    },
+    {
+     "text": "both",
+     "correct": false
     }
    ],
    "solutionSteps": [
@@ -2395,50 +2302,11 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-020",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "13 + 13 = ?",
-   "answer": "26",
-   "options": [
-    {
-     "text": "24",
-     "correct": false
-    },
-    {
-     "text": "27",
-     "correct": false
-    },
-    {
-     "text": "15",
-     "correct": false
-    },
-    {
-     "text": "26",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "Double 13 means 13 + 13.",
-    "13 + 13 = 26."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-021",
+   "id": "m2-eg-s01-honors-011",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "925 counters are put into pairs. Is 925 even or odd?",
+   "prompt": "Sort 925 as even or odd.",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 5.",
@@ -2455,28 +2323,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-022",
-   "skillId": "equal-groups-skill-01",
-   "level": "honors",
-   "format": "short-answer",
-   "prompt": "10 + 10 = ?",
-   "answer": "20",
-   "solutionSteps": [
-    "Double 10 means 10 + 10.",
-    "10 + 10 = 20."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s01-honors-023",
+   "id": "m2-eg-s01-honors-012",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "multiple-choice",
@@ -2488,12 +2335,12 @@
      "correct": false
     },
     {
-     "text": "both",
-     "correct": false
-    },
-    {
      "text": "odd",
      "correct": true
+    },
+    {
+     "text": "both",
+     "correct": false
     },
     {
      "text": "even",
@@ -2515,33 +2362,15 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s01-honors-024",
+   "id": "m2-eg-s01-honors-013",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "What is double 11?",
-   "answer": "22",
-   "options": [
-    {
-     "text": "23",
-     "correct": false
-    },
-    {
-     "text": "20",
-     "correct": false
-    },
-    {
-     "text": "13",
-     "correct": false
-    },
-    {
-     "text": "22",
-     "correct": true
-    }
-   ],
+   "format": "short-answer",
+   "prompt": "441 is even or odd?",
+   "answer": "odd",
    "solutionSteps": [
-    "Double 11 means 11 + 11.",
-    "11 + 11 = 22."
+    "Look at the ones digit: 1.",
+    "441 is odd."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -2551,20 +2380,359 @@
     "2.OA.C",
     "2.OA.C.3"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-014",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "Tell whether 219 is even or odd.",
+   "answer": "odd",
+   "options": [
+    {
+     "text": "odd",
+     "correct": true
+    },
+    {
+     "text": "even",
+     "correct": false
+    },
+    {
+     "text": "neither",
+     "correct": false
+    },
+    {
+     "text": "both",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Look at the ones digit: 9.",
+    "219 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-015",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Tell whether 105 is even or odd.",
+   "answer": "odd",
+   "solutionSteps": [
+    "Look at the ones digit: 5.",
+    "105 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-016",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "665 is even or odd?",
+   "answer": "odd",
+   "options": [
+    {
+     "text": "odd",
+     "correct": true
+    },
+    {
+     "text": "both",
+     "correct": false
+    },
+    {
+     "text": "even",
+     "correct": false
+    },
+    {
+     "text": "neither",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Look at the ones digit: 5.",
+    "665 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-017",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Tell whether 607 is even or odd.",
+   "answer": "odd",
+   "solutionSteps": [
+    "Look at the ones digit: 7.",
+    "607 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-018",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "545 is even or odd?",
+   "answer": "odd",
+   "options": [
+    {
+     "text": "both",
+     "correct": false
+    },
+    {
+     "text": "even",
+     "correct": false
+    },
+    {
+     "text": "neither",
+     "correct": false
+    },
+    {
+     "text": "odd",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Look at the ones digit: 5.",
+    "545 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-019",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Sort 115 as even or odd.",
+   "answer": "odd",
+   "solutionSteps": [
+    "Look at the ones digit: 5.",
+    "115 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-020",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "404 is even or odd?",
+   "answer": "even",
+   "options": [
+    {
+     "text": "both",
+     "correct": false
+    },
+    {
+     "text": "odd",
+     "correct": false
+    },
+    {
+     "text": "neither",
+     "correct": false
+    },
+    {
+     "text": "even",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Look at the ones digit: 4.",
+    "404 is even."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-021",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Sort 831 as even or odd.",
+   "answer": "odd",
+   "solutionSteps": [
+    "Look at the ones digit: 1.",
+    "831 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-022",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "Look at 238. Is it even or odd?",
+   "answer": "even",
+   "options": [
+    {
+     "text": "odd",
+     "correct": false
+    },
+    {
+     "text": "both",
+     "correct": false
+    },
+    {
+     "text": "even",
+     "correct": true
+    },
+    {
+     "text": "neither",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Look at the ones digit: 8.",
+    "238 is even."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-023",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Sort 274 as even or odd.",
+   "answer": "even",
+   "solutionSteps": [
+    "Look at the ones digit: 4.",
+    "274 is even."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s01-honors-024",
+   "skillId": "equal-groups-skill-01",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "702 counters are put into pairs. Is 702 even or odd?",
+   "answer": "even",
+   "options": [
+    {
+     "text": "both",
+     "correct": false
+    },
+    {
+     "text": "odd",
+     "correct": false
+    },
+    {
+     "text": "neither",
+     "correct": false
+    },
+    {
+     "text": "even",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Look at the ones digit: 2.",
+    "702 is even."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-eg-s01-honors-025",
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Sofia solved this problem.\n14 + 14 = ?\nSofia answered: 26\nFind the mistake. What is the correct answer?",
-   "answer": "28",
+   "prompt": "Jonah solved this problem.\n633 is even or odd?\nJonah answered: both\nFind the mistake. What is the correct answer?",
+   "answer": "odd",
    "solutionSteps": [
-    "The answer 26 is not correct.",
-    "Double 14 means 14 + 14.",
-    "14 + 14 = 28.",
-    "The correct answer is 28."
+    "The answer both is not correct.",
+    "Look at the ones digit: 3.",
+    "633 is odd.",
+    "The correct answer is odd."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -2581,13 +2749,13 @@
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Tariq solved this problem.\nWhat is double 11?\nTariq answered: 13\nFind the mistake. What is the correct answer?",
-   "answer": "22",
+   "prompt": "Diego solved this problem.\nTell whether 875 is even or odd.\nDiego answered: both\nFind the mistake. What is the correct answer?",
+   "answer": "odd",
    "solutionSteps": [
-    "The answer 13 is not correct.",
-    "Double 11 means 11 + 11.",
-    "11 + 11 = 22.",
-    "The correct answer is 22."
+    "The answer both is not correct.",
+    "Look at the ones digit: 5.",
+    "875 is odd.",
+    "The correct answer is odd."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -2604,7 +2772,7 @@
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Femi solved this problem.\nTell whether 630 is even or odd.\nFemi answered: neither\nFind the mistake. What is the correct answer?",
+   "prompt": "Quinn solved this problem.\nWhich word describes 630: even or odd?\nQuinn answered: neither\nFind the mistake. What is the correct answer?",
    "answer": "even",
    "solutionSteps": [
     "The answer neither is not correct.",
@@ -2627,30 +2795,30 @@
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "True or false? What is double 9? The answer is 18.\nAnswer shown: 18\nChoose the best response.",
-   "answer": "True. 9 + 9 = 18.",
+   "prompt": "True or false? Is 252 even or odd? The answer is even.\nAnswer shown: both\nChoose the best response.",
+   "answer": "False. The correct answer is even.",
    "options": [
     {
-     "text": "False. The correct answer is 16.",
-     "correct": false
-    },
-    {
-     "text": "True. 9 + 9 = 18.",
+     "text": "False. The correct answer is even.",
      "correct": true
     },
     {
-     "text": "False. The correct answer is 19.",
+     "text": "False. The correct answer is odd.",
      "correct": false
     },
     {
-     "text": "False. The correct answer is 11.",
+     "text": "False. The correct answer is neither.",
+     "correct": false
+    },
+    {
+     "text": "True. both is the correct answer.",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 9 means 9 + 9.",
-    "9 + 9 = 18.",
-    "The answer 18 is correct."
+    "Look at the ones digit: 2.",
+    "252 is even.",
+    "The answer both is not correct; it should be even."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -2670,32 +2838,32 @@
    "prompt": "Select ALL the problems that are matched with the correct answer.",
    "options": [
     {
-     "text": "Is 482 even or odd? → even",
+     "text": "801 counters are put into pairs. Is 801 even or odd? → odd",
      "correct": true
     },
     {
-     "text": "8 + 8 = ? → 16",
-     "correct": true
-    },
-    {
-     "text": "11 + 11 = ? → 20",
+     "text": "Which word describes 274: even or odd? → odd",
      "correct": false
     },
     {
-     "text": "What is double 9? → 11",
+     "text": "Is 890 even or odd? → even",
+     "correct": true
+    },
+    {
+     "text": "548 counters are put into pairs. Is 548 even or odd? → odd",
      "correct": false
     }
    ],
    "answer": [
-    "Is 482 even or odd? → even",
-    "8 + 8 = ? → 16"
+    "801 counters are put into pairs. Is 801 even or odd? → odd",
+    "Is 890 even or odd? → even"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
-    "Is 482 even or odd? → even: correct.",
-    "8 + 8 = ? → 16: correct.",
-    "11 + 11 = ? → 20: not correct.",
-    "What is double 9? → 11: not correct."
+    "801 counters are put into pairs. Is 801 even or odd? → odd: correct.",
+    "Which word describes 274: even or odd? → odd: not correct.",
+    "Is 890 even or odd? → even: correct.",
+    "548 counters are put into pairs. Is 548 even or odd? → odd: not correct."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -2712,31 +2880,31 @@
    "skillId": "equal-groups-skill-01",
    "level": "honors",
    "format": "open-response",
-   "prompt": "Answer each part. Show your work.\n(a) Look at 432. Is it even or odd?\n(b) 8 + 8 = ?\n(c) What is double 20?\n(d) What is double 8?",
+   "prompt": "Answer each part. Show your work.\n(a) Look at 432. Is it even or odd?\n(b) Is 289 even or odd?\n(c) Look at 339. Is it even or odd?\n(d) Is 581 even or odd?",
    "parts": [
     {
      "prompt": "Look at 432. Is it even or odd?",
      "answer": "even"
     },
     {
-     "prompt": "8 + 8 = ?",
-     "answer": "16"
+     "prompt": "Is 289 even or odd?",
+     "answer": "odd"
     },
     {
-     "prompt": "What is double 20?",
-     "answer": "40"
+     "prompt": "Look at 339. Is it even or odd?",
+     "answer": "odd"
     },
     {
-     "prompt": "What is double 8?",
-     "answer": "16"
+     "prompt": "Is 581 even or odd?",
+     "answer": "odd"
     }
    ],
-   "answer": "(a) even; (b) 16; (c) 40; (d) 16",
+   "answer": "(a) even; (b) odd; (c) odd; (d) odd",
    "solutionSteps": [
     "(a) Look at the ones digit: 2. 432 is even.",
-    "(b) Double 8 means 8 + 8. 8 + 8 = 16.",
-    "(c) Double 20 means 20 + 20. 20 + 20 = 40.",
-    "(d) Double 8 means 8 + 8. 8 + 8 = 16."
+    "(b) Look at the ones digit: 9. 289 is odd.",
+    "(c) Look at the ones digit: 9. 339 is odd.",
+    "(d) Look at the ones digit: 1. 581 is odd."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -2753,7 +2921,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "4 counters are put into pairs. Is 4 even or odd?",
+   "prompt": "Sort 4 as even or odd.",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 4.",
@@ -3070,11 +3238,11 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "7 counters are put into pairs. Is 7 even or odd?",
+   "prompt": "Which word describes 7: even or odd?",
    "answer": "odd",
    "options": [
     {
-     "text": "neither",
+     "text": "both",
      "correct": false
     },
     {
@@ -3082,7 +3250,7 @@
      "correct": false
     },
     {
-     "text": "both",
+     "text": "neither",
      "correct": false
     },
     {
@@ -3155,11 +3323,11 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Look at 8. Is it even or odd?",
+   "prompt": "Sort 6 as even or odd.",
    "answer": "even",
    "solutionSteps": [
-    "Look at the ones digit: 8.",
-    "8 is even."
+    "Look at the ones digit: 6.",
+    "6 is even."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -3204,7 +3372,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "Is 16 even or odd?",
+   "prompt": "16 is even or odd?",
    "answer": "even",
    "options": [
     {
@@ -3216,11 +3384,11 @@
      "correct": false
     },
     {
-     "text": "odd",
+     "text": "neither",
      "correct": false
     },
     {
-     "text": "neither",
+     "text": "odd",
      "correct": false
     }
    ],
@@ -3669,11 +3837,7 @@
    "prompt": "Select ALL the problems that are matched with the correct answer.",
    "options": [
     {
-     "text": "19 counters are put into pairs. Is 19 even or odd? → odd",
-     "correct": true
-    },
-    {
-     "text": "An array with 3 rows and 3 dots in each row. Write the total: 3 rows of 3. → 12",
+     "text": "Which word describes 14: even or odd? → odd",
      "correct": false
     },
     {
@@ -3681,20 +3845,24 @@
      "correct": true
     },
     {
-     "text": "Look at 14. Is it even or odd? → odd",
+     "text": "An array with 3 rows and 3 dots in each row. Write the total: 3 rows of 3. → 12",
      "correct": false
+    },
+    {
+     "text": "19 counters are put into pairs. Is 19 even or odd? → odd",
+     "correct": true
     }
    ],
    "answer": [
-    "19 counters are put into pairs. Is 19 even or odd? → odd",
-    "Look at 14. Is it even or odd? → even"
+    "Look at 14. Is it even or odd? → even",
+    "19 counters are put into pairs. Is 19 even or odd? → odd"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
-    "19 counters are put into pairs. Is 19 even or odd? → odd: correct.",
-    "An array with 3 rows and 3 dots in each row. Write the total: 3 rows of 3. → 12: not correct.",
+    "Which word describes 14: even or odd? → odd: not correct.",
     "Look at 14. Is it even or odd? → even: correct.",
-    "Look at 14. Is it even or odd? → odd: not correct."
+    "An array with 3 rows and 3 dots in each row. Write the total: 3 rows of 3. → 12: not correct.",
+    "19 counters are put into pairs. Is 19 even or odd? → odd: correct."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -3711,7 +3879,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp2",
    "format": "open-response",
-   "prompt": "Answer each part. Show your work.\n(a) An array with 3 rows and 2 dots in each row. The array has 3 rows of 2. How many in all?\n(b) Is 4 even or odd?\n(c) An array with 4 rows and 3 dots in each row. How many dots are in this array?\n(d) Look at 10. Is it even or odd?",
+   "prompt": "Answer each part. Show your work.\n(a) An array with 3 rows and 2 dots in each row. The array has 3 rows of 2. How many in all?\n(b) Is 4 even or odd?\n(c) An array with 4 rows and 3 dots in each row. How many dots are in this array?\n(d) 10 is even or odd?",
    "parts": [
     {
      "prompt": "An array with 3 rows and 2 dots in each row. The array has 3 rows of 2. How many in all?",
@@ -3726,7 +3894,7 @@
      "answer": "12"
     },
     {
-     "prompt": "Look at 10. Is it even or odd?",
+     "prompt": "10 is even or odd?",
      "answer": "even"
     }
    ],
@@ -3752,7 +3920,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "22 counters are put into pairs. Is 22 even or odd?",
+   "prompt": "Which word describes 22: even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 2.",
@@ -3801,19 +3969,19 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "Tell whether 72 is even or odd.",
+   "prompt": "Sort 72 as even or odd.",
    "answer": "even",
    "options": [
-    {
-     "text": "neither",
-     "correct": false
-    },
     {
      "text": "both",
      "correct": false
     },
     {
      "text": "odd",
+     "correct": false
+    },
+    {
+     "text": "neither",
      "correct": false
     },
     {
@@ -3886,7 +4054,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Look at 80. Is it even or odd?",
+   "prompt": "80 is even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 0.",
@@ -4154,7 +4322,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Tell whether 85 is even or odd.",
+   "prompt": "85 is even or odd?",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 5.",
@@ -4288,7 +4456,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Look at 58. Is it even or odd?",
+   "prompt": "Sort 58 as even or odd.",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 8.",
@@ -4556,10 +4724,10 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Hana solved this problem.\nTell whether 42 is even or odd.\nHana answered: odd\nFind the mistake. What is the correct answer?",
+   "prompt": "Isla solved this problem.\n42 is even or odd?\nIsla answered: neither\nFind the mistake. What is the correct answer?",
    "answer": "even",
    "solutionSteps": [
-    "The answer odd is not correct.",
+    "The answer neither is not correct.",
     "Look at the ones digit: 2.",
     "42 is even.",
     "The correct answer is even."
@@ -4710,31 +4878,31 @@
    "skillId": "equal-groups-skill-02",
    "level": "cp1",
    "format": "open-response",
-   "prompt": "Answer each part. Show your work.\n(a) An array with 5 rows and 3 dots in each row. The array has 5 rows of 3. How many in all?\n(b) 72 counters are put into pairs. Is 72 even or odd?\n(c) Is 99 even or odd?\n(d) An array with 4 rows and 3 dots in each row. There are 4 rows with 3 dots in each row. How many dots?",
+   "prompt": "Answer each part. Show your work.\n(a) An array with 5 rows and 3 dots in each row. The array has 5 rows of 3. How many in all?\n(b) Sort 72 as even or odd.\n(c) An array with 2 rows and 5 dots in each row. Write the total: 2 rows of 5.\n(d) Look at 56. Is it even or odd?",
    "parts": [
     {
      "prompt": "An array with 5 rows and 3 dots in each row. The array has 5 rows of 3. How many in all?",
      "answer": "15"
     },
     {
-     "prompt": "72 counters are put into pairs. Is 72 even or odd?",
+     "prompt": "Sort 72 as even or odd.",
      "answer": "even"
     },
     {
-     "prompt": "Is 99 even or odd?",
-     "answer": "odd"
+     "prompt": "An array with 2 rows and 5 dots in each row. Write the total: 2 rows of 5.",
+     "answer": "10"
     },
     {
-     "prompt": "An array with 4 rows and 3 dots in each row. There are 4 rows with 3 dots in each row. How many dots?",
-     "answer": "12"
+     "prompt": "Look at 56. Is it even or odd?",
+     "answer": "even"
     }
    ],
-   "answer": "(a) 15; (b) even; (c) odd; (d) 12",
+   "answer": "(a) 15; (b) even; (c) 10; (d) even",
    "solutionSteps": [
     "(a) 5 rows of 3 is 5 × 3 = 15. The answer is 15.",
     "(b) Look at the ones digit: 2. 72 is even.",
-    "(c) Look at the ones digit: 9. 99 is odd.",
-    "(d) 4 rows of 3 is 4 × 3 = 12. The answer is 12."
+    "(c) 2 rows of 5 is 2 × 5 = 10. The answer is 10.",
+    "(d) Look at the ones digit: 6. 56 is even."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -5068,7 +5236,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "421 counters are put into pairs. Is 421 even or odd?",
+   "prompt": "Which word describes 421: even or odd?",
    "answer": "odd",
    "options": [
     {
@@ -5076,7 +5244,7 @@
      "correct": false
     },
     {
-     "text": "both",
+     "text": "neither",
      "correct": false
     },
     {
@@ -5084,7 +5252,7 @@
      "correct": true
     },
     {
-     "text": "neither",
+     "text": "both",
      "correct": false
     }
    ],
@@ -5153,7 +5321,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Tell whether 577 is even or odd.",
+   "prompt": "Which word describes 577: even or odd?",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 7.",
@@ -5202,11 +5370,11 @@
    "skillId": "equal-groups-skill-02",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Tell whether 141 is even or odd.",
+   "prompt": "Sort 141 as even or odd.",
    "answer": "odd",
    "options": [
     {
-     "text": "both",
+     "text": "even",
      "correct": false
     },
     {
@@ -5214,7 +5382,7 @@
      "correct": false
     },
     {
-     "text": "even",
+     "text": "both",
      "correct": false
     },
     {
@@ -5287,7 +5455,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "321 counters are put into pairs. Is 321 even or odd?",
+   "prompt": "Sort 321 as even or odd.",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 1.",
@@ -5555,7 +5723,7 @@
    "skillId": "equal-groups-skill-02",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Sam solved this problem.\nTell whether 550 is even or odd.\nSam answered: both\nFind the mistake. What is the correct answer?",
+   "prompt": "Mei solved this problem.\nWhich word describes 550: even or odd?\nMei answered: both\nFind the mistake. What is the correct answer?",
    "answer": "even",
    "solutionSteps": [
     "The answer both is not correct.",
@@ -5671,7 +5839,7 @@
      "correct": false
     },
     {
-     "text": "Look at 636. Is it even or odd? → even",
+     "text": "636 is even or odd? → even",
      "correct": true
     },
     {
@@ -5684,13 +5852,13 @@
     }
    ],
    "answer": [
-    "Look at 636. Is it even or odd? → even",
+    "636 is even or odd? → even",
     "An array with 5 rows and 4 dots in each row. How many dots are in this array? → 20"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
     "Is 286 even or odd? → odd: not correct.",
-    "Look at 636. Is it even or odd? → even: correct.",
+    "636 is even or odd? → even: correct.",
     "An array with 3 rows and 3 dots in each row. How many dots are in this array? → 6: not correct.",
     "An array with 5 rows and 4 dots in each row. How many dots are in this array? → 20: correct."
    ],
@@ -5750,11 +5918,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Tariq has 4 pretzels. Sofia gives 4 more pretzels. How many pretzels does Tariq have now?",
-   "answer": "8",
+   "prompt": "What is double 5?",
+   "answer": "10",
    "solutionSteps": [
-    "Double 4 means 4 + 4.",
-    "4 + 4 = 8."
+    "Double 5 means 5 + 5.",
+    "5 + 5 = 10."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -5771,11 +5939,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Look at 6. Is it even or odd?",
-   "answer": "even",
+   "prompt": "Which word describes 13: even or odd?",
+   "answer": "odd",
    "solutionSteps": [
-    "Look at the ones digit: 6.",
-    "6 is even."
+    "Look at the ones digit: 3.",
+    "13 is odd."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -5891,7 +6059,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Tell whether 12 is even or odd.",
+   "prompt": "Which word describes 12: even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 2.",
@@ -6011,11 +6179,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Is 15 even or odd?",
-   "answer": "odd",
+   "prompt": "Tell whether 12 is even or odd.",
+   "answer": "even",
    "solutionSteps": [
-    "Look at the ones digit: 5.",
-    "15 is odd."
+    "Look at the ones digit: 2.",
+    "12 is even."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -6071,11 +6239,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "Tell whether 9 is even or odd.",
+   "prompt": "9 is even or odd?",
    "answer": "odd",
    "options": [
     {
-     "text": "both",
+     "text": "even",
      "correct": false
     },
     {
@@ -6087,7 +6255,7 @@
      "correct": true
     },
     {
-     "text": "even",
+     "text": "both",
      "correct": false
     }
    ],
@@ -6110,6 +6278,27 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
+   "prompt": "Tell whether 9 is even or odd.",
+   "answer": "odd",
+   "solutionSteps": [
+    "Look at the ones digit: 9.",
+    "9 is odd."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s03-cp2-014",
+   "skillId": "equal-groups-skill-03",
+   "level": "cp2",
+   "format": "short-answer",
    "prompt": "2 + 2 = ?",
    "answer": "4",
    "solutionSteps": [
@@ -6127,15 +6316,33 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-014",
+   "id": "m2-eg-s03-cp2-015",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
-   "format": "short-answer",
-   "prompt": "20 counters are put into pairs. Is 20 even or odd?",
+   "format": "multiple-choice",
+   "prompt": "Tell whether 6 is even or odd.",
    "answer": "even",
+   "options": [
+    {
+     "text": "even",
+     "correct": true
+    },
+    {
+     "text": "odd",
+     "correct": false
+    },
+    {
+     "text": "both",
+     "correct": false
+    },
+    {
+     "text": "neither",
+     "correct": false
+    }
+   ],
    "solutionSteps": [
-    "Look at the ones digit: 0.",
-    "20 is even."
+    "Look at the ones digit: 6.",
+    "6 is even."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -6148,7 +6355,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-015",
+   "id": "m2-eg-s03-cp2-016",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "multiple-choice",
@@ -6156,12 +6363,12 @@
    "answer": "8",
    "options": [
     {
-     "text": "8",
-     "correct": true
-    },
-    {
      "text": "6",
      "correct": false
+    },
+    {
+     "text": "8",
+     "correct": true
     },
     {
      "text": "9",
@@ -6187,7 +6394,49 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-016",
+   "id": "m2-eg-s03-cp2-017",
+   "skillId": "equal-groups-skill-03",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "8 is even or odd?",
+   "answer": "even",
+   "solutionSteps": [
+    "Look at the ones digit: 8.",
+    "8 is even."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s03-cp2-018",
+   "skillId": "equal-groups-skill-03",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "What is double 6?",
+   "answer": "12",
+   "solutionSteps": [
+    "Double 6 means 6 + 6.",
+    "6 + 6 = 12."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s03-cp2-019",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "multiple-choice",
@@ -6199,12 +6448,12 @@
      "correct": false
     },
     {
-     "text": "even",
-     "correct": true
-    },
-    {
      "text": "odd",
      "correct": false
+    },
+    {
+     "text": "even",
+     "correct": true
     },
     {
      "text": "neither",
@@ -6226,7 +6475,46 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-017",
+   "id": "m2-eg-s03-cp2-020",
+   "skillId": "equal-groups-skill-03",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "5 + 5 = ?",
+   "answer": "10",
+   "options": [
+    {
+     "text": "7",
+     "correct": false
+    },
+    {
+     "text": "11",
+     "correct": false
+    },
+    {
+     "text": "10",
+     "correct": true
+    },
+    {
+     "text": "8",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Double 5 means 5 + 5.",
+    "5 + 5 = 10."
+   ],
+   "standards": [
+    "2.NBT.A.2",
+    "2.NBT.B.7",
+    "2.NBT.B.8",
+    "2.OA.B.2",
+    "2.OA.C",
+    "2.OA.C.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-eg-s03-cp2-021",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
@@ -6247,28 +6535,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-018",
-   "skillId": "equal-groups-skill-03",
-   "level": "cp2",
-   "format": "short-answer",
-   "prompt": "3 + 3 = ___",
-   "answer": "6",
-   "solutionSteps": [
-    "Double 3 means 3 + 3.",
-    "3 + 3 = 6."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s03-cp2-019",
+   "id": "m2-eg-s03-cp2-022",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "multiple-choice",
@@ -6307,46 +6574,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-020",
-   "skillId": "equal-groups-skill-03",
-   "level": "cp2",
-   "format": "multiple-choice",
-   "prompt": "Add 2 and 2.",
-   "answer": "4",
-   "options": [
-    {
-     "text": "4",
-     "correct": true
-    },
-    {
-     "text": "14",
-     "correct": false
-    },
-    {
-     "text": "3",
-     "correct": false
-    },
-    {
-     "text": "5",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "Double 2 means 2 + 2.",
-    "2 + 2 = 4."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_doubles_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s03-cp2-021",
+   "id": "m2-eg-s03-cp2-023",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
@@ -6367,15 +6595,19 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-022",
+   "id": "m2-eg-s03-cp2-024",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "multiple-choice",
-   "prompt": "Look at 16. Is it even or odd?",
+   "prompt": "Sort 16 as even or odd.",
    "answer": "even",
    "options": [
     {
      "text": "neither",
+     "correct": false
+    },
+    {
+     "text": "both",
      "correct": false
     },
     {
@@ -6385,10 +6617,6 @@
     {
      "text": "even",
      "correct": true
-    },
-    {
-     "text": "both",
-     "correct": false
     }
    ],
    "solutionSteps": [
@@ -6406,74 +6634,14 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-eg-s03-cp2-023",
-   "skillId": "equal-groups-skill-03",
-   "level": "cp2",
-   "format": "short-answer",
-   "prompt": "Look at 18. Is it even or odd?",
-   "answer": "even",
-   "solutionSteps": [
-    "Look at the ones digit: 8.",
-    "18 is even."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-eg-s03-cp2-024",
-   "skillId": "equal-groups-skill-03",
-   "level": "cp2",
-   "format": "multiple-choice",
-   "prompt": "Tell whether 18 is even or odd.",
-   "answer": "even",
-   "options": [
-    {
-     "text": "both",
-     "correct": false
-    },
-    {
-     "text": "odd",
-     "correct": false
-    },
-    {
-     "text": "neither",
-     "correct": false
-    },
-    {
-     "text": "even",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "Look at the ones digit: 8.",
-    "18 is even."
-   ],
-   "standards": [
-    "2.NBT.A.2",
-    "2.NBT.B.7",
-    "2.NBT.B.8",
-    "2.OA.B.2",
-    "2.OA.C",
-    "2.OA.C.3"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_even_odd_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
    "id": "m2-eg-s03-cp2-025",
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Dev solved this problem.\n19 counters are put into pairs. Is 19 even or odd?\nDev answered: both\nFind the mistake. What is the correct answer?",
+   "prompt": "Dev solved this problem.\n19 is even or odd?\nDev answered: neither\nFind the mistake. What is the correct answer?",
    "answer": "odd",
    "solutionSteps": [
-    "The answer both is not correct.",
+    "The answer neither is not correct.",
     "Look at the ones digit: 9.",
     "19 is odd.",
     "The correct answer is odd."
@@ -6516,10 +6684,10 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Tessa solved this problem.\nTell whether 13 is even or odd.\nTessa answered: even\nFind the mistake. What is the correct answer?",
+   "prompt": "Dev solved this problem.\n13 is even or odd?\nDev answered: neither\nFind the mistake. What is the correct answer?",
    "answer": "odd",
    "solutionSteps": [
-    "The answer even is not correct.",
+    "The answer neither is not correct.",
     "Look at the ones digit: 3.",
     "13 is odd.",
     "The correct answer is odd."
@@ -6624,7 +6792,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp2",
    "format": "open-response",
-   "prompt": "Answer each part. Show your work.\n(a) What is double 4?\n(b) Tell whether 4 is even or odd.\n(c) What is double 3?\n(d) Is 11 even or odd?",
+   "prompt": "Answer each part. Show your work.\n(a) What is double 4?\n(b) Tell whether 4 is even or odd.\n(c) What is double 3?\n(d) 11 is even or odd?",
    "parts": [
     {
      "prompt": "What is double 4?",
@@ -6639,7 +6807,7 @@
      "answer": "6"
     },
     {
-     "prompt": "Is 11 even or odd?",
+     "prompt": "11 is even or odd?",
      "answer": "odd"
     }
    ],
@@ -6827,7 +6995,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "Add 10 and 10.",
+   "prompt": "10 + 10 = ?",
    "answer": "20",
    "options": [
     {
@@ -6835,15 +7003,15 @@
      "correct": true
     },
     {
+     "text": "18",
+     "correct": false
+    },
+    {
      "text": "21",
      "correct": false
     },
     {
-     "text": "19",
-     "correct": false
-    },
-    {
-     "text": "30",
+     "text": "12",
      "correct": false
     }
    ],
@@ -6866,7 +7034,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "Look at 93. Is it even or odd?",
+   "prompt": "Sort 93 as even or odd.",
    "answer": "odd",
    "options": [
     {
@@ -6874,7 +7042,7 @@
      "correct": false
     },
     {
-     "text": "even",
+     "text": "neither",
      "correct": false
     },
     {
@@ -6882,7 +7050,7 @@
      "correct": true
     },
     {
-     "text": "neither",
+     "text": "even",
      "correct": false
     }
    ],
@@ -6905,7 +7073,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "Tell whether 35 is even or odd.",
+   "prompt": "35 is even or odd?",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 5.",
@@ -7067,7 +7235,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "83 counters are put into pairs. Is 83 even or odd?",
+   "prompt": "Sort 83 as even or odd.",
    "answer": "odd",
    "options": [
     {
@@ -7106,29 +7274,29 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "Hana has 6 tiles. Lena gives 6 more tiles. How many tiles does Hana have now?",
-   "answer": "12",
+   "prompt": "What is double 8?",
+   "answer": "16",
    "options": [
     {
-     "text": "12",
+     "text": "16",
      "correct": true
     },
     {
-     "text": "13",
+     "text": "17",
      "correct": false
     },
     {
-     "text": "11",
+     "text": "14",
      "correct": false
     },
     {
-     "text": "22",
+     "text": "10",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 6 means 6 + 6.",
-    "6 + 6 = 12."
+    "Double 8 means 8 + 8.",
+    "8 + 8 = 16."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -7187,7 +7355,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "multiple-choice",
-   "prompt": "99 counters are put into pairs. Is 99 even or odd?",
+   "prompt": "Sort 99 as even or odd.",
    "answer": "odd",
    "options": [
     {
@@ -7199,11 +7367,11 @@
      "correct": true
     },
     {
-     "text": "neither",
+     "text": "both",
      "correct": false
     },
     {
-     "text": "both",
+     "text": "neither",
      "correct": false
     }
    ],
@@ -7265,7 +7433,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "44 counters are put into pairs. Is 44 even or odd?",
+   "prompt": "44 is even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 4.",
@@ -7286,11 +7454,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "cp1",
    "format": "short-answer",
-   "prompt": "8 + 8 = ?",
-   "answer": "16",
+   "prompt": "Find the sum of 5 and 5.",
+   "answer": "10",
    "solutionSteps": [
-    "Double 8 means 8 + 8.",
-    "8 + 8 = 16."
+    "Double 5 means 5 + 5.",
+    "5 + 5 = 10."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -7497,32 +7665,32 @@
    "prompt": "Select ALL the problems that are matched with the correct answer.",
    "options": [
     {
-     "text": "4 + 4 = ? → 9",
-     "correct": false
-    },
-    {
-     "text": "10 + 10 = ? → 20",
+     "text": "Which word describes 36: even or odd? → even",
      "correct": true
     },
     {
-     "text": "36 counters are put into pairs. Is 36 even or odd? → both",
+     "text": "Is 81 even or odd? → neither",
      "correct": false
     },
     {
-     "text": "Is 66 even or odd? → even",
+     "text": "Is 94 even or odd? → even",
      "correct": true
+    },
+    {
+     "text": "88 counters are put into pairs. Is 88 even or odd? → neither",
+     "correct": false
     }
    ],
    "answer": [
-    "10 + 10 = ? → 20",
-    "Is 66 even or odd? → even"
+    "Which word describes 36: even or odd? → even",
+    "Is 94 even or odd? → even"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
-    "4 + 4 = ? → 9: not correct.",
-    "10 + 10 = ? → 20: correct.",
-    "36 counters are put into pairs. Is 36 even or odd? → both: not correct.",
-    "Is 66 even or odd? → even: correct."
+    "Which word describes 36: even or odd? → even: correct.",
+    "Is 81 even or odd? → neither: not correct.",
+    "Is 94 even or odd? → even: correct.",
+    "88 counters are put into pairs. Is 88 even or odd? → neither: not correct."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -7601,7 +7769,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "744 counters are put into pairs. Is 744 even or odd?",
+   "prompt": "Which word describes 744: even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 4.",
@@ -7622,29 +7790,29 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "15 shells in a box and 15 more shells on the table. How many shells in all?",
-   "answer": "30",
+   "prompt": "11 + 11 = ?",
+   "answer": "22",
    "options": [
     {
-     "text": "30",
+     "text": "20",
+     "correct": false
+    },
+    {
+     "text": "22",
      "correct": true
     },
     {
-     "text": "29",
+     "text": "13",
      "correct": false
     },
     {
-     "text": "31",
-     "correct": false
-    },
-    {
-     "text": "40",
+     "text": "23",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 15 means 15 + 15.",
-    "15 + 15 = 30."
+    "Double 11 means 11 + 11.",
+    "11 + 11 = 22."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -7661,15 +7829,15 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Is 785 even or odd?",
+   "prompt": "Which word describes 785: even or odd?",
    "answer": "odd",
    "options": [
     {
-     "text": "even",
+     "text": "neither",
      "correct": false
     },
     {
-     "text": "both",
+     "text": "even",
      "correct": false
     },
     {
@@ -7677,7 +7845,7 @@
      "correct": true
     },
     {
-     "text": "neither",
+     "text": "both",
      "correct": false
     }
    ],
@@ -7700,11 +7868,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "19 shells in a box and 19 more shells on the table. How many shells in all?",
-   "answer": "38",
+   "prompt": "What is double 20?",
+   "answer": "40",
    "solutionSteps": [
-    "Double 19 means 19 + 19.",
-    "19 + 19 = 38."
+    "Double 20 means 20 + 20.",
+    "20 + 20 = 40."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -7820,11 +7988,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "What is double 19?",
-   "answer": "38",
+   "prompt": "What is double 8?",
+   "answer": "16",
    "solutionSteps": [
-    "Double 19 means 19 + 19.",
-    "19 + 19 = 38."
+    "Double 8 means 8 + 8.",
+    "8 + 8 = 16."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -7901,7 +8069,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Tell whether 804 is even or odd.",
+   "prompt": "804 is even or odd?",
    "answer": "even",
    "options": [
     {
@@ -7909,7 +8077,7 @@
      "correct": true
     },
     {
-     "text": "neither",
+     "text": "both",
      "correct": false
     },
     {
@@ -7917,7 +8085,7 @@
      "correct": false
     },
     {
-     "text": "both",
+     "text": "neither",
      "correct": false
     }
    ],
@@ -7982,29 +8150,29 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "20 + 20 = ?",
-   "answer": "40",
+   "prompt": "What is double 11?",
+   "answer": "22",
    "options": [
     {
-     "text": "40",
-     "correct": true
-    },
-    {
-     "text": "38",
-     "correct": false
-    },
-    {
-     "text": "41",
+     "text": "13",
      "correct": false
     },
     {
      "text": "22",
+     "correct": true
+    },
+    {
+     "text": "23",
+     "correct": false
+    },
+    {
+     "text": "20",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 20 means 20 + 20.",
-    "20 + 20 = 40."
+    "Double 11 means 11 + 11.",
+    "11 + 11 = 22."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -8081,7 +8249,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Tell whether 129 is even or odd.",
+   "prompt": "129 is even or odd?",
    "answer": "odd",
    "solutionSteps": [
     "Look at the ones digit: 9.",
@@ -8141,19 +8309,19 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Look at 281. Is it even or odd?",
+   "prompt": "281 is even or odd?",
    "answer": "odd",
    "options": [
+    {
+     "text": "neither",
+     "correct": false
+    },
     {
      "text": "even",
      "correct": false
     },
     {
      "text": "both",
-     "correct": false
-    },
-    {
-     "text": "neither",
      "correct": false
     },
     {
@@ -8180,11 +8348,11 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "12 cups in a box and 12 more cups on the table. How many cups in all?",
-   "answer": "24",
+   "prompt": "What is double 17?",
+   "answer": "34",
    "solutionSteps": [
-    "Double 12 means 12 + 12.",
-    "12 + 12 = 24."
+    "Double 17 means 17 + 17.",
+    "17 + 17 = 34."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -8201,7 +8369,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "314 counters are put into pairs. Is 314 even or odd?",
+   "prompt": "Which word describes 314: even or odd?",
    "answer": "even",
    "solutionSteps": [
     "Look at the ones digit: 4.",
@@ -8261,29 +8429,29 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Lena has 14 pencils. Aisha gives 14 more pencils. How many pencils does Lena have now?",
-   "answer": "28",
+   "prompt": "What is double 16?",
+   "answer": "32",
    "options": [
     {
-     "text": "28",
+     "text": "32",
      "correct": true
     },
     {
-     "text": "38",
+     "text": "18",
      "correct": false
     },
     {
-     "text": "29",
+     "text": "30",
      "correct": false
     },
     {
-     "text": "27",
+     "text": "33",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Double 14 means 14 + 14.",
-    "14 + 14 = 28."
+    "Double 16 means 16 + 16.",
+    "16 + 16 = 32."
    ],
    "standards": [
     "2.NBT.A.2",
@@ -8346,10 +8514,10 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Mei solved this problem.\nTell whether 863 is even or odd.\nMei answered: even\nFind the mistake. What is the correct answer?",
+   "prompt": "Omar solved this problem.\nWhich word describes 863: even or odd?\nOmar answered: neither\nFind the mistake. What is the correct answer?",
    "answer": "odd",
    "solutionSteps": [
-    "The answer even is not correct.",
+    "The answer neither is not correct.",
     "Look at the ones digit: 3.",
     "863 is odd.",
     "The correct answer is odd."
@@ -8369,7 +8537,7 @@
    "skillId": "equal-groups-skill-03",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "True or false? Look at 366. Is it even or odd? The answer is even.\nAnswer shown: even\nChoose the best response.",
+   "prompt": "True or false? Which word describes 366: even or odd? The answer is even.\nAnswer shown: even\nChoose the best response.",
    "answer": "True. 366 is even.",
    "options": [
     {
@@ -8412,11 +8580,11 @@
    "prompt": "Select ALL the problems that are matched with the correct answer.",
    "options": [
     {
-     "text": "Is 643 even or odd? → odd",
+     "text": "Which word describes 643: even or odd? → odd",
      "correct": true
     },
     {
-     "text": "19 + 19 = ? → 38",
+     "text": "20 + 20 = ? → 40",
      "correct": true
     },
     {
@@ -8429,13 +8597,13 @@
     }
    ],
    "answer": [
-    "Is 643 even or odd? → odd",
-    "19 + 19 = ? → 38"
+    "Which word describes 643: even or odd? → odd",
+    "20 + 20 = ? → 40"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
-    "Is 643 even or odd? → odd: correct.",
-    "19 + 19 = ? → 38: correct.",
+    "Which word describes 643: even or odd? → odd: correct.",
+    "20 + 20 = ? → 40: correct.",
     "What is double 20? → 41: not correct.",
     "What is double 17? → 32: not correct."
    ],

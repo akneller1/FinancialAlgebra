@@ -12225,10 +12225,10 @@
    "skillId": "number-line-addition-subtraction-skill-05",
    "level": "cp2",
    "format": "short-answer",
-   "prompt": "Subtract 14 from 47.",
-   "answer": "33",
+   "prompt": "Carmen has 37 pencils and gives 21 away. How many are left?",
+   "answer": "16",
    "solutionSteps": [
-    "Subtract ones, then tens: 47 − 14 = 33."
+    "Subtract ones, then tens: 37 − 21 = 16."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16391,6 +16391,26 @@
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "short-answer",
+   "prompt": "Aisha had 47 marbles. Aisha got 26 more, then gave 43 away. How many marbles does Aisha have now?",
+   "answer": "30",
+   "solutionSteps": [
+    "First add: 47 + 26 = 73.",
+    "Then subtract: 73 − 43 = 30."
+   ],
+   "standards": [
+    "2.MD.B.5",
+    "2.MD.B.6",
+    "2.NBT.A.2",
+    "2.NBT.B.5",
+    "2.OA.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+  },
+  {
+   "id": "m2-nl-s06-honors-002",
+   "skillId": "number-line-addition-subtraction-skill-06",
+   "level": "honors",
+   "format": "short-answer",
    "prompt": "Use the number line: 50 + 50 = ?",
    "answer": "100",
    "solutionSteps": [
@@ -16400,7 +16420,7 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-001.png",
+     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-002.png",
      "alt": "A number line from 0 to 100 showing a jump of 50 from 50."
     }
    },
@@ -16414,15 +16434,33 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-002",
+   "id": "m2-nl-s06-honors-003",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "short-answer",
-   "prompt": "Tessa had 66 buttons. Tessa got 12 more, then gave 20 away. How many buttons does Tessa have now?",
-   "answer": "58",
+   "format": "multiple-choice",
+   "prompt": "Priya had 58 leaves. Priya got 8 more, then gave 11 away. How many leaves does Priya have now?",
+   "answer": "55",
+   "options": [
+    {
+     "text": "77",
+     "correct": false
+    },
+    {
+     "text": "39",
+     "correct": false
+    },
+    {
+     "text": "66",
+     "correct": false
+    },
+    {
+     "text": "55",
+     "correct": true
+    }
+   ],
    "solutionSteps": [
-    "First add: 66 + 12 = 78.",
-    "Then subtract: 78 − 20 = 58."
+    "First add: 58 + 8 = 66.",
+    "Then subtract: 66 − 11 = 55."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16434,7 +16472,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-003",
+   "id": "m2-nl-s06-honors-004",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
@@ -16446,16 +16484,16 @@
      "correct": false
     },
     {
+     "text": "94",
+     "correct": true
+    },
+    {
      "text": "95",
      "correct": false
     },
     {
      "text": "104",
      "correct": false
-    },
-    {
-     "text": "94",
-     "correct": true
     }
    ],
    "solutionSteps": [
@@ -16465,7 +16503,7 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-003.png",
+     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-004.png",
      "alt": "A number line from 0 to 100 showing a jump of 49 from 45."
     }
    },
@@ -16479,33 +16517,15 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-004",
+   "id": "m2-nl-s06-honors-005",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "Elena had 76 cards. Elena got 17 more, then gave 22 away. How many cards does Elena have now?",
-   "answer": "71",
-   "options": [
-    {
-     "text": "115",
-     "correct": false
-    },
-    {
-     "text": "71",
-     "correct": true
-    },
-    {
-     "text": "37",
-     "correct": false
-    },
-    {
-     "text": "93",
-     "correct": false
-    }
-   ],
+   "format": "short-answer",
+   "prompt": "Maya had 58 shells. Maya got 14 more, then gave 19 away. How many shells does Maya have now?",
+   "answer": "53",
    "solutionSteps": [
-    "First add: 76 + 17 = 93.",
-    "Then subtract: 93 − 22 = 71."
+    "First add: 58 + 14 = 72.",
+    "Then subtract: 72 − 19 = 53."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16517,7 +16537,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-005",
+   "id": "m2-nl-s06-honors-006",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "short-answer",
@@ -16530,7 +16550,7 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-005.png",
+     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-006.png",
      "alt": "A number line from 0 to 100 showing a jump of 34 from 42."
     }
    },
@@ -16544,15 +16564,33 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-006",
+   "id": "m2-nl-s06-honors-007",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "short-answer",
-   "prompt": "Nia had 72 crayons. Nia got 15 more, then gave 33 away. How many crayons does Nia have now?",
-   "answer": "54",
+   "format": "multiple-choice",
+   "prompt": "Isla had 57 pencils. Isla got 27 more, then gave 38 away. How many pencils does Isla have now?",
+   "answer": "46",
+   "options": [
+    {
+     "text": "122",
+     "correct": false
+    },
+    {
+     "text": "46",
+     "correct": true
+    },
+    {
+     "text": "84",
+     "correct": false
+    },
+    {
+     "text": "1",
+     "correct": false
+    }
+   ],
    "solutionSteps": [
-    "First add: 72 + 15 = 87.",
-    "Then subtract: 87 − 33 = 54."
+    "First add: 57 + 27 = 84.",
+    "Then subtract: 84 − 38 = 46."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16564,7 +16602,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-007",
+   "id": "m2-nl-s06-honors-008",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
@@ -16572,12 +16610,12 @@
    "answer": "53",
    "options": [
     {
-     "text": "63",
-     "correct": false
-    },
-    {
      "text": "53",
      "correct": true
+    },
+    {
+     "text": "63",
+     "correct": false
     },
     {
      "text": "43",
@@ -16595,7 +16633,7 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-007.png",
+     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-008.png",
      "alt": "A number line from 0 to 100 showing a jump of 13 from 40."
     }
    },
@@ -16609,33 +16647,15 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-008",
+   "id": "m2-nl-s06-honors-009",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "Tessa had 73 pencils. Tessa got 14 more, then gave 19 away. How many pencils does Tessa have now?",
-   "answer": "68",
-   "options": [
-    {
-     "text": "68",
-     "correct": true
-    },
-    {
-     "text": "106",
-     "correct": false
-    },
-    {
-     "text": "40",
-     "correct": false
-    },
-    {
-     "text": "87",
-     "correct": false
-    }
-   ],
+   "format": "short-answer",
+   "prompt": "Ben had 71 stamps. Ben got 9 more, then gave 75 away. How many stamps does Ben have now?",
+   "answer": "5",
    "solutionSteps": [
-    "First add: 73 + 14 = 87.",
-    "Then subtract: 87 − 19 = 68."
+    "First add: 71 + 9 = 80.",
+    "Then subtract: 80 − 75 = 5."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16647,7 +16667,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-009",
+   "id": "m2-nl-s06-honors-010",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "short-answer",
@@ -16660,7 +16680,7 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-009.png",
+     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-010.png",
      "alt": "A number line from 0 to 100 showing a jump of 29 from 32."
     }
    },
@@ -16674,15 +16694,33 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-010",
+   "id": "m2-nl-s06-honors-011",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "short-answer",
-   "prompt": "Tariq had 80 leaves. Tariq got 12 more, then gave 37 away. How many leaves does Tariq have now?",
-   "answer": "55",
+   "format": "multiple-choice",
+   "prompt": "Tessa had 39 beads. Tessa got 37 more, then gave 35 away. How many beads does Tessa have now?",
+   "answer": "41",
+   "options": [
+    {
+     "text": "41",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false
+    },
+    {
+     "text": "111",
+     "correct": false
+    },
+    {
+     "text": "76",
+     "correct": false
+    }
+   ],
    "solutionSteps": [
-    "First add: 80 + 12 = 92.",
-    "Then subtract: 92 − 37 = 55."
+    "First add: 39 + 37 = 76.",
+    "Then subtract: 76 − 35 = 41."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16694,7 +16732,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-011",
+   "id": "m2-nl-s06-honors-012",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
@@ -16702,16 +16740,16 @@
    "answer": "90",
    "options": [
     {
-     "text": "90",
-     "correct": true
-    },
-    {
      "text": "80",
      "correct": false
     },
     {
      "text": "91",
      "correct": false
+    },
+    {
+     "text": "90",
+     "correct": true
     },
     {
      "text": "100",
@@ -16725,7 +16763,7 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-011.png",
+     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-012.png",
      "alt": "A number line from 0 to 100 showing a jump of 54 from 36."
     }
    },
@@ -16739,33 +16777,15 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-012",
+   "id": "m2-nl-s06-honors-013",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "Elena had 79 books. Elena got 13 more, then gave 29 away. How many books does Elena have now?",
-   "answer": "63",
-   "options": [
-    {
-     "text": "92",
-     "correct": false
-    },
-    {
-     "text": "37",
-     "correct": false
-    },
-    {
-     "text": "63",
-     "correct": true
-    },
-    {
-     "text": "121",
-     "correct": false
-    }
-   ],
+   "format": "short-answer",
+   "prompt": "Lucia had 45 coins. Lucia got 25 more, then gave 27 away. How many coins does Lucia have now?",
+   "answer": "43",
    "solutionSteps": [
-    "First add: 79 + 13 = 92.",
-    "Then subtract: 92 − 29 = 63."
+    "First add: 45 + 25 = 70.",
+    "Then subtract: 70 − 27 = 43."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16777,7 +16797,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-013",
+   "id": "m2-nl-s06-honors-014",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "short-answer",
@@ -16790,7 +16810,7 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-013.png",
+     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-014.png",
      "alt": "A number line from 0 to 100 showing a jump of 39 from 25."
     }
    },
@@ -16804,15 +16824,33 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-014",
+   "id": "m2-nl-s06-honors-015",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "short-answer",
-   "prompt": "Aisha had 67 buttons. Aisha got 24 more, then gave 35 away. How many buttons does Aisha have now?",
-   "answer": "56",
+   "format": "multiple-choice",
+   "prompt": "Carmen had 72 books. Carmen got 25 more, then gave 21 away. How many books does Carmen have now?",
+   "answer": "76",
+   "options": [
+    {
+     "text": "26",
+     "correct": false
+    },
+    {
+     "text": "76",
+     "correct": true
+    },
+    {
+     "text": "118",
+     "correct": false
+    },
+    {
+     "text": "97",
+     "correct": false
+    }
+   ],
    "solutionSteps": [
-    "First add: 67 + 24 = 91.",
-    "Then subtract: 91 − 35 = 56."
+    "First add: 72 + 25 = 97.",
+    "Then subtract: 97 − 21 = 76."
    ],
    "standards": [
     "2.MD.B.5",
@@ -16824,7 +16862,7 @@
    "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
-   "id": "m2-nl-s06-honors-015",
+   "id": "m2-nl-s06-honors-016",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
@@ -16855,35 +16893,8 @@
    "diagram": {
     "type": "image",
     "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-015.png",
-     "alt": "A number line from 0 to 100 showing a jump of 50 from 32."
-    }
-   },
-   "standards": [
-    "2.MD.B.5",
-    "2.MD.B.6",
-    "2.NBT.A.2",
-    "2.NBT.B.5",
-    "2.OA.A.1"
-   ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
-  },
-  {
-   "id": "m2-nl-s06-honors-016",
-   "skillId": "number-line-addition-subtraction-skill-06",
-   "level": "honors",
-   "format": "short-answer",
-   "prompt": "Use the number line: 46 + 19 = ?",
-   "answer": "65",
-   "solutionSteps": [
-    "Read the number line.",
-    "The answer is 65."
-   ],
-   "diagram": {
-    "type": "image",
-    "spec": {
      "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-016.png",
-     "alt": "A number line from 0 to 100 showing a jump of 19 from 46."
+     "alt": "A number line from 0 to 100 showing a jump of 50 from 32."
     }
    },
    "standards": [
@@ -16899,38 +16910,13 @@
    "id": "m2-nl-s06-honors-017",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "Start at 47. Jump 32 more. Where do you land?",
-   "answer": "79",
-   "options": [
-    {
-     "text": "79",
-     "correct": true
-    },
-    {
-     "text": "89",
-     "correct": false
-    },
-    {
-     "text": "15",
-     "correct": false
-    },
-    {
-     "text": "69",
-     "correct": false
-    }
-   ],
+   "format": "short-answer",
+   "prompt": "Sofia had 71 apples. Sofia got 24 more, then gave 47 away. How many apples does Sofia have now?",
+   "answer": "48",
    "solutionSteps": [
-    "Read the number line.",
-    "The answer is 79."
+    "First add: 71 + 24 = 95.",
+    "Then subtract: 95 − 47 = 48."
    ],
-   "diagram": {
-    "type": "image",
-    "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-017.png",
-     "alt": "A number line from 0 to 100 showing a jump of 32 from 47."
-    }
-   },
    "standards": [
     "2.MD.B.5",
     "2.MD.B.6",
@@ -16938,24 +16924,24 @@
     "2.NBT.B.5",
     "2.OA.A.1"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-nl-s06-honors-018",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Use the number line: 11 + 46 = ?",
-   "answer": "57",
+   "prompt": "Use the number line: 46 + 19 = ?",
+   "answer": "65",
    "solutionSteps": [
     "Read the number line.",
-    "The answer is 57."
+    "The answer is 65."
    ],
    "diagram": {
     "type": "image",
     "spec": {
      "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-018.png",
-     "alt": "A number line from 0 to 100 showing a jump of 46 from 11."
+     "alt": "A number line from 0 to 100 showing a jump of 19 from 46."
     }
    },
    "standards": [
@@ -16972,37 +16958,30 @@
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Use the number line: 24 + 73 = ?",
-   "answer": "97",
+   "prompt": "Priya had 23 buttons. Priya got 9 more, then gave 25 away. How many buttons does Priya have now?",
+   "answer": "7",
    "options": [
     {
-     "text": "87",
+     "text": "1",
      "correct": false
     },
     {
-     "text": "98",
+     "text": "32",
      "correct": false
     },
     {
-     "text": "107",
+     "text": "57",
      "correct": false
     },
     {
-     "text": "97",
+     "text": "7",
      "correct": true
     }
    ],
    "solutionSteps": [
-    "Read the number line.",
-    "The answer is 97."
+    "First add: 23 + 9 = 32.",
+    "Then subtract: 32 − 25 = 7."
    ],
-   "diagram": {
-    "type": "image",
-    "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-019.png",
-     "alt": "A number line from 0 to 100 showing a jump of 73 from 24."
-    }
-   },
    "standards": [
     "2.MD.B.5",
     "2.MD.B.6",
@@ -17010,24 +16989,42 @@
     "2.NBT.B.5",
     "2.OA.A.1"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-nl-s06-honors-020",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "short-answer",
-   "prompt": "Use the number line: 29 + 68 = ?",
-   "answer": "97",
+   "format": "multiple-choice",
+   "prompt": "Start at 22. Jump 21 more. Where do you land?",
+   "answer": "43",
+   "options": [
+    {
+     "text": "43",
+     "correct": true
+    },
+    {
+     "text": "53",
+     "correct": false
+    },
+    {
+     "text": "1",
+     "correct": false
+    },
+    {
+     "text": "33",
+     "correct": false
+    }
+   ],
    "solutionSteps": [
     "Read the number line.",
-    "The answer is 97."
+    "The answer is 43."
    ],
    "diagram": {
     "type": "image",
     "spec": {
      "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-020.png",
-     "alt": "A number line from 0 to 100 showing a jump of 68 from 29."
+     "alt": "A number line from 0 to 100 showing a jump of 21 from 22."
     }
    },
    "standards": [
@@ -17043,38 +17040,13 @@
    "id": "m2-nl-s06-honors-021",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
-   "format": "multiple-choice",
-   "prompt": "Start at 15. Jump 85 more. Where do you land?",
-   "answer": "100",
-   "options": [
-    {
-     "text": "101",
-     "correct": false
-    },
-    {
-     "text": "110",
-     "correct": false
-    },
-    {
-     "text": "100",
-     "correct": true
-    },
-    {
-     "text": "90",
-     "correct": false
-    }
-   ],
+   "format": "short-answer",
+   "prompt": "Ava had 63 beads. Ava got 32 more, then gave 6 away. How many beads does Ava have now?",
+   "answer": "89",
    "solutionSteps": [
-    "Read the number line.",
-    "The answer is 100."
+    "First add: 63 + 32 = 95.",
+    "Then subtract: 95 − 6 = 89."
    ],
-   "diagram": {
-    "type": "image",
-    "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-021.png",
-     "alt": "A number line from 0 to 100 showing a jump of 85 from 15."
-    }
-   },
    "standards": [
     "2.MD.B.5",
     "2.MD.B.6",
@@ -17082,24 +17054,24 @@
     "2.NBT.B.5",
     "2.OA.A.1"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-nl-s06-honors-022",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Use the number line: 42 + 40 = ?",
-   "answer": "82",
+   "prompt": "Use the number line: 11 + 46 = ?",
+   "answer": "57",
    "solutionSteps": [
     "Read the number line.",
-    "The answer is 82."
+    "The answer is 57."
    ],
    "diagram": {
     "type": "image",
     "spec": {
      "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-022.png",
-     "alt": "A number line from 0 to 100 showing a jump of 40 from 42."
+     "alt": "A number line from 0 to 100 showing a jump of 46 from 11."
     }
    },
    "standards": [
@@ -17116,37 +17088,30 @@
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Use the number line: 41 + 44 = ?",
-   "answer": "85",
+   "prompt": "Tariq had 28 stickers. Tariq got 65 more, then gave 70 away. How many stickers does Tariq have now?",
+   "answer": "23",
    "options": [
     {
-     "text": "85",
+     "text": "23",
      "correct": true
     },
     {
-     "text": "75",
+     "text": "93",
      "correct": false
     },
     {
-     "text": "95",
+     "text": "1",
      "correct": false
     },
     {
-     "text": "86",
+     "text": "163",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "Read the number line.",
-    "The answer is 85."
+    "First add: 28 + 65 = 93.",
+    "Then subtract: 93 − 70 = 23."
    ],
-   "diagram": {
-    "type": "image",
-    "spec": {
-     "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-023.png",
-     "alt": "A number line from 0 to 100 showing a jump of 44 from 41."
-    }
-   },
    "standards": [
     "2.MD.B.5",
     "2.MD.B.6",
@@ -17154,42 +17119,42 @@
     "2.NBT.B.5",
     "2.OA.A.1"
    ],
-   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam02_fam02_fam02_numberline_items_jump). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
+   "sourceNotes": "Original Claude-authored Grade 2 item (family: fam01_fam01_fam01_two_step_items). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade1-authoring/verify1.py)."
   },
   {
    "id": "m2-nl-s06-honors-024",
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "Use the number line: 49 + 32 = ?",
-   "answer": "81",
+   "prompt": "Use the number line: 24 + 73 = ?",
+   "answer": "97",
    "options": [
     {
-     "text": "81",
+     "text": "97",
      "correct": true
     },
     {
-     "text": "71",
+     "text": "87",
      "correct": false
     },
     {
-     "text": "91",
+     "text": "98",
      "correct": false
     },
     {
-     "text": "17",
+     "text": "107",
      "correct": false
     }
    ],
    "solutionSteps": [
     "Read the number line.",
-    "The answer is 81."
+    "The answer is 97."
    ],
    "diagram": {
     "type": "image",
     "spec": {
      "src": "question-banks/assets/math2/number-line-addition-subtraction/m2-nl-s06-honors-024.png",
-     "alt": "A number line from 0 to 100 showing a jump of 32 from 49."
+     "alt": "A number line from 0 to 100 showing a jump of 73 from 24."
     }
    },
    "standards": [
@@ -17228,13 +17193,13 @@
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "short-answer",
-   "prompt": "Carmen solved this problem.\nA number line from 0 to 100 showing a jump of 10 from 40. Start at 40. Jump 10 more. Where do you land?\nCarmen answered: 40\nFind the mistake. What is the correct answer?",
-   "answer": "50",
+   "prompt": "Ava solved this problem.\nHana had 73 crayons. Hana got 17 more, then gave 10 away. How many crayons does Hana have now?\nAva answered: 10\nFind the mistake. What is the correct answer?",
+   "answer": "80",
    "solutionSteps": [
-    "The answer 40 is not correct.",
-    "Read the number line.",
-    "The answer is 50.",
-    "The correct answer is 50."
+    "The answer 10 is not correct.",
+    "First add: 73 + 17 = 90.",
+    "Then subtract: 90 − 10 = 80.",
+    "The correct answer is 80."
    ],
    "standards": [
     "2.MD.B.5",
@@ -17272,30 +17237,30 @@
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "multiple-choice",
-   "prompt": "True or false? A number line from 0 to 100 showing a jump of 19 from 26. Start at 26. Jump 19 more. Where do you land? The answer is 45.\nAnswer shown: 7\nChoose the best response.",
-   "answer": "False. The correct answer is 45.",
+   "prompt": "True or false? Quinn had 52 stickers. Quinn got 33 more, then gave 51 away. How many stickers does Quinn have now? The answer is 34.\nAnswer shown: 1\nChoose the best response.",
+   "answer": "False. The correct answer is 34.",
    "options": [
     {
-     "text": "False. The correct answer is 35.",
-     "correct": false
-    },
-    {
-     "text": "True. 7 is the correct answer.",
-     "correct": false
-    },
-    {
-     "text": "False. The correct answer is 55.",
-     "correct": false
-    },
-    {
-     "text": "False. The correct answer is 45.",
+     "text": "False. The correct answer is 34.",
      "correct": true
+    },
+    {
+     "text": "False. The correct answer is 136.",
+     "correct": false
+    },
+    {
+     "text": "True. 1 is the correct answer.",
+     "correct": false
+    },
+    {
+     "text": "False. The correct answer is 85.",
+     "correct": false
     }
    ],
    "solutionSteps": [
-    "Read the number line.",
-    "The answer is 45.",
-    "The answer 7 is not correct; it should be 45."
+    "First add: 52 + 33 = 85.",
+    "Then subtract: 85 − 51 = 34.",
+    "The answer 1 is not correct; it should be 34."
    ],
    "standards": [
     "2.MD.B.5",
@@ -17314,32 +17279,32 @@
    "prompt": "Select ALL the problems that are matched with the correct answer.",
    "options": [
     {
-     "text": "A number line from 0 to 100 showing a jump of 54 from 11. Use the number line: 11 + 54 = ? → 65",
-     "correct": true
+     "text": "Liam had 75 cards. Liam got 24 more, then gave 77 away. How many cards does Liam have now? → 77",
+     "correct": false
     },
     {
      "text": "A number line from 0 to 100 showing a jump of 55 from 11. Use the number line: 11 + 55 = ? → 76",
      "correct": false
     },
     {
-     "text": "A number line from 0 to 100 showing a jump of 43 from 44. Use the number line: 44 + 43 = ? → 97",
-     "correct": false
+     "text": "Nia had 41 blocks. Nia got 56 more, then gave 51 away. How many blocks does Nia have now? → 46",
+     "correct": true
     },
     {
-     "text": "A number line from 0 to 100 showing a jump of 75 from 18. Use the number line: 18 + 75 = ? → 93",
+     "text": "A number line from 0 to 100 showing a jump of 54 from 11. Use the number line: 11 + 54 = ? → 65",
      "correct": true
     }
    ],
    "answer": [
-    "A number line from 0 to 100 showing a jump of 54 from 11. Use the number line: 11 + 54 = ? → 65",
-    "A number line from 0 to 100 showing a jump of 75 from 18. Use the number line: 18 + 75 = ? → 93"
+    "Nia had 41 blocks. Nia got 56 more, then gave 51 away. How many blocks does Nia have now? → 46",
+    "A number line from 0 to 100 showing a jump of 54 from 11. Use the number line: 11 + 54 = ? → 65"
    ],
    "solutionSteps": [
     "Work each problem and compare with the answer shown.",
-    "A number line from 0 to 100 showing a jump of 54 from 11. Use the number line: 11 + 54 = ? → 65: correct.",
+    "Liam had 75 cards. Liam got 24 more, then gave 77 away. How many cards does Liam have now? → 77: not correct.",
     "A number line from 0 to 100 showing a jump of 55 from 11. Use the number line: 11 + 55 = ? → 76: not correct.",
-    "A number line from 0 to 100 showing a jump of 43 from 44. Use the number line: 44 + 43 = ? → 97: not correct.",
-    "A number line from 0 to 100 showing a jump of 75 from 18. Use the number line: 18 + 75 = ? → 93: correct."
+    "Nia had 41 blocks. Nia got 56 more, then gave 51 away. How many blocks does Nia have now? → 46: correct.",
+    "A number line from 0 to 100 showing a jump of 54 from 11. Use the number line: 11 + 54 = ? → 65: correct."
    ],
    "standards": [
     "2.MD.B.5",
@@ -17355,31 +17320,31 @@
    "skillId": "number-line-addition-subtraction-skill-06",
    "level": "honors",
    "format": "open-response",
-   "prompt": "Answer each part. Show your work.\n(a) A number line from 0 to 100 showing a jump of 40 from 41. Start at 41. Jump 40 more. Where do you land?\n(b) A number line from 0 to 100 showing a jump of 62 from 13. Use the number line: 13 + 62 = ?\n(c) A number line from 0 to 100 showing a jump of 39 from 34. Use the number line: 34 + 39 = ?\n(d) A number line from 0 to 100 showing a jump of 42 from 36. Use the number line: 36 + 42 = ?",
+   "prompt": "Answer each part. Show your work.\n(a) A number line from 0 to 100 showing a jump of 40 from 41. Start at 41. Jump 40 more. Where do you land?\n(b) Marco had 52 crayons. Marco got 25 more, then gave 15 away. How many crayons does Marco have now?\n(c) Priya had 22 stamps. Priya got 23 more, then gave 41 away. How many stamps does Priya have now?\n(d) Lucia had 57 tiles. Lucia got 17 more, then gave 65 away. How many tiles does Lucia have now?",
    "parts": [
     {
      "prompt": "A number line from 0 to 100 showing a jump of 40 from 41. Start at 41. Jump 40 more. Where do you land?",
      "answer": "81"
     },
     {
-     "prompt": "A number line from 0 to 100 showing a jump of 62 from 13. Use the number line: 13 + 62 = ?",
-     "answer": "75"
+     "prompt": "Marco had 52 crayons. Marco got 25 more, then gave 15 away. How many crayons does Marco have now?",
+     "answer": "62"
     },
     {
-     "prompt": "A number line from 0 to 100 showing a jump of 39 from 34. Use the number line: 34 + 39 = ?",
-     "answer": "73"
+     "prompt": "Priya had 22 stamps. Priya got 23 more, then gave 41 away. How many stamps does Priya have now?",
+     "answer": "4"
     },
     {
-     "prompt": "A number line from 0 to 100 showing a jump of 42 from 36. Use the number line: 36 + 42 = ?",
-     "answer": "78"
+     "prompt": "Lucia had 57 tiles. Lucia got 17 more, then gave 65 away. How many tiles does Lucia have now?",
+     "answer": "9"
     }
    ],
-   "answer": "(a) 81; (b) 75; (c) 73; (d) 78",
+   "answer": "(a) 81; (b) 62; (c) 4; (d) 9",
    "solutionSteps": [
     "(a) Read the number line. The answer is 81.",
-    "(b) Read the number line. The answer is 75.",
-    "(c) Read the number line. The answer is 73.",
-    "(d) Read the number line. The answer is 78."
+    "(b) First add: 52 + 25 = 77. Then subtract: 77 − 15 = 62.",
+    "(c) First add: 22 + 23 = 45. Then subtract: 45 − 41 = 4.",
+    "(d) First add: 57 + 17 = 74. Then subtract: 74 − 65 = 9."
    ],
    "standards": [
     "2.MD.B.5",

@@ -11,6 +11,6 @@ SKILLS = {
     5: {"name": 'Add and subtract within 1,000 using place-value methods', "fams": [add3_items(), sub3_items()]},
     6: {"name": 'Build fluency with two-digit addition and subtraction', "fams": [add2_items(), sub2_items()]},
     7: {"name": 'Represent one-step problems with equations and diagrams', "fams": [tape_compare_items(100), two_step_items(100)]},
-    8: {"name": 'Solve two-step story problems within 100', "fams": [two_step_items(100), tape_compare_items(100)]},
+    8: {"name": 'Solve two-step story problems within 100', "fams": [two_step_items(100), two_step_items(limit=100)]},
     9: {"name": 'Write stories to match equations or diagrams', "fams": [tape_compare_items(), story_match_items()]},
 }
