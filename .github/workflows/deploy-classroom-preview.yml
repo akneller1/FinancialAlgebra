@@ -46,28 +46,34 @@ jobs:
           CLASSROOM_SOURCE_DIR: ../classroom
         run: node scripts/test-classroom-preview.cjs
       - name: Install Chromium for Grade 3 browser regression (PR only)
-        if: github.event_name == 'pull_request'
-        working-directory: source
+                working-directory: source
         run: |
           npm install --no-save playwright
           npx playwright install --with-deps chromium
       - name: Exercise Grade 3 games, study guides and student links in Chromium
-        if: github.event_name == 'pull_request'
-        working-directory: source
+                working-directory: source
         env:
           G3_SITE: ../classroom/_site
           G3_PREFIX: grade3/
-        run: node tools/grade3-authoring/tests/browser-grade3.cjs
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            node tools/grade3-authoring/tests/browser-grade3.cjs
+          else
+            node tools/grade3-authoring/tests/browser-grade3.cjs --quick
+          fi
       - name: Exercise Grade 3 native generators and printable answer keys in Chromium
-        if: github.event_name == 'pull_request'
-        working-directory: source
+                working-directory: source
         env:
           G3_BASE: http://127.0.0.1:8766/
           G3_SET: grade3
         run: |
           python3 -m http.server 8766 --directory ../classroom/_site > /tmp/grade3-preview-http.log 2>&1 &
           echo $! > /tmp/grade3-preview-http.pid
-          node tools/grade3-authoring/tests/browser-generators.cjs --all
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            node tools/grade3-authoring/tests/browser-generators.cjs --all
+          else
+            node tools/grade3-authoring/tests/browser-generators.cjs
+          fi
           kill $(cat /tmp/grade3-preview-http.pid)
       - uses: actions/upload-pages-artifact@v3
         with:
