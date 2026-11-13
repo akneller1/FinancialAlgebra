@@ -355,7 +355,7 @@
       if (!ids.length) return {};
       // Error Analysis relies on vetted misconceptions stored separately from
       // the question bank. Do not silently erase them on a network/cache error.
-      // The independent source URL is a fallback for older main-site builds.
+      // The site-root path is a fallback for pages opened from a different folder depth.
       var metadataPath = '../' + COURSE + '/meta/' + encodeURIComponent(id) + '.meta.json';
       function readMetadata(url) {
         return G.fetch(url, { cache: 'no-store' }).then(function (response) {
@@ -370,7 +370,7 @@
       }
       return readMetadata(metadataPath).catch(function (primaryError) {
         if (COURSE !== 'math5') return { __loadError: primaryError.message };
-        return readMetadata('https://akneller1.github.io/FinancialAlgebra/math5/meta/' +
+        return readMetadata('/grade5/math5/meta/' +
           encodeURIComponent(id) + '.meta.json').catch(function (fallbackError) {
           // Preserve ordinary generators even if both metadata sources fail.
           return { __loadError: primaryError.message + '; ' + fallbackError.message };

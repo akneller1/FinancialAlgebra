@@ -24,6 +24,25 @@ export const money = (x, cents = true) => {
 };
 export const $ = x => money(x, !Number.isInteger(M.round2(x)));      // drop .00 on whole dollars
 export const $0 = x => money(x, false);
+/* One money style per question: if any dollar amount in the question shows cents ($45.50), every whole amount
+   shows .00 too ($1,500.00); otherwise whole amounts drop .00 ($2,100). Mixed "$1,500 … $2,100.00" never appears.
+   Applied to every generated question in buildUnit; scripts/normalize-money.mjs applies it to built banks. */
+const MONEY_RE = /([−-]?\$)(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d+))?(?![\d,]\d)/g;
+const MONEY_SKIP = new Set(['id', 'unitId', 'skillId', 'level', 'family', 'type', 'format', 'activityTypes', 'gameEligible', 'value', 'tolerance', 'unit']);
+function eachString(o, fn, key) {
+  if (typeof o === 'string') return MONEY_SKIP.has(key) ? o : fn(o);
+  if (Array.isArray(o)) return o.map(v => eachString(v, fn, key));
+  if (o && typeof o === 'object') { const out = {}; for (const k of Object.keys(o)) out[k] = MONEY_SKIP.has(k) ? o[k] : eachString(o[k], fn, k); return out; }
+  return o;
+}
+export function normalizeMoney(q) {
+  let cents = false;
+  eachString(q, s => { for (const m of s.matchAll(MONEY_RE)) if (m[3] && !/^0+$/.test(m[3])) cents = true; return s; });
+  return eachString(q, s => s.replace(MONEY_RE, (all, sign, whole, dec) => {
+    if (dec && !/^0+$/.test(dec)) return all;
+    return sign + whole + (cents ? '.00' : '');
+  }));
+}
 export const pct = (x, d = 1) => (Math.round(x * 100 * 10 ** d) / 10 ** d).toString() + '%';
 export const num = (x, d = 0) => (Math.round(x * 10 ** d) / 10 ** d).toLocaleString('en-US');
 
@@ -85,6 +104,7 @@ export const CLAIM_OPTIONS = ['Always true', 'Sometimes true — it depends on t
 export function buildUnit(unitId, content) {
   const out = []; const prompts = new Set();
   const push = (q, fam, k) => {
+    q = normalizeMoney(q);
     const id = `fa-${unitId}-s${String(q.skill).padStart(2, '0')}-${fam}-${String(k + 1).padStart(2, '0')}`;
     const key = (q.prompt + JSON.stringify(q.scenario || '')).replace(/\s+/g, ' ');
     if (prompts.has(key)) return false; prompts.add(key);
