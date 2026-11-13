@@ -26,6 +26,15 @@ const courses=outlines.map((c,i)=>({id:'grade'+(i+1),name:c.name,blurb:c.descrip
  artifacts.push(mk('Readiness Check','elementary/worksheet-generator/elementary-resource.html'+query+'&tool=check','Study Guide','interactive-practice-test','grade5/thumbs/math5-understanding-check.svg'));
  return {id:u.id,name:u.name,artifacts};
 })}));
+// Replace the Grade 4 placeholder with its complete Grade 5-style staged resources.
+// This changes only the development preview; public Classroom stays untouched.
+const {grade4Ready,assembleGrade4}=await import('../tools/grade4-authoring/staging/assemble-grade4.mjs');
+if(grade4Ready(source)){
+ const grade4=assembleGrade4({source,out});
+ const i=courses.findIndex(c=>c.id==='grade4');
+ if(i<0)throw Error('Grade 4 preview placeholder not found');
+ courses[i]=grade4;
+}
 const skillData=Object.fromEntries(outlines.map((c,i)=>['grade'+(i+1),Object.fromEntries(c.units.map(u=>[u.id,u.skills]))]));
 const catalog=`/* Development artifact: production Classroom renderer, preloaded elementary courses. */\n(function(G){var courses=${JSON.stringify(courses)},skills=${JSON.stringify(skillData)};G.MK_ELEMENTARY_PRELOAD=courses;G.LIBRARY.courses=G.LIBRARY.courses.filter(c=>!courses.some(p=>p.id===c.id)).concat(courses);var C=G.MK_COURSE_CATALOG,old=C.getSkills,records=C.getSkillRecords;C.getSkills=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].slice():old(c,u)};C.getSkillRecords=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].map((name,i)=>({id:u+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})):records(c,u)};G.LIBRARY.courses.forEach(c=>c.units.forEach(u=>u.artifacts.forEach(a=>{for(var k of ['path','thumb'])if(typeof a[k]==='string')a[k]=a[k].replace(/^\\/grade5\\//,'grade5/')})));})(window);\n`;
 fs.writeFileSync(path.join(out,'elementary-preload-catalog.js'),catalog);
