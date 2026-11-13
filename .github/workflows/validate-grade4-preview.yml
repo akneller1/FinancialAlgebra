@@ -56,6 +56,6 @@ jobs:
       - name: Browser test Grade 4 native generators
         working-directory: source
         env:
-          G4_BASE: http://127.0.0.1:8771/worksheet-generator/
+          G4_BASE: http://127.0.0.1:8771/
           G4_SET: grade4
         run: node tools/grade4-authoring/tests/browser-generators.cjs
