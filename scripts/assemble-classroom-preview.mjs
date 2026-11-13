@@ -45,6 +45,8 @@ app=app.replace('  L.courses = L.courses.filter',"  SOON = SOON.filter(function(
 app=app.replace('  function unitView(c, u) {','  function unitView(c, u) {\n    if (c.preloaded) return algebraUnitView(c, u);');
 if(!app.includes('if (c.preloaded) return algebraUnitView'))throw Error('Classroom unit renderer changed; update preview integration');
 app=app.replace("['grade5','financial-algebra'].includes(it.c.id)","['grade1','grade2','grade3','grade4','grade5','financial-algebra'].includes(it.c.id)");
+app=app.replace("(c.id === 'grade5' ? category('projects', 'Projects', ['other']) : '')", "(['grade4','grade5'].includes(c.id) ? category('projects', 'Projects', ['other']) : '')");
+if(!app.includes("['grade4','grade5'].includes(c.id) ? category('projects'"))throw Error('Grade 4 project category injection failed');
 app=app.replace("if (/^https:\\/\\//i.test(path)","if (/^elementary\\//.test(path) || /^grade5\\//.test(path)) return path; if (/^https:\\/\\//i.test(path)");
 app=app.replace("var items = u ? u.artifacts : (c && c.id === 'grade5'", "var items = u ? u.artifacts : (c && (c.id === 'grade5' || c.preloaded)");
 app=app.replace("(c.planned ? units(c.units.length)", "(c.preloaded ? units(c.units.length) + ' · resource templates ready · question banks coming soon' : c.planned ? units(c.units.length)");
