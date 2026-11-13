@@ -74,8 +74,7 @@ separately approved integration.
 
 ## Staging handoff and limits
 
-The rebuild preserves all 8,370 IDs, skill IDs, level quotas, standards and the complete
-approval manifest, checked against commit `21bdadb`. Each skill has 30 questions per level.
+The rebuild preserves all 8,370 IDs, skill IDs, level quotas, standards and all editorial approval and bank access flags, checked against commit `21bdadb`. Each skill has 30 questions per level.
 The bank is not registered with production games.
 
 `staging-games.html` demonstrates the proposed Puzzle Masters compatibility change:

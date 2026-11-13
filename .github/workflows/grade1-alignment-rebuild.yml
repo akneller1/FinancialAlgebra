@@ -8,6 +8,8 @@ on:
       - 'tools/grade1-authoring/units/*.py'
       - 'tools/grade1-authoring/staging-*'
       - 'scripts/test-grade1-staging.cjs'
+      - 'scripts/update-grade1-validation.cjs'
+      - 'scripts/test-grade1-targets.cjs'
       - 'scripts/test-grade1-puzzle-browser.cjs'
   workflow_dispatch:
 permissions:
@@ -38,6 +40,8 @@ jobs:
           node scripts/audit-grade1-semantics.cjs
           node scripts/audit-grade1-alignment.cjs > /tmp/alignment.json
           node -e "const r=require('./grade1-alignment-report.json');if(r.counts.hardMismatch||r.counts.strictAdd100Mismatches||r.counts.domainFacts)process.exit(1)"
+          node scripts/test-grade1-targets.cjs
+          node scripts/update-grade1-validation.cjs
           node scripts/test-grade1-staging.cjs
       - name: Install Chromium
         run: |

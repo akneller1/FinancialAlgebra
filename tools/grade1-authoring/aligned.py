@@ -109,6 +109,9 @@ def arithmetic(r,L,task):
         return item(p,b,FN('missing_part',total=t,part=a),[f'{a} and {b} make {t}.',f'{t} − {a} = {b}.'])
     if task=='equal':
         # Equality across both sides; Advanced uses two nontrivial expressions.
+        if L==2:
+            c=r.randint(1,b)
+            return item(f'{a} + □ = {t} − {c}. What number makes both sides equal?',b-c,FN('missing_part',total=t-c,part=a),[f'The right side is {t-c}.',f'{a} + {b-c} = {t-c}, so both sides have equal value.'])
         c=0 if L==0 else r.randint(1,t-1); d=t-c
         p=f'{a} + {b} = '+(f'□' if L==0 else f'{c} + □')+'. What number makes both sides equal?'
         return item(p,d,FN('missing_part',total=t,part=c),[f'The left side is {t}.',f'The right side must also be {t}: {c} + {d} = {t}.'])
@@ -297,8 +300,13 @@ def geometry(r,L,i):
     if i==3:
         shape=r.choice(['square','hexagon']);n=2 if shape=='square' else 6
         if L==0:p=f'{nm} joins the triangle pieces with no gaps. Name the outside shape.';ans=shape;ck=FN('composition_shape',pieces=n)
-        else:p=f'{nm} builds a {shape} using the triangle pieces shown. How many triangle pieces are needed?';ans=n;ck=FN('composition_count',shape=shape)
-        return item(p,ans,ck,[f'{n} matching triangles tile a {shape}.'],dg('composition',{'shape':shape,'color':color},f'A {shape} tiled by {n} triangles.'),wrong=None if isinstance(ans,int) else [('triangle','names a piece'),('circle','curved outline'),('rectangle','not the named outside shape')])
+        elif L==1:p=f'{nm} builds a {shape} using the triangle pieces shown. How many triangle pieces are needed?';ans=n;ck=FN('composition_count',shape=shape)
+        else:
+            have=r.randint(1,n-1);ans=n-have;ck=FN('composition_missing',shape=shape,have=have)
+            p=f'{nm} wants to build the pictured {shape}. {have} triangle '+('piece is' if have==1 else 'pieces are')+' ready. How many MORE matching triangle pieces are needed?'
+        steps=[f'{n} matching triangles tile a {shape}.']
+        if L==2:steps.append(f'{n} − {have} = {ans} more triangle pieces.')
+        return item(p,ans,ck,steps,dg('composition',{'shape':shape,'color':color},f'A {shape} tiled by {n} triangles.'),wrong=None if isinstance(ans,int) else [('triangle','names a piece'),('circle','curved outline'),('rectangle','not the named outside shape')])
     if i==4:
         rows=r.randint(1,(2,2,3)[L]);cols=r.randint(2,(3,4,3)[L]);layers=1 if L==0 else r.randint(1,2)
         n=rows*cols*layers
@@ -320,7 +328,9 @@ def geometry(r,L,i):
                 p=f'{nm} cuts a {color} {shape} into {parts} pieces of {"equal" if equal else "different"} sizes. Are these pieces {word}?';ck=FN('fair_parts',equal=equal,question='yes-no')
             else:p=f'{nm} says any {parts} pieces of a {color} {shape} are {word}. What must be true about their size?';ck=FN('fair_parts',equal=True)
             return item(p,ans,ck,[f'{word.capitalize()} must be equal in size, not just {parts} pieces.'],wrong=[(x,'parts must have the same size') for x in ['yes','no','equal size','any size'] if x!=ans])
-        return item(f'{nm} divides a {color} {shape} into {parts} equal pieces. What are the pieces called?',word,FN('partition_word',parts=parts),[f'{parts} equal parts are called {word}.'],diagram if L==0 else None,[(x,'incorrect equal part name') for x in ['halves','fourths','thirds','wholes'] if x!=word])
+        prompt=f'{nm} divides a {color} {shape} into {parts} equal pieces. What are the pieces called?'
+        if L==2:prompt=f'{nm} divides a {color} {shape} into 2 equal parts'+(' and then splits each part into 2 equal pieces' if parts==4 else '')+'. What are the final pieces called?'
+        return item(prompt,word,FN('partition_word',parts=parts),[f'{parts} equal parts are called {word}.'],diagram if L==0 else None,[(x,'incorrect equal part name') for x in ['halves','fourths','thirds','wholes'] if x!=word])
     h=r.randint(1,12);m=0 if i==9 else 30 if i==10 else r.choice([0,30]);time=f'{h}:{m:02d}'
     if i==12:
         # Drawing target is represented as a hand-placement response, usable by shared games.

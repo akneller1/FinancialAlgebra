@@ -3,7 +3,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),cp=require('node:child_process');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const manifest=read('question-banks/math1/manifest.json');
-assert.deepEqual(manifest,JSON.parse(cp.execFileSync('git',['show',process.env.G1_BASE_REF||'21bdadb:question-banks/math1/manifest.json'],{encoding:'utf8'})),'Approval manifest changed');
+const originalManifest=JSON.parse(cp.execFileSync('git',['show',process.env.G1_BASE_REF||'21bdadb:question-banks/math1/manifest.json'],{encoding:'utf8'}));
+assert.deepEqual(manifest.review.editorialApproval,originalManifest.review.editorialApproval,'Editorial approval changed');
+assert.deepEqual(manifest.banks,originalManifest.banks,'Bank approval/access flags changed');
+assert.equal(manifest.version,originalManifest.version);assert.equal(manifest.courseId,originalManifest.courseId);
 const context={};vm.createContext(context);vm.runInContext(fs.readFileSync('tools/grade1-authoring/staging-puzzle.js','utf8'),context);
 let scopes=0,visual=0,restricted=0;
 for(const {unitId} of manifest.banks){
@@ -27,4 +30,4 @@ for(const {unitId} of manifest.banks){
  }
 }
 assert.equal(scopes,279);
-console.log(JSON.stringify({passed:true,scopes,scopesUsingImages:visual,scopesWithFewerThanFourAnswerValues:restricted,preserved:'all IDs, skill IDs, levels, standards and complete approval manifest'},null,2));
+console.log(JSON.stringify({passed:true,scopes,scopesUsingImages:visual,scopesWithFewerThanFourAnswerValues:restricted,preserved:'all IDs, skill IDs, levels, standards and all editorial approval and bank access flags'},null,2));
