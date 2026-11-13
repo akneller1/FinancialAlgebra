@@ -1,0 +1,70 @@
+name: Verify Grade 2 question bank
+on:
+  push:
+    branches: [main, grade2-levels-and-semantics]
+    paths:
+      - 'question-banks/math2/**'
+      - 'question-banks/assets/math2/**'
+      - 'tools/grade1-authoring/**'
+      - 'tools/grade2-authoring/**'
+      - 'docs/math2/**'
+      - '.github/workflows/verify-grade2.yml'
+  pull_request:
+    paths:
+      - 'question-banks/math2/**'
+      - 'question-banks/assets/math2/**'
+      - 'tools/grade1-authoring/**'
+      - 'tools/grade2-authoring/**'
+      - 'docs/math2/**'
+      - '.github/workflows/verify-grade2.yml'
+jobs:
+  verify-grade2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow
+      - name: Enforce Grade 2-only bank scope
+        run: |
+          test ! -d question-banks/math1
+          test ! -d question-banks/assets/math1
+          test ! -e question-banks/manifest.json
+          if grep -R '"approved": true' question-banks/math2; then
+            echo 'Grade 2 includes approved content'; exit 1
+          fi
+      - name: Verify committed bank, grade levels, alignment and semantics
+        working-directory: tools/grade2-authoring
+        run: |
+          python3 verify2.py | tee /tmp/verify2.log
+          grep -q 'TOTAL ERRORS 0' /tmp/verify2.log
+          python3 level_audit.py | tee /tmp/levels.log
+          grep -Eiq 'skills[: ]+89.*flat[: ]+2|Skills: 89, flat: 2' /tmp/levels.log
+          python3 align_audit.py | tee /tmp/align.log
+          python3 audit2.py | tee /tmp/audit.log
+          grep -q 'TOTAL FLAGGED 322' /tmp/audit.log
+          python3 report2.py
+          python3 -c "import json,glob,os; files=[f for f in glob.glob('../../question-banks/math2/*.json') if os.path.basename(f)!='manifest.json']; n=sum(len(json.load(open(f))['questions']) for f in files); print('QUESTIONS',n); assert len(files)==9 and n==8010"
+      - name: Require exact audit totals in regenerated documentation
+        run: |
+          grep -q 'generic filler under a specific skill.*134' docs/math2/ALIGNMENT.md
+          grep -q 'number outside the skill.*61' docs/math2/ALIGNMENT.md
+          grep -q 'question topic does not match the skill.*409' docs/math2/ALIGNMENT.md
+          grep -q 'Skills: 89, flat: 2' docs/math2/LEVELS.md
+      - name: Verify deterministic regeneration without PNG rendering
+        working-directory: tools/grade2-authoring
+        env:
+          G1_NEAR: '3'
+          G1_NODRAW: '1'
+        run: |
+          python3 build2.py
+          git diff --exit-code -- ../../question-banks/math2
+      - name: Verify Grade 1 can regenerate and independently validate after shared changes
+        run: |
+          G1_NEAR=3 python3 tools/grade1-authoring/build1.py
+          python3 tools/grade1-authoring/verify1.py | tee /tmp/verify1.log
+          grep -q 'TOTAL ERRORS 0' /tmp/verify1.log
