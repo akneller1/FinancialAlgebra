@@ -2,7 +2,13 @@ name: Grade 1 target alignment — rebuild and verify development bank
 on:
   push:
     branches: [grade1-question-bank]
-    paths: ['.github/workflows/grade1-alignment-rebuild.yml']
+    paths:
+      - '.github/workflows/grade1-alignment-rebuild.yml'
+      - 'tools/grade1-authoring/*.py'
+      - 'tools/grade1-authoring/units/*.py'
+      - 'tools/grade1-authoring/staging-*'
+      - 'scripts/test-grade1-staging.cjs'
+      - 'scripts/test-grade1-puzzle-browser.cjs'
   workflow_dispatch:
 permissions:
   contents: write

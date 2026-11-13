@@ -9,10 +9,11 @@ number ranges and difficulty ladder are built for first graders.
 | `outline.py` | Loads `course-outlines/grade1.json`: 8 units, 27 sections, 93 skills. Skill IDs are `<unit-id>-skill-NN` (stable). Standards per skill come from the section that lists it. |
 | `g1lib.py` | Grade 5 problem toolkit unchanged: `Item`, `Diagram`, `EX`/`KEY`/`FN` checks, `fam`, derived extras. |
 | `figs1.py` | Pillow diagram renderer (no SVG rasteriser in this environment): ten-frames, counters, number lines, base-ten, tally, picture and bar graphs, shapes and solids, partitions, analog clocks, rulers, place-value charts, number cards, arrays, sorting boxes. Fixed 720×480 canvas, colour-vision-safe palette. |
-| `families.py` | Question families. Every family is `f(r, L) -> Item` and carries a machine-checkable `check` built from the inputs (never from the answer). ~50 factories covering arithmetic, place value, stories, data, geometry, time and measurement. |
-| `extras.py` | Grade 1 derived formats: 3 error-analysis, 1 true/false, 1 select-all and 1 open-response per skill and level, generated from a domain fact factory so picture-heavy skills still get them. |
+| `families.py` | Legacy question helpers. Every family is `f(r, L) -> Item` and carries a machine-checkable `check` built from the inputs (never from the answer). ~50 factories covering arithmetic, place value, stories, data, geometry, time and measurement. |
+| `aligned.py` | Explicit target-specific source for all 93 skills. No domain-fact fallback. Levels vary number ranges, scaffolding, unknown positions, comparison closeness, and reasoning demands. |
+| `aligned_extras.py` | Error analysis, true/false, select-all and multipart questions draw from the same selected target. Required diagrams are retained, with labelled panels for multipart items. Legacy `extras.py` is unused. |
 | `gen_units.py` | Generates `units/uNN_*.py` from the skill → family mapping, so a skill name can never drift from the outline. |
-| `units/uNN_*.py` | `SKILLS = {index: {"name": …, "fams": […], "domain": …}}` for each unit. |
+| `units/uNN_*.py` | `SKILLS = {index: {"name": …, "fams": [source(unit, index)]}}` for each unit. |
 | `build1.py` | Builds `question-banks/math1/<unit>.json`, `meta/<unit>.meta.json`, `assets/math1/<unit>/<qid>.png` and `out/<unit>.checks.json`. 30 questions per skill and level (12 short answer, 12 multiple choice, 3 error analysis, 1 true/false, 1 select-all, 1 open response/matching). |
 | `verify1.py` | Independent verifier: re-derives every answer from the stored inputs with its own arithmetic and its own implementations of the named checks (no import of the families). Also validates options, distractor reasons, standards, counts, duplicates, and every diagram file (exists, 720×480, decodes, not blank, alt text, answer agrees with the picture where the picture is the ground truth). Must print `TOTAL ERRORS 0`. |
 | `dupstats.py` | Measures cross-skill duplication: exact identity (prompt + options + answer + picture), picture-equivalent groups and digit-masked near-duplicates. Baseline figures are stored in `out/dup_before.json`. |
@@ -70,3 +71,29 @@ Grade 1 is intentionally **not** wired into the public Classroom site: no edits 
 `data.js`, `app.js`, `course-catalog.js`, the root `question-banks/manifest.json` or any
 student-facing page. `question-banks/math1/manifest.json` is the handoff point for a later,
 separately approved integration.
+
+## Staging handoff and limits
+
+The rebuild preserves all 8,370 IDs, skill IDs, level quotas, standards and the complete
+approval manifest, checked against commit `21bdadb`. Each skill has 30 questions per level.
+The bank is not registered with production games.
+
+`staging-games.html` demonstrates the proposed Puzzle Masters compatibility change:
+keep the selected skill/level, allow image questions and longer text, and match repeated
+answer values interchangeably. `scripts/test-grade1-staging.cjs` checks every one of the
+279 scopes. `scripts/test-grade1-puzzle-browser.cjs` clicks and solves each scope at a
+390-pixel mobile viewport, checks image decoding and rejects horizontal overflow.
+This behavior still needs adoption in the shared game engine during staging integration.
+The legacy shared game has restrictive text-only/short-answer eligibility; its count of
+restricted skill/level combinations is a compatibility warning, not a request to add filler.
+
+Run the branch-only `grade1-alignment-rebuild.yml` workflow to rebuild all PNGs, run
+independent mathematics/semantic/structural/alignment checks and both Chromium suites,
+then commit generated banks only if every check passes. No deploy or approval step exists.
+
+The alignment pattern audit rejects obvious domain and addend-structure errors; it is
+not an exhaustive proof of instructional effectiveness. Drawing and story-writing targets
+use model answers for automatic games, so alternate valid constructed responses need
+teacher judgment. Some narrow targets have only two valid answer categories. Cross-skill
+repeated facts are permitted; duplicates within a selected skill/level are rejected.
+Remedial/Standard/Advanced levels describe task demand, not calibrated student performance.

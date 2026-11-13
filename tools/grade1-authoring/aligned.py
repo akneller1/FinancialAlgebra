@@ -38,6 +38,7 @@ def numbers(r,L,top=20):
 
 def story(r,L,kind,top=20,model=False,equation=False):
     t,a,b=numbers(r,L,top); nm=name(r); thing=r.choice(['shells','stickers','blocks','books'])
+    if kind=='compare' and nm=='Sam':nm='Ava'
     if kind in ['result','subtract']:
         take=kind=='subtract' or r.choice([False,True]); op='−' if take else '+'
         x,y=(t,b) if take else (a,b); ans=a if take else t
@@ -159,8 +160,13 @@ def place(r,L,task):
         p=f'{n} is {t} tens and {o} ones. Trade {trade} '+('ten' if trade==1 else 'tens')+f' for ones. It is now {new} tens and how many ones?'
         return item(p,ans,FN('equiv_ones',n=n,tens=new),[f'Trade each ten for 10 ones.',f'{o} + {trade*10} = {ans} loose ones.'],dg('baseten',{'tens':t,'ones':o},f'{t} tens and {o} ones.') if L==0 else None)
     if task=='tens-count':
-        a=r.randint(0,8)*10
-        return calc(a,10,prompt=f'Count by tens: {a}, □. What comes next?')
+        a=r.randint(0,8 if L==0 else 6)*10
+        if L==0:return calc(a,10,prompt=f'Count by tens: {a}, □. What comes next?')
+        if L==1:
+            sequence=f'{a}, □, {a+20}' if r.choice([True,False]) else f'{a}, {a+10}, □, {a+30}'
+            return calc(a,10 if sequence.startswith(f'{a}, □') else 20,prompt=f'Count by tens: {sequence}. What number is missing?')
+        sequence=f'{a+30}, {a+20}, □, {a}' if r.choice([True,False]) else f'{a+20}, □, {a}'
+        return calc(a+20,10,'−',prompt=f'Count back by tens: {sequence}. What number is missing?')
     if task in ['complete-tens','ten-ops']:
         k=r.randint(1,(2,4,7)[L])*10
         a=r.randint(1,8)*10+(0 if task=='complete-tens' else r.randint(1,9));minus=r.choice([True,False]);need(0<=a-k if minus else a+k<=99)
@@ -243,6 +249,8 @@ def measure(r,L,i):
     a=r.randint(3,(7,12,20)[L]);b=r.randint(1,a-1);nm=r.choice(['ribbon','string','rope','yarn'])
     if i==1:
         vals=r.sample(range(3,18),2);a,b=vals;want=r.choice(['longer','shorter']);ans='A' if (a>b)==(want=='longer') else 'B'
+        if L==2:
+            a=r.randint(8,17);b=a+r.choice([-1,1]);ans='A' if (a>b)==(want=='longer') else 'B'
         return item(f'The objects start at the same line. Which is {want}: A or B?',ans,FN('direct_length',a=a,b=b,want=want),[f'Compare the far ends from the shared start.',f'{ans} is {want}.'],dg('lengthbars',{'values':[a,b],'labels':['A','B'],'offset':L*17},f'Objects A and B share a start; their lengths are {a} and {b} units.'),[(x,'incorrect end comparison') for x in ['A','B','same length','cannot tell'] if x!=ans])
     if i==2:
         # Third object is an actual common comparator, not a list of measured numbers.
@@ -292,7 +300,7 @@ def geometry(r,L,i):
         else:p=f'{nm} builds a {shape} using the triangle pieces shown. How many triangle pieces are needed?';ans=n;ck=FN('composition_count',shape=shape)
         return item(p,ans,ck,[f'{n} matching triangles tile a {shape}.'],dg('composition',{'shape':shape,'color':color},f'A {shape} tiled by {n} triangles.'),wrong=None if isinstance(ans,int) else [('triangle','names a piece'),('circle','curved outline'),('rectangle','not the named outside shape')])
     if i==4:
-        rows=r.randint(1,(2,3,4)[L]);cols=r.randint(2,(3,4,5)[L]);layers=1 if L==0 else r.randint(1,2)
+        rows=r.randint(1,(2,2,3)[L]);cols=r.randint(2,(3,4,3)[L]);layers=1 if L==0 else r.randint(1,2)
         n=rows*cols*layers
         p=f'{nm} builds a solid box. Each layer has {rows} rows of {cols} small cubes. There are {layers} '+('layer' if layers==1 else 'layers')+'. How many cubes are needed?'
         return item(p,n,FN('solid_composition',rows=rows,cols=cols,layers=layers),[f'Count {rows*cols} cubes in each layer.',f'{layers} '+('layer' if layers==1 else 'layers')+f' use {n} cubes.'],dg('cubeplan',{'rows':rows,'cols':cols,'layers':layers},f'A plan: {rows} rows of {cols} cube spaces per layer, {layers} layers.'))
@@ -307,7 +315,9 @@ def geometry(r,L,i):
             return item(p,parts,FN('partition_count',parts=parts),[f'{"Halves" if parts==2 else "Fourths"} require {parts} equal pieces.'],diagram if L==0 else None)
         if i==7:
             ans='no' if L<2 else 'equal size'
-            if L<2:p=f'{nm} cuts a {color} {shape} into {parts} pieces of different sizes. Are these pieces {word}?';ck=FN('fair_parts',equal=False)
+            if L<2:
+                equal=r.choice([True,False]);ans='yes' if equal else 'no'
+                p=f'{nm} cuts a {color} {shape} into {parts} pieces of {"equal" if equal else "different"} sizes. Are these pieces {word}?';ck=FN('fair_parts',equal=equal,question='yes-no')
             else:p=f'{nm} says any {parts} pieces of a {color} {shape} are {word}. What must be true about their size?';ck=FN('fair_parts',equal=True)
             return item(p,ans,ck,[f'{word.capitalize()} must be equal in size, not just {parts} pieces.'],wrong=[(x,'parts must have the same size') for x in ['yes','no','equal size','any size'] if x!=ans])
         return item(f'{nm} divides a {color} {shape} into {parts} equal pieces. What are the pieces called?',word,FN('partition_word',parts=parts),[f'{parts} equal parts are called {word}.'],diagram if L==0 else None,[(x,'incorrect equal part name') for x in ['halves','fourths','thirds','wholes'] if x!=word])

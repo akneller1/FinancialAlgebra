@@ -18,6 +18,8 @@ for(const unit of units){
   tested.questions++;if(q.diagram)tested.diagrams++;
   const text=q.prompt||'',answer=String(q.answer);
   const chk=checks[q.id]||{},check=chk.q||{},fn=check.fn||'';
+  if(/\b([A-Z][a-z]+) has \d+ [^.]+\. \1 has \d+\./.test(text))
+   add('SELF_COMPARISON',q,check,'Comparison story assigns two different quantities to the same named person.');
   if(q.format==='short-answer'&&
     /(?:how many (?:straight )?(?:sides|corners|vertices|faces)\b|count the (?:straight )?(?:sides|corners)\b|(?:shape|figure) has _+ (?:straight )?sides\b)/i.test(text) &&
     !integer(answer))

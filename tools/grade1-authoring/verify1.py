@@ -337,7 +337,9 @@ def h_unit_layout(c,t):return norm(t)==norm(c['correct'])
 def h_composition_shape(c,t):return norm(t)==({2:'square',6:'hexagon'}.get(c['pieces']))
 def h_composition_count(c,t):return num_eq(t,{'square':2,'hexagon':6}[c['shape']])
 def h_solid_composition(c,t):return num_eq(t,c['rows']*c['cols']*c['layers'])
-def h_fair_parts(c,t):return norm(t)==('equal size' if c['equal'] else 'no')
+def h_fair_parts(c,t):
+    if c.get('question')=='yes-no':return norm(t)==('yes' if c['equal'] else 'no')
+    return norm(t)==('equal size' if c['equal'] else 'no')
 def h_clock_hands(c,t):
     h,m=int(c['h']),int(c['m']);short=str(h) if m==0 else f'between {h} and {h%12+1}'
     return norm(t)==norm(f"short: {short}; long: {12 if m==0 else 6}")
