@@ -229,13 +229,13 @@ for unit in OUTLINE["units"]:
             stats["shape_count_vs_name"]+=1
         # Number of equal parts is a count; "name one part" demands a
         # fraction word, even when the stored answer is 2/4.
-        if fn=="partition_count" and q["format"]=="short-answer" and PART_NAME.search(q["prompt"]):
+        if fn=="partition_count" and PART_NAME.search(q["prompt"]):
             q["prompt"]="How many equal parts are shown in the picture?"
             q["solutionSteps"]=["Count all the equal parts in the picture.",f"There are {ans} equal parts."]
             meta["explanation"]=q["solutionSteps"][-1]
             stats["part_count_wording"]+=1
         # Traded groups of ten are not ones-place digits.
-        if fn=="tens_from_ones" and q["format"]=="short-answer" and \
+        if fn=="tens_from_ones" and \
             re.search(r"\bones (?:digit|place)\b|\bhow many ones\b",q["prompt"],re.I):
             count=int(check["ones"])
             q["prompt"]=f"How many groups of ten can be made from {count} ones?"
@@ -296,6 +296,12 @@ for unit in OUTLINE["units"]:
                           f"This whole has how many equal parts?",
                           f"Look at the partitions. How many same-size pieces do you see?",
                           f"The shape has {parts} equal parts. How many parts make the whole?"]
+            elif fn=="tens_from_ones":
+                total=int(rec["q"]["ones"])
+                variants=[f"From {total} ones, how many complete tens can you form?",
+                          f"Count the groups of 10 in {total} ones. How many tens?",
+                          f"How many bundles of ten are in {total} ones?",
+                          f"{total} single counters can make how many bundles of ten?"]
             else:
                 raise AssertionError("Unexpected repeated question after repairs "+q["id"]+" "+original)
             for new in variants:
