@@ -130,3 +130,16 @@ The printable audit covers all 279 skill/level selections. Matching works in eve
 Partner Check has genuinely different same-answer pairs in 187 selections. The other 92
 (such as reading a fixed clock time) offer matching instead of repeated or relabelled problems.
 No questions, IDs, standards, levels or bank approval fields are changed by these printables.
+
+## Exact-level activity selection
+
+Grade 1 activities no longer borrow Standard questions when Remedial or Advanced content
+cannot fill a format. Maze and Tarsia fail clearly at the selected level and disable printing.
+Stations and Error Analysis use distinct source questions without requiring distinct answers.
+Color by Number adapts its existing picture to the available answer/color pairs (at least two),
+so each answer has one color and all regions agree with the teacher key. Source diagrams
+remain attached to every question; only the coloring picture's palette assignments change.
+
+The activity audit checks 120 whole-unit/level/format selections and all 279 single-skill
+selections for Stations, Error Analysis and coloring. Unsupported Tarsia selections still need
+more short, distinct answers; the bank is never padded or moved to another level to fill one.

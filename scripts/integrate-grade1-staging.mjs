@@ -54,6 +54,11 @@ export function integrate({source,out}){
  fs.writeFileSync(printablePage,printableHtml);
  const printableUI=path.join(out,'worksheet-generator/menu/printables-ui.js');
  let printableCode=fs.readFileSync(printableUI,'utf8');
+ printableCode=printableCode.replace("sc.groups.forEach(function (g) { out += '<g fill=", "sc.groups.forEach(function (g, gi) { out += '<g fill=");
+ printableCode=printableCode.replace('PR.SCENE_COLORS[g.color]', 'PR.SCENE_COLORS[B.grade1Color?B.colorOf[B.groupNum[gi]-1]:g.color]');
+ printableCode=printableCode.replace('.test(g.color)', '.test(B.grade1Color?B.colorOf[B.groupNum[gi]-1]:g.color)');
+ printableCode=printableCode.replace('  function colorPages(cfg, B, v, nV, key) {',
+  '  function colorPages(cfg, B, v, nV, key) {\n    if(B.grade1Color){var cover={nofoot:true,brand:true,html:\'<div class="mm-body pc">\'+nameDate(key)+\'<div class="pc-ctitle">\'+esc(unitName(cfg)+\": Color By Number\")+\'</div><div class="pc-sbox">\'+sceneSvg(B,key)+\'</div>\'+colorCode(B,key)+\'</div>\'};return G.MK_GRADE1_PRINTABLES.colorPages(cfg,B,v,nV,key,cover);}');
  printableCode=printableCode.replace('  PR.pageEls = function',"  var originalPages=PR.pages;PR.pages=function(cfg,B,v,nV,key){return B.grade1Staging?G.MK_GRADE1_PRINTABLES.pages(cfg,B,v,nV,key):originalPages.apply(this,arguments);};\n  PR.pageEls = function");
  fs.writeFileSync(printableUI,printableCode);
  const menuFile=path.join(out,'worksheet-generator/menu/app.js');
