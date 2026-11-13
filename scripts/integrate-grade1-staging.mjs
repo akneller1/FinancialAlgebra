@@ -34,8 +34,14 @@ export function integrate({source,out}){
  const nativeFile=path.join(out,'worksheet-generator/algebra2-bank-native.js');
  let nativeCode=fs.readFileSync(nativeFile,'utf8');
  nativeCode=nativeCode.replaceAll('family: [^)]*_error\\)', 'family: (?:[^)]*_error|err_[^)]*)\\)');
- nativeCode=nativeCode.replace('approved:true,skill:q.skillId',"approved:!q.id.startsWith('m1-'),staging:q.id.startsWith('m1-'),skill:q.skillId");
+ // `approved` on a native worksheet item is the existing print-control flag,
+ // separate from editorial bank approval. Keep it for unedited source keys.
+ nativeCode=nativeCode.replace('approved:true,skill:q.skillId',"approved:true,staging:q.id.startsWith('m1-'),skill:q.skillId");
  fs.writeFileSync(nativeFile,nativeCode);
+ const menuFile=path.join(out,'worksheet-generator/menu/app.js');
+ let menu=fs.readFileSync(menuFile,'utf8');
+ menu=menu.replace("var st = p.verify && p.verify.status;", "if (p.staging && NS.isUneditedAlgebra2BankQuestion(p)) return '<span class=\"mm-badge\">Development preview</span>';\n    var st = p.verify && p.verify.status;");
+ fs.writeFileSync(menuFile,menu);
  const catalog=path.join(out,'elementary-preload-catalog.js');fs.appendFileSync(catalog,"\nwindow.LIBRARY.courses.filter(c=>c.id==='grade1').forEach(c=>{c.staging=true;c.units.forEach(u=>u.artifacts.forEach(a=>a.description='Grade 1 development preview'));});\n");
  const html=path.join(out,'index.html');fs.writeFileSync(html,fs.readFileSync(html,'utf8').replace('Grades 1–4 question banks are coming soon.','Grade 1 bank available for staging review · Grades 2–4 banks coming soon.'));
  const app=path.join(out,'app.js');fs.writeFileSync(app,fs.readFileSync(app,'utf8').replace("c.preloaded ? units(c.units.length) + ' · resource templates ready · question banks coming soon'", "c.staging ? units(c.units.length) + ' · development preview' : c.preloaded ? units(c.units.length) + ' · resource templates ready · question banks coming soon'"));

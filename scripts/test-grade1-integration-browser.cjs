@@ -70,13 +70,26 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
       for(const format of ['short-answer','multiple-choice','select-all','open-response']){
        const p=MKMENU.generateProblem(id,skill.id,4,{level,authoredFormats:[format]},'integration-check');
        const q=MK_QUESTION_BANKS.select({courseId:c.id,unitId:u.id,level,skillIds:[skill.id],formats:[format]}).find(q=>q.id===p.sourceId);
-       if(p.failed||!q||p.approved!==false)throw Error('Native format/level contract '+id+'/'+skill.id+'/'+level+'/'+format);checks++;
+       if(p.failed||!q||p.staging!==true)throw Error('Native format/level contract '+id+'/'+skill.id+'/'+level+'/'+format);checks++;
       }
       const error=MKMENU.generateProblem(id,skill.id,4,{level,authoredErrorAnalysis:true,authoredFormats:['short-answer']},'error-check');
       if(error.failed||!error.authoredErrorAnalysis)throw Error('Error analysis routing '+skill.id+'/'+level);checks++;
      }
     }return checks;
    });if(contracts!==1395)throw Error('Missing native format checks '+contracts);
+  }
+  if(['worksheet.html','menu-assessment.html'].includes(file)){
+   await page.locator('[data-step="7"]').click();
+   if(await page.locator('.mm-block').count())throw Error('Native print blockers '+file);
+   await page.evaluate(()=>{window.print=()=>{};window.confirm=()=>{throw Error('Unexpected print override')};});
+   await page.locator('[data-print="student"]').first().click();
+   await page.locator('#printRoot .mm-page').first().waitFor({state:'attached'});
+   if(await page.locator('#printRoot .mm-ans,#printRoot .mm-keypage').count())throw Error('Answer key leaked to student sheet');
+   await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
+   await page.locator('[data-print="key"]').first().click();
+   await page.locator('#printRoot .mm-keypage').first().waitFor({state:'attached'});
+   if(!await page.locator('#printRoot .mm-ans').count())throw Error('Missing teacher answers');
+   await page.evaluate(()=>window.dispatchEvent(new Event('afterprint')));
   }
   await page.screenshot({path:'grade1-integration-results/'+file+'.png',fullPage:true});pages++;
  }
