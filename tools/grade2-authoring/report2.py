@@ -126,3 +126,58 @@ out = os.path.join(ROOT, "docs", COURSE_ID)
 os.makedirs(out, exist_ok=True)
 open(os.path.join(out, "COVERAGE.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 print("wrote docs/math2/COVERAGE.md", total, "questions,", diagrams, "diagrams")
+
+# Keep review metadata synchronized with the committed banks and the audit output.
+# This updates only the math2 manifest's non-approval summary fields, never
+# question items, statuses, or editorial approval flags.
+import re
+import subprocess
+
+manifest_path = os.path.join(ROOT, "question-banks", COURSE_ID, "manifest.json")
+with open(manifest_path, encoding="utf-8") as fh:
+    manifest = json.load(fh)
+assert manifest["courseId"] == COURSE_ID
+assert len(manifest["banks"]) == len(UNITS)
+assert not manifest["review"]["editorialApproval"]["approved"]
+assert all(b["approved"] is False for b in manifest["banks"])
+
+levels_text = open(os.path.join(ROOT, "docs", COURSE_ID, "LEVELS.md"), encoding="utf-8").read()
+level_match = re.search(r"Skills:\s*(\d+),\s*flat:\s*(\d+)", levels_text)
+if not level_match:
+    raise RuntimeError("Grade 2 level report does not contain a skill summary")
+skills_checked, skills_flat = map(int, level_match.groups())
+assert skills_checked == sum(len(u["skills"]) for u in UNITS)
+
+audit = subprocess.run([sys.executable, os.path.join(HERE, "audit2.py")],
+                       cwd=HERE, capture_output=True, text=True, check=True)
+audit_match = re.search(r"TOTAL FLAGGED\s+(\d+)", audit.stdout)
+if not audit_match:
+    raise RuntimeError("Grade 2 semantic audit did not report a candidate count")
+semantic_candidates = int(audit_match.group(1))
+
+validation = manifest["review"]["mathematicalValidation"]
+validation["questionsChecked"] = total
+validation["diagrams"] = diagrams
+validation["exactCrossSkillDuplicateRate"] = round(after["dup_rate"], 4)
+validation["semanticAudit"] = (
+    f"screened (tools/grade2-authoring/audit2.py: {semantic_candidates} "
+    "rule-based candidates, not confirmed defects)"
+)
+dedup = manifest["review"]["deduplication"]
+dedup["exactCrossSkillDuplicates"] = after["dup_items"]
+dedup["rate"] = round(after["dup_rate"], 4)
+# Earlier postprocessing counts have no authoritative stored per-action source.
+for legacy_field in ("replaced", "leftAsClosedFactSets", "keptAsIntentionalRepetition"):
+    dedup.pop(legacy_field, None)
+dedup["redundantCopies"] = after["excess"]
+dedup["pictureEquivalentGroups"] = after["vis_groups"]
+levels = manifest["review"]["levelEscalation"]
+levels["skillsChecked"] = skills_checked
+levels["skillsNotEscalating"] = skills_flat
+levels["status"] = "passed" if skills_flat == 0 else "passed-with-exceptions"
+with open(manifest_path, "w", encoding="utf-8") as fh:
+    json.dump(manifest, fh, ensure_ascii=False, indent=1)
+    fh.write("\n")
+print("updated math2 manifest metrics:", total, diagrams,
+      semantic_candidates, "semantic candidates;", skills_flat, "flat skills")
+
