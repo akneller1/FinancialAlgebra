@@ -77,7 +77,7 @@
  }
  function mazeOptions(cfg){return '<label class="field"><span class="lbl">Maze size</span><select id="prMazeSize">'+[['auto','Automatic · up to 8 problems'],['small','Small · 3 problems'],['medium','Medium · 8 problems'],['large','Large · 15 problems']].map(function(o){return '<option value="'+o[0]+'"'+((cfg.grade1MazeSize||'auto')===o[0]?' selected':'')+'>'+o[1]+'</option>';}).join('')+'</select></label>';}
  function maze(cfg,v){
-  var needed={small:3,medium:8,large:15}[cfg.grade1MazeSize]||3,distinct=new Set(selection(cfg).map(function(q){return key(q.answer);}));
+  var needed={small:3,medium:8,large:15}[cfg.grade1MazeSize]||3,distinct=new Set(bank.select({courseId:'grade1',unitId:cfg.unitId.slice(7),level:cfg.level,formats:['short-answer','multiple-choice']}).filter(function(q){return cfg.skills[q.skillId];}).map(function(q){return key(q.answer);}));
   if(distinct.size<needed)return {error:'This maze size needs '+needed+' different answers; the selected '+N.courseLevelName(cfg.unitId,cfg.level)+' questions provide '+distinct.size+'. Choose Automatic or a smaller maze, add compatible skills, or use Problem & Answer Matching.'};
   var B;for(var retry=0;retry<3;retry++){
    B=PR.buildMaze(Object.assign({},cfg,{seed:String(cfg.seed)+(retry?'|retry'+retry:'')}),v);
@@ -171,7 +171,7 @@
  function colorPages(cfg,B,v,nV,teacher,cover){return [cover].concat(workPages(cfg,B.items,'Color by Number · Problems',teacher,function(it,i){return '<p>Color: '+(teacher?esc(B.colorOf[i]):'____________________')+'</p>';}));}
  function mazePages(cfg,B,v,nV,teacher,cover){
   var out=[cover];if(teacher)out.push(page('Maze · Route','<p>'+esc(N.skillSets[cfg.unitId].unitName)+' · '+esc(N.courseLevelName(cfg.unitId,cfg.level))+'</p><p>Start at the top left. Follow these numbered problems to the finish:</p><p style="font-size:22px;line-height:1.8">'+B.path.map(function(rc){var r=B.rooms.find(function(r){return r.r===rc[0]&&r.c===rc[1];});return r.finish?'FINISH':'Problem '+r.item.num;}).join(' → ')+'</p><p>The highlighted route is shown on the maze key. The following pages include solutions for every room, including dead ends.</p>'));
-  return out.concat(workPages(cfg,B.items,'Maze · Numbered problems',teacher));
+  return out.concat(workPages(cfg,B.items,'Maze · Numbered problems',teacher).map(function(p){return Object.assign({},p,{html:p.html.replace(/height:190px/g,'height:320px')});}));
  }
  function whoPages(cfg,B,v,nV,teacher){
   var S=B.S,letter=function(n){return 'ABCD'[n];},heading=S.name+' · '+N.courseLevelName(cfg.unitId,cfg.level),out=[];
