@@ -1,0 +1,170 @@
+name: Grade 2 preview validation
+
+on:
+  push:
+    branches: [integration/grade2-staging-preview]
+    paths:
+      - '.github/workflows/grade2-preview-validation.yml'
+      - 'scripts/test-grade2-staging-browser.cjs'
+      - 'scripts/assemble-classroom-preview.mjs'
+      - 'question-banks/math2/**'
+      - 'tools/grade2-authoring/**'
+      - 'worksheet-generator/elementary/**'
+      - 'worksheet-generator/grade2/**'
+      - 'manifest.json'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'question-banks/math2/**'
+      - 'question-banks/assets/math2/**'
+      - 'tools/grade2-authoring/**'
+      - 'course-outlines/grade2.json'
+      - 'manifest.json'
+      - '.github/workflows/grade2-preview-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-grade2:
+    name: Validate Grade 2 source and answers
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate elementary player JavaScript syntax
+        run: |
+          node --check worksheet-generator/elementary/el-core.js
+          node --check worksheet-generator/elementary/el-games.js
+          node --check worksheet-generator/elementary/el-flashcards.js
+          node --check worksheet-generator/elementary/el-understanding-check.js
+          node --check worksheet-generator/grade2/config.js
+      - name: Require complete preview package
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('.')
+          m=json.loads((root/'manifest.json').read_text())
+          entries=[b for b in m['banks'] if b.get('courseId')=='math2']
+          assert len(entries)==12, f'Expected 12 Grade 2 banks, found {len(entries)}'
+          assert len({b['unitId'] for b in entries})==12, 'Duplicate unit IDs'
+          for b in entries:
+              assert b.get('approved') is False and b.get('preview') is True, f"Grade 2 release flag unsafe: {b['unitId']}"
+              p=pathlib.PurePosixPath(b['path'])
+              assert len(p.parts)>=3 and p.parts[:2]==('question-banks','math2') and '..' not in p.parts
+              assert (root/p).is_file(), f'Missing bank: {p}'
+          for path in (
+              'tools/grade2-authoring/verify.py',
+              'tools/grade2-authoring/checks2.py',
+              'tools/grade2-authoring/audit.py',
+              'tools/grade2-authoring/staging/assemble-grade2.mjs',
+              'course-outlines/grade2.json',
+          ):
+              assert (root/path).is_file(), f'Missing source: {path}'
+          check_count=0
+          for entry in entries:
+              unit=entry['unitId']
+              practice=json.loads((root/entry['path']).read_text())
+              checks_path=root/'question-banks'/'math2'/'checks'/f'{unit}.json'
+              assert checks_path.is_file(), f'Missing separate Understanding Check bank: {unit}'
+              checks=json.loads(checks_path.read_text())
+              assert checks.get('courseId')=='math2' and checks.get('unitId')==unit, f'Wrong check bank course/unit: {unit}'
+              ids={q['id'] for q in practice['questions']}
+              check_ids=[q['id'] for q in checks['questions']]
+              assert len(check_ids)==len(set(check_ids)), f'Duplicate Understanding Check ID: {unit}'
+              assert not ids.intersection(check_ids), f'Understanding Check reuses practice question IDs: {unit}'
+              check_count+=len(check_ids)
+              assert (root/'question-banks'/'math2'/'checks'/'meta'/f'{unit}.meta.json').is_file(), f'Missing check metadata: {unit}'
+          assert check_count==318, f'Expected 318 separate Understanding Check questions; found {check_count}'
+          print('Validated 318 dedicated Understanding Check questions and metadata across 12 units')
+          print('All 12 Grade 2 preview banks and required sources are present')
+          PY
+      - name: Require shared elementary player dependencies
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          root=pathlib.Path('.')
+          shared=[
+              'worksheet-generator/elementary/el-core.js',
+              'worksheet-generator/elementary/el-games.js',
+              'worksheet-generator/elementary/el-flashcards.js',
+              'worksheet-generator/elementary/el-understanding-check.js',
+              'worksheet-generator/core/math-display.js',
+              'worksheet-generator/games/skill-setup.js',
+              'question-bank-loader.js',
+              'question-bank-adapter.js',
+          ]
+          missing=[p for p in shared if not (root/p).is_file()]
+          assert not missing, f'Missing shared runtime dependencies: {missing}'
+          for filename in (
+              'worksheet-generator/grade2-games.html',
+              'worksheet-generator/grade2-flashcards.html',
+              'worksheet-generator/grade2-understanding-check.html',
+          ):
+              html=(root/filename).read_text()
+              for src in re.findall(r'<script[^>]+src=["\\\']([^"\\\']+)',html):
+                  local=src.split('?',1)[0].split('#',1)[0]
+                  if '://' in local or local.startswith('//'): continue
+                  # These are generated by the Grade 2 assembler or copied from Classroom's built shell.
+                  if local in ('../analytics.js', '../data.js', '../course-catalog.js'): continue
+                  resolved=(root/'worksheet-generator'/local).resolve()
+                  assert resolved.is_relative_to(root.resolve()) and resolved.is_file(), f'{filename}: script not found: {src}'
+          print('Shared elementary runtime and Grade 2 player script dependencies verified')
+          PY
+      - name: Verify practice answer checks
+        working-directory: tools/grade2-authoring
+        run: python3 verify.py
+      - name: Verify independent Understanding Check answers
+        working-directory: tools/grade2-authoring
+        env:
+          VERIFY_CHECKS: '1'
+        run: python3 verify.py
+      - name: Audit Grade 2 content
+        working-directory: tools/grade2-authoring
+        run: python3 audit.py
+
+  integration-browser:
+    name: Assemble Classroom preview and test Grade 2 in Chromium
+    needs: verify-grade2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Grade 2 staging source
+        uses: actions/checkout@v4
+        with:
+          path: FinancialAlgebra
+          persist-credentials: false
+      - name: Check out latest Classroom shell and shared engines
+        uses: actions/checkout@v4
+        with:
+          repository: akneller1/classroom
+          ref: main
+          path: classroom
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Assemble real Classroom-backed Grade 2 preview
+        env:
+          CLASSROOM_SOURCE_DIR: ${{ github.workspace }}/classroom
+        run: node FinancialAlgebra/scripts/assemble-classroom-preview.mjs
+      - name: Verify Grade 2 native-bank registration
+        shell: bash
+        run: |
+          node - <<'JS'
+          const fs=require('fs'), path=require('path');
+          const root=path.resolve('classroom/_site');
+          const manifest=JSON.parse(fs.readFileSync(path.join(root,'question-banks/manifest.json')));
+          const banks=manifest.banks.filter(b=>b.courseId==='grade2');
+          if(banks.length!==12)throw Error('Expected 12 Grade 2 native banks; got '+banks.length);
+          for(const b of banks)if(!fs.existsSync(path.join(root,b.path)))throw Error('Missing adapted bank: '+b.path);
+          for(const p of ['grade2/worksheet-generator/grade2-games.html','grade2/worksheet-generator/grade2-understanding-check.html','grade2/worksheet-generator/grade2-flashcards.html'])
+            if(!fs.existsSync(path.join(root,p)))throw Error('Missing Grade 2 player: '+p);
+          console.log('PASS 12 Grade 2 native banks and all three shared player entrypoints');
+          JS
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Browser-test Grade 2 unit, games, student skills and dedicated Understanding Checks
+        run: node FinancialAlgebra/scripts/test-grade2-staging-browser.cjs classroom/_site

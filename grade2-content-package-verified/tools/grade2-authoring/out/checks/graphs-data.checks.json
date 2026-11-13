@@ -1,0 +1,841 @@
+{
+"m2c-gd-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "pic_value",
+"syms": [
+5,
+9,
+10
+],
+"key": 1,
+"i": 1,
+"unit": "shells"
+},
+"family": "pg_value",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Shells Found",
+"cats": [
+"Ana",
+"Ben",
+"Kai"
+],
+"symbols": [
+5,
+9,
+10
+],
+"key": 1,
+"icon": "star",
+"unit": "shell"
+}
+}
+},
+"m2c-gd-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "pic_sum",
+"syms": [
+6,
+4,
+9
+],
+"key": 1,
+"idx": [
+0,
+2
+],
+"unit": "shells"
+},
+"family": "pg_two",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Shells Found",
+"cats": [
+"Ana",
+"Ben",
+"Kai"
+],
+"symbols": [
+6,
+4,
+9
+],
+"key": 1,
+"icon": "star",
+"unit": "shell"
+}
+}
+},
+"m2c-gd-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "pic_value",
+"syms": [
+3,
+6,
+14
+],
+"key": 1,
+"i": 2,
+"unit": "days"
+},
+"family": "pg_value",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Weather This Month",
+"cats": [
+"sunny",
+"rainy",
+"cloudy"
+],
+"symbols": [
+3,
+6,
+14
+],
+"key": 1,
+"icon": "circle",
+"unit": "day"
+}
+}
+},
+"m2c-gd-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "graph_extreme",
+"cats": [
+"dog",
+"cat",
+"fish"
+],
+"vals": [
+7,
+4,
+5
+],
+"want": "fewest"
+},
+"family": "pg_most",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Pets in Our Class",
+"cats": [
+"dog",
+"cat",
+"fish"
+],
+"symbols": [
+7,
+4,
+5
+],
+"key": 1,
+"icon": "circle",
+"unit": "pet"
+}
+}
+},
+"m2c-gd-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "graph_extreme",
+"cats": [
+"soccer",
+"tennis",
+"swim",
+"run"
+],
+"vals": [
+7,
+12,
+18,
+15
+],
+"want": "fewest"
+},
+"family": "pg_most",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Sport",
+"cats": [
+"soccer",
+"tennis",
+"swim",
+"run"
+],
+"symbols": [
+7,
+12,
+18,
+15
+],
+"key": 1,
+"icon": "star",
+"unit": "vote"
+}
+}
+},
+"m2c-gd-s01-honors-002": {
+"q": {
+"k": "fn",
+"fn": "pic_sum",
+"syms": [
+17,
+4,
+9,
+6
+],
+"key": 1,
+"idx": [
+1,
+3
+],
+"unit": "votes"
+},
+"family": "pg_two",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Fruit",
+"cats": [
+"apple",
+"banana",
+"grape",
+"pear"
+],
+"symbols": [
+17,
+4,
+9,
+6
+],
+"key": 1,
+"icon": "star",
+"unit": "vote"
+}
+}
+},
+"m2c-gd-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "bar_value",
+"vals": [
+5,
+8,
+3
+],
+"i": 2,
+"unit": "pets"
+},
+"family": "bg_value",
+"diagram": {
+"kind": "bargraph1",
+"data": {
+"title": "Pets in Our Class",
+"cats": [
+"dog",
+"cat",
+"fish"
+],
+"vals": [
+5,
+8,
+3
+],
+"top": 10,
+"ylabel": "Number of pets",
+"horizontal": true
+}
+}
+},
+"m2c-gd-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "graph_extreme",
+"cats": [
+"sunny",
+"rainy",
+"cloudy"
+],
+"vals": [
+9,
+10,
+1
+],
+"want": "fewest"
+},
+"family": "bg_most",
+"diagram": {
+"kind": "bargraph1",
+"data": {
+"title": "Weather This Month",
+"cats": [
+"sunny",
+"rainy",
+"cloudy"
+],
+"vals": [
+9,
+10,
+1
+],
+"top": 10,
+"ylabel": "Number of days",
+"horizontal": false
+}
+}
+},
+"m2c-gd-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "bar_value",
+"vals": [
+4,
+9,
+6
+],
+"i": 0,
+"unit": "votes"
+},
+"family": "bg_value",
+"diagram": {
+"kind": "bargraph1",
+"data": {
+"title": "Favorite Sport",
+"cats": [
+"soccer",
+"tennis",
+"swim"
+],
+"vals": [
+4,
+9,
+6
+],
+"top": 20,
+"ylabel": "Number of votes",
+"horizontal": false
+}
+}
+},
+"m2c-gd-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "bar_has",
+"cats": [
+"pizza",
+"tacos",
+"soup"
+],
+"vals": [
+12,
+3,
+8
+],
+"v": 12
+},
+"family": "bg_which",
+"diagram": {
+"kind": "bargraph1",
+"data": {
+"title": "Lunch Choice",
+"cats": [
+"pizza",
+"tacos",
+"soup"
+],
+"vals": [
+12,
+3,
+8
+],
+"top": 20,
+"ylabel": "Number of votes",
+"horizontal": false
+}
+}
+},
+"m2c-gd-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "bar_value",
+"vals": [
+15,
+9,
+11
+],
+"i": 2,
+"unit": "shells"
+},
+"family": "bg_value",
+"diagram": {
+"kind": "bargraph1",
+"data": {
+"title": "Shells Found",
+"cats": [
+"Ana",
+"Ben",
+"Kai"
+],
+"vals": [
+15,
+9,
+11
+],
+"top": 20,
+"ylabel": "Number of shells",
+"horizontal": false
+}
+}
+},
+"m2c-gd-s02-honors-002": {
+"q": {
+"k": "fn",
+"fn": "graph_extreme",
+"cats": [
+"pizza",
+"tacos",
+"soup",
+"salad"
+],
+"vals": [
+17,
+8,
+2,
+14
+],
+"want": "most"
+},
+"family": "bg_most",
+"diagram": {
+"kind": "bargraph1",
+"data": {
+"title": "Lunch Choice",
+"cats": [
+"pizza",
+"tacos",
+"soup",
+"salad"
+],
+"vals": [
+17,
+8,
+2,
+14
+],
+"top": 20,
+"ylabel": "Number of votes",
+"horizontal": false
+}
+}
+},
+"m2c-gd-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "bar_diff",
+"vals": [
+4,
+1,
+5
+],
+"i": 2,
+"j": 1,
+"unit": "pets"
+},
+"family": "sp_more",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Pets in Our Class",
+"cats": [
+"dog",
+"cat",
+"fish"
+],
+"symbols": [
+4,
+1,
+5
+],
+"key": 1,
+"icon": "circle",
+"unit": "pet"
+}
+}
+},
+"m2c-gd-s03-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "bar_combo",
+"vals": [
+10,
+4,
+6
+],
+"plus": [
+2,
+0
+],
+"minus": [],
+"unit": "votes"
+},
+"family": "sp_together",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Lunch Choice",
+"cats": [
+"pizza",
+"tacos",
+"soup"
+],
+"symbols": [
+10,
+4,
+6
+],
+"key": 1,
+"icon": "star",
+"unit": "vote"
+}
+}
+},
+"m2c-gd-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "bar_diff",
+"vals": [
+7,
+13,
+2,
+5
+],
+"i": 0,
+"j": 2,
+"unit": "days"
+},
+"family": "sp_more",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Weather This Month",
+"cats": [
+"sunny",
+"rainy",
+"cloudy",
+"snowy"
+],
+"symbols": [
+7,
+13,
+2,
+5
+],
+"key": 1,
+"icon": "circle",
+"unit": "day"
+}
+}
+},
+"m2c-gd-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "bar_diff",
+"vals": [
+1,
+8,
+6,
+5
+],
+"i": 2,
+"j": 3,
+"unit": "votes"
+},
+"family": "sp_fewer",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Sport",
+"cats": [
+"soccer",
+"tennis",
+"swim",
+"run"
+],
+"symbols": [
+1,
+8,
+6,
+5
+],
+"key": 1,
+"icon": "star",
+"unit": "vote"
+}
+}
+},
+"m2c-gd-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "bar_diff",
+"vals": [
+8,
+7,
+6
+],
+"i": 0,
+"j": 1,
+"unit": "pets"
+},
+"family": "sp_fewer",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Pets in Our Class",
+"cats": [
+"dog",
+"cat",
+"fish"
+],
+"symbols": [
+8,
+7,
+6
+],
+"key": 1,
+"icon": "circle",
+"unit": "pet"
+}
+}
+},
+"m2c-gd-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "bar_combo",
+"vals": [
+8,
+15,
+2,
+9
+],
+"plus": [
+0,
+3
+],
+"minus": [],
+"unit": "votes"
+},
+"family": "sp_together",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Fruit",
+"cats": [
+"apple",
+"banana",
+"grape",
+"pear"
+],
+"symbols": [
+8,
+15,
+2,
+9
+],
+"key": 1,
+"icon": "star",
+"unit": "vote"
+}
+}
+},
+"m2c-gd-s04-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "tally_val",
+"counts": [
+7,
+2,
+6
+],
+"i": 2
+},
+"family": "mk_bar_height",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Favorite Sport",
+"cats": [
+"soccer",
+"tennis",
+"swim"
+],
+"counts": [
+7,
+2,
+6
+]
+}
+}
+},
+"m2c-gd-s04-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "tally_val",
+"counts": [
+7,
+9,
+1
+],
+"i": 2
+},
+"family": "mk_pic_count",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Weather This Month",
+"cats": [
+"sunny",
+"rainy",
+"cloudy"
+],
+"counts": [
+7,
+9,
+1
+]
+}
+}
+},
+"m2c-gd-s04-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "tally_val",
+"counts": [
+1,
+12,
+10
+],
+"i": 0
+},
+"family": "mk_bar_height",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Shells Found",
+"cats": [
+"Ana",
+"Ben",
+"Kai"
+],
+"counts": [
+1,
+12,
+10
+]
+}
+}
+},
+"m2c-gd-s04-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "tally_val",
+"counts": [
+1,
+14,
+6
+],
+"i": 1
+},
+"family": "mk_pic_count",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Weather This Month",
+"cats": [
+"sunny",
+"rainy",
+"cloudy"
+],
+"counts": [
+1,
+14,
+6
+]
+}
+}
+},
+"m2c-gd-s04-honors-001": {
+"q": {
+"k": "fn",
+"fn": "tally_val",
+"counts": [
+2,
+8,
+15
+],
+"i": 0
+},
+"family": "mk_bar_height",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Favorite Fruit",
+"cats": [
+"apple",
+"banana",
+"grape"
+],
+"counts": [
+2,
+8,
+15
+]
+}
+}
+},
+"m2c-gd-s04-honors-002": {
+"q": {
+"k": "fn",
+"fn": "graph_extreme",
+"cats": [
+"Ana",
+"Ben",
+"Kai",
+"Zoe"
+],
+"vals": [
+6,
+14,
+20,
+19
+],
+"want": "most"
+},
+"family": "mk_tallest",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Shells Found",
+"cats": [
+"Ana",
+"Ben",
+"Kai",
+"Zoe"
+],
+"counts": [
+6,
+14,
+20,
+19
+]
+}
+}
+}
+}

@@ -158,7 +158,7 @@ async function understandingCheck(ctx, unit) {
       if (view === 'one' && fb === 'now' && !teacher) throw new Error('teacher summary missing');
       if (errors.length) throw new Error(errors.slice(0, 3).join(' | '));
       log(true, what, m[0]);
-    } catch (e) { log(false, what, e.message + (errors.length ? ' | ' + errors.slice(0, 2).join(' | ') : '')); }
+    } catch (e) { const body = await page.locator('body').innerText().catch(()=>''); log(false, what, e.message + ' | page: ' + body.replace(/\s+/g,' ').slice(0,350) + (errors.length ? ' | ' + errors.slice(0, 2).join(' | ') : '')); }
     finally { await page.close(); }
   }
 }

@@ -8,8 +8,14 @@ assert.equal((read('index.html').match(/src="elementary-preload-catalog/g)||[]).
 const context={window:{}};context.globalThis=context.window;
 for(const file of ['data.js','course-integrations.js','course-catalog.js','grade5/grade5-main-catalog.js','elementary-preload-catalog.js'])vm.runInNewContext(read(file),context,{filename:file});
 const G=context.window,grades=G.LIBRARY.courses.filter(c=>/^grade[1-4]$/.test(c.id));
-assert.equal(grades.length,4);const expectedUnits=[1,2,3,4].reduce((sum,n)=>sum+JSON.parse(fs.readFileSync(path.join(stage,n===3?'tools/grade3-authoring/outline.json':'course-outlines/grade'+n+'.json'),'utf8')).units.length,0);
+assert.equal(grades.length,4);const expectedUnits=[1,2,3,4].reduce((sum,n)=>sum+JSON.parse(fs.readFileSync(path.join(stage,(n===2||n===3)?'tools/grade'+n+'-authoring/outline.json':'course-outlines/grade'+n+'.json'),'utf8')).units.length,0);
 assert.equal(grades.reduce((n,c)=>n+c.units.length,0),expectedUnits);
+const grade2Manifest=JSON.parse(read('grade2/manifest.json'));
+assert.equal(grade2Manifest.banks.length,12,'Grade 2 shared-loader manifest requires 12 units');
+assert.ok(grade2Manifest.banks.every(b=>b.courseId==='math2'&&b.approved===true),'Grade 2 preview player manifest is incomplete');
+assert.equal(read('grade2/manifest.json'),read('grade2/question-banks/manifest.json'),'Grade 2 root and bank manifests differ');
+for(const b of grade2Manifest.banks) assert.ok(fs.existsSync(path.join(site,'grade2',b.path)),b.path+' missing from Grade 2 player');
+
 for(const c of grades)for(const u of c.units){
  assert.equal(G.MK_COURSE_CATALOG.getSkills(c.id,u.id).length,G.MK_COURSE_CATALOG.getSkillRecords(c.id,u.id).length);
  for(const [format,page] of [['lesson-planner','lesson-planner.html'],['worksheet-generator','worksheet.html'],['assessment-generator','menu-assessment.html'],['printable-generator','printables.html']]){

@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "id": "math2",
+  "name": "2nd Grade Mathematics",
+  "shortName": "Grade 2",
+  "status": "development",
+  "description": "Twelve units covering every Common Core / Massachusetts Grade 2 mathematics standard (27 leaf standards plus the 2.NBT.A.1 statement), 53 skills with observable learning targets.",
+  "source": {
+    "title": "Common Core State Standards for Mathematics, Grade 2 (identical codes in the Massachusetts 2017 Mathematics Curriculum Framework)",
+    "note": "Replaces the earlier scope-and-sequence outline (9 units, 89 skills). Skill source of truth: tools/grade2-authoring/outline.py."
+  },
+  "standards": {
+    "2.OA.A.1": "Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.",
+    "2.OA.B.2": "Fluently add and subtract within 20 using mental strategies. By end of Grade 2, know from memory all sums of two one-digit numbers.",
+    "2.OA.C.3": "Determine whether a group of objects (up to 20) has an odd or even number of members, e.g., by pairing objects or counting them by 2s; write an equation to express an even number as a sum of two equal addends.",
+    "2.OA.C.4": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends.",
+    "2.NBT.A.1": "Understand that the three digits of a three-digit number represent amounts of hundreds, tens, and ones; e.g., 706 equals 7 hundreds, 0 tens, and 6 ones.",
+    "2.NBT.A.1.a": "100 can be thought of as a bundle of ten tens — called a “hundred.”",
+    "2.NBT.A.1.b": "The numbers 100, 200, 300, 400, 500, 600, 700, 800, 900 refer to one, two, three, four, five, six, seven, eight, or nine hundreds (and 0 tens and 0 ones).",
+    "2.NBT.A.2": "Count within 1000; skip-count by 5s, 10s, and 100s.",
+    "2.NBT.A.3": "Read and write numbers to 1000 using base-ten numerals, number names, and expanded form.",
+    "2.NBT.A.4": "Compare two three-digit numbers based on meanings of the hundreds, tens, and ones digits, using >, =, and < symbols to record the results of comparisons.",
+    "2.NBT.B.5": "Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction.",
+    "2.NBT.B.6": "Add up to four two-digit numbers using strategies based on place value and properties of operations.",
+    "2.NBT.B.7": "Add and subtract within 1000, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method. Understand that in adding or subtracting three-digit numbers, one adds or subtracts hundreds and hundreds, tens and tens, ones and ones; and sometimes it is necessary to compose or decompose tens or hundreds.",
+    "2.NBT.B.8": "Mentally add 10 or 100 to a given number 100–900, and mentally subtract 10 or 100 from a given number 100–900.",
+    "2.NBT.B.9": "Explain why addition and subtraction strategies work, using place value and the properties of operations.",
+    "2.MD.A.1": "Measure the length of an object by selecting and using appropriate tools such as rulers, yardsticks, meter sticks, and measuring tapes.",
+    "2.MD.A.2": "Measure the length of an object twice, using length units of different lengths for the two measurements; describe how the two measurements relate to the size of the unit chosen.",
+    "2.MD.A.3": "Estimate lengths using units of inches, feet, centimeters, and meters.",
+    "2.MD.A.4": "Measure to determine how much longer one object is than another, expressing the length difference in terms of a standard length unit.",
+    "2.MD.B.5": "Use addition and subtraction within 100 to solve word problems involving lengths that are given in the same units, e.g., by using drawings (such as drawings of rulers) and equations with a symbol for the unknown number to represent the problem.",
+    "2.MD.B.6": "Represent whole numbers as lengths from 0 on a number line diagram with equally spaced points corresponding to the numbers 0, 1, 2, ..., and represent whole-number sums and differences within 100 on a number line diagram.",
+    "2.MD.C.7": "Tell and write time from analog and digital clocks to the nearest five minutes, using a.m. and p.m.",
+    "2.MD.C.8": "Solve word problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and ¢ symbols appropriately.",
+    "2.MD.D.9": "Generate measurement data by measuring lengths of several objects to the nearest whole unit, or by making repeated measurements of the same object. Show the measurements by making a line plot, where the horizontal scale is marked off in whole-number units.",
+    "2.MD.D.10": "Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put-together, take-apart, and compare problems using information presented in a bar graph.",
+    "2.G.A.1": "Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces. Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.",
+    "2.G.A.2": "Partition a rectangle into rows and columns of same-size squares and count to find the total number of them.",
+    "2.G.A.3": "Partition circles and rectangles into two, three, or four equal shares, describe the shares using the words halves, thirds, half of, a third of, etc., and describe the whole as two halves, three thirds, four fourths. Recognize that equal shares of identical wholes need not have the same shape."
+  },
+  "units": [
+    {
+      "id": "add-subtract-20",
+      "name": "Addition and Subtraction within 20",
+      "description": "Mental strategies for adding and subtracting within 20: make a ten, doubles, related facts and missing numbers.",
+      "status": "development",
+      "skills": [
+        "Adding within 20 with Strategies",
+        "Subtracting within 20 with Strategies",
+        "Related Facts and Fact Families",
+        "Missing Numbers in Equations within 20"
+      ],
+      "skillStandards": [
+        [
+          "2.OA.B.2"
+        ],
+        [
+          "2.OA.B.2"
+        ],
+        [
+          "2.OA.B.2"
+        ],
+        [
+          "2.OA.B.2"
+        ]
+      ],
+      "targets": [
+        "I can add two numbers within 20 in my head using strategies such as making a ten, doubles, and doubles plus one.",
+        "I can subtract within 20 in my head by thinking addition, counting back, or going back through ten.",
+        "I can use an addition fact to find related addition and subtraction facts in the same fact family.",
+        "I can find the missing number in an addition or subtraction equation within 20 and tell if an equation is true."
+      ]
+    },
+    {
+      "id": "odd-even-arrays",
+      "name": "Odd and Even Numbers and Arrays",
+      "description": "Odd and even numbers to 20, doubles as equal addends, and arrays with up to 5 rows and 5 columns.",
+      "status": "development",
+      "skills": [
+        "Odd and Even Numbers",
+        "Even Numbers as Doubles",
+        "Arrays and Repeated Addition",
+        "Array Word Problems"
+      ],
+      "skillStandards": [
+        [
+          "2.OA.C.3"
+        ],
+        [
+          "2.OA.C.3"
+        ],
+        [
+          "2.OA.C.4"
+        ],
+        [
+          "2.OA.C.4"
+        ]
+      ],
+      "targets": [
+        "I can tell whether a group of up to 20 objects is odd or even by making pairs or counting by 2s.",
+        "I can write an even number as the sum of two equal addends, such as 14 = 7 + 7.",
+        "I can find the total in an array with up to 5 rows and 5 columns and write an addition equation with equal addends.",
+        "I can solve word problems about objects in rows and columns by drawing an array and writing an equation."
+      ]
+    },
+    {
+      "id": "place-value-1000",
+      "name": "Place Value to 1,000",
+      "description": "Hundreds as ten tens, hundreds, tens and ones, and reading and writing numbers to 1,000 three ways.",
+      "status": "development",
+      "skills": [
+        "A Hundred Is Ten Tens",
+        "Hundreds, Tens, and Ones",
+        "Counting Hundreds",
+        "Numerals, Number Names, and Expanded Form"
+      ],
+      "skillStandards": [
+        [
+          "2.NBT.A.1.a"
+        ],
+        [
+          "2.NBT.A.1"
+        ],
+        [
+          "2.NBT.A.1.b"
+        ],
+        [
+          "2.NBT.A.3"
+        ]
+      ],
+      "targets": [
+        "I can explain that 100 is the same as ten tens and trade between tens and hundreds.",
+        "I can tell how many hundreds, tens, and ones are in a three-digit number and the value of each digit.",
+        "I can tell that 100, 200, … 900 are one to nine hundreds with 0 tens and 0 ones.",
+        "I can read and write numbers to 1,000 as numerals, in words, and in expanded form."
+      ]
+    },
+    {
+      "id": "count-compare-1000",
+      "name": "Counting and Comparing to 1,000",
+      "description": "Counting and skip counting within 1,000, comparing three-digit numbers, and adding or subtracting 10 and 100 mentally.",
+      "status": "development",
+      "skills": [
+        "Counting within 1,000",
+        "Skip Counting by 5s, 10s, and 100s",
+        "Comparing Three-Digit Numbers",
+        "Adding and Subtracting 10 and 100"
+      ],
+      "skillStandards": [
+        [
+          "2.NBT.A.2"
+        ],
+        [
+          "2.NBT.A.2"
+        ],
+        [
+          "2.NBT.A.4"
+        ],
+        [
+          "2.NBT.B.8"
+        ]
+      ],
+      "targets": [
+        "I can count forward and backward within 1,000, including across tens and hundreds.",
+        "I can skip count by 5s, 10s, and 100s from any starting number and continue the pattern.",
+        "I can compare two three-digit numbers using hundreds, tens, and ones and record it with >, =, or <.",
+        "I can mentally add or subtract 10 or 100 to a number from 100 to 900."
+      ]
+    },
+    {
+      "id": "add-subtract-100",
+      "name": "Addition and Subtraction within 100",
+      "description": "Adding and subtracting two-digit numbers with place-value strategies, adding up to four two-digit numbers, and explaining strategies.",
+      "status": "development",
+      "skills": [
+        "Adding within 100",
+        "Subtracting within 100",
+        "Addition and Subtraction Are Related",
+        "Adding Three or Four Two-Digit Numbers",
+        "Explaining Addition and Subtraction Strategies"
+      ],
+      "skillStandards": [
+        [
+          "2.NBT.B.5"
+        ],
+        [
+          "2.NBT.B.5"
+        ],
+        [
+          "2.NBT.B.5"
+        ],
+        [
+          "2.NBT.B.6"
+        ],
+        [
+          "2.NBT.B.9"
+        ]
+      ],
+      "targets": [
+        "I can add two-digit numbers within 100 using place value, and make a new ten when the ones add to 10 or more.",
+        "I can subtract within 100 using place value, breaking apart a ten when there are not enough ones.",
+        "I can use addition to check subtraction and to find an unknown number within 100.",
+        "I can add up to four two-digit numbers by adding tens and ones or by finding friendly pairs.",
+        "I can explain why a strategy works using place value and properties of operations."
+      ]
+    },
+    {
+      "id": "word-problems-100",
+      "name": "Word Problems within 100",
+      "description": "One- and two-step addition and subtraction word problems with unknowns in every position, solved with drawings and equations.",
+      "status": "development",
+      "skills": [
+        "Add To and Take From Problems",
+        "Put Together and Take Apart Problems",
+        "Compare Problems",
+        "Two-Step Word Problems"
+      ],
+      "skillStandards": [
+        [
+          "2.OA.A.1"
+        ],
+        [
+          "2.OA.A.1"
+        ],
+        [
+          "2.OA.A.1"
+        ],
+        [
+          "2.OA.A.1"
+        ]
+      ],
+      "targets": [
+        "I can solve add-to and take-from problems when the result, the change, or the start is unknown.",
+        "I can solve put-together and take-apart problems when the total or one part is unknown.",
+        "I can solve compare problems that ask how many more or how many fewer, or the bigger or smaller amount.",
+        "I can solve two-step word problems within 100 and write an equation with a symbol for the unknown."
+      ]
+    },
+    {
+      "id": "add-subtract-1000",
+      "name": "Addition and Subtraction within 1,000",
+      "description": "Adding and subtracting three-digit numbers with models, place-value strategies, and composing or decomposing tens and hundreds.",
+      "status": "development",
+      "skills": [
+        "Adding Three-Digit Numbers with Models",
+        "Adding with New Tens and Hundreds",
+        "Subtracting Three-Digit Numbers with Models",
+        "Subtracting with Regrouping"
+      ],
+      "skillStandards": [
+        [
+          "2.NBT.B.7"
+        ],
+        [
+          "2.NBT.B.7",
+          "2.NBT.B.9"
+        ],
+        [
+          "2.NBT.B.7"
+        ],
+        [
+          "2.NBT.B.7",
+          "2.NBT.B.9"
+        ]
+      ],
+      "targets": [
+        "I can add three-digit numbers with base-ten blocks or drawings by adding hundreds, tens, and ones.",
+        "I can add within 1,000 when I need to make a new ten or a new hundred and relate it to a written method.",
+        "I can subtract three-digit numbers with base-ten blocks or drawings, or by counting up.",
+        "I can subtract within 1,000 when I need to break apart a ten or a hundred, including across zeros."
+      ]
+    },
+    {
+      "id": "measuring-length",
+      "name": "Measuring Length",
+      "description": "Measuring with rulers, yardsticks and meter sticks, comparing units, estimating, comparing lengths, and line plots.",
+      "status": "development",
+      "skills": [
+        "Measuring with a Ruler",
+        "Choosing a Measuring Tool and Unit",
+        "Measuring with Different Units",
+        "Estimating Lengths",
+        "How Much Longer?",
+        "Line Plots of Measurements"
+      ],
+      "skillStandards": [
+        [
+          "2.MD.A.1"
+        ],
+        [
+          "2.MD.A.1"
+        ],
+        [
+          "2.MD.A.2"
+        ],
+        [
+          "2.MD.A.3"
+        ],
+        [
+          "2.MD.A.4"
+        ],
+        [
+          "2.MD.D.9"
+        ]
+      ],
+      "targets": [
+        "I can measure the length of an object to the nearest inch or centimeter with a ruler.",
+        "I can choose a ruler, yardstick, meter stick, or measuring tape and the best unit for the length I need to measure.",
+        "I can measure an object with two units and explain why a smaller unit gives a bigger number.",
+        "I can estimate lengths in inches, feet, centimeters, and meters using benchmarks.",
+        "I can measure two objects and find how much longer one is than the other.",
+        "I can measure several objects to the nearest whole unit and show the data on a line plot."
+      ]
+    },
+    {
+      "id": "length-number-line",
+      "name": "Length Problems and the Number Line",
+      "description": "Addition and subtraction word problems about length, and sums and differences shown on a number line.",
+      "status": "development",
+      "skills": [
+        "Length Word Problems",
+        "Whole Numbers on a Number Line",
+        "Adding and Subtracting on a Number Line"
+      ],
+      "skillStandards": [
+        [
+          "2.MD.B.5"
+        ],
+        [
+          "2.MD.B.6"
+        ],
+        [
+          "2.MD.B.6"
+        ]
+      ],
+      "targets": [
+        "I can solve addition and subtraction word problems about lengths in the same unit.",
+        "I can show a whole number as a length from 0 on a number line with equally spaced numbers.",
+        "I can show sums and differences within 100 as jumps on a number line."
+      ]
+    },
+    {
+      "id": "time-money",
+      "name": "Time and Money",
+      "description": "Telling time to the nearest five minutes with AM and PM, and counting and solving problems with coins and bills.",
+      "status": "development",
+      "skills": [
+        "Telling Time to Five Minutes",
+        "AM and PM",
+        "Counting Coins",
+        "Counting Bills and Coins",
+        "Money Word Problems"
+      ],
+      "skillStandards": [
+        [
+          "2.MD.C.7"
+        ],
+        [
+          "2.MD.C.7"
+        ],
+        [
+          "2.MD.C.8"
+        ],
+        [
+          "2.MD.C.8"
+        ],
+        [
+          "2.MD.C.8"
+        ]
+      ],
+      "targets": [
+        "I can tell and write time to the nearest five minutes from analog and digital clocks.",
+        "I can use AM and PM (a.m. and p.m.) to tell the time of day for events.",
+        "I can find the value of a group of quarters, dimes, nickels, and pennies and write it with ¢.",
+        "I can find the value of dollar bills and coins together and write it with $ and ¢.",
+        "I can solve word problems about money, including finding totals, change, and how much more is needed."
+      ]
+    },
+    {
+      "id": "graphs-data",
+      "name": "Picture Graphs and Bar Graphs",
+      "description": "Reading and making picture graphs and single-unit bar graphs with up to four categories, and solving problems with them.",
+      "status": "development",
+      "skills": [
+        "Reading Picture Graphs",
+        "Reading Bar Graphs",
+        "Solving Problems with Graphs",
+        "Making Picture Graphs and Bar Graphs"
+      ],
+      "skillStandards": [
+        [
+          "2.MD.D.10"
+        ],
+        [
+          "2.MD.D.10"
+        ],
+        [
+          "2.MD.D.10"
+        ],
+        [
+          "2.MD.D.10"
+        ]
+      ],
+      "targets": [
+        "I can read a picture graph where each picture stands for 1 and tell how many are in each category.",
+        "I can read a bar graph with a scale of 1 and tell how many are in each category.",
+        "I can use a picture graph or bar graph to solve put-together, take-apart, and compare problems.",
+        "I can make a picture graph or bar graph from a tally chart or table with up to four categories."
+      ]
+    },
+    {
+      "id": "shapes-equal-shares",
+      "name": "Shapes and Equal Shares",
+      "description": "Naming and drawing shapes by their attributes, cubes, partitioning rectangles into squares, and halves, thirds and fourths.",
+      "status": "development",
+      "skills": [
+        "Naming Shapes by Sides and Angles",
+        "Drawing Shapes with Given Attributes",
+        "Cubes and Their Faces",
+        "Partitioning Rectangles into Squares",
+        "Halves, Thirds, and Fourths",
+        "Describing the Whole and Equal Shares"
+      ],
+      "skillStandards": [
+        [
+          "2.G.A.1"
+        ],
+        [
+          "2.G.A.1"
+        ],
+        [
+          "2.G.A.1"
+        ],
+        [
+          "2.G.A.2"
+        ],
+        [
+          "2.G.A.3"
+        ],
+        [
+          "2.G.A.3"
+        ]
+      ],
+      "targets": [
+        "I can identify triangles, quadrilaterals, pentagons, and hexagons by counting their sides and angles.",
+        "I can draw or choose a shape that has a given number of sides, angles, or vertices.",
+        "I can identify a cube and describe its 6 equal square faces, edges, and vertices.",
+        "I can partition a rectangle into rows and columns of same-size squares and count to find how many.",
+        "I can partition circles and rectangles into 2, 3, or 4 equal shares and describe them as halves, thirds, or fourths.",
+        "I can describe a whole as two halves, three thirds, or four fourths, and explain that equal shares can have different shapes."
+      ]
+    }
+  ]
+}

@@ -88,6 +88,23 @@
   /* ---------- banks ---------- */
   var META = {};
   function load(unitId) {
+    // An elementary course may supply a separate, verified Understanding Check bank.
+    // Ordinary games, flashcards and generators continue using the practice bank.
+    if (CFG.checkBankPath && /understanding-check\.html$/.test(G.location.pathname)) {
+      if (!/^[a-z0-9-]+$/.test(unitId)) return Promise.reject(new Error('Invalid unit'));
+      var base = CFG.checkBankPath.replace(/\/$/, '');
+      var source = '../' + base + '/' + unitId;
+      return Promise.all([
+        G.fetch(source + '.json').then(function(r) { if (!r.ok) throw new Error('Understanding Check questions unavailable for this unit.'); return r.json(); }),
+        G.fetch(base.replace(/^/, '../') + '/meta/' + unitId + '.meta.json').then(function(r) { return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
+      ]).then(function(parts) {
+        var bank = parts[0];
+        if (!bank || bank.unitId !== unitId || bank.courseId !== COURSE || !Array.isArray(bank.questions) || !bank.questions.length)
+          throw new Error('Understanding Check bank is incomplete or mismatched.');
+        META = parts[1] && parts[1].questions || {};
+        return bank.questions;
+      });
+    }
     if (!G.MK_BANK_LOADER) return Promise.reject(new Error('Question bank loader missing'));
     return G.MK_BANK_LOADER.loadUnitFromSite(COURSE, unitId, null, '../').then(function (ids) {
       if (!ids.length) throw new Error('This unit’s questions are not published yet.');

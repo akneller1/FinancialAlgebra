@@ -1,12 +1,17 @@
 name: Deploy integrated Classroom development site
 on:
   push:
-    branches: [main]
+    branches: [main, integration/grade2-staging-preview]
   workflow_dispatch:
   pull_request:
     paths:
       - 'scripts/assemble-classroom-preview.mjs'
       - 'scripts/test-classroom-preview.cjs'
+      - 'tools/grade2-authoring/**'
+      - 'question-banks/math2/**'
+      - 'worksheet-generator/elementary/**'
+      - 'worksheet-generator/grade2/**'
+      - 'manifest.json'
       - '.github/workflows/deploy-classroom-preview.yml'
 permissions:
   contents: read
@@ -14,8 +19,8 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: integrated-development-pages
-  cancel-in-progress: false
+  group: integrated-development-pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -51,6 +56,7 @@ jobs:
           npm install --no-save playwright
           npx playwright install --with-deps chromium
       - name: Exercise Grade 3 games, study guides and student links in Chromium
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         working-directory: source
         env:
           G3_SITE: ../classroom/_site
@@ -62,6 +68,7 @@ jobs:
             node tools/grade3-authoring/tests/browser-grade3.cjs --quick
           fi
       - name: Exercise Grade 3 native generators and printable answer keys in Chromium
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         working-directory: source
         env:
           G3_BASE: http://127.0.0.1:8766/
@@ -75,11 +82,55 @@ jobs:
             node tools/grade3-authoring/tests/browser-generators.cjs
           fi
           kill $(cat /tmp/grade3-preview-http.pid)
+      - name: Exercise Grade 2 Understanding Checks in Chromium
+        working-directory: source
+        timeout-minutes: 8
+        env:
+          G2_SITE: ../classroom/_site
+          G2_PREFIX: grade2/
+          G3_ONLY: checks
+        run: node tools/grade2-authoring/tests/browser-grade2.cjs --quick
+      - name: Exercise Grade 2 flashcards and student links in Chromium
+        working-directory: source
+        timeout-minutes: 8
+        env:
+          G2_SITE: ../classroom/_site
+          G2_PREFIX: grade2/
+        run: |
+          G3_ONLY=cards node tools/grade2-authoring/tests/browser-grade2.cjs
+          G3_ONLY=links node tools/grade2-authoring/tests/browser-grade2.cjs
+      - name: Play through Grade 2 games in Chromium
+        working-directory: source
+        timeout-minutes: 12
+        env:
+          G2_SITE: ../classroom/_site
+          G2_PREFIX: grade2/
+          G3_ONLY: games
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            node tools/grade2-authoring/tests/browser-grade2.cjs
+          else
+            node tools/grade2-authoring/tests/browser-grade2.cjs --quick
+          fi
+      - name: Exercise Grade 2 native generators and printable answer keys in Chromium
+        working-directory: source
+        env:
+          G2_BASE: http://127.0.0.1:8767/
+          G2_SET: grade2
+        run: |
+          python3 -m http.server 8767 --directory ../classroom/_site > /tmp/grade2-preview-http.log 2>&1 &
+          echo $! > /tmp/grade2-preview-http.pid
+          trap 'kill $(cat /tmp/grade2-preview-http.pid) || true' EXIT
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            node tools/grade2-authoring/tests/browser-generators.cjs --all
+          else
+            node tools/grade2-authoring/tests/browser-generators.cjs
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: classroom/_site
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

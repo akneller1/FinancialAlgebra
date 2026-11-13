@@ -1,5 +1,7 @@
 # Grade 2 Mathematics — Question Bank Development Handoff
 
+**Status (2026-11-13):** Grade 2 content package authored on branch `grade2-content`: 12 units, 53 skills, 4,770 verified questions, 318 Understanding Check items, flashcards, cheat sheets and 14 projects. It is a development preview only. See `docs/math2/INTEGRATION.md` and `docs/math2/VALIDATION_REPORT.md`; the notes below are the original handoff and its old outline is replaced.
+
 **Status:** Shared Grade 5 game, generator, flashcard and readiness-check engines are preloaded for every unit in staging. Question banks have not been authored; these resources display a pending-bank state.
 
 ## Authoritative source

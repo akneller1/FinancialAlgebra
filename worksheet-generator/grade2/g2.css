@@ -1,0 +1,16 @@
+/* 2nd Grade Math look for the shared elementary pages (body.el.g2): a coral and sky palette, the largest text and touch targets of the elementary courses, and extra room between choices. Layout and controls are the shared ones. */
+body.g2 { --blue: #d0563b; --bg: #fff7f2; --line: #f6d3c6; }
+html:has(body.g2) { font-size: calc(21px * var(--el-zoom)); }
+body.el.g2 { background-image: radial-gradient(circle at 7% 12%, #ffe6dc 0 80px, transparent 81px), radial-gradient(circle at 93% 86%, #e2f1ff 0 96px, transparent 97px), radial-gradient(circle at 88% 10%, #fff3cf 0 60px, transparent 61px); }
+.g2 .el-top { background: linear-gradient(90deg, #e2563b, #f08c1a 55%, #2f7fd8); }
+.g2 .el-panel { border-color: #f6d3c6; }
+.g2 .el-panel h2 { color: #9a3412; }
+.g2 .el-q { border-color: #f3c3b2; }
+.g2 .el-q-label { background: #ffe9e0; color: #9a3412; }
+.g2 .el-prompt { font-size: 1.36rem; line-height: 1.55; }
+.g2 .el-choices { gap: .75rem; }
+.g2 .el-choice { font-size: 1.12rem; padding: .72rem .95rem; min-height: 3.3rem; }
+.g2 .el-btn { min-height: 3rem; }
+.g2 .el-input { font-size: 1.22rem; min-height: 3.1rem; }
+.g2 .el-pill span { padding: .58rem 1.15rem; }
+.g2 .el-celebrate h2 { color: #9a3412; }

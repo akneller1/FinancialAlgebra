@@ -54,7 +54,11 @@ export function assembleGrade2({ source, out }) {
 (function(G){var S=${JSON.stringify(skills)};function rec(c,u){return c==='${C}'&&S[u]?S[u].map(function(n,i){return {id:u+'-skill-'+String(i+1).padStart(2,'0'),name:n,index:i+1};}):[];}
 G.MK_COURSE_CATALOG={getSkills:function(c,u){return rec(c,u).map(function(r){return r.name;});},getSkillRecords:rec,courses:function(){return ['${C}'];}};})(window);\n`);
   const banks = O.units.map(u => ({ courseId: C, unitId: u.id, path: `question-banks/${C}/${u.id}.json`, approved: true }));
-  fs.writeFileSync(path.join(dest, 'question-banks/manifest.json'), JSON.stringify({ version: 1, banks }, null, 2) + '\n');
+  const playerManifest = JSON.stringify({ version: 1, banks }, null, 2) + '\n';
+  fs.writeFileSync(path.join(dest, 'question-banks/manifest.json'), playerManifest);
+  // The shared loader resolves '../manifest.json' relative to grade2/worksheet-generator/.
+  // Keep its root manifest in sync rather than making a separate player engine.
+  fs.writeFileSync(path.join(dest, 'manifest.json'), playerManifest);
   // The players return to the course page; /grade2/ itself is only an alias of /#grade2.
   fs.writeFileSync(path.join(dest, 'index.html'), '<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><script>location.replace("../#grade2"+(location.hash.replace(/^#(?:c\\/)?(?:math|grade)2\\.?/,"")?"."+location.hash.replace(/^#(?:c\\/)?(?:math|grade)2\\.?/,""):""));</script></head><body><a href="../#grade2">Open Grade 2</a></body></html>\n');
   // analytics stays off on the noindex development preview
