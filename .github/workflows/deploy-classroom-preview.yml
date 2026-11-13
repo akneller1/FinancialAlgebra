@@ -57,7 +57,7 @@ jobs:
         env:
           G3_SITE: ../classroom/_site
           G3_PREFIX: grade3/
-        run: node tools/grade3-authoring/tests/browser-grade3.cjs --quick
+        run: node tools/grade3-authoring/tests/browser-grade3.cjs
       - name: Exercise Grade 3 native generators and printable answer keys in Chromium
         if: github.event_name == 'pull_request'
         working-directory: source
