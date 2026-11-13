@@ -11,12 +11,12 @@ This repository is a separate development space for creating new math classes us
 | --- | --- | --- |
 | Financial Algebra | [Course outline](https://akneller1.github.io/FinancialAlgebra/) | 10 units, 40 skills; complete Financial Algebra resource library |
 | Grade 5 | [Grade 5](https://akneller1.github.io/FinancialAlgebra/grade5.html) | 13 units, 80 skills, sourced from the uploaded sequence |
-| Grade 4 | [Grade 4](https://akneller1.github.io/FinancialAlgebra/grade4.html) | 12 units, 107 editorial learning targets, pacing and objectives |
+| Grade 4 | [Grade 4](https://akneller1.github.io/FinancialAlgebra/#grade4) | 10 Common Core units, 49 skills, 4,410 verified questions (30 per skill and level); games, flashcards, Understanding Checks, cheat sheets, 9 interactive tools, 10 projects and the native Classroom generators. See docs/math4/README-GRADE4.md. The original 12-unit Math Expressions outline is kept as a reference. |
 | Grade 3 | [Grade 3](https://akneller1.github.io/FinancialAlgebra/grade3.html) | 8 units, standard-aligned goals and guiding questions |
 | Grade 2 | [Grade 2](https://akneller1.github.io/FinancialAlgebra/grade2.html) | 9 Illustrative Mathematics units, 25 source-named sections |
 | Grade 1 | [Grade 1](https://akneller1.github.io/FinancialAlgebra/grade1.html) | 8 Illustrative Mathematics units, 27 source-named sections |
 
-Financial Algebra unit pages link to lesson plans, eight worksheet formats, assessments, practice tests, ten Decision Labs, 228 flashcards, ten cheat sheets, and twelve projects. The 1,445-item extended bank powers the native resources; 1,274 compatible questions are also exported for future Classroom games integration. Games are not published here. Grades 1–5 remain course outlines with Coming soon shortcuts.
+Financial Algebra unit pages link to lesson plans, eight worksheet formats, assessments, practice tests, ten Decision Labs, 228 flashcards, ten cheat sheets, and twelve projects. The 1,445-item extended bank powers the native resources; 1,274 compatible questions are also exported for future Classroom games integration. Games are not published here. Grades 1–3 remain course outlines with Coming soon shortcuts; Grade 4 has approved banks in staging (not released to production).
 
 ## Design and icons
 

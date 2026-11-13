@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {validateOutline,skillId} from '../src/outline-template.js';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
-const course=JSON.parse(read('course-outlines/grade4.json'));
+// The original Math Expressions scope and sequence is kept as the curriculum reference; course-outlines/grade4.json is
+// now the ten-unit Common Core course with approved banks (tests/grade4-course.test.mjs).
+const course=JSON.parse(read('course-outlines/grade4-math-expressions.json'));
 test('Grade 4 source curriculum contains all twelve units in source order',()=>{
  assert.equal(course.id,'math4');
  assert.equal(course.source.pages,15);
@@ -48,18 +50,14 @@ test('Grade 4 preserves meaningful source qualifications',()=>{
  assert.ok(joined.includes('the source repeats these two objectives'));
  assert.ok(course.units[8].sourcePages.includes(12));
 });
-test('Grade 4 page reuses the existing generic outline renderer and does not advertise finished activities',()=>{
- const page=read('grade4.html'),js=read('src/grade4-site.js'),template=read('src/outline-template.js');
+test('Grade 4 page still renders through the generic outline renderer',()=>{
+ const page=read('grade4.html'),js=read('src/grade4-site.js');
  assert.ok(page.includes('styles.css'));
  assert.ok(page.includes('site-overrides.css'));
  assert.ok(page.includes('src/grade4-site.js'));
  assert.ok(js.includes('course-outlines/grade4.json'));
- assert.ok(!read('index.html').includes('href="grade4.html"'),'Unfinished Grade 4 must stay off the staging homepage');
- assert.ok(!read('grade5.html').includes('href="grade4.html"'),'Grade 5 picker should not advertise unfinished Grade 4');
+ assert.ok(!read('index.html').includes('href="grade4.html"'),'Grade 4 stays off the staging homepage until it is released');
+ assert.ok(!read('grade5.html').includes('href="grade4.html"'),'Grade 5 picker should not advertise Grade 4 until it is released');
  assert.ok(read('grade3.html').includes('href="grade4.html"'));
- assert.ok(template.includes('objectiveGroups'));
- assert.ok(template.includes('Source Objectives by Category'));
- assert.ok(template.includes('Questions coming soon'));
- assert.ok(template.includes('resource templates ready'));
  assert.ok(existsSync(new URL('../styles.css',import.meta.url)));
 });

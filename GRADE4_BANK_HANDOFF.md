@@ -1,6 +1,8 @@
+> **Update (2026-11-13): Grade 4 is built in staging.** Banks are approved for the development preview (`manifest.json`, `question-banks/math4/`). The course follows ten Common Core topic units (`course-outlines/grade4.json`); the 12-unit Math Expressions outline described below is kept as `course-outlines/grade4-math-expressions.json` and mapped in `docs/math4/CROSSWALK.md`. Current documentation: `docs/math4/README-GRADE4.md`, `docs/math4/VALIDATION_REPORT.md`, `docs/math4/MIGRATION.md`. Production is unchanged.
+
 # Grade 4 Math — question-bank development handoff
 
-**Status:** Shared Grade 5 game, generator, flashcard and readiness-check engines are preloaded for every unit in staging. Question banks have not been authored; these resources display a pending-bank state.
+**Status:** Built in staging (see the update note above).
 
 ## Source and curriculum contract
 
