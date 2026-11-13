@@ -148,8 +148,8 @@ def _counters(data):
 
 
 def _numberline(data):
-    lo, hi = int(data.get("min", 0)), int(data.get("max", 10))
-    step = int(data.get("step", 1))
+    lo, hi = int(data.get("min") or 0), int(data.get("max") or 10)
+    step = int(data.get("step") or 1)
     im, d = _canvas()
     y = 300
     left, right = 60, W - 60

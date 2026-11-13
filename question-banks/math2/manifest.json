@@ -1,114 +1,121 @@
 {
-  "version": 1,
-  "courseId": "math2",
-  "review": {
-    "mathematicalValidation": {
-      "status": "passed",
-      "method": "independent verifier: tools/grade2-authoring/verify2.py re-derives every answer from stored inputs",
-      "date": "2026-11-13",
-      "questionsChecked": 8010,
-      "mathematicalErrors": 0,
-      "diagramDefects": 0,
-      "withinSkillDuplicates": 0,
-      "diagrams": 2439,
-      "exactCrossSkillDuplicateRate": 0.0593
-    },
-    "editorialApproval": {
-      "status": "pending",
-      "approved": false,
-      "note": "No teacher or curriculum reviewer has signed off on wording, difficulty or grade-level fit."
-    },
-    "deduplication": {
-      "exactCrossSkillDuplicates": 475,
-      "rate": 0.0593,
-      "before": {
-        "items": 1514,
-        "rate": 0.189
-      },
-      "keptAsIntentionalRepetition": 388
-    }
+ "version": 1,
+ "courseId": "math2",
+ "review": {
+  "mathematicalValidation": {
+   "status": "passed",
+   "method": "independent verifier: tools/grade2-authoring/verify2.py re-derives every answer from stored inputs",
+   "date": "2026-11-13",
+   "questionsChecked": 8010,
+   "mathematicalErrors": 0,
+   "diagramDefects": 0,
+   "withinSkillDuplicates": 0,
+   "diagrams": 2222,
+   "exactCrossSkillDuplicateRate": 0.062,
+   "semanticAudit": "passed (tools/grade2-authoring/audit2.py, 0 flagged)"
   },
-  "banks": [
-    {
-      "courseId": "math2",
-      "unitId": "adding-subtracting-working-data",
-      "path": "math2/adding-subtracting-working-data.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "adding-subtracting-100",
-      "path": "math2/adding-subtracting-100.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "measuring-length",
-      "path": "math2/measuring-length.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "number-line-addition-subtraction",
-      "path": "math2/number-line-addition-subtraction.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "numbers-to-1000",
-      "path": "math2/numbers-to-1000.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "geometry-time-money",
-      "path": "math2/geometry-time-money.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "adding-subtracting-1000",
-      "path": "math2/adding-subtracting-1000.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "equal-groups",
-      "path": "math2/equal-groups.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    },
-    {
-      "courseId": "math2",
-      "unitId": "putting-it-all-together",
-      "path": "math2/putting-it-all-together.json",
-      "approved": false,
-      "teacherUse": true,
-      "mathematicalValidation": "passed",
-      "editorialApproval": "pending"
-    }
-  ]
+  "editorialApproval": {
+   "status": "pending",
+   "approved": false,
+   "note": "No teacher or curriculum reviewer has signed off on wording, difficulty or grade-level fit."
+  },
+  "deduplication": {
+   "exactCrossSkillDuplicates": 496,
+   "rate": 0.062,
+   "replaced": 607,
+   "leftAsClosedFactSets": 352,
+   "keptAsIntentionalRepetition": 0
+  },
+  "levelEscalation": {
+   "status": "passed",
+   "method": "tools/grade2-authoring/level_audit.py reads every published question and compares Remedial, Standard and Advanced on number size, regrouping and steps",
+   "skillsChecked": 89,
+   "skillsNotEscalating": 0,
+   "policy": "Remedial stays in one place value with small numbers, Standard introduces two-digit regrouping or three-digit numbers, Advanced uses the largest numbers in the grade, carrying or borrowing across places and the most steps",
+   "report": "docs/math2/LEVELS.md"
+  }
+ },
+ "banks": [
+  {
+   "courseId": "math2",
+   "unitId": "adding-subtracting-working-data",
+   "path": "math2/adding-subtracting-working-data.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "adding-subtracting-100",
+   "path": "math2/adding-subtracting-100.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "measuring-length",
+   "path": "math2/measuring-length.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "number-line-addition-subtraction",
+   "path": "math2/number-line-addition-subtraction.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "numbers-to-1000",
+   "path": "math2/numbers-to-1000.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "geometry-time-money",
+   "path": "math2/geometry-time-money.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "adding-subtracting-1000",
+   "path": "math2/adding-subtracting-1000.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "equal-groups",
+   "path": "math2/equal-groups.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  },
+  {
+   "courseId": "math2",
+   "unitId": "putting-it-all-together",
+   "path": "math2/putting-it-all-together.json",
+   "approved": false,
+   "teacherUse": true,
+   "mathematicalValidation": "passed",
+   "editorialApproval": "pending"
+  }
+ ]
 }

@@ -153,6 +153,12 @@ def main():
                 return None
             if shapes[(scope, shape(cq))] >= 6:
                 return None
+            # wording is compared after text normalisation, so a template can look fresh
+            # and still repeat a prompt already in this skill and level
+            if any(x["prompt"] == cq["prompt"] and x["id"] != q["id"]
+                   for x in banks[uid]["questions"]
+                   if (x["skillId"], x["level"]) == scope):
+                return None
             return cand
 
         if fam is not None:

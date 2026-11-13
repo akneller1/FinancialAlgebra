@@ -99,7 +99,13 @@ PHRASES = [(r"\bten-frame\b", "ten\u2011frame"), (r"\bten-frames\b", "ten\u2011f
            (r"\btake-away\b", "take\u2011away"), (r"\bone-digit\b", "one\u2011digit"),
            (r"\btwo-digit\b", "two\u2011digit"), (r"\bpart-whole\b", "part\u2011whole"),
            (r"\bchange-unknown\b", "change\u2011unknown"), (r"\bresult-unknown\b", "result\u2011unknown"),
-           (r"\baddend-unknown\b", "addend\u2011unknown"), (r"\bstart-unknown\b", "start\u2011unknown")]
+           (r"\baddend-unknown\b", "addend\u2011unknown"), (r"\bstart-unknown\b", "start\u2011unknown"),
+           # a count of one takes a singular noun: "1 ten", "1 one", "1 dime"
+           (r"\b1 tens\b", "1 ten"), (r"\b1 ones\b", "1 one"), (r"\b1 hundreds\b", "1 hundred"),
+           (r"\b1 dimes\b", "1 dime"), (r"\b1 nickels\b", "1 nickel"),
+           (r"\b1 quarters\b", "1 quarter"), (r"\b1 pennies\b", "1 penny"),
+           (r"\b1 halves\b", "1 half"), (r"\b1 fourths\b", "1 fourth"),
+           (r"\b1 thirds\b", "1 third"), (r"\b1 sixths\b", "1 sixth"), (r"\b1 eighths\b", "1 eighth")]
 
 
 def fix_text(t):

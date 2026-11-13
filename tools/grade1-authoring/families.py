@@ -41,6 +41,10 @@ def num(n):
     return str(int(n))
 
 
+def tw(n, word):
+    return f"{n} {word}" if int(n) == 1 else f"{n} {word}s"
+
+
 def a_an(word):
     return ("an " if word[:1].lower() in "aeiou" else "a ") + word
 
@@ -500,7 +504,8 @@ def tens_ones_equiv_items():
         n = tens * 10 + ones
         alt_tens, alt_ones = tens - 1, ones + 10
         ans = num(alt_ones)
-        prompt = f"{n} is {tens} tens and {ones} ones. It is also {alt_tens} tens and how many ones?"
+        prompt = (f"{n} is {tw(tens, 'ten')} and {tw(ones, 'one')}. "
+                  f"It is also {tw(alt_tens, 'ten')} and how many ones?")
         return Item(prompt, ans, [f"Trade one ten for 10 ones.", f"{ones} + 10 = {alt_ones}, so {n} is {alt_tens} tens and {alt_ones} ones."],
                     wrong_numbers(alt_ones, [ones, ones + 1, alt_tens * 10 + ones]),
                     check=FN("equiv_ones", n=n, tens=alt_tens), qtype="conceptual", tags=("place-value", "reasoning"),
@@ -606,7 +611,7 @@ def story_items(kind="join"):
             prompt = f"{nm} has {a} red {thing} and {b} blue {thing}. How many {thing} does {nm} have in all?"
         elif kind == "start-unknown":
             start = a + b
-            ans, chk = start, FN("add", a=b, b=a)
+            ans, chk = start - b, FN("sub", a=start, b=b)
             prompt = f"{nm} had some {thing}. {nm2} gave {nm} {b} more. Now {nm} has {start} {thing}. How many {thing} did {nm} start with?"
         else:  # change-unknown
             start = a + b
@@ -905,7 +910,7 @@ def equal_parts_items():
         style = r.randrange(2)
         if style == 0:
             prompt = "Which shape is cut into equal parts?"
-            ans = "the rectangle"
+            ans = "rectangle"
             chk = FN("equal_parts", parts=4, kind="which")
         else:
             prompt = "Why must parts be the same size when we name halves?"

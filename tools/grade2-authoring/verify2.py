@@ -19,8 +19,10 @@ os.environ["G1_OUT"] = os.path.join(HERE, "out")
 import verify1
 from verify1 import num_eq, norm, as_int, err
 
-SIDES = {"triangle": 3, "square": 4, "rectangle": 4, "quadrilateral": 4, "pentagon": 5, "hexagon": 6}
-PARTS = {2: ("halves", "half"), 3: ("thirds", "third"), 4: ("fourths", "fourth", "quarters", "quarter")}
+SIDES = {"triangle": 3, "square": 4, "rectangle": 4, "quadrilateral": 4, "trapezoid": 4, "rhombus": 4,
+         "parallelogram": 4, "pentagon": 5, "hexagon": 6, "octagon": 8}
+PARTS = {2: ("halves", "half"), 3: ("thirds", "third"), 4: ("fourths", "fourth", "quarters", "quarter"),
+         6: ("sixths", "sixth"), 8: ("eighths", "eighth")}
 
 
 def h_digit_value3(c, t):
@@ -49,7 +51,7 @@ def h_skip_seq(c, t):
 def h_round10(c, t):
     n = int(c["n"])
     down = n // 10 * 10
-    want = down if n - down < 10 else down + 10
+    want = down if n - down < 5 else down + 10
     return num_eq(t, want)
 
 
@@ -150,6 +152,29 @@ def h_clock_ampm(c, t):
     return norm(t) == norm(f"{int(c['h'])}:{int(c['m']):02d} {c['part']}")
 
 
+def h_round100(c, t):
+    n = int(c["n"])
+    down = n // 100 * 100
+    return num_eq(t, down if n - down < 50 else down + 100)
+
+
+def h_build3(c, t):
+    return num_eq(t, int(c["n"]))
+
+
+def h_graph_least(c, t):
+    rows = [(str(r[0]), int(r[1])) for r in c["rows"]]
+    least = min(v for _, v in rows)
+    if sum(1 for _, v in rows if v == least) != 1:
+        return False
+    return norm(t) == norm([k for k, v in rows if v == least][0])
+
+
+def h_graph_diff(c, t):
+    rows = [(str(r[0]), int(r[1])) for r in c["rows"]]
+    return num_eq(t, max(v for _, v in rows) - min(v for _, v in rows))
+
+
 verify1.HANDLERS.update({
     "digit_value3": h_digit_value3, "expanded3": h_expanded3, "skip_seq": h_skip_seq,
     "round10": h_round10, "round_sum": h_round_sum, "money_cents": h_money_cents,
@@ -157,7 +182,8 @@ verify1.HANDLERS.update({
     "array_total": h_array_total, "array_rows": h_array_rows, "even_odd": h_even_odd,
     "longer_lbl": h_longer_lbl, "shorter_lbl": h_shorter_lbl, "tape_diff": h_tape_diff,
     "lineplot_at": h_lineplot_at, "lineplot_total": h_lineplot_total, "lineplot_mode": h_lineplot_mode,
-    "repeat_add": h_repeat_add, "fraction_shaded": h_fraction_shaded, "clock_ampm": h_clock_ampm,
+    "repeat_add": h_repeat_add, "round100": h_round100, "build3": h_build3,
+    "graph_least": h_graph_least, "graph_diff": h_graph_diff, "fraction_shaded": h_fraction_shaded, "clock_ampm": h_clock_ampm,
 })
 
 if __name__ == "__main__":

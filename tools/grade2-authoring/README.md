@@ -14,6 +14,8 @@ and renderer run against `course-outlines/grade2.json`.
 | `build2.py` | Builds `question-banks/math2/<unit>.json`, `meta/<unit>.meta.json`, `assets/math2/<unit>/<qid>.png` and `out/<unit>.checks.json` through the shared Grade 1 builder. 30 questions per skill and level: 12 short answer, 12 multiple choice, 3 error analysis, 1 true/false, 1 select-all, 1 open response. |
 | `verify2.py` | Runs the shared independent verifier against math2 and registers the Grade 2 check kinds (`digit_value3`, `expanded3`, `skip_seq`, `round10`, `round_sum`, `money_cents`, `part_name`, `polygon_*`, `array_*`, `even_odd`, `longer_lbl`, `shorter_lbl`, `tape_diff`, `lineplot_*`, `repeat_add`, `fraction_shaded`, `clock_ampm`). |
 | `dedupe2.py` | Cross-skill deduplication with the shared engine: one copy of every identity is kept, redundant copies are re-drawn, re-presented or re-worded. |
+| `audit2.py` | Semantic audit of the published text: a "how many" prompt answered with a name or colour, ambiguous place-value wording, number agreement ("1 tens"), a start-unknown story answered with the total, and comparison prompts that never say which direction. Must end with `TOTAL FLAGGED 0`. |
+| `level_audit.py` | Measures the Remedial/Standard/Advanced split from the published banks (number size, regrouping rate, step count per skill and family) and writes `docs/math2/LEVELS.md`. A skill counts as escalating when size rises at every step and Advanced is at least 20% larger than Remedial. |
 | `report2.py` | Writes `docs/math2/COVERAGE.md` (counts, formats, standards, before/after duplication, validation, approval). |
 
 ## Rebuild
@@ -23,9 +25,29 @@ cd tools/grade2-authoring
 python3 gen_units2.py          # regenerate unit modules from the mapping
 G1_NEAR=3 python3 build2.py    # all 9 units (G1_NODRAW=1 skips diagrams)
 python3 verify2.py             # must end with TOTAL ERRORS 0
+python3 audit2.py              # must end with TOTAL FLAGGED 0
 python3 dedupe2.py             # cross-skill duplicates (optional, idempotent)
+python3 verify2.py && python3 audit2.py
+python3 level_audit.py         # docs/math2/LEVELS.md
 python3 report2.py             # docs/math2/COVERAGE.md
 ```
+
+## Levels
+
+Every family takes the level as an argument and changes the work, not just the label:
+
+| | Remedial (`cp2`) | Standard (`cp1`) | Advanced (`honors`) |
+|---|---|---|---|
+| Addition and subtraction | one place value, no carrying or borrowing | two-digit with regrouping | three-digit, carrying or borrowing across places |
+| Place value | 2-digit, tens and ones | 3-digit, hundreds 1–4 | 3-digit, hundreds 5–9, hundreds rounding |
+| Money | dimes only, under 50¢ | dimes and quarters, under $1 | many coins, over $1 |
+| Measurement | centimetres up to 9 | up to 19 cm and two-digit comparisons | 3-digit lengths |
+| Geometry | triangle, square, rectangle, trapezoid; halves and fourths | adds pentagon, hexagon and thirds | adds octagon, sixths and eighths, larger arrays |
+| Stories | one step | one or two steps | two steps with the largest numbers |
+
+The domain fact pool behind error analysis, true/false, select-all and open response is scaled the
+same way, so the derived formats do not quietly reset a skill to one difficulty.
+`level_audit.py` re-checks the split from the published text: 89 of 89 skills escalate.
 
 ## Content rules
 
@@ -43,8 +65,12 @@ python3 report2.py             # docs/math2/COVERAGE.md
 * **Diagrams:** alt text is generated from the same data that draws the picture; the verifier
   checks size (720×480), decodability, that the figure is not blank, and that shape answers
   match what is drawn.
-* **Duplicates:** none inside a skill/level; across skills the residue is limited to closed
-  fact sets (array sizes, polygon names, fraction words, true/false stems).
+* **Duplicates:** none inside a skill/level; across skills 496 of 8,010 items (6.2%) repeat an
+  identity, and the residue is limited to closed fact sets (array sizes, polygon names,
+  fraction words, true/false stems).
+* **Wording:** a count of one takes a singular noun ("1 ten", never "1 tens"); a place-value
+  question asks for the whole number rather than the loose ones; a "how many" prompt always has
+  a number for an answer; the answer to "which shape" is a shape name.
 
 ## Compatibility
 

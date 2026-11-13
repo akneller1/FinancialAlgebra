@@ -113,6 +113,16 @@ def _graph_templates(r):
             ("Add the rows of the graph. How many in all?", True)]
 
 
+def _graph_most_templates(r):
+    return [("Look at the graph. Which group has the most?", True), ("Which group has the greatest number?", True),
+            ("Which one does the graph show the most of?", True)]
+
+
+def _graph_least_templates(r):
+    return [("Look at the graph. Which group has the least?", True), ("Which group has the smallest number?", True),
+            ("Which one does the graph show the fewest of?", True)]
+
+
 def _compare_templates(r):
     return [("Which is longer?", True), ("Look at the two groups. Which one is longer?", True),
             ("Which object is longer?", True)]
@@ -220,10 +230,16 @@ def templates(check, r):
             return _partition_templates(int(check.get("parts", 2)), r)
         if fn == "ruler":
             return _ruler_templates(r)
-        if fn.startswith("tally"):
+        if fn in ("tally_total",):
             return _tally_templates(r)
-        if fn.startswith("graph"):
+        if fn == "tally_most":
+            return _graph_most_templates(r)
+        if fn == "graph_sum":
             return _graph_templates(r)
+        if fn in ("graph_most",):
+            return _graph_most_templates(r)
+        if fn in ("graph_least",):
+            return _graph_least_templates(r)
         if fn in ("longer_ab", "shorter", "longer", "which_group", "more_count"):
             return _compare_templates(r)
     except (KeyError, TypeError, ValueError):

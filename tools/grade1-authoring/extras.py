@@ -81,11 +81,11 @@ def _fact(domain, r, L):
                               (str(n + 100), "added one hundred")],
                     "claim": f"10 more than {n} is {n + 10}"}
         tens, ones = r.randint(1, 9), r.randint(1, 9)
-        return {"prompt": f"How many ones are in {tens} tens and {ones} ones?", "answer": str(ones),
-                "chk": FN("ones_of", n=tens * 10 + ones, tens=tens),
+        return {"prompt": f"Write the number that has {tens} tens and {ones} ones.", "answer": str(tens * 10 + ones),
+                "chk": FN("tens_ones", tens=tens, ones=ones),
                 "steps": [f"{tens} tens make {tens * 10}.", f"The ones digit is {ones}."],
-                "wrong": [(str(tens), "gave the tens digit"), (str(tens * 10), "gave the value of the tens"),
-                          (str(tens * 10 + ones), "gave the whole number")],
+                "wrong": [(str(ones * 10 + tens), "reversed the tens and ones"), (str(tens + ones), "added the digits"),
+                          (str(tens * 10), "left out the ones")],
                 "claim": f"{tens} tens and {ones} ones is {tens * 10 + ones}"}
 
     if domain == "md":
