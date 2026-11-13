@@ -30,6 +30,8 @@ jobs:
         run: python tools/grade1-authoring/verify1.py
       - name: Validate shared Classroom adapter and all eight banks
         run: node scripts/audit-grade1-bank.cjs
+      - name: Independently check question wording versus mathematical answers
+        run: node scripts/audit-grade1-semantics.cjs
       - name: Upload Grade 1 audit report
         if: always()
         uses: actions/upload-artifact@v4
@@ -38,5 +40,7 @@ jobs:
           path: |
             grade1-qa-report.json
             grade1-qa-report.md
+            grade1-semantic-report.json
+            grade1-semantic-report.md
           if-no-files-found: warn
 # No deploy job and no published manifest changes. The branch is review-only.
