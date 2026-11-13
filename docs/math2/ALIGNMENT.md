@@ -5,7 +5,7 @@ confirmed defects; a candidate can be a wording mismatch rather than a wrong tas
 
 * **generic filler under a specific skill**: 134
 * **number outside the skill's stated range**: 61
-* **question topic does not match the skill**: 406
+* **question topic does not match the skill**: 409
 
 ## generic filler under a specific skill (134)
 
@@ -18,10 +18,10 @@ Which fact belongs to the same fact family
 * m2-h100-s04-honors-026 | Use related addition to find an unknown addend | Ravi solved this problem.
 Which fact belongs to the same fact family a
 * m2-h100-s05-cp2-026 | Trade one ten for ten ones to subtract | Maya solved this problem.
-1 ten rods and 6 ones cubes. The picture sho
+1 ten rod and 6 ones cubes. The picture show
 * m2-h100-s05-cp2-027 | Trade one ten for ten ones to subtract | Mateo solved this problem.
-1 ten rods and 7 ones cubes. The picture sh
-* m2-h100-s07-cp2-028 | Compare and explain different subtraction methods | True or false? 1 ten rods and 9 ones cubes. The picture shows 1 ten an
+1 ten rod and 7 ones cubes. The picture sho
+* m2-h100-s07-cp2-028 | Compare and explain different subtraction methods | True or false? 1 ten rod and 9 ones cubes. The picture shows 1 ten and
 * m2-h100-s07-cp2-029 | Compare and explain different subtraction methods | Select ALL the problems that are matched with the correct answer.
 * m2-h100-s07-cp1-027 | Compare and explain different subtraction methods | Yusuf solved this problem.
 How would you work out 46 + 28 efficiently?
@@ -51,7 +51,7 @@ A tape diagram comparing 27 and 12. Mateo h
 * m2-ad-s03-cp1-014 | Build fluency with mental addition within 50 | 69 | 50
 * m2-ad-s03-cp1-016 | Build fluency with mental addition within 50 | 77 | 50
 
-## question topic does not match the skill (406)
+## question topic does not match the skill (409)
 
 * m2-h100-s01-cp2-007 | Represent tens and ones using base-ten blocks | fam01_baseten_items_build | How many is 1 ten and 4 ones?
 * m2-h100-s04-cp2-002 | Use related addition to find an unknown addend | fam02_fact_family_items_100 | Which fact belongs to the same fact family as 12 + 21 = 33?

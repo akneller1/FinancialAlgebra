@@ -72,7 +72,7 @@ Advanced is at least 20% larger than Remedial.
 | measuring-length | s08 | 8 / — / 1.00 | 30 / — / 1.00 | 94 / — / 1.00 | escalates |
 | measuring-length | s09 | 7 / — / 1.00 | 13 / — / 1.00 | 28 / — / 1.00 | escalates |
 | measuring-length | s10 | 11 / — / 1.00 | 19 / — / 1.00 | 30 / — / 1.00 | escalates |
-| measuring-length | s11 | 11 / — / 1.00 | 19 / — / 1.00 | 33 / — / 1.00 | escalates |
+| measuring-length | s11 | 11 / — / 1.00 | 19 / — / 1.00 | 31 / — / 1.00 | escalates |
 | number-line-addition-subtraction | s01 | 75 / — / 1.00 | 183 / — / 1.00 | 693 / — / 1.00 | escalates |
 | number-line-addition-subtraction | s02 | 29 / 43% / 1.00 | 50 / 50% / 1.00 | 73 / 44% / 1.00 | escalates |
 | number-line-addition-subtraction | s03 | 50 / — / 1.00 | 94 / — / 1.00 | 621 / — / 1.00 | escalates |
@@ -169,7 +169,7 @@ Advanced is at least 20% larger than Remedial.
 | sel_nbt | 191 | 377 | 598 | — | — | — |
 | sel_oa | 33 | 61 | 163 | — | — | — |
 | tf_g | 10 | 22 | 33 | — | — | — |
-| tf_md | 19 | 249 | 366 | — | — | — |
+| tf_md | 19 | 249 | 362 | — | — | — |
 | tf_nbt | 222 | 414 | 670 | 25% | 0% | 71% |
 | tf_oa | 37 | 189 | 132 | 17% | 44% | 100% |
 

@@ -156,10 +156,12 @@ def _numberline(data):
     d.line([left, y, right, y], fill=INK, width=4)
     span = max(hi - lo, 1)
     ticks = list(range(lo, hi + 1, step))
-    for t in ticks:
+    every = max(1, int(len(ticks) / 12 + 0.999))
+    for i, t in enumerate(ticks):
         x = left + (t - lo) / span * (right - left)
         d.line([x, y - 12, x, y + 12], fill=INK, width=3)
-        _center_text(d, x, y + 40, t, 24)
+        if i % every == 0 or i == len(ticks) - 1:
+            _center_text(d, x, y + 40, t, 24)
     for m in data.get("marks", []):
         x = left + (m - lo) / span * (right - left)
         d.ellipse([x - 13, y - 13, x + 13, y + 13], fill=YELLOW, outline=INK, width=3)
@@ -244,12 +246,14 @@ def _pictograph(data):
         y = top + i * band
         _text(d, 50, y, label, 25)
         n = int(count) // max(int(key), 1)
+        gap = max(26, min(52, (W - 300) // max(n, 1)))
+        radius = max(6, min(15, gap // 2 - 6))
         for j in range(n):
-            cx = 250 + j * 52
+            cx = 250 + j * gap
             if sym == "star":
-                _star(d, cx, y + 12, 18, ORANGE)
+                _star(d, cx, y + 12, radius + 2, ORANGE)
             else:
-                _counter(d, cx, y + 12, 16, BLUE)
+                _counter(d, cx, y + 12, radius, BLUE)
     return im
 
 
@@ -301,8 +305,11 @@ def _shapes(data):
                 d.ellipse([cx - size / 2, cy - size * 0.65, cx + size / 2, cy - size * 0.25], fill=fill, outline=INK, width=3)
             elif kind == "sphere":
                 d.ellipse([cx - size / 2, cy - size / 2, cx + size / 2, cy + size / 2], fill=fill, outline=INK, width=3)
-            else:
-                d.polygon([(cx, cy - size * 0.7), (cx - size * 0.6, cy + size * 0.5), (cx + size * 0.6, cy + size * 0.5)], fill=fill, outline=INK)
+            else:  # cone: circular base with a curved body meeting at the apex
+                d.ellipse([cx - size * 0.55, cy + size * 0.28, cx + size * 0.55, cy + size * 0.58],
+                          fill=fill, outline=INK, width=3)
+                d.polygon([(cx, cy - size * 0.75), (cx - size * 0.55, cy + size * 0.43),
+                           (cx + size * 0.55, cy + size * 0.43)], fill=fill, outline=INK, width=3)
         label = s.get("label")
         if label:
             _center_text(d, cx, cy + size * 0.95, label, 24)

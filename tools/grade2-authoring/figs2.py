@@ -12,36 +12,38 @@ from figs1 import (_canvas, _text, _center_text, _color, _RENDERERS,
 
 
 def _baseten3(data):
-    """Hundreds flats, tens rods and ones cubes."""
+    """Hundreds flats, tens rods and ones cubes on one baseline."""
     hundreds = int(data.get("hundreds", 0))
     tens = int(data.get("tens", 0))
     ones = int(data.get("ones", 0))
     im, d = _canvas()
-    x, y = 60, 150
+    base, x = 300, 60
     for _ in range(hundreds):
-        d.rectangle([x, y, x + 96, y + 96], fill=SOFT_BLUE, outline=BLUE, width=3)
+        d.rectangle([x, base - 96, x + 96, base], fill=SOFT_BLUE, outline=BLUE, width=3)
         for k in range(1, 10):
-            d.line([x + k * 9.6, y, x + k * 9.6, y + 96], fill=BLUE, width=1)
-            d.line([x, y + k * 9.6, x + 96, y + k * 9.6], fill=BLUE, width=1)
+            d.line([x + k * 9.6, base - 96, x + k * 9.6, base], fill=BLUE, width=1)
+            d.line([x, base - 96 + k * 9.6, x + 96, base - 96 + k * 9.6], fill=BLUE, width=1)
         x += 108
-        if x > W - 110:
-            x, y = 60, y + 112
+        if x > W - 140:
+            x, base = 60, base - 112
     if hundreds:
-        x, y = 60, 300
+        x += 16
     for _ in range(tens):
-        d.rectangle([x, y, x + 30, y + 96], fill=SOFT_ORANGE, outline=ORANGE, width=3)
+        d.rectangle([x, base - 96, x + 30, base], fill=SOFT_ORANGE, outline=ORANGE, width=3)
         for k in range(1, 10):
-            d.line([x, y + k * 9.6, x + 30, y + k * 9.6], fill=ORANGE, width=1)
+            d.line([x, base - 96 + k * 9.6, x + 30, base - 96 + k * 9.6], fill=ORANGE, width=1)
         x += 40
     if tens:
-        x += 12
+        x += 16
     for _ in range(ones):
-        d.rectangle([x, y + 76, x + 20, y + 96], fill=SOFT_ORANGE, outline=ORANGE, width=2)
+        d.rectangle([x, base - 20, x + 20, base], fill=SOFT_ORANGE, outline=ORANGE, width=2)
         x += 26
     cap = data.get("caption")
     if cap:
         _center_text(d, W / 2, 60, cap, 28)
-    _text(d, 60, 440, f"{hundreds} hundreds, {tens} tens, {ones} ones", 24)
+    label = (f"{hundreds} {'hundred' if hundreds == 1 else 'hundreds'}, "
+             f"{tens} {'ten' if tens == 1 else 'tens'}, {ones} {'one' if ones == 1 else 'ones'}")
+    _text(d, 60, 440, label, 24)
     return im
 
 
@@ -140,7 +142,12 @@ def _polygon(data):
             pts = [(cx + size * 0.7 * math.cos(math.radians(-90 + 72 * k)),
                     cy + size * 0.7 * math.sin(math.radians(-90 + 72 * k))) for k in range(5)]
             d.polygon(pts, fill=fill, outline=INK)
-        elif kind in ("quadrilateral", "trapezoid"):
+        elif kind == "trapezoid":
+            # exactly one pair of parallel sides: long base, short parallel top
+            d.polygon([(cx - size * 0.85, cy + size * 0.5), (cx + size * 0.85, cy + size * 0.5),
+                       (cx + size * 0.45, cy - size * 0.5), (cx - size * 0.45, cy - size * 0.5)],
+                      fill=fill, outline=INK)
+        elif kind == "quadrilateral":
             d.polygon([(cx - size * 0.7, cy + size * 0.5), (cx + size * 0.55, cy + size * 0.5),
                        (cx + size * 0.75, cy - size * 0.5), (cx - size * 0.5, cy - size * 0.5)],
                       fill=fill, outline=INK)

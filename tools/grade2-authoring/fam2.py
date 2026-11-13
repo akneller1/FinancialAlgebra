@@ -407,14 +407,15 @@ def lineplot_items(kind="at"):
             v = r.choice(values)
             ans = num(values.count(v))
             prompt = r.choice([f"{head} How many {things} are {v} {unit} long?",
-                               f"{head} How many x marks are above {v}?"])
+                               f"{head} How many x marks are at {v}?"])
             chk = FN("lineplot_at", values=values, value=v)
             wrong = _w(values.count(v), [values.count(v) + 1, len(values), v])
-        return Item(prompt, ans, ["Read the number of x marks above the value.", f"The answer is {ans}."], wrong,
+        return Item(prompt, ans, ["Read the number of x marks at the value.", f"The answer is {ans}."], wrong,
                     check=chk, qtype="visual", tags=("data", "measurement"),
                     diagram=Diagram("lineplot", {"values": values, "min": min(values), "max": max(values)},
                                     f"A line plot of {where}: " +
-                                    ", ".join(f"{v} appears {values.count(v)} times" for v in sorted(set(values))) + "."))
+                                    ", ".join(f"{v} appears {values.count(v)} {'time' if values.count(v) == 1 else 'times'}"
+                                               for v in sorted(set(values))) + "."))
     return f
 
 
@@ -645,7 +646,6 @@ def time_items(marks=None):
             m = r.choice([0, 15, 30, 45])
         else:
             m = r.choice([5, 10, 15, 20, 25, 35, 40, 45, 50, 55])
-            m = m + r.choice([0, 1, 2]) if m not in (15, 30) else m
             m = min(m, 59)
         ans = clock_text(h, m)
         prompt = r.choice(["What time is shown?", "Write the time on the clock.", "Read the clock. What time is it?",
@@ -711,7 +711,7 @@ def polygon_items(kind="name"):
                     check=chk, qtype="visual", tags=("geometry",),
                     diagram=Diagram("polygon", {"shapes": [{"type": k, "color": "blue", "label": f"{sides} sides"}],
                                                 "caption": "A shape"},
-                                    f"A {k} with {sides} sides and {sides} corners."))
+                                    f"{'An' if k[0].lower() in 'aeiou' else 'A'} {k} with {sides} sides and {sides} corners."))
     return f
 
 
@@ -1036,11 +1036,13 @@ def baseten_items(kind="value", limit=None):
             ans = num({"hundreds": hundreds * 100, "tens": tens * 10, "ones": ones}[which])
             prompt = f"What is the value of the digit in the {which} place?"
             chk = FN("digit_value3", n=n, which=which)
-        dg = (Diagram("baseten3", {"hundreds": hundreds, "tens": tens % 10, "ones": ones, "caption": f"{n}"},
-                      f"{hundreds} hundreds, {tens} tens and {ones} ones.")
+        dg = (Diagram("baseten3", {"hundreds": hundreds, "tens": tens % 10, "ones": ones, "caption": ""},
+                      f"{hundreds} {'hundred' if hundreds == 1 else 'hundreds'}, "
+                      f"{tens} {'ten' if tens == 1 else 'tens'} and {ones} {'one' if ones == 1 else 'ones'}.")
               if hundreds else
               Diagram("baseten", {"tens": tens, "ones": ones, "caption": "Base-ten blocks"},
-                      f"{tens} tens rods and {ones} {'one' if ones == 1 else 'ones'} cubes."))
+                      f"{tens} {'ten rod' if tens == 1 else 'tens rods'} and "
+                      f"{ones} {'one cube' if ones == 1 else 'ones cubes'}."))
         return Item(prompt, ans, [f"{n} has {hundreds} hundreds, {tens} tens and {ones} ones.", f"The answer is {ans}."],
                     _w(ans, [ones, tens, n + 10] if str(ans).isdigit() else []),
                     check=chk, qtype="visual", tags=("place-value",), diagram=dg)
