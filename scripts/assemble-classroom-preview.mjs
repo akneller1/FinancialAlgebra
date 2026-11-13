@@ -85,6 +85,17 @@ for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html'
  text=text.replace('</head>','<meta name="robots" content="noindex,nofollow"></head>');
  fs.writeFileSync(file,text);
 }
+// Shared games and study tools also load the full approved manifest. Register
+// elementary skills there before their adapters initialize, just as in generators.
+for(const page of fs.readdirSync(path.join(out,'worksheet-generator')).filter(name=>name.endsWith('.html'))){
+ const file=path.join(out,'worksheet-generator',page);
+ let text=fs.readFileSync(file,'utf8');
+ if(text.includes('elementary-preload-catalog.js'))continue;
+ const match=text.match(/<script src="\.\.\/course-catalog\.js[^>]*><\/script>/);
+ if(!match)continue;
+ text=text.replace(match[0],match[0]+'\n<script src="../elementary-preload-catalog.js?v=shared-activities-20261113"></script>');
+ fs.writeFileSync(file,text);
+}
 // Keep a requested empty vocabulary unit selected instead of substituting Algebra 1.
 const vocabularyFile=path.join(out,'worksheet-generator/vocabulary-builder.js');
 let vocabulary=fs.readFileSync(vocabularyFile,'utf8');

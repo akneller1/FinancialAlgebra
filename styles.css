@@ -1282,12 +1282,12 @@ body { background:var(--paper); }
 .course-band ~ .section .unit .unit-skill { font-size: .75rem; line-height: 1.3; }
 .course-band ~ .section .unit .unit-skills { margin-block: .3rem; }
 
-/* A near-square footprint, without fixed heights that would clip buttons. */
+/* Cards grow with their controls so wrapped student links remain visible. */
 .unit-band ~ .section .cards.grouped-cards > li.card,
 .unit-band ~ .section .finance-resource-grid > li.card,
 .activity-group > .cards.grouped-cards > li.card {
   box-sizing: border-box;
-  aspect-ratio: 1 / 1.06;
+  aspect-ratio: auto;
 }
 .unit-band ~ .section .cards.grouped-cards .thumb,
 .activity-group > .cards.grouped-cards .thumb {
@@ -1408,3 +1408,8 @@ body { background:var(--paper); }
     -webkit-line-clamp: unset;
   }
 }
+
+/* Card actions may wrap at any viewport width; reserve their full height. */
+.card > .card-body { flex: 1 0 auto; }
+.card .actions { flex-shrink: 0; min-width: 0; }
+.card .actions > .btn { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
