@@ -43,7 +43,7 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
  await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-subtracting-working-data&kind=color');await page.reload();
  await page.locator('input[name=prLevel][value=cp2]').check();await page.locator('#prPreview .pc-scene').waitFor();
  await page.locator('#prPreview .mm-page').first().screenshot({path:'grade1-integration-results/color-remedial.png'});
- await page.locator('[data-doc=key]').click();await page.locator('#prPreview .pc-redk').waitFor();
+ await page.locator('[data-doc=key]').click();await page.locator('#prPreview .pc-redk').first().waitFor();
  await page.locator('#prPreview .mm-page').first().screenshot({path:'grade1-integration-results/color-remedial-key.png'});
  if(errors.length||broken.length)throw Error(JSON.stringify({errors,broken}));
  fs.writeFileSync('grade1-integration-results/activities-browser.json',JSON.stringify({passed:true,...result,errors,broken},null,2));console.log(JSON.stringify({passed:true,...result}));
