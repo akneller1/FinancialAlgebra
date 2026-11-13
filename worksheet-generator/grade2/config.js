@@ -4,6 +4,8 @@
 window.MK_ELEMENTARY = {
   course: 'math2',
   label: 'Grade 2',
+  // Return to the actual Classroom root, including GitHub Pages project subpaths.
+  home: '../../index.html',
   metaPath: '../question-banks/math2/meta/',
   // Only the Understanding Check page uses the separate verified check set.
   checkBankPath: 'question-banks/math2/checks',
