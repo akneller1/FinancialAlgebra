@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decimal Grids · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Shade tenths and hundredths on a 10 by 10 grid. Read the amount as a fraction, as tenths plus hundredths, as a decimal and in words, and compare two decimals.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Decimal Grids</h1><p class="tl-sub">Tap a column to shade a whole tenth, or use the buttons to add one hundredth at a time. Then compare with the second grid.</p>
+<div class="tl-model" id="dgModel"></div><div class="tl-controls" id="dgCtl"><div class="tl-field"><span class="lab">Grid A hundredths</span><div class="tl-step"><button type="button" data-k="a" data-s="-1" aria-label="Grid A hundredths down">−</button><b id="dgA"></b><button type="button" data-k="a" data-s="1" aria-label="Grid A hundredths up">+</button></div></div><div class="tl-field"><span class="lab">Grid A tenths</span><div class="tl-step"><button type="button" data-k="at" data-s="-1" aria-label="Grid A tenths down">−</button><b id="dgAT"></b><button type="button" data-k="at" data-s="1" aria-label="Grid A tenths up">+</button></div></div><div class="tl-field"><span class="lab">Grid B hundredths</span><div class="tl-step"><button type="button" data-k="b" data-s="-1" aria-label="Grid B hundredths down">−</button><b id="dgB"></b><button type="button" data-k="b" data-s="1" aria-label="Grid B hundredths up">+</button></div></div><div class="tl-field"><span class="lab">Grid B tenths</span><div class="tl-step"><button type="button" data-k="bt" data-s="-1" aria-label="Grid B tenths down">−</button><b id="dgBT"></b><button type="button" data-k="bt" data-s="1" aria-label="Grid B tenths up">+</button></div></div></div><div class="tl-out" id="dgOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st;
+function reset() { st = { a: 25, b: 60 }; }
+var W1 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'], W10 = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+function w(n) { return n < 20 ? W1[n] : W10[Math.floor(n / 10)] + (n % 10 ? '-' + W1[n % 10] : ''); }
+function dec(n) { return n === 100 ? '1.00' : '0.' + (n < 10 ? '0' : '') + n; }
+function name(n) { return n === 100 ? 'one whole' : n === 0 ? 'zero' : n % 10 === 0 ? w(n / 10) + ' tenth' + (n === 10 ? '' : 's') + ', or ' + w(n) + ' hundredths' : w(n) + ' hundredth' + (n === 1 ? '' : 's'); }
+function grid(x0, n, fill, id) {
+  var s = '', u = 26;
+  for (var i = 0; i < 100; i++) { var c = Math.floor(i / 10), r = i % 10; s += '<rect data-g="' + id + '" data-c="' + c + '" x="' + (x0 + c * u) + '" y="' + (16 + r * u) + '" width="' + u + '" height="' + u + '" fill="' + (i < n ? fill : '#fff') + '" stroke="#52627a" stroke-width="1"/>'; }
+  return s + '<rect x="' + x0 + '" y="16" width="260" height="260" fill="none" stroke="#1d2a3a" stroke-width="3"/><text x="' + (x0 + 130) + '" y="306" text-anchor="middle" font-size="24" font-weight="800">' + (id === 'a' ? 'A' : 'B') + ': ' + dec(n) + '</text>';
+}
+function draw() {
+  $('dgA').textContent = st.a; $('dgB').textContent = st.b; $('dgAT').textContent = Math.floor(st.a / 10); $('dgBT').textContent = Math.floor(st.b / 10);
+  var cmp = st.a > st.b ? '>' : st.a < st.b ? '<' : '=';
+  $('dgModel').innerHTML = '<svg viewBox="0 0 700 316" role="img" aria-label="Grid A has ' + st.a + ' of 100 squares shaded. Grid B has ' + st.b + ' of 100 squares shaded.">' + grid(30, st.a, '#ffc27a', 'a') +
+    '<text x="350" y="160" text-anchor="middle" font-size="54" font-weight="900" fill="#d63c7a">' + cmp + '</text>' + grid(410, st.b, '#86d4e4', 'b') + '</svg>';
+  var t = Math.floor(st.a / 10), h = st.a % 10;
+  $('dgOut').innerHTML = '<b>Grid A:</b> ' + T.frac(st.a, 100) + (st.a < 100 ? ' = ' + T.frac(t, 10) + ' + ' + T.frac(h, 100) : '') + ' = <b>' + dec(st.a) + '</b>' + (h === 0 && st.a < 100 && st.a > 0 ? ' = <b>0.' + t + '</b>' : '') + ' (' + name(st.a) + ')' +
+    '<br><b>Compare:</b> ' + dec(st.a) + ' ' + cmp + ' ' + dec(st.b) + ' because ' + st.a + ' hundredths is ' + (cmp === '>' ? 'more than' : cmp === '<' ? 'less than' : 'the same as') + ' ' + st.b + ' hundredths.';
+  T.update({ a: st.a, b: st.b });
+}
+var CH = [{ text: 'Shade 0.4 on Grid A and 0.35 on Grid B. Which is greater?', test: function (s) { return s.a === 40 && s.b === 35; } },
+  { text: 'Show that 0.7 and 0.70 are the same amount.', test: function (s) { return s.a === 70 && s.b === 70; } },
+  { text: 'Shade 3 tenths and 4 hundredths on Grid A.', test: function (s) { return s.a === 34; } },
+  { text: 'Make Grid B greater than 0.5 but less than 0.6.', test: function (s) { return s.b > 50 && s.b < 60; } }];
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'fraction-operations-decimals', title: 'Decimal Grids', standards: '4.NF.C.5, 4.NF.C.6, 4.NF.C.7',
+  teacher: ["Tap a whole column to show one tenth is ten hundredths.", "Compare 0.4 and 0.35 before revealing the symbol: many students expect 0.35 to be greater.", "Have students say each amount two ways: as tenths and hundredths, and as hundredths only."], notice: ["One tenth is the same as ten hundredths: 0.4 = 0.40.", "To compare decimals, think of both as hundredths.", "More digits does not mean a greater number."], challenges: CH, reset: function () { reset(); draw(); } });
+T.steppers($('dgCtl'), function (k, dlt) { var key = k.charAt(0), amt = k.length > 1 ? 10 * dlt : dlt; st[key] = Math.max(0, Math.min(100, st[key] + amt)); draw(); });
+$('dgModel').addEventListener('click', function (e) { var r = e.target.closest('rect[data-g]'); if (!r) return; var g = r.dataset.g, c = +r.dataset.c + 1; st[g] = st[g] === c * 10 ? (c - 1) * 10 : c * 10; draw(); });
+draw();
+})();
+</script></body></html>

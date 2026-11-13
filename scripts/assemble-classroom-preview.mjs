@@ -5,6 +5,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {assembleGrade4,grade4Ready} from '../tools/grade4-authoring/staging/assemble-grade4.mjs';
 const source=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const classroom=path.resolve(process.env.CLASSROOM_SOURCE_DIR||path.join(source,'../classroom'));
 const out=path.join(classroom,'_site');
@@ -23,10 +24,13 @@ const courses=outlines.map((c,i)=>({id:'grade'+(i+1),name:c.name,blurb:c.descrip
  if(/fraction/i.test(u.name))artifacts.push(mk('Fraction Frenzy','elementary/worksheet-generator/elementary-resource.html'+query+'&tool=games&game=fraction-frenzy','Game','topic-games','grade5/thumbs/math5-game-frenzy.svg'));
  artifacts.push({...mk('Error Analysis','worksheet-generator/printables.html#unit='+set+'&kind=error','Generator','printable-generator','grade5/thumbs/math5-generator-activity.svg'),visibleInBrowse:true});
  artifacts.push(mk('Flashcards','elementary/worksheet-generator/elementary-resource.html'+query+'&tool=flashcards','Study Guide','flashcards','grade5/thumbs/math5-flashcards.svg'));
- artifacts.push(mk('Readiness Check','elementary/worksheet-generator/elementary-resource.html'+query+'&tool=check','Study Guide','interactive-practice-test','grade5/thumbs/math5-understanding-check.svg'));
+ artifacts.push(mk('Understanding Check','elementary/worksheet-generator/elementary-resource.html'+query+'&tool=check','Study Guide','interactive-practice-test','grade5/thumbs/math5-understanding-check.svg'));
  return {id:u.id,name:u.name,artifacts};
 })}));
 const skillData=Object.fromEntries(outlines.map((c,i)=>['grade'+(i+1),Object.fromEntries(c.units.map(u=>[u.id,u.skills]))]));
+// Grade 4 has approved banks: its unit pages list the real resources (tools/grade4-authoring/staging/assemble-grade4.mjs).
+if(grade4Ready(source)){const g4=assembleGrade4({source,out}),i=courses.findIndex(c=>c.id==='grade4');skillData.grade4=g4.skills;delete g4.skills;courses[i]=g4;}
+const approvedGrades=courses.filter(c=>c.approved).map(c=>c.id.slice(5)),pendingGrades=courses.filter(c=>!c.approved).map(c=>c.id.slice(5));
 const catalog=`/* Development artifact: production Classroom renderer, preloaded elementary courses. */\n(function(G){var courses=${JSON.stringify(courses)},skills=${JSON.stringify(skillData)};G.MK_ELEMENTARY_PRELOAD=courses;G.LIBRARY.courses=G.LIBRARY.courses.filter(c=>!courses.some(p=>p.id===c.id)).concat(courses);var C=G.MK_COURSE_CATALOG,old=C.getSkills,records=C.getSkillRecords;C.getSkills=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].slice():old(c,u)};C.getSkillRecords=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].map((name,i)=>({id:u+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})):records(c,u)};G.LIBRARY.courses.forEach(c=>c.units.forEach(u=>u.artifacts.forEach(a=>{for(var k of ['path','thumb'])if(typeof a[k]==='string')a[k]=a[k].replace(/^\\/grade5\\//,'grade5/')})));})(window);\n`;
 fs.writeFileSync(path.join(out,'elementary-preload-catalog.js'),catalog);
 fs.copyFileSync(path.join(source,'src/classroom-preload-runtime.js'),path.join(out,'worksheet-generator/elementary-preload-runtime.js'));
@@ -36,15 +40,17 @@ app=app.replace('  L.courses = L.courses.filter',"  SOON = SOON.filter(function(
 app=app.replace('  function unitView(c, u) {','  function unitView(c, u) {\n    if (c.preloaded) return algebraUnitView(c, u);');
 if(!app.includes('if (c.preloaded) return algebraUnitView'))throw Error('Classroom unit renderer changed; update preview integration');
 app=app.replace("['grade5','financial-algebra'].includes(it.c.id)","['grade1','grade2','grade3','grade4','grade5','financial-algebra'].includes(it.c.id)");
-app=app.replace("if (/^https:\\/\\//i.test(path)","if (/^elementary\\//.test(path) || /^grade5\\//.test(path)) return path; if (/^https:\\/\\//i.test(path)");
+app=app.replace("if (/^https:\\/\\//i.test(path)","if (/^elementary\\//.test(path) || /^grade[1-5]\\//.test(path)) return path; if (/^https:\\/\\//i.test(path)");
+// Approved elementary courses (Grade 4) list their unit projects the way released Grade 5 does.
+app=app.replace("(c.id === 'grade5' ? category('projects', 'Projects', ['other'])","((c.id === 'grade5' || c.approved) ? category('projects', 'Projects', ['other'])");
 app=app.replace("var items = u ? u.artifacts : (c && c.id === 'grade5'", "var items = u ? u.artifacts : (c && (c.id === 'grade5' || c.preloaded)");
-app=app.replace("(c.planned ? units(c.units.length)", "(c.preloaded ? units(c.units.length) + ' · resource templates ready · question banks coming soon' : c.planned ? units(c.units.length)");
+app=app.replace("(c.planned ? units(c.units.length)", "(c.preloaded ? units(c.units.length) + (c.approved ? ' · ' + c.approved : ' · resource templates ready · question banks coming soon') : c.planned ? units(c.units.length)");
 fs.writeFileSync(appFile,app);
 const htmlFile=path.join(out,'index.html');let html=fs.readFileSync(htmlFile,'utf8');
 html=html.replace('<script src="app.js','<script src="elementary-preload-catalog.js?v=integrated-model-20261113"></script>\n<script src="app.js');
 html=html.replace('</head>','<meta name="robots" content="noindex,nofollow">\n</head>');
 html=html.replace(/(<a class="brand"[^>]*href=")[^"]+(")/, '$1./index.html$2');
-html=html.replace('<main id="main"','<p style="margin:10px auto;max-width:1200px;padding:10px 20px;background:#fff4d6;border-radius:8px">Development preview · Grades 1–4 question banks are coming soon.</p>\n<main id="main"');
+html=html.replace('<main id="main"','<p style="margin:10px auto;max-width:1200px;padding:10px 20px;background:#fff4d6;border-radius:8px">Development preview · '+(approvedGrades.length?'Grade '+approvedGrades.join(', ')+' has approved question banks. ':'')+'Grades '+pendingGrades[0]+'–'+pendingGrades[pendingGrades.length-1]+' question banks are coming soon.</p>\n<main id="main"');
 fs.writeFileSync(htmlFile,html);
 for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html','printables.html','vocabulary.html']){
  const file=path.join(out,'worksheet-generator',page);if(!fs.existsSync(file))continue;
@@ -105,4 +111,4 @@ player=player.replace('</head>',`<script>(function(){var p=new URLSearchParams(l
 fs.writeFileSync(path.join(elementary,'worksheet-generator/elementary-resource.html'),player);
 const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:classroom,encoding:'utf8'}).trim();
 fs.writeFileSync(path.join(out,'development-build.json'),JSON.stringify({model:'integrated-classroom-grade5',classroomCommit:sha,courses:courses.map(c=>c.id),units:courses.reduce((n,c)=>n+c.units.length,0),nativeGenerators:generators.map(g=>g[2])},null,2));
-console.log('Development preview assembled from Classroom '+sha+': 37 preloaded units; native generators and integrated Grade 5 renderer.');
+console.log('Development preview assembled from Classroom '+sha+': '+courses.reduce((n,c)=>n+c.units.length,0)+' preloaded units ('+courses.filter(c=>c.approved).map(c=>c.id).join(', ')+' with approved banks); native generators and integrated Grade 5 renderer.');
