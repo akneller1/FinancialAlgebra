@@ -58,6 +58,17 @@ jobs:
           G3_SITE: ../classroom/_site
           G3_PREFIX: grade3/
         run: node tools/grade3-authoring/tests/browser-grade3.cjs --quick
+      - name: Exercise Grade 3 native generators and printable answer keys in Chromium
+        if: github.event_name == 'pull_request'
+        working-directory: source
+        env:
+          G3_BASE: http://127.0.0.1:8766/
+          G3_SET: grade3
+        run: |
+          python3 -m http.server 8766 --directory ../classroom/_site > /tmp/grade3-preview-http.log 2>&1 &
+          echo $! > /tmp/grade3-preview-http.pid
+          node tools/grade3-authoring/tests/browser-generators.cjs
+          kill $(cat /tmp/grade3-preview-http.pid)
       - uses: actions/upload-pages-artifact@v3
         with:
           path: classroom/_site
