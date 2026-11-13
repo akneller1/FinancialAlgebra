@@ -20,7 +20,7 @@ permissions:
   id-token: write
 concurrency:
   group: integrated-development-pages-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   build:
     runs-on: ubuntu-latest
