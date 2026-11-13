@@ -1,0 +1,386 @@
+{
+"m2c-ln-s01-cp2-001": {
+"q": {
+"k": "expr",
+"e": "10+5",
+"unit": "centimeters"
+},
+"family": "lw_join"
+},
+"m2c-ln-s01-cp2-002": {
+"q": {
+"k": "expr",
+"e": "36-15",
+"unit": "inches"
+},
+"family": "lw_cut"
+},
+"m2c-ln-s01-cp1-001": {
+"q": {
+"k": "expr",
+"e": "51+28",
+"unit": "centimeters"
+},
+"family": "lw_join"
+},
+"m2c-ln-s01-cp1-002": {
+"q": {
+"k": "expr",
+"e": "43-26",
+"unit": "centimeters"
+},
+"family": "lw_cut"
+},
+"m2c-ln-s01-honors-001": {
+"q": {
+"k": "expr",
+"e": "49+24",
+"unit": "feet"
+},
+"family": "lw_start"
+},
+"m2c-ln-s01-honors-002": {
+"q": {
+"k": "expr",
+"e": "19+22+21",
+"unit": "meters"
+},
+"family": "lw_path"
+},
+"m2c-ln-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "point_label",
+"points": {
+"A": 12,
+"B": 1,
+"C": 16,
+"D": 13
+},
+"v": 1
+},
+"family": "nl_which",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 0,
+"hi": 20,
+"step": 1,
+"label_every": 5,
+"points": [
+{
+"v": 12,
+"label": "A"
+},
+{
+"v": 1,
+"label": "B"
+},
+{
+"v": 16,
+"label": "C"
+},
+{
+"v": 13,
+"label": "D"
+}
+]
+}
+}
+},
+"m2c-ln-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "point_val",
+"v": 10
+},
+"family": "nl_length"
+},
+"m2c-ln-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "point_label",
+"points": {
+"A": 65,
+"B": 10,
+"C": 70,
+"D": 60
+},
+"v": 70
+},
+"family": "nl_which",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 0,
+"hi": 100,
+"step": 5,
+"label_every": 2,
+"points": [
+{
+"v": 65,
+"label": "A"
+},
+{
+"v": 10,
+"label": "B"
+},
+{
+"v": 70,
+"label": "C"
+},
+{
+"v": 60,
+"label": "D"
+}
+]
+}
+}
+},
+"m2c-ln-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "point_val",
+"v": 68
+},
+"family": "nl_between",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 60,
+"hi": 70,
+"step": 1,
+"labels": [
+60,
+70
+],
+"points": [
+{
+"v": 68,
+"label": "?"
+}
+]
+}
+}
+},
+"m2c-ln-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "point_val",
+"v": 11
+},
+"family": "nl_point",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 10,
+"hi": 30,
+"step": 1,
+"label_every": 10,
+"points": [
+{
+"v": 11,
+"label": "?"
+}
+]
+}
+}
+},
+"m2c-ln-s02-honors-002": {
+"q": {
+"k": "fn",
+"fn": "point_label",
+"points": {
+"A": 65,
+"B": 63,
+"C": 60,
+"D": 57
+},
+"v": 60
+},
+"family": "nl_which",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 50,
+"hi": 70,
+"step": 1,
+"label_every": 10,
+"points": [
+{
+"v": 65,
+"label": "A"
+},
+{
+"v": 63,
+"label": "B"
+},
+{
+"v": 60,
+"label": "C"
+},
+{
+"v": 57,
+"label": "D"
+}
+]
+}
+}
+},
+"m2c-ln-s03-cp2-001": {
+"q": {
+"k": "expr",
+"e": "8+4"
+},
+"family": "nj_land",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 0,
+"hi": 20,
+"step": 1,
+"label_every": 5,
+"jumps": [
+[
+8,
+12,
+"+4"
+]
+],
+"points": [
+{
+"v": 12,
+"label": "?"
+}
+]
+}
+}
+},
+"m2c-ln-s03-cp2-002": {
+"q": {
+"k": "expr",
+"e": "11-4"
+},
+"family": "nj_size",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 0,
+"hi": 20,
+"step": 1,
+"label_every": 5,
+"jumps": [
+[
+4,
+11,
+"?"
+]
+]
+}
+}
+},
+"m2c-ln-s03-cp1-001": {
+"q": {
+"k": "expr",
+"e": "67-25"
+},
+"family": "nj_land",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 40,
+"hi": 70,
+"step": 1,
+"label_every": 10,
+"jumps": [
+[
+67,
+42,
+"−25"
+]
+],
+"points": [
+{
+"v": 42,
+"label": "?"
+}
+]
+}
+}
+},
+"m2c-ln-s03-cp1-002": {
+"q": {
+"k": "expr",
+"e": "78-62"
+},
+"family": "nj_size",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 60,
+"hi": 80,
+"step": 1,
+"label_every": 10,
+"jumps": [
+[
+62,
+78,
+"?"
+]
+]
+}
+}
+},
+"m2c-ln-s03-honors-001": {
+"q": {
+"k": "expr",
+"e": "34-15"
+},
+"family": "nj_land",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 10,
+"hi": 40,
+"step": 1,
+"label_every": 10,
+"jumps": [
+[
+34,
+19,
+"−15"
+]
+],
+"points": [
+{
+"v": 19,
+"label": "?"
+}
+]
+}
+}
+},
+"m2c-ln-s03-honors-002": {
+"q": {
+"k": "expr",
+"e": "77-68"
+},
+"family": "nj_size",
+"diagram": {
+"kind": "jline",
+"data": {
+"lo": 60,
+"hi": 80,
+"step": 1,
+"label_every": 10,
+"jumps": [
+[
+68,
+77,
+"?"
+]
+]
+}
+}
+}
+}
