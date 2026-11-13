@@ -144,7 +144,8 @@ REVIEWED = {
     ("u07_within1000", 2): ["sub3_items(decompose=False, styles=(0, 1))", "sub3_items(decompose=False, styles=(2,))"],
     ("u07_within1000", 4): ["add3_items(rename=True, styles=(0, 1))", "two_digit_items('add', compose=True, styles=(2,))"],
     ("u07_within1000", 5): ["add3_items(rename=True, styles=(0, 1))", "two_digit_items('add', compose=True, styles=(2,))"],
-    ("u07_within1000", 7): ["sub3_items(decompose=True, styles=(0, 1))", "two_digit_items('sub', compose=True, styles=(2,))"],
+    ("u07_within1000", 7): ["sub3_items(decompose=True, styles=(0, 1), borrow='hundred')",
+                            "sub3_items(decompose=True, styles=(2,), borrow='hundred')"],
     ("u07_within1000", 8): ["sub3_items(decompose=True, styles=(0, 1))", "two_digit_items('sub', compose=True, styles=(2,))"],
     ("u07_within1000", 9): ["sub3_items(decompose=True, styles=(0, 1))", "sub3_items(decompose=True, styles=(2,))"],
 }

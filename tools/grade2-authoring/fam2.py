@@ -137,7 +137,7 @@ def add3_items(rename=None, styles=None):
     return f
 
 
-def sub3_items(decompose=None, styles=None):
+def sub3_items(decompose=None, styles=None, borrow="ten"):
     """L0 no decomposing, L1 decompose a ten, L2 decompose a hundred or a ten."""
     def f(r, L):
         dec = (L >= 1) if decompose is None else decompose
@@ -151,13 +151,20 @@ def sub3_items(decompose=None, styles=None):
             a_t, b_t = r.randint(4, 9), r.randint(1, 3)
             b_o = r.randint(2, 9)
             a_o = r.randint(0, b_o - 1)
+        elif borrow == "hundred":
+            a_t = r.randint(0, 4)
+            b_t = r.randint(a_t + 1, 9)
+            b_o = r.randint(2, 9)
+            a_o = r.randint(0, b_o - 1)
         else:
-            a_t, b_t = r.randint(0, 2), r.randint(1, 4)
+            a_t, b_t = r.randint(3, 6), r.randint(1, 2)
             b_o = r.randint(2, 9)
             a_o = r.randint(0, b_o - 1)
         a, b = a_h * 100 + a_t * 10 + a_o, b_h * 100 + b_t * 10 + b_o
         need(a - b > 0 and a <= 1000)
         need((a_o < b_o) if dec else (a_o >= b_o and a_t >= b_t))
+        if dec and borrow == "hundred":
+            need(a_t < b_t)
         style = r.choice(styles) if styles else r.randrange(3)
         prompt = [f"{a} \u2212 {b} = ?", f"Subtract {b} from {a}.",
                   f"A library has {a} books. {b} are borrowed. How many are left?"][style]
@@ -1076,13 +1083,19 @@ def two_digit_items(op="add", compose=False, styles=None, limit=None):
                 a_o = r.randint(1, 4)
                 b_o = r.randint(1, 9 - a_o)
         else:
-            a_t = band(L, r.randint(2, 3), r.randint(4, 6), r.randint(7, 8))
+            a_t = band(L, r.randint(2, 3), r.randint(4, 6), r.randint(7, 9))
             b_t = r.randint(1, 2)
-            a_o = r.randint(3, 9)
-            b_o = r.randint(1, a_o - 1 if compose else a_o)
+            if compose:
+                a_o = r.randint(1, 8)
+                b_o = r.randint(a_o + 1, 9)
+            else:
+                a_o = r.randint(3, 9)
+                b_o = r.randint(0, a_o)
         a, b = a_t * 10 + a_o, b_t * 10 + b_o
         ans = a + b if op == "add" else a - b
         need(ans > 0)
+        if op == "add":
+            need(ans <= 99)
         if limit:
             need(max(a, b) <= int(limit))
         kind = r.choice(list(styles)) if styles else r.randrange(3)

@@ -9,8 +9,8 @@ Advanced is at least 20% larger than Remedial.
 | Unit | Skill | R size/regroup/steps | S | A | verdict |
 | --- | --- | --- | --- | --- | --- |
 | adding-subtracting-100 | s01 | 24 / — / 1.00 | 61 / — / 1.00 | 197 / — / 1.00 | escalates |
-| adding-subtracting-100 | s02 | 36 / 0% / 1.00 | 62 / 0% / 1.03 | 92 / 11% / 1.00 | escalates |
-| adding-subtracting-100 | s03 | 30 / — / 1.00 | 57 / — / 1.00 | 81 / — / 1.00 | escalates |
+| adding-subtracting-100 | s02 | 36 / 0% / 1.00 | 62 / 0% / 1.03 | 90 / 0% / 1.03 | escalates |
+| adding-subtracting-100 | s03 | 32 / — / 1.00 | 57 / — / 1.00 | 88 / — / 1.00 | escalates |
 | adding-subtracting-100 | s04 | 21 / 33% / 1.00 | 52 / 100% / 1.03 | 59 / 100% / 1.07 | escalates |
 | adding-subtracting-100 | s05 | 33 / — / 1.00 | 60 / — / 1.00 | 66 / — / 1.00 | escalates |
 | adding-subtracting-100 | s06 | 19 / — / 1.00 | 40 / — / 1.00 | 63 / — / 1.00 | escalates |
@@ -22,13 +22,13 @@ Advanced is at least 20% larger than Remedial.
 | adding-subtracting-1000 | s01 | 357 / 0% / 1.00 | 503 / 0% / 1.03 | 776 / 0% / 1.00 | escalates |
 | adding-subtracting-1000 | s02 | 363 / — / 1.00 | 522 / — / 1.00 | 831 / — / 1.00 | escalates |
 | adding-subtracting-1000 | s03 | 236 / 27% / 1.03 | 312 / 80% / 1.03 | 675 / 89% / 1.03 | escalates |
-| adding-subtracting-1000 | s04 | 42 / — / 1.00 | 278 / 100% / 1.00 | 458 / 100% / 1.00 | escalates |
-| adding-subtracting-1000 | s05 | 42 / — / 1.00 | 300 / 100% / 1.00 | 451 / 100% / 1.00 | escalates |
+| adding-subtracting-1000 | s04 | 42 / — / 1.00 | 278 / 100% / 1.00 | 484 / 100% / 1.03 | escalates |
+| adding-subtracting-1000 | s05 | 42 / — / 1.00 | 300 / 100% / 1.00 | 478 / 100% / 1.03 | escalates |
 | adding-subtracting-1000 | s06 | 157 / 100% / 1.00 | 490 / 100% / 1.03 | 680 / 100% / 1.03 | escalates |
-| adding-subtracting-1000 | s07 | 247 / — / 1.00 | 360 / — / 1.00 | 461 / — / 1.00 | escalates |
-| adding-subtracting-1000 | s08 | 273 / — / 1.00 | 332 / — / 1.00 | 451 / — / 1.00 | escalates |
-| adding-subtracting-1000 | s09 | 396 / — / 1.00 | 647 / — / 1.00 | 839 / — / 1.00 | escalates |
-| adding-subtracting-1000 | s10 | 245 / 100% / 1.03 | 374 / 100% / 1.00 | 576 / 100% / 1.03 | escalates |
+| adding-subtracting-1000 | s07 | 283 / — / 1.00 | 362 / — / 1.00 | 451 / — / 1.00 | escalates |
+| adding-subtracting-1000 | s08 | 279 / — / 1.00 | 332 / — / 1.00 | 470 / — / 1.00 | escalates |
+| adding-subtracting-1000 | s09 | 430 / — / 1.00 | 647 / — / 1.00 | 864 / — / 1.00 | escalates |
+| adding-subtracting-1000 | s10 | 264 / 100% / 1.03 | 374 / 100% / 1.00 | 596 / 100% / 1.03 | escalates |
 | adding-subtracting-working-data | s01 | 8 / 31% / 1.03 | 11 / 22% / 1.03 | 13 / 81% / 1.03 | escalates |
 | adding-subtracting-working-data | s02 | 8 / 20% / 1.03 | 16 / 94% / 1.03 | 17 / 73% / 1.07 | escalates |
 | adding-subtracting-working-data | s03 | 24 / 0% / 1.03 | 40 / 12% / 1.00 | 49 / 7% / 1.03 | escalates |
@@ -92,7 +92,7 @@ Advanced is at least 20% larger than Remedial.
 | putting-it-all-together | s02 | 22 / 93% / 1.00 | 30 / 87% / 1.03 | 169 / 88% / 1.00 | escalates |
 | putting-it-all-together | s03 | 4 / — / 1.00 | 9 / — / 1.00 | 18 / — / 1.00 | escalates |
 | putting-it-all-together | s04 | 251 / 0% / 1.00 | 711 / 0% / 1.00 | 1151 / 50% / 1.03 | escalates |
-| putting-it-all-together | s05 | 397 / 0% / 1.00 | 593 / 100% / 1.00 | 806 / 100% / 1.00 | escalates |
+| putting-it-all-together | s05 | 397 / 0% / 1.00 | 593 / 100% / 1.00 | 823 / 100% / 1.00 | escalates |
 | putting-it-all-together | s06 | 42 / 0% / 1.03 | 69 / 0% / 1.03 | 75 / 100% / 1.03 | escalates |
 | putting-it-all-together | s07 | 19 / — / 1.00 | 51 / — / 1.00 | 72 / — / 1.00 | escalates |
 | putting-it-all-together | s08 | 13 / — / 1.00 | 50 / — / 1.00 | 64 / — / 1.00 | escalates |
@@ -104,17 +104,17 @@ Advanced is at least 20% larger than Remedial.
 | --- | --- | --- | --- | --- | --- | --- |
 | err_g | 10 | 21 | 34 | — | — | — |
 | err_md | 24 | 51 | 147 | — | — | — |
-| err_nbt | 243 | 457 | 852 | 25% | 45% | 50% |
-| err_oa | 37 | 66 | 225 | 24% | 47% | 48% |
+| err_nbt | 249 | 457 | 876 | 25% | 45% | 55% |
+| err_oa | 37 | 66 | 225 | 24% | 47% | 45% |
 | fam01_100 | 14 | 35 | 49 | — | — | — |
-| fam01_add | 34 | 60 | 93 | 0% | 0% | 0% |
+| fam01_add | 34 | 60 | 92 | 0% | 0% | 0% |
 | fam01_at | 3 | 4 | 6 | — | — | — |
 | fam01_bargraph | 2 | 6 | 8 | — | — | — |
 | fam01_build | 28 | 71 | 274 | — | — | — |
 | fam01_count | 11 | 29 | 49 | — | — | — |
 | fam01_customary | 3 | 5 | 22 | — | — | — |
 | fam01_expanded | 284 | 531 | 874 | — | — | — |
-| fam01_items | 110 | 174 | 296 | 46% | 60% | 75% |
+| fam01_items | 113 | 174 | 299 | 46% | 60% | 75% |
 | fam01_jump | 51 | 76 | 315 | 33% | 69% | 62% |
 | fam01_locate | 53 | 94 | 456 | — | — | — |
 | fam01_metric | 9 | 6 | 13 | — | — | — |
@@ -125,7 +125,7 @@ Advanced is at least 20% larger than Remedial.
 | fam01_rows | 8 | 7 | 13 | — | — | — |
 | fam01_shaded | 3 | 4 | 6 | — | — | — |
 | fam01_sides | 4 | 4 | 5 | — | — | — |
-| fam01_sub | 31 | 61 | 79 | — | — | — |
+| fam01_sub | 32 | 59 | 88 | — | — | — |
 | fam01_total | 9 | 11 | 18 | — | — | — |
 | fam01_value | 242 | 549 | 841 | — | — | — |
 | fam01_word | 15 | 44 | 69 | — | — | — |
@@ -133,12 +133,12 @@ Advanced is at least 20% larger than Remedial.
 | fam02_2 | 14 | 16 | — | — | — | — |
 | fam02_20 | 7 | 20 | 20 | 8% | 100% | 83% |
 | fam02_4 | 669 | 618 | 863 | — | — | — |
-| fam02_add | 40 | 66 | 94 | — | — | — |
+| fam02_add | 40 | 66 | 90 | — | — | — |
 | fam02_bargraph | 2 | 13 | 9 | — | — | — |
 | fam02_build | 33 | 61 | 342 | — | — | — |
 | fam02_corners | 4 | 4 | 5 | — | — | — |
 | fam02_count | 9 | 30 | 34 | — | — | — |
-| fam02_items | 81 | 154 | 285 | 45% | 50% | 60% |
+| fam02_items | 82 | 154 | 287 | 45% | 50% | 60% |
 | fam02_jump | 61 | 92 | 381 | 46% | 67% | 74% |
 | fam02_locate | 20 | 38 | 56 | — | — | — |
 | fam02_metric | 11 | 8 | 24 | — | — | — |
@@ -149,7 +149,7 @@ Advanced is at least 20% larger than Remedial.
 | fam02_rows | 6 | 7 | 11 | — | — | — |
 | fam02_shaded | 3 | 4 | 6 | — | — | — |
 | fam02_sides | 4 | 4 | 6 | — | — | — |
-| fam02_sub | 31 | 54 | 80 | — | — | — |
+| fam02_sub | 32 | 53 | 86 | — | — | — |
 | fam02_total | 12 | 21 | 36 | — | — | — |
 | fam02_value | 142 | 367 | 602 | — | — | — |
 | fam02_word | 15 | 45 | 64 | — | — | — |
@@ -162,15 +162,15 @@ Advanced is at least 20% larger than Remedial.
 | fam03_value | 284 | 577 | 838 | — | — | — |
 | open_g | 11 | 33 | 38 | — | — | — |
 | open_md | 15 | 33 | 71 | — | — | — |
-| open_nbt | 298 | 508 | 858 | 62% | 57% | 80% |
-| open_oa | 45 | 88 | 187 | 17% | 54% | 83% |
+| open_nbt | 312 | 512 | 851 | 62% | 57% | 80% |
+| open_oa | 45 | 88 | 188 | 17% | 54% | 85% |
 | sel_g | 10 | 25 | 33 | — | — | — |
 | sel_md | 7 | 15 | 44 | — | — | — |
-| sel_nbt | 199 | 377 | 624 | — | — | — |
+| sel_nbt | 191 | 377 | 598 | — | — | — |
 | sel_oa | 33 | 61 | 163 | — | — | — |
 | tf_g | 10 | 22 | 33 | — | — | — |
 | tf_md | 19 | 249 | 366 | — | — | — |
-| tf_nbt | 218 | 414 | 671 | 25% | 0% | 71% |
+| tf_nbt | 222 | 414 | 670 | 25% | 0% | 71% |
 | tf_oa | 37 | 189 | 132 | 17% | 44% | 100% |
 
 Skills: 89, flat: 2. Families: 70, flat: 15.

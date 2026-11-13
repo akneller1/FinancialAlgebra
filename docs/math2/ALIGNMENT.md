@@ -6,7 +6,6 @@ confirmed defects; a candidate can be a wording mismatch rather than a wrong tas
 * **generic filler under a specific skill**: 134
 * **number outside the skill's stated range**: 61
 * **question topic does not match the skill**: 406
-* **regrouping structure does not match the skill**: 85
 
 ## generic filler under a specific skill (134)
 
@@ -69,21 +68,3 @@ A tape diagram comparing 27 and 12. Mateo h
 * m2-h100-s04-honors-004 | Use related addition to find an unknown addend | fam02_fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 80 + 20 = 100?
 * m2-h100-s04-honors-006 | Use related addition to find an unknown addend | fam02_fam02_fam02_fact_family_items_100 | Which fact belongs to the same fact family as 43 + 57 = 100?
 * m2-h100-s04-honors-009 | Use related addition to find an unknown addend | fam01_fam01_fam01_missing_addend_items | There are 8 blocks in all. 1 are in a bag. How many blocks are not in 
-
-## regrouping structure does not match the skill (85)
-
-* m2-h100-s02-honors-009 | Add two-digit numbers without regrouping | 81 add 23 | needs regrouping
-* m2-h100-s02-honors-020 | Add two-digit numbers without regrouping | 82 add 22 | needs regrouping
-* m2-h100-s02-honors-025 | Add two-digit numbers without regrouping | 83 add 24 | needs regrouping
-* m2-t1k-s07-cp2-002 | Decompose a hundred into tens when subtracting | 35 sub 12 | no regrouping
-* m2-t1k-s07-cp2-004 | Decompose a hundred into tens when subtracting | 23 sub 21 | no regrouping
-* m2-t1k-s07-cp2-006 | Decompose a hundred into tens when subtracting | 36 sub 22 | no regrouping
-* m2-t1k-s07-cp2-008 | Decompose a hundred into tens when subtracting | 39 sub 27 | no regrouping
-* m2-t1k-s07-cp2-010 | Decompose a hundred into tens when subtracting | 29 sub 16 | no regrouping
-* m2-t1k-s07-cp2-012 | Decompose a hundred into tens when subtracting | 34 sub 22 | no regrouping
-* m2-t1k-s07-cp2-014 | Decompose a hundred into tens when subtracting | 38 sub 27 | no regrouping
-* m2-t1k-s07-cp2-016 | Decompose a hundred into tens when subtracting | 39 sub 14 | no regrouping
-* m2-t1k-s07-cp2-018 | Decompose a hundred into tens when subtracting | 34 sub 12 | no regrouping
-* m2-t1k-s07-cp2-020 | Decompose a hundred into tens when subtracting | 26 sub 12 | no regrouping
-* m2-t1k-s07-cp2-022 | Decompose a hundred into tens when subtracting | 33 sub 21 | no regrouping
-* m2-t1k-s07-cp2-024 | Decompose a hundred into tens when subtracting | 24 sub 23 | no regrouping
