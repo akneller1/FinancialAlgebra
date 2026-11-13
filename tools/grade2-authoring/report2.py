@@ -142,7 +142,7 @@ assert not manifest["review"]["editorialApproval"]["approved"]
 assert all(b["approved"] is False for b in manifest["banks"])
 
 levels_text = open(os.path.join(ROOT, "docs", COURSE_ID, "LEVELS.md"), encoding="utf-8").read()
-level_match = re.search(r"Skills:\\s*(\\d+),\\s*flat:\\s*(\\d+)", levels_text)
+level_match = re.search(r"Skills:\s*(\d+),\s*flat:\s*(\d+)", levels_text)
 if not level_match:
     raise RuntimeError("Grade 2 level report does not contain a skill summary")
 skills_checked, skills_flat = map(int, level_match.groups())
@@ -150,7 +150,7 @@ assert skills_checked == sum(len(u["skills"]) for u in UNITS)
 
 audit = subprocess.run([sys.executable, os.path.join(HERE, "audit2.py")],
                        cwd=HERE, capture_output=True, text=True, check=True)
-audit_match = re.search(r"TOTAL FLAGGED\\s+(\\d+)", audit.stdout)
+audit_match = re.search(r"TOTAL FLAGGED\s+(\d+)", audit.stdout)
 if not audit_match:
     raise RuntimeError("Grade 2 semantic audit did not report a candidate count")
 semantic_candidates = int(audit_match.group(1))
@@ -177,7 +177,7 @@ levels["skillsNotEscalating"] = skills_flat
 levels["status"] = "passed" if skills_flat == 0 else "passed-with-exceptions"
 with open(manifest_path, "w", encoding="utf-8") as fh:
     json.dump(manifest, fh, ensure_ascii=False, indent=1)
-    fh.write("\\n")
+    fh.write("\n")
 print("updated math2 manifest metrics:", total, diagrams,
       semantic_candidates, "semantic candidates;", skills_flat, "flat skills")
 
