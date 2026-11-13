@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Grade 1 Bank Inspector | Branch-only teacher review</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#26324a;background:#fffaf4}
+*{box-sizing:border-box}body{margin:0;padding:24px}main{max-width:1100px;margin:auto}.notice{padding:12px 18px;background:#fff0cb;border:2px solid #c08120;border-radius:12px;font-weight:650}
+h1{font-size:1.75rem;margin:.7em 0 .3em}p{line-height:1.5}.controls{display:grid;grid-template-columns:2fr 2fr 1fr 1.4fr;gap:12px;margin:18px 0}
+label{font-size:.88rem;font-weight:700;display:grid;gap:4px}select{border:1px solid #94a3b8;background:white;border-radius:8px;padding:11px;font:inherit;min-width:0}
+.card{border:2px solid #536b91;border-radius:16px;background:white;padding:22px;box-shadow:5px 5px 0 #e5dacd}.meta{color:#546078;font-size:.85rem;margin-bottom:12px}.prompt{font-size:1.4rem;line-height:1.45;white-space:pre-wrap;font-weight:700}
+.diagram{display:block;max-width:min(100%,720px);border:1px solid #dedede;border-radius:8px;margin:16px auto}
+.choices{display:grid;gap:10px;margin:20px 0}.choice{padding:12px 16px;border-radius:10px;border:1px solid #b4c1d5;font-size:1.08rem}
+.parts{display:grid;gap:8px}button{font:inherit;border:0;border-radius:9px;padding:11px 17px;background:#3456d1;color:#fff;cursor:pointer}
+button:focus-visible,select:focus-visible{outline:3px solid #f8aa1f;outline-offset:2px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.answer{background:#e6f7f0;border:1px solid #79ae9c;border-radius:10px;padding:16px;margin-top:15px}
+#error{color:#a32020;font-weight:700}footer{color:#667085;margin-top:25px;font-size:.85rem}
+@media(max-width:760px){body{padding:10px}.controls{grid-template-columns:1fr 1fr}.card{padding:15px}.prompt{font-size:1.15rem}}
+</style></head>
+<body><main>
+<h1>Grade 1 bank inspector</h1>
+<p class="notice">Development-only editorial review. Mathematical checks have passed; these questions are <strong>NOT approved</strong> for students or public release.</p>
+<p>Use this standalone tool to sample actual bank questions, pictures, distractors, and worked solutions. This is not a production game.</p>
+<div class="controls">
+<label for="unit">Unit<select id="unit"></select></label>
+<label for="skill">Skill<select id="skill"></select></label>
+<label for="level">Level<select id="level"><option value="cp2">Remedial</option><option value="cp1" selected>Standard</option><option value="honors">Advanced</option></select></label>
+<label for="format">Format<select id="format"><option value="">All formats</option><option value="short-answer">Short answer</option><option value="multiple-choice">Multiple choice</option><option value="select-all">Select all</option><option value="open-response">Open response</option></select></label>
+</div>
+<p id="count" role="status"></p><p id="error" role="alert"></p>
+<article class="card" aria-label="Question sample">
+<div class="meta" id="id"></div>
+<div class="prompt" id="prompt"></div>
+<img class="diagram" id="diagram" hidden alt="">
+<div class="choices" id="choices"></div>
+<div class="parts" id="parts"></div>
+<div class="answer" id="answer" hidden></div>
+</article>
+<div class="actions">
+<button type="button" id="previous">Previous</button>
+<button type="button" id="next">Next</button>
+<button type="button" id="toggle">Show answer &amp; solution</button>
+</div>
+<footer>Data is fetched from the current repository checkout, not from mrksclassroom.com. No tracking, no grading, no student links.</footer>
+</main>
+<script>
+(async function(){
+const $=id=>document.getElementById(id);
+const selectors=['unit','skill','level','format'];let outline=[],bank=[],filtered=[],index=0;
+function option(select,value,label){const o=document.createElement('option');o.value=value;o.textContent=label;select.append(o)}
+function clear(el){el.replaceChildren()}
+function text(el,value){el.textContent=String(value??'')}
+function show(){
+ const q=filtered[index];text($('count'),filtered.length?('Question '+(index+1)+' of '+filtered.length):'No questions match these filters.');
+ text($('id'),q?q.id+' · '+q.level+' · '+q.format:'');
+ text($('prompt'),q?q.prompt:'Choose a different skill or format.');
+ $('answer').hidden=true;text($('toggle'),'Show answer & solution');
+ clear($('choices'));clear($('parts'));$('diagram').hidden=true;$('diagram').removeAttribute('src');
+ if(!q)return;
+ if(q.diagram?.spec?.src){
+  const img=$('diagram');img.src=new URL('../../'+q.diagram.spec.src,location.href).href;
+  img.alt=q.diagram.spec.alt||'Question diagram';img.hidden=false;
+  img.onerror=()=>text($('error'),'Could not load diagram '+q.diagram.spec.src);
+ }
+ if(q.options)for(const o of q.options){const div=document.createElement('div');div.className='choice';text(div,o.text);$('choices').append(div)}
+ if(q.parts)for(const p of q.parts){const div=document.createElement('div');text(div,p.prompt);$('parts').append(div)}
+}
+function filter(){
+ const unit=$('unit').value,skill=$('skill').value,level=$('level').value,format=$('format').value;
+ filtered=bank.filter(q=>q.skillId===skill&&q.level===level&&(!format||q.format===format));
+ index=0;show();
+}
+function fillSkills(){
+ const unit=outline.find(u=>u.id===$('unit').value);clear($('skill'));
+ if(!unit)return;
+ for(let i=0;i<unit.skills.length;i++)option($('skill'),unit.id+'-skill-'+String(i+1).padStart(2,'0'),(i+1)+'. '+unit.skills[i]);
+}
+async function fetchBank(){
+ const unit=$('unit').value;text($('error'),'');text($('count'),'Loading '+unit+'…');
+ try{
+  const result=await fetch('../../question-banks/math1/'+unit+'.json',{cache:'no-store'});
+  if(!result.ok)throw Error('HTTP '+result.status+' for '+unit);
+  const parsed=await result.json();
+  if(parsed.courseId!=='math1'||parsed.unitId!==unit)throw Error('Unexpected question bank identity');
+  bank=parsed.questions;fillSkills();filter();
+ }catch(e){bank=[];filtered=[];text($('error'),e.message);show()}
+}
+$('unit').onchange=fetchBank;
+for(const id of ['skill','level','format'])$(id).onchange=filter;
+$('previous').onclick=()=>{if(filtered.length){index=(index+filtered.length-1)%filtered.length;show()}};
+$('next').onclick=()=>{if(filtered.length){index=(index+1)%filtered.length;show()}};
+$('toggle').onclick=()=>{
+ const q=filtered[index];if(!q)return;
+ $('answer').hidden=!$('answer').hidden;
+ $('toggle').textContent=$('answer').hidden?'Show answer & solution':'Hide answer & solution';
+ clear($('answer'));
+ if(!$('answer').hidden){
+  const line=document.createElement('p');text(line,'Answer: '+(Array.isArray(q.answer)?q.answer.join('; '):q.answer));$('answer').append(line);
+  const ol=document.createElement('ol');
+  for(const s of q.solutionSteps||[]){const li=document.createElement('li');text(li,s);ol.append(li)}
+  $('answer').append(ol);
+ }
+};
+try{
+ const res=await fetch('../../course-outlines/grade1.json',{cache:'no-store'});
+ if(!res.ok)throw Error('Cannot load Grade 1 outline: HTTP '+res.status);
+ const d=await res.json();outline=d.units;
+ for(const u of outline)option($('unit'),u.id,u.name);
+ await fetchBank();
+}catch(e){text($('error'),e.message);}
+})();
+</script></body></html>
