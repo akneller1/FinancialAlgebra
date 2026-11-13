@@ -119,7 +119,7 @@ formats and Error Analysis at every skill/level, plus representative game and gu
 Partner Check now selects same-skill, same-level pairs directly from the bank, with
 different mathematical inputs and equal answers; no extra author-assigned pair IDs are
 needed. Problem & Answer Matching supports repeated use of an answer letter and retains
-source diagrams. Mazes and Tarsia still require enough short, distinct answers.
+source diagrams. Mazes still require enough short, distinct answers. Tarsia uses numbered problem pages, including source pictures, and codes long answers through an answer bank.
 The UI may offer fewer printable formats for narrow skills; unrelated filler is not added.
 
 Grade 1 flashcards are bank-derived practice cards, rather than a separately authored
@@ -143,3 +143,7 @@ remain attached to every question; only the coloring picture's palette assignmen
 The activity audit checks 120 whole-unit/level/format selections and all 279 single-skill
 selections for Stations, Error Analysis and coloring. Unsupported Tarsia selections still need
 more short, distinct answers; the bank is never padded or moved to another level to fill one.
+
+### Adaptive Grade 1 Tarsia
+
+Automatic sizing selects 3, 4, or 9 pieces using only the chosen skills and level. Explicit 16- and 24-piece puzzles are available when enough distinct answers exist. Boundary edges stay blank; each internal edge pairs one numbered problem with its exact answer or answer-bank code. The 3-piece starter is a trapezoid, the 4/9/16-piece puzzles are triangles, and the 24-piece puzzle is a hexagon. No cross-level fallback or fabricated questions are used. Model tests cover all 279 skill/level scopes and six size settings, validating geometry, connectivity, edge matches, source fidelity, and deterministic scrambling. Browser checks cover all available sizes and three print layouts, including pictures, long answers, student/key separation, and page bounds.

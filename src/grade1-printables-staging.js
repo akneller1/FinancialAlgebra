@@ -75,11 +75,40 @@
   var colors=palette.slice(0,qs.length),items=qs.map(function(q){return item(cfg.unitId,q);});
   return {kind:'color',grade1Color:true,levelNote:items.length<10?'This selection uses '+items.length+' questions and colors. Regions with the same problem number use the same color.':'',scene:scene,sceneName:sc.name,items:items,colorOf:colors,groupNum:sc.groups.map(function(g,i){return i%items.length+1;}),code:colors.map(function(c,i){return {color:c,hex:PR.SCENE_COLORS[c],num:i+1,answer:items[i].key};})};
  }
+ function tri(up,i,j){return up?[[i,j],[i+1,j],[i,j+1]]:[[i+1,j],[i,j+1],[i+1,j+1]];}
+ function triangle(side){var out=[];for(var j=0;j<side;j++)for(var i=0;i<side-j;i++){out.push(tri(true,i,j));if(i<side-j-1)out.push(tri(false,i,j));}return out;}
+ function edgeKey(p,q){var a=p.join(','),b=q.join(',');return a<b?a+'|'+b:b+'|'+a;}
+ function edgeMap(tris){var edges={};tris.forEach(function(t,i){[[0,1],[1,2],[2,0]].forEach(function(e,k){var id=edgeKey(t[e[0]],t[e[1]]);(edges[id]||(edges[id]=[])).push({piece:i,side:k});});});return edges;}
+ function tarsiaDefinitions(){
+  return [{id:'starter',shape:'trapezoid',tris:triangle(2).slice(0,3)}, {id:'small',shape:'triangle',tris:triangle(2)}, {id:'medium',shape:'triangle',tris:triangle(3)}, {id:'large',shape:'triangle',tris:triangle(4)}, {id:'full',shape:'hexagon',tris:PR.TARSIA_SHAPES.hexagon.tris()}].map(function(d){d.edges=edgeMap(d.tris);d.matches=Object.keys(d.edges).filter(function(k){return d.edges[k].length===2;});return d;});
+ }
+ function tarsia(cfg,v){
+  var used=new Set(),qs=shuffled(selection(cfg),cfg.seed+'|tarsia|'+v).filter(function(q){var k=key(q.answer);if(used.has(k))return false;used.add(k);return true;});
+  var defs=tarsiaDefinitions(),size=cfg.tarsiaSize||'auto',d;
+  if(size==='auto')d=defs.filter(function(x){return x.tris.length<=9&&x.matches.length<=qs.length;}).pop();
+  else d=defs.find(function(x){return x.id===size;});
+  if(!d||d.matches.length>qs.length)return {error:'Tarsia needs '+(d?d.matches.length:2)+' different answers for this size; the selected '+N.courseLevelName(cfg.unitId,cfg.level)+' questions provide '+qs.length+'. Choose Automatic, add compatible skills, or use Stations.'};
+  qs=balanced(qs,d.matches.length,function(q){return q.skillId;});
+  var items=qs.map(function(q,i){var it=item(cfg.unitId,q);it.num=i+1;it.numberedEdge=true;return it;});
+  var labels=new Set(items.map(function(it){return key(it.key);})),codes=shuffled(items.map(function(it,i){return i+1;}),cfg.seed+'|codes|'+v),answerBank=[];
+  if(codes.length>1&&codes.every(function(x,i){return x===i+1;}))codes.push(codes.shift());
+  items.forEach(function(it,i){
+   if(it.key.length<=10)it.edgeAnswer=it.key;
+   else{var n=codes[i],label='Code C'+n;while(labels.has(key(label))){n++;label='Code C'+n;}labels.add(key(label));it.edgeAnswer=label;answerBank.push({label:label,answer:it.key});}
+  });
+  var pieces=d.tris.map(function(t){return {pts:t.map(function(p){return p.slice();}),text:['','',''],kind:['','','']};}),placed=shuffled(items,cfg.seed+'|edges|'+v);
+  d.matches.forEach(function(k,i){var pair=shuffled(d.edges[k],cfg.seed+'|side|'+v+'|'+i),it=placed[i];pieces[pair[0].piece].text[pair[0].side]='P'+it.num;pieces[pair[0].piece].kind[pair[0].side]='q';pieces[pair[1].piece].text[pair[1].side]=it.edgeAnswer;pieces[pair[1].piece].kind[pair[1].side]='a';it.edge=k;});
+  var order=shuffled(pieces.map(function(p,i){return i;}),cfg.seed+'|pieces|'+v);if(order.every(function(x,i){return x===i;}))order.push(order.shift());
+  var scrambled=order.map(function(pi,i){return {piece:pi,slot:i,turn:shuffled([0,1,2],cfg.seed+'|turn|'+v+'|'+i)[0]};});
+  return {kind:'tarsia',grade1Tarsia:true,shape:d.shape,size:d.id,pieces:pieces,items:items,scrambled:scrambled,answerBank:answerBank,levelNote:pieces.length+' pieces and '+items.length+' matches at '+N.courseLevelName(cfg.unitId,cfg.level)+'. Blank edges form the outside; coded answers are listed in the answer bank.'};
+ }
+ function tarsiaOptions(cfg){return '<label class="field"><span class="lbl">Puzzle size</span><select id="prTarsiaSize">'+[['auto','Automatic · up to 9 pieces'],['starter','Starter · 3 pieces / 2 matches'],['small','Small · 4 pieces / 3 matches'],['medium','Medium · 9 pieces / 9 matches'],['large','Large · 16 pieces / 18 matches'],['full','Full · 24 pieces / 30 matches']].map(function(o){return '<option value="'+o[0]+'"'+((cfg.tarsiaSize||'auto')===o[0]?' selected':'')+'>'+o[1]+'</option>';}).join('')+'</select></label>';}
  var capable=PR.capable,build=PR.build;
  PR.MODES['answer-match']={prompt:500,answer:200,fig:true,wrong:0};
  PR.KINDS.push({id:'answer-match',name:'Problem & Answer Matching',blurb:'Solve each problem and write its answer letter. Letters may be used more than once.'});
  PR.capable=function(id,skill,kind,level){
   if(kind==='answer-match')return scoped(id)&&pool(id,level||'cp1').some(function(q){return q.skillId===skill;});
+  if(scoped(id)&&kind==='tarsia')return new Set(pool(id,level||'cp1').filter(function(q){return q.skillId===skill;}).map(function(q){return key(q.answer);})).size>=2;
   if(scoped(id)&&['stations','error','color'].includes(kind)){
    if(kind==='error')return bank.select({courseId:'grade1',unitId:id.slice(7),level:level||'cp1',skillIds:[skill],formats:['short-answer']}).some(function(q){return /family: err_/.test(q.sourceNotes||'');});
    var qs=pool(id,level||'cp1').filter(function(q){return q.skillId===skill;});
@@ -95,6 +124,7 @@
   if(cfg.kind==='stations')return stationWork(cfg,v||0);
   if(cfg.kind==='error')return errors(cfg,v||0);
   if(cfg.kind==='color')return coloring(cfg,v||0);
+  if(cfg.kind==='tarsia')return tarsia(cfg,v||0);
   var native={maze:PR.buildMaze,tarsia:PR.buildTarsia,who:PR.buildWho}[cfg.kind];
   if(!native)return build.apply(this,arguments);
   var result;for(var retry=0;retry<3;retry++){
@@ -112,6 +142,10 @@
   return chunk(items,per,function(list,start){return page(title+(teacher?' · Teacher key':''),'<p>'+esc(N.skillSets[cfg.unitId].unitName)+' · '+esc(N.courseLevelName(cfg.unitId,cfg.level))+'</p>'+list.map(function(it,i){return '<section><h2>Problem '+(start+i+1)+'</h2>'+question(it)+(teacher?solution(it)+(extra?extra(it,start+i):''):'<div style="min-height:'+(per===1?170:85)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer: ____________________</p>'+(extra?extra(it,start+i):''))+'</section>';}).join(''));});
  }
  function colorPages(cfg,B,v,nV,teacher,cover){return [cover].concat(workPages(cfg,B.items,'Color by Number · Problems',teacher,function(it,i){return '<p>Color: '+(teacher?esc(B.colorOf[i]):'____________________')+'</p>';}));}
+ function tarsiaPages(cfg,B,v,nV,teacher,covers){
+  var bankPages=chunk(B.answerBank,4,function(list){return page('Tarsia · Answer bank','<p>Some triangle edges use a code instead of a long answer. Solve the question first, then find its answer here.</p>'+list.map(function(a){return '<div style="padding:14px;border-bottom:1px solid #aaa;overflow-wrap:anywhere"><b>'+esc(a.label)+':</b> '+esc(a.answer)+'</div>';}).join(''));});
+  return covers.concat(bankPages,workPages(cfg,B.items,'Tarsia · Numbered problems',teacher,function(it){return '<p>Puzzle edge: '+(teacher?esc(it.edgeAnswer):'____________________')+'</p>';}));
+ }
  function pages(cfg,B,v,nV,teacher){
   var title=N.skillSets[cfg.unitId].unitName+' · '+N.courseLevelName(cfg.unitId,cfg.level)+' · Version '+String.fromCharCode(65+v),out=[];
   if(B.kind==='stations')return B.stations.reduce(function(out,s,i){return out.concat(workPages(cfg,s.items,'Station '+(i+1)+' · '+s.title,teacher));},[]);
@@ -134,5 +168,5 @@
   return out.concat(chunk(B.items,per,function(items,i){return page('Problem & Answer Matching'+(teacher?' · Teacher key':''),'<p>'+esc(title)+'</p>'+(!teacher&&compactChoices?choices:'')+items.map(function(it,j){return '<section><h2>Problem '+(i+j+1)+'</h2>'+question(it)+(teacher?'<p><b>Answer letter: '+it.letter+'</b></p>'+solution(it):'<div style="min-height:'+(per===1?140:70)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer letter: __________</p>')+'</section>';}).join(''));}));
 
  }
- G.MK_GRADE1_PRINTABLES={pages:pages,partner:partner,matching:matching,colorPages:colorPages,key:key};
+ G.MK_GRADE1_PRINTABLES={pages:pages,partner:partner,matching:matching,colorPages:colorPages,tarsiaPages:tarsiaPages,tarsiaOptions:tarsiaOptions,key:key};
 })(window);

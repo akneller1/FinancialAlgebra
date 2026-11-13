@@ -33,9 +33,12 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
   }
   return {rendered,pages,images,blocked};
  });
- // A prior silent cross-level fallback must now display a clear, non-printable result.
- await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-addition-subtraction-story-problems&kind=tarsia');await page.reload();
+ // A deliberately oversized puzzle must fail without changing the selected level.
+ await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-subtracting-working-data&kind=tarsia');await page.reload();
  await page.locator('input[name=prLevel][value=cp2]').check();
+ const ids=await page.locator('.prSkill').evaluateAll(xs=>xs.map(x=>x.value));
+ for(const id of ids.slice(1))await page.locator('.prSkill[value="'+id+'"]').uncheck();
+ await page.locator('#prTarsiaSize').selectOption('large');
  await page.locator('#prPreview .pr-err').waitFor();
  if(!await page.locator('#prPrintS').isDisabled()||!await page.locator('#prPrintK').isDisabled())throw Error('Unavailable puzzle may print');
  if(!/Remedial/.test(await page.locator('#prPreview .pr-err').innerText()))throw Error('Missing selected-level explanation');

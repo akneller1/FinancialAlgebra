@@ -54,6 +54,16 @@ export function integrate({source,out}){
  fs.writeFileSync(printablePage,printableHtml);
  const printableUI=path.join(out,'worksheet-generator/menu/printables-ui.js');
  let printableCode=fs.readFileSync(printableUI,'utf8');
+ printableCode=printableCode.replace("var fs = large ? 13 : (sIn > 1.6 ? 8 : 7.4);", "var fs = B.grade1Tarsia ? (large ? 16 : (sIn > 1.6 ? 14 : 11)) : (large ? 13 : (sIn > 1.6 ? 8 : 7.4));");
+ printableCode=printableCode.replace("story + st + (kind === 'tarsia'", "story + st + (kind==='tarsia'&&/^grade1-/.test(unit)?G.MK_GRADE1_PRINTABLES.tarsiaOptions(cfg):'') + (kind === 'tarsia'");
+ printableCode=printableCode.replace("if ($('#prTarsiaLayout'))", "if ($('#prTarsiaSize')) $('#prTarsiaSize').onchange=function(e){cfg.tarsiaSize=e.target.value;save();rebuild();};\n    if ($('#prTarsiaLayout'))");
+ printableCode=printableCode.replace('  function tarsiaPages(cfg, B, v, nV, key) {', `  function tarsiaPages(cfg, B, v, nV, key) {
+    if(B.grade1Tarsia){
+      var layout=cfg.tarsiaLayout||'standard',sections=layout==='large'?Math.ceil(B.pieces.length/6):1,covers=[];
+      for(var section=0;section<sections;section++)covers.push({nofoot:true,html:'<div class="mm-body pc pt">'+tarsiaHead(cfg,nV,v,unitName(cfg)+' Tarsia'+(key?' · Teacher key':''),B.shape+' · '+B.pieces.length+' pieces · '+B.items.length+' matches',!key)+(section===0?'<p style="font-size:15px;margin:6px 0">'+(key?'Solved puzzle. Each P-edge touches its correct answer.':'Solve the numbered problems. P1 means Problem 1. Match touching edges and build the '+B.shape+'. Blank edges go outside. C-codes use the answer bank.')+'</p>':'')+'<div class="pr-tbox">'+tarsiaSvg(B,key,layout,section)+'</div></div>'});
+      return G.MK_GRADE1_PRINTABLES.tarsiaPages(cfg,B,v,nV,key,covers);
+    }
+  `);
  printableCode=printableCode.replace("sc.groups.forEach(function (g) { out += '<g fill=", "sc.groups.forEach(function (g, gi) { out += '<g fill=");
  printableCode=printableCode.replace('PR.SCENE_COLORS[g.color]', 'PR.SCENE_COLORS[B.grade1Color?B.colorOf[B.groupNum[gi]-1]:g.color]');
  printableCode=printableCode.replace('.test(g.color)', '.test(B.grade1Color?B.colorOf[B.groupNum[gi]-1]:g.color)');

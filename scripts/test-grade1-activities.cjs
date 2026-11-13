@@ -19,9 +19,9 @@ for(const u of outline.units)for(const level of ['cp2','cp1','honors'])for(const
  results.push({unit:u.id,level,kind,success:!B.error,error:B.error||null,items:qs.length,borrowed:borrowed.length,ms:Date.now()-start});
  if(results.length%15===0)console.log('Audited '+results.length+' unit/activity selections');
 }
-let scopes=0;const singles={stations:0,error:0,color:0};
+let scopes=0;const singles={stations:0,error:0,color:0,tarsia:0};
 for(const u of outline.units)for(const skill of G.MK_COURSE_CATALOG.getSkillRecords('grade1',u.id))for(const level of ['cp2','cp1','honors']){
- for(const kind of ['stations','error','color']){
+ for(const kind of ['stations','error','color','tarsia']){
   const cfg=PR.defaultConfig('grade1-'+u.id,kind);Object.assign(cfg,{skills:{[skill.id]:true},level,seed:'single-skill-audit'});const B=PR.build(cfg,0);
   if(['stations','error'].includes(kind))assert(!B.error,kind+' '+skill.id+'/'+level);
   if(!B.error){singles[kind]++;for(const id of walk(B)){const q=all.get(id);assert(q);assert.equal(q.level,level);assert.equal(q.skillId,skill.id);}}

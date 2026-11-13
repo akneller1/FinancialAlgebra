@@ -11,6 +11,7 @@ on:
       - 'src/grade1-printables-staging.js'
       - 'scripts/test-grade1-printables*.cjs'
       - 'scripts/test-grade1-activities*.cjs'
+      - 'scripts/test-grade1-tarsia*.cjs'
       - 'worksheet-generator/grade5/g5-games.js'
       - 'worksheet-generator/grade5/flashcards.js'
   workflow_dispatch:
@@ -46,6 +47,7 @@ jobs:
           node scripts/test-grade1-integration.cjs
           node scripts/test-grade1-printables.cjs
           node scripts/test-grade1-activities.cjs
+          node scripts/test-grade1-tarsia.cjs
           node --check worksheet-generator/grade5/g5-games.js
       - name: Install Chromium
         working-directory: source
@@ -63,6 +65,7 @@ jobs:
           node scripts/test-grade1-integration-browser.cjs
           node scripts/test-grade1-printables-browser.cjs
           node scripts/test-grade1-activities-browser.cjs
+          node scripts/test-grade1-tarsia-browser.cjs
       - uses: actions/upload-artifact@v4
         if: success()
         with:
