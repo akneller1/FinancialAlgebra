@@ -91,7 +91,7 @@ def h_related(c, t):
 
 def h_teen_parts(c, t):
     n = int(c["n"])
-    return norm(t) == norm(f"1 ten and {n - 10} ones")
+    return norm(t) == norm(f"1 ten and {n - 10} {'one' if n - 10 == 1 else 'ones'}")
 
 
 def h_symbol(c, t):

@@ -126,6 +126,38 @@ def rewrite_safe(q, record, meta):
         meta["distractors"] = {textual(k):textual(v) for k,v in meta["distractors"].items()}
     if meta.get("shown"):
         meta["shown"] = [textual(v) for v in meta["shown"]]
+    # Correctly inflected answer and distractor text can collide after removing
+    # the malformed "1 ones" variant; preserve one correct choice and three
+    # genuinely distinct plausible errors.
+    if q["format"]=="multiple-choice":
+        seen=set()
+        for item in q["options"]:
+            if item["correct"]:
+                seen.add(item["text"])
+        for item in q["options"]:
+            if item["correct"]:
+                continue
+            if item["text"] in seen:
+                ans=q["answer"]
+                candidates=[]
+                m=re.search(r"(\\d+) ten(?:s)? and (\\d+) one(?:s)?",str(ans))
+                if m:
+                    t,o=map(int,m.groups())
+                    candidates=[f"{t} tens and {o+1} ones",f"{t+1} tens and {o} ones",
+                                f"{t} tens and {max(0,o-1)} ones"]
+                if re.fullmatch(r"\\d+",str(ans)):
+                    n=int(ans)
+                    candidates += [str(n+1),str(max(0,n-1)),str(n+2),str(n+3)]
+                pick=next((textual(x) for x in candidates if textual(x) not in seen and textual(x)!=ans),None)
+                if pick is None:
+                    raise AssertionError("Cannot uniquely repair MC distractor "+q["id"])
+                item["text"]=pick
+                stats["colliding_options_replaced"]+=1
+            seen.add(item["text"])
+        if len(seen)!=len(q["options"]):
+            raise AssertionError("Duplicate option survived "+q["id"])
+        if meta.get("distractors"):
+            meta["distractors"]={o["text"]:meta["distractors"].get(o["text"],"Common place-value misconception.") for o in q["options"] if not o["correct"]}
     q["sourceNotes"] = BASE_NOTE + " (family: " + record.get("family","unknown") + ")."
 
 for unit in OUTLINE["units"]:
@@ -223,6 +255,51 @@ for unit in OUTLINE["units"]:
         if q["prompt"]!=p and "ones digit" in q["prompt"]:
             stats["ambiguous_ones"]+=1
         rewrite_safe(q,record,meta)
+    # When a specific picture was fixed, two once-distinct broken prompts can
+    # become identical. Preserve meaning while varying the instructional question.
+    # The verifier defines identity by prompt + option text + diagram alt.
+    seen_scoped=set()
+    def scope_key(q):
+        return (q["skillId"],q["level"],re.sub(r"\s+"," ",q["prompt"]).strip().lower().rstrip("."),
+                tuple(sorted(o["text"].strip().lower() for o in q.get("options",[]))),
+                (q.get("diagram") or {}).get("spec",{}).get("alt","").strip().lower())
+    for q in bank["questions"]:
+        key=scope_key(q)
+        if key in seen_scoped:
+            rec=checks[q["id"]]
+            fn=(rec.get("q") or {}).get("fn")
+            original=q["prompt"]
+            ans=str(q["answer"])
+            if rec.get("diagram",{}).get("kind")=="composition":
+                if ans=="hexagon":
+                    variants=["Six equal triangular pieces share a center point. What shape does their outline form?",
+                              "What shape forms when six equal triangles meet around one point?",
+                              "Name the shape made from six equilateral triangles meeting at their tips.",
+                              "Six equal triangles are joined around the middle. What shape is formed?"]
+                else:
+                    variants=["Two matching halves of a square are joined along their diagonal. What shape is made?",
+                              "Which shape is made by joining two matching right triangles cut from one square?",
+                              "Two equal right triangles are put back together into their original figure. What shape is it?"]
+            elif fn=="shape_attr_name":
+                sides=int(rec["q"].get("sides",0))
+                variants=([f"Find the shape in the picture with {sides} sides.",
+                           f"Name the shape that has {sides} straight sides in this picture.",
+                           f"Which shown shape has exactly {sides} straight sides?",
+                           f"Choose the {sides}-sided shape shown in the diagram."] if sides else
+                          ["Find the shape with no corners in the picture.",
+                           "Which pictured shape has no straight sides?",
+                           "Name the pictured shape without corners."])
+            else:
+                raise AssertionError("Unexpected repeated question after repairs "+q["id"]+" "+original)
+            for new in variants:
+                q["prompt"]=new
+                key=scope_key(q)
+                if key not in seen_scoped:
+                    stats["meaning_preserving_rewordings"]+=1
+                    break
+            else:
+                raise AssertionError("Could not make an authentic unique question "+q["id"])
+        seen_scoped.add(key)
     bpath.write_text(json.dumps(bank,ensure_ascii=False,indent=1)+"\n",encoding="utf-8")
     mpath.write_text(json.dumps(metas,ensure_ascii=False,indent=0)+"\n",encoding="utf-8")
     cpath.write_text(json.dumps(checks,ensure_ascii=False,indent=0)+"\n",encoding="utf-8")
