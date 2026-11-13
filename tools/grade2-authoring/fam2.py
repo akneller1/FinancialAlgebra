@@ -107,7 +107,8 @@ def add3_items(rename=None, styles=None):
     """L0 no composing, L1 compose a ten, L2 compose a ten and a hundred."""
     def f(r, L):
         ren = (L >= 1) if rename is None else rename
-        a_h, b_h = r.randint(1, 4), r.randint(1, 3)
+        a_h = band(L, r.randint(1, 2), r.randint(2, 4), r.randint(4, 7))
+        b_h = r.randint(1, 2)
         if not ren:
             a_t, b_t = r.randint(1, 4), r.randint(1, 4)
             a_o, b_o = r.randint(1, 4), r.randint(1, 4)
@@ -140,8 +141,9 @@ def sub3_items(decompose=None, styles=None):
     """L0 no decomposing, L1 decompose a ten, L2 decompose a hundred or a ten."""
     def f(r, L):
         dec = (L >= 1) if decompose is None else decompose
-        a_h = r.randint(3, 8) if not dec else r.randint(4, 9)
-        b_h = r.randint(1, 2) if not dec else r.randint(1, 3)
+        a_h = band(L, r.randint(2, 4), r.randint(3, 6), r.randint(6, 9)) if not dec else \
+            band(L, r.randint(3, 5), r.randint(4, 7), r.randint(7, 9))
+        b_h = r.randint(1, 2)
         if not dec:
             a_t, b_t = r.randint(4, 9), r.randint(1, 3)
             a_o, b_o = r.randint(4, 9), r.randint(1, 3)
@@ -290,7 +292,7 @@ def order_choice_items(n=None):
 def skip_count_items(step=None, limit=None):
     """L0 multiples of 10 from a multiple of the step, L1 by 5s or 10s, L2 by 100 from any number."""
     def f(r, L):
-        st = step or band(L, 10, 10, 100)
+        st = step or band(L, 10, 25, 100)
         if limit:
             st = min(st, 100)
         if L == 2:
@@ -319,7 +321,7 @@ def numberline_items(kind="jump", limit=None):
     def f(r, L):
         hi = band(L, 100, 200, 1000)
         if limit:
-            hi = min(hi, int(limit))
+            hi = min(hi, band(L, 40, 70, int(limit)))
         step = 10 if hi <= 200 else 100
         if kind == "locate":
             p = r.randint(1, (hi // step) - 1) * step
@@ -434,7 +436,8 @@ def measure_unit_items(kind="metric"):
     pool = METRIC if kind == "metric" else CUSTOMARY
     unit2 = "{0} is too small a unit here" if kind == "metric" else "{0} is too small a unit here"
     def f(r, L):
-        cands = [x for x in pool if x[4] <= L]
+        _band = {0: (0,), 1: (0, 1), 2: (1, 2)}[L]
+        cands = [x for x in pool if x[4] in _band] or pool
         thing, unit, other, why, cls, about, tool = r.choice(cands)
         pick = r.randrange(3)
         if pick == 0:
@@ -468,7 +471,7 @@ def measure_unit_items(kind="metric"):
 def measure_compare_items(kind="metric", limit=None):
     def f(r, L):
         unit = "centimeters" if kind == "metric" else "inches"
-        lo, hi = band(L, (12, 30), (20, 60), (30, 95))
+        lo, hi = band(L, (6, 18), (14, 44), (30, 95))
         a, b = r.randint(lo, hi), r.randint(lo, hi)
         need(a != b)
         left, right = "pencil", "ribbon"
@@ -630,9 +633,9 @@ def time_items(marks=None):
         if marks:
             m = r.choice(list(marks))
         elif L == 0:
-            m = r.choice([0, 30])
+            m = 0
         elif L == 1:
-            m = r.choice([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55])
+            m = r.choice([0, 15, 30, 45])
         else:
             m = r.choice([5, 10, 15, 20, 25, 35, 40, 45, 50, 55])
             m = m + r.choice([0, 1, 2]) if m not in (15, 30) else m
@@ -653,7 +656,7 @@ def time_items(marks=None):
 def time_word_items():
     def f(r, L):
         h = r.randint(1, 11)
-        m = band(L, r.choice([0, 30]), r.choice([0, 15, 30, 45]), r.choice([5, 10, 20, 25, 35, 40, 50, 55]))
+        m = band(L, 0, r.choice([0, 30]), r.choice([5, 15, 25, 35, 40, 45, 50, 55]))
         activity = ["eat lunch", "go to recess", "read a story", "line up for the bus", "start math"][r.randrange(5)]
         part = "a.m." if r.random() < 0.5 else "p.m."
         ans = f"{clock_text(h, m)} {part}"
@@ -672,7 +675,7 @@ def polygon_items(kind="name"):
         if L >= 1:
             pool.update({"pentagon": 5, "hexagon": 6})
         if L >= 2:
-            pool.update({"quadrilateral": 4})
+            pool.update({"heptagon": 7, "octagon": 8, "quadrilateral": 4})
         k = r.choice(list(pool))
         sides = pool[k]
         if kind == "sides":
@@ -710,7 +713,7 @@ def thirds_items(kind="name"):
             6: ("sixths", "sixth"), 8: ("eighths", "eighth")}
 
     def f(r, L):
-        parts = r.choice([2, 3] if L == 0 else [2, 3, 4] if L == 1 else [2, 3, 4, 6, 8])
+        parts = r.choice([2, 3] if L == 0 else [3, 4] if L == 1 else [4, 6, 8])
         word, one = WORD[parts]
         others = [w for p, (w, _) in WORD.items() if p != parts]
         r.shuffle(others)
@@ -875,7 +878,7 @@ def fluency_items(limit=None):
     """Fact fluency: L0 within 10, L1 within 20, L2 within 20 with missing parts and three addends."""
     def f(r, L):
         kind = r.randrange(4 if L == 2 else 3)
-        top = band(L, 10, 20, 20)
+        top = band(L, 10, 16, 20)
         if limit:
             top = min(top, int(limit))
         if kind == 0:
@@ -912,9 +915,11 @@ def graph_data_items(kind="bargraph", limit=None):
 
     def f(r, L):
         cats = CATS[:band(L, 3, 4, 5)]
-        if limit and len(cats) > 3:
-            cats = cats[:3]
-        high = band(L, 5, 9, 12)
+        if limit:
+            cats = cats[:3] if L < 2 else cats[:2]
+        high = band(L, 5, 9, 15)
+        if limit and len(cats) == 2:
+            high = max(high, min(int(limit) - 2, 12))
         if limit:
             high = max(2, min(high, int(limit) // max(1, len(cats))))
         counts = r.sample(range(2, high + 1), len(cats))
@@ -957,10 +962,10 @@ def tally_data_items(kind="total", limit=None):
     CATS = ["red", "blue", "green", "yellow", "orange"]
 
     def f(r, L):
-        cats = CATS[:band(L, 3, 3, 4)]
+        cats = CATS[:band(L, 3, 4, 5)]
         if limit and len(cats) > 3:
             cats = cats[:3]
-        high = band(L, 6, 10, 14)
+        high = band(L, 6, 11, 18)
         if limit:
             high = max(1, min(high, int(limit) // max(1, len(cats))))
         counts = r.sample(range(1, high + 1), len(cats))
@@ -1060,7 +1065,7 @@ def two_digit_items(op="add", compose=False, styles=None, limit=None):
     """Two-digit add/sub that keeps the structure the skill names."""
     def f(r, L):
         if op == "add":
-            a_t = r.randint(1, 7)
+            a_t = band(L, r.randint(1, 2), r.randint(3, 5), r.randint(6, 8))
             b_t = r.randint(1, 2)
             if compose:
                 a_o = r.randint(2, 9)
@@ -1069,7 +1074,7 @@ def two_digit_items(op="add", compose=False, styles=None, limit=None):
                 a_o = r.randint(1, 4)
                 b_o = r.randint(1, 9 - a_o)
         else:
-            a_t = r.randint(3, 8)
+            a_t = band(L, r.randint(2, 3), r.randint(4, 6), r.randint(7, 8))
             b_t = r.randint(1, 2)
             a_o = r.randint(3, 9)
             b_o = r.randint(1, a_o - 1 if compose else a_o)

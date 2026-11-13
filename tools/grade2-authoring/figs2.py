@@ -144,6 +144,12 @@ def _polygon(data):
             d.polygon([(cx - size * 0.7, cy + size * 0.5), (cx + size * 0.55, cy + size * 0.5),
                        (cx + size * 0.75, cy - size * 0.5), (cx - size * 0.5, cy - size * 0.5)],
                       fill=fill, outline=INK)
+        elif kind in ("heptagon", "octagon"):
+            sides = 7 if kind == "heptagon" else 8
+            pts = [(cx + size * 0.62 * math.cos(math.radians(-90 + 360 / sides * k)),
+                    cy + size * 0.62 * math.sin(math.radians(-90 + 360 / sides * k)))
+                   for k in range(sides)]
+            d.polygon(pts, fill=fill, outline=INK)
         elif kind == "hexagon":
             pts = [(cx + size * 0.62 * math.cos(math.pi / 3 * k), cy + size * 0.62 * math.sin(math.pi / 3 * k)) for k in range(6)]
             d.polygon(pts, fill=fill, outline=INK)

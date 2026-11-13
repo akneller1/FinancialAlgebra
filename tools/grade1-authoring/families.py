@@ -41,6 +41,11 @@ def num(n):
     return str(int(n))
 
 
+def band(L, low, mid, high):
+    """Pick the value that belongs to Remedial, Standard or Advanced."""
+    return low if L == 0 else mid if L == 1 else high
+
+
 def tw(n, word):
     return f"{n} {word}" if int(n) == 1 else f"{n} {word}s"
 
@@ -174,7 +179,7 @@ def add1_items(*, back=False):
 
 def missing_addend_items(hi=10):
     def f(r, L):
-        top = hi if L else max(6, hi // 2)
+        top = band(L, max(6, hi // 2), int(hi * 0.75), hi)
         total = r.randint(2, top)
         known = r.randint(1, total - 1)
         unknown = total - known
@@ -217,7 +222,11 @@ def fact_family_items(hi=10, limit=None):
     """Related addition/subtraction facts (1.OA.B.3, 1.OA.C.6)."""
     def f(r, L):
         top = hi if L else max(6, hi // 2)
-        a, b = r.randint(1, top - 1), r.randint(1, top - 1)
+        if L:
+            a = r.randint(1, top - 1)
+            b = top - a
+        else:
+            a, b = r.randint(1, top - 1), r.randint(1, top - 1)
         s = a + b
         need(s <= (int(limit) if limit else top))
         style = r.randrange(3)
@@ -860,7 +869,27 @@ def shape_attr_items(kind="sides"):
 def solid_items():
     def f(r, L):
         solid = r.choice(SOLIDS)
-        style = r.randrange(2)
+        style = r.randrange(2) if L == 0 else (2 if L == 1 else r.choice([2, 3]))
+        if style == 2 and solid not in ("cube", "cylinder", "cone"):
+            style = 0
+        if style == 3 and solid != "cube":
+            style = 0
+        if style == 2:
+            faces = {"cube": 6, "cylinder": 3, "cone": 2}[solid]
+            prompt = f"How many faces does a {solid} have?"
+            return Item(prompt, num(faces), [f"A {solid} has {faces} flat faces."],
+                        wrong_numbers(faces, [faces + 1, max(1, faces - 1), faces + 2]),
+                        check=FN("solid_faces", kind=solid), qtype="conceptual", tags=("geometry",),
+                        diagram=Diagram("shapes", {"shapes": [{"type": solid, "color": "teal"}]},
+                                        f"One {solid}."))
+        if style == 3:
+            edges = 12
+            prompt = f"How many edges does a {solid} have?"
+            return Item(prompt, num(edges), [f"A {solid} has {edges} edges."],
+                        wrong_numbers(edges, [edges + 2, max(1, edges - 2), edges + 4]),
+                        check=FN("solid_edges", kind=solid), qtype="conceptual", tags=("geometry",),
+                        diagram=Diagram("shapes", {"shapes": [{"type": solid, "color": "teal"}]},
+                                        f"One {solid}."))
         if style == 0:
             prompt = "What solid shape is shown?"
             ans = solid
@@ -991,7 +1020,7 @@ def length_compare_items():
 
 def ruler_items():
     def f(r, L):
-        n = r.randint(2, 9 if not L else 12)
+        n = band(L, r.randint(2, 5), r.randint(5, 9), r.randint(9, 15))
         unit = r.choice(["paper clip", "cube", "tile"])
         prompt = f"How many {unit}s long is the object?"
         return Item(prompt, num(n), [f"Count the {unit}s from end to end.", f"The object is {n} {unit}s long."],

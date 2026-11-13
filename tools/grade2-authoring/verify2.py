@@ -20,7 +20,7 @@ import verify1
 from verify1 import num_eq, norm, as_int, err
 
 SIDES = {"triangle": 3, "square": 4, "rectangle": 4, "quadrilateral": 4, "trapezoid": 4, "rhombus": 4,
-         "parallelogram": 4, "pentagon": 5, "hexagon": 6, "octagon": 8}
+         "parallelogram": 4, "pentagon": 5, "hexagon": 6, "heptagon": 7, "octagon": 8}
 PARTS = {2: ("halves", "half"), 3: ("thirds", "third"), 4: ("fourths", "fourth", "quarters", "quarter"),
          6: ("sixths", "sixth"), 8: ("eighths", "eighth")}
 
@@ -189,6 +189,18 @@ def h_graph_diff(c, t):
     return num_eq(t, max(v for _, v in rows) - min(v for _, v in rows))
 
 
+FACES = {"cube": 6, "cylinder": 3, "cone": 2}
+EDGES = {"cube": 12}
+
+
+def h_solid_faces(c, t):
+    return num_eq(t, FACES.get(str(c.get("kind")), -1))
+
+
+def h_solid_edges(c, t):
+    return num_eq(t, EDGES.get(str(c.get("kind")), -1))
+
+
 def h_strategy(c, t):
     """Make-a-ten is the right method only when the ones digits pass ten."""
     a, b = int(c["a"]), int(c["b"])
@@ -197,7 +209,7 @@ def h_strategy(c, t):
 
 
 verify1.HANDLERS.update({
-    "strategy": h_strategy, "digit_value3": h_digit_value3, "expanded3": h_expanded3, "skip_seq": h_skip_seq,
+    "strategy": h_strategy, "solid_faces": h_solid_faces, "solid_edges": h_solid_edges, "digit_value3": h_digit_value3, "expanded3": h_expanded3, "skip_seq": h_skip_seq,
     "round10": h_round10, "round_sum": h_round_sum, "money_cents": h_money_cents,
     "part_name": h_part_name, "polygon_sides": h_polygon_sides, "polygon_corners": h_polygon_corners,
     "array_total": h_array_total, "array_cols": h_array_cols, "array_rows": h_array_rows, "even_odd": h_even_odd,
