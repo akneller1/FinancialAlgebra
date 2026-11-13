@@ -206,7 +206,7 @@ def h_shape_name(c, t):
 
 
 def h_solid_name(c, t):
-    return norm(t) in SOLIDS
+    return norm(t) == norm(c["kind"]) if "kind" in c else norm(t) in SOLIDS
 
 
 def h_shape_attr_name(c, t):
@@ -311,6 +311,43 @@ def h_clock_minutes(c, t):
 def h_half_hour(c, t):
     return num_eq(t, 30)
 
+
+# Target-specific checks: implemented independently of the authoring factories.
+def h_bundle(c,t):return num_eq(t,int(c['n'])//10)
+def h_model_parts(c,t):
+    n=int(c['n']); tens,ones=divmod(n,10)
+    return norm(t)==norm(f"{tens} {'ten' if tens==1 else 'tens'} and {ones} {'one' if ones==1 else 'ones'}")
+def h_place_equation(c,t):
+    a,b=int(c['a']),int(c['b']);tens=a//10*10+b//10*10;ones=a%10+b%10
+    return norm(t)==norm(f"{tens} + {ones} = {a+b}")
+def h_regroup_remainder(c,t):return num_eq(t,(int(c['a'])+int(c['b']))%10)
+def h_regroup_tens(c,t):return num_eq(t,(int(c['a'])+int(c['b']))//10)
+def h_regroup_reason(c,t):
+    return norm(t)==norm(f"10 ones make 1 ten; both methods give {int(c['a'])+int(c['b'])}")
+def h_sort_count(c,t):
+    return num_eq(t,sum(x[c['attribute']]==c['value'] for x in c['objects']))
+def h_survey_count(c,t):return num_eq(t,c['votes'].count(c['label']))
+def h_graph_diff(c,t):
+    rows=dict(c['rows']);return num_eq(t,abs(rows[c['labels'][0]]-rows[c['labels'][1]]))
+def h_direct_length(c,t):
+    a,b=int(c['a']),int(c['b']);return norm(t)==('a' if (a>b)==(c['want']=='longer') else 'b')
+def h_indirect_length(c,t):
+    return norm(t)==('a' if c['a_vs_ref']>c['b_vs_ref'] else 'b')
+def h_unit_layout(c,t):return norm(t)==norm(c['correct'])
+def h_composition_shape(c,t):return norm(t)==({2:'square',6:'hexagon'}.get(c['pieces']))
+def h_composition_count(c,t):return num_eq(t,{'square':2,'hexagon':6}[c['shape']])
+def h_solid_composition(c,t):return num_eq(t,c['rows']*c['cols']*c['layers'])
+def h_fair_parts(c,t):return norm(t)==('equal size' if c['equal'] else 'no')
+def h_clock_hands(c,t):
+    h,m=int(c['h']),int(c['m']);short=str(h) if m==0 else f'between {h} and {h%12+1}'
+    return norm(t)==norm(f"short: {short}; long: {12 if m==0 else 6}")
+
+
+def h_story_equations(c,t):
+    a,b=c['a'],c['b'];return norm(t)==norm(f'{a} + {b} = {a+b}; {a+b} − {b} = {a}')
+def h_constructed_story(c,t):
+    a,b=c['a'],c['b'];nm=c['person']
+    return norm(t)==norm(f'{nm} has {a} shells, gets {b} more, and now has {a+b} shells.')
 
 HANDLERS = {k[2:]: v for k, v in globals().items() if k.startswith("h_") and callable(v)}
 

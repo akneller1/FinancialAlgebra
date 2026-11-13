@@ -7,7 +7,7 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
 const result={passed:0,failed:[],jsErrors:[],brokenAssets:[],diagramRenders:0,skillsTested:0,levelsTested:0};
 fs.mkdirSync('grade1-browser-results',{recursive:true});
 (async()=>{
- const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+ const browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:['--no-sandbox']});
  const page=await browser.newPage({viewport:{width:1280,height:860}});
  page.setDefaultTimeout(6000);
  page.on('pageerror',e=>result.jsErrors.push(e.message));

@@ -81,10 +81,11 @@ def mc_options(p, pos, r):
         if _norm(w) not in seen:
             seen.add(_norm(w))
             ds.append((w, why))
-    if len(ds) < 3:
+    if not ds:
         return None
     ds = ds[:3]
     r.shuffle(ds)
+    pos = min(pos, len(ds))
     ds.insert(pos, (p.answer, ""))
     return [{"text": t, "correct": i == pos} for i, (t, _) in enumerate(ds)]
 
@@ -279,7 +280,7 @@ class Builder:
             p, r = self.make(f, rec, L, attempts[f.__name__])
             if p is None:
                 fails[f.__name__] += 1
-                if fails[f.__name__] > 80:
+                if fails[f.__name__] > 2500:
                     dead.add(f.__name__)
                 continue
             m = p.mode if p.mode != "any" else (f.mode or "any")
@@ -295,7 +296,7 @@ class Builder:
                 fmt = "sa" if need["sa"] > 0 and m == "any" else None
             if fmt is None:
                 fails[f.__name__] += 1
-                if fails[f.__name__] > 80:
+                if fails[f.__name__] > 2500:
                     dead.add(f.__name__)
                 continue
             if accept(p, "multiple-choice" if fmt == "mc" else "short-answer", f.__name__, r):
@@ -304,14 +305,14 @@ class Builder:
                 fc[fmt] += 1
             else:
                 fails[f.__name__] += 1
-                if fails[f.__name__] > 80:
+                if fails[f.__name__] > 2500:
                     dead.add(f.__name__)
 
         # Grade 1 extras are generated per domain (text-only), so picture-heavy skills still
         # get error analysis, true/false, select-all and open-response questions.
-        from extras import extras_for
+        from aligned_extras import extras_for
         domain = spec.get("domain") or getattr(self.m, "DOMAIN", "oa")
-        derived = {k: [v] for k, v in extras_for(domain).items()}
+        derived = {k: [v] for k, v in extras_for(spec["fams"][0]).items()}
         fmt_of = {"err": "short-answer", "tf": "multiple-choice", "sel": "select-all", "open": "open-response"}
         for kind in ("err", "tf", "sel", "open"):
             pool = derived.get(kind, [])
@@ -336,7 +337,7 @@ class Builder:
                 p, r = self.make(f, rec, L, attempts[f.__name__] + 2000)
                 if p is None:
                     fails[f.__name__] += 1
-                    if fails[f.__name__] > 300:
+                    if fails[f.__name__] > 2500:
                         dead.add(f.__name__)
                     continue
                 fmt = "multiple-choice" if (p.options or (len({_norm(w) for w, _ in p.wrong} - {_norm(p.answer)}) >= 3 and kind == "tf")) else "short-answer"
@@ -348,7 +349,7 @@ class Builder:
                     used[f.__name__] += 1
                 else:
                     fails[f.__name__] += 1
-                    if fails[f.__name__] > 300:
+                    if fails[f.__name__] > 2500:
                         dead.add(f.__name__)
         return out
 

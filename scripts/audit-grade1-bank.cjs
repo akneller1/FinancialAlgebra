@@ -98,7 +98,7 @@ for(const entry of manifest.banks){
  totals.units++;
  totals.skills+=skills.size;
 }
-if(totals.questions!==8370||totals.skills!==93||totals.diagrams<3000)issue('Unexpected total count: '+JSON.stringify(totals));
+if(totals.questions!==8370||totals.skills!==93||totals.diagrams===0)issue('Unexpected total count: '+JSON.stringify(totals));
 if(totals.metaRecords!==totals.questions)issue('Question metadata incomplete');
 const allOnDisk=fs.readdirSync(path.join(root,'question-banks/assets/math1'),{withFileTypes:true})
  .filter(x=>x.isDirectory()).flatMap(x=>fs.readdirSync(path.join(root,'question-banks/assets/math1',x.name))

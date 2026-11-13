@@ -1,16 +1,14 @@
-"""Adding Within 100 — Grade 1 question families for adding-within-100."""
-from families import *
-
-DOMAIN = 'nbt'
+"""Adding Within 100: explicit target-specific sources; no fallback."""
+from aligned import source
 
 SKILLS = {
-    1: {"name": 'Add a one-digit number to a two-digit number without regrouping', "fams": [add_two_digit_items(compose=False, second_digits=1)]},
-    2: {"name": 'Add two two-digit numbers without composing a ten', "fams": [add_two_digit_items(compose=False), add_multiple_of_ten_items(), domain_facts_items('nbt')]},
-    3: {"name": 'Record place-value addition methods as equations', "fams": [add_two_digit_items(compose=False), equation_items(), domain_facts_items('nbt')]},
-    4: {"name": 'Compose a ten to add a one-digit and a two-digit number', "fams": [add_two_digit_items(compose=True, second_digits=1)], "domain": 'md'},
-    5: {"name": 'Use base-ten drawings to show regrouping', "fams": [add_two_digit_items(compose=True), base_ten_items('value'), domain_facts_items('md')], "domain": 'md'},
-    6: {"name": 'Record equivalent addition methods', "fams": [add_two_digit_items(compose=False), add_multiple_of_ten_items(), domain_facts_items('md')], "domain": 'md'},
-    7: {"name": 'Add two two-digit numbers by composing a ten', "fams": [add_two_digit_items(compose=True), domain_facts_items('md')], "domain": 'md'},
-    8: {"name": 'Connect visual models to written place-value steps', "fams": [add_two_digit_items(compose=True), digit_value_items(), domain_facts_items('md')], "domain": 'md'},
-    9: {"name": 'Explain why different regrouping methods give the same sum', "fams": [add_two_digit_items(compose=True), explain_strategy_items(), domain_facts_items('md')], "domain": 'md'},
+    1: {"name": 'Add a one-digit number to a two-digit number without regrouping', "fams": [source(4, 1)]},
+    2: {"name": 'Add two two-digit numbers without composing a ten', "fams": [source(4, 2)]},
+    3: {"name": 'Record place-value addition methods as equations', "fams": [source(4, 3)]},
+    4: {"name": 'Compose a ten to add a one-digit and a two-digit number', "fams": [source(4, 4)]},
+    5: {"name": 'Use base-ten drawings to show regrouping', "fams": [source(4, 5)]},
+    6: {"name": 'Record equivalent addition methods', "fams": [source(4, 6)]},
+    7: {"name": 'Add two two-digit numbers by composing a ten', "fams": [source(4, 7)]},
+    8: {"name": 'Connect visual models to written place-value steps', "fams": [source(4, 8)]},
+    9: {"name": 'Explain why different regrouping methods give the same sum', "fams": [source(4, 9)]},
 }

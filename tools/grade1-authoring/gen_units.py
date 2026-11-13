@@ -2,8 +2,8 @@
 
 The mapping is the editorial decision of which question families serve each of the 93 Grade 1
 skills; the unit modules are generated so a skill name can never drift from the outline.
-Skills with fewer than three families get the domain filler (domain_facts_items) so every
-skill has enough independent draws to reach 30 unique questions per level.
+Every target dispatches to an explicit source in aligned.py, including derived formats.
+The legacy MAP below is retained only as historical context; it is not used for builds.
 """
 import os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -131,21 +131,11 @@ DATA_SKILLS = {("u01_add_sub_data", i) for i in (4, 5, 6, 7, 8, 9)}
 def build_module(name):
     idx = list(MAP).index(name)
     unit = UNITS[idx]
-    domain = DOMAIN[name]
-    lines = [f'"""{unit["name"]} — Grade 1 question families for {unit["id"]}."""',
-             "from families import *", "", f"DOMAIN = {domain!r}", "", "SKILLS = {"]
+    lines = [f'"""{unit["name"]}: explicit target-specific sources; no fallback."""',
+             "from aligned import source", "", "SKILLS = {"]
     for i, skill_name in enumerate(unit["skills"], 1):
-        fams = list(MAP[name][i])
-        if ("u01_add_sub_data", i) in DATA_SKILLS:
-            domain_i = "md"
-        else:
-            domain_i = domain
-        if len(fams) < 3 and all("domain_facts_items" not in f for f in fams):
-            fams.append(f"domain_facts_items({domain_i!r})")
-        extra = f', "domain": {domain_i!r}' if domain_i != domain else ""
-        lines.append(f'    {i}: {{"name": {skill_name!r}, "fams": [{", ".join(fams)}]{extra}}},')
-    lines.append("}")
-    return "\n".join(lines) + "\n"
+        lines.append(f'    {i}: {{"name": {skill_name!r}, "fams": [source({idx}, {i})]}},')
+    return "\n".join(lines + ["}", ""])
 
 
 def main():

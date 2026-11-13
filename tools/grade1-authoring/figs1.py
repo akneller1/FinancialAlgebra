@@ -505,7 +505,89 @@ def _composition(data):
     _center_text(d, W / 2, H - 35, "The outline is formed by joining triangles.", 22)
     return im
 
+def _panels(data):
+    im, d = _canvas()
+    for panel in data['panels']:
+        idx = 'ABCD'.index(panel['label']); x = (idx % 2)*360; y = (idx//2)*240
+        source = _RENDERERS[panel['kind']](panel['data']).resize((350,210))
+        im.paste(source,(x+5,y+25)); _text(d,x+12,y+5,panel['label'],22)
+    return im
+
+
+def _addmodel(data):
+    im,d = _canvas()
+    for i,n in enumerate([data['a'],data['b']]):
+        sub = _baseten({'tens':n//10,'ones':n%10,'caption':f'Addend {n}'}).resize((350,370))
+        im.paste(sub,(i*360,60));_center_text(d,i*360+180,35,f'Addend {n}',26)
+    return im
+
+
+def _lengthbars(data):
+    im,d=_canvas(); vals=data['values'];scale=580/max(vals);offset=data.get('offset',0)
+    for i,(v,label) in enumerate(zip(vals,data['labels'])):
+        y=75+i*85;_text(d,20,y,label,24);d.rectangle([90+offset,y,90+offset+v*scale,y+28],fill=SOFT_BLUE,outline=INK,width=2)
+    d.line([90+offset,60,90+offset,435],fill=INK,width=2)
+    return im
+
+
+def _unitlayout(data):
+    im,d=_canvas();n=data['units'];size=480/(n+2)
+    for j,label in enumerate(['A','B']):
+        y=115+j*175;_text(d,25,y,label);correct=label==data['correct'];spacing=size if correct else size*(1.15 if data['bad']=='gaps' else .8)
+        d.rectangle([100,y-30,100+n*size,y-12],fill=SOFT_ORANGE,outline=INK)
+        for i in range(n):d.rectangle([100+i*spacing,y,100+i*spacing+size,y+size],fill=SOFT_BLUE,outline=INK,width=2)
+    return im
+
+
+def _unitlength(data):
+    im,d=_canvas();n=data['n'];w=600/n
+    d.rectangle([60,180,660,215],fill=SOFT_ORANGE,outline=INK,width=3)
+    for i in range(n):d.rectangle([60+i*w,240,60+(i+1)*w,280],fill=SOFT_BLUE,outline=INK,width=2)
+    _center_text(d,360,90,'Count equal-size units',28)
+    return im
+
+
+def _collection(data):
+    im,d=_canvas();t=data['tens'];o=data['ones']
+    for g in range(t):
+        x=20+(g%4)*175;y=35+(g//4)*125
+        d.rectangle([x,y,x+150,y+100],outline=INK,width=2)
+        for k in range(10):_counter(d,x+17+(k%5)*28,y+28+(k//5)*40,8,BLUE)
+    for k in range(o):_counter(d,40+k*65,440,10,ORANGE)
+    return im
+
+
+def _sortobjects(data):
+    im,d=_canvas()
+    for i,obj in enumerate(data['objects']):
+        x=70+(i%7)*90;y=100+(i//7)*100
+        if obj['type']=='circle':_counter(d,x,y,23,_color(obj['color']))
+        else:d.rectangle([x-23,y-23,x+23,y+23],fill=_color(obj['color']),outline=INK,width=2)
+    return im
+
+
+def _cubeplan(data):
+    im,d=_canvas();rows=data['rows'];cols=data['cols'];size=min(80,420/max(rows,cols))
+    _center_text(d,360,45,f"Each layer: {rows} rows, {cols} cubes per row",24)
+    for i in range(rows):
+        for j in range(cols):
+            x=100+j*size;y=100+i*size;d.rectangle([x,y,x+size,y+size],fill=SOFT_BLUE,outline=INK,width=3)
+    _center_text(d,360,450,f"Build {data['layers']} layer(s) like this",24)
+    return im
+
+
+def _blankclock(data):
+    import math
+    im,d=_canvas();cx,cy=360,260;r=175
+    d.ellipse([cx-r,cy-r,cx+r,cy+r],outline=INK,width=4)
+    for h in range(1,13):
+        a=math.pi*h/6-math.pi/2;_center_text(d,cx+145*math.cos(a),cy+145*math.sin(a),h,26)
+    _center_text(d,360,35,data.get('caption','Draw the hands'),28)
+    return im
+
+
 _RENDERERS = {
+    "panels": _panels, "addmodel": _addmodel, "lengthbars": _lengthbars, "unitlayout": _unitlayout, "unitlength": _unitlength, "collection": _collection, "sortobjects": _sortobjects, "cubeplan": _cubeplan, "blankclock": _blankclock,
     "tenframe": _tenframe, "counters": _counters, "numberline": _numberline, "baseten": _baseten,
     "tally": _tally, "pictograph": _pictograph, "bargraph": _bargraph, "shapes": _shapes,
     "partition": _partition, "composition": _composition, "clock": _clock, "ruler": _ruler, "comparegroups": _comparegroups,
