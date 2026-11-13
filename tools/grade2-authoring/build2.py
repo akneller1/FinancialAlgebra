@@ -25,3 +25,8 @@ _sys.path.insert(0, os.path.join(HERE, "units"))
 
 if __name__ == "__main__":
     build1.main()
+    # The committed Grade 2 banks are postprocessed by the cross-skill deduplicator.
+    # Make the complete build reproducible from one command rather than emitting
+    # an unprocessed bank and leaving generated JSON out of sync.
+    import dedupe2
+    dedupe2.dedupe1.main()
