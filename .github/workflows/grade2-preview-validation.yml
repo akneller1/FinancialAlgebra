@@ -1,6 +1,15 @@
 name: Grade 2 preview validation
 
 on:
+  push:
+    branches: [integration/grade2-staging-preview]
+    paths:
+      - '.github/workflows/grade2-preview-validation.yml'
+      - 'question-banks/math2/**'
+      - 'tools/grade2-authoring/**'
+      - 'worksheet-generator/elementary/**'
+      - 'worksheet-generator/grade2/**'
+      - 'manifest.json'
   workflow_dispatch:
   pull_request:
     paths:
