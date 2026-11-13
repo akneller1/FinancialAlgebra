@@ -82,11 +82,30 @@ jobs:
             node tools/grade3-authoring/tests/browser-generators.cjs
           fi
           kill $(cat /tmp/grade3-preview-http.pid)
-      - name: Exercise Grade 2 games, Understanding Checks, flashcards and student links in Chromium
+      - name: Exercise Grade 2 Understanding Checks in Chromium
         working-directory: source
+        timeout-minutes: 8
         env:
           G2_SITE: ../classroom/_site
           G2_PREFIX: grade2/
+          G3_ONLY: checks
+        run: node tools/grade2-authoring/tests/browser-grade2.cjs --quick
+      - name: Exercise Grade 2 flashcards and student links in Chromium
+        working-directory: source
+        timeout-minutes: 8
+        env:
+          G2_SITE: ../classroom/_site
+          G2_PREFIX: grade2/
+        run: |
+          G3_ONLY=cards node tools/grade2-authoring/tests/browser-grade2.cjs
+          G3_ONLY=links node tools/grade2-authoring/tests/browser-grade2.cjs
+      - name: Play through Grade 2 games in Chromium
+        working-directory: source
+        timeout-minutes: 12
+        env:
+          G2_SITE: ../classroom/_site
+          G2_PREFIX: grade2/
+          G3_ONLY: games
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             node tools/grade2-authoring/tests/browser-grade2.cjs
