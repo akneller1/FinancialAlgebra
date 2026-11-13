@@ -43,6 +43,9 @@ export function assembleGrade4({ source, out }) {
   ['worksheet-generator/grade4-games.html', 'worksheet-generator/grade4-flashcards.html', 'worksheet-generator/grade4-understanding-check.html',
     'worksheet-generator/elementary', 'worksheet-generator/grade4', 'question-banks/math4', 'question-banks/assets/math4']
     .concat(list('artifacts', /^math4-/), list('thumbs', /^math4-/)).forEach(f => copy(f));
+  // Grade 4 players load per-unit metadata from question-banks/math4/meta/.
+  // Authoring stores these under math4/meta/, so place them at the runtime path.
+  copy('math4/meta', 'question-banks/math4/meta');
   /* 2. shared Classroom files the players use, taken from the assembled production shell */
   ['question-bank-adapter.js', 'question-bank-loader.js', 'analytics.js', 'assets/favicon.svg', 'worksheet-generator/core/math-display.js',
     'worksheet-generator/core/math-display.css', 'worksheet-generator/games/skill-setup.js'].forEach(f => { if (fs.existsSync(path.join(out, f))) copy(f, f, out); });
