@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {validateOutline,skillId} from '../src/outline-template.js';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
-const course=JSON.parse(read('course-outlines/grade4.json'));
+// Preserve the original Math Expressions source-outline assertions against its archive.
+const course=JSON.parse(read('course-outlines/grade4-math-expressions.json'));
+const activeCourse=JSON.parse(read('course-outlines/grade4.json'));
 test('Grade 4 source curriculum contains all twelve units in source order',()=>{
  assert.equal(course.id,'math4');
  assert.equal(course.source.pages,15);
@@ -48,6 +50,34 @@ test('Grade 4 preserves meaningful source qualifications',()=>{
  assert.ok(joined.includes('the source repeats these two objectives'));
  assert.ok(course.units[8].sourcePages.includes(12));
 });
+
+test('active Grade 4 Common Core course stays separate from the source archive',()=>{
+ const stats=validateOutline(activeCourse);
+ assert.deepEqual(stats,{units:10,skills:49});
+ assert.equal(activeCourse.id,'math4');
+ assert.equal(activeCourse.status,'approved');
+ assert.equal(Object.keys(activeCourse.standards).length,35);
+ assert.equal(new Set(activeCourse.units.map(u=>u.id)).size,10);
+ const covered=new Set();
+ for(const unit of activeCourse.units){
+  assert.equal(unit.status,'approved');
+  assert.ok(unit.skills.length>0);
+  assert.equal(unit.skills.length,unit.skillStandards.length);
+  assert.equal(new Set(unit.skills).size,unit.skills.length);
+  for(let i=0;i<unit.skills.length;i++){
+   assert.equal(skillId(unit.id,i),unit.id+'-skill-'+String(i+1).padStart(2,'0'));
+   assert.ok(unit.skillStandards[i].length,'Missing standard mapping in '+unit.id);
+   for(const std of unit.skillStandards[i]){
+    assert.ok(activeCourse.standards[std],'Unknown standard '+std);
+    assert.ok(unit.standards.includes(std),'Unit does not list skill standard '+std);
+    covered.add(std);
+   }
+  }
+ }
+ assert.equal(covered.size,35);
+ assert.ok(read('docs/math4/CROSSWALK.md').includes('grade4-math-expressions.json'));
+});
+
 test('Grade 4 page reuses the existing generic outline renderer and does not advertise finished activities',()=>{
  const page=read('grade4.html'),js=read('src/grade4-site.js'),template=read('src/outline-template.js');
  assert.ok(page.includes('styles.css'));
