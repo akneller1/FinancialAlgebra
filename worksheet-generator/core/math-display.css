@@ -40,3 +40,7 @@ svg.fig .dot.open{fill:var(--bgc,#fff);stroke:var(--fg,currentColor);stroke-widt
 .mk-math{white-space:normal}.gm-opt .fr,.choice .fr{font-size:.95em}.fr .fn,.fr .fd{white-space:nowrap}.gm-opt,.choice{min-height:56px}
 /* Inside sentences (text decorated for stacked fractions) "and" / "or" are ordinary words, not answer connectors */
 .mk-math .w,.mk-prose .w{font-size:inherit;font-weight:inherit;letter-spacing:normal;text-transform:none;margin:0;opacity:1}
+.mx{display:inline-flex;align-items:stretch;vertical-align:middle;margin:.15em .2em;white-space:nowrap;font-style:normal}
+.mx::before,.mx::after{content:"";width:.32em;border:.08em solid currentColor}
+.mx::before{border-right:0}.mx::after{border-left:0}
+.mxg{display:inline-grid;column-gap:.9em;row-gap:.22em;padding:.2em .35em;justify-items:center;align-items:center}

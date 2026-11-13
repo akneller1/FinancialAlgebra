@@ -1,39 +1,46 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
-import {validateOutline,skillId} from '../src/outline-template.js';
+import {skillId} from '../src/outline-template.js';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const c=JSON.parse(read('course-outlines/grade2.json'));
-const names=["Adding, Subtracting, and Working with Data","Adding and Subtracting within 100","Measuring Length","Addition and Subtraction on the Number Line","Numbers to 1,000","Geometry, Time, and Money","Adding and Subtracting within 1,000","Equal Groups","Putting It All Together"];
-const pacing=[[14,18],[12,16],[14,18],[12,15],[11,14],[16,21],[14,18],[10,13],[13,13]];
-test('Grade 2: units and original section headings are present',()=>{
+// The current Claude course replaced the former IM outline. Check the active
+// 12-unit curriculum against the independently published curriculum map.
+const map=JSON.parse(read('docs/math2/curriculum-map.json'));
+const ids=['add-subtract-20','odd-even-arrays','place-value-1000','count-compare-1000','add-subtract-100','word-problems-100','add-subtract-1000','measuring-length','length-number-line','time-money','graphs-data','shapes-equal-shares'];
+test('Grade 2: current twelve-unit course has 53 learning targets',()=>{
  assert.equal(c.id,'math2');
- assert.equal(c.source.format,'HTML');
- assert.equal(c.source.url,'https://im.kendallhunt.com/k5/teachers/grade-2/course-guide/scope-and-sequence.html');
- assert.deepEqual(c.units.map(u=>u.name),names);
- assert.equal(c.units.length,9);
- assert.equal(c.units.reduce((n,u)=>n+u.sections.length,0),25);
- assert.equal(validateOutline(c).skills,89);
- assert.deepEqual(c.units.map(u=>[u.estimatedDays,u.estimatedDaysMax]),pacing);
+ assert.equal(c.status,'development');
+ assert.ok(c.source.title.includes('Common Core'));
+ assert.deepEqual(c.units.map(u=>u.id),ids);
+ assert.equal(c.units.reduce((n,u)=>n+u.skills.length,0),53);
+ assert.equal(Object.keys(c.standards).length,28);
+ assert.deepEqual(map.units.map(u=>u.id),ids);
 });
-test('Grade 2: each section has source alignment and stable original skill identifiers',()=>{
- for(const unit of c.units){
-  assert.equal(unit.status,'outline');
-  assert.equal(unit.resource,'Illustrative Mathematics (Kendall Hunt)');
-  assert.ok(unit.sections.length>=2);
+test('Grade 2: every target has stable IDs and complete standards coverage',()=>{
+ const covered=new Set();
+ for(const [ui,unit] of c.units.entries()){
+  assert.equal(unit.status,'development');
   assert.equal(unit.skills.length,new Set(unit.skills).size);
-  assert.deepEqual(unit.skills,unit.sections.flatMap(section=>section.skills));
-  assert.deepEqual(unit.objectiveGroups.map(group=>group.category),unit.sections.map(s=>'Section '+s.letter+': '+s.name));
+  assert.equal(unit.skills.length,unit.targets.length);
+  assert.equal(unit.skills.length,unit.skillStandards.length);
+  assert.equal(unit.skills.length,map.units[ui].skills.length);
   for(const [i,name] of unit.skills.entries()){
-   assert.ok(name.length>=12);
-   assert.equal(skillId(unit.id,i),unit.id+'-skill-'+String(i+1).padStart(2,'0'));
-  }
-  for(const section of unit.sections){
-   assert.ok(section.standards.length>0);
-   assert.ok(section.skills.length>0);
-   for(const code of section.standards) assert.ok(c.standards[code]);
+   const mapped=map.units[ui].skills[i];
+   assert.equal(mapped.id,skillId(unit.id,i));
+   assert.equal(mapped.name,name);
+   assert.equal(mapped.target,unit.targets[i]);
+   assert.deepEqual(mapped.standards,unit.skillStandards[i]);
+   assert.ok(name.trim().length>0);
+   assert.ok(unit.targets[i].startsWith('I can '));
+   assert.ok(unit.skillStandards[i].length>0);
+   for(const code of unit.skillStandards[i]){
+    assert.ok(c.standards[code],'Unmapped standard '+code);
+    covered.add(code);
+   }
   }
  }
+ assert.deepEqual([...covered].sort(),Object.keys(c.standards).sort());
 });
 test('Grade 2: page, navigation, and source-based outline are wired',()=>{
  const page=read('grade2.html'),script=read('src/grade2-site.js');

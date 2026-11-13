@@ -31,6 +31,18 @@ function fmArticle(s,i,m){
   if(m[0]==='A')return /(^|[.!?:\n]\s*)$/.test(before);
   return !(prev&&FM_VARCTX.has(prev.toLowerCase()));
 }
+/* A hyphen joining words ("x-axis", "sign-up", "24-pound", "row-echelon") stays a hyphen; every other "-" is a minus sign.
+   A side counts as a word when it has a lowercase letter, 3+ letters and a vowel (or is one of a few short words),
+   and is not a function name, so "2x-3", "a-b", "AB-CD" and "5-cos(x)" keep the minus sign. */
+const FM_FN=new Set(['sin','cos','tan','sec','csc','cot','log','ln','exp','arcsin','arccos','arctan','sinh','cosh','tanh','lim','max','min']);
+const FM_SHORT=new Set(['up','in','on','by','to','of','off','out']);
+function fmWord(w){const l=w.toLowerCase();if(!/[a-z]/.test(w)||FM_FN.has(l))return false;return FM_SHORT.has(l)||(w.length>=3&&/[aeiouy]/.test(l));}
+function fmWordHyphen(s,i){
+  const L=/([A-Za-z]+|\d+)$/.exec(s.slice(0,i)),R=/^[A-Za-z]+/.exec(s.slice(i+1));
+  if(!L||!R)return false;
+  if(/^\d/.test(L[1]))return fmWord(R[0]);
+  return fmWord(L[1])||fmWord(R[0]);
+}
 function fmEsc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function fmMatch(s,i,open,close){ /* s[i..] starts with open; return index just after the matching close */
   let d=0;
@@ -100,7 +112,7 @@ function fm(s){
     if(c==='<'){out+='&lt;';i++;continue;}
     if(c==='>'){out+='&gt;';i++;continue;}
     if(c==='&'){out+='&amp;';i++;continue;}
-    if(c==='-'){out+='−';i++;continue;}
+    if(c==='-'){out+=fmWordHyphen(s,i)?'-':'−';i++;continue;}
     if(c==='*'){out+='·';i++;continue;}
     if(c==="'"){out+=/[A-Za-z]/.test(s[i-1]||'')&&/[A-Za-z]/.test(s[i+1]||'')?"'":'′';i++;continue;}
     if(c==='\n'){out+='<br>';i++;continue;}
@@ -180,23 +192,68 @@ function fractions(src){
  }
  return s.replace(/\uE000(\d+)\uE001/g,(_,n)=>dates[+n]);
 }
+/* Dollar amounts with one decimal place get the second digit: $2.5 -> $2.50, $1,050.5 -> $1,050.50. */
+/* Squared trig functions in textbook form: cos(x)² -> cos²(x), sec(2x)^2 -> sec²(2x). Display only; stored answers are unchanged. */
+function trigSquares(s){
+ const re=/(^|[^A-Za-z])(sin|cos|tan|sec|csc|cot)\(([^()]{1,16})\)(?:²|\^2(?![0-9.]))/g;
+ let prev,out=String(s);do{prev=out;out=out.replace(re,'$1$2²($3)');}while(out!==prev);return out;
+}
+function money(s){return String(s).replace(/\$(\d{1,3}(?:,\d{3})+|\d+)\.(\d)(?!\d)/g,(_,whole,cent)=>'$'+whole+'.'+cent+'0');}
+/* Matrices written as [a, b; c, d] (rows split by ";", entries by ",") are drawn as a bracketed grid.
+   Needs at least one ";" and the same number of entries in every row; [[top ; bottom]] fractions are left alone. */
+const MATRIX=/\[([^\[\]\n]*;[^\[\]\n]*)\]|(\b[A-Z]\s?=\s?)\[([^\[\];\n]*,[^\[\];\n]*)\]/g; // [a, b; c, d], or one row after "A = "
+function matrixRows(inner,oneRow){
+ const rows=inner.split(';').map(r=>r.split(',').map(x=>x.trim()));
+ const n=rows[0].length;
+ if((oneRow?n<2:rows.length<2)||rows.some(r=>r.length!==n||r.some(x=>!x||x.length>28)))return null;
+ if(oneRow&&!rows[0].every(x=>/^[-−+]?[\d.]+$|^[-−]?\d+\/\d+$/.test(x)))return null; // one row: numbers only
+ return rows;
+}
+function matrixMatch(s,m){ /* -> {start,end,prefix,rows} or null */
+ const oneRow=m[1]===undefined,prefix=oneRow?m[2]:'',inner=oneRow?m[3]:m[1];
+ const start=m.index+prefix.length,end=m.index+m[0].length;
+ if(s[start-1]==='['||s[end]===']')return null;
+ const rows=matrixRows(inner,oneRow);
+ return rows?{start,end,rows}:null;
+}
+function hasMatrix(s){
+ s=String(s);let m;MATRIX.lastIndex=0;
+ while((m=MATRIX.exec(s))){if(matrixMatch(s,m))return true;}
+ return false;
+}
+function mini(part){return fm(trigSquares(fractions(part)).replace(/\^\(([^()]*)\)/g,'^{$1}'));}
+function withMatrices(part){
+ let out='',last=0,m;MATRIX.lastIndex=0;
+ while((m=MATRIX.exec(part))){
+  const hit=matrixMatch(part,m);if(!hit)continue;
+  const rows=hit.rows;
+  out+=mini(part.slice(last,hit.start));
+  out+='<span class="mx" role="math" aria-label="matrix"><span class="mxg" style="grid-template-columns:repeat('+rows[0].length+',auto)">'+
+   rows.map(r=>r.map(x=>'<span>'+mini(x)+'</span>').join('')).join('')+'</span></span>';
+  last=hit.end;
+ }
+ return out+mini(part.slice(last));
+}
 function html(value,options){
- const rendered=String(value==null?'':value).split(/(⟨[^⟩]*⟩)/).map(part=>{
+ const rendered=money(value==null?'':value).split(/(⟨[^⟩]*⟩)/).map(part=>{
   if(/^⟨/.test(part)&&G.katex){return G.katex.renderToString(part.slice(1,-1).replace(/\\frac/g,'\\dfrac'),{throwOnError:false,output:'html',trust:false})}
-  let mini=fractions(part);mini=mini.replace(/\^\(([^()]*)\)/g,'^{$1}');
-  return fm(mini).replace(/\n/g,'<br>');
+  return withMatrices(part).replace(/\n/g,'<br>');
  }).join('');
  return options&&options.prose?'<span class="mk-prose">'+rendered+'</span>':rendered;
 }
 function decorate(root){
  if(!root||!G.document)return;
  const walk=G.document.createTreeWalker(root,4),nodes=[];let node;
- while((node=walk.nextNode()))if(node.parentElement&&!node.parentElement.closest('script,style,textarea,select,option,.katex,.mk-math,.fr')&&/\/(?!\/)/.test(node.nodeValue)&&fractions(node.nodeValue)!==node.nodeValue)nodes.push(node);
+ while((node=walk.nextNode())){
+  if(!node.parentElement||node.parentElement.closest('script,style,textarea,select,option,.katex,.mk-math,.fr'))continue;
+  let tidy=money(node.nodeValue);if(!/\//.test(tidy))tidy=trigSquares(tidy);if(tidy!==node.nodeValue)node.nodeValue=tidy;
+  if((/\/(?!\/)/.test(node.nodeValue)&&fractions(node.nodeValue)!==node.nodeValue)||hasMatrix(node.nodeValue))nodes.push(node);
+ }
  nodes.forEach(n=>{const span=G.document.createElement('span');span.className='mk-math';span.innerHTML=html(n.nodeValue);n.replaceWith(span)});
 }
-G.MK_MATH_DISPLAY={html,fractions,decorate};
+G.MK_MATH_DISPLAY={html,fractions,decorate,money,hasMatrix,trigSquares};
 if(G.document){
- const script=G.document.currentScript,link=G.document.createElement('link');link.rel='stylesheet';link.href=new URL('math-display.css?v=worksheet-layout-20261111',script.src).href;G.document.head.appendChild(link);
+ const script=G.document.currentScript,link=G.document.createElement('link');link.rel='stylesheet';link.href=new URL('math-display.css?v=matrix-grid-20261113',script.src).href;G.document.head.appendChild(link);
  const selector='.af-prompt,.gm-q,.gm-opt,.gm-sol,.prompt,.statement,.choices,.problem,.display,.eq,.q,.solution,.steps,.st,.item,.ord,.pm-text,.pm-big,#prPreview .page';
  let pending=false;function scan(){pending=false;G.document.querySelectorAll(selector).forEach(decorate)}
  function schedule(){if(!pending){pending=true;queueMicrotask(scan)}}
