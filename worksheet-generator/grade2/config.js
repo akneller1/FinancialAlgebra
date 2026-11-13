@@ -1,0 +1,195 @@
+/* 2nd Grade Math settings for the shared elementary runtime (worksheet-generator/elementary/).
+   Generated from games.json (the Grade 3 settings with Array Attack removed: its engine writes multiplication equations). Load this before elementary/el-core.js.
+   A new elementary course needs only its own copy of this file and three thin pages (games, flashcards, Understanding Check). */
+window.MK_ELEMENTARY = {
+  course: 'math2',
+  label: 'Grade 2',
+  metaPath: '../question-banks/math2/meta/',
+  flashcards: 'grade2/flashcards/',
+  zoomKey: 'el-zoom-math2',
+  answerHint: 'Times: 4:05 PM · Money: 45¢ or $8 · With units: 12 inches',
+  games: {
+    "treasure-quest": {
+      "title": "Treasure Quest",
+      "icon": "💎",
+      "engine": "path",
+      "theme": "treasure",
+      "per": 1,
+      "modes": [
+        [
+          "solo",
+          "On my own"
+        ],
+        [
+          "class",
+          "Whole class together"
+        ]
+      ],
+      "stops": [
+        "Start",
+        "Palm Beach",
+        "Old Bridge",
+        "Parrot Cove",
+        "Hidden Cave",
+        "Waterfall",
+        "Sunken Ship",
+        "Lighthouse",
+        "Treasure"
+      ],
+      "intro": "Follow the treasure map. Each correct answer moves you to the next stop and adds a gem to your chest."
+    },
+    "space-rescue": {
+      "title": "Space Rescue",
+      "icon": "🚀",
+      "engine": "path",
+      "theme": "space",
+      "per": 2,
+      "modes": [
+        [
+          "solo",
+          "On my own"
+        ],
+        [
+          "class",
+          "Whole class together"
+        ]
+      ],
+      "stops": [
+        "Launch Pad",
+        "Moon Base",
+        "Red Planet",
+        "Ice Planet",
+        "Ring World",
+        "Star Station"
+      ],
+      "intro": "Astronauts are waiting at each stop. Answer two questions correctly to fly to the next stop and rescue them."
+    },
+    "puzzle-island": {
+      "title": "Puzzle Island",
+      "icon": "🏝️",
+      "engine": "path",
+      "theme": "island",
+      "per": 2,
+      "modes": [
+        [
+          "solo",
+          "On my own"
+        ],
+        [
+          "class",
+          "Whole class together"
+        ]
+      ],
+      "stops": [
+        "Dock",
+        "Shell Island",
+        "Turtle Island",
+        "Coconut Island",
+        "Volcano Island",
+        "Puzzle Island"
+      ],
+      "intro": "Sail from island to island. Answer two questions correctly on each island to earn its puzzle piece and sail on."
+    },
+    "castle-conquest": {
+      "title": "Castle Conquest",
+      "icon": "🏰",
+      "engine": "builder",
+      "theme": "castle",
+      "modes": [
+        [
+          "solo",
+          "On my own"
+        ],
+        [
+          "class",
+          "Whole class together"
+        ]
+      ],
+      "intro": "Every correct answer adds a part to your castle: walls, towers, a gate and flags. Build all 12 parts to conquer the castle!"
+    },
+    "math-detective": {
+      "title": "Math Detective",
+      "icon": "🕵️",
+      "engine": "builder",
+      "theme": "detective",
+      "modes": [
+        [
+          "solo",
+          "On my own"
+        ],
+        [
+          "class",
+          "Whole class together"
+        ]
+      ],
+      "intro": "A trophy is missing! Each correct answer uncovers one clue tile. Uncover all 12 clues to solve the case."
+    },
+    "monster-match": {
+      "title": "Monster Match",
+      "icon": "👾",
+      "engine": "match",
+      "cardIcons": [
+        "👾",
+        "⭐"
+      ],
+      "modes": [
+        [
+          "solo",
+          "On my own"
+        ],
+        [
+          "pairs",
+          "With a partner"
+        ]
+      ],
+      "intro": "Flip two cards. Work out each monster's problem and match it to its answer star. Match all the pairs to win."
+    },
+    "rocket-race": {
+      "title": "Rocket Race",
+      "icon": "🏁",
+      "engine": "race",
+      "length": 8,
+      "token": "🚀",
+      "track": "#27306b",
+      "modes": [
+        [
+          "class2",
+          "2 teams"
+        ],
+        [
+          "class3",
+          "3 teams"
+        ],
+        [
+          "class4",
+          "4 teams"
+        ]
+      ],
+      "intro": "Teams take turns. A correct answer moves your rocket one space. The first team to the finish line wins!"
+    },
+    "math-soccer": {
+      "title": "Math Soccer",
+      "icon": "⚽",
+      "engine": "soccer",
+      "modes": [
+        [
+          "class2",
+          "2 teams"
+        ]
+      ],
+      "intro": "A correct answer kicks the ball toward the other goal and keeps the ball. A miss is a turnover. Score 3 goals to win!"
+    },
+    "four-in-a-row": {
+      "title": "Four in a Row",
+      "icon": "🔴",
+      "engine": "c4",
+      "modes": [
+        [
+          "class2",
+          "2 teams"
+        ]
+      ],
+      "intro": "Answer correctly to drop a disc in a column. Get four in a row to win!"
+    }
+  }
+};
