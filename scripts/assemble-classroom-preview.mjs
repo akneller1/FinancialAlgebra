@@ -40,6 +40,16 @@ if(approvedGrade4Banks.length){
  const g4=assembleGrade4({source,out}),i=courses.findIndex(c=>c.id==='grade4');
  skillData.grade4=g4.skills;delete g4.skills;courses[i]=g4;
 }
+// Grade 3 is available only in this noindex development build.
+const previewGrade3=manifest.banks.filter(b=>b.courseId==='math3'&&(b.preview===true||b.approved===true));
+if(previewGrade3.length){
+ const assembler=path.join(source,'tools/grade3-authoring/staging/assemble-grade3.mjs');
+ if(!fs.existsSync(assembler))throw Error('Grade 3 preview banks require '+assembler);
+ const {assembleGrade3,grade3Ready}=await import(new URL('../tools/grade3-authoring/staging/assemble-grade3.mjs',import.meta.url));
+ if(!grade3Ready(source))throw Error('Grade 3 staging assembler reports course not ready');
+ const g3=assembleGrade3({source,out}),i=courses.findIndex(c=>c.id==='grade3');
+ skillData.grade3=g3.skills;delete g3.skills;courses[i]=g3;
+}
 const approvedGrades=courses.filter(c=>c.approved).map(c=>c.id.slice(5)),pendingGrades=courses.filter(c=>!c.approved).map(c=>c.id.slice(5));
 const catalog=`/* Development artifact: production Classroom renderer, preloaded elementary courses. */\n(function(G){var courses=${JSON.stringify(courses)},skills=${JSON.stringify(skillData)};G.MK_ELEMENTARY_PRELOAD=courses;G.LIBRARY.courses=G.LIBRARY.courses.filter(c=>!courses.some(p=>p.id===c.id)).concat(courses);var C=G.MK_COURSE_CATALOG,old=C.getSkills,records=C.getSkillRecords;C.getSkills=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].slice():old(c,u)};C.getSkillRecords=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].map((name,i)=>({id:u+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})):records(c,u)};G.LIBRARY.courses.forEach(c=>c.units.forEach(u=>u.artifacts.forEach(a=>{for(var k of ['path','thumb'])if(typeof a[k]==='string')a[k]=a[k].replace(/^\\/grade5\\//,'grade5/')})));})(window);\n`;
 fs.writeFileSync(path.join(out,'elementary-preload-catalog.js'),catalog);
@@ -97,14 +107,14 @@ for(let grade=1;grade<=4;grade++){
 // Adapt future approved banks once, just as integrated Grade 5 does today.
 const nativePath=path.join(out,'question-banks/manifest.json'),native=JSON.parse(fs.readFileSync(nativePath,'utf8'));
 const scoped=[];
-for(const entry of manifest.banks.filter(b=>/^math[1-4]$/.test(b.courseId)&&b.approved===true)){
+for(const entry of manifest.banks.filter(b=>/^math[1-4]$/.test(b.courseId)&&(b.approved===true||(b.courseId==='math3'&&b.preview===true)))){
  const bank=JSON.parse(fs.readFileSync(path.join(source,entry.path),'utf8')),gradeId=entry.courseId.replace('math','grade');
  const target='question-banks/'+gradeId+'/'+entry.unitId+'.json';
  const adapted=structuredClone(bank);adapted.courseId=gradeId;
  for(const q of adapted.questions)if(q.diagram?.type==='image'){
   const rel=q.diagram.spec.src;
   if(rel.includes('..')||path.isAbsolute(rel))throw Error('Unsafe bank diagram '+rel);
-  const to='question-banks/assets/'+gradeId+'/'+rel;fs.mkdirSync(path.dirname(path.join(out,to)),{recursive:true});fs.copyFileSync(path.join(source,rel),path.join(out,to));q.diagram.spec.src=to;
+  const to=rel.replace(/^question-banks\/assets\/math3\//,'question-banks/assets/grade3/');fs.mkdirSync(path.dirname(path.join(out,to)),{recursive:true});fs.copyFileSync(path.join(source,rel),path.join(out,to));q.diagram.spec.src=to;
  }
  fs.mkdirSync(path.dirname(path.join(out,target)),{recursive:true});fs.writeFileSync(path.join(out,target),JSON.stringify(adapted));
  native.banks=native.banks.filter(b=>!(b.courseId===gradeId&&b.unitId===entry.unitId));native.banks.push({courseId:gradeId,unitId:entry.unitId,path:target,approved:true});
