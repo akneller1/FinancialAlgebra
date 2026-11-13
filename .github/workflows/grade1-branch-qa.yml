@@ -10,6 +10,7 @@ on:
       - 'course-outlines/grade1.json'
       - 'scripts/audit-grade1-bank.cjs'
       - 'scripts/audit-grade1-semantics.cjs'
+      - 'scripts/audit-grade1-alignment.cjs'
       - 'scripts/test-grade1-browser.cjs'
       - '.github/workflows/grade1-branch-qa.yml'
   workflow_dispatch:
@@ -38,6 +39,8 @@ jobs:
         run: node scripts/audit-grade1-bank.cjs
       - name: Independently check question wording versus mathematical answers
         run: node scripts/audit-grade1-semantics.cjs
+      - name: Report question-to-skill alignment, including wrong addend structures
+        run: node scripts/audit-grade1-alignment.cjs
       - name: Install Chromium browser for student-facing sample render checks
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
@@ -64,6 +67,8 @@ jobs:
             grade1-semantic-report.json
             grade1-semantic-report.md
             grade1-browser-results/
+            grade1-alignment-report.json
+            grade1-alignment-report.md
           if-no-files-found: warn
 # Browser preview test lives in scripts/test-grade1-browser.cjs for optional later use.
 # It is not a release gate while known semantic errors block the course.
