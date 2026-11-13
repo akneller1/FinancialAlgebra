@@ -963,9 +963,11 @@ def tally_data_items(kind="total", limit=None):
 
     def f(r, L):
         cats = CATS[:band(L, 3, 4, 5)]
-        if limit and len(cats) > 3:
-            cats = cats[:3]
+        if limit:
+            cats = cats[:3] if L < 2 else cats[:2]
         high = band(L, 6, 11, 18)
+        if limit and len(cats) == 2:
+            high = max(high, min(int(limit) - 2, 12))
         if limit:
             high = max(1, min(high, int(limit) // max(1, len(cats))))
         counts = r.sample(range(1, high + 1), len(cats))
