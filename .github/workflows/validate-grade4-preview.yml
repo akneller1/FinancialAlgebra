@@ -34,3 +34,28 @@ jobs:
         env:
           CLASSROOM_SOURCE_DIR: ../classroom
         run: node scripts/test-classroom-preview.cjs
+      - name: Install browser test dependencies
+        working-directory: source
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Browser smoke test of integrated Grade 4 course
+        working-directory: source
+        env:
+          G4_BASE: http://127.0.0.1:8771/
+        run: |
+          python3 -m http.server 8771 --directory ../classroom/_site > /tmp/grade4-server.log 2>&1 &
+          sleep 3
+          node tools/grade4-authoring/tests/browser-preview.cjs
+      - name: Browser test Grade 4 games, study guides and student links
+        working-directory: source
+        env:
+          G4_SITE: ../classroom/_site
+          G4_PREFIX: grade4/
+        run: node tools/grade4-authoring/tests/browser-grade4.cjs --quick
+      - name: Browser test Grade 4 native generators
+        working-directory: source
+        env:
+          G4_BASE: http://127.0.0.1:8771/worksheet-generator/
+          G4_SET: grade4
+        run: node tools/grade4-authoring/tests/browser-generators.cjs
