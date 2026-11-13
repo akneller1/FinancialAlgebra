@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/assemble-classroom-preview.mjs'
+      - 'scripts/test-classroom-preview.cjs'
+      - '.github/workflows/deploy-classroom-preview.yml'
 permissions:
   contents: read
   actions: read
@@ -44,6 +49,7 @@ jobs:
         with:
           path: classroom/_site
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
