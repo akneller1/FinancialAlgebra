@@ -5,6 +5,8 @@ window.MK_ELEMENTARY = {
   course: 'math2',
   label: 'Grade 2',
   metaPath: '../question-banks/math2/meta/',
+  // Only the Understanding Check page uses the separate verified check set.
+  checkBankPath: 'question-banks/math2/checks',
   flashcards: 'grade2/flashcards/',
   zoomKey: 'el-zoom-math2',
   answerHint: 'Times: 4:05 PM · Money: 45¢ or $8 · With units: 12 inches',
