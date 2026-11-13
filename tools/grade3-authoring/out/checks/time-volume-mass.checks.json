@@ -1,0 +1,402 @@
+{
+"m3c-tm-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 10,
+"m": 55
+},
+"family": "tt_read",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 10,
+"m": 55
+}
+}
+},
+"m3c-tm-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 5,
+"m": 20
+},
+"family": "tt_words"
+},
+"m3c-tm-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 4,
+"m": 44
+},
+"family": "tt_read",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 4,
+"m": 44
+}
+}
+},
+"m3c-tm-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 2,
+"m": 9
+},
+"family": "tt_words"
+},
+"m3c-tm-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 4,
+"m": 43
+},
+"family": "tt_read",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 4,
+"m": 43
+}
+}
+},
+"m3c-tm-s01-honors-002": {
+"q": {
+"k": "fn",
+"fn": "hour_hand",
+"h": 5,
+"m": 57
+},
+"family": "tt_hour_hand"
+},
+"m3c-tm-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "elapsed",
+"a": "5:05",
+"b": "5:15",
+"unit": "minutes"
+},
+"family": "el_find"
+},
+"m3c-tm-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "end_time",
+"a": "1:20",
+"d": 10
+},
+"family": "el_end"
+},
+"m3c-tm-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "elapsed",
+"a": "3:44",
+"b": "4:14",
+"unit": "minutes"
+},
+"family": "el_find"
+},
+"m3c-tm-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "end_time",
+"a": "1:47",
+"d": 26
+},
+"family": "el_end"
+},
+"m3c-tm-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "elapsed",
+"a": "9:21",
+"b": "10:19",
+"unit": "minutes"
+},
+"family": "el_find"
+},
+"m3c-tm-s02-honors-002": {
+"q": {
+"k": "fn",
+"fn": "end_time",
+"a": "2:36",
+"d": 52
+},
+"family": "el_end"
+},
+"m3c-tm-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "read_scale",
+"mx": 20,
+"st": 2,
+"v": 10,
+"unit": "liters"
+},
+"family": "lv_read",
+"diagram": {
+"kind": "beaker",
+"data": {
+"max": 20,
+"step": 2,
+"label_every": 1,
+"level": 10,
+"unit": "liters"
+}
+}
+},
+"m3c-tm-s03-cp2-002": {
+"q": {
+"k": "expr",
+"e": "10-9",
+"unit": "liters"
+},
+"family": "lv_more",
+"diagram": {
+"kind": "beaker",
+"data": {
+"max": 10,
+"step": 1,
+"label_every": 5,
+"level": 9,
+"unit": "liters"
+}
+}
+},
+"m3c-tm-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "read_scale",
+"mx": 20,
+"st": 1,
+"v": 2,
+"unit": "liters"
+},
+"family": "lv_read",
+"diagram": {
+"kind": "beaker",
+"data": {
+"max": 20,
+"step": 1,
+"label_every": 5,
+"level": 2,
+"unit": "liters"
+}
+}
+},
+"m3c-tm-s03-cp1-002": {
+"q": {
+"k": "expr",
+"e": "20-8",
+"unit": "liters"
+},
+"family": "lv_more",
+"diagram": {
+"kind": "beaker",
+"data": {
+"max": 20,
+"step": 1,
+"label_every": 5,
+"level": 8,
+"unit": "liters"
+}
+}
+},
+"m3c-tm-s03-honors-001": {
+"q": {
+"k": "expr",
+"e": "100-90",
+"unit": "liters"
+},
+"family": "lv_more",
+"diagram": {
+"kind": "beaker",
+"data": {
+"max": 100,
+"step": 10,
+"label_every": 2,
+"level": 90,
+"unit": "liters"
+}
+}
+},
+"m3c-tm-s03-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"50 liters. Each mark is 10 liters."
+]
+},
+"family": "lv_error",
+"diagram": {
+"kind": "beaker",
+"data": {
+"max": 100,
+"step": 10,
+"label_every": 2,
+"level": 50,
+"unit": "liters"
+}
+}
+},
+"m3c-tm-s04-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "read_scale",
+"mx": 20,
+"st": 2,
+"v": 14,
+"unit": "kilograms"
+},
+"family": "ms_read",
+"diagram": {
+"kind": "scale",
+"data": {
+"max": 20,
+"step": 2,
+"label_every": 1,
+"value": 14,
+"unit": "kilograms",
+"object": "box"
+}
+}
+},
+"m3c-tm-s04-cp2-002": {
+"q": {
+"k": "expr",
+"e": "5*100",
+"unit": "grams"
+},
+"family": "ms_balance"
+},
+"m3c-tm-s04-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "read_scale",
+"mx": 50,
+"st": 5,
+"v": 35,
+"unit": "kilograms"
+},
+"family": "ms_read",
+"diagram": {
+"kind": "scale",
+"data": {
+"max": 50,
+"step": 5,
+"label_every": 2,
+"value": 35,
+"unit": "kilograms",
+"object": "pumpkin"
+}
+}
+},
+"m3c-tm-s04-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "read_scale",
+"mx": 500,
+"st": 50,
+"v": 150,
+"unit": "grams"
+},
+"family": "ms_read",
+"diagram": {
+"kind": "scale",
+"data": {
+"max": 500,
+"step": 50,
+"label_every": 2,
+"value": 150,
+"unit": "grams",
+"object": "bag of rice"
+}
+}
+},
+"m3c-tm-s04-honors-001": {
+"q": {
+"k": "key",
+"accept": [
+"No. A bigger object is not always heavier; a balloon is big but very light."
+]
+},
+"family": "ms_mass_size"
+},
+"m3c-tm-s04-honors-002": {
+"q": {
+"k": "fn",
+"fn": "read_scale",
+"mx": 100,
+"st": 5,
+"v": 35,
+"unit": "kilograms"
+},
+"family": "ms_read",
+"diagram": {
+"kind": "scale",
+"data": {
+"max": 100,
+"step": 5,
+"label_every": 4,
+"value": 35,
+"unit": "kilograms",
+"object": "bag of rice"
+}
+}
+},
+"m3c-tm-s05-cp2-001": {
+"q": {
+"k": "expr",
+"e": "3+8",
+"unit": "kilograms"
+},
+"family": "mw_add"
+},
+"m3c-tm-s05-cp2-002": {
+"q": {
+"k": "expr",
+"e": "10-4",
+"unit": "grams"
+},
+"family": "mw_sub"
+},
+"m3c-tm-s05-cp1-001": {
+"q": {
+"k": "expr",
+"e": "37+43",
+"unit": "grams"
+},
+"family": "mw_add"
+},
+"m3c-tm-s05-cp1-002": {
+"q": {
+"k": "expr",
+"e": "50-22",
+"unit": "kilograms"
+},
+"family": "mw_sub"
+},
+"m3c-tm-s05-honors-001": {
+"q": {
+"k": "expr",
+"e": "390+392",
+"unit": "kilograms"
+},
+"family": "mw_add"
+},
+"m3c-tm-s05-honors-002": {
+"q": {
+"k": "expr",
+"e": "661-228",
+"unit": "liters"
+},
+"family": "mw_sub"
+}
+}
