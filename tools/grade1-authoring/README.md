@@ -142,7 +142,7 @@ remain attached to every question; only the coloring picture's palette assignmen
 
 The activity audit checks 120 whole-unit/level/format selections and all 279 single-skill
 selections for Stations, Error Analysis and coloring. Unsupported Tarsia selections still need
-more short, distinct answers; the bank is never padded or moved to another level to fill one.
+at least two distinct answers; the bank is never padded or moved to another level to fill one.
 
 ### Adaptive Grade 1 Tarsia
 
