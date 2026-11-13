@@ -53,6 +53,11 @@ if(previewGrade3.length){
 // Grade 2 is staged only when its complete preview package is present.
 const previewGrade2=manifest.banks.filter(b=>b.courseId==='math2'&&(b.preview===true||b.approved===true));
 if(previewGrade2.length){
+ if(previewGrade2.length!==12 || new Set(previewGrade2.map(b=>b.unitId)).size!==12)throw Error('Grade 2 preview requires exactly 12 distinct unit banks');
+ if(previewGrade2.some(b=>b.approved!==false||b.preview!==true))throw Error('Grade 2 must remain unapproved preview content in staging');
+ for(const b of previewGrade2){
+   if(typeof b.path!=='string'||!b.path.startsWith('question-banks/math2/')||b.path.includes('..')||!fs.existsSync(path.join(source,b.path)))throw Error('Missing or unsafe Grade 2 preview bank '+b.unitId);
+ }
  const assembler=path.join(source,'tools/grade2-authoring/staging/assemble-grade2.mjs');
  if(!fs.existsSync(assembler))throw Error('Grade 2 preview banks require '+assembler);
  const {assembleGrade2,grade2Ready}=await import(new URL('../tools/grade2-authoring/staging/assemble-grade2.mjs',import.meta.url));
