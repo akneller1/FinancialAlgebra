@@ -1,7 +1,14 @@
 name: Verify Grade 2 question bank
 on:
   push:
-    branches: [grade2-levels-and-semantics]
+    branches: [main, grade2-levels-and-semantics]
+    paths:
+      - 'question-banks/math2/**'
+      - 'question-banks/assets/math2/**'
+      - 'tools/grade1-authoring/**'
+      - 'tools/grade2-authoring/**'
+      - 'docs/math2/**'
+      - '.github/workflows/verify-grade2.yml'
   pull_request:
     paths:
       - 'question-banks/math2/**'
