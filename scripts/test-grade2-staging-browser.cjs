@@ -48,7 +48,7 @@ const server=http.createServer((req,res)=>{
   const student=await browser.newPage(),studentErrors=[];
   student.on('pageerror',e=>studentErrors.push(e.message));
   await student.goto(new URL(parsed.pathname+parsed.search,base).href,{waitUntil:'load'});
-  await student.waitForSelector('.el-setup, .el-stage',{timeout:25000});
+  try { await student.waitForSelector('.el-setup, .el-stage',{timeout:15000}); } catch(e) { console.error('Student URL',student.url(),'JS errors',studentErrors,'body',(await student.locator('body').innerText().catch(()=>'')).slice(0,500)); throw e; }
   assert.deepEqual(studentErrors,[],'Student game must boot without JS errors');
   await student.close();
   const check=await browser.newPage(),checkErrors=[],checkRequests=[];
