@@ -27,7 +27,7 @@ const report={passed:0,failed:[],errors:[],missing:[],diagramsOpened:0};
     for(const fmt of ['short-answer','multiple-choice','select-all','open-response']){
      await page.selectOption('#format',fmt);
      try{
-      await page.waitForFunction(()=>document.querySelector('#count')?.textContent.startsWith('Question '),null,{timeout:8000});
+      await page.waitForFunction(()=>document.querySelector('#count')?.textContent.startsWith('Question '),null,{timeout:3000});
       const text=(await page.locator('#prompt').innerText()).trim();
       if(!text||text.includes('Choose a different skill'))throw Error('Missing question prompt');
       const id=(await page.locator('#id').innerText()).trim();
@@ -47,7 +47,7 @@ const report={passed:0,failed:[],errors:[],missing:[],diagramsOpened:0};
       if(!(await page.locator('#answer').innerText()).includes('Answer:'))throw Error('Empty answer');
       await page.locator('#toggle').click();
       report.passed++;
-     }catch(e){report.failed.push({unit:units[i],level,format:fmt,error:e.message});}
+     }catch(e){report.failed.push({unit:units[i],level,format:fmt,error:e.message});if(report.failed.length>=6)throw Error('Stopped after six sample-viewer failures');}
     }
    }
    if(i<4)await page.screenshot({path:output+'/unit-'+(i+1)+'.png',fullPage:true});
