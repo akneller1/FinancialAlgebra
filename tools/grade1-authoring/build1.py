@@ -75,8 +75,11 @@ def numeric_distractors(answer):
 def mc_options(p, pos, r):
     if p.options:
         return [{"text": t, "correct": bool(c)} for t, c in p.options]
-    seen, ds = {_norm(p.answer)}, []
+    # Normalize grammatical singular/plural before comparing option identities:
+    # e.g. "1 tens and 1 one" becomes the correct "1 ten and 1 one".
+    seen, ds = {_norm(fix_text(p.answer))}, []
     for w, why in p.wrong:
+        w = fix_text(w)
         if _norm(w) in seen or not w.strip():
             continue
         seen.add(_norm(w))
