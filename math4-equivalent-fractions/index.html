@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equivalent Fraction Models · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Shade a fraction bar, then cut every part into smaller equal parts. The amount stays the same while the numerator and denominator are multiplied by the same number.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Equivalent Fraction Models</h1><p class="tl-sub">Set a fraction. Then choose how many pieces to cut each part into.</p>
+<div class="tl-model" id="efModel"></div><div class="tl-controls" id="efCtl"><div class="tl-field"><span class="lab">Numerator</span><div class="tl-step"><button type="button" data-k="n" data-s="-1" aria-label="Numerator down">−</button><b id="efN"></b><button type="button" data-k="n" data-s="1" aria-label="Numerator up">+</button></div></div><div class="tl-field"><span class="lab">Denominator</span><div class="tl-step"><button type="button" data-k="d" data-s="-1" aria-label="Denominator down">−</button><b id="efD"></b><button type="button" data-k="d" data-s="1" aria-label="Denominator up">+</button></div></div><div class="tl-field"><span class="lab">Cut each part into</span><div class="tl-step"><button type="button" data-k="k" data-s="-1" aria-label="Cut each part into down">−</button><b id="efK"></b><button type="button" data-k="k" data-s="1" aria-label="Cut each part into up">+</button></div></div></div><div class="tl-out" id="efOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st;
+function reset() { st = { n: 2, d: 3, k: 2 }; }
+function bar(y, n, d, fill, label) {
+  var w = 640 / d, s = '';
+  for (var i = 0; i < d; i++) s += '<rect x="' + (20 + i * w).toFixed(1) + '" y="' + y + '" width="' + w.toFixed(1) + '" height="64" fill="' + (i < n ? fill : '#fff') + '" stroke="#1d2a3a" stroke-width="2.5"/>';
+  return s + '<text x="700" y="' + (y + 26) + '" text-anchor="middle" font-size="24" font-weight="800">' + n + '</text><line x1="680" y1="' + (y + 33) + '" x2="720" y2="' + (y + 33) + '" stroke="#1d2a3a" stroke-width="3"/><text x="700" y="' + (y + 58) + '" text-anchor="middle" font-size="24" font-weight="800">' + d + '</text>';
+}
+function draw() {
+  var N = st.n * st.k, Dn = st.d * st.k, g = T.gcd(st.n, st.d);
+  $('efN').textContent = st.n; $('efD').textContent = st.d; $('efK').textContent = st.k;
+  $('efModel').innerHTML = '<svg viewBox="0 0 740 190" role="img" aria-label="Two fraction bars: ' + st.n + ' of ' + st.d + ' and ' + N + ' of ' + Dn + '">' + bar(14, st.n, st.d, '#f5a3c4') + bar(108, N, Dn, '#c3a6f0') +
+    '<line x1="' + (20 + 640 * st.n / st.d) + '" y1="6" x2="' + (20 + 640 * st.n / st.d) + '" y2="182" stroke="#d63c7a" stroke-width="3" stroke-dasharray="7 6"/></svg>';
+  $('efOut').innerHTML = T.frac(st.n, st.d) + ' = ' + T.frac(st.n + ' × ' + st.k, st.d + ' × ' + st.k) + ' = <b>' + T.frac(N, Dn) + '</b> &nbsp; The shading ends at the same place on both bars.' +
+    (g > 1 ? '<br>Simplest form of ' + T.frac(st.n, st.d) + ' is ' + T.frac(st.n / g, st.d / g) + '.' : '<br>' + T.frac(st.n, st.d) + ' is in simplest form.') +
+    '<br>Compared with ' + T.frac(1, 2) + ': ' + T.frac(st.n, st.d) + ' is <b>' + (2 * st.n > st.d ? 'greater than' : 2 * st.n < st.d ? 'less than' : 'equal to') + '</b> ' + T.frac(1, 2) + '.';
+  T.update({ n: st.n, d: st.d, k: st.k, N: N, D: Dn });
+}
+var CH = [{ text: 'Show that 2/3 is equal to 8/12.', test: function (s) { return s.n === 2 && s.d === 3 && s.k === 4; } },
+  { text: 'Make a fraction equal to 1/2 that has a denominator of 10.', test: function (s) { return s.N * 2 === s.D && s.D === 10; } },
+  { text: 'Build 6/8. What is its simplest form?', test: function (s) { return s.n === 6 && s.d === 8; } },
+  { text: 'Find three different names for 3/4.', test: (function () { var seen = {}; return function (s) { if (s.n * 4 === s.d * 3) seen[s.N + '/' + s.D] = 1; return Object.keys(seen).length >= 3; }; })() }];
+CH.forEach(function (c) { c.text = c.text.replace(/(\d+)\/(\d+)/g, function (m, a, b) { return T.frac(a, b); }); });
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'fractions-equivalent-fractions', title: 'Equivalent Fraction Models', standards: '4.NF.A.1, 4.NF.A.2',
+  teacher: ["Before cutting, ask: will the shaded amount change? Then cut and compare.", "Have students record each equation: 2/3 = (2 × 4)/(3 × 4) = 8/12.", "Use the dashed line to show the shading ends at the same place."], notice: ["Cutting every part into the same number of pieces multiplies the numerator and the denominator by that number.", "The pieces get smaller but there are more of them, so the amount stays the same.", "A fraction is in simplest form when no number greater than 1 divides both parts."], challenges: CH, reset: function () { reset(); draw(); } });
+T.steppers($('efCtl'), function (k, dlt) {
+  if (k === 'n') st.n = Math.max(0, Math.min(st.d, st.n + dlt));
+  if (k === 'd') { st.d = Math.max(1, Math.min(12, st.d + dlt)); st.n = Math.min(st.n, st.d); }
+  if (k === 'k') st.k = Math.max(1, Math.min(6, st.k + dlt));
+  draw();
+});
+draw();
+})();
+</script></body></html>

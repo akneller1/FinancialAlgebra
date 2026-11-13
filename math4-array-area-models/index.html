@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arrays and Area Models · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Build a multiplication array, split it into tens and ones, and see the partial products add up to the whole product.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Arrays and Area Models</h1><p class="tl-sub">Choose the number of rows and columns. Move the split line to break the array into two easier parts.</p>
+<div class="tl-model" id="amModel"></div><div class="tl-controls"><div class="tl-field"><label for="amR">Rows: <b id="amRV"></b></label><input type="range" id="amR" min="1" max="12" step="1" value="4"></div><div class="tl-field"><label for="amC">Columns: <b id="amCV"></b></label><input type="range" id="amC" min="1" max="30" step="1" value="12"></div><div class="tl-field"><label for="amS">Split after column: <b id="amSV"></b></label><input type="range" id="amS" min="0" max="30" step="1" value="10"></div><button type="button" class="tl-btn" id="amMode" aria-pressed="false">Show as area model</button></div><div class="tl-out" id="amOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st;
+function reset() { st = { r: 4, c: 12, s: 10, area: false, splits: {} }; $('amR').value = 4; $('amC').value = 12; $('amS').max = 30; $('amS').value = 10; }
+function draw() {
+  st.r = +$('amR').value; st.c = +$('amC').value; $('amS').max = st.c; st.s = Math.min(+$('amS').value, st.c); $('amS').value = st.s;
+  $('amRV').textContent = st.r; $('amCV').textContent = st.c; $('amSV').textContent = st.s ? st.s : 'no split';
+  var u = Math.min(22, 700 / st.c, 250 / st.r), W = st.c * u + 70, H = st.r * u + 60, x0 = 44, y0 = 34, s = '<svg viewBox="0 0 ' + W.toFixed(0) + ' ' + H.toFixed(0) + '" role="img" aria-label="' + st.r + ' by ' + st.c + ' array">';
+  var a = st.s && st.s < st.c ? st.s : 0;
+  if (st.area) {
+    s += '<rect x="' + x0 + '" y="' + y0 + '" width="' + ((a || st.c) * u) + '" height="' + (st.r * u) + '" fill="#7fb6f0" stroke="#1e3a8a" stroke-width="3"/>';
+    if (a) s += '<rect x="' + (x0 + a * u) + '" y="' + y0 + '" width="' + ((st.c - a) * u) + '" height="' + (st.r * u) + '" fill="#ffc27a" stroke="#1e3a8a" stroke-width="3"/>';
+    s += '<text x="' + (x0 + (a || st.c) * u / 2) + '" y="' + (y0 + st.r * u / 2 + 7) + '" text-anchor="middle" font-size="20" font-weight="800">' + st.r * (a || st.c) + '</text>';
+    if (a) s += '<text x="' + (x0 + a * u + (st.c - a) * u / 2) + '" y="' + (y0 + st.r * u / 2 + 7) + '" text-anchor="middle" font-size="20" font-weight="800">' + st.r * (st.c - a) + '</text>';
+  } else {
+    for (var i = 0; i < st.r; i++) for (var j = 0; j < st.c; j++) s += '<circle cx="' + (x0 + j * u + u / 2).toFixed(1) + '" cy="' + (y0 + i * u + u / 2).toFixed(1) + '" r="' + (u * 0.36).toFixed(1) + '" fill="' + (a && j >= a ? '#f08c1a' : '#2f7fd8') + '"/>';
+    if (a) s += '<line x1="' + (x0 + a * u) + '" y1="' + (y0 - 8) + '" x2="' + (x0 + a * u) + '" y2="' + (y0 + st.r * u + 8) + '" stroke="#1d2a3a" stroke-width="3" stroke-dasharray="7 6"/>';
+  }
+  s += '<text x="' + (x0 - 12) + '" y="' + (y0 + st.r * u / 2 + 7) + '" text-anchor="end" font-size="20" font-weight="800">' + st.r + '</text>';
+  s += '<text x="' + (x0 + (a || st.c) * u / 2) + '" y="' + (y0 - 12) + '" text-anchor="middle" font-size="20" font-weight="800">' + (a || st.c) + '</text>';
+  if (a) s += '<text x="' + (x0 + a * u + (st.c - a) * u / 2) + '" y="' + (y0 - 12) + '" text-anchor="middle" font-size="20" font-weight="800">' + (st.c - a) + '</text>';
+  $('amModel').innerHTML = s + '</svg>';
+  var p = st.r * st.c;
+  $('amOut').innerHTML = a ? '<b>' + st.r + ' × ' + st.c + '</b> = (' + st.r + ' × ' + a + ') + (' + st.r + ' × ' + (st.c - a) + ') = ' + st.r * a + ' + ' + st.r * (st.c - a) + ' = <b>' + p + '</b>' : '<b>' + st.r + ' × ' + st.c + ' = ' + p + '</b>. ' + st.r + ' and ' + st.c + ' are a factor pair of ' + p + '.';
+  if (a) st.splits[st.r + 'x' + st.c + '@' + a] = 1;
+  T.update({ r: st.r, c: st.c, a: a, area: st.area, p: p });
+}
+var CH = [{ text: 'Build 6 × 14 and split it into 6 × 10 and 6 × 4.', test: function (s) { return s.r === 6 && s.c === 14 && s.a === 10; } },
+  { text: 'Show 7 × 23 as an area model split at 20.', test: function (s) { return s.r === 7 && s.c === 23 && s.a === 20 && s.area; } },
+  { text: 'Find an array with 24 dots that is not 4 × 6.', test: function (s) { return s.p === 24 && !(s.r === 4 && s.c === 6) && !(s.r === 6 && s.c === 4); } },
+  { text: 'Make a square array. What is special about its two factors?', test: function (s) { return s.r === s.c && s.r > 1; } }];
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'multiplication-strategies', title: 'Arrays and Area Models', standards: '4.NBT.B.5, 4.OA.B.4',
+  teacher: ["Start with dots for small numbers, then switch to the area model for larger ones.", "Have students choose their own split and compare: every split gives the same product.", "Link the two boxes to the partial products they write on paper."], notice: ["Splitting the array does not change the total number of dots.", "Splitting at a ten makes the multiplication easier.", "The numbers of rows and columns are a factor pair of the product."], challenges: CH, reset: function () { reset(); draw(); } });
+['amR', 'amC', 'amS'].forEach(function (id) { $(id).oninput = draw; });
+$('amMode').onclick = function () { st.area = !st.area; this.setAttribute('aria-pressed', st.area); this.textContent = st.area ? 'Show as dots' : 'Show as area model'; draw(); };
+draw();
+})();
+</script></body></html>
