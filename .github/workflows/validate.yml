@@ -22,3 +22,5 @@ jobs:
       - name: Verify Grade 5 answers independently
         run: python3 tools/grade5-authoring/verify.py
 
+      - name: Verify Grade 3 integration source, skills and diagram paths
+        run: node scripts/check-grade3-source.mjs
