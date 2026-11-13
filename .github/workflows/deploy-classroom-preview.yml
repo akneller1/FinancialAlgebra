@@ -19,7 +19,7 @@ permissions:
   pages: write
   id-token: write
 concurrency:
-  group: integrated-development-pages
+  group: integrated-development-pages-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   build:
@@ -56,6 +56,7 @@ jobs:
           npm install --no-save playwright
           npx playwright install --with-deps chromium
       - name: Exercise Grade 3 games, study guides and student links in Chromium
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         working-directory: source
         env:
           G3_SITE: ../classroom/_site
@@ -67,6 +68,7 @@ jobs:
             node tools/grade3-authoring/tests/browser-grade3.cjs --quick
           fi
       - name: Exercise Grade 3 native generators and printable answer keys in Chromium
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         working-directory: source
         env:
           G3_BASE: http://127.0.0.1:8766/
