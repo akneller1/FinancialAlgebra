@@ -45,9 +45,13 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
  fs.mkdirSync('grade1-integration-results',{recursive:true});
  // Preserve readable images of a visual matching sheet and its teacher key.
  await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-geometry-time&kind=answer-match');
+ await page.reload();
+ await page.locator('input[name=prKind][value=answer-match]:checked').waitFor({state:'attached'});
  await page.locator('#prPreview .g1-printable').first().waitFor();
- await page.locator('#prPreview .mm-page').nth(1).screenshot({path:'grade1-integration-results/matching-printable.png'});
+ await page.locator('#prPreview .mm-page').first().screenshot({path:'grade1-integration-results/matching-printable.png'});
  await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-subtracting-working-data&kind=partner');
+ await page.reload();
+ await page.locator('input[name=prKind][value=partner]:checked').waitFor({state:'attached'});
  await page.locator('#prPreview .g1-printable').first().waitFor();
  await page.locator('#prPreview .mm-page').first().screenshot({path:'grade1-integration-results/partner-printable.png'});
  if(errors.length||broken.length)throw Error(JSON.stringify({errors,broken}));

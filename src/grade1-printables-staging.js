@@ -61,22 +61,28 @@
   return build.apply(this,arguments);
  };
  function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
- function question(it){var p=it.p;return '<p style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.4">'+esc(p.prompt)+'</p>'+(p.fig?'<img src="../'+esc(p.fig.src)+'" alt="'+esc(p.fig.alt)+'" style="display:block;width:100%;height:190px;object-fit:contain;margin:10px auto">':'');}
- function solution(it){return '<div class="mm-ans" style="overflow-wrap:anywhere"><b>Answer:</b> '+esc(it.key)+'</div><ol>'+it.p.steps.map(function(s){return '<li>'+esc(s.t||s.m||'')+'</li>';}).join('')+'</ol>';}
+ function question(it){var p=it.p;return '<p style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;line-height:1.4;margin:8px 0">'+esc(p.prompt)+'</p>'+(p.fig?'<img src="../'+esc(p.fig.src)+'" alt="'+esc(p.fig.alt)+'" style="display:block;width:100%;height:190px;object-fit:contain;margin:10px auto">':'');}
+ function solution(it){return '<div class="mm-ans" style="overflow-wrap:anywhere"><b>Answer:</b> '+esc(it.key)+'</div><ol style="margin:6px 0;padding-left:22px;font-size:15px;line-height:1.35">'+it.p.steps.map(function(s){return '<li>'+esc(s.t||s.m||'')+'</li>';}).join('')+'</ol>';}
  function page(title,body){return {nofoot:true,html:'<div class="mm-body pc g1-printable" style="font-family:Arial,sans-serif"><h1 style="font-size:25px">'+esc(title)+'</h1>'+body+'</div>'};}
  function chunk(items,n,fn){var out=[];for(var i=0;i<items.length;i+=n)out.push(fn(items.slice(i,i+n),i));return out;}
  function pages(cfg,B,v,nV,teacher){
   var title=N.skillSets[cfg.unitId].unitName+' · '+N.courseLevelName(cfg.unitId,cfg.level)+' · Version '+String.fromCharCode(65+v),out=[];
   if(B.kind==='partner'){
-   if(teacher)return chunk(B.rows,1,function(rows,i){var r=rows[0];return page('Partner Check · Teacher key', '<p>'+esc(title)+'</p><h2>Pair '+(i+1)+'</h2><div style="display:grid;grid-template-columns:1fr 1fr;gap:24px"><section><h3>Partner A</h3>'+question(r.A)+solution(r.A)+'</section><section><h3>Partner B</h3>'+question(r.B)+solution(r.B)+'</section></div>');});
-   var per=B.rows.some(function(r){return r.A.p.fig||r.B.p.fig||r.A.p.prompt.length>140||r.B.p.prompt.length>140;})?1:2;
+   var visual=B.rows.some(function(r){return r.A.p.fig||r.B.p.fig;}),long=B.rows.some(function(r){return r.A.p.prompt.length>100||r.B.p.prompt.length>100;});
+   if(teacher){
+    var keyPer=visual?1:long?2:3;
+    return chunk(B.rows,keyPer,function(rows,i){return page('Partner Check · Teacher key','<p>'+esc(title)+'</p>'+rows.map(function(r,j){return '<section><h2 style="font-size:18px;margin:12px 0 6px">Pair '+(i+j+1)+'</h2><div style="display:grid;grid-template-columns:1fr 1fr;gap:24px"><section><h3 style="font-size:16px;margin:6px 0">Partner A</h3>'+question(r.A)+solution(r.A)+'</section><section><h3 style="font-size:16px;margin:6px 0">Partner B</h3>'+question(r.B)+solution(r.B)+'</section></div></section>';}).join(''));});
+   }
+   var per=visual||long?1:3;
    ['A','B'].forEach(function(who){out=out.concat(chunk(B.rows,per,function(rows,i){
-    return page('Partner Check · Partner '+who,'<p>'+esc(title)+'</p><p>Name: ____________________ &nbsp; Partner: ____________________</p><p>Solve each problem. Compare answers with your partner. If they differ, find the mistake together.</p>'+rows.map(function(r,j){return '<section><h2>Pair '+(i+j+1)+'</h2>'+question(r[who])+'<div style="min-height:'+(per===1?150:70)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>My answer: ____________________</p><p>Do our answers match? □ Yes □ No</p></section>';}).join(''));
+    return page('Partner Check · Partner '+who,'<p>'+esc(title)+'</p><p>Name: ____________________ &nbsp; Partner: ____________________</p><p>Solve each problem. Compare answers with your partner. If they differ, find the mistake together.</p>'+rows.map(function(r,j){return '<section><h2>Pair '+(i+j+1)+'</h2>'+question(r[who])+'<div style="min-height:'+(per===1?150:55)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>My answer: ____________________</p><p>Do our answers match? □ Yes □ No</p></section>';}).join(''));
    }));});return out;
   }
-  if(!teacher)out=chunk(B.answers,4,function(answers,i){return page('Problem & Answer Matching · Answer bank','<p>'+esc(title)+'</p><p>Solve each numbered problem and write an answer letter. A letter may be used more than once.</p>'+answers.map(function(a){return '<div style="padding:18px;border-bottom:1px solid #bbb;white-space:pre-wrap;overflow-wrap:anywhere"><b>'+a.letter+'.</b> '+esc(a.value)+'</div>';}).join(''));});
+  var compactChoices=B.answers.every(function(a){return a.value.length<=60;})&&B.answers.reduce(function(n,a){return n+a.value.length;},0)<=200;
+  var choices='<p>Write an answer letter for each problem. Letters may be used more than once.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;border:1px solid #999;padding:12px">'+B.answers.map(function(a){return '<div style="overflow-wrap:anywhere"><b>'+a.letter+'.</b> '+esc(a.value)+'</div>';}).join('')+'</div>';
+  if(!teacher&&!compactChoices)out=chunk(B.answers,4,function(answers,i){return page('Problem & Answer Matching · Answer bank','<p>'+esc(title)+'</p><p>Solve each numbered problem and write an answer letter. A letter may be used more than once.</p>'+answers.map(function(a){return '<div style="padding:18px;border-bottom:1px solid #bbb;white-space:pre-wrap;overflow-wrap:anywhere"><b>'+a.letter+'.</b> '+esc(a.value)+'</div>';}).join(''));});
   var per=B.items.some(function(it){return it.p.fig||it.p.prompt.length>140;})?1:2;
-  return out.concat(chunk(B.items,per,function(items,i){return page('Problem & Answer Matching'+(teacher?' · Teacher key':''),'<p>'+esc(title)+'</p>'+items.map(function(it,j){return '<section><h2>Problem '+(i+j+1)+'</h2>'+question(it)+(teacher?'<p><b>Answer letter: '+it.letter+'</b></p>'+solution(it):'<div style="min-height:'+(per===1?140:70)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer letter: __________</p>')+'</section>';}).join(''));}));
+  return out.concat(chunk(B.items,per,function(items,i){return page('Problem & Answer Matching'+(teacher?' · Teacher key':''),'<p>'+esc(title)+'</p>'+(!teacher&&compactChoices?choices:'')+items.map(function(it,j){return '<section><h2>Problem '+(i+j+1)+'</h2>'+question(it)+(teacher?'<p><b>Answer letter: '+it.letter+'</b></p>'+solution(it):'<div style="min-height:'+(per===1?140:70)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer letter: __________</p>')+'</section>';}).join(''));}));
 
  }
  G.MK_GRADE1_PRINTABLES={pages:pages,partner:partner,matching:matching,key:key};
