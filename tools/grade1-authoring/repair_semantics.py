@@ -289,6 +289,13 @@ for unit in OUTLINE["units"]:
                           ["Find the shape with no corners in the picture.",
                            "Which pictured shape has no straight sides?",
                            "Name the pictured shape without corners."])
+            elif fn=="partition_count":
+                parts=int(rec["q"]["parts"])
+                variants=[f"Into how many equal parts is the whole divided?",
+                          f"Count the equal pieces in this picture. How many?",
+                          f"This whole has how many equal parts?",
+                          f"Look at the partitions. How many same-size pieces do you see?",
+                          f"The shape has {parts} equal parts. How many parts make the whole?"]
             else:
                 raise AssertionError("Unexpected repeated question after repairs "+q["id"]+" "+original)
             for new in variants:
