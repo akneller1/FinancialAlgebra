@@ -8,7 +8,7 @@ assert.equal((read('index.html').match(/src="elementary-preload-catalog/g)||[]).
 const context={window:{}};context.globalThis=context.window;
 for(const file of ['data.js','course-integrations.js','course-catalog.js','grade5/grade5-main-catalog.js','elementary-preload-catalog.js'])vm.runInNewContext(read(file),context,{filename:file});
 const G=context.window,grades=G.LIBRARY.courses.filter(c=>/^grade[1-4]$/.test(c.id));
-assert.equal(grades.length,4);const expectedUnits=[1,2,3,4].reduce((sum,n)=>sum+JSON.parse(fs.readFileSync(path.join(stage,n===3?'tools/grade3-authoring/outline.json':'course-outlines/grade'+n+'.json'),'utf8')).units.length,0);
+assert.equal(grades.length,4);const expectedUnits=[1,2,3,4].reduce((sum,n)=>sum+JSON.parse(fs.readFileSync(path.join(stage,(n===2||n===3)?'tools/grade'+n+'-authoring/outline.json':'course-outlines/grade'+n+'.json'),'utf8')).units.length,0);
 assert.equal(grades.reduce((n,c)=>n+c.units.length,0),expectedUnits);
 for(const c of grades)for(const u of c.units){
  assert.equal(G.MK_COURSE_CATALOG.getSkills(c.id,u.id).length,G.MK_COURSE_CATALOG.getSkillRecords(c.id,u.id).length);
