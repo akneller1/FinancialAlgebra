@@ -81,7 +81,7 @@ def _fact(domain, r, L):
                               (str(n + 100), "added one hundred")],
                     "claim": f"10 more than {n} is {n + 10}"}
         tens, ones = r.randint(1, 9), r.randint(1, 9)
-        return {"prompt": f"How many ones are in {tens} tens and {ones} ones?", "answer": str(ones),
+        return {"prompt": f"In a number with {tens} tens and {ones} ones, what is the ones digit?", "answer": str(ones),
                 "chk": FN("ones_of", n=tens * 10 + ones, tens=tens),
                 "steps": [f"{tens} tens make {tens * 10}.", f"The ones digit is {ones}."],
                 "wrong": [(str(tens), "gave the tens digit"), (str(tens * 10), "gave the value of the tens"),

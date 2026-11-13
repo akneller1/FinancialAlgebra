@@ -69,9 +69,9 @@ def _place_templates(t, o, r):
 
 
 def _ones_templates(n, t, r):
-    return [(f"How many ones are in {n}?", False), (f"Which digit is in the ones place of {n}?", False),
+    return [(f"What is the ones digit of {n}?", False), (f"Which digit is in the ones place of {n}?", False),
             (f"In {n}, the ones digit is ___ .", False), (f"What is the ones digit of {n}?", False),
-            (f"Look at {n}. How many ones does it have?", False)]
+            (f"Look at {n}. Which digit shows the ones place?", False)]
 
 
 def _clock_templates(r):

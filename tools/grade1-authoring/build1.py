@@ -25,7 +25,7 @@ ROOT = os.environ.get("G1_ROOT", os.path.abspath(os.path.join(HERE, "..", ".."))
 MODS = ["u01_add_sub_data", "u02_story", "u03_within20", "u04_numbers99",
         "u05_within100", "u06_length", "u07_geometry_time", "u08_together"]
 QUOTA = {"sa": 12, "mc": 12, "err": 3, "tf": 1, "sel": 1, "open": 1}
-NOTE = ("Original Claude-authored Grade 1 item (family: {fam}). Answer computed by the authoring script and "
+NOTE = ("Programmatically generated Grade 1 item (family: {fam}). Answer computed by the authoring script and "
         "re-derived by the independent verifier (tools/grade1-authoring/verify1.py).")
 TAGSET = {"fluency", "count-on", "unknown", "story", "equation", "place-value", "compare", "order", "counting",
           "geometry", "time", "measurement", "data", "reasoning", "make-ten", "multistep", "connections"}
@@ -89,7 +89,8 @@ def mc_options(p, pos, r):
     return [{"text": t, "correct": i == pos} for i, (t, _) in enumerate(ds)]
 
 
-PHRASES = [(r"\bten-frame\b", "ten\u2011frame"), (r"\bten-frames\b", "ten\u2011frames"),
+PHRASES = [(r"\b1 tens\b", "1 ten"), (r"\b1 ones\b", "1 one"),
+           (r"\bten-frame\b", "ten\u2011frame"), (r"\bten-frames\b", "ten\u2011frames"),
            (r"\btake-away\b", "take\u2011away"), (r"\bone-digit\b", "one\u2011digit"),
            (r"\btwo-digit\b", "two\u2011digit"), (r"\bpart-whole\b", "part\u2011whole"),
            (r"\bchange-unknown\b", "change\u2011unknown"), (r"\bresult-unknown\b", "result\u2011unknown"),
