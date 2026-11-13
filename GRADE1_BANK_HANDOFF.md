@@ -26,3 +26,12 @@
 ## Implementation notes
 
 The shared course outline component is `src/outline-template.js`; course entry page is `grade1.html`; bootstrap is `src/grade1-site.js`. Grade 1 is independent of Financial Algebra's one-level policy. No payment, third-party API, or AI inference at run time is required.
+
+
+## Current integrated interface
+
+Use Grade 5 on `mrksclassroom.com/#grade5` as the model. The development build
+now uses the real main Classroom shell and native generators, assembled by
+`scripts/assemble-classroom-preview.mjs`. Do not develop against the older
+standalone Grade 5 generator UI. Source IDs stay `mathN`; the build adapts them
+to `gradeN` for the native engines, using the same process as integrated Grade 5.

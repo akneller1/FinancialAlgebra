@@ -21,3 +21,12 @@
 8. Keep the main `akneller1/classroom` website untouched pending separate approval and regression tests.
 
 **Important:** In the source, Unit 1 includes review material referenced as `2.G.2`; retain this rather than silently deleting it.
+
+
+## Current integrated interface
+
+Use Grade 5 on `mrksclassroom.com/#grade5` as the model. The development build
+now uses the real main Classroom shell and native generators, assembled by
+`scripts/assemble-classroom-preview.mjs`. Do not develop against the older
+standalone Grade 5 generator UI. Source IDs stay `mathN`; the build adapts them
+to `gradeN` for the native engines, using the same process as integrated Grade 5.

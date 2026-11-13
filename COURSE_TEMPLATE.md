@@ -65,30 +65,25 @@ and must never race the deploy job. For Grade 4 and younger, keep development wo
 off the public site until approved for release and wired through the same QA gates.
 
 
-## Preloaded resource engines (2026-11-12)
+## Authoritative visual and generator model
 
-All Grade 1–4 outlines automatically inherit `src/elementary-resources.js` through
-`src/outline-template.js`. Do not copy the Grade 5 engines or write per-grade game pages.
-Each unit receives nine general games, the four teacher generators, six activity formats,
-flashcards and a Readiness Check. Fraction Frenzy is reserved for fraction units.
-Teacher generators include ordered mixed question groups, editable lesson sections,
-difficulty/skill selection, spacing, versions, review, previews, and separate teacher keys.
-There are no student-share controls in generators.
+The model is **integrated Grade 5 at `mrksclassroom.com/#grade5`**, with the native
+Classroom lesson planner, worksheet, assessment and activity generators. The old
+standalone `grade5.html` renderer and `grade5-generators.html` UI are not the model.
 
-`worksheet-generator/elementary-resource.html` loads the selected outline and the actual
-Grade 5 runtime. All requests use the outline's `math1`/`math2`/`math3`/`math4` ID, existing
-unit IDs and `<unit-id>-skill-NN` IDs. Missing banks never fall back to Grade 5 questions.
-The generator settings remain usable with an empty bank; handouts wait for real questions.
+The development deployment now checks out `akneller1/classroom` and runs
+`scripts/assemble-classroom-preview.mjs`. It assembles the actual production shell,
+its integrated Grade 5 package, and Grades 1–4 with stable `gradeN` catalog IDs.
+Native generator pages and their assets come directly from that checkout; they are
+not copied into this source repository. Source outlines and banks keep `mathN` IDs,
+which the assembly adapts exactly as it adapts Grade 5 today.
 
-To activate a unit, add a schemaVersion 1 bank at
-`question-banks/mathN/<unit-id>.json`, then register it in the root `manifest.json` with
-`courseId`, `unitId`, `path`, and `approved:true` after automated verification. Preserve the
-stable skill IDs and levels `cp2`, `cp1`, `honors` (Remedial, Standard, Advanced). The same
-entry activates games, practice flashcards and checks. Include accessible image diagrams
-and worked solutions; add optional misconception metadata at `mathN/meta/<unit-id>.meta.json`
-for written error-analysis activities. New lesson vocabulary/objectives may be supplied
-in the outline's unit `generatorContent` field; no Grade 5 instructional content is borrowed.
+Every staged grade uses the main Classroom course and unit renderer and native
+`worksheet.html`, `menu-assessment.html`, `lesson-planner.html`, and `printables.html`
+pages. Existing standalone generator URLs redirect to those pages in the assembled
+site. Pending unit registries expose the real settings without inventing questions.
+Add validated source banks to the manifest to activate them at the next deployment.
 
-Run `npm test` and `node scripts/test-grade5.cjs` after changes. Curated vocabulary decks,
-cheat sheets, projects and unit-specific manipulatives remain authored curriculum work.
-Preloading does not promote unfinished grades into the main production website.
+`grade1.html` through `grade4.html` are compatibility aliases into `/#gradeN` in the
+assembled development site. This deployment affects the development website only.
+The main Classroom deployment still assembles only its released course allowlist.

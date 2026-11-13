@@ -33,3 +33,12 @@
 ## Pilot sequence for future development
 
 Prioritize Units 1, 3, 5, 7, 9, and 11 for robust question generation and printable activities, then complete the remaining units. Focus early interactive-tool experimentation on quadrilaterals, angles and polygons, number patterns, fractions, measurement, and data representations.
+
+
+## Current integrated interface
+
+Use Grade 5 on `mrksclassroom.com/#grade5` as the model. The development build
+now uses the real main Classroom shell and native generators, assembled by
+`scripts/assemble-classroom-preview.mjs`. Do not develop against the older
+standalone Grade 5 generator UI. Source IDs stay `mathN`; the build adapts them
+to `gradeN` for the native engines, using the same process as integrated Grade 5.
