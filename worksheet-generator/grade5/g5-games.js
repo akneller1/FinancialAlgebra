@@ -271,12 +271,21 @@
 
   /* ---------- engine: card match ---------- */
   function playMatch() {
-    var pool = state.deck.filter(function (p) { return p.kind === 'sa' && String(p.answer).length <= 18 && p.prompt.length <= 110 && !p.img && p.prompt.indexOf('\n') < 0; });
-    var seen = {}, pairs = [];
-    pool.forEach(function (p) { var k = g5.parseNum(p.answer); var key = k ? k.join('/') : String(p.answer).toLowerCase(); if (!seen[key] && pairs.length < 6) { seen[key] = 1; pairs.push(p); } });
-    if (pairs.length < 4) { g5.errorBox(stage, 'This unit and level do not have enough short-answer questions for Puzzle Masters. Try another game.'); return; }
+    var pool = state.deck.filter(function (p) { return p.kind === 'sa' && p.answer != null; });
+    function answerKey(value) {
+      var text=String(value).trim().toLowerCase().replace(/−/g,'-').replace(/\s+/g,' ').replace(/\.$/,'');
+      var number=/^-?\d+(?:\.\d+)?$/.test(text)?g5.parseNum(text):null;
+      return number?number.join('/'):text;
+    }
+    var seen = new Set(), identities=new Set(), pairs = [], rest=[];
+    pool.forEach(function (p) {
+      var identity=p.prompt+'|'+(p.img&&p.img.src||'');if(identities.has(identity))return;identities.add(identity);
+      var key=answerKey(p.answer);if(seen.has(key))rest.push(p);else{seen.add(key);pairs.push(p);}
+    });
+    pairs=pairs.concat(rest).slice(0,6);
+    if (pairs.length < 4) { g5.errorBox(stage, 'Choose more skills to build a matching puzzle.'); return; }
     var cards = [];
-    pairs.forEach(function (p, i) { cards.push({ pair: i, text: p.prompt, kind: 'q', p: p }); cards.push({ pair: i, text: p.answer, kind: 'a', p: p }); });
+    pairs.forEach(function (p, i) { cards.push({ pair: i, value:answerKey(p.answer), text: p.prompt, kind: 'q', p: p }); cards.push({ pair: i, value:answerKey(p.answer), text: p.answer, kind: 'a', p: p }); });
     cards = g5.shuffle(cards);
     var open = [], matched = 0, tries = 0, turn = 0, pts = [0, 0];
     var hud = el('div', stage, 'g5-hud'), grid = el('div', stage, 'g5-grid-btns'), qhost = el('div', stage);
@@ -287,18 +296,21 @@
     }
     cards.forEach(function (c, i) {
       var b = el('button', grid, 'g5-choice'); b.style.minHeight = '6rem'; b.style.justifyContent = 'center';
-      b.setAttribute('aria-label', 'Card ' + (i + 1));
+      b.setAttribute('aria-label', 'Card ' + (i + 1));b.dataset.cardKind=c.kind;b.dataset.questionId=c.p.id;b.dataset.answerValue=c.value;
+      b.style.whiteSpace='normal';b.style.overflowWrap='anywhere';b.style.minWidth='0';b.style.flexDirection='column';
       el('span', b, 'g5-ct', c.kind === 'q' ? '❓ Problem' : '🔑 Answer');
       c.btn = b;
       b.onclick = function () {
         if (c.done || open.indexOf(c) >= 0 || open.length >= 2) return;
-        open.push(c); b.innerHTML = ''; g5.math(el('span', b, 'g5-ct'), c.text); b.classList.add('on');
+        open.push(c); b.innerHTML = ''; g5.math(el('span', b, 'g5-ct'), c.text);
+        if(c.kind==='q'&&c.p.img){var image=el('img',b,'g5-fig');image.src=c.p.img.src;image.alt=c.p.img.alt;image.style.maxWidth='100%';}
+        b.classList.add('on');
         if (open.length === 2) {
           tries++;
           var a = open[0], z = open[1];
-          var ok = a.pair === z.pair && a.kind !== z.kind;
+          var ok = a.value === z.value && a.kind !== z.kind;
           setTimeout(function () {
-            if (ok) { a.done = z.done = true; a.btn.classList.add('right'); z.btn.classList.add('right'); matched++; pts[turn]++; record(a.p, true); qhost.innerHTML = ''; var f = el('div', qhost, 'g5-feedback good', g5.pick(g5.PRAISE) + ' That is a match.'); }
+            if (ok) { a.done = z.done = true; a.btn.disabled=z.btn.disabled=true; a.btn.classList.add('right'); z.btn.classList.add('right'); matched++; pts[turn]++; record(a.p, true); qhost.innerHTML = ''; var f = el('div', qhost, 'g5-feedback good', g5.pick(g5.PRAISE) + ' That is a match.'); }
             else {
               [a, z].forEach(function (x) { x.btn.classList.remove('on'); x.btn.innerHTML = ''; el('span', x.btn, 'g5-ct', x.kind === 'q' ? '❓ Problem' : '🔑 Answer'); });
               qhost.innerHTML = ''; el('div', qhost, 'g5-feedback try', 'Not a match yet. Remember where those cards are!');

@@ -106,3 +106,7 @@ fs.writeFileSync(path.join(elementary,'worksheet-generator/elementary-resource.h
 const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:classroom,encoding:'utf8'}).trim();
 fs.writeFileSync(path.join(out,'development-build.json'),JSON.stringify({model:'integrated-classroom-grade5',classroomCommit:sha,courses:courses.map(c=>c.id),units:courses.reduce((n,c)=>n+c.units.length,0),nativeGenerators:generators.map(g=>g[2])},null,2));
 console.log('Development preview assembled from Classroom '+sha+': 37 preloaded units; native generators and integrated Grade 5 renderer.');
+// Explicit opt-in only; default development/public artifacts remain unchanged.
+if(process.env.GRADE1_STAGING==='1'){
+ const {integrate}=await import('./integrate-grade1-staging.mjs');integrate({source,out});
+}

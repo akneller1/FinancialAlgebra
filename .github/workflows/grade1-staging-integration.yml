@@ -1,0 +1,68 @@
+name: Grade 1 — integrated development artifact
+on:
+  push:
+    branches: [grade1-question-bank]
+    paths:
+      - '.github/workflows/grade1-staging-integration.yml'
+      - 'scripts/integrate-grade1-staging.mjs'
+      - 'scripts/assemble-classroom-preview.mjs'
+      - 'scripts/test-grade1-integration*.cjs'
+      - 'src/grade1-staging-runtime.js'
+      - 'worksheet-generator/grade5/g5-games.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: grade1-integrated-staging
+  cancel-in-progress: true
+jobs:
+  staging:
+    if: github.ref == 'refs/heads/grade1-question-bank'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/checkout@v4
+        with:
+          repository: akneller1/classroom
+          ref: e6ce580a4d77f75db117d104309d3dd3b5c74134
+          path: classroom
+          persist-credentials: false
+      - name: Assemble and verify the unchanged default preview
+        working-directory: source
+        run: |
+          node scripts/assemble-classroom-preview.mjs
+          node scripts/test-classroom-preview.cjs
+      - name: Add Grade 1 staging banks without editorial approval or production entries
+        working-directory: source
+        run: |
+          node --input-type=module -e "import {integrate} from './scripts/integrate-grade1-staging.mjs';integrate({source:process.cwd(),out:process.cwd()+'/../classroom/_site'})"
+          node scripts/test-grade1-integration.cjs
+          node --check worksheet-generator/grade5/g5-games.js
+      - name: Install Chromium
+        working-directory: source
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Test native generators, shared games, guides and all 279 Puzzle Masters scopes
+        working-directory: source
+        run: |
+          python -m http.server 8765 --directory ../classroom/_site > /tmp/grade1-stage.log 2>&1 &
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:8765/grade1-staging/manifest.json >/dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/test-grade1-integration-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: grade1-integrated-development-site
+          path: classroom/_site/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: grade1-integration-checks
+          path: source/grade1-integration-results/
+# Deliberately no deployment, publishing, bank-approval or branch-write permissions.
