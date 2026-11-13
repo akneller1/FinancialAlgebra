@@ -5,6 +5,8 @@ on:
     branches: [integration/grade2-staging-preview]
     paths:
       - '.github/workflows/grade2-preview-validation.yml'
+      - 'scripts/test-grade2-staging-browser.cjs'
+      - 'scripts/assemble-classroom-preview.mjs'
       - 'question-banks/math2/**'
       - 'tools/grade2-authoring/**'
       - 'worksheet-generator/elementary/**'
@@ -121,3 +123,48 @@ jobs:
       - name: Audit Grade 2 content
         working-directory: tools/grade2-authoring
         run: python3 audit.py
+
+  integration-browser:
+    name: Assemble Classroom preview and test Grade 2 in Chromium
+    needs: verify-grade2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Grade 2 staging source
+        uses: actions/checkout@v4
+        with:
+          path: FinancialAlgebra
+          persist-credentials: false
+      - name: Check out latest Classroom shell and shared engines
+        uses: actions/checkout@v4
+        with:
+          repository: akneller1/classroom
+          ref: main
+          path: classroom
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Assemble real Classroom-backed Grade 2 preview
+        env:
+          CLASSROOM_SOURCE_DIR: ${{ github.workspace }}/classroom
+        run: node FinancialAlgebra/scripts/assemble-classroom-preview.mjs
+      - name: Verify Grade 2 native-bank registration
+        shell: bash
+        run: |
+          node - <<'JS'
+          const fs=require('fs'), path=require('path');
+          const root=path.resolve('classroom/_site');
+          const manifest=JSON.parse(fs.readFileSync(path.join(root,'question-banks/manifest.json')));
+          const banks=manifest.banks.filter(b=>b.courseId==='grade2');
+          if(banks.length!==12)throw Error('Expected 12 Grade 2 native banks; got '+banks.length);
+          for(const b of banks)if(!fs.existsSync(path.join(root,b.path)))throw Error('Missing adapted bank: '+b.path);
+          for(const p of ['grade2/worksheet-generator/grade2-games.html','grade2/worksheet-generator/grade2-understanding-check.html','grade2/worksheet-generator/grade2-flashcards.html'])
+            if(!fs.existsSync(path.join(root,p)))throw Error('Missing Grade 2 player: '+p);
+          console.log('PASS 12 Grade 2 native banks and all three shared player entrypoints');
+          JS
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Browser-test Grade 2 unit, games, student skills and dedicated Understanding Checks
+        run: node FinancialAlgebra/scripts/test-grade2-staging-browser.cjs classroom/_site
