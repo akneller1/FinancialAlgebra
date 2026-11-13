@@ -31,6 +31,11 @@ export function integrate({source,out}){
  let ui=fs.readFileSync(planner,'utf8');
  ui=ui.replace("'discrete', 'grade5'", "'discrete', 'grade1', 'grade2', 'grade3', 'grade4', 'grade5'").replaceAll('|grade5)', '|grade[1-5])');
  fs.writeFileSync(planner,ui);
+ const nativeFile=path.join(out,'worksheet-generator/algebra2-bank-native.js');
+ let nativeCode=fs.readFileSync(nativeFile,'utf8');
+ nativeCode=nativeCode.replaceAll('family: [^)]*_error\\)', 'family: (?:[^)]*_error|err_[^)]*)\\)');
+ nativeCode=nativeCode.replace('approved:true,skill:q.skillId',"approved:!q.id.startsWith('m1-'),staging:q.id.startsWith('m1-'),skill:q.skillId");
+ fs.writeFileSync(nativeFile,nativeCode);
  const catalog=path.join(out,'elementary-preload-catalog.js');fs.appendFileSync(catalog,"\nwindow.LIBRARY.courses.filter(c=>c.id==='grade1').forEach(c=>{c.staging=true;c.units.forEach(u=>u.artifacts.forEach(a=>a.description='Grade 1 development preview'));});\n");
  const html=path.join(out,'index.html');fs.writeFileSync(html,fs.readFileSync(html,'utf8').replace('Grades 1–4 question banks are coming soon.','Grade 1 bank available for staging review · Grades 2–4 banks coming soon.'));
  const app=path.join(out,'app.js');fs.writeFileSync(app,fs.readFileSync(app,'utf8').replace("c.preloaded ? units(c.units.length) + ' · resource templates ready · question banks coming soon'", "c.staging ? units(c.units.length) + ' · development preview' : c.preloaded ? units(c.units.length) + ' · resource templates ready · question banks coming soon'"));

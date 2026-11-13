@@ -82,7 +82,7 @@ keep the selected skill/level, allow image questions and longer text, and match 
 answer values interchangeably. `scripts/test-grade1-staging.cjs` checks every one of the
 279 scopes. `scripts/test-grade1-puzzle-browser.cjs` clicks and solves each scope at a
 390-pixel mobile viewport, checks image decoding and rejects horizontal overflow.
-This behavior still needs adoption in the shared game engine during staging integration.
+The shared engine now uses this behavior in the branch-only integrated development artifact.
 The legacy shared game has restrictive text-only/short-answer eligibility; its count of
 restricted skill/level combinations is a compatibility warning, not a request to add filler.
 
@@ -96,3 +96,26 @@ use model answers for automatic games, so alternate valid constructed responses 
 teacher judgment. Some narrow targets have only two valid answer categories. Cross-skill
 repeated facts are permitted; duplicates within a selected skill/level are rejected.
 Remedial/Standard/Advanced levels describe task demand, not calibrated student performance.
+
+## Integrated development artifact
+
+The `Grade 1 — integrated development artifact` workflow assembles the actual Classroom
+shell and native generators, then adds an isolated Grade 1 staging loader. No Pages or
+production deployment occurs. Its successful run provides the downloadable
+`grade1-integrated-development-site` artifact and browser screenshots/results.
+
+For local assembly on `grade1-question-bank`, set `GRADE1_STAGING=1` when running
+`scripts/assemble-classroom-preview.mjs`. With no flag, the default build excludes Grade 1
+banks exactly as before. Both source manifests and assembled production manifests retain
+all bank approval flags. Staging banks are registered with `verified:false`; only the
+explicitly packaged staging facade allows their use in development pages.
+
+Native worksheet, assessment, lesson-plan and printable engines use the Grade 1 banks.
+Games and study guides reuse the elementary engines. Puzzle Masters retains images and
+longer prompts and accepts interchangeable answer cards with the same mathematical value.
+The integration suite verifies all 279 single-skill/level puzzles, all four native question
+formats and Error Analysis at every skill/level, plus representative game and guide routes.
+
+Format-specific printables still need compatible arrangements: Partner Check requires
+explicit paired items, while mazes and Tarsia require enough short, distinct answers.
+The UI may offer fewer printable formats for narrow skills; unrelated filler is not added.

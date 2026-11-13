@@ -56,12 +56,28 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
  for(const [file,button] of [['worksheet.html','#mmBuildBtn'],['menu-assessment.html','#mmBuildBtn'],['printables.html','#prNew'],['lesson-planner.html','#plNew']]){
   await page.goto(base+'/worksheet-generator/'+file+'#unit=grade1-'+outline.units[0].id);
   await page.waitForFunction(()=>window.MK_COURSE_BANKS_READY);await page.evaluate(()=>MK_COURSE_BANKS_READY);
+  if(file!=='lesson-planner.html')await page.waitForFunction(expected=>(document.querySelector('#mmUnitSel')||document.querySelector('#prUnit'))?.value===expected,'grade1-'+outline.units[0].id);
   await page.locator(button).waitFor();await page.locator(button).click();
   await page.waitForTimeout(300);
   const state=await page.evaluate(()=>({registered:!!MKMENU.skillSets['grade1-adding-subtracting-working-data']?.authoredBank,verified:MK_GRADE1_STAGING.originalAvailable('grade1','adding-subtracting-working-data'),pending:!!window.MK_PRELOADED_UNITS?.['grade1-adding-subtracting-working-data'],course:window.MKPLAN_COURSE,selected:(document.querySelector('#mmUnitSel')||document.querySelector('#prUnit'))?.value,failures:[...document.querySelectorAll('.pl-missing')].map(x=>x.textContent)}));
   if(!state.registered||state.verified||state.pending||state.failures.length)throw Error(file+' '+JSON.stringify(state));
-  if(file!=='lesson-planner.html'&&state.selected!=='grade1-'+outline.units[0].id)throw Error('Wrong generator selection '+file+' '+state.selected);
   if(file==='lesson-planner.html'&&state.course!=='grade1')throw Error('Wrong planner course');
+  if(file==='worksheet.html'){
+   const contracts=await page.evaluate(()=>{
+    let checks=0;for(const c of LIBRARY.courses.filter(c=>c.id==='grade1'))for(const u of c.units){
+     const id=c.id+'-'+u.id;
+     for(const skill of MK_COURSE_CATALOG.getSkillRecords(c.id,u.id))for(const level of ['cp2','cp1','honors']){
+      for(const format of ['short-answer','multiple-choice','select-all','open-response']){
+       const p=MKMENU.generateProblem(id,skill.id,4,{level,authoredFormats:[format]},'integration-check');
+       const q=MK_QUESTION_BANKS.select({courseId:c.id,unitId:u.id,level,skillIds:[skill.id],formats:[format]}).find(q=>q.id===p.sourceId);
+       if(p.failed||!q||p.approved!==false)throw Error('Native format/level contract '+id+'/'+skill.id+'/'+level+'/'+format);checks++;
+      }
+      const error=MKMENU.generateProblem(id,skill.id,4,{level,authoredErrorAnalysis:true,authoredFormats:['short-answer']},'error-check');
+      if(error.failed||!error.authoredErrorAnalysis)throw Error('Error analysis routing '+skill.id+'/'+level);checks++;
+     }
+    }return checks;
+   });if(contracts!==1395)throw Error('Missing native format checks '+contracts);
+  }
   await page.screenshot({path:'grade1-integration-results/'+file+'.png',fullPage:true});pages++;
  }
  if(errors.length||broken.length)throw Error(JSON.stringify({errors,broken}));
