@@ -1,6 +1,6 @@
 # Grade 1 Mathematics — Question Bank Development Handoff
 
-**Status:** Shared Grade 5 game, generator, flashcard and readiness-check engines are preloaded for every unit in staging. Question banks have not been authored; these resources display a pending-bank state.
+**Status:** All eight Grade 1 banks are authored (8,370 questions, 3,405 diagrams) on the review-only grade1-question-bank branch, but editorial approval is pending and semantic QA currently fails (193 findings). They must remain disabled. See docs/math1/INTEGRATION_AUDIT.md.
 
 ## Authoritative source
 
@@ -12,7 +12,7 @@
 - The `skills` labels are **paraphrases for future item generation**; they are not copied textbook lesson titles. `sections[*].skills` maps directly to the flattened `units[*].skills`.
 - A skill ID is `<unit-id>-skill-01` (one-based, two-digit index), e.g. `adding-subtracting-working-data-skill-01`. Do not rename these without a migration plan.
 
-## Work for Claude
+## Original authoring requirements (historical handoff)
 
 1. Inspect this JSON before generating any content; compare its IDs and sections with `akneller1/classroom` production course catalogs and a proven original question bank.
 2. Author an ample range of age-appropriate, **original** item families for each skill. Use concrete contexts, story types, diagrams, models, number lines, and correctly labeled graphs. Prefer reusable generators with verified outputs to repeated near-identical questions.
@@ -20,7 +20,7 @@
 4. Support multiple forms of assessment: objective answers, short numerical explanations, visual interpretation, and structured teacher rubrics for reasoning.
 5. Include deterministic answer checking, solutions, test fixtures, uniqueness checks, and rendering guidance for diagrams and accessibility.
 6. Verify compatibility with the approved question schema and all activities before marking a section usable. Do not force word-problem or open-response families into games requiring simple numeric answers.
-7. Deliver complete modular bank files, a manifest, and automated validation results as a ZIP. **Claude cannot modify the GitHub repositories directly in this workflow.**
+7. The bank was delivered directly in the grade1-question-bank GitHub branch. This section documents original requirements, not the current verification status.
 8. Keep all student-facing activities unavailable until the bank is reviewed and integrated in staging. Do not modify `akneller1/classroom` production until explicitly approved after regression testing.
 
 ## Implementation notes
