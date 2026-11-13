@@ -4,7 +4,10 @@ import {readFileSync,existsSync} from 'node:fs';
 import {validateOutline,skillId} from '../src/outline-template.js';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const has=p=>existsSync(new URL('../'+p,import.meta.url));
-const course=JSON.parse(read('course-outlines/grade4.json'));
+// The 12-unit Math Expressions outline is a separate legacy source.
+// The released Grade 4 bank uses the 10-unit CCSS authoring outline.
+const authored=JSON.parse(read('tools/grade4-authoring/outline.json'));
+const course={id:'math4',standards:authored.standards,units:authored.units.map(u=>({id:u.id,name:u.name,skills:u.skills.map(s=>s[0]),skillStandards:u.skills.map(s=>s[1]),standards:[...new Set(u.skills.flatMap(s=>s[1]))]}))};
 const manifest=JSON.parse(read('manifest.json'));
 const LEVELS=['cp2','cp1','honors'];
 
