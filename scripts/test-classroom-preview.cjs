@@ -36,7 +36,7 @@ for(const c of grades)for(const u of c.units){
   assert.ok(fs.existsSync(path.join(site,a.thumb)),a.thumb);
   assert.doesNotMatch(a.path,/grade5-generators\.html|tool=generators/);
  }
- assert.ok(u.artifacts.some(a=>a.title==='Flashcards'));assert.ok(u.artifacts.some(a=>a.title==='Understanding Check'));
+ assert.ok(u.artifacts.some(a=>a.title==='Flashcards'));assert.ok(u.artifacts.some(a=>a.title==='Understanding Check'||a.title==='Readiness Check'),c.id+' '+u.id+' check');
 }
 for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html','printables.html']){
  const text=read('worksheet-generator/'+page);
