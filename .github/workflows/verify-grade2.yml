@@ -41,7 +41,7 @@ jobs:
           python3 audit2.py | tee /tmp/audit.log
           grep -q 'TOTAL FLAGGED 322' /tmp/audit.log
           python3 report2.py
-          python3 -c "import json,glob; n=sum(len(json.load(open(f))['questions']) for f in glob.glob('../../question-banks/math2/*.json')); print('QUESTIONS',n); assert n==8010"
+          python3 -c "import json,glob,os; files=[f for f in glob.glob('../../question-banks/math2/*.json') if os.path.basename(f)!='manifest.json']; n=sum(len(json.load(open(f))['questions']) for f in files); print('QUESTIONS',n); assert len(files)==9 and n==8010"
       - name: Require exact audit totals in regenerated documentation
         run: |
           grep -q 'generic filler under a specific skill.*134' docs/math2/ALIGNMENT.md
