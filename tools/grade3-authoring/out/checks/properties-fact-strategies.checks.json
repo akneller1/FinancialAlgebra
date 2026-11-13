@@ -1,0 +1,261 @@
+{
+"m3c-pf-s01-cp2-001": {
+"q": {
+"k": "expr",
+"e": "5*2"
+},
+"family": "cm_use"
+},
+"m3c-pf-s01-cp2-002": {
+"q": {
+"k": "key",
+"accept": [
+"2 × 5 = 10 and 5 × 2 = 10"
+]
+},
+"family": "cm_array",
+"diagram": {
+"kind": "array3",
+"data": {
+"rows": 2,
+"cols": 5
+}
+}
+},
+"m3c-pf-s01-cp1-001": {
+"q": {
+"k": "expr",
+"e": "9*5"
+},
+"family": "cm_use"
+},
+"m3c-pf-s01-cp1-002": {
+"q": {
+"k": "key",
+"accept": [
+"No. 54 ÷ 9 = 6, but 9 ÷ 54 is not 6."
+]
+},
+"family": "cm_division"
+},
+"m3c-pf-s01-honors-001": {
+"q": {
+"k": "expr",
+"e": "6*9"
+},
+"family": "cm_use"
+},
+"m3c-pf-s01-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"9 × 8 = 72 and 8 × 9 = 72"
+]
+},
+"family": "cm_array",
+"diagram": {
+"kind": "array3",
+"data": {
+"rows": 9,
+"cols": 8
+}
+}
+},
+"m3c-pf-s02-cp2-001": {
+"q": {
+"k": "expr",
+"e": "5*3*2",
+"unit": "toy cars"
+},
+"family": "as_story"
+},
+"m3c-pf-s02-cp2-002": {
+"q": {
+"k": "expr",
+"e": "5*4*2"
+},
+"family": "as_compute"
+},
+"m3c-pf-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "blank_eq",
+"eq": "(5 × 4) × 3 = 5 × (4 × ___)"
+},
+"family": "as_fill"
+},
+"m3c-pf-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "(5*3)*2"
+},
+"family": "as_same"
+},
+"m3c-pf-s02-honors-001": {
+"q": {
+"k": "expr",
+"e": "3*6*3"
+},
+"family": "as_compute"
+},
+"m3c-pf-s02-honors-002": {
+"q": {
+"k": "expr",
+"e": "6*4"
+},
+"family": "as_break"
+},
+"m3c-pf-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "blank_eq",
+"eq": "5 × 7 = (5 × 5) + (5 × ___)"
+},
+"family": "di_fill"
+},
+"m3c-pf-s03-cp2-002": {
+"q": {
+"k": "expr",
+"e": "3*5+3*3"
+},
+"family": "di_compute"
+},
+"m3c-pf-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "5*7"
+},
+"family": "di_array",
+"diagram": {
+"kind": "array3",
+"data": {
+"rows": 5,
+"cols": 7,
+"split_col": 2
+}
+}
+},
+"m3c-pf-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "blank_eq",
+"eq": "3 × 8 = (3 × 2) + (3 × ___)"
+},
+"family": "di_fill"
+},
+"m3c-pf-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "same_value",
+"target": "7*8"
+},
+"family": "di_array",
+"diagram": {
+"kind": "array3",
+"data": {
+"rows": 7,
+"cols": 8,
+"split_col": 3
+}
+}
+},
+"m3c-pf-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "blank_eq",
+"eq": "7 × 7 = (7 × 3) + (7 × ___)"
+},
+"family": "di_fill"
+},
+"m3c-pf-s04-cp2-001": {
+"q": {
+"k": "expr",
+"e": "1*4"
+},
+"family": "z_fact"
+},
+"m3c-pf-s04-cp2-002": {
+"q": {
+"k": "expr",
+"e": "8*0",
+"unit": "cookies"
+},
+"family": "z_story"
+},
+"m3c-pf-s04-cp1-001": {
+"q": {
+"k": "expr",
+"e": "10*0"
+},
+"family": "z_fact"
+},
+"m3c-pf-s04-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "blank_eq",
+"eq": "___ × 7 = 0"
+},
+"family": "z_missing"
+},
+"m3c-pf-s04-honors-001": {
+"q": {
+"k": "expr",
+"e": "1*53"
+},
+"family": "z_fact"
+},
+"m3c-pf-s04-honors-002": {
+"q": {
+"k": "expr",
+"e": "8*0",
+"unit": "cookies"
+},
+"family": "z_story"
+},
+"m3c-pf-s05-cp2-001": {
+"q": {
+"k": "expr",
+"e": "6/3"
+},
+"family": "fs_divide"
+},
+"m3c-pf-s05-cp2-002": {
+"q": {
+"k": "expr",
+"e": "5*7+1*7"
+},
+"family": "fs_add_group"
+},
+"m3c-pf-s05-cp1-001": {
+"q": {
+"k": "expr",
+"e": "5*5+1*5"
+},
+"family": "fs_add_group"
+},
+"m3c-pf-s05-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "strategy",
+"target": "6*5"
+},
+"family": "fs_strategy"
+},
+"m3c-pf-s05-honors-001": {
+"q": {
+"k": "fn",
+"fn": "strategy",
+"target": "8*5"
+},
+"family": "fs_strategy"
+},
+"m3c-pf-s05-honors-002": {
+"q": {
+"k": "expr",
+"e": "9*9"
+},
+"family": "fs_fact"
+}
+}

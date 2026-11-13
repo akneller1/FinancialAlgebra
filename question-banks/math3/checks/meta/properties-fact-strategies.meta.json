@@ -1,0 +1,343 @@
+{
+"skillFeedback": {
+"properties-fact-strategies-skill-01": {
+"skill": "Commutative Property of Multiplication",
+"target": "I can use the commutative property to turn an array or fact around and know the product stays the same.",
+"standards": [
+"3.OA.B.5"
+],
+"ifCorrect": "You can do this: can use the commutative property to turn an array or fact around and know the product stays the same.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Believing the property works for division too (12 ÷ 3 = 3 ÷ 12). Try this: Rotate an array a quarter turn: rows become columns, the total does not change. Test a division example to see it fail."
+},
+"properties-fact-strategies-skill-02": {
+"skill": "Associative Property of Multiplication",
+"target": "I can regroup three factors to make multiplying easier and show the product is the same.",
+"standards": [
+"3.OA.B.5"
+],
+"ifCorrect": "You can do this: can regroup three factors to make multiplying easier and show the product is the same.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Multiplying only two of the three factors, or adding one of them. Try this: Circle the two factors you will multiply first, write the partial product, then multiply by the third."
+},
+"properties-fact-strategies-skill-03": {
+"skill": "Distributive Property: Break Apart Facts",
+"target": "I can break a factor into two easier parts, multiply each part, and add the two products.",
+"standards": [
+"3.OA.B.5"
+],
+"ifCorrect": "You can do this: can break a factor into two easier parts, multiply each part, and add the two products.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Breaking apart one factor but multiplying only one part, or adding the leftover part instead of multiplying it. Try this: Draw the array and split it with a line; label each part with its own multiplication."
+},
+"properties-fact-strategies-skill-04": {
+"skill": "Multiplying and Dividing with 0 and 1",
+"target": "I can explain and use the rules for multiplying by 0 and 1 and dividing by 1 and by the same number.",
+"standards": [
+"3.OA.B.5",
+"3.OA.C.7"
+],
+"ifCorrect": "You can do this: can explain and use the rules for multiplying by 0 and 1 and dividing by 1 and by the same number.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Thinking n × 0 = n, or that 0 ÷ n and n ÷ 0 behave the same. Try this: Tell equal-group stories: 5 plates with 0 cookies; 1 plate with 5 cookies. Explain why we cannot share into 0 groups."
+},
+"properties-fact-strategies-skill-05": {
+"skill": "Fact Strategies for 3, 4, 6, 7, 8, and 9",
+"target": "I can find any fact to 10 × 10 with a strategy such as doubling, adding a group, or subtracting a group.",
+"standards": [
+"3.OA.C.7"
+],
+"ifCorrect": "You can do this: can find any fact to 10 × 10 with a strategy such as doubling, adding a group, or subtracting a group.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Making an off-by-one-group error (7 × 8 = 48) or using the strategy on the wrong fact. Try this: Name the known fact you start from and say how many groups you are adding or subtracting."
+}
+},
+"questions": {
+"m3c-pf-s01-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "So 5 × 2 = 10.",
+"distractors": {
+"7": "added the factors",
+"12": "added one more group",
+"5": "used one group fewer"
+}
+},
+"m3c-pf-s01-cp2-002": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "Both equal 10.",
+"diagram": "array3"
+},
+"m3c-pf-s01-cp1-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "So 9 × 5 = 45.",
+"distractors": {
+"14": "added the factors",
+"50": "added one more group",
+"36": "used one group fewer"
+}
+},
+"m3c-pf-s01-cp1-002": {
+"questionType": "error-analysis",
+"tags": [
+"misconception",
+"reasoning"
+],
+"explanation": "54 ÷ 9 = 6. Sharing 9 among 54 groups is not 6."
+},
+"m3c-pf-s01-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "So 6 × 9 = 54.",
+"distractors": {
+"15": "added the factors",
+"63": "added one more group",
+"48": "used one group fewer"
+}
+},
+"m3c-pf-s01-honors-002": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "Both equal 72.",
+"diagram": "array3"
+},
+"m3c-pf-s02-cp2-001": {
+"questionType": "word-problem",
+"tags": [
+"multistep"
+],
+"explanation": "15 × 2 = 30 toy cars.",
+"distractors": {
+"10 toy cars": "added the numbers",
+"15 toy cars": "found the boxes, not the cars",
+"17 toy cars": "added the last number"
+}
+},
+"m3c-pf-s02-cp2-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "10 × 4 = 40.",
+"distractors": {
+"22": "added the last factor",
+"11": "added all the factors",
+"14": "added instead of multiplying the second time",
+"20": "used only two factors"
+}
+},
+"m3c-pf-s02-cp1-001": {
+"questionType": "fill-blank",
+"tags": [],
+"explanation": "(5 × 4) × 3 = 5 × (4 × 3) = 60.",
+"distractors": {
+"5": "used the first factor",
+"20": "wrote a partial product",
+"60": "wrote the product"
+}
+},
+"m3c-pf-s02-cp1-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "Both equal 30."
+},
+"m3c-pf-s02-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "9 × 6 = 54.",
+"distractors": {
+"21": "added the last factor",
+"12": "added all the factors",
+"15": "added instead of multiplying the second time",
+"18": "used only two factors"
+}
+},
+"m3c-pf-s02-honors-002": {
+"questionType": "compare-strategies",
+"tags": [
+"reasoning"
+],
+"explanation": "12 × 2 = 24.",
+"distractors": {
+"12": "stopped after doubling once",
+"14": "added 2 instead of doubling",
+"10": "added"
+}
+},
+"m3c-pf-s03-cp2-001": {
+"questionType": "fill-blank",
+"tags": [],
+"explanation": "5 × 7 = (5 × 5) + (5 × 2).",
+"distractors": {
+"7": "repeated the whole factor",
+"10": "wrote the partial product",
+"5": "repeated the first part"
+}
+},
+"m3c-pf-s03-cp2-002": {
+"questionType": "compare-strategies",
+"tags": [
+"multiple-representations"
+],
+"explanation": "15 + 9 = 24.",
+"distractors": {
+"18": "multiplied only one part",
+"15": "forgot the second part",
+"135": "multiplied the parts instead of adding"
+}
+},
+"m3c-pf-s03-cp1-001": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "Add the parts: 10 + 25 = 35.",
+"diagram": "array3"
+},
+"m3c-pf-s03-cp1-002": {
+"questionType": "fill-blank",
+"tags": [],
+"explanation": "3 × 8 = (3 × 2) + (3 × 6).",
+"distractors": {
+"8": "repeated the whole factor",
+"18": "wrote the partial product",
+"2": "repeated the first part"
+}
+},
+"m3c-pf-s03-honors-001": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "Add the parts: 21 + 35 = 56.",
+"diagram": "array3"
+},
+"m3c-pf-s03-honors-002": {
+"questionType": "fill-blank",
+"tags": [],
+"explanation": "7 × 7 = (7 × 3) + (7 × 4).",
+"distractors": {
+"7": "repeated the whole factor",
+"28": "wrote the partial product",
+"3": "repeated the first part"
+}
+},
+"m3c-pf-s04-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "1 × 4 = 4.",
+"distractors": {
+"1": "thought multiplying by 1 gives 1",
+"5": "added 1",
+"40": "wrote a different number"
+}
+},
+"m3c-pf-s04-cp2-002": {
+"questionType": "word-problem",
+"tags": [],
+"explanation": "The answer is 0.",
+"distractors": {
+"8 cookies": "used the wrong rule for 0 or 1",
+"9 cookies": "added 1",
+"1 cookie": "used the wrong rule for 0 or 1"
+}
+},
+"m3c-pf-s04-cp1-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "10 × 0 = 0.",
+"distractors": {
+"10": "thought multiplying by 0 keeps the number",
+"1": "mixed up the 0 and 1 rules",
+"100": "wrote a different number"
+}
+},
+"m3c-pf-s04-cp1-002": {
+"questionType": "fill-blank",
+"tags": [],
+"explanation": "0 × 7 = 0 is true.",
+"distractors": {
+"7": "used the wrong rule",
+"1": "mixed up the 0 and 1 rules",
+"8": "added"
+}
+},
+"m3c-pf-s04-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "1 × 53 = 53.",
+"distractors": {
+"1": "thought multiplying by 1 gives 1",
+"54": "added 1",
+"530": "wrote a different number"
+}
+},
+"m3c-pf-s04-honors-002": {
+"questionType": "word-problem",
+"tags": [],
+"explanation": "The answer is 0.",
+"distractors": {
+"8 cookies": "used the wrong rule for 0 or 1",
+"9 cookies": "added 1",
+"1 cookie": "used the wrong rule for 0 or 1"
+}
+},
+"m3c-pf-s05-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "3 × 2 = 6, so 6 ÷ 3 = 2.",
+"distractors": {
+"3": "used a nearby fact",
+"1": "used a nearby fact"
+}
+},
+"m3c-pf-s05-cp2-002": {
+"questionType": "compare-strategies",
+"tags": [
+"reasoning"
+],
+"explanation": "35 + 7 = 42.",
+"distractors": {
+"36": "added 1 instead of 1 groups of 7",
+"49": "added too many groups",
+"35": "did not add the extra groups"
+}
+},
+"m3c-pf-s05-cp1-001": {
+"questionType": "compare-strategies",
+"tags": [
+"reasoning"
+],
+"explanation": "25 + 5 = 30.",
+"distractors": {
+"26": "added 1 instead of 1 groups of 5",
+"35": "added too many groups",
+"25": "did not add the extra groups"
+}
+},
+"m3c-pf-s05-cp1-002": {
+"questionType": "compare-strategies",
+"tags": [
+"reasoning"
+],
+"explanation": "5 × 5 plus 1 × 5 = 30."
+},
+"m3c-pf-s05-honors-001": {
+"questionType": "compare-strategies",
+"tags": [
+"reasoning"
+],
+"explanation": "double 4 × 5 = 40."
+},
+"m3c-pf-s05-honors-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "9 × 9 = 81.",
+"distractors": {
+"90": "added an extra group",
+"72": "left out a group",
+"91": "used a wrong fact",
+"18": "added"
+}
+}
+}
+}

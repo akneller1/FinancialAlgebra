@@ -1,0 +1,792 @@
+{
+ "schemaVersion": 1,
+ "courseId": "math3",
+ "unitId": "properties-fact-strategies",
+ "purpose": "understanding-check",
+ "questions": [
+  {
+   "id": "m3c-pf-s01-cp2-001",
+   "skillId": "properties-fact-strategies-skill-01",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "Tess knows that 2 × 5 = 10. What is 5 × 2?",
+   "answer": "10",
+   "solutionSteps": [
+    "5 × 2 has the same factors in a different order.",
+    "So 5 × 2 = 10."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: cm_use). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s01-cp2-002",
+   "skillId": "properties-fact-strategies-skill-01",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "You can read the array by rows or by columns. Which pair of equations both match the array?",
+   "answer": "2 × 5 = 10 and 5 × 2 = 10",
+   "options": [
+    {
+     "text": "2 + 5 = 7 and 5 + 2 = 7",
+     "correct": false
+    },
+    {
+     "text": "2 × 2 = 4 and 5 × 5 = 25",
+     "correct": false
+    },
+    {
+     "text": "2 × 5 = 10 and 5 × 2 = 12",
+     "correct": false
+    },
+    {
+     "text": "2 × 5 = 10 and 5 × 2 = 10",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "By rows: 2 rows of 5 is 2 × 5. By columns: 5 columns of 2 is 5 × 2.",
+    "Both equal 10."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math3/properties-fact-strategies/m3c-pf-s01-cp2-002.png",
+     "alt": "An array of dots with 2 rows and 5 columns."
+    }
+   },
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: cm_array). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s01-cp1-001",
+   "skillId": "properties-fact-strategies-skill-01",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "Jada knows that 5 × 9 = 45. What is 9 × 5?",
+   "answer": "45",
+   "solutionSteps": [
+    "9 × 5 has the same factors in a different order.",
+    "So 9 × 5 = 45."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: cm_use). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s01-cp1-002",
+   "skillId": "properties-fact-strategies-skill-01",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "Tess says 54 ÷ 9 = 9 ÷ 54 because of the commutative property. Is that right?",
+   "answer": "No. 54 ÷ 9 = 6, but 9 ÷ 54 is not 6.",
+   "options": [
+    {
+     "text": "Yes. Order never matters.",
+     "correct": false
+    },
+    {
+     "text": "Yes. Both are equal to 6.",
+     "correct": false
+    },
+    {
+     "text": "No. 54 ÷ 9 = 9.",
+     "correct": false
+    },
+    {
+     "text": "No. 54 ÷ 9 = 6, but 9 ÷ 54 is not 6.",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The commutative property works for multiplication, not division.",
+    "54 ÷ 9 = 6. Sharing 9 among 54 groups is not 6."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: cm_division). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s01-honors-001",
+   "skillId": "properties-fact-strategies-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Finn knows that 9 × 6 = 54. What is 6 × 9?",
+   "answer": "54",
+   "solutionSteps": [
+    "6 × 9 has the same factors in a different order.",
+    "So 6 × 9 = 54."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: cm_use). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s01-honors-002",
+   "skillId": "properties-fact-strategies-skill-01",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "You can read the array by rows or by columns. Which pair of equations both match the array?",
+   "answer": "9 × 8 = 72 and 8 × 9 = 72",
+   "options": [
+    {
+     "text": "9 + 8 = 17 and 8 + 9 = 17",
+     "correct": false
+    },
+    {
+     "text": "9 × 8 = 72 and 8 × 9 = 72",
+     "correct": true
+    },
+    {
+     "text": "9 × 8 = 72 and 8 × 9 = 81",
+     "correct": false
+    },
+    {
+     "text": "9 × 9 = 81 and 8 × 8 = 64",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "By rows: 9 rows of 8 is 9 × 8. By columns: 8 columns of 9 is 8 × 9.",
+    "Both equal 72."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math3/properties-fact-strategies/m3c-pf-s01-honors-002.png",
+     "alt": "An array of dots with 9 rows and 8 columns."
+    }
+   },
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: cm_array). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s02-cp2-001",
+   "skillId": "properties-fact-strategies-skill-02",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "There are 5 shelves. Each shelf has 3 boxes. Each box has 2 toy cars. How many toy cars are there?",
+   "answer": "30 toy cars",
+   "solutionSteps": [
+    "5 × 3 = 15 boxes.",
+    "15 × 2 = 30 toy cars."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: as_story). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s02-cp2-002",
+   "skillId": "properties-fact-strategies-skill-02",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "Find 5 × 4 × 2. Hint: multiply 5 × 2 first.",
+   "answer": "40",
+   "options": [
+    {
+     "text": "22",
+     "correct": false
+    },
+    {
+     "text": "14",
+     "correct": false
+    },
+    {
+     "text": "11",
+     "correct": false
+    },
+    {
+     "text": "40",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "5 × 2 = 10.",
+    "10 × 4 = 40."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: as_compute). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s02-cp1-001",
+   "skillId": "properties-fact-strategies-skill-02",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "Complete the equation: (5 × 4) × 3 = 5 × (4 × ___)",
+   "answer": "3",
+   "solutionSteps": [
+    "The associative property: you can group the factors in a different way.",
+    "(5 × 4) × 3 = 5 × (4 × 3) = 60."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: as_fill). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s02-cp1-002",
+   "skillId": "properties-fact-strategies-skill-02",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "Which expression has the same value as (5 × 3) × 2?",
+   "answer": "(5 × 2) × 3",
+   "options": [
+    {
+     "text": "(5 + 2) × 3",
+     "correct": false
+    },
+    {
+     "text": "5 × 2",
+     "correct": false
+    },
+    {
+     "text": "(5 × 2) × 3",
+     "correct": true
+    },
+    {
+     "text": "(5 × 2) + 3",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "You can change the order and grouping of factors (commutative and associative properties).",
+    "Both equal 30."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: as_same). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s02-honors-001",
+   "skillId": "properties-fact-strategies-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Find 3 × 6 × 3. Hint: multiply 3 × 3 first.",
+   "answer": "54",
+   "solutionSteps": [
+    "3 × 3 = 9.",
+    "9 × 6 = 54."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: as_compute). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s02-honors-002",
+   "skillId": "properties-fact-strategies-skill-02",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "Kai finds 6 × 4 like this: 6 × 4 = 6 × (2 × 2) = (6 × 2) × 2. What is 6 × 4?",
+   "answer": "24",
+   "options": [
+    {
+     "text": "12",
+     "correct": false
+    },
+    {
+     "text": "24",
+     "correct": true
+    },
+    {
+     "text": "10",
+     "correct": false
+    },
+    {
+     "text": "14",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "6 × 2 = 12.",
+    "12 × 2 = 24."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: as_break). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s03-cp2-001",
+   "skillId": "properties-fact-strategies-skill-03",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "Complete the equation: 5 × 7 = (5 × 5) + (5 × ___)",
+   "answer": "2",
+   "solutionSteps": [
+    "Break 7 into 5 + 2.",
+    "5 × 7 = (5 × 5) + (5 × 2)."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: di_fill). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s03-cp2-002",
+   "skillId": "properties-fact-strategies-skill-03",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "Find 3 × 8 by breaking 8 into 5 + 3. What is 3 × 8?",
+   "answer": "24",
+   "options": [
+    {
+     "text": "18",
+     "correct": false
+    },
+    {
+     "text": "15",
+     "correct": false
+    },
+    {
+     "text": "24",
+     "correct": true
+    },
+    {
+     "text": "135",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "3 × 5 = 15 and 3 × 3 = 9.",
+    "15 + 9 = 24."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: di_compute). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s03-cp1-001",
+   "skillId": "properties-fact-strategies-skill-03",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "The dashed line splits the array into two parts. Which expression matches the two parts?",
+   "answer": "(5 × 2) + (5 × 5)",
+   "options": [
+    {
+     "text": "(5 × 2) × (5 × 5)",
+     "correct": false
+    },
+    {
+     "text": "(5 × 2) + (5 × 5)",
+     "correct": true
+    },
+    {
+     "text": "(5 × 2) + 5",
+     "correct": false
+    },
+    {
+     "text": "(5 + 2) + (5 + 5)",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Blue part: 5 × 2. Orange part: 5 × 5.",
+    "Add the parts: 10 + 25 = 35."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math3/properties-fact-strategies/m3c-pf-s03-cp1-001.png",
+     "alt": "An array with 5 rows and 7 columns, split by a dashed line into 2 blue columns and 5 orange columns."
+    }
+   },
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: di_array). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s03-cp1-002",
+   "skillId": "properties-fact-strategies-skill-03",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "Complete the equation: 3 × 8 = (3 × 2) + (3 × ___)",
+   "answer": "6",
+   "solutionSteps": [
+    "Break 8 into 2 + 6.",
+    "3 × 8 = (3 × 2) + (3 × 6)."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: di_fill). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s03-honors-001",
+   "skillId": "properties-fact-strategies-skill-03",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "The dashed line splits the array into two parts. Which expression matches the two parts?",
+   "answer": "(7 × 3) + (7 × 5)",
+   "options": [
+    {
+     "text": "(7 × 3) + (7 × 5)",
+     "correct": true
+    },
+    {
+     "text": "(7 + 3) + (7 + 5)",
+     "correct": false
+    },
+    {
+     "text": "(7 × 3) × (7 × 5)",
+     "correct": false
+    },
+    {
+     "text": "(7 × 3) + 5",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Blue part: 7 × 3. Orange part: 7 × 5.",
+    "Add the parts: 21 + 35 = 56."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math3/properties-fact-strategies/m3c-pf-s03-honors-001.png",
+     "alt": "An array with 7 rows and 8 columns, split by a dashed line into 3 blue columns and 5 orange columns."
+    }
+   },
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: di_array). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s03-honors-002",
+   "skillId": "properties-fact-strategies-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Complete the equation: 7 × 7 = (7 × 3) + (7 × ___)",
+   "answer": "4",
+   "solutionSteps": [
+    "Break 7 into 3 + 4.",
+    "7 × 7 = (7 × 3) + (7 × 4)."
+   ],
+   "standards": [
+    "3.OA.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: di_fill). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s04-cp2-001",
+   "skillId": "properties-fact-strategies-skill-04",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "Find: 1 × 4",
+   "answer": "4",
+   "solutionSteps": [
+    "Multiplying any number by 1 gives that number.",
+    "1 × 4 = 4."
+   ],
+   "standards": [
+    "3.OA.B.5",
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: z_fact). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s04-cp2-002",
+   "skillId": "properties-fact-strategies-skill-04",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "Max has 8 plates. There are 0 cookies on each plate. How many cookies are there?",
+   "answer": "0 cookies",
+   "options": [
+    {
+     "text": "9 cookies",
+     "correct": false
+    },
+    {
+     "text": "0 cookies",
+     "correct": true
+    },
+    {
+     "text": "1 cookie",
+     "correct": false
+    },
+    {
+     "text": "8 cookies",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Write the equation: 8 × 0.",
+    "The answer is 0."
+   ],
+   "standards": [
+    "3.OA.B.5",
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: z_story). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s04-cp1-001",
+   "skillId": "properties-fact-strategies-skill-04",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "Find: 10 × 0",
+   "answer": "0",
+   "solutionSteps": [
+    "Any number times 0 is 0.",
+    "10 × 0 = 0."
+   ],
+   "standards": [
+    "3.OA.B.5",
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: z_fact). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s04-cp1-002",
+   "skillId": "properties-fact-strategies-skill-04",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "What number makes the equation true? ___ × 7 = 0",
+   "answer": "0",
+   "options": [
+    {
+     "text": "1",
+     "correct": false
+    },
+    {
+     "text": "0",
+     "correct": true
+    },
+    {
+     "text": "7",
+     "correct": false
+    },
+    {
+     "text": "8",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Think about the rules for 0 and 1.",
+    "0 × 7 = 0 is true."
+   ],
+   "standards": [
+    "3.OA.B.5",
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: z_missing). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s04-honors-001",
+   "skillId": "properties-fact-strategies-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Find: 1 × 53",
+   "answer": "53",
+   "solutionSteps": [
+    "Multiplying any number by 1 gives that number.",
+    "1 × 53 = 53."
+   ],
+   "standards": [
+    "3.OA.B.5",
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: z_fact). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s04-honors-002",
+   "skillId": "properties-fact-strategies-skill-04",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "Hugo has 8 plates. There are 0 cookies on each plate. How many cookies are there?",
+   "answer": "0 cookies",
+   "options": [
+    {
+     "text": "0 cookies",
+     "correct": true
+    },
+    {
+     "text": "1 cookie",
+     "correct": false
+    },
+    {
+     "text": "9 cookies",
+     "correct": false
+    },
+    {
+     "text": "8 cookies",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Write the equation: 8 × 0.",
+    "The answer is 0."
+   ],
+   "standards": [
+    "3.OA.B.5",
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: z_story). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s05-cp2-001",
+   "skillId": "properties-fact-strategies-skill-05",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "Divide: 6 ÷ 3",
+   "answer": "2",
+   "solutionSteps": [
+    "Think: 3 × ? = 6.",
+    "3 × 2 = 6, so 6 ÷ 3 = 2."
+   ],
+   "standards": [
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: fs_divide). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s05-cp2-002",
+   "skillId": "properties-fact-strategies-skill-05",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "Use 5 × 7 = 35 to find 6 × 7.",
+   "answer": "42",
+   "options": [
+    {
+     "text": "49",
+     "correct": false
+    },
+    {
+     "text": "36",
+     "correct": false
+    },
+    {
+     "text": "35",
+     "correct": false
+    },
+    {
+     "text": "42",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "6 × 7 is 1 more group of 7 than 5 × 7.",
+    "35 + 7 = 42."
+   ],
+   "standards": [
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: fs_add_group). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s05-cp1-001",
+   "skillId": "properties-fact-strategies-skill-05",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "Use 5 × 5 = 25 to find 6 × 5.",
+   "answer": "30",
+   "solutionSteps": [
+    "6 × 5 is 1 more group of 5 than 5 × 5.",
+    "25 + 5 = 30."
+   ],
+   "standards": [
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: fs_add_group). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s05-cp1-002",
+   "skillId": "properties-fact-strategies-skill-05",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "Which strategy gives the correct product for 6 × 5?",
+   "answer": "5 × 5 plus 1 × 5",
+   "options": [
+    {
+     "text": "5 × 5 plus 1 × 5",
+     "correct": true
+    },
+    {
+     "text": "6 × 5 plus 1",
+     "correct": false
+    },
+    {
+     "text": "5 × 5 plus 1",
+     "correct": false
+    },
+    {
+     "text": "double 6 × 5",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Start from a known fact and add or subtract whole groups.",
+    "5 × 5 plus 1 × 5 = 30."
+   ],
+   "standards": [
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: fs_strategy). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s05-honors-001",
+   "skillId": "properties-fact-strategies-skill-05",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "Which strategy gives the correct product for 8 × 5?",
+   "answer": "double 4 × 5",
+   "options": [
+    {
+     "text": "4 × 5 plus 4",
+     "correct": false
+    },
+    {
+     "text": "10 × 5 minus 1",
+     "correct": false
+    },
+    {
+     "text": "double 4 × 5",
+     "correct": true
+    },
+    {
+     "text": "double 8 × 5",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Start from a known fact and add or subtract whole groups.",
+    "double 4 × 5 = 40."
+   ],
+   "standards": [
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: fs_strategy). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  },
+  {
+   "id": "m3c-pf-s05-honors-002",
+   "skillId": "properties-fact-strategies-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Multiply: 9 × 9",
+   "answer": "81",
+   "solutionSteps": [
+    "Use a fact you know, like 9 × 8 = 72, and add one more group of 9.",
+    "9 × 9 = 81."
+   ],
+   "standards": [
+    "3.OA.C.7"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 3 item (family: fs_fact). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade3-authoring/verify.py)."
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+/* 3rd Grade Math look for the shared elementary pages (body.el.g3): a teal and sunshine palette, larger text and touch targets than Grade 4, and extra room between choices. Layout and controls are the shared ones. */
+body.g3 { --blue: #0f8f9e; --bg: #f1fbfb; --line: #c7e9ec; }
+html:has(body.g3) { font-size: calc(20px * var(--el-zoom)); }
+body.el.g3 { background-image: radial-gradient(circle at 7% 12%, #dff4f6 0 80px, transparent 81px), radial-gradient(circle at 93% 86%, #fff1d6 0 96px, transparent 97px), radial-gradient(circle at 88% 10%, #e2f0ff 0 60px, transparent 61px); }
+.g3 .el-top { background: linear-gradient(90deg, #0f97b5, #1aa37a 55%, #f0a020); }
+.g3 .el-panel { border-color: #c7e9ec; }
+.g3 .el-panel h2 { color: #0b5f6b; }
+.g3 .el-q { border-color: #b6e3e7; }
+.g3 .el-q-label { background: #e0f6f8; color: #0b5f6b; }
+.g3 .el-prompt { font-size: 1.32rem; line-height: 1.5; }
+.g3 .el-choices { gap: .7rem; }
+.g3 .el-choice { font-size: 1.1rem; padding: .7rem .9rem; min-height: 3.2rem; }
+.g3 .el-btn { min-height: 2.9rem; }
+.g3 .el-input { font-size: 1.2rem; min-height: 3rem; }
+.g3 .el-pill span { padding: .55rem 1.1rem; }
+.g3 .el-celebrate h2 { color: #0b5f6b; }

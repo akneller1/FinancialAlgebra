@@ -1,0 +1,348 @@
+{
+"skillFeedback": {
+"area-skill-01": {
+"skill": "Understanding Area and Unit Squares",
+"target": "I can explain that area is the number of unit squares that cover a shape with no gaps or overlaps.",
+"standards": [
+"3.MD.C.5.a",
+"3.MD.C.5.b"
+],
+"ifCorrect": "You can do this: can explain that area is the number of unit squares that cover a shape with no gaps or overlaps.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Counting the squares around the edge, or accepting gaps and overlaps when tiling. Try this: Tile with real square tiles; check that there are no gaps or overlaps before counting."
+},
+"area-skill-02": {
+"skill": "Measuring Area by Counting Unit Squares",
+"target": "I can find area by counting unit squares and name it in square centimeters, square meters, square inches, square feet, or square units.",
+"standards": [
+"3.MD.C.6"
+],
+"ifCorrect": "You can do this: can find area by counting unit squares and name it in square centimeters, square meters, square inches, square feet, or square units.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Writing the unit as centimeters instead of square centimeters. Try this: Ask “What is one square worth?” and say the unit as “square ___.”"
+},
+"area-skill-03": {
+"skill": "Area of Rectangles: Tile and Multiply",
+"target": "I can find the area of a rectangle by tiling and show that multiplying the side lengths gives the same area.",
+"standards": [
+"3.MD.C.7.a",
+"3.MD.C.7.b"
+],
+"ifCorrect": "You can do this: can find the area of a rectangle by tiling and show that multiplying the side lengths gives the same area.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Adding the side lengths (finding perimeter) when area is asked. Try this: Draw rows of unit squares: the number of rows times the squares in each row."
+},
+"area-skill-04": {
+"skill": "Area and the Distributive Property",
+"target": "I can split a rectangle with side lengths a and b + c into two rectangles and show that its area is a × b + a × c.",
+"standards": [
+"3.MD.C.7.c"
+],
+"ifCorrect": "You can do this: can split a rectangle with side lengths a and b + c into two rectangles and show that its area is a × b + a × c.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Adding one side length instead of multiplying both parts by it. Try this: Cut the rectangle on grid paper and write the area of each part before adding."
+},
+"area-skill-05": {
+"skill": "Area of Rectilinear Figures",
+"target": "I can find the area of a rectilinear figure by splitting it into rectangles that do not overlap and adding their areas.",
+"standards": [
+"3.MD.C.7.d"
+],
+"ifCorrect": "You can do this: can find the area of a rectilinear figure by splitting it into rectangles that do not overlap and adding their areas.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Counting the overlap twice, or using a side length that belongs to the whole figure for one part. Try this: Shade each rectangle a different color and label its own side lengths before multiplying."
+}
+},
+"questions": {
+"m3c-ar-s01-cp2-001": {
+"questionType": "conceptual",
+"tags": [
+"reasoning"
+],
+"explanation": "Gaps and overlaps make the count wrong."
+},
+"m3c-ar-s01-cp2-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "The area is 5 square units.",
+"distractors": {
+"4 square units": "miscounted",
+"20 square units": "counted the sides of the squares"
+}
+},
+"m3c-ar-s01-cp1-001": {
+"questionType": "conceptual",
+"tags": [
+"reasoning"
+],
+"explanation": "Gaps and overlaps make the count wrong."
+},
+"m3c-ar-s01-cp1-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "The area is 7 square units.",
+"distractors": {
+"6 square units": "miscounted",
+"28 square units": "counted the sides of the squares"
+}
+},
+"m3c-ar-s01-honors-001": {
+"questionType": "conceptual",
+"tags": [
+"reasoning"
+],
+"explanation": "Gaps and overlaps make the count wrong."
+},
+"m3c-ar-s01-honors-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "The area is 10 square units.",
+"distractors": {
+"9 square units": "miscounted",
+"40 square units": "counted the sides of the squares"
+}
+},
+"m3c-ar-s02-cp2-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The area is 20 square meters.",
+"distractors": {
+"18 square meters": "counted the edges around the figure",
+"19 square meters": "missed a square",
+"22 square meters": "counted some squares twice"
+},
+"diagram": "grid"
+},
+"m3c-ar-s02-cp2-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The area is 20 square meters.",
+"diagram": "grid"
+},
+"m3c-ar-s02-cp1-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The area is 17 square inches.",
+"distractors": {
+"18 square inches": "counted the edges around the figure",
+"16 square inches": "missed a square",
+"19 square inches": "counted some squares twice"
+},
+"diagram": "grid"
+},
+"m3c-ar-s02-cp1-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "31 of them make 31 square inches.",
+"distractors": {
+"124 square inches": "counted the sides",
+"32 square inches": "miscounted",
+"30 square inches": "missed a square"
+}
+},
+"m3c-ar-s02-honors-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The area is 28 square centimeters.",
+"distractors": {
+"22 square centimeters": "counted the edges around the figure",
+"27 square centimeters": "missed a square",
+"30 square centimeters": "counted some squares twice"
+},
+"diagram": "grid"
+},
+"m3c-ar-s02-honors-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "36 of them make 36 square feet.",
+"distractors": {
+"144 square feet": "counted the sides",
+"37 square feet": "miscounted",
+"35 square feet": "missed a square"
+}
+},
+"m3c-ar-s03-cp2-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "5 × 4 = 20 square inches.",
+"distractors": {
+"9 square inches": "added the side lengths",
+"18 square inches": "found the perimeter"
+},
+"diagram": "rects"
+},
+"m3c-ar-s03-cp2-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "5 × 2 = 10 square units.",
+"distractors": {
+"7 square units": "added the side lengths",
+"14 square units": "found the perimeter",
+"8 square units": "missed a row"
+},
+"diagram": "rects"
+},
+"m3c-ar-s03-cp1-001": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "The area is 35 square centimeters.",
+"distractors": {
+"12 square centimeters": "added the side lengths",
+"24 square centimeters": "found the perimeter"
+}
+},
+"m3c-ar-s03-cp1-002": {
+"questionType": "multi-step",
+"tags": [
+"reasoning"
+],
+"explanation": "27 ÷ 9 = 3 feet.",
+"distractors": {
+"18 feet": "subtracted instead of dividing",
+"4 feet": "used a nearby fact",
+"5 feet": "used the perimeter rule"
+}
+},
+"m3c-ar-s03-honors-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "6 × 7 = 42 square inches.",
+"distractors": {
+"13 square inches": "added the side lengths",
+"26 square inches": "found the perimeter"
+},
+"diagram": "rects"
+},
+"m3c-ar-s03-honors-002": {
+"questionType": "multi-step",
+"tags": [
+"reasoning"
+],
+"explanation": "63 ÷ 9 = 7 feet.",
+"distractors": {
+"54 feet": "subtracted instead of dividing",
+"8 feet": "used a nearby fact",
+"9 feet": "used the perimeter rule"
+}
+},
+"m3c-ar-s04-cp2-001": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "(5 × 10) + (5 × 3) = 5 × 13.",
+"diagram": "rects"
+},
+"m3c-ar-s04-cp2-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "2 × 12 = (2 × 10) + (2 × 2).",
+"distractors": {
+"12": "used the whole side",
+"4": "wrote the area of the part",
+"10": "repeated the first part"
+},
+"diagram": "rects"
+},
+"m3c-ar-s04-cp1-001": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "70 + 21 = 91 square units.",
+"distractors": {
+"73 square units": "added the side length instead of the area of the second part",
+"70 square units": "found only one part",
+"20 square units": "added the side lengths"
+},
+"diagram": "rects"
+},
+"m3c-ar-s04-cp1-002": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "(6 × 5) + (6 × 4) = 6 × 9.",
+"diagram": "rects"
+},
+"m3c-ar-s04-honors-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "9 × 9 = (9 × 5) + (9 × 4).",
+"distractors": {
+"9": "used the whole side",
+"36": "wrote the area of the part",
+"5": "repeated the first part"
+},
+"diagram": "rects"
+},
+"m3c-ar-s04-honors-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "6 × 5 = 30 square units.",
+"distractors": {
+"66 square units": "found the whole rectangle",
+"11 square units": "added the sides",
+"36 square units": "used the other part"
+},
+"diagram": "rects"
+},
+"m3c-ar-s05-cp2-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "18 + 15 = 33 square meters.",
+"distractors": {
+"45 square meters": "multiplied the longest sides as if it were a rectangle",
+"28 square meters": "found the perimeter",
+"43 square meters": "counted the overlap twice"
+},
+"diagram": "shape"
+},
+"m3c-ar-s05-cp2-002": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "Add the two areas.",
+"diagram": "shape"
+},
+"m3c-ar-s05-cp1-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The area is 13 square units.",
+"distractors": {
+"20 square units": "found the perimeter",
+"21 square units": "used the whole rectangle around the figure",
+"11 square units": "missed some squares"
+},
+"diagram": "grid"
+},
+"m3c-ar-s05-cp1-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "12 + 15 = 27 square meters.",
+"distractors": {
+"42 square meters": "multiplied the longest sides as if it were a rectangle",
+"26 square meters": "found the perimeter",
+"33 square meters": "counted the overlap twice"
+},
+"diagram": "shape"
+},
+"m3c-ar-s05-honors-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "24 + 6 = 30 square meters.",
+"distractors": {
+"48 square meters": "multiplied the longest sides as if it were a rectangle",
+"28 square meters": "found the perimeter",
+"36 square meters": "counted the overlap twice"
+},
+"diagram": "shape"
+},
+"m3c-ar-s05-honors-002": {
+"questionType": "visual",
+"tags": [
+"multiple-representations"
+],
+"explanation": "Add the two areas.",
+"diagram": "shape"
+}
+}
+}
