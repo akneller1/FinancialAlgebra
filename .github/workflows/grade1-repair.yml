@@ -1,0 +1,52 @@
+name: Grade 1 — repair existing bank safely on review branch
+
+on:
+  push:
+    branches: [grade1-question-bank]
+    paths:
+      - 'tools/grade1-authoring/repair_semantics.py'
+      - '.github/workflows/grade1-repair.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grade1-repair-once
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: grade1-question-bank
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pillow
+      - name: Repair questions, independent checks, metadata, and changed diagrams
+        run: python tools/grade1-authoring/repair_semantics.py
+      - name: Independently check all 8370 answers and all PNGs
+        run: python tools/grade1-authoring/verify1.py
+      - name: Check shared Grade 5 bank adapter and release flags
+        run: node scripts/audit-grade1-bank.cjs
+      - name: Reject known incorrect English question / answer pairs
+        run: node scripts/audit-grade1-semantics.cjs
+      - name: Verify and commit only the branch-local repairs
+        run: |
+          set -euo pipefail
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add question-banks/math1 tools/grade1-authoring/out question-banks/assets/math1
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+          else
+            git commit -m "Correct Grade 1 question semantics, answers and figures [skip ci]"
+            git push origin HEAD:grade1-question-bank
+          fi
+# No Pages deployment, no main branch writes, no approval status changes.
