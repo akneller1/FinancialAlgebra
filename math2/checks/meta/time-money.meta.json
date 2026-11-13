@@ -1,0 +1,357 @@
+{
+"skillFeedback": {
+"time-money-skill-01": {
+"skill": "Telling Time to Five Minutes",
+"target": "I can tell and write time to the nearest five minutes from analog and digital clocks.",
+"standards": [
+"2.MD.C.7"
+],
+"ifCorrect": "You can do this: can tell and write time to the nearest five minutes from analog and digital clocks.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Reading the minute hand as the number it points to (pointing at 4 → 4 minutes), or mixing up the hour and minute hands. Try this: Count the minute hand by 5s around the clock; check the hour hand is just past the hour."
+},
+"time-money-skill-02": {
+"skill": "AM and PM",
+"target": "I can use AM and PM (a.m. and p.m.) to tell the time of day for events.",
+"standards": [
+"2.MD.C.7"
+],
+"ifCorrect": "You can do this: can use AM and PM (a.m. and p.m.) to tell the time of day for events.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Thinking AM means morning only until 10 o'clock, or that noon is AM. Try this: Use a daily schedule from midnight to midnight; AM is from midnight to noon; PM is from noon to midnight."
+},
+"time-money-skill-03": {
+"skill": "Counting Coins",
+"target": "I can find the value of a group of quarters, dimes, nickels, and pennies and write it with ¢.",
+"standards": [
+"2.MD.C.8"
+],
+"ifCorrect": "You can do this: can find the value of a group of quarters, dimes, nickels, and pennies and write it with ¢.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Counting coins by size or number (3 coins = 3¢), or thinking a nickel is worth more than a dime because it is bigger. Try this: Sort the coins from greatest to least value, then skip count (25s, 10s, 5s, 1s)."
+},
+"time-money-skill-04": {
+"skill": "Counting Bills and Coins",
+"target": "I can find the value of dollar bills and coins together and write it with $ and ¢.",
+"standards": [
+"2.MD.C.8"
+],
+"ifCorrect": "You can do this: can find the value of dollar bills and coins together and write it with $ and ¢.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Writing $ and ¢ in the same amount ($35¢), or adding dollars and cents as if they were the same unit. Try this: Count the bills first in dollars, then the coins in cents; write dollars with $ and cents with ¢."
+},
+"time-money-skill-05": {
+"skill": "Money Word Problems",
+"target": "I can solve word problems about money, including finding totals, change, and how much more is needed.",
+"standards": [
+"2.MD.C.8"
+],
+"ifCorrect": "You can do this: can solve word problems about money, including finding totals, change, and how much more is needed.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Adding when the problem asks how much is left or how much more is needed. Try this: Draw the coins or a bar model of the total and the part spent, then decide which part is unknown."
+}
+},
+"questions": {
+"m2c-tm-s01-cp2-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "Count by 5s: 0 minutes. The time is 4:00.",
+"distractors": {
+"4:05": "read the minute hand as the number it points to",
+"12:20": "mixed up the hour hand and the minute hand",
+"3:00": "read the hour before"
+},
+"diagram": "clock"
+},
+"m2c-tm-s01-cp2-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "10 minutes is 2 jumps of 5, so the minute hand points to the 2.",
+"distractors": {
+"10": "used the minutes as the number",
+"11": "gave the hour",
+"3": "counted one extra 5"
+},
+"diagram": "digital"
+},
+"m2c-tm-s01-cp1-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "25 minutes is 5 jumps of 5, so the minute hand points to the 5.",
+"distractors": {
+"2": "used the minutes as the number",
+"9": "gave the hour",
+"6": "counted one extra 5"
+},
+"diagram": "digital"
+},
+"m2c-tm-s01-cp1-002": {
+"questionType": "error-analysis",
+"tags": [
+"misconception"
+],
+"explanation": "The time is 6:35.",
+"diagram": "clock"
+},
+"m2c-tm-s01-honors-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "Count by 5s: 40 minutes. The time is 3:40.",
+"distractors": {
+"3:08": "read the minute hand as the number it points to",
+"8:15": "mixed up the hour hand and the minute hand",
+"4:40": "read the next hour"
+},
+"diagram": "clock"
+},
+"m2c-tm-s01-honors-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The time is 5:05.",
+"distractors": {
+"5:01": "read the minute hand as the number it points to",
+"1:25": "mixed up the hour hand and the minute hand",
+"4:05": "read the hour before",
+"5:10": "counted one extra 5"
+},
+"diagram": "clock"
+},
+"m2c-tm-s02-cp2-001": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "Finn plays after school in the afternoon or evening, so it is PM.",
+"distractors": {
+"AM": "mixed up AM and PM"
+}
+},
+"m2c-tm-s02-cp2-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "2:35 AM comes first."
+},
+"m2c-tm-s02-cp1-001": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "Jada eats dinner in the afternoon or evening, so it is PM.",
+"distractors": {
+"AM": "mixed up AM and PM"
+}
+},
+"m2c-tm-s02-cp1-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "2:35 AM comes first."
+},
+"m2c-tm-s02-honors-001": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "Pia eats breakfast in the morning, so it is AM.",
+"distractors": {
+"PM": "mixed up AM and PM"
+}
+},
+"m2c-tm-s02-honors-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "5:45 AM comes first."
+},
+"m2c-tm-s03-cp2-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "10 + 1 + 1 = 12¢.",
+"distractors": {
+"3¢": "counted the coins instead of their values",
+"17¢": "counted one coin wrong",
+"11¢": "made a counting mistake",
+"$12": "used the dollar sign"
+},
+"diagram": "money"
+},
+"m2c-tm-s03-cp2-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "10 + 1 + 1 = 12¢.",
+"distractors": {
+"3¢": "counted the coins instead of their values",
+"17¢": "mixed up a dime and a nickel",
+"11¢": "made a counting mistake"
+}
+},
+"m2c-tm-s03-cp1-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "25 + 10 + 5 + 1 = 41¢.",
+"distractors": {
+"4¢": "counted the coins instead of their values",
+"46¢": "counted one coin wrong",
+"40¢": "made a counting mistake",
+"$41": "used the dollar sign"
+},
+"diagram": "money"
+},
+"m2c-tm-s03-cp1-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "10 + 5 + 1 + 1 = 17¢.",
+"distractors": {
+"4¢": "counted the coins instead of their values",
+"22¢": "mixed up a dime and a nickel",
+"16¢": "made a counting mistake"
+}
+},
+"m2c-tm-s03-honors-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "25 + 25 + 10 + 5 = 65¢.",
+"distractors": {
+"4¢": "counted the coins instead of their values",
+"70¢": "counted one coin wrong",
+"64¢": "made a counting mistake",
+"$65": "used the dollar sign"
+},
+"diagram": "money"
+},
+"m2c-tm-s03-honors-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "10 + 10 + 5 + 5 + 5 + 1 = 36¢.",
+"distractors": {
+"6¢": "counted the coins instead of their values",
+"41¢": "mixed up a dime and a nickel",
+"35¢": "made a counting mistake"
+}
+},
+"m2c-tm-s04-cp2-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The total is $6 and 41¢.",
+"distractors": {
+"$47": "added dollars and cents as if they were the same",
+"$6 and 46¢": "counted one coin wrong",
+"$2 and 5¢": "counted bills and coins instead of values"
+},
+"diagram": "money"
+},
+"m2c-tm-s04-cp2-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "Kai has $11.",
+"distractors": {
+"$3": "counted the bills, not their values",
+"$12": "made a counting mistake",
+"11¢": "used the cent sign"
+}
+},
+"m2c-tm-s04-cp1-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "20 + 10 + 1 + 1 = 32, so $32.",
+"distractors": {
+"$4": "counted the bills, not their values",
+"32¢": "used the cent sign",
+"$37": "counted one bill wrong"
+},
+"diagram": "money"
+},
+"m2c-tm-s04-cp1-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The total is $55 and 91¢.",
+"distractors": {
+"$146": "added dollars and cents as if they were the same",
+"$55 and 96¢": "counted one coin wrong",
+"$4 and 6¢": "counted bills and coins instead of values"
+},
+"diagram": "money"
+},
+"m2c-tm-s04-honors-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "20 + 10 + 5 + 5 = 40, so $40.",
+"distractors": {
+"$4": "counted the bills, not their values",
+"40¢": "used the cent sign",
+"$45": "counted one bill wrong"
+},
+"diagram": "money"
+},
+"m2c-tm-s04-honors-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "The total is $61 and 70¢.",
+"distractors": {
+"$131": "added dollars and cents as if they were the same",
+"$61 and 75¢": "counted one coin wrong",
+"$5 and 5¢": "counted bills and coins instead of values"
+},
+"diagram": "money"
+},
+"m2c-tm-s05-cp2-001": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "39 + 54 = 93¢.",
+"distractors": {
+"15¢": "subtracted instead of adding",
+"103¢": "made a regrouping mistake",
+"$93": "used the dollar sign"
+}
+},
+"m2c-tm-s05-cp2-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "56 − 12 = 44¢.",
+"distractors": {
+"68¢": "added instead of subtracting",
+"54¢": "made a regrouping mistake",
+"12¢": "gave the price"
+}
+},
+"m2c-tm-s05-cp1-001": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "60 + 34 = 94¢.",
+"distractors": {
+"26¢": "subtracted instead of adding",
+"104¢": "made a regrouping mistake",
+"$94": "used the dollar sign"
+}
+},
+"m2c-tm-s05-cp1-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "76 − 8 = 68¢.",
+"distractors": {
+"84¢": "added instead of subtracting",
+"78¢": "made a regrouping mistake",
+"8¢": "gave the price"
+}
+},
+"m2c-tm-s05-honors-001": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "37 − 25 = 12¢.",
+"distractors": {
+"62¢": "added instead of subtracting",
+"22¢": "made a regrouping mistake",
+"25¢": "gave the price"
+}
+},
+"m2c-tm-s05-honors-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "16 − 3 = 13, so $13.",
+"distractors": {
+"$19": "added instead of subtracting",
+"$16": "gave the price",
+"13¢": "used the cent sign"
+}
+}
+}
+}
