@@ -45,6 +45,37 @@ jobs:
               assert (root/path).is_file(), f'Missing source: {path}'
           print('All 12 Grade 2 preview banks and required sources are present')
           PY
+      - name: Require shared elementary player dependencies
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          root=pathlib.Path('.')
+          shared=[
+              'worksheet-generator/elementary/el-core.js',
+              'worksheet-generator/elementary/el-games.js',
+              'worksheet-generator/elementary/el-flashcards.js',
+              'worksheet-generator/elementary/el-understanding-check.js',
+              'worksheet-generator/core/math-display.js',
+              'worksheet-generator/games/skill-setup.js',
+              'question-bank-loader.js',
+              'question-bank-adapter.js',
+          ]
+          missing=[p for p in shared if not (root/p).is_file()]
+          assert not missing, f'Missing shared runtime dependencies: {missing}'
+          for filename in (
+              'worksheet-generator/grade2-games.html',
+              'worksheet-generator/grade2-flashcards.html',
+              'worksheet-generator/grade2-understanding-check.html',
+          ):
+              html=(root/filename).read_text()
+              for src in re.findall(r'<script[^>]+src=["\\\']([^"\\\']+)',html):
+                  local=src.split('?',1)[0].split('#',1)[0]
+                  if '://' in local or local.startswith('//'): continue
+                  resolved=(root/'worksheet-generator'/local).resolve()
+                  assert resolved.is_relative_to(root.resolve()) and resolved.is_file(), f'{filename}: script not found: {src}'
+          print('Shared elementary runtime and Grade 2 player script dependencies verified')
+          PY
       - name: Verify practice answer checks
         working-directory: tools/grade2-authoring
         run: python3 verify.py
