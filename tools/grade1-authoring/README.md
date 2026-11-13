@@ -116,10 +116,17 @@ longer prompts and accepts interchangeable answer cards with the same mathematic
 The integration suite verifies all 279 single-skill/level puzzles, all four native question
 formats and Error Analysis at every skill/level, plus representative game and guide routes.
 
-Format-specific printables still need compatible arrangements: Partner Check requires
-explicit paired items, while mazes and Tarsia require enough short, distinct answers.
+Partner Check now selects same-skill, same-level pairs directly from the bank, with
+different mathematical inputs and equal answers; no extra author-assigned pair IDs are
+needed. Problem & Answer Matching supports repeated use of an answer letter and retains
+source diagrams. Mazes and Tarsia still require enough short, distinct answers.
 The UI may offer fewer printable formats for narrow skills; unrelated filler is not added.
 
 Grade 1 flashcards are bank-derived practice cards, rather than a separately authored
 vocabulary deck. They include complete single-answer prompts and retain diagrams;
 select-all and multipart items remain in the readiness check and generators.
+
+The printable audit covers all 279 skill/level selections. Matching works in every selection;
+Partner Check has genuinely different same-answer pairs in 187 selections. The other 92
+(such as reading a fixed clock time) offer matching instead of repeated or relabelled problems.
+No questions, IDs, standards, levels or bank approval fields are changed by these printables.

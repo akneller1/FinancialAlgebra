@@ -10,15 +10,24 @@ export function integrate({source,out}){
  const folder=path.join(out,'grade1-staging');fs.mkdirSync(path.join(folder,'banks'),{recursive:true});
  const copy=(from,to)=>{fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(path.join(source,from),to);};
  copy('src/grade1-staging-runtime.js',path.join(folder,'runtime.js'));
- const banks=[];
+ const banks=[],content={};
+ function canonical(value){
+  if(Array.isArray(value))return value.map(canonical);
+  if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().filter(k=>!['person','color','caption'].includes(k)).map(k=>[k,canonical(value[k])]));
+  return value;
+ }
  for(const entry of manifest.banks){
   const rel='question-banks/'+entry.path,bank=JSON.parse(fs.readFileSync(path.join(source,rel)));
+  const checks=JSON.parse(fs.readFileSync(path.join(source,'tools/grade1-authoring/out',entry.unitId+'.checks.json')));
+  bank.questions.forEach(q=>{content[q.id]=JSON.stringify(canonical(checks[q.id].q||checks[q.id].parts));});
   copy(rel,path.join(folder,'banks',entry.unitId+'.json'));
   banks.push({courseId:'math1',unitId:entry.unitId,path:'banks/'+entry.unitId+'.json',approved:false});
   const meta='question-banks/math1/meta/'+entry.unitId+'.meta.json';copy(meta,path.join(out,'elementary/math1/meta',entry.unitId+'.meta.json'));
   for(const q of bank.questions)if(q.diagram){const asset=q.diagram.spec.src;if(!asset.startsWith('question-banks/assets/math1/')||asset.includes('..'))throw Error('Unsafe Grade 1 asset');copy(asset,path.join(out,asset));copy(asset,path.join(out,'elementary',asset));}
  }
  fs.writeFileSync(path.join(folder,'manifest.json'),JSON.stringify({version:1,staging:true,banks},null,2));
+ fs.writeFileSync(path.join(folder,'content-index.json'),JSON.stringify(content));
+ copy('src/grade1-printables-staging.js',path.join(folder,'printables.js'));
  // Load the scoped adapter extension before the native approved-bank bridge starts.
  for(const page of ['worksheet.html','menu-assessment.html','lesson-planner.html','printables.html']){
   const file=path.join(out,'worksheet-generator',page);let text=fs.readFileSync(file,'utf8');
@@ -37,7 +46,16 @@ export function integrate({source,out}){
  // `approved` on a native worksheet item is the existing print-control flag,
  // separate from editorial bank approval. Keep it for unedited source keys.
  nativeCode=nativeCode.replace('approved:true,skill:q.skillId',"approved:true,staging:q.id.startsWith('m1-'),skill:q.skillId");
+ nativeCode=nativeCode.replace('const generate=NS.generateProblem;',"NS.grade1StagingQuestion=function(id,qid){const q=raw.get(qid);return /^grade1-/.test(id)&&isBank(id)&&q&&NS.skillSets[id].byId[q.skillId]?problem(q,id,NS.LEVELS[q.level].tiers[1]):null;};\nconst generate=NS.generateProblem;");
  fs.writeFileSync(nativeFile,nativeCode);
+ const printablePage=path.join(out,'worksheet-generator/printables.html');
+ let printableHtml=fs.readFileSync(printablePage,'utf8');
+ printableHtml=printableHtml.replace(/(<script src="menu\/printables-ui\.js[^>]*>)/,'<script src="../grade1-staging/printables.js"></script>\n<script>(function(){var p=new URLSearchParams(location.hash.slice(1));if((p.get("unit")||"").startsWith("grade1-")&&["match","matching"].includes(p.get("kind"))){p.set("kind","answer-match");history.replaceState(null,"","#"+p);}})();</script>\n$1');
+ fs.writeFileSync(printablePage,printableHtml);
+ const printableUI=path.join(out,'worksheet-generator/menu/printables-ui.js');
+ let printableCode=fs.readFileSync(printableUI,'utf8');
+ printableCode=printableCode.replace('  PR.pageEls = function',"  var originalPages=PR.pages;PR.pages=function(cfg,B,v,nV,key){return B.grade1Staging?G.MK_GRADE1_PRINTABLES.pages(cfg,B,v,nV,key):originalPages.apply(this,arguments);};\n  PR.pageEls = function");
+ fs.writeFileSync(printableUI,printableCode);
  const menuFile=path.join(out,'worksheet-generator/menu/app.js');
  let menu=fs.readFileSync(menuFile,'utf8');
  menu=menu.replace("var st = p.verify && p.verify.status;", "if (p.staging && NS.isUneditedAlgebra2BankQuestion(p)) return '<span class=\"mm-badge\">Development preview</span>';\n    var st = p.verify && p.verify.status;");

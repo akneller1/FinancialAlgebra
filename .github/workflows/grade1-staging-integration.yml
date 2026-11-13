@@ -8,6 +8,8 @@ on:
       - 'scripts/assemble-classroom-preview.mjs'
       - 'scripts/test-grade1-integration*.cjs'
       - 'src/grade1-staging-runtime.js'
+      - 'src/grade1-printables-staging.js'
+      - 'scripts/test-grade1-printables*.cjs'
       - 'worksheet-generator/grade5/g5-games.js'
       - 'worksheet-generator/grade5/flashcards.js'
   workflow_dispatch:
@@ -41,6 +43,7 @@ jobs:
         run: |
           node --input-type=module -e "import {integrate} from './scripts/integrate-grade1-staging.mjs';integrate({source:process.cwd(),out:process.cwd()+'/../classroom/_site'})"
           node scripts/test-grade1-integration.cjs
+          node scripts/test-grade1-printables.cjs
           node --check worksheet-generator/grade5/g5-games.js
       - name: Install Chromium
         working-directory: source
@@ -56,6 +59,7 @@ jobs:
             sleep 1
           done
           node scripts/test-grade1-integration-browser.cjs
+          node scripts/test-grade1-printables-browser.cjs
       - uses: actions/upload-artifact@v4
         if: success()
         with:

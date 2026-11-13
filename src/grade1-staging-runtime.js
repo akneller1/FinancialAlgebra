@@ -13,8 +13,9 @@
  var originalAvailable=A.available,originalSelect=A.select,all=L.loadFromSite,one=L.loadUnitFromSite;
  function scoped(c){return c==='grade1'||c==='math1';}
  function read(url){return G.fetch(new URL(url,base)).then(function(r){if(!r.ok)throw Error('Staging resource unavailable: '+url);return r.json();});}
- function entries(){return manifest||(manifest=read('manifest.json').then(function(m){
-  if(m.staging!==true||m.banks.length!==8||m.banks.some(function(b){return b.approved!==false||b.courseId!=='math1';}))throw Error('Invalid unapproved Grade 1 staging manifest');return m.banks;
+ function entries(){return manifest||(manifest=Promise.all([read('manifest.json'),read('content-index.json')]).then(function(results){
+  var m=results[0];G.MK_GRADE1_STAGING.content=results[1];
+  if(m.staging!==true||m.banks.length!==8||Object.keys(results[1]).length!==8370||m.banks.some(function(b){return b.approved!==false||b.courseId!=='math1';}))throw Error('Invalid unapproved Grade 1 staging manifest');return m.banks;
  }));}
  function ensure(id){
   if(!requests[id])requests[id]=entries().then(function(es){var e=es.find(function(b){return b.unitId===id;});if(!e)throw Error('Unknown Grade 1 staging unit');return read(e.path);}).then(function(bank){
