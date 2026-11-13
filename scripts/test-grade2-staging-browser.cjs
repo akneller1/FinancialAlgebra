@@ -55,7 +55,14 @@ const server=http.createServer((req,res)=>{
   check.on('pageerror',e=>checkErrors.push(e.message));
   check.on('request',req=>{if(req.url().includes('/question-banks/math2/checks/'))checkRequests.push(req.url());});
   await check.goto(base+'grade2/worksheet-generator/grade2-understanding-check.html?unit='+encodeURIComponent(unit),{waitUntil:'load'});
-  await check.waitForSelector('.el-setup, .el-stage',{timeout:25000});
+  try { await check.waitForSelector('.el-setup, .el-stage',{timeout:15000}); }
+  catch (e) {
+    console.error('Understanding Check URL:',check.url(),
+      'page errors:',checkErrors,
+      'bank requests:',checkRequests,
+      'body:',(await check.locator('body').innerText().catch(()=>'')).slice(0,900));
+    throw e;
+  }
   assert.ok(checkRequests.some(u=>u.includes('/checks/'+unit+'.json')),'Understanding Check must request its dedicated 318-question check-bank family');
   assert.deepEqual(checkErrors,[],'Understanding Check must boot without JS errors');
   await check.close();
