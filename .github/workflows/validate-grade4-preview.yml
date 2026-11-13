@@ -1,0 +1,36 @@
+name: Validate Grade 4 integrated Classroom preview
+on:
+  push:
+    branches: [grade4-framework-migration]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/checkout@v4
+        with:
+          repository: akneller1/classroom
+          ref: main
+          path: classroom
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate Grade 4 source banks and resources
+        working-directory: source
+        run: npm test
+      - name: Assemble Grade 4 in the real Classroom shell
+        working-directory: source
+        env:
+          CLASSROOM_SOURCE_DIR: ../classroom
+        run: node scripts/assemble-classroom-preview.mjs
+      - name: Verify all integrated Grade 4 routes and generators
+        working-directory: source
+        env:
+          CLASSROOM_SOURCE_DIR: ../classroom
+        run: node scripts/test-classroom-preview.cjs
