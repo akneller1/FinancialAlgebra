@@ -55,7 +55,14 @@ const server=http.createServer((req,res)=>{
   check.on('pageerror',e=>checkErrors.push(e.message));
   check.on('request',req=>{if(req.url().includes('/question-banks/math2/checks/'))checkRequests.push(req.url());});
   await check.goto(base+'grade2/worksheet-generator/grade2-understanding-check.html?unit='+encodeURIComponent(unit),{waitUntil:'load'});
-  try { await check.waitForSelector('.el-setup, .el-stage',{timeout:15000}); }
+  try {
+    await check.waitForSelector('dialog.teacher-skills, .el-setup, .el-stage',{timeout:15000});
+    const teacherSkills=check.locator('dialog.teacher-skills');
+    if(await teacherSkills.count()) {
+      await teacherSkills.getByText('Continue',{exact:true}).click();
+      await check.waitForSelector('.el-setup, .el-stage',{timeout:15000});
+    }
+  }
   catch (e) {
     console.error('Understanding Check URL:',check.url(),
       'page errors:',checkErrors,
