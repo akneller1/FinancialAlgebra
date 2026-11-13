@@ -458,8 +458,8 @@
 "m1-geo-s01-cp1-001": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 3
+"fn": "shape_name",
+"kind": "rectangle"
 },
 "family": "fam01_fam01_f",
 "diagram": {
@@ -469,14 +469,6 @@
 {
 "type": "rectangle",
 "color": "teal"
-},
-{
-"type": "square",
-"color": "green"
-},
-{
-"type": "hexagon",
-"color": "purple"
 }
 ]
 }
@@ -504,8 +496,9 @@
 "m1-geo-s01-cp1-003": {
 "q": {
 "k": "fn",
-"fn": "shape_sides",
-"kind": "hexagon"
+"fn": "clock_minutes",
+"h": 10,
+"m": 0
 },
 "family": "fam03_fam03_facts_g"
 },
@@ -604,8 +597,9 @@
 "m1-geo-s01-cp1-009": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 3
+"fn": "clock_minutes",
+"h": 11,
+"m": 0
 },
 "family": "fam03_fam03_facts_g"
 },
@@ -658,7 +652,9 @@
 "m1-geo-s01-cp1-012": {
 "q": {
 "k": "fn",
-"fn": "half_hour"
+"fn": "clock_minutes",
+"h": 11,
+"m": 30
 },
 "family": "fam03_fam03_facts_g"
 },
@@ -666,7 +662,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_name",
-"kind": "hexagon"
+"kind": "triangle"
 },
 "family": "fam01_fam01_f",
 "diagram": {
@@ -674,8 +670,8 @@
 "data": {
 "shapes": [
 {
-"type": "hexagon",
-"color": "purple"
+"type": "triangle",
+"color": "blue"
 }
 ]
 }
@@ -721,8 +717,8 @@
 "q": {
 "k": "fn",
 "fn": "clock_minutes",
-"h": 9,
-"m": 30
+"h": 5,
+"m": 0
 },
 "family": "fam03_fam03_facts_g"
 },
@@ -914,8 +910,8 @@
 "m1-geo-s01-honors-001": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 0
+"fn": "shape_name",
+"kind": "circle"
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -923,16 +919,8 @@
 "data": {
 "shapes": [
 {
-"type": "hexagon",
-"color": "purple"
-},
-{
-"type": "square",
+"type": "circle",
 "color": "teal"
-},
-{
-"type": "triangle",
-"color": "orange"
 }
 ]
 }
@@ -969,8 +957,9 @@
 "m1-geo-s01-honors-004": {
 "q": {
 "k": "fn",
-"fn": "shape_sides",
-"kind": "square"
+"fn": "clock_minutes",
+"h": 6,
+"m": 0
 },
 "family": "fam03_fam03_fam03_facts_g"
 },
@@ -1015,8 +1004,8 @@
 "m1-geo-s01-honors-007": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 3
+"fn": "shape_name",
+"kind": "hexagon"
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -1025,15 +1014,7 @@
 "shapes": [
 {
 "type": "hexagon",
-"color": "blue"
-},
-{
-"type": "square",
 "color": "green"
-},
-{
-"type": "circle",
-"color": "orange"
 }
 ]
 }
@@ -1042,8 +1023,9 @@
 "m1-geo-s01-honors-008": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 6
+"fn": "clock_minutes",
+"h": 2,
+"m": 30
 },
 "family": "fam03_fam03_fam03_facts_g"
 },
@@ -1178,8 +1160,9 @@
 "m1-geo-s01-honors-017": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 0
+"fn": "clock_minutes",
+"h": 10,
+"m": 30
 },
 "family": "fam03_fam03_fam03_facts_g"
 },
@@ -1231,8 +1214,9 @@
 "m1-geo-s01-honors-021": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 3
+"fn": "clock_minutes",
+"h": 12,
+"m": 0
 },
 "family": "fam03_fam03_fam03_facts_g"
 },
@@ -2203,7 +2187,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "sphere"
+"kind": "cylinder"
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -2211,7 +2195,7 @@
 "data": {
 "shapes": [
 {
-"type": "sphere",
+"type": "cylinder",
 "color": "teal"
 }
 ]
@@ -2305,7 +2289,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "cube"
+"kind": "cylinder"
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -2313,7 +2297,7 @@
 "data": {
 "shapes": [
 {
-"type": "cube",
+"type": "cylinder",
 "color": "teal"
 }
 ]
@@ -2323,8 +2307,8 @@
 "m1-geo-s02-honors-008": {
 "q": {
 "k": "fn",
-"fn": "solid_name",
-"kind": "cylinder"
+"fn": "shape_attr_name",
+"sides": 4
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
@@ -2332,16 +2316,12 @@
 "data": {
 "shapes": [
 {
-"type": "circle",
+"type": "triangle",
 "color": "blue"
 },
 {
-"type": "rectangle",
+"type": "triangle",
 "color": "orange"
-},
-{
-"type": "circle",
-"color": "blue"
 }
 ],
 "caption": "Join the pieces"
@@ -2615,8 +2595,8 @@
 "m1-geo-s03-cp2-001": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 4
+"fn": "solid_name",
+"kind": "cylinder"
 },
 "family": "fam01_f",
 "diagram": {
@@ -2624,12 +2604,16 @@
 "data": {
 "shapes": [
 {
-"type": "triangle",
+"type": "circle",
 "color": "blue"
 },
 {
-"type": "triangle",
+"type": "rectangle",
 "color": "orange"
+},
+{
+"type": "circle",
+"color": "blue"
 }
 ],
 "caption": "Join the pieces"
@@ -2640,7 +2624,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_attr_name",
-"sides": 6
+"sides": 0
 },
 "family": "fam02_f",
 "diagram": {
@@ -2648,12 +2632,12 @@
 "data": {
 "shapes": [
 {
-"type": "rectangle",
+"type": "triangle",
 "color": "blue"
 },
 {
-"type": "triangle",
-"color": "purple"
+"type": "hexagon",
+"color": "green"
 },
 {
 "type": "square",
@@ -2728,8 +2712,8 @@
 "m1-geo-s03-cp2-007": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 3
+"fn": "shape_name",
+"kind": "circle"
 },
 "family": "fam02_f",
 "diagram": {
@@ -2737,16 +2721,8 @@
 "data": {
 "shapes": [
 {
-"type": "hexagon",
-"color": "teal"
-},
-{
-"type": "rectangle",
-"color": "blue"
-},
-{
-"type": "square",
-"color": "blue"
+"type": "circle",
+"color": "purple"
 }
 ]
 }
@@ -2832,8 +2808,8 @@
 "m1-geo-s03-cp2-013": {
 "q": {
 "k": "fn",
-"fn": "shape_name",
-"kind": "hexagon"
+"fn": "shape_attr_name",
+"sides": 6
 },
 "family": "fam02_f",
 "diagram": {
@@ -2841,8 +2817,16 @@
 "data": {
 "shapes": [
 {
-"type": "hexagon",
+"type": "triangle",
+"color": "blue"
+},
+{
+"type": "circle",
 "color": "purple"
+},
+{
+"type": "rectangle",
+"color": "orange"
 }
 ]
 }
@@ -2889,7 +2873,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_name",
-"kind": "rectangle"
+"kind": "hexagon"
 },
 "family": "fam02_f",
 "diagram": {
@@ -2897,8 +2881,8 @@
 "data": {
 "shapes": [
 {
-"type": "rectangle",
-"color": "teal"
+"type": "hexagon",
+"color": "purple"
 }
 ]
 }
@@ -3086,7 +3070,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_attr_name",
-"sides": 4
+"sides": 6
 },
 "family": "fam01_fam01_f",
 "diagram": {
@@ -3109,8 +3093,8 @@
 "m1-geo-s03-cp1-002": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 0
+"fn": "shape_name",
+"kind": "triangle"
 },
 "family": "fam02_fam02_f",
 "diagram": {
@@ -3118,16 +3102,8 @@
 "data": {
 "shapes": [
 {
-"type": "rectangle",
-"color": "purple"
-},
-{
-"type": "hexagon",
-"color": "purple"
-},
-{
-"type": "square",
-"color": "teal"
+"type": "triangle",
+"color": "green"
 }
 ]
 }
@@ -3202,8 +3178,8 @@
 "m1-geo-s03-cp1-007": {
 "q": {
 "k": "fn",
-"fn": "shape_name",
-"kind": "hexagon"
+"fn": "shape_attr_name",
+"sides": 6
 },
 "family": "fam02_fam02_f",
 "diagram": {
@@ -3211,8 +3187,16 @@
 "data": {
 "shapes": [
 {
-"type": "hexagon",
+"type": "rectangle",
 "color": "blue"
+},
+{
+"type": "triangle",
+"color": "teal"
+},
+{
+"type": "square",
+"color": "teal"
 }
 ]
 }
@@ -3230,8 +3214,8 @@
 "m1-geo-s03-cp1-009": {
 "q": {
 "k": "fn",
-"fn": "solid_name",
-"kind": "cylinder"
+"fn": "shape_attr_name",
+"sides": 6
 },
 "family": "fam01_fam01_f",
 "diagram": {
@@ -3239,16 +3223,12 @@
 "data": {
 "shapes": [
 {
-"type": "circle",
+"type": "triangle",
 "color": "blue"
 },
 {
-"type": "rectangle",
+"type": "triangle",
 "color": "orange"
-},
-{
-"type": "circle",
-"color": "blue"
 }
 ],
 "caption": "Join the pieces"
@@ -3295,7 +3275,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_attr_name",
-"sides": 3
+"sides": 6
 },
 "family": "fam02_fam02_f",
 "diagram": {
@@ -3303,16 +3283,16 @@
 "data": {
 "shapes": [
 {
-"type": "hexagon",
-"color": "orange"
+"type": "circle",
+"color": "blue"
 },
 {
-"type": "circle",
-"color": "green"
+"type": "triangle",
+"color": "orange"
 },
 {
 "type": "rectangle",
-"color": "orange"
+"color": "blue"
 }
 ]
 }
@@ -3357,7 +3337,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_name",
-"kind": "rectangle"
+"kind": "triangle"
 },
 "family": "fam02_fam02_f",
 "diagram": {
@@ -3365,8 +3345,8 @@
 "data": {
 "shapes": [
 {
-"type": "rectangle",
-"color": "green"
+"type": "triangle",
+"color": "orange"
 }
 ]
 }
@@ -3577,7 +3557,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_attr_name",
-"sides": 0
+"sides": 3
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
@@ -3585,16 +3565,16 @@
 "data": {
 "shapes": [
 {
+"type": "hexagon",
+"color": "orange"
+},
+{
 "type": "square",
-"color": "green"
+"color": "teal"
 },
 {
-"type": "triangle",
-"color": "blue"
-},
-{
-"type": "rectangle",
-"color": "blue"
+"type": "circle",
+"color": "teal"
 }
 ]
 }
@@ -3666,8 +3646,8 @@
 "m1-geo-s03-honors-007": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 6
+"fn": "shape_name",
+"kind": "rectangle"
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
@@ -3677,14 +3657,6 @@
 {
 "type": "rectangle",
 "color": "blue"
-},
-{
-"type": "triangle",
-"color": "orange"
-},
-{
-"type": "circle",
-"color": "orange"
 }
 ]
 }
@@ -3701,7 +3673,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_attr_name",
-"sides": 6
+"sides": 4
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -3767,8 +3739,8 @@
 "m1-geo-s03-honors-013": {
 "q": {
 "k": "fn",
-"fn": "shape_name",
-"kind": "rectangle"
+"fn": "shape_attr_name",
+"sides": 0
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
@@ -3778,6 +3750,14 @@
 {
 "type": "rectangle",
 "color": "blue"
+},
+{
+"type": "triangle",
+"color": "green"
+},
+{
+"type": "square",
+"color": "purple"
 }
 ]
 }
@@ -3822,7 +3802,7 @@
 "q": {
 "k": "fn",
 "fn": "shape_name",
-"kind": "circle"
+"kind": "rectangle"
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
@@ -3830,7 +3810,7 @@
 "data": {
 "shapes": [
 {
-"type": "circle",
+"type": "rectangle",
 "color": "teal"
 }
 ]
@@ -4016,7 +3996,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "sphere"
+"kind": "cube"
 },
 "family": "fam01_f",
 "diagram": {
@@ -4024,7 +4004,7 @@
 "data": {
 "shapes": [
 {
-"type": "sphere",
+"type": "cube",
 "color": "teal"
 }
 ]
@@ -4034,8 +4014,8 @@
 "m1-geo-s04-cp2-002": {
 "q": {
 "k": "fn",
-"fn": "shape_attr_name",
-"sides": 4
+"fn": "solid_name",
+"kind": "cylinder"
 },
 "family": "fam02_f",
 "diagram": {
@@ -4043,12 +4023,16 @@
 "data": {
 "shapes": [
 {
-"type": "triangle",
+"type": "circle",
 "color": "blue"
 },
 {
-"type": "triangle",
+"type": "rectangle",
 "color": "orange"
+},
+{
+"type": "circle",
+"color": "blue"
 }
 ],
 "caption": "Join the pieces"
@@ -4059,8 +4043,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 7
+"a": 7,
+"b": 6
 },
 "family": "fam03_facts_md"
 },
@@ -4115,8 +4099,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
-"b": 3
+"a": 12,
+"b": 7
 },
 "family": "fam03_facts_md"
 },
@@ -4141,7 +4125,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "sphere"
+"kind": "cube"
 },
 "family": "fam01_f",
 "diagram": {
@@ -4149,7 +4133,7 @@
 "data": {
 "shapes": [
 {
-"type": "sphere",
+"type": "cube",
 "color": "teal"
 }
 ]
@@ -4183,17 +4167,9 @@
 "m1-geo-s04-cp2-010": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-6,
-7,
-8
-]
+"fn": "add",
+"a": 11,
+"b": 2
 },
 "family": "fam03_facts_md"
 },
@@ -4220,8 +4196,8 @@
 "q": {
 "k": "fn",
 "fn": "longer_ab",
-"a": 7,
-"b": 5
+"a": 10,
+"b": 9
 },
 "family": "fam03_facts_md"
 },
@@ -4229,7 +4205,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "cone"
+"kind": "cube"
 },
 "family": "fam01_f",
 "diagram": {
@@ -4237,7 +4213,7 @@
 "data": {
 "shapes": [
 {
-"type": "cone",
+"type": "cube",
 "color": "teal"
 }
 ]
@@ -4265,8 +4241,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 6
+"a": 3,
+"b": 8
 },
 "family": "fam03_facts_md"
 },
@@ -4274,8 +4250,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 11
+"a": 12,
+"b": 4
 },
 "family": "fam03_facts_md"
 },
@@ -4283,8 +4259,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 10,
-"b": 7
+"a": 5,
+"b": 10
 },
 "family": "fam03_facts_md"
 },
@@ -4298,9 +4274,9 @@
 "green"
 ],
 "counts": [
-8,
+9,
 3,
-7
+6
 ]
 },
 "family": "fam03_facts_md"
@@ -4308,17 +4284,9 @@
 "m1-geo-s04-cp2-019": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-5,
-2,
-9
-]
+"fn": "add",
+"a": 7,
+"b": 11
 },
 "family": "fam03_facts_md"
 },
@@ -4335,8 +4303,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 5
+"a": 11,
+"b": 9
 },
 "family": "fam03_facts_md"
 },
@@ -4344,8 +4312,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 5,
-"b": 4
+"a": 12,
+"b": 11
 },
 "family": "fam03_facts_md"
 },
@@ -4353,8 +4321,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 5,
-"b": 10
+"a": 9,
+"b": 8
 },
 "family": "fam03_facts_md"
 },
@@ -4362,8 +4330,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 2,
-"b": 7
+"a": 10,
+"b": 9
 },
 "family": "fam03_facts_md"
 },
@@ -4599,17 +4567,9 @@
 "m1-geo-s04-cp1-005": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-3,
-4,
-6
-]
+"fn": "add",
+"a": 12,
+"b": 9
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -4635,17 +4595,9 @@
 "m1-geo-s04-cp1-007": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-4,
-6,
-9
-]
+"fn": "add",
+"a": 7,
+"b": 11
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -4677,7 +4629,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "cube"
+"kind": "cylinder"
 },
 "family": "fam01_fam01_f",
 "diagram": {
@@ -4685,7 +4637,7 @@
 "data": {
 "shapes": [
 {
-"type": "cube",
+"type": "cylinder",
 "color": "teal"
 }
 ]
@@ -4741,7 +4693,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "cone"
+"kind": "sphere"
 },
 "family": "fam01_fam01_f",
 "diagram": {
@@ -4749,7 +4701,7 @@
 "data": {
 "shapes": [
 {
-"type": "cone",
+"type": "sphere",
 "color": "teal"
 }
 ]
@@ -4794,8 +4746,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 10,
-"b": 2
+"a": 4,
+"b": 3
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -4803,7 +4755,7 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
+"a": 6,
 "b": 8
 },
 "family": "fam03_fam03_facts_md"
@@ -4812,12 +4764,30 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 5,
-"b": 7
+"a": 4,
+"b": 6
 },
 "family": "fam03_fam03_facts_md"
 },
 "m1-geo-s04-cp1-019": {
+"q": {
+"k": "fn",
+"fn": "add",
+"a": 9,
+"b": 11
+},
+"family": "fam03_fam03_facts_md"
+},
+"m1-geo-s04-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "add",
+"a": 4,
+"b": 5
+},
+"family": "fam03_fam03_facts_md"
+},
+"m1-geo-s04-cp1-021": {
 "q": {
 "k": "fn",
 "fn": "add",
@@ -4826,30 +4796,12 @@
 },
 "family": "fam03_fam03_facts_md"
 },
-"m1-geo-s04-cp1-020": {
-"q": {
-"k": "fn",
-"fn": "add",
-"a": 3,
-"b": 6
-},
-"family": "fam03_fam03_facts_md"
-},
-"m1-geo-s04-cp1-021": {
-"q": {
-"k": "fn",
-"fn": "add",
-"a": 2,
-"b": 10
-},
-"family": "fam03_fam03_facts_md"
-},
 "m1-geo-s04-cp1-022": {
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 9,
-"b": 3
+"a": 5,
+"b": 2
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -4857,7 +4809,7 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
+"a": 8,
 "b": 5
 },
 "family": "fam03_fam03_facts_md"
@@ -4866,8 +4818,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 5,
-"b": 2
+"a": 3,
+"b": 11
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -5024,7 +4976,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "sphere"
+"kind": "cone"
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -5032,7 +4984,7 @@
 "data": {
 "shapes": [
 {
-"type": "sphere",
+"type": "cone",
 "color": "teal"
 }
 ]
@@ -5066,9 +5018,9 @@
 "m1-geo-s04-honors-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 5,
-"b": 4
+"fn": "add",
+"a": 4,
+"b": 5
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5123,8 +5075,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
-"b": 2
+"a": 3,
+"b": 12
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5156,7 +5108,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "sphere"
+"kind": "cube"
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -5164,7 +5116,7 @@
 "data": {
 "shapes": [
 {
-"type": "sphere",
+"type": "cube",
 "color": "teal"
 }
 ]
@@ -5192,8 +5144,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 11
+"a": 10,
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5220,8 +5172,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 7
+"a": 7,
+"b": 5
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5229,7 +5181,7 @@
 "q": {
 "k": "fn",
 "fn": "solid_name",
-"kind": "cylinder"
+"kind": "cone"
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
@@ -5237,7 +5189,7 @@
 "data": {
 "shapes": [
 {
-"type": "cylinder",
+"type": "cone",
 "color": "teal"
 }
 ]
@@ -5247,27 +5199,35 @@
 "m1-geo-s04-honors-014": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 5,
-"b": 6
+"fn": "most_of",
+"labels": [
+"red",
+"blue",
+"green"
+],
+"counts": [
+9,
+3,
+7
+]
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s04-honors-015": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 3,
-"b": 2
+"fn": "add",
+"a": 2,
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s04-honors-016": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 3,
-"b": 10
+"fn": "add",
+"a": 11,
+"b": 12
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5281,9 +5241,9 @@
 "green"
 ],
 "counts": [
-7,
-3,
-8
+8,
+9,
+3
 ]
 },
 "family": "fam03_fam03_fam03_facts_md"
@@ -5292,8 +5252,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 11
+"a": 9,
+"b": 2
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5301,8 +5261,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 2
+"a": 7,
+"b": 12
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5310,8 +5270,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 5,
-"b": 9
+"a": 9,
+"b": 12
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5319,8 +5279,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 10
+"a": 10,
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5328,8 +5288,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 2,
-"b": 6
+"a": 12,
+"b": 8
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5337,8 +5297,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 5
+"a": 2,
+"b": 4
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5346,8 +5306,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 10,
-"b": 2
+"a": 8,
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -5521,9 +5481,9 @@
 "m1-geo-s05-cp2-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 8,
-"b": 7
+"fn": "add",
+"a": 12,
+"b": 3
 },
 "family": "fam03_facts_md"
 },
@@ -5564,9 +5524,9 @@
 "m1-geo-s05-cp2-006": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 4,
-"b": 9
+"fn": "add",
+"a": 5,
+"b": 12
 },
 "family": "fam03_facts_md"
 },
@@ -5642,8 +5602,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 2,
-"b": 12
+"a": 5,
+"b": 7
 },
 "family": "fam03_facts_md"
 },
@@ -5684,9 +5644,9 @@
 "m1-geo-s05-cp2-014": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 2,
-"b": 3
+"fn": "add",
+"a": 7,
+"b": 10
 },
 "family": "fam03_facts_md"
 },
@@ -5728,8 +5688,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 4,
-"b": 8
+"a": 7,
+"b": 12
 },
 "family": "fam03_facts_md"
 },
@@ -5771,8 +5731,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 12
+"a": 3,
+"b": 7
 },
 "family": "fam03_facts_md"
 },
@@ -5814,8 +5774,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 3
+"a": 9,
+"b": 8
 },
 "family": "fam03_facts_md"
 },
@@ -6030,9 +5990,9 @@
 "m1-geo-s05-cp1-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 6,
-"b": 11
+"fn": "add",
+"a": 2,
+"b": 4
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -6058,24 +6018,24 @@
 "k": "fn",
 "fn": "add",
 "a": 6,
-"b": 12
+"b": 2
 },
 "family": "fam03_fam03_facts_md"
 },
 "m1-geo-s05-cp1-006": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 2
+"fn": "partition_word",
+"parts": 4
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 2,
-"shaded": 2,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 1,
+"caption": "4 equal parts"
 }
 }
 },
@@ -6150,9 +6110,9 @@
 "m1-geo-s05-cp1-011": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 8,
-"b": 2
+"fn": "add",
+"a": 6,
+"b": 7
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -6193,17 +6153,9 @@
 "m1-geo-s05-cp1-014": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-6,
-2,
-4
-]
+"fn": "add",
+"a": 2,
+"b": 9
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -6244,9 +6196,9 @@
 "m1-geo-s05-cp1-017": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 9,
-"b": 5
+"fn": "add",
+"a": 11,
+"b": 3
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -6271,25 +6223,25 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 9
+"a": 2,
+"b": 6
 },
 "family": "fam03_fam03_facts_md"
 },
 "m1-geo-s05-cp1-020": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 4
+"fn": "partition_word",
+"parts": 2
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 1,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 2,
+"caption": "2 equal parts"
 }
 }
 },
@@ -6314,16 +6266,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_word",
-"parts": 2
+"parts": 4
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
 }
 }
 },
@@ -6348,8 +6300,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 10
+"a": 4,
+"b": 12
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -6590,17 +6542,9 @@
 "m1-geo-s05-honors-006": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-9,
-5,
-8
-]
+"fn": "add",
+"a": 12,
+"b": 4
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -6642,25 +6586,25 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 10,
-"b": 8
+"a": 2,
+"b": 10
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s05-honors-010": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 2
+"fn": "partition_count",
+"parts": 4
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
+"parts": 4,
 "shaded": 1,
-"caption": "2 equal parts"
+"caption": "4 equal parts"
 }
 }
 },
@@ -6685,8 +6629,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 7
+"a": 11,
+"b": 10
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -6745,7 +6689,7 @@
 "data": {
 "shape": "circle",
 "parts": 2,
-"shaded": 2,
+"shaded": 1,
 "caption": "2 equal parts"
 }
 }
@@ -6754,15 +6698,15 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
-"b": 7
+"a": 9,
+"b": 12
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s05-honors-018": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 4
 },
 "family": "fam01_fam01_fam01_f",
@@ -6771,7 +6715,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 4,
-"shaded": 2,
+"shaded": 4,
 "caption": "4 equal parts"
 }
 }
@@ -6796,9 +6740,17 @@
 "m1-geo-s05-honors-020": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 3,
-"b": 12
+"fn": "most_of",
+"labels": [
+"red",
+"blue",
+"green"
+],
+"counts": [
+4,
+9,
+3
+]
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -6857,8 +6809,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 4,
-"b": 11
+"a": 11,
+"b": 4
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -7006,24 +6958,24 @@
 "m1-geo-s06-cp2-001": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 2
+"fn": "partition_count",
+"parts": 4
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 4,
+"caption": "4 equal parts"
 }
 }
 },
 "m1-geo-s06-cp2-002": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
+"fn": "partition_word",
 "parts": 2
 },
 "family": "fam02_f",
@@ -7040,16 +6992,16 @@
 "m1-geo-s06-cp2-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 11,
-"b": 2
+"fn": "add",
+"a": 10,
+"b": 8
 },
 "family": "fam03_facts_md"
 },
 "m1-geo-s06-cp2-004": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 4
 },
 "family": "fam01_f",
@@ -7058,7 +7010,7 @@
 "data": {
 "shape": "circle",
 "parts": 4,
-"shaded": 3,
+"shaded": 2,
 "caption": "4 equal parts"
 }
 }
@@ -7066,34 +7018,26 @@
 "m1-geo-s06-cp2-005": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 2
+"fn": "partition_count",
+"parts": 4
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
-"shaded": 2,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
 }
 }
 },
 "m1-geo-s06-cp2-006": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-5,
-8,
-3
-]
+"fn": "add",
+"a": 9,
+"b": 11
 },
 "family": "fam03_facts_md"
 },
@@ -7101,16 +7045,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_word",
-"parts": 4
+"parts": 2
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 4,
-"shaded": 2,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 1,
+"caption": "2 equal parts"
 }
 }
 },
@@ -7135,8 +7079,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 4,
-"b": 11
+"a": 9,
+"b": 6
 },
 "family": "fam03_facts_md"
 },
@@ -7178,7 +7122,7 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
+"a": 4,
 "b": 3
 },
 "family": "fam03_facts_md"
@@ -7186,17 +7130,17 @@
 "m1-geo-s06-cp2-013": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 2
+"fn": "partition_word",
+"parts": 4
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
 }
 }
 },
@@ -7247,7 +7191,7 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
+"a": 7,
 "b": 6
 },
 "family": "fam03_facts_md"
@@ -7255,7 +7199,7 @@
 "m1-geo-s06-cp2-018": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
+"fn": "partition_word",
 "parts": 4
 },
 "family": "fam01_f",
@@ -7289,17 +7233,9 @@
 "m1-geo-s06-cp2-020": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-2,
-9,
-4
-]
+"fn": "add",
+"a": 9,
+"b": 11
 },
 "family": "fam03_facts_md"
 },
@@ -7307,16 +7243,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_count",
-"parts": 4
+"parts": 2
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 4,
-"shaded": 1,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 2,
+"caption": "2 equal parts"
 }
 }
 },
@@ -7324,8 +7260,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 5
+"a": 7,
+"b": 8
 },
 "family": "fam03_facts_md"
 },
@@ -7349,17 +7285,17 @@
 "m1-geo-s06-cp2-024": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 2
+"fn": "partition_word",
+"parts": 4
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 2,
-"shaded": 2,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
 }
 }
 },
@@ -7533,7 +7469,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 2,
-"shaded": 2,
+"shaded": 1,
 "caption": "2 equal parts"
 }
 }
@@ -7541,9 +7477,9 @@
 "m1-geo-s06-cp1-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 9,
-"b": 8
+"fn": "add",
+"a": 12,
+"b": 6
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -7568,33 +7504,25 @@
 "q": {
 "k": "fn",
 "fn": "partition_count",
-"parts": 2
+"parts": 4
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 4,
+"caption": "4 equal parts"
 }
 }
 },
 "m1-geo-s06-cp1-006": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-5,
-8,
-6
-]
+"fn": "add",
+"a": 7,
+"b": 6
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -7618,33 +7546,33 @@
 "m1-geo-s06-cp1-008": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 4
+"fn": "partition_count",
+"parts": 2
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 4,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 1,
+"caption": "2 equal parts"
 }
 }
 },
 "m1-geo-s06-cp1-009": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 9,
-"b": 4
+"fn": "add",
+"a": 12,
+"b": 7
 },
 "family": "fam03_fam03_facts_md"
 },
 "m1-geo-s06-cp1-010": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 4
 },
 "family": "fam01_fam01_f",
@@ -7653,7 +7581,7 @@
 "data": {
 "shape": "circle",
 "parts": 4,
-"shaded": 3,
+"shaded": 1,
 "caption": "4 equal parts"
 }
 }
@@ -7670,7 +7598,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 4,
-"shaded": 4,
+"shaded": 2,
 "caption": "4 equal parts"
 }
 }
@@ -7679,8 +7607,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 9,
-"b": 12
+"a": 8,
+"b": 11
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -7696,7 +7624,7 @@
 "data": {
 "shape": "circle",
 "parts": 2,
-"shaded": 1,
+"shaded": 2,
 "caption": "2 equal parts"
 }
 }
@@ -7723,7 +7651,7 @@
 "k": "fn",
 "fn": "add",
 "a": 7,
-"b": 5
+"b": 10
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -7766,24 +7694,24 @@
 "k": "fn",
 "fn": "add",
 "a": 3,
-"b": 2
+"b": 4
 },
 "family": "fam03_fam03_facts_md"
 },
 "m1-geo-s06-cp1-019": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 2
+"fn": "partition_word",
+"parts": 4
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 4,
+"caption": "4 equal parts"
 }
 }
 },
@@ -7859,7 +7787,7 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
+"a": 7,
 "b": 12
 },
 "family": "fam03_fam03_facts_md"
@@ -8024,7 +7952,7 @@
 "m1-geo-s06-honors-001": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 4
 },
 "family": "fam01_fam01_fam01_f",
@@ -8033,7 +7961,7 @@
 "data": {
 "shape": "circle",
 "parts": 4,
-"shaded": 2,
+"shaded": 1,
 "caption": "4 equal parts"
 }
 }
@@ -8085,25 +8013,25 @@
 "q": {
 "k": "fn",
 "fn": "partition_count",
-"parts": 4
+"parts": 2
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
+"parts": 2,
 "shaded": 1,
-"caption": "4 equal parts"
+"caption": "2 equal parts"
 }
 }
 },
 "m1-geo-s06-honors-006": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 12,
-"b": 11
+"fn": "add",
+"a": 2,
+"b": 5
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -8145,25 +8073,25 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 10
+"a": 12,
+"b": 8
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s06-honors-010": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 2
+"fn": "partition_count",
+"parts": 4
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "circle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
 }
 }
 },
@@ -8179,7 +8107,7 @@
 "counts": [
 9,
 2,
-6
+5
 ]
 },
 "family": "fam03_fam03_fam03_facts_md"
@@ -8221,43 +8149,35 @@
 "m1-geo-s06-honors-014": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-8,
-3,
-2
-]
+"fn": "add",
+"a": 11,
+"b": 5
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s06-honors-015": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 4
+"fn": "partition_count",
+"parts": 2
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 4,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 2,
+"caption": "2 equal parts"
 }
 }
 },
 "m1-geo-s06-honors-016": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 8,
-"b": 4
+"fn": "add",
+"a": 2,
+"b": 8
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -8281,7 +8201,7 @@
 "m1-geo-s06-honors-018": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 2
 },
 "family": "fam02_fam02_fam02_f",
@@ -8290,7 +8210,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 2,
-"shaded": 1,
+"shaded": 2,
 "caption": "2 equal parts"
 }
 }
@@ -8305,9 +8225,9 @@
 "green"
 ],
 "counts": [
+8,
 3,
-7,
-2
+4
 ]
 },
 "family": "fam03_fam03_fam03_facts_md"
@@ -8368,7 +8288,7 @@
 "k": "fn",
 "fn": "add",
 "a": 3,
-"b": 12
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -8586,16 +8506,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_count",
-"parts": 4
+"parts": 2
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
+"parts": 2,
 "shaded": 1,
-"caption": "4 equal parts"
+"caption": "2 equal parts"
 }
 }
 },
@@ -8620,7 +8540,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 4,
-"shaded": 2,
+"shaded": 3,
 "caption": "4 equal parts"
 }
 }
@@ -8655,8 +8575,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 12
+"a": 3,
+"b": 10
 },
 "family": "fam03_facts_md"
 },
@@ -8681,37 +8601,55 @@
 "q": {
 "k": "fn",
 "fn": "partition_word",
-"parts": 4
+"parts": 2
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 4,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 2,
+"caption": "2 equal parts"
 }
 }
 },
 "m1-geo-s07-cp2-013": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-9,
-7,
-3
-]
+"fn": "add",
+"a": 4,
+"b": 8
 },
 "family": "fam03_facts_md"
 },
 "m1-geo-s07-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "partition_count",
+"parts": 2
+},
+"family": "fam02_f",
+"diagram": {
+"kind": "partition",
+"data": {
+"shape": "rectangle",
+"parts": 2,
+"shaded": 2,
+"caption": "2 equal parts"
+}
+}
+},
+"m1-geo-s07-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "add",
+"a": 10,
+"b": 5
+},
+"family": "fam03_facts_md"
+},
+"m1-geo-s07-cp2-016": {
 "q": {
 "k": "fn",
 "fn": "partition_word",
@@ -8728,53 +8666,19 @@
 }
 }
 },
-"m1-geo-s07-cp2-015": {
-"q": {
-"k": "fn",
-"fn": "add",
-"a": 9,
-"b": 7
-},
-"family": "fam03_facts_md"
-},
-"m1-geo-s07-cp2-016": {
-"q": {
-"k": "fn",
-"fn": "partition_word",
-"parts": 2
-},
-"family": "fam02_f",
-"diagram": {
-"kind": "partition",
-"data": {
-"shape": "rectangle",
-"parts": 2,
-"shaded": 2,
-"caption": "2 equal parts"
-}
-}
-},
 "m1-geo-s07-cp2-017": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-2,
-3,
-4
-]
+"fn": "add",
+"a": 8,
+"b": 4
 },
 "family": "fam03_facts_md"
 },
 "m1-geo-s07-cp2-018": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 4
 },
 "family": "fam02_f",
@@ -8783,7 +8687,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 4,
-"shaded": 2,
+"shaded": 4,
 "caption": "4 equal parts"
 }
 }
@@ -8792,8 +8696,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
-"b": 4
+"a": 3,
+"b": 6
 },
 "family": "fam03_facts_md"
 },
@@ -8818,8 +8722,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 8
+"a": 10,
+"b": 12
 },
 "family": "fam03_facts_md"
 },
@@ -8844,8 +8748,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 7
+"a": 8,
+"b": 10
 },
 "family": "fam03_facts_md"
 },
@@ -9060,9 +8964,9 @@
 "m1-geo-s07-cp1-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 4,
-"b": 2
+"fn": "add",
+"a": 11,
+"b": 6
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -9121,32 +9025,6 @@
 "q": {
 "k": "fn",
 "fn": "partition_word",
-"parts": 4
-},
-"family": "fam02_fam02_f",
-"diagram": {
-"kind": "partition",
-"data": {
-"shape": "rectangle",
-"parts": 4,
-"shaded": 4,
-"caption": "4 equal parts"
-}
-}
-},
-"m1-geo-s07-cp1-008": {
-"q": {
-"k": "fn",
-"fn": "longer_ab",
-"a": 3,
-"b": 11
-},
-"family": "fam03_fam03_facts_md"
-},
-"m1-geo-s07-cp1-009": {
-"q": {
-"k": "fn",
-"fn": "partition_word",
 "parts": 2
 },
 "family": "fam02_fam02_f",
@@ -9160,6 +9038,32 @@
 }
 }
 },
+"m1-geo-s07-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "add",
+"a": 3,
+"b": 6
+},
+"family": "fam03_fam03_facts_md"
+},
+"m1-geo-s07-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "partition_count",
+"parts": 4
+},
+"family": "fam02_fam02_f",
+"diagram": {
+"kind": "partition",
+"data": {
+"shape": "rectangle",
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
+}
+}
+},
 "m1-geo-s07-cp1-010": {
 "q": {
 "k": "fn",
@@ -9170,9 +9074,9 @@
 "green"
 ],
 "counts": [
-9,
-8,
-3
+6,
+7,
+5
 ]
 },
 "family": "fam03_fam03_facts_md"
@@ -9189,7 +9093,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 4,
-"shaded": 3,
+"shaded": 4,
 "caption": "4 equal parts"
 }
 }
@@ -9198,25 +9102,25 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 2
+"a": 9,
+"b": 6
 },
 "family": "fam03_fam03_facts_md"
 },
 "m1-geo-s07-cp1-013": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 2
+"fn": "partition_count",
+"parts": 4
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
+"parts": 4,
 "shaded": 1,
-"caption": "2 equal parts"
+"caption": "4 equal parts"
 }
 }
 },
@@ -9224,8 +9128,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 5,
-"b": 7
+"a": 11,
+"b": 3
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -9249,34 +9153,26 @@
 "m1-geo-s07-cp1-016": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 4
+"fn": "partition_count",
+"parts": 2
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 1,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 2,
+"caption": "2 equal parts"
 }
 }
 },
 "m1-geo-s07-cp1-017": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-3,
-2,
-7
-]
+"fn": "add",
+"a": 5,
+"b": 3
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -9301,16 +9197,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_count",
-"parts": 4
+"parts": 2
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 2,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 1,
+"caption": "2 equal parts"
 }
 }
 },
@@ -9318,8 +9214,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 6
+"a": 2,
+"b": 11
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -9344,8 +9240,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 10
+"a": 10,
+"b": 8
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -9370,8 +9266,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 9
+"a": 6,
+"b": 4
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -9568,6 +9464,32 @@
 "m1-geo-s07-honors-002": {
 "q": {
 "k": "fn",
+"fn": "partition_word",
+"parts": 4
+},
+"family": "fam02_fam02_fam02_f",
+"diagram": {
+"kind": "partition",
+"data": {
+"shape": "rectangle",
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
+}
+}
+},
+"m1-geo-s07-honors-003": {
+"q": {
+"k": "fn",
+"fn": "add",
+"a": 9,
+"b": 2
+},
+"family": "fam03_fam03_fam03_facts_md"
+},
+"m1-geo-s07-honors-004": {
+"q": {
+"k": "fn",
 "fn": "partition_count",
 "parts": 4
 },
@@ -9582,38 +9504,12 @@
 }
 }
 },
-"m1-geo-s07-honors-003": {
-"q": {
-"k": "fn",
-"fn": "longer_ab",
-"a": 2,
-"b": 6
-},
-"family": "fam03_fam03_fam03_facts_md"
-},
-"m1-geo-s07-honors-004": {
-"q": {
-"k": "fn",
-"fn": "partition_word",
-"parts": 4
-},
-"family": "fam02_fam02_fam02_f",
-"diagram": {
-"kind": "partition",
-"data": {
-"shape": "rectangle",
-"parts": 4,
-"shaded": 2,
-"caption": "4 equal parts"
-}
-}
-},
 "m1-geo-s07-honors-005": {
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 4,
-"b": 12
+"a": 12,
+"b": 6
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -9654,16 +9550,16 @@
 "m1-geo-s07-honors-008": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 5,
-"b": 4
+"fn": "add",
+"a": 8,
+"b": 6
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s07-honors-009": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 4
 },
 "family": "fam02_fam02_fam02_f",
@@ -9672,7 +9568,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 4,
-"shaded": 1,
+"shaded": 3,
 "caption": "4 equal parts"
 }
 }
@@ -9681,8 +9577,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 4
+"a": 4,
+"b": 6
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -9696,8 +9592,8 @@
 "green"
 ],
 "counts": [
-9,
-7,
+8,
+2,
 6
 ]
 },
@@ -9715,7 +9611,7 @@
 "data": {
 "shape": "rectangle",
 "parts": 4,
-"shaded": 3,
+"shaded": 1,
 "caption": "4 equal parts"
 }
 }
@@ -9723,35 +9619,43 @@
 "m1-geo-s07-honors-013": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 9,
-"b": 5
+"fn": "add",
+"a": 11,
+"b": 2
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s07-honors-014": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 4
+"fn": "partition_count",
+"parts": 2
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
+"parts": 2,
 "shaded": 2,
-"caption": "4 equal parts"
+"caption": "2 equal parts"
 }
 }
 },
 "m1-geo-s07-honors-015": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 12,
-"b": 3
+"fn": "most_of",
+"labels": [
+"red",
+"blue",
+"green"
+],
+"counts": [
+4,
+5,
+7
+]
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -9810,8 +9714,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 4,
-"b": 11
+"a": 12,
+"b": 3
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -9836,8 +9740,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 2
+"a": 4,
+"b": 12
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -9862,8 +9766,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 12
+"a": 7,
+"b": 4
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -10028,17 +9932,17 @@
 "m1-geo-s08-cp2-001": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 4
+"fn": "partition_word",
+"parts": 2
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 2,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 1,
+"caption": "2 equal parts"
 }
 }
 },
@@ -10072,16 +9976,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_count",
-"parts": 2
+"parts": 4
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
+"parts": 4,
 "shaded": 2,
-"caption": "2 equal parts"
+"caption": "4 equal parts"
 }
 }
 },
@@ -10105,9 +10009,9 @@
 "m1-geo-s08-cp2-006": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 6,
-"b": 12
+"fn": "add",
+"a": 11,
+"b": 7
 },
 "family": "fam03_facts_md"
 },
@@ -10132,8 +10036,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 7
+"a": 8,
+"b": 10
 },
 "family": "fam03_facts_md"
 },
@@ -10157,24 +10061,16 @@
 "m1-geo-s08-cp2-010": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-4,
-7,
-3
-]
+"fn": "add",
+"a": 5,
+"b": 11
 },
 "family": "fam03_facts_md"
 },
 "m1-geo-s08-cp2-011": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
+"fn": "partition_word",
 "parts": 4
 },
 "family": "fam01_f",
@@ -10191,17 +10087,9 @@
 "m1-geo-s08-cp2-012": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-9,
-7,
-4
-]
+"fn": "add",
+"a": 4,
+"b": 12
 },
 "family": "fam03_facts_md"
 },
@@ -10287,7 +10175,7 @@
 "k": "fn",
 "fn": "add",
 "a": 2,
-"b": 7
+"b": 12
 },
 "family": "fam03_facts_md"
 },
@@ -10313,7 +10201,7 @@
 "k": "fn",
 "fn": "add",
 "a": 8,
-"b": 2
+"b": 11
 },
 "family": "fam03_facts_md"
 },
@@ -10338,8 +10226,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 9,
-"b": 7
+"a": 11,
+"b": 6
 },
 "family": "fam03_facts_md"
 },
@@ -10364,8 +10252,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 4,
-"b": 10
+"a": 8,
+"b": 7
 },
 "family": "fam03_facts_md"
 },
@@ -10546,16 +10434,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_word",
-"parts": 2
+"parts": 4
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 4,
+"caption": "4 equal parts"
 }
 }
 },
@@ -10596,17 +10484,17 @@
 "m1-geo-s08-cp1-004": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 2
+"fn": "partition_count",
+"parts": 4
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
+"parts": 4,
 "shaded": 1,
-"caption": "2 equal parts"
+"caption": "4 equal parts"
 }
 }
 },
@@ -10647,32 +10535,6 @@
 "m1-geo-s08-cp1-007": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 4
-},
-"family": "fam01_fam01_f",
-"diagram": {
-"kind": "partition",
-"data": {
-"shape": "rectangle",
-"parts": 4,
-"shaded": 2,
-"caption": "4 equal parts"
-}
-}
-},
-"m1-geo-s08-cp1-008": {
-"q": {
-"k": "fn",
-"fn": "add",
-"a": 3,
-"b": 2
-},
-"family": "fam03_fam03_facts_md"
-},
-"m1-geo-s08-cp1-009": {
-"q": {
-"k": "fn",
 "fn": "partition_word",
 "parts": 2
 },
@@ -10682,8 +10544,34 @@
 "data": {
 "shape": "rectangle",
 "parts": 2,
-"shaded": 2,
+"shaded": 1,
 "caption": "2 equal parts"
+}
+}
+},
+"m1-geo-s08-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "add",
+"a": 3,
+"b": 5
+},
+"family": "fam03_fam03_facts_md"
+},
+"m1-geo-s08-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "partition_count",
+"parts": 4
+},
+"family": "fam01_fam01_f",
+"diagram": {
+"kind": "partition",
+"data": {
+"shape": "rectangle",
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
 }
 }
 },
@@ -10691,8 +10579,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 2
+"a": 9,
+"b": 4
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -10742,9 +10630,9 @@
 "m1-geo-s08-cp1-014": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 2,
-"b": 3
+"fn": "add",
+"a": 12,
+"b": 10
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -10769,8 +10657,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
-"b": 4
+"a": 11,
+"b": 12
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -10795,34 +10683,42 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 11
+"a": 8,
+"b": 10
 },
 "family": "fam03_fam03_facts_md"
 },
 "m1-geo-s08-cp1-019": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
-"parts": 4
+"fn": "partition_count",
+"parts": 2
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
-"shaded": 3,
-"caption": "4 equal parts"
+"parts": 2,
+"shaded": 1,
+"caption": "2 equal parts"
 }
 }
 },
 "m1-geo-s08-cp1-020": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 3,
-"b": 6
+"fn": "most_of",
+"labels": [
+"red",
+"blue",
+"green"
+],
+"counts": [
+7,
+8,
+5
+]
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -10847,8 +10743,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 2,
-"b": 8
+"a": 11,
+"b": 10
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -10873,8 +10769,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 5
+"a": 7,
+"b": 9
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -11022,17 +10918,17 @@
 "m1-geo-s08-honors-001": {
 "q": {
 "k": "fn",
-"fn": "partition_count",
-"parts": 2
+"fn": "partition_word",
+"parts": 4
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
-"shaded": 1,
-"caption": "2 equal parts"
+"parts": 4,
+"shaded": 3,
+"caption": "4 equal parts"
 }
 }
 },
@@ -11056,16 +10952,16 @@
 "m1-geo-s08-honors-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 9,
-"b": 7
+"fn": "add",
+"a": 8,
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
 "m1-geo-s08-honors-004": {
 "q": {
 "k": "fn",
-"fn": "partition_word",
+"fn": "partition_count",
 "parts": 2
 },
 "family": "fam01_fam01_fam01_f",
@@ -11082,9 +10978,9 @@
 "m1-geo-s08-honors-005": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
+"fn": "add",
 "a": 11,
-"b": 8
+"b": 5
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -11109,16 +11005,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_count",
-"parts": 4
+"parts": 2
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 4,
+"parts": 2,
 "shaded": 1,
-"caption": "4 equal parts"
+"caption": "2 equal parts"
 }
 }
 },
@@ -11151,9 +11047,9 @@
 "m1-geo-s08-honors-010": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 2,
-"b": 5
+"fn": "add",
+"a": 8,
+"b": 3
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -11161,8 +11057,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 12,
-"b": 5
+"a": 11,
+"b": 2
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -11187,8 +11083,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 2
+"a": 6,
+"b": 7
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -11230,16 +11126,16 @@
 "q": {
 "k": "fn",
 "fn": "partition_word",
-"parts": 2
+"parts": 4
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "partition",
 "data": {
 "shape": "rectangle",
-"parts": 2,
+"parts": 4,
 "shaded": 2,
-"caption": "2 equal parts"
+"caption": "4 equal parts"
 }
 }
 },
@@ -11281,8 +11177,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 12
+"a": 8,
+"b": 11
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -11307,8 +11203,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 2
+"a": 9,
+"b": 10
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -11333,8 +11229,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
-"b": 6
+"a": 12,
+"b": 7
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -11539,9 +11435,9 @@
 "m1-geo-s09-cp2-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 2,
-"b": 11
+"fn": "add",
+"a": 10,
+"b": 12
 },
 "family": "fam03_facts_md"
 },
@@ -11581,8 +11477,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 6
+"a": 5,
+"b": 4
 },
 "family": "fam03_facts_md"
 },
@@ -11605,9 +11501,9 @@
 "m1-geo-s09-cp2-008": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 7,
-"b": 5
+"fn": "add",
+"a": 11,
+"b": 4
 },
 "family": "fam03_facts_md"
 },
@@ -11647,8 +11543,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 6,
-"b": 12
+"a": 4,
+"b": 9
 },
 "family": "fam03_facts_md"
 },
@@ -11737,7 +11633,7 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
+"a": 8,
 "b": 5
 },
 "family": "fam03_facts_md"
@@ -11763,7 +11659,7 @@
 "k": "fn",
 "fn": "add",
 "a": 5,
-"b": 12
+"b": 9
 },
 "family": "fam03_facts_md"
 },
@@ -11803,8 +11699,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 12
+"a": 4,
+"b": 7
 },
 "family": "fam03_facts_md"
 },
@@ -11828,7 +11724,7 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 5,
+"a": 6,
 "b": 10
 },
 "family": "fam03_facts_md"
@@ -12041,9 +11937,9 @@
 "m1-geo-s09-cp1-003": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 3,
-"b": 12
+"fn": "add",
+"a": 10,
+"b": 6
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12082,17 +11978,9 @@
 "m1-geo-s09-cp1-006": {
 "q": {
 "k": "fn",
-"fn": "most_of",
-"labels": [
-"red",
-"blue",
-"green"
-],
-"counts": [
-4,
-8,
-5
-]
+"fn": "add",
+"a": 5,
+"b": 2
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12115,9 +12003,9 @@
 "m1-geo-s09-cp1-008": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 9,
-"b": 3
+"fn": "add",
+"a": 8,
+"b": 2
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12140,9 +12028,9 @@
 "m1-geo-s09-cp1-010": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 11,
-"b": 8
+"fn": "add",
+"a": 9,
+"b": 2
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12182,8 +12070,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 5
+"a": 5,
+"b": 11
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12223,8 +12111,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 8
+"a": 6,
+"b": 3
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12264,8 +12152,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 3,
-"b": 7
+"a": 10,
+"b": 9
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12289,8 +12177,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 4,
-"b": 5
+"a": 2,
+"b": 7
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12314,8 +12202,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 7,
-"b": 11
+"a": 4,
+"b": 3
 },
 "family": "fam03_fam03_facts_md"
 },
@@ -12576,9 +12464,9 @@
 "m1-geo-s09-honors-006": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 5,
-"b": 2
+"fn": "add",
+"a": 8,
+"b": 7
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -12624,9 +12512,9 @@
 "green"
 ],
 "counts": [
-7,
-3,
-8
+6,
+5,
+2
 ]
 },
 "family": "fam03_fam03_fam03_facts_md"
@@ -12666,8 +12554,8 @@
 "m1-geo-s09-honors-012": {
 "q": {
 "k": "fn",
-"fn": "longer_ab",
-"a": 11,
+"fn": "add",
+"a": 8,
 "b": 12
 },
 "family": "fam03_fam03_fam03_facts_md"
@@ -12709,7 +12597,7 @@
 "k": "fn",
 "fn": "add",
 "a": 3,
-"b": 10
+"b": 11
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -12733,8 +12621,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 8,
-"b": 10
+"a": 11,
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -12758,8 +12646,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 11,
-"b": 7
+"a": 4,
+"b": 9
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -12767,14 +12655,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 6,
+"h": 3,
 "m": 0
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 6,
+"hour": 3,
 "minute": 0
 }
 }
@@ -12783,8 +12671,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 9,
-"b": 11
+"a": 4,
+"b": 8
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -12808,8 +12696,8 @@
 "q": {
 "k": "fn",
 "fn": "add",
-"a": 2,
-"b": 7
+"a": 10,
+"b": 4
 },
 "family": "fam03_fam03_fam03_facts_md"
 },
@@ -13110,14 +12998,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 6,
+"h": 12,
 "m": 0
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 6,
+"hour": 12,
 "minute": 0
 }
 }
@@ -13184,15 +13072,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 1,
-"m": 0
+"h": 2,
+"m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 1,
-"minute": 0
+"hour": 2,
+"minute": 30
 }
 }
 },
@@ -13234,15 +13122,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 5,
-"m": 0
+"h": 8,
+"m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 5,
-"minute": 0
+"hour": 8,
+"minute": 30
 }
 }
 },
@@ -13628,15 +13516,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 5,
-"m": 0
+"h": 11,
+"m": 30
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 5,
-"minute": 0
+"hour": 11,
+"minute": 30
 }
 }
 },
@@ -13852,15 +13740,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 11,
-"m": 30
+"h": 1,
+"m": 0
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 11,
-"minute": 30
+"hour": 1,
+"minute": 0
 }
 }
 },
@@ -13976,15 +13864,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 10,
-"m": 0
+"h": 1,
+"m": 30
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 10,
-"minute": 0
+"hour": 1,
+"minute": 30
 }
 }
 },
@@ -14156,15 +14044,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 10,
-"m": 0
+"h": 1,
+"m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 10,
-"minute": 0
+"hour": 1,
+"minute": 30
 }
 }
 },
@@ -14236,15 +14124,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 8,
-"m": 0
+"h": 4,
+"m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 8,
-"minute": 0
+"hour": 4,
+"minute": 30
 }
 }
 },
@@ -14275,15 +14163,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 12,
-"m": 30
+"h": 10,
+"m": 0
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 12,
-"minute": 30
+"hour": 10,
+"minute": 0
 }
 }
 },
@@ -14316,14 +14204,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 3,
+"h": 10,
 "m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 3,
+"hour": 10,
 "minute": 30
 }
 }
@@ -14333,14 +14221,14 @@
 "k": "fn",
 "fn": "clock",
 "h": 11,
-"m": 30
+"m": 0
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
 "hour": 11,
-"minute": 30
+"minute": 0
 }
 }
 },
@@ -14381,14 +14269,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 11,
+"h": 9,
 "m": 0
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 11,
+"hour": 9,
 "minute": 0
 }
 }
@@ -14431,14 +14319,14 @@
 "k": "fn",
 "fn": "clock",
 "h": 10,
-"m": 0
+"m": 30
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
 "hour": 10,
-"minute": 0
+"minute": 30
 }
 }
 },
@@ -14455,15 +14343,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 2,
-"m": 0
+"h": 4,
+"m": 30
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 2,
-"minute": 0
+"hour": 4,
+"minute": 30
 }
 }
 },
@@ -14594,15 +14482,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 10,
-"m": 0
+"h": 12,
+"m": 30
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 10,
-"minute": 0
+"hour": 12,
+"minute": 30
 }
 }
 },
@@ -14617,15 +14505,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 8,
-"m": 0
+"h": 9,
+"m": 30
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 8,
-"minute": 0
+"hour": 9,
+"minute": 30
 }
 }
 },
@@ -14658,15 +14546,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 12,
-"m": 30
+"h": 10,
+"m": 0
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 12,
-"minute": 30
+"hour": 10,
+"minute": 0
 }
 }
 },
@@ -14739,15 +14627,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 7,
-"m": 30
+"h": 12,
+"m": 0
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 7,
-"minute": 30
+"hour": 12,
+"minute": 0
 }
 }
 },
@@ -14820,15 +14708,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 11,
-"m": 0
+"h": 3,
+"m": 30
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 11,
-"minute": 0
+"hour": 3,
+"minute": 30
 }
 }
 },
@@ -15080,14 +14968,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 1,
+"h": 8,
 "m": 0
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 1,
+"hour": 8,
 "minute": 0
 }
 }
@@ -15096,15 +14984,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 7,
-"m": 0
+"h": 11,
+"m": 30
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 7,
-"minute": 0
+"hour": 11,
+"minute": 30
 }
 }
 },
@@ -15120,14 +15008,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 2,
+"h": 7,
 "m": 30
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 2,
+"hour": 7,
 "minute": 30
 }
 }
@@ -15176,15 +15064,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 5,
-"m": 0
+"h": 3,
+"m": 30
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 5,
-"minute": 0
+"hour": 3,
+"minute": 30
 }
 }
 },
@@ -15201,15 +15089,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 3,
-"m": 30
+"h": 8,
+"m": 0
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 3,
-"minute": 30
+"hour": 8,
+"minute": 0
 }
 }
 },
@@ -15241,15 +15129,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 1,
-"m": 0
+"h": 7,
+"m": 30
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 1,
-"minute": 0
+"hour": 7,
+"minute": 30
 }
 }
 },
@@ -15266,14 +15154,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 1,
+"h": 6,
 "m": 30
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 1,
+"hour": 6,
 "minute": 30
 }
 }
@@ -15291,14 +15179,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 2,
+"h": 4,
 "m": 0
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 2,
+"hour": 4,
 "minute": 0
 }
 }
@@ -15422,15 +15310,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 11,
-"m": 0
+"h": 1,
+"m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 11,
-"minute": 0
+"hour": 1,
+"minute": 30
 }
 }
 },
@@ -15438,15 +15326,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 3,
-"m": 30
+"h": 11,
+"m": 0
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 3,
-"minute": 30
+"hour": 11,
+"minute": 0
 }
 }
 },
@@ -15488,14 +15376,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 5,
+"h": 2,
 "m": 0
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 5,
+"hour": 2,
 "minute": 0
 }
 }
@@ -15545,14 +15433,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 7,
+"h": 10,
 "m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 7,
+"hour": 10,
 "minute": 30
 }
 }
@@ -15568,15 +15456,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 10,
-"m": 0
+"h": 12,
+"m": 30
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 10,
-"minute": 0
+"hour": 12,
+"minute": 30
 }
 }
 },
@@ -15608,15 +15496,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 4,
-"m": 0
+"h": 8,
+"m": 30
 },
 "family": "fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 4,
-"minute": 0
+"hour": 8,
+"minute": 30
 }
 }
 },
@@ -15698,15 +15586,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 12,
-"m": 0
+"h": 6,
+"m": 30
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 12,
-"minute": 0
+"hour": 6,
+"minute": 30
 }
 }
 },
@@ -15722,14 +15610,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 2,
+"h": 12,
 "m": 0
 },
 "family": "fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 2,
+"hour": 12,
 "minute": 0
 }
 }
@@ -15950,14 +15838,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 1,
+"h": 4,
 "m": 30
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 1,
+"hour": 4,
 "minute": 30
 }
 }
@@ -15982,14 +15870,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 10,
+"h": 6,
 "m": 0
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 10,
+"hour": 6,
 "minute": 0
 }
 }
@@ -16006,15 +15894,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 8,
-"m": 0
+"h": 2,
+"m": 30
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 8,
-"minute": 0
+"hour": 2,
+"minute": 30
 }
 }
 },
@@ -16022,15 +15910,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 8,
-"m": 30
+"h": 10,
+"m": 0
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 8,
-"minute": 30
+"hour": 10,
+"minute": 0
 }
 }
 },
@@ -16046,14 +15934,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 8,
+"h": 4,
 "m": 30
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 8,
+"hour": 4,
 "minute": 30
 }
 }
@@ -16062,15 +15950,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 12,
-"m": 30
+"h": 1,
+"m": 0
 },
 "family": "fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 12,
-"minute": 30
+"hour": 1,
+"minute": 0
 }
 }
 },
@@ -16137,14 +16025,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 9,
+"h": 11,
 "m": 30
 },
 "family": "fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 9,
+"hour": 11,
 "minute": 30
 }
 }
@@ -16266,14 +16154,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 6,
+"h": 9,
 "m": 0
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 6,
+"hour": 9,
 "minute": 0
 }
 }
@@ -16282,15 +16170,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 9,
-"m": 0
+"h": 1,
+"m": 30
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 9,
-"minute": 0
+"hour": 1,
+"minute": 30
 }
 }
 },
@@ -16323,14 +16211,14 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 7,
+"h": 1,
 "m": 30
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 7,
+"hour": 1,
 "minute": 30
 }
 }
@@ -16348,15 +16236,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 11,
-"m": 30
+"h": 4,
+"m": 0
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 11,
-"minute": 30
+"hour": 4,
+"minute": 0
 }
 }
 },
@@ -16388,15 +16276,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 11,
-"m": 0
+"h": 10,
+"m": 30
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 11,
-"minute": 0
+"hour": 10,
+"minute": 30
 }
 }
 },
@@ -16413,15 +16301,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 8,
-"m": 0
+"h": 3,
+"m": 30
 },
 "family": "fam02_fam02_fam02_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 8,
-"minute": 0
+"hour": 3,
+"minute": 30
 }
 }
 },
@@ -16429,15 +16317,15 @@
 "q": {
 "k": "fn",
 "fn": "clock",
-"h": 6,
-"m": 0
+"h": 4,
+"m": 30
 },
 "family": "fam01_fam01_fam01_f",
 "diagram": {
 "kind": "clock",
 "data": {
-"hour": 6,
-"minute": 0
+"hour": 4,
+"minute": 30
 }
 }
 },

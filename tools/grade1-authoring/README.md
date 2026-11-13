@@ -15,7 +15,10 @@ number ranges and difficulty ladder are built for first graders.
 | `units/uNN_*.py` | `SKILLS = {index: {"name": …, "fams": […], "domain": …}}` for each unit. |
 | `build1.py` | Builds `question-banks/math1/<unit>.json`, `meta/<unit>.meta.json`, `assets/math1/<unit>/<qid>.png` and `out/<unit>.checks.json`. 30 questions per skill and level (12 short answer, 12 multiple choice, 3 error analysis, 1 true/false, 1 select-all, 1 open response/matching). |
 | `verify1.py` | Independent verifier: re-derives every answer from the stored inputs with its own arithmetic and its own implementations of the named checks (no import of the families). Also validates options, distractor reasons, standards, counts, duplicates, and every diagram file (exists, 720×480, decodes, not blank, alt text, answer agrees with the picture where the picture is the ground truth). Must print `TOTAL ERRORS 0`. |
-| `report.py` | Writes `docs/math1/COVERAGE.md`. |
+| `dupstats.py` | Measures cross-skill duplication: exact identity (prompt + options + answer + picture), picture-equivalent groups and digit-masked near-duplicates. Baseline figures are stored in `out/dup_before.json`. |
+| `dedupe1.py` | Surgical deduplication: only items whose identity also appears in another skill are rewritten, one copy of every identity is kept, and the rest of the bank is untouched. Routes: fresh draw from the same family, fresh draw re-presented in another form (`forms.py`), or the same fact re-presented without its picture. |
+| `forms.py` | Re-presentation templates per check kind (equation/story/place-value/clock/shape wording). The answer and check are never changed, so the verifier still proves the mathematics. |
+| `report.py` | Writes `docs/math1/COVERAGE.md` including before/after duplication statistics and validation results. |
 | `question-banks/math1/manifest.json` | Approved-bank manifest for the 8 units (not merged into the public site manifest). |
 
 ## Rebuild
@@ -47,6 +50,19 @@ inside one skill and level; the verifier rejects anything above 6.
 * **Diagrams:** the alt text is written from the same data that draws the picture, so the
   description cannot drift from the image; the verifier checks the file, its size, that it
   is not blank, and — for shape questions — that the answer matches the drawn shape.
+
+## Approval status
+
+`approved` is `false` for all eight banks in `question-banks/math1/manifest.json`. The manifest
+records the two kinds of review separately:
+
+* `review.mathematicalValidation` — passed: every answer re-derived from its inputs, 0 errors,
+  0 diagram defects, 0 within-skill duplicates.
+* `review.editorialApproval` — pending: no curriculum reviewer has signed off on wording,
+  difficulty or grade-level fit.
+
+Content being mathematically validated does **not** make it approved. Only a separate editorial
+authorisation should flip `approved` to `true`.
 
 ## Not integrated
 

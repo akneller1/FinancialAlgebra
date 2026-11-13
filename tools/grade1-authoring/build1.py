@@ -150,9 +150,9 @@ class Builder:
         self.m, self.u = unit_mod, unit
         self.questions, self.meta, self.checks, self.diagrams = [], {}, {}, []
 
-    def emit(self, rec, L, idx, p, fmt, fname, r, pos=None):
+    def emit(self, rec, L, idx, p, fmt, fname, r, pos=None, qid=None):
         lv = LEVELS[L]
-        qid = f"{PREFIX}-{self.u['abbr']}-s{rec['index']:02d}-{lv}-{idx:03d}"
+        qid = qid or f"{PREFIX}-{self.u['abbr']}-s{rec['index']:02d}-{lv}-{idx:03d}"
         q = {"id": qid, "skillId": rec["id"], "level": lv, "format": fmt,
              "prompt": p.mc_prompt if fmt == "multiple-choice" and p.mc_prompt else p.prompt}
         chk = {"q": p.check, "family": fname}
