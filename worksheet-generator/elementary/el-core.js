@@ -90,9 +90,9 @@
   function load(unitId) {
     // An elementary course may supply a separate, verified Understanding Check bank.
     // Ordinary games, flashcards and generators continue using the practice bank.
-    if (CFG.checkBankPath && /understanding-check\\.html$/.test(G.location.pathname)) {
+    if (CFG.checkBankPath && /understanding-check\.html$/.test(G.location.pathname)) {
       if (!/^[a-z0-9-]+$/.test(unitId)) return Promise.reject(new Error('Invalid unit'));
-      var base = CFG.checkBankPath.replace(/\\/$/, '');
+      var base = CFG.checkBankPath.replace(/\/$/, '');
       var source = '../' + base + '/' + unitId;
       return Promise.all([
         G.fetch(source + '.json').then(function(r) { if (!r.ok) throw new Error('Understanding Check questions unavailable for this unit.'); return r.json(); }),
