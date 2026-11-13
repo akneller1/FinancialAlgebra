@@ -13,7 +13,7 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
   const courses=LIBRARY.courses.filter(c=>c.id==='grade1');
   for(const c of courses)for(const u of c.units)MK_QUESTION_BANKS.select({courseId:'grade1',unitId:u.id}).forEach(q=>all.set(q.id,q));
   function ids(B,set=new Set(),seen=new Set()){if(!B||typeof B!=='object'||seen.has(B))return set;seen.add(B);if(B.sourceId)set.add(B.sourceId);Object.values(B).forEach(x=>{if(x&&typeof x==='object')ids(x,set,seen)});return set;}
-  for(const c of courses)for(const u of c.units)for(const kind of ['maze','color','tarsia','stations','error']){
+  for(const c of courses)for(const u of c.units)for(const kind of ['maze','color','tarsia','stations','error','who']){
    const cfg={...PR.defaultConfig('grade1-'+u.id,kind),level:'cp1',seed:'full-activity-audit'},B=PR.build(cfg,0);
    if(B.error){blocked++;continue;}
    const sources=[...ids(B)].map(id=>all.get(id));if(!sources.length||sources.some(q=>!q||q.level!==cfg.level||!cfg.skills[q.skillId]))throw Error('Wrong source scope '+u.id+'/'+kind);
@@ -33,6 +33,14 @@ const base=process.env.GRADE1_BASE||'http://127.0.0.1:8765';
   }
   return {rendered,pages,images,blocked};
  });
+ // Capture an illustrated Grade 1 mystery card and its source-faithful key.
+ await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-within-100&kind=who');await page.reload();
+ await page.locator('#prPreview .g1-printable').first().waitFor();
+ fs.mkdirSync('grade1-integration-results',{recursive:true});
+ await page.locator('#prPreview .mm-page').nth(1).screenshot({path:'grade1-integration-results/mystery-student.png'});
+ await page.locator('[data-doc=key]').click();
+ await page.locator('#prPreview').getByText('Case solution',{exact:true}).waitFor();
+ await page.locator('#prPreview .mm-page').nth(1).screenshot({path:'grade1-integration-results/mystery-key.png'});
  // A deliberately oversized puzzle must fail without changing the selected level.
  await page.goto(base+'/worksheet-generator/printables.html#unit=grade1-adding-subtracting-working-data&kind=tarsia');await page.reload();
  await page.locator('input[name=prLevel][value=cp2]').check();

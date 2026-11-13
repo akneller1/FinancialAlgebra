@@ -52,8 +52,13 @@ export function integrate({source,out}){
  let printableHtml=fs.readFileSync(printablePage,'utf8');
  printableHtml=printableHtml.replace(/(<script src="menu\/printables-ui\.js[^>]*>)/,'<script src="../grade1-staging/printables.js"></script>\n<script>(function(){var p=new URLSearchParams(location.hash.slice(1));if((p.get("unit")||"").startsWith("grade1-")&&["match","matching"].includes(p.get("kind"))){p.set("kind","answer-match");history.replaceState(null,"","#"+p);}})();</script>\n$1');
  fs.writeFileSync(printablePage,printableHtml);
+ const printableEngine=path.join(out,'worksheet-generator/menu/printables.js');
+ let engineCode=fs.readFileSync(printableEngine,'utf8');
+ engineCode=engineCode.replace('PR.buildWho = function (cfg, vIdx) {','PR.buildWho = function (cfg, vIdx, grade1Items) {').replace("var items = gather(cfg, vIdx, 10, 'who',", "var items = (/^grade1-/.test(cfg.unitId)&&grade1Items) || gather(cfg, vIdx, 10, 'who',");
+ fs.writeFileSync(printableEngine,engineCode);
  const printableUI=path.join(out,'worksheet-generator/menu/printables-ui.js');
  let printableCode=fs.readFileSync(printableUI,'utf8');
+ printableCode=printableCode.replace('  function whoPages(cfg, B, v, nV, key) {','  function whoPages(cfg, B, v, nV, key) {\n    if(B.grade1Who)return G.MK_GRADE1_PRINTABLES.whoPages(cfg,B,v,nV,key);');
  printableCode=printableCode.replace("var fs = large ? 13 : (sIn > 1.6 ? 8 : 7.4);", "var fs = B.grade1Tarsia ? (large ? 16 : (sIn > 1.6 ? 14 : 11)) : (large ? 13 : (sIn > 1.6 ? 8 : 7.4));");
  printableCode=printableCode.replace("story + st + (kind === 'tarsia'", "story + st + (kind==='tarsia'&&/^grade1-/.test(unit)?G.MK_GRADE1_PRINTABLES.tarsiaOptions(cfg):'') + (kind === 'tarsia'");
  printableCode=printableCode.replace("if ($('#prTarsiaLayout'))", "if ($('#prTarsiaSize')) $('#prTarsiaSize').onchange=function(e){cfg.tarsiaSize=e.target.value;save();rebuild();};\n    if ($('#prTarsiaLayout'))");

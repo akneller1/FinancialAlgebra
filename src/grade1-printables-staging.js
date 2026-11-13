@@ -75,6 +75,20 @@
   var colors=palette.slice(0,qs.length),items=qs.map(function(q){return item(cfg.unitId,q);});
   return {kind:'color',grade1Color:true,levelNote:items.length<10?'This selection uses '+items.length+' questions and colors. Regions with the same problem number use the same color.':'',scene:scene,sceneName:sc.name,items:items,colorOf:colors,groupNum:sc.groups.map(function(g,i){return i%items.length+1;}),code:colors.map(function(c,i){return {color:c,hex:PR.SCENE_COLORS[c],num:i+1,answer:items[i].key};})};
  }
+ function whoQuestions(cfg){
+  var seen=new Set();return bank.select({courseId:'grade1',unitId:cfg.unitId.slice(7),level:cfg.level,formats:['multiple-choice']}).filter(function(q){
+   if(!cfg.skills[q.skillId]||Number(q.id.slice(-3))>24)return false;
+   var identity=plainPrompt(q)+'|'+(q.diagram&&q.diagram.spec.alt||''),opts=q.options||[];
+   if(seen.has(identity)||opts.length!==4||opts.filter(function(o){return o.correct;}).length!==1||new Set(opts.map(function(o){return key(o.text);})).size!==4||!opts.some(function(o){return o.correct&&key(o.text)===key(q.answer);}))return false;
+   seen.add(identity);return true;
+  });
+ }
+ function who(cfg,v){
+  var qs=balanced(shuffled(whoQuestions(cfg),cfg.seed+'|who-source|'+v),10,function(q){return q.skillId;});
+  if(qs.length<10)return {error:'This mystery needs 10 different multiple-choice questions; the selected '+N.courseLevelName(cfg.unitId,cfg.level)+' skills provide '+qs.length+'. Add compatible skills, or use Problem & Answer Matching.'};
+  var items=qs.map(function(q){var it=item(cfg.unitId,q);it.wrong=q.options.filter(function(o){return !o.correct;}).map(function(o){return o.text;});return it;});
+  var B=PR.buildWho(cfg,v,items);if(!B.error)B.grade1Who=true;return B;
+ }
  function tri(up,i,j){return up?[[i,j],[i+1,j],[i,j+1]]:[[i+1,j],[i,j+1],[i+1,j+1]];}
  function triangle(side){var out=[];for(var j=0;j<side;j++)for(var i=0;i<side-j;i++){out.push(tri(true,i,j));if(i<side-j-1)out.push(tri(false,i,j));}return out;}
  function edgeKey(p,q){var a=p.join(','),b=q.join(',');return a<b?a+'|'+b:b+'|'+a;}
@@ -108,6 +122,7 @@
  PR.KINDS.push({id:'answer-match',name:'Problem & Answer Matching',blurb:'Solve each problem and write its answer letter. Letters may be used more than once.'});
  PR.capable=function(id,skill,kind,level){
   if(kind==='answer-match')return scoped(id)&&pool(id,level||'cp1').some(function(q){return q.skillId===skill;});
+  if(scoped(id)&&kind==='who')return whoQuestions({unitId:id,level:level||'cp1',skills:{[skill]:true}}).length>=1;
   if(scoped(id)&&kind==='tarsia')return new Set(pool(id,level||'cp1').filter(function(q){return q.skillId===skill;}).map(function(q){return key(q.answer);})).size>=2;
   if(scoped(id)&&['stations','error','color'].includes(kind)){
    if(kind==='error')return bank.select({courseId:'grade1',unitId:id.slice(7),level:level||'cp1',skillIds:[skill],formats:['short-answer']}).some(function(q){return /family: err_/.test(q.sourceNotes||'');});
@@ -124,6 +139,7 @@
   if(cfg.kind==='stations')return stationWork(cfg,v||0);
   if(cfg.kind==='error')return errors(cfg,v||0);
   if(cfg.kind==='color')return coloring(cfg,v||0);
+  if(cfg.kind==='who')return who(cfg,v||0);
   if(cfg.kind==='tarsia')return tarsia(cfg,v||0);
   var native={maze:PR.buildMaze,tarsia:PR.buildTarsia,who:PR.buildWho}[cfg.kind];
   if(!native)return build.apply(this,arguments);
@@ -142,6 +158,14 @@
   return chunk(items,per,function(list,start){return page(title+(teacher?' · Teacher key':''),'<p>'+esc(N.skillSets[cfg.unitId].unitName)+' · '+esc(N.courseLevelName(cfg.unitId,cfg.level))+'</p>'+list.map(function(it,i){return '<section><h2>Problem '+(start+i+1)+'</h2>'+question(it)+(teacher?solution(it)+(extra?extra(it,start+i):''):'<div style="min-height:'+(per===1?170:85)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer: ____________________</p>'+(extra?extra(it,start+i):''))+'</section>';}).join(''));});
  }
  function colorPages(cfg,B,v,nV,teacher,cover){return [cover].concat(workPages(cfg,B.items,'Color by Number · Problems',teacher,function(it,i){return '<p>Color: '+(teacher?esc(B.colorOf[i]):'____________________')+'</p>';}));}
+ function whoPages(cfg,B,v,nV,teacher){
+  var S=B.S,letter=function(n){return 'ABCD'[n];},heading=S.name+' · '+N.courseLevelName(cfg.unitId,cfg.level),out=[];
+  function clears(t){return t.p!==undefined?S.suspects[t.p].n+' and '+S.places[t.l].n:S.methods[t.m].n;}
+  if(teacher)out.push(page('Mystery · Teacher guide','<p>'+esc(heading)+'</p><h2>Case solution</h2><p>'+esc(S.suspects[B.culprit.p].n)+' · '+esc(S.places[B.culprit.l].n)+' · '+esc(S.methods[B.culprit.m].n)+'</p><h2>Setup</h2><p>Use this as a teacher-led reading activity. Print the student case board and clue cards. Read each problem and answer clue aloud as needed. Students solve the math, choose an answer, then cross out only what that clue clears.</p><p>The ten correct clues leave exactly one suspect, one place, and one method. A wrong answer can remove the solution or leave extra possibilities; recheck the math together.</p>'));
+  else out.push(page('Mystery · Case board','<p>'+esc(heading)+'</p><p>Name: ____________________</p><p>'+esc(S.intro.replace(/<[^>]*>/g,''))+'</p><p>Solve each clue card. Read the clue beside your answer. Cross out the people, places, or methods it clears. Write the card number beside each one. One of each will be left.</p><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">'+[['Suspects',S.suspects],['Places',S.places],['Methods',S.methods]].map(function(group){return '<section><h2 style="font-size:20px">'+group[0]+'</h2>'+group[1].map(function(x){return '<p style="font-size:16px;min-height:55px;overflow-wrap:anywhere">□ '+esc(x.n)+'<br>Card: _____</p>';}).join('')+'</section>';}).join('')+'</div><p>The person: ____________________</p><p>The place: ____________________</p><p>The method: ____________________</p>'));
+  B.cards.forEach(function(c,i){out.push(page('Mystery · Clue card '+(i+1)+(teacher?' · Teacher key':''),'<p>'+esc(heading)+'</p>'+question(c.item)+'<div style="font-size:15px;line-height:1.4">'+c.opts.map(function(o,j){return '<section style="padding:9px 0;border-bottom:1px solid #aaa"><b>'+letter(j)+'. '+esc(o.a)+'</b><br>'+esc(o.clue)+'</section>';}).join('')+'</div>'+(teacher?'<p><b>Correct choice: '+letter(c.pos)+'</b> · Clears: '+esc(clears(c.truth))+'</p>'+solution(c.item):'<p>My choice: _____</p><div style="min-height:60px;border-bottom:1px solid #aaa">Show your thinking:</div>')));});
+  return out;
+ }
  function tarsiaPages(cfg,B,v,nV,teacher,covers){
   var bankPages=chunk(B.answerBank,4,function(list){return page('Tarsia · Answer bank','<p>Some triangle edges use a code instead of a long answer. Solve the question first, then find its answer here.</p>'+list.map(function(a){return '<div style="padding:14px;border-bottom:1px solid #aaa;overflow-wrap:anywhere"><b>'+esc(a.label)+':</b> '+esc(a.answer)+'</div>';}).join(''));});
   return covers.concat(bankPages,workPages(cfg,B.items,'Tarsia · Numbered problems',teacher,function(it){return '<p>Puzzle edge: '+(teacher?esc(it.edgeAnswer):'____________________')+'</p>';}));
@@ -168,5 +192,5 @@
   return out.concat(chunk(B.items,per,function(items,i){return page('Problem & Answer Matching'+(teacher?' · Teacher key':''),'<p>'+esc(title)+'</p>'+(!teacher&&compactChoices?choices:'')+items.map(function(it,j){return '<section><h2>Problem '+(i+j+1)+'</h2>'+question(it)+(teacher?'<p><b>Answer letter: '+it.letter+'</b></p>'+solution(it):'<div style="min-height:'+(per===1?140:70)+'px;border-bottom:1px solid #999">Show your thinking:</div><p>Answer letter: __________</p>')+'</section>';}).join(''));}));
 
  }
- G.MK_GRADE1_PRINTABLES={pages:pages,partner:partner,matching:matching,colorPages:colorPages,tarsiaPages:tarsiaPages,tarsiaOptions:tarsiaOptions,key:key};
+ G.MK_GRADE1_PRINTABLES={pages:pages,partner:partner,matching:matching,colorPages:colorPages,tarsiaPages:tarsiaPages,whoPages:whoPages,tarsiaOptions:tarsiaOptions,key:key};
 })(window);
