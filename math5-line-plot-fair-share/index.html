@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Line Plot Fair Share · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Make a line plot of measurements in eighths, find the total, and share it equally to find the fair share (the mean). See how one new value changes the fair share.">
+<link rel="stylesheet" href="../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Line Plot Fair Share</h1><p class="g5-sub">Each ✕ is one jar of water. Use + and − to add or remove jars at each amount (in liters). Then look at the total and the fair share.</p><div class="g5-row" id="lpRows" style="justify-content:center;gap:.25rem"></div>
+<div class="ts-model" id="lpPlot"></div><div class="ts-out" id="lpOut" aria-live="polite"></div>
+<div class="g5-actions" style="justify-content:center"><button class="g5-btn alt" id="lpClear">Clear</button></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../worksheet-generator/grade5/tool-shell.js?v=games-guides-only-20261112"></script>
+<script>
+
+var T=[1,2,3,4,5,6,7,8],c={},made={},live=false;function lab(n){var g=TOOL.gcd(n,8);return n===8?'1':(n/g)+'/'+(8/g);}
+function reset(){T.forEach(function(t){c[t]=0});c[2]=1;c[4]=2;c[6]=1;made={};live=false;draw();}
+function fr(n,d){if(n===0)return '0';return TOOL.mixed(n,d);}
+function draw(){
+ TOOL.$('lpRows').innerHTML=T.map(function(t){return '<div class="ts-step" style="flex-direction:column"><button aria-label="Add a jar at '+lab(t)+' liter" data-t="'+t+'" data-s="1">+</button><span style="font-weight:800">'+c[t]+'</span><button aria-label="Remove a jar at '+lab(t)+' liter" data-t="'+t+'" data-s="-1">−</button><span class="g5-note" style="font-size:.75rem">'+TOOL.mixed(t,8)+'</span></div>';}).join('');
+ Array.prototype.forEach.call(document.querySelectorAll('#lpRows button'),function(b){b.onclick=function(){var t=+b.dataset.t;c[t]=Math.max(0,Math.min(6,c[t]+(+b.dataset.s)));live=true;draw();}});
+ TOOL.$('lpClear').onclick=function(){T.forEach(function(t){c[t]=0});live=true;draw();};
+ TOOL.$('lpPlot').innerHTML=G5FIGS.lineplot(['0'].concat(T.map(lab)),[0].concat(T.map(function(t){return c[t]})),{xlabel:'Water in each jar (liters)',title:'Line plot of the jars'});
+ var n=0,tot=0,lo=null,hi=null;T.forEach(function(t){n+=c[t];tot+=t*c[t];if(c[t]){if(lo===null)lo=t;hi=t;}});
+ var out=n?('Jars: <b>'+n+'</b> · Total: <b>'+fr(tot,8)+' L</b>'+' · Fair share (total ÷ '+n+'): <b>'+TOOL.mixed(tot,8*n)+' L</b>'+'<br>Greatest − least: '+fr(hi-lo,8)+' L'):'No jars yet. Use + to add some.';
+ TOOL.$('lpOut').innerHTML=out;
+ if(n&&live)made[T.map(function(t){return c[t]}).join(',')]={n:n,tot:tot};
+ if(live)TOOL.update(O,{n:n,tot:tot,share:n?tot/(8*n):null,range:n?hi-lo:null,c:c,made:made});}
+var O={title:'Line Plot Fair Share',reset:reset,challenges:[
+ {text:'Make a line plot of 6 jars with a total of exactly 3 liters.',test:function(s){return s.n===6&&s.tot===24}},
+ {text:'Make the fair share exactly 1/2 liter with jars that are NOT all 1/2 liter.',test:function(s){return s.n>1&&s.share===0.5&&s.c[4]!==s.n}},
+ {text:'Make the greatest amount minus the least amount equal 5/8 liter.',test:function(s){return s.range===5}},
+ {text:'Make 4 jars whose fair share is 3/4 liter.',test:function(s){return s.n===4&&s.tot===24}},
+ {text:'Add one jar so that the fair share goes UP. Then remove it.',test:function(s){var k=Object.keys(s.made).map(function(x){return s.made[x]});return k.some(function(a){return k.some(function(b){return b.n===a.n+1&&b.tot*a.n>a.tot*b.n})})}}],
+ teacher:['5.MD.B.2: make a line plot of measurements in fractions of a unit (1/2, 1/4, 1/8) and redistribute the total equally.','The fair share is total ÷ number of jars: the mean, without the word.','Ask: which jars give water away and which receive it when the water is shared equally?'],
+ notice:['The total is the sum of every ✕: count each amount as many times as it has ✕ marks.','The fair share is the total divided by the number of jars.','A new jar above the fair share raises it; a new jar below it lowers it.','The fair share is always between the least and the greatest amount.']};
+TOOL.init(O);reset();
+</script></body></html>

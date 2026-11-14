@@ -26,7 +26,10 @@
     'fraction-multiplication-division':['fraction-explorer','area-model-explorer'],
     'measurement-conversions':['measurement-converter'],
     'volume-three-dimensional-figures':['volume-builder'],
-    'coordinate-plane-graphing':['coordinate-explorer']
+    'coordinate-plane-graphing':['coordinate-explorer'],
+    'decimal-operations':['place-value-builder'],
+    'classifying-two-dimensional-figures':['quadrilateral-family'],
+    'data-line-plots-problem-solving':['line-plot-fair-share']
   };
   var gameDefs=[
     ['math-quest','Math Quest','quest'],['treasure-trail','Treasure Trail','treasure'],

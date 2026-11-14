@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quadrilateral Family · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Change the bottom side, top side, height and slant of a four-sided figure. Watch which names fit: trapezoid, parallelogram, rectangle, rhombus, square.">
+<link rel="stylesheet" href="../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Quadrilateral Family</h1><p class="g5-sub">Use the + and − buttons. The checklist shows every name the shape has right now, and why.</p><div class="g5-row" id="qfCtl" style="justify-content:center;gap:.6rem"></div>
+<div class="ts-model" id="qfShape"></div><div class="ts-out" id="qfOut" aria-live="polite"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../worksheet-generator/grade5/tool-shell.js?v=games-guides-only-20261112"></script>
+<script>
+
+var K=[['B','Bottom side',2,8],['T','Top side',1,8],['H','Height',2,6],['S','Slant',-3,3]],v={},seen={},live=false;
+function reset(){v={B:6,T:3,H:4,S:1};seen={};live=false;draw();}
+function props(){var B=v.B,T=v.T,H=v.H,S=v.S,tl=S,tr=S+T;
+ /* corners: (0,0) (B,0) (tr,H) (tl,H); the top is always parallel to the bottom */
+ var left=Math.sqrt(tl*tl+H*H),right=Math.sqrt((tr-B)*(tr-B)+H*H);
+ var par2=T===B&&true,right4=par2&&S===0,eq4=par2&&Math.abs(left-B)<1e-9;
+ var leftEq=Math.abs(left-right)<1e-9;
+ return {pairs:par2?2:1,right4:right4,eq4:eq4,square:right4&&eq4,rect:right4,rhombus:eq4,para:par2,trap:true,left:left,right:right,iso:!par2&&leftEq};}
+function draw(){
+ TOOL.$('qfCtl').innerHTML=K.map(function(k){return '<div class="ts-step" style="flex-direction:column"><span class="g5-note">'+k[1]+'</span><div class="ts-step"><button aria-label="Decrease '+k[1]+'" data-k="'+k[0]+'" data-s="-1">−</button><b style="min-width:2ch;text-align:center">'+v[k[0]]+'</b><button aria-label="Increase '+k[1]+'" data-k="'+k[0]+'" data-s="1">+</button></div></div>';}).join('');
+ Array.prototype.forEach.call(document.querySelectorAll('#qfCtl button'),function(b){b.onclick=function(){var k=K.filter(function(q){return q[0]===b.dataset.k})[0];v[k[0]]=Math.max(k[2],Math.min(k[3],v[k[0]]+(+b.dataset.s)));live=true;draw();}});
+ var p=props(),sc=40,ox=30+Math.max(0,-v.S)*sc,W=Math.max(v.B,v.S+v.T)*sc+ox+30,Hh=v.H*sc+60;
+ var pts=[[0,0],[v.B,0],[v.S+v.T,v.H],[v.S,v.H]].map(function(q){return (ox+q[0]*sc)+','+(Hh-30-q[1]*sc)}).join(' ');
+ var g='';for(var x=0;x<=W;x+=sc)g+='<line x1="'+x+'" y1="0" x2="'+x+'" y2="'+Hh+'" stroke="#E2E8F0"/>';for(var y=Hh-30;y>=0;y-=sc)g+='<line x1="0" y1="'+y+'" x2="'+W+'" y2="'+y+'" stroke="#E2E8F0"/>';
+ TOOL.$('qfShape').innerHTML='<svg viewBox="0 0 '+W+' '+Hh+'" role="img" aria-label="Quadrilateral on a grid">'+g+'<polygon points="'+pts+'" fill="#C4B5FD" fill-opacity=".55" stroke="#5B21B6" stroke-width="4" stroke-linejoin="round"/></svg>';
+ var rows=[['Quadrilateral',true,'4 straight sides'],['Trapezoid',p.trap,'at least one pair of parallel sides (top and bottom)'],['Parallelogram',p.para,p.para?'2 pairs of parallel sides':'top and bottom are different lengths, so the slanted sides are not parallel'],
+  ['Rectangle',p.rect,p.rect?'a parallelogram with 4 right angles':(p.para?'the angles are not right angles':'not a parallelogram')],['Rhombus',p.rhombus,p.rhombus?'a parallelogram with 4 equal sides':'the sides are not all equal'],['Square',p.square,p.square?'a rectangle AND a rhombus':'needs 4 right angles and 4 equal sides']];
+ TOOL.$('qfOut').innerHTML=rows.map(function(r){return (r[1]?'✅ <b>':'⬜ ')+r[0]+(r[1]?'</b>':'')+' — '+r[2]}).join('<br>')+'<br><span class="g5-note">Side lengths: bottom '+v.B+', top '+v.T+', left '+(Math.round(p.left*100)/100)+', right '+(Math.round(p.right*100)/100)+'</span>';
+ if(live){if(p.rect&&!p.square)seen.rectNotSq=1;if(p.rhombus&&!p.square)seen.rhNotSq=1;if(!p.para)seen.trapOnly=1;if(p.square)seen.square=1;if(p.para&&!p.rect&&!p.rhombus)seen.paraOnly=1;}
+ TOOL.update(O,{seen:seen});}
+var O={title:'Quadrilateral Family',reset:reset,challenges:[
+ {text:'Make a trapezoid that is not a parallelogram.',test:function(s){return s.seen.trapOnly}},
+ {text:'Make a parallelogram that is not a rectangle and not a rhombus.',test:function(s){return s.seen.paraOnly}},
+ {text:'Make a rectangle that is not a square.',test:function(s){return s.seen.rectNotSq}},
+ {text:'Make a square. Which names does it have?',test:function(s){return s.seen.square}},
+ {text:'Make a rhombus that is not a square. (Hint: try bottom 5, height 4.)',test:function(s){return s.seen.rhNotSq}}],
+ teacher:['5.G.B.3–4: attributes of a category belong to every subcategory; classify in a hierarchy.','This tool uses the inclusive definition: a trapezoid has at least one pair of parallel sides, so every parallelogram is a trapezoid. Some programs use “exactly one pair”; tell students which definition your class uses.','The 3-4-5 right triangle makes the rhombus challenge possible with whole-number moves (slant 3, height 4, sides 5).'],
+ notice:['Every square is a rectangle and a rhombus, but not every rectangle or rhombus is a square.','Every rectangle and every rhombus is a parallelogram.','A shape keeps all the names of the families above it.','Changing the slant changes the angles but not the parallel sides.']};
+TOOL.init(O);reset();
+</script></body></html>
