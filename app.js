@@ -758,7 +758,7 @@
         category('study-guides', 'Study Guides', guideFormats) +
         category('interactive', 'Interactive Math', interactiveFormats) +
         category('practice', 'Practice Activities', practiceFormats) +
-        category('projects', 'Projects', ['projects']) +
+        (/^(?:grade|math)[1-5]$/.test(c.id) ? '' : category('projects', 'Projects', ['projects'])) +
         unitPager(c, u) + '</div></section>'
     };
   }
