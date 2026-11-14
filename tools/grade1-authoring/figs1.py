@@ -1,506 +1,225 @@
-"""Grade 1 diagram renderer (Pillow).
+"""Grade 1 diagram kinds, added to the Grade 2 kit (figs2.py -> figs3.py -> Grade 5 figs.py).
 
-Same contract as the Grade 5 figure module: a diagram is declared as (kind, data) by a
-question family, rendered here to PNG bytes, and its alt text is written from the same data
-so the description can never drift from the picture.
+render(kind, data) -> SVG. Every drawing is built only from `data`, which is also stored in the check file.
+Reused unchanged: counters, jline, tally, chart, blocks, digital, solids, bars (Grade 2); clock, picgraph, partition,
+groups (Grade 3); table (Grade 5). New kinds: tenframe, crossrow, lengths, measure, shapes1, compose."""
+import math, os, sys
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(HERE, "..", "grade2-authoring"))
+sys.path.append(os.path.join(HERE, "..", "grade3-authoring"))
+sys.path.append(os.path.join(HERE, "..", "grade5-authoring"))
+import figs2 as G2
+from figs import svg, text, rect, line, poly, INK, FILL
 
-No SVG rasteriser is available in this environment, so figures are drawn directly with
-Pillow primitives on a fixed 720x480 canvas.  Colours are chosen for print and for colour
-vision deficiency (blue / orange / green / purple, no red-green pairings as the only cue).
-"""
-import io
-from PIL import Image, ImageDraw, ImageFont
-
-W, H = 720, 480
-BG = (255, 255, 255)
-INK = (24, 35, 51)
-GRID = (203, 213, 225)
-BLUE = (37, 99, 235)
-ORANGE = (234, 88, 12)
-GREEN = (21, 128, 61)
-PURPLE = (126, 34, 206)
-TEAL = (13, 148, 136)
-YELLOW = (250, 204, 21)
-RED = (190, 30, 45)
-SOFT_BLUE = (219, 234, 254)
-SOFT_ORANGE = (255, 237, 213)
-
-_COLORS = {"blue": BLUE, "orange": ORANGE, "green": GREEN, "purple": PURPLE, "teal": TEAL,
-           "yellow": YELLOW, "red": RED}
-
-_FONT_CACHE = {}
+RED, YEL, BLUE, ORANGE, GREEN = "#e2563b", "#f5c400", "#2f7fd8", "#f08c1a", "#1aa37a"
 
 
-def _font(size, bold=False):
-    key = (size, bold)
-    if key not in _FONT_CACHE:
-        try:
-            _FONT_CACHE[key] = ImageFont.load_default(size=size)
-        except TypeError:                                    # very old Pillow
-            _FONT_CACHE[key] = ImageFont.load_default()
-    return _FONT_CACHE[key]
+def _dot(cx, cy, col, r=15, crossed=False):
+    s = f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{col}" stroke="{INK}" stroke-width="1.6"/>'
+    if crossed:
+        s += line(cx - r, cy - r, cx + r, cy + r, INK, 3.5) + line(cx - r, cy + r, cx + r, cy - r, INK, 3.5)
+    return s
 
 
-def _canvas():
-    im = Image.new("RGB", (W, H), BG)
-    return im, ImageDraw.Draw(im)
+def tenframe(d):
+    """Ten frames (frames: 1 or 2). a red counters then b yellow counters, filled in reading order (top row first, frame by
+    frame); x: the last x counters are crossed out."""
+    k, a, b, x = d.get("frames", 1), d.get("a", 0), d.get("b", 0), d.get("x", 0)
+    n = a + b
+    W, H = 30 + k * 250, 132
+    out = ""
+    for f in range(k):
+        for i in range(10):
+            cx, cy = 20 + f * 250 + (i % 5) * 44, 18 + (i // 5) * 48
+            out += rect(cx, cy, 44, 48, "#fff", sw=2.2)
+            j = f * 10 + i
+            if j < n:
+                out += _dot(cx + 22, cy + 24, RED if j < a else YEL, 15, j >= n - x)
+    return svg(W, H, out)
 
 
-def _text(d, x, y, s, size=26, fill=INK, anchor="la"):
-    d.text((int(x), int(y)), str(s), font=_font(size), fill=fill, anchor=anchor)
+def crossrow(d):
+    """n counters in rows of `per` (default 5); the last x are crossed out. color: red|blue."""
+    n, x, per = d["n"], d.get("x", 0), d.get("per", 5)
+    rows = math.ceil(n / per)
+    W, H = 40 + per * 46 + (per // 5 - 1) * 14, 24 + rows * 46
+    out = ""
+    col = BLUE if d.get("color") == "blue" else RED
+    for i in range(n):
+        r_, c = divmod(i, per)
+        out += _dot(36 + c * 46 + (c // 5) * 14, 36 + r_ * 46, col, 16, i >= n - x)
+    return svg(W, H, out)
 
 
-def _center_text(d, x, y, s, size=26, fill=INK):
-    d.text((int(x), int(y)), str(s), font=_font(size), fill=fill, anchor="mm")
+COLS = {"blue": "#7fb6f0", "orange": "#ffc27a", "green": "#8fdcbf", "pink": "#f5a3c4", "purple": "#c3a6f0", "yellow": "#ffe08a"}
 
 
-def _color(name, default=BLUE):
-    return _COLORS.get(str(name).lower(), default)
+def lengths(d):
+    """Objects drawn as long rounded bars, one per row. items [{"label", "len", "start", "color"}] in grid units (u px each).
+    grid: each row sits on a strip of unit squares (so lengths can be counted); line: draw the start line at 0."""
+    items, u = d["items"], d.get("u", 40)
+    span = max(it.get("start", 0) + it["len"] for it in items) + (1 if d.get("grid") else 0)
+    W, H = 150 + span * u + 30, 30 + len(items) * 62
+    out = ""
+    for i, it in enumerate(items):
+        y = 26 + i * 62
+        if d.get("grid"):
+            for k in range(span):
+                out += rect(140 + k * u, y - 6, u, 46, "#f4f7fc", "#9aa8bb", 1.4)
+        x0 = 140 + it.get("start", 0) * u
+        out += rect(x0, y + 5, it["len"] * u, 24, COLS.get(it.get("color", "blue"), "#7fb6f0"), INK, 2.4, rx=12)
+        if d.get("grid"):
+            for k in range(span + 1):
+                out += line(140 + k * u, y - 6, 140 + k * u, y + 40, "#5b6b80", 1.2, 'stroke-opacity="0.55"')
+        out += text(126, y + 24, it["label"], 19, anchor="end", weight="800")
+    if d.get("line", True):
+        out += line(140, 10, 140, H - 6, INK, 3)
+    return svg(W, H, out)
 
 
-def _png(im):
-    buf = io.BytesIO()
-    im.convert("RGB").quantize(colors=128, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).save(buf, "PNG", optimize=True)
-    return buf.getvalue()
+def measure(d):
+    """An object (bar of length `len` units) with units laid under it. units: [[x0, w], ...] in units (gaps, overlaps and
+    other sizes are drawn exactly as given). unit: 'cube'|'clip'. label: object name."""
+    L, u = d["len"], 44
+    units = d["units"]
+    span = max([L] + [a + w for a, w in units])
+    W, H = 60 + span * u + 40, 170
+    x0 = 50
+    out = text(x0, 28, d.get("label", ""), 19, anchor="start", weight="800")
+    out += rect(x0, 40, L * u, 36, "#7fb6f0", INK, 2.4, rx=12)
+    out += line(x0, 34, x0, 150, "#7a8799", 1.5, 'stroke-dasharray="5 4"')
+    out += line(x0 + L * u, 34, x0 + L * u, 150, "#7a8799", 1.5, 'stroke-dasharray="5 4"')
+    for k, (a, w) in enumerate(units):
+        x, y = x0 + a * u, 96 + (8 if k % 2 and d.get("stagger") else 0)
+        if d.get("unit") == "clip":
+            out += rect(x + 2, y + 6, w * u - 4, 22, "none", "#5a62d8", 3.5, rx=11) + rect(x + 10, y + 12, w * u - 18, 10, "none", "#5a62d8", 2.5, rx=5)
+        else:
+            out += rect(x, y, w * u, 34, "#ffc27a", INK, 2, rx=3)
+    return svg(W, H, out)
 
 
-# --------------------------------------------------------------------------- primitives
-def _counter(d, cx, cy, r, fill):
-    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=fill, outline=INK, width=2)
+def _shape_pts(kind):
+    """Unit outlines (y down) for named 2-D shapes; curves as polylines."""
+    if kind == "triangle":
+        return [(0, 1), (0.5, 0), (1, 1)]
+    if kind == "triangle2":                       # skinny right triangle
+        return [(0, 0), (0, 1), (0.6, 1)]
+    if kind == "square":
+        return [(0, 0), (1, 0), (1, 1), (0, 1)]
+    if kind == "rectangle":
+        return [(0, 0.2), (1.6, 0.2), (1.6, 0.9), (0, 0.9)]
+    if kind == "trapezoid":
+        return [(0.3, 0.15), (1.1, 0.15), (1.4, 0.85), (0, 0.85)]
+    if kind == "hexagon":
+        return [(0.5 + 0.5 * math.cos(math.radians(60 * k)), 0.5 + 0.5 * math.sin(math.radians(60 * k))) for k in range(6)]
+    if kind == "rhombus":
+        return [(0.5, 0), (1, 0.5), (0.5, 1), (0, 0.5)]
+    if kind == "pentagon":
+        return [(0.5 + 0.5 * math.cos(math.radians(72 * k - 90)), 0.5 + 0.5 * math.sin(math.radians(72 * k - 90))) for k in range(5)]
+    if kind == "circle":
+        return [(0.5 + 0.5 * math.cos(t / 36 * math.tau), 0.5 + 0.5 * math.sin(t / 36 * math.tau)) for t in range(36)]
+    if kind == "halfcircle":
+        return [(0.5 + 0.5 * math.cos(math.pi + t / 18 * math.pi), 0.75 + 0.5 * math.sin(math.pi + t / 18 * math.pi)) for t in range(19)]
+    if kind == "quartercircle":
+        return [(0, 0)] + [(math.sin(t / 18 * math.pi / 2), math.cos(t / 18 * math.pi / 2)) for t in range(19)]
+    if kind == "oval":
+        return [(0.7 + 0.7 * math.cos(t / 36 * math.tau), 0.5 + 0.4 * math.sin(t / 36 * math.tau)) for t in range(36)]
+    raise KeyError(kind)
 
 
-def _star(d, cx, cy, r, fill):
-    import math
-    pts = []
-    for k in range(10):
-        ang = -math.pi / 2 + k * math.pi / 5
-        rad = r if k % 2 == 0 else r * 0.45
-        pts.append((cx + rad * math.cos(ang), cy + rad * math.sin(ang)))
-    d.polygon(pts, fill=fill, outline=INK)
+def _place(pts, cx, cy, size, rot):
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    mx, my = (max(xs) + min(xs)) / 2, (max(ys) + min(ys)) / 2
+    sc = size / max(max(xs) - min(xs), max(ys) - min(ys))
+    a = math.radians(rot)
+    return [(cx + ((x - mx) * math.cos(a) - (y - my) * math.sin(a)) * sc, cy + ((x - mx) * math.sin(a) + (y - my) * math.cos(a)) * sc) for x, y in pts]
 
 
-def _tally_mark(d, x, y, h=54, fill=INK):
-    d.line([x, y, x, y + h], fill=fill, width=5)
+def shapes1(d):
+    """Row of labeled shapes. items [{"kind", "rot", "size" (0.5-1), "color", "label", "open" (gap: not closed)}].
+    kind: triangle, triangle2, square, rectangle, trapezoid, hexagon, rhombus, pentagon, circle, halfcircle, quartercircle, oval."""
+    items = d["items"]
+    cw = 170
+    W, H = cw * len(items) + 20, 210
+    out = ""
+    for k, it in enumerate(items):
+        P = _place(_shape_pts(it["kind"]), 10 + k * cw + cw / 2, 92, 125 * it.get("size", 1), it.get("rot", 0))
+        col = COLS.get(it.get("color", "blue"), "#7fb6f0")
+        if it.get("open"):
+            p = " ".join(f"{x:.1f},{y:.1f}" for x, y in P)
+            out += f'<polyline points="{p}" fill="none" stroke="{INK}" stroke-width="3.5" stroke-linejoin="round"/>'
+        else:
+            out += poly(P, col, INK, 3)
+        if it.get("label"):
+            out += text(10 + k * cw + cw / 2, 198, it["label"], 20, weight="800")
+    return svg(W, H, out)
 
 
-# --------------------------------------------------------------------------- kinds
-def _tenframe(data):
-    frames = data.get("frames", [10, 10])
-    filled = data.get("filled", [0, 0])
-    im, d = _canvas()
-    n = len(frames)
-    fw, fh = 300, 150
-    gap = 40
-    total_w = n * fw + (n - 1) * gap
-    x0 = (W - total_w) // 2
-    y0 = 130
-    cw, ch = fw / 5, fh / 2
-    for fi in range(n):
-        ox = x0 + fi * (fw + gap)
-        d.rectangle([ox, y0, ox + fw, y0 + fh], fill=(250, 252, 255), outline=INK, width=3)
-        for row in range(2):
-            for col in range(5):
-                x1, y1 = ox + col * cw, y0 + row * ch
-                d.rectangle([x1, y1, x1 + cw, y1 + ch], outline=GRID, width=2)
-        # counters (a caller may supply fewer values than frames)
-        count = filled[fi] if fi < len(filled) else 0
-        for j in range(min(count, 10)):
-            row, col = divmod(j, 5)
-            cx = ox + col * cw + cw / 2
-            cy = y0 + row * ch + ch / 2
-            _counter(d, cx, cy, min(cw, ch) * 0.33, _color(data.get("color", "blue")))
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 360, cap, 30)
-    return im
-
-
-def _counters(data):
-    groups = data.get("groups") or [{"count": 5, "color": "blue"}]
-    im, d = _canvas()
-    top = 90 if data.get("caption") else 70
-    rows = len(groups)
-    band = (H - top - 40) / max(rows, 1)
-    for gi, g in enumerate(groups):
-        cnt = int(g.get("count", 0))
-        color = _color(g.get("color", "blue"))
-        cols = min(cnt, 10) if cnt > 0 else 1
-        rowsn = (cnt + 9) // 10 if cnt else 1
-        r = min(26, 240 / max(cols, 1) / 2.4, band / (rowsn * 2.6))
-        gw = cols * (r * 2.5)
-        x0 = (W - gw) / 2
-        y0 = top + gi * band + band / 2 - (rowsn * r * 2.4) / 2 + r
-        for j in range(cnt):
-            rr, cc = divmod(j, 10)
-            cx = x0 + cc * (r * 2.5) + r
-            cy = y0 + rr * (r * 2.4)
-            if data.get("style") == "star":
-                _star(d, cx, cy, r * 0.9, color)
-            else:
-                _counter(d, cx, cy, r * 0.9, color)
-        label = g.get("label")
-        if label:
-            _text(d, 34, y0 - 10, label, 24)
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, H - 46, cap, 28)
-    return im
-
-
-def _numberline(data):
-    lo, hi = int(data.get("min") or 0), int(data.get("max") or 10)
-    step = int(data.get("step") or 1)
-    im, d = _canvas()
-    y = 300
-    left, right = 60, W - 60
-    d.line([left, y, right, y], fill=INK, width=4)
-    span = max(hi - lo, 1)
-    ticks = list(range(lo, hi + 1, step))
-    every = max(1, int(len(ticks) / 12 + 0.999))
-    for i, t in enumerate(ticks):
-        x = left + (t - lo) / span * (right - left)
-        d.line([x, y - 12, x, y + 12], fill=INK, width=3)
-        if i % every == 0 or i == len(ticks) - 1:
-            _center_text(d, x, y + 40, t, 24)
-    for m in data.get("marks", []):
-        x = left + (m - lo) / span * (right - left)
-        d.ellipse([x - 13, y - 13, x + 13, y + 13], fill=YELLOW, outline=INK, width=3)
-        _center_text(d, x, y - 1, m, 20)
-    for j in data.get("jumps", []):
-        a, b = j[0], j[1]
-        xa = left + (a - lo) / span * (right - left)
-        xb = left + (b - lo) / span * (right - left)
-        top = y - 70 - 40 * j[2] if len(j) > 2 else y - 70
-        d.arc([min(xa, xb), top, max(xa, xb), y - 20], 180, 360, fill=BLUE, width=4)
-        if len(j) > 3 and j[3]:
-            _center_text(d, (xa + xb) / 2, top - 18, j[3], 24, BLUE)
-    if data.get("point") is not None:
-        p = data["point"]
-        x = left + (p - lo) / span * (right - left)
-        d.polygon([(x, y - 26), (x - 14, y - 50), (x + 14, y - 50)], fill=RED, outline=INK)
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 110, cap, 28)
-    return im
-
-
-def _baseten(data):
-    tens, ones = int(data.get("tens", 0)), int(data.get("ones", 0))
-    im, d = _canvas()
-    x = 60
-    ybase = 380
-    for _ in range(tens):
-        d.rectangle([x, ybase - 200, x + 34, ybase], fill=SOFT_BLUE, outline=BLUE, width=3)
-        for k in range(1, 10):
-            yy = ybase - 200 + k * 20
-            d.line([x + 3, yy, x + 31, yy], fill=BLUE, width=1)
-        x += 46
-        if x > W - 90:
-            x = 60
-            ybase -= 215
-    if tens:
-        x += 12
-    for i in range(ones):
-        d.rectangle([x, ybase - 20, x + 20, ybase], fill=SOFT_ORANGE, outline=ORANGE, width=2)
-        x += 26
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 60, cap, 28)
-    _text(d, 60, 430, f"{tens} {'ten' if tens == 1 else 'tens'} and "
-                      f"{ones} {'one' if ones == 1 else 'ones'}", 24, INK)
-    return im
-
-
-def _tally(data):
-    rows = data.get("rows", [])
-    im, d = _canvas()
-    top = 100
-    band = 86
-    _text(d, 60, 42, data.get("caption", "Tally chart"), 28)
-    for i, (label, count) in enumerate(rows):
-        y = top + i * band
-        _text(d, 60, y, label, 26)
-        x = 250
-        n = int(count)
-        for g in range(n // 5):
-            for k in range(4):
-                _tally_mark(d, x + k * 12, y - 4)
-            d.line([x - 6, y + 48, x + 48, y - 8], fill=INK, width=5)
-            x += 70
-        for k in range(n % 5):
-            _tally_mark(d, x, y - 4)
-            x += 12
-        _text(d, 620, y, f"= {n}", 24)
-    return im
-
-
-def _pictograph(data):
-    rows = data.get("rows", [])
-    key = data.get("key", 1)
-    sym = data.get("symbol", "dot")
-    im, d = _canvas()
-    _text(d, 50, 40, data.get("caption", "Picture graph"), 28)
-    _text(d, W - 50, 40, f"Each {sym} = {key}", 24, anchor="ra")
-    top, band = 110, 78
-    for i, (label, count) in enumerate(rows):
-        y = top + i * band
-        _text(d, 50, y, label, 25)
-        n = int(count) // max(int(key), 1)
-        gap = max(26, min(52, (W - 300) // max(n, 1)))
-        radius = max(6, min(15, gap // 2 - 6))
-        for j in range(n):
-            cx = 250 + j * gap
-            if sym == "star":
-                _star(d, cx, y + 12, radius + 2, ORANGE)
-            else:
-                _counter(d, cx, y + 12, radius, BLUE)
-    return im
-
-
-def _bargraph(data):
-    rows = data.get("rows", [])
-    im, d = _canvas()
-    _text(d, 50, 34, data.get("caption", "Bar graph"), 28)
-    top, band = 110, 80
-    maxv = max([int(c) for _, c in rows] + [1])
-    for i, (label, count) in enumerate(rows):
-        y = top + i * band
-        _text(d, 50, y, label, 24)
-        w = int((W - 330) * int(count) / maxv)
-        d.rectangle([240, y, 240 + max(w, 6), y + 46], fill=_color(data.get("color", "blue")), outline=INK, width=2)
-        _text(d, 240 + max(w, 6) + 14, y + 8, count, 24)
-    return im
-
-
-def _shapes(data):
-    items = data.get("shapes", [])
-    im, d = _canvas()
-    _text(d, 50, 34, data.get("caption", ""), 26)
-    n = max(len(items), 1)
-    slot = (W - 100) / n
-    for i, s in enumerate(items):
-        cx = 50 + slot * (i + 0.5)
-        cy = 250
-        size = min(slot * 0.32, 95)
-        kind = s.get("type", "square")
-        fill = _color(s.get("color", "blue"))
-        if kind in ("square", "rectangle"):
-            w = size * (1.55 if kind == "rectangle" else 1)
-            d.rectangle([cx - w / 2, cy - size / 2, cx + w / 2, cy + size / 2], fill=fill, outline=INK, width=4)
-        elif kind == "triangle":
-            d.polygon([(cx, cy - size * 0.72), (cx - size * 0.85, cy + size * 0.6), (cx + size * 0.85, cy + size * 0.6)], fill=fill, outline=INK)
-        elif kind == "circle":
-            d.ellipse([cx - size / 2, cy - size / 2, cx + size / 2, cy + size / 2], fill=fill, outline=INK, width=4)
-        elif kind == "hexagon":
-            import math
-            pts = [(cx + size * 0.6 * math.cos(math.pi / 3 * k), cy + size * 0.6 * math.sin(math.pi / 3 * k)) for k in range(6)]
-            d.polygon(pts, fill=fill, outline=INK)
-        elif kind in ("cube", "cylinder", "sphere", "cone"):
-            if kind == "cube":
-                d.rectangle([cx - size / 2, cy - size / 2, cx + size * 0.2, cy + size * 0.2], fill=fill, outline=INK, width=3)
-                d.polygon([(cx - size / 2, cy - size / 2), (cx - size / 4, cy - size * 0.8), (cx + size * 0.45, cy - size * 0.8), (cx + size * 0.2, cy - size / 2)], fill=fill, outline=INK)
-                d.polygon([(cx + size * 0.2, cy - size / 2), (cx + size * 0.45, cy - size * 0.8), (cx + size * 0.45, cy - size * 0.1), (cx + size * 0.2, cy + size * 0.2)], fill=fill, outline=INK)
-            elif kind == "cylinder":
-                d.rectangle([cx - size / 2, cy - size / 2, cx + size / 2, cy + size / 2], fill=fill, outline=INK, width=3)
-                d.ellipse([cx - size / 2, cy - size * 0.65, cx + size / 2, cy - size * 0.25], fill=fill, outline=INK, width=3)
-            elif kind == "sphere":
-                d.ellipse([cx - size / 2, cy - size / 2, cx + size / 2, cy + size / 2], fill=fill, outline=INK, width=3)
-            else:  # cone: circular base with a curved body meeting at the apex
-                d.ellipse([cx - size * 0.55, cy + size * 0.28, cx + size * 0.55, cy + size * 0.58],
-                          fill=fill, outline=INK, width=3)
-                d.polygon([(cx, cy - size * 0.75), (cx - size * 0.55, cy + size * 0.43),
-                           (cx + size * 0.55, cy + size * 0.43)], fill=fill, outline=INK, width=3)
-        label = s.get("label")
-        if label:
-            _center_text(d, cx, cy + size * 0.95, label, 24)
-    cap = data.get("footer")
-    if cap:
-        _center_text(d, W / 2, H - 40, cap, 24)
-    return im
-
-
-def _partition(data):
-    shape = data.get("shape", "rectangle")
-    parts = int(data.get("parts", 2))
-    shaded = int(data.get("shaded", 0))
-    im, d = _canvas()
-    cx, cy = W / 2, H / 2 + 20
-    if shape == "circle":
-        r = 160
-        colors = [SOFT_BLUE] * parts
-        for k in range(shaded):
-            colors[k] = BLUE
-        step = 360 / parts
-        for k in range(parts):
-            d.pieslice([cx - r, cy - r, cx + r, cy + r], k * step, (k + 1) * step, fill=colors[k], outline=INK, width=3)
-        d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=INK, width=4)
-    else:
-        w, h = 440, 240
-        pw = w / parts
-        for k in range(parts):
-            fill = BLUE if k < shaded else SOFT_BLUE
-            d.rectangle([cx - w / 2 + k * pw, cy - h / 2, cx - w / 2 + (k + 1) * pw, cy + h / 2], fill=fill, outline=INK, width=3)
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 70, cap, 28)
-    return im
-
-
-def _clock(data):
-    h = int(data.get("hour", 3)) % 12
-    m = int(data.get("minute", 0))
-    im, d = _canvas()
-    cx, cy, r = W / 2, H / 2 + 10, 170
-    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(255, 255, 255), outline=INK, width=5)
-    import math
-    for k in range(1, 13):
-        ang = math.radians(k * 30 - 90)
-        tx, ty = cx + (r - 30) * math.cos(ang), cy + (r - 30) * math.sin(ang)
-        _center_text(d, tx, ty, k, 28)
-    # minute ticks
-    for k in range(60):
-        ang = math.radians(k * 6 - 90)
-        r1 = r - 8 if k % 5 else r - 16
-        d.line([cx + r1 * math.cos(ang), cy + r1 * math.sin(ang), cx + r * math.cos(ang), cy + r * math.sin(ang)],
-               fill=INK if k % 5 == 0 else GRID, width=3 if k % 5 == 0 else 1)
-    # hour hand
-    ha = math.radians((h % 12) * 30 + m * 0.5 - 90)
-    d.line([cx, cy, cx + r * 0.52 * math.cos(ha), cy + r * 0.52 * math.sin(ha)], fill=INK, width=10)
-    # minute hand
-    ma = math.radians(m * 6 - 90)
-    d.line([cx, cy, cx + r * 0.76 * math.cos(ma), cy + r * 0.76 * math.sin(ma)], fill=BLUE, width=6)
-    d.ellipse([cx - 8, cy - 8, cx + 8, cy + 8], fill=INK)
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 40, cap, 26)
-    return im
-
-
-def _ruler(data):
-    units = int(data.get("units", 6))
-    label = data.get("unit", "unit")
-    show = data.get("show")          # if set, shade the measured length
-    im, d = _canvas()
-    left, right, y = 70, W - 70, 250
-    seg = (right - left) / max(units, 1)
-    d.rectangle([left, y - 34, right, y + 34], fill=(254, 252, 232), outline=INK, width=3)
-    for k in range(units + 1):
-        x = left + k * seg
-        d.line([x, y - 34, x, y + 34], fill=INK, width=2)
-        _center_text(d, x, y + 58, k, 22)
-    if show:
-        d.rectangle([left, y - 34, left + show * seg, y + 34], fill=(191, 219, 254), outline=BLUE, width=0)
-        d.rectangle([left, y - 34, right, y + 34], outline=INK, width=3)
-    _text(d, left, y - 80, data.get("caption", f"Measured in {label}s"), 26)
-    return im
-
-
-def _comparegroups(data):
-    im, d = _canvas()
-    left = data.get("left", {})
-    right = data.get("right", {})
-    for i, g in enumerate((left, right)):
-        x0 = 60 + i * (W / 2)
-        w = W / 2 - 100
-        d.rounded_rectangle([x0, 120, x0 + w, 400], radius=18, outline=GRID, width=3, fill=(250, 252, 255))
-        _text(d, x0 + 20, 132, g.get("label", ""), 24)
-        cnt = int(g.get("count", 0))
-        r = 20
-        cols = max(min(cnt, 5), 1)
-        for j in range(cnt):
-            rr, cc = divmod(j, 5)
-            cx = x0 + 50 + cc * (r * 2.6)
-            cy = 210 + rr * (r * 2.6)
-            _counter(d, cx, cy, r, _color(g.get("color", "blue")))
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 60, cap, 28)
-    return im
-
-
-def _placevalue(data):
-    tens, ones = int(data.get("tens", 0)), int(data.get("ones", 0))
-    im, d = _canvas()
-    _center_text(d, W / 2, 56, data.get("caption", "Place value chart"), 26)
-    cols = [("Tens", tens, BLUE), ("Ones", ones, ORANGE)]
-    for i, (label, val, col) in enumerate(cols):
-        x0 = 120 + i * 250
-        d.rounded_rectangle([x0, 110, x0 + 200, 150], radius=8, fill=col, outline=INK, width=2)
-        _center_text(d, x0 + 100, 130, label, 26, (255, 255, 255))
-        d.rectangle([x0, 150, x0 + 200, 330], fill=(250, 252, 255), outline=INK, width=3)
-        _center_text(d, x0 + 100, 240, val, 74, INK)
-    return im
-
-
-def _numbercards(data):
-    """A row of numeral cards (e.g. "which is greater?"), optional blank card."""
-    cards = data.get("cards", [])
-    im, d = _canvas()
-    n = max(len(cards), 1)
-    slot = (W - 80) / n
-    for i, c in enumerate(cards):
-        cx = 40 + slot * (i + 0.5)
-        d.rounded_rectangle([cx - slot * 0.32, 160, cx + slot * 0.32, 320], radius=16, fill=SOFT_BLUE, outline=BLUE, width=4)
-        _center_text(d, cx, 240, c if c != "" else "?", 60)
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 70, cap, 28)
-    return im
-
-
-def _array(data):
-    rows, cols = int(data.get("rows", 2)), int(data.get("cols", 5))
-    im, d = _canvas()
-    r = 22
-    gapx, gapy = 54, 54
-    w = (cols - 1) * gapx + 2 * r
-    h = (rows - 1) * gapy + 2 * r
-    x0, y0 = (W - w) / 2, (H - h) / 2
-    for i in range(rows):
-        for j in range(cols):
-            _counter(d, x0 + r + j * gapx, y0 + r + i * gapy, r, _color(data.get("color", "green")))
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 60, cap, 28)
-    return im
-
-
-def _sortbox(data):
-    """Objects scattered in a box, for sorting/counting tasks."""
-    items = data.get("items", [])
-    im, d = _canvas()
-    d.rounded_rectangle([60, 100, W - 60, H - 70], radius=20, outline=GRID, width=3, fill=(250, 252, 255))
-    if items:
-        cols = 8
-        for i, it in enumerate(items):
-            rr, cc = divmod(i, cols)
-            cx = 120 + cc * 62
-            cy = 160 + rr * 62
-            color = _color(it if isinstance(it, str) else it.get("color", "blue"))
-            if isinstance(it, dict) and it.get("shape") == "star":
-                _star(d, cx, cy, 20, color)
-            else:
-                _counter(d, cx, cy, 20, color)
-    cap = data.get("caption")
-    if cap:
-        _center_text(d, W / 2, 56, cap, 28)
-    return im
-
-
-_RENDERERS = {
-    "tenframe": _tenframe, "counters": _counters, "numberline": _numberline, "baseten": _baseten,
-    "tally": _tally, "pictograph": _pictograph, "bargraph": _bargraph, "shapes": _shapes,
-    "partition": _partition, "clock": _clock, "ruler": _ruler, "comparegroups": _comparegroups,
-    "placevalue": _placevalue, "numbercards": _numbercards, "array": _array, "sortbox": _sortbox,
+# composite shapes drawn with every piece outlined: name -> (piece kind, pieces as polygons in a 0..4 box)
+COMPOSE = {
+    "square_tri2": ("triangle", [[(0, 0), (4, 0), (0, 4)], [(4, 0), (4, 4), (0, 4)]]),
+    "square_tri4": ("triangle", [[(0, 0), (4, 0), (2, 2)], [(4, 0), (4, 4), (2, 2)], [(4, 4), (0, 4), (2, 2)], [(0, 4), (0, 0), (2, 2)]]),
+    "rect_sq2": ("square", [[(0, 1), (2, 1), (2, 3), (0, 3)], [(2, 1), (4, 1), (4, 3), (2, 3)]]),
+    "rect_sq3": ("square", [[(0, 1.4), (1.33, 1.4), (1.33, 2.73), (0, 2.73)], [(1.33, 1.4), (2.67, 1.4), (2.67, 2.73), (1.33, 2.73)],
+                            [(2.67, 1.4), (4, 1.4), (4, 2.73), (2.67, 2.73)]]),
+    "square_sq4": ("square", [[(0, 0), (2, 0), (2, 2), (0, 2)], [(2, 0), (4, 0), (4, 2), (2, 2)], [(0, 2), (2, 2), (2, 4), (0, 4)], [(2, 2), (4, 2), (4, 4), (2, 4)]]),
+    "rect_tri2": ("triangle", [[(0, 1), (4, 1), (0, 3)], [(4, 1), (4, 3), (0, 3)]]),
+    "square_rect2": ("rectangle", [[(0, 0), (4, 0), (4, 2), (0, 2)], [(0, 2), (4, 2), (4, 4), (0, 4)]]),
+    "hex_tri6": ("triangle", None),
+    "hex_trap2": ("trapezoid", None),
+    "trap_tri3": ("triangle", None),
+    "circle_half2": ("half-circle", None),
+    "circle_quarter4": ("quarter-circle", None),
+    "rhombus_tri2": ("triangle", None),
 }
 
 
-def render_png(kind, data):
-    if kind not in _RENDERERS:
-        raise ValueError(f"unknown diagram kind {kind!r}")
-    return _png(_RENDERERS[kind](data))
+def _hex():
+    return [(2 + 2 * math.cos(math.radians(60 * k)), 2 + 2 * math.sin(math.radians(60 * k))) for k in range(6)]
+
+
+def compose(d):
+    """A composite shape with the outline of every piece drawn. data: name (key of COMPOSE), color."""
+    nm = d["name"]
+    piece, polys = COMPOSE[nm]
+    h = _hex()
+    if nm == "hex_tri6":
+        polys = [[(2, 2), h[k], h[(k + 1) % 6]] for k in range(6)]
+    elif nm == "hex_trap2":
+        polys = [[h[0], h[1], h[2], h[3]], [h[3], h[4], h[5], h[0]]]
+    elif nm == "trap_tri3":
+        s = 4 / 3 * 1.0
+        r3 = math.sqrt(3) / 2 * 2
+        top = 1 + r3
+        polys = [[(0, top), (1, 1), (2, top)], [(1, 1), (3, 1), (2, top)], [(2, top), (3, 1), (4, top)]]
+        polys = [[(x, y) for x, y in p] for p in polys]
+    elif nm == "rhombus_tri2":
+        r3 = math.sqrt(3)
+        polys = [[(0, 2), (1, 2 - r3), (2, 2)], [(1, 2 - r3), (3, 2 - r3), (2, 2)]]
+    out = ""
+    S, ox, oy = 52, 40, 30
+    if polys:
+        xs = [x for p in polys for x, _ in p]
+        ys = [y for p in polys for _, y in p]
+        dx, dy = 2 - (max(xs) + min(xs)) / 2, 2 - (max(ys) + min(ys)) / 2
+        polys = [[(x + dx, y + dy) for x, y in p] for p in polys]
+    fills = [COLS[c] for c in ("blue", "orange", "green", "pink", "purple", "yellow")]
+    if nm in ("circle_half2", "circle_quarter4"):
+        cx, cy, R = ox + 2 * S, oy + 2 * S, 2 * S
+        k = 2 if nm == "circle_half2" else 4
+        for i in range(k):
+            a0, a1 = math.tau * i / k, math.tau * (i + 1) / k
+            pts = [(cx, cy)] + [(cx + R * math.cos(a0 + (a1 - a0) * t / 24), cy + R * math.sin(a0 + (a1 - a0) * t / 24)) for t in range(25)]
+            out += poly(pts, fills[i % 6], INK, 3)
+    else:
+        for i, p in enumerate(polys):
+            out += poly([(ox + x * S, oy + y * S) for x, y in p], fills[i % 6], INK, 3)
+    return svg(ox * 2 + 4 * S, oy * 2 + 4 * S, out)
+
+
+KINDS = dict(G2.KINDS)
+KINDS.update({"tenframe": tenframe, "crossrow": crossrow, "lengths": lengths, "measure": measure, "shapes1": shapes1, "compose": compose})
 
 
 def render(kind, data):
-    """Compatibility with the Grade 5 helper name (returns PNG bytes here, not SVG)."""
-    return render_png(kind, data)
+    return KINDS[kind](data)

@@ -1,0 +1,73 @@
+name: Grade 1 preview validation
+on:
+  pull_request:
+    paths:
+      - 'tools/grade1-authoring/**'
+      - 'question-banks/math1/**'
+      - 'question-banks/assets/math1/**'
+      - 'worksheet-generator/grade1*'
+      - 'worksheet-generator/grade1/**'
+      - 'scripts/assemble-classroom-preview.mjs'
+      - 'manifest.json'
+      - '.github/workflows/grade1-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: grade1-preview-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  grade1:
+    name: Grade 1 answers and browser regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/checkout@v4
+        with:
+          repository: akneller1/classroom
+          ref: main
+          path: classroom
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify Grade 1 practice and Understanding Check answers
+        working-directory: source
+        run: |
+          pip install Pillow
+          python tools/grade1-authoring/verify.py
+          VERIFY_CHECKS=1 python tools/grade1-authoring/verify.py
+          node tools/grade1-authoring/tests/schema-adapter.cjs question-bank-adapter.js .
+      - name: Assemble the development preview
+        working-directory: source
+        run: node scripts/assemble-classroom-preview.mjs
+      - name: Install Chromium
+        working-directory: source
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Exercise Grade 1 checks, links and game modes
+        working-directory: source
+        env:
+          G1_SITE: ../classroom/_site
+          G1_PREFIX: grade1/
+        run: |
+          G3_ONLY=checks node tools/grade1-authoring/tests/browser-grade1.cjs
+          G3_ONLY=links node tools/grade1-authoring/tests/browser-grade1.cjs
+          G3_ONLY=games node tools/grade1-authoring/tests/browser-grade1.cjs --quick
+      - name: Exercise all Grade 1 native generators
+        working-directory: source
+        env:
+          G1_BASE: http://127.0.0.1:8768/
+          G1_SET: grade1
+        run: |
+          python3 -m http.server 8768 --directory ../classroom/_site > /tmp/grade1-preview-http.log 2>&1 &
+          G1_HTTP_PID=$!
+          trap 'kill "$G1_HTTP_PID" || true' EXIT
+          node tools/grade1-authoring/tests/browser-generators.cjs --all

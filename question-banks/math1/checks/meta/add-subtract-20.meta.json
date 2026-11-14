@@ -1,0 +1,430 @@
+{
+"skillFeedback": {
+"add-subtract-20-skill-01": {
+"skill": "Adding within 20 with Strategies",
+"target": "I can add within 20 by making a ten, using doubles, or counting on.",
+"standards": [
+"1.OA.C.6"
+],
+"ifCorrect": "You can do this: can add within 20 by making a ten, using doubles, or counting on.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Counting on from the smaller number and losing count, or forgetting part of the second number after making ten. Try this: Fill a ten frame first, then add the leftover counters in a second frame."
+},
+"add-subtract-20-skill-02": {
+"skill": "Subtracting within 20 with Strategies",
+"target": "I can subtract within 20 by counting back, going back to 10, or thinking addition.",
+"standards": [
+"1.OA.C.6",
+"1.OA.B.4"
+],
+"ifCorrect": "You can do this: can subtract within 20 by counting back, going back to 10, or thinking addition.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Subtracting the smaller ones digit from the larger one (14 − 6 → 12). Try this: Ask “6 plus what makes 14?” and jump to 10 first on a number line."
+},
+"add-subtract-20-skill-03": {
+"skill": "Adding in Any Order and Adding Three Numbers",
+"target": "I can change the order of addends and add three numbers by finding a ten first.",
+"standards": [
+"1.OA.B.3",
+"1.OA.C.6"
+],
+"ifCorrect": "You can do this: can change the order of addends and add three numbers by finding a ten first.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Thinking 3 + 8 and 8 + 3 have different answers, or leaving out one of three addends. Try this: Turn the domino around; it has the same dots. Circle two addends that make 10."
+},
+"add-subtract-20-skill-04": {
+"skill": "Related Facts and Fact Families",
+"target": "I can use an addition fact to solve a related subtraction fact.",
+"standards": [
+"1.OA.B.4",
+"1.OA.C.6"
+],
+"ifCorrect": "You can do this: can use an addition fact to solve a related subtraction fact.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Writing a subtraction fact that starts with a part (6 − 14 = 8). Try this: Use a part-part-whole mat: in subtraction the whole comes first."
+}
+},
+"questions": {
+"m1c-as-s01-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "6 + 6 = 12.",
+"distractors": {
+"11": "counted on and included the first number",
+"13": "counted one too many",
+"0": "subtracted instead of adding",
+"2": "lost the ten",
+"14": "made a counting mistake"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s01-cp2-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "3 + 3 = 6.",
+"distractors": {
+"5": "counted one too few",
+"7": "counted one too many",
+"3": "did not double",
+"4": "added 1 instead"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s01-cp1-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "4 + 8 = 12.",
+"distractors": {
+"11": "counted on and included the first number",
+"13": "counted one too many",
+"4": "subtracted instead of adding",
+"2": "lost the ten",
+"14": "made a counting mistake"
+},
+"diagram": "tenframe",
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-as-s01-cp1-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "8 + 6 = 14 kites.",
+"distractors": {
+"13 kites": "counted on and included the first number",
+"15 kites": "counted one too many",
+"2 kites": "subtracted instead of adding",
+"4 kites": "lost the ten",
+"16 kites": "made a counting mistake"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s01-honors-001": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "8 + 5 = 13 blocks.",
+"distractors": {
+"12 blocks": "counted on and included the first number",
+"14 blocks": "counted one too many",
+"3 blocks": "subtracted instead of adding",
+"15 blocks": "made a counting mistake"
+},
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-as-s01-honors-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "6 + 7 = 13.",
+"distractors": {
+"12": "counted on and included the first number",
+"14": "counted one too many",
+"1": "subtracted instead of adding",
+"3": "lost the ten",
+"15": "made a counting mistake"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s02-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "17 − 7 = 10.",
+"distractors": {
+"11": "counted back and included the starting number",
+"24": "added instead of subtracting",
+"9": "counted back one too many",
+"20": "forgot to go back past ten"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s02-cp2-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "11 − 1 = 10 buttons.",
+"distractors": {
+"11 buttons": "counted back and included the starting number",
+"12 buttons": "added instead of subtracting",
+"9 buttons": "counted back one too many",
+"20 buttons": "forgot to go back past ten"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s02-cp1-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "16 − 7 = 9.",
+"distractors": {
+"10": "counted back and included the starting number",
+"23": "added instead of subtracting",
+"11": "subtracted the smaller ones digit from the larger one",
+"8": "counted back one too many",
+"19": "forgot to go back past ten"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s02-cp1-002": {
+"questionType": "compare-strategies",
+"tags": [
+"connections"
+],
+"explanation": "13 − 3 = 10 and 10 − 5 = 5.",
+"distractors": {
+"6": "counted back and included the starting number",
+"21": "added instead of subtracting",
+"15": "subtracted the smaller ones digit from the larger one",
+"4": "counted back one too many"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s02-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "15 − 8 = 7.",
+"distractors": {
+"8": "counted back and included the starting number",
+"23": "added instead of subtracting",
+"13": "subtracted the smaller ones digit from the larger one",
+"6": "counted back one too many",
+"17": "forgot to go back past ten"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s02-honors-002": {
+"questionType": "compare-strategies",
+"tags": [
+"connections"
+],
+"explanation": "15 − 5 = 10 and 10 − 1 = 9.",
+"distractors": {
+"10": "counted back and included the starting number",
+"21": "added instead of subtracting",
+"11": "subtracted the smaller ones digit from the larger one",
+"8": "counted back one too many",
+"19": "forgot to go back past ten"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s03-cp2-001": {
+"questionType": "conceptual",
+"tags": [
+"reasoning"
+],
+"explanation": "6 + 8 = 8 + 6.",
+"distractors": {
+"14": "wrote the sum",
+"8": "copied the wrong addend",
+"7": "made a counting mistake",
+"2": "subtracted"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s03-cp2-002": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "1 + 10 = 10 + 1 = 11.",
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s03-cp1-001": {
+"questionType": "conceptual",
+"tags": [],
+"explanation": "4 + 9 = 9 + 4 = 13.",
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s03-cp1-002": {
+"questionType": "conceptual",
+"tags": [
+"reasoning"
+],
+"explanation": "7 + 6 = 6 + 7.",
+"distractors": {
+"13": "wrote the sum",
+"6": "copied the wrong addend",
+"8": "made a counting mistake",
+"1": "subtracted"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s03-honors-001": {
+"questionType": "conceptual",
+"tags": [
+"reasoning"
+],
+"explanation": "6 + 7 = 7 + 6.",
+"distractors": {
+"13": "wrote the sum",
+"6": "copied the wrong addend",
+"8": "made a counting mistake",
+"1": "subtracted"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s03-honors-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "5 + 7 + 1 = 13.",
+"distractors": {
+"12": "left out an addend",
+"8": "left out an addend",
+"14": "made a counting mistake"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s04-cp2-001": {
+"questionType": "compare-strategies",
+"tags": [
+"connections"
+],
+"explanation": "7 − 3 = 4.",
+"distractors": {
+"5": "counted back and included the starting number",
+"10": "added instead of subtracting",
+"3": "counted back one too many",
+"14": "forgot to go back past ten"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s04-cp2-002": {
+"questionType": "compare-strategies",
+"tags": [
+"connections"
+],
+"explanation": "10 + 6 = 16, so 16 − 10 = 6.",
+"distractors": {
+"7": "counted back and included the starting number",
+"26": "added instead of subtracting",
+"5": "counted back one too many",
+"16": "forgot to go back past ten"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s04-cp1-001": {
+"questionType": "compare-strategies",
+"tags": [
+"connections"
+],
+"explanation": "14 − 6 = 8.",
+"distractors": {
+"9": "counted back and included the starting number",
+"20": "added instead of subtracting",
+"12": "subtracted the smaller ones digit from the larger one",
+"7": "counted back one too many",
+"18": "forgot to go back past ten"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s04-cp1-002": {
+"questionType": "compare-strategies",
+"tags": [
+"connections"
+],
+"explanation": "7 + 4 = 11, so 11 − 7 = 4.",
+"distractors": {
+"5": "counted back and included the starting number",
+"18": "added instead of subtracting",
+"16": "subtracted the smaller ones digit from the larger one",
+"3": "counted back one too many",
+"14": "forgot to go back past ten"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-as-s04-honors-001": {
+"questionType": "compare-strategies",
+"tags": [
+"connections"
+],
+"explanation": "8 + 8 = 16, so 16 − 8 = 8.",
+"distractors": {
+"9": "counted back and included the starting number",
+"24": "added instead of subtracting",
+"12": "subtracted the smaller ones digit from the larger one",
+"7": "counted back one too many",
+"18": "forgot to go back past ten"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-as-s04-honors-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "16 − 7 = 9.",
+"distractors": {
+"23": "added the whole and the part",
+"7": "copied the part",
+"16": "copied the whole",
+"10": "counted one too many"
+},
+"diagram": "bars",
+"game": {
+"textMC": false,
+"numeric": false
+}
+}
+}
+}

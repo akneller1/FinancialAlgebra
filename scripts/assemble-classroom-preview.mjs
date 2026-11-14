@@ -66,6 +66,22 @@ if(previewGrade2.length){
  if(i<0)throw Error('Grade 2 course placeholder missing');
  skillData.grade2=g2.skills;delete g2.skills;courses[i]=g2;
 }
+// Grade 1 is staged only when its complete preview package is present.
+const previewGrade1=manifest.banks.filter(b=>b.courseId==='math1'&&(b.preview===true||b.approved===true));
+if(previewGrade1.length){
+ if(previewGrade1.length!==12 || new Set(previewGrade1.map(b=>b.unitId)).size!==12)throw Error('Grade 1 preview requires exactly 12 distinct unit banks');
+ if(previewGrade1.some(b=>b.approved!==false||b.preview!==true))throw Error('Grade 1 must remain unapproved preview content in staging');
+ for(const b of previewGrade1){
+   if(typeof b.path!=='string'||!b.path.startsWith('question-banks/math1/')||b.path.includes('..')||!fs.existsSync(path.join(source,b.path)))throw Error('Missing or unsafe Grade 1 preview bank '+b.unitId);
+ }
+ const assembler=path.join(source,'tools/grade1-authoring/staging/assemble-grade1.mjs');
+ if(!fs.existsSync(assembler))throw Error('Grade 1 preview banks require '+assembler);
+ const {assembleGrade1,grade1Ready}=await import(new URL('../tools/grade1-authoring/staging/assemble-grade1.mjs',import.meta.url));
+ if(!grade1Ready(source))throw Error('Grade 1 staging assembler reports course not ready');
+ const g1=assembleGrade1({source,out}),i=courses.findIndex(c=>c.id==='grade1');
+ if(i<0)throw Error('Grade 1 course placeholder missing');
+ skillData.grade1=g1.skills;delete g1.skills;courses[i]=g1;
+}
 const approvedGrades=courses.filter(c=>c.approved).map(c=>c.id.slice(5)),pendingGrades=courses.filter(c=>!c.approved).map(c=>c.id.slice(5));
 const catalog=`/* Development artifact: production Classroom renderer, preloaded elementary courses. */\n(function(G){var courses=${JSON.stringify(courses)},skills=${JSON.stringify(skillData)};G.MK_ELEMENTARY_PRELOAD=courses;G.LIBRARY.courses=G.LIBRARY.courses.filter(c=>!courses.some(p=>p.id===c.id)).concat(courses);var C=G.MK_COURSE_CATALOG,old=C.getSkills,records=C.getSkillRecords;C.getSkills=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].slice():old(c,u)};C.getSkillRecords=function(c,u){return skills[c]&&skills[c][u]?skills[c][u].map((name,i)=>({id:u+'-skill-'+String(i+1).padStart(2,'0'),name,index:i+1})):records(c,u)};G.LIBRARY.courses.forEach(c=>c.units.forEach(u=>u.artifacts.forEach(a=>{for(var k of ['path','thumb'])if(typeof a[k]==='string')a[k]=a[k].replace(/^\\/grade5\\//,'grade5/')})));})(window);\n`;
 fs.writeFileSync(path.join(out,'elementary-preload-catalog.js'),catalog);
@@ -134,7 +150,7 @@ for(let grade=1;grade<=4;grade++){
 // Adapt future approved banks once, just as integrated Grade 5 does today.
 const nativePath=path.join(out,'question-banks/manifest.json'),native=JSON.parse(fs.readFileSync(nativePath,'utf8'));
 const scoped=[];
-for(const entry of manifest.banks.filter(b=>/^math[1-4]$/.test(b.courseId)&&(b.approved===true||((b.courseId==='math3'||b.courseId==='math2')&&b.preview===true)))){
+for(const entry of manifest.banks.filter(b=>/^math[1-4]$/.test(b.courseId)&&(b.approved===true||((b.courseId==='math3'||b.courseId==='math2'||b.courseId==='math1')&&b.preview===true)))){
  const bank=JSON.parse(fs.readFileSync(path.join(source,entry.path),'utf8')),gradeId=entry.courseId.replace('math','grade');
  const target='question-banks/'+gradeId+'/'+entry.unitId+'.json';
  const adapted=structuredClone(bank);adapted.courseId=gradeId;

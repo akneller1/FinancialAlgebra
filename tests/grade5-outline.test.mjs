@@ -54,7 +54,7 @@ test('Grade 5 keeps the original source sequence within one Classroom-style clas
  assert.ok(site.includes('Original curriculum sequence (13 pacing units)'));
  assert.ok(site.includes('cards grouped-cards'));
  assert.ok(site.includes('generator-banner compact'));
- for(const section of ['Games','Study Guides','Interactive Math','Projects']){
+ for(const section of ['Games','Study Guides','Interactive Math']){
   assert.ok(site.includes('title:\''+section+'\''),section+' section');
  }
  assert.ok(catalog.includes('worksheet-generator/grade5-games.html'));

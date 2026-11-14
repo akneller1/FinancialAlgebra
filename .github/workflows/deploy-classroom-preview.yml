@@ -7,6 +7,11 @@ on:
     paths:
       - 'scripts/assemble-classroom-preview.mjs'
       - 'scripts/test-classroom-preview.cjs'
+      - 'tools/grade1-authoring/**'
+      - 'question-banks/math1/**'
+      - 'question-banks/assets/math1/**'
+      - 'worksheet-generator/grade1/**'
+      - 'worksheet-generator/grade1-*.html'
       - 'tools/grade2-authoring/**'
       - 'question-banks/math2/**'
       - 'worksheet-generator/elementary/**'
@@ -126,6 +131,27 @@ jobs:
           else
             node tools/grade2-authoring/tests/browser-generators.cjs
           fi
+      - name: Exercise Grade 1 games, Understanding Checks and student links
+        working-directory: source
+        timeout-minutes: 15
+        env:
+          G1_SITE: ../classroom/_site
+          G1_PREFIX: grade1/
+        run: |
+          G3_ONLY=checks node tools/grade1-authoring/tests/browser-grade1.cjs
+          G3_ONLY=links node tools/grade1-authoring/tests/browser-grade1.cjs
+          G3_ONLY=games node tools/grade1-authoring/tests/browser-grade1.cjs --quick
+      - name: Exercise Grade 1 native generators and answer keys
+        working-directory: source
+        timeout-minutes: 15
+        env:
+          G1_BASE: http://127.0.0.1:8768/
+          G1_SET: grade1
+        run: |
+          python3 -m http.server 8768 --directory ../classroom/_site > /tmp/grade1-preview-http.log 2>&1 &
+          G1_HTTP_PID=$!
+          trap 'kill "$G1_HTTP_PID" || true' EXIT
+          node tools/grade1-authoring/tests/browser-generators.cjs --all
       - uses: actions/upload-pages-artifact@v3
         with:
           path: classroom/_site

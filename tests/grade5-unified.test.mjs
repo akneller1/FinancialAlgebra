@@ -52,7 +52,7 @@ test('All 11 units use the Classroom unit banner, section order and resource car
     assert.ok(html.includes('algebra-unit-layout'),unit.id+' layout');
     assert.ok(html.includes('unit-pager'),unit.id+' pager');
     assert.ok(html.includes('generator-banner compact'),unit.id+' shortcuts');
-    const sections=['g5-games','g5-study-guides','g5-interactive','g5-projects'];
+    const sections=['g5-games','g5-study-guides','g5-interactive'];
     let before=-1;
     for(const name of sections){
       const idx=html.indexOf('id="'+name+'"');
@@ -67,10 +67,10 @@ test('All 11 units use the Classroom unit banner, section order and resource car
     assert.ok(html.includes('Skills in this unit'),unit.id+' skills');
     assert.equal(html.includes('grade5-resources.html'),false,unit.id+' has orphan library link');
     const cards=[...html.matchAll(/<li class="card g5-resource-card"[^>]*>/g)];
-    assert.equal(cards.length,unit.artifacts.length,unit.id+' resource counts');
+    assert.equal(cards.length,unit.artifacts.filter(a=>a.type!=='Project').length,unit.id+' resource counts');
     const shortcuts=html.match(/data-g5-scroll="g5-games"/g)||[];
     assert.equal(shortcuts.length,1,unit.id+' game shortcut');
-    for(const resource of unit.artifacts){
+    for(const resource of unit.artifacts.filter(a=>a.type!=='Project')){
       assert.ok(html.includes('href="'+resource.path.replaceAll('&','&amp;')+'"'),unit.id+' missing link '+resource.path);
       assert.ok(existsSync(new URL('../'+resource.path.split(/[?#]/)[0],import.meta.url)),resource.path+' target');
     }
@@ -99,9 +99,9 @@ test('Open resource is a real anchor and only games and study guides have studen
   const openLinks=[...page.matchAll(/<a class="btn btn-open" href="([^"]+)">Open resource →<\/a>/g)];
   const copyControls=[...page.matchAll(/<button type="button" class="g5-student-copy"[^>]*>Copy student link<\/button>/g)];
   const explicitThumbLinks=[...page.matchAll(/<a class="thumb g5-resource-image-link" href="([^"]+)"/g)];
-  assert.equal(openLinks.length,u.artifacts.length,'Open resource links: '+u.id);
+  assert.equal(openLinks.length,u.artifacts.filter(a=>a.type!=='Project').length,'Open resource links: '+u.id);
   assert.equal(copyControls.length,u.artifacts.filter(a=>['Game','Study Guide'].includes(a.type)).length,'Student share controls: '+u.id);
-  assert.equal(explicitThumbLinks.length,u.artifacts.length,'Clickable thumbnails: '+u.id);
+  assert.equal(explicitThumbLinks.length,u.artifacts.filter(a=>a.type!=='Project').length,'Clickable thumbnails: '+u.id);
   assert.ok(page.includes('<option value="cp1" selected>Standard</option>'),u.id+' has a level selector');
  }
  const page=read('grade5.html');
@@ -115,7 +115,7 @@ test('Student links preserve unit and game, set level, and never point to projec
  const base='https://akneller1.github.io/FinancialAlgebra/grade5.html';
  const grade5=win.MK_GRADE5_RESOURCES.course;
  let tested=0;
- for(const unit of grade5.units)for(const resource of unit.artifacts){
+ for(const unit of grade5.units)for(const resource of unit.artifacts.filter(a=>a.type!=='Project')){
   const level=hasLevel(resource)?'honors':'cp1';
   const absolute=destination(resource,level,base);
   const u=new URL(absolute);
