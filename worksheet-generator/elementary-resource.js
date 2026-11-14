@@ -1,5 +1,5 @@
 /* Open an outline's resources with the established Grade 5 engines, never its banks. */
-import {validateOutline} from '../src/outline-template.js?v=preload-20261112';
+import {validateOutline} from '../src/outline-template.js?v=staging-structure-20261114';
 const params = new URLSearchParams(location.search);
 const id = params.get('course'), tool = params.get('tool');
 const tools = {
@@ -9,7 +9,7 @@ const tools = {
  generators:['generators-content.js','generators-core.js','generators-pagination.js','generators-render.js','generators.js']
 };
 function script(src) {
- return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src+'?v=elementary-preload-20261112';s.onload=resolve;s.onerror=()=>reject(Error('Could not load resource controls. Please refresh.'));document.body.append(s);});
+ return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src+'?v=elementary-staging-structure-20261114';s.onload=resolve;s.onerror=()=>reject(Error('Could not load resource controls. Please refresh.'));document.body.append(s);});
 }
 async function boot() {
  if (!/^math[1-4]$/.test(id||'') || !tools[tool]) throw Error('Choose a course and resource from its unit page.');

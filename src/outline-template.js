@@ -1,4 +1,4 @@
-import {unitResources, resourceUrl} from './elementary-resources.js?v=preload-20261112';
+import {unitResources, resourceUrl} from './elementary-resources.js?v=staging-structure-20261114';
 /* Reusable course-outline renderer for new classes.
    Data is supplied as JSON; no questions, activities, or unsupported links are fabricated. */
 export function skillId(unitId,index){return unitId+'-skill-'+String(index+1).padStart(2,'0');}
@@ -9,13 +9,16 @@ export function validateOutline(course){
  if(!course || typeof course.id!=='string' || !Array.isArray(course.units)) throw Error('Invalid course outline');
  const seen=new Set();
  for(const u of course.units){
-  if(!u.id||seen.has(u.id)||!Array.isArray(u.skills)||!Array.isArray(u.standards))throw Error('Invalid or duplicate unit '+u.id);
+  const codes=u.standards||[...new Set((u.skillStandards||[]).flat())];
+  if(!u.id||seen.has(u.id)||!Array.isArray(u.skills)||!Array.isArray(codes))throw Error('Invalid or duplicate unit '+u.id);
   seen.add(u.id);
-  for(const code of u.standards)if(!course.standards?.[code])throw Error('Unmapped standard '+code);
+  for(const code of codes)if(!course.standards?.[code])throw Error('Unmapped standard '+code);
  }
  return outlineStats(course);
 }
 export function mountOutline(course,{page='grade5.html'}={}){
+ // Current bank outlines store standards per skill; accept both schema versions.
+ course={...course,units:course.units.map(u=>({...u,standards:u.standards||[...new Set((u.skillStandards||[]).flat())],sourcePages:u.sourcePages||[]}))};
  const stats=validateOutline(course);
  const hasObjectives=Boolean(course.units.some(u=>Array.isArray(u.objectiveGroups)&&u.objectiveGroups.length));
  const targetLabel=hasObjectives?'learning targets':'lessons';
@@ -69,7 +72,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
  function resources(u){
   const all=unitResources(course,u);
   return ['Generators','Games','Study Guides'].map(group=>'<section class="algebra-unit-section"><h2>'+group+'</h2><ul class="cards grouped-cards">'+all.filter(a=>a.group===group).map(a=>
-   '<li class="card"><a class="thumb" href="'+esc(a.path)+'" tabindex="-1" aria-hidden="true"><img src="'+esc(a.thumb)+'" alt="" loading="lazy"></a><div class="card-body"><h3><a href="'+esc(a.path)+'">'+esc(a.title)+'</a></h3><p>Shared Grade 5 format. Questions coming soon.</p><div class="actions"><a class="btn btn-open" href="'+esc(a.path)+'">Open '+(group==='Generators'?'settings':'resource')+'</a></div></div></li>').join('')+'</ul></section>').join('');
+   '<li class="card"><a class="thumb" href="'+esc(a.path)+'" tabindex="-1" aria-hidden="true"><img src="'+esc(a.thumb)+'" alt="" loading="lazy"></a><div class="card-body"><h3><a href="'+esc(a.path)+'">'+esc(a.title)+'</a></h3><p>Questions are available in the course question bank.</p><div class="actions"><a class="btn btn-open" href="'+esc(a.path)+'">Open '+(group==='Generators'?'settings':'resource')+'</a></div></div></li>').join('')+'</ul></section>').join('');
  }
  function unitPager(u){
   const idx=course.units.indexOf(u);
@@ -100,23 +103,23 @@ export function mountOutline(course,{page='grade5.html'}={}){
    '<details class="outline-standards-detail"><summary>Show '+n+' source-based statements in '+u.objectiveGroups.length+' categories</summary>'+
    u.objectiveGroups.map(g=>'<section class="outline-objective-group"><h3>'+esc(g.category)+'</h3><ul>'+
    g.items.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul></section>').join('')+'</details>'+
-   '<p class="outline-source">Source: '+esc(course.source.filename)+' · PDF page'+(u.sourcePages.length>1?'s ':' ')+u.sourcePages.join(', ')+'</p></section>';
+   '<p class="outline-source">Source: '+esc(course.source.filename||course.source.title||'Curriculum source')+' · PDF page'+(u.sourcePages.length>1?'s ':' ')+u.sourcePages.join(', ')+'</p></section>';
   }
   return '<section class="algebra-unit-section outline-standards"><h2>Standards &amp; Eligible Content</h2>'+
    '<p class="course-skill-hint">References transcribed from the attached Grade 5 scope and sequence, not independently revised or remapped.</p>'+
    '<details class="outline-standards-detail"><summary>Show '+u.standards.length+' source references</summary>'+
    '<ul>'+u.standards.map(code=>'<li><strong>'+esc(code)+'</strong> — '+esc(course.standards[code])+'</li>').join('')+'</ul></details>'+
-   '<p class="outline-source">Source: '+esc(course.source.filename)+' · page'+(u.sourcePages.length>1?'s ':' ')+u.sourcePages.join('–')+'</p></section>';
+   '<p class="outline-source">Source: '+esc(course.source.filename||course.source.title||'Curriculum source')+' · page'+(u.sourcePages.length>1?'s ':' ')+u.sourcePages.join('–')+'</p></section>';
  }
  function unitPage(u){
   const lead=crumb([[course.name,page],[title(u),null]])+'<h1 tabindex="-1">'+esc(title(u))+'</h1>'+
-   '<p class="band-meta">'+u.skills.length+' '+targetLabel+(Number.isFinite(u.estimatedDays)?' · '+paceLabel(u.estimatedDays,u.estimatedDaysMax)+' estimated instructional days':'')+(u.sourceMonth?' · '+esc(u.sourceMonth):'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · resource templates ready</p>';
+   '<p class="band-meta">'+u.skills.length+' '+targetLabel+(Number.isFinite(u.estimatedDays)?' · '+paceLabel(u.estimatedDays,u.estimatedDaysMax)+' estimated instructional days':'')+(u.sourceMonth?' · '+esc(u.sourceMonth):'')+(u.reportedLessons?' · '+u.reportedLessons+' reported textbook lessons':'')+' · question banks available</p>';
   const lessonItems=u.skills.map((s,i)=>'<li class="outline-lesson" data-skill-id="'+skillId(u.id,i)+'">'+
    '<span class="outline-lesson-number">'+String(i+1).padStart(2,'0')+'</span><span>'+esc(s)+'</span></li>').join('');
   return band(lead,true,true)+'<section class="section"><div class="wrap algebra-unit-layout">'+
    unitPager(u)+shortcuts(u)+
    '<section class="algebra-unit-section"><h2>'+(hasObjectives?'Learning Targets & Subskills':'Lessons and Subskills')+'</h2>'+
-   '<p class="course-skill-hint">'+(hasObjectives?'Source-based learning targets are editorial groupings; Individual lesson titles are not listed in the source; sections and learning targets are shown here.':'The lesson sequence follows the supplied curriculum.')+' Stable skill IDs are reserved for later question banks.</p>'+
+   '<p class="course-skill-hint">'+(hasObjectives?'Source-based learning targets are editorial groupings; Individual lesson titles are not listed in the source; sections and learning targets are shown here.':'The lesson sequence follows the supplied curriculum.')+' Skills use stable IDs in the course question banks.</p>'+
    '<ol class="outline-lesson-list" data-course-id="'+course.id+'" data-unit-id="'+u.id+'">'+lessonItems+'</ol>'+
    (u.resourceNote?'<p class="outline-curriculum-note"><strong>Source resource note:</strong> '+esc(u.resourceNote)+'</p>':'')+'</section>'+
    standards(u)+
@@ -128,7 +131,7 @@ export function mountOutline(course,{page='grade5.html'}={}){
   const matching=course.units.filter(u=>!q||(u.name+' '+u.skills.join(' ')+' '+u.standards.join(' ')).toLocaleLowerCase().includes(q));
   const lead=crumb([[course.name,null]])+'<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
    '<p class="band-blurb">'+esc(course.description)+'</p>'+
-   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasPacing?' · '+paceLabel(pacingLow,pacingHigh)+' estimated instructional days':'')+' · resource templates ready · question banks coming soon</p>';
+   '<p class="band-meta">'+stats.units+' units · '+stats.skills+' '+targetLabel+(hasPacing?' · '+paceLabel(pacingLow,pacingHigh)+' estimated instructional days':'')+' · question banks available</p>';
   return band(lead,true,'course')+'<section class="section"><div class="wrap">'+
    '<h2 class="course-units-title">Browse by unit</h2>'+
    '<p class="course-units-status">'+(hasObjectives?'Unit sequence and available pacing come from the source curriculum. Target labels summarize the stated goals; open a unit for the original section headings and standards when provided.':'Unit names and lesson order reflect the attached scope and sequence. Expand the lesson lists or open a unit to see its standards.')+'</p>'+

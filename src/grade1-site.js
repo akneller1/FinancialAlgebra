@@ -1,4 +1,4 @@
-import {mountOutline} from './outline-template.js?v=preload-20261112';
+import {mountOutline} from './outline-template.js?v=staging-structure-20261114';
 const root=document.getElementById('main');
 fetch('./course-outlines/grade1.json')
   .then(r=>{if(!r.ok)throw new Error('Grade 1 curriculum could not be loaded');return r.json()})

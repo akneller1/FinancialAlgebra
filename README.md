@@ -1,7 +1,7 @@
 # Mr. K's Classroom — Independent Course Development
 
 **Staging website:** https://akneller1.github.io/FinancialAlgebra/  
-**Live production website:** https://mrksclassroom.com/ (not modified)
+**Live production website:** https://mrksclassroom.com/ 
 
 This repository is a separate development space for creating new math classes using the Mr. K's Classroom design, before importing finished courses into production.
 
@@ -9,14 +9,14 @@ This repository is a separate development space for creating new math classes us
 
 | Class | Staging page | Curriculum status |
 | --- | --- | --- |
-| Financial Algebra | [Course outline](https://akneller1.github.io/FinancialAlgebra/) | 10 units, 40 skills; complete Financial Algebra resource library |
-| Grade 5 | [Grade 5](https://akneller1.github.io/FinancialAlgebra/grade5.html) | 13 units, 80 skills, sourced from the uploaded sequence |
-| Grade 4 | [Grade 4](https://akneller1.github.io/FinancialAlgebra/grade4.html) | 12 units, 107 editorial learning targets, pacing and objectives |
-| Grade 3 | [Grade 3](https://akneller1.github.io/FinancialAlgebra/grade3.html) | 8 units, standard-aligned goals and guiding questions |
-| Grade 2 | [Grade 2](https://akneller1.github.io/FinancialAlgebra/grade2.html) | 9 Illustrative Mathematics units, 25 source-named sections |
-| Grade 1 | [Grade 1](https://akneller1.github.io/FinancialAlgebra/grade1.html) | 8 Illustrative Mathematics units, 27 source-named sections |
+| Financial Algebra | [Staging](https://akneller1.github.io/FinancialAlgebra/) | 10 units; question banks and resources available |
+| Grade 5 | [Staging](https://akneller1.github.io/FinancialAlgebra/grade5.html) | 11 published units; question banks available |
+| Grade 4 | [Staging](https://akneller1.github.io/FinancialAlgebra/grade4.html) | 10 published units; question banks available |
+| Grade 3 | [Staging](https://akneller1.github.io/FinancialAlgebra/grade3.html) | 11 published units; question banks available (original 8-unit outline retained for reference) |
+| Grade 2 | [Staging](https://akneller1.github.io/FinancialAlgebra/grade2.html) | 12 published units; question banks available |
+| Grade 1 | [Staging](https://akneller1.github.io/FinancialAlgebra/grade1.html) | 12 published units; question banks available |
 
-Financial Algebra unit pages link to lesson plans, eight worksheet formats, assessments, practice tests, ten Decision Labs, 228 flashcards, ten cheat sheets, and twelve projects. The 1,445-item extended bank powers the native resources; 1,274 compatible questions are also exported for future Classroom games integration. Games are not published here. Grades 1–5 remain course outlines with Coming soon shortcuts.
+Production imports reviewed commit pins through `classroom/.github/workflows/deploy-site.yml`. Staging changes do not update those pins automatically. Original curriculum outlines can have different unit counts from the published bank catalogs. Grade 5 retains its original 13-unit outline for reference.
 
 ## Design and icons
 

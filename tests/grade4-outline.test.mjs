@@ -78,7 +78,7 @@ test('active Grade 4 Common Core course stays separate from the source archive',
  assert.ok(read('docs/math4/CROSSWALK.md').includes('grade4-math-expressions.json'));
 });
 
-test('Grade 4 page reuses the existing generic outline renderer and does not advertise finished activities',()=>{
+test('Grade 4 page reuses the existing generic outline renderer and shows current question-bank status',()=>{
  const page=read('grade4.html'),js=read('src/grade4-site.js'),template=read('src/outline-template.js');
  assert.ok(page.includes('styles.css'));
  assert.ok(page.includes('site-overrides.css'));
@@ -89,7 +89,7 @@ test('Grade 4 page reuses the existing generic outline renderer and does not adv
  assert.ok(read('grade3.html').includes('href="grade4.html"'));
  assert.ok(template.includes('objectiveGroups'));
  assert.ok(template.includes('Source Objectives by Category'));
- assert.ok(template.includes('Questions coming soon'));
- assert.ok(template.includes('resource templates ready'));
+ assert.ok(template.includes('Questions are available'));
+ assert.ok(template.includes('question banks available'));
  assert.ok(existsSync(new URL('../styles.css',import.meta.url)));
 });

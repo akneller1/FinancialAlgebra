@@ -10,6 +10,9 @@ export const GAMES = [
 export const GENERATORS = [['lesson','Lesson Plan'],['worksheet','Worksheet'],['activity','Activity'],['assessment','Assessment']];
 export const ACTIVITIES = [['maze','Maze'],['color','Color by Number'],['matching','Matching'],['stations','Station Work'],['error','Error Analysis'],['partner','Partner Check']];
 export function resourceUrl(course,unit,tool,extra={}) {
+ const grade=course.id.replace('math','grade');
+ const native={games:'games',flashcards:'flashcards',check:'understanding-check'};
+ if(native[tool])return 'worksheet-generator/'+grade+'-'+native[tool]+'.html?'+new URLSearchParams({course:course.id,unit:unit.id,...extra});
  const params = new URLSearchParams({course:course.id,unit:unit.id,tool,...extra});
  return 'worksheet-generator/elementary-resource.html?' + params;
 }
