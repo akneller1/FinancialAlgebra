@@ -64,8 +64,7 @@
     {key:'Game',id:'games',title:'Games',icon:'🎮',hint:'Kid-friendly games for independent practice and whole-class review.'},
     {key:'Study Guide',id:'study-guides',title:'Study Guides',icon:'📚',hint:'Flashcards, printable cheat sheets, and an Understanding Check.'},
     {key:'Printable',id:'printables',title:'Teacher Tools',icon:'🖨️',hint:'Build lesson plans, worksheets, assessments and printable activities from this unit’s questions.'},
-    {key:'Interactive',id:'interactive',title:'Interactive Math',icon:'📐',hint:'Hands-on visual models with printable student worksheets.'},
-    {key:'Project',id:'projects',title:'Projects',icon:'🧩',hint:'Real-life projects with three differentiated versions and a teacher guide.'}
+    {key:'Interactive',id:'interactive',title:'Interactive Math',icon:'📐',hint:'Hands-on visual models with printable student worksheets.'}
   ];
   function sortCards(items,category){
     var priority=category==='Study Guide'?{'Flashcards':0,'Cheat Sheet':1,'Understanding Check':2}:null;
@@ -131,7 +130,7 @@
       '<p class="band-blurb">Colorful math games, practice, visual explorations, study guides and projects — designed for fifth graders.</p>'+
       '<p class="band-meta">11 topic units · 55 skills · 4,950 approved questions · three difficulty levels</p>';
     var body='<h2 class="course-units-title">Browse by unit</h2>'+
-      '<p class="g5-course-note">Choose a unit to find the same familiar sections: Games, Study Guides, Teacher Tools, Interactive Math, and Projects. Teacher Tools build a lesson plan, worksheet, assessment or printable activity from the same approved questions.</p>'+
+      '<p class="g5-course-note">Choose a unit to find the same familiar sections: Games, Study Guides, Teacher Tools, and Interactive Math. Projects are available through the Activity Generator. Teacher Tools build a lesson plan, worksheet, assessment or printable activity from the same approved questions.</p>'+
       (visible.length?'<ul class="units">'+visible.map(unitCard).join('')+'</ul>':
         '<div class="empty"><h2>No matching units</h2><p>Try a different skill or topic.</p></div>')+
       '<details class="g5-source-outline"><summary>Original curriculum sequence (13 pacing units)</summary>'+
