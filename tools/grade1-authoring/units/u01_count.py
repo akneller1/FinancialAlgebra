@@ -53,7 +53,7 @@ def co_bags(r, L):
     o = r.randint(1, 9)
     th = thing(r)
     n = 10 * t + o
-    return Item(f"There are {t} bags with 10 {th[1]} in each bag. There are {o} more {th[1]}. How many {th[1]} are there?",
+    return Item(f"There are {t} bags with 10 {th[1]} in each bag. There {'is' if o == 1 else 'are'} {o} more {th[0] if o == 1 else th[1]}. How many {th[1]} are there?",
                 f"{n} {th[1]}", [f"{t} bags of 10 is {10 * t}.", f"{10 * t} and {o} more is {n} {th[1]}."],
                 [W(f"{t + o} {th[1]}", "counted each bag as 1"), W(f"{10 * o + t} {th[1]}", "switched the tens and the ones"),
                  W(f"{n + 10} {th[1]}", "counted one bag twice"), W(f"{n - 1} {th[1]}", "made a counting mistake")],
@@ -83,7 +83,7 @@ def co_which_frame(r, L):
     e = 20 - n
     alt = f"Two ten frames with {n} counters and {e} empty boxes."
     return Item("Two ten frames hold 20 in all. How many counters are in these ten frames?", n,
-                [f"There are {e} empty boxes.", f"20 − {e} = {n} counters."],
+                [f"There {'is' if e == 1 else 'are'} {e} empty {'box' if e == 1 else 'boxes'}.", f"20 − {e} = {n} counters."],
                 [W(e, "counted the empty boxes"), W(n + 1, "counted one too many"), W(n - 1, "skipped a counter"), W(20, "said the frames are full")],
                 FN("count_n", n=n), qtype="visual", tags={"reasoning"}, diagram=Diagram("tenframe", {"frames": 2, "a": n}, alt))
 
