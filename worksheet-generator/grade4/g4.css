@@ -1,0 +1,17 @@
+/* 4th Grade Math look for the shared elementary pages (body.el.g4): a meadow-green and sky palette, slightly larger
+   text and touch targets than Grade 5, and extra room between choices. Layout and controls are the shared ones. */
+body.g4 { --blue: #1f78c8; --bg: #f2fbf5; --line: #cfe8da; }
+html:has(body.g4) { font-size: calc(19px * var(--el-zoom)); }
+body.el.g4 { background-image: radial-gradient(circle at 7% 12%, #dff5e6 0 80px, transparent 81px), radial-gradient(circle at 93% 86%, #fff1d6 0 96px, transparent 97px), radial-gradient(circle at 88% 10%, #e2f0ff 0 60px, transparent 61px); }
+.g4 .el-top { background: linear-gradient(90deg, #1fa565, #0f97b5 55%, #2f7fd8); }
+.g4 .el-panel { border-color: #cfe8da; }
+.g4 .el-panel h2 { color: #0d6b3c; }
+.g4 .el-q { border-color: #bfe6cf; }
+.g4 .el-q-label { background: #e2f8ea; color: #0d6b3c; }
+.g4 .el-prompt { font-size: 1.28rem; line-height: 1.45; }
+.g4 .el-choices { gap: .7rem; }
+.g4 .el-choice { font-size: 1.1rem; padding: .7rem .9rem; min-height: 3.2rem; }
+.g4 .el-btn { min-height: 2.9rem; }
+.g4 .el-input { font-size: 1.2rem; min-height: 3rem; }
+.g4 .el-pill span { padding: .55rem 1.1rem; }
+.g4 .el-celebrate h2 { color: #0d6b3c; }

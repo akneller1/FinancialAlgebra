@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fraction Number Line · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Jump along a number line by equal fractions. See a fraction as a multiple of a unit fraction, as a mixed number, and as a product.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Fraction Number Line</h1><p class="tl-sub">Choose the size of each jump and how many jumps to take, starting at 0.</p>
+<div class="tl-model" id="nlModel"></div><div class="tl-controls" id="nlCtl"><div class="tl-field"><label for="nlD">Denominator</label><select id="nlD"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>8</option><option>10</option><option>12</option></select></div><div class="tl-field"><span class="lab">Numerator of each jump</span><div class="tl-step"><button type="button" data-k="a" data-s="-1" aria-label="Numerator of each jump down">−</button><b id="nlA"></b><button type="button" data-k="a" data-s="1" aria-label="Numerator of each jump up">+</button></div></div><div class="tl-field"><span class="lab">Number of jumps</span><div class="tl-step"><button type="button" data-k="j" data-s="-1" aria-label="Number of jumps down">−</button><b id="nlJ"></b><button type="button" data-k="j" data-s="1" aria-label="Number of jumps up">+</button></div></div></div><div class="tl-out" id="nlOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st;
+function reset() { st = { d: 4, a: 3, j: 2 }; $('nlD').value = 4; }
+function draw() {
+  st.d = +$('nlD').value; st.a = Math.min(st.a, st.d * 2);
+  var tot = st.a * st.j, hi = Math.max(2, Math.ceil(tot / st.d) + (tot % st.d === 0 ? 0 : 0)), W = 760, x0 = 40, sc = (W - 80) / hi, y = 150, s, i;
+  $('nlA').textContent = st.a; $('nlJ').textContent = st.j;
+  s = '<svg viewBox="0 0 ' + W + ' 210" role="img" aria-label="Number line from 0 to ' + hi + ' with ' + st.j + ' jumps of ' + st.a + ' over ' + st.d + '"><line x1="' + (x0 - 14) + '" y1="' + y + '" x2="' + (W - 26) + '" y2="' + y + '" stroke="#1d2a3a" stroke-width="3.5"/>';
+  for (i = 0; i <= hi * st.d; i++) { var big = i % st.d === 0, x = x0 + i * sc / st.d; s += '<line x1="' + x.toFixed(1) + '" y1="' + (y - (big ? 15 : 8)) + '" x2="' + x.toFixed(1) + '" y2="' + (y + (big ? 15 : 8)) + '" stroke="#1d2a3a" stroke-width="' + (big ? 3.5 : 1.8) + '"/>'; if (big) s += '<text x="' + x.toFixed(1) + '" y="' + (y + 44) + '" text-anchor="middle" font-size="24" font-weight="800">' + i / st.d + '</text>'; }
+  for (i = 0; i < st.j; i++) { var a = x0 + i * st.a * sc / st.d, b = x0 + (i + 1) * st.a * sc / st.d; s += '<path d="M' + a.toFixed(1) + ' ' + (y - 6) + ' Q' + ((a + b) / 2).toFixed(1) + ' ' + (y - 96) + ' ' + b.toFixed(1) + ' ' + (y - 6) + '" fill="none" stroke="#f08c1a" stroke-width="4"/>'; }
+  s += '<circle cx="' + (x0 + tot * sc / st.d).toFixed(1) + '" cy="' + y + '" r="10" fill="#d63c7a" stroke="#fff" stroke-width="2.5"/>';
+  $('nlModel').innerHTML = s + '</svg>';
+  $('nlOut').innerHTML = '<b>' + st.j + ' × ' + T.frac(st.a, st.d) + ' = ' + T.frac(tot, st.d) + '</b>' + (tot >= st.d ? ' = <b>' + T.mixed(tot, st.d) + '</b>' : '') +
+    '<br>' + T.frac(tot, st.d) + ' is ' + tot + ' copies of ' + T.frac(1, st.d) + ': ' + tot + ' × ' + T.frac(1, st.d) + '.' + (st.j > 1 && st.j <= 5 ? '<br>As addition: ' + new Array(st.j).fill(T.frac(st.a, st.d)).join(' + ') + ' = ' + T.frac(tot, st.d) : '');
+  T.update({ d: st.d, a: st.a, j: st.j, tot: tot });
+}
+var CH = [{ text: 'Show 3 × 2/5. Where do you land?', test: function (s) { return s.d === 5 && s.a === 2 && s.j === 3; } },
+  { text: 'Land exactly on 2 using jumps of 1/4.', test: function (s) { return s.d === 4 && s.a === 1 && s.tot === 8; } },
+  { text: 'Land on 1 1/2 in two different ways.', test: (function () { var seen = {}; return function (s) { if (s.tot * 2 === s.d * 3) seen[s.d + ':' + s.a + ':' + s.j] = 1; return Object.keys(seen).length >= 2; }; })() },
+  { text: 'Make a product that is between 2 and 3.', test: function (s) { return s.tot > 2 * s.d && s.tot < 3 * s.d; } }];
+CH.forEach(function (c) { c.text = c.text.replace(/(\d+) (\d+)\/(\d+)/g, function (m, w, a, b) { return w + ' ' + T.frac(a, b); }).replace(/(^|[^>\d])(\d+)\/(\d+)/g, function (m, p, a, b) { return p + T.frac(a, b); }); });
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'fractions-equivalent-fractions', title: 'Fraction Number Line', standards: '4.NF.B.3, 4.NF.B.4',
+  teacher: ["Use jumps of a unit fraction first (numerator 1) to show a/b as a copies of 1/b.", "Ask students to predict where the jumps will land before they press +.", "Connect repeated addition with multiplication of a fraction by a whole number."], notice: ["A fraction a/b is a copies of the unit fraction 1/b.", "n × a/b = (n × a)/b: multiply the numerator, keep the denominator.", "When the numerator is greater than the denominator, the fraction is more than 1 and can be written as a mixed number."], challenges: CH, reset: function () { reset(); draw(); } });
+T.steppers($('nlCtl'), function (k, dlt) { if (k === 'a') st.a = Math.max(1, Math.min(st.d * 2, st.a + dlt)); if (k === 'j') st.j = Math.max(0, Math.min(12, st.j + dlt)); if (st.a * st.j > st.d * 6) st.j = Math.floor(st.d * 6 / st.a); draw(); });
+$('nlD').onchange = draw;
+draw();
+})();
+</script></body></html>

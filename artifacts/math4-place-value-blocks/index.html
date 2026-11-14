@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Place-Value Blocks · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Build numbers to 9,999 with thousands cubes, hundreds flats, tens rods and ones. See standard, expanded and word form, and regroup 10 of one place into 1 of the next.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Place-Value Blocks</h1><p class="tl-sub">Use + and − to add or take away blocks. When a place has 10 blocks, press Regroup to trade them.</p>
+<div class="tl-model" id="pvModel" aria-live="polite"></div><div class="tl-big" id="pvNum"></div><div class="tl-controls" id="pvCtl"><div class="tl-field"><span class="lab">Thousands</span><div class="tl-step"><button type="button" data-k="3" data-s="-1" aria-label="Thousands down">−</button><b id="pv3"></b><button type="button" data-k="3" data-s="1" aria-label="Thousands up">+</button></div></div><div class="tl-field"><span class="lab">Hundreds</span><div class="tl-step"><button type="button" data-k="2" data-s="-1" aria-label="Hundreds down">−</button><b id="pv2"></b><button type="button" data-k="2" data-s="1" aria-label="Hundreds up">+</button></div></div><div class="tl-field"><span class="lab">Tens</span><div class="tl-step"><button type="button" data-k="1" data-s="-1" aria-label="Tens down">−</button><b id="pv1"></b><button type="button" data-k="1" data-s="1" aria-label="Tens up">+</button></div></div><div class="tl-field"><span class="lab">Ones</span><div class="tl-step"><button type="button" data-k="0" data-s="-1" aria-label="Ones down">−</button><b id="pv0"></b><button type="button" data-k="0" data-s="1" aria-label="Ones up">+</button></div></div><button type="button" class="tl-btn" id="pvRe">Regroup</button><button type="button" class="tl-btn" id="pvTen">× 10</button></div><div class="tl-out" id="pvOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st, NAMES = ['ones', 'tens', 'hundreds', 'thousands'];
+function reset() { st = { d: [6, 4, 3, 1], regrouped: 0, times10: 0 }; }
+function value() { return st.d[0] + 10 * st.d[1] + 100 * st.d[2] + 1000 * st.d[3]; }
+var ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'], TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+function words(n) { if (n < 20) return ONES[n]; if (n < 100) return TENS[Math.floor(n / 10)] + (n % 10 ? '-' + ONES[n % 10] : ''); if (n < 1000) return ONES[Math.floor(n / 100)] + ' hundred' + (n % 100 ? ' ' + words(n % 100) : ''); return words(Math.floor(n / 1000)) + ' thousand' + (n % 1000 ? ', ' + words(n % 1000) : ''); }
+function blocks() {
+  var s = '<svg viewBox="0 0 760 250" role="img" aria-label="Base-ten blocks: ' + st.d[3] + ' thousands, ' + st.d[2] + ' hundreds, ' + st.d[1] + ' tens, ' + st.d[0] + ' ones">', i, x;
+  var col = [['#f472b6', '#9d174d'], ['#fbbf24', '#92400e'], ['#34d399', '#065f46'], ['#60a5fa', '#1e3a8a']];
+  for (i = 0; i < Math.min(st.d[3], 12); i++) { x = 14 + (i % 6) * 34; var y = 30 + Math.floor(i / 6) * 96; s += '<rect x="' + x + '" y="' + (y + 12) + '" width="56" height="56" fill="' + col[3][0] + '" stroke="' + col[3][1] + '" stroke-width="2"/><path d="M' + x + ' ' + (y + 12) + ' l12 -12 h56 l-12 12z M' + (x + 56) + ' ' + (y + 12) + ' l12 -12 v56 l-12 12z" fill="#3b82f6" stroke="' + col[3][1] + '" stroke-width="2"/>'; }
+  for (i = 0; i < Math.min(st.d[2], 12); i++) { x = 250 + (i % 6) * 26; s += '<rect x="' + x + '" y="' + (30 + Math.floor(i / 6) * 100 + (i % 6) * 5) + '" width="60" height="60" fill="' + col[2][0] + '" stroke="' + col[2][1] + '" stroke-width="2" opacity=".93"/>'; }
+  for (i = 0; i < Math.min(st.d[1], 14); i++) s += '<rect x="' + (470 + i * 13) + '" y="30" width="9" height="90" fill="' + col[1][0] + '" stroke="' + col[1][1] + '" stroke-width="1.5"/>';
+  for (i = 0; i < Math.min(st.d[0], 14); i++) s += '<rect x="' + (660 + (i % 5) * 16) + '" y="' + (30 + Math.floor(i / 5) * 16) + '" width="11" height="11" fill="' + col[0][0] + '" stroke="' + col[0][1] + '" stroke-width="1.5"/>';
+  ['Thousands', 'Hundreds', 'Tens', 'Ones'].forEach(function (t, k) { s += '<text x="' + [100, 330, 550, 695][k] + '" y="236" text-anchor="middle" font-size="19" font-weight="800" fill="#1d2a3a">' + t + ': ' + st.d[3 - k] + '</text>'; });
+  return s + '</svg>';
+}
+function draw() {
+  var n = value();
+  $('pvModel').innerHTML = blocks(); $('pvNum').textContent = T.comma(n);
+  [0, 1, 2, 3].forEach(function (k) { $('pv' + k).textContent = st.d[k]; });
+  var exp = [3, 2, 1, 0].filter(function (k) { return st.d[k]; }).map(function (k) { return T.comma(st.d[k] * Math.pow(10, k)); }).join(' + ') || '0';
+  var can = st.d.slice(0, 3).some(function (v) { return v >= 10; });
+  $('pvRe').disabled = !can;
+  $('pvOut').innerHTML = '<b>Expanded form:</b> ' + exp + '<br><b>Word form:</b> ' + words(n) + (can ? '<br><b>Regroup!</b> A place has 10 or more blocks. Trade 10 of them for 1 of the next place.' : '');
+  T.update({ n: n, d: st.d, regrouped: st.regrouped, times10: st.times10 });
+}
+var CH = [{ text: 'Build 2,405. Which place has no blocks?', test: function (s) { return s.n === 2405 && s.d[1] === 0; } },
+  { text: 'Make 10 or more ones, then press Regroup.', test: function (s) { return s.regrouped > 0; } },
+  { text: 'Build 360, then press × 10. What happens to each digit?', test: function (s) { return s.times10 > 0 && s.n === 3600; } },
+  { text: 'Build the greatest number you can with 3 blocks.', test: function (s) { return s.n === 3000; } }];
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'place-value-number-sense', title: 'Place-Value Blocks', standards: '4.NBT.A.1, 4.NBT.A.2',
+  teacher: ["Ask students to predict the number before they read it, then build the same number with different blocks (for example 13 tens instead of 1 hundred 3 tens).", "Use × 10 to show that every digit moves one place to the left (4.NBT.A.1).", "Connect Regroup to the regrouping step in addition and subtraction."], notice: ["A digit's value depends on its place: 4 tens is 40, 4 hundreds is 400.", "10 of any block can be traded for 1 of the next larger block.", "Multiplying by 10 moves every digit one place to the left."], challenges: CH, reset: function () { reset(); draw(); } });
+T.steppers($('pvCtl'), function (k, dlt) { k = +k; st.d[k] = Math.max(0, Math.min(k === 3 ? 9 : 14, st.d[k] + dlt)); draw(); });
+$('pvRe').onclick = function () { for (var k = 0; k < 3; k++) if (st.d[k] >= 10 && st.d[k + 1] < (k === 2 ? 9 : 14)) { st.d[k] -= 10; st.d[k + 1]++; st.regrouped++; break; } draw(); };
+$('pvTen').onclick = function () { var n = value() * 10; if (n > 9999) { $('pvOut').innerHTML = '<b>Too big:</b> this tool shows numbers up to 9,999.'; return; } st.d = [n % 10, Math.floor(n / 10) % 10, Math.floor(n / 100) % 10, Math.floor(n / 1000)]; st.times10++; draw(); };
+draw();
+})();
+</script></body></html>

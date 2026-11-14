@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Angle Explorer · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Turn a ray around a point and read the angle on a protractor. See the angle type, the fraction of a full turn, and how two angles add.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Angle Explorer</h1><p class="tl-sub">Drag the slider (or the end of the blue ray) to turn the ray. Add a second angle to see angle measures add up.</p>
+<div class="tl-model" id="agModel"></div><div class="tl-controls"><div class="tl-field"><label for="agA">First angle: <b id="agAV"></b></label><input type="range" id="agA" min="0" max="180" step="1" value="65"></div><div class="tl-field"><label for="agB">Second angle (added on): <b id="agBV"></b></label><input type="range" id="agB" min="0" max="180" step="1" value="0"></div><button type="button" class="tl-btn" id="agP" aria-pressed="true">Protractor</button></div><div class="tl-out" id="agOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st;
+function reset() { st = { a: 65, b: 0, pro: true, seen: {} }; $('agA').value = 65; $('agB').value = 0; }
+function pt(cx, cy, r, d) { var t = d * Math.PI / 180; return [cx + r * Math.cos(t), cy - r * Math.sin(t)]; }
+function type(a) { return a === 0 ? 'zero angle' : a < 90 ? 'acute' : a === 90 ? 'right' : a < 180 ? 'obtuse' : a === 180 ? 'straight' : 'more than a straight angle'; }
+function gcd(a, b) { return b ? gcd(b, a % b) : a; }
+function draw() {
+  st.a = +$('agA').value; st.b = Math.min(+$('agB').value, 360 - st.a); $('agB').value = st.b; $('agAV').textContent = st.a + '°'; $('agBV').textContent = st.b + '°';
+  var cx = 380, cy = st.a + st.b > 180 ? 250 : 330, R = 230, s = '<svg viewBox="0 0 760 ' + (st.a + st.b > 180 ? 500 : 370) + '" role="img" aria-label="Angle of ' + st.a + ' degrees' + (st.b ? ' plus ' + st.b + ' degrees' : '') + '" id="agSvg">', t, p, q;
+  if (st.pro) {
+    s += '<path d="M' + (cx - R - 20) + ' ' + cy + ' A' + (R + 20) + ' ' + (R + 20) + ' 0 0 1 ' + (cx + R + 20) + ' ' + cy + 'Z" fill="#eef6ff" stroke="#7a8aa0" stroke-width="2"/>';
+    for (t = 0; t <= 180; t += 5) { p = pt(cx, cy, R + 20, t); q = pt(cx, cy, R + 20 - (t % 10 ? 9 : 16), t); s += '<line x1="' + p[0].toFixed(1) + '" y1="' + p[1].toFixed(1) + '" x2="' + q[0].toFixed(1) + '" y2="' + q[1].toFixed(1) + '" stroke="#52627a" stroke-width="' + (t % 10 ? 1 : 1.8) + '"/>'; if (t % 10 === 0) { q = pt(cx, cy, R - 14, t); s += '<text x="' + q[0].toFixed(1) + '" y="' + (q[1] + (t === 0 || t === 180 ? -6 : 5)).toFixed(1) + '" text-anchor="middle" font-size="14" font-weight="700" fill="#33435a">' + t + '</text>'; } }
+  }
+  function arc(a0, a1, r, col) { var p0 = pt(cx, cy, r, a0), p1 = pt(cx, cy, r, a1); return '<path d="M' + p0[0].toFixed(1) + ' ' + p0[1].toFixed(1) + ' A' + r + ' ' + r + ' 0 ' + (a1 - a0 > 180 ? 1 : 0) + ' 0 ' + p1[0].toFixed(1) + ' ' + p1[1].toFixed(1) + '" fill="none" stroke="' + col + '" stroke-width="5"/>'; }
+  if (st.a === 90 && !st.b) s += '<path d="M' + (cx + 30) + ' ' + cy + ' v-30 h-30" fill="none" stroke="#d63c7a" stroke-width="4"/>'; else if (st.a) s += arc(0, st.a, 60, '#2f7fd8');
+  if (st.b) s += arc(st.a, st.a + st.b, 84, '#f08c1a');
+  function ray(d, col, id) { var e = pt(cx, cy, R + 44, d); return '<line x1="' + cx + '" y1="' + cy + '" x2="' + e[0].toFixed(1) + '" y2="' + e[1].toFixed(1) + '" stroke="' + col + '" stroke-width="6" stroke-linecap="round"/>' + (id ? '<circle id="' + id + '" cx="' + e[0].toFixed(1) + '" cy="' + e[1].toFixed(1) + '" r="15" fill="' + col + '" stroke="#fff" stroke-width="3" style="cursor:grab"/>' : ''); }
+  s += ray(0, '#1d2a3a') + ray(st.a, '#2f7fd8', 'agH') + (st.b ? ray(st.a + st.b, '#f08c1a') : '') + '<circle cx="' + cx + '" cy="' + cy + '" r="7" fill="#1d2a3a"/>';
+  $('agModel').innerHTML = s + '</svg>';
+  var g = gcd(st.a, 360), tot = st.a + st.b;
+  $('agOut').innerHTML = '<b>' + st.a + '°</b> is a' + (/^[ao]/.test(type(st.a)) ? 'n' : '') + ' <b>' + type(st.a) + '</b> angle' + (st.a ? '. It is ' + T.frac(st.a / g, 360 / g) + ' of a full turn (360°).' : '.') +
+    (st.b ? '<br><b>Adding angles:</b> ' + st.a + '° + ' + st.b + '° = <b>' + tot + '°</b> (' + type(tot) + ').' : '') + (st.a < 90 && st.a > 0 && !st.b ? '<br>To make a right angle you need ' + (90 - st.a) + '° more.' : '');
+  st.seen[type(st.a)] = 1;
+  T.update({ a: st.a, b: st.b, tot: tot, seen: st.seen });
+}
+var CH = [{ text: 'Make a right angle. What fraction of a full turn is it?', test: function (s) { return s.a === 90; } },
+  { text: 'Make an acute angle, a right angle and an obtuse angle.', test: function (s) { return s.seen.acute && s.seen.right && s.seen.obtuse; } },
+  { text: 'Use two angles to make a straight angle (180°).', test: function (s) { return s.a > 0 && s.b > 0 && s.tot === 180; } },
+  { text: 'A right angle is split into 35° and another angle. Show both.', test: function (s) { return s.tot === 90 && (s.a === 35 || s.b === 35); } }];
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'geometry-angles-symmetry', title: 'Angle Explorer', standards: '4.MD.C.5, 4.MD.C.6, 4.MD.C.7, 4.G.A.1',
+  teacher: ["Hide the protractor and have students estimate before they measure.", "Use the second angle to model unknown-angle problems: 35° + x = 90°.", "Link 90°, 180° and 360° to quarter, half and full turns."], notice: ["An angle is measured by how far one ray turns from the other, not by how long the rays are.", "Acute angles are less than 90°, right angles are exactly 90°, obtuse angles are between 90° and 180°.", "When two angles share a ray and do not overlap, their measures add."], challenges: CH, reset: function () { reset(); draw(); } });
+$('agA').oninput = draw; $('agB').oninput = draw;
+$('agP').onclick = function () { st.pro = !st.pro; this.setAttribute('aria-pressed', st.pro); draw(); };
+var dragging = false;
+$('agModel').addEventListener('pointerdown', function (e) { if (e.target.id === 'agH') { dragging = true; e.preventDefault(); } });
+window.addEventListener('pointerup', function () { dragging = false; });
+window.addEventListener('pointermove', function (e) {
+  if (!dragging) return; var svg = $('agSvg'), r = svg.getBoundingClientRect(), vb = svg.viewBox.baseVal;
+  var x = (e.clientX - r.left) * vb.width / r.width - 380, y = (st.a + st.b > 180 ? 250 : 330) - (e.clientY - r.top) * vb.height / r.height;
+  var d = Math.round(Math.atan2(y, x) * 180 / Math.PI); if (d < 0) d = d < -90 ? 180 : 0; $('agA').value = Math.max(0, Math.min(180, d)); draw();
+});
+draw();
+})();
+</script></body></html>

@@ -50,7 +50,7 @@ test('Grade 1: page, navigation, and source-based outline are wired',()=>{
  assert.ok(page.includes('src/grade1-site.js'));
  assert.ok(renderer.includes('Curriculum Sections &amp; Standards'));
  assert.ok(renderer.includes('estimatedDaysMax'));
- assert.ok(renderer.includes('resource templates ready'));
+ assert.ok(renderer.includes('published resources'));
  for(const existing of ['grade2.html','grade3.html','grade4.html']){
   assert.ok(read(existing).includes('href="grade1.html"'));
  }

@@ -414,6 +414,8 @@ def b_sum(r, L):
     ba, bb = bench(a), bench(b)
     v = ba + bb if op == "+" else ba - bb
     need(v >= 0)
+    # 2026-11-14: only fractions near a benchmark, so the estimate is within 1/4 of the exact answer
+    need(abs(a - ba) <= F(1, 6) and abs(b - bb) <= F(1, 6) and abs(v - (a + b if op == "+" else a - b)) <= F(1, 4))
     return Item(f"Use benchmarks (0, 1/2, or 1) to estimate {frac(a)} {op} {frac(b)}.", fs(v),
                 [f"{frac(a)} is about {fs(ba)} and {frac(b)} is about {fs(bb)}.", f"{fs(ba)} {op} {fs(bb)} = {fs(v)}."],
                 [W(fs(a + b if op == "+" else a - b), "found the exact answer instead of estimating"), W(fs(v + F(1, 2)), "rounded one fraction the wrong way"), W(fs(v + 1), "rounded both fractions up")],

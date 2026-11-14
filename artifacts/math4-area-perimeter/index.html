@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Area and Perimeter Explorer · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Stretch a rectangle on a grid and watch its area and perimeter change. Find rectangles with the same area and different perimeters, or the same perimeter and different areas.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Area and Perimeter Explorer</h1><p class="tl-sub">Change the length and the width. Count the squares inside (area) and the units around the edge (perimeter).</p>
+<div class="tl-model" id="apModel"></div><div class="tl-controls"><div class="tl-field"><label for="apW">Length: <b id="apWV"></b></label><input type="range" id="apW" min="1" max="20" step="1" value="5"></div><div class="tl-field"><label for="apH">Width: <b id="apHV"></b></label><input type="range" id="apH" min="1" max="12" step="1" value="3"></div><button type="button" class="tl-btn" id="apPin">Remember this rectangle</button></div><div class="tl-out" id="apOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st;
+function reset() { st = { w: 5, h: 3, pin: null, sameA: false, sameP: false }; $('apW').value = 5; $('apH').value = 3; }
+function draw() {
+  st.w = +$('apW').value; st.h = +$('apH').value; $('apWV').textContent = st.w + ' units'; $('apHV').textContent = st.h + ' units';
+  var u = 28, s = '<svg viewBox="0 0 660 390" role="img" aria-label="Rectangle ' + st.w + ' units long and ' + st.h + ' units wide"><rect x="40" y="20" width="560" height="336" fill="#f7fafc"/>', i;
+  for (i = 0; i <= 20; i++) s += '<line x1="' + (40 + i * u) + '" y1="20" x2="' + (40 + i * u) + '" y2="356" stroke="#d6e1f0" stroke-width="1"/>';
+  for (i = 0; i <= 12; i++) s += '<line x1="40" y1="' + (20 + i * u) + '" x2="600" y2="' + (20 + i * u) + '" stroke="#d6e1f0" stroke-width="1"/>';
+  if (st.pin) s += '<rect x="40" y="20" width="' + st.pin.w * u + '" height="' + st.pin.h * u + '" fill="none" stroke="#d63c7a" stroke-width="3" stroke-dasharray="8 6"/>';
+  s += '<rect x="40" y="20" width="' + st.w * u + '" height="' + st.h * u + '" fill="#8fdcbf" fill-opacity=".8" stroke="#0d6b3c" stroke-width="4"/>';
+  for (i = 1; i < st.w; i++) s += '<line x1="' + (40 + i * u) + '" y1="20" x2="' + (40 + i * u) + '" y2="' + (20 + st.h * u) + '" stroke="#0d6b3c" stroke-width="1"/>';
+  for (i = 1; i < st.h; i++) s += '<line x1="40" y1="' + (20 + i * u) + '" x2="' + (40 + st.w * u) + '" y2="' + (20 + i * u) + '" stroke="#0d6b3c" stroke-width="1"/>';
+  s += '<text x="' + (40 + st.w * u / 2) + '" y="' + (20 + st.h * u + 24) + '" text-anchor="middle" font-size="19" font-weight="800">' + st.w + '</text><text x="26" y="' + (20 + st.h * u / 2 + 6) + '" text-anchor="middle" font-size="19" font-weight="800">' + st.h + '</text>';
+  $('apModel').innerHTML = s + '</svg>';
+  var A = st.w * st.h, P = 2 * (st.w + st.h), msg = '';
+  if (st.pin) {
+    var A0 = st.pin.w * st.pin.h, P0 = 2 * (st.pin.w + st.pin.h), diff = !(st.pin.w === st.w && st.pin.h === st.h) && !(st.pin.w === st.h && st.pin.h === st.w);
+    msg = '<br><b>Remembered (dashed):</b> ' + st.pin.w + ' by ' + st.pin.h + ', area ' + A0 + ', perimeter ' + P0 + '.' + (diff && A0 === A ? ' <b>Same area, different perimeter!</b>' : '') + (diff && P0 === P ? ' <b>Same perimeter, different area!</b>' : '');
+    if (diff && A0 === A && P0 !== P) st.sameA = true; if (diff && P0 === P && A0 !== A) st.sameP = true;
+  }
+  $('apOut').innerHTML = '<b>Area</b> = length × width = ' + st.w + ' × ' + st.h + ' = <b>' + A + ' square units</b><br><b>Perimeter</b> = 2 × ' + st.w + ' + 2 × ' + st.h + ' = ' + 2 * st.w + ' + ' + 2 * st.h + ' = <b>' + P + ' units</b>' + msg;
+  T.update({ w: st.w, h: st.h, A: A, P: P, sameA: st.sameA, sameP: st.sameP });
+}
+var CH = [{ text: 'Make a rectangle with an area of 24 square units.', test: function (s) { return s.A === 24; } },
+  { text: 'Remember a rectangle, then make a different one with the same area.', test: function (s) { return s.sameA; } },
+  { text: 'Remember a rectangle, then make a different one with the same perimeter.', test: function (s) { return s.sameP; } },
+  { text: 'Make a square with a perimeter of 20 units. What is its area?', test: function (s) { return s.w === 5 && s.h === 5; } }];
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'measurement-unit-conversions', title: 'Area and Perimeter Explorer', standards: '4.MD.A.3',
+  teacher: ["Have students record rectangles with a perimeter of 20 in a table and look for the greatest area.", "Ask which measurement a fence needs and which a carpet needs.", "Use Remember to compare two rectangles side by side."], notice: ["Area counts the squares inside; perimeter counts the units around the edge.", "Rectangles with the same area can have different perimeters.", "Rectangles with the same perimeter can have different areas; the square has the greatest area."], challenges: CH, reset: function () { reset(); draw(); } });
+$('apW').oninput = draw; $('apH').oninput = draw;
+$('apPin').onclick = function () { st.pin = { w: st.w, h: st.h }; draw(); };
+draw();
+})();
+</script></body></html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Division: Groups and Arrays · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Share counters into equal groups or arrange them in rows. See the quotient, the remainder and the multiplication check.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Division: Groups and Arrays</h1><p class="tl-sub">Choose how many counters and how many groups. Watch what is left over.</p>
+<div class="tl-model" id="dvModel"></div><div class="tl-controls"><div class="tl-field"><label for="dvN">Counters (dividend): <b id="dvNV"></b></label><input type="range" id="dvN" min="1" max="60" step="1" value="17"></div><div class="tl-field"><label for="dvD">Groups (divisor): <b id="dvDV"></b></label><input type="range" id="dvD" min="1" max="10" step="1" value="3"></div><button type="button" class="tl-btn" id="dvMode" aria-pressed="false">Show as rows</button></div><div class="tl-out" id="dvOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st;
+function reset() { st = { n: 17, d: 3, rows: false }; $('dvN').value = 17; $('dvD').value = 3; }
+function draw() {
+  st.n = +$('dvN').value; st.d = +$('dvD').value; $('dvNV').textContent = st.n; $('dvDV').textContent = st.d;
+  var q = Math.floor(st.n / st.d), r = st.n % st.d, s, i, j;
+  if (st.rows) {
+    var u = Math.min(26, 640 / Math.max(q + r, 6)), W = Math.max(q + (r ? 1 : 0), 6) * u + 150;
+    s = '<svg viewBox="0 0 ' + W.toFixed(0) + ' ' + (st.d * u + 50) + '" role="img" aria-label="' + st.d + ' rows of ' + q + ' with ' + r + ' left over">';
+    for (i = 0; i < st.d; i++) for (j = 0; j < q; j++) s += '<circle cx="' + (30 + j * u + u / 2) + '" cy="' + (20 + i * u + u / 2) + '" r="' + u * 0.36 + '" fill="#8a4fd6"/>';
+    for (i = 0; i < r; i++) s += '<circle cx="' + (30 + q * u + 50 + u / 2) + '" cy="' + (20 + i * u + u / 2) + '" r="' + u * 0.36 + '" fill="#f08c1a"/>';
+    if (r) s += '<text x="' + (30 + q * u + 50 + u / 2) + '" y="' + (st.d * u + 42) + '" text-anchor="middle" font-size="16" font-weight="800" fill="#b4590b">left over</text>';
+  } else {
+    var per = Math.min(5, Math.max(1, Math.ceil(Math.sqrt(Math.max(q, 1))))), gw = Math.max(1, per) * 22 + 20, gh = Math.ceil(Math.max(q, 1) / per) * 22 + 20, cols = Math.min(st.d, 5), rowsN = Math.ceil(st.d / cols);
+    s = '<svg viewBox="0 0 ' + (cols * (gw + 14) + 120) + ' ' + (rowsN * (gh + 14) + 30) + '" role="img" aria-label="' + st.d + ' groups of ' + q + ' with ' + r + ' left over">';
+    for (i = 0; i < st.d; i++) { var gx = 10 + (i % cols) * (gw + 14), gy = 10 + Math.floor(i / cols) * (gh + 14); s += '<rect x="' + gx + '" y="' + gy + '" width="' + gw + '" height="' + gh + '" rx="12" fill="#fff" stroke="#8a4fd6" stroke-width="3"/>'; for (j = 0; j < q; j++) s += '<circle cx="' + (gx + 21 + (j % per) * 22) + '" cy="' + (gy + 21 + Math.floor(j / per) * 22) + '" r="8" fill="#8a4fd6"/>'; }
+    for (i = 0; i < r; i++) s += '<circle cx="' + (cols * (gw + 14) + 30 + (i % 3) * 24) + '" cy="' + (30 + Math.floor(i / 3) * 24) + '" r="9" fill="#f08c1a"/>';
+    if (r) s += '<text x="' + (cols * (gw + 14) + 54) + '" y="' + (30 + Math.ceil(r / 3) * 24 + 14) + '" text-anchor="middle" font-size="15" font-weight="800" fill="#b4590b">left over</text>';
+  }
+  $('dvModel').innerHTML = s + '</svg>';
+  $('dvOut').innerHTML = '<b>' + st.n + ' ÷ ' + st.d + ' = ' + q + (r ? ' R ' + r : '') + '</b> &nbsp; Check: ' + st.d + ' × ' + q + (r ? ' + ' + r : '') + ' = ' + st.n + (r ? '<br>The remainder ' + r + ' is less than the divisor ' + st.d + '.' : '<br>No remainder: ' + st.d + ' is a factor of ' + st.n + '.');
+  T.update({ n: st.n, d: st.d, q: q, r: r, rows: st.rows });
+}
+var CH = [{ text: 'Share 23 counters into 4 groups. What is left over?', test: function (s) { return s.n === 23 && s.d === 4; } },
+  { text: 'Find a number of counters that leaves a remainder of 0 when divided by 6.', test: function (s) { return s.d === 6 && s.r === 0 && s.n >= 6; } },
+  { text: 'Make the largest remainder you can when dividing by 5.', test: function (s) { return s.d === 5 && s.r === 4; } },
+  { text: 'Show 36 ÷ 9 as rows. How is it like an array?', test: function (s) { return s.n === 36 && s.d === 9 && s.rows; } }];
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'division-remainders', title: 'Division: Groups and Arrays', standards: '4.NBT.B.6, 4.OA.A.3',
+  teacher: ["Ask what the remainder would mean in a story: drop it, add one more group, or use it as the answer.", "Switch to rows to connect division with arrays and multiplication.", "Have students find all divisors of 24 that leave no remainder (its factors)."], notice: ["The remainder is always less than the divisor.", "divisor × quotient + remainder = dividend.", "When the remainder is 0, the divisor is a factor of the dividend."], challenges: CH, reset: function () { reset(); draw(); } });
+$('dvN').oninput = draw; $('dvD').oninput = draw;
+$('dvMode').onclick = function () { st.rows = !st.rows; this.setAttribute('aria-pressed', st.rows); this.textContent = st.rows ? 'Show as groups' : 'Show as rows'; draw(); };
+draw();
+})();
+</script></body></html>

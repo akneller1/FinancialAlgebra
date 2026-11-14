@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Symmetry and Shapes · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Choose a shape and turn a fold line through its center. The tool flips one side over the line so you can see whether the two parts match, and lists the shape's sides and angles.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Symmetry and Shapes</h1><p class="tl-sub">Pick a shape. Turn the dashed fold line. The pink outline shows the shape flipped over the line: when it matches the shape exactly, you found a line of symmetry.</p>
+<div class="tl-model" id="syModel"></div><div class="tl-controls"><div class="tl-field"><label for="syS">Shape</label><select id="syS"></select></div><div class="tl-field"><label for="syA">Fold line turn: <b id="syAV"></b></label><input type="range" id="syA" min="0" max="175" step="5" value="90"></div><button type="button" class="tl-btn" id="syF" aria-pressed="true">Show the flip</button></div><div class="tl-out" id="syOut"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var SH = {
+  'square': [[-1, -1], [1, -1], [1, 1], [-1, 1]], 'rectangle': [[-1.6, -0.9], [1.6, -0.9], [1.6, 0.9], [-1.6, 0.9]],
+  'equilateral triangle': [[0, 1.3], [-1.126, -0.65], [1.126, -0.65]], 'isosceles triangle': [[0, 1.5], [-0.9, -1], [0.9, -1]], 'right triangle': [[-1.3, -0.9], [1.5, -0.9], [-1.3, 1.1]],
+  'rhombus': [[0, 1.1], [-1.7, 0], [0, -1.1], [1.7, 0]], 'parallelogram': [[-1.7, -0.8], [0.9, -0.8], [1.7, 0.8], [-0.9, 0.8]], 'trapezoid': [[-1.6, -0.8], [1.6, -0.8], [0.8, 0.8], [-0.8, 0.8]],
+  'kite': [[0, 1.0], [-1.0, 0.2], [0, -1.6], [1.0, 0.2]],
+  'regular pentagon': [0, 1, 2, 3, 4].map(function (k) { return [1.4 * Math.sin(2 * Math.PI * k / 5), 1.4 * Math.cos(2 * Math.PI * k / 5)]; }),
+  'regular hexagon': [0, 1, 2, 3, 4, 5].map(function (k) { return [1.4 * Math.cos(Math.PI * k / 3), 1.4 * Math.sin(Math.PI * k / 3)]; }),
+  'arrow': [[-1.6, -0.4], [0.2, -0.4], [0.2, -1.1], [1.7, 0], [0.2, 1.1], [0.2, 0.4], [-1.6, 0.4]]
+};
+var st;
+function reset() { st = { shape: 'rectangle', a: 90, flip: true, found: {} }; $('syS').value = 'rectangle'; $('syA').value = 90; }
+function refl(p, deg) { var t = deg * Math.PI / 180, c = Math.cos(2 * t), s = Math.sin(2 * t); return [p[0] * c + p[1] * s, p[0] * s - p[1] * c]; }
+function isAxis(P, deg) { return P.every(function (p) { var r = refl(p, deg); return P.some(function (q) { return Math.abs(q[0] - r[0]) < 0.01 && Math.abs(q[1] - r[1]) < 0.01; }); }); }
+function axes(P) { var out = []; for (var d = 0; d < 180; d += 5) if (isAxis(P, d)) out.push(d); return out; }
+function props(P) {
+  var n = P.length, v = [], par = 0, right = 0, i, j;
+  for (i = 0; i < n; i++) v.push([P[(i + 1) % n][0] - P[i][0], P[(i + 1) % n][1] - P[i][1]]);
+  for (i = 0; i < n; i++) for (j = i + 1; j < n; j++) if (Math.abs(v[i][0] * v[j][1] - v[i][1] * v[j][0]) < 1e-6) par++;
+  for (i = 0; i < n; i++) { var a = v[(i + n - 1) % n], b = v[i]; if (Math.abs(a[0] * b[0] + a[1] * b[1]) < 1e-6) right++; }
+  return { sides: n, par: par, right: right };
+}
+function draw() {
+  st.shape = $('syS').value; st.a = +$('syA').value; $('syAV').textContent = st.a + '°';
+  var P = SH[st.shape], cx = 380, cy = 190, sc = 105, X = function (p) { return (cx + p[0] * sc).toFixed(1) + ',' + (cy - p[1] * sc).toFixed(1); };
+  var ok = isAxis(P, st.a), all = axes(P), t = st.a * Math.PI / 180, dx = Math.cos(t) * 330, dy = Math.sin(t) * 330;
+  var s = '<svg viewBox="0 0 760 380" role="img" aria-label="' + st.shape + ' with a fold line turned ' + st.a + ' degrees. ' + (ok ? 'The two parts match.' : 'The two parts do not match.') + '">';
+  s += '<polygon points="' + P.map(X).join(' ') + '" fill="#c3a6f0" stroke="#1d2a3a" stroke-width="4" stroke-linejoin="round"/>';
+  if (st.flip) s += '<polygon points="' + P.map(function (p) { return X(refl(p, st.a)); }).join(' ') + '" fill="' + (ok ? 'none' : 'rgba(214,60,122,.12)') + '" stroke="#d63c7a" stroke-width="3" stroke-dasharray="' + (ok ? '0' : '9 7') + '" stroke-linejoin="round"/>';
+  s += '<line x1="' + (cx - dx) + '" y1="' + (cy + dy) + '" x2="' + (cx + dx) + '" y2="' + (cy - dy) + '" stroke="' + (ok ? '#16865c' : '#52627a') + '" stroke-width="4" stroke-dasharray="12 8"/>';
+  $('syModel').innerHTML = s + '</svg>';
+  if (ok) st.found[st.shape + ':' + st.a] = 1;
+  var mine = all.filter(function (d) { return st.found[st.shape + ':' + d]; }).length, pr = props(P);
+  $('syOut').innerHTML = (ok ? '<b style="color:#16865c">Yes! This fold line is a line of symmetry.</b> The flipped shape lands exactly on the shape.' : '<b>Not a line of symmetry.</b> The flipped shape (pink) does not match.') +
+    '<br>You have found <b>' + mine + '</b> line' + (mine === 1 ? '' : 's') + ' of symmetry for this ' + st.shape + '. Keep turning the line to look for more.' +
+    '<br><b>Sides and angles:</b> ' + pr.sides + ' sides, ' + pr.par + ' pair' + (pr.par === 1 ? '' : 's') + ' of parallel sides, ' + pr.right + ' right angle' + (pr.right === 1 ? '' : 's') + '.';
+  T.update({ shape: st.shape, a: st.a, ok: ok, found: st.found, mine: mine, total: all.length });
+}
+var CH = [{ text: 'Find both lines of symmetry of the rectangle.', test: function (s) { return s.found['rectangle:0'] && s.found['rectangle:90']; } },
+  { text: 'Find all 4 lines of symmetry of the square.', test: function (s) { return [0, 45, 90, 135].every(function (d) { return s.found['square:' + d]; }); } },
+  { text: 'Find a shape with no lines of symmetry. Check every turn.', test: (function () { var tried = {}; return function (s) { if (s.total === 0) { tried[s.shape + ':' + s.a] = 1; return Object.keys(tried).filter(function (k) { return k.indexOf(s.shape + ':') === 0; }).length >= 6; } return false; }; })() },
+  { text: 'Find a shape with exactly 1 line of symmetry.', test: function (s) { return s.total === 1 && s.mine === 1; } }];
+Object.keys(SH).forEach(function (k) { var o = document.createElement('option'); o.textContent = k; $('syS').appendChild(o); });
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'geometry-angles-symmetry', title: 'Symmetry and Shapes', standards: '4.G.A.2, 4.G.A.3',
+  teacher: ["Ask students to predict the number of lines of symmetry before they turn the line.", "Compare the rectangle and the parallelogram: why is the diagonal not a line of symmetry?", "Use the sides and angles line to sort shapes by parallel sides and right angles."], notice: ["A line of symmetry folds a shape into two parts that match exactly.", "Not every line through the middle is a line of symmetry.", "Regular shapes have as many lines of symmetry as they have sides."], challenges: CH, reset: function () { reset(); draw(); } });
+$('syS').onchange = draw; $('syA').oninput = draw;
+$('syF').onclick = function () { st.flip = !st.flip; this.setAttribute('aria-pressed', st.flip); draw(); };
+draw();
+})();
+</script></body></html>
