@@ -10,7 +10,7 @@ function load(manifest, fetchJSON){
  if(!manifest||manifest.version!==1||!Array.isArray(manifest.banks)) return Promise.reject(new Error('Invalid bank manifest'));
  var allowed=Object.create(null),entries=[];
  manifest.banks.forEach(function(item){
-  if(!item||!item.courseId||!item.unitId||typeof item.path!=='string'||!/^(?:question-banks|math5)\/[a-z0-9/_-]+\.json$/.test(item.path))
+  if(!item||!item.courseId||!item.unitId||typeof item.path!=='string'||!/^(?:question-banks|math[1-5])\/[a-z0-9/_-]+\.json$/.test(item.path))
    throw new Error('Invalid manifest entry');
   var id=item.courseId+'/'+item.unitId;
   if(allowed[id])throw new Error('Duplicate manifest entry '+id);
@@ -66,7 +66,7 @@ function loadUnitFromSite(courseId,unitId,path,base){
   if(!manifest||manifest.version!==1||!Array.isArray(manifest.banks))throw new Error('Invalid bank manifest');
   var seen=Object.create(null),match=null;
   manifest.banks.forEach(function(item){
-   if(!item||!item.courseId||!item.unitId||typeof item.path!=='string'||!/^(?:question-banks|math5)\/[a-z0-9/_-]+\.json$/.test(item.path))throw new Error('Invalid manifest entry');
+   if(!item||!item.courseId||!item.unitId||typeof item.path!=='string'||!/^(?:question-banks|math[1-5])\/[a-z0-9/_-]+\.json$/.test(item.path))throw new Error('Invalid manifest entry');
    var k=item.courseId+'/'+item.unitId;
    if(seen[k])throw new Error('Duplicate manifest entry '+k);
    seen[k]=true;
