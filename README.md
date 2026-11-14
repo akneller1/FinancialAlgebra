@@ -1,7 +1,7 @@
 # Mr. K's Classroom — Independent Course Development
 
 **Staging website:** https://akneller1.github.io/FinancialAlgebra/  
-**Live production website:** https://mrksclassroom.com/ 
+**Live production website:** https://mrksclassroom.com/
 
 This repository is a separate development space for creating new math classes using the Mr. K's Classroom design, before importing finished courses into production.
 
