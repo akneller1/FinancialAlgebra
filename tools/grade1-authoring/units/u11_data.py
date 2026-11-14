@@ -84,8 +84,9 @@ def s_sort(r, L):
     need(cnt >= 1 and len(set(seq)) == k)
     noun = "shapes" if kinds[0] == "circle" else "blocks"
     word = f"{want}s" if noun == "shapes" else f"{want} blocks"
+    singular_word = want if noun == "shapes" else f"{want} block"
     return Item(f"Sort the {noun}: {', '.join(seq)}. How many {word} are there?", cnt,
-                [f"Make a group for each kind and count the {word}.", f"There are {cnt} {word}."],
+                [f"Make a group for each kind and count the {word}.", f"There {'is' if cnt == 1 else 'are'} {cnt} {singular_word if cnt == 1 else word}."],
                 [W(n, "counted all the objects"), W(n - cnt, "counted the other groups"), W(cnt + 1, "counted one twice"), W(cnt - 1 if cnt > 1 else cnt + 2, "missed one")],
                 FN("list_count", items=seq, want=want), qtype="procedural")
 
