@@ -1,0 +1,413 @@
+{
+"skillFeedback": {
+"add-subtract-10-skill-01": {
+"skill": "Adding within 10",
+"target": "I can add two numbers with a sum up to 10.",
+"standards": [
+"1.OA.C.6"
+],
+"ifCorrect": "You can do this: can add two numbers with a sum up to 10.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Counting all objects again instead of counting on, and losing track. Try this: Put the bigger number in your head and count on the smaller number."
+},
+"add-subtract-10-skill-02": {
+"skill": "Subtracting within 10",
+"target": "I can subtract numbers within 10.",
+"standards": [
+"1.OA.C.6"
+],
+"ifCorrect": "You can do this: can subtract numbers within 10.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Subtracting the larger number from the smaller one, or adding instead of taking away. Try this: Act it out with counters: show the whole, take some away, count what is left."
+},
+"add-subtract-10-skill-03": {
+"skill": "Making Ten",
+"target": "I can find the number that goes with another number to make 10.",
+"standards": [
+"1.OA.C.6"
+],
+"ifCorrect": "You can do this: can find the number that goes with another number to make 10.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Thinking 6 and 3 make ten because the ten frame looks almost full. Try this: Fill a ten frame and count the empty boxes."
+},
+"add-subtract-10-skill-04": {
+"skill": "Number Partners within 10",
+"target": "I can break a number up to 10 into two parts and find a missing part.",
+"standards": [
+"1.OA.C.6",
+"1.OA.B.4"
+],
+"ifCorrect": "You can do this: can break a number up to 10 into two parts and find a missing part.",
+"ifMissed": "Practice this skill again. Watch for this mistake: Adding the whole and the part instead of finding the missing part. Try this: Use a part-part-whole mat: cover one part and ask what is hiding."
+}
+},
+"questions": {
+"m1c-at-s01-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "3 + 1 = 4.",
+"distractors": {
+"3": "counted on and included the first number",
+"5": "counted one too many",
+"2": "subtracted instead of adding",
+"6": "made a counting mistake"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s01-cp2-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "4 + 2 = 6 crayons.",
+"distractors": {
+"5 crayons": "counted on and included the first number",
+"7 crayons": "counted one too many",
+"2 crayons": "subtracted instead of adding",
+"4 crayons": "did not add the second number",
+"8 crayons": "made a counting mistake"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s01-cp1-001": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "4 + 3 = 7 crayons.",
+"distractors": {
+"6 crayons": "counted on and included the first number",
+"8 crayons": "counted one too many",
+"1 crayon": "subtracted instead of adding",
+"4 crayons": "did not add the second number",
+"9 crayons": "made a counting mistake"
+},
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-at-s01-cp1-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "8 + 2 = 10.",
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s01-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "2 + 7 = 9.",
+"distractors": {
+"8": "counted on and included the first number",
+"10": "counted one too many",
+"5": "subtracted instead of adding",
+"7": "did not add the second number",
+"11": "made a counting mistake"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s01-honors-002": {
+"questionType": "explain",
+"tags": [
+"reasoning"
+],
+"explanation": "8 + 1 = 9.",
+"distractors": {
+"8": "agreed with the wrong answer",
+"11": "made a counting mistake",
+"1": "wrote the number added",
+"7": "subtracted"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s02-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "4 − 1 = 3.",
+"distractors": {
+"4": "counted back and included the starting number",
+"5": "added instead of subtracting",
+"1": "gave the number taken away",
+"2": "counted back one too many"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s02-cp2-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "4 − 2 = 2.",
+"distractors": {
+"3": "counted back and included the starting number",
+"6": "added instead of subtracting",
+"1": "counted back one too many",
+"4": "did not take any away"
+},
+"diagram": "crossrow",
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-at-s02-cp1-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "10 − 2 = 8.",
+"distractors": {
+"9": "counted back and included the starting number",
+"12": "added instead of subtracting",
+"2": "gave the number taken away",
+"7": "counted back one too many",
+"10": "did not take any away"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s02-cp1-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "5 − 3 = 2.",
+"distractors": {
+"3": "counted back and included the starting number",
+"8": "added instead of subtracting",
+"1": "counted back one too many",
+"5": "did not take any away"
+},
+"diagram": "crossrow",
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-at-s02-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "7 − 4 = 3.",
+"distractors": {
+"4": "counted back and included the starting number",
+"11": "added instead of subtracting",
+"2": "counted back one too many",
+"7": "did not take any away"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s02-honors-002": {
+"questionType": "visual",
+"tags": [],
+"explanation": "7 − 5 = 2.",
+"distractors": {
+"3": "counted back and included the starting number",
+"12": "added instead of subtracting",
+"5": "gave the number taken away",
+"1": "counted back one too many",
+"7": "did not take any away"
+},
+"diagram": "crossrow",
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-at-s03-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "5 + 5 = 10.",
+"distractors": {
+"15": "added the numbers",
+"4": "counted one too few",
+"6": "counted on and included the first number"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s03-cp2-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "7 + 3 = 10, so 3 more stickers.",
+"distractors": {
+"17 stickers": "added the numbers",
+"7 stickers": "gave the number already there",
+"2 stickers": "counted one too few",
+"4 stickers": "counted one too many"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s03-cp1-001": {
+"questionType": "visual",
+"tags": [],
+"explanation": "4 + 6 = 10, so 6 more.",
+"distractors": {
+"4": "counted the counters, not the empty boxes",
+"10": "gave the total",
+"5": "counted one too few",
+"7": "counted one too many"
+},
+"diagram": "tenframe",
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-at-s03-cp1-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "3 + 7 = 10, so 7 more beads.",
+"distractors": {
+"13 beads": "added the numbers",
+"3 beads": "gave the number already there",
+"6 beads": "counted one too few",
+"8 beads": "counted one too many"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s03-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "3 + 7 = 10.",
+"distractors": {
+"13": "added the numbers",
+"3": "copied the number given",
+"6": "counted one too few",
+"8": "counted on and included the first number"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s03-honors-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "1 + 9 = 10, so 9 more blocks.",
+"distractors": {
+"11 blocks": "added the numbers",
+"1 block": "gave the number already there",
+"8 blocks": "counted one too few",
+"10 blocks": "counted one too many"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s04-cp2-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "2 + 1 = 3.",
+"distractors": {
+"5": "added the numbers",
+"3": "copied the total",
+"2": "counted one too many"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s04-cp2-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "2 + 2 = 4, so 2 are under the cup.",
+"distractors": {
+"6 beads": "added the numbers",
+"4 beads": "gave the total",
+"3 beads": "counted one too many"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s04-cp1-001": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "1 + 6 = 7, so 6 are under the cup.",
+"distractors": {
+"8 cups": "added the numbers",
+"1 cup": "counted the ones you can see",
+"7 cups": "gave the total"
+},
+"game": {
+"textMC": false,
+"numeric": false
+}
+},
+"m1c-at-s04-cp1-002": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "7 + 3 = 10.",
+"game": {
+"textMC": true,
+"numeric": false
+}
+},
+"m1c-at-s04-honors-001": {
+"questionType": "procedural",
+"tags": [],
+"explanation": "5 + 5 = 10.",
+"distractors": {
+"15": "added the numbers",
+"10": "copied the total",
+"6": "counted one too many"
+},
+"game": {
+"textMC": false,
+"numeric": true
+}
+},
+"m1c-at-s04-honors-002": {
+"questionType": "word-problem",
+"tags": [
+"modeling"
+],
+"explanation": "3 + 6 = 9, so 6 are under the cup.",
+"distractors": {
+"12 buttons": "added the numbers",
+"3 buttons": "counted the ones you can see",
+"9 buttons": "gave the total",
+"7 buttons": "counted one too many"
+},
+"game": {
+"textMC": true,
+"numeric": false
+}
+}
+}
+}

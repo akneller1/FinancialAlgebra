@@ -1,0 +1,537 @@
+{
+"m1c-dt-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "list_count",
+"items": [
+"blue",
+"blue",
+"red",
+"blue",
+"red",
+"red",
+"red"
+],
+"want": "blue"
+},
+"family": "s_sort"
+},
+"m1c-dt-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Birds": 6
+},
+"q": "value",
+"a": "Birds"
+},
+"family": "s_tally_count",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "",
+"cats": [
+"Birds"
+],
+"counts": [
+6
+]
+}
+}
+},
+"m1c-dt-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "list_count",
+"items": [
+"big",
+"small",
+"medium",
+"small",
+"big",
+"medium",
+"medium",
+"medium",
+"big",
+"big",
+"small",
+"small"
+],
+"want": "big"
+},
+"family": "s_sort"
+},
+"m1c-dt-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Votes": 12
+},
+"q": "value",
+"a": "Votes"
+},
+"family": "s_tally_count",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "",
+"cats": [
+"Votes"
+],
+"counts": [
+12
+]
+}
+}
+},
+"m1c-dt-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "list_count",
+"items": [
+"green",
+"green",
+"blue",
+"green",
+"red",
+"red",
+"blue",
+"green",
+"blue",
+"green",
+"red",
+"blue",
+"green",
+"red"
+],
+"want": "green"
+},
+"family": "s_sort"
+},
+"m1c-dt-s01-honors-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Cars": 16
+},
+"q": "value",
+"a": "Cars"
+},
+"family": "s_tally_count",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "",
+"cats": [
+"Cars"
+],
+"counts": [
+16
+]
+}
+}
+},
+"m1c-dt-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Circles": 7,
+"Squares": 5,
+"Triangles": 3
+},
+"q": "value",
+"a": "Squares"
+},
+"family": "g_value",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Shapes in a Bag",
+"cats": [
+"Circles",
+"Squares",
+"Triangles"
+],
+"symbols": [
+7,
+5,
+3
+],
+"key": 1,
+"icon": "star",
+"unit": ""
+}
+}
+},
+"m1c-dt-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Soccer": 2,
+"Tag": 7,
+"Swings": 5
+},
+"q": "least"
+},
+"family": "g_most_mc",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Recess Games",
+"cats": [
+"Soccer",
+"Tag",
+"Swings"
+],
+"counts": [
+2,
+7,
+5
+]
+}
+}
+},
+"m1c-dt-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Pizza": 7,
+"Tacos": 14,
+"Soup": 8
+},
+"q": "value",
+"a": "Tacos"
+},
+"family": "g_value",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Lunch Choice",
+"Number"
+],
+"rows": [
+[
+"Pizza",
+7
+],
+[
+"Tacos",
+14
+],
+[
+"Soup",
+8
+]
+]
+}
+}
+},
+"m1c-dt-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Dogs": 8,
+"Cats": 7,
+"Fish": 5
+},
+"q": "value",
+"a": "Cats"
+},
+"family": "g_value_mc",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Our Pets",
+"Number"
+],
+"rows": [
+[
+"Dogs",
+8
+],
+[
+"Cats",
+7
+],
+[
+"Fish",
+5
+]
+]
+}
+}
+},
+"m1c-dt-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Popcorn": 12,
+"Pretzels": 13,
+"Apples": 8
+},
+"q": "value",
+"a": "Pretzels"
+},
+"family": "g_value",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Snack",
+"cats": [
+"Popcorn",
+"Pretzels",
+"Apples"
+],
+"symbols": [
+12,
+13,
+8
+],
+"key": 1,
+"icon": "star",
+"unit": ""
+}
+}
+},
+"m1c-dt-s02-honors-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Red": 13,
+"Blue": 15,
+"Green": 6
+},
+"q": "value",
+"a": "Red"
+},
+"family": "g_value_mc",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Favorite Color",
+"Number"
+],
+"rows": [
+[
+"Red",
+13
+],
+[
+"Blue",
+15
+],
+[
+"Green",
+6
+]
+]
+}
+}
+},
+"m1c-dt-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Popcorn": 3,
+"Pretzels": 6,
+"Apples": 7
+},
+"q": "total"
+},
+"family": "q_total",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Snack",
+"cats": [
+"Popcorn",
+"Pretzels",
+"Apples"
+],
+"symbols": [
+3,
+6,
+7
+],
+"key": 1,
+"icon": "star",
+"unit": ""
+}
+}
+},
+"m1c-dt-s03-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Red": 8,
+"Blue": 4,
+"Green": 5
+},
+"q": "diff",
+"a": "Red",
+"b": "Blue"
+},
+"family": "q_diff",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Favorite Color",
+"cats": [
+"Red",
+"Blue",
+"Green"
+],
+"counts": [
+8,
+4,
+5
+]
+}
+}
+},
+"m1c-dt-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Apple": 9,
+"Banana": 7,
+"Grape": 8
+},
+"q": "diff",
+"a": "Grape",
+"b": "Banana"
+},
+"family": "q_diff",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Fruit",
+"cats": [
+"Apple",
+"Banana",
+"Grape"
+],
+"symbols": [
+9,
+7,
+8
+],
+"key": 1,
+"icon": "star",
+"unit": ""
+}
+}
+},
+"m1c-dt-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Circles": 7,
+"Squares": 4,
+"Triangles": 10
+},
+"q": "sum",
+"a": "Triangles",
+"b": "Squares"
+},
+"family": "q_two",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Shapes in a Bag",
+"cats": [
+"Circles",
+"Squares",
+"Triangles"
+],
+"symbols": [
+7,
+4,
+10
+],
+"key": 1,
+"icon": "star",
+"unit": ""
+}
+}
+},
+"m1c-dt-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Popcorn": 16,
+"Pretzels": 9,
+"Apples": 6
+},
+"q": "total"
+},
+"family": "q_total",
+"diagram": {
+"kind": "tally",
+"data": {
+"title": "Favorite Snack",
+"cats": [
+"Popcorn",
+"Pretzels",
+"Apples"
+],
+"counts": [
+16,
+9,
+6
+]
+}
+}
+},
+"m1c-dt-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "data_q",
+"counts": {
+"Spring": 15,
+"Summer": 11,
+"Winter": 10
+},
+"q": "diff",
+"a": "Summer",
+"b": "Winter"
+},
+"family": "q_diff",
+"diagram": {
+"kind": "picgraph",
+"data": {
+"title": "Favorite Season",
+"cats": [
+"Spring",
+"Summer",
+"Winter"
+],
+"symbols": [
+15,
+11,
+10
+],
+"key": 1,
+"icon": "star",
+"unit": ""
+}
+}
+}
+}

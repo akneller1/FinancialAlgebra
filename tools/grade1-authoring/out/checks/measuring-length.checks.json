@@ -1,0 +1,839 @@
+{
+"m1c-ml-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Crayon": 10,
+"Yarn": 6
+},
+"want": "shortest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 6,
+"color": "orange"
+}
+]
+}
+}
+},
+"m1c-ml-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Pencil": 10,
+"Snake": 12,
+"Rope": 8
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Snake",
+"len": 12,
+"color": "orange"
+},
+{
+"label": "Rope",
+"len": 8,
+"color": "green"
+}
+]
+}
+}
+},
+"m1c-ml-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Brush": 8,
+"Straw": 10,
+"Spoon": 5
+},
+"want": "shortest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Straw",
+"len": 10,
+"color": "orange"
+},
+{
+"label": "Spoon",
+"len": 5,
+"color": "green"
+}
+]
+}
+}
+},
+"m1c-ml-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Stick": 12,
+"Marker": 11,
+"Snake": 6
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Stick",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Marker",
+"len": 11,
+"color": "orange"
+},
+{
+"label": "Snake",
+"len": 6,
+"color": "green"
+}
+]
+}
+}
+},
+"m1c-ml-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Straw": 9,
+"Brush": 11,
+"Crayon": 8
+},
+"want": "shortest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Brush",
+"len": 11,
+"color": "orange"
+},
+{
+"label": "Crayon",
+"len": 8,
+"color": "green"
+}
+]
+}
+}
+},
+"m1c-ml-s01-honors-002": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Straw": 12,
+"Brush": 8,
+"Crayon": 7
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Brush",
+"len": 8,
+"color": "orange"
+},
+{
+"label": "Crayon",
+"len": 7,
+"color": "green"
+}
+]
+}
+}
+},
+"m1c-ml-s02-cp2-001": {
+"q": {
+"k": "key",
+"accept": [
+"The door"
+]
+},
+"family": "in_string"
+},
+"m1c-ml-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Mia",
+"Tom"
+],
+[
+"Tom",
+"Max"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1c-ml-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"board",
+"ribbon"
+],
+[
+"ribbon",
+"book"
+]
+],
+"want": "cmp",
+"pair": [
+"board",
+"book"
+]
+},
+"family": "in_cmp"
+},
+"m1c-ml-s02-cp1-002": {
+"q": {
+"k": "key",
+"accept": [
+"The couch"
+]
+},
+"family": "in_string"
+},
+"m1c-ml-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"snake",
+"stick"
+],
+[
+"stick",
+"worm"
+]
+],
+"want": "cmp",
+"pair": [
+"snake",
+"worm"
+]
+},
+"family": "in_cmp"
+},
+"m1c-ml-s02-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"The rug"
+]
+},
+"family": "in_string"
+},
+"m1c-ml-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 3,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 3,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+]
+],
+"unit": "cube",
+"label": "Ribbon"
+}
+}
+},
+"m1c-ml-s03-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ribbon": 6,
+"Straw": 11
+},
+"item": "Straw",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 6,
+"color": "blue"
+},
+{
+"label": "Straw",
+"len": 11,
+"color": "orange"
+}
+],
+"grid": true
+}
+}
+},
+"m1c-ml-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "clip",
+"label": "Ruler"
+}
+}
+},
+"m1c-ml-s03-cp1-002": {
+"q": {
+"k": "expr",
+"e": "8-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1c-ml-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "clip",
+"label": "Spoon"
+}
+}
+},
+"m1c-ml-s03-honors-002": {
+"q": {
+"k": "expr",
+"e": "8-5",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1c-ml-s04-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 4,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+1.6,
+1
+],
+[
+2.6,
+1
+],
+[
+3.6,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 4,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+1.6,
+1
+],
+[
+2.6,
+1
+],
+[
+3.6,
+1
+]
+],
+"unit": "cube",
+"label": "Brush",
+"stagger": true
+}
+}
+},
+"m1c-ml-s04-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ribbon": 4
+},
+"item": "Ribbon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 4,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1c-ml-s04-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+]
+],
+"unit": "cube",
+"label": "Marker",
+"stagger": false
+}
+}
+},
+"m1c-ml-s04-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Snake": 8
+},
+"item": "Snake",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 8,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1c-ml-s04-honors-001": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+]
+],
+"unit": "cube",
+"label": "Ribbon",
+"stagger": false
+}
+}
+},
+"m1c-ml-s04-honors-002": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 7
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+}
+}

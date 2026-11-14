@@ -1,0 +1,9976 @@
+{
+"m1-ml-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Yarn": 3,
+"Rope": 5,
+"Ruler": 10
+},
+"want": "shortest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Rope",
+"len": 5,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 10,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Rope": 9,
+"Marker": 4,
+"Yarn": 8
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Marker",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 8,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-003": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-004": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Rope",
+"Marker"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Rope",
+"Marker"
+]
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp2-005": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Crayon": 7,
+"Stick": 11
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 7,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 11,
+"color": "orange"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Yarn": 9,
+"Snake": 3,
+"Stick": 7
+},
+"want": "shortest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Snake",
+"len": 3,
+"color": "orange"
+},
+{
+"label": "Stick",
+"len": 7,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-007": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Stick": 12,
+"Snake": 11,
+"Yarn": 4
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Stick",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Snake",
+"len": 11,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 4,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-008": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Stick",
+"Snake"
+]
+],
+"want": "cmp",
+"pair": [
+"Stick",
+"Snake"
+]
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp2-010": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Crayon": 4,
+"Stick": 8
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 4,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 8,
+"color": "orange"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Rope": 12,
+"Snake": 4,
+"Marker": 3
+},
+"want": "longest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Snake",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 3,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-012": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Stick": 12,
+"Ribbon": 9,
+"Yarn": 8
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Stick",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 8,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-013": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ruler",
+"Marker"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Ruler",
+"Marker"
+]
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Snake": 8,
+"Marker": 3
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Marker",
+"len": 3,
+"color": "orange"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-016": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Ribbon": 6,
+"Spoon": 5,
+"Crayon": 9
+},
+"want": "shortest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 6,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 5,
+"color": "orange"
+},
+{
+"label": "Crayon",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-017": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Brush": 10,
+"Ribbon": 8,
+"Straw": 9
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 8,
+"color": "orange"
+},
+{
+"label": "Straw",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-018": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Snake",
+"Crayon"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Snake",
+"Crayon"
+]
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Marker": 12,
+"Spoon": 6
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 6,
+"color": "orange"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Marker": 12,
+"Spoon": 9,
+"Stick": 10
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Stick",
+"len": 10,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-022": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-023": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-024": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Stick": 8,
+"Spoon": 6,
+"Yarn": 12
+},
+"want": "longest first"
+},
+"family": "lo_order_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Stick",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 6,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 12,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Snake",
+"Straw"
+]
+],
+"want": "cmp",
+"pair": [
+"Snake",
+"Straw"
+]
+},
+"family": "lo_text_error"
+},
+"m1-ml-s01-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Ruler": 3,
+"Yarn": 6
+},
+"want": "longest"
+},
+"family": "lo_extreme_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 6,
+"color": "orange"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp2-028": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"The yarn is longer than the crayon. Which is longer? → Yarn": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Yarn",
+"Crayon"
+]
+],
+"want": "cmp",
+"pair": [
+"Yarn",
+"Crayon"
+]
+},
+"shown": "Yarn"
+},
+"The pencil is longer than the marker. Which is shorter? → Pencil": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Pencil",
+"Marker"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Pencil",
+"Marker"
+]
+},
+"shown": "Pencil"
+},
+"The rope is longer than the spoon. Which is shorter? → Spoon": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Rope",
+"Spoon"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Rope",
+"Spoon"
+]
+},
+"shown": "Spoon"
+},
+"The pencil is longer than the crayon. Which is longer? → Crayon": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Pencil",
+"Crayon"
+]
+],
+"want": "cmp",
+"pair": [
+"Pencil",
+"Crayon"
+]
+},
+"shown": "Crayon"
+}
+}
+},
+"family": "lo_text_sel"
+},
+"m1-ml-s01-cp2-030": {
+"q": null,
+"family": "lo_text_open",
+"parts": [
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Yarn",
+"Ruler"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Yarn",
+"Ruler"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ribbon",
+"Marker"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Ribbon",
+"Marker"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Crayon",
+"Rope"
+]
+],
+"want": "cmp_short",
+"pair": [
+"Crayon",
+"Rope"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Crayon",
+"Rope"
+]
+],
+"want": "cmp",
+"pair": [
+"Crayon",
+"Rope"
+]
+}
+]
+},
+"m1-ml-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Brush": 6,
+"Yarn": 7,
+"Spoon": 9
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 6,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Spoon",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Straw": 11,
+"Pencil": 7,
+"Ribbon": 10
+},
+"want": "shortest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 11,
+"color": "blue"
+},
+{
+"label": "Pencil",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Ribbon",
+"len": 10,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-003": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Ribbon": 12,
+"Stick": 5,
+"Crayon": 4
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 5,
+"color": "orange"
+},
+{
+"label": "Crayon",
+"len": 4,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-004": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Yarn",
+"Snake"
+],
+[
+"Yarn",
+"Brush"
+]
+],
+"want": "longest"
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Yarn": 8,
+"Rope": 6,
+"Marker": 12
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Rope",
+"len": 6,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 12,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Crayon": 12,
+"Spoon": 9,
+"Marker": 10
+},
+"want": "longest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 10,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Crayon": 11,
+"Marker": 8,
+"Spoon": 7
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 11,
+"color": "blue"
+},
+{
+"label": "Marker",
+"len": 8,
+"color": "orange"
+},
+{
+"label": "Spoon",
+"len": 7,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-009": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-010": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Straw",
+"Yarn"
+],
+[
+"Straw",
+"Ruler"
+]
+],
+"want": "longest"
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Marker": 3,
+"Yarn": 5,
+"Ruler": 9
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 5,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-012": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Snake": 3,
+"Marker": 4,
+"Stick": 10
+},
+"want": "longest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Marker",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Stick",
+"len": 10,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Crayon": 12,
+"Straw": 5,
+"Brush": 7
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Straw",
+"len": 5,
+"color": "orange"
+},
+{
+"label": "Brush",
+"len": 7,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-014": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-015": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Marker",
+"Crayon"
+],
+[
+"Marker",
+"Rope"
+]
+],
+"want": "longest"
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Spoon": 4,
+"Stick": 3,
+"Ruler": 9
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 4,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 3,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Ribbon": 5,
+"Marker": 12,
+"Ruler": 7
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 5,
+"color": "blue"
+},
+{
+"label": "Marker",
+"len": 12,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 7,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-018": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Marker": 5,
+"Yarn": 7,
+"Straw": 9
+},
+"want": "longest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 5,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Straw",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-019": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Straw",
+"Ribbon"
+],
+[
+"Straw",
+"Spoon"
+]
+],
+"want": "longest"
+},
+"family": "lo_text"
+},
+"m1-ml-s01-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Ribbon": 12,
+"Spoon": 5,
+"Yarn": 7
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 5,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 7,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-022": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-023": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-024": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Brush": 3,
+"Spoon": 7,
+"Ribbon": 9
+},
+"want": "shortest"
+},
+"family": "lo_extreme_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Ribbon",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Pencil": 8,
+"Stick": 4,
+"Rope": 3
+},
+"want": "shortest first"
+},
+"family": "lo_order_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Rope",
+"len": 3,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-027": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Crayon": 6,
+"Snake": 7,
+"Straw": 5
+},
+"want": "longest"
+},
+"family": "lo_extreme_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 6,
+"color": "blue"
+},
+{
+"label": "Snake",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Straw",
+"len": 5,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-cp1-028": {
+"q": {
+"k": "key",
+"accept": [
+"Line up the ends at the same starting line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"The brush is longer than the spoon. The brush is longer than the ribbon. Which is the longest? → Spoon": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Brush",
+"Spoon"
+],
+[
+"Brush",
+"Ribbon"
+]
+],
+"want": "longest"
+},
+"shown": "Spoon"
+},
+"The ruler is longer than the pencil. The ruler is longer than the marker. Which is the longest? → Ruler": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ruler",
+"Pencil"
+],
+[
+"Ruler",
+"Marker"
+]
+],
+"want": "longest"
+},
+"shown": "Ruler"
+},
+"The ruler is longer than the ribbon. The ruler is longer than the snake. Which is the longest? → Ribbon": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ruler",
+"Ribbon"
+],
+[
+"Ruler",
+"Snake"
+]
+],
+"want": "longest"
+},
+"shown": "Ribbon"
+},
+"The ruler is longer than the rope. The ruler is longer than the snake. Which is the longest? → Ruler": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ruler",
+"Rope"
+],
+[
+"Ruler",
+"Snake"
+]
+],
+"want": "longest"
+},
+"shown": "Ruler"
+}
+}
+},
+"family": "lo_text_sel"
+},
+"m1-ml-s01-cp1-030": {
+"q": null,
+"family": "lo_text_open",
+"parts": [
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Snake",
+"Spoon"
+],
+[
+"Snake",
+"Marker"
+]
+],
+"want": "longest"
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ruler",
+"Spoon"
+],
+[
+"Ruler",
+"Crayon"
+]
+],
+"want": "longest"
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Spoon",
+"Straw"
+],
+[
+"Spoon",
+"Brush"
+]
+],
+"want": "longest"
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Pencil",
+"Stick"
+],
+[
+"Pencil",
+"Marker"
+]
+],
+"want": "longest"
+}
+]
+},
+"m1-ml-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Pencil": 3,
+"Brush": 6,
+"Marker": 4
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Brush",
+"len": 6,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 4,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-003": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Spoon",
+"Yarn"
+],
+[
+"Straw",
+"Spoon"
+]
+],
+"want": "shortest"
+},
+"family": "lo_text"
+},
+"m1-ml-s01-honors-004": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Ruler": 8,
+"Straw": 9,
+"Brush": 6
+},
+"want": "shortest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Straw",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Brush",
+"len": 6,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-005": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Ruler": 12,
+"Stick": 7,
+"Ribbon": 6
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Ribbon",
+"len": 6,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-006": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Ruler": 6,
+"Marker": 10,
+"Yarn": 9
+},
+"want": "shortest"
+},
+"family": "lo_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 6,
+"color": "blue",
+"start": 1
+},
+{
+"label": "Marker",
+"len": 10,
+"color": "orange",
+"start": 2
+},
+{
+"label": "Yarn",
+"len": 9,
+"color": "green",
+"start": 3
+}
+],
+"grid": true,
+"line": false
+}
+}
+},
+"m1-ml-s01-honors-007": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-008": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Spoon",
+"Rope"
+],
+[
+"Snake",
+"Spoon"
+]
+],
+"want": "longest"
+},
+"family": "lo_text"
+},
+"m1-ml-s01-honors-009": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Straw": 4,
+"Stick": 12,
+"Marker": 5
+},
+"want": "longest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 4,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 12,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 5,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-010": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Pencil": 12,
+"Crayon": 11,
+"Yarn": 8
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Crayon",
+"len": 11,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 8,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-011": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Spoon": 8,
+"Pencil": 7,
+"Straw": 11
+},
+"want": "shortest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Pencil",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Straw",
+"len": 11,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-012": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Crayon": 12,
+"Rope": 9,
+"Ribbon": 8
+},
+"want": "shortest"
+},
+"family": "lo_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 12,
+"color": "blue",
+"start": 2
+},
+{
+"label": "Rope",
+"len": 9,
+"color": "orange",
+"start": 1
+},
+{
+"label": "Ribbon",
+"len": 8,
+"color": "green",
+"start": 3
+}
+],
+"grid": true,
+"line": false
+}
+}
+},
+"m1-ml-s01-honors-013": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-014": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Straw",
+"Brush"
+],
+[
+"Pencil",
+"Straw"
+]
+],
+"want": "shortest"
+},
+"family": "lo_text"
+},
+"m1-ml-s01-honors-015": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Straw": 10,
+"Ribbon": 9,
+"Marker": 5
+},
+"want": "longest first"
+},
+"family": "lo_order",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 5,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-016": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Ribbon": 10,
+"Yarn": 8,
+"Marker": 11
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 8,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 11,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-017": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Crayon": 10,
+"Marker": 5,
+"Rope": 9
+},
+"want": "shortest"
+},
+"family": "lo_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 10,
+"color": "blue",
+"start": 0
+},
+{
+"label": "Marker",
+"len": 5,
+"color": "orange",
+"start": 2
+},
+{
+"label": "Rope",
+"len": 9,
+"color": "green",
+"start": 1
+}
+],
+"grid": true,
+"line": false
+}
+}
+},
+"m1-ml-s01-honors-018": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Ruler": 5,
+"Brush": 12,
+"Spoon": 11
+},
+"want": "longest"
+},
+"family": "lo_extreme",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 5,
+"color": "blue"
+},
+{
+"label": "Brush",
+"len": 12,
+"color": "orange"
+},
+{
+"label": "Spoon",
+"len": 11,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-019": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-020": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Crayon": 10,
+"Stick": 11,
+"Marker": 5
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 11,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 5,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-021": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-022": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Marker": 8,
+"Straw": 4,
+"Stick": 9
+},
+"want": "shortest first"
+},
+"family": "lo_order_mc",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Straw",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Stick",
+"len": 9,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-023": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-024": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-025": {
+"q": {
+"k": "fn",
+"fn": "len_pick",
+"lens": {
+"Pencil": 3,
+"Ribbon": 9,
+"Rope": 8
+},
+"want": "longest"
+},
+"family": "lo_extreme_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Rope",
+"len": 8,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-026": {
+"q": {
+"k": "fn",
+"fn": "len_order",
+"lens": {
+"Pencil": 12,
+"Brush": 9,
+"Yarn": 10
+},
+"want": "longest first"
+},
+"family": "lo_order_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Brush",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 10,
+"color": "green"
+}
+]
+}
+}
+},
+"m1-ml-s01-honors-027": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Pencil",
+"Crayon"
+],
+[
+"Rope",
+"Pencil"
+]
+],
+"want": "shortest"
+},
+"family": "lo_text_error"
+},
+"m1-ml-s01-honors-028": {
+"q": {
+"k": "key",
+"accept": [
+"No. Their ends do not start at the same line."
+]
+},
+"family": "lo_line_up"
+},
+"m1-ml-s01-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"The rope is longer than the marker. The spoon is longer than the rope. Which is the shortest? → Spoon": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Rope",
+"Marker"
+],
+[
+"Spoon",
+"Rope"
+]
+],
+"want": "shortest"
+},
+"shown": "Spoon"
+},
+"The stick is longer than the yarn. The ruler is longer than the stick. Which is the shortest? → Stick": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Stick",
+"Yarn"
+],
+[
+"Ruler",
+"Stick"
+]
+],
+"want": "shortest"
+},
+"shown": "Stick"
+},
+"The snake is longer than the spoon. The ruler is longer than the snake. Which is the longest? → Ruler": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Snake",
+"Spoon"
+],
+[
+"Ruler",
+"Snake"
+]
+],
+"want": "longest"
+},
+"shown": "Ruler"
+},
+"The rope is longer than the brush. The ruler is longer than the rope. Which is the longest? → Ruler": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Rope",
+"Brush"
+],
+[
+"Ruler",
+"Rope"
+]
+],
+"want": "longest"
+},
+"shown": "Ruler"
+}
+}
+},
+"family": "lo_text_sel"
+},
+"m1-ml-s01-honors-030": {
+"q": null,
+"family": "lo_text_open",
+"parts": [
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Yarn",
+"Pencil"
+],
+[
+"Ribbon",
+"Yarn"
+]
+],
+"want": "shortest"
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ruler",
+"Crayon"
+],
+[
+"Brush",
+"Ruler"
+]
+],
+"want": "shortest"
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ribbon",
+"Straw"
+],
+[
+"Yarn",
+"Ribbon"
+]
+],
+"want": "longest"
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Straw",
+"Snake"
+],
+[
+"Stick",
+"Straw"
+]
+],
+"want": "longest"
+}
+]
+},
+"m1-ml-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"couch",
+"yarn"
+],
+[
+"yarn",
+"chair"
+]
+],
+"pair": [
+"couch",
+"chair"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp2-002": {
+"q": {
+"k": "key",
+"accept": [
+"The hall"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp2-003": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Ana"
+],
+[
+"Ana",
+"Ben"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp2-004": {
+"q": {
+"k": "key",
+"accept": [
+"snake, stick, worm"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp2-005": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the ribbon."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"door",
+"rope"
+],
+[
+"rope",
+"bed"
+]
+],
+"pair": [
+"door",
+"bed"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp2-007": {
+"q": {
+"k": "key",
+"accept": [
+"The slide"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp2-008": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Zoe"
+],
+[
+"Zoe",
+"Mia"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp2-009": {
+"q": {
+"k": "key",
+"accept": [
+"train, bus, van"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp2-010": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the ribbon."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp2-011": {
+"q": {
+"k": "key",
+"accept": [
+"The snake"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp2-012": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Max"
+],
+[
+"Max",
+"Ben"
+]
+],
+"want": "shortest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp2-013": {
+"q": {
+"k": "key",
+"accept": [
+"hall, rope, room"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp2-014": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the rope."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"table",
+"tape"
+],
+[
+"tape",
+"box"
+]
+],
+"pair": [
+"table",
+"box"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp2-016": {
+"q": {
+"k": "key",
+"accept": [
+"The rug"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp2-017": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Zoe",
+"Ana"
+],
+[
+"Ana",
+"Sam"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp2-018": {
+"q": {
+"k": "key",
+"accept": [
+"slide, rope, bench"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp2-019": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the rope."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"bus",
+"truck"
+],
+[
+"truck",
+"car"
+]
+],
+"pair": [
+"bus",
+"car"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Tom"
+],
+[
+"Tom",
+"Ana"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp2-022": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"hall",
+"rope"
+],
+[
+"rope",
+"room"
+]
+],
+"pair": [
+"hall",
+"room"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp2-023": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Ana"
+],
+[
+"Ana",
+"Ben"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"snake",
+"stick"
+],
+[
+"stick",
+"worm"
+]
+],
+"pair": [
+"snake",
+"worm"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"board",
+"ribbon"
+],
+[
+"ribbon",
+"book"
+]
+],
+"pair": [
+"board",
+"book"
+]
+},
+"family": "in_cmp_error"
+},
+"m1-ml-s02-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Tom"
+],
+[
+"Tom",
+"Zoe"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme_error"
+},
+"m1-ml-s02-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"snake",
+"stick"
+],
+[
+"stick",
+"worm"
+]
+],
+"pair": [
+"snake",
+"worm"
+]
+},
+"family": "in_cmp_error"
+},
+"m1-ml-s02-cp2-028": {
+"q": {
+"k": "key",
+"accept": [
+"The table"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Ben's worm is longer than Tom's. Tom's worm is longer than Zoe's. Whose worm is the longest? → Tom": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ben",
+"Tom"
+],
+[
+"Tom",
+"Zoe"
+]
+],
+"want": "longest"
+},
+"shown": "Tom"
+},
+"Ana's train is longer than Ben's. Ben's train is longer than Mia's. Whose train is the longest? → Ana": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ana",
+"Ben"
+],
+[
+"Ben",
+"Mia"
+]
+],
+"want": "longest"
+},
+"shown": "Ana"
+},
+"Sam's snake is longer than Zoe's. Zoe's snake is longer than Max's. Whose snake is the longest? → Max": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Zoe"
+],
+[
+"Zoe",
+"Max"
+]
+],
+"want": "longest"
+},
+"shown": "Max"
+},
+"Kim's train is longer than Tom's. Tom's train is longer than Ana's. Whose train is the longest? → Kim": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Tom"
+],
+[
+"Tom",
+"Ana"
+]
+],
+"want": "longest"
+},
+"shown": "Kim"
+}
+}
+},
+"family": "in_extreme_sel"
+},
+"m1-ml-s02-cp2-030": {
+"q": null,
+"family": "in_cmp_open",
+"parts": [
+{
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"hall",
+"rope"
+],
+[
+"rope",
+"room"
+]
+],
+"pair": [
+"hall",
+"room"
+]
+},
+{
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"train",
+"bus"
+],
+[
+"bus",
+"van"
+]
+],
+"pair": [
+"train",
+"van"
+]
+},
+{
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"table",
+"tape"
+],
+[
+"tape",
+"box"
+]
+],
+"pair": [
+"table",
+"box"
+]
+},
+{
+"k": "fn",
+"fn": "indirect_word",
+"facts": [
+[
+"couch",
+"yarn"
+],
+[
+"yarn",
+"chair"
+]
+],
+"pair": [
+"couch",
+"chair"
+]
+}
+]
+},
+"m1-ml-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"train",
+"bus"
+],
+[
+"bus",
+"van"
+]
+],
+"want": "cmp",
+"pair": [
+"train",
+"van"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp1-002": {
+"q": {
+"k": "key",
+"accept": [
+"The bus"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp1-003": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Mia",
+"Ana"
+],
+[
+"Ben",
+"Mia"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp1-004": {
+"q": {
+"k": "key",
+"accept": [
+"bus, truck, car"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp1-005": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the rope."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"table",
+"tape"
+],
+[
+"tape",
+"box"
+]
+],
+"want": "cmp",
+"pair": [
+"table",
+"box"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp1-007": {
+"q": {
+"k": "key",
+"accept": [
+"The door"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Ben"
+],
+[
+"Max",
+"Kim"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp1-009": {
+"q": {
+"k": "key",
+"accept": [
+"table, tape, box"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp1-010": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the ribbon."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"hall",
+"rope"
+],
+[
+"rope",
+"room"
+]
+],
+"want": "cmp",
+"pair": [
+"hall",
+"room"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp1-012": {
+"q": {
+"k": "key",
+"accept": [
+"The hall"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Mia"
+],
+[
+"Tom",
+"Sam"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp1-014": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the tape."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp1-015": {
+"q": {
+"k": "key",
+"accept": [
+"board, ribbon, book"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"couch",
+"yarn"
+],
+[
+"yarn",
+"chair"
+]
+],
+"want": "cmp",
+"pair": [
+"couch",
+"chair"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp1-017": {
+"q": {
+"k": "key",
+"accept": [
+"The bus"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp1-018": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Ana"
+],
+[
+"Zoe",
+"Sam"
+]
+],
+"want": "shortest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp1-019": {
+"q": {
+"k": "key",
+"accept": [
+"Compare each one to the rope."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-cp1-020": {
+"q": {
+"k": "key",
+"accept": [
+"rug, string, desk"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"bus",
+"truck"
+],
+[
+"truck",
+"car"
+]
+],
+"want": "cmp",
+"pair": [
+"bus",
+"car"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp1-022": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Zoe"
+],
+[
+"Sam",
+"Kim"
+]
+],
+"want": "shortest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp1-023": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"slide",
+"rope"
+],
+[
+"rope",
+"bench"
+]
+],
+"want": "cmp",
+"pair": [
+"slide",
+"bench"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Tom"
+],
+[
+"Sam",
+"Kim"
+]
+],
+"want": "shortest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"slide",
+"rope"
+],
+[
+"rope",
+"bench"
+]
+],
+"want": "cmp",
+"pair": [
+"slide",
+"bench"
+]
+},
+"family": "in_cmp_error"
+},
+"m1-ml-s02-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ben",
+"Zoe"
+],
+[
+"Sam",
+"Ben"
+]
+],
+"want": "shortest"
+},
+"family": "in_extreme_error"
+},
+"m1-ml-s02-cp1-027": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"bus",
+"truck"
+],
+[
+"truck",
+"car"
+]
+],
+"want": "cmp",
+"pair": [
+"bus",
+"car"
+]
+},
+"family": "in_cmp_error"
+},
+"m1-ml-s02-cp1-028": {
+"q": {
+"k": "key",
+"accept": [
+"The board"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Ben's worm is longer than Zoe's. Sam's worm is longer than Ben's. Whose worm is the shortest? → Zoe": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ben",
+"Zoe"
+],
+[
+"Sam",
+"Ben"
+]
+],
+"want": "shortest"
+},
+"shown": "Zoe"
+},
+"Sam's train is longer than Zoe's. Ben's train is longer than Sam's. Whose train is the longest? → Sam": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Zoe"
+],
+[
+"Ben",
+"Sam"
+]
+],
+"want": "longest"
+},
+"shown": "Sam"
+},
+"Zoe's train is longer than Kim's. Mia's train is longer than Zoe's. Whose train is the longest? → Zoe": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Zoe",
+"Kim"
+],
+[
+"Mia",
+"Zoe"
+]
+],
+"want": "longest"
+},
+"shown": "Zoe"
+},
+"Ben's train is longer than Zoe's. Sam's train is longer than Ben's. Whose train is the longest? → Sam": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ben",
+"Zoe"
+],
+[
+"Sam",
+"Ben"
+]
+],
+"want": "longest"
+},
+"shown": "Sam"
+}
+}
+},
+"family": "in_extreme_sel"
+},
+"m1-ml-s02-cp1-030": {
+"q": null,
+"family": "in_cmp_open",
+"parts": [
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"hall",
+"rope"
+],
+[
+"rope",
+"room"
+]
+],
+"want": "cmp",
+"pair": [
+"hall",
+"room"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"door",
+"rope"
+],
+[
+"rope",
+"bed"
+]
+],
+"want": "cmp",
+"pair": [
+"door",
+"bed"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"slide",
+"rope"
+],
+[
+"rope",
+"bench"
+]
+],
+"want": "cmp",
+"pair": [
+"slide",
+"bench"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"snake",
+"stick"
+],
+[
+"stick",
+"worm"
+]
+],
+"want": "cmp",
+"pair": [
+"snake",
+"worm"
+]
+}
+]
+},
+"m1-ml-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"hall",
+"rope"
+],
+[
+"rope",
+"room"
+]
+],
+"want": "cmp",
+"pair": [
+"hall",
+"room"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"The table"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-honors-003": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Kim",
+"Max"
+],
+[
+"Max",
+"Zoe"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-honors-004": {
+"q": {
+"k": "key",
+"accept": [
+"The rug, because the string fits along the desk with extra, and the rug is longer than the string."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-honors-005": {
+"q": {
+"k": "key",
+"accept": [
+"door, rope, bed"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-honors-006": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"train",
+"bus"
+],
+[
+"bus",
+"van"
+]
+],
+"want": "cmp",
+"pair": [
+"train",
+"van"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-honors-007": {
+"q": {
+"k": "key",
+"accept": [
+"The bus"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-honors-008": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Mia",
+"Tom"
+],
+[
+"Tom",
+"Kim"
+]
+],
+"want": "shortest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-honors-009": {
+"q": {
+"k": "key",
+"accept": [
+"The hall, because the rope fits along the room with extra, and the hall is longer than the rope."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-honors-010": {
+"q": {
+"k": "key",
+"accept": [
+"couch, yarn, chair"
+]
+},
+"family": "in_order"
+},
+"m1-ml-s02-honors-011": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"couch",
+"yarn"
+],
+[
+"yarn",
+"chair"
+]
+],
+"want": "cmp",
+"pair": [
+"couch",
+"chair"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-honors-012": {
+"q": {
+"k": "key",
+"accept": [
+"The snake"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-honors-013": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Ben"
+],
+[
+"Ben",
+"Zoe"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-honors-014": {
+"q": {
+"k": "key",
+"accept": [
+"The table, because the tape fits along the box with extra, and the table is longer than the tape."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-honors-015": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"rug",
+"string"
+],
+[
+"string",
+"desk"
+]
+],
+"want": "cmp",
+"pair": [
+"rug",
+"desk"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-honors-016": {
+"q": {
+"k": "key",
+"accept": [
+"The hall"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-honors-017": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ben",
+"Mia"
+],
+[
+"Mia",
+"Zoe"
+]
+],
+"want": "shortest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-honors-018": {
+"q": {
+"k": "key",
+"accept": [
+"The couch, because the yarn fits along the chair with extra, and the couch is longer than the yarn."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-honors-019": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"board",
+"ribbon"
+],
+[
+"ribbon",
+"book"
+]
+],
+"want": "cmp",
+"pair": [
+"board",
+"book"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-honors-020": {
+"q": {
+"k": "key",
+"accept": [
+"The train"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-honors-021": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Zoe",
+"Mia"
+],
+[
+"Mia",
+"Ben"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-honors-022": {
+"q": {
+"k": "key",
+"accept": [
+"The snake, because the stick fits along the worm with extra, and the snake is longer than the stick."
+]
+},
+"family": "in_why"
+},
+"m1-ml-s02-honors-023": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Max",
+"Ana"
+],
+[
+"Ana",
+"Mia"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme"
+},
+"m1-ml-s02-honors-024": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"snake",
+"stick"
+],
+[
+"stick",
+"worm"
+]
+],
+"want": "cmp",
+"pair": [
+"snake",
+"worm"
+]
+},
+"family": "in_cmp"
+},
+"m1-ml-s02-honors-025": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"door",
+"rope"
+],
+[
+"rope",
+"bed"
+]
+],
+"want": "cmp",
+"pair": [
+"door",
+"bed"
+]
+},
+"family": "in_cmp_error"
+},
+"m1-ml-s02-honors-026": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ana",
+"Zoe"
+],
+[
+"Zoe",
+"Tom"
+]
+],
+"want": "longest"
+},
+"family": "in_extreme_error"
+},
+"m1-ml-s02-honors-027": {
+"q": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"couch",
+"yarn"
+],
+[
+"yarn",
+"chair"
+]
+],
+"want": "cmp",
+"pair": [
+"couch",
+"chair"
+]
+},
+"family": "in_cmp_error"
+},
+"m1-ml-s02-honors-028": {
+"q": {
+"k": "key",
+"accept": [
+"The door"
+]
+},
+"family": "in_string"
+},
+"m1-ml-s02-honors-029": {
+"q": {
+"k": "fn",
+"fn": "claims",
+"table": {
+"Max's worm is shorter than Zoe's. Zoe's worm is shorter than Sam's. Whose worm is the shortest? → Max": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Sam",
+"Zoe"
+],
+[
+"Zoe",
+"Max"
+]
+],
+"want": "shortest"
+},
+"shown": "Max"
+},
+"Tom's worm is shorter than Zoe's. Zoe's worm is shorter than Max's. Whose worm is the shortest? → Max": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Max",
+"Zoe"
+],
+[
+"Zoe",
+"Tom"
+]
+],
+"want": "shortest"
+},
+"shown": "Max"
+},
+"Tom's worm is shorter than Mia's. Mia's worm is shorter than Ana's. Whose worm is the shortest? → Tom": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Ana",
+"Mia"
+],
+[
+"Mia",
+"Tom"
+]
+],
+"want": "shortest"
+},
+"shown": "Tom"
+},
+"Ben's worm is shorter than Tom's. Tom's worm is shorter than Mia's. Whose worm is the shortest? → Mia": {
+"inner": {
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"Mia",
+"Tom"
+],
+[
+"Tom",
+"Ben"
+]
+],
+"want": "shortest"
+},
+"shown": "Mia"
+}
+}
+},
+"family": "in_extreme_sel"
+},
+"m1-ml-s02-honors-030": {
+"q": null,
+"family": "in_cmp_open",
+"parts": [
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"couch",
+"yarn"
+],
+[
+"yarn",
+"chair"
+]
+],
+"want": "cmp",
+"pair": [
+"couch",
+"chair"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"hall",
+"rope"
+],
+[
+"rope",
+"room"
+]
+],
+"want": "cmp",
+"pair": [
+"hall",
+"room"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"slide",
+"rope"
+],
+[
+"rope",
+"bench"
+]
+],
+"want": "cmp",
+"pair": [
+"slide",
+"bench"
+]
+},
+{
+"k": "fn",
+"fn": "indirect",
+"facts": [
+[
+"couch",
+"yarn"
+],
+[
+"yarn",
+"chair"
+]
+],
+"want": "cmp",
+"pair": [
+"couch",
+"chair"
+]
+}
+]
+},
+"m1-ml-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 3,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 3,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+]
+],
+"unit": "clip",
+"label": "Stick"
+}
+}
+},
+"m1-ml-s03-cp2-002": {
+"q": {
+"k": "expr",
+"e": "6-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp2-003": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Rope": 11,
+"Stick": 6,
+"Ribbon": 12
+},
+"n": 6
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 11,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 6,
+"color": "orange"
+},
+{
+"label": "Ribbon",
+"len": 12,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-004": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp2-005": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Brush": 3,
+"Ribbon": 6
+},
+"item": "Ribbon",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 6,
+"color": "orange"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 2,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 2,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+]
+],
+"unit": "cube",
+"label": "Pencil"
+}
+}
+},
+"m1-ml-s03-cp2-007": {
+"q": {
+"k": "expr",
+"e": "6-2",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp2-008": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Straw": 7,
+"Stick": 9,
+"Marker": 11
+},
+"n": 11
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 7,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Marker",
+"len": 11,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 3,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp2-010": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Crayon": 11,
+"Snake": 4
+},
+"item": "Snake",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 11,
+"color": "blue"
+},
+{
+"label": "Snake",
+"len": 4,
+"color": "orange"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "clip",
+"label": "Spoon"
+}
+}
+},
+"m1-ml-s03-cp2-012": {
+"q": {
+"k": "expr",
+"e": "6-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp2-013": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Ruler": 4,
+"Spoon": 12,
+"Pencil": 11
+},
+"n": 4
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 4,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 12,
+"color": "orange"
+},
+{
+"label": "Pencil",
+"len": 11,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Straw": 5,
+"Ribbon": 11
+},
+"item": "Ribbon",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 5,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 11,
+"color": "orange"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-016": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 3,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 3,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+]
+],
+"unit": "clip",
+"label": "Crayon"
+}
+}
+},
+"m1-ml-s03-cp2-017": {
+"q": {
+"k": "expr",
+"e": "7-6",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp2-018": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Straw": 8,
+"Ribbon": 11,
+"Snake": 12
+},
+"n": 12
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 11,
+"color": "orange"
+},
+{
+"label": "Snake",
+"len": 12,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 10,
+"Yarn": 6
+},
+"item": "Rope",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 6,
+"color": "orange"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 4,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 4,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+]
+],
+"unit": "cube",
+"label": "Pencil"
+}
+}
+},
+"m1-ml-s03-cp2-022": {
+"q": {
+"k": "expr",
+"e": "5-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp2-023": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 8,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 4,
+"Stick": 12
+},
+"item": "Rope",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 4,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 12,
+"color": "orange"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 2,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count_error",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 2,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+]
+],
+"unit": "cube",
+"label": "Ruler"
+}
+}
+},
+"m1-ml-s03-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ruler": 8,
+"Pencil": 3
+},
+"item": "Ruler",
+"unit": "units"
+},
+"family": "mu_grid_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Pencil",
+"len": 3,
+"color": "orange"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-027": {
+"q": {
+"k": "expr",
+"e": "6-2",
+"unit": "cubes"
+},
+"family": "mu_diff_error"
+},
+"m1-ml-s03-cp2-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "7-5",
+"unit": "cubes"
+},
+"shown": "12 cubes",
+"answer": "2 cubes"
+},
+"family": "mu_diff_tf"
+},
+"m1-ml-s03-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Snake": 3,
+"Stick": 8,
+"Straw": 6
+},
+"n": 3
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 8,
+"color": "orange"
+},
+{
+"label": "Straw",
+"len": 6,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp2-030": {
+"q": null,
+"family": "mu_diff_open",
+"parts": [
+{
+"k": "expr",
+"e": "5-3",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "5-3",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "6-4",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "5-4",
+"unit": "cubes"
+}
+]
+},
+"m1-ml-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "clip",
+"label": "Pencil"
+}
+}
+},
+"m1-ml-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Crayon": 5,
+"Ruler": 3,
+"Ribbon": 11
+},
+"item": "Ruler",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 5,
+"color": "blue"
+},
+{
+"label": "Ruler",
+"len": 3,
+"color": "orange"
+},
+{
+"label": "Ribbon",
+"len": 11,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-003": {
+"q": {
+"k": "expr",
+"e": "9-6",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp1-004": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 10,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp1-005": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Ribbon": 3,
+"Yarn": 7,
+"Straw": 5
+},
+"n": 3
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Straw",
+"len": 5,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-006": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "clip",
+"label": "Snake"
+}
+}
+},
+"m1-ml-s03-cp1-007": {
+"q": {
+"k": "expr",
+"e": "10-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp1-008": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 8,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp1-009": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Crayon": 12,
+"Snake": 10,
+"Ruler": 5
+},
+"item": "Ruler",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Snake",
+"len": 10,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 5,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-010": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Spoon": 10,
+"Rope": 9,
+"Pencil": 12
+},
+"n": 10
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Rope",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Pencil",
+"len": 12,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-011": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "clip",
+"label": "Pencil"
+}
+}
+},
+"m1-ml-s03-cp1-012": {
+"q": {
+"k": "expr",
+"e": "7-5",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 14,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+],
+[
+10,
+1
+],
+[
+11,
+1
+],
+[
+12,
+1
+],
+[
+13,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp1-014": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 9,
+"Crayon": 4,
+"Spoon": 6
+},
+"item": "Crayon",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Crayon",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Spoon",
+"len": 6,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-015": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Straw": 9,
+"Yarn": 8,
+"Pencil": 10
+},
+"n": 9
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 8,
+"color": "orange"
+},
+{
+"label": "Pencil",
+"len": 10,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "cube",
+"label": "Marker"
+}
+}
+},
+"m1-ml-s03-cp1-017": {
+"q": {
+"k": "expr",
+"e": "9-6",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp1-018": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 8,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp1-019": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 12,
+"Spoon": 4,
+"Crayon": 10
+},
+"item": "Spoon",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Crayon",
+"len": 10,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Spoon": 10,
+"Rope": 3,
+"Brush": 5
+},
+"n": 3
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Rope",
+"len": 3,
+"color": "orange"
+},
+{
+"label": "Brush",
+"len": 5,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 4,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 4,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+]
+],
+"unit": "cube",
+"label": "Snake"
+}
+}
+},
+"m1-ml-s03-cp1-022": {
+"q": {
+"k": "expr",
+"e": "4-3",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-cp1-023": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 14,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+],
+[
+10,
+1
+],
+[
+11,
+1
+],
+[
+12,
+1
+],
+[
+13,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Marker": 4,
+"Stick": 7,
+"Yarn": 9
+},
+"item": "Stick",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 4,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Yarn",
+"len": 9,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count_error",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "clip",
+"label": "Ribbon"
+}
+}
+},
+"m1-ml-s03-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 8,
+"Crayon": 7,
+"Brush": 11
+},
+"item": "Rope",
+"unit": "units"
+},
+"family": "mu_grid_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 8,
+"color": "blue"
+},
+{
+"label": "Crayon",
+"len": 7,
+"color": "orange"
+},
+{
+"label": "Brush",
+"len": 11,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-027": {
+"q": {
+"k": "expr",
+"e": "7-4",
+"unit": "cubes"
+},
+"family": "mu_diff_error"
+},
+"m1-ml-s03-cp1-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "10-9",
+"unit": "cubes"
+},
+"shown": "1 cube",
+"answer": "1 cube"
+},
+"family": "mu_diff_tf"
+},
+"m1-ml-s03-cp1-029": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Ribbon": 9,
+"Yarn": 10,
+"Rope": 11
+},
+"n": 10
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 10,
+"color": "orange"
+},
+{
+"label": "Rope",
+"len": 11,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-cp1-030": {
+"q": null,
+"family": "mu_diff_open",
+"parts": [
+{
+"k": "expr",
+"e": "8-7",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "10-5",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "9-7",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "8-6",
+"unit": "cubes"
+}
+]
+},
+"m1-ml-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 10,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 10,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+]
+],
+"unit": "cube",
+"label": "Stick"
+}
+}
+},
+"m1-ml-s03-honors-002": {
+"q": {
+"k": "expr",
+"e": "12-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-honors-003": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Yarn": 11,
+"Ribbon": 6,
+"Pencil": 5
+},
+"n": 5
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 11,
+"color": "blue"
+},
+{
+"label": "Ribbon",
+"len": 6,
+"color": "orange"
+},
+{
+"label": "Pencil",
+"len": 5,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-004": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 15,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+],
+[
+10,
+1
+],
+[
+11,
+1
+],
+[
+12,
+1
+],
+[
+13,
+1
+],
+[
+14,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-honors-005": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Brush": 3,
+"Crayon": 5,
+"Ruler": 6
+},
+"item": "Ruler",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 3,
+"color": "blue"
+},
+{
+"label": "Crayon",
+"len": 5,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 6,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-006": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 10,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 10,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+]
+],
+"unit": "cube",
+"label": "Spoon"
+}
+}
+},
+"m1-ml-s03-honors-007": {
+"q": {
+"k": "expr",
+"e": "12-11",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-honors-008": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Rope": 5,
+"Brush": 10,
+"Snake": 11
+},
+"n": 10
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 5,
+"color": "blue"
+},
+{
+"label": "Brush",
+"len": 10,
+"color": "orange"
+},
+{
+"label": "Snake",
+"len": 11,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-009": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 19,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+],
+[
+10,
+1
+],
+[
+11,
+1
+],
+[
+12,
+1
+],
+[
+13,
+1
+],
+[
+14,
+1
+],
+[
+15,
+1
+],
+[
+16,
+1
+],
+[
+17,
+1
+],
+[
+18,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-honors-010": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 11,
+"Straw": 12,
+"Spoon": 9
+},
+"item": "Yarn",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 11,
+"color": "blue"
+},
+{
+"label": "Straw",
+"len": 12,
+"color": "orange"
+},
+{
+"label": "Spoon",
+"len": 9,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-011": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 10,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 10,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+]
+],
+"unit": "clip",
+"label": "Marker"
+}
+}
+},
+"m1-ml-s03-honors-012": {
+"q": {
+"k": "expr",
+"e": "6-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-honors-013": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Spoon": 12,
+"Pencil": 9,
+"Stick": 8
+},
+"n": 9
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 12,
+"color": "blue"
+},
+{
+"label": "Pencil",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Stick",
+"len": 8,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-014": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 18,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+],
+[
+10,
+1
+],
+[
+11,
+1
+],
+[
+12,
+1
+],
+[
+13,
+1
+],
+[
+14,
+1
+],
+[
+15,
+1
+],
+[
+16,
+1
+],
+[
+17,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-honors-015": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Pencil": 9,
+"Yarn": 11,
+"Straw": 12
+},
+"item": "Pencil",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Yarn",
+"len": 11,
+"color": "orange"
+},
+{
+"label": "Straw",
+"len": 12,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-016": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+],
+"unit": "clip",
+"label": "Rope"
+}
+}
+},
+"m1-ml-s03-honors-017": {
+"q": {
+"k": "expr",
+"e": "6-4",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-honors-018": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Marker": 6,
+"Spoon": 12,
+"Snake": 11
+},
+"n": 6
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 6,
+"color": "blue"
+},
+{
+"label": "Spoon",
+"len": 12,
+"color": "orange"
+},
+{
+"label": "Snake",
+"len": 11,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-019": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 18,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+],
+[
+10,
+1
+],
+[
+11,
+1
+],
+[
+12,
+1
+],
+[
+13,
+1
+],
+[
+14,
+1
+],
+[
+15,
+1
+],
+[
+16,
+1
+],
+[
+17,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-honors-020": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 6,
+"Pencil": 4,
+"Ruler": 7
+},
+"item": "Pencil",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 6,
+"color": "blue"
+},
+{
+"label": "Pencil",
+"len": 4,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 7,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-021": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "paper clips"
+},
+"family": "mu_count",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "clip",
+"label": "Rope"
+}
+}
+},
+"m1-ml-s03-honors-022": {
+"q": {
+"k": "expr",
+"e": "12-8",
+"unit": "cubes"
+},
+"family": "mu_diff"
+},
+"m1-ml-s03-honors-023": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 14,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+],
+[
+9,
+1
+],
+[
+10,
+1
+],
+[
+11,
+1
+],
+[
+12,
+1
+],
+[
+13,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_word"
+},
+"m1-ml-s03-honors-024": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Marker": 10,
+"Stick": 9,
+"Snake": 8
+},
+"item": "Snake",
+"unit": "units"
+},
+"family": "mu_grid",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 10,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 9,
+"color": "orange"
+},
+{
+"label": "Snake",
+"len": 8,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-025": {
+"q": {
+"k": "fn",
+"fn": "units_long",
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+],
+"unit": "cubes"
+},
+"family": "mu_count_error",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+],
+"unit": "cube",
+"label": "Snake"
+}
+}
+},
+"m1-ml-s03-honors-026": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Snake": 9,
+"Rope": 3,
+"Ruler": 8
+},
+"item": "Snake",
+"unit": "units"
+},
+"family": "mu_grid_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 9,
+"color": "blue"
+},
+{
+"label": "Rope",
+"len": 3,
+"color": "orange"
+},
+{
+"label": "Ruler",
+"len": 8,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-027": {
+"q": {
+"k": "expr",
+"e": "12-10",
+"unit": "cubes"
+},
+"family": "mu_diff_error"
+},
+"m1-ml-s03-honors-028": {
+"q": {
+"k": "fn",
+"fn": "tf",
+"inner": {
+"k": "expr",
+"e": "14-5",
+"unit": "cubes"
+},
+"shown": "19 cubes",
+"answer": "9 cubes"
+},
+"family": "mu_diff_tf"
+},
+"m1-ml-s03-honors-029": {
+"q": {
+"k": "fn",
+"fn": "len_is",
+"lens": {
+"Yarn": 11,
+"Stick": 8,
+"Snake": 10
+},
+"n": 10
+},
+"family": "mu_which",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 11,
+"color": "blue"
+},
+{
+"label": "Stick",
+"len": 8,
+"color": "orange"
+},
+{
+"label": "Snake",
+"len": 10,
+"color": "green"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s03-honors-030": {
+"q": null,
+"family": "mu_diff_open",
+"parts": [
+{
+"k": "expr",
+"e": "12-5",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "12-11",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "8-7",
+"unit": "cubes"
+},
+{
+"k": "expr",
+"e": "7-4",
+"unit": "cubes"
+}
+]
+},
+"m1-ml-s04-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4.4,
+1
+],
+[
+5.4,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4.4,
+1
+],
+[
+5.4,
+1
+]
+],
+"unit": "cube",
+"label": "Snake",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-cp2-002": {
+"q": {
+"k": "key",
+"accept": [
+"Ivy"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-cp2-003": {
+"q": {
+"k": "key",
+"accept": [
+"longer than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-cp2-004": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 6
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-005": {
+"q": {
+"k": "key",
+"accept": [
+"End to end, with no gaps or overlaps"
+]
+},
+"family": "mc_rule"
+},
+"m1-ml-s04-cp2-006": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1.4,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+],
+[
+5.4,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1.4,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+],
+[
+5.4,
+1
+]
+],
+"unit": "cube",
+"label": "Yarn",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-cp2-007": {
+"q": {
+"k": "key",
+"accept": [
+"Mia"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-cp2-008": {
+"q": {
+"k": "key",
+"accept": [
+"longer than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-cp2-009": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Marker": 5
+},
+"item": "Marker",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Marker",
+"len": 5,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-010": {
+"q": {
+"k": "key",
+"accept": [
+"End to end, with no gaps or overlaps"
+]
+},
+"family": "mc_rule"
+},
+"m1-ml-s04-cp2-011": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+],
+"unit": "cube",
+"label": "Stick",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-cp2-012": {
+"q": {
+"k": "key",
+"accept": [
+"Raj"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-cp2-013": {
+"q": {
+"k": "key",
+"accept": [
+"shorter than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Stick": 7
+},
+"item": "Stick",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Stick",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-015": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 7
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-016": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Stick": 3
+},
+"item": "Stick",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Stick",
+"len": 3,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-017": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Crayon": 4
+},
+"item": "Crayon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 4,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-018": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ruler": 5
+},
+"item": "Ruler",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 5,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-019": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Spoon": 6
+},
+"item": "Spoon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-020": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ruler": 3
+},
+"item": "Ruler",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 3,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-021": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Straw": 6
+},
+"item": "Straw",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-022": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Snake": 7
+},
+"item": "Snake",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-023": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 6
+},
+"item": "Rope",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-024": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Spoon": 3
+},
+"item": "Spoon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 3,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-025": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Snake": 7
+},
+"item": "Snake",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-026": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Pencil": 6
+},
+"item": "Pencil",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-027": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Spoon": 3
+},
+"item": "Spoon",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 3,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp2-028": {
+"q": {
+"k": "key",
+"accept": [
+"End to end, with no gaps or overlaps"
+]
+},
+"family": "mc_rule"
+},
+"m1-ml-s04-cp2-029": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+]
+],
+"unit": "cube",
+"label": "Ribbon",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-cp2-030": {
+"q": {
+"k": "key",
+"accept": [
+"Dan"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+]
+],
+"unit": "cube",
+"label": "Spoon",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-cp1-002": {
+"q": {
+"k": "key",
+"accept": [
+"Cam"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-cp1-003": {
+"q": {
+"k": "key",
+"accept": [
+"shorter than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-cp1-004": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Brush": 10
+},
+"item": "Brush",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 10,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-005": {
+"q": {
+"k": "key",
+"accept": [
+"More paper clips than craft sticks, because paper clips are shorter."
+]
+},
+"family": "mc_units"
+},
+"m1-ml-s04-cp1-006": {
+"q": {
+"k": "key",
+"accept": [
+"End to end, with no gaps or overlaps"
+]
+},
+"family": "mc_rule"
+},
+"m1-ml-s04-cp1-007": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 7,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+]
+],
+"unit": "cube",
+"label": "Ruler",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-cp1-008": {
+"q": {
+"k": "key",
+"accept": [
+"Abe"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-cp1-009": {
+"q": {
+"k": "key",
+"accept": [
+"shorter than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-cp1-010": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 5
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 5,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-011": {
+"q": {
+"k": "key",
+"accept": [
+"More paper clips than craft sticks, because paper clips are shorter."
+]
+},
+"family": "mc_units"
+},
+"m1-ml-s04-cp1-012": {
+"q": {
+"k": "key",
+"accept": [
+"End to end, with no gaps or overlaps"
+]
+},
+"family": "mc_rule"
+},
+"m1-ml-s04-cp1-013": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "cube",
+"label": "Marker",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-cp1-014": {
+"q": {
+"k": "key",
+"accept": [
+"Abe"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-cp1-015": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 10
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 10,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-016": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Spoon": 7
+},
+"item": "Spoon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-017": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Pencil": 9
+},
+"item": "Pencil",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 9,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-018": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Brush": 8
+},
+"item": "Brush",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 8,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-019": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Straw": 9
+},
+"item": "Straw",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 9,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Pencil": 10
+},
+"item": "Pencil",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 10,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-021": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Straw": 10
+},
+"item": "Straw",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 10,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-022": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 7
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-023": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Straw": 6
+},
+"item": "Straw",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Straw",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-024": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 8
+},
+"item": "Rope",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 8,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-025": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Brush": 6
+},
+"item": "Brush",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-026": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 6
+},
+"item": "Rope",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 6,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-027": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ruler": 9
+},
+"item": "Ruler",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 9,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-cp1-028": {
+"q": {
+"k": "key",
+"accept": [
+"shorter than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-cp1-029": {
+"q": {
+"k": "key",
+"accept": [
+"More paper clips than craft sticks, because paper clips are shorter."
+]
+},
+"family": "mc_units"
+},
+"m1-ml-s04-cp1-030": {
+"q": {
+"k": "key",
+"accept": [
+"End to end, with no gaps or overlaps"
+]
+},
+"family": "mc_rule"
+},
+"m1-ml-s04-honors-001": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 5,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+]
+],
+"unit": "cube",
+"label": "Pencil",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"Cam"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-honors-003": {
+"q": {
+"k": "key",
+"accept": [
+"shorter than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-honors-004": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Snake": 7
+},
+"item": "Snake",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-005": {
+"q": {
+"k": "key",
+"accept": [
+"More paper clips than craft sticks, because paper clips are shorter."
+]
+},
+"family": "mc_units"
+},
+"m1-ml-s04-honors-006": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 9,
+"units": [
+[
+0,
+1
+],
+[
+1,
+2
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+],
+[
+6,
+1
+],
+[
+7,
+1
+],
+[
+8,
+1
+]
+],
+"unit": "cube",
+"label": "Marker",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-honors-007": {
+"q": {
+"k": "key",
+"accept": [
+"Mia"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-honors-008": {
+"q": {
+"k": "key",
+"accept": [
+"longer than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-honors-009": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ruler": 10
+},
+"item": "Ruler",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 10,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-010": {
+"q": {
+"k": "key",
+"accept": [
+"More paper clips than craft sticks, because paper clips are shorter."
+]
+},
+"family": "mc_units"
+},
+"m1-ml-s04-honors-011": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 6,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2,
+1
+],
+[
+3,
+1
+],
+[
+4,
+1
+],
+[
+5,
+1
+]
+],
+"unit": "cube",
+"label": "Ruler",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-honors-012": {
+"q": {
+"k": "key",
+"accept": [
+"Tess"
+]
+},
+"family": "mc_who"
+},
+"m1-ml-s04-honors-013": {
+"q": {
+"k": "key",
+"accept": [
+"shorter than that"
+]
+},
+"family": "mc_more_less"
+},
+"m1-ml-s04-honors-014": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 8
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 8,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-015": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Snake": 12
+},
+"item": "Snake",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Snake",
+"len": 12,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-016": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ruler": 11
+},
+"item": "Ruler",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ruler",
+"len": 11,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-017": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Pencil": 9
+},
+"item": "Pencil",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 9,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-018": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Pencil": 9
+},
+"item": "Pencil",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Pencil",
+"len": 9,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-019": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Spoon": 7
+},
+"item": "Spoon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Spoon",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-020": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Ribbon": 8
+},
+"item": "Ribbon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Ribbon",
+"len": 8,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-021": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Yarn": 12
+},
+"item": "Yarn",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Yarn",
+"len": 12,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-022": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Stick": 7
+},
+"item": "Stick",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Stick",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-023": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 7
+},
+"item": "Rope",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 7,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-024": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Crayon": 11
+},
+"item": "Crayon",
+"unit": "cubes"
+},
+"family": "mc_fix",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 11,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-025": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Brush": 10
+},
+"item": "Brush",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Brush",
+"len": 10,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-026": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Crayon": 10
+},
+"item": "Crayon",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Crayon",
+"len": 10,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-027": {
+"q": {
+"k": "fn",
+"fn": "len_of",
+"lens": {
+"Rope": 12
+},
+"item": "Rope",
+"unit": "cubes"
+},
+"family": "mc_fix_error",
+"diagram": {
+"kind": "lengths",
+"data": {
+"items": [
+{
+"label": "Rope",
+"len": 12,
+"color": "blue"
+}
+],
+"grid": true
+}
+}
+},
+"m1-ml-s04-honors-028": {
+"q": {
+"k": "key",
+"accept": [
+"More paper clips than craft sticks, because paper clips are shorter."
+]
+},
+"family": "mc_units"
+},
+"m1-ml-s04-honors-029": {
+"q": {
+"k": "fn",
+"fn": "measure_ok",
+"len": 8,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+],
+[
+5.4,
+1
+],
+[
+6.4,
+1
+]
+]
+},
+"family": "mc_check",
+"diagram": {
+"kind": "measure",
+"data": {
+"len": 8,
+"units": [
+[
+0,
+1
+],
+[
+1,
+1
+],
+[
+2.4,
+1
+],
+[
+3.4,
+1
+],
+[
+4.4,
+1
+],
+[
+5.4,
+1
+],
+[
+6.4,
+1
+]
+],
+"unit": "cube",
+"label": "Rope",
+"stagger": false
+}
+}
+},
+"m1-ml-s04-honors-030": {
+"q": {
+"k": "key",
+"accept": [
+"Uma"
+]
+},
+"family": "mc_who"
+}
+}

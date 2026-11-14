@@ -1,72 +1,307 @@
-"""Grade 1 (math1) outline: single source of truth loaded from course-outlines/grade1.json.
+"""Grade 1 (math1) course outline: the single source of truth for units, skills, learning targets and standards.
+Skill order here == course-catalog order == skill IDs (<unit>-skill-NN). Do not reorder after publication.
 
-8 units, 27 sections, 93 skills. Skill IDs are `<unit-id>-skill-NN` and must stay stable.
-Standards for a skill come from the section that lists it (the source's Grade 1 section
-listings); a skill not listed in any section inherits the unit standards.
-"""
-import json, os
-
-HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-OUTLINE = os.path.join(ROOT, "course-outlines", "grade1.json")
+Standards: Common Core State Standards for Mathematics, Grade 1 (same codes in the Massachusetts 2017 framework).
+1.NBT.B.2 has its own statement and parts a, b and c; all four are tracked (24 codes). Every other code is a leaf.
+This standards-based outline replaces the earlier scope-and-sequence outline (8 units, 93 skills), as Grade 2 did."""
 
 COURSE_ID = "math1"
+COURSE_NAME = "1st Grade Math"
 PREFIX = "m1"
 
-# short, stable file/ID tokens for each unit (do not change: they appear in question IDs)
-ABBR = {
-    "adding-subtracting-working-data": "ad",
-    "addition-subtraction-story-problems": "sp",
-    "adding-subtracting-within-20": "t20",
-    "numbers-to-99": "n99",
-    "adding-within-100": "h100",
-    "length-measurement-120": "len",
-    "geometry-time": "geo",
-    "putting-it-all-together": "all",
+STANDARDS = {
+    "1.OA.A.1": "Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.",
+    "1.OA.A.2": "Solve word problems that call for addition of three whole numbers whose sum is less than or equal to 20, e.g., by using objects, drawings, and equations with a symbol for the unknown number to represent the problem.",
+    "1.OA.B.3": "Apply properties of operations as strategies to add and subtract. (Examples: If 8 + 3 = 11 is known, then 3 + 8 = 11 is also known. To add 2 + 6 + 4, the second two numbers can be added to make a ten, so 2 + 6 + 4 = 2 + 10 = 12.)",
+    "1.OA.B.4": "Understand subtraction as an unknown-addend problem. For example, subtract 10 − 8 by finding the number that makes 10 when added to 8.",
+    "1.OA.C.5": "Relate counting to addition and subtraction (e.g., by counting on 2 to add 2).",
+    "1.OA.C.6": "Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten; decomposing a number leading to a ten; using the relationship between addition and subtraction; and creating equivalent but easier or known sums.",
+    "1.OA.D.7": "Understand the meaning of the equal sign, and determine if equations involving addition and subtraction are true or false.",
+    "1.OA.D.8": "Determine the unknown whole number in an addition or subtraction equation relating three whole numbers.",
+    "1.NBT.A.1": "Count to 120, starting at any number less than 120. In this range, read and write numerals and represent a number of objects with a written numeral.",
+    "1.NBT.B.2": "Understand that the two digits of a two-digit number represent amounts of tens and ones.",
+    "1.NBT.B.2.a": "10 can be thought of as a bundle of ten ones — called a “ten.”",
+    "1.NBT.B.2.b": "The numbers from 11 to 19 are composed of a ten and one, two, three, four, five, six, seven, eight, or nine ones.",
+    "1.NBT.B.2.c": "The numbers 10, 20, 30, 40, 50, 60, 70, 80, 90 refer to one, two, three, four, five, six, seven, eight, or nine tens (and 0 ones).",
+    "1.NBT.B.3": "Compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols >, =, and <.",
+    "1.NBT.C.4": "Add within 100, including adding a two-digit number and a one-digit number, and adding a two-digit number and a multiple of 10, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method and explain the reasoning used. Understand that in adding two-digit numbers, one adds tens and tens, ones and ones; and sometimes it is necessary to compose a ten.",
+    "1.NBT.C.5": "Given a two-digit number, mentally find 10 more or 10 less than the number, without having to count; explain the reasoning used.",
+    "1.NBT.C.6": "Subtract multiples of 10 in the range 10–90 from multiples of 10 in the range 10–90 (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction.",
+    "1.MD.A.1": "Order three objects by length; compare the lengths of two objects indirectly by using a third object.",
+    "1.MD.A.2": "Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no gaps or overlaps.",
+    "1.MD.B.3": "Tell and write time in hours and half-hours using analog and digital clocks.",
+    "1.MD.C.4": "Organize, represent, and interpret data with up to three categories; ask and answer questions about the total number of data points, how many in each category, and how many more or less are in one category than in another.",
+    "1.G.A.1": "Distinguish between defining attributes (e.g., triangles are closed and three-sided) versus non-defining attributes (e.g., color, orientation, overall size); build and draw shapes to possess defining attributes.",
+    "1.G.A.2": "Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape.",
+    "1.G.A.3": "Partition circles and rectangles into two and four equal shares, describe the shares using the words halves, fourths, and quarters, and use the phrases half of, fourth of, and quarter of. Describe the whole as two of, or four of the shares. Understand for these examples that decomposing into more equal shares creates smaller shares.",
 }
 
-with open(OUTLINE, encoding="utf-8") as fh:
-    SRC = json.load(fh)
-
-UNITS = []
-for _u in SRC["units"]:
-    _sections = _u.get("sections") or []
-    _by_skill = {}
-    for _s in _sections:
-        for _name in _s.get("skills", []):
-            _by_skill.setdefault(_name, [])
-            for _std in _s.get("standards", []):
-                if _std not in _by_skill[_name]:
-                    _by_skill[_name].append(_std)
-    UNITS.append({
-        "id": _u["id"],
-        "name": _u["name"],
-        "abbr": ABBR[_u["id"]],
-        "skills": list(_u["skills"]),
-        "standards": list(_u.get("standards") or []),
-        "standards_by_skill": _by_skill,
-        "sections": _sections,
-        "days": (_u.get("estimatedDays"), _u.get("estimatedDaysMax")),
-    })
-
-UNIT_BY_ID = {u["id"]: u for u in UNITS}
-SKILL_COUNT = sum(len(u["skills"]) for u in UNITS)
+# Each skill: (name, standards, learning target "I can …", common misconception, how to address it)
+UNITS = [
+    dict(id="count-120", name="Counting and Numbers to 120", abbr="cn", color="#2f7fd8",
+         blurb="Counting objects, counting on from any number to 120, reading and writing numerals, and counting on or back to add and subtract.",
+         skills=[
+             ("Counting Objects", ["1.NBT.A.1"],
+              "I can count a group of objects and write the number.",
+              "Skipping or double-counting objects that are not in a line.",
+              "Touch and move each object as it is counted, or count objects in ten frames."),
+             ("Counting On to 120", ["1.NBT.A.1"],
+              "I can count forward from any number up to 120 and say what number comes next.",
+              "Getting stuck at a decade change (…48, 49, 40) or after 100 (…109, 200).",
+              "Use a 120 chart: when the ones reach 9, move to the next row and the tens go up by one."),
+             ("Reading and Writing Numbers to 120", ["1.NBT.A.1"],
+              "I can read and write numbers to 120 and match number words to numerals.",
+              "Writing numbers as they sound (one hundred four → 1004) or reversing teen digits (sixteen → 61).",
+              "Build the number with tens and ones, then write the tens digit first."),
+             ("Counting On and Back to Add and Subtract", ["1.OA.C.5"],
+              "I can count on to add and count back to subtract.",
+              "Counting the start number as the first jump (5 + 3 → 5, 6, 7).",
+              "Say the start number, then count only the jumps on a number line."),
+         ]),
+    dict(id="add-subtract-10", name="Addition and Subtraction within 10", abbr="at", color="#e2563b",
+         blurb="Adding and subtracting within 10 with ten frames and counters, pairs that make ten, and fluent facts within 10.",
+         skills=[
+             ("Adding within 10", ["1.OA.C.6"],
+              "I can add two numbers with a sum up to 10.",
+              "Counting all objects again instead of counting on, and losing track.",
+              "Put the bigger number in your head and count on the smaller number."),
+             ("Subtracting within 10", ["1.OA.C.6"],
+              "I can subtract numbers within 10.",
+              "Subtracting the larger number from the smaller one, or adding instead of taking away.",
+              "Act it out with counters: show the whole, take some away, count what is left."),
+             ("Making Ten", ["1.OA.C.6"],
+              "I can find the number that goes with another number to make 10.",
+              "Thinking 6 and 3 make ten because the ten frame looks almost full.",
+              "Fill a ten frame and count the empty boxes."),
+             ("Number Partners within 10", ["1.OA.C.6", "1.OA.B.4"],
+              "I can break a number up to 10 into two parts and find a missing part.",
+              "Adding the whole and the part instead of finding the missing part.",
+              "Use a part-part-whole mat: cover one part and ask what is hiding."),
+         ]),
+    dict(id="add-subtract-20", name="Addition and Subtraction within 20", abbr="as", color="#8e44ad",
+         blurb="Strategies for adding and subtracting within 20: make a ten, doubles, adding three numbers, and related facts.",
+         skills=[
+             ("Adding within 20 with Strategies", ["1.OA.C.6"],
+              "I can add within 20 by making a ten, using doubles, or counting on.",
+              "Counting on from the smaller number and losing count, or forgetting part of the second number after making ten.",
+              "Fill a ten frame first, then add the leftover counters in a second frame."),
+             ("Subtracting within 20 with Strategies", ["1.OA.C.6", "1.OA.B.4"],
+              "I can subtract within 20 by counting back, going back to 10, or thinking addition.",
+              "Subtracting the smaller ones digit from the larger one (14 − 6 → 12).",
+              "Ask “6 plus what makes 14?” and jump to 10 first on a number line."),
+             ("Adding in Any Order and Adding Three Numbers", ["1.OA.B.3", "1.OA.C.6"],
+              "I can change the order of addends and add three numbers by finding a ten first.",
+              "Thinking 3 + 8 and 8 + 3 have different answers, or leaving out one of three addends.",
+              "Turn the domino around; it has the same dots. Circle two addends that make 10."),
+             ("Related Facts and Fact Families", ["1.OA.B.4", "1.OA.C.6"],
+              "I can use an addition fact to solve a related subtraction fact.",
+              "Writing a subtraction fact that starts with a part (6 − 14 = 8).",
+              "Use a part-part-whole mat: in subtraction the whole comes first."),
+         ]),
+    dict(id="equal-sign", name="The Equal Sign and Missing Numbers", abbr="eq", color="#d4a017",
+         blurb="Understanding the equal sign as “the same as,” true and false equations, and finding unknown numbers.",
+         skills=[
+             ("True or False Equations", ["1.OA.D.7"],
+              "I can tell whether an equation is true or false by checking that both sides are the same amount.",
+              "Thinking the equal sign means “the answer comes next,” so 7 = 7 or 5 = 2 + 3 looks wrong.",
+              "Read = as “is the same as” and build each side with cubes."),
+             ("Finding the Missing Number", ["1.OA.D.8"],
+              "I can find the unknown number in an addition or subtraction equation.",
+              "Combining all numbers shown (8 + ___ = 11 → 19).",
+              "Ask what number makes both sides the same; check by putting it in the blank."),
+             ("Balancing Both Sides", ["1.OA.D.7", "1.OA.D.8"],
+              "I can find a number that makes both sides of an equation the same, such as 6 + 4 = 5 + ___.",
+              "Writing the total of the first side in the blank (6 + 4 = 5 + 10).",
+              "Find the amount on the side you know, then ask what the other side still needs."),
+         ]),
+    dict(id="word-problems-20", name="Word Problems within 20", abbr="wp", color="#16a085",
+         blurb="Add to, take from, put together, take apart and compare stories within 20, with unknowns in all positions and three addends.",
+         skills=[
+             ("Add To and Take From Stories", ["1.OA.A.1"],
+              "I can solve stories where some are added or taken away.",
+              "Adding every pair of numbers in a story without thinking about what happened.",
+              "Act the story out: did the group get bigger or smaller?"),
+             ("Put Together and Take Apart Stories", ["1.OA.A.1"],
+              "I can solve stories about two parts and a total.",
+              "Adding the total and a part when a part is missing.",
+              "Draw a part-part-whole picture and label which number is the total."),
+             ("Compare Stories", ["1.OA.A.1"],
+              "I can solve stories that ask how many more or how many fewer.",
+              "Adding because the word “more” appears in the question.",
+              "Line up the two groups and count the extra objects."),
+             ("Stories with a Missing Start or Change", ["1.OA.A.1", "1.OA.D.8"],
+              "I can solve stories where the start or the change is unknown.",
+              "Using the last number in the story as the answer, or adding when the start is unknown.",
+              "Write an equation with a blank in the right place, then find the blank."),
+             ("Stories with Three Numbers", ["1.OA.A.2"],
+              "I can solve stories that add three numbers with a total up to 20.",
+              "Adding only two of the three numbers.",
+              "Underline each number in the story and check that all three are added."),
+         ]),
+    dict(id="tens-ones", name="Tens and Ones", abbr="to", color="#c0392b",
+         blurb="A ten as ten ones, teen numbers as a ten and some ones, decade numbers, and tens and ones in two-digit numbers.",
+         skills=[
+             ("A Ten Is Ten Ones", ["1.NBT.B.2.a", "1.NBT.B.2"],
+              "I can make a ten from ten ones and tell how many tens and ones are in a group.",
+              "Counting a ten rod as one, not ten.",
+              "Bundle ten straws and count the bundle as “ten.”"),
+             ("Teen Numbers", ["1.NBT.B.2.b", "1.NBT.B.2"],
+              "I can show a number from 11 to 19 as one ten and some ones.",
+              "Thinking 16 is 6 tens and 1 one, or writing sixteen as 61.",
+              "Fill one ten frame and put the extra ones in a second frame."),
+             ("Counting by Tens", ["1.NBT.B.2.c", "1.NBT.B.2"],
+              "I can count by tens and tell how many tens are in 10, 20, 30, … 90.",
+              "Thinking 50 is 5 ones, or counting by tens as 10, 20, 30, 31.",
+              "Count ten rods: “1 ten, 10; 2 tens, 20 …”."),
+             ("Tens and Ones in Two-Digit Numbers", ["1.NBT.B.2"],
+              "I can tell how many tens and ones are in a two-digit number and show it with blocks.",
+              "Mixing up the places (47 → 7 tens and 4 ones).",
+              "Read the tens digit first, then build the rods and cubes to check."),
+         ]),
+    dict(id="compare-numbers", name="Comparing Two-Digit Numbers", abbr="cm", color="#2c3e50",
+         blurb="Comparing two-digit numbers by tens and ones and recording comparisons with >, = and <.",
+         skills=[
+             ("Comparing Tens and Ones", ["1.NBT.B.3"],
+              "I can tell which of two numbers is greater by comparing the tens first, then the ones.",
+              "Comparing the ones digits first (29 is greater than 41 because 9 > 1).",
+              "Build both numbers with blocks; the number with more tens is greater."),
+             ("Using >, =, and <", ["1.NBT.B.3"],
+              "I can write a comparison using the symbols >, =, and <.",
+              "Pointing the symbol the wrong way.",
+              "The open side of the symbol faces the greater number."),
+             ("Reasoning about Comparisons", ["1.NBT.B.3", "1.NBT.B.2"],
+              "I can find numbers that make a comparison true and explain my thinking.",
+              "Thinking a number with a bigger ones digit is always greater.",
+              "Check the tens digits first and use a number line to see which number comes later."),
+         ]),
+    dict(id="add-subtract-100", name="Adding and Subtracting within 100", abbr="ah", color="#27ae60",
+         blurb="Ten more and ten less, adding and subtracting tens, adding a one-digit number, and making a new ten.",
+         skills=[
+             ("10 More and 10 Less", ["1.NBT.C.5"],
+              "I can find 10 more or 10 less than a two-digit number without counting by ones.",
+              "Changing the ones digit instead of the tens digit (34 + 10 → 35).",
+              "Add or take away one ten rod: only the tens digit changes."),
+             ("Adding and Subtracting Tens", ["1.NBT.C.4", "1.NBT.C.6"],
+              "I can add tens to a two-digit number and subtract tens from tens.",
+              "Adding the tens to the ones (40 + 23 → 27), or writing 50 − 20 = 3.",
+              "Think in tens: 5 tens − 2 tens = 3 tens, which is 30."),
+             ("Adding a Two-Digit and a One-Digit Number", ["1.NBT.C.4"],
+              "I can add a one-digit number to a two-digit number when no new ten is made.",
+              "Adding the one-digit number to the tens (32 + 5 → 82).",
+              "Add ones to ones and keep the tens."),
+             ("Making a New Ten", ["1.NBT.C.4"],
+              "I can add a one-digit number to a two-digit number when the ones make a new ten.",
+              "Writing the ones sum as a digit (38 + 5 → 313).",
+              "Fill the ten first: 38 + 2 = 40, then add the 3 left."),
+             ("Adding Two-Digit Numbers with Models", ["1.NBT.C.4"],
+              "I can add two two-digit numbers within 100 by adding tens and tens and ones and ones.",
+              "Adding a tens digit to a ones digit.",
+              "Draw tens as lines and ones as dots; add each kind separately."),
+         ]),
+    dict(id="measuring-length", name="Measuring Length", abbr="ml", color="#e67e22",
+         blurb="Ordering objects by length, comparing indirectly, and measuring with same-size units laid end to end.",
+         skills=[
+             ("Comparing and Ordering Lengths", ["1.MD.A.1"],
+              "I can compare two lengths and put three objects in order from shortest to longest.",
+              "Comparing objects that do not start at the same line.",
+              "Line up the ends before comparing."),
+             ("Comparing Lengths Indirectly", ["1.MD.A.1"],
+              "I can use a third object to compare two lengths.",
+              "Thinking a comparison cannot be made without putting the two objects side by side.",
+              "If the rug is longer than the string and the string is longer than the desk, the rug is longer than the desk."),
+             ("Measuring with Length Units", ["1.MD.A.2"],
+              "I can measure a length by counting same-size units laid end to end.",
+              "Counting the spaces or lines instead of the units.",
+              "Count each cube or paper clip as you touch it."),
+             ("Measuring Correctly", ["1.MD.A.2"],
+              "I can tell when a measurement is wrong because of gaps, overlaps, or units of different sizes.",
+              "Leaving gaps or overlaps, or mixing big and small units.",
+              "Check that units touch end to end and are all the same size."),
+         ]),
+    dict(id="telling-time", name="Telling Time", abbr="tt", color="#3498db",
+         blurb="Telling and writing time to the hour and half hour on analog and digital clocks.",
+         skills=[
+             ("Time to the Hour", ["1.MD.B.3"],
+              "I can tell and write time to the hour on analog and digital clocks.",
+              "Mixing up the hour hand and the minute hand.",
+              "The short hand tells the hour; the long hand points to 12 at o'clock."),
+             ("Time to the Half Hour", ["1.MD.B.3"],
+              "I can tell and write time to the half hour on analog and digital clocks.",
+              "Reading the next hour at half past (the hour hand is past 3, so it says 4:30).",
+              "At half past, the hour hand is halfway between two numbers; read the number it has passed."),
+             ("Matching and Using Clock Times", ["1.MD.B.3"],
+              "I can match analog and digital times and tell what time it will be one hour or half an hour later.",
+              "Writing half past 6 as 6:50 or 6:3.",
+              "Half past means 30 minutes; the long hand points to 6."),
+         ]),
+    dict(id="data", name="Organizing and Reading Data", abbr="dt", color="#9b59b6",
+         blurb="Sorting, tally charts, picture graphs and tables with up to three categories, and answering questions about data.",
+         skills=[
+             ("Sorting and Tally Marks", ["1.MD.C.4"],
+              "I can sort objects into up to three groups and use tally marks to show how many.",
+              "Counting each bundle of five tally marks as one.",
+              "Count tally bundles by fives, then count on by ones."),
+             ("Reading Picture Graphs and Tables", ["1.MD.C.4"],
+              "I can read how many are in each category of a picture graph, tally chart, or table.",
+              "Reading the wrong row or counting the label.",
+              "Point to the category name, then slide across the row."),
+             ("Answering Questions about Data", ["1.MD.C.4"],
+              "I can find the total and tell how many more or fewer are in one category than another.",
+              "Adding when the question asks how many more.",
+              "Find the two numbers first, then decide: in all means add; how many more means compare."),
+         ]),
+    dict(id="shapes-equal-shares", name="Shapes and Equal Shares", abbr="sh", color="#3d8b37",
+         blurb="Defining attributes of shapes, naming 2-D and 3-D shapes, composing shapes, and halves and fourths.",
+         skills=[
+             ("Defining Attributes of Shapes", ["1.G.A.1"],
+              "I can tell which attributes make a shape what it is (closed, number of sides and corners) and which do not (color, size, position).",
+              "Thinking a turned square is not a square, or that color or size changes a shape's name.",
+              "Turn and resize paper shapes; count sides and corners again."),
+             ("Naming Two- and Three-Dimensional Shapes", ["1.G.A.1"],
+              "I can name circles, triangles, squares, rectangles, trapezoids, hexagons, cubes, cones, cylinders, and rectangular prisms.",
+              "Calling every four-sided shape a square, or calling a cylinder a circle.",
+              "Count sides and corners; for solids, look for flat faces and curved surfaces."),
+             ("Composing Shapes", ["1.G.A.2"],
+              "I can put shapes together to make new shapes and tell how many shapes I used.",
+              "Thinking a new shape cannot be made from smaller pieces, or counting outlines instead of pieces.",
+              "Use pattern blocks to cover a shape and count the pieces."),
+             ("Halves and Fourths", ["1.G.A.3"],
+              "I can split circles and rectangles into 2 or 4 equal shares and name halves, fourths, and quarters.",
+              "Calling unequal parts halves or fourths.",
+              "Fold paper shapes so the parts match exactly."),
+             ("More Shares Are Smaller Shares", ["1.G.A.3"],
+              "I can describe a whole as two halves or four fourths and explain that more equal shares are smaller shares.",
+              "Thinking a fourth is bigger than a half because 4 is bigger than 2.",
+              "Cut two same-size paper strips into halves and fourths and compare the pieces."),
+         ]),
+]
 
 
 def skill_records(unit):
-    """[{id, index, name, standards}] for one unit, 1-based two-digit index."""
-    out = []
-    for i, name in enumerate(unit["skills"], 1):
-        stds = unit["standards_by_skill"].get(name) or unit["standards"]
-        out.append({"id": f"{unit['id']}-skill-{i:02d}", "index": i, "name": name, "standards": list(stds)})
-    return out
+    return [dict(id=f"{unit['id']}-skill-{i:02d}", index=i, name=s[0], standards=s[1], target=s[2], misconception=s[3], fix=s[4])
+            for i, s in enumerate(unit["skills"], 1)]
 
 
-def all_standards():
-    seen = []
+def all_skills():
     for u in UNITS:
         for r in skill_records(u):
-            for s in r["standards"]:
-                if s not in seen:
-                    seen.append(s)
-    return seen
+            yield u, r
+
+
+def outline_json():
+    return {"courseId": COURSE_ID, "name": COURSE_NAME,
+            "blurb": "Counting to 120, addition and subtraction within 20, tens and ones, adding within 100, length, time, data and shapes.",
+            "units": [{"id": u["id"], "name": u["name"], "abbr": u["abbr"], "color": u["color"], "blurb": u["blurb"],
+                       "skills": [[s[0], s[1]] for s in u["skills"]],
+                       "targets": [s[2] for s in u["skills"]]} for u in UNITS],
+            "standards": STANDARDS}
+
+
+if __name__ == "__main__":
+    import json, os, sys
+    covered = {s for _, r in all_skills() for s in r["standards"]}
+    print(len(UNITS), "units", sum(len(u["skills"]) for u in UNITS), "skills", f"{len(covered)}/{len(STANDARDS)} standards")
+    print("uncovered:", sorted(set(STANDARDS) - covered), "unknown:", sorted(covered - set(STANDARDS)))
+    if "--write" in sys.argv:
+        here = os.path.dirname(os.path.abspath(__file__))
+        json.dump(outline_json(), open(os.path.join(here, "outline.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

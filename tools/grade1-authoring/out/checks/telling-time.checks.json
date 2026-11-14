@@ -1,0 +1,224 @@
+{
+"m1c-tt-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 5,
+"m": 0
+},
+"family": "h_read",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 5,
+"m": 0
+}
+}
+},
+"m1c-tt-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "hour_hand",
+"h": 9,
+"m": 0
+},
+"family": "h_hand"
+},
+"m1c-tt-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 9,
+"m": 0
+},
+"family": "h_story"
+},
+"m1c-tt-s01-cp1-002": {
+"q": {
+"k": "key",
+"accept": [
+"At the 12"
+]
+},
+"family": "h_hand"
+},
+"m1c-tt-s01-honors-001": {
+"q": {
+"k": "key",
+"accept": [
+"At the 12"
+]
+},
+"family": "h_hand"
+},
+"m1c-tt-s01-honors-002": {
+"q": {
+"k": "fn",
+"fn": "later_time",
+"h": 2,
+"m": 0,
+"add": 60
+},
+"family": "h_story"
+},
+"m1c-tt-s02-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "clock_say",
+"h": 11,
+"m": 30
+},
+"family": "hh_digital",
+"diagram": {
+"kind": "digital",
+"data": {
+"h": 11,
+"m": 30
+}
+}
+},
+"m1c-tt-s02-cp2-002": {
+"q": {
+"k": "key",
+"accept": [
+"At the 6"
+]
+},
+"family": "hh_hand"
+},
+"m1c-tt-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 3,
+"m": 0
+},
+"family": "hh_mixed",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 3,
+"m": 0
+}
+}
+},
+"m1c-tt-s02-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 6,
+"m": 30
+},
+"family": "hh_which"
+},
+"m1c-tt-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 11,
+"m": 30
+},
+"family": "hh_read",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 11,
+"m": 30
+}
+}
+},
+"m1c-tt-s02-honors-002": {
+"q": {
+"k": "fn",
+"fn": "clock_say",
+"h": 10,
+"m": 30
+},
+"family": "hh_words",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 10,
+"m": 30
+}
+}
+},
+"m1c-tt-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 6,
+"m": 30
+},
+"family": "u_match",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 6,
+"m": 30
+}
+}
+},
+"m1c-tt-s03-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "later_time",
+"h": 8,
+"m": 0,
+"add": 60
+},
+"family": "u_later"
+},
+"m1c-tt-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 12,
+"m": 30
+},
+"family": "u_match",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 12,
+"m": 30
+}
+}
+},
+"m1c-tt-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "later_time",
+"h": 2,
+"m": 30,
+"add": 60
+},
+"family": "u_later"
+},
+"m1c-tt-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "clock",
+"h": 10,
+"m": 0
+},
+"family": "u_match",
+"diagram": {
+"kind": "clock",
+"data": {
+"h": 10,
+"m": 0
+}
+}
+},
+"m1c-tt-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "later_time",
+"h": 10,
+"m": 0,
+"add": -60
+},
+"family": "u_earlier"
+}
+}

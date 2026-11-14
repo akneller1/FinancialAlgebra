@@ -1,0 +1,202 @@
+{
+"m1c-cm-s01-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "cmp_pick",
+"nums": [
+16,
+24
+],
+"want": "less"
+},
+"family": "c_pick_mc"
+},
+"m1c-cm-s01-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "who_cmp",
+"vals": {
+"Gus": 55,
+"Raj": 49
+},
+"want": "fewer"
+},
+"family": "c_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Name",
+"Tens",
+"Ones"
+],
+"rows": [
+[
+"Gus",
+5,
+5
+],
+[
+"Raj",
+4,
+9
+]
+]
+}
+}
+},
+"m1c-cm-s01-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "cmp_pick",
+"nums": [
+39,
+49
+],
+"want": "less"
+},
+"family": "c_pick"
+},
+"m1c-cm-s01-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "who_cmp",
+"vals": {
+"Cam": 65,
+"Zoe": 28
+},
+"want": "more"
+},
+"family": "c_word"
+},
+"m1c-cm-s01-honors-001": {
+"q": {
+"k": "fn",
+"fn": "cmp_pick",
+"nums": [
+91,
+19
+],
+"want": "less"
+},
+"family": "c_pick"
+},
+"m1c-cm-s01-honors-002": {
+"q": {
+"k": "fn",
+"fn": "cmp_pick",
+"nums": [
+32,
+23
+],
+"want": "less"
+},
+"family": "c_pick_mc"
+},
+"m1c-cm-s02-cp2-001": {
+"q": {
+"k": "key",
+"accept": [
+"51 is greater than 17."
+]
+},
+"family": "s_read"
+},
+"m1c-cm-s02-cp2-002": {
+"q": {
+"k": "fn",
+"fn": "cmp_stmt",
+"a": 17,
+"b": 33
+},
+"family": "s_write"
+},
+"m1c-cm-s02-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "compare",
+"a": "42",
+"b": "46"
+},
+"family": "s_symbol"
+},
+"m1c-cm-s02-cp1-002": {
+"q": {
+"k": "key",
+"accept": [
+"59 is greater than 47."
+]
+},
+"family": "s_read"
+},
+"m1c-cm-s02-honors-001": {
+"q": {
+"k": "fn",
+"fn": "compare",
+"a": "63",
+"b": "63"
+},
+"family": "s_symbol"
+},
+"m1c-cm-s02-honors-002": {
+"q": {
+"k": "key",
+"accept": [
+"53 is less than 56."
+]
+},
+"family": "s_read"
+},
+"m1c-cm-s03-cp2-001": {
+"q": {
+"k": "fn",
+"fn": "between_nums",
+"lo": 33,
+"hi": 37
+},
+"family": "r_between"
+},
+"m1c-cm-s03-cp2-002": {
+"q": {
+"k": "key",
+"accept": [
+"No. 61 has more tens, so 61 is greater."
+]
+},
+"family": "r_claim"
+},
+"m1c-cm-s03-cp1-001": {
+"q": {
+"k": "fn",
+"fn": "digit_fill",
+"tmpl": "2? < 26"
+},
+"family": "r_digit"
+},
+"m1c-cm-s03-cp1-002": {
+"q": {
+"k": "fn",
+"fn": "between_nums",
+"lo": 20,
+"hi": 25
+},
+"family": "r_between"
+},
+"m1c-cm-s03-honors-001": {
+"q": {
+"k": "fn",
+"fn": "digit_fill",
+"tmpl": "6? < 65"
+},
+"family": "r_digit"
+},
+"m1c-cm-s03-honors-002": {
+"q": {
+"k": "fn",
+"fn": "between_nums",
+"lo": 85,
+"hi": 89
+},
+"family": "r_between"
+}
+}
