@@ -37,7 +37,7 @@ def at_add(r, L):
     th, nm = thing(r), name(r)
     an = animal(r)
     t = pick(r, [f"{nm} has {U(a, th)}. {nm} gets {b} more. How many {th[1]} does {nm} have now?",
-                 f"There are {U(a, an)} in the yard. {b} more come. How many {an[1]} are in the yard now?",
+                 f"There {'is' if a == 1 else 'are'} {U(a, an)} in the yard. {b} more come. How many {an[1]} are in the yard now?",
                  f"{nm} had {U(a, th)}. Then {nm} found {b} more. How many {th[1]} does {nm} have now?"])
     if "yard" in t:
         th = an
@@ -109,8 +109,8 @@ def pt_total(r, L):
     a, b = nums(r, L)
     th, nm = thing(r), name(r)
     c1, c2 = r.sample(["red", "blue", "green", "yellow", "big", "small"], 2)
-    t = pick(r, [f"{nm} has {a} {c1} {th[1]} and {b} {c2} {th[1]}. How many {th[1]} does {nm} have?",
-                 f"There are {a} {c1} {th[1]} and {b} {c2} {th[1]} in a bag. How many {th[1]} are in the bag?"])
+    t = pick(r, [f"{nm} has {a} {c1} {th[0] if a == 1 else th[1]} and {b} {c2} {th[0] if b == 1 else th[1]}. How many {th[1]} does {nm} have?",
+                 f"A bag holds {a} {c1} {th[0] if a == 1 else th[1]} and {b} {c2} {th[0] if b == 1 else th[1]}. How many {th[1]} are in the bag?"])
     return Item(t, U(a + b, th), [f"Put the two parts together: {a} + {b}.", f"{a} + {b} = {a + b}."],
                 ws(a + b, th, [(abs(a - b), "subtracted instead of adding"), (a, "used only one part")]), EX(f"{a}+{b}", unit=th[1]),
                 qtype="word-problem", tags={"modeling"})
@@ -138,7 +138,7 @@ def pt_bar(r, L):
     if unk == "whole":
         alt = f"A bar model with parts {a} and {b}. The whole is unknown."
         rows = [{"label": "", "parts": [[w, "?"]]}, {"label": "", "parts": [[a, str(a)], [b, str(b)]]}]
-        return Item(f"There are {a} big {th[1]} and {b} small {th[1]}. The bar shows the story. How many {th[1]} in all?", U(w, th),
+        return Item(f"There are {a} big {th[0] if a == 1 else th[1]} and {b} small {th[0] if b == 1 else th[1]}. The bar shows the story. How many {th[1]} in all?", U(w, th),
                     [f"Add the parts: {a} + {b}.", f"{a} + {b} = {w}."], ws(w, th, [(abs(a - b), "subtracted instead of adding")]), EX(f"{a}+{b}", unit=th[1]),
                     qtype="visual", tags={"modeling"}, diagram=Diagram("bars", {"rows": rows}, alt))
     alt = f"A bar model with whole {w} and parts {a} and unknown."
@@ -343,9 +343,9 @@ def three(r, L):
 def th_sum(r, L):
     a, b, c = three(r, L)
     th, nm = thing(r), name(r)
-    t = pick(r, [f"{nm} has {a} red {th[1]}, {b} blue {th[1]}, and {c} green {th[1]}. How many {th[1]} does {nm} have?",
+    t = pick(r, [f"{nm} has {a} red {th[0] if a == 1 else th[1]}, {b} blue {th[0] if b == 1 else th[1]}, and {c} green {th[0] if c == 1 else th[1]}. How many {th[1]} does {nm} have?",
                  f"{nm} picks {U(a, th)} on Monday, {b} on Tuesday, and {c} on Wednesday. How many {th[1]} in all?",
-                 f"There are {a} {th[1]} in one box, {b} in a second box, and {c} in a third box. How many {th[1]} are there?"])
+                 f"There {'is' if a == 1 else 'are'} {ns(a, th)} in one box, {b} in a second box, and {c} in a third box. How many {th[1]} are there?"])
     return Item(t, U(a + b + c, th), ["Add all three numbers. Look for a ten.", f"{a} + {b} + {c} = {a + b + c}."],
                 ws(a + b + c, th, [(a + b, "left out a number"), (b + c, "left out a number"), (a + c, "left out a number")]),
                 EX(f"{a}+{b}+{c}", unit=th[1]), qtype="word-problem", tags={"modeling"})
