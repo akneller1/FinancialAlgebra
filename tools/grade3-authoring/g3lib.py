@@ -41,3 +41,40 @@ def mins(n):
 
 def times_word(n):
     return ONES[n] if 0 <= n <= 10 else str(n)
+
+
+# Grade 3 repeated-addition select-all cards must test ONE idea per card.
+# The core eg_repeated family alternates between finding a total and counting
+# addends. Both are valid on their own, but mixing them in a four-choice
+# "matched answer" card makes one choice test a different task.
+from g5lib import select_of as _shared_select_of
+
+
+def select_of(core, k_true=2, k_false=2):
+    if core.__name__ != "eg_repeated":
+        return _shared_select_of(core, k_true, k_false)
+
+    def groups_only(r, L):
+        if L == 0:
+            g, n = r.randint(2, 5), r.randint(2, 5)
+        elif L == 1:
+            g, n = r.randint(3, 6), r.randint(3, 8)
+        else:
+            g, n = r.randint(4, 7), r.randint(4, 9)
+        summands = " + ".join([str(n)] * g)
+        return Item(
+            f"Complete the equation: {summands} = ___ × {n}", g,
+            [f"Count the addends: there are {g} addends of {n}.",
+             f"{summands} = {g} × {n}."],
+            [W(g + 1, "counted one extra addend"),
+             W(g - 1, "missed one addend"),
+             W(g * n, "used the total instead of the group count")],
+            FN("repadd_groups", sum=summands, addend=n),
+            qtype="fill-blank", tags={"multiple-representations"}
+        )
+
+    groups_only.__name__ = core.__name__
+    groups_only.levels = core.levels
+    groups_only.mode = core.mode
+    groups_only.qtype = core.qtype
+    return _shared_select_of(groups_only, k_true, k_false)
