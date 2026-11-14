@@ -113,6 +113,8 @@ async function playGame(ctx, game, unit, mode) {
 }
 
 async function understandingCheck(ctx, unit) {
+  // Dedicated sets contain two items per skill at the selected Standard level.
+  const expected = Math.min(8, outline.units.find(u => u.id === unit).skills.length * 2);
   for (const [view, fb] of [['one', 'now'], ['one', 'end'], ['page', 'now']]) {
     const { page, errors } = await open(ctx, `http://localhost:${PORT}/${PREFIX}worksheet-generator/grade1-understanding-check.html?unit=${unit}&count=8&view=${view}&feedback=${fb}`);
     const what = `understanding check ${unit} ${view}/${fb}`;
@@ -125,11 +127,11 @@ async function understandingCheck(ctx, unit) {
       if (view === 'page') {
         // answer every quiet box using the prepared set exposed through the page (answers typed in the inputs)
         const n = await page.$$eval('.el-q', b => b.length);
-        if (n !== 8) throw new Error(n + ' questions shown');
+        if (n !== expected) throw new Error(n + ' questions shown');
         await page.click('.el-btn.primary.big');
         await page.waitForSelector('.el-celebrate');
       } else {
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < expected; i++) {
           if (fb === 'now') {
             const r = await answer(page); if (r === 'stuck' || r === 'none') throw new Error('could not answer question ' + (i + 1));
             await page.waitForSelector('.el-feedback.good, .el-feedback.try');
@@ -141,17 +143,17 @@ async function understandingCheck(ctx, unit) {
       }
       const txt = await page.$eval('.el-celebrate', e => e.innerText);
       const m = txt.match(/You answered (\d+) of (\d+)/); if (!m) throw new Error('no score line');
-      if (fb === 'now' && view === 'one' && (+m[1] !== 8 || wrong)) throw new Error('bot answered correctly but score is ' + m[1] + '/8');
+      if (fb === 'now' && view === 'one' && (+m[1] !== expected || wrong)) throw new Error('bot answered correctly but score is ' + m[1] + '/' + expected);
       if (view !== 'one' || fb === 'end') {   // blank answers: everything should be counted as missed and offer a retry
         if (+m[1] !== 0) throw new Error('blank answers scored ' + m[1]);
-        const retry = await page.$('text=Retry missed questions (8)'); if (!retry) throw new Error('no retry button'); await retry.click();
+        const retry = await page.$('text=Retry missed questions (' + expected + ')'); if (!retry) throw new Error('no retry button'); await retry.click();
         await page.waitForSelector('.el-q');
       }
       if (view === 'one' && fb === 'now') {   // printable results page: every question listed with the typed answer
         await page.click('text=Print or save my results');
         const rows = await page.$$eval('#el-results .el-results-table tr', r => r.length);
         const name = await page.$('#el-results .el-results-name');
-        if (rows < 9 || !name) throw new Error('results page incomplete (' + rows + ' rows)');
+        if (rows < expected + 1 || !name) throw new Error('results page incomplete (' + rows + ' rows)');
         await page.click('#el-results .el-results-bar .el-btn:not(.primary)');
       }
       const teacher = await page.$('.el-summary'); // student=1 not set: teacher summary visible
