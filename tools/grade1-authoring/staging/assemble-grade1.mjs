@@ -14,7 +14,9 @@ export function assembleGrade1({ source, out }) {
   const tools = path.join(source, 'tools/grade1-authoring');
   const O = JSON.parse(fs.readFileSync(path.join(tools, 'outline.json'), 'utf8'));
   const GAMES = JSON.parse(fs.readFileSync(path.join(tools, 'games.json'), 'utf8')).games;
-  const TOOLS = [];
+  // Interactive Math tools (built by tools/elementary-interactive/build.py); same manifest shape as Grades 2 and 3.
+  const toolManifest = path.join(tools, 'interactive/manifest.json');
+  const TOOLS = fs.existsSync(toolManifest) ? JSON.parse(fs.readFileSync(toolManifest, 'utf8')).tools : [];
   const PROJ = {};
   const dest = path.join(out, G);
   fs.rmSync(dest, { recursive: true, force: true });

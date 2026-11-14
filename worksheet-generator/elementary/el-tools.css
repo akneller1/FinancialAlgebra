@@ -45,3 +45,15 @@ body.present .tl-sub{display:none}
 @media (max-width:54rem){main.tl-main{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.tl *{transition:none!important;animation:none!important}}
 @media print{.tl-top,.tl-controls{display:none!important}body.tl{background:#fff}}
+/* Grades 1–3 tools (el-tool-kit.js): clock layout, view switches, wide steppers, tappable shares */
+.tl-step-wide{flex-wrap:wrap}.tl-step-wide button{min-width:3.1rem;font-size:1rem}
+.el-view{margin-bottom:.6rem;align-items:center}.el-inline{flex-direction:row;align-items:center;gap:.4rem;flex:0 1 auto;min-width:0}.el-inline label{font-weight:800;font-size:.9rem}
+.el-clock-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:.9rem;align-items:center}.el-clock svg{max-height:22rem}
+@media (max-width:40rem){.el-clock-row{grid-template-columns:1fr}}
+.el-digital{font-size:2.6rem;font-weight:900;text-align:center;color:#22408a;background:#0f1d33;color:#7cf5b4;border-radius:.9rem;padding:.2rem .8rem;font-variant-numeric:tabular-nums;letter-spacing:.05em}.el-digital small{font-size:1.1rem}
+.el-part{cursor:pointer}.el-part:hover{filter:brightness(.95)}.el-part:focus-visible{outline:none;stroke:#ffb000;stroke-width:7}
+.el-svg-btn{cursor:pointer}.el-svg-btn:focus-visible{outline:none}.el-svg-btn:focus-visible rect{stroke:#ffb000;stroke-width:4}
+.el-ok{color:#0d6b3c;font-weight:800}.el-no{color:#b42318;font-weight:800}
+.tl input[type=number],.tl input[type=text]{border:.12rem solid #b9d6c6;border-radius:.7rem;padding:.4rem .5rem;min-height:2.7rem;width:6rem;font-size:1.1rem;background:#fff}
+.tl [hidden]{display:none!important}
+.tl-controls>.lab{align-self:center}

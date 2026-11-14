@@ -56,7 +56,10 @@
     var mainEl = D.querySelector('main');
     var tn = D.createElement('section'); tn.id = 'tsTeacher'; tn.className = 'tl-card tl-teacher'; tn.hidden = true;
     tn.innerHTML = '<h2>Teacher notes</h2>' + (o.teacher ? '<ul>' + o.teacher.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' : '') +
-      (o.standards ? '<p><b>Standards:</b> ' + o.standards + '</p>' : '') + '<p>Use <b>Present</b> on a projector or smartboard, and <b>Fit</b> to make the picture and its controls fill the screen together.</p>';
+      (o.standards ? '<p><b>Standards:</b> ' + o.standards + '</p>' : '') +
+      (o.challenges ? '<p><b>Challenges students work toward:</b> ' + o.challenges.map(function (c) { return c.text; }).join(' · ') + '</p>' : '') +
+      /* Grade 5 parity: tools that ship an Explore & Reflect worksheet and teacher key link them here (teacher view only). */
+      (o.printables ? '<p><a href="worksheet.pdf" target="_blank" rel="noopener">Printable student worksheet (PDF)</a> · <a href="teacher-key.pdf" target="_blank" rel="noopener">Teacher key (PDF)</a></p>' : '') + '<p>Use <b>Present</b> on a projector or smartboard, and <b>Fit</b> to make the picture and its controls fill the screen together.</p>';
     mainEl.appendChild(tn);
     function setMode(t) { D.body.classList.toggle('teacher', t); tn.hidden = !t; var b = $('tsMode'); if (b) { b.setAttribute('aria-pressed', t); b.textContent = t ? 'Student view' : 'Teacher view'; } var d = D.querySelector('#notice details'); if (d) d.open = t; }
     if ($('tsMode')) $('tsMode').onclick = function () { setMode(!D.body.classList.contains('teacher')); };
