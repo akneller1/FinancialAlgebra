@@ -1,5 +1,5 @@
 /* Grade 1 development-only assembly. Reuses the Grade 2 shared game and Understanding Check runtime.
-   This question-bank package does not yet supply flashcards, cheat sheets, vocabulary or projects. */
+   Includes unit flashcards, cheat sheets, vocabulary and teaching notes; projects are not supplied. */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -27,7 +27,7 @@ export function assembleGrade1({ source, out }) {
   const list = (dir, re) => fs.readdirSync(path.join(source, dir)).filter(f => re.test(f)).map(f => dir + '/' + f);
 
   /* 1. course-owned files (same relative layout as the production repository) */
-  ['worksheet-generator/grade1-games.html', 'worksheet-generator/grade1-understanding-check.html',
+  ['worksheet-generator/grade1-games.html', 'worksheet-generator/grade1-flashcards.html', 'worksheet-generator/grade1-understanding-check.html',
     'worksheet-generator/elementary', 'worksheet-generator/grade1', 'question-banks/math1', 'question-banks/assets/math1']
     .concat(list('artifacts', /^math1-/), list('thumbs', /^math1-/)).forEach(f => copy(f));
   /* 2. shared Classroom files the players use, taken from the assembled production shell */
@@ -51,8 +51,14 @@ G.MK_COURSE_CATALOG={getSkills:function(c,u){return rec(c,u).map(function(r){ret
   // analytics stays off on the noindex development preview
   if (fs.existsSync(path.join(dest, 'analytics.js'))) fs.writeFileSync(path.join(dest, 'analytics.js'), '/* development preview: analytics disabled */\n');
 
+  const vf = path.join(out, 'worksheet-generator/vocabulary-data-middle-grades.js');
+  if (fs.existsSync(vf)) {
+    const block = fs.readFileSync(path.join(tools, 'patches/vocabulary-math1.js'), 'utf8').trim().replace(/"math1-/g, '"' + G + '-');
+    fs.writeFileSync(vf, fs.readFileSync(vf, 'utf8') + '\n' + block + '\n');
+  }
+
   /* Native planner teaching notes and the Activity generator's project registry, the way released Grade 5 supplies them. */
-  const notes = {};
+  const notes = JSON.parse(fs.readFileSync(path.join(tools, 'staging/teaching-notes.json'), 'utf8'));
   fs.writeFileSync(path.join(dest, 'grade1-native-notes.js'), 'window.MKPLAN_TEACH=window.MKPLAN_TEACH||{};window.MKPLAN_TEACH.' + G + '=' + JSON.stringify(notes) + ';\n');
   const nativeProjects = {};
   Object.entries(PROJ).forEach(([k, list]) => { nativeProjects[k.replace(/^math1-/, G + '-')] = list.map(p => ({ folder: p.folder, slug: p.slug, base: '../' + G + '/artifacts/' + p.folder + '/',
@@ -92,11 +98,14 @@ G.MK_COURSE_CATALOG={getSkills:function(c,u){return rec(c,u).map(function(r){ret
       ['Assessment', 'menu-assessment.html', 'assessment-generator', 'assessment', 'Multiple choice, short answer and open response, with points, versions and an answer key.']]
       .forEach(([t, page, fmt, th, d]) => add({ title: t + ' Generator', path: 'worksheet-generator/' + page + '#unit=' + set, type: 'Generator', bankFormat: fmt, thumb: `${G}/thumbs/math1-generator-${th}.svg`, description: d }));
     add({ title: 'Error Analysis', path: 'worksheet-generator/printables.html#unit=' + set + '&kind=error', type: 'Generator', bankFormat: 'printable-generator', visibleInBrowse: true, thumb: `${G}/thumbs/math1-generator-activity.svg`, description: 'Find, explain and correct a classmate’s mistake. Teacher solutions included.' });
+    add({ title: 'Vocabulary Activities and Crosswords', path: 'worksheet-generator/printables.html#unit=' + set + '&kind=vocabulary', type: 'Generator', bankFormat: 'printable-generator', thumb: `${G}/thumbs/math1-flashcards.svg`, description: 'Matching, fill in the blank and crosswords with the unit vocabulary.' });
     GAMES.forEach(g => {
       if (g.units && !g.units.includes(u.id)) return;
       add({ title: g.title, path: `${G}/worksheet-generator/grade1-games.html?game=${g.id}&unit=${u.id}`, type: 'Game', bankFormat: g.id === 'four-in-a-row' ? 'connect-four' : 'topic-games', gameMode: g.team ? 'Team Games' : 'Individual Review', thumb: `${G}/thumbs/math1-game-${g.thumb}.svg`, description: g.description });
     });
+    add({ title: 'Flashcards', path: `${G}/worksheet-generator/grade1-flashcards.html?unit=${u.id}`, type: 'Study Guide', bankFormat: 'flashcards', thumb: `${G}/thumbs/math1-flashcards.svg`, description: 'Vocabulary, key facts, pictures, examples and common mistakes. The answer is on the back only.' });
     add({ title: 'Understanding Check', path: `${G}/worksheet-generator/grade1-understanding-check.html?unit=${u.id}`, type: 'Study Guide', bankFormat: 'interactive-practice-test', thumb: `${G}/thumbs/math1-understanding-check.svg`, description: 'Immediate feedback, worked solutions, progress, a summary, retry of missed questions and a printable results page.' });
+    add({ title: 'Cheat Sheet', path: `${G}/artifacts/math1-${u.id}-cheat-sheet/worksheet.pdf`, type: 'Study Guide', bankFormat: 'cheat-sheets', thumb: `${G}/thumbs/math1-${u.id}-cheat-sheet.jpg`, description: 'Two-page printable reference: big idea, vocabulary, worked examples, visual models, reminders, common mistakes and Try It!' });
     TOOLS.filter(t => t.units.includes(u.id)).forEach(t => add({ title: t.title, path: `${G}/artifacts/${t.slug}/index.html`, type: 'Interactive', bankFormat: 'interactive-math', thumb: `${G}/thumbs/${t.slug}.svg`, description: t.description }));
     (PROJ['math1-' + u.id] || []).forEach(p => add({ title: p.title, path: `${G}/artifacts/${p.folder}/index.html`, type: 'Project', bankFormat: 'other', thumb: `${G}/thumbs/${p.folder}.svg`, description: p.description }));
     return { id: u.id, name: u.name, artifacts: A };
@@ -105,6 +114,6 @@ G.MK_COURSE_CATALOG={getSkills:function(c,u){return rec(c,u).map(function(r){ret
   O.units.forEach(u => { nQ += JSON.parse(fs.readFileSync(path.join(source, `question-banks/${C}/${u.id}.json`), 'utf8')).questions.length; });
   const nS = O.units.reduce((n, u) => n + u.skills.length, 0);
   return { id: G, name: O.name, blurb: O.blurb, color: 'green', art: 'first', preloaded: true,
-    approved: `${nS} skills · ${nQ.toLocaleString('en-US')} verified questions · games and understanding checks`, units,
+    approved: `${nS} skills · ${nQ.toLocaleString('en-US')} verified questions · games and study guides`, units,
     skills: Object.fromEntries(O.units.map(u => [u.id, u.skills.map(s => s[0])])) };
 }

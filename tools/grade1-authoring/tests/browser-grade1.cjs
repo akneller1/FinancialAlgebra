@@ -256,7 +256,7 @@ let PORT;
     }
   }
   if (!want || want === 'checks') for (const u of (QUICK ? UNITS.slice(0, 3) : UNITS)) await understandingCheck(ctx, u);
-  // Grade 1 flashcards have not been authored.
+  if (!want || want === 'cards') for (const u of UNITS) await flashcards(ctx, u);
   if (!want || want === 'links') await studentLinks(ctx);
   if ((!want || want === 'units') && !PREFIX && !fs.existsSync(path.join(SRC, 'src/grade1-site.js'))) await unitPages(ctx);
   await browser.close(); server.close();

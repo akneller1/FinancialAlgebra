@@ -59,6 +59,7 @@ jobs:
           G1_PREFIX: grade1/
         run: |
           G3_ONLY=checks node tools/grade1-authoring/tests/browser-grade1.cjs
+          G3_ONLY=cards node tools/grade1-authoring/tests/browser-grade1.cjs
           G3_ONLY=links node tools/grade1-authoring/tests/browser-grade1.cjs
           G3_ONLY=games node tools/grade1-authoring/tests/browser-grade1.cjs --quick
       - name: Exercise all Grade 1 native generators

@@ -18,6 +18,7 @@ const PAGES = [
   ['assessment', 'menu-assessment.html', '#mmView', '#mmBuildBtn'],
   ['activity: maze', 'printables.html', '#prPreview', null, '&kind=maze'],
   ['activity: tarsia', 'printables.html', '#prPreview', null, '&kind=tarsia'],
+  ['activity: vocabulary', 'printables.html', 'body', 'FRAME:#generate', '&kind=vocabulary'],
   ['activity: stations', 'printables.html', '#prPreview', null, '&kind=stations'],
   ...(SET === 'math1' ? [['understanding check (printable)', 'practice-test.html', 'main, body', null]] : [])
 ];

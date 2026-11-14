@@ -19,6 +19,7 @@ Run on 2026-11-14 in a clean checkout layout (FinancialAlgebra `tools/grade2-aut
 | Language lint | `verify.py` notation lints + build polish | ASCII minus, “1 times”, broken values, plural agreement after 1 (incl. “1 more X”), site-renderer italic traps (do/go/“of a”) | **0** issues |
 | Assets | `verify.py`, `audit1.py` | Every diagram file exists, alt text present, diagram data stored for the verifier; no orphan files | **1,359** PNGs referenced (1,275 practice + 84 checks), **0 missing, 0 unused** |
 | Rendered review | contact sheets viewed as images | Ten frames, crossed-out counters, number lines, base-ten blocks, 120/hundred charts, bars, tally charts, picture graphs, tables, length strips on unit squares, measuring with cubes/clips (gaps, overlaps, mixed sizes), analog/digital clocks, 2-D shapes (rotated, open figures), solids, composite pattern-block shapes, partitions | Defects found and fixed: length grids were not countable (now unit-square strips), compose drawings off-centre, “1 more blocks”, repeated names in one prompt, “6 groups of 10 and 0 more” |
+| Flashcards and cheat sheets | `build_content.py` (Node-evaluated checks + equation re-check) and Classroom `build.cjs` | 72 cheat-sheet example/Try It! checks pass; 90 equations in vocabulary, cards and sheets re-computed; 12 two-page PDFs built with **0 overflow**; pages viewed as images; 223 flashcards schema-checked | **0 failures** |
 | Determinism | rebuild in a second checkout | `build.py` regenerates byte-identical banks | identical |
 
 ## Difficulty progression
@@ -30,4 +31,4 @@ Across the 47 skills the mean largest number per item rises 14.7 → 23.1 → 30
 3. **Open-response/matching extras** are built from the same skill's core families, so a few sets have repeated part answers (e.g. four “4”s in “How many fourths make a whole?”).
 4. Some families serve two or three levels with different number ranges, so a Standard and an Advanced item can share wording. Teacher review of tone and pacing is still pending; no human has approved the banks (`approved:false`, `preview:true`).
 5. Clocks use the shared Grade 3 renderer (hour hand placed exactly at h + m/60), so half-hour hands sit between numbers as intended.
-6. Not authored in this package: flashcard decks, vocabulary patch, cheat sheets, projects, teaching notes, `worksheet-generator/grade1/config.js` and a staging assembler (see `INTEGRATION.md`).
+6. Not authored in this package: projects, `worksheet-generator/grade1/config.js` and a staging assembler (see `INTEGRATION.md`). Flashcard and cheat-sheet content is hand-written and checked for arithmetic, but has not had teacher review.
