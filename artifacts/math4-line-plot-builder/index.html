@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Line Plot Builder · 4th Grade Math | Mr. K's Classroom</title><meta name="description" content="Make a line plot of measurements in halves, quarters and eighths of an inch. Read the greatest, least and most common values, the difference between the greatest and least, and the total of all the measurements.">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../worksheet-generator/elementary/el-tools.css?v=grade4-20261112">
+</head><body class="tl">
+<main class="tl-main"><section class="tl-card" id="workspace"><h1>Line Plot Builder</h1><p class="tl-sub">Choose a data set or start a blank plot. Tap a mark on the line, or move the arrow and press Add X.</p>
+<div class="tl-model" id="lpModel"></div><div class="tl-controls" id="lpCtl"><div class="tl-field"><label for="lpP">Data set</label><select id="lpP" style="width:100%;min-width:0"></select></div><div class="tl-field"><label for="lpS">Measured to the nearest</label><select id="lpS" style="width:100%;min-width:0"><option value="4">1/2 inch</option><option value="2" selected>1/4 inch</option><option value="1">1/8 inch</option></select></div><div class="tl-field"><span class="lab">Arrow at</span><div class="tl-step"><button type="button" data-k="c" data-s="-1" aria-label="Arrow at down">−</button><b id="lpC"></b><button type="button" data-k="c" data-s="1" aria-label="Arrow at up">+</button></div></div><button type="button" class="tl-btn" id="lpAdd">Add X</button><button type="button" class="tl-btn" id="lpDel">Remove X</button><button type="button" class="tl-btn" id="lpClr">Clear</button></div><div class="tl-out" id="lpOut" aria-live="polite"></div>
+</section>
+<aside class="tl-aside"><section class="tl-card" id="challenges"></section><section class="tl-card" id="notice"></section></aside></main>
+<script src="../../worksheet-generator/elementary/el-tool-shell.js?v=grade4-20261112"></script>
+<script>
+(function () {
+'use strict';
+var T = window.TOOL, $ = T.$;
+var st, MAX = 24, PRESETS = {
+  blank: { name: 'Blank plot', s: 2, v: [] },
+  ribbon: { name: 'Ribbon lengths', s: 2, v: [10, 12, 12, 14, 16, 10, 18, 12, 14, 16] },
+  beans: { name: 'Bean sprout heights', s: 1, v: [5, 7, 7, 8, 9, 11, 7, 12, 9, 7] },
+  rain: { name: 'Weekly rainfall', s: 4, v: [4, 8, 8, 12, 4, 16, 8, 12] } };
+function reset() { st = { p: 'blank', s: 2, c: 8, v: [], added: 0 }; $('lpP').value = 'blank'; $('lpS').value = '2'; }
+// e = a length in eighths of an inch
+function txt(e) { if (e === 0) return '0'; var g = T.gcd(e, 8); return T.mixed(e / g, 8 / g); }
+function plain(e) { if (e === 0) return '0'; var g = T.gcd(e, 8), n = e / g, d = 8 / g, w = Math.floor(n / d), r = n % d; return r ? (w ? w + ' ' : '') + r + '/' + d : String(w); }
+function X(e) { return 50 + e * 660 / MAX; }
+function load(k) { var P = PRESETS[k]; st.p = k; st.s = P.s; st.v = P.v.slice(); $('lpS').value = String(P.s); }
+function stats() {
+  var v = st.v.slice().sort(function (a, b) { return a - b; }), n = v.length, cnt = {}, best = 0, modes = [];
+  v.forEach(function (e) { cnt[e] = (cnt[e] || 0) + 1; best = Math.max(best, cnt[e]); });
+  Object.keys(cnt).forEach(function (k) { if (cnt[k] === best) modes.push(+k); });
+  return { n: n, lo: n ? v[0] : 0, hi: n ? v[n - 1] : 0, tot: v.reduce(function (a, b) { return a + b; }, 0), cnt: cnt, modes: modes.sort(function (a, b) { return a - b; }), best: best };
+}
+function draw() {
+  $('lpC').textContent = plain(st.c);
+  var S = stats(), y0 = 250, s = '<svg viewBox="0 0 760 330" role="img" aria-label="Line plot with ' + S.n + ' measurement' + (S.n === 1 ? '' : 's') + (S.n ? ', from ' + plain(S.lo) + ' to ' + plain(S.hi) + ' inches' : '') + '">', e, k;
+  s += '<line x1="30" y1="' + y0 + '" x2="730" y2="' + y0 + '" stroke="#1d2a3a" stroke-width="4"/>';
+  for (e = 0; e <= MAX; e++) {
+    var on = e % st.s === 0, whole = e % 8 === 0, x = X(e);
+    if (!on && !whole) continue;
+    s += '<line x1="' + x + '" y1="' + (y0 - (whole ? 14 : 9)) + '" x2="' + x + '" y2="' + (y0 + (whole ? 14 : 9)) + '" stroke="#1d2a3a" stroke-width="' + (whole ? 4 : 2.5) + '"/>';
+    if (whole) s += '<text x="' + x + '" y="' + (y0 + 40) + '" text-anchor="middle" font-size="22" font-weight="800" fill="#1d2a3a">' + (e / 8) + '</text>';
+    else if (st.s >= 2 || e % 2 === 0) s += '<text x="' + x + '" y="' + (y0 + 36) + '" text-anchor="middle" font-size="13" fill="#52627a">' + plain(e).replace(/^\d+ /, '') + '</text>';
+    if (on) s += '<rect x="' + (x - 12) + '" y="20" width="24" height="' + (y0 - 10) + '" fill="transparent" data-e="' + e + '" style="cursor:pointer"/>';
+  }
+  for (k in S.cnt) for (var i = 0; i < S.cnt[k]; i++) { var cx = X(+k), cy = y0 - 30 - i * 24; s += '<path d="M' + (cx - 8) + ' ' + (cy - 8) + ' l16 16 m0 -16 l-16 16" stroke="#16865c" stroke-width="4" stroke-linecap="round" pointer-events="none"/>'; }
+  s += '<path d="M' + X(st.c) + ' ' + (y0 + 52) + ' l-10 14 h20z" fill="#d63c7a"/>';
+  s += '<text x="730" y="' + (y0 + 70) + '" text-anchor="end" font-size="15" fill="#52627a">inches</text>';
+  $('lpModel').innerHTML = s + '</svg>';
+  $('lpOut').innerHTML = S.n ? '<b>' + S.n + ' measurement' + (S.n === 1 ? '' : 's') + '.</b> Least: ' + txt(S.lo) + ' in. &nbsp; Greatest: ' + txt(S.hi) + ' in.' +
+    '<br><b>Greatest − least:</b> ' + txt(S.hi) + ' − ' + txt(S.lo) + ' = <b>' + txt(S.hi - S.lo) + '</b> in.' +
+    '<br><b>Most common:</b> ' + S.modes.map(txt).join(', ') + ' in. (' + S.best + ' X' + (S.best === 1 ? '' : 's') + ')' + (S.best === 1 ? ' — every value appears once' : '') +
+    '<br><b>Total of all the measurements:</b> ' + txt(S.tot) + ' in.' : 'The plot is empty. Choose a data set, or tap a mark on the line to add an X.';
+  T.update({ p: st.p, s: st.s, n: S.n, lo: S.lo, hi: S.hi, range: S.hi - S.lo, tot: S.tot, modes: S.modes, best: S.best, added: st.added, quarters: st.v.every(function (e) { return e % 2 === 0; }) });
+}
+function add(e) { if (st.v.length >= 30) return; st.v.push(e); st.c = e; st.added++; draw(); }
+var CH = [{ text: 'Load the ribbon lengths. How much longer is the longest ribbon than the shortest?', test: function (s) { return s.p === 'ribbon' && s.n === 10 && s.range === 8; } },
+  { text: 'Make your own plot of 6 measurements to the nearest 1/4 inch.', test: function (s) { return s.s === 2 && s.n === 6 && s.added >= 6 && s.quarters; } },
+  { text: 'Make a plot where the greatest − least is exactly 1 1/2 inches.', test: function (s) { return s.n >= 3 && s.added >= 1 && s.range === 12; } },
+  { text: 'Measure to the nearest 1/8 inch and make 1 3/8 the most common measurement.', test: function (s) { return s.s === 1 && s.n >= 4 && s.added >= 1 && s.modes.length === 1 && s.modes[0] === 11 && s.best >= 2; } },
+  { text: 'Use exactly 4 Xs whose total is 5 inches.', test: function (s) { return s.n === 4 && s.added >= 1 && s.tot === 40; } }];
+Object.keys(PRESETS).forEach(function (k) { var o = document.createElement('option'); o.value = k; o.textContent = PRESETS[k].name; $('lpP').appendChild(o); });
+reset();
+T.init({ course: 'math4', courseName: '4th Grade Math', unit: 'data-line-plots-word-problems', title: 'Line Plot Builder', standards: '4.MD.B.4',
+  teacher: ["Load the ribbon data and ask: how many ribbons are 1 1/2 inches? Which length is most common? Then ask how much longer the longest is than the shortest.", "Have students measure real objects (pencils, crayons) to the nearest 1/4 or 1/8 inch and build the class plot together.", "Use the total to connect the plot with adding fractions: equal X's can be added by multiplying, for example 3 × 1 1/2."], notice: ["Each X is one measurement, so the number of X's is the number of measurements.", "Greatest − least uses the X's farthest to the right and to the left.", "The most common value has the tallest stack, and the total adds every X, not just one from each stack."], challenges: CH, reset: function () { reset(); draw(); } });
+$('lpP').onchange = function () { load(this.value); st.c = Math.min(st.c - st.c % st.s, MAX); draw(); };
+$('lpS').onchange = function () { st.s = +this.value; st.p = 'blank'; $('lpP').value = 'blank'; st.v = []; st.c = st.c - st.c % st.s; draw(); };
+T.steppers($('lpCtl'), function (k, d) { st.c = Math.max(0, Math.min(MAX, st.c + d * st.s)); draw(); });
+$('lpAdd').onclick = function () { add(st.c); };
+$('lpDel').onclick = function () { var i = st.v.lastIndexOf(st.c); if (i >= 0) { st.v.splice(i, 1); st.added++; draw(); } };
+$('lpClr').onclick = function () { st.v = []; st.p = 'blank'; $('lpP').value = 'blank'; draw(); };
+$('lpModel').addEventListener('click', function (ev) { var r = ev.target.closest('[data-e]'); if (r) add(+r.getAttribute('data-e')); });
+draw();
+})();
+</script></body></html>
