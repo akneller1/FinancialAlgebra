@@ -53,7 +53,7 @@ def ad_frame(r, L):
     alt = f"Ten frame with {a} red counters and {b} yellow counters."
     return Item(pick(r, ["How many counters are in the ten frame in all?", "Red and yellow counters are in the ten frame. How many in all?",
                          "What addition does the ten frame show? Find the total."]), a + b,
-                [f"There are {a} red and {b} yellow counters.", f"{a} + {b} = {a + b}."], add_w(a, b), EX(f"{a}+{b}"), qtype="visual",
+                [f"Count {a} red {'counter' if a == 1 else 'counters'} and {b} yellow {'counter' if b == 1 else 'counters'}.", f"{a} + {b} = {a + b}."], add_w(a, b), EX(f"{a}+{b}"), qtype="visual",
                 diagram=Diagram("tenframe", {"frames": 1, "a": a, "b": b}, alt))
 
 
@@ -61,9 +61,9 @@ def ad_frame(r, L):
 def ad_word(r, L):
     a, b = apair(r, L)
     th, nm = thing(r), name(r)
-    t = pick(r, [f"{nm} has {a} {th[1]}. {nm} gets {b} more. How many {th[1]} does {nm} have now?",
-                 f"There are {a} {th[1]} on a table. {b} more {th[1]} are put on the table. How many {th[1]} are on the table now?",
-                 f"{nm} sees {a} {th[1]} and then {b} more {th[1]}. How many {th[1]} does {nm} see in all?"])
+    t = pick(r, [f"{nm} has {ns(a, th)}. {nm} gets {b} more. How many {th[1]} does {nm} have now?",
+                 f"There {'is' if a == 1 else 'are'} {ns(a, th)} on a table. {b} more {th[0] if b == 1 else th[1]} {'is' if b == 1 else 'are'} put on the table. How many {th[1]} are on the table now?",
+                 f"{nm} sees {ns(a, th)} and then {b} more. How many {th[1]} does {nm} see in all?"])
     return Item(t, f"{a + b} {th[1]}", [f"Add {a} and {b}.", f"{a} + {b} = {a + b} {th[1]}."], add_w(a, b, th[1]), EX(f"{a}+{b}", unit=th[1]),
                 qtype="word-problem", tags={"modeling"})
 
@@ -72,7 +72,7 @@ def ad_word(r, L):
 def ad_groups(r, L):
     a, b = apair(r, L)
     alt = f"Two circles of dots. One circle has {a} dots and the other has {b} dots."
-    return Item(pick(r, ["How many dots are there in all?", "Count all the dots. How many?"]), a + b, [f"There are {a} dots and {b} dots.", f"{a} + {b} = {a + b}."],
+    return Item(pick(r, ["How many dots are there in all?", "Count all the dots. How many?"]), a + b, [f"Count {ns(a, ('dot', 'dots'))} and {ns(b, ('dot', 'dots'))}.", f"{a} + {b} = {a + b}."],
                 add_w(a, b), EX(f"{a}+{b}"), qtype="visual", diagram=Diagram("groups", {"counts": [a, b]}, alt))
 
 
@@ -222,7 +222,7 @@ def mt_frame(r, L):
     alt = f"Ten frame with {a} counters and {10 - a} empty boxes."
     return Item(pick(r, ["How many more counters are needed to fill the ten frame?", "How many empty boxes are in the ten frame?",
                          "The ten frame needs 10 counters. How many more are needed?"]), 10 - a,
-                [f"There are {a} counters.", f"{a} + {10 - a} = 10, so {10 - a} more."],
+                [f"There {'is' if a == 1 else 'are'} {ns(a, ('counter', 'counters'))}.", f"{a} + {10 - a} = 10, so {10 - a} more."],
                 [W(a, "counted the counters, not the empty boxes"), W(10, "gave the total"), W(9 - a, "counted one too few"), W(11 - a, "counted one too many")],
                 FN("blank_eq", eq=f"{a} + ___ = 10"), qtype="visual", diagram=Diagram("tenframe", {"frames": 1, "a": a}, alt))
 
@@ -333,7 +333,7 @@ def np_frame_parts(r, L):
     a = r.randint(1, w - 1)
     alt = f"Ten frame with {a} red counters and {w - a} yellow counters."
     return Item(f"The ten frame shows {w}. How many yellow counters are there?", w - a,
-                [f"There are {a} red counters.", f"{a} + {w - a} = {w}."],
+                [f"There {'is' if a == 1 else 'are'} {a} red {'counter' if a == 1 else 'counters'}.", f"{a} + {w - a} = {w}."],
                 [W(a, "counted the red counters"), W(w, "counted all the counters"), W(10 - w, "counted the empty boxes"), W(w - a + 1, "counted one too many")],
                 FN("blank_eq", eq=f"{a} + ___ = {w}"), qtype="visual", diagram=Diagram("tenframe", {"frames": 1, "a": a, "b": w - a}, alt))
 
