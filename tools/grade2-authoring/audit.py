@@ -76,7 +76,7 @@ def main():
             # Yes/No prompts deliberately show a wrong claim for students to check.
             # Do not interpret that explicitly rejected guess as an operand or
             # the correct answer for the grade-level numeric scope audit.
-            given = re.sub(r"\\s*Is the answer \\d+(?:\\s+[A-Za-z]+)?\\?", "", given, flags=re.I)
+            given = re.sub(r"\s*Is the answer \d+(?:\s+[A-Za-z]+)?\?", "", given, flags=re.I)
             steps_ok = [x for x in q["solutionSteps"] if not x.startswith("Mistake:") and "not " not in x]
             lim = LIMIT.get(u["id"], 1000)
             if q["skillId"] == "add-subtract-100-skill-04":
