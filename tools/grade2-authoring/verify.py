@@ -158,7 +158,14 @@ def fn_tf(c, text):
     t = text.strip()
     if t.startswith("True."):
         return shown_ok
-    m = re.match(r"False\. The correct answer is (.+)\.$", t)
+    # Grade 2 uses child-friendly Yes/No claims as well as True/False.
+    # Check that a Yes explanation actually names the verified shown value.
+    if t.startswith("Yes."):
+        clause = t[4:].strip()
+        value = str(shown).strip()
+        return bool(shown_ok and value and clause and
+                    re.search(r"(?<!\w)" + re.escape(value) + r"(?!\w)", clause, re.I))
+    m = re.fullmatch(r"(?:False\. The correct answer is|No\. The answer is) (.+)\.", t)
     if m:
         return (not shown_ok) and accepts(inner, m.group(1))
     return False
@@ -886,6 +893,24 @@ def numbers_in(t):
 
 
 # ------------------------------------------------------------------ main
+def graph_alt_matches_check(item, check):
+    """Recover ordered graph values from the authored accessible description.
+
+    A subset of Grade 2 text graphs omits the redundant diagram check object.
+    Validate that all of the diagram's data matches the independent numeric
+    answer check, rather than ignoring an unverified image.
+    """
+    q = check.get("q") or {}
+    if q.get("fn") == "tf":
+        q = q.get("inner") or {}
+    vals = q.get("vals")
+    if not isinstance(vals, list) or not vals:
+        return False
+    alt = item.get("diagram", {}).get("spec", {}).get("alt", "")
+    shown = re.findall(r":\s*(\d+)(?:\s+pictures)?(?=\s*[;.]|$)", alt)
+    return len(shown) == len(vals) and [int(v) for v in shown] == [int(v) for v in vals]
+
+
 def main():
     errors, warn = [], []
     stats = Counter()
@@ -948,7 +973,7 @@ def main():
                     E("diagram file missing")
                 if not q["diagram"]["spec"].get("alt", "").strip():
                     E("diagram alt missing")
-                if not c.get("diagram"):
+                if not c.get("diagram") and not graph_alt_matches_check(q, c):
                     E("diagram has no stored data")
             chk = c["q"] or {"k": "parts"}
             if chk["k"] == "key":
