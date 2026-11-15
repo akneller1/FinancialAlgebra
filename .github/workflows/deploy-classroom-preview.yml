@@ -39,6 +39,11 @@ jobs:
           ref: main
           path: classroom
           persist-credentials: false
+      - name: Validate shared solo game opponents
+        run: |
+          node classroom/worksheet-generator/games/tests/solo-ai-tests.cjs
+          node --check classroom/worksheet-generator/games/games.js
+          node --check classroom/worksheet-generator/games/solo-legacy.js
       - uses: actions/setup-node@v4
         with:
           node-version: 22
