@@ -1,0 +1,63 @@
+name: Import Grade 1 Phase 2 story illustrations
+
+on:
+  push:
+    paths:
+      - .github/workflows/import-grade1-phase2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Retrieve and check reviewed source archive
+        run: |
+          curl -fsSL --retry 3 --retry-delay 3             -o "$RUNNER_TEMP/kid-friendly-phase2.zip"             "https://raw.githubusercontent.com/akneller1/classroom/e300c5561fcbb685f3caf6d651ba831d1c0fa940/kid-friendly-phase2-ready-to-deploy.zip"
+          echo "cde4192d7ddeac39a4db4610441e6e558958351fff0b03e85c7dc70d3174a249  $RUNNER_TEMP/kid-friendly-phase2.zip" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/kidphase2"
+          unzip -q "$RUNNER_TEMP/kid-friendly-phase2.zip" -d "$RUNNER_TEMP/kidphase2"
+      - name: Apply checked Grade 1 question illustrations
+        run: node "$RUNNER_TEMP/kidphase2/apply-story-pictures.mjs" "$GITHUB_WORKSPACE" "$RUNNER_TEMP/kidphase2"
+      - name: Verify all source images and metadata
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          let count=0;
+          const dir=path.join(process.env.RUNNER_TEMP,'kidphase2/patches/math1');
+          for(const f of fs.readdirSync(dir).filter(n=>n.endsWith('.json'))){
+            const edits=JSON.parse(fs.readFileSync(path.join(dir,f))).edits;
+            for(const edit of edits){
+              const bank=JSON.parse(fs.readFileSync(edit.bank));
+              const q=bank.questions.find(x=>x.id===edit.id);
+              assert(q && JSON.stringify(q.diagram)===JSON.stringify(edit.changes.diagram.to),'Diagram mismatch '+edit.id);
+              assert(q.sourceNotes?.includes(edit.changes.sourceNotes.append),'Source note missing '+edit.id);
+              const png=fs.readFileSync(q.diagram.spec.src);
+              assert(png.length>100 && png.subarray(0,8).toString('hex')==='89504e470d0a1a0a','Invalid PNG '+edit.id);
+              assert(q.diagram.spec.alt?.length>5,'Missing alt text '+edit.id);
+              count++;
+            }
+          }
+          assert.equal(count,412);
+          console.log('Validated '+count+' exact Grade 1 illustrations in 6 banks.');
+          NODE
+      - name: Commit approved source updates
+        run: |
+          git config user.name "mrks-classroom-automation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add question-banks/math1 question-banks/assets/math1
+          if ! git diff --cached --quiet; then
+            git commit -m "Add 412 validated Grade 1 story illustrations (kid-friendly Phase 2)"
+            git push origin HEAD:main
+          fi
