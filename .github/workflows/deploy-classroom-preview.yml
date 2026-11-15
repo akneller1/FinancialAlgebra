@@ -44,6 +44,17 @@ jobs:
           node classroom/worksheet-generator/games/tests/solo-ai-tests.cjs
           node --check classroom/worksheet-generator/games/games.js
           node --check classroom/worksheet-generator/games/solo-legacy.js
+      - name: Check shared game page scripts
+        run: |
+          node - <<'NODE'
+          const fs = require('node:fs'), vm = require('node:vm');
+          for (const file of ['course-game.html', 'middle-school-game.html']) {
+            const html = fs.readFileSync('classroom/worksheet-generator/' + file, 'utf8');
+            for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
+              if (!/src=/.test(match[1])) new vm.Script(match[2], {filename: file});
+            }
+          }
+          NODE
       - uses: actions/setup-node@v4
         with:
           node-version: 22
