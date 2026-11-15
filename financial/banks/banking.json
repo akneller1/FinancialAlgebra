@@ -6810,6 +6810,397 @@
      "none": "No recommendation."
     }
    ]
+  },
+  {
+   "id": "fa-banking-s01-err-overdraft-count-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "overdraft-count-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Charged the fee once; it applies to each item that clears while overdrawn (two items)."
+   ],
+   "calc": {
+    "kind": "mult",
+    "inputs": [
+     32.0,
+     2
+    ],
+    "correct": 64.0,
+    "unit": "USD"
+   },
+   "prompt": "Malik’s account went negative and two more purchases cleared while it was overdrawn. The bank charges $32.00 per overdraft item. Malik’s work: Overdraft fees = $32.00. What mistake did Malik make?",
+   "format": "multiple-choice",
+   "answer": "Charged the fee once; it applies to each item that clears while overdrawn (two items).",
+   "options": [
+    {
+     "text": "Charged the fee once; it applies to each item that clears while overdrawn (two items).",
+     "correct": true
+    },
+    {
+     "text": "Overdraft fees are charged per month, not per item.",
+     "correct": false
+    },
+    {
+     "text": "Should have charged the fee three times.",
+     "correct": false
+    },
+    {
+     "text": "Overdraft fees are refunded automatically.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Two items cleared while the account was overdrawn.",
+    "2 × $32.00 = $64.00.",
+    "Correct result: $64.00."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-err-fee-annualized-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "fee-annualized-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Multiplied by 4 (quarters or weeks) instead of 12 months."
+   ],
+   "calc": {
+    "kind": "mult",
+    "inputs": [
+     5.95,
+     12
+    ],
+    "correct": 71.4,
+    "unit": "USD"
+   },
+   "prompt": "Sofia’s checking account has a $5.95 monthly maintenance fee. Sofia’s work: Yearly fees = $5.95 × 4 = $23.80. What is the correct yearly cost of the fee?",
+   "format": "short-answer",
+   "answer": "$71.40",
+   "solutionSteps": [
+    "Mistake: Multiplied by 4 (quarters or weeks) instead of 12 months.",
+    "The fee is charged every month.",
+    "$5.95 × 12 = $71.40.",
+    "Correct result: $71.40."
+   ],
+   "numeric": {
+    "value": 71.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-banking-s02-err-months-as-years-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "months-as-years-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used 9 as the time in years; time must be in years, so t = 9/12."
+   ],
+   "calc": {
+    "kind": "simple-interest",
+    "inputs": [
+     2500.0,
+     4.25,
+     0.75
+    ],
+    "correct": 79.69,
+    "unit": "USD"
+   },
+   "prompt": "Diego deposits $2,500.00 at 4.25% simple annual interest for 9 months. Diego’s work: I = $2,500.00 × 0.0425 × 9 = $956.25. What mistake did Diego make?",
+   "format": "multiple-choice",
+   "answer": "Used 9 as the time in years; time must be in years, so t = 9/12.",
+   "options": [
+    {
+     "text": "Used 9 as the time in years; time must be in years, so t = 9/12.",
+     "correct": true
+    },
+    {
+     "text": "Should have used 3.5 instead of 0.035.",
+     "correct": false
+    },
+    {
+     "text": "Should have compounded monthly.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided the rate by 365.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "t = 9 ÷ 12 = 0.75 years.",
+    "I = $2,500.00 × 0.0425 × 0.75 = $79.69.",
+    "Correct result: $79.69."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-err-percent-as-whole-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "percent-as-whole-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used 4 instead of the decimal 0.04 for the rate."
+   ],
+   "calc": {
+    "kind": "simple-interest",
+    "inputs": [
+     750.0,
+     4,
+     2
+    ],
+    "correct": 60.0,
+    "unit": "USD"
+   },
+   "prompt": "Jordan earns 4% simple annual interest on $750.00 for 2 years. Jordan’s work: I = $750.00 × 4 × 2 = $6,000.00. What is the correct interest?",
+   "format": "short-answer",
+   "answer": "$60.00",
+   "solutionSteps": [
+    "Mistake: Used 4 instead of the decimal 0.04 for the rate.",
+    "4% = 0.04.",
+    "I = $750.00 × 0.04 × 2 = $60.00.",
+    "Correct result: $60.00."
+   ],
+   "numeric": {
+    "value": 60.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-banking-s03-err-apr-vs-apy-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "apr-vs-apy-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Compared an APR with an APY; convert Bank A’s APR to APY first."
+   ],
+   "calc": {
+    "kind": "apy",
+    "inputs": [
+     4.8
+    ],
+    "correct": 4.91,
+    "unit": "%"
+   },
+   "prompt": "Bank A pays 4.8% APR compounded monthly. Bank B pays 4.82% APY. Elena’s work: Bank B is better because 4.82% > 4.8%. What mistake did Elena make?",
+   "format": "multiple-choice",
+   "answer": "Compared an APR with an APY; convert Bank A’s APR to APY first.",
+   "options": [
+    {
+     "text": "Compared an APR with an APY; convert Bank A’s APR to APY first.",
+     "correct": true
+    },
+    {
+     "text": "APY is always lower than APR, so Bank A is better.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided Bank B’s APY by 12.",
+     "correct": false
+    },
+    {
+     "text": "Both accounts earn the same amount.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "APY for Bank A = (1 + 0.048/12)^12 − 1 ≈ 4.91%.",
+    "Compare APY to APY: 4.91% vs 4.82%; Bank A pays more.",
+    "Correct result: 4.91%."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-err-compound-as-simple-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "compound-as-simple-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Treated monthly compounding as simple interest."
+   ],
+   "calc": {
+    "kind": "compound",
+    "inputs": [
+     2500.0,
+     5.0,
+     12,
+     1
+    ],
+    "correct": 2627.9,
+    "unit": "USD"
+   },
+   "prompt": "Kenji deposits $2,500.00 at 5% interest compounded monthly for 1 year. Kenji’s work: A = $2,500.00 × (1 + 0.05) = $2,625.00. What is the correct balance after 1 year?",
+   "format": "short-answer",
+   "answer": "$2,627.90",
+   "solutionSteps": [
+    "Mistake: Treated monthly compounding as simple interest.",
+    "Monthly rate = 0.05 ÷ 12.",
+    "A = $2,500.00 × (1 + 0.05/12)^12 = $2,627.90.",
+    "Correct result: $2,627.90."
+   ],
+   "numeric": {
+    "value": 2627.9,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-banking-s04-err-statement-deposits-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "statement-deposits-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Subtracted the deposits; deposits are added to the balance."
+   ],
+   "calc": {
+    "kind": "statement",
+    "inputs": [
+     560.25,
+     980.0,
+     1320.75,
+     0
+    ],
+    "correct": 219.5,
+    "unit": "USD"
+   },
+   "prompt": "Kenji’s statement shows a starting balance of $560.25, deposits of $980.00, and withdrawals of $1,320.75. Kenji’s work: Ending balance = $560.25 − $980.00 − $1,320.75 = −$1,740.50. What mistake did Kenji make?",
+   "format": "multiple-choice",
+   "answer": "Subtracted the deposits; deposits are added to the balance.",
+   "options": [
+    {
+     "text": "Subtracted the deposits; deposits are added to the balance.",
+     "correct": true
+    },
+    {
+     "text": "Should have added the withdrawals.",
+     "correct": false
+    },
+    {
+     "text": "Should have ignored the starting balance.",
+     "correct": false
+    },
+    {
+     "text": "Ending balance equals deposits minus withdrawals.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Ending = start + deposits − withdrawals.",
+    "$560.25 + $980.00 − $1,320.75 = $219.50.",
+    "Correct result: $219.50."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-err-statement-fee-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "statement-fee-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Forgot to subtract the monthly service fee."
+   ],
+   "calc": {
+    "kind": "statement",
+    "inputs": [
+     765.5,
+     1250.0,
+     1199.3,
+     12.0
+    ],
+    "correct": 804.2,
+    "unit": "USD"
+   },
+   "prompt": "Kenji’s statement: starting balance $765.50, deposits $1,250.00, withdrawals $1,199.30, and a $12.00 monthly service fee. Kenji’s work: Ending balance = $765.50 + $1,250.00 − $1,199.30 = $816.20. What is the correct ending balance?",
+   "format": "short-answer",
+   "answer": "$804.20",
+   "solutionSteps": [
+    "Mistake: Forgot to subtract the monthly service fee.",
+    "$765.50 + $1,250.00 − $1,199.30 = $816.20.",
+    "Subtract the fee: − $12.00 = $804.20.",
+    "Correct result: $804.20."
+   ],
+   "numeric": {
+    "value": 804.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
   }
  ]
 }

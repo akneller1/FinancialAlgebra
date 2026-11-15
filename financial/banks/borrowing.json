@@ -6242,6 +6242,398 @@
      "none": "No recommendation."
     }
    ]
+  },
+  {
+   "id": "fa-borrowing-s01-err-annual-rate-formula-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "annual-rate-formula-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used the annual rate in the formula; the monthly rate is APR ÷ 12."
+   ],
+   "calc": {
+    "kind": "loan-payment",
+    "inputs": [
+     15600.0,
+     6.9,
+     48
+    ],
+    "correct": 372.84,
+    "unit": "USD"
+   },
+   "prompt": "Sofia finances $15,600.00 at 6.9% APR for 48 months. Sofia’s work: Using r = 0.069 in the payment formula, the payment is $1,122.01. What mistake did Sofia make?",
+   "format": "multiple-choice",
+   "answer": "Used the annual rate in the formula; the monthly rate is APR ÷ 12.",
+   "options": [
+    {
+     "text": "Used the annual rate in the formula; the monthly rate is APR ÷ 12.",
+     "correct": true
+    },
+    {
+     "text": "Should have used n = years instead of months.",
+     "correct": false
+    },
+    {
+     "text": "Should have added the APR to the loan amount.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided the loan by n only.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Monthly rate r = 0.069 ÷ 12.",
+    "Payment = P·r ÷ (1 − (1 + r)^−48) = $372.84.",
+    "Correct result: $372.84."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-err-years-as-n-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "years-as-n-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used n = 4 (years); monthly payments need n = 48 months."
+   ],
+   "calc": {
+    "kind": "loan-payment",
+    "inputs": [
+     12000.0,
+     6.5,
+     48
+    ],
+    "correct": 284.58,
+    "unit": "USD"
+   },
+   "prompt": "Noah borrows $12,000.00 at 6.5% APR for 4 years with monthly payments. Noah’s work: Noah used n = 4 in the payment formula and got $3,040.73. What is the correct monthly payment?",
+   "format": "short-answer",
+   "answer": "$284.58",
+   "solutionSteps": [
+    "Mistake: Used n = 4 (years); monthly payments need n = 48 months.",
+    "n = 12 × 4 = 48 payments.",
+    "r = 0.065 ÷ 12; payment = $284.58.",
+    "Correct result: $284.58."
+   ],
+   "numeric": {
+    "value": 284.58,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-borrowing-s02-err-monthly-only-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "monthly-only-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Compared only monthly payments; the longer term makes Loan A cost more in total."
+   ],
+   "calc": {
+    "kind": "loan-total",
+    "inputs": [
+     20000.0,
+     6.4,
+     48
+    ],
+    "correct": 22722.24,
+    "unit": "USD"
+   },
+   "prompt": "Loan A: $20,000.00 at 5.9% APR for 72 months. Loan B: $20,000.00 at 6.4% APR for 48 months. Elena’s work: Loan A is cheaper because its monthly payment ($330.51) is lower than Loan B’s ($473.38). What mistake did Elena make?",
+   "format": "multiple-choice",
+   "answer": "Compared only monthly payments; the longer term makes Loan A cost more in total.",
+   "options": [
+    {
+     "text": "Compared only monthly payments; the longer term makes Loan A cost more in total.",
+     "correct": true
+    },
+    {
+     "text": "Should have compared APRs only, so Loan A is cheaper.",
+     "correct": false
+    },
+    {
+     "text": "Both loans cost the same because the principal is the same.",
+     "correct": false
+    },
+    {
+     "text": "Should have compared the number of payments only.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Total for A: $330.51 × 72 = $23,796.72.",
+    "Total for B: $473.38 × 48 = $22,722.24.",
+    "Loan B costs less overall.",
+    "Correct result: $22,722.24."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-err-down-payment-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "down-payment-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Did not subtract the down payment from the price."
+   ],
+   "calc": {
+    "kind": "sub",
+    "inputs": [
+     26500.0,
+     4500.0
+    ],
+    "correct": 22000.0,
+    "unit": "USD"
+   },
+   "prompt": "Mateo buys a $26,500.00 car with a $4,500.00 down payment. Mateo’s work: Amount financed = $26,500.00. What is the correct amount financed?",
+   "format": "short-answer",
+   "answer": "$22,000.00",
+   "solutionSteps": [
+    "Mistake: Did not subtract the down payment from the price.",
+    "Amount financed = price − down payment.",
+    "$26,500.00 − $4,500.00 = $22,000.00.",
+    "Correct result: $22,000.00."
+   ],
+   "numeric": {
+    "value": 22000.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-borrowing-s03-err-interest-original-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "interest-original-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used the original balance; month-2 interest is on the balance after the first payment."
+   ],
+   "calc": {
+    "kind": "amort2",
+    "inputs": [
+     15000.0,
+     7.2,
+     298.44
+    ],
+    "correct": 88.75,
+    "unit": "USD"
+   },
+   "prompt": "Priya’s $15,000.00 loan at 7.2% APR has a monthly payment of $298.44. Priya finds the interest in month 2. Priya’s work: Month-2 interest = $15,000.00 × 0.072 ÷ 12 = $90.00. What mistake did Priya make?",
+   "format": "multiple-choice",
+   "answer": "Used the original balance; month-2 interest is on the balance after the first payment.",
+   "options": [
+    {
+     "text": "Used the original balance; month-2 interest is on the balance after the first payment.",
+     "correct": true
+    },
+    {
+     "text": "Should have used the annual rate without dividing by 12.",
+     "correct": false
+    },
+    {
+     "text": "Interest is the same every month on an installment loan.",
+     "correct": false
+    },
+    {
+     "text": "Should have added the payment to the balance.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Month 1 interest = $90.00; principal paid = $298.44 − $90.00 = $208.44.",
+    "New balance = $14,791.56; month-2 interest = $88.75.",
+    "Correct result: $88.75."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-err-principal-month1-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "principal-month1-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Forgot that the first part of each payment goes to interest."
+   ],
+   "calc": {
+    "kind": "amort1",
+    "inputs": [
+     12500.0,
+     6.6,
+     297.01
+    ],
+    "correct": 228.26,
+    "unit": "USD"
+   },
+   "prompt": "Elena’s $12,500.00 loan at 6.6% APR has a monthly payment of $297.01. Elena’s work: Principal paid in month 1 = $297.01. How much principal is paid in month 1?",
+   "format": "short-answer",
+   "answer": "$228.26",
+   "solutionSteps": [
+    "Mistake: Forgot that the first part of each payment goes to interest.",
+    "Interest = $12,500.00 × 0.066 ÷ 12 = $68.75.",
+    "Principal = $297.01 − $68.75 = $228.26.",
+    "Correct result: $228.26."
+   ],
+   "numeric": {
+    "value": 228.26,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-borrowing-s04-err-simple-vs-amortized-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "simple-vs-amortized-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used simple interest on the original amount; for an amortized loan, total interest = total payments − principal."
+   ],
+   "calc": {
+    "kind": "loan-interest",
+    "inputs": [
+     14000.0,
+     7.0,
+     48
+    ],
+    "correct": 2092.0,
+    "unit": "USD"
+   },
+   "prompt": "Sofia borrows $14,000.00 at 7% APR for 4 years; the monthly payment is $335.25. Sofia’s work: Total interest = $14,000.00 × 0.07 × 4 = $3,920.00. What mistake did Sofia make?",
+   "format": "multiple-choice",
+   "answer": "Used simple interest on the original amount; for an amortized loan, total interest = total payments − principal.",
+   "options": [
+    {
+     "text": "Used simple interest on the original amount; for an amortized loan, total interest = total payments − principal.",
+     "correct": true
+    },
+    {
+     "text": "Should have used compound interest on the payment.",
+     "correct": false
+    },
+    {
+     "text": "Total interest equals one monthly payment.",
+     "correct": false
+    },
+    {
+     "text": "Should have multiplied the payment by the number of years.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Total payments = $335.25 × 48 = $16,092.00.",
+    "Interest = $16,092.00 − $14,000.00 = $2,092.00.",
+    "Correct result: $2,092.00."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-err-trade-in-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "trade-in-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Added the trade-in value; a trade-in lowers the amount financed."
+   ],
+   "calc": {
+    "kind": "sub2",
+    "inputs": [
+     28400.0,
+     6500.0,
+     3500.0
+    ],
+    "correct": 18400.0,
+    "unit": "USD"
+   },
+   "prompt": "Mateo buys a $28,400.00 car, gets $6,500.00 for a trade-in, and pays $3,500.00 down. Mateo’s work: Financed = $28,400.00 + $6,500.00 − $3,500.00 = $31,400.00. What is the correct amount financed?",
+   "format": "short-answer",
+   "answer": "$18,400.00",
+   "solutionSteps": [
+    "Mistake: Added the trade-in value; a trade-in lowers the amount financed.",
+    "Financed = price − trade-in − down payment.",
+    "$28,400.00 − $6,500.00 − $3,500.00 = $18,400.00.",
+    "Correct result: $18,400.00."
+   ],
+   "numeric": {
+    "value": 18400.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
   }
  ]
 }

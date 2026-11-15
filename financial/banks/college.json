@@ -6026,6 +6026,392 @@
      "none": "No recommendation."
     }
    ]
+  },
+  {
+   "id": "fa-college-s01-err-tuition-growth-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "tuition-growth-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Ignored the yearly increase; each year’s tuition is the previous year’s times (1 + rate)."
+   ],
+   "calc": {
+    "kind": "growing-sum",
+    "inputs": [
+     14200.0,
+     4,
+     4
+    ],
+    "correct": 60299.79,
+    "unit": "USD"
+   },
+   "prompt": "This year’s tuition is $14,200.00 and rises 4% each year. Diego estimates tuition for 4 years starting now. Diego’s work: 4 × $14,200.00 = $56,800.00. What mistake did Diego make?",
+   "format": "multiple-choice",
+   "answer": "Ignored the yearly increase; each year’s tuition is the previous year’s times (1 + rate).",
+   "options": [
+    {
+     "text": "Ignored the yearly increase; each year’s tuition is the previous year’s times (1 + rate).",
+     "correct": true
+    },
+    {
+     "text": "Should have multiplied by 4 and then added 4%.",
+     "correct": false
+    },
+    {
+     "text": "Tuition increases only in the last year.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided by 4.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Years: $14,200.00, $14,768.00, $15,358.72, $15,973.07.",
+    "Total = $60,299.79.",
+    "Correct result: $60,299.79."
+   ]
+  },
+  {
+   "id": "fa-college-s01-err-net-price-01",
+   "unitId": "college",
+   "skillId": "college-skill-01",
+   "level": "standard",
+   "family": "net-price-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Subtracted loans; loans must be repaid, so only grants lower the net price."
+   ],
+   "calc": {
+    "kind": "sub",
+    "inputs": [
+     27800.0,
+     9400.0
+    ],
+    "correct": 18400.0,
+    "unit": "USD"
+   },
+   "prompt": "Sofia’s cost of attendance is $27,800.00. Aid offer: $9,400.00 in grants and $7,000.00 in federal loans. Sofia’s work: Net price = $27,800.00 − $9,400.00 − $7,000.00 = $11,400.00. What is the correct net price?",
+   "format": "short-answer",
+   "answer": "$18,400.00",
+   "solutionSteps": [
+    "Mistake: Subtracted loans; loans must be repaid, so only grants lower the net price.",
+    "Net price = cost − grants and scholarships.",
+    "$27,800.00 − $9,400.00 = $18,400.00.",
+    "Correct result: $18,400.00."
+   ],
+   "numeric": {
+    "value": 18400.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-college-s02-err-loan-months-01",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "loan-months-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used n = 10; monthly payments over 10 years need n = 120."
+   ],
+   "calc": {
+    "kind": "loan-payment",
+    "inputs": [
+     27000.0,
+     5.5,
+     120
+    ],
+    "correct": 293.02,
+    "unit": "USD"
+   },
+   "prompt": "Priya will repay $27,000.00 in student loans at 5.5% over 10 years with monthly payments. Priya’s work: Priya used n = 10 and got $2,768.53. What mistake did Priya make?",
+   "format": "multiple-choice",
+   "answer": "Used n = 10; monthly payments over 10 years need n = 120.",
+   "options": [
+    {
+     "text": "Used n = 10; monthly payments over 10 years need n = 120.",
+     "correct": true
+    },
+    {
+     "text": "Should have used the annual rate without dividing by 12.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided the loan by 10.",
+     "correct": false
+    },
+    {
+     "text": "Student loans have no interest.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "n = 120; r = 0.055 ÷ 12.",
+    "Payment = $293.02.",
+    "Correct result: $293.02."
+   ]
+  },
+  {
+   "id": "fa-college-s02-err-unsubsidized-01",
+   "unitId": "college",
+   "skillId": "college-skill-02",
+   "level": "standard",
+   "family": "unsubsidized-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Ignored interest that accrues during school on an unsubsidized loan."
+   ],
+   "calc": {
+    "kind": "simple-total",
+    "inputs": [
+     5500.0,
+     6.0,
+     4
+    ],
+    "correct": 6820.0,
+    "unit": "USD"
+   },
+   "prompt": "Zara borrows a $5,500.00 unsubsidized loan at 6% simple interest. Interest builds for 4 years in school and is then added to the balance. Zara’s work: Balance at graduation = $5,500.00. What is the balance at graduation?",
+   "format": "short-answer",
+   "answer": "$6,820.00",
+   "solutionSteps": [
+    "Mistake: Ignored interest that accrues during school on an unsubsidized loan.",
+    "Interest = $5,500.00 × 0.06 × 4 = $1,320.00.",
+    "Balance = $6,820.00.",
+    "Correct result: $6,820.00."
+   ],
+   "numeric": {
+    "value": 6820.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-college-s03-err-career-difference-01",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "career-difference-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Gave the one-year difference; multiply by the number of working years."
+   ],
+   "calc": {
+    "kind": "mult",
+    "inputs": [
+     21000.0,
+     30
+    ],
+    "correct": 630000.0,
+    "unit": "USD"
+   },
+   "prompt": "Amara compares two careers: $62,000.00 versus $41,000.00 per year over a 30-year career. Amara’s work: Difference over the career = $21,000.00. What mistake did Amara make?",
+   "format": "multiple-choice",
+   "answer": "Gave the one-year difference; multiply by the number of working years.",
+   "options": [
+    {
+     "text": "Gave the one-year difference; multiply by the number of working years.",
+     "correct": true
+    },
+    {
+     "text": "Should have added the salaries.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided by the number of years.",
+     "correct": false
+    },
+    {
+     "text": "Career earnings are the same after taxes.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Yearly difference = $21,000.00.",
+    "× 30 years = $630,000.00.",
+    "Correct result: $630,000.00."
+   ]
+  },
+  {
+   "id": "fa-college-s03-err-roi-base-01",
+   "unitId": "college",
+   "skillId": "college-skill-03",
+   "level": "standard",
+   "family": "roi-base-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Divided by the gain; ROI = (gain − cost) ÷ cost."
+   ],
+   "calc": {
+    "kind": "roi",
+    "inputs": [
+     95000.0,
+     25000.0
+    ],
+    "correct": 280.0,
+    "unit": "%"
+   },
+   "prompt": "A certificate costs $25,000.00 and is expected to raise lifetime earnings by $95,000.00. Imani’s work: ROI = ($95,000.00 − $25,000.00) ÷ $95,000.00 = 73.68%. What is the correct ROI?",
+   "format": "short-answer",
+   "answer": "280%",
+   "solutionSteps": [
+    "Mistake: Divided by the gain; ROI = (gain − cost) ÷ cost.",
+    "Net gain = $70,000.00.",
+    "ROI = $70,000.00 ÷ $25,000.00 = 280%.",
+    "Correct result: 280%."
+   ],
+   "numeric": {
+    "value": 280.0,
+    "tolerance": 0.01,
+    "unit": "percent"
+   }
+  },
+  {
+   "id": "fa-college-s04-err-payback-salary-01",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback-salary-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Divided by the whole salary; payback uses the increase in earnings."
+   ],
+   "calc": {
+    "kind": "div",
+    "inputs": [
+     36000.0,
+     9000.0
+    ],
+    "correct": 4.0,
+    "unit": "years"
+   },
+   "prompt": "A program costs $36,000.00. Graduates earn $52,000.00 per year, which is $9,000.00 more than they earn now. Sofia’s work: Payback = $36,000.00 ÷ $52,000.00 = 0.69 years. What mistake did Sofia make?",
+   "format": "multiple-choice",
+   "answer": "Divided by the whole salary; payback uses the increase in earnings.",
+   "options": [
+    {
+     "text": "Divided by the whole salary; payback uses the increase in earnings.",
+     "correct": true
+    },
+    {
+     "text": "Should have multiplied the cost by the raise.",
+     "correct": false
+    },
+    {
+     "text": "Payback is always 4 years.",
+     "correct": false
+    },
+    {
+     "text": "Should have used the monthly salary.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Payback = cost ÷ yearly increase.",
+    "$36,000.00 ÷ $9,000.00 = 4 years.",
+    "Correct result: 4 years."
+   ]
+  },
+  {
+   "id": "fa-college-s04-err-payback-months-01",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "payback-months-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Converted to years twice; months to pay back = cost ÷ monthly increase."
+   ],
+   "calc": {
+    "kind": "div",
+    "inputs": [
+     7200.0,
+     400.0
+    ],
+    "correct": 18.0,
+    "unit": "count"
+   },
+   "prompt": "A coding course costs $7,200.00 and raises Priya’s take-home pay by $400.00 per month. Priya’s work: Payback = $7,200.00 ÷ ($400.00 × 12 × 12) = 0.12 months. How many months does payback take?",
+   "format": "short-answer",
+   "answer": "18",
+   "solutionSteps": [
+    "Mistake: Converted to years twice; months to pay back = cost ÷ monthly increase.",
+    "$7,200.00 ÷ $400.00 = 18 months.",
+    "Correct result: 18."
+   ],
+   "numeric": {
+    "value": 18.0,
+    "tolerance": 0.05,
+    "unit": "count"
+   }
   }
  ]
 }

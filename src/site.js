@@ -47,7 +47,7 @@ function unitCard(unit,index){
  '<a class="unit-open-link" href="'+linkFor(unit)+'">Open unit →</a></div></li>';
 }
 const shortcuts=[
- ['Lesson Plan','▤','lessonPlan'],['Worksheet','≡','worksheet'],['Assessment','☑','assessment'],
+ ['Error Analysis','⌕','errorAnalysis'],['Lesson Plan','▤','lessonPlan'],['Worksheet','≡','worksheet'],['Assessment','☑','assessment'],
  ['Decision Lab','⟡','decisionLab'],['Practice Test','✓','practiceTest'],['Flashcards','▤','flashcards'],['Cheat Sheet','▧','cheatSheet']
 ];
 function shortcutBanner(unit){
@@ -76,6 +76,7 @@ function resourceSections(unit){
  return '<section class="algebra-unit-section"><h2>Generators</h2><ul class="finance-resource-grid">'+
  resourceCard('Lesson Plan',r.lessonPlan,'Build notes, examples, practice and an exit ticket.',unit)+
  resourceCard('Worksheet',r.worksheet,'Choose skills and create practice with an answer key.',unit)+
+ resourceCard('Error Analysis',r.errorAnalysis,'Find and correct mistakes in fictional students’ financial calculations.',unit)+
  resourceCard('Assessment',r.assessment,'Create a unit assessment with worked solutions.',unit)+'</ul></section>'+
  '<section class="algebra-unit-section" id="games"><h2>Games</h2><p>Play with financial vocabulary, concepts, calculations, and real-life choices. Standard level.</p><ul class="finance-resource-grid">'+
  r.games.map(g=>resourceCard(g.title,g.path,g.description,unit)).join('')+'</ul></section>'+

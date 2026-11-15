@@ -8329,6 +8329,391 @@
      "none": "No recommendation."
     }
    ]
+  },
+  {
+   "id": "fa-income-s01-err-weeks-per-year-01",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "standard",
+   "family": "weeks-per-year-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used 50 weeks instead of 52 weeks in a year."
+   ],
+   "calc": {
+    "kind": "mult",
+    "inputs": [
+     18.25,
+     40,
+     52
+    ],
+    "correct": 37960.0,
+    "unit": "USD"
+   },
+   "prompt": "Imani earns $18.25 per hour and works 40 hours every week of the year. Imani’s work: $18.25 × 40 × 50 = $36,500.00 per year. What mistake did Imani make?",
+   "format": "multiple-choice",
+   "answer": "Used 50 weeks instead of 52 weeks in a year.",
+   "options": [
+    {
+     "text": "Used 50 weeks instead of 52 weeks in a year.",
+     "correct": true
+    },
+    {
+     "text": "Should have multiplied by 12 months instead of weeks.",
+     "correct": false
+    },
+    {
+     "text": "Should have used 35 hours per week.",
+     "correct": false
+    },
+    {
+     "text": "Should have subtracted taxes first.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "A full year has 52 weeks.",
+    "$18.25 × 40 × 52 = $37,960.00.",
+    "Correct result: $37,960.00."
+   ]
+  },
+  {
+   "id": "fa-income-s01-err-overtime-rate-01",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "standard",
+   "family": "overtime-rate-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Paid the overtime hours at the regular rate instead of 1.5 times the rate."
+   ],
+   "calc": {
+    "kind": "weekly-ot",
+    "inputs": [
+     15.0,
+     50
+    ],
+    "correct": 825.0,
+    "unit": "USD"
+   },
+   "prompt": "Elena earns $15.00 per hour and worked 50 hours this week. Overtime (over 40 hours) pays 1.5 times the regular rate. Elena’s work: $15.00 × 50 = $750.00. What is the correct weekly gross pay?",
+   "format": "short-answer",
+   "answer": "$825.00",
+   "solutionSteps": [
+    "Mistake: Paid the overtime hours at the regular rate instead of 1.5 times the rate.",
+    "Regular: $15.00 × 40 = $600.00.",
+    "Overtime: $15.00 × 1.5 × 10 = $225.00.",
+    "Correct result: $825.00."
+   ],
+   "numeric": {
+    "value": 825.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-income-s02-err-fica-medicare-01",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "standard",
+   "family": "fica-medicare-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Left out the 1.45% Medicare tax; FICA is 7.65% in total."
+   ],
+   "calc": {
+    "kind": "pct",
+    "inputs": [
+     3420.0,
+     7.65
+    ],
+    "correct": 261.63,
+    "unit": "USD"
+   },
+   "prompt": "Jordan’s monthly gross pay is $3,420.00. FICA is Social Security (6.2%) plus Medicare (1.45%). Jordan’s work: FICA = $3,420.00 × 0.062 = $212.04. What mistake did Jordan make?",
+   "format": "multiple-choice",
+   "answer": "Left out the 1.45% Medicare tax; FICA is 7.65% in total.",
+   "options": [
+    {
+     "text": "Left out the 1.45% Medicare tax; FICA is 7.65% in total.",
+     "correct": true
+    },
+    {
+     "text": "Should have used the 5% state rate.",
+     "correct": false
+    },
+    {
+     "text": "Should have applied FICA to net pay.",
+     "correct": false
+    },
+    {
+     "text": "Should have used 6.2% of annual pay and divided by 2.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "FICA = 6.2% + 1.45% = 7.65%.",
+    "$3,420.00 × 0.0765 = $261.63.",
+    "Correct result: $261.63."
+   ]
+  },
+  {
+   "id": "fa-income-s02-err-net-deductions-01",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "standard",
+   "family": "net-deductions-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Subtracted only federal withholding and forgot FICA and state tax."
+   ],
+   "calc": {
+    "kind": "net",
+    "inputs": [
+     2600.0,
+     215.0
+    ],
+    "correct": 2056.1,
+    "unit": "USD"
+   },
+   "prompt": "Aisha’s biweekly gross pay is $2,600.00. Federal withholding is $215.00, FICA is 7.65% of gross, and state tax is a flat 5% of gross. Aisha’s work: Net pay = $2,600.00 − $215.00 = $2,385.00. What is the correct net pay?",
+   "format": "short-answer",
+   "answer": "$2,056.10",
+   "solutionSteps": [
+    "Mistake: Subtracted only federal withholding and forgot FICA and state tax.",
+    "FICA: $2,600.00 × 0.0765 = $198.90.",
+    "State: $2,600.00 × 0.05 = $130.00.",
+    "Net = $2,600.00 − $215.00 − $198.90 − $130.00.",
+    "Correct result: $2,056.10."
+   ],
+   "numeric": {
+    "value": 2056.1,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-income-s03-err-pretax-401k-01",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "standard",
+   "family": "pretax-401k-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Did not subtract the pre-tax 401(k) contribution before finding taxable wages."
+   ],
+   "calc": {
+    "kind": "sub",
+    "inputs": [
+     2400.0,
+     180.0
+    ],
+    "correct": 2220.0,
+    "unit": "USD"
+   },
+   "prompt": "Aisha’s pay stub shows gross pay of $2,400.00 and a pre-tax 401(k) contribution of $180.00. Aisha needs the wages that are subject to federal income tax. Aisha’s work: Taxable wages = $2,400.00. What mistake did Aisha make?",
+   "format": "multiple-choice",
+   "answer": "Did not subtract the pre-tax 401(k) contribution before finding taxable wages.",
+   "options": [
+    {
+     "text": "Did not subtract the pre-tax 401(k) contribution before finding taxable wages.",
+     "correct": true
+    },
+    {
+     "text": "Should have added the 401(k) contribution to gross pay.",
+     "correct": false
+    },
+    {
+     "text": "Should have subtracted FICA before finding taxable wages.",
+     "correct": false
+    },
+    {
+     "text": "Should have used net pay as taxable wages.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Pre-tax deductions lower the wages subject to federal income tax.",
+    "$2,400.00 − $180.00 = $2,220.00.",
+    "Correct result: $2,220.00."
+   ]
+  },
+  {
+   "id": "fa-income-s03-err-pay-periods-01",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "standard",
+   "family": "pay-periods-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Divided by 24 (twice a month) instead of 26 biweekly pay periods."
+   ],
+   "calc": {
+    "kind": "div",
+    "inputs": [
+     52000.0,
+     26
+    ],
+    "correct": 2000.0,
+    "unit": "USD"
+   },
+   "prompt": "Sofia earns a salary of $52,000.00 per year and is paid biweekly (every two weeks). Sofia’s work: $52,000.00 ÷ 24 = $2,166.67 per paycheck. What is the correct gross pay per paycheck?",
+   "format": "short-answer",
+   "answer": "$2,000.00",
+   "solutionSteps": [
+    "Mistake: Divided by 24 (twice a month) instead of 26 biweekly pay periods.",
+    "Biweekly means every two weeks: 52 ÷ 2 = 26 paychecks a year.",
+    "$52,000.00 ÷ 26 = $2,000.00.",
+    "Correct result: $2,000.00."
+   ],
+   "numeric": {
+    "value": 2000.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-income-s04-err-marginal-rate-01",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "marginal-rate-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Applied the top (marginal) rate to all of the income instead of taxing each bracket at its own rate."
+   ],
+   "calc": {
+    "kind": "fed-tax-taxable",
+    "inputs": [
+     58000.0
+    ],
+    "correct": 7720.0,
+    "unit": "USD"
+   },
+   "prompt": "Noah has taxable income of $58,000.00. The course tax table taxes 10% up to $12,000, 12% from $12,000 to $48,000, and 22% from $48,000 to $103,000. Noah’s work: Tax = $58,000.00 × 22% = $12,760.00. What mistake did Noah make?",
+   "format": "multiple-choice",
+   "answer": "Applied the top (marginal) rate to all of the income instead of taxing each bracket at its own rate.",
+   "options": [
+    {
+     "text": "Applied the top (marginal) rate to all of the income instead of taxing each bracket at its own rate.",
+     "correct": true
+    },
+    {
+     "text": "Should have used the 12% rate for all of the income.",
+     "correct": false
+    },
+    {
+     "text": "Should have subtracted the standard deduction twice.",
+     "correct": false
+    },
+    {
+     "text": "Should have added the three rates together.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "10% of the first $12,000 = $1,200.00.",
+    "12% of the next $36,000 = $4,320.00.",
+    "22% of the remaining $10,000.00 = $2,200.00; total $7,720.00.",
+    "Correct result: $7,720.00."
+   ]
+  },
+  {
+   "id": "fa-income-s04-err-standard-deduction-01",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "standard-deduction-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Forgot to subtract the $15,000 standard deduction before using the tax table."
+   ],
+   "calc": {
+    "kind": "fed-tax-gross",
+    "inputs": [
+     45000.0
+    ],
+    "correct": 3360.0,
+    "unit": "USD"
+   },
+   "prompt": "Hannah earns $45,000.00 in gross income with no pre-tax deductions. The course uses a $15,000 standard deduction and the course tax table (10% to $12,000, 12% to $48,000, 22% above). Hannah’s work: Hannah applied the tax table to $45,000.00 and got $5,160.00. What is the correct federal income tax?",
+   "format": "short-answer",
+   "answer": "$3,360.00",
+   "solutionSteps": [
+    "Mistake: Forgot to subtract the $15,000 standard deduction before using the tax table.",
+    "Taxable income = $45,000.00 − $15,000.00 = $30,000.00.",
+    "Apply the brackets to $30,000.00.",
+    "Correct result: $3,360.00."
+   ],
+   "numeric": {
+    "value": 3360.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
   }
  ]
 }

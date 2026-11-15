@@ -5621,6 +5621,391 @@
     "[[$198,000.00 || 1.025^27]] = $101,653.15.",
     "Estimated monthly income in today’s dollars ≈ $338.84."
    ]
+  },
+  {
+   "id": "fa-retirement-s01-err-inflation-linear-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "inflation-linear-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used simple growth; inflation compounds: P(1 + i)^t."
+   ],
+   "calc": {
+    "kind": "compound",
+    "inputs": [
+     4.5,
+     3,
+     1,
+     10
+    ],
+    "correct": 6.05,
+    "unit": "USD"
+   },
+   "prompt": "An item costs $4.50 today. Inflation is 3% per year. Imani predicts the price in 10 years. Imani’s work: Price = $4.50 × (1 + 0.03 × 10) = $5.85. What mistake did Imani make?",
+   "format": "multiple-choice",
+   "answer": "Used simple growth; inflation compounds: P(1 + i)^t.",
+   "options": [
+    {
+     "text": "Used simple growth; inflation compounds: P(1 + i)^t.",
+     "correct": true
+    },
+    {
+     "text": "Should have subtracted inflation each year.",
+     "correct": false
+    },
+    {
+     "text": "Prices do not change with inflation.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided by the inflation rate.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Price = $4.50 × (1 + 0.03)^10 = $6.05.",
+    "Correct result: $6.05."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-err-purchasing-power-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "purchasing-power-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Multiplied instead of dividing; future dollars are worth less today, so divide by (1 + i)^t."
+   ],
+   "calc": {
+    "kind": "pv",
+    "inputs": [
+     50000.0,
+     2.5,
+     25
+    ],
+    "correct": 26969.53,
+    "unit": "USD"
+   },
+   "prompt": "Zara wants to know what $50,000.00 received in 25 years is worth in today’s dollars at 2.5% inflation. Zara’s work: Value = $50,000.00 × (1 + 0.025)^25 = $92,697.20. What is it worth in today’s dollars?",
+   "format": "short-answer",
+   "answer": "$26,969.53",
+   "solutionSteps": [
+    "Mistake: Multiplied instead of dividing; future dollars are worth less today, so divide by (1 + i)^t.",
+    "Value = $50,000.00 ÷ (1 + 0.025)^25 = $26,969.53.",
+    "Correct result: $26,969.53."
+   ],
+   "numeric": {
+    "value": 26969.53,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-retirement-s02-err-four-percent-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "four-percent-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "The 4% guideline is per year; divide by 12 for a monthly amount."
+   ],
+   "calc": {
+    "kind": "pct-div",
+    "inputs": [
+     800000.0,
+     4,
+     12
+    ],
+    "correct": 2666.67,
+    "unit": "USD"
+   },
+   "prompt": "Sofia plans to retire with $800,000.00 and use the 4% guideline. Sofia computes the monthly withdrawal. Sofia’s work: Monthly withdrawal = 4% × $800,000.00 = $32,000.00. What mistake did Sofia make?",
+   "format": "multiple-choice",
+   "answer": "The 4% guideline is per year; divide by 12 for a monthly amount.",
+   "options": [
+    {
+     "text": "The 4% guideline is per year; divide by 12 for a monthly amount.",
+     "correct": true
+    },
+    {
+     "text": "Should have used 4% per month.",
+     "correct": false
+    },
+    {
+     "text": "Should have used 40% of savings.",
+     "correct": false
+    },
+    {
+     "text": "Withdrawals should equal the yearly interest only.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Yearly = 4% × $800,000.00 = $32,000.00.",
+    "Monthly = ÷ 12 = $2,666.67.",
+    "Correct result: $2,666.67."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-err-retire-fv-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "retire-fv-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Counted the deposits only and left out compound growth."
+   ],
+   "calc": {
+    "kind": "annuity",
+    "inputs": [
+     250.0,
+     7.0,
+     420
+    ],
+    "correct": 450263.65,
+    "unit": "USD"
+   },
+   "prompt": "Jordan saves $250.00 at the end of each month for 35 years in an account earning 7% compounded monthly. Jordan’s work: Savings at retirement = $250.00 × 420 = $105,000.00. What is the estimated balance at retirement?",
+   "format": "short-answer",
+   "answer": "$450,263.65",
+   "solutionSteps": [
+    "Mistake: Counted the deposits only and left out compound growth.",
+    "FV = c((1 + r)^n − 1)/r with r = 0.07/12, n = 420.",
+    "FV = $450,263.65.",
+    "Correct result: $450,263.65."
+   ],
+   "numeric": {
+    "value": 450263.65,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-retirement-s03-err-match-cap-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "match-cap-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Ignored the cap; the employer matches only up to 4% of salary."
+   ],
+   "calc": {
+    "kind": "match",
+    "inputs": [
+     64000.0,
+     10,
+     4
+    ],
+    "correct": 2560.0,
+    "unit": "USD"
+   },
+   "prompt": "Elena earns $64,000.00 and contributes 10% to a 401(k). The employer matches 100% of contributions up to 4% of salary. Elena’s work: Employer match = 10% × $64,000.00 = $6,400.00. What mistake did Elena make?",
+   "format": "multiple-choice",
+   "answer": "Ignored the cap; the employer matches only up to 4% of salary.",
+   "options": [
+    {
+     "text": "Ignored the cap; the employer matches only up to 4% of salary.",
+     "correct": true
+    },
+    {
+     "text": "The employer matches 50% of the contribution.",
+     "correct": false
+    },
+    {
+     "text": "The match is added to taxable salary.",
+     "correct": false
+    },
+    {
+     "text": "Should have matched 100% of salary.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Matched percent = min(10%, 4%) = 4%.",
+    "4% × $64,000.00 = $2,560.00.",
+    "Correct result: $2,560.00."
+   ]
+  },
+  {
+   "id": "fa-retirement-s03-err-traditional-savings-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "traditional-savings-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used (1 − rate); the tax saved is contribution × marginal rate."
+   ],
+   "calc": {
+    "kind": "pct",
+    "inputs": [
+     4500.0,
+     12
+    ],
+    "correct": 540.0,
+    "unit": "USD"
+   },
+   "prompt": "Noah contributes $4,500.00 to a traditional (pre-tax) retirement account and is in the 12% federal bracket. Noah’s work: Tax saved this year = $4,500.00 × (1 − 0.12) = $3,960.00. How much federal tax is saved this year?",
+   "format": "short-answer",
+   "answer": "$540.00",
+   "solutionSteps": [
+    "Mistake: Used (1 − rate); the tax saved is contribution × marginal rate.",
+    "Tax saved ≈ $4,500.00 × 0.12 = $540.00.",
+    "Correct result: $540.00."
+   ],
+   "numeric": {
+    "value": 540.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-retirement-s04-err-real-rate-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "real-rate-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Added inflation instead of subtracting it."
+   ],
+   "calc": {
+    "kind": "sub",
+    "inputs": [
+     6.0,
+     2.0
+    ],
+    "correct": 4.0,
+    "unit": "%"
+   },
+   "prompt": "Jordan’s retirement account earns 6% per year and inflation is 2%. Jordan’s work: Growth in purchasing power ≈ 6% + 2% = 8%. What mistake did Jordan make?",
+   "format": "multiple-choice",
+   "answer": "Added inflation instead of subtracting it.",
+   "options": [
+    {
+     "text": "Added inflation instead of subtracting it.",
+     "correct": true
+    },
+    {
+     "text": "Should have multiplied the two rates.",
+     "correct": false
+    },
+    {
+     "text": "Inflation does not affect retirement savings.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided the return by inflation.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Real growth ≈ 6% − 2% = 4%.",
+    "Correct result: 4%."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-err-years-to-retire-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "years-to-retire-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Added the ages; years left = retirement age − current age."
+   ],
+   "calc": {
+    "kind": "sub",
+    "inputs": [
+     62,
+     23
+    ],
+    "correct": 39,
+    "unit": "count"
+   },
+   "prompt": "Jordan is 23 and plans to retire at 62. Jordan counts the years of saving left. Jordan’s work: Years = 62 + 23 = 85. How many years of saving remain?",
+   "format": "short-answer",
+   "answer": "39",
+   "solutionSteps": [
+    "Mistake: Added the ages; years left = retirement age − current age.",
+    "62 − 23 = 39 years.",
+    "Correct result: 39."
+   ],
+   "numeric": {
+    "value": 39,
+    "tolerance": 0.05,
+    "unit": "count"
+   }
   }
  ]
 }

@@ -21,7 +21,9 @@ test('all ten unit views show a local thumbnail on every resource card',async()=
   // Check the complete card, not the removed legacy anchor wrapper.
   const cards=[...main.innerHTML.matchAll(/<article class="finance-resource-card"[^>]*>[\s\S]*?<\/article>/g)].map(m=>m[0]);
   const resources=manifest.units.find(u=>u.unitId===unit.id).resources;
-  assert.equal(cards.length,8+resources.projects.length+resources.games.length,unit.id+' resource count');
+  assert.match(main.innerHTML,/Error Analysis/);
+  assert.match(main.innerHTML,/format=error/);
+  assert.equal(cards.length,9+resources.projects.length+resources.games.length,unit.id+' resource count');
   for(const card of cards){
    assert.match(card,/<img class="finance-resource-thumb"/);
    for(const match of card.matchAll(/(?:href|src)="([^"]+)"/g)){

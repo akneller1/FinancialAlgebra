@@ -6,3 +6,17 @@ test('worksheet filtering keeps distinct matching items and reports shortages',(
 test('assessment points and rubrics reconcile for supported totals',()=>{for(const b of banks)for(const total of [40,50,60,80]){const o=F.options({skills:b.skills.map(s=>s.id),count:12,total:total}),p=F.buildPaper(b,o,'assessment','C');assert.equal(p.sections[0].blocks.reduce((a,x)=>a+x.points,0),total);assert.match(F.packetHTML(p,false),new RegExp(total+' points'));assert.doesNotMatch(F.packetHTML(p,false),/class="fa-key"/);}const b=banks[0],o=F.options({skills:b.skills.map(s=>s.id),response:'open-response',count:4,total:50}),p=F.buildPaper(b,o,'assessment','A'),key=F.packetHTML(p,true);const printed=[...key.matchAll(/Scoring rubric \(([\d.]+) points\)/g)].map(m=>+m[1]);assert.deepEqual(printed,Array.from(p.sections[0].blocks,x=>x.points));});
 test('forms deterministic, previews do not regenerate and case studies contain a case',()=>{const b=banks[0],o=F.options({skills:b.skills.map(s=>s.id),format:'case-study',count:8}),p=F.buildPaper(b,o,'worksheet','A');const ids=()=>p.sections[0].blocks.map(x=>x.q.id).join(),before=ids();F.packetHTML(p,false);F.packetHTML(p,true);assert.equal(ids(),before);assert.equal(JSON.stringify(p),JSON.stringify(F.buildPaper(b,o,'worksheet','A')));assert.ok(p.sections[0].blocks.some(x=>x.q.format==='open-response'));});
 test('numeric self-check requires complete valid number',()=>{const q={numeric:{value:2200,tolerance:.01}};for(const x of ['$2,200.00','2200','+2200'])assert.equal(F.gradeNumeric(q,x),true);for(const x of ['2200garbage','2200 + 1','','Infinity','2,20,0'])assert.equal(F.gradeNumeric(q,x),false);});
+
+
+test('Error Analysis selects only mistake-diagnosis items across all ten units',()=>{
+ for(const b of banks){
+  const o=F.options({format:'error',skills:b.skills.map(s=>s.id),count:8});
+  const paper=F.buildPaper(b,o,'worksheet','errors');
+  const questions=paper.sections.flatMap(s=>s.blocks).map(x=>x.q);
+  assert.equal(questions.length,8,b.unitId);
+  assert(questions.every(q=>q.errorAnalysis&&q.gameEligible===false));
+  assert.equal(new Set(questions.map(q=>q.id)).size,8);
+  assert.equal(F.FORMATS.error,'Error Analysis');
+  assert.match(F.packetHTML(paper,false),/Error Analysis/);
+ }
+});

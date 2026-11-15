@@ -10479,6 +10479,398 @@
      "none": "No recommendation."
     }
    ]
+  },
+  {
+   "id": "fa-budgeting-s01-err-biweekly-monthly-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "biweekly-monthly-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Assumed exactly two paychecks per month; biweekly pay gives 26 paychecks a year, so multiply by 26 and divide by 12."
+   ],
+   "calc": {
+    "kind": "mult-div",
+    "inputs": [
+     1385.5,
+     26,
+     12
+    ],
+    "correct": 3001.92,
+    "unit": "USD"
+   },
+   "prompt": "Imani takes home $1,385.50 every two weeks and wants an average monthly income for a budget. Imani’s work: $1,385.50 × 2 = $2,771.00 per month. What mistake did Imani make?",
+   "format": "multiple-choice",
+   "answer": "Assumed exactly two paychecks per month; biweekly pay gives 26 paychecks a year, so multiply by 26 and divide by 12.",
+   "options": [
+    {
+     "text": "Assumed exactly two paychecks per month; biweekly pay gives 26 paychecks a year, so multiply by 26 and divide by 12.",
+     "correct": true
+    },
+    {
+     "text": "Should have multiplied by 4 because a month has 4 weeks.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided by 2.",
+     "correct": false
+    },
+    {
+     "text": "Should have used gross pay.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "26 paychecks per year: $1,385.50 × 26 = $36,023.00.",
+    "Per month: ÷ 12 = $3,001.92.",
+    "Correct result: $3,001.92."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-err-cash-flow-sign-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "cash-flow-sign-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Reversed the subtraction; cash flow is income minus expenses."
+   ],
+   "calc": {
+    "kind": "cashflow",
+    "inputs": [
+     3200.0,
+     1150.0,
+     310.0,
+     465.0,
+     215.0,
+     590.0
+    ],
+    "correct": 470.0,
+    "unit": "USD"
+   },
+   "prompt": "Aisha’s monthly income is $3,200.00. Expenses: rent $1,150.00, utilities $310.00, groceries $465.00, phone/internet $215.00, car costs $590.00. Aisha’s work: Cash flow = expenses − income = $2,730.00 − $3,200.00 = −$470.00. What is the correct monthly cash flow?",
+   "format": "short-answer",
+   "answer": "$470.00",
+   "solutionSteps": [
+    "Mistake: Reversed the subtraction; cash flow is income minus expenses.",
+    "Total expenses = $2,730.00.",
+    "Cash flow = $3,200.00 − $2,730.00 = $470.00.",
+    "Correct result: $470.00."
+   ],
+   "numeric": {
+    "value": 470.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-budgeting-s02-err-annual-to-monthly-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "annual-to-monthly-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Divided the annual cost by 52 weeks instead of 12 months."
+   ],
+   "calc": {
+    "kind": "div",
+    "inputs": [
+     1176.0,
+     12
+    ],
+    "correct": 98.0,
+    "unit": "USD"
+   },
+   "prompt": "Sofia pays car insurance of $1,176.00 once a year and wants to set aside the same amount each month. Sofia’s work: Sofia budgets $22.62 per month. What mistake did Sofia make?",
+   "format": "multiple-choice",
+   "answer": "Divided the annual cost by 52 weeks instead of 12 months.",
+   "options": [
+    {
+     "text": "Divided the annual cost by 52 weeks instead of 12 months.",
+     "correct": true
+    },
+    {
+     "text": "Should have multiplied by 12.",
+     "correct": false
+    },
+    {
+     "text": "Should have budgeted the full amount every month.",
+     "correct": false
+    },
+    {
+     "text": "Car insurance is a variable expense, so it should not be budgeted.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "A year has 12 months.",
+    "$1,176.00 ÷ 12 = $98.00 per month.",
+    "Correct result: $98.00."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-err-sinking-fund-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "sinking-fund-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Multiplied by the number of months instead of dividing the goal among them."
+   ],
+   "calc": {
+    "kind": "div",
+    "inputs": [
+     2400.0,
+     6
+    ],
+    "correct": 400.0,
+    "unit": "USD"
+   },
+   "prompt": "Aisha wants $2,400.00 for a laptop in 6 months and will save the same amount each month. Aisha’s work: $2,400.00 × 6 = $14,400.00 per month. How much should be saved each month?",
+   "format": "short-answer",
+   "answer": "$400.00",
+   "solutionSteps": [
+    "Mistake: Multiplied by the number of months instead of dividing the goal among them.",
+    "Spread the goal over 6 months.",
+    "$2,400.00 ÷ 6 = $400.00.",
+    "Correct result: $400.00."
+   ],
+   "numeric": {
+    "value": 400.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-budgeting-s03-err-fifty-thirty-twenty-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "fifty-thirty-twenty-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Applied 50/30/20 to gross pay; the guideline uses take-home (net) pay."
+   ],
+   "calc": {
+    "kind": "pct",
+    "inputs": [
+     3920.0,
+     50
+    ],
+    "correct": 1960.0,
+    "unit": "USD"
+   },
+   "prompt": "Hannah’s monthly gross pay is $4,650.00 and take-home pay is $3,920.00. Hannah uses the 50/30/20 guideline for needs. Hannah’s work: Needs = 50% of $4,650.00 = $2,325.00. What mistake did Hannah make?",
+   "format": "multiple-choice",
+   "answer": "Applied 50/30/20 to gross pay; the guideline uses take-home (net) pay.",
+   "options": [
+    {
+     "text": "Applied 50/30/20 to gross pay; the guideline uses take-home (net) pay.",
+     "correct": true
+    },
+    {
+     "text": "Needs should be 30%, not 50%.",
+     "correct": false
+    },
+    {
+     "text": "Should have used 50% of annual pay.",
+     "correct": false
+    },
+    {
+     "text": "Needs should be 20%, the savings share.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The 50/30/20 guideline splits take-home pay.",
+    "50% of $3,920.00 = $1,960.00.",
+    "Correct result: $1,960.00."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-err-hours-needed-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "hours-needed-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Divided the wage by the goal instead of the goal by the wage."
+   ],
+   "calc": {
+    "kind": "ceil-div",
+    "inputs": [
+     420.0,
+     17.25
+    ],
+    "correct": 25,
+    "unit": "count"
+   },
+   "prompt": "Liam earns $17.25 per hour and needs at least $420.00 for a trip. Liam can only work whole hours. Liam’s work: Hours = 17.25 ÷ 420 = 0.041, so about 1 hour. How many whole hours must be worked?",
+   "format": "short-answer",
+   "answer": "25",
+   "solutionSteps": [
+    "Mistake: Divided the wage by the goal instead of the goal by the wage.",
+    "Hours = $420.00 ÷ $17.25 = 24.35.",
+    "Round UP to reach the goal: 25 hours.",
+    "Correct result: 25."
+   ],
+   "numeric": {
+    "value": 25,
+    "tolerance": 0.05,
+    "unit": "count"
+   }
+  },
+  {
+   "id": "fa-budgeting-s04-err-unit-price-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "unit-price-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Compared total prices instead of price per ounce."
+   ],
+   "calc": {
+    "kind": "unit-price",
+    "inputs": [
+     3.49,
+     12,
+     5.29,
+     20
+    ],
+    "correct": 0.26,
+    "unit": "USD"
+   },
+   "prompt": "A small box of cereal costs $3.49 for 12 oz. A large box costs $5.29 for 20 oz. Amara’s work: The small box is the better buy because $3.49 is less than $5.29. What mistake did Amara make?",
+   "format": "multiple-choice",
+   "answer": "Compared total prices instead of price per ounce.",
+   "options": [
+    {
+     "text": "Compared total prices instead of price per ounce.",
+     "correct": true
+    },
+    {
+     "text": "Should have compared ounces only.",
+     "correct": false
+    },
+    {
+     "text": "Should have added the two prices.",
+     "correct": false
+    },
+    {
+     "text": "The large box is always the better buy.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Small: $3.49 ÷ 12 ≈ $0.291 per oz.",
+    "Large: $5.29 ÷ 20 ≈ $0.265 per oz.",
+    "The large box has the lower unit price (≈ $0.26 per oz).",
+    "Correct result: $0.26."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-err-bnpl-fee-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "bnpl-fee-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Left out the late fee from the total cost."
+   ],
+   "calc": {
+    "kind": "sum",
+    "inputs": [
+     448.0,
+     15.0
+    ],
+    "correct": 463.0,
+    "unit": "USD"
+   },
+   "prompt": "Elena used buy now, pay later: 4 payments of $112.00. One payment was late and charged a $15.00 late fee. Elena’s work: Total cost = 4 × $112.00 = $448.00. What did the purchase really cost?",
+   "format": "short-answer",
+   "answer": "$463.00",
+   "solutionSteps": [
+    "Mistake: Left out the late fee from the total cost.",
+    "Payments: 4 × $112.00 = $448.00.",
+    "Add the late fee: $448.00 + $15.00 = $463.00.",
+    "Correct result: $463.00."
+   ],
+   "numeric": {
+    "value": 463.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
   }
  ]
 }

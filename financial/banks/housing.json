@@ -6219,6 +6219,393 @@
      "none": "No recommendation."
     }
    ]
+  },
+  {
+   "id": "fa-housing-s01-err-piti-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "piti-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Left out the monthly share of property tax and insurance."
+   ],
+   "calc": {
+    "kind": "piti",
+    "inputs": [
+     1620.0,
+     4800.0,
+     1440.0
+    ],
+    "correct": 2140.0,
+    "unit": "USD"
+   },
+   "prompt": "Jordan compares renting with buying. The mortgage payment would be $1,620.00; property tax is $4,800.00 per year and homeowners insurance is $1,440.00 per year. Jordan’s work: Monthly cost of owning = $1,620.00. What mistake did Jordan make?",
+   "format": "multiple-choice",
+   "answer": "Left out the monthly share of property tax and insurance.",
+   "options": [
+    {
+     "text": "Left out the monthly share of property tax and insurance.",
+     "correct": true
+    },
+    {
+     "text": "Should have added the full yearly tax to each month.",
+     "correct": false
+    },
+    {
+     "text": "Should have subtracted insurance from the payment.",
+     "correct": false
+    },
+    {
+     "text": "Owning costs only the down payment.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Tax per month = $4,800.00 ÷ 12 = $400.00; insurance = $120.00.",
+    "Total = $2,140.00.",
+    "Correct result: $2,140.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-err-tax-monthly-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "tax-monthly-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Added the yearly amount to every month instead of one-twelfth of it."
+   ],
+   "calc": {
+    "kind": "div",
+    "inputs": [
+     4380.0,
+     12
+    ],
+    "correct": 365.0,
+    "unit": "USD"
+   },
+   "prompt": "Owen’s annual property tax is $4,380.00, paid monthly through escrow. Owen’s work: Owen added $4,380.00 to each month’s housing cost. How much tax belongs in each month’s cost?",
+   "format": "short-answer",
+   "answer": "$365.00",
+   "solutionSteps": [
+    "Mistake: Added the yearly amount to every month instead of one-twelfth of it.",
+    "Escrow spreads the annual tax over 12 months.",
+    "$4,380.00 ÷ 12 = $365.00.",
+    "Correct result: $365.00."
+   ],
+   "numeric": {
+    "value": 365.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-housing-s02-err-mortgage-n-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "mortgage-n-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used 30 payments; a 30-year monthly mortgage has 360 payments."
+   ],
+   "calc": {
+    "kind": "loan-payment",
+    "inputs": [
+     228000.0,
+     6.75,
+     360
+    ],
+    "correct": 1478.8,
+    "unit": "USD"
+   },
+   "prompt": "Diego takes a 30-year mortgage for $228,000.00 at 6.75%. Diego’s work: Diego used n = 30 in the monthly payment formula and got $8,280.58. What mistake did Diego make?",
+   "format": "multiple-choice",
+   "answer": "Used 30 payments; a 30-year monthly mortgage has 360 payments.",
+   "options": [
+    {
+     "text": "Used 30 payments; a 30-year monthly mortgage has 360 payments.",
+     "correct": true
+    },
+    {
+     "text": "Should have used n = 30 × 52.",
+     "correct": false
+    },
+    {
+     "text": "Should have used the annual rate without dividing by 12.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided the loan by 30.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "n = 30 × 12 = 360.",
+    "Payment = $1,478.80.",
+    "Correct result: $1,478.80."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-err-loan-amount-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "standard",
+   "family": "loan-amount-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Computed the down payment, not the loan; the loan is the remaining percent of the price."
+   ],
+   "calc": {
+    "kind": "pct",
+    "inputs": [
+     295000.0,
+     85
+    ],
+    "correct": 250750.0,
+    "unit": "USD"
+   },
+   "prompt": "Aisha buys a $295,000.00 home with 15% down. Aisha’s work: Loan = 15% × $295,000.00 = $44,250.00. What is the loan amount?",
+   "format": "short-answer",
+   "answer": "$250,750.00",
+   "solutionSteps": [
+    "Mistake: Computed the down payment, not the loan; the loan is the remaining percent of the price.",
+    "Down payment = 15%; loan = 85% of the price.",
+    "$295,000.00 × 0.85 = $250,750.00.",
+    "Correct result: $250,750.00."
+   ],
+   "numeric": {
+    "value": 250750.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-housing-s03-err-pmi-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "pmi-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "PMI is required with less than 20% down; it costs a percent of the loan each year."
+   ],
+   "calc": {
+    "kind": "pmi",
+    "inputs": [
+     312000.0,
+     0.75
+    ],
+    "correct": 195.0,
+    "unit": "USD"
+   },
+   "prompt": "Owen puts 10% down, so the lender charges PMI of 0.75% of the $312,000.00 loan per year. Owen’s work: No PMI is needed because the home is a good investment. What mistake did Owen make?",
+   "format": "multiple-choice",
+   "answer": "PMI is required with less than 20% down; it costs a percent of the loan each year.",
+   "options": [
+    {
+     "text": "PMI is required with less than 20% down; it costs a percent of the loan each year.",
+     "correct": true
+    },
+    {
+     "text": "PMI is charged only once at closing.",
+     "correct": false
+    },
+    {
+     "text": "PMI is a percent of the down payment.",
+     "correct": false
+    },
+    {
+     "text": "PMI replaces homeowners insurance.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Annual PMI = 0.75% × $312,000.00 = $2,340.00.",
+    "Monthly = $195.00.",
+    "Correct result: $195.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-err-closing-costs-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "standard",
+   "family": "closing-costs-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Took the percent of the down payment instead of the purchase price."
+   ],
+   "calc": {
+    "kind": "pct",
+    "inputs": [
+     310000.0,
+     3
+    ],
+    "correct": 9300.0,
+    "unit": "USD"
+   },
+   "prompt": "Closing costs are about 3% of the $310,000.00 purchase price. Zara also pays 20% down. Zara’s work: Closing = 3% × $62,000.00 = $1,860.00. What are the estimated closing costs?",
+   "format": "short-answer",
+   "answer": "$9,300.00",
+   "solutionSteps": [
+    "Mistake: Took the percent of the down payment instead of the purchase price.",
+    "3% of the purchase price.",
+    "$310,000.00 × 0.03 = $9,300.00.",
+    "Correct result: $9,300.00."
+   ],
+   "numeric": {
+    "value": 9300.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-housing-s04-err-opportunity-cost-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "opportunity-cost-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Ignored opportunity cost: the growth the money would have earned if it stayed invested."
+   ],
+   "calc": {
+    "kind": "opp",
+    "inputs": [
+     45000.0,
+     4.0,
+     5
+    ],
+    "correct": 9749.38,
+    "unit": "USD"
+   },
+   "prompt": "Mateo puts a $45,000.00 down payment on a home instead of leaving it invested at 4% per year. Mateo’s work: There is no cost to the down payment because the money stays in the house. What mistake did Mateo make?",
+   "format": "multiple-choice",
+   "answer": "Ignored opportunity cost: the growth the money would have earned if it stayed invested.",
+   "options": [
+    {
+     "text": "Ignored opportunity cost: the growth the money would have earned if it stayed invested.",
+     "correct": true
+    },
+    {
+     "text": "The down payment earns the mortgage rate.",
+     "correct": false
+    },
+    {
+     "text": "Opportunity cost only applies to renters.",
+     "correct": false
+    },
+    {
+     "text": "The cost is the full down payment every year.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "In 5 years the money could have grown to $54,749.38.",
+    "Forgone growth = $9,749.38.",
+    "Correct result: $9,749.38."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-err-twenty-eight-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "standard",
+   "family": "twenty-eight-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used take-home pay; the 28% guideline uses gross income."
+   ],
+   "calc": {
+    "kind": "pct",
+    "inputs": [
+     6500.0,
+     28
+    ],
+    "correct": 1820.0,
+    "unit": "USD"
+   },
+   "prompt": "Lenders often suggest housing costs of at most 28% of gross monthly income. Aisha’s gross monthly income is $6,500.00 and take-home pay is $4,980.00. Aisha’s work: Limit = 28% × $4,980.00 = $1,394.40. What is the guideline’s maximum housing cost?",
+   "format": "short-answer",
+   "answer": "$1,820.00",
+   "solutionSteps": [
+    "Mistake: Used take-home pay; the 28% guideline uses gross income.",
+    "28% of gross income.",
+    "$6,500.00 × 0.28 = $1,820.00.",
+    "Correct result: $1,820.00."
+   ],
+   "numeric": {
+    "value": 1820.0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
   }
  ]
 }

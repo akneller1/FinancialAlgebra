@@ -6142,6 +6142,397 @@
     "Return ≈ -5.9%.",
     "Contributions grew the account even in a down year — don’t confuse contributions with returns."
    ]
+  },
+  {
+   "id": "fa-investing-s01-err-linear-growth-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "linear-growth-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used simple interest; compound growth is P(1 + r)^t."
+   ],
+   "calc": {
+    "kind": "compound",
+    "inputs": [
+     8000.0,
+     7,
+     1,
+     10
+    ],
+    "correct": 15737.21,
+    "unit": "USD"
+   },
+   "prompt": "Malik invests $8,000.00 at 7% compounded annually for 10 years. Malik’s work: A = $8,000.00 × (1 + 0.07 × 10) = $13,600.00. What mistake did Malik make?",
+   "format": "multiple-choice",
+   "answer": "Used simple interest; compound growth is P(1 + r)^t.",
+   "options": [
+    {
+     "text": "Used simple interest; compound growth is P(1 + r)^t.",
+     "correct": true
+    },
+    {
+     "text": "Should have divided the rate by 12.",
+     "correct": false
+    },
+    {
+     "text": "Should have multiplied P by t only.",
+     "correct": false
+    },
+    {
+     "text": "Compound and simple interest give the same result.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "A = $8,000.00 × (1.07)^10.",
+    "A = $15,737.21.",
+    "Correct result: $15,737.21."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-err-monthly-rate-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "monthly-rate-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used the annual rate for each month; the monthly rate is r ÷ 12."
+   ],
+   "calc": {
+    "kind": "compound",
+    "inputs": [
+     3000.0,
+     6.0,
+     12,
+     8
+    ],
+    "correct": 4842.43,
+    "unit": "USD"
+   },
+   "prompt": "Hannah invests $3,000.00 at 6% compounded monthly for 8 years. Hannah’s work: A = $3,000.00 × (1 + 0.06)^96 = $806,277.09. What is the correct value?",
+   "format": "short-answer",
+   "answer": "$4,842.43",
+   "solutionSteps": [
+    "Mistake: Used the annual rate for each month; the monthly rate is r ÷ 12.",
+    "Monthly rate = 0.06 ÷ 12; n = 96 months.",
+    "A = $3,000.00 × (1 + 0.06/12)^96 = $4,842.43.",
+    "Correct result: $4,842.43."
+   ],
+   "numeric": {
+    "value": 4842.43,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-investing-s02-err-contributions-only-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "contributions-only-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Counted only the deposits and ignored the growth (interest) on them."
+   ],
+   "calc": {
+    "kind": "annuity",
+    "inputs": [
+     150.0,
+     7.2,
+     240
+    ],
+    "correct": 80064.35,
+    "unit": "USD"
+   },
+   "prompt": "Amara deposits $150.00 at the end of each month for 20 years in an account earning 7.2% compounded monthly. Amara’s work: Future value = $150.00 × 240 = $36,000.00. What mistake did Amara make?",
+   "format": "multiple-choice",
+   "answer": "Counted only the deposits and ignored the growth (interest) on them.",
+   "options": [
+    {
+     "text": "Counted only the deposits and ignored the growth (interest) on them.",
+     "correct": true
+    },
+    {
+     "text": "Should have used simple interest on one deposit.",
+     "correct": false
+    },
+    {
+     "text": "Should have divided by 12 instead of multiplying.",
+     "correct": false
+    },
+    {
+     "text": "Future value equals one deposit times the rate.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "FV = c × ((1 + r)^n − 1) ÷ r with r = 0.072/12, n = 240.",
+    "FV = $80,064.35.",
+    "Correct result: $80,064.35."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-err-annuity-rate-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "annuity-rate-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Used the annual rate as the monthly rate."
+   ],
+   "calc": {
+    "kind": "annuity",
+    "inputs": [
+     300.0,
+     6.6,
+     96
+    ],
+    "correct": 37804.73,
+    "unit": "USD"
+   },
+   "prompt": "Imani deposits $300.00 at the end of each month for 8 years at 6.6% compounded monthly. Imani’s work: FV with r = 0.066 per month = $2,095,694.76. What is the correct future value?",
+   "format": "short-answer",
+   "answer": "$37,804.73",
+   "solutionSteps": [
+    "Mistake: Used the annual rate as the monthly rate.",
+    "r = 0.066 ÷ 12 per month; n = 96.",
+    "FV = $37,804.73.",
+    "Correct result: $37,804.73."
+   ],
+   "numeric": {
+    "value": 37804.73,
+    "tolerance": 0.01,
+    "unit": "USD"
+   }
+  },
+  {
+   "id": "fa-investing-s03-err-return-base-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "return-base-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Divided by the selling price; percent return is gain ÷ original cost."
+   ],
+   "calc": {
+    "kind": "pct-change",
+    "inputs": [
+     40.0,
+     52.0
+    ],
+    "correct": 30.0,
+    "unit": "%"
+   },
+   "prompt": "Hannah bought a share for $40.00 and sold it for $52.00. Hannah’s work: Return = ($52.00 − $40.00) ÷ $52.00 = 23.08%. What mistake did Hannah make?",
+   "format": "multiple-choice",
+   "answer": "Divided by the selling price; percent return is gain ÷ original cost.",
+   "options": [
+    {
+     "text": "Divided by the selling price; percent return is gain ÷ original cost.",
+     "correct": true
+    },
+    {
+     "text": "Should have divided the selling price by the cost.",
+     "correct": false
+    },
+    {
+     "text": "Should have subtracted the cost from 100%.",
+     "correct": false
+    },
+    {
+     "text": "Return equals the dollar gain.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Gain = $12.00.",
+    "Return = $12.00 ÷ $40.00 = 30%.",
+    "Correct result: 30%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-err-rule-of-72-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "rule-of-72-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Multiplied instead of dividing; years ≈ 72 ÷ rate."
+   ],
+   "calc": {
+    "kind": "div",
+    "inputs": [
+     72,
+     6
+    ],
+    "correct": 12.0,
+    "unit": "years"
+   },
+   "prompt": "Imani estimates how long money takes to double at 6% per year using the Rule of 72. Imani’s work: Years = 72 × 6 = 432. About how many years does it take to double?",
+   "format": "short-answer",
+   "answer": "12 years",
+   "solutionSteps": [
+    "Mistake: Multiplied instead of dividing; years ≈ 72 ÷ rate.",
+    "Rule of 72: years ≈ 72 ÷ 6.",
+    "≈ 12 years.",
+    "Correct result: 12 years."
+   ],
+   "numeric": {
+    "value": 12.0,
+    "tolerance": 0.05,
+    "unit": "years"
+   }
+  },
+  {
+   "id": "fa-investing-s04-err-fee-drag-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "fee-drag-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Took the fee from the gain only; the fee is a percent of all the assets."
+   ],
+   "calc": {
+    "kind": "fee",
+    "inputs": [
+     10000.0,
+     8.0,
+     1.5
+    ],
+    "correct": 10650.0,
+    "unit": "USD"
+   },
+   "prompt": "Diego’s $10,000.00 fund earned 8% this year before a 1.5% annual fee on assets. Diego’s work: Fee = 1.5% of the gain, so the balance is $10,788.00. What mistake did Diego make?",
+   "format": "multiple-choice",
+   "answer": "Took the fee from the gain only; the fee is a percent of all the assets.",
+   "options": [
+    {
+     "text": "Took the fee from the gain only; the fee is a percent of all the assets.",
+     "correct": true
+    },
+    {
+     "text": "Should have added the fee to the return.",
+     "correct": false
+    },
+    {
+     "text": "The fee is charged only when you sell.",
+     "correct": false
+    },
+    {
+     "text": "Should have subtracted the fee in dollars from the rate.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Net growth ≈ 8% − 1.5% = 6.5%.",
+    "$10,000.00 × (1 + 0.065) = $10,650.00.",
+    "Correct result: $10,650.00."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-err-real-return-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "real-return-error",
+   "type": "reasoning",
+   "errorAnalysis": true,
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test",
+    "error-analysis"
+   ],
+   "gameEligible": false,
+   "misconceptions": [
+    "Added inflation; it reduces purchasing power, so subtract it."
+   ],
+   "calc": {
+    "kind": "sub",
+    "inputs": [
+     9.0,
+     4.0
+    ],
+    "correct": 5.0,
+    "unit": "%"
+   },
+   "prompt": "Sofia’s investment returned 9% while inflation was 4%. Sofia estimates the real return. Sofia’s work: Real return ≈ 9% + 4% = 13%. What is the approximate real return?",
+   "format": "short-answer",
+   "answer": "5%",
+   "solutionSteps": [
+    "Mistake: Added inflation; it reduces purchasing power, so subtract it.",
+    "Real return ≈ nominal return − inflation.",
+    "9% − 4% = 5%.",
+    "Correct result: 5%."
+   ],
+   "numeric": {
+    "value": 5.0,
+    "tolerance": 0.01,
+    "unit": "percent"
+   }
   }
  ]
 }
