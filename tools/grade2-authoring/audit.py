@@ -73,6 +73,10 @@ def main():
                         dist_reason += 1 if o["text"] in m.get("distractors", {}) or m.get("questionType") in ("conceptual", "explain", "visual", "true-false", "compare-strategies", "error-analysis", "real-world", "word-problem") else 0
             # scope limits
             given = re.sub(r"answered: .*|Answer shown: .*|\bsays [^.?]*|wrote “[^”]*” as \d+|counted: [^.]*?(?=\. )", "", p)
+            # Yes/No prompts deliberately show a wrong claim for students to check.
+            # Do not interpret that explicitly rejected guess as an operand or
+            # the correct answer for the grade-level numeric scope audit.
+            given = re.sub(r"\\s*Is the answer \\d+(?:\\s+[A-Za-z]+)?\\?", "", given, flags=re.I)
             steps_ok = [x for x in q["solutionSteps"] if not x.startswith("Mistake:") and "not " not in x]
             lim = LIMIT.get(u["id"], 1000)
             if q["skillId"] == "add-subtract-100-skill-04":
