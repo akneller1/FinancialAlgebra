@@ -27,7 +27,7 @@ export const $0 = x => money(x, false);
 /* One money style per question: if any dollar amount in the question shows cents ($45.50), every whole amount
    shows .00 too ($1,500.00); otherwise whole amounts drop .00 ($2,100). Mixed "$1,500 … $2,100.00" never appears.
    Applied to every generated question in buildUnit; scripts/normalize-money.mjs applies it to built banks. */
-const MONEY_RE = /([−-]?\$)(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d+))?(?![\d,]\d)/g;
+const MONEY_RE = /(?<![A-Za-z])([−-]?\$)(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d+))?(?![\d,]\d)/g;
 const MONEY_SKIP = new Set(['id', 'unitId', 'skillId', 'level', 'family', 'type', 'format', 'activityTypes', 'gameEligible', 'value', 'tolerance', 'unit']);
 function eachString(o, fn, key) {
   if (typeof o === 'string') return MONEY_SKIP.has(key) ? o : fn(o);

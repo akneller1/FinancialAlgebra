@@ -13,21 +13,46 @@
  "skills": [
   {
    "id": "insurance-skill-01",
-   "name": "Compare premiums and deductibles"
+   "name": "Compare premiums and deductibles",
+   "standards": [
+    "Managing Risk 12-1: Risk and the cost of insurance",
+    "Managing Risk 12-4: Premiums and reducing risk"
+   ]
   },
   {
    "id": "insurance-skill-02",
-   "name": "Model out-of-pocket costs"
+   "name": "Model out-of-pocket costs",
+   "standards": [
+    "Managing Risk 12-5: Health insurance"
+   ]
   },
   {
    "id": "insurance-skill-03",
-   "name": "Calculate expected value"
+   "name": "Calculate expected value",
+   "standards": [
+    "Managing Risk 12-1: Risk and the cost of insurance",
+    "Managing Risk 12-2: Insurance purchase decisions"
+   ]
   },
   {
    "id": "insurance-skill-04",
-   "name": "Evaluate financial risk"
+   "name": "Evaluate financial risk",
+   "standards": [
+    "Managing Risk 12-2: Insurance purchase decisions",
+    "Managing Risk 12-6: Disability insurance",
+    "Managing Risk 12-8: Life insurance"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": []
+ },
  "vocab": [
   {
    "term": "Premium",
@@ -2101,7 +2126,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $2,950 − $250 = $2,700.",
+    "Spreadsheet or calculator: =2950-250",
     "Leah pays the deductible: $250."
    ]
   },
@@ -2129,7 +2156,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $2,550 − $1,000 = $1,550.",
+    "Spreadsheet or calculator: =2550-1000",
     "Dev pays the deductible: $1,000."
    ]
   },
@@ -2157,7 +2186,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $3,300 − $500 = $2,800.",
+    "Spreadsheet or calculator: =3300-500",
     "Andre pays the deductible: $500."
    ]
   },
@@ -2185,7 +2216,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $6,150 − $1,000 = $5,150.",
+    "Spreadsheet or calculator: =6150-1000",
     "Noah pays the deductible: $1,000."
    ]
   },
@@ -2213,7 +2246,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $8,000 − $1,000 = $7,000.",
+    "Spreadsheet or calculator: =8000-1000",
     "Hana pays the deductible: $1,000."
    ]
   },
@@ -2241,7 +2276,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $3,950 − $1,000 = $2,950.",
+    "Spreadsheet or calculator: =3950-1000",
     "Noah pays the deductible: $1,000."
    ]
   },
@@ -2267,9 +2304,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $220 per year.",
     "Extra deductible = $1,000.",
     "$1,000 ÷ $220 ≈ 4.55 → 5 years.",
+    "Spreadsheet or calculator: =ROUNDUP(1000/220,0)",
     "If claims happen less often than once every 4.5 years and savings can cover $1,500, the higher deductible makes sense."
    ]
   },
@@ -2295,9 +2334,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $160 per year.",
     "Extra deductible = $500.",
     "$500 ÷ $160 ≈ 3.13 → 4 years.",
+    "Spreadsheet or calculator: =ROUNDUP(500/160,0)",
     "If claims happen less often than once every 3.1 years and savings can cover $1,000, the higher deductible makes sense."
    ]
   },
@@ -2323,9 +2364,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $360 per year.",
     "Extra deductible = $500.",
     "$500 ÷ $360 ≈ 1.39 → 2 years.",
+    "Spreadsheet or calculator: =ROUNDUP(500/360,0)",
     "If claims happen less often than once every 1.4 years and savings can cover $1,000, the higher deductible makes sense."
    ]
   },
@@ -2351,9 +2394,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $240 per year.",
     "Extra deductible = $750.",
     "$750 ÷ $240 ≈ 3.13 → 4 years.",
+    "Spreadsheet or calculator: =ROUNDUP(750/240,0)",
     "If claims happen less often than once every 3.1 years and savings can cover $1,000, the higher deductible makes sense."
    ]
   },
@@ -2379,9 +2424,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $180 per year.",
     "Extra deductible = $1,000.",
     "$1,000 ÷ $180 ≈ 5.56 → 6 years.",
+    "Spreadsheet or calculator: =ROUNDUP(1000/180,0)",
     "If claims happen less often than once every 5.6 years and savings can cover $1,500, the higher deductible makes sense."
    ]
   },
@@ -2407,9 +2454,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $280 per year.",
     "Extra deductible = $750.",
     "$750 ÷ $280 ≈ 2.68 → 3 years.",
+    "Spreadsheet or calculator: =ROUNDUP(750/280,0)",
     "If claims happen less often than once every 2.7 years and savings can cover $1,000, the higher deductible makes sense."
    ]
   },
@@ -2437,8 +2486,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(205 + 110 + 19) × 12 = $4,008.",
-    "$4,008 ÷ $48,000 ≈ 8.4%."
+    "$4,008 ÷ $48,000 ≈ 8.4%.",
+    "Spreadsheet or calculator: =(205+110+19)*12",
+    "So the answer is $4,008; 8.4%; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -2465,8 +2517,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(320 + 140 + 12) × 12 = $5,664.",
-    "$5,664 ÷ $48,000 ≈ 11.8%."
+    "$5,664 ÷ $48,000 ≈ 11.8%.",
+    "Spreadsheet or calculator: =(320+140+12)*12",
+    "So the answer is $5,664; 11.8%; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -2493,8 +2548,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(85 + 130 + 12) × 12 = $2,724.",
-    "$2,724 ÷ $48,000 ≈ 5.7%."
+    "$2,724 ÷ $48,000 ≈ 5.7%.",
+    "Spreadsheet or calculator: =(85+130+12)*12",
+    "So the answer is $2,724; 5.7%; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -2521,8 +2579,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(310 + 190 + 12) × 12 = $6,144.",
-    "$6,144 ÷ $48,000 ≈ 12.8%."
+    "$6,144 ÷ $48,000 ≈ 12.8%.",
+    "Spreadsheet or calculator: =(310+190+12)*12",
+    "So the answer is $6,144; 12.8%; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -2549,8 +2610,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(230 + 110 + 12) × 12 = $4,224.",
-    "$4,224 ÷ $48,000 ≈ 8.8%."
+    "$4,224 ÷ $48,000 ≈ 8.8%.",
+    "Spreadsheet or calculator: =(230+110+12)*12",
+    "So the answer is $4,224; 8.8%; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -2577,10 +2641,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $3,000.",
     "Coinsurance: 20% × $0 = $0.",
     "Copays: 0 × $0 = $0.",
-    "Sum = $3,000, capped at $8,000 → $3,000."
+    "Sum = $3,000, capped at $8,000 → $3,000.",
+    "So the answer is $3,000; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -2607,10 +2673,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $6,000.",
     "Coinsurance: 20% × $17,600 = $3,520.",
     "Copays: 5 × $0 = $0.",
-    "Sum = $9,520, capped at $8,000 → $8,000."
+    "Sum = $9,520, capped at $8,000 → $8,000.",
+    "So the answer is $8,000; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -2637,10 +2705,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $2,000.",
     "Coinsurance: 20% × $26,800 = $5,360.",
     "Copays: 8 × $35 = $280.",
-    "Sum = $7,640, capped at $6,000 → $6,000."
+    "Sum = $7,640, capped at $6,000 → $6,000.",
+    "So the answer is $6,000; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -2667,10 +2737,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $500.",
     "Coinsurance: 10% × $19,400 = $1,940.",
     "Copays: 3 × $20 = $60.",
-    "Sum = $2,500, capped at $3,000 → $2,500."
+    "Sum = $2,500, capped at $3,000 → $2,500.",
+    "Spreadsheet or calculator: =3000-500",
+    "So the answer is $2,500; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -2697,10 +2770,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $500.",
     "Coinsurance: 10% × $25,550 = $2,555.",
     "Copays: 8 × $20 = $160.",
-    "Sum = $3,215, capped at $3,000 → $3,000."
+    "Sum = $3,215, capped at $3,000 → $3,000.",
+    "So the answer is $3,000; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -2727,10 +2802,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $500.",
     "Coinsurance: 10% × $9,550 = $955.",
     "Copays: 6 × $20 = $120.",
-    "Sum = $1,575, capped at $3,000 → $1,575."
+    "Sum = $1,575, capped at $3,000 → $1,575.",
+    "So the answer is $1,575; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -2757,10 +2834,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $6,000.",
     "Coinsurance: 20% × $22,050 = $4,410.",
     "Copays: 0 × $0 = $0.",
-    "Sum = $10,410, capped at $8,000 → $8,000."
+    "Sum = $10,410, capped at $8,000 → $8,000.",
+    "So the answer is $8,000; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -2787,10 +2866,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $2,000.",
     "Coinsurance: 20% × $27,100 = $5,420.",
     "Copays: 6 × $35 = $210.",
-    "Sum = $7,630, capped at $6,000 → $6,000."
+    "Sum = $7,630, capped at $6,000 → $6,000.",
+    "So the answer is $6,000; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -3423,9 +3504,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible) + copays.",
     "ER: $2,000 deductible + 20% × $1,400 = $2,280.",
     "Prescriptions: 6 × $10 = $60.",
-    "Total = $2,340 (below the $6,000 maximum)."
+    "Total = $2,340 (below the $6,000 maximum).",
+    "So the answer is $2,340; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -3505,16 +3588,18 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible) + copays.",
     "ER: $2,600 deductible + 20% × $0 = $2,600.",
     "Prescriptions: 3 × $15 = $45.",
-    "Total = $2,645 (below the $8,000 maximum)."
+    "Total = $2,645 (below the $8,000 maximum).",
+    "So the answer is $2,645; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
    "id": "fa-insurance-s02-sbc-doc-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "advanced",
+   "level": "standard",
    "family": "sbc-doc",
    "type": "document",
    "activityTypes": [
@@ -3587,9 +3672,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible) + copays.",
     "ER: $500 deductible + 10% × $1,300 = $630.",
     "Prescriptions: 5 × $10 = $50.",
-    "Total = $680 (below the $3,000 maximum)."
+    "Total = $680 (below the $3,000 maximum).",
+    "So the answer is $680; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -3669,9 +3756,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible) + copays.",
     "ER: $500 deductible + 10% × $2,900 = $790.",
     "Prescriptions: 5 × $10 = $50.",
-    "Total = $840 (below the $3,000 maximum)."
+    "Total = $840 (below the $3,000 maximum).",
+    "So the answer is $840; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -3751,9 +3840,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible) + copays.",
     "ER: $1,800 deductible + 20% × $0 = $1,800.",
     "Prescriptions: 4 × $10 = $40.",
-    "Total = $1,840 (below the $8,000 maximum)."
+    "Total = $1,840 (below the $8,000 maximum).",
+    "So the answer is $1,840; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -3780,8 +3871,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.15 × $360 + 0.05 × $900 = $99.",
     "Plan = $9 × 12 = $108.",
+    "Spreadsheet or calculator: =0.15*360+0.05*900",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -3809,8 +3902,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.08 × $440.00 + 0.06 × $1,100.00 = $101.20.",
     "Plan = $15.00 × 12 = $180.00.",
+    "Spreadsheet or calculator: =0.08*440.00+0.06*1100.00",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -3838,8 +3933,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.12 × $128.00 = $15.36.",
     "Plan = $15.00 × 12 = $180.00.",
+    "Spreadsheet or calculator: =0.12*128.00",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -3867,8 +3964,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.08 × $440.00 + 0.06 × $1,100.00 = $101.20.",
     "Plan = $12.00 × 12 = $144.00.",
+    "Spreadsheet or calculator: =0.08*440.00+0.06*1100.00",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -3876,7 +3975,7 @@
    "id": "fa-insurance-s03-ev-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "advanced",
+   "level": "standard",
    "family": "ev",
    "type": "calculation",
    "activityTypes": [
@@ -3896,8 +3995,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.1 × $560 + 0.04 × $1,400 = $112.",
     "Plan = $15 × 12 = $180.",
+    "Spreadsheet or calculator: =0.1*560+0.04*1400",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -3925,8 +4026,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.08 × $440.00 + 0.06 × $1,100.00 = $101.20.",
     "Plan = $12.00 × 12 = $144.00.",
+    "Spreadsheet or calculator: =0.08*440.00+0.06*1100.00",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -3954,8 +4057,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.12 × $128.00 = $15.36.",
     "Plan = $12.00 × 12 = $144.00.",
+    "Spreadsheet or calculator: =0.12*128.00",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -3983,8 +4088,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.15 × $360 + 0.05 × $900 = $99.",
     "Plan = $15 × 12 = $180.",
+    "Spreadsheet or calculator: =0.15*360+0.05*900",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -4012,8 +4119,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.15 × $360 + 0.05 × $900 = $99.",
     "Plan = $12 × 12 = $144.",
+    "Spreadsheet or calculator: =0.15*360+0.05*900",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ]
   },
@@ -4041,8 +4150,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.02 × $12,000 = $240.",
     "Premium = $240 × 1.25 = $300.",
+    "Spreadsheet or calculator: =240*1.25",
     "Total premiums ≈ $1,500,000 vs. expected claims ≈ $1,200,000 — risk pooling."
    ]
   },
@@ -4070,8 +4181,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.03 × $18,000 = $540.",
     "Premium = $540 × 1.2 = $648.",
+    "Spreadsheet or calculator: =540*1.2",
     "Total premiums ≈ $648,000 vs. expected claims ≈ $540,000 — risk pooling."
    ]
   },
@@ -4099,8 +4212,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.05 × $26,000 = $1,300.",
     "Premium = $1,300 × 1.15 = $1,495.",
+    "Spreadsheet or calculator: =1300*1.15",
     "Total premiums ≈ $7,475,000 vs. expected claims ≈ $6,500,000 — risk pooling."
    ]
   },
@@ -4128,8 +4243,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.03 × $23,000.00 = $690.00.",
     "Premium = $690.00 × 1.15 = $793.50.",
+    "Spreadsheet or calculator: =690.00*1.15",
     "Total premiums ≈ $3,967,500.00 vs. expected claims ≈ $3,450,000.00 — risk pooling."
    ]
   },
@@ -4157,8 +4274,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.05 × $22,000 = $1,100.",
     "Premium = $1,100 × 1.25 = $1,375.",
+    "Spreadsheet or calculator: =1100*1.25",
     "Total premiums ≈ $1,375,000 vs. expected claims ≈ $1,100,000 — risk pooling."
    ]
   },
@@ -4186,8 +4305,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.05 × $10,000 = $500.",
     "Premium = $500 × 1.15 = $575.",
+    "Spreadsheet or calculator: =500*1.15",
     "Total premiums ≈ $575,000 vs. expected claims ≈ $500,000 — risk pooling."
    ]
   },
@@ -4215,8 +4336,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.02 × $16,000 = $320.",
     "Premium = $320 × 1.2 = $384.",
+    "Spreadsheet or calculator: =320*1.2",
     "Total premiums ≈ $3,840,000 vs. expected claims ≈ $3,200,000 — risk pooling."
    ]
   },
@@ -4244,8 +4367,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.03 × $28,000 = $840.",
     "Premium = $840 × 1.2 = $1,008.",
+    "Spreadsheet or calculator: =840*1.2",
     "Total premiums ≈ $10,080,000 vs. expected claims ≈ $8,400,000 — risk pooling."
    ]
   },
@@ -4908,6 +5033,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $66,000.",
     "Property: up to $25,000 → $25,000; remaining $1,000.",
     "Personal exposure = $67,000.",
@@ -4938,6 +5064,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $28,000.",
     "Property: up to $25,000 → $19,000; remaining $0.",
     "Personal exposure = $28,000.",
@@ -4968,6 +5095,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $50,000 per person → $50,000; remaining $49,000.",
     "Property: up to $50,000 → $28,000; remaining $0.",
     "Personal exposure = $49,000.",
@@ -4978,7 +5106,7 @@
    "id": "fa-insurance-s04-liability-limit-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "advanced",
+   "level": "standard",
    "family": "liability-limit",
    "type": "calculation",
    "activityTypes": [
@@ -4998,6 +5126,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $20,000.",
     "Property: up to $25,000 → $25,000; remaining $22,000.",
     "Personal exposure = $42,000.",
@@ -5028,6 +5157,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $50,000 per person → $32,000; remaining $0.",
     "Property: up to $50,000 → $27,000; remaining $0.",
     "Personal exposure = $0.",
@@ -5058,6 +5188,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $88,000.",
     "Property: up to $25,000 → $25,000; remaining $35,000.",
     "Personal exposure = $123,000.",
@@ -5376,8 +5507,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$2,875 − $1,000 = $1,875.",
+    "Spreadsheet or calculator: =2875-1000",
     "Marcus pays $1,000."
    ]
   },
@@ -5405,8 +5538,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$1,450 − $1,000 = $450.",
+    "Spreadsheet or calculator: =1450-1000",
     "Riley pays $1,000."
    ]
   },
@@ -5434,6 +5569,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$1,175 − $2,000 = $0.",
     "The damage is below the deductible, so filing a claim pays nothing."
@@ -5463,8 +5599,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$7,550 − $1,000 = $6,550.",
+    "Spreadsheet or calculator: =7550-1000",
     "Leah pays $1,000."
    ]
   },
@@ -5492,8 +5630,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$1,550 − $1,000 = $550.",
+    "Spreadsheet or calculator: =1550-1000",
     "Riley pays $1,000."
    ]
   },
@@ -5521,8 +5661,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$4,275 − $500 = $3,775.",
+    "Spreadsheet or calculator: =4275-500",
     "Noah pays $500."
    ]
   },
@@ -5550,8 +5692,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$6,725 − $1,000 = $5,725.",
+    "Spreadsheet or calculator: =6725-1000",
     "Maya pays $1,000."
    ]
   },
@@ -5579,6 +5723,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Luis pays the first $1,500.",
     "Coinsurance: 20% × ($27,000 − $1,500) = $5,100.",
     "Total $6,600, capped at the $6,500 maximum: $6,500."
@@ -5608,6 +5753,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Diego pays the first $1,000.",
     "Coinsurance: 30% × ($14,500 − $1,000) = $4,050.",
     "Total $5,050, capped at the $5,000 maximum: $5,000."
@@ -5637,6 +5783,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Owen pays the first $1,000.",
     "Coinsurance: 10% × ($13,400 − $1,000) = $1,240.",
     "Total $2,240: $2,240."
@@ -5666,6 +5813,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Isaiah pays the first $1,000.",
     "Coinsurance: 10% × ($13,100 − $1,000) = $1,210.",
     "Total $2,210: $2,210."
@@ -5695,6 +5843,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Camila pays the first $1,000.",
     "Coinsurance: 30% × ($12,300 − $1,000) = $3,390.",
     "Total $4,390: $4,390."
@@ -5724,6 +5873,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Tyler pays the first $2,500.",
     "Coinsurance: 30% × ($18,300 − $2,500) = $4,740.",
     "Total $7,240, capped at the $5,000 maximum: $5,000."
@@ -5753,6 +5903,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Owen pays the first $1,000.",
     "Coinsurance: 20% × ($20,200 − $1,000) = $3,840.",
     "Total $4,840: $4,840."
@@ -5782,6 +5933,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Leah pays the first $1,000.",
     "Coinsurance: 20% × ($5,100 − $1,000) = $820.",
     "Total $1,820: $1,820."
@@ -5811,8 +5963,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 8% × $340.00 = $27.20.",
     "Expected value = $27.20 − $135.00 = −$107.80.",
+    "Spreadsheet or calculator: =27.20-135.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ]
   },
@@ -5840,8 +5994,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 8% × $440.00 = $35.20.",
     "Expected value = $35.20 − $90.00 = −$54.80.",
+    "Spreadsheet or calculator: =35.20-90.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ]
   },
@@ -5869,8 +6025,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 5% × $620 = $31.",
     "Expected value = $31 − $65 = −$34.",
+    "Spreadsheet or calculator: =31-65",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ]
   },
@@ -5898,8 +6056,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 10% × $530 = $53.",
     "Expected value = $53 − $145 = −$92.",
+    "Spreadsheet or calculator: =53-145",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ]
   },
@@ -5927,8 +6087,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 15% × $450.00 = $67.50.",
     "Expected value = $67.50 − $190.00 = −$122.50.",
+    "Spreadsheet or calculator: =67.50-190.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ]
   },
@@ -5956,8 +6118,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 12% × $220.00 = $26.40.",
     "Expected value = $26.40 − $220.00 = −$193.60.",
+    "Spreadsheet or calculator: =26.40-220.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ]
   },
@@ -5985,8 +6149,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 10% × $610 = $61.",
     "Expected value = $61 − $100 = −$39.",
+    "Spreadsheet or calculator: =61-100",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ]
   },
@@ -6012,8 +6178,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $165 × 12 + $1,000 = $2,980.",
     "Plan B: $193 × 12 + $500 = $2,816.",
+    "Spreadsheet or calculator: =(165*12+1000)-(193*12+500)",
     "Plan B costs $164 less with one claim; with no claims, the lower premium wins."
    ]
   },
@@ -6039,8 +6207,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $137 × 12 + $2,000 = $3,644.",
     "Plan B: $205 × 12 + $250 = $2,710.",
+    "Spreadsheet or calculator: =(137*12+2000)-(205*12+250)",
     "Plan B costs $934 less with one claim; with no claims, the lower premium wins."
    ]
   },
@@ -6066,8 +6236,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $133 × 12 + $1,000 = $2,596.",
     "Plan B: $179 × 12 + $500 = $2,648.",
+    "Spreadsheet or calculator: =(179*12+500)-(133*12+1000)",
     "Plan A costs $52 less with one claim; with no claims, the lower premium wins."
    ]
   },
@@ -6093,8 +6265,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $171 × 12 + $1,000 = $3,052.",
     "Plan B: $258 × 12 + $250 = $3,346.",
+    "Spreadsheet or calculator: =(258*12+250)-(171*12+1000)",
     "Plan A costs $294 less with one claim; with no claims, the lower premium wins."
    ]
   },
@@ -6120,8 +6294,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $112 × 12 + $2,000 = $3,344.",
     "Plan B: $173 × 12 + $500 = $2,576.",
+    "Spreadsheet or calculator: =(112*12+2000)-(173*12+500)",
     "Plan B costs $768 less with one claim; with no claims, the lower premium wins."
    ]
   },
@@ -6147,8 +6323,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $168 × 12 + $2,000 = $4,016.",
     "Plan B: $162 × 12 + $500 = $2,444.",
+    "Spreadsheet or calculator: =(168*12+2000)-(162*12+500)",
     "Plan B costs $1,572 less with one claim; with no claims, the lower premium wins."
    ]
   },
@@ -6174,8 +6352,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $107 × 12 + $2,000 = $3,284.",
     "Plan B: $247 × 12 + $250 = $3,214.",
+    "Spreadsheet or calculator: =(107*12+2000)-(247*12+250)",
     "Plan B costs $70 less with one claim; with no claims, the lower premium wins."
    ]
   },
@@ -6203,7 +6383,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$125 × 12 = $1,500."
+    "Formula: Yearly premium = monthly × 12.",
+    "$125 × 12 = $1,500.",
+    "Spreadsheet or calculator: =125*12",
+    "So the answer is $1,500; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -6230,7 +6413,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$210 × 12 = $2,520."
+    "Formula: Yearly premium = monthly × 12.",
+    "$210 × 12 = $2,520.",
+    "Spreadsheet or calculator: =210*12",
+    "So the answer is $2,520; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -6257,7 +6443,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$205 × 12 = $2,460."
+    "Formula: Yearly premium = monthly × 12.",
+    "$205 × 12 = $2,460.",
+    "Spreadsheet or calculator: =205*12",
+    "So the answer is $2,460; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -6284,7 +6473,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$75 × 12 = $900."
+    "Formula: Yearly premium = monthly × 12.",
+    "$75 × 12 = $900.",
+    "Spreadsheet or calculator: =75*12",
+    "So the answer is $900; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -6311,8 +6503,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $2,000 − $250 = $1750.",
     "$1750 ÷ $180 = 9.72 years.",
+    "Spreadsheet or calculator: =1750/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ]
   },
@@ -6340,8 +6534,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,000 − $250 = $750.",
     "$750 ÷ $150 = 5.00 years.",
+    "Spreadsheet or calculator: =750/150",
     "If you expect a claim sooner, the lower deductible may be better."
    ]
   },
@@ -6369,8 +6565,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,500 − $500 = $1000.",
     "$1000 ÷ $180 = 5.56 years.",
+    "Spreadsheet or calculator: =1000/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ]
   },
@@ -6398,8 +6596,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $2,000 − $250 = $1750.",
     "$1750 ÷ $150 = 11.67 years.",
+    "Spreadsheet or calculator: =1750/150",
     "If you expect a claim sooner, the lower deductible may be better."
    ]
   },
@@ -6427,8 +6627,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $2,000 − $250 = $1750.",
     "$1750 ÷ $180 = 9.72 years.",
+    "Spreadsheet or calculator: =1750/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ]
   },
@@ -6456,8 +6658,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,500 − $500 = $1000.",
     "$1000 ÷ $180 = 5.56 years.",
+    "Spreadsheet or calculator: =1000/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ]
   },
@@ -6485,8 +6689,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,500 − $500 = $1000.",
     "$1000 ÷ $150 = 6.67 years.",
+    "Spreadsheet or calculator: =1000/150",
     "If you expect a claim sooner, the lower deductible may be better."
    ]
   },
@@ -6514,7 +6720,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "7 × $40 = $280."
+    "Formula: Total copays = visits × copay.",
+    "7 × $40 = $280.",
+    "Spreadsheet or calculator: =7*40",
+    "So the answer is $280; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -6541,7 +6750,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "8 × $30 = $240."
+    "Formula: Total copays = visits × copay.",
+    "8 × $30 = $240.",
+    "Spreadsheet or calculator: =8*30",
+    "So the answer is $240; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -6568,7 +6780,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "4 × $20 = $80."
+    "Formula: Total copays = visits × copay.",
+    "4 × $20 = $80.",
+    "Spreadsheet or calculator: =4*20",
+    "So the answer is $80; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -6595,7 +6810,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "8 × $30 = $240."
+    "Formula: Total copays = visits × copay.",
+    "8 × $30 = $240.",
+    "Spreadsheet or calculator: =8*30",
+    "So the answer is $240; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -6622,7 +6840,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "8 × $40 = $320."
+    "Formula: Total copays = visits × copay.",
+    "8 × $40 = $320.",
+    "Spreadsheet or calculator: =8*40",
+    "So the answer is $320; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -6649,7 +6870,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "3 × $40 = $120."
+    "Formula: Total copays = visits × copay.",
+    "3 × $40 = $120.",
+    "Spreadsheet or calculator: =3*40",
+    "So the answer is $120; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -6676,8 +6900,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,500 + coinsurance $405.",
     "June: remaining deductible $0 + coinsurance $4,500.",
+    "Spreadsheet or calculator: =6405-405",
     "Total $6,405, capped at $6,000 → $6,000."
    ]
   },
@@ -6705,6 +6931,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,550 + coinsurance $0.",
     "June: remaining deductible $450 + coinsurance $2,010.",
     "Total $4,010 → $4,010."
@@ -6734,6 +6961,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $525.",
     "June: remaining deductible $0 + coinsurance $1,800.",
     "Total $3,325 → $3,325."
@@ -6763,6 +6991,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $180.",
     "June: remaining deductible $0 + coinsurance $5,550.",
     "Total $6,730, capped at $5,000 → $5,000."
@@ -6792,6 +7021,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $370.",
     "June: remaining deductible $0 + coinsurance $5,200.",
     "Total $6,570, capped at $6,000 → $6,000."
@@ -6821,6 +7051,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $270.",
     "June: remaining deductible $0 + coinsurance $4,500.",
     "Total $5,770 → $5,770."
@@ -6850,6 +7081,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $120.",
     "June: remaining deductible $0 + coinsurance $3,000.",
     "Total $4,120 → $4,120."
@@ -6879,6 +7111,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,850 + coinsurance $0.",
     "June: remaining deductible $150 + coinsurance $2,070.",
     "Total $4,070, capped at $4,000 → $4,000."
@@ -6908,6 +7141,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,800 + coinsurance $0.",
     "June: remaining deductible $200 + coinsurance $4,460.",
     "Total $6,460, capped at $4,000 → $4,000."
@@ -6937,7 +7171,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.02 × $11,000 = $220."
+    "Formula: Expected loss = probability × amount.",
+    "0.02 × $11,000 = $220.",
+    "Spreadsheet or calculator: =0.02*11000",
+    "So the answer is $220; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -6964,7 +7201,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.01 × $9,000 = $90."
+    "Formula: Expected loss = probability × amount.",
+    "0.01 × $9,000 = $90.",
+    "Spreadsheet or calculator: =0.01*9000",
+    "So the answer is $90; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -6991,7 +7231,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.02 × $2,000 = $40."
+    "Formula: Expected loss = probability × amount.",
+    "0.02 × $2,000 = $40.",
+    "Spreadsheet or calculator: =0.02*2000",
+    "So the answer is $40; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7018,7 +7261,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.10 × $17,000 = $1,700."
+    "Formula: Expected loss = probability × amount.",
+    "0.10 × $17,000 = $1,700.",
+    "Spreadsheet or calculator: =0.10*17000",
+    "So the answer is $1,700; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7045,7 +7291,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.01 × $13,000 = $130."
+    "Formula: Expected loss = probability × amount.",
+    "0.01 × $13,000 = $130.",
+    "Spreadsheet or calculator: =0.01*13000",
+    "So the answer is $130; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7072,7 +7321,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.01 × $19,000 = $190."
+    "Formula: Expected loss = probability × amount.",
+    "0.01 × $19,000 = $190.",
+    "Spreadsheet or calculator: =0.01*19000",
+    "So the answer is $190; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7099,7 +7351,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.05 × $4,000 = $200."
+    "Formula: Expected loss = probability × amount.",
+    "0.05 × $4,000 = $200.",
+    "Spreadsheet or calculator: =0.05*4000",
+    "So the answer is $200; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7126,7 +7381,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.05 × $7,000 = $350."
+    "Formula: Expected loss = probability × amount.",
+    "0.05 × $7,000 = $350.",
+    "Spreadsheet or calculator: =0.05*7000",
+    "So the answer is $350; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7153,7 +7411,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.02 × $12,000 = $240."
+    "Formula: Expected loss = probability × amount.",
+    "0.02 × $12,000 = $240.",
+    "Spreadsheet or calculator: =0.02*12000",
+    "So the answer is $240; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7180,8 +7441,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.03 × $11,000.00 = $330.00.",
-    "Add 25%: $330.00 × 1.25 = $412.50."
+    "Add 25%: $330.00 × 1.25 = $412.50.",
+    "Spreadsheet or calculator: =330.00*1.25",
+    "So the answer is $412.50; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7208,8 +7472,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.05 × $10,500 = $525.",
-    "Add 20%: $525 × 1.2 = $630."
+    "Add 20%: $525 × 1.2 = $630.",
+    "Spreadsheet or calculator: =525*1.2",
+    "So the answer is $630; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7236,8 +7503,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.02 × $5,500 = $110.",
-    "Add 20%: $110 × 1.2 = $132."
+    "Add 20%: $110 × 1.2 = $132.",
+    "Spreadsheet or calculator: =110*1.2",
+    "So the answer is $132; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7264,8 +7534,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.02 × $12,000 = $240.",
-    "Add 20%: $240 × 1.2 = $288."
+    "Add 20%: $240 × 1.2 = $288.",
+    "Spreadsheet or calculator: =240*1.2",
+    "So the answer is $288; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7292,8 +7565,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.03 × $13,000 = $390.",
-    "Add 20%: $390 × 1.2 = $468."
+    "Add 20%: $390 × 1.2 = $468.",
+    "Spreadsheet or calculator: =390*1.2",
+    "So the answer is $468; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7320,8 +7596,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.02 × $14,000 = $280.",
-    "Add 20%: $280 × 1.2 = $336."
+    "Add 20%: $280 × 1.2 = $336.",
+    "Spreadsheet or calculator: =280*1.2",
+    "So the answer is $336; insure against losses you could not afford, not small ones."
    ]
   },
   {
@@ -7348,7 +7627,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,000 × 3 = $6,000."
+    "Formula: An emergency fund of 3 months = monthly expenses × 3.",
+    "$2,000 × 3 = $6,000.",
+    "Spreadsheet or calculator: =2000*3",
+    "So the answer is $6,000; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7375,7 +7657,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,400 × 6 = $20,400."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$3,400 × 6 = $20,400.",
+    "Spreadsheet or calculator: =3400*6",
+    "So the answer is $20,400; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7402,7 +7687,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,000 × 6 = $24,000."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$4,000 × 6 = $24,000.",
+    "Spreadsheet or calculator: =4000*6",
+    "So the answer is $24,000; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7429,7 +7717,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,400 × 6 = $14,400."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$2,400 × 6 = $14,400.",
+    "Spreadsheet or calculator: =2400*6",
+    "So the answer is $14,400; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7456,7 +7747,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,200 × 3 = $9,600."
+    "Formula: An emergency fund of 3 months = monthly expenses × 3.",
+    "$3,200 × 3 = $9,600.",
+    "Spreadsheet or calculator: =3200*3",
+    "So the answer is $9,600; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7483,7 +7777,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,600 × 6 = $21,600."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$3,600 × 6 = $21,600.",
+    "Spreadsheet or calculator: =3600*6",
+    "So the answer is $21,600; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7510,7 +7807,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,500 × 3 = $4,500."
+    "Formula: An emergency fund of 3 months = monthly expenses × 3.",
+    "$1,500 × 3 = $4,500.",
+    "Spreadsheet or calculator: =1500*3",
+    "So the answer is $4,500; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7537,7 +7837,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,700 × 6 = $10,200."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$1,700 × 6 = $10,200.",
+    "Spreadsheet or calculator: =1700*6",
+    "So the answer is $10,200; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7564,7 +7867,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,500 × 6 = $21,000."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$3,500 × 6 = $21,000.",
+    "Spreadsheet or calculator: =3500*6",
+    "So the answer is $21,000; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7591,7 +7897,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,700 × 6 = $10,200."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$1,700 × 6 = $10,200.",
+    "Spreadsheet or calculator: =1700*6",
+    "So the answer is $10,200; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7618,7 +7927,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,800 × 6 = $10,800."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$1,800 × 6 = $10,800.",
+    "Spreadsheet or calculator: =1800*6",
+    "So the answer is $10,800; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7643,9 +7955,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,000 + $2,500 = $3,500.",
     "Uninsured = $26,000.",
-    "Difference = $22,500: insurance limits the worst case."
+    "Difference = $22,500: insurance limits the worst case.",
+    "Spreadsheet or calculator: =26000-3500",
+    "So the answer is $22,500; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7670,9 +7985,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $650 + $1,000 = $1,650.",
     "Uninsured = $15,000.",
-    "Difference = $13,350: insurance limits the worst case."
+    "Difference = $13,350: insurance limits the worst case.",
+    "Spreadsheet or calculator: =15000-1650",
+    "So the answer is $13,350; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7697,9 +8015,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $600 + $1,000 = $1,600.",
     "Uninsured = $11,000.",
-    "Difference = $9,400: insurance limits the worst case."
+    "Difference = $9,400: insurance limits the worst case.",
+    "Spreadsheet or calculator: =11000-1600",
+    "So the answer is $9,400; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7724,9 +8045,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,400 + $1,000 = $2,400.",
     "Uninsured = $9,000.",
-    "Difference = $6,600: insurance limits the worst case."
+    "Difference = $6,600: insurance limits the worst case.",
+    "Spreadsheet or calculator: =9000-2400",
+    "So the answer is $6,600; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7751,9 +8075,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $750 + $500 = $1,250.",
     "Uninsured = $26,000.",
-    "Difference = $24,750: insurance limits the worst case."
+    "Difference = $24,750: insurance limits the worst case.",
+    "Spreadsheet or calculator: =26000-1250",
+    "So the answer is $24,750; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7778,9 +8105,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,500 + $2,500 = $4,000.",
     "Uninsured = $29,000.",
-    "Difference = $25,000: insurance limits the worst case."
+    "Difference = $25,000: insurance limits the worst case.",
+    "Spreadsheet or calculator: =29000-4000",
+    "So the answer is $25,000; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7805,9 +8135,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,450 + $1,000 = $2,450.",
     "Uninsured = $18,000.",
-    "Difference = $15,550: insurance limits the worst case."
+    "Difference = $15,550: insurance limits the worst case.",
+    "Spreadsheet or calculator: =18000-2450",
+    "So the answer is $15,550; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7832,9 +8165,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,250 + $2,500 = $3,750.",
     "Uninsured = $11,000.",
-    "Difference = $7,250: insurance limits the worst case."
+    "Difference = $7,250: insurance limits the worst case.",
+    "Spreadsheet or calculator: =11000-3750",
+    "So the answer is $7,250; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7859,9 +8195,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $850 + $1,000 = $1,850.",
     "Uninsured = $26,000.",
-    "Difference = $24,150: insurance limits the worst case."
+    "Difference = $24,150: insurance limits the worst case.",
+    "Spreadsheet or calculator: =26000-1850",
+    "So the answer is $24,150; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7886,9 +8225,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,250 + $1,000 = $2,250.",
     "Uninsured = $20,000.",
-    "Difference = $17,750: insurance limits the worst case."
+    "Difference = $17,750: insurance limits the worst case.",
+    "Spreadsheet or calculator: =20000-2250",
+    "So the answer is $17,750; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7913,9 +8255,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $600 + $1,000 = $1,600.",
     "Uninsured = $17,000.",
-    "Difference = $15,400: insurance limits the worst case."
+    "Difference = $15,400: insurance limits the worst case.",
+    "Spreadsheet or calculator: =17000-1600",
+    "So the answer is $15,400; use numbers like this to decide which risks are worth insuring."
    ]
   },
   {
@@ -7989,7 +8334,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$242 + $128 + $98 + $52 = $520."
+    "Formula: 6-month premium = sum of the coverage premiums.",
+    "$242 + $128 + $98 + $52 = $520.",
+    "Spreadsheet or calculator: =242+128+98+52",
+    "So the answer is $520; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8063,8 +8411,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: 6-month premium = sum of the coverage premiums.",
     "6-month total = $751.00.",
-    "÷ 6 = $125.17 per month."
+    "÷ 6 = $125.17 per month.",
+    "So the answer is $125.17; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8138,9 +8488,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: 6-month premium = sum of the coverage premiums.",
     "Own car: collision pays after the $500 deductible.",
     "Other car: property-damage limit $50,000 covers it.",
-    "Out of pocket = $500."
+    "Out of pocket = $500.",
+    "So the answer is $500; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8214,7 +8566,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$246 + $172 + $118 + $43 = $579."
+    "Formula: 6-month premium = sum of the coverage premiums.",
+    "$246 + $172 + $118 + $43 = $579.",
+    "Spreadsheet or calculator: =246+172+118+43",
+    "So the answer is $579; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8288,8 +8643,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: 6-month premium = sum of the coverage premiums.",
     "6-month total = $549.00.",
-    "÷ 6 = $91.50 per month."
+    "÷ 6 = $91.50 per month.",
+    "So the answer is $91.50; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8363,9 +8720,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: 6-month premium = sum of the coverage premiums.",
     "Own car: collision pays after the $1,000 deductible.",
     "Other car: property-damage limit $50,000 covers it.",
-    "Out of pocket = $1,000."
+    "Out of pocket = $1,000.",
+    "So the answer is $1,000; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8439,7 +8798,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$363 + $158 + $119 + $24 = $664."
+    "Formula: 6-month premium = sum of the coverage premiums.",
+    "$363 + $158 + $119 + $24 = $664.",
+    "Spreadsheet or calculator: =363+158+119+24",
+    "So the answer is $664; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8513,8 +8875,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: 6-month premium = sum of the coverage premiums.",
     "6-month total = $524.00.",
-    "÷ 6 = $87.33 per month."
+    "÷ 6 = $87.33 per month.",
+    "So the answer is $87.33; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8588,9 +8952,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: 6-month premium = sum of the coverage premiums.",
     "Own car: collision pays after the $1,000 deductible.",
     "Other car: property-damage limit $50,000, so Mei owes the extra $5,500.",
-    "Out of pocket = $6,500."
+    "Out of pocket = $6,500.",
+    "So the answer is $6,500; weigh the premium against what you would pay in a bad year."
    ]
   },
   {
@@ -8667,7 +9033,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,743.00 − $1,394.40 = $348.60."
+    "Formula: You owe = allowed amount − plan paid.",
+    "$1,743.00 − $1,394.40 = $348.60.",
+    "Spreadsheet or calculator: =1743.00-1394.40",
+    "So the answer is $348.60; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -8745,6 +9114,7 @@
    },
    "solutionSteps": [
     "20% × $1,428.00 = $285.60.",
+    "Spreadsheet or calculator: =20%*1428.00",
     "The plan pays $1,142.40; the billed amount above the allowed amount is written off."
    ]
   },
@@ -8824,7 +9194,8 @@
    "solutionSteps": [
     "Deductible part = $1,270.",
     "Coinsurance = 20% × ($2,730 − $1,270) = $292.",
-    "Total = $1,562."
+    "Total = $1,562.",
+    "So the answer is $1,562; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -8901,7 +9272,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,484.00 − $1,187.20 = $296.80."
+    "Formula: You owe = allowed amount − plan paid.",
+    "$1,484.00 − $1,187.20 = $296.80.",
+    "Spreadsheet or calculator: =1484.00-1187.20",
+    "So the answer is $296.80; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -8979,6 +9353,7 @@
    },
    "solutionSteps": [
     "20% × $630.50 = $126.10.",
+    "Spreadsheet or calculator: =20%*630.50",
     "The plan pays $504.40; the billed amount above the allowed amount is written off."
    ]
   },
@@ -9058,7 +9433,8 @@
    "solutionSteps": [
     "Deductible part = $530.00.",
     "Coinsurance = 20% × ($1,639.00 − $530.00) = $221.80.",
-    "Total = $751.80."
+    "Total = $751.80.",
+    "So the answer is $751.80; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -9135,7 +9511,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,281.00 − $1,024.80 = $256.20."
+    "Formula: You owe = allowed amount − plan paid.",
+    "$1,281.00 − $1,024.80 = $256.20.",
+    "Spreadsheet or calculator: =1281.00-1024.80",
+    "So the answer is $256.20; the out-of-pocket maximum caps your worst year."
    ]
   },
   {
@@ -9213,6 +9592,7 @@
    },
    "solutionSteps": [
     "20% × $966.00 = $193.20.",
+    "Spreadsheet or calculator: =20%*966.00",
     "The plan pays $772.80; the billed amount above the allowed amount is written off."
    ]
   },
@@ -9292,7 +9672,4958 @@
    "solutionSteps": [
     "Deductible part = $600.00.",
     "Coinsurance = 20% × ($1,446.00 − $600.00) = $169.20.",
-    "Total = $769.20."
+    "Total = $769.20.",
+    "So the answer is $769.20; the out-of-pocket maximum caps your worst year."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Zara has $2,050 of medical bills this year on Plan A (below the deductible, so she pays all of them). What is her total yearly cost, premiums included?",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1680
+        ],
+        [
+         333.33,
+         2013.33
+        ],
+        [
+         666.67,
+         2346.67
+        ],
+        [
+         1000,
+         2680
+        ],
+        [
+         1333.33,
+         3013.33
+        ],
+        [
+         1666.67,
+         3346.67
+        ],
+        [
+         2000,
+         3680
+        ],
+        [
+         2333.33,
+         4013.33
+        ],
+        [
+         2666.67,
+         4346.67
+        ],
+        [
+         3000,
+         4680
+        ],
+        [
+         3333.33,
+         4746.67
+        ],
+        [
+         3666.67,
+         4813.33
+        ],
+        [
+         4000,
+         4880
+        ],
+        [
+         4333.33,
+         4946.67
+        ],
+        [
+         4666.67,
+         5013.33
+        ],
+        [
+         5000,
+         5080
+        ],
+        [
+         5333.33,
+         5146.67
+        ],
+        [
+         5666.67,
+         5213.33
+        ],
+        [
+         6000,
+         5280
+        ],
+        [
+         6333.33,
+         5346.67
+        ],
+        [
+         6666.67,
+         5413.33
+        ],
+        [
+         7000,
+         5480
+        ],
+        [
+         7333.33,
+         5546.67
+        ],
+        [
+         7666.67,
+         5613.33
+        ],
+        [
+         8000,
+         5680
+        ],
+        [
+         8333.33,
+         5746.67
+        ],
+        [
+         8666.67,
+         5813.33
+        ],
+        [
+         9000,
+         5880
+        ],
+        [
+         9333.33,
+         5946.67
+        ],
+        [
+         9666.67,
+         6013.33
+        ],
+        [
+         10000,
+         6080
+        ],
+        [
+         10333.33,
+         6146.67
+        ],
+        [
+         10666.67,
+         6213.33
+        ],
+        [
+         11000,
+         6280
+        ],
+        [
+         11333.33,
+         6346.67
+        ],
+        [
+         11666.67,
+         6413.33
+        ],
+        [
+         12000,
+         6480
+        ],
+        [
+         12333.33,
+         6546.67
+        ],
+        [
+         12666.67,
+         6613.33
+        ],
+        [
+         13000,
+         6680
+        ],
+        [
+         13333.33,
+         6746.67
+        ],
+        [
+         13666.67,
+         6813.33
+        ],
+        [
+         14000,
+         6880
+        ],
+        [
+         14333.33,
+         6946.67
+        ],
+        [
+         14666.67,
+         7013.33
+        ],
+        [
+         15000,
+         7080
+        ],
+        [
+         15333.33,
+         7146.67
+        ],
+        [
+         15666.67,
+         7213.33
+        ],
+        [
+         16000,
+         7280
+        ],
+        [
+         16333.33,
+         7346.67
+        ],
+        [
+         16666.67,
+         7413.33
+        ],
+        [
+         17000,
+         7480
+        ],
+        [
+         17333.33,
+         7546.67
+        ],
+        [
+         17666.67,
+         7613.33
+        ],
+        [
+         18000,
+         7680
+        ],
+        [
+         18333.33,
+         7746.67
+        ],
+        [
+         18666.67,
+         7813.33
+        ],
+        [
+         19000,
+         7880
+        ],
+        [
+         19333.33,
+         7946.67
+        ],
+        [
+         19666.67,
+         8013.33
+        ],
+        [
+         20000,
+         8080
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         4020
+        ],
+        [
+         333.33,
+         4353.33
+        ],
+        [
+         666.67,
+         4686.67
+        ],
+        [
+         1000,
+         4820
+        ],
+        [
+         1333.33,
+         4886.67
+        ],
+        [
+         1666.67,
+         4953.33
+        ],
+        [
+         2000,
+         5020
+        ],
+        [
+         2333.33,
+         5086.67
+        ],
+        [
+         2666.67,
+         5153.33
+        ],
+        [
+         3000,
+         5220
+        ],
+        [
+         3333.33,
+         5286.67
+        ],
+        [
+         3666.67,
+         5353.33
+        ],
+        [
+         4000,
+         5420
+        ],
+        [
+         4333.33,
+         5486.67
+        ],
+        [
+         4666.67,
+         5553.33
+        ],
+        [
+         5000,
+         5620
+        ],
+        [
+         5333.33,
+         5686.67
+        ],
+        [
+         5666.67,
+         5753.33
+        ],
+        [
+         6000,
+         5820
+        ],
+        [
+         6333.33,
+         5886.67
+        ],
+        [
+         6666.67,
+         5953.33
+        ],
+        [
+         7000,
+         6020
+        ],
+        [
+         7333.33,
+         6086.67
+        ],
+        [
+         7666.67,
+         6153.33
+        ],
+        [
+         8000,
+         6220
+        ],
+        [
+         8333.33,
+         6286.67
+        ],
+        [
+         8666.67,
+         6353.33
+        ],
+        [
+         9000,
+         6420
+        ],
+        [
+         9333.33,
+         6486.67
+        ],
+        [
+         9666.67,
+         6553.33
+        ],
+        [
+         10000,
+         6620
+        ],
+        [
+         10333.33,
+         6686.67
+        ],
+        [
+         10666.67,
+         6753.33
+        ],
+        [
+         11000,
+         6820
+        ],
+        [
+         11333.33,
+         6886.67
+        ],
+        [
+         11666.67,
+         6953.33
+        ],
+        [
+         12000,
+         7020
+        ],
+        [
+         12333.33,
+         7086.67
+        ],
+        [
+         12666.67,
+         7153.33
+        ],
+        [
+         13000,
+         7220
+        ],
+        [
+         13333.33,
+         7286.67
+        ],
+        [
+         13666.67,
+         7353.33
+        ],
+        [
+         14000,
+         7420
+        ],
+        [
+         14333.33,
+         7486.67
+        ],
+        [
+         14666.67,
+         7520
+        ],
+        [
+         15000,
+         7520
+        ],
+        [
+         15333.33,
+         7520
+        ],
+        [
+         15666.67,
+         7520
+        ],
+        [
+         16000,
+         7520
+        ],
+        [
+         16333.33,
+         7520
+        ],
+        [
+         16666.67,
+         7520
+        ],
+        [
+         17000,
+         7520
+        ],
+        [
+         17333.33,
+         7520
+        ],
+        [
+         17666.67,
+         7520
+        ],
+        [
+         18000,
+         7520
+        ],
+        [
+         18333.33,
+         7520
+        ],
+        [
+         18666.67,
+         7520
+        ],
+        [
+         19000,
+         7520
+        ],
+        [
+         19333.33,
+         7520
+        ],
+        [
+         19666.67,
+         7520
+        ],
+        [
+         20000,
+         7520
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $140 a month, $3,000 deductible, then 20% coinsurance, out-of-pocket maximum $7,000. Plan B: $335 a month, $750 deductible, then 20% coinsurance, out-of-pocket maximum $3,500."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,730",
+   "numeric": {
+    "value": 3730,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for bills b ≤ deductible, cost = 12 × premium + b.",
+    "Substitute: 12 × $140 + $2,050 = $3,730.",
+    "Spreadsheet: =12*140+2050.",
+    "So Plan A costs $3,730 this year; Plan B would cost $5,030. In a low-bill year the cheaper premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Sam has $10,500 of medical bills on Plan B. What is the total yearly cost, premiums included?",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1560
+        ],
+        [
+         333.33,
+         1893.33
+        ],
+        [
+         666.67,
+         2226.67
+        ],
+        [
+         1000,
+         2560
+        ],
+        [
+         1333.33,
+         2893.33
+        ],
+        [
+         1666.67,
+         3226.67
+        ],
+        [
+         2000,
+         3560
+        ],
+        [
+         2333.33,
+         3893.33
+        ],
+        [
+         2666.67,
+         4226.67
+        ],
+        [
+         3000,
+         4560
+        ],
+        [
+         3333.33,
+         4893.33
+        ],
+        [
+         3666.67,
+         5093.33
+        ],
+        [
+         4000,
+         5160
+        ],
+        [
+         4333.33,
+         5226.67
+        ],
+        [
+         4666.67,
+         5293.33
+        ],
+        [
+         5000,
+         5360
+        ],
+        [
+         5333.33,
+         5426.67
+        ],
+        [
+         5666.67,
+         5493.33
+        ],
+        [
+         6000,
+         5560
+        ],
+        [
+         6333.33,
+         5626.67
+        ],
+        [
+         6666.67,
+         5693.33
+        ],
+        [
+         7000,
+         5760
+        ],
+        [
+         7333.33,
+         5826.67
+        ],
+        [
+         7666.67,
+         5893.33
+        ],
+        [
+         8000,
+         5960
+        ],
+        [
+         8333.33,
+         6026.67
+        ],
+        [
+         8666.67,
+         6093.33
+        ],
+        [
+         9000,
+         6160
+        ],
+        [
+         9333.33,
+         6226.67
+        ],
+        [
+         9666.67,
+         6293.33
+        ],
+        [
+         10000,
+         6360
+        ],
+        [
+         10333.33,
+         6426.67
+        ],
+        [
+         10666.67,
+         6493.33
+        ],
+        [
+         11000,
+         6560
+        ],
+        [
+         11333.33,
+         6626.67
+        ],
+        [
+         11666.67,
+         6693.33
+        ],
+        [
+         12000,
+         6760
+        ],
+        [
+         12333.33,
+         6826.67
+        ],
+        [
+         12666.67,
+         6893.33
+        ],
+        [
+         13000,
+         6960
+        ],
+        [
+         13333.33,
+         7026.67
+        ],
+        [
+         13666.67,
+         7093.33
+        ],
+        [
+         14000,
+         7160
+        ],
+        [
+         14333.33,
+         7226.67
+        ],
+        [
+         14666.67,
+         7293.33
+        ],
+        [
+         15000,
+         7360
+        ],
+        [
+         15333.33,
+         7426.67
+        ],
+        [
+         15666.67,
+         7493.33
+        ],
+        [
+         16000,
+         7560
+        ],
+        [
+         16333.33,
+         7626.67
+        ],
+        [
+         16666.67,
+         7693.33
+        ],
+        [
+         17000,
+         7760
+        ],
+        [
+         17333.33,
+         7826.67
+        ],
+        [
+         17666.67,
+         7893.33
+        ],
+        [
+         18000,
+         7960
+        ],
+        [
+         18333.33,
+         8026.67
+        ],
+        [
+         18666.67,
+         8093.33
+        ],
+        [
+         19000,
+         8160
+        ],
+        [
+         19333.33,
+         8226.67
+        ],
+        [
+         19666.67,
+         8293.33
+        ],
+        [
+         20000,
+         8360
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3720
+        ],
+        [
+         333.33,
+         4053.33
+        ],
+        [
+         666.67,
+         4386.67
+        ],
+        [
+         1000,
+         4720
+        ],
+        [
+         1333.33,
+         4786.67
+        ],
+        [
+         1666.67,
+         4853.33
+        ],
+        [
+         2000,
+         4920
+        ],
+        [
+         2333.33,
+         4986.67
+        ],
+        [
+         2666.67,
+         5053.33
+        ],
+        [
+         3000,
+         5120
+        ],
+        [
+         3333.33,
+         5186.67
+        ],
+        [
+         3666.67,
+         5253.33
+        ],
+        [
+         4000,
+         5320
+        ],
+        [
+         4333.33,
+         5386.67
+        ],
+        [
+         4666.67,
+         5453.33
+        ],
+        [
+         5000,
+         5520
+        ],
+        [
+         5333.33,
+         5586.67
+        ],
+        [
+         5666.67,
+         5653.33
+        ],
+        [
+         6000,
+         5720
+        ],
+        [
+         6333.33,
+         5786.67
+        ],
+        [
+         6666.67,
+         5853.33
+        ],
+        [
+         7000,
+         5920
+        ],
+        [
+         7333.33,
+         5986.67
+        ],
+        [
+         7666.67,
+         6053.33
+        ],
+        [
+         8000,
+         6120
+        ],
+        [
+         8333.33,
+         6186.67
+        ],
+        [
+         8666.67,
+         6253.33
+        ],
+        [
+         9000,
+         6320
+        ],
+        [
+         9333.33,
+         6386.67
+        ],
+        [
+         9666.67,
+         6453.33
+        ],
+        [
+         10000,
+         6520
+        ],
+        [
+         10333.33,
+         6586.67
+        ],
+        [
+         10666.67,
+         6653.33
+        ],
+        [
+         11000,
+         6720
+        ],
+        [
+         11333.33,
+         6720
+        ],
+        [
+         11666.67,
+         6720
+        ],
+        [
+         12000,
+         6720
+        ],
+        [
+         12333.33,
+         6720
+        ],
+        [
+         12666.67,
+         6720
+        ],
+        [
+         13000,
+         6720
+        ],
+        [
+         13333.33,
+         6720
+        ],
+        [
+         13666.67,
+         6720
+        ],
+        [
+         14000,
+         6720
+        ],
+        [
+         14333.33,
+         6720
+        ],
+        [
+         14666.67,
+         6720
+        ],
+        [
+         15000,
+         6720
+        ],
+        [
+         15333.33,
+         6720
+        ],
+        [
+         15666.67,
+         6720
+        ],
+        [
+         16000,
+         6720
+        ],
+        [
+         16333.33,
+         6720
+        ],
+        [
+         16666.67,
+         6720
+        ],
+        [
+         17000,
+         6720
+        ],
+        [
+         17333.33,
+         6720
+        ],
+        [
+         17666.67,
+         6720
+        ],
+        [
+         18000,
+         6720
+        ],
+        [
+         18333.33,
+         6720
+        ],
+        [
+         18666.67,
+         6720
+        ],
+        [
+         19000,
+         6720
+        ],
+        [
+         19333.33,
+         6720
+        ],
+        [
+         19666.67,
+         6720
+        ],
+        [
+         20000,
+         6720
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $130 a month, $3,500 deductible, then 20% coinsurance, out-of-pocket maximum $7,000. Plan B: $310 a month, $1,000 deductible, then 20% coinsurance, out-of-pocket maximum $3,000."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6,620",
+   "numeric": {
+    "value": 6620,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for bills above the deductible (and below the maximum), cost = 12 × premium + deductible + 20% × (b − deductible).",
+    "Substitute: 12 × $310 + $1,000 + 0.2 × ($10,500 − $1,000) = $3,720 + $2,900 = $6,620.",
+    "Spreadsheet: =12*310+MIN(3000,1000+0.2*(10500-1000)).",
+    "So Plan B costs $6,620; Plan A would cost $6,460. This is the middle piece of Plan B's graph."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "At what level of medical bills do the two plans cost the same for the year? Round to the nearest dollar.",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 8000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1140
+        ],
+        [
+         333.33,
+         1473.33
+        ],
+        [
+         666.67,
+         1806.67
+        ],
+        [
+         1000,
+         2140
+        ],
+        [
+         1333.33,
+         2473.33
+        ],
+        [
+         1666.67,
+         2806.67
+        ],
+        [
+         2000,
+         3140
+        ],
+        [
+         2333.33,
+         3473.33
+        ],
+        [
+         2666.67,
+         3806.67
+        ],
+        [
+         3000,
+         4140
+        ],
+        [
+         3333.33,
+         4206.67
+        ],
+        [
+         3666.67,
+         4273.33
+        ],
+        [
+         4000,
+         4340
+        ],
+        [
+         4333.33,
+         4406.67
+        ],
+        [
+         4666.67,
+         4473.33
+        ],
+        [
+         5000,
+         4540
+        ],
+        [
+         5333.33,
+         4606.67
+        ],
+        [
+         5666.67,
+         4673.33
+        ],
+        [
+         6000,
+         4740
+        ],
+        [
+         6333.33,
+         4806.67
+        ],
+        [
+         6666.67,
+         4873.33
+        ],
+        [
+         7000,
+         4940
+        ],
+        [
+         7333.33,
+         5006.67
+        ],
+        [
+         7666.67,
+         5073.33
+        ],
+        [
+         8000,
+         5140
+        ],
+        [
+         8333.33,
+         5206.67
+        ],
+        [
+         8666.67,
+         5273.33
+        ],
+        [
+         9000,
+         5340
+        ],
+        [
+         9333.33,
+         5406.67
+        ],
+        [
+         9666.67,
+         5473.33
+        ],
+        [
+         10000,
+         5540
+        ],
+        [
+         10333.33,
+         5606.67
+        ],
+        [
+         10666.67,
+         5673.33
+        ],
+        [
+         11000,
+         5740
+        ],
+        [
+         11333.33,
+         5806.67
+        ],
+        [
+         11666.67,
+         5873.33
+        ],
+        [
+         12000,
+         5940
+        ],
+        [
+         12333.33,
+         6006.67
+        ],
+        [
+         12666.67,
+         6073.33
+        ],
+        [
+         13000,
+         6140
+        ],
+        [
+         13333.33,
+         6206.67
+        ],
+        [
+         13666.67,
+         6273.33
+        ],
+        [
+         14000,
+         6340
+        ],
+        [
+         14333.33,
+         6406.67
+        ],
+        [
+         14666.67,
+         6473.33
+        ],
+        [
+         15000,
+         6540
+        ],
+        [
+         15333.33,
+         6606.67
+        ],
+        [
+         15666.67,
+         6673.33
+        ],
+        [
+         16000,
+         6740
+        ],
+        [
+         16333.33,
+         6806.67
+        ],
+        [
+         16666.67,
+         6873.33
+        ],
+        [
+         17000,
+         6940
+        ],
+        [
+         17333.33,
+         7006.67
+        ],
+        [
+         17666.67,
+         7073.33
+        ],
+        [
+         18000,
+         7140
+        ],
+        [
+         18333.33,
+         7206.67
+        ],
+        [
+         18666.67,
+         7273.33
+        ],
+        [
+         19000,
+         7340
+        ],
+        [
+         19333.33,
+         7406.67
+        ],
+        [
+         19666.67,
+         7473.33
+        ],
+        [
+         20000,
+         7540
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3840
+        ],
+        [
+         333.33,
+         4173.33
+        ],
+        [
+         666.67,
+         4506.67
+        ],
+        [
+         1000,
+         4840
+        ],
+        [
+         1333.33,
+         4906.67
+        ],
+        [
+         1666.67,
+         4973.33
+        ],
+        [
+         2000,
+         5040
+        ],
+        [
+         2333.33,
+         5106.67
+        ],
+        [
+         2666.67,
+         5173.33
+        ],
+        [
+         3000,
+         5240
+        ],
+        [
+         3333.33,
+         5306.67
+        ],
+        [
+         3666.67,
+         5373.33
+        ],
+        [
+         4000,
+         5440
+        ],
+        [
+         4333.33,
+         5506.67
+        ],
+        [
+         4666.67,
+         5573.33
+        ],
+        [
+         5000,
+         5640
+        ],
+        [
+         5333.33,
+         5706.67
+        ],
+        [
+         5666.67,
+         5773.33
+        ],
+        [
+         6000,
+         5840
+        ],
+        [
+         6333.33,
+         5906.67
+        ],
+        [
+         6666.67,
+         5973.33
+        ],
+        [
+         7000,
+         6040
+        ],
+        [
+         7333.33,
+         6106.67
+        ],
+        [
+         7666.67,
+         6173.33
+        ],
+        [
+         8000,
+         6240
+        ],
+        [
+         8333.33,
+         6306.67
+        ],
+        [
+         8666.67,
+         6373.33
+        ],
+        [
+         9000,
+         6440
+        ],
+        [
+         9333.33,
+         6506.67
+        ],
+        [
+         9666.67,
+         6573.33
+        ],
+        [
+         10000,
+         6640
+        ],
+        [
+         10333.33,
+         6706.67
+        ],
+        [
+         10666.67,
+         6773.33
+        ],
+        [
+         11000,
+         6840
+        ],
+        [
+         11333.33,
+         6840
+        ],
+        [
+         11666.67,
+         6840
+        ],
+        [
+         12000,
+         6840
+        ],
+        [
+         12333.33,
+         6840
+        ],
+        [
+         12666.67,
+         6840
+        ],
+        [
+         13000,
+         6840
+        ],
+        [
+         13333.33,
+         6840
+        ],
+        [
+         13666.67,
+         6840
+        ],
+        [
+         14000,
+         6840
+        ],
+        [
+         14333.33,
+         6840
+        ],
+        [
+         14666.67,
+         6840
+        ],
+        [
+         15000,
+         6840
+        ],
+        [
+         15333.33,
+         6840
+        ],
+        [
+         15666.67,
+         6840
+        ],
+        [
+         16000,
+         6840
+        ],
+        [
+         16333.33,
+         6840
+        ],
+        [
+         16666.67,
+         6840
+        ],
+        [
+         17000,
+         6840
+        ],
+        [
+         17333.33,
+         6840
+        ],
+        [
+         17666.67,
+         6840
+        ],
+        [
+         18000,
+         6840
+        ],
+        [
+         18333.33,
+         6840
+        ],
+        [
+         18666.67,
+         6840
+        ],
+        [
+         19000,
+         6840
+        ],
+        [
+         19333.33,
+         6840
+        ],
+        [
+         19666.67,
+         6840
+        ],
+        [
+         20000,
+         6840
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $95 a month, $3,000 deductible, then 20% coinsurance, out-of-pocket maximum $7,000. Plan B: $320 a month, $1,000 deductible, then 20% coinsurance, out-of-pocket maximum $3,000."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$16,500",
+   "numeric": {
+    "value": 16500,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: set A(b) = B(b), using the piece of each graph where they cross.",
+    "At $0 of bills, A = $1,140 and B = $3,840; the plans cross at b ≈ $16,500, where both cost about $6,840.",
+    "Spreadsheet: put bills in A2:A201 (0, 100, 200…), =12*95+MIN(7000,IF(A2<=3000,A2,3000+0.2*(A2-3000))) in B2, the Plan B formula in C2, then find where B − C changes sign (or use Goal Seek).",
+    "So below about $16,500 of bills Plan A is cheaper; above it Plan B is. Someone expecting a big year should pick Plan B."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Elijah has $3,200 of medical bills this year on Plan A (below the deductible, so he pays all of them). What is his total yearly cost, premiums included?",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         960
+        ],
+        [
+         333.33,
+         1293.33
+        ],
+        [
+         666.67,
+         1626.67
+        ],
+        [
+         1000,
+         1960
+        ],
+        [
+         1333.33,
+         2293.33
+        ],
+        [
+         1666.67,
+         2626.67
+        ],
+        [
+         2000,
+         2960
+        ],
+        [
+         2333.33,
+         3293.33
+        ],
+        [
+         2666.67,
+         3626.67
+        ],
+        [
+         3000,
+         3960
+        ],
+        [
+         3333.33,
+         4293.33
+        ],
+        [
+         3666.67,
+         4626.67
+        ],
+        [
+         4000,
+         4960
+        ],
+        [
+         4333.33,
+         5026.67
+        ],
+        [
+         4666.67,
+         5093.33
+        ],
+        [
+         5000,
+         5160
+        ],
+        [
+         5333.33,
+         5226.67
+        ],
+        [
+         5666.67,
+         5293.33
+        ],
+        [
+         6000,
+         5360
+        ],
+        [
+         6333.33,
+         5426.67
+        ],
+        [
+         6666.67,
+         5493.33
+        ],
+        [
+         7000,
+         5560
+        ],
+        [
+         7333.33,
+         5626.67
+        ],
+        [
+         7666.67,
+         5693.33
+        ],
+        [
+         8000,
+         5760
+        ],
+        [
+         8333.33,
+         5826.67
+        ],
+        [
+         8666.67,
+         5893.33
+        ],
+        [
+         9000,
+         5960
+        ],
+        [
+         9333.33,
+         6026.67
+        ],
+        [
+         9666.67,
+         6093.33
+        ],
+        [
+         10000,
+         6160
+        ],
+        [
+         10333.33,
+         6226.67
+        ],
+        [
+         10666.67,
+         6293.33
+        ],
+        [
+         11000,
+         6360
+        ],
+        [
+         11333.33,
+         6426.67
+        ],
+        [
+         11666.67,
+         6493.33
+        ],
+        [
+         12000,
+         6560
+        ],
+        [
+         12333.33,
+         6626.67
+        ],
+        [
+         12666.67,
+         6693.33
+        ],
+        [
+         13000,
+         6760
+        ],
+        [
+         13333.33,
+         6826.67
+        ],
+        [
+         13666.67,
+         6893.33
+        ],
+        [
+         14000,
+         6960
+        ],
+        [
+         14333.33,
+         7026.67
+        ],
+        [
+         14666.67,
+         7093.33
+        ],
+        [
+         15000,
+         7160
+        ],
+        [
+         15333.33,
+         7226.67
+        ],
+        [
+         15666.67,
+         7293.33
+        ],
+        [
+         16000,
+         7360
+        ],
+        [
+         16333.33,
+         7426.67
+        ],
+        [
+         16666.67,
+         7493.33
+        ],
+        [
+         17000,
+         7560
+        ],
+        [
+         17333.33,
+         7626.67
+        ],
+        [
+         17666.67,
+         7693.33
+        ],
+        [
+         18000,
+         7760
+        ],
+        [
+         18333.33,
+         7826.67
+        ],
+        [
+         18666.67,
+         7893.33
+        ],
+        [
+         19000,
+         7960
+        ],
+        [
+         19333.33,
+         8026.67
+        ],
+        [
+         19666.67,
+         8093.33
+        ],
+        [
+         20000,
+         8160
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3780
+        ],
+        [
+         333.33,
+         4113.33
+        ],
+        [
+         666.67,
+         4446.67
+        ],
+        [
+         1000,
+         4580
+        ],
+        [
+         1333.33,
+         4646.67
+        ],
+        [
+         1666.67,
+         4713.33
+        ],
+        [
+         2000,
+         4780
+        ],
+        [
+         2333.33,
+         4846.67
+        ],
+        [
+         2666.67,
+         4913.33
+        ],
+        [
+         3000,
+         4980
+        ],
+        [
+         3333.33,
+         5046.67
+        ],
+        [
+         3666.67,
+         5113.33
+        ],
+        [
+         4000,
+         5180
+        ],
+        [
+         4333.33,
+         5246.67
+        ],
+        [
+         4666.67,
+         5313.33
+        ],
+        [
+         5000,
+         5380
+        ],
+        [
+         5333.33,
+         5446.67
+        ],
+        [
+         5666.67,
+         5513.33
+        ],
+        [
+         6000,
+         5580
+        ],
+        [
+         6333.33,
+         5646.67
+        ],
+        [
+         6666.67,
+         5713.33
+        ],
+        [
+         7000,
+         5780
+        ],
+        [
+         7333.33,
+         5846.67
+        ],
+        [
+         7666.67,
+         5913.33
+        ],
+        [
+         8000,
+         5980
+        ],
+        [
+         8333.33,
+         6046.67
+        ],
+        [
+         8666.67,
+         6113.33
+        ],
+        [
+         9000,
+         6180
+        ],
+        [
+         9333.33,
+         6246.67
+        ],
+        [
+         9666.67,
+         6313.33
+        ],
+        [
+         10000,
+         6380
+        ],
+        [
+         10333.33,
+         6446.67
+        ],
+        [
+         10666.67,
+         6513.33
+        ],
+        [
+         11000,
+         6580
+        ],
+        [
+         11333.33,
+         6646.67
+        ],
+        [
+         11666.67,
+         6713.33
+        ],
+        [
+         12000,
+         6780
+        ],
+        [
+         12333.33,
+         6780
+        ],
+        [
+         12666.67,
+         6780
+        ],
+        [
+         13000,
+         6780
+        ],
+        [
+         13333.33,
+         6780
+        ],
+        [
+         13666.67,
+         6780
+        ],
+        [
+         14000,
+         6780
+        ],
+        [
+         14333.33,
+         6780
+        ],
+        [
+         14666.67,
+         6780
+        ],
+        [
+         15000,
+         6780
+        ],
+        [
+         15333.33,
+         6780
+        ],
+        [
+         15666.67,
+         6780
+        ],
+        [
+         16000,
+         6780
+        ],
+        [
+         16333.33,
+         6780
+        ],
+        [
+         16666.67,
+         6780
+        ],
+        [
+         17000,
+         6780
+        ],
+        [
+         17333.33,
+         6780
+        ],
+        [
+         17666.67,
+         6780
+        ],
+        [
+         18000,
+         6780
+        ],
+        [
+         18333.33,
+         6780
+        ],
+        [
+         18666.67,
+         6780
+        ],
+        [
+         19000,
+         6780
+        ],
+        [
+         19333.33,
+         6780
+        ],
+        [
+         19666.67,
+         6780
+        ],
+        [
+         20000,
+         6780
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $80 a month, $4,000 deductible, then 20% coinsurance, out-of-pocket maximum $7,500. Plan B: $315 a month, $750 deductible, then 20% coinsurance, out-of-pocket maximum $3,000."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$4,160",
+   "numeric": {
+    "value": 4160,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for bills b ≤ deductible, cost = 12 × premium + b.",
+    "Substitute: 12 × $80 + $3,200 = $4,160.",
+    "Spreadsheet: =12*80+3200.",
+    "So Plan A costs $4,160 this year; Plan B would cost $5,020. In a low-bill year the cheaper premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Leah has $1,300 of medical bills on Plan B. What is the total yearly cost, premiums included?",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1320
+        ],
+        [
+         333.33,
+         1653.33
+        ],
+        [
+         666.67,
+         1986.67
+        ],
+        [
+         1000,
+         2320
+        ],
+        [
+         1333.33,
+         2653.33
+        ],
+        [
+         1666.67,
+         2986.67
+        ],
+        [
+         2000,
+         3320
+        ],
+        [
+         2333.33,
+         3653.33
+        ],
+        [
+         2666.67,
+         3986.67
+        ],
+        [
+         3000,
+         4320
+        ],
+        [
+         3333.33,
+         4653.33
+        ],
+        [
+         3666.67,
+         4986.67
+        ],
+        [
+         4000,
+         5320
+        ],
+        [
+         4333.33,
+         5386.67
+        ],
+        [
+         4666.67,
+         5453.33
+        ],
+        [
+         5000,
+         5520
+        ],
+        [
+         5333.33,
+         5586.67
+        ],
+        [
+         5666.67,
+         5653.33
+        ],
+        [
+         6000,
+         5720
+        ],
+        [
+         6333.33,
+         5786.67
+        ],
+        [
+         6666.67,
+         5853.33
+        ],
+        [
+         7000,
+         5920
+        ],
+        [
+         7333.33,
+         5986.67
+        ],
+        [
+         7666.67,
+         6053.33
+        ],
+        [
+         8000,
+         6120
+        ],
+        [
+         8333.33,
+         6186.67
+        ],
+        [
+         8666.67,
+         6253.33
+        ],
+        [
+         9000,
+         6320
+        ],
+        [
+         9333.33,
+         6386.67
+        ],
+        [
+         9666.67,
+         6453.33
+        ],
+        [
+         10000,
+         6520
+        ],
+        [
+         10333.33,
+         6586.67
+        ],
+        [
+         10666.67,
+         6653.33
+        ],
+        [
+         11000,
+         6720
+        ],
+        [
+         11333.33,
+         6786.67
+        ],
+        [
+         11666.67,
+         6853.33
+        ],
+        [
+         12000,
+         6920
+        ],
+        [
+         12333.33,
+         6986.67
+        ],
+        [
+         12666.67,
+         7053.33
+        ],
+        [
+         13000,
+         7120
+        ],
+        [
+         13333.33,
+         7186.67
+        ],
+        [
+         13666.67,
+         7253.33
+        ],
+        [
+         14000,
+         7320
+        ],
+        [
+         14333.33,
+         7386.67
+        ],
+        [
+         14666.67,
+         7453.33
+        ],
+        [
+         15000,
+         7520
+        ],
+        [
+         15333.33,
+         7586.67
+        ],
+        [
+         15666.67,
+         7653.33
+        ],
+        [
+         16000,
+         7720
+        ],
+        [
+         16333.33,
+         7786.67
+        ],
+        [
+         16666.67,
+         7853.33
+        ],
+        [
+         17000,
+         7920
+        ],
+        [
+         17333.33,
+         7986.67
+        ],
+        [
+         17666.67,
+         8053.33
+        ],
+        [
+         18000,
+         8120
+        ],
+        [
+         18333.33,
+         8186.67
+        ],
+        [
+         18666.67,
+         8253.33
+        ],
+        [
+         19000,
+         8320
+        ],
+        [
+         19333.33,
+         8386.67
+        ],
+        [
+         19666.67,
+         8453.33
+        ],
+        [
+         20000,
+         8520
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3540
+        ],
+        [
+         333.33,
+         3873.33
+        ],
+        [
+         666.67,
+         4073.33
+        ],
+        [
+         1000,
+         4140
+        ],
+        [
+         1333.33,
+         4206.67
+        ],
+        [
+         1666.67,
+         4273.33
+        ],
+        [
+         2000,
+         4340
+        ],
+        [
+         2333.33,
+         4406.67
+        ],
+        [
+         2666.67,
+         4473.33
+        ],
+        [
+         3000,
+         4540
+        ],
+        [
+         3333.33,
+         4606.67
+        ],
+        [
+         3666.67,
+         4673.33
+        ],
+        [
+         4000,
+         4740
+        ],
+        [
+         4333.33,
+         4806.67
+        ],
+        [
+         4666.67,
+         4873.33
+        ],
+        [
+         5000,
+         4940
+        ],
+        [
+         5333.33,
+         5006.67
+        ],
+        [
+         5666.67,
+         5073.33
+        ],
+        [
+         6000,
+         5140
+        ],
+        [
+         6333.33,
+         5206.67
+        ],
+        [
+         6666.67,
+         5273.33
+        ],
+        [
+         7000,
+         5340
+        ],
+        [
+         7333.33,
+         5406.67
+        ],
+        [
+         7666.67,
+         5473.33
+        ],
+        [
+         8000,
+         5540
+        ],
+        [
+         8333.33,
+         5606.67
+        ],
+        [
+         8666.67,
+         5673.33
+        ],
+        [
+         9000,
+         5740
+        ],
+        [
+         9333.33,
+         5806.67
+        ],
+        [
+         9666.67,
+         5873.33
+        ],
+        [
+         10000,
+         5940
+        ],
+        [
+         10333.33,
+         6006.67
+        ],
+        [
+         10666.67,
+         6073.33
+        ],
+        [
+         11000,
+         6140
+        ],
+        [
+         11333.33,
+         6206.67
+        ],
+        [
+         11666.67,
+         6273.33
+        ],
+        [
+         12000,
+         6340
+        ],
+        [
+         12333.33,
+         6406.67
+        ],
+        [
+         12666.67,
+         6473.33
+        ],
+        [
+         13000,
+         6540
+        ],
+        [
+         13333.33,
+         6606.67
+        ],
+        [
+         13666.67,
+         6673.33
+        ],
+        [
+         14000,
+         6740
+        ],
+        [
+         14333.33,
+         6806.67
+        ],
+        [
+         14666.67,
+         6873.33
+        ],
+        [
+         15000,
+         6940
+        ],
+        [
+         15333.33,
+         7006.67
+        ],
+        [
+         15666.67,
+         7040
+        ],
+        [
+         16000,
+         7040
+        ],
+        [
+         16333.33,
+         7040
+        ],
+        [
+         16666.67,
+         7040
+        ],
+        [
+         17000,
+         7040
+        ],
+        [
+         17333.33,
+         7040
+        ],
+        [
+         17666.67,
+         7040
+        ],
+        [
+         18000,
+         7040
+        ],
+        [
+         18333.33,
+         7040
+        ],
+        [
+         18666.67,
+         7040
+        ],
+        [
+         19000,
+         7040
+        ],
+        [
+         19333.33,
+         7040
+        ],
+        [
+         19666.67,
+         7040
+        ],
+        [
+         20000,
+         7040
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $110 a month, $4,000 deductible, then 20% coinsurance, out-of-pocket maximum $7,500. Plan B: $295 a month, $500 deductible, then 20% coinsurance, out-of-pocket maximum $3,500."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$4,200",
+   "numeric": {
+    "value": 4200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for bills above the deductible (and below the maximum), cost = 12 × premium + deductible + 20% × (b − deductible).",
+    "Substitute: 12 × $295 + $500 + 0.2 × ($1,300 − $500) = $3,540 + $660 = $4,200.",
+    "Spreadsheet: =12*295+MIN(3500,500+0.2*(1300-500)).",
+    "So Plan B costs $4,200; Plan A would cost $2,620. This is the middle piece of Plan B's graph."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "At what level of medical bills do the two plans cost the same for the year? Round to the nearest dollar.",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1500
+        ],
+        [
+         333.33,
+         1833.33
+        ],
+        [
+         666.67,
+         2166.67
+        ],
+        [
+         1000,
+         2500
+        ],
+        [
+         1333.33,
+         2833.33
+        ],
+        [
+         1666.67,
+         3166.67
+        ],
+        [
+         2000,
+         3500
+        ],
+        [
+         2333.33,
+         3833.33
+        ],
+        [
+         2666.67,
+         4166.67
+        ],
+        [
+         3000,
+         4500
+        ],
+        [
+         3333.33,
+         4833.33
+        ],
+        [
+         3666.67,
+         5033.33
+        ],
+        [
+         4000,
+         5100
+        ],
+        [
+         4333.33,
+         5166.67
+        ],
+        [
+         4666.67,
+         5233.33
+        ],
+        [
+         5000,
+         5300
+        ],
+        [
+         5333.33,
+         5366.67
+        ],
+        [
+         5666.67,
+         5433.33
+        ],
+        [
+         6000,
+         5500
+        ],
+        [
+         6333.33,
+         5566.67
+        ],
+        [
+         6666.67,
+         5633.33
+        ],
+        [
+         7000,
+         5700
+        ],
+        [
+         7333.33,
+         5766.67
+        ],
+        [
+         7666.67,
+         5833.33
+        ],
+        [
+         8000,
+         5900
+        ],
+        [
+         8333.33,
+         5966.67
+        ],
+        [
+         8666.67,
+         6033.33
+        ],
+        [
+         9000,
+         6100
+        ],
+        [
+         9333.33,
+         6166.67
+        ],
+        [
+         9666.67,
+         6233.33
+        ],
+        [
+         10000,
+         6300
+        ],
+        [
+         10333.33,
+         6366.67
+        ],
+        [
+         10666.67,
+         6433.33
+        ],
+        [
+         11000,
+         6500
+        ],
+        [
+         11333.33,
+         6566.67
+        ],
+        [
+         11666.67,
+         6633.33
+        ],
+        [
+         12000,
+         6700
+        ],
+        [
+         12333.33,
+         6766.67
+        ],
+        [
+         12666.67,
+         6833.33
+        ],
+        [
+         13000,
+         6900
+        ],
+        [
+         13333.33,
+         6966.67
+        ],
+        [
+         13666.67,
+         7033.33
+        ],
+        [
+         14000,
+         7100
+        ],
+        [
+         14333.33,
+         7166.67
+        ],
+        [
+         14666.67,
+         7233.33
+        ],
+        [
+         15000,
+         7300
+        ],
+        [
+         15333.33,
+         7366.67
+        ],
+        [
+         15666.67,
+         7433.33
+        ],
+        [
+         16000,
+         7500
+        ],
+        [
+         16333.33,
+         7566.67
+        ],
+        [
+         16666.67,
+         7633.33
+        ],
+        [
+         17000,
+         7700
+        ],
+        [
+         17333.33,
+         7766.67
+        ],
+        [
+         17666.67,
+         7833.33
+        ],
+        [
+         18000,
+         7900
+        ],
+        [
+         18333.33,
+         7966.67
+        ],
+        [
+         18666.67,
+         8033.33
+        ],
+        [
+         19000,
+         8100
+        ],
+        [
+         19333.33,
+         8166.67
+        ],
+        [
+         19666.67,
+         8233.33
+        ],
+        [
+         20000,
+         8300
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3660
+        ],
+        [
+         333.33,
+         3993.33
+        ],
+        [
+         666.67,
+         4326.67
+        ],
+        [
+         1000,
+         4460
+        ],
+        [
+         1333.33,
+         4526.67
+        ],
+        [
+         1666.67,
+         4593.33
+        ],
+        [
+         2000,
+         4660
+        ],
+        [
+         2333.33,
+         4726.67
+        ],
+        [
+         2666.67,
+         4793.33
+        ],
+        [
+         3000,
+         4860
+        ],
+        [
+         3333.33,
+         4926.67
+        ],
+        [
+         3666.67,
+         4993.33
+        ],
+        [
+         4000,
+         5060
+        ],
+        [
+         4333.33,
+         5126.67
+        ],
+        [
+         4666.67,
+         5193.33
+        ],
+        [
+         5000,
+         5260
+        ],
+        [
+         5333.33,
+         5326.67
+        ],
+        [
+         5666.67,
+         5393.33
+        ],
+        [
+         6000,
+         5460
+        ],
+        [
+         6333.33,
+         5526.67
+        ],
+        [
+         6666.67,
+         5593.33
+        ],
+        [
+         7000,
+         5660
+        ],
+        [
+         7333.33,
+         5726.67
+        ],
+        [
+         7666.67,
+         5793.33
+        ],
+        [
+         8000,
+         5860
+        ],
+        [
+         8333.33,
+         5926.67
+        ],
+        [
+         8666.67,
+         5993.33
+        ],
+        [
+         9000,
+         6060
+        ],
+        [
+         9333.33,
+         6126.67
+        ],
+        [
+         9666.67,
+         6193.33
+        ],
+        [
+         10000,
+         6260
+        ],
+        [
+         10333.33,
+         6326.67
+        ],
+        [
+         10666.67,
+         6393.33
+        ],
+        [
+         11000,
+         6460
+        ],
+        [
+         11333.33,
+         6526.67
+        ],
+        [
+         11666.67,
+         6593.33
+        ],
+        [
+         12000,
+         6660
+        ],
+        [
+         12333.33,
+         6660
+        ],
+        [
+         12666.67,
+         6660
+        ],
+        [
+         13000,
+         6660
+        ],
+        [
+         13333.33,
+         6660
+        ],
+        [
+         13666.67,
+         6660
+        ],
+        [
+         14000,
+         6660
+        ],
+        [
+         14333.33,
+         6660
+        ],
+        [
+         14666.67,
+         6660
+        ],
+        [
+         15000,
+         6660
+        ],
+        [
+         15333.33,
+         6660
+        ],
+        [
+         15666.67,
+         6660
+        ],
+        [
+         16000,
+         6660
+        ],
+        [
+         16333.33,
+         6660
+        ],
+        [
+         16666.67,
+         6660
+        ],
+        [
+         17000,
+         6660
+        ],
+        [
+         17333.33,
+         6660
+        ],
+        [
+         17666.67,
+         6660
+        ],
+        [
+         18000,
+         6660
+        ],
+        [
+         18333.33,
+         6660
+        ],
+        [
+         18666.67,
+         6660
+        ],
+        [
+         19000,
+         6660
+        ],
+        [
+         19333.33,
+         6660
+        ],
+        [
+         19666.67,
+         6660
+        ],
+        [
+         20000,
+         6660
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $125 a month, $3,500 deductible, then 20% coinsurance, out-of-pocket maximum $7,000. Plan B: $305 a month, $750 deductible, then 20% coinsurance, out-of-pocket maximum $3,000."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,450",
+   "numeric": {
+    "value": 3450,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: set A(b) = B(b), using the piece of each graph where they cross.",
+    "At $0 of bills, A = $1,500 and B = $3,660; the plans cross at b ≈ $3,450, where both cost about $4,950.",
+    "Spreadsheet: put bills in A2:A201 (0, 100, 200…), =12*125+MIN(7000,IF(A2<=3500,A2,3500+0.2*(A2-3500))) in B2, the Plan B formula in C2, then find where B − C changes sign (or use Goal Seek).",
+    "So below about $3,450 of bills Plan A is cheaper; above it Plan B is. Someone expecting a big year should pick Plan B."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Aaliyah has $1,050 of medical bills this year on Plan A (below the deductible, so she pays all of them). What is her total yearly cost, premiums included?",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1560
+        ],
+        [
+         333.33,
+         1893.33
+        ],
+        [
+         666.67,
+         2226.67
+        ],
+        [
+         1000,
+         2560
+        ],
+        [
+         1333.33,
+         2893.33
+        ],
+        [
+         1666.67,
+         3226.67
+        ],
+        [
+         2000,
+         3560
+        ],
+        [
+         2333.33,
+         3893.33
+        ],
+        [
+         2666.67,
+         4226.67
+        ],
+        [
+         3000,
+         4560
+        ],
+        [
+         3333.33,
+         4893.33
+        ],
+        [
+         3666.67,
+         5093.33
+        ],
+        [
+         4000,
+         5160
+        ],
+        [
+         4333.33,
+         5226.67
+        ],
+        [
+         4666.67,
+         5293.33
+        ],
+        [
+         5000,
+         5360
+        ],
+        [
+         5333.33,
+         5426.67
+        ],
+        [
+         5666.67,
+         5493.33
+        ],
+        [
+         6000,
+         5560
+        ],
+        [
+         6333.33,
+         5626.67
+        ],
+        [
+         6666.67,
+         5693.33
+        ],
+        [
+         7000,
+         5760
+        ],
+        [
+         7333.33,
+         5826.67
+        ],
+        [
+         7666.67,
+         5893.33
+        ],
+        [
+         8000,
+         5960
+        ],
+        [
+         8333.33,
+         6026.67
+        ],
+        [
+         8666.67,
+         6093.33
+        ],
+        [
+         9000,
+         6160
+        ],
+        [
+         9333.33,
+         6226.67
+        ],
+        [
+         9666.67,
+         6293.33
+        ],
+        [
+         10000,
+         6360
+        ],
+        [
+         10333.33,
+         6426.67
+        ],
+        [
+         10666.67,
+         6493.33
+        ],
+        [
+         11000,
+         6560
+        ],
+        [
+         11333.33,
+         6626.67
+        ],
+        [
+         11666.67,
+         6693.33
+        ],
+        [
+         12000,
+         6760
+        ],
+        [
+         12333.33,
+         6826.67
+        ],
+        [
+         12666.67,
+         6893.33
+        ],
+        [
+         13000,
+         6960
+        ],
+        [
+         13333.33,
+         7026.67
+        ],
+        [
+         13666.67,
+         7093.33
+        ],
+        [
+         14000,
+         7160
+        ],
+        [
+         14333.33,
+         7226.67
+        ],
+        [
+         14666.67,
+         7293.33
+        ],
+        [
+         15000,
+         7360
+        ],
+        [
+         15333.33,
+         7426.67
+        ],
+        [
+         15666.67,
+         7493.33
+        ],
+        [
+         16000,
+         7560
+        ],
+        [
+         16333.33,
+         7626.67
+        ],
+        [
+         16666.67,
+         7693.33
+        ],
+        [
+         17000,
+         7760
+        ],
+        [
+         17333.33,
+         7826.67
+        ],
+        [
+         17666.67,
+         7893.33
+        ],
+        [
+         18000,
+         7960
+        ],
+        [
+         18333.33,
+         8026.67
+        ],
+        [
+         18666.67,
+         8093.33
+        ],
+        [
+         19000,
+         8160
+        ],
+        [
+         19333.33,
+         8226.67
+        ],
+        [
+         19666.67,
+         8293.33
+        ],
+        [
+         20000,
+         8360
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3600
+        ],
+        [
+         333.33,
+         3933.33
+        ],
+        [
+         666.67,
+         4266.67
+        ],
+        [
+         1000,
+         4400
+        ],
+        [
+         1333.33,
+         4466.67
+        ],
+        [
+         1666.67,
+         4533.33
+        ],
+        [
+         2000,
+         4600
+        ],
+        [
+         2333.33,
+         4666.67
+        ],
+        [
+         2666.67,
+         4733.33
+        ],
+        [
+         3000,
+         4800
+        ],
+        [
+         3333.33,
+         4866.67
+        ],
+        [
+         3666.67,
+         4933.33
+        ],
+        [
+         4000,
+         5000
+        ],
+        [
+         4333.33,
+         5066.67
+        ],
+        [
+         4666.67,
+         5133.33
+        ],
+        [
+         5000,
+         5200
+        ],
+        [
+         5333.33,
+         5266.67
+        ],
+        [
+         5666.67,
+         5333.33
+        ],
+        [
+         6000,
+         5400
+        ],
+        [
+         6333.33,
+         5466.67
+        ],
+        [
+         6666.67,
+         5533.33
+        ],
+        [
+         7000,
+         5600
+        ],
+        [
+         7333.33,
+         5666.67
+        ],
+        [
+         7666.67,
+         5733.33
+        ],
+        [
+         8000,
+         5800
+        ],
+        [
+         8333.33,
+         5866.67
+        ],
+        [
+         8666.67,
+         5933.33
+        ],
+        [
+         9000,
+         6000
+        ],
+        [
+         9333.33,
+         6066.67
+        ],
+        [
+         9666.67,
+         6133.33
+        ],
+        [
+         10000,
+         6200
+        ],
+        [
+         10333.33,
+         6266.67
+        ],
+        [
+         10666.67,
+         6333.33
+        ],
+        [
+         11000,
+         6400
+        ],
+        [
+         11333.33,
+         6466.67
+        ],
+        [
+         11666.67,
+         6533.33
+        ],
+        [
+         12000,
+         6600
+        ],
+        [
+         12333.33,
+         6600
+        ],
+        [
+         12666.67,
+         6600
+        ],
+        [
+         13000,
+         6600
+        ],
+        [
+         13333.33,
+         6600
+        ],
+        [
+         13666.67,
+         6600
+        ],
+        [
+         14000,
+         6600
+        ],
+        [
+         14333.33,
+         6600
+        ],
+        [
+         14666.67,
+         6600
+        ],
+        [
+         15000,
+         6600
+        ],
+        [
+         15333.33,
+         6600
+        ],
+        [
+         15666.67,
+         6600
+        ],
+        [
+         16000,
+         6600
+        ],
+        [
+         16333.33,
+         6600
+        ],
+        [
+         16666.67,
+         6600
+        ],
+        [
+         17000,
+         6600
+        ],
+        [
+         17333.33,
+         6600
+        ],
+        [
+         17666.67,
+         6600
+        ],
+        [
+         18000,
+         6600
+        ],
+        [
+         18333.33,
+         6600
+        ],
+        [
+         18666.67,
+         6600
+        ],
+        [
+         19000,
+         6600
+        ],
+        [
+         19333.33,
+         6600
+        ],
+        [
+         19666.67,
+         6600
+        ],
+        [
+         20000,
+         6600
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $130 a month, $3,500 deductible, then 20% coinsurance, out-of-pocket maximum $7,500. Plan B: $300 a month, $750 deductible, then 20% coinsurance, out-of-pocket maximum $3,000."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,610",
+   "numeric": {
+    "value": 2610,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for bills b ≤ deductible, cost = 12 × premium + b.",
+    "Substitute: 12 × $130 + $1,050 = $2,610.",
+    "Spreadsheet: =12*130+1050.",
+    "So Plan A costs $2,610 this year; Plan B would cost $4,410. In a low-bill year the cheaper premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Camila has $8,750 of medical bills on Plan B. What is the total yearly cost, premiums included?",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1260
+        ],
+        [
+         333.33,
+         1593.33
+        ],
+        [
+         666.67,
+         1926.67
+        ],
+        [
+         1000,
+         2260
+        ],
+        [
+         1333.33,
+         2593.33
+        ],
+        [
+         1666.67,
+         2926.67
+        ],
+        [
+         2000,
+         3260
+        ],
+        [
+         2333.33,
+         3593.33
+        ],
+        [
+         2666.67,
+         3926.67
+        ],
+        [
+         3000,
+         4260
+        ],
+        [
+         3333.33,
+         4593.33
+        ],
+        [
+         3666.67,
+         4793.33
+        ],
+        [
+         4000,
+         4860
+        ],
+        [
+         4333.33,
+         4926.67
+        ],
+        [
+         4666.67,
+         4993.33
+        ],
+        [
+         5000,
+         5060
+        ],
+        [
+         5333.33,
+         5126.67
+        ],
+        [
+         5666.67,
+         5193.33
+        ],
+        [
+         6000,
+         5260
+        ],
+        [
+         6333.33,
+         5326.67
+        ],
+        [
+         6666.67,
+         5393.33
+        ],
+        [
+         7000,
+         5460
+        ],
+        [
+         7333.33,
+         5526.67
+        ],
+        [
+         7666.67,
+         5593.33
+        ],
+        [
+         8000,
+         5660
+        ],
+        [
+         8333.33,
+         5726.67
+        ],
+        [
+         8666.67,
+         5793.33
+        ],
+        [
+         9000,
+         5860
+        ],
+        [
+         9333.33,
+         5926.67
+        ],
+        [
+         9666.67,
+         5993.33
+        ],
+        [
+         10000,
+         6060
+        ],
+        [
+         10333.33,
+         6126.67
+        ],
+        [
+         10666.67,
+         6193.33
+        ],
+        [
+         11000,
+         6260
+        ],
+        [
+         11333.33,
+         6326.67
+        ],
+        [
+         11666.67,
+         6393.33
+        ],
+        [
+         12000,
+         6460
+        ],
+        [
+         12333.33,
+         6526.67
+        ],
+        [
+         12666.67,
+         6593.33
+        ],
+        [
+         13000,
+         6660
+        ],
+        [
+         13333.33,
+         6726.67
+        ],
+        [
+         13666.67,
+         6793.33
+        ],
+        [
+         14000,
+         6860
+        ],
+        [
+         14333.33,
+         6926.67
+        ],
+        [
+         14666.67,
+         6993.33
+        ],
+        [
+         15000,
+         7060
+        ],
+        [
+         15333.33,
+         7126.67
+        ],
+        [
+         15666.67,
+         7193.33
+        ],
+        [
+         16000,
+         7260
+        ],
+        [
+         16333.33,
+         7326.67
+        ],
+        [
+         16666.67,
+         7393.33
+        ],
+        [
+         17000,
+         7460
+        ],
+        [
+         17333.33,
+         7526.67
+        ],
+        [
+         17666.67,
+         7593.33
+        ],
+        [
+         18000,
+         7660
+        ],
+        [
+         18333.33,
+         7726.67
+        ],
+        [
+         18666.67,
+         7793.33
+        ],
+        [
+         19000,
+         7860
+        ],
+        [
+         19333.33,
+         7926.67
+        ],
+        [
+         19666.67,
+         7993.33
+        ],
+        [
+         20000,
+         8060
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3120
+        ],
+        [
+         333.33,
+         3453.33
+        ],
+        [
+         666.67,
+         3786.67
+        ],
+        [
+         1000,
+         3920
+        ],
+        [
+         1333.33,
+         3986.67
+        ],
+        [
+         1666.67,
+         4053.33
+        ],
+        [
+         2000,
+         4120
+        ],
+        [
+         2333.33,
+         4186.67
+        ],
+        [
+         2666.67,
+         4253.33
+        ],
+        [
+         3000,
+         4320
+        ],
+        [
+         3333.33,
+         4386.67
+        ],
+        [
+         3666.67,
+         4453.33
+        ],
+        [
+         4000,
+         4520
+        ],
+        [
+         4333.33,
+         4586.67
+        ],
+        [
+         4666.67,
+         4653.33
+        ],
+        [
+         5000,
+         4720
+        ],
+        [
+         5333.33,
+         4786.67
+        ],
+        [
+         5666.67,
+         4853.33
+        ],
+        [
+         6000,
+         4920
+        ],
+        [
+         6333.33,
+         4986.67
+        ],
+        [
+         6666.67,
+         5053.33
+        ],
+        [
+         7000,
+         5120
+        ],
+        [
+         7333.33,
+         5186.67
+        ],
+        [
+         7666.67,
+         5253.33
+        ],
+        [
+         8000,
+         5320
+        ],
+        [
+         8333.33,
+         5386.67
+        ],
+        [
+         8666.67,
+         5453.33
+        ],
+        [
+         9000,
+         5520
+        ],
+        [
+         9333.33,
+         5586.67
+        ],
+        [
+         9666.67,
+         5653.33
+        ],
+        [
+         10000,
+         5720
+        ],
+        [
+         10333.33,
+         5786.67
+        ],
+        [
+         10666.67,
+         5853.33
+        ],
+        [
+         11000,
+         5920
+        ],
+        [
+         11333.33,
+         5986.67
+        ],
+        [
+         11666.67,
+         6053.33
+        ],
+        [
+         12000,
+         6120
+        ],
+        [
+         12333.33,
+         6186.67
+        ],
+        [
+         12666.67,
+         6253.33
+        ],
+        [
+         13000,
+         6320
+        ],
+        [
+         13333.33,
+         6386.67
+        ],
+        [
+         13666.67,
+         6453.33
+        ],
+        [
+         14000,
+         6520
+        ],
+        [
+         14333.33,
+         6586.67
+        ],
+        [
+         14666.67,
+         6620
+        ],
+        [
+         15000,
+         6620
+        ],
+        [
+         15333.33,
+         6620
+        ],
+        [
+         15666.67,
+         6620
+        ],
+        [
+         16000,
+         6620
+        ],
+        [
+         16333.33,
+         6620
+        ],
+        [
+         16666.67,
+         6620
+        ],
+        [
+         17000,
+         6620
+        ],
+        [
+         17333.33,
+         6620
+        ],
+        [
+         17666.67,
+         6620
+        ],
+        [
+         18000,
+         6620
+        ],
+        [
+         18333.33,
+         6620
+        ],
+        [
+         18666.67,
+         6620
+        ],
+        [
+         19000,
+         6620
+        ],
+        [
+         19333.33,
+         6620
+        ],
+        [
+         19666.67,
+         6620
+        ],
+        [
+         20000,
+         6620
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $105 a month, $3,500 deductible, then 20% coinsurance, out-of-pocket maximum $7,500. Plan B: $260 a month, $750 deductible, then 20% coinsurance, out-of-pocket maximum $3,500."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$5,470",
+   "numeric": {
+    "value": 5470,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for bills above the deductible (and below the maximum), cost = 12 × premium + deductible + 20% × (b − deductible).",
+    "Substitute: 12 × $260 + $750 + 0.2 × ($8,750 − $750) = $3,120 + $2,350 = $5,470.",
+    "Spreadsheet: =12*260+MIN(3500,750+0.2*(8750-750)).",
+    "So Plan B costs $5,470; Plan A would cost $5,810. This is the middle piece of Plan B's graph."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-m-plan-piecewise-09",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-m-plan-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "At what level of medical bills do the two plans cost the same for the year? Round to the nearest dollar.",
+   "scenario": {
+    "graph": {
+     "title": "Total yearly cost of two health plans",
+     "x": {
+      "label": "Medical bills in the year, b",
+      "min": 0,
+      "max": 20000,
+      "step": 4000,
+      "money": true
+     },
+     "y": {
+      "label": "Yearly cost",
+      "min": 0,
+      "max": 10000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Plan A (high deductible)",
+       "pts": [
+        [
+         0,
+         1620
+        ],
+        [
+         333.33,
+         1953.33
+        ],
+        [
+         666.67,
+         2286.67
+        ],
+        [
+         1000,
+         2620
+        ],
+        [
+         1333.33,
+         2953.33
+        ],
+        [
+         1666.67,
+         3286.67
+        ],
+        [
+         2000,
+         3620
+        ],
+        [
+         2333.33,
+         3953.33
+        ],
+        [
+         2666.67,
+         4286.67
+        ],
+        [
+         3000,
+         4620
+        ],
+        [
+         3333.33,
+         4686.67
+        ],
+        [
+         3666.67,
+         4753.33
+        ],
+        [
+         4000,
+         4820
+        ],
+        [
+         4333.33,
+         4886.67
+        ],
+        [
+         4666.67,
+         4953.33
+        ],
+        [
+         5000,
+         5020
+        ],
+        [
+         5333.33,
+         5086.67
+        ],
+        [
+         5666.67,
+         5153.33
+        ],
+        [
+         6000,
+         5220
+        ],
+        [
+         6333.33,
+         5286.67
+        ],
+        [
+         6666.67,
+         5353.33
+        ],
+        [
+         7000,
+         5420
+        ],
+        [
+         7333.33,
+         5486.67
+        ],
+        [
+         7666.67,
+         5553.33
+        ],
+        [
+         8000,
+         5620
+        ],
+        [
+         8333.33,
+         5686.67
+        ],
+        [
+         8666.67,
+         5753.33
+        ],
+        [
+         9000,
+         5820
+        ],
+        [
+         9333.33,
+         5886.67
+        ],
+        [
+         9666.67,
+         5953.33
+        ],
+        [
+         10000,
+         6020
+        ],
+        [
+         10333.33,
+         6086.67
+        ],
+        [
+         10666.67,
+         6153.33
+        ],
+        [
+         11000,
+         6220
+        ],
+        [
+         11333.33,
+         6286.67
+        ],
+        [
+         11666.67,
+         6353.33
+        ],
+        [
+         12000,
+         6420
+        ],
+        [
+         12333.33,
+         6486.67
+        ],
+        [
+         12666.67,
+         6553.33
+        ],
+        [
+         13000,
+         6620
+        ],
+        [
+         13333.33,
+         6686.67
+        ],
+        [
+         13666.67,
+         6753.33
+        ],
+        [
+         14000,
+         6820
+        ],
+        [
+         14333.33,
+         6886.67
+        ],
+        [
+         14666.67,
+         6953.33
+        ],
+        [
+         15000,
+         7020
+        ],
+        [
+         15333.33,
+         7086.67
+        ],
+        [
+         15666.67,
+         7153.33
+        ],
+        [
+         16000,
+         7220
+        ],
+        [
+         16333.33,
+         7286.67
+        ],
+        [
+         16666.67,
+         7353.33
+        ],
+        [
+         17000,
+         7420
+        ],
+        [
+         17333.33,
+         7486.67
+        ],
+        [
+         17666.67,
+         7553.33
+        ],
+        [
+         18000,
+         7620
+        ],
+        [
+         18333.33,
+         7686.67
+        ],
+        [
+         18666.67,
+         7753.33
+        ],
+        [
+         19000,
+         7820
+        ],
+        [
+         19333.33,
+         7886.67
+        ],
+        [
+         19666.67,
+         7953.33
+        ],
+        [
+         20000,
+         8020
+        ]
+       ]
+      },
+      {
+       "name": "Plan B (low deductible)",
+       "pts": [
+        [
+         0,
+         3600
+        ],
+        [
+         333.33,
+         3933.33
+        ],
+        [
+         666.67,
+         4133.33
+        ],
+        [
+         1000,
+         4200
+        ],
+        [
+         1333.33,
+         4266.67
+        ],
+        [
+         1666.67,
+         4333.33
+        ],
+        [
+         2000,
+         4400
+        ],
+        [
+         2333.33,
+         4466.67
+        ],
+        [
+         2666.67,
+         4533.33
+        ],
+        [
+         3000,
+         4600
+        ],
+        [
+         3333.33,
+         4666.67
+        ],
+        [
+         3666.67,
+         4733.33
+        ],
+        [
+         4000,
+         4800
+        ],
+        [
+         4333.33,
+         4866.67
+        ],
+        [
+         4666.67,
+         4933.33
+        ],
+        [
+         5000,
+         5000
+        ],
+        [
+         5333.33,
+         5066.67
+        ],
+        [
+         5666.67,
+         5133.33
+        ],
+        [
+         6000,
+         5200
+        ],
+        [
+         6333.33,
+         5266.67
+        ],
+        [
+         6666.67,
+         5333.33
+        ],
+        [
+         7000,
+         5400
+        ],
+        [
+         7333.33,
+         5466.67
+        ],
+        [
+         7666.67,
+         5533.33
+        ],
+        [
+         8000,
+         5600
+        ],
+        [
+         8333.33,
+         5666.67
+        ],
+        [
+         8666.67,
+         5733.33
+        ],
+        [
+         9000,
+         5800
+        ],
+        [
+         9333.33,
+         5866.67
+        ],
+        [
+         9666.67,
+         5933.33
+        ],
+        [
+         10000,
+         6000
+        ],
+        [
+         10333.33,
+         6066.67
+        ],
+        [
+         10666.67,
+         6133.33
+        ],
+        [
+         11000,
+         6200
+        ],
+        [
+         11333.33,
+         6266.67
+        ],
+        [
+         11666.67,
+         6333.33
+        ],
+        [
+         12000,
+         6400
+        ],
+        [
+         12333.33,
+         6466.67
+        ],
+        [
+         12666.67,
+         6533.33
+        ],
+        [
+         13000,
+         6600
+        ],
+        [
+         13333.33,
+         6600
+        ],
+        [
+         13666.67,
+         6600
+        ],
+        [
+         14000,
+         6600
+        ],
+        [
+         14333.33,
+         6600
+        ],
+        [
+         14666.67,
+         6600
+        ],
+        [
+         15000,
+         6600
+        ],
+        [
+         15333.33,
+         6600
+        ],
+        [
+         15666.67,
+         6600
+        ],
+        [
+         16000,
+         6600
+        ],
+        [
+         16333.33,
+         6600
+        ],
+        [
+         16666.67,
+         6600
+        ],
+        [
+         17000,
+         6600
+        ],
+        [
+         17333.33,
+         6600
+        ],
+        [
+         17666.67,
+         6600
+        ],
+        [
+         18000,
+         6600
+        ],
+        [
+         18333.33,
+         6600
+        ],
+        [
+         18666.67,
+         6600
+        ],
+        [
+         19000,
+         6600
+        ],
+        [
+         19333.33,
+         6600
+        ],
+        [
+         19666.67,
+         6600
+        ],
+        [
+         20000,
+         6600
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Plan A: $135 a month, $3,000 deductible, then 20% coinsurance, out-of-pocket maximum $7,000. Plan B: $300 a month, $500 deductible, then 20% coinsurance, out-of-pocket maximum $3,000."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,975",
+   "numeric": {
+    "value": 2975,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: set A(b) = B(b), using the piece of each graph where they cross.",
+    "At $0 of bills, A = $1,620 and B = $3,600; the plans cross at b ≈ $2,975, where both cost about $4,595.",
+    "Spreadsheet: put bills in A2:A201 (0, 100, 200…), =12*135+MIN(7000,IF(A2<=3000,A2,3000+0.2*(A2-3000))) in B2, the Plan B formula in C2, then find where B − C changes sign (or use Goal Seek).",
+    "So below about $2,975 of bills Plan A is cheaper; above it Plan B is. Someone expecting a big year should pick Plan B."
    ]
   },
   {
@@ -9380,9 +14711,12 @@
    "answer": "$3,480",
    "solutionSteps": [
     "Mistake: Left out the deductible from the year’s cost.",
+    "Formula: worst-case year = premiums + deductible.",
     "Premiums: $1,980.",
     "Add the deductible: $1,980 + $1,500 = $3,480.",
-    "Correct result: $3,480."
+    "Correct result: $3,480.",
+    "Spreadsheet or calculator: =1980+1500",
+    "So the answer is $3,480; weigh the premium against what you would pay in a bad year."
    ],
    "numeric": {
     "value": 3480,
@@ -9451,7 +14785,7 @@
    "id": "fa-insurance-s02-err-oop-max-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "oop-max-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9481,9 +14815,11 @@
    "answer": "$6,500",
    "solutionSteps": [
     "Mistake: Ignored the out-of-pocket maximum, which caps what the patient pays.",
+    "Formula: out-of-pocket = the smaller of (deductible + coinsurance × (bill − deductible)) and the maximum.",
     "Deductible + coinsurance = $11,200.",
     "This is above the cap, so the patient pays $6,500.",
-    "Correct result: $6,500."
+    "Correct result: $6,500.",
+    "So the answer is $6,500; the out-of-pocket maximum caps your worst year."
    ],
    "numeric": {
     "value": 6500,
@@ -9495,7 +14831,7 @@
    "id": "fa-insurance-s03-err-ev-probabilities-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ev-probabilities-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9553,7 +14889,7 @@
    "id": "fa-insurance-s03-err-ev-single-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "support",
+   "level": "advanced",
    "family": "ev-single-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9581,8 +14917,11 @@
    "answer": "$300",
    "solutionSteps": [
     "Mistake: Divided by the percent; expected loss = probability × loss.",
+    "Formula: expected loss = probability × loss.",
     "0.05 × $6,000 = $300.",
-    "Correct result: $300."
+    "Correct result: $300.",
+    "Spreadsheet or calculator: =0.05*6000",
+    "So the answer is $300; insure against losses you could not afford, not small ones."
    ],
    "numeric": {
     "value": 300,
@@ -9647,7 +14986,7 @@
    "id": "fa-insurance-s04-err-copay-visits-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "copay-visits-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9675,8 +15014,10 @@
    "answer": "$225",
    "solutionSteps": [
     "Mistake: A copay is charged for each visit, not once per year.",
+    "Formula: total copays = visits × copay.",
     "9 visits × $25 = $225.",
-    "Correct result: $225."
+    "Correct result: $225.",
+    "So the answer is $225; use numbers like this to decide which risks are worth insuring."
    ],
    "numeric": {
     "value": 225,

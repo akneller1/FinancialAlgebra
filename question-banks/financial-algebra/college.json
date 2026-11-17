@@ -982,7 +982,9 @@
    "prompt": "Isaiah's first-year net price is $17,000.00, and it is expected to rise 5% each year. What is the estimated total net price for four years?",
    "answer": "$73,272.13",
    "solutionSteps": [
-    "Sum of $17,000.00(1 + 0.05)^k for k = 0 to 3 = $73,272.13."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $17,000.00(1 + 0.05)^k for k = 0 to 3 = $73,272.13.",
+    "So the answer is $73,272.13; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family four-year; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -994,7 +996,9 @@
    "prompt": "Sam's first-year net price is $12,500.00, and it is expected to rise 4% each year. What is the estimated total net price for four years?",
    "answer": "$53,080.80",
    "solutionSteps": [
-    "Sum of $12,500.00(1 + 0.04)^k for k = 0 to 3 = $53,080.80."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $12,500.00(1 + 0.04)^k for k = 0 to 3 = $53,080.80.",
+    "So the answer is $53,080.80; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family four-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1006,7 +1010,9 @@
    "prompt": "Isaiah's first-year net price is $16,000, and it is expected to rise 5% each year. What is the estimated total net price for four years?",
    "answer": "$68,962",
    "solutionSteps": [
-    "Sum of $16,000(1 + 0.05)^k for k = 0 to 3 = $68,962."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $16,000(1 + 0.05)^k for k = 0 to 3 = $68,962.",
+    "So the answer is $68,962; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family four-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1018,7 +1024,9 @@
    "prompt": "Tyler's first-year net price is $28,000.00, and it is expected to rise 5% each year. What is the estimated total net price for four years?",
    "answer": "$120,683.50",
    "solutionSteps": [
-    "Sum of $28,000.00(1 + 0.05)^k for k = 0 to 3 = $120,683.50."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $28,000.00(1 + 0.05)^k for k = 0 to 3 = $120,683.50.",
+    "So the answer is $120,683.50; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family four-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1030,7 +1038,9 @@
    "prompt": "Luis's first-year net price is $11,500.00, and it is expected to rise 4% each year. What is the estimated total net price for four years?",
    "answer": "$48,834.34",
    "solutionSteps": [
-    "Sum of $11,500.00(1 + 0.04)^k for k = 0 to 3 = $48,834.34."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $11,500.00(1 + 0.04)^k for k = 0 to 3 = $48,834.34.",
+    "So the answer is $48,834.34; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family four-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1042,9 +1052,12 @@
    "prompt": "Camila graduates owing $44,500.00 in student loans at 5.53%. On a 20-year repayment plan, what is the monthly payment and total interest?",
    "answer": "$306.86 per month; total interest $29,146.40",
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = 0.0553 ÷ 12, n = 240.",
     "PMT = $306.86.",
-    "Interest = $306.86 × 240 − $44,500.00 = $29,146.40."
+    "Interest = $306.86 × 240 − $44,500.00 = $29,146.40.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,240,-44500)",
+    "So the answer is $306.86 per month; total interest $29,146.40; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family loan-pmt; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1056,9 +1069,12 @@
    "prompt": "Diego graduates owing $18,500.00 in student loans at 6.5%. On a 10-year repayment plan, what is the monthly payment and total interest?",
    "answer": "$210.06 per month; total interest $6,707.20",
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = 0.065 ÷ 12, n = 120.",
     "PMT = $210.06.",
-    "Interest = $210.06 × 120 − $18,500.00 = $6,707.20."
+    "Interest = $210.06 × 120 − $18,500.00 = $6,707.20.",
+    "Spreadsheet or calculator: =PMT(0.065/12,120,-18500)",
+    "So the answer is $210.06 per month; total interest $6,707.20; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family loan-pmt; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1070,9 +1086,12 @@
    "prompt": "Imani graduates owing $28,500.00 in student loans at 6.5%. On a 20-year repayment plan, what is the monthly payment and total interest?",
    "answer": "$212.49 per month; total interest $22,497.60",
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = 0.065 ÷ 12, n = 240.",
     "PMT = $212.49.",
-    "Interest = $212.49 × 240 − $28,500.00 = $22,497.60."
+    "Interest = $212.49 × 240 − $28,500.00 = $22,497.60.",
+    "Spreadsheet or calculator: =PMT(0.065/12,240,-28500)",
+    "So the answer is $212.49 per month; total interest $22,497.60; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family loan-pmt; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1084,9 +1103,12 @@
    "prompt": "Sam graduates owing $44,500.00 in student loans at 7.05%. On a 20-year repayment plan, what is the monthly payment and total interest?",
    "answer": "$346.34 per month; total interest $38,621.60",
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = 0.0705 ÷ 12, n = 240.",
     "PMT = $346.34.",
-    "Interest = $346.34 × 240 − $44,500.00 = $38,621.60."
+    "Interest = $346.34 × 240 − $44,500.00 = $38,621.60.",
+    "Spreadsheet or calculator: =PMT(0.0705/12,240,-44500)",
+    "So the answer is $346.34 per month; total interest $38,621.60; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family loan-pmt; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1098,9 +1120,12 @@
    "prompt": "Sofia graduates owing $33,000.00 in student loans at 5.53%. On a 15-year repayment plan, what is the monthly payment and total interest?",
    "answer": "$270.16 per month; total interest $15,628.80",
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = 0.0553 ÷ 12, n = 180.",
     "PMT = $270.16.",
-    "Interest = $270.16 × 180 − $33,000.00 = $15,628.80."
+    "Interest = $270.16 × 180 − $33,000.00 = $15,628.80.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,180,-33000)",
+    "So the answer is $270.16 per month; total interest $15,628.80; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family loan-pmt; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1112,9 +1137,12 @@
    "prompt": "Grace graduates owing $28,500.00 in student loans at 7.05%. On a 10-year repayment plan, what is the monthly payment and total interest?",
    "answer": "$331.64 per month; total interest $11,296.80",
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = 0.0705 ÷ 12, n = 120.",
     "PMT = $331.64.",
-    "Interest = $331.64 × 120 − $28,500.00 = $11,296.80."
+    "Interest = $331.64 × 120 − $28,500.00 = $11,296.80.",
+    "Spreadsheet or calculator: =PMT(0.0705/12,120,-28500)",
+    "So the answer is $331.64 per month; total interest $11,296.80; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family loan-pmt; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1126,9 +1154,12 @@
    "prompt": "Fatima graduates owing $36,000.00 in student loans at 6.5%. On a 15-year repayment plan, what is the monthly payment and total interest?",
    "answer": "$313.60 per month; total interest $20,448.00",
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = 0.065 ÷ 12, n = 180.",
     "PMT = $313.60.",
-    "Interest = $313.60 × 180 − $36,000.00 = $20,448.00."
+    "Interest = $313.60 × 180 − $36,000.00 = $20,448.00.",
+    "Spreadsheet or calculator: =PMT(0.065/12,180,-36000)",
+    "So the answer is $313.60 per month; total interest $20,448.00; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family loan-pmt; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1140,6 +1171,7 @@
    "prompt": "Fatima borrows $3,000 in an unsubsidized loan at 6.5% simple interest at the start of college and makes no payments for 5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
    "answer": "$3,975",
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $3,000 × 0.065 × 5 = $975.",
     "New balance = $3,975; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -1154,6 +1186,7 @@
    "prompt": "Dev borrows $5,500.00 in an unsubsidized loan at 5.53% simple interest at the start of college and makes no payments for 4.5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
    "answer": "$6,868.68",
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $5,500.00 × 0.0553 × 4.5 = $1,368.68.",
     "New balance = $6,868.68; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -1168,6 +1201,7 @@
    "prompt": "Jordan borrows $4,000 in an unsubsidized loan at 6.5% simple interest at the start of college and makes no payments for 4 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
    "answer": "$5,040",
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $4,000 × 0.065 × 4 = $1,040.",
     "New balance = $5,040; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -1182,6 +1216,7 @@
    "prompt": "Nadia borrows $5,500.00 in an unsubsidized loan at 5.53% simple interest at the start of college and makes no payments for 5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
    "answer": "$7,020.75",
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $5,500.00 × 0.0553 × 5 = $1,520.75.",
     "New balance = $7,020.75; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -1196,6 +1231,7 @@
    "prompt": "Dev borrows $7,000.00 in an unsubsidized loan at 6.5% simple interest at the start of college and makes no payments for 4.5 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
    "answer": "$9,047.50",
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $7,000.00 × 0.065 × 4.5 = $2,047.50.",
     "New balance = $9,047.50; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -1210,6 +1246,7 @@
    "prompt": "Imani borrows $3,000.00 in an unsubsidized loan at 5.53% simple interest at the start of college and makes no payments for 4 years (school + grace period). The unpaid interest is then capitalized. What is the new balance?",
    "answer": "$3,663.60",
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $3,000.00 × 0.0553 × 4 = $663.60.",
     "New balance = $3,663.60; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -1416,8 +1453,11 @@
    "prompt": "Kofi starts a career at $45,000.00 per year with 2% annual raises. What are total earnings over the first 20 years?",
    "answer": "$1,093,381.64",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $45,000.00((1 + 0.02)^20 − 1) ÷ 0.02 = $1,093,381.64."
+    "S = $45,000.00((1 + 0.02)^20 − 1) ÷ 0.02 = $1,093,381.64.",
+    "Spreadsheet or calculator: =45000.00*((1+0.02)^20-1)/0.02",
+    "So the answer is $1,093,381.64; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1429,8 +1469,11 @@
    "prompt": "Priya starts a career at $56,000.00 per year with 4% annual raises. What are total earnings over the first 30 years?",
    "answer": "$3,140,756.51",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $56,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,140,756.51."
+    "S = $56,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,140,756.51.",
+    "Spreadsheet or calculator: =56000.00*((1+0.04)^30-1)/0.04",
+    "So the answer is $3,140,756.51; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1442,8 +1485,11 @@
    "prompt": "Marcus starts a career at $49,000.00 per year with 2% annual raises. What are total earnings over the first 30 years?",
    "answer": "$1,987,835.88",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $49,000.00((1 + 0.02)^30 − 1) ÷ 0.02 = $1,987,835.88."
+    "S = $49,000.00((1 + 0.02)^30 − 1) ÷ 0.02 = $1,987,835.88.",
+    "Spreadsheet or calculator: =49000.00*((1+0.02)^30-1)/0.02",
+    "So the answer is $1,987,835.88; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1455,8 +1501,11 @@
    "prompt": "Maya starts a career at $59,000.00 per year with 3% annual raises. What are total earnings over the first 30 years?",
    "answer": "$2,806,949.53",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $59,000.00((1 + 0.03)^30 − 1) ÷ 0.03 = $2,806,949.53."
+    "S = $59,000.00((1 + 0.03)^30 − 1) ÷ 0.03 = $2,806,949.53.",
+    "Spreadsheet or calculator: =59000.00*((1+0.03)^30-1)/0.03",
+    "So the answer is $2,806,949.53; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1468,8 +1517,11 @@
    "prompt": "Diego starts a career at $41,000.00 per year with 4% annual raises. What are total earnings over the first 30 years?",
    "answer": "$2,299,482.45",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $41,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $2,299,482.45."
+    "S = $41,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $2,299,482.45.",
+    "Spreadsheet or calculator: =41000.00*((1+0.04)^30-1)/0.04",
+    "So the answer is $2,299,482.45; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1481,8 +1533,11 @@
    "prompt": "Grace starts a career at $67,000.00 per year with 4% annual raises. What are total earnings over the first 30 years?",
    "answer": "$3,757,690.83",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $67,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,757,690.83."
+    "S = $67,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,757,690.83.",
+    "Spreadsheet or calculator: =67000.00*((1+0.04)^30-1)/0.04",
+    "So the answer is $3,757,690.83; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1494,8 +1549,11 @@
    "prompt": "Fatima starts a career at $52,000.00 per year with 3% annual raises. What are total earnings over the first 10 years?",
    "answer": "$596,121.72",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $52,000.00((1 + 0.03)^10 − 1) ÷ 0.03 = $596,121.72."
+    "S = $52,000.00((1 + 0.03)^10 − 1) ÷ 0.03 = $596,121.72.",
+    "Spreadsheet or calculator: =52000.00*((1+0.03)^10-1)/0.03",
+    "So the answer is $596,121.72; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1507,8 +1565,11 @@
    "prompt": "Elijah starts a career at $50,000.00 per year with 2% annual raises. What are total earnings over the first 10 years?",
    "answer": "$547,486.05",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $50,000.00((1 + 0.02)^10 − 1) ÷ 0.02 = $547,486.05."
+    "S = $50,000.00((1 + 0.02)^10 − 1) ÷ 0.02 = $547,486.05.",
+    "Spreadsheet or calculator: =50000.00*((1+0.02)^10-1)/0.02",
+    "So the answer is $547,486.05; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1520,8 +1581,11 @@
    "prompt": "Isaiah starts a career at $55,000.00 per year with 3% annual raises. What are total earnings over the first 20 years?",
    "answer": "$1,477,870.60",
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $55,000.00((1 + 0.03)^20 − 1) ÷ 0.03 = $1,477,870.60."
+    "S = $55,000.00((1 + 0.03)^20 − 1) ÷ 0.03 = $1,477,870.60.",
+    "Spreadsheet or calculator: =55000.00*((1+0.03)^20-1)/0.03",
+    "So the answer is $1,477,870.60; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lifetime; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1533,8 +1597,10 @@
    "prompt": "Leah considers a 2-year associate degree in nursing costing $32,000 plus $30,000 in forgone earnings while studying. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
    "answer": "2.4 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $62,000.",
     "Payback = $62,000 ÷ $26,000 ≈ 2.4 years.",
+    "Spreadsheet or calculator: =62000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1547,8 +1613,10 @@
    "prompt": "Owen considers a 6-month coding bootcamp costing $15,000. It is expected to raise yearly earnings by $9,000. What is the payback period in years (nearest tenth)?",
    "answer": "1.7 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $15,000.",
     "Payback = $15,000 ÷ $9,000 ≈ 1.7 years.",
+    "Spreadsheet or calculator: =15000/9000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1561,8 +1629,10 @@
    "prompt": "Grace considers a CDL truck-driving program costing $6,500. It is expected to raise yearly earnings by $14,000. What is the payback period in years (nearest tenth)?",
    "answer": "0.5 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $6,500.",
     "Payback = $6,500 ÷ $14,000 ≈ 0.5 years.",
+    "Spreadsheet or calculator: =6500/14000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1575,8 +1645,10 @@
    "prompt": "Camila considers a CDL truck-driving program costing $6,500 plus $15,000 in forgone earnings while studying. It is expected to raise yearly earnings by $14,000. What is the payback period in years (nearest tenth)?",
    "answer": "1.5 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $21,500.",
     "Payback = $21,500 ÷ $14,000 ≈ 1.5 years.",
+    "Spreadsheet or calculator: =21500/14000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1589,8 +1661,10 @@
    "prompt": "Leah considers a 1-year HVAC certificate costing $14,000. It is expected to raise yearly earnings by $11,000. What is the payback period in years (nearest tenth)?",
    "answer": "1.3 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $14,000.",
     "Payback = $14,000 ÷ $11,000 ≈ 1.3 years.",
+    "Spreadsheet or calculator: =14000/11000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1603,8 +1677,10 @@
    "prompt": "Tyler considers a 2-year associate degree in nursing costing $32,000 plus $30,000 in forgone earnings while studying. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
    "answer": "2.4 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $62,000.",
     "Payback = $62,000 ÷ $26,000 ≈ 2.4 years.",
+    "Spreadsheet or calculator: =62000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1617,8 +1693,10 @@
    "prompt": "Maya considers a 2-year associate degree in nursing costing $32,000. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
    "answer": "1.2 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $32,000.",
     "Payback = $32,000 ÷ $26,000 ≈ 1.2 years.",
+    "Spreadsheet or calculator: =32000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1631,8 +1709,10 @@
    "prompt": "Fatima considers a bachelor’s in accounting costing $72,000 plus $30,000 in forgone earnings while studying. It is expected to raise yearly earnings by $19,000. What is the payback period in years (nearest tenth)?",
    "answer": "5.4 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $102,000.",
     "Payback = $102,000 ÷ $19,000 ≈ 5.4 years.",
+    "Spreadsheet or calculator: =102000/19000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1645,8 +1725,10 @@
    "prompt": "Kofi considers a 2-year associate degree in nursing costing $32,000. It is expected to raise yearly earnings by $26,000. What is the payback period in years (nearest tenth)?",
    "answer": "1.2 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $32,000.",
     "Payback = $32,000 ÷ $26,000 ≈ 1.2 years.",
+    "Spreadsheet or calculator: =32000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1659,8 +1741,10 @@
    "prompt": "Mei considers a 6-month coding bootcamp costing $15,000 plus $15,000 in forgone earnings while studying. It is expected to raise yearly earnings by $9,000. What is the payback period in years (nearest tenth)?",
    "answer": "3.3 years",
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $30,000.",
     "Payback = $30,000 ÷ $9,000 ≈ 3.3 years.",
+    "Spreadsheet or calculator: =30000/9000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ],
    "sourceNotes": "Financial Algebra original item (family payback; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1827,6 +1911,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$44,500 − $8,000 − $250 = $36,250.",
+    "Spreadsheet or calculator: =44500-8000-250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-net-price-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1841,6 +1926,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$37,500 − $2,250 − $8,000 = $27,250.",
+    "Spreadsheet or calculator: =37500-2250-8000",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-net-price-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1855,6 +1941,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$48,500 − $5,750 − $7,250 = $35,500.",
+    "Spreadsheet or calculator: =48500-5750-7250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-net-price-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1869,6 +1956,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$27,500 − $8,000 − $7,750 = $11,750.",
+    "Spreadsheet or calculator: =27500-8000-7750",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-net-price-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1883,6 +1971,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$42,000 − $7,500 − $250 = $34,250.",
+    "Spreadsheet or calculator: =42000-7500-250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-net-price-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1897,6 +1986,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$42,000 − $3,500 − $8,250 = $30,250.",
+    "Spreadsheet or calculator: =42000-3500-8250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-net-price-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1911,6 +2001,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$30,500 − $11,750 − $4,500 = $14,250.",
+    "Spreadsheet or calculator: =30500-11750-4500",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-net-price-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1923,8 +2014,10 @@
    "prompt": "Nadia borrows a $7,000.00 unsubsidized student loan at 6.53% simple interest, which builds while she is in school for 4.5 years. How much interest accrues before repayment starts?",
    "answer": "$2,056.95",
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$7,000.00 × 0.0653 × 4.5 = $2,056.95.",
+    "Spreadsheet or calculator: =7000.00*0.0653*4.5",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-unsub-accrue; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1937,8 +2030,10 @@
    "prompt": "Tyler borrows a $4,000 unsubsidized student loan at 7.05% simple interest, which builds while he is in school for 4 years. How much interest accrues before repayment starts?",
    "answer": "$1,128",
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,000 × 0.0705 × 4 = $1,128.",
+    "Spreadsheet or calculator: =4000*0.0705*4",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-unsub-accrue; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1951,8 +2046,10 @@
    "prompt": "Mateo borrows a $7,000.00 unsubsidized student loan at 5.53% simple interest, which builds while he is in school for 3 years. How much interest accrues before repayment starts?",
    "answer": "$1,161.30",
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$7,000.00 × 0.0553 × 3 = $1,161.30.",
+    "Spreadsheet or calculator: =7000.00*0.0553*3",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-unsub-accrue; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1965,8 +2062,10 @@
    "prompt": "Tyler borrows a $5,000 unsubsidized student loan at 6.53% simple interest, which builds while he is in school for 4 years. How much interest accrues before repayment starts?",
    "answer": "$1,306",
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$5,000 × 0.0653 × 4 = $1,306.",
+    "Spreadsheet or calculator: =5000*0.0653*4",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-unsub-accrue; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1979,8 +2078,10 @@
    "prompt": "Aaliyah borrows a $4,500 unsubsidized student loan at 7.05% simple interest, which builds while she is in school for 4 years. How much interest accrues before repayment starts?",
    "answer": "$1,269",
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,500 × 0.0705 × 4 = $1,269.",
+    "Spreadsheet or calculator: =4500*0.0705*4",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-unsub-accrue; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1993,8 +2094,10 @@
    "prompt": "Grace borrows a $4,000.00 unsubsidized student loan at 5.53% simple interest, which builds while she is in school for 4.5 years. How much interest accrues before repayment starts?",
    "answer": "$995.40",
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,000.00 × 0.0553 × 4.5 = $995.40.",
+    "Spreadsheet or calculator: =4000.00*0.0553*4.5",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-unsub-accrue; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2007,8 +2110,10 @@
    "prompt": "Aaliyah borrows a $4,500.00 unsubsidized student loan at 6.53% simple interest, which builds while she is in school for 4.5 years. How much interest accrues before repayment starts?",
    "answer": "$1,322.33",
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,500.00 × 0.0653 × 4.5 = $1,322.33.",
+    "Spreadsheet or calculator: =4500.00*0.0653*4.5",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-unsub-accrue; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2021,6 +2126,7 @@
    "prompt": "Career A pays $44,500 per year and Career B pays $78,000 per year. Ignoring raises, how much more does Career B earn over 15 years?",
    "answer": "$502,500",
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $78,000 − $44,500 = $33,500.",
     "× 15 years = $502,500.",
     "Also weigh training cost and time out of the workforce."
@@ -2035,6 +2141,7 @@
    "prompt": "Career A pays $43,000 per year and Career B pays $68,000 per year. Ignoring raises, how much more does Career B earn over 10 years?",
    "answer": "$250,000",
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $68,000 − $43,000 = $25,000.",
     "× 10 years = $250,000.",
     "Also weigh training cost and time out of the workforce."
@@ -2049,6 +2156,7 @@
    "prompt": "Career A pays $36,500 per year and Career B pays $72,000 per year. Ignoring raises, how much more does Career B earn over 5 years?",
    "answer": "$177,500",
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $72,000 − $36,500 = $35,500.",
     "× 5 years = $177,500.",
     "Also weigh training cost and time out of the workforce."
@@ -2063,6 +2171,7 @@
    "prompt": "Career A pays $46,000 per year and Career B pays $53,500 per year. Ignoring raises, how much more does Career B earn over 5 years?",
    "answer": "$37,500",
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $53,500 − $46,000 = $7,500.",
     "× 5 years = $37,500.",
     "Also weigh training cost and time out of the workforce."
@@ -2077,6 +2186,7 @@
    "prompt": "Career A pays $44,500 per year and Career B pays $54,500 per year. Ignoring raises, how much more does Career B earn over 15 years?",
    "answer": "$150,000",
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $54,500 − $44,500 = $10,000.",
     "× 15 years = $150,000.",
     "Also weigh training cost and time out of the workforce."
@@ -2091,6 +2201,7 @@
    "prompt": "Career A pays $40,000 per year and Career B pays $52,000 per year. Ignoring raises, how much more does Career B earn over 15 years?",
    "answer": "$180,000",
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $52,000 − $40,000 = $12,000.",
     "× 15 years = $180,000.",
     "Also weigh training cost and time out of the workforce."
@@ -2105,6 +2216,7 @@
    "prompt": "Career A pays $38,000 per year and Career B pays $62,500 per year. Ignoring raises, how much more does Career B earn over 10 years?",
    "answer": "$245,000",
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $62,500 − $38,000 = $24,500.",
     "× 10 years = $245,000.",
     "Also weigh training cost and time out of the workforce."
@@ -2119,8 +2231,10 @@
    "prompt": "A certificate program costs $19,000 and is expected to raise yearly earnings by $14,000. To the nearest tenth of a year, how long until the extra earnings cover the cost?",
    "answer": "1.4 years",
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$19,000 ÷ $14,000 = 1.36.",
+    "Spreadsheet or calculator: =19000/14000",
     "≈ 1.4 years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-payback-simple; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2133,8 +2247,10 @@
    "prompt": "A certificate program costs $23,000 and is expected to raise yearly earnings by $12,500. To the nearest tenth of a year, how long until the extra earnings cover the cost?",
    "answer": "1.8 years",
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$23,000 ÷ $12,500 = 1.84.",
+    "Spreadsheet or calculator: =23000/12500",
     "≈ 1.8 years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-payback-simple; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2147,8 +2263,10 @@
    "prompt": "A certificate program costs $23,000 and is expected to raise yearly earnings by $9,000. To the nearest tenth of a year, how long until the extra earnings cover the cost?",
    "answer": "2.6 years",
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$23,000 ÷ $9,000 = 2.56.",
+    "Spreadsheet or calculator: =23000/9000",
     "≈ 2.6 years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-payback-simple; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2161,8 +2279,10 @@
    "prompt": "A certificate program costs $29,000 and is expected to raise yearly earnings by $8,500. To the nearest tenth of a year, how long until the extra earnings cover the cost?",
    "answer": "3.4 years",
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$29,000 ÷ $8,500 = 3.41.",
+    "Spreadsheet or calculator: =29000/8500",
     "≈ 3.4 years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-payback-simple; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2175,8 +2295,10 @@
    "prompt": "A certificate program costs $53,000 and is expected to raise yearly earnings by $8,500. To the nearest tenth of a year, how long until the extra earnings cover the cost?",
    "answer": "6.2 years",
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$53,000 ÷ $8,500 = 6.24.",
+    "Spreadsheet or calculator: =53000/8500",
     "≈ 6.2 years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-payback-simple; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2189,8 +2311,10 @@
    "prompt": "A certificate program costs $50,000 and is expected to raise yearly earnings by $13,500. To the nearest tenth of a year, how long until the extra earnings cover the cost?",
    "answer": "3.7 years",
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$50,000 ÷ $13,500 = 3.70.",
+    "Spreadsheet or calculator: =50000/13500",
     "≈ 3.7 years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-payback-simple; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2203,8 +2327,10 @@
    "prompt": "A certificate program costs $41,000 and is expected to raise yearly earnings by $13,000. To the nearest tenth of a year, how long until the extra earnings cover the cost?",
    "answer": "3.2 years",
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$41,000 ÷ $13,000 = 3.15.",
+    "Spreadsheet or calculator: =41000/13000",
     "≈ 3.2 years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-payback-simple; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2217,7 +2343,10 @@
    "prompt": "College costs Camila $13,000 a year. Four-year cost = yearly cost × 4. What is the four-year cost?",
    "answer": "$52,000",
    "solutionSteps": [
-    "$13,000 × 4 = $52,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$13,000 × 4 = $52,000.",
+    "Spreadsheet or calculator: =13000*4",
+    "So the answer is $52,000; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-four-years; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2229,7 +2358,10 @@
    "prompt": "College costs Sofia $18,500 a year. Four-year cost = yearly cost × 4. What is the four-year cost?",
    "answer": "$74,000",
    "solutionSteps": [
-    "$18,500 × 4 = $74,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$18,500 × 4 = $74,000.",
+    "Spreadsheet or calculator: =18500*4",
+    "So the answer is $74,000; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-four-years; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2241,7 +2373,10 @@
    "prompt": "College costs Isaiah $21,000 a year. Four-year cost = yearly cost × 4. What is the four-year cost?",
    "answer": "$84,000",
    "solutionSteps": [
-    "$21,000 × 4 = $84,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$21,000 × 4 = $84,000.",
+    "Spreadsheet or calculator: =21000*4",
+    "So the answer is $84,000; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-four-years; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2253,7 +2388,10 @@
    "prompt": "College costs Sofia $27,500 a year. Four-year cost = yearly cost × 4. What is the four-year cost?",
    "answer": "$110,000",
    "solutionSteps": [
-    "$27,500 × 4 = $110,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$27,500 × 4 = $110,000.",
+    "Spreadsheet or calculator: =27500*4",
+    "So the answer is $110,000; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-four-years; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2265,8 +2403,10 @@
    "prompt": "Mateo's first-year cost is $20,000.00, and costs rise 4% each year. What is the total cost of four years?",
    "answer": "$84,929.28",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $20,000.00, $20,800.00, $21,632.00, $22,497.28.",
-    "Total = $84,929.28."
+    "Total = $84,929.28.",
+    "So the answer is $84,929.28; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2278,8 +2418,10 @@
    "prompt": "Imani's first-year cost is $10,000.00, and costs rise 4% each year. What is the total cost of four years?",
    "answer": "$42,464.64",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $10,000.00, $10,400.00, $10,816.00, $11,248.64.",
-    "Total = $42,464.64."
+    "Total = $42,464.64.",
+    "So the answer is $42,464.64; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2291,8 +2433,10 @@
    "prompt": "Leah's first-year cost is $26,500.00, and costs rise 4% each year. What is the total cost of four years?",
    "answer": "$112,531.30",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $26,500.00, $27,560.00, $28,662.40, $29,808.90.",
-    "Total = $112,531.30."
+    "Total = $112,531.30.",
+    "So the answer is $112,531.30; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2304,8 +2448,10 @@
    "prompt": "Imani's first-year cost is $14,000.00, and costs rise 3% each year. What is the total cost of four years?",
    "answer": "$58,570.78",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $14,000.00, $14,420.00, $14,852.60, $15,298.18.",
-    "Total = $58,570.78."
+    "Total = $58,570.78.",
+    "So the answer is $58,570.78; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2317,8 +2463,10 @@
    "prompt": "Marcus's first-year cost is $9,500.00, and costs rise 5% each year. What is the total cost of four years?",
    "answer": "$40,946.19",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $9,500.00, $9,975.00, $10,473.75, $10,997.44.",
-    "Total = $40,946.19."
+    "Total = $40,946.19.",
+    "So the answer is $40,946.19; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2330,8 +2478,10 @@
    "prompt": "Zara's first-year cost is $9,000.00, and costs rise 3% each year. What is the total cost of four years?",
    "answer": "$37,652.64",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $9,000.00, $9,270.00, $9,548.10, $9,834.54.",
-    "Total = $37,652.64."
+    "Total = $37,652.64.",
+    "So the answer is $37,652.64; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2343,8 +2493,10 @@
    "prompt": "Sofia's first-year cost is $9,000.00, and costs rise 3% each year. What is the total cost of four years?",
    "answer": "$37,652.64",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $9,000.00, $9,270.00, $9,548.10, $9,834.54.",
-    "Total = $37,652.64."
+    "Total = $37,652.64.",
+    "So the answer is $37,652.64; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2356,8 +2508,10 @@
    "prompt": "Leah's first-year cost is $10,500.00, and costs rise 4% each year. What is the total cost of four years?",
    "answer": "$44,587.87",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $10,500.00, $10,920.00, $11,356.80, $11,811.07.",
-    "Total = $44,587.87."
+    "Total = $44,587.87.",
+    "So the answer is $44,587.87; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2369,8 +2523,10 @@
    "prompt": "Priya's first-year cost is $16,000.00, and costs rise 4% each year. What is the total cost of four years?",
    "answer": "$67,943.42",
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $16,000.00, $16,640.00, $17,305.60, $17,997.82.",
-    "Total = $67,943.42."
+    "Total = $67,943.42.",
+    "So the answer is $67,943.42; compare schools by net price, not the sticker price."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-rising-tuition; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2382,7 +2538,10 @@
    "prompt": "Tyler's student loan payment is $180 a month for 10 years (120 payments). Total paid = payment × 120. What is the total?",
    "answer": "$21,600",
    "solutionSteps": [
-    "$180 × 120 = $21,600."
+    "Formula: total paid = payment × number of payments.",
+    "$180 × 120 = $21,600.",
+    "Spreadsheet or calculator: =180*120",
+    "So the answer is $21,600; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ten-year-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2394,7 +2553,10 @@
    "prompt": "Owen's student loan payment is $120 a month for 10 years (120 payments). Total paid = payment × 120. What is the total?",
    "answer": "$14,400",
    "solutionSteps": [
-    "$120 × 120 = $14,400."
+    "Formula: total paid = payment × number of payments.",
+    "$120 × 120 = $14,400.",
+    "Spreadsheet or calculator: =120*120",
+    "So the answer is $14,400; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ten-year-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2406,7 +2568,10 @@
    "prompt": "Andre's student loan payment is $360 a month for 10 years (120 payments). Total paid = payment × 120. What is the total?",
    "answer": "$43,200",
    "solutionSteps": [
-    "$360 × 120 = $43,200."
+    "Formula: total paid = payment × number of payments.",
+    "$360 × 120 = $43,200.",
+    "Spreadsheet or calculator: =360*120",
+    "So the answer is $43,200; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ten-year-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2418,7 +2583,10 @@
    "prompt": "Maya's student loan payment is $420 a month for 10 years (120 payments). Total paid = payment × 120. What is the total?",
    "answer": "$50,400",
    "solutionSteps": [
-    "$420 × 120 = $50,400."
+    "Formula: total paid = payment × number of payments.",
+    "$420 × 120 = $50,400.",
+    "Spreadsheet or calculator: =420*120",
+    "So the answer is $50,400; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ten-year-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2430,7 +2598,10 @@
    "prompt": "Kofi's student loan payment is $330 a month for 10 years (120 payments). Total paid = payment × 120. What is the total?",
    "answer": "$39,600",
    "solutionSteps": [
-    "$330 × 120 = $39,600."
+    "Formula: total paid = payment × number of payments.",
+    "$330 × 120 = $39,600.",
+    "Spreadsheet or calculator: =330*120",
+    "So the answer is $39,600; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ten-year-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2442,7 +2613,10 @@
    "prompt": "Imani's student loan payment is $170 a month for 10 years (120 payments). Total paid = payment × 120. What is the total?",
    "answer": "$20,400",
    "solutionSteps": [
-    "$170 × 120 = $20,400."
+    "Formula: total paid = payment × number of payments.",
+    "$170 × 120 = $20,400.",
+    "Spreadsheet or calculator: =170*120",
+    "So the answer is $20,400; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ten-year-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2454,7 +2628,10 @@
    "prompt": "Owen's student loan payment is $430 a month for 10 years (120 payments). Total paid = payment × 120. What is the total?",
    "answer": "$51,600",
    "solutionSteps": [
-    "$430 × 120 = $51,600."
+    "Formula: total paid = payment × number of payments.",
+    "$430 × 120 = $51,600.",
+    "Spreadsheet or calculator: =430*120",
+    "So the answer is $51,600; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ten-year-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2466,9 +2643,12 @@
    "prompt": "Sam borrows $20,000.00 in unsubsidized loans at 5.53%. Interest accrues for 4 years in school and is added to the balance, then they repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$265.43",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $20,000.00 × 0.0553 × 4 = $4,424.00.",
     "New balance = $24,424.00.",
-    "Payment = $265.43."
+    "Payment = $265.43.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,120,-24424)",
+    "So the answer is $265.43; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2480,9 +2660,12 @@
    "prompt": "Elijah borrows $20,000.00 in unsubsidized loans at 6.53%. Interest accrues for 4 years in school and is added to the balance, then he repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$286.80",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $20,000.00 × 0.0653 × 4 = $5,224.00.",
     "New balance = $25,224.00.",
-    "Payment = $286.80."
+    "Payment = $286.80.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-25224)",
+    "So the answer is $286.80; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2494,9 +2677,12 @@
    "prompt": "Elijah borrows $23,000.00 in unsubsidized loans at 6.53%. Interest accrues for 4 years in school and is added to the balance, then he repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$329.82",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $23,000.00 × 0.0653 × 4 = $6,007.60.",
     "New balance = $29,007.60.",
-    "Payment = $329.82."
+    "Payment = $329.82.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-29007.6)",
+    "So the answer is $329.82; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2508,9 +2694,12 @@
    "prompt": "Imani borrows $30,000.00 in unsubsidized loans at 5.53%. Interest accrues for 4 years in school and is added to the balance, then she repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$398.14",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $30,000.00 × 0.0553 × 4 = $6,636.00.",
     "New balance = $36,636.00.",
-    "Payment = $398.14."
+    "Payment = $398.14.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,120,-36636)",
+    "So the answer is $398.14; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2522,9 +2711,12 @@
    "prompt": "Aaliyah borrows $27,000.00 in unsubsidized loans at 6.53%. Interest accrues for 4 years in school and is added to the balance, then she repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$387.18",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $27,000.00 × 0.0653 × 4 = $7,052.40.",
     "New balance = $34,052.40.",
-    "Payment = $387.18."
+    "Payment = $387.18.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-34052.4)",
+    "So the answer is $387.18; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2536,9 +2728,12 @@
    "prompt": "Imani borrows $27,000.00 in unsubsidized loans at 7.05%. Interest accrues for 4 years in school and is added to the balance, then she repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$402.79",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $27,000.00 × 0.0705 × 4 = $7,614.00.",
     "New balance = $34,614.00.",
-    "Payment = $402.79."
+    "Payment = $402.79.",
+    "Spreadsheet or calculator: =PMT(0.0705/12,120,-34614)",
+    "So the answer is $402.79; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2550,9 +2745,12 @@
    "prompt": "Mei borrows $19,000.00 in unsubsidized loans at 6.53%. Interest accrues for 4 years in school and is added to the balance, then she repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$272.46",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $19,000.00 × 0.0653 × 4 = $4,962.80.",
     "New balance = $23,962.80.",
-    "Payment = $272.46."
+    "Payment = $272.46.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-23962.8)",
+    "So the answer is $272.46; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2564,9 +2762,12 @@
    "prompt": "Aaliyah borrows $30,000.00 in unsubsidized loans at 6.53%. Interest accrues for 4 years in school and is added to the balance, then she repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$430.20",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $30,000.00 × 0.0653 × 4 = $7,836.00.",
     "New balance = $37,836.00.",
-    "Payment = $430.20."
+    "Payment = $430.20.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-37836)",
+    "So the answer is $430.20; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2578,9 +2779,12 @@
    "prompt": "Diego borrows $23,000.00 in unsubsidized loans at 6.53%. Interest accrues for 4 years in school and is added to the balance, then he repays over 10 years. What is the monthly payment? (Payment = P·i ÷ (1 − (1 + i)^−120), i = rate ÷ 12.)",
    "answer": "$329.82",
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $23,000.00 × 0.0653 × 4 = $6,007.60.",
     "New balance = $29,007.60.",
-    "Payment = $329.82."
+    "Payment = $329.82.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-29007.6)",
+    "So the answer is $329.82; borrow only what the expected career can repay."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-capitalized-payment; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2592,7 +2796,10 @@
    "prompt": "Job A pays $35,000 a year and Job B pays $46,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$11,000",
    "solutionSteps": [
-    "$46,000 − $35,000 = $11,000."
+    "Formula: Difference = higher − lower.",
+    "$46,000 − $35,000 = $11,000.",
+    "Spreadsheet or calculator: =46000-35000",
+    "So the answer is $11,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2604,7 +2811,10 @@
    "prompt": "Job A pays $39,000 a year and Job B pays $64,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$25,000",
    "solutionSteps": [
-    "$64,000 − $39,000 = $25,000."
+    "Formula: Difference = higher − lower.",
+    "$64,000 − $39,000 = $25,000.",
+    "Spreadsheet or calculator: =64000-39000",
+    "So the answer is $25,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2616,7 +2826,10 @@
    "prompt": "Job A pays $37,000 a year and Job B pays $56,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$19,000",
    "solutionSteps": [
-    "$56,000 − $37,000 = $19,000."
+    "Formula: Difference = higher − lower.",
+    "$56,000 − $37,000 = $19,000.",
+    "Spreadsheet or calculator: =56000-37000",
+    "So the answer is $19,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2628,7 +2841,10 @@
    "prompt": "Job A pays $39,000 a year and Job B pays $56,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$17,000",
    "solutionSteps": [
-    "$56,000 − $39,000 = $17,000."
+    "Formula: Difference = higher − lower.",
+    "$56,000 − $39,000 = $17,000.",
+    "Spreadsheet or calculator: =56000-39000",
+    "So the answer is $17,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2640,7 +2856,10 @@
    "prompt": "Job A pays $32,000 a year and Job B pays $49,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$17,000",
    "solutionSteps": [
-    "$49,000 − $32,000 = $17,000."
+    "Formula: Difference = higher − lower.",
+    "$49,000 − $32,000 = $17,000.",
+    "Spreadsheet or calculator: =49000-32000",
+    "So the answer is $17,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2652,7 +2871,10 @@
    "prompt": "Job A pays $44,000 a year and Job B pays $71,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$27,000",
    "solutionSteps": [
-    "$71,000 − $44,000 = $27,000."
+    "Formula: Difference = higher − lower.",
+    "$71,000 − $44,000 = $27,000.",
+    "Spreadsheet or calculator: =71000-44000",
+    "So the answer is $27,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2664,7 +2886,10 @@
    "prompt": "Job A pays $36,000 a year and Job B pays $54,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$18,000",
    "solutionSteps": [
-    "$54,000 − $36,000 = $18,000."
+    "Formula: Difference = higher − lower.",
+    "$54,000 − $36,000 = $18,000.",
+    "Spreadsheet or calculator: =54000-36000",
+    "So the answer is $18,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2676,7 +2901,10 @@
    "prompt": "Job A pays $45,000 a year and Job B pays $67,000. Difference = higher − lower. How much more does Job B pay each year?",
    "answer": "$22,000",
    "solutionSteps": [
-    "$67,000 − $45,000 = $22,000."
+    "Formula: Difference = higher − lower.",
+    "$67,000 − $45,000 = $22,000.",
+    "Spreadsheet or calculator: =67000-45000",
+    "So the answer is $22,000; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-salary-gap; type comparison). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2688,8 +2916,11 @@
    "prompt": "A job starts at $70,000.00 and gives a 2% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$766,480.47",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $70,000.00; year 10: $83,656.48.",
-    "Sum = $70,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $766,480.47."
+    "Sum = $70,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $766,480.47.",
+    "Spreadsheet or calculator: =70000.00*(1.02^10-1)/0.02",
+    "So the answer is $766,480.47; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2701,8 +2932,11 @@
    "prompt": "A job starts at $57,000.00 and gives a 2% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$624,134.10",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $57,000.00; year 10: $68,120.28.",
-    "Sum = $57,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $624,134.10."
+    "Sum = $57,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $624,134.10.",
+    "Spreadsheet or calculator: =57000.00*(1.02^10-1)/0.02",
+    "So the answer is $624,134.10; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2714,8 +2948,11 @@
    "prompt": "A job starts at $55,000.00 and gives a 3% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$630,513.36",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $55,000.00; year 10: $71,762.53.",
-    "Sum = $55,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $630,513.36."
+    "Sum = $55,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $630,513.36.",
+    "Spreadsheet or calculator: =55000.00*(1.03^10-1)/0.03",
+    "So the answer is $630,513.36; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2727,8 +2964,11 @@
    "prompt": "A job starts at $48,000.00 and gives a 2% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$525,586.61",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $48,000.00; year 10: $57,364.44.",
-    "Sum = $48,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $525,586.61."
+    "Sum = $48,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $525,586.61.",
+    "Spreadsheet or calculator: =48000.00*(1.02^10-1)/0.02",
+    "So the answer is $525,586.61; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2740,8 +2980,11 @@
    "prompt": "A job starts at $50,000.00 and gives a 3% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$573,193.97",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $50,000.00; year 10: $65,238.66.",
-    "Sum = $50,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $573,193.97."
+    "Sum = $50,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $573,193.97.",
+    "Spreadsheet or calculator: =50000.00*(1.03^10-1)/0.03",
+    "So the answer is $573,193.97; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2753,8 +2996,11 @@
    "prompt": "A job starts at $46,000.00 and gives a 4% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$552,280.93",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $46,000.00; year 10: $65,472.34.",
-    "Sum = $46,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $552,280.93."
+    "Sum = $46,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $552,280.93.",
+    "Spreadsheet or calculator: =46000.00*(1.04^10-1)/0.04",
+    "So the answer is $552,280.93; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2766,8 +3012,11 @@
    "prompt": "A job starts at $67,000.00 and gives a 4% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$804,409.18",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $67,000.00; year 10: $95,361.89.",
-    "Sum = $67,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $804,409.18."
+    "Sum = $67,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $804,409.18.",
+    "Spreadsheet or calculator: =67000.00*(1.04^10-1)/0.04",
+    "So the answer is $804,409.18; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2779,8 +3028,11 @@
    "prompt": "A job starts at $45,000.00 and gives a 3% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$515,874.57",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $45,000.00; year 10: $58,714.79.",
-    "Sum = $45,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $515,874.57."
+    "Sum = $45,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $515,874.57.",
+    "Spreadsheet or calculator: =45000.00*(1.03^10-1)/0.03",
+    "So the answer is $515,874.57; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2792,8 +3044,11 @@
    "prompt": "A job starts at $60,000.00 and gives a 3% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$687,832.76",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $60,000.00; year 10: $78,286.39.",
-    "Sum = $60,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $687,832.76."
+    "Sum = $60,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $687,832.76.",
+    "Spreadsheet or calculator: =60000.00*(1.03^10-1)/0.03",
+    "So the answer is $687,832.76; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2805,8 +3060,11 @@
    "prompt": "A job starts at $46,000.00 and gives a 3% raise every year. What are total earnings over the first 10 years? Use total = S·((1 + g)^10 − 1) ÷ g.",
    "answer": "$527,338.45",
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $46,000.00; year 10: $60,019.57.",
-    "Sum = $46,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $527,338.45."
+    "Sum = $46,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $527,338.45.",
+    "Spreadsheet or calculator: =46000.00*(1.03^10-1)/0.03",
+    "So the answer is $527,338.45; weigh lifetime earnings against the cost and time of training."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-raises-sum; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2818,7 +3076,10 @@
    "prompt": "A training program costs $12,000 and raises earnings by $3,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "4",
    "solutionSteps": [
-    "$12,000 ÷ $3,000 = 4 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$12,000 ÷ $3,000 = 4 years.",
+    "Spreadsheet or calculator: =12000/3000",
+    "So the answer is 4; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2830,7 +3091,10 @@
    "prompt": "A training program costs $35,000 and raises earnings by $5,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "7",
    "solutionSteps": [
-    "$35,000 ÷ $5,000 = 7 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$35,000 ÷ $5,000 = 7 years.",
+    "Spreadsheet or calculator: =35000/5000",
+    "So the answer is 7; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2842,7 +3106,10 @@
    "prompt": "A training program costs $20,000 and raises earnings by $10,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "2",
    "solutionSteps": [
-    "$20,000 ÷ $10,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$20,000 ÷ $10,000 = 2 years.",
+    "Spreadsheet or calculator: =20000/10000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2854,7 +3121,10 @@
    "prompt": "A training program costs $80,000 and raises earnings by $10,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "8",
    "solutionSteps": [
-    "$80,000 ÷ $10,000 = 8 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$80,000 ÷ $10,000 = 8 years.",
+    "Spreadsheet or calculator: =80000/10000",
+    "So the answer is 8; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2866,7 +3136,10 @@
    "prompt": "A training program costs $27,000 and raises earnings by $9,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "3",
    "solutionSteps": [
-    "$27,000 ÷ $9,000 = 3 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$27,000 ÷ $9,000 = 3 years.",
+    "Spreadsheet or calculator: =27000/9000",
+    "So the answer is 3; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2878,7 +3151,10 @@
    "prompt": "A training program costs $40,000 and raises earnings by $10,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "4",
    "solutionSteps": [
-    "$40,000 ÷ $10,000 = 4 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$40,000 ÷ $10,000 = 4 years.",
+    "Spreadsheet or calculator: =40000/10000",
+    "So the answer is 4; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2890,7 +3166,10 @@
    "prompt": "A training program costs $42,000 and raises earnings by $6,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "7",
    "solutionSteps": [
-    "$42,000 ÷ $6,000 = 7 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$42,000 ÷ $6,000 = 7 years.",
+    "Spreadsheet or calculator: =42000/6000",
+    "So the answer is 7; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2902,7 +3181,10 @@
    "prompt": "A training program costs $8,000 and raises earnings by $4,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "2",
    "solutionSteps": [
-    "$8,000 ÷ $4,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$8,000 ÷ $4,000 = 2 years.",
+    "Spreadsheet or calculator: =8000/4000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2914,7 +3196,10 @@
    "prompt": "A training program costs $12,000 and raises earnings by $6,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "2",
    "solutionSteps": [
-    "$12,000 ÷ $6,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$12,000 ÷ $6,000 = 2 years.",
+    "Spreadsheet or calculator: =12000/6000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2926,7 +3211,10 @@
    "prompt": "A training program costs $36,000 and raises earnings by $6,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "6",
    "solutionSteps": [
-    "$36,000 ÷ $6,000 = 6 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$36,000 ÷ $6,000 = 6 years.",
+    "Spreadsheet or calculator: =36000/6000",
+    "So the answer is 6; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2938,7 +3226,10 @@
    "prompt": "A training program costs $4,000 and raises earnings by $2,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "2",
    "solutionSteps": [
-    "$4,000 ÷ $2,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$4,000 ÷ $2,000 = 2 years.",
+    "Spreadsheet or calculator: =4000/2000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2950,7 +3241,10 @@
    "prompt": "A training program costs $56,000 and raises earnings by $8,000 a year. Payback = cost ÷ yearly gain. How many years until it pays for itself?",
    "answer": "7",
    "solutionSteps": [
-    "$56,000 ÷ $8,000 = 7 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$56,000 ÷ $8,000 = 7 years.",
+    "Spreadsheet or calculator: =56000/8000",
+    "So the answer is 7; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-payback-whole; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2962,9 +3256,11 @@
    "prompt": "A 2-year program costs $36,000 in total. While in school a student gives up a job paying $32,000 a year. Afterward earnings rise by $18,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "5.6",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $32,000 × 2 = $64,000.",
     "Total cost = $100,000.",
-    "÷ $18,000 = 5.56 years."
+    "÷ $18,000 = 5.56 years.",
+    "So the answer is 5.6; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2976,9 +3272,11 @@
    "prompt": "A 4-year program costs $39,000 in total. While in school a student gives up a job paying $34,000 a year. Afterward earnings rise by $27,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "6.5",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $34,000 × 4 = $136,000.",
     "Total cost = $175,000.",
-    "÷ $27,000 = 6.48 years."
+    "÷ $27,000 = 6.48 years.",
+    "So the answer is 6.5; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2990,9 +3288,11 @@
    "prompt": "A 2-year program costs $72,000 in total. While in school a student gives up a job paying $31,000 a year. Afterward earnings rise by $23,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "5.8",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $31,000 × 2 = $62,000.",
     "Total cost = $134,000.",
-    "÷ $23,000 = 5.83 years."
+    "÷ $23,000 = 5.83 years.",
+    "So the answer is 5.8; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3004,9 +3304,11 @@
    "prompt": "A 2-year program costs $75,000 in total. While in school a student gives up a job paying $28,000 a year. Afterward earnings rise by $12,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "10.9",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $28,000 × 2 = $56,000.",
     "Total cost = $131,000.",
-    "÷ $12,000 = 10.92 years."
+    "÷ $12,000 = 10.92 years.",
+    "So the answer is 10.9; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3018,9 +3320,11 @@
    "prompt": "A 4-year program costs $30,000 in total. While in school a student gives up a job paying $27,000 a year. Afterward earnings rise by $19,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "7.3",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $27,000 × 4 = $108,000.",
     "Total cost = $138,000.",
-    "÷ $19,000 = 7.26 years."
+    "÷ $19,000 = 7.26 years.",
+    "So the answer is 7.3; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3032,9 +3336,11 @@
    "prompt": "A 4-year program costs $64,000 in total. While in school a student gives up a job paying $25,000 a year. Afterward earnings rise by $12,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "13.7",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $25,000 × 4 = $100,000.",
     "Total cost = $164,000.",
-    "÷ $12,000 = 13.67 years."
+    "÷ $12,000 = 13.67 years.",
+    "So the answer is 13.7; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3046,9 +3352,11 @@
    "prompt": "A 2-year program costs $67,000 in total. While in school a student gives up a job paying $33,000 a year. Afterward earnings rise by $13,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "10.2",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $33,000 × 2 = $66,000.",
     "Total cost = $133,000.",
-    "÷ $13,000 = 10.23 years."
+    "÷ $13,000 = 10.23 years.",
+    "So the answer is 10.2; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3060,9 +3368,11 @@
    "prompt": "A 4-year program costs $76,000 in total. While in school a student gives up a job paying $30,000 a year. Afterward earnings rise by $26,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "7.5",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $30,000 × 4 = $120,000.",
     "Total cost = $196,000.",
-    "÷ $26,000 = 7.54 years."
+    "÷ $26,000 = 7.54 years.",
+    "So the answer is 7.5; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3074,9 +3384,11 @@
    "prompt": "A 2-year program costs $40,000 in total. While in school a student gives up a job paying $30,000 a year. Afterward earnings rise by $12,000 a year. Counting the lost wages, how many years after graduating until the program pays off, to the nearest tenth?",
    "answer": "8.3",
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $30,000 × 2 = $60,000.",
     "Total cost = $100,000.",
-    "÷ $12,000 = 8.33 years."
+    "÷ $12,000 = 8.33 years.",
+    "So the answer is 8.3; a shorter payback means a lower-risk investment in yourself."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-payback-forgone; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   }

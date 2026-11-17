@@ -13,21 +13,45 @@
  "skills": [
   {
    "id": "college-skill-01",
-   "name": "Estimate education costs"
+   "name": "Estimate education costs",
+   "standards": [
+    "Earning Income 12-3: Costs and benefits of education",
+    "Managing Credit 12-4: Financing postsecondary education"
+   ]
   },
   {
    "id": "college-skill-02",
-   "name": "Model student loan payments"
+   "name": "Model student loan payments",
+   "standards": [
+    "Managing Credit 12-4: Financing postsecondary education",
+    "Managing Credit 12-5: Federal and private student loans"
+   ]
   },
   {
    "id": "college-skill-03",
-   "name": "Compare career earnings"
+   "name": "Compare career earnings",
+   "standards": [
+    "Earning Income 12-3: Costs and benefits of education",
+    "Earning Income 12-4: Wages and productivity"
+   ]
   },
   {
    "id": "college-skill-04",
-   "name": "Analyze payback periods"
+   "name": "Analyze payback periods",
+   "standards": [
+    "Earning Income 12-3: Costs and benefits of education"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": []
+ },
  "vocab": [
   {
    "term": "Cost of attendance (COA)",
@@ -2078,8 +2102,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net price = cost of attendance − grants − scholarships.",
     "COA = $46,500 + $12,600 + $2,800 = $61,900.",
     "Net price = COA − grants − scholarships = $61,900 − $1,000 − $3,500 = $57,400.",
+    "Spreadsheet or calculator: =61900-1000-3500",
     "Loans and work-study help pay the net price; they do not reduce it."
    ],
    "misconceptions": [
@@ -2110,8 +2136,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net price = cost of attendance − grants − scholarships.",
     "COA = $9,200 + $11,000 + $3,500 = $23,700.",
     "Net price = COA − grants − scholarships = $23,700 − $8,500 − $6,000 = $9,200.",
+    "Spreadsheet or calculator: =23700-8500-6000",
     "Loans and work-study help pay the net price; they do not reduce it."
    ],
    "misconceptions": [
@@ -2142,8 +2170,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net price = cost of attendance − grants − scholarships.",
     "COA = $46,500 + $15,000 + $4,700 = $66,200.",
     "Net price = COA − grants − scholarships = $66,200 − $10,500 − $5,000 = $50,700.",
+    "Spreadsheet or calculator: =66200-10500-5000",
     "Loans and work-study help pay the net price; they do not reduce it."
    ],
    "misconceptions": [
@@ -2174,8 +2204,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net price = cost of attendance − grants − scholarships.",
     "COA = $46,500 + $9,800 + $2,600 = $58,900.",
     "Net price = COA − grants − scholarships = $58,900 − $2,500 − $4,000 = $52,400.",
+    "Spreadsheet or calculator: =58900-2500-4000",
     "Loans and work-study help pay the net price; they do not reduce it."
    ],
    "misconceptions": [
@@ -2206,8 +2238,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net price = cost of attendance − grants − scholarships.",
     "COA = $46,500 + $12,200 + $2,800 = $61,500.",
     "Net price = COA − grants − scholarships = $61,500 − $9,500 − $1,500 = $50,500.",
+    "Spreadsheet or calculator: =61500-9500-1500",
     "Loans and work-study help pay the net price; they do not reduce it."
    ],
    "misconceptions": [
@@ -2238,8 +2272,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net price = cost of attendance − grants − scholarships.",
     "COA = $12,400 + $13,400 + $3,700 = $29,500.",
     "Net price = COA − grants − scholarships = $29,500 − $6,500 − $4,500 = $18,500.",
+    "Spreadsheet or calculator: =29500-6500-4500",
     "Loans and work-study help pay the net price; they do not reduce it."
    ],
    "misconceptions": [
@@ -2270,8 +2306,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net price = cost of attendance − grants − scholarships.",
     "COA = $12,400 + $10,400 + $2,600 = $25,400.",
     "Net price = COA − grants − scholarships = $25,400 − $6,000 − $5,500 = $13,900.",
+    "Spreadsheet or calculator: =25400-6000-5500",
     "Loans and work-study help pay the net price; they do not reduce it."
    ],
    "misconceptions": [
@@ -2362,7 +2400,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,500 + $2,000 + $10,000 = $15,500 (the Parent PLUS loan is the parent’s debt)."
+    "Formula: student loans = sum of the loans offered to the student.",
+    "$3,500 + $2,000 + $10,000 = $15,500 (the Parent PLUS loan is the parent’s debt).",
+    "Spreadsheet or calculator: =3500+2000+10000",
+    "So the answer is $15,500; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2449,7 +2490,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$27,200 − $14,000 gifts − $5,500 loans = $7,700."
+    "Formula: student loans = sum of the loans offered to the student.",
+    "$27,200 − $14,000 gifts − $5,500 loans = $7,700.",
+    "So the answer is $7,700; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2536,7 +2579,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Pell $5,500 + institutional grant $3,500 = $9,000."
+    "Formula: student loans = sum of the loans offered to the student.",
+    "Pell $5,500 + institutional grant $3,500 = $9,000.",
+    "So the answer is $9,000; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2623,7 +2668,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,500 + $2,000 + $10,000 = $15,500 (the Parent PLUS loan is the parent’s debt)."
+    "Formula: student loans = sum of the loans offered to the student.",
+    "$3,500 + $2,000 + $10,000 = $15,500 (the Parent PLUS loan is the parent’s debt).",
+    "Spreadsheet or calculator: =3500+2000+10000",
+    "So the answer is $15,500; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2710,7 +2758,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$22,800 − $9,500 gifts − $15,500 loans = $0."
+    "Formula: student loans = sum of the loans offered to the student.",
+    "$22,800 − $9,500 gifts − $15,500 loans = $0.",
+    "So the answer is $0; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2797,7 +2847,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Pell $5,500 + institutional grant $12,000 = $17,500."
+    "Formula: student loans = sum of the loans offered to the student.",
+    "Pell $5,500 + institutional grant $12,000 = $17,500.",
+    "So the answer is $17,500; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2824,7 +2876,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Sum of $17,000.00(1 + 0.05)^k for k = 0 to 3 = $73,272.13."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $17,000.00(1 + 0.05)^k for k = 0 to 3 = $73,272.13.",
+    "So the answer is $73,272.13; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2851,7 +2905,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Sum of $12,500.00(1 + 0.04)^k for k = 0 to 3 = $53,080.80."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $12,500.00(1 + 0.04)^k for k = 0 to 3 = $53,080.80.",
+    "So the answer is $53,080.80; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2878,7 +2934,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Sum of $16,000(1 + 0.05)^k for k = 0 to 3 = $68,962."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $16,000(1 + 0.05)^k for k = 0 to 3 = $68,962.",
+    "So the answer is $68,962; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2905,7 +2963,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Sum of $28,000.00(1 + 0.05)^k for k = 0 to 3 = $120,683.50."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $28,000.00(1 + 0.05)^k for k = 0 to 3 = $120,683.50.",
+    "So the answer is $120,683.50; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2932,7 +2992,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Sum of $11,500.00(1 + 0.04)^k for k = 0 to 3 = $48,834.34."
+    "Formula: total = first-year cost × (1 + g)^0 + … + first-year cost × (1 + g)^3.",
+    "Sum of $11,500.00(1 + 0.04)^k for k = 0 to 3 = $48,834.34.",
+    "So the answer is $48,834.34; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -2959,9 +3021,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = [[0.0553 || 12]], n = 240.",
     "PMT = $306.86.",
-    "Interest = $306.86 × 240 − $44,500.00 = $29,146.40."
+    "Interest = $306.86 × 240 − $44,500.00 = $29,146.40.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,240,-44500)",
+    "So the answer is $306.86 per month; total interest $29,146.40; borrow only what the expected career can repay."
    ]
   },
   {
@@ -2988,9 +3053,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = [[0.065 || 12]], n = 120.",
     "PMT = $210.06.",
-    "Interest = $210.06 × 120 − $18,500.00 = $6,707.20."
+    "Interest = $210.06 × 120 − $18,500.00 = $6,707.20.",
+    "Spreadsheet or calculator: =PMT(0.065/12,120,-18500)",
+    "So the answer is $210.06 per month; total interest $6,707.20; borrow only what the expected career can repay."
    ]
   },
   {
@@ -3017,9 +3085,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = [[0.065 || 12]], n = 240.",
     "PMT = $212.49.",
-    "Interest = $212.49 × 240 − $28,500.00 = $22,497.60."
+    "Interest = $212.49 × 240 − $28,500.00 = $22,497.60.",
+    "Spreadsheet or calculator: =PMT(0.065/12,240,-28500)",
+    "So the answer is $212.49 per month; total interest $22,497.60; borrow only what the expected career can repay."
    ]
   },
   {
@@ -3046,9 +3117,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = [[0.0705 || 12]], n = 240.",
     "PMT = $346.34.",
-    "Interest = $346.34 × 240 − $44,500.00 = $38,621.60."
+    "Interest = $346.34 × 240 − $44,500.00 = $38,621.60.",
+    "Spreadsheet or calculator: =PMT(0.0705/12,240,-44500)",
+    "So the answer is $346.34 per month; total interest $38,621.60; borrow only what the expected career can repay."
    ]
   },
   {
@@ -3075,9 +3149,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = [[0.0553 || 12]], n = 180.",
     "PMT = $270.16.",
-    "Interest = $270.16 × 180 − $33,000.00 = $15,628.80."
+    "Interest = $270.16 × 180 − $33,000.00 = $15,628.80.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,180,-33000)",
+    "So the answer is $270.16 per month; total interest $15,628.80; borrow only what the expected career can repay."
    ]
   },
   {
@@ -3104,9 +3181,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = [[0.0705 || 12]], n = 120.",
     "PMT = $331.64.",
-    "Interest = $331.64 × 120 − $28,500.00 = $11,296.80."
+    "Interest = $331.64 × 120 − $28,500.00 = $11,296.80.",
+    "Spreadsheet or calculator: =PMT(0.0705/12,120,-28500)",
+    "So the answer is $331.64 per month; total interest $11,296.80; borrow only what the expected career can repay."
    ]
   },
   {
@@ -3133,9 +3213,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "i = [[0.065 || 12]], n = 180.",
     "PMT = $313.60.",
-    "Interest = $313.60 × 180 − $36,000.00 = $20,448.00."
+    "Interest = $313.60 × 180 − $36,000.00 = $20,448.00.",
+    "Spreadsheet or calculator: =PMT(0.065/12,180,-36000)",
+    "So the answer is $313.60 per month; total interest $20,448.00; borrow only what the expected career can repay."
    ]
   },
   {
@@ -3162,6 +3245,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $3,000 × 0.065 × 5 = $975.",
     "New balance = $3,975; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -3191,6 +3275,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $5,500.00 × 0.0553 × 4.5 = $1,368.68.",
     "New balance = $6,868.68; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -3220,6 +3305,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $4,000 × 0.065 × 4 = $1,040.",
     "New balance = $5,040; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -3249,6 +3335,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $5,500.00 × 0.0553 × 5 = $1,520.75.",
     "New balance = $7,020.75; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -3278,6 +3365,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $7,000.00 × 0.065 × 4.5 = $2,047.50.",
     "New balance = $9,047.50; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -3307,6 +3395,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P × r × t (simple); new balance = P + interest.",
     "Interest = $3,000.00 × 0.0553 × 4 = $663.60.",
     "New balance = $3,663.60; future interest is charged on this larger amount.",
     "Paying interest during school prevents capitalization."
@@ -3576,8 +3665,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $45,000.00((1 + 0.02)^20 − 1) ÷ 0.02 = $1,093,381.64."
+    "S = $45,000.00((1 + 0.02)^20 − 1) ÷ 0.02 = $1,093,381.64.",
+    "Spreadsheet or calculator: =45000.00*((1+0.02)^20-1)/0.02",
+    "So the answer is $1,093,381.64; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3604,8 +3696,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $56,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,140,756.51."
+    "S = $56,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,140,756.51.",
+    "Spreadsheet or calculator: =56000.00*((1+0.04)^30-1)/0.04",
+    "So the answer is $3,140,756.51; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3632,8 +3727,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $49,000.00((1 + 0.02)^30 − 1) ÷ 0.02 = $1,987,835.88."
+    "S = $49,000.00((1 + 0.02)^30 − 1) ÷ 0.02 = $1,987,835.88.",
+    "Spreadsheet or calculator: =49000.00*((1+0.02)^30-1)/0.02",
+    "So the answer is $1,987,835.88; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3660,8 +3758,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $59,000.00((1 + 0.03)^30 − 1) ÷ 0.03 = $2,806,949.53."
+    "S = $59,000.00((1 + 0.03)^30 − 1) ÷ 0.03 = $2,806,949.53.",
+    "Spreadsheet or calculator: =59000.00*((1+0.03)^30-1)/0.03",
+    "So the answer is $2,806,949.53; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3688,8 +3789,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $41,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $2,299,482.45."
+    "S = $41,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $2,299,482.45.",
+    "Spreadsheet or calculator: =41000.00*((1+0.04)^30-1)/0.04",
+    "So the answer is $2,299,482.45; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3716,8 +3820,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $67,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,757,690.83."
+    "S = $67,000.00((1 + 0.04)^30 − 1) ÷ 0.04 = $3,757,690.83.",
+    "Spreadsheet or calculator: =67000.00*((1+0.04)^30-1)/0.04",
+    "So the answer is $3,757,690.83; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3744,8 +3851,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $52,000.00((1 + 0.03)^10 − 1) ÷ 0.03 = $596,121.72."
+    "S = $52,000.00((1 + 0.03)^10 − 1) ÷ 0.03 = $596,121.72.",
+    "Spreadsheet or calculator: =52000.00*((1+0.03)^10-1)/0.03",
+    "So the answer is $596,121.72; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3772,8 +3882,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $50,000.00((1 + 0.02)^10 − 1) ÷ 0.02 = $547,486.05."
+    "S = $50,000.00((1 + 0.02)^10 − 1) ÷ 0.02 = $547,486.05.",
+    "Spreadsheet or calculator: =50000.00*((1+0.02)^10-1)/0.02",
+    "So the answer is $547,486.05; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3800,8 +3913,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: S = a((1 + g)^n − 1) ÷ g.",
     "Geometric series: S = a((1 + g)^n − 1) ÷ g.",
-    "S = $55,000.00((1 + 0.03)^20 − 1) ÷ 0.03 = $1,477,870.60."
+    "S = $55,000.00((1 + 0.03)^20 − 1) ÷ 0.03 = $1,477,870.60.",
+    "Spreadsheet or calculator: =55000.00*((1+0.03)^20-1)/0.03",
+    "So the answer is $1,477,870.60; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -3888,7 +4004,7 @@
    "id": "fa-college-s03-path-compare-03",
    "unitId": "college",
    "skillId": "college-skill-03",
-   "level": "advanced",
+   "level": "standard",
    "family": "path-compare",
    "type": "comparison",
    "activityTypes": [
@@ -4188,8 +4304,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $62,000.",
     "Payback = $62,000 ÷ $26,000 ≈ 2.4 years.",
+    "Spreadsheet or calculator: =62000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4217,8 +4335,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $15,000.",
     "Payback = $15,000 ÷ $9,000 ≈ 1.7 years.",
+    "Spreadsheet or calculator: =15000/9000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4246,8 +4366,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $6,500.",
     "Payback = $6,500 ÷ $14,000 ≈ 0.5 years.",
+    "Spreadsheet or calculator: =6500/14000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4275,8 +4397,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $21,500.",
     "Payback = $21,500 ÷ $14,000 ≈ 1.5 years.",
+    "Spreadsheet or calculator: =21500/14000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4304,8 +4428,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $14,000.",
     "Payback = $14,000 ÷ $11,000 ≈ 1.3 years.",
+    "Spreadsheet or calculator: =14000/11000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4333,8 +4459,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $62,000.",
     "Payback = $62,000 ÷ $26,000 ≈ 2.4 years.",
+    "Spreadsheet or calculator: =62000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4362,8 +4490,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $32,000.",
     "Payback = $32,000 ÷ $26,000 ≈ 1.2 years.",
+    "Spreadsheet or calculator: =32000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4391,8 +4521,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $102,000.",
     "Payback = $102,000 ÷ $19,000 ≈ 5.4 years.",
+    "Spreadsheet or calculator: =102000/19000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4420,8 +4552,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $32,000.",
     "Payback = $32,000 ÷ $26,000 ≈ 1.2 years.",
+    "Spreadsheet or calculator: =32000/26000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4449,8 +4583,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (cost + forgone earnings) ÷ yearly earnings gain.",
     "Total investment = $30,000.",
     "Payback = $30,000 ÷ $9,000 ≈ 3.3 years.",
+    "Spreadsheet or calculator: =30000/9000",
     "Ignores interest and raises; uncertain earnings make this an estimate."
    ]
   },
@@ -4892,6 +5028,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$44,500 − $8,000 − $250 = $36,250.",
+    "Spreadsheet or calculator: =44500-8000-250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ]
   },
@@ -4921,6 +5058,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$37,500 − $2,250 − $8,000 = $27,250.",
+    "Spreadsheet or calculator: =37500-2250-8000",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ]
   },
@@ -4950,6 +5088,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$48,500 − $5,750 − $7,250 = $35,500.",
+    "Spreadsheet or calculator: =48500-5750-7250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ]
   },
@@ -4979,6 +5118,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$27,500 − $8,000 − $7,750 = $11,750.",
+    "Spreadsheet or calculator: =27500-8000-7750",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ]
   },
@@ -5008,6 +5148,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$42,000 − $7,500 − $250 = $34,250.",
+    "Spreadsheet or calculator: =42000-7500-250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ]
   },
@@ -5037,6 +5178,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$42,000 − $3,500 − $8,250 = $30,250.",
+    "Spreadsheet or calculator: =42000-3500-8250",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ]
   },
@@ -5066,6 +5208,7 @@
    "solutionSteps": [
     "Net price = cost of attendance − grants − scholarships (gift aid you do not repay).",
     "$30,500 − $11,750 − $4,500 = $14,250.",
+    "Spreadsheet or calculator: =30500-11750-4500",
     "Loans are not subtracted; they reduce what you pay now but must be repaid."
    ]
   },
@@ -5093,8 +5236,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$7,000.00 × 0.0653 × 4.5 = $2,056.95.",
+    "Spreadsheet or calculator: =7000.00*0.0653*4.5",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ]
   },
@@ -5122,8 +5267,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,000 × 0.0705 × 4 = $1,128.",
+    "Spreadsheet or calculator: =4000*0.0705*4",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ]
   },
@@ -5151,8 +5298,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$7,000.00 × 0.0553 × 3 = $1,161.30.",
+    "Spreadsheet or calculator: =7000.00*0.0553*3",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ]
   },
@@ -5180,8 +5329,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$5,000 × 0.0653 × 4 = $1,306.",
+    "Spreadsheet or calculator: =5000*0.0653*4",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ]
   },
@@ -5209,8 +5360,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,500 × 0.0705 × 4 = $1,269.",
+    "Spreadsheet or calculator: =4500*0.0705*4",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ]
   },
@@ -5238,8 +5391,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,000.00 × 0.0553 × 4.5 = $995.40.",
+    "Spreadsheet or calculator: =4000.00*0.0553*4.5",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ]
   },
@@ -5267,8 +5422,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt.",
     "$4,500.00 × 0.0653 × 4.5 = $1,322.33.",
+    "Spreadsheet or calculator: =4500.00*0.0653*4.5",
     "If unpaid, this interest can be added to the balance (capitalized) when repayment begins."
    ]
   },
@@ -5294,6 +5451,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $78,000 − $44,500 = $33,500.",
     "× 15 years = $502,500.",
     "Also weigh training cost and time out of the workforce."
@@ -5321,6 +5479,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $68,000 − $43,000 = $25,000.",
     "× 10 years = $250,000.",
     "Also weigh training cost and time out of the workforce."
@@ -5348,6 +5507,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $72,000 − $36,500 = $35,500.",
     "× 5 years = $177,500.",
     "Also weigh training cost and time out of the workforce."
@@ -5375,6 +5535,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $53,500 − $46,000 = $7,500.",
     "× 5 years = $37,500.",
     "Also weigh training cost and time out of the workforce."
@@ -5402,6 +5563,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $54,500 − $44,500 = $10,000.",
     "× 15 years = $150,000.",
     "Also weigh training cost and time out of the workforce."
@@ -5429,6 +5591,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $52,000 − $40,000 = $12,000.",
     "× 15 years = $180,000.",
     "Also weigh training cost and time out of the workforce."
@@ -5456,6 +5619,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = (higher salary − lower salary) × years.",
     "Yearly difference = $62,500 − $38,000 = $24,500.",
     "× 10 years = $245,000.",
     "Also weigh training cost and time out of the workforce."
@@ -5485,8 +5649,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$19,000 ÷ $14,000 = 1.36.",
+    "Spreadsheet or calculator: =19000/14000",
     "≈ 1.4 years."
    ]
   },
@@ -5514,8 +5680,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$23,000 ÷ $12,500 = 1.84.",
+    "Spreadsheet or calculator: =23000/12500",
     "≈ 1.8 years."
    ]
   },
@@ -5543,8 +5711,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$23,000 ÷ $9,000 = 2.56.",
+    "Spreadsheet or calculator: =23000/9000",
     "≈ 2.6 years."
    ]
   },
@@ -5572,8 +5742,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$29,000 ÷ $8,500 = 3.41.",
+    "Spreadsheet or calculator: =29000/8500",
     "≈ 3.4 years."
    ]
   },
@@ -5601,8 +5773,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$53,000 ÷ $8,500 = 6.24.",
+    "Spreadsheet or calculator: =53000/8500",
     "≈ 6.2 years."
    ]
   },
@@ -5630,8 +5804,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$50,000 ÷ $13,500 = 3.70.",
+    "Spreadsheet or calculator: =50000/13500",
     "≈ 3.7 years."
    ]
   },
@@ -5659,8 +5835,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Payback period = cost ÷ yearly gain.",
     "Payback period = cost ÷ yearly gain.",
     "$41,000 ÷ $13,000 = 3.15.",
+    "Spreadsheet or calculator: =41000/13000",
     "≈ 3.2 years."
    ]
   },
@@ -5688,7 +5866,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$13,000 × 4 = $52,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$13,000 × 4 = $52,000.",
+    "Spreadsheet or calculator: =13000*4",
+    "So the answer is $52,000; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5715,7 +5896,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$18,500 × 4 = $74,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$18,500 × 4 = $74,000.",
+    "Spreadsheet or calculator: =18500*4",
+    "So the answer is $74,000; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5742,7 +5926,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$21,000 × 4 = $84,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$21,000 × 4 = $84,000.",
+    "Spreadsheet or calculator: =21000*4",
+    "So the answer is $84,000; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5769,7 +5956,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$27,500 × 4 = $110,000."
+    "Formula: Four-year cost = yearly cost × 4.",
+    "$27,500 × 4 = $110,000.",
+    "Spreadsheet or calculator: =27500*4",
+    "So the answer is $110,000; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5796,8 +5986,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $20,000.00, $20,800.00, $21,632.00, $22,497.28.",
-    "Total = $84,929.28."
+    "Total = $84,929.28.",
+    "So the answer is $84,929.28; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5824,8 +6016,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $10,000.00, $10,400.00, $10,816.00, $11,248.64.",
-    "Total = $42,464.64."
+    "Total = $42,464.64.",
+    "So the answer is $42,464.64; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5852,8 +6046,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $26,500.00, $27,560.00, $28,662.40, $29,808.90.",
-    "Total = $112,531.30."
+    "Total = $112,531.30.",
+    "So the answer is $112,531.30; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5880,8 +6076,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $14,000.00, $14,420.00, $14,852.60, $15,298.18.",
-    "Total = $58,570.78."
+    "Total = $58,570.78.",
+    "So the answer is $58,570.78; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5908,8 +6106,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $9,500.00, $9,975.00, $10,473.75, $10,997.44.",
-    "Total = $40,946.19."
+    "Total = $40,946.19.",
+    "So the answer is $40,946.19; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5936,8 +6136,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $9,000.00, $9,270.00, $9,548.10, $9,834.54.",
-    "Total = $37,652.64."
+    "Total = $37,652.64.",
+    "So the answer is $37,652.64; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5964,8 +6166,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $9,000.00, $9,270.00, $9,548.10, $9,834.54.",
-    "Total = $37,652.64."
+    "Total = $37,652.64.",
+    "So the answer is $37,652.64; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -5992,8 +6196,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $10,500.00, $10,920.00, $11,356.80, $11,811.07.",
-    "Total = $44,587.87."
+    "Total = $44,587.87.",
+    "So the answer is $44,587.87; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -6020,8 +6226,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = sum of first-year cost × (1 + g)^k for each year k.",
     "Years: $16,000.00, $16,640.00, $17,305.60, $17,997.82.",
-    "Total = $67,943.42."
+    "Total = $67,943.42.",
+    "So the answer is $67,943.42; compare schools by net price, not the sticker price."
    ]
   },
   {
@@ -6048,7 +6256,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$180 × 120 = $21,600."
+    "Formula: total paid = payment × number of payments.",
+    "$180 × 120 = $21,600.",
+    "Spreadsheet or calculator: =180*120",
+    "So the answer is $21,600; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6075,7 +6286,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$120 × 120 = $14,400."
+    "Formula: total paid = payment × number of payments.",
+    "$120 × 120 = $14,400.",
+    "Spreadsheet or calculator: =120*120",
+    "So the answer is $14,400; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6102,7 +6316,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$360 × 120 = $43,200."
+    "Formula: total paid = payment × number of payments.",
+    "$360 × 120 = $43,200.",
+    "Spreadsheet or calculator: =360*120",
+    "So the answer is $43,200; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6129,7 +6346,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$420 × 120 = $50,400."
+    "Formula: total paid = payment × number of payments.",
+    "$420 × 120 = $50,400.",
+    "Spreadsheet or calculator: =420*120",
+    "So the answer is $50,400; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6156,7 +6376,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$330 × 120 = $39,600."
+    "Formula: total paid = payment × number of payments.",
+    "$330 × 120 = $39,600.",
+    "Spreadsheet or calculator: =330*120",
+    "So the answer is $39,600; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6183,7 +6406,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$170 × 120 = $20,400."
+    "Formula: total paid = payment × number of payments.",
+    "$170 × 120 = $20,400.",
+    "Spreadsheet or calculator: =170*120",
+    "So the answer is $20,400; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6210,7 +6436,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$430 × 120 = $51,600."
+    "Formula: total paid = payment × number of payments.",
+    "$430 × 120 = $51,600.",
+    "Spreadsheet or calculator: =430*120",
+    "So the answer is $51,600; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6237,9 +6466,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $20,000.00 × 0.0553 × 4 = $4,424.00.",
     "New balance = $24,424.00.",
-    "Payment = $265.43."
+    "Payment = $265.43.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,120,-24424)",
+    "So the answer is $265.43; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6266,9 +6498,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $20,000.00 × 0.0653 × 4 = $5,224.00.",
     "New balance = $25,224.00.",
-    "Payment = $286.80."
+    "Payment = $286.80.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-25224)",
+    "So the answer is $286.80; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6295,9 +6530,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $23,000.00 × 0.0653 × 4 = $6,007.60.",
     "New balance = $29,007.60.",
-    "Payment = $329.82."
+    "Payment = $329.82.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-29007.6)",
+    "So the answer is $329.82; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6324,9 +6562,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $30,000.00 × 0.0553 × 4 = $6,636.00.",
     "New balance = $36,636.00.",
-    "Payment = $398.14."
+    "Payment = $398.14.",
+    "Spreadsheet or calculator: =PMT(0.0553/12,120,-36636)",
+    "So the answer is $398.14; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6353,9 +6594,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $27,000.00 × 0.0653 × 4 = $7,052.40.",
     "New balance = $34,052.40.",
-    "Payment = $387.18."
+    "Payment = $387.18.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-34052.4)",
+    "So the answer is $387.18; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6382,9 +6626,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $27,000.00 × 0.0705 × 4 = $7,614.00.",
     "New balance = $34,614.00.",
-    "Payment = $402.79."
+    "Payment = $402.79.",
+    "Spreadsheet or calculator: =PMT(0.0705/12,120,-34614)",
+    "So the answer is $402.79; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6411,9 +6658,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $19,000.00 × 0.0653 × 4 = $4,962.80.",
     "New balance = $23,962.80.",
-    "Payment = $272.46."
+    "Payment = $272.46.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-23962.8)",
+    "So the answer is $272.46; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6440,9 +6690,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $30,000.00 × 0.0653 × 4 = $7,836.00.",
     "New balance = $37,836.00.",
-    "Payment = $430.20."
+    "Payment = $430.20.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-37836)",
+    "So the answer is $430.20; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6469,9 +6722,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = P + P × r × years in school; PMT = new balance × i ÷ (1 − (1 + i)^−n).",
     "Accrued interest = $23,000.00 × 0.0653 × 4 = $6,007.60.",
     "New balance = $29,007.60.",
-    "Payment = $329.82."
+    "Payment = $329.82.",
+    "Spreadsheet or calculator: =PMT(0.0653/12,120,-29007.6)",
+    "So the answer is $329.82; borrow only what the expected career can repay."
    ]
   },
   {
@@ -6496,7 +6752,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$46,000 − $35,000 = $11,000."
+    "Formula: Difference = higher − lower.",
+    "$46,000 − $35,000 = $11,000.",
+    "Spreadsheet or calculator: =46000-35000",
+    "So the answer is $11,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6521,7 +6780,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$64,000 − $39,000 = $25,000."
+    "Formula: Difference = higher − lower.",
+    "$64,000 − $39,000 = $25,000.",
+    "Spreadsheet or calculator: =64000-39000",
+    "So the answer is $25,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6546,7 +6808,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$56,000 − $37,000 = $19,000."
+    "Formula: Difference = higher − lower.",
+    "$56,000 − $37,000 = $19,000.",
+    "Spreadsheet or calculator: =56000-37000",
+    "So the answer is $19,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6571,7 +6836,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$56,000 − $39,000 = $17,000."
+    "Formula: Difference = higher − lower.",
+    "$56,000 − $39,000 = $17,000.",
+    "Spreadsheet or calculator: =56000-39000",
+    "So the answer is $17,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6596,7 +6864,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$49,000 − $32,000 = $17,000."
+    "Formula: Difference = higher − lower.",
+    "$49,000 − $32,000 = $17,000.",
+    "Spreadsheet or calculator: =49000-32000",
+    "So the answer is $17,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6621,7 +6892,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$71,000 − $44,000 = $27,000."
+    "Formula: Difference = higher − lower.",
+    "$71,000 − $44,000 = $27,000.",
+    "Spreadsheet or calculator: =71000-44000",
+    "So the answer is $27,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6646,7 +6920,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$54,000 − $36,000 = $18,000."
+    "Formula: Difference = higher − lower.",
+    "$54,000 − $36,000 = $18,000.",
+    "Spreadsheet or calculator: =54000-36000",
+    "So the answer is $18,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6671,7 +6948,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$67,000 − $45,000 = $22,000."
+    "Formula: Difference = higher − lower.",
+    "$67,000 − $45,000 = $22,000.",
+    "Spreadsheet or calculator: =67000-45000",
+    "So the answer is $22,000; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6698,8 +6978,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $70,000.00; year 10: $83,656.48.",
-    "Sum = $70,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $766,480.47."
+    "Sum = $70,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $766,480.47.",
+    "Spreadsheet or calculator: =70000.00*(1.02^10-1)/0.02",
+    "So the answer is $766,480.47; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6726,8 +7009,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $57,000.00; year 10: $68,120.28.",
-    "Sum = $57,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $624,134.10."
+    "Sum = $57,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $624,134.10.",
+    "Spreadsheet or calculator: =57000.00*(1.02^10-1)/0.02",
+    "So the answer is $624,134.10; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6754,8 +7040,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $55,000.00; year 10: $71,762.53.",
-    "Sum = $55,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $630,513.36."
+    "Sum = $55,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $630,513.36.",
+    "Spreadsheet or calculator: =55000.00*(1.03^10-1)/0.03",
+    "So the answer is $630,513.36; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6782,8 +7071,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $48,000.00; year 10: $57,364.44.",
-    "Sum = $48,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $525,586.61."
+    "Sum = $48,000.00 × ((1.02)^10 − 1) ÷ 0.02 = $525,586.61.",
+    "Spreadsheet or calculator: =48000.00*(1.02^10-1)/0.02",
+    "So the answer is $525,586.61; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6810,8 +7102,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $50,000.00; year 10: $65,238.66.",
-    "Sum = $50,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $573,193.97."
+    "Sum = $50,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $573,193.97.",
+    "Spreadsheet or calculator: =50000.00*(1.03^10-1)/0.03",
+    "So the answer is $573,193.97; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6838,8 +7133,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $46,000.00; year 10: $65,472.34.",
-    "Sum = $46,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $552,280.93."
+    "Sum = $46,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $552,280.93.",
+    "Spreadsheet or calculator: =46000.00*(1.04^10-1)/0.04",
+    "So the answer is $552,280.93; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6866,8 +7164,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $67,000.00; year 10: $95,361.89.",
-    "Sum = $67,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $804,409.18."
+    "Sum = $67,000.00 × ((1.04)^10 − 1) ÷ 0.04 = $804,409.18.",
+    "Spreadsheet or calculator: =67000.00*(1.04^10-1)/0.04",
+    "So the answer is $804,409.18; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6894,8 +7195,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $45,000.00; year 10: $58,714.79.",
-    "Sum = $45,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $515,874.57."
+    "Sum = $45,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $515,874.57.",
+    "Spreadsheet or calculator: =45000.00*(1.03^10-1)/0.03",
+    "So the answer is $515,874.57; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6922,8 +7226,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $60,000.00; year 10: $78,286.39.",
-    "Sum = $60,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $687,832.76."
+    "Sum = $60,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $687,832.76.",
+    "Spreadsheet or calculator: =60000.00*(1.03^10-1)/0.03",
+    "So the answer is $687,832.76; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6950,8 +7257,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = S·((1 + g)^10 − 1) ÷ g.",
     "Year 1: $46,000.00; year 10: $60,019.57.",
-    "Sum = $46,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $527,338.45."
+    "Sum = $46,000.00 × ((1.03)^10 − 1) ÷ 0.03 = $527,338.45.",
+    "Spreadsheet or calculator: =46000.00*(1.03^10-1)/0.03",
+    "So the answer is $527,338.45; weigh lifetime earnings against the cost and time of training."
    ]
   },
   {
@@ -6978,7 +7288,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$12,000 ÷ $3,000 = 4 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$12,000 ÷ $3,000 = 4 years.",
+    "Spreadsheet or calculator: =12000/3000",
+    "So the answer is 4; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7005,7 +7318,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$35,000 ÷ $5,000 = 7 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$35,000 ÷ $5,000 = 7 years.",
+    "Spreadsheet or calculator: =35000/5000",
+    "So the answer is 7; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7032,7 +7348,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$20,000 ÷ $10,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$20,000 ÷ $10,000 = 2 years.",
+    "Spreadsheet or calculator: =20000/10000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7059,7 +7378,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$80,000 ÷ $10,000 = 8 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$80,000 ÷ $10,000 = 8 years.",
+    "Spreadsheet or calculator: =80000/10000",
+    "So the answer is 8; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7086,7 +7408,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$27,000 ÷ $9,000 = 3 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$27,000 ÷ $9,000 = 3 years.",
+    "Spreadsheet or calculator: =27000/9000",
+    "So the answer is 3; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7113,7 +7438,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$40,000 ÷ $10,000 = 4 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$40,000 ÷ $10,000 = 4 years.",
+    "Spreadsheet or calculator: =40000/10000",
+    "So the answer is 4; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7140,7 +7468,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$42,000 ÷ $6,000 = 7 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$42,000 ÷ $6,000 = 7 years.",
+    "Spreadsheet or calculator: =42000/6000",
+    "So the answer is 7; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7167,7 +7498,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$8,000 ÷ $4,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$8,000 ÷ $4,000 = 2 years.",
+    "Spreadsheet or calculator: =8000/4000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7194,7 +7528,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$12,000 ÷ $6,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$12,000 ÷ $6,000 = 2 years.",
+    "Spreadsheet or calculator: =12000/6000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7221,7 +7558,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$36,000 ÷ $6,000 = 6 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$36,000 ÷ $6,000 = 6 years.",
+    "Spreadsheet or calculator: =36000/6000",
+    "So the answer is 6; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7248,7 +7588,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$4,000 ÷ $2,000 = 2 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$4,000 ÷ $2,000 = 2 years.",
+    "Spreadsheet or calculator: =4000/2000",
+    "So the answer is 2; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7275,7 +7618,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$56,000 ÷ $8,000 = 7 years."
+    "Formula: Payback = cost ÷ yearly gain.",
+    "$56,000 ÷ $8,000 = 7 years.",
+    "Spreadsheet or calculator: =56000/8000",
+    "So the answer is 7; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7302,9 +7648,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $32,000 × 2 = $64,000.",
     "Total cost = $100,000.",
-    "÷ $18,000 = 5.56 years."
+    "÷ $18,000 = 5.56 years.",
+    "So the answer is 5.6; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7331,9 +7679,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $34,000 × 4 = $136,000.",
     "Total cost = $175,000.",
-    "÷ $27,000 = 6.48 years."
+    "÷ $27,000 = 6.48 years.",
+    "So the answer is 6.5; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7360,9 +7710,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $31,000 × 2 = $62,000.",
     "Total cost = $134,000.",
-    "÷ $23,000 = 5.83 years."
+    "÷ $23,000 = 5.83 years.",
+    "So the answer is 5.8; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7389,9 +7741,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $28,000 × 2 = $56,000.",
     "Total cost = $131,000.",
-    "÷ $12,000 = 10.92 years."
+    "÷ $12,000 = 10.92 years.",
+    "So the answer is 10.9; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7418,9 +7772,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $27,000 × 4 = $108,000.",
     "Total cost = $138,000.",
-    "÷ $19,000 = 7.26 years."
+    "÷ $19,000 = 7.26 years.",
+    "So the answer is 7.3; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7447,9 +7803,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $25,000 × 4 = $100,000.",
     "Total cost = $164,000.",
-    "÷ $12,000 = 13.67 years."
+    "÷ $12,000 = 13.67 years.",
+    "So the answer is 13.7; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7476,9 +7834,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $33,000 × 2 = $66,000.",
     "Total cost = $133,000.",
-    "÷ $13,000 = 10.23 years."
+    "÷ $13,000 = 10.23 years.",
+    "So the answer is 10.2; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7505,9 +7865,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $30,000 × 4 = $120,000.",
     "Total cost = $196,000.",
-    "÷ $26,000 = 7.54 years."
+    "÷ $26,000 = 7.54 years.",
+    "So the answer is 7.5; a shorter payback means a lower-risk investment in yourself."
    ]
   },
   {
@@ -7534,9 +7896,4961 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: payback years = (program cost + wages given up) ÷ yearly raise in pay.",
     "Lost wages = $30,000 × 2 = $60,000.",
     "Total cost = $100,000.",
-    "÷ $12,000 = 8.33 years."
+    "÷ $12,000 = 8.33 years.",
+    "So the answer is 8.3; a shorter payback means a lower-risk investment in yourself."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-01",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "support",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On the \"work now\" path, what has Priya earned in total after 9 years?",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 1000000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $35,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         11666.67
+        ],
+        [
+         0.67,
+         23333.33
+        ],
+        [
+         1,
+         35000
+        ],
+        [
+         1.33,
+         46666.67
+        ],
+        [
+         1.67,
+         58333.33
+        ],
+        [
+         2,
+         70000
+        ],
+        [
+         2.33,
+         81666.67
+        ],
+        [
+         2.67,
+         93333.33
+        ],
+        [
+         3,
+         105000
+        ],
+        [
+         3.33,
+         116666.67
+        ],
+        [
+         3.67,
+         128333.33
+        ],
+        [
+         4,
+         140000
+        ],
+        [
+         4.33,
+         151666.67
+        ],
+        [
+         4.67,
+         163333.33
+        ],
+        [
+         5,
+         175000
+        ],
+        [
+         5.33,
+         186666.67
+        ],
+        [
+         5.67,
+         198333.33
+        ],
+        [
+         6,
+         210000
+        ],
+        [
+         6.33,
+         221666.67
+        ],
+        [
+         6.67,
+         233333.33
+        ],
+        [
+         7,
+         245000
+        ],
+        [
+         7.33,
+         256666.67
+        ],
+        [
+         7.67,
+         268333.33
+        ],
+        [
+         8,
+         280000
+        ],
+        [
+         8.33,
+         291666.67
+        ],
+        [
+         8.67,
+         303333.33
+        ],
+        [
+         9,
+         315000
+        ],
+        [
+         9.33,
+         326666.67
+        ],
+        [
+         9.67,
+         338333.33
+        ],
+        [
+         10,
+         350000
+        ],
+        [
+         10.33,
+         361666.67
+        ],
+        [
+         10.67,
+         373333.33
+        ],
+        [
+         11,
+         385000
+        ],
+        [
+         11.33,
+         396666.67
+        ],
+        [
+         11.67,
+         408333.33
+        ],
+        [
+         12,
+         420000
+        ],
+        [
+         12.33,
+         431666.67
+        ],
+        [
+         12.67,
+         443333.33
+        ],
+        [
+         13,
+         455000
+        ],
+        [
+         13.33,
+         466666.67
+        ],
+        [
+         13.67,
+         478333.33
+        ],
+        [
+         14,
+         490000
+        ],
+        [
+         14.33,
+         501666.67
+        ],
+        [
+         14.67,
+         513333.33
+        ],
+        [
+         15,
+         525000
+        ],
+        [
+         15.33,
+         536666.67
+        ],
+        [
+         15.67,
+         548333.33
+        ],
+        [
+         16,
+         560000
+        ],
+        [
+         16.33,
+         571666.67
+        ],
+        [
+         16.67,
+         583333.33
+        ],
+        [
+         17,
+         595000
+        ],
+        [
+         17.33,
+         606666.67
+        ],
+        [
+         17.67,
+         618333.33
+        ],
+        [
+         18,
+         630000
+        ],
+        [
+         18.33,
+         641666.67
+        ],
+        [
+         18.67,
+         653333.33
+        ],
+        [
+         19,
+         665000
+        ],
+        [
+         19.33,
+         676666.67
+        ],
+        [
+         19.67,
+         688333.33
+        ],
+        [
+         20,
+         700000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$21,000t for t ≤ 4, then −$84,000 + $58,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -7000
+        ],
+        [
+         0.67,
+         -14000
+        ],
+        [
+         1,
+         -21000
+        ],
+        [
+         1.33,
+         -28000
+        ],
+        [
+         1.67,
+         -35000
+        ],
+        [
+         2,
+         -42000
+        ],
+        [
+         2.33,
+         -49000
+        ],
+        [
+         2.67,
+         -56000
+        ],
+        [
+         3,
+         -63000
+        ],
+        [
+         3.33,
+         -70000
+        ],
+        [
+         3.67,
+         -77000
+        ],
+        [
+         4,
+         -84000
+        ],
+        [
+         4.33,
+         -64666.67
+        ],
+        [
+         4.67,
+         -45333.33
+        ],
+        [
+         5,
+         -26000
+        ],
+        [
+         5.33,
+         -6666.67
+        ],
+        [
+         5.67,
+         12666.67
+        ],
+        [
+         6,
+         32000
+        ],
+        [
+         6.33,
+         51333.33
+        ],
+        [
+         6.67,
+         70666.67
+        ],
+        [
+         7,
+         90000
+        ],
+        [
+         7.33,
+         109333.33
+        ],
+        [
+         7.67,
+         128666.67
+        ],
+        [
+         8,
+         148000
+        ],
+        [
+         8.33,
+         167333.33
+        ],
+        [
+         8.67,
+         186666.67
+        ],
+        [
+         9,
+         206000
+        ],
+        [
+         9.33,
+         225333.33
+        ],
+        [
+         9.67,
+         244666.67
+        ],
+        [
+         10,
+         264000
+        ],
+        [
+         10.33,
+         283333.33
+        ],
+        [
+         10.67,
+         302666.67
+        ],
+        [
+         11,
+         322000
+        ],
+        [
+         11.33,
+         341333.33
+        ],
+        [
+         11.67,
+         360666.67
+        ],
+        [
+         12,
+         380000
+        ],
+        [
+         12.33,
+         399333.33
+        ],
+        [
+         12.67,
+         418666.67
+        ],
+        [
+         13,
+         438000
+        ],
+        [
+         13.33,
+         457333.33
+        ],
+        [
+         13.67,
+         476666.67
+        ],
+        [
+         14,
+         496000
+        ],
+        [
+         14.33,
+         515333.33
+        ],
+        [
+         14.67,
+         534666.67
+        ],
+        [
+         15,
+         554000
+        ],
+        [
+         15.33,
+         573333.33
+        ],
+        [
+         15.67,
+         592666.67
+        ],
+        [
+         16,
+         612000
+        ],
+        [
+         16.33,
+         631333.33
+        ],
+        [
+         16.67,
+         650666.67
+        ],
+        [
+         17,
+         670000
+        ],
+        [
+         17.33,
+         689333.33
+        ],
+        [
+         17.67,
+         708666.67
+        ],
+        [
+         18,
+         728000
+        ],
+        [
+         18.33,
+         747333.33
+        ],
+        [
+         18.67,
+         766666.67
+        ],
+        [
+         19,
+         786000
+        ],
+        [
+         19.33,
+         805333.33
+        ],
+        [
+         19.67,
+         824666.67
+        ],
+        [
+         20,
+         844000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $35,000 a year. Degree: pay $21,000 a year for 4 years with no earnings, then earn $58,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$315,000",
+   "numeric": {
+    "value": 315000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(t) = salary × t.",
+    "Substitute: $35,000 × 9 = $315,000.",
+    "Spreadsheet: =35000*9.",
+    "So $315,000; the degree path stands at $206,000 at the same point."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-02",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On the degree path, what are Elijah's cumulative net earnings after 14 years? Use the second piece of the function.",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 1000000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $37,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         12333.33
+        ],
+        [
+         0.67,
+         24666.67
+        ],
+        [
+         1,
+         37000
+        ],
+        [
+         1.33,
+         49333.33
+        ],
+        [
+         1.67,
+         61666.67
+        ],
+        [
+         2,
+         74000
+        ],
+        [
+         2.33,
+         86333.33
+        ],
+        [
+         2.67,
+         98666.67
+        ],
+        [
+         3,
+         111000
+        ],
+        [
+         3.33,
+         123333.33
+        ],
+        [
+         3.67,
+         135666.67
+        ],
+        [
+         4,
+         148000
+        ],
+        [
+         4.33,
+         160333.33
+        ],
+        [
+         4.67,
+         172666.67
+        ],
+        [
+         5,
+         185000
+        ],
+        [
+         5.33,
+         197333.33
+        ],
+        [
+         5.67,
+         209666.67
+        ],
+        [
+         6,
+         222000
+        ],
+        [
+         6.33,
+         234333.33
+        ],
+        [
+         6.67,
+         246666.67
+        ],
+        [
+         7,
+         259000
+        ],
+        [
+         7.33,
+         271333.33
+        ],
+        [
+         7.67,
+         283666.67
+        ],
+        [
+         8,
+         296000
+        ],
+        [
+         8.33,
+         308333.33
+        ],
+        [
+         8.67,
+         320666.67
+        ],
+        [
+         9,
+         333000
+        ],
+        [
+         9.33,
+         345333.33
+        ],
+        [
+         9.67,
+         357666.67
+        ],
+        [
+         10,
+         370000
+        ],
+        [
+         10.33,
+         382333.33
+        ],
+        [
+         10.67,
+         394666.67
+        ],
+        [
+         11,
+         407000
+        ],
+        [
+         11.33,
+         419333.33
+        ],
+        [
+         11.67,
+         431666.67
+        ],
+        [
+         12,
+         444000
+        ],
+        [
+         12.33,
+         456333.33
+        ],
+        [
+         12.67,
+         468666.67
+        ],
+        [
+         13,
+         481000
+        ],
+        [
+         13.33,
+         493333.33
+        ],
+        [
+         13.67,
+         505666.67
+        ],
+        [
+         14,
+         518000
+        ],
+        [
+         14.33,
+         530333.33
+        ],
+        [
+         14.67,
+         542666.67
+        ],
+        [
+         15,
+         555000
+        ],
+        [
+         15.33,
+         567333.33
+        ],
+        [
+         15.67,
+         579666.67
+        ],
+        [
+         16,
+         592000
+        ],
+        [
+         16.33,
+         604333.33
+        ],
+        [
+         16.67,
+         616666.67
+        ],
+        [
+         17,
+         629000
+        ],
+        [
+         17.33,
+         641333.33
+        ],
+        [
+         17.67,
+         653666.67
+        ],
+        [
+         18,
+         666000
+        ],
+        [
+         18.33,
+         678333.33
+        ],
+        [
+         18.67,
+         690666.67
+        ],
+        [
+         19,
+         703000
+        ],
+        [
+         19.33,
+         715333.33
+        ],
+        [
+         19.67,
+         727666.67
+        ],
+        [
+         20,
+         740000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$19,000t for t ≤ 4, then −$76,000 + $62,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -6333.33
+        ],
+        [
+         0.67,
+         -12666.67
+        ],
+        [
+         1,
+         -19000
+        ],
+        [
+         1.33,
+         -25333.33
+        ],
+        [
+         1.67,
+         -31666.67
+        ],
+        [
+         2,
+         -38000
+        ],
+        [
+         2.33,
+         -44333.33
+        ],
+        [
+         2.67,
+         -50666.67
+        ],
+        [
+         3,
+         -57000
+        ],
+        [
+         3.33,
+         -63333.33
+        ],
+        [
+         3.67,
+         -69666.67
+        ],
+        [
+         4,
+         -76000
+        ],
+        [
+         4.33,
+         -55333.33
+        ],
+        [
+         4.67,
+         -34666.67
+        ],
+        [
+         5,
+         -14000
+        ],
+        [
+         5.33,
+         6666.67
+        ],
+        [
+         5.67,
+         27333.33
+        ],
+        [
+         6,
+         48000
+        ],
+        [
+         6.33,
+         68666.67
+        ],
+        [
+         6.67,
+         89333.33
+        ],
+        [
+         7,
+         110000
+        ],
+        [
+         7.33,
+         130666.67
+        ],
+        [
+         7.67,
+         151333.33
+        ],
+        [
+         8,
+         172000
+        ],
+        [
+         8.33,
+         192666.67
+        ],
+        [
+         8.67,
+         213333.33
+        ],
+        [
+         9,
+         234000
+        ],
+        [
+         9.33,
+         254666.67
+        ],
+        [
+         9.67,
+         275333.33
+        ],
+        [
+         10,
+         296000
+        ],
+        [
+         10.33,
+         316666.67
+        ],
+        [
+         10.67,
+         337333.33
+        ],
+        [
+         11,
+         358000
+        ],
+        [
+         11.33,
+         378666.67
+        ],
+        [
+         11.67,
+         399333.33
+        ],
+        [
+         12,
+         420000
+        ],
+        [
+         12.33,
+         440666.67
+        ],
+        [
+         12.67,
+         461333.33
+        ],
+        [
+         13,
+         482000
+        ],
+        [
+         13.33,
+         502666.67
+        ],
+        [
+         13.67,
+         523333.33
+        ],
+        [
+         14,
+         544000
+        ],
+        [
+         14.33,
+         564666.67
+        ],
+        [
+         14.67,
+         585333.33
+        ],
+        [
+         15,
+         606000
+        ],
+        [
+         15.33,
+         626666.67
+        ],
+        [
+         15.67,
+         647333.33
+        ],
+        [
+         16,
+         668000
+        ],
+        [
+         16.33,
+         688666.67
+        ],
+        [
+         16.67,
+         709333.33
+        ],
+        [
+         17,
+         730000
+        ],
+        [
+         17.33,
+         750666.67
+        ],
+        [
+         17.67,
+         771333.33
+        ],
+        [
+         18,
+         792000
+        ],
+        [
+         18.33,
+         812666.67
+        ],
+        [
+         18.67,
+         833333.33
+        ],
+        [
+         19,
+         854000
+        ],
+        [
+         19.33,
+         874666.67
+        ],
+        [
+         19.67,
+         895333.33
+        ],
+        [
+         20,
+         916000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $37,000 a year. Degree: pay $19,000 a year for 4 years with no earnings, then earn $62,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$544,000",
+   "numeric": {
+    "value": 544000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for t > 4, B(t) = −4 × cost + new salary × (t − 4).",
+    "Substitute: −4 × $19,000 + $62,000 × (14 − 4) = −$76,000 + $620,000 = $544,000.",
+    "Spreadsheet: =-4*19000+62000*(14-4).",
+    "So after 14 years the degree path is at $544,000 against $518,000 for working now; it has caught up."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-03",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "advanced",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many whole years does the degree path first catch up with (equal or pass) the work-now path?",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 800000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $35,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         11666.67
+        ],
+        [
+         0.67,
+         23333.33
+        ],
+        [
+         1,
+         35000
+        ],
+        [
+         1.33,
+         46666.67
+        ],
+        [
+         1.67,
+         58333.33
+        ],
+        [
+         2,
+         70000
+        ],
+        [
+         2.33,
+         81666.67
+        ],
+        [
+         2.67,
+         93333.33
+        ],
+        [
+         3,
+         105000
+        ],
+        [
+         3.33,
+         116666.67
+        ],
+        [
+         3.67,
+         128333.33
+        ],
+        [
+         4,
+         140000
+        ],
+        [
+         4.33,
+         151666.67
+        ],
+        [
+         4.67,
+         163333.33
+        ],
+        [
+         5,
+         175000
+        ],
+        [
+         5.33,
+         186666.67
+        ],
+        [
+         5.67,
+         198333.33
+        ],
+        [
+         6,
+         210000
+        ],
+        [
+         6.33,
+         221666.67
+        ],
+        [
+         6.67,
+         233333.33
+        ],
+        [
+         7,
+         245000
+        ],
+        [
+         7.33,
+         256666.67
+        ],
+        [
+         7.67,
+         268333.33
+        ],
+        [
+         8,
+         280000
+        ],
+        [
+         8.33,
+         291666.67
+        ],
+        [
+         8.67,
+         303333.33
+        ],
+        [
+         9,
+         315000
+        ],
+        [
+         9.33,
+         326666.67
+        ],
+        [
+         9.67,
+         338333.33
+        ],
+        [
+         10,
+         350000
+        ],
+        [
+         10.33,
+         361666.67
+        ],
+        [
+         10.67,
+         373333.33
+        ],
+        [
+         11,
+         385000
+        ],
+        [
+         11.33,
+         396666.67
+        ],
+        [
+         11.67,
+         408333.33
+        ],
+        [
+         12,
+         420000
+        ],
+        [
+         12.33,
+         431666.67
+        ],
+        [
+         12.67,
+         443333.33
+        ],
+        [
+         13,
+         455000
+        ],
+        [
+         13.33,
+         466666.67
+        ],
+        [
+         13.67,
+         478333.33
+        ],
+        [
+         14,
+         490000
+        ],
+        [
+         14.33,
+         501666.67
+        ],
+        [
+         14.67,
+         513333.33
+        ],
+        [
+         15,
+         525000
+        ],
+        [
+         15.33,
+         536666.67
+        ],
+        [
+         15.67,
+         548333.33
+        ],
+        [
+         16,
+         560000
+        ],
+        [
+         16.33,
+         571666.67
+        ],
+        [
+         16.67,
+         583333.33
+        ],
+        [
+         17,
+         595000
+        ],
+        [
+         17.33,
+         606666.67
+        ],
+        [
+         17.67,
+         618333.33
+        ],
+        [
+         18,
+         630000
+        ],
+        [
+         18.33,
+         641666.67
+        ],
+        [
+         18.67,
+         653333.33
+        ],
+        [
+         19,
+         665000
+        ],
+        [
+         19.33,
+         676666.67
+        ],
+        [
+         19.67,
+         688333.33
+        ],
+        [
+         20,
+         700000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$15,000t for t ≤ 4, then −$60,000 + $52,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -5000
+        ],
+        [
+         0.67,
+         -10000
+        ],
+        [
+         1,
+         -15000
+        ],
+        [
+         1.33,
+         -20000
+        ],
+        [
+         1.67,
+         -25000
+        ],
+        [
+         2,
+         -30000
+        ],
+        [
+         2.33,
+         -35000
+        ],
+        [
+         2.67,
+         -40000
+        ],
+        [
+         3,
+         -45000
+        ],
+        [
+         3.33,
+         -50000
+        ],
+        [
+         3.67,
+         -55000
+        ],
+        [
+         4,
+         -60000
+        ],
+        [
+         4.33,
+         -42666.67
+        ],
+        [
+         4.67,
+         -25333.33
+        ],
+        [
+         5,
+         -8000
+        ],
+        [
+         5.33,
+         9333.33
+        ],
+        [
+         5.67,
+         26666.67
+        ],
+        [
+         6,
+         44000
+        ],
+        [
+         6.33,
+         61333.33
+        ],
+        [
+         6.67,
+         78666.67
+        ],
+        [
+         7,
+         96000
+        ],
+        [
+         7.33,
+         113333.33
+        ],
+        [
+         7.67,
+         130666.67
+        ],
+        [
+         8,
+         148000
+        ],
+        [
+         8.33,
+         165333.33
+        ],
+        [
+         8.67,
+         182666.67
+        ],
+        [
+         9,
+         200000
+        ],
+        [
+         9.33,
+         217333.33
+        ],
+        [
+         9.67,
+         234666.67
+        ],
+        [
+         10,
+         252000
+        ],
+        [
+         10.33,
+         269333.33
+        ],
+        [
+         10.67,
+         286666.67
+        ],
+        [
+         11,
+         304000
+        ],
+        [
+         11.33,
+         321333.33
+        ],
+        [
+         11.67,
+         338666.67
+        ],
+        [
+         12,
+         356000
+        ],
+        [
+         12.33,
+         373333.33
+        ],
+        [
+         12.67,
+         390666.67
+        ],
+        [
+         13,
+         408000
+        ],
+        [
+         13.33,
+         425333.33
+        ],
+        [
+         13.67,
+         442666.67
+        ],
+        [
+         14,
+         460000
+        ],
+        [
+         14.33,
+         477333.33
+        ],
+        [
+         14.67,
+         494666.67
+        ],
+        [
+         15,
+         512000
+        ],
+        [
+         15.33,
+         529333.33
+        ],
+        [
+         15.67,
+         546666.67
+        ],
+        [
+         16,
+         564000
+        ],
+        [
+         16.33,
+         581333.33
+        ],
+        [
+         16.67,
+         598666.67
+        ],
+        [
+         17,
+         616000
+        ],
+        [
+         17.33,
+         633333.33
+        ],
+        [
+         17.67,
+         650666.67
+        ],
+        [
+         18,
+         668000
+        ],
+        [
+         18.33,
+         685333.33
+        ],
+        [
+         18.67,
+         702666.67
+        ],
+        [
+         19,
+         720000
+        ],
+        [
+         19.33,
+         737333.33
+        ],
+        [
+         19.67,
+         754666.67
+        ],
+        [
+         20,
+         772000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $35,000 a year. Degree: pay $15,000 a year for 4 years with no earnings, then earn $52,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "16",
+   "numeric": {
+    "value": 16,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve A(t) = B(t) with the second piece: sA·t = −4c + sB(t − 4), so t = [[4c + 4sB || sB − sA]].",
+    "Substitute: t = [[4 × $15,000 + 4 × $52,000 || $52,000 − $35,000]] = $268,000 ÷ $17,000 = 15.76, so year 16.",
+    "Spreadsheet: =ROUNDUP((4*15000+4*52000)/(52000-35000),0).",
+    "So the degree pays off in year 16, when Maya is about 34. Raises, loan interest or a different field would move this point."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-04",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "support",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On the \"work now\" path, what has Camila earned in total after 7 years?",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 800000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $30,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         10000
+        ],
+        [
+         0.67,
+         20000
+        ],
+        [
+         1,
+         30000
+        ],
+        [
+         1.33,
+         40000
+        ],
+        [
+         1.67,
+         50000
+        ],
+        [
+         2,
+         60000
+        ],
+        [
+         2.33,
+         70000
+        ],
+        [
+         2.67,
+         80000
+        ],
+        [
+         3,
+         90000
+        ],
+        [
+         3.33,
+         100000
+        ],
+        [
+         3.67,
+         110000
+        ],
+        [
+         4,
+         120000
+        ],
+        [
+         4.33,
+         130000
+        ],
+        [
+         4.67,
+         140000
+        ],
+        [
+         5,
+         150000
+        ],
+        [
+         5.33,
+         160000
+        ],
+        [
+         5.67,
+         170000
+        ],
+        [
+         6,
+         180000
+        ],
+        [
+         6.33,
+         190000
+        ],
+        [
+         6.67,
+         200000
+        ],
+        [
+         7,
+         210000
+        ],
+        [
+         7.33,
+         220000
+        ],
+        [
+         7.67,
+         230000
+        ],
+        [
+         8,
+         240000
+        ],
+        [
+         8.33,
+         250000
+        ],
+        [
+         8.67,
+         260000
+        ],
+        [
+         9,
+         270000
+        ],
+        [
+         9.33,
+         280000
+        ],
+        [
+         9.67,
+         290000
+        ],
+        [
+         10,
+         300000
+        ],
+        [
+         10.33,
+         310000
+        ],
+        [
+         10.67,
+         320000
+        ],
+        [
+         11,
+         330000
+        ],
+        [
+         11.33,
+         340000
+        ],
+        [
+         11.67,
+         350000
+        ],
+        [
+         12,
+         360000
+        ],
+        [
+         12.33,
+         370000
+        ],
+        [
+         12.67,
+         380000
+        ],
+        [
+         13,
+         390000
+        ],
+        [
+         13.33,
+         400000
+        ],
+        [
+         13.67,
+         410000
+        ],
+        [
+         14,
+         420000
+        ],
+        [
+         14.33,
+         430000
+        ],
+        [
+         14.67,
+         440000
+        ],
+        [
+         15,
+         450000
+        ],
+        [
+         15.33,
+         460000
+        ],
+        [
+         15.67,
+         470000
+        ],
+        [
+         16,
+         480000
+        ],
+        [
+         16.33,
+         490000
+        ],
+        [
+         16.67,
+         500000
+        ],
+        [
+         17,
+         510000
+        ],
+        [
+         17.33,
+         520000
+        ],
+        [
+         17.67,
+         530000
+        ],
+        [
+         18,
+         540000
+        ],
+        [
+         18.33,
+         550000
+        ],
+        [
+         18.67,
+         560000
+        ],
+        [
+         19,
+         570000
+        ],
+        [
+         19.33,
+         580000
+        ],
+        [
+         19.67,
+         590000
+        ],
+        [
+         20,
+         600000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$19,000t for t ≤ 4, then −$76,000 + $49,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -6333.33
+        ],
+        [
+         0.67,
+         -12666.67
+        ],
+        [
+         1,
+         -19000
+        ],
+        [
+         1.33,
+         -25333.33
+        ],
+        [
+         1.67,
+         -31666.67
+        ],
+        [
+         2,
+         -38000
+        ],
+        [
+         2.33,
+         -44333.33
+        ],
+        [
+         2.67,
+         -50666.67
+        ],
+        [
+         3,
+         -57000
+        ],
+        [
+         3.33,
+         -63333.33
+        ],
+        [
+         3.67,
+         -69666.67
+        ],
+        [
+         4,
+         -76000
+        ],
+        [
+         4.33,
+         -59666.67
+        ],
+        [
+         4.67,
+         -43333.33
+        ],
+        [
+         5,
+         -27000
+        ],
+        [
+         5.33,
+         -10666.67
+        ],
+        [
+         5.67,
+         5666.67
+        ],
+        [
+         6,
+         22000
+        ],
+        [
+         6.33,
+         38333.33
+        ],
+        [
+         6.67,
+         54666.67
+        ],
+        [
+         7,
+         71000
+        ],
+        [
+         7.33,
+         87333.33
+        ],
+        [
+         7.67,
+         103666.67
+        ],
+        [
+         8,
+         120000
+        ],
+        [
+         8.33,
+         136333.33
+        ],
+        [
+         8.67,
+         152666.67
+        ],
+        [
+         9,
+         169000
+        ],
+        [
+         9.33,
+         185333.33
+        ],
+        [
+         9.67,
+         201666.67
+        ],
+        [
+         10,
+         218000
+        ],
+        [
+         10.33,
+         234333.33
+        ],
+        [
+         10.67,
+         250666.67
+        ],
+        [
+         11,
+         267000
+        ],
+        [
+         11.33,
+         283333.33
+        ],
+        [
+         11.67,
+         299666.67
+        ],
+        [
+         12,
+         316000
+        ],
+        [
+         12.33,
+         332333.33
+        ],
+        [
+         12.67,
+         348666.67
+        ],
+        [
+         13,
+         365000
+        ],
+        [
+         13.33,
+         381333.33
+        ],
+        [
+         13.67,
+         397666.67
+        ],
+        [
+         14,
+         414000
+        ],
+        [
+         14.33,
+         430333.33
+        ],
+        [
+         14.67,
+         446666.67
+        ],
+        [
+         15,
+         463000
+        ],
+        [
+         15.33,
+         479333.33
+        ],
+        [
+         15.67,
+         495666.67
+        ],
+        [
+         16,
+         512000
+        ],
+        [
+         16.33,
+         528333.33
+        ],
+        [
+         16.67,
+         544666.67
+        ],
+        [
+         17,
+         561000
+        ],
+        [
+         17.33,
+         577333.33
+        ],
+        [
+         17.67,
+         593666.67
+        ],
+        [
+         18,
+         610000
+        ],
+        [
+         18.33,
+         626333.33
+        ],
+        [
+         18.67,
+         642666.67
+        ],
+        [
+         19,
+         659000
+        ],
+        [
+         19.33,
+         675333.33
+        ],
+        [
+         19.67,
+         691666.67
+        ],
+        [
+         20,
+         708000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $30,000 a year. Degree: pay $19,000 a year for 4 years with no earnings, then earn $49,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$210,000",
+   "numeric": {
+    "value": 210000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(t) = salary × t.",
+    "Substitute: $30,000 × 7 = $210,000.",
+    "Spreadsheet: =30000*7.",
+    "So $210,000; the degree path stands at $71,000 at the same point."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-05",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On the degree path, what are Tyler's cumulative net earnings after 10 years? Use the second piece of the function.",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 800000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $30,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         10000
+        ],
+        [
+         0.67,
+         20000
+        ],
+        [
+         1,
+         30000
+        ],
+        [
+         1.33,
+         40000
+        ],
+        [
+         1.67,
+         50000
+        ],
+        [
+         2,
+         60000
+        ],
+        [
+         2.33,
+         70000
+        ],
+        [
+         2.67,
+         80000
+        ],
+        [
+         3,
+         90000
+        ],
+        [
+         3.33,
+         100000
+        ],
+        [
+         3.67,
+         110000
+        ],
+        [
+         4,
+         120000
+        ],
+        [
+         4.33,
+         130000
+        ],
+        [
+         4.67,
+         140000
+        ],
+        [
+         5,
+         150000
+        ],
+        [
+         5.33,
+         160000
+        ],
+        [
+         5.67,
+         170000
+        ],
+        [
+         6,
+         180000
+        ],
+        [
+         6.33,
+         190000
+        ],
+        [
+         6.67,
+         200000
+        ],
+        [
+         7,
+         210000
+        ],
+        [
+         7.33,
+         220000
+        ],
+        [
+         7.67,
+         230000
+        ],
+        [
+         8,
+         240000
+        ],
+        [
+         8.33,
+         250000
+        ],
+        [
+         8.67,
+         260000
+        ],
+        [
+         9,
+         270000
+        ],
+        [
+         9.33,
+         280000
+        ],
+        [
+         9.67,
+         290000
+        ],
+        [
+         10,
+         300000
+        ],
+        [
+         10.33,
+         310000
+        ],
+        [
+         10.67,
+         320000
+        ],
+        [
+         11,
+         330000
+        ],
+        [
+         11.33,
+         340000
+        ],
+        [
+         11.67,
+         350000
+        ],
+        [
+         12,
+         360000
+        ],
+        [
+         12.33,
+         370000
+        ],
+        [
+         12.67,
+         380000
+        ],
+        [
+         13,
+         390000
+        ],
+        [
+         13.33,
+         400000
+        ],
+        [
+         13.67,
+         410000
+        ],
+        [
+         14,
+         420000
+        ],
+        [
+         14.33,
+         430000
+        ],
+        [
+         14.67,
+         440000
+        ],
+        [
+         15,
+         450000
+        ],
+        [
+         15.33,
+         460000
+        ],
+        [
+         15.67,
+         470000
+        ],
+        [
+         16,
+         480000
+        ],
+        [
+         16.33,
+         490000
+        ],
+        [
+         16.67,
+         500000
+        ],
+        [
+         17,
+         510000
+        ],
+        [
+         17.33,
+         520000
+        ],
+        [
+         17.67,
+         530000
+        ],
+        [
+         18,
+         540000
+        ],
+        [
+         18.33,
+         550000
+        ],
+        [
+         18.67,
+         560000
+        ],
+        [
+         19,
+         570000
+        ],
+        [
+         19.33,
+         580000
+        ],
+        [
+         19.67,
+         590000
+        ],
+        [
+         20,
+         600000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$14,000t for t ≤ 4, then −$56,000 + $47,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -4666.67
+        ],
+        [
+         0.67,
+         -9333.33
+        ],
+        [
+         1,
+         -14000
+        ],
+        [
+         1.33,
+         -18666.67
+        ],
+        [
+         1.67,
+         -23333.33
+        ],
+        [
+         2,
+         -28000
+        ],
+        [
+         2.33,
+         -32666.67
+        ],
+        [
+         2.67,
+         -37333.33
+        ],
+        [
+         3,
+         -42000
+        ],
+        [
+         3.33,
+         -46666.67
+        ],
+        [
+         3.67,
+         -51333.33
+        ],
+        [
+         4,
+         -56000
+        ],
+        [
+         4.33,
+         -40333.33
+        ],
+        [
+         4.67,
+         -24666.67
+        ],
+        [
+         5,
+         -9000
+        ],
+        [
+         5.33,
+         6666.67
+        ],
+        [
+         5.67,
+         22333.33
+        ],
+        [
+         6,
+         38000
+        ],
+        [
+         6.33,
+         53666.67
+        ],
+        [
+         6.67,
+         69333.33
+        ],
+        [
+         7,
+         85000
+        ],
+        [
+         7.33,
+         100666.67
+        ],
+        [
+         7.67,
+         116333.33
+        ],
+        [
+         8,
+         132000
+        ],
+        [
+         8.33,
+         147666.67
+        ],
+        [
+         8.67,
+         163333.33
+        ],
+        [
+         9,
+         179000
+        ],
+        [
+         9.33,
+         194666.67
+        ],
+        [
+         9.67,
+         210333.33
+        ],
+        [
+         10,
+         226000
+        ],
+        [
+         10.33,
+         241666.67
+        ],
+        [
+         10.67,
+         257333.33
+        ],
+        [
+         11,
+         273000
+        ],
+        [
+         11.33,
+         288666.67
+        ],
+        [
+         11.67,
+         304333.33
+        ],
+        [
+         12,
+         320000
+        ],
+        [
+         12.33,
+         335666.67
+        ],
+        [
+         12.67,
+         351333.33
+        ],
+        [
+         13,
+         367000
+        ],
+        [
+         13.33,
+         382666.67
+        ],
+        [
+         13.67,
+         398333.33
+        ],
+        [
+         14,
+         414000
+        ],
+        [
+         14.33,
+         429666.67
+        ],
+        [
+         14.67,
+         445333.33
+        ],
+        [
+         15,
+         461000
+        ],
+        [
+         15.33,
+         476666.67
+        ],
+        [
+         15.67,
+         492333.33
+        ],
+        [
+         16,
+         508000
+        ],
+        [
+         16.33,
+         523666.67
+        ],
+        [
+         16.67,
+         539333.33
+        ],
+        [
+         17,
+         555000
+        ],
+        [
+         17.33,
+         570666.67
+        ],
+        [
+         17.67,
+         586333.33
+        ],
+        [
+         18,
+         602000
+        ],
+        [
+         18.33,
+         617666.67
+        ],
+        [
+         18.67,
+         633333.33
+        ],
+        [
+         19,
+         649000
+        ],
+        [
+         19.33,
+         664666.67
+        ],
+        [
+         19.67,
+         680333.33
+        ],
+        [
+         20,
+         696000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $30,000 a year. Degree: pay $14,000 a year for 4 years with no earnings, then earn $47,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$226,000",
+   "numeric": {
+    "value": 226000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for t > 4, B(t) = −4 × cost + new salary × (t − 4).",
+    "Substitute: −4 × $14,000 + $47,000 × (10 − 4) = −$56,000 + $282,000 = $226,000.",
+    "Spreadsheet: =-4*14000+47000*(10-4).",
+    "So after 10 years the degree path is at $226,000 against $300,000 for working now; it has not caught up yet."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-06",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "advanced",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many whole years does the degree path first catch up with (equal or pass) the work-now path?",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 1000000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $34,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         11333.33
+        ],
+        [
+         0.67,
+         22666.67
+        ],
+        [
+         1,
+         34000
+        ],
+        [
+         1.33,
+         45333.33
+        ],
+        [
+         1.67,
+         56666.67
+        ],
+        [
+         2,
+         68000
+        ],
+        [
+         2.33,
+         79333.33
+        ],
+        [
+         2.67,
+         90666.67
+        ],
+        [
+         3,
+         102000
+        ],
+        [
+         3.33,
+         113333.33
+        ],
+        [
+         3.67,
+         124666.67
+        ],
+        [
+         4,
+         136000
+        ],
+        [
+         4.33,
+         147333.33
+        ],
+        [
+         4.67,
+         158666.67
+        ],
+        [
+         5,
+         170000
+        ],
+        [
+         5.33,
+         181333.33
+        ],
+        [
+         5.67,
+         192666.67
+        ],
+        [
+         6,
+         204000
+        ],
+        [
+         6.33,
+         215333.33
+        ],
+        [
+         6.67,
+         226666.67
+        ],
+        [
+         7,
+         238000
+        ],
+        [
+         7.33,
+         249333.33
+        ],
+        [
+         7.67,
+         260666.67
+        ],
+        [
+         8,
+         272000
+        ],
+        [
+         8.33,
+         283333.33
+        ],
+        [
+         8.67,
+         294666.67
+        ],
+        [
+         9,
+         306000
+        ],
+        [
+         9.33,
+         317333.33
+        ],
+        [
+         9.67,
+         328666.67
+        ],
+        [
+         10,
+         340000
+        ],
+        [
+         10.33,
+         351333.33
+        ],
+        [
+         10.67,
+         362666.67
+        ],
+        [
+         11,
+         374000
+        ],
+        [
+         11.33,
+         385333.33
+        ],
+        [
+         11.67,
+         396666.67
+        ],
+        [
+         12,
+         408000
+        ],
+        [
+         12.33,
+         419333.33
+        ],
+        [
+         12.67,
+         430666.67
+        ],
+        [
+         13,
+         442000
+        ],
+        [
+         13.33,
+         453333.33
+        ],
+        [
+         13.67,
+         464666.67
+        ],
+        [
+         14,
+         476000
+        ],
+        [
+         14.33,
+         487333.33
+        ],
+        [
+         14.67,
+         498666.67
+        ],
+        [
+         15,
+         510000
+        ],
+        [
+         15.33,
+         521333.33
+        ],
+        [
+         15.67,
+         532666.67
+        ],
+        [
+         16,
+         544000
+        ],
+        [
+         16.33,
+         555333.33
+        ],
+        [
+         16.67,
+         566666.67
+        ],
+        [
+         17,
+         578000
+        ],
+        [
+         17.33,
+         589333.33
+        ],
+        [
+         17.67,
+         600666.67
+        ],
+        [
+         18,
+         612000
+        ],
+        [
+         18.33,
+         623333.33
+        ],
+        [
+         18.67,
+         634666.67
+        ],
+        [
+         19,
+         646000
+        ],
+        [
+         19.33,
+         657333.33
+        ],
+        [
+         19.67,
+         668666.67
+        ],
+        [
+         20,
+         680000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$14,000t for t ≤ 4, then −$56,000 + $54,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -4666.67
+        ],
+        [
+         0.67,
+         -9333.33
+        ],
+        [
+         1,
+         -14000
+        ],
+        [
+         1.33,
+         -18666.67
+        ],
+        [
+         1.67,
+         -23333.33
+        ],
+        [
+         2,
+         -28000
+        ],
+        [
+         2.33,
+         -32666.67
+        ],
+        [
+         2.67,
+         -37333.33
+        ],
+        [
+         3,
+         -42000
+        ],
+        [
+         3.33,
+         -46666.67
+        ],
+        [
+         3.67,
+         -51333.33
+        ],
+        [
+         4,
+         -56000
+        ],
+        [
+         4.33,
+         -38000
+        ],
+        [
+         4.67,
+         -20000
+        ],
+        [
+         5,
+         -2000
+        ],
+        [
+         5.33,
+         16000
+        ],
+        [
+         5.67,
+         34000
+        ],
+        [
+         6,
+         52000
+        ],
+        [
+         6.33,
+         70000
+        ],
+        [
+         6.67,
+         88000
+        ],
+        [
+         7,
+         106000
+        ],
+        [
+         7.33,
+         124000
+        ],
+        [
+         7.67,
+         142000
+        ],
+        [
+         8,
+         160000
+        ],
+        [
+         8.33,
+         178000
+        ],
+        [
+         8.67,
+         196000
+        ],
+        [
+         9,
+         214000
+        ],
+        [
+         9.33,
+         232000
+        ],
+        [
+         9.67,
+         250000
+        ],
+        [
+         10,
+         268000
+        ],
+        [
+         10.33,
+         286000
+        ],
+        [
+         10.67,
+         304000
+        ],
+        [
+         11,
+         322000
+        ],
+        [
+         11.33,
+         340000
+        ],
+        [
+         11.67,
+         358000
+        ],
+        [
+         12,
+         376000
+        ],
+        [
+         12.33,
+         394000
+        ],
+        [
+         12.67,
+         412000
+        ],
+        [
+         13,
+         430000
+        ],
+        [
+         13.33,
+         448000
+        ],
+        [
+         13.67,
+         466000
+        ],
+        [
+         14,
+         484000
+        ],
+        [
+         14.33,
+         502000
+        ],
+        [
+         14.67,
+         520000
+        ],
+        [
+         15,
+         538000
+        ],
+        [
+         15.33,
+         556000
+        ],
+        [
+         15.67,
+         574000
+        ],
+        [
+         16,
+         592000
+        ],
+        [
+         16.33,
+         610000
+        ],
+        [
+         16.67,
+         628000
+        ],
+        [
+         17,
+         646000
+        ],
+        [
+         17.33,
+         664000
+        ],
+        [
+         17.67,
+         682000
+        ],
+        [
+         18,
+         700000
+        ],
+        [
+         18.33,
+         718000
+        ],
+        [
+         18.67,
+         736000
+        ],
+        [
+         19,
+         754000
+        ],
+        [
+         19.33,
+         772000
+        ],
+        [
+         19.67,
+         790000
+        ],
+        [
+         20,
+         808000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $34,000 a year. Degree: pay $14,000 a year for 4 years with no earnings, then earn $54,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "14",
+   "numeric": {
+    "value": 14,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve A(t) = B(t) with the second piece: sA·t = −4c + sB(t − 4), so t = [[4c + 4sB || sB − sA]].",
+    "Substitute: t = [[4 × $14,000 + 4 × $54,000 || $54,000 − $34,000]] = $272,000 ÷ $20,000 = 13.60, so year 14.",
+    "Spreadsheet: =ROUNDUP((4*14000+4*54000)/(54000-34000),0).",
+    "So the degree pays off in year 14, when Marcus is about 32. Raises, loan interest or a different field would move this point."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-07",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "support",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On the \"work now\" path, what has Owen earned in total after 10 years?",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 1000000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $36,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         12000
+        ],
+        [
+         0.67,
+         24000
+        ],
+        [
+         1,
+         36000
+        ],
+        [
+         1.33,
+         48000
+        ],
+        [
+         1.67,
+         60000
+        ],
+        [
+         2,
+         72000
+        ],
+        [
+         2.33,
+         84000
+        ],
+        [
+         2.67,
+         96000
+        ],
+        [
+         3,
+         108000
+        ],
+        [
+         3.33,
+         120000
+        ],
+        [
+         3.67,
+         132000
+        ],
+        [
+         4,
+         144000
+        ],
+        [
+         4.33,
+         156000
+        ],
+        [
+         4.67,
+         168000
+        ],
+        [
+         5,
+         180000
+        ],
+        [
+         5.33,
+         192000
+        ],
+        [
+         5.67,
+         204000
+        ],
+        [
+         6,
+         216000
+        ],
+        [
+         6.33,
+         228000
+        ],
+        [
+         6.67,
+         240000
+        ],
+        [
+         7,
+         252000
+        ],
+        [
+         7.33,
+         264000
+        ],
+        [
+         7.67,
+         276000
+        ],
+        [
+         8,
+         288000
+        ],
+        [
+         8.33,
+         300000
+        ],
+        [
+         8.67,
+         312000
+        ],
+        [
+         9,
+         324000
+        ],
+        [
+         9.33,
+         336000
+        ],
+        [
+         9.67,
+         348000
+        ],
+        [
+         10,
+         360000
+        ],
+        [
+         10.33,
+         372000
+        ],
+        [
+         10.67,
+         384000
+        ],
+        [
+         11,
+         396000
+        ],
+        [
+         11.33,
+         408000
+        ],
+        [
+         11.67,
+         420000
+        ],
+        [
+         12,
+         432000
+        ],
+        [
+         12.33,
+         444000
+        ],
+        [
+         12.67,
+         456000
+        ],
+        [
+         13,
+         468000
+        ],
+        [
+         13.33,
+         480000
+        ],
+        [
+         13.67,
+         492000
+        ],
+        [
+         14,
+         504000
+        ],
+        [
+         14.33,
+         516000
+        ],
+        [
+         14.67,
+         528000
+        ],
+        [
+         15,
+         540000
+        ],
+        [
+         15.33,
+         552000
+        ],
+        [
+         15.67,
+         564000
+        ],
+        [
+         16,
+         576000
+        ],
+        [
+         16.33,
+         588000
+        ],
+        [
+         16.67,
+         600000
+        ],
+        [
+         17,
+         612000
+        ],
+        [
+         17.33,
+         624000
+        ],
+        [
+         17.67,
+         636000
+        ],
+        [
+         18,
+         648000
+        ],
+        [
+         18.33,
+         660000
+        ],
+        [
+         18.67,
+         672000
+        ],
+        [
+         19,
+         684000
+        ],
+        [
+         19.33,
+         696000
+        ],
+        [
+         19.67,
+         708000
+        ],
+        [
+         20,
+         720000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$19,000t for t ≤ 4, then −$76,000 + $59,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -6333.33
+        ],
+        [
+         0.67,
+         -12666.67
+        ],
+        [
+         1,
+         -19000
+        ],
+        [
+         1.33,
+         -25333.33
+        ],
+        [
+         1.67,
+         -31666.67
+        ],
+        [
+         2,
+         -38000
+        ],
+        [
+         2.33,
+         -44333.33
+        ],
+        [
+         2.67,
+         -50666.67
+        ],
+        [
+         3,
+         -57000
+        ],
+        [
+         3.33,
+         -63333.33
+        ],
+        [
+         3.67,
+         -69666.67
+        ],
+        [
+         4,
+         -76000
+        ],
+        [
+         4.33,
+         -56333.33
+        ],
+        [
+         4.67,
+         -36666.67
+        ],
+        [
+         5,
+         -17000
+        ],
+        [
+         5.33,
+         2666.67
+        ],
+        [
+         5.67,
+         22333.33
+        ],
+        [
+         6,
+         42000
+        ],
+        [
+         6.33,
+         61666.67
+        ],
+        [
+         6.67,
+         81333.33
+        ],
+        [
+         7,
+         101000
+        ],
+        [
+         7.33,
+         120666.67
+        ],
+        [
+         7.67,
+         140333.33
+        ],
+        [
+         8,
+         160000
+        ],
+        [
+         8.33,
+         179666.67
+        ],
+        [
+         8.67,
+         199333.33
+        ],
+        [
+         9,
+         219000
+        ],
+        [
+         9.33,
+         238666.67
+        ],
+        [
+         9.67,
+         258333.33
+        ],
+        [
+         10,
+         278000
+        ],
+        [
+         10.33,
+         297666.67
+        ],
+        [
+         10.67,
+         317333.33
+        ],
+        [
+         11,
+         337000
+        ],
+        [
+         11.33,
+         356666.67
+        ],
+        [
+         11.67,
+         376333.33
+        ],
+        [
+         12,
+         396000
+        ],
+        [
+         12.33,
+         415666.67
+        ],
+        [
+         12.67,
+         435333.33
+        ],
+        [
+         13,
+         455000
+        ],
+        [
+         13.33,
+         474666.67
+        ],
+        [
+         13.67,
+         494333.33
+        ],
+        [
+         14,
+         514000
+        ],
+        [
+         14.33,
+         533666.67
+        ],
+        [
+         14.67,
+         553333.33
+        ],
+        [
+         15,
+         573000
+        ],
+        [
+         15.33,
+         592666.67
+        ],
+        [
+         15.67,
+         612333.33
+        ],
+        [
+         16,
+         632000
+        ],
+        [
+         16.33,
+         651666.67
+        ],
+        [
+         16.67,
+         671333.33
+        ],
+        [
+         17,
+         691000
+        ],
+        [
+         17.33,
+         710666.67
+        ],
+        [
+         17.67,
+         730333.33
+        ],
+        [
+         18,
+         750000
+        ],
+        [
+         18.33,
+         769666.67
+        ],
+        [
+         18.67,
+         789333.33
+        ],
+        [
+         19,
+         809000
+        ],
+        [
+         19.33,
+         828666.67
+        ],
+        [
+         19.67,
+         848333.33
+        ],
+        [
+         20,
+         868000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $36,000 a year. Degree: pay $19,000 a year for 4 years with no earnings, then earn $59,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$360,000",
+   "numeric": {
+    "value": 360000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(t) = salary × t.",
+    "Substitute: $36,000 × 10 = $360,000.",
+    "Spreadsheet: =36000*10.",
+    "So $360,000; the degree path stands at $278,000 at the same point."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-08",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "standard",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On the degree path, what are Mateo's cumulative net earnings after 16 years? Use the second piece of the function.",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 1000000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $35,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         11666.67
+        ],
+        [
+         0.67,
+         23333.33
+        ],
+        [
+         1,
+         35000
+        ],
+        [
+         1.33,
+         46666.67
+        ],
+        [
+         1.67,
+         58333.33
+        ],
+        [
+         2,
+         70000
+        ],
+        [
+         2.33,
+         81666.67
+        ],
+        [
+         2.67,
+         93333.33
+        ],
+        [
+         3,
+         105000
+        ],
+        [
+         3.33,
+         116666.67
+        ],
+        [
+         3.67,
+         128333.33
+        ],
+        [
+         4,
+         140000
+        ],
+        [
+         4.33,
+         151666.67
+        ],
+        [
+         4.67,
+         163333.33
+        ],
+        [
+         5,
+         175000
+        ],
+        [
+         5.33,
+         186666.67
+        ],
+        [
+         5.67,
+         198333.33
+        ],
+        [
+         6,
+         210000
+        ],
+        [
+         6.33,
+         221666.67
+        ],
+        [
+         6.67,
+         233333.33
+        ],
+        [
+         7,
+         245000
+        ],
+        [
+         7.33,
+         256666.67
+        ],
+        [
+         7.67,
+         268333.33
+        ],
+        [
+         8,
+         280000
+        ],
+        [
+         8.33,
+         291666.67
+        ],
+        [
+         8.67,
+         303333.33
+        ],
+        [
+         9,
+         315000
+        ],
+        [
+         9.33,
+         326666.67
+        ],
+        [
+         9.67,
+         338333.33
+        ],
+        [
+         10,
+         350000
+        ],
+        [
+         10.33,
+         361666.67
+        ],
+        [
+         10.67,
+         373333.33
+        ],
+        [
+         11,
+         385000
+        ],
+        [
+         11.33,
+         396666.67
+        ],
+        [
+         11.67,
+         408333.33
+        ],
+        [
+         12,
+         420000
+        ],
+        [
+         12.33,
+         431666.67
+        ],
+        [
+         12.67,
+         443333.33
+        ],
+        [
+         13,
+         455000
+        ],
+        [
+         13.33,
+         466666.67
+        ],
+        [
+         13.67,
+         478333.33
+        ],
+        [
+         14,
+         490000
+        ],
+        [
+         14.33,
+         501666.67
+        ],
+        [
+         14.67,
+         513333.33
+        ],
+        [
+         15,
+         525000
+        ],
+        [
+         15.33,
+         536666.67
+        ],
+        [
+         15.67,
+         548333.33
+        ],
+        [
+         16,
+         560000
+        ],
+        [
+         16.33,
+         571666.67
+        ],
+        [
+         16.67,
+         583333.33
+        ],
+        [
+         17,
+         595000
+        ],
+        [
+         17.33,
+         606666.67
+        ],
+        [
+         17.67,
+         618333.33
+        ],
+        [
+         18,
+         630000
+        ],
+        [
+         18.33,
+         641666.67
+        ],
+        [
+         18.67,
+         653333.33
+        ],
+        [
+         19,
+         665000
+        ],
+        [
+         19.33,
+         676666.67
+        ],
+        [
+         19.67,
+         688333.33
+        ],
+        [
+         20,
+         700000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$23,000t for t ≤ 4, then −$92,000 + $56,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -7666.67
+        ],
+        [
+         0.67,
+         -15333.33
+        ],
+        [
+         1,
+         -23000
+        ],
+        [
+         1.33,
+         -30666.67
+        ],
+        [
+         1.67,
+         -38333.33
+        ],
+        [
+         2,
+         -46000
+        ],
+        [
+         2.33,
+         -53666.67
+        ],
+        [
+         2.67,
+         -61333.33
+        ],
+        [
+         3,
+         -69000
+        ],
+        [
+         3.33,
+         -76666.67
+        ],
+        [
+         3.67,
+         -84333.33
+        ],
+        [
+         4,
+         -92000
+        ],
+        [
+         4.33,
+         -73333.33
+        ],
+        [
+         4.67,
+         -54666.67
+        ],
+        [
+         5,
+         -36000
+        ],
+        [
+         5.33,
+         -17333.33
+        ],
+        [
+         5.67,
+         1333.33
+        ],
+        [
+         6,
+         20000
+        ],
+        [
+         6.33,
+         38666.67
+        ],
+        [
+         6.67,
+         57333.33
+        ],
+        [
+         7,
+         76000
+        ],
+        [
+         7.33,
+         94666.67
+        ],
+        [
+         7.67,
+         113333.33
+        ],
+        [
+         8,
+         132000
+        ],
+        [
+         8.33,
+         150666.67
+        ],
+        [
+         8.67,
+         169333.33
+        ],
+        [
+         9,
+         188000
+        ],
+        [
+         9.33,
+         206666.67
+        ],
+        [
+         9.67,
+         225333.33
+        ],
+        [
+         10,
+         244000
+        ],
+        [
+         10.33,
+         262666.67
+        ],
+        [
+         10.67,
+         281333.33
+        ],
+        [
+         11,
+         300000
+        ],
+        [
+         11.33,
+         318666.67
+        ],
+        [
+         11.67,
+         337333.33
+        ],
+        [
+         12,
+         356000
+        ],
+        [
+         12.33,
+         374666.67
+        ],
+        [
+         12.67,
+         393333.33
+        ],
+        [
+         13,
+         412000
+        ],
+        [
+         13.33,
+         430666.67
+        ],
+        [
+         13.67,
+         449333.33
+        ],
+        [
+         14,
+         468000
+        ],
+        [
+         14.33,
+         486666.67
+        ],
+        [
+         14.67,
+         505333.33
+        ],
+        [
+         15,
+         524000
+        ],
+        [
+         15.33,
+         542666.67
+        ],
+        [
+         15.67,
+         561333.33
+        ],
+        [
+         16,
+         580000
+        ],
+        [
+         16.33,
+         598666.67
+        ],
+        [
+         16.67,
+         617333.33
+        ],
+        [
+         17,
+         636000
+        ],
+        [
+         17.33,
+         654666.67
+        ],
+        [
+         17.67,
+         673333.33
+        ],
+        [
+         18,
+         692000
+        ],
+        [
+         18.33,
+         710666.67
+        ],
+        [
+         18.67,
+         729333.33
+        ],
+        [
+         19,
+         748000
+        ],
+        [
+         19.33,
+         766666.67
+        ],
+        [
+         19.67,
+         785333.33
+        ],
+        [
+         20,
+         804000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $35,000 a year. Degree: pay $23,000 a year for 4 years with no earnings, then earn $56,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$580,000",
+   "numeric": {
+    "value": 580000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: for t > 4, B(t) = −4 × cost + new salary × (t − 4).",
+    "Substitute: −4 × $23,000 + $56,000 × (16 − 4) = −$92,000 + $672,000 = $580,000.",
+    "Spreadsheet: =-4*23000+56000*(16-4).",
+    "So after 16 years the degree path is at $580,000 against $560,000 for working now; it has caught up."
+   ]
+  },
+  {
+   "id": "fa-college-s04-lv-m-catch-up-09",
+   "unitId": "college",
+   "skillId": "college-skill-04",
+   "level": "advanced",
+   "family": "lv-m-catch-up",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many whole years does the degree path first catch up with (equal or pass) the work-now path?",
+   "scenario": {
+    "graph": {
+     "title": "Cumulative net earnings: work now vs a 4-year degree",
+     "x": {
+      "label": "Years after high school, t",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Net earnings",
+      "min": -200000,
+      "max": 1000000,
+      "step": 200000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Work now: $33,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         11000
+        ],
+        [
+         0.67,
+         22000
+        ],
+        [
+         1,
+         33000
+        ],
+        [
+         1.33,
+         44000
+        ],
+        [
+         1.67,
+         55000
+        ],
+        [
+         2,
+         66000
+        ],
+        [
+         2.33,
+         77000
+        ],
+        [
+         2.67,
+         88000
+        ],
+        [
+         3,
+         99000
+        ],
+        [
+         3.33,
+         110000
+        ],
+        [
+         3.67,
+         121000
+        ],
+        [
+         4,
+         132000
+        ],
+        [
+         4.33,
+         143000
+        ],
+        [
+         4.67,
+         154000
+        ],
+        [
+         5,
+         165000
+        ],
+        [
+         5.33,
+         176000
+        ],
+        [
+         5.67,
+         187000
+        ],
+        [
+         6,
+         198000
+        ],
+        [
+         6.33,
+         209000
+        ],
+        [
+         6.67,
+         220000
+        ],
+        [
+         7,
+         231000
+        ],
+        [
+         7.33,
+         242000
+        ],
+        [
+         7.67,
+         253000
+        ],
+        [
+         8,
+         264000
+        ],
+        [
+         8.33,
+         275000
+        ],
+        [
+         8.67,
+         286000
+        ],
+        [
+         9,
+         297000
+        ],
+        [
+         9.33,
+         308000
+        ],
+        [
+         9.67,
+         319000
+        ],
+        [
+         10,
+         330000
+        ],
+        [
+         10.33,
+         341000
+        ],
+        [
+         10.67,
+         352000
+        ],
+        [
+         11,
+         363000
+        ],
+        [
+         11.33,
+         374000
+        ],
+        [
+         11.67,
+         385000
+        ],
+        [
+         12,
+         396000
+        ],
+        [
+         12.33,
+         407000
+        ],
+        [
+         12.67,
+         418000
+        ],
+        [
+         13,
+         429000
+        ],
+        [
+         13.33,
+         440000
+        ],
+        [
+         13.67,
+         451000
+        ],
+        [
+         14,
+         462000
+        ],
+        [
+         14.33,
+         473000
+        ],
+        [
+         14.67,
+         484000
+        ],
+        [
+         15,
+         495000
+        ],
+        [
+         15.33,
+         506000
+        ],
+        [
+         15.67,
+         517000
+        ],
+        [
+         16,
+         528000
+        ],
+        [
+         16.33,
+         539000
+        ],
+        [
+         16.67,
+         550000
+        ],
+        [
+         17,
+         561000
+        ],
+        [
+         17.33,
+         572000
+        ],
+        [
+         17.67,
+         583000
+        ],
+        [
+         18,
+         594000
+        ],
+        [
+         18.33,
+         605000
+        ],
+        [
+         18.67,
+         616000
+        ],
+        [
+         19,
+         627000
+        ],
+        [
+         19.33,
+         638000
+        ],
+        [
+         19.67,
+         649000
+        ],
+        [
+         20,
+         660000
+        ]
+       ]
+      },
+      {
+       "name": "Degree: −$22,000t for t ≤ 4, then −$88,000 + $57,000(t − 4)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.33,
+         -7333.33
+        ],
+        [
+         0.67,
+         -14666.67
+        ],
+        [
+         1,
+         -22000
+        ],
+        [
+         1.33,
+         -29333.33
+        ],
+        [
+         1.67,
+         -36666.67
+        ],
+        [
+         2,
+         -44000
+        ],
+        [
+         2.33,
+         -51333.33
+        ],
+        [
+         2.67,
+         -58666.67
+        ],
+        [
+         3,
+         -66000
+        ],
+        [
+         3.33,
+         -73333.33
+        ],
+        [
+         3.67,
+         -80666.67
+        ],
+        [
+         4,
+         -88000
+        ],
+        [
+         4.33,
+         -69000
+        ],
+        [
+         4.67,
+         -50000
+        ],
+        [
+         5,
+         -31000
+        ],
+        [
+         5.33,
+         -12000
+        ],
+        [
+         5.67,
+         7000
+        ],
+        [
+         6,
+         26000
+        ],
+        [
+         6.33,
+         45000
+        ],
+        [
+         6.67,
+         64000
+        ],
+        [
+         7,
+         83000
+        ],
+        [
+         7.33,
+         102000
+        ],
+        [
+         7.67,
+         121000
+        ],
+        [
+         8,
+         140000
+        ],
+        [
+         8.33,
+         159000
+        ],
+        [
+         8.67,
+         178000
+        ],
+        [
+         9,
+         197000
+        ],
+        [
+         9.33,
+         216000
+        ],
+        [
+         9.67,
+         235000
+        ],
+        [
+         10,
+         254000
+        ],
+        [
+         10.33,
+         273000
+        ],
+        [
+         10.67,
+         292000
+        ],
+        [
+         11,
+         311000
+        ],
+        [
+         11.33,
+         330000
+        ],
+        [
+         11.67,
+         349000
+        ],
+        [
+         12,
+         368000
+        ],
+        [
+         12.33,
+         387000
+        ],
+        [
+         12.67,
+         406000
+        ],
+        [
+         13,
+         425000
+        ],
+        [
+         13.33,
+         444000
+        ],
+        [
+         13.67,
+         463000
+        ],
+        [
+         14,
+         482000
+        ],
+        [
+         14.33,
+         501000
+        ],
+        [
+         14.67,
+         520000
+        ],
+        [
+         15,
+         539000
+        ],
+        [
+         15.33,
+         558000
+        ],
+        [
+         15.67,
+         577000
+        ],
+        [
+         16,
+         596000
+        ],
+        [
+         16.33,
+         615000
+        ],
+        [
+         16.67,
+         634000
+        ],
+        [
+         17,
+         653000
+        ],
+        [
+         17.33,
+         672000
+        ],
+        [
+         17.67,
+         691000
+        ],
+        [
+         18,
+         710000
+        ],
+        [
+         18.33,
+         729000
+        ],
+        [
+         18.67,
+         748000
+        ],
+        [
+         19,
+         767000
+        ],
+        [
+         19.33,
+         786000
+        ],
+        [
+         19.67,
+         805000
+        ],
+        [
+         20,
+         824000
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Work now: earn $33,000 a year. Degree: pay $22,000 a year for 4 years with no earnings, then earn $57,000 a year. (Simplified: no raises, taxes or interest.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "14",
+   "numeric": {
+    "value": 14,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve A(t) = B(t) with the second piece: sA·t = −4c + sB(t − 4), so t = [[4c + 4sB || sB − sA]].",
+    "Substitute: t = [[4 × $22,000 + 4 × $57,000 || $57,000 − $33,000]] = $316,000 ÷ $24,000 = 13.17, so year 14.",
+    "Spreadsheet: =ROUNDUP((4*22000+4*57000)/(57000-33000),0).",
+    "So the degree pays off in year 14, when Isaiah is about 32. Raises, loan interest or a different field would move this point."
    ]
   },
   {
@@ -7626,9 +12940,12 @@
    "answer": "$18,400",
    "solutionSteps": [
     "Mistake: Subtracted loans; loans must be repaid, so only grants lower the net price.",
+    "Formula: Net price = cost − grants and scholarships.",
     "Net price = cost − grants and scholarships.",
     "$27,800 − $9,400 = $18,400.",
-    "Correct result: $18,400."
+    "Correct result: $18,400.",
+    "Spreadsheet or calculator: =27800-9400",
+    "So the answer is $18,400; compare schools by net price, not the sticker price."
    ],
    "numeric": {
     "value": 18400,
@@ -7724,9 +13041,11 @@
    "answer": "$6,820",
    "solutionSteps": [
     "Mistake: Ignored interest that accrues during school on an unsubsidized loan.",
+    "Formula: balance = P + P × r × years in school.",
     "Interest = $5,500 × 0.06 × 4 = $1,320.",
     "Balance = $6,820.",
-    "Correct result: $6,820."
+    "Correct result: $6,820.",
+    "So the answer is $6,820; borrow only what the expected career can repay."
    ],
    "numeric": {
     "value": 6820,
@@ -7792,7 +13111,7 @@
    "id": "fa-college-s03-err-roi-base-01",
    "unitId": "college",
    "skillId": "college-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "roi-base-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -7820,9 +13139,11 @@
    "answer": "280%",
    "solutionSteps": [
     "Mistake: Divided by the gain; ROI = (gain − cost) ÷ cost.",
+    "Formula: ROI = (gain − cost) ÷ cost.",
     "Net gain = $70,000.",
     "ROI = $70,000 ÷ $25,000 = 280%.",
-    "Correct result: 280%."
+    "Correct result: 280%.",
+    "So the answer is 280%; weigh lifetime earnings against the cost and time of training."
    ],
    "numeric": {
     "value": 280,
@@ -7916,8 +13237,11 @@
    "answer": "18",
    "solutionSteps": [
     "Mistake: Converted to years twice; months to pay back = cost ÷ monthly increase.",
+    "Formula: months to pay back = cost ÷ monthly increase.",
     "$7,200 ÷ $400 = 18 months.",
-    "Correct result: 18."
+    "Correct result: 18.",
+    "Spreadsheet or calculator: =7200/400",
+    "So the answer is 18; a shorter payback means a lower-risk investment in yourself."
    ],
    "numeric": {
     "value": 18,

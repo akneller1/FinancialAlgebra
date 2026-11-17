@@ -6,6 +6,7 @@ export function resourceThumbnail(path, unitId) {
  if(url.pathname.includes('/practice/'))kind='practice';
  if(url.pathname.includes('/flashcards/'))kind='flashcards';
  if(url.pathname.includes('-cheat-sheet/'))kind='cheat-sheet';
+ if(url.pathname.includes('/spreadsheet-labs/'))kind='spreadsheet';
  if(url.pathname.includes('/decision-lab/'))kind=url.searchParams.has('teacher')?'guide':'lab';
  return `thumbs/financial-algebra/${unitId}-${kind||'worksheet'}.${kind==='cheat-sheet'?'jpg':'svg'}?v=distinct-2`;
 }

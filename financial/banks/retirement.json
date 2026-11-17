@@ -13,21 +13,47 @@
  "skills": [
   {
    "id": "retirement-skill-01",
-   "name": "Model inflation"
+   "name": "Model inflation",
+   "standards": [
+    "Saving 12-4: Inflation and savings",
+    "Investing 12-4: Inflation and real returns"
+   ]
   },
   {
    "id": "retirement-skill-02",
-   "name": "Estimate retirement savings"
+   "name": "Estimate retirement savings",
+   "standards": [
+    "Earning Income 12-10: Retirement income sources",
+    "Saving 12-7: Employer retirement and health savings plans"
+   ]
   },
   {
    "id": "retirement-skill-03",
-   "name": "Compare account contributions"
+   "name": "Compare account contributions",
+   "standards": [
+    "Saving 12-6: Tax incentives for saving",
+    "Saving 12-7: Employer retirement and health savings plans",
+    "Investing 12-8: Tax rules for investments"
+   ]
   },
   {
    "id": "retirement-skill-04",
-   "name": "Analyze purchasing power"
+   "name": "Analyze purchasing power",
+   "standards": [
+    "Investing 12-4: Inflation and real returns",
+    "Saving 12-4: Inflation and savings"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": []
+ },
  "vocab": [
   {
    "term": "Inflation",
@@ -2004,7 +2030,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$18,000.00 × (1 + 0.025)^25 = $33,370.99.",
+    "Spreadsheet or calculator: =18000.00*(1+0.025)^25",
     "Prices rise 85% in total."
    ]
   },
@@ -2032,7 +2060,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$1,450.00 × (1 + 0.03)^10 = $1,948.68.",
+    "Spreadsheet or calculator: =1450.00*(1+0.03)^10",
     "Prices rise 34% in total."
    ]
   },
@@ -2060,7 +2090,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$4.20 × (1 + 0.04)^30 = $13.62.",
+    "Spreadsheet or calculator: =4.20*(1+0.04)^30",
     "Prices rise 224% in total."
    ]
   },
@@ -2088,7 +2120,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$16.00 × (1 + 0.025)^30 = $33.56.",
+    "Spreadsheet or calculator: =16.00*(1+0.025)^30",
     "Prices rise 110% in total."
    ]
   },
@@ -2116,7 +2150,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$16.00 × (1 + 0.02)^15 = $21.53.",
+    "Spreadsheet or calculator: =16.00*(1+0.02)^15",
     "Prices rise 35% in total."
    ]
   },
@@ -2144,7 +2180,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$11.50 × (1 + 0.02)^25 = $18.87.",
+    "Spreadsheet or calculator: =11.50*(1+0.02)^25",
     "Prices rise 64% in total."
    ]
   },
@@ -2172,7 +2210,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$18,000.00 × (1 + 0.02)^25 = $29,530.91.",
+    "Spreadsheet or calculator: =18000.00*(1+0.02)^25",
     "Prices rise 64% in total."
    ]
   },
@@ -2200,7 +2240,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$420.00 × (1 + 0.02)^25 = $689.05.",
+    "Spreadsheet or calculator: =420.00*(1+0.02)^25",
     "Prices rise 64% in total."
    ]
   },
@@ -2228,7 +2270,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "[[273.3 − 264.3 || 264.3]] = 3.4%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "[[273.3 − 264.3 || 264.3]] = 3.4%.",
+    "Spreadsheet or calculator: =(273.3-264.3)/264.3 (then format as a percent)",
+    "So the answer is 3.4%; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -2255,7 +2300,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$180.00 × [[304 || 297.7]] = $183.81."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "$180.00 × [[304 || 297.7]] = $183.81.",
+    "Spreadsheet or calculator: =180.00*304/297.7",
+    "So the answer is $183.81; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -2282,7 +2330,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "[[311.9 − 292.9 || 292.9]] = 6.5%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "[[311.9 − 292.9 || 292.9]] = 6.5%.",
+    "Spreadsheet or calculator: =(311.9-292.9)/292.9 (then format as a percent)",
+    "So the answer is 6.5%; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -2309,7 +2360,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "[[327.8 − 262.2 || 262.2]] = 25%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "[[327.8 − 262.2 || 262.2]] = 25%.",
+    "Spreadsheet or calculator: =(327.8-262.2)/262.2 (then format as a percent)",
+    "So the answer is 25%; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -2336,7 +2390,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$260.00 × [[306.9 || 274]] = $291.22."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "$260.00 × [[306.9 || 274]] = $291.22.",
+    "Spreadsheet or calculator: =260.00*306.9/274",
+    "So the answer is $291.22; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -2363,7 +2420,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "[[316.8 − 253.4 || 253.4]] = 25%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "[[316.8 − 253.4 || 253.4]] = 25%.",
+    "Spreadsheet or calculator: =(316.8-253.4)/253.4 (then format as a percent)",
+    "So the answer is 25%; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -2585,8 +2645,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $72,000.00 − $19,000.00 = $53,000.00.",
     "Nest egg = [[$53,000.00 || 0.035]] = $1,514,285.71.",
+    "Spreadsheet or calculator: =53000.00/0.035",
     "This is a planning estimate, not a guarantee."
    ]
   },
@@ -2614,8 +2676,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $44,000 − $24,000 = $20,000.",
     "Nest egg = [[$20,000 || 0.04]] = $500,000.",
+    "Spreadsheet or calculator: =20000/0.04",
     "This is a planning estimate, not a guarantee."
    ]
   },
@@ -2643,8 +2707,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $52,000 − $18,000 = $34,000.",
     "Nest egg = [[$34,000 || 0.04]] = $850,000.",
+    "Spreadsheet or calculator: =34000/0.04",
     "This is a planning estimate, not a guarantee."
    ]
   },
@@ -2672,8 +2738,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $46,000.00 − $19,000.00 = $27,000.00.",
     "Nest egg = [[$27,000.00 || 0.035]] = $771,428.57.",
+    "Spreadsheet or calculator: =27000.00/0.035",
     "This is a planning estimate, not a guarantee."
    ]
   },
@@ -2701,8 +2769,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $72,000.00 − $18,000.00 = $54,000.00.",
     "Nest egg = [[$54,000.00 || 0.035]] = $1,542,857.14.",
+    "Spreadsheet or calculator: =54000.00/0.035",
     "This is a planning estimate, not a guarantee."
    ]
   },
@@ -2730,8 +2800,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $44,000 − $18,000 = $26,000.",
     "Nest egg = [[$26,000 || 0.04]] = $650,000.",
+    "Spreadsheet or calculator: =26000/0.04",
     "This is a planning estimate, not a guarantee."
    ]
   },
@@ -2759,6 +2831,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "Monthly employee = $353.33; match = $132.50; total = $485.83.",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.05 || 12]], N = 540.",
     "Balance ≈ $984,510.79 (future dollars)."
@@ -2788,8 +2861,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "Monthly employee = $245.83; match = $122.92; total = $368.75.",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.06 || 12]], N = 444.",
+    "Spreadsheet or calculator: =FV(0.06/12,444,-368.75)",
     "Balance ≈ $601,544.86 (future dollars)."
    ]
   },
@@ -2817,8 +2892,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "Monthly employee = $170.83; match = $85.42; total = $256.25.",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.07 || 12]], N = 540.",
+    "Spreadsheet or calculator: =FV(0.07/12,540,-256.25)",
     "Balance ≈ $971,852.39 (future dollars)."
    ]
   },
@@ -2846,8 +2923,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "Monthly employee = $500.00; match = $150.00; total = $650.00.",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.05 || 12]], N = 444.",
+    "Spreadsheet or calculator: =FV(0.05/12,444,-650)",
     "Balance ≈ $832,325.91 (future dollars)."
    ]
   },
@@ -2875,8 +2954,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "Monthly employee = $335.00; match = $167.50; total = $502.50.",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.05 || 12]], N = 444.",
+    "Spreadsheet or calculator: =FV(0.05/12,444,-502.5)",
     "Balance ≈ $643,451.95 (future dollars)."
    ]
   },
@@ -2904,8 +2985,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "Monthly employee = $255.00; match = $127.50; total = $382.50.",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.06 || 12]], N = 504.",
+    "Spreadsheet or calculator: =FV(0.06/12,504,-382.5)",
     "Balance ≈ $868,336.28 (future dollars)."
    ]
   },
@@ -2933,6 +3016,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "Monthly employee = $608.33; match = $182.50; total = $790.83.",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.07 || 12]], N = 324.",
     "Balance ≈ $756,911.60 (future dollars)."
@@ -3246,8 +3330,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(2%, 5%) × $77,000 = $1,540.",
     "Match = 1 × that = $1,540.",
+    "Spreadsheet or calculator: =MIN(2%,5%)*77000",
     "Contributing 5% would add $2,310 more per year."
    ]
   },
@@ -3275,6 +3361,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(8%, 4%) × $86,000 = $3,440.",
     "Match = 0.5 × that = $1,720.",
     "The full match is captured."
@@ -3304,6 +3391,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(6%, 6%) × $74,000 = $4,440.",
     "Match = 0.5 × that = $2,220.",
     "The full match is captured."
@@ -3333,6 +3421,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(3%, 4%) × $63,000 = $1,890.",
     "Match = 0.5 × that = $945.",
     "Contributing 4% would add $315 more per year."
@@ -3362,6 +3451,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(4%, 4%) × $89,000 = $3,560.",
     "Match = 0.5 × that = $1,780.",
     "The full match is captured."
@@ -3391,6 +3481,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(6%, 6%) × $48,000 = $2,880.",
     "Match = 0.5 × that = $1,440.",
     "The full match is captured."
@@ -3420,6 +3511,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(8%, 4%) × $50,000 = $2,000.",
     "Match = 0.5 × that = $1,000.",
     "The full match is captured."
@@ -3649,6 +3741,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $1,400 × 1 = $1,400.",
     "Vested = 20% → $280.",
     "Your own contributions are always 100% yours."
@@ -3678,6 +3771,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,600 × 2 = $5,200.",
     "Vested = 40% → $2,080.",
     "Your own contributions are always 100% yours."
@@ -3707,6 +3801,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,500 × 1 = $2,500.",
     "Vested = 20% → $500.",
     "Your own contributions are always 100% yours."
@@ -3736,6 +3831,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,100 × 2 = $4,200.",
     "Vested = 40% → $1,680.",
     "Your own contributions are always 100% yours."
@@ -3765,6 +3861,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,400 × 1 = $2,400.",
     "Vested = 20% → $480.",
     "Your own contributions are always 100% yours."
@@ -3794,7 +3891,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "[[$500,000.00 || (1 + 0.035)^10]] = $354,459.41.",
+    "Spreadsheet or calculator: =(500000.00/((1+0.035)^10))",
     "It buys 71% of what $500,000.00 buys today."
    ]
   },
@@ -3822,7 +3921,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "[[$10,000.00 || (1 + 0.025)^20]] = $6,102.71.",
+    "Spreadsheet or calculator: =(10000.00/((1+0.025)^20))",
     "It buys 61% of what $10,000.00 buys today."
    ]
   },
@@ -3850,7 +3951,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "[[$100,000.00 || (1 + 0.035)^20]] = $50,256.59.",
+    "Spreadsheet or calculator: =(100000.00/((1+0.035)^20))",
     "It buys 50% of what $100,000.00 buys today."
    ]
   },
@@ -3878,7 +3981,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "[[$10,000.00 || (1 + 0.025)^10]] = $7,811.98.",
+    "Spreadsheet or calculator: =(10000.00/((1+0.025)^10))",
     "It buys 78% of what $10,000.00 buys today."
    ]
   },
@@ -3906,7 +4011,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "[[$500,000.00 || (1 + 0.025)^40]] = $186,215.31.",
+    "Spreadsheet or calculator: =(500000.00/((1+0.025)^40))",
     "It buys 37% of what $500,000.00 buys today."
    ]
   },
@@ -3934,7 +4041,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "[[$100,000.00 || (1 + 0.025)^10]] = $78,119.84.",
+    "Spreadsheet or calculator: =(100000.00/((1+0.025)^10))",
     "It buys 78% of what $100,000.00 buys today."
    ]
   },
@@ -3962,7 +4071,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "[[$50,000.00 || (1 + 0.03)^40]] = $15,327.84.",
+    "Spreadsheet or calculator: =(50000.00/((1+0.03)^40))",
     "It buys 31% of what $50,000.00 buys today."
    ]
   },
@@ -3990,7 +4101,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = [[1 + 0.015 || 1 + 0.03]] − 1 = -1.46%.",
+    "Spreadsheet or calculator: =(1+0.015)/(1+0.03)-1 (then format as a percent)",
     "Negative: purchasing power shrinks."
    ]
   },
@@ -4018,7 +4131,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = [[1 + 0.08 || 1 + 0.025]] − 1 = 5.37%.",
+    "Spreadsheet or calculator: =(1+0.08)/(1+0.025)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ]
   },
@@ -4046,7 +4161,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = [[1 + 0.07 || 1 + 0.04]] − 1 = 2.88%.",
+    "Spreadsheet or calculator: =(1+0.07)/(1+0.04)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ]
   },
@@ -4074,7 +4191,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = [[1 + 0.015 || 1 + 0.02]] − 1 = -0.49%.",
+    "Spreadsheet or calculator: =(1+0.015)/(1+0.02)-1 (then format as a percent)",
     "Negative: purchasing power shrinks."
    ]
   },
@@ -4102,7 +4221,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = [[1 + 0.05 || 1 + 0.03]] − 1 = 1.94%.",
+    "Spreadsheet or calculator: =(1+0.05)/(1+0.03)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ]
   },
@@ -4130,7 +4251,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = [[1 + 0.06 || 1 + 0.025]] − 1 = 3.41%.",
+    "Spreadsheet or calculator: =(1+0.06)/(1+0.025)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ]
   },
@@ -4207,8 +4330,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: today's dollars = projected balance ÷ (1 + inflation)^years.",
     "Years until 67: 32.",
     "[[$885,000.00 || 1.025^32]] = $401,586.94.",
+    "Spreadsheet or calculator: =885000.00/(1.025^32)",
     "Estimated monthly income in today’s dollars ≈ $1,338.62."
    ]
   },
@@ -4285,8 +4410,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: today's dollars = projected balance ÷ (1 + inflation)^years.",
     "Years until 67: 32.",
     "[[$420,000.00 || 1.025^32]] = $190,583.63.",
+    "Spreadsheet or calculator: =420000.00/(1.025^32)",
     "Estimated monthly income in today’s dollars ≈ $635.28."
    ]
   },
@@ -4363,8 +4490,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: today's dollars = projected balance ÷ (1 + inflation)^years.",
     "Years until 67: 37.",
     "[[$304,000.00 || 1.025^37]] = $121,924.38.",
+    "Spreadsheet or calculator: =304000.00/(1.025^37)",
     "Estimated monthly income in today’s dollars ≈ $406.41."
    ]
   },
@@ -4441,8 +4570,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: today's dollars = projected balance ÷ (1 + inflation)^years.",
     "Years until 67: 32.",
     "[[$324,000.00 || 1.025^32]] = $147,021.66.",
+    "Spreadsheet or calculator: =324000.00/(1.025^32)",
     "Estimated monthly income in today’s dollars ≈ $490.07."
    ]
   },
@@ -4519,8 +4650,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: today's dollars = projected balance ÷ (1 + inflation)^years.",
     "Years until 67: 27.",
     "[[$198,000.00 || 1.025^27]] = $101,653.15.",
+    "Spreadsheet or calculator: =198000.00/(1.025^27)",
     "Estimated monthly income in today’s dollars ≈ $338.84."
    ]
   },
@@ -4548,8 +4681,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 8% and 6%.",
     "Matched contribution rate = the smaller of 8% and 6% = 6%.",
     "Match = 50% × 6% × $94,000 = $2,820.",
+    "Spreadsheet or calculator: =50%*6%*94000",
     "This captures the full match."
    ]
   },
@@ -4577,8 +4712,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 6% and 6%.",
     "Matched contribution rate = the smaller of 6% and 6% = 6%.",
     "Match = 50% × 6% × $51,000 = $1,530.",
+    "Spreadsheet or calculator: =50%*6%*51000",
     "This captures the full match."
    ]
   },
@@ -4606,8 +4743,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 6% and 6%.",
     "Matched contribution rate = the smaller of 6% and 6% = 6%.",
     "Match = 50% × 6% × $42,000 = $1,260.",
+    "Spreadsheet or calculator: =50%*6%*42000",
     "This captures the full match."
    ]
   },
@@ -4635,8 +4774,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 4% and 6%.",
     "Matched contribution rate = the smaller of 4% and 6% = 4%.",
     "Match = 50% × 4% × $74,000 = $1,480.",
+    "Spreadsheet or calculator: =50%*4%*74000",
     "Raising contributions to 6% would earn the full match."
    ]
   },
@@ -4664,8 +4805,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 6% and 6%.",
     "Matched contribution rate = the smaller of 6% and 6% = 6%.",
     "Match = 50% × 6% × $72,000 = $2,160.",
+    "Spreadsheet or calculator: =50%*6%*72000",
     "This captures the full match."
    ]
   },
@@ -4693,8 +4836,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 4% and 6%.",
     "Matched contribution rate = the smaller of 4% and 6% = 4%.",
     "Match = 100% × 4% × $58,000 = $2,320.",
+    "Spreadsheet or calculator: =100%*4%*58000",
     "Raising contributions to 6% would earn the full match."
    ]
   },
@@ -4722,8 +4867,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 8% and 6%.",
     "Matched contribution rate = the smaller of 8% and 6% = 6%.",
     "Match = 100% × 6% × $85,000 = $5,100.",
+    "Spreadsheet or calculator: =100%*6%*85000",
     "This captures the full match."
    ]
   },
@@ -4751,8 +4898,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $44,000 − $14,000 = $30,000 per year.",
     "4% rule: savings ≈ $30,000 ÷ 0.04 = $750,000.",
+    "Spreadsheet or calculator: =30000/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ]
   },
@@ -4780,8 +4929,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $50,000 − $20,500 = $29,500 per year.",
     "4% rule: savings ≈ $29,500 ÷ 0.04 = $737,500.",
+    "Spreadsheet or calculator: =29500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ]
   },
@@ -4809,8 +4960,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $55,000 − $22,500 = $32,500 per year.",
     "4% rule: savings ≈ $32,500 ÷ 0.04 = $812,500.",
+    "Spreadsheet or calculator: =32500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ]
   },
@@ -4838,8 +4991,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $69,000 − $21,500 = $47,500 per year.",
     "4% rule: savings ≈ $47,500 ÷ 0.04 = $1,187,500.",
+    "Spreadsheet or calculator: =47500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ]
   },
@@ -4867,8 +5022,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $50,000 − $20,500 = $29,500 per year.",
     "4% rule: savings ≈ $29,500 ÷ 0.04 = $737,500.",
+    "Spreadsheet or calculator: =29500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ]
   },
@@ -4896,8 +5053,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $51,000 − $18,000 = $33,000 per year.",
     "4% rule: savings ≈ $33,000 ÷ 0.04 = $825,000.",
+    "Spreadsheet or calculator: =33000/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ]
   },
@@ -4925,8 +5084,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $42,000 − $17,500 = $24,500 per year.",
     "4% rule: savings ≈ $24,500 ÷ 0.04 = $612,500.",
+    "Spreadsheet or calculator: =24500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ]
   },
@@ -4954,8 +5115,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $420.00 × (1 + 0.025)^20.",
     "= $420.00 × 1.6386 = $688.22.",
+    "Spreadsheet or calculator: =420.00*1.6386",
     "Prices roughly double every 72 ÷ (rate) years."
    ]
   },
@@ -4983,8 +5146,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $52.00 × (1 + 0.025)^10.",
     "= $52.00 × 1.2801 = $66.56.",
+    "Spreadsheet or calculator: =52.00*1.2801",
     "Prices roughly double every 72 ÷ (rate) years."
    ]
   },
@@ -5012,8 +5177,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $13.50 × (1 + 0.035)^10.",
     "= $13.50 × 1.4106 = $19.04.",
+    "Spreadsheet or calculator: =13.50*1.4106",
     "Prices roughly double every 72 ÷ (rate) years."
    ]
   },
@@ -5041,8 +5208,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $9,500.00 × (1 + 0.03)^30.",
     "= $9,500.00 × 2.4273 = $23,058.99.",
+    "Spreadsheet or calculator: =9500.00*(1+0.03)^30",
     "Prices roughly double every 72 ÷ (rate) years."
    ]
   },
@@ -5070,8 +5239,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $420.00 × (1 + 0.035)^10.",
     "= $420.00 × 1.4106 = $592.45.",
+    "Spreadsheet or calculator: =420.00*1.4106",
     "Prices roughly double every 72 ÷ (rate) years."
    ]
   },
@@ -5099,8 +5270,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $11,200.00 × (1 + 0.03)^10.",
     "= $11,200.00 × 1.3439 = $15,051.86.",
+    "Spreadsheet or calculator: =11200.00*(1+0.03)^10",
     "Prices roughly double every 72 ÷ (rate) years."
    ]
   },
@@ -5128,8 +5301,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $18,000.00 × (1 + 0.025)^30.",
     "= $18,000.00 × 2.0976 = $37,756.22.",
+    "Spreadsheet or calculator: =18000.00*(1+0.025)^30",
     "Prices roughly double every 72 ÷ (rate) years."
    ]
   },
@@ -5157,9 +5332,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.08) ÷ (1 + 0.035) − 1 = 0.04348.",
-    "≈ 4.35%. The shortcut 8% − 3.5% = 4.5% is close but slightly high."
+    "≈ 4.35%. The shortcut 8% − 3.5% = 4.5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.08)/(1+0.035)-1 (then format as a percent)",
+    "So the answer is 4.35%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -5186,9 +5364,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.04) ÷ (1 + 0.035) − 1 = 0.00483.",
-    "≈ 0.48%. The shortcut 4% − 3.5% = 0.5% is close but slightly high."
+    "≈ 0.48%. The shortcut 4% − 3.5% = 0.5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.04)/(1+0.035)-1 (then format as a percent)",
+    "So the answer is 0.48%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -5215,9 +5396,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.06) ÷ (1 + 0.02) − 1 = 0.03922.",
-    "≈ 3.92%. The shortcut 6% − 2% = 4% is close but slightly high."
+    "≈ 3.92%. The shortcut 6% − 2% = 4% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.06)/(1+0.02)-1 (then format as a percent)",
+    "So the answer is 3.92%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -5244,9 +5428,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.08) ÷ (1 + 0.03) − 1 = 0.04854.",
-    "≈ 4.85%. The shortcut 8% − 3% = 5% is close but slightly high."
+    "≈ 4.85%. The shortcut 8% − 3% = 5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.08)/(1+0.03)-1 (then format as a percent)",
+    "So the answer is 4.85%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -5273,9 +5460,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.07) ÷ (1 + 0.02) − 1 = 0.04902.",
-    "≈ 4.90%. The shortcut 7% − 2% = 5% is close but slightly high."
+    "≈ 4.90%. The shortcut 7% − 2% = 5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.07)/(1+0.02)-1 (then format as a percent)",
+    "So the answer is 4.9%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -5302,9 +5492,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.04) ÷ (1 + 0.025) − 1 = 0.01463.",
-    "≈ 1.46%. The shortcut 4% − 2.5% = 1.5% is close but slightly high."
+    "≈ 1.46%. The shortcut 4% − 2.5% = 1.5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.04)/(1+0.025)-1 (then format as a percent)",
+    "So the answer is 1.46%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -5331,9 +5524,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.07) ÷ (1 + 0.03) − 1 = 0.03883.",
-    "≈ 3.88%. The shortcut 7% − 3% = 4% is close but slightly high."
+    "≈ 3.88%. The shortcut 7% − 3% = 4% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.07)/(1+0.03)-1 (then format as a percent)",
+    "So the answer is 3.88%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -5360,7 +5556,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20.00 × 1.03 = $20.60."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$20.00 × 1.03 = $20.60.",
+    "Spreadsheet or calculator: =20.00*1.03",
+    "So the answer is $20.60; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5387,7 +5586,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$80.00 × 1.03 = $82.40."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$80.00 × 1.03 = $82.40.",
+    "Spreadsheet or calculator: =80.00*1.03",
+    "So the answer is $82.40; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5414,7 +5616,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20 × 1.05 = $21."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$20 × 1.05 = $21.",
+    "Spreadsheet or calculator: =20*1.05",
+    "So the answer is $21; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5441,7 +5646,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20.00 × 1.02 = $20.40."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$20.00 × 1.02 = $20.40.",
+    "Spreadsheet or calculator: =20.00*1.02",
+    "So the answer is $20.40; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5468,7 +5676,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$60.00 × 1.02 = $61.20."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$60.00 × 1.02 = $61.20.",
+    "Spreadsheet or calculator: =60.00*1.02",
+    "So the answer is $61.20; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5495,7 +5706,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$100 × 1.02 = $102."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$100 × 1.02 = $102.",
+    "Spreadsheet or calculator: =100*1.02",
+    "So the answer is $102; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5522,7 +5736,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$60 × 1.05 = $63."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$60 × 1.05 = $63.",
+    "Spreadsheet or calculator: =60*1.05",
+    "So the answer is $63; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5549,7 +5766,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$60.00 × 1.02 = $61.20."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$60.00 × 1.02 = $61.20.",
+    "Spreadsheet or calculator: =60.00*1.02",
+    "So the answer is $61.20; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5576,7 +5796,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.025) = 44.49.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.025)",
     "Each extra year multiplies prices by the same factor."
    ]
   },
@@ -5604,8 +5826,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 2 ÷ log(1.03) = 23.45.",
-    "Rule of 72 check: 72 ÷ 3 = 24.0."
+    "Rule of 72 check: 72 ÷ 3 = 24.0.",
+    "Spreadsheet or calculator: =LOG10(2)/LOG10(1.03)",
+    "So the answer is 23.4; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5632,7 +5857,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.02) = 55.48.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.02)",
     "Each extra year multiplies prices by the same factor."
    ]
   },
@@ -5660,7 +5887,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 1.5 ÷ log(1.04) = 10.34.",
+    "Spreadsheet or calculator: =LOG10(1.5)/LOG10(1.04)",
     "Each extra year multiplies prices by the same factor."
    ]
   },
@@ -5688,7 +5917,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.03) = 37.17.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.03)",
     "Each extra year multiplies prices by the same factor."
    ]
   },
@@ -5716,8 +5947,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 2 ÷ log(1.02) = 35.00.",
-    "Rule of 72 check: 72 ÷ 2 = 36.0."
+    "Rule of 72 check: 72 ÷ 2 = 36.0.",
+    "Spreadsheet or calculator: =LOG10(2)/LOG10(1.02)",
+    "So the answer is 35; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5744,7 +5978,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 1.5 ÷ log(1.025) = 16.42.",
+    "Spreadsheet or calculator: =LOG10(1.5)/LOG10(1.025)",
     "Each extra year multiplies prices by the same factor."
    ]
   },
@@ -5772,7 +6008,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.04) = 28.01.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.04)",
     "Each extra year multiplies prices by the same factor."
    ]
   },
@@ -5800,8 +6038,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 2 ÷ log(1.025) = 28.07.",
-    "Rule of 72 check: 72 ÷ 2.5 = 28.8."
+    "Rule of 72 check: 72 ÷ 2.5 = 28.8.",
+    "Spreadsheet or calculator: =LOG10(2)/LOG10(1.025)",
+    "So the answer is 28.1; inflation means the same dollars buy less over time."
    ]
   },
   {
@@ -5828,7 +6069,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6,000 × 40 = $240,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$6,000 × 40 = $240,000.",
+    "Spreadsheet or calculator: =6000*40",
+    "So the answer is $240,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -5855,7 +6099,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$7,000 × 30 = $210,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$7,000 × 30 = $210,000.",
+    "Spreadsheet or calculator: =7000*30",
+    "So the answer is $210,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -5882,7 +6129,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,500 × 10 = $45,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$4,500 × 10 = $45,000.",
+    "Spreadsheet or calculator: =4500*10",
+    "So the answer is $45,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -5909,7 +6159,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6,500 × 40 = $260,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$6,500 × 40 = $260,000.",
+    "Spreadsheet or calculator: =6500*40",
+    "So the answer is $260,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -5936,7 +6189,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,000 × 30 = $90,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$3,000 × 30 = $90,000.",
+    "Spreadsheet or calculator: =3000*30",
+    "So the answer is $90,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -5963,7 +6219,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$7,500 × 40 = $300,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$7,500 × 40 = $300,000.",
+    "Spreadsheet or calculator: =7500*40",
+    "So the answer is $300,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -5990,7 +6249,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,500 × 30 = $75,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$2,500 × 30 = $75,000.",
+    "Spreadsheet or calculator: =2500*30",
+    "So the answer is $75,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6017,7 +6279,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,000 × 10 = $30,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$3,000 × 10 = $30,000.",
+    "Spreadsheet or calculator: =3000*10",
+    "So the answer is $30,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6044,7 +6309,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,500 × 10 = $25,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$2,500 × 10 = $25,000.",
+    "Spreadsheet or calculator: =2500*10",
+    "So the answer is $25,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6071,7 +6339,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6,000 × 10 = $60,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$6,000 × 10 = $60,000.",
+    "Spreadsheet or calculator: =6000*10",
+    "So the answer is $60,000; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6098,9 +6369,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $46,000.00 × 0.06 ÷ 12 × 1.5 = $345.00.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $346,557.69."
+    "FV = $346,557.69.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-345)",
+    "So the answer is $346,557.69; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6127,9 +6401,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $43,000.00 × 0.06 ÷ 12 × 1.5 = $322.50.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $323,956.10."
+    "FV = $323,956.10.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-322.5)",
+    "So the answer is $323,956.10; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6156,9 +6433,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $51,000.00 × 0.06 ÷ 12 × 1.5 = $382.50.",
     "n = 240, i = 0.06 ÷ 12.",
-    "FV = $176,730.64."
+    "FV = $176,730.64.",
+    "Spreadsheet or calculator: =FV(0.06/12,240,-382.5)",
+    "So the answer is $176,730.64; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6185,9 +6465,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $55,000.00 × 0.06 ÷ 12 × 1.5 = $412.50.",
     "n = 240, i = 0.06 ÷ 12.",
-    "FV = $190,591.87."
+    "FV = $190,591.87.",
+    "Spreadsheet or calculator: =FV(0.06/12,240,-412.5)",
+    "So the answer is $190,591.87; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6214,9 +6497,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $57,000.00 × 0.06 ÷ 12 × 1.5 = $427.50.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $429,430.18."
+    "FV = $429,430.18.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-427.5)",
+    "So the answer is $429,430.18; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6243,9 +6529,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $50,000.00 × 0.06 ÷ 12 × 1.5 = $375.00.",
     "n = 360, i = 0.07 ÷ 12.",
-    "FV = $457,489.12."
+    "FV = $457,489.12.",
+    "Spreadsheet or calculator: =FV(0.07/12,360,-375)",
+    "So the answer is $457,489.12; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6272,9 +6561,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $44,000.00 × 0.06 ÷ 12 × 1.5 = $330.00.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $331,489.96."
+    "FV = $331,489.96.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-330)",
+    "So the answer is $331,489.96; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6301,9 +6593,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $42,000.00 × 0.06 ÷ 12 × 1.5 = $315.00.",
     "n = 240, i = 0.06 ÷ 12.",
-    "FV = $145,542.88."
+    "FV = $145,542.88.",
+    "Spreadsheet or calculator: =FV(0.06/12,240,-315)",
+    "So the answer is $145,542.88; starting early lets compounding carry more of the load."
    ]
   },
   {
@@ -6330,7 +6625,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$43,000 × 0.03 = $1,290."
+    "Formula: Contribution = salary × percent.",
+    "$43,000 × 0.03 = $1,290.",
+    "Spreadsheet or calculator: =43000*0.03",
+    "So the answer is $1,290; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6357,7 +6655,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$47,000 × 0.05 = $2,350."
+    "Formula: Contribution = salary × percent.",
+    "$47,000 × 0.05 = $2,350.",
+    "Spreadsheet or calculator: =47000*0.05",
+    "So the answer is $2,350; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6384,7 +6685,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$64,000 × 0.10 = $6,400."
+    "Formula: Contribution = salary × percent.",
+    "$64,000 × 0.10 = $6,400.",
+    "Spreadsheet or calculator: =64000*0.10",
+    "So the answer is $6,400; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6411,7 +6715,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$57,000 × 0.05 = $2,850."
+    "Formula: Contribution = salary × percent.",
+    "$57,000 × 0.05 = $2,850.",
+    "Spreadsheet or calculator: =57000*0.05",
+    "So the answer is $2,850; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6438,7 +6745,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$79,000 × 0.05 = $3,950."
+    "Formula: Contribution = salary × percent.",
+    "$79,000 × 0.05 = $3,950.",
+    "Spreadsheet or calculator: =79000*0.05",
+    "So the answer is $3,950; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6465,9 +6775,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $99,900 = $16,690.",
     "With: tax on $88,300 = $14,138.",
-    "Savings = $2,552."
+    "Savings = $2,552.",
+    "Spreadsheet or calculator: =16690-14138",
+    "So the answer is $2,552; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6494,9 +6807,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $56,900 = $7,230.",
     "With: tax on $49,600 = $5,704.",
-    "Savings = $1,526."
+    "Savings = $1,526.",
+    "Spreadsheet or calculator: =7230-5704",
+    "So the answer is $1,526; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6523,9 +6839,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $81,900 = $12,730.",
     "With: tax on $77,000 = $11,652.",
-    "Savings = $1,078."
+    "Savings = $1,078.",
+    "Spreadsheet or calculator: =12730-11652",
+    "So the answer is $1,078; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6552,9 +6871,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $101,900 = $17,130.",
     "With: tax on $90,100 = $14,534.",
-    "Savings = $2,596."
+    "Savings = $2,596.",
+    "Spreadsheet or calculator: =17130-14534",
+    "So the answer is $2,596; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6581,9 +6903,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $70,900.00 = $10,310.00.",
     "With: tax on $63,940.00 = $8,778.80.",
-    "Savings = $1,531.20."
+    "Savings = $1,531.20.",
+    "Spreadsheet or calculator: =10310.00-8778.80",
+    "So the answer is $1,531.20; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6610,9 +6935,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $39,900 = $4,540.",
     "With: tax on $34,300 = $3,868.",
-    "Savings = $672."
+    "Savings = $672.",
+    "Spreadsheet or calculator: =4540-3868",
+    "So the answer is $672; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6639,9 +6967,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $76,900 = $11,630.",
     "With: tax on $72,250 = $10,607.",
-    "Savings = $1,023."
+    "Savings = $1,023.",
+    "Spreadsheet or calculator: =11630-10607",
+    "So the answer is $1,023; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6668,9 +6999,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $40,900.00 = $4,660.00.",
     "With: tax on $36,340.00 = $4,112.80.",
-    "Savings = $547.20."
+    "Savings = $547.20.",
+    "Spreadsheet or calculator: =4660.00-4112.80",
+    "So the answer is $547.20; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6697,9 +7031,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $42,900.00 = $4,900.00.",
     "With: tax on $38,180.00 = $4,333.60.",
-    "Savings = $566.40."
+    "Savings = $566.40.",
+    "Spreadsheet or calculator: =4900.00-4333.60",
+    "So the answer is $566.40; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6726,9 +7063,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $53,900 = $6,570.",
     "With: tax on $50,400 = $5,800.",
-    "Savings = $770."
+    "Savings = $770.",
+    "Spreadsheet or calculator: =6570-5800",
+    "So the answer is $770; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -6755,7 +7095,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,000.00 ÷ 1.04 = $1,923.08."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$2,000.00 ÷ 1.04 = $1,923.08.",
+    "Spreadsheet or calculator: =2000.00/1.04",
+    "So the answer is $1,923.08; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6782,7 +7125,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$100.00 ÷ 1.04 = $96.15."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$100.00 ÷ 1.04 = $96.15.",
+    "Spreadsheet or calculator: =100.00/1.04",
+    "So the answer is $96.15; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6809,7 +7155,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$500.00 ÷ 1.02 = $490.20."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$500.00 ÷ 1.02 = $490.20.",
+    "Spreadsheet or calculator: =500.00/1.02",
+    "So the answer is $490.20; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6836,7 +7185,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$500.00 ÷ 1.05 = $476.19."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$500.00 ÷ 1.05 = $476.19.",
+    "Spreadsheet or calculator: =500.00/1.05",
+    "So the answer is $476.19; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6863,7 +7215,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,000.00 ÷ 1.02 = $980.39."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$1,000.00 ÷ 1.02 = $980.39.",
+    "Spreadsheet or calculator: =1000.00/1.02",
+    "So the answer is $980.39; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6890,7 +7245,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,000.00 ÷ 1.05 = $1,904.76."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$2,000.00 ÷ 1.05 = $1,904.76.",
+    "Spreadsheet or calculator: =2000.00/1.05",
+    "So the answer is $1,904.76; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6917,7 +7275,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,000.00 ÷ 1.02 = $1,960.78."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$2,000.00 ÷ 1.02 = $1,960.78.",
+    "Spreadsheet or calculator: =2000.00/1.02",
+    "So the answer is $1,960.78; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6944,8 +7305,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.02) = 1.07100.",
-    "Nominal = 7.10%. Adding the rates gives 7%, slightly low."
+    "Nominal = 7.10%. Adding the rates gives 7%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.02))-1 (then format as a percent)",
+    "So the answer is 7.1%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -6972,8 +7336,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.04)(1 + 0.03) = 1.07120.",
-    "Nominal = 7.12%. Adding the rates gives 7%, slightly low."
+    "Nominal = 7.12%. Adding the rates gives 7%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.04)*(1+0.03))-1 (then format as a percent)",
+    "So the answer is 7.12%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7000,8 +7367,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.025) = 1.05575.",
-    "Nominal = 5.58%. Adding the rates gives 5.5%, slightly low."
+    "Nominal = 5.58%. Adding the rates gives 5.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.025))-1 (then format as a percent)",
+    "So the answer is 5.58%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7028,8 +7398,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.03) = 1.06090.",
-    "Nominal = 6.09%. Adding the rates gives 6%, slightly low."
+    "Nominal = 6.09%. Adding the rates gives 6%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.03))-1 (then format as a percent)",
+    "So the answer is 6.09%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7056,8 +7429,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.02) = 1.05060.",
-    "Nominal = 5.06%. Adding the rates gives 5%, slightly low."
+    "Nominal = 5.06%. Adding the rates gives 5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.02))-1 (then format as a percent)",
+    "So the answer is 5.06%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7084,8 +7460,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.035) = 1.08675.",
-    "Nominal = 8.68%. Adding the rates gives 8.5%, slightly low."
+    "Nominal = 8.68%. Adding the rates gives 8.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.035))-1 (then format as a percent)",
+    "So the answer is 8.68%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7112,8 +7491,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.025) = 1.07625.",
-    "Nominal = 7.63%. Adding the rates gives 7.5%, slightly low."
+    "Nominal = 7.63%. Adding the rates gives 7.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.025))-1 (then format as a percent)",
+    "So the answer is 7.63%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7140,8 +7522,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.03) = 1.08150.",
-    "Nominal = 8.15%. Adding the rates gives 8%, slightly low."
+    "Nominal = 8.15%. Adding the rates gives 8%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.03))-1 (then format as a percent)",
+    "So the answer is 8.15%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7168,8 +7553,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.04)(1 + 0.02) = 1.06080.",
-    "Nominal = 6.08%. Adding the rates gives 6%, slightly low."
+    "Nominal = 6.08%. Adding the rates gives 6%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.04)*(1+0.02))-1 (then format as a percent)",
+    "So the answer is 6.08%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7196,8 +7584,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.035) = 1.06605.",
-    "Nominal = 6.61%. Adding the rates gives 6.5%, slightly low."
+    "Nominal = 6.61%. Adding the rates gives 6.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.035))-1 (then format as a percent)",
+    "So the answer is 6.61%; plan in today's dollars to see what savings will really buy."
    ]
   },
   {
@@ -7269,7 +7660,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$65,000 × 6% ÷ 26 = $150."
+    "Formula: Per paycheck = salary × contribution rate ÷ paychecks per year.",
+    "$65,000 × 6% ÷ 26 = $150.",
+    "Spreadsheet or calculator: =65000*6%/26",
+    "So the answer is $150; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -7341,8 +7735,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched rate = the smaller of 4% and 6%.",
     "Matched rate = the smaller of 4% and 6% = 4%.",
-    "Match = 50% × 4% × $43,000 = $860."
+    "Match = 50% × 4% × $43,000 = $860.",
+    "Spreadsheet or calculator: =50%*4%*43000",
+    "So the answer is $860; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -7488,7 +7885,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$61,000.00 × 4% ÷ 26 = $93.85."
+    "Formula: Per paycheck = salary × contribution rate ÷ paychecks per year.",
+    "$61,000.00 × 4% ÷ 26 = $93.85.",
+    "Spreadsheet or calculator: =61000.00*4%/26",
+    "So the answer is $93.85; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -7560,8 +7960,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched rate = the smaller of 4% and 6%.",
     "Matched rate = the smaller of 4% and 6% = 4%.",
-    "Match = 100% × 4% × $64,000 = $2,560."
+    "Match = 100% × 4% × $64,000 = $2,560.",
+    "Spreadsheet or calculator: =100%*4%*64000",
+    "So the answer is $2,560; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -7707,7 +8110,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$45,000.00 × 8% ÷ 26 = $138.46."
+    "Formula: Per paycheck = salary × contribution rate ÷ paychecks per year.",
+    "$45,000.00 × 8% ÷ 26 = $138.46.",
+    "Spreadsheet or calculator: =45000.00*8%/26",
+    "So the answer is $138.46; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -7779,8 +8185,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Matched rate = the smaller of 8% and 6%.",
     "Matched rate = the smaller of 8% and 6% = 6%.",
-    "Match = 100% × 6% × $53,000 = $3,180."
+    "Match = 100% × 6% × $53,000 = $3,180.",
+    "Spreadsheet or calculator: =100%*6%*53000",
+    "So the answer is $3,180; always contribute enough to get the full employer match."
    ]
   },
   {
@@ -7855,6 +8264,4956 @@
     "Employer money = $3,360 × 2 = $6,720.",
     "Vested = 50%.",
     "He keeps $3,360."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "support",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "With 3% inflation, what will the $45.00 item cost in 30 years? Use Price(t) = $45.00(1 + 0.03)^t.",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $45.00 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 150,
+      "step": 50,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         45
+        ],
+        [
+         0.67,
+         45.6
+        ],
+        [
+         1.33,
+         46.2
+        ],
+        [
+         2,
+         46.82
+        ],
+        [
+         2.67,
+         47.44
+        ],
+        [
+         3.33,
+         48.07
+        ],
+        [
+         4,
+         48.71
+        ],
+        [
+         4.67,
+         49.36
+        ],
+        [
+         5.33,
+         50.01
+        ],
+        [
+         6,
+         50.68
+        ],
+        [
+         6.67,
+         51.35
+        ],
+        [
+         7.33,
+         52.03
+        ],
+        [
+         8,
+         52.72
+        ],
+        [
+         8.67,
+         53.43
+        ],
+        [
+         9.33,
+         54.14
+        ],
+        [
+         10,
+         54.85
+        ],
+        [
+         10.67,
+         55.58
+        ],
+        [
+         11.33,
+         56.32
+        ],
+        [
+         12,
+         57.07
+        ],
+        [
+         12.67,
+         57.83
+        ],
+        [
+         13.33,
+         58.6
+        ],
+        [
+         14,
+         59.38
+        ],
+        [
+         14.67,
+         60.17
+        ],
+        [
+         15.33,
+         60.97
+        ],
+        [
+         16,
+         61.78
+        ],
+        [
+         16.67,
+         62.6
+        ],
+        [
+         17.33,
+         63.43
+        ],
+        [
+         18,
+         64.27
+        ],
+        [
+         18.67,
+         65.13
+        ],
+        [
+         19.33,
+         65.99
+        ],
+        [
+         20,
+         66.87
+        ],
+        [
+         20.67,
+         67.76
+        ],
+        [
+         21.33,
+         68.66
+        ],
+        [
+         22,
+         69.57
+        ],
+        [
+         22.67,
+         70.49
+        ],
+        [
+         23.33,
+         71.43
+        ],
+        [
+         24,
+         72.38
+        ],
+        [
+         24.67,
+         73.34
+        ],
+        [
+         25.33,
+         74.32
+        ],
+        [
+         26,
+         75.3
+        ],
+        [
+         26.67,
+         76.3
+        ],
+        [
+         27.33,
+         77.32
+        ],
+        [
+         28,
+         78.35
+        ],
+        [
+         28.67,
+         79.39
+        ],
+        [
+         29.33,
+         80.44
+        ],
+        [
+         30,
+         81.51
+        ],
+        [
+         30.67,
+         82.59
+        ],
+        [
+         31.33,
+         83.69
+        ],
+        [
+         32,
+         84.8
+        ],
+        [
+         32.67,
+         85.93
+        ],
+        [
+         33.33,
+         87.07
+        ],
+        [
+         34,
+         88.23
+        ],
+        [
+         34.67,
+         89.4
+        ],
+        [
+         35.33,
+         90.59
+        ],
+        [
+         36,
+         91.79
+        ],
+        [
+         36.67,
+         93.01
+        ],
+        [
+         37.33,
+         94.25
+        ],
+        [
+         38,
+         95.5
+        ],
+        [
+         38.67,
+         96.77
+        ],
+        [
+         39.33,
+         98.06
+        ],
+        [
+         40,
+         99.36
+        ]
+       ]
+      },
+      {
+       "name": "3% inflation",
+       "pts": [
+        [
+         0,
+         45
+        ],
+        [
+         0.67,
+         45.9
+        ],
+        [
+         1.33,
+         46.81
+        ],
+        [
+         2,
+         47.74
+        ],
+        [
+         2.67,
+         48.69
+        ],
+        [
+         3.33,
+         49.66
+        ],
+        [
+         4,
+         50.65
+        ],
+        [
+         4.67,
+         51.66
+        ],
+        [
+         5.33,
+         52.68
+        ],
+        [
+         6,
+         53.73
+        ],
+        [
+         6.67,
+         54.8
+        ],
+        [
+         7.33,
+         55.89
+        ],
+        [
+         8,
+         57
+        ],
+        [
+         8.67,
+         58.14
+        ],
+        [
+         9.33,
+         59.3
+        ],
+        [
+         10,
+         60.48
+        ],
+        [
+         10.67,
+         61.68
+        ],
+        [
+         11.33,
+         62.91
+        ],
+        [
+         12,
+         64.16
+        ],
+        [
+         12.67,
+         65.44
+        ],
+        [
+         13.33,
+         66.74
+        ],
+        [
+         14,
+         68.07
+        ],
+        [
+         14.67,
+         69.42
+        ],
+        [
+         15.33,
+         70.8
+        ],
+        [
+         16,
+         72.21
+        ],
+        [
+         16.67,
+         73.65
+        ],
+        [
+         17.33,
+         75.11
+        ],
+        [
+         18,
+         76.61
+        ],
+        [
+         18.67,
+         78.13
+        ],
+        [
+         19.33,
+         79.69
+        ],
+        [
+         20,
+         81.28
+        ],
+        [
+         20.67,
+         82.89
+        ],
+        [
+         21.33,
+         84.54
+        ],
+        [
+         22,
+         86.22
+        ],
+        [
+         22.67,
+         87.94
+        ],
+        [
+         23.33,
+         89.69
+        ],
+        [
+         24,
+         91.48
+        ],
+        [
+         24.67,
+         93.3
+        ],
+        [
+         25.33,
+         95.15
+        ],
+        [
+         26,
+         97.05
+        ],
+        [
+         26.67,
+         98.98
+        ],
+        [
+         27.33,
+         100.95
+        ],
+        [
+         28,
+         102.96
+        ],
+        [
+         28.67,
+         105.01
+        ],
+        [
+         29.33,
+         107.1
+        ],
+        [
+         30,
+         109.23
+        ],
+        [
+         30.67,
+         111.4
+        ],
+        [
+         31.33,
+         113.62
+        ],
+        [
+         32,
+         115.88
+        ],
+        [
+         32.67,
+         118.18
+        ],
+        [
+         33.33,
+         120.54
+        ],
+        [
+         34,
+         122.94
+        ],
+        [
+         34.67,
+         125.38
+        ],
+        [
+         35.33,
+         127.88
+        ],
+        [
+         36,
+         130.42
+        ],
+        [
+         36.67,
+         133.02
+        ],
+        [
+         37.33,
+         135.67
+        ],
+        [
+         38,
+         138.37
+        ],
+        [
+         38.67,
+         141.12
+        ],
+        [
+         39.33,
+         143.93
+        ],
+        [
+         40,
+         146.79
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $45.00(1 + i)^t, with i = 2% and i = 3% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$109.23",
+   "numeric": {
+    "value": 109.23,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: Price(t) = P(1 + i)^t.",
+    "Substitute: $45.00 × 1.03^30 = $109.23.",
+    "Spreadsheet: =45*(1+0.03)^30.",
+    "So the same item costs $109.23: a dollar then buys about 41¢ of today's goods."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-02",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After 10 years, how much more does the item cost with 3% inflation than with 2%?",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $12.00 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.67,
+         12.16
+        ],
+        [
+         1.33,
+         12.32
+        ],
+        [
+         2,
+         12.48
+        ],
+        [
+         2.67,
+         12.65
+        ],
+        [
+         3.33,
+         12.82
+        ],
+        [
+         4,
+         12.99
+        ],
+        [
+         4.67,
+         13.16
+        ],
+        [
+         5.33,
+         13.34
+        ],
+        [
+         6,
+         13.51
+        ],
+        [
+         6.67,
+         13.69
+        ],
+        [
+         7.33,
+         13.88
+        ],
+        [
+         8,
+         14.06
+        ],
+        [
+         8.67,
+         14.25
+        ],
+        [
+         9.33,
+         14.44
+        ],
+        [
+         10,
+         14.63
+        ],
+        [
+         10.67,
+         14.82
+        ],
+        [
+         11.33,
+         15.02
+        ],
+        [
+         12,
+         15.22
+        ],
+        [
+         12.67,
+         15.42
+        ],
+        [
+         13.33,
+         15.63
+        ],
+        [
+         14,
+         15.83
+        ],
+        [
+         14.67,
+         16.04
+        ],
+        [
+         15.33,
+         16.26
+        ],
+        [
+         16,
+         16.47
+        ],
+        [
+         16.67,
+         16.69
+        ],
+        [
+         17.33,
+         16.91
+        ],
+        [
+         18,
+         17.14
+        ],
+        [
+         18.67,
+         17.37
+        ],
+        [
+         19.33,
+         17.6
+        ],
+        [
+         20,
+         17.83
+        ],
+        [
+         20.67,
+         18.07
+        ],
+        [
+         21.33,
+         18.31
+        ],
+        [
+         22,
+         18.55
+        ],
+        [
+         22.67,
+         18.8
+        ],
+        [
+         23.33,
+         19.05
+        ],
+        [
+         24,
+         19.3
+        ],
+        [
+         24.67,
+         19.56
+        ],
+        [
+         25.33,
+         19.82
+        ],
+        [
+         26,
+         20.08
+        ],
+        [
+         26.67,
+         20.35
+        ],
+        [
+         27.33,
+         20.62
+        ],
+        [
+         28,
+         20.89
+        ],
+        [
+         28.67,
+         21.17
+        ],
+        [
+         29.33,
+         21.45
+        ],
+        [
+         30,
+         21.74
+        ],
+        [
+         30.67,
+         22.03
+        ],
+        [
+         31.33,
+         22.32
+        ],
+        [
+         32,
+         22.61
+        ],
+        [
+         32.67,
+         22.92
+        ],
+        [
+         33.33,
+         23.22
+        ],
+        [
+         34,
+         23.53
+        ],
+        [
+         34.67,
+         23.84
+        ],
+        [
+         35.33,
+         24.16
+        ],
+        [
+         36,
+         24.48
+        ],
+        [
+         36.67,
+         24.8
+        ],
+        [
+         37.33,
+         25.13
+        ],
+        [
+         38,
+         25.47
+        ],
+        [
+         38.67,
+         25.81
+        ],
+        [
+         39.33,
+         26.15
+        ],
+        [
+         40,
+         26.5
+        ]
+       ]
+      },
+      {
+       "name": "3% inflation",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.67,
+         12.24
+        ],
+        [
+         1.33,
+         12.48
+        ],
+        [
+         2,
+         12.73
+        ],
+        [
+         2.67,
+         12.98
+        ],
+        [
+         3.33,
+         13.24
+        ],
+        [
+         4,
+         13.51
+        ],
+        [
+         4.67,
+         13.77
+        ],
+        [
+         5.33,
+         14.05
+        ],
+        [
+         6,
+         14.33
+        ],
+        [
+         6.67,
+         14.61
+        ],
+        [
+         7.33,
+         14.9
+        ],
+        [
+         8,
+         15.2
+        ],
+        [
+         8.67,
+         15.5
+        ],
+        [
+         9.33,
+         15.81
+        ],
+        [
+         10,
+         16.13
+        ],
+        [
+         10.67,
+         16.45
+        ],
+        [
+         11.33,
+         16.78
+        ],
+        [
+         12,
+         17.11
+        ],
+        [
+         12.67,
+         17.45
+        ],
+        [
+         13.33,
+         17.8
+        ],
+        [
+         14,
+         18.15
+        ],
+        [
+         14.67,
+         18.51
+        ],
+        [
+         15.33,
+         18.88
+        ],
+        [
+         16,
+         19.26
+        ],
+        [
+         16.67,
+         19.64
+        ],
+        [
+         17.33,
+         20.03
+        ],
+        [
+         18,
+         20.43
+        ],
+        [
+         18.67,
+         20.84
+        ],
+        [
+         19.33,
+         21.25
+        ],
+        [
+         20,
+         21.67
+        ],
+        [
+         20.67,
+         22.1
+        ],
+        [
+         21.33,
+         22.54
+        ],
+        [
+         22,
+         22.99
+        ],
+        [
+         22.67,
+         23.45
+        ],
+        [
+         23.33,
+         23.92
+        ],
+        [
+         24,
+         24.39
+        ],
+        [
+         24.67,
+         24.88
+        ],
+        [
+         25.33,
+         25.37
+        ],
+        [
+         26,
+         25.88
+        ],
+        [
+         26.67,
+         26.39
+        ],
+        [
+         27.33,
+         26.92
+        ],
+        [
+         28,
+         27.46
+        ],
+        [
+         28.67,
+         28
+        ],
+        [
+         29.33,
+         28.56
+        ],
+        [
+         30,
+         29.13
+        ],
+        [
+         30.67,
+         29.71
+        ],
+        [
+         31.33,
+         30.3
+        ],
+        [
+         32,
+         30.9
+        ],
+        [
+         32.67,
+         31.52
+        ],
+        [
+         33.33,
+         32.14
+        ],
+        [
+         34,
+         32.78
+        ],
+        [
+         34.67,
+         33.44
+        ],
+        [
+         35.33,
+         34.1
+        ],
+        [
+         36,
+         34.78
+        ],
+        [
+         36.67,
+         35.47
+        ],
+        [
+         37.33,
+         36.18
+        ],
+        [
+         38,
+         36.9
+        ],
+        [
+         38.67,
+         37.63
+        ],
+        [
+         39.33,
+         38.38
+        ],
+        [
+         40,
+         39.14
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $12.00(1 + i)^t, with i = 2% and i = 3% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1.50",
+   "numeric": {
+    "value": 1.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = P(1 + 0.03)^t − P(1 + 0.02)^t.",
+    "Substitute: $16.13 − $14.63 = $1.50.",
+    "Spreadsheet: =12*(1+0.03)^10-12*(1+0.02)^10.",
+    "So a few points of inflation add $1.50 to this one price after 10 years. Retirement plans have to assume a rate, and the choice matters."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-03",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "advanced",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "With 3% inflation, after how many whole years has the price first at least doubled?",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $4 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 15,
+      "step": 5,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         4
+        ],
+        [
+         0.67,
+         4.05
+        ],
+        [
+         1.33,
+         4.11
+        ],
+        [
+         2,
+         4.16
+        ],
+        [
+         2.67,
+         4.22
+        ],
+        [
+         3.33,
+         4.27
+        ],
+        [
+         4,
+         4.33
+        ],
+        [
+         4.67,
+         4.39
+        ],
+        [
+         5.33,
+         4.45
+        ],
+        [
+         6,
+         4.5
+        ],
+        [
+         6.67,
+         4.56
+        ],
+        [
+         7.33,
+         4.63
+        ],
+        [
+         8,
+         4.69
+        ],
+        [
+         8.67,
+         4.75
+        ],
+        [
+         9.33,
+         4.81
+        ],
+        [
+         10,
+         4.88
+        ],
+        [
+         10.67,
+         4.94
+        ],
+        [
+         11.33,
+         5.01
+        ],
+        [
+         12,
+         5.07
+        ],
+        [
+         12.67,
+         5.14
+        ],
+        [
+         13.33,
+         5.21
+        ],
+        [
+         14,
+         5.28
+        ],
+        [
+         14.67,
+         5.35
+        ],
+        [
+         15.33,
+         5.42
+        ],
+        [
+         16,
+         5.49
+        ],
+        [
+         16.67,
+         5.56
+        ],
+        [
+         17.33,
+         5.64
+        ],
+        [
+         18,
+         5.71
+        ],
+        [
+         18.67,
+         5.79
+        ],
+        [
+         19.33,
+         5.87
+        ],
+        [
+         20,
+         5.94
+        ],
+        [
+         20.67,
+         6.02
+        ],
+        [
+         21.33,
+         6.1
+        ],
+        [
+         22,
+         6.18
+        ],
+        [
+         22.67,
+         6.27
+        ],
+        [
+         23.33,
+         6.35
+        ],
+        [
+         24,
+         6.43
+        ],
+        [
+         24.67,
+         6.52
+        ],
+        [
+         25.33,
+         6.61
+        ],
+        [
+         26,
+         6.69
+        ],
+        [
+         26.67,
+         6.78
+        ],
+        [
+         27.33,
+         6.87
+        ],
+        [
+         28,
+         6.96
+        ],
+        [
+         28.67,
+         7.06
+        ],
+        [
+         29.33,
+         7.15
+        ],
+        [
+         30,
+         7.25
+        ],
+        [
+         30.67,
+         7.34
+        ],
+        [
+         31.33,
+         7.44
+        ],
+        [
+         32,
+         7.54
+        ],
+        [
+         32.67,
+         7.64
+        ],
+        [
+         33.33,
+         7.74
+        ],
+        [
+         34,
+         7.84
+        ],
+        [
+         34.67,
+         7.95
+        ],
+        [
+         35.33,
+         8.05
+        ],
+        [
+         36,
+         8.16
+        ],
+        [
+         36.67,
+         8.27
+        ],
+        [
+         37.33,
+         8.38
+        ],
+        [
+         38,
+         8.49
+        ],
+        [
+         38.67,
+         8.6
+        ],
+        [
+         39.33,
+         8.72
+        ],
+        [
+         40,
+         8.83
+        ]
+       ]
+      },
+      {
+       "name": "3% inflation",
+       "pts": [
+        [
+         0,
+         4
+        ],
+        [
+         0.67,
+         4.08
+        ],
+        [
+         1.33,
+         4.16
+        ],
+        [
+         2,
+         4.24
+        ],
+        [
+         2.67,
+         4.33
+        ],
+        [
+         3.33,
+         4.41
+        ],
+        [
+         4,
+         4.5
+        ],
+        [
+         4.67,
+         4.59
+        ],
+        [
+         5.33,
+         4.68
+        ],
+        [
+         6,
+         4.78
+        ],
+        [
+         6.67,
+         4.87
+        ],
+        [
+         7.33,
+         4.97
+        ],
+        [
+         8,
+         5.07
+        ],
+        [
+         8.67,
+         5.17
+        ],
+        [
+         9.33,
+         5.27
+        ],
+        [
+         10,
+         5.38
+        ],
+        [
+         10.67,
+         5.48
+        ],
+        [
+         11.33,
+         5.59
+        ],
+        [
+         12,
+         5.7
+        ],
+        [
+         12.67,
+         5.82
+        ],
+        [
+         13.33,
+         5.93
+        ],
+        [
+         14,
+         6.05
+        ],
+        [
+         14.67,
+         6.17
+        ],
+        [
+         15.33,
+         6.29
+        ],
+        [
+         16,
+         6.42
+        ],
+        [
+         16.67,
+         6.55
+        ],
+        [
+         17.33,
+         6.68
+        ],
+        [
+         18,
+         6.81
+        ],
+        [
+         18.67,
+         6.95
+        ],
+        [
+         19.33,
+         7.08
+        ],
+        [
+         20,
+         7.22
+        ],
+        [
+         20.67,
+         7.37
+        ],
+        [
+         21.33,
+         7.51
+        ],
+        [
+         22,
+         7.66
+        ],
+        [
+         22.67,
+         7.82
+        ],
+        [
+         23.33,
+         7.97
+        ],
+        [
+         24,
+         8.13
+        ],
+        [
+         24.67,
+         8.29
+        ],
+        [
+         25.33,
+         8.46
+        ],
+        [
+         26,
+         8.63
+        ],
+        [
+         26.67,
+         8.8
+        ],
+        [
+         27.33,
+         8.97
+        ],
+        [
+         28,
+         9.15
+        ],
+        [
+         28.67,
+         9.33
+        ],
+        [
+         29.33,
+         9.52
+        ],
+        [
+         30,
+         9.71
+        ],
+        [
+         30.67,
+         9.9
+        ],
+        [
+         31.33,
+         10.1
+        ],
+        [
+         32,
+         10.3
+        ],
+        [
+         32.67,
+         10.51
+        ],
+        [
+         33.33,
+         10.71
+        ],
+        [
+         34,
+         10.93
+        ],
+        [
+         34.67,
+         11.15
+        ],
+        [
+         35.33,
+         11.37
+        ],
+        [
+         36,
+         11.59
+        ],
+        [
+         36.67,
+         11.82
+        ],
+        [
+         37.33,
+         12.06
+        ],
+        [
+         38,
+         12.3
+        ],
+        [
+         38.67,
+         12.54
+        ],
+        [
+         39.33,
+         12.79
+        ],
+        [
+         40,
+         13.05
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $4(1 + i)^t, with i = 2% and i = 3% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "24",
+   "numeric": {
+    "value": 24,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve (1 + i)^t ≥ 2, so t ≥ ln 2 ÷ ln(1 + i).",
+    "Substitute: ln 2 ÷ ln 1.03 = 23.45, so 24 years. (Rule of 72: 72 ÷ 3 ≈ 24.0.)",
+    "Spreadsheet: =ROUNDUP(LN(2)/LN(1+0.03),0).",
+    "So prices double in 24 years; Maya would need twice the income then to buy the same things."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-04",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "support",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "With 3% inflation, what will the $12.00 item cost in 20 years? Use Price(t) = $12.00(1 + 0.03)^t.",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $12.00 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.67,
+         12.16
+        ],
+        [
+         1.33,
+         12.32
+        ],
+        [
+         2,
+         12.48
+        ],
+        [
+         2.67,
+         12.65
+        ],
+        [
+         3.33,
+         12.82
+        ],
+        [
+         4,
+         12.99
+        ],
+        [
+         4.67,
+         13.16
+        ],
+        [
+         5.33,
+         13.34
+        ],
+        [
+         6,
+         13.51
+        ],
+        [
+         6.67,
+         13.69
+        ],
+        [
+         7.33,
+         13.88
+        ],
+        [
+         8,
+         14.06
+        ],
+        [
+         8.67,
+         14.25
+        ],
+        [
+         9.33,
+         14.44
+        ],
+        [
+         10,
+         14.63
+        ],
+        [
+         10.67,
+         14.82
+        ],
+        [
+         11.33,
+         15.02
+        ],
+        [
+         12,
+         15.22
+        ],
+        [
+         12.67,
+         15.42
+        ],
+        [
+         13.33,
+         15.63
+        ],
+        [
+         14,
+         15.83
+        ],
+        [
+         14.67,
+         16.04
+        ],
+        [
+         15.33,
+         16.26
+        ],
+        [
+         16,
+         16.47
+        ],
+        [
+         16.67,
+         16.69
+        ],
+        [
+         17.33,
+         16.91
+        ],
+        [
+         18,
+         17.14
+        ],
+        [
+         18.67,
+         17.37
+        ],
+        [
+         19.33,
+         17.6
+        ],
+        [
+         20,
+         17.83
+        ],
+        [
+         20.67,
+         18.07
+        ],
+        [
+         21.33,
+         18.31
+        ],
+        [
+         22,
+         18.55
+        ],
+        [
+         22.67,
+         18.8
+        ],
+        [
+         23.33,
+         19.05
+        ],
+        [
+         24,
+         19.3
+        ],
+        [
+         24.67,
+         19.56
+        ],
+        [
+         25.33,
+         19.82
+        ],
+        [
+         26,
+         20.08
+        ],
+        [
+         26.67,
+         20.35
+        ],
+        [
+         27.33,
+         20.62
+        ],
+        [
+         28,
+         20.89
+        ],
+        [
+         28.67,
+         21.17
+        ],
+        [
+         29.33,
+         21.45
+        ],
+        [
+         30,
+         21.74
+        ],
+        [
+         30.67,
+         22.03
+        ],
+        [
+         31.33,
+         22.32
+        ],
+        [
+         32,
+         22.61
+        ],
+        [
+         32.67,
+         22.92
+        ],
+        [
+         33.33,
+         23.22
+        ],
+        [
+         34,
+         23.53
+        ],
+        [
+         34.67,
+         23.84
+        ],
+        [
+         35.33,
+         24.16
+        ],
+        [
+         36,
+         24.48
+        ],
+        [
+         36.67,
+         24.8
+        ],
+        [
+         37.33,
+         25.13
+        ],
+        [
+         38,
+         25.47
+        ],
+        [
+         38.67,
+         25.81
+        ],
+        [
+         39.33,
+         26.15
+        ],
+        [
+         40,
+         26.5
+        ]
+       ]
+      },
+      {
+       "name": "3% inflation",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.67,
+         12.24
+        ],
+        [
+         1.33,
+         12.48
+        ],
+        [
+         2,
+         12.73
+        ],
+        [
+         2.67,
+         12.98
+        ],
+        [
+         3.33,
+         13.24
+        ],
+        [
+         4,
+         13.51
+        ],
+        [
+         4.67,
+         13.77
+        ],
+        [
+         5.33,
+         14.05
+        ],
+        [
+         6,
+         14.33
+        ],
+        [
+         6.67,
+         14.61
+        ],
+        [
+         7.33,
+         14.9
+        ],
+        [
+         8,
+         15.2
+        ],
+        [
+         8.67,
+         15.5
+        ],
+        [
+         9.33,
+         15.81
+        ],
+        [
+         10,
+         16.13
+        ],
+        [
+         10.67,
+         16.45
+        ],
+        [
+         11.33,
+         16.78
+        ],
+        [
+         12,
+         17.11
+        ],
+        [
+         12.67,
+         17.45
+        ],
+        [
+         13.33,
+         17.8
+        ],
+        [
+         14,
+         18.15
+        ],
+        [
+         14.67,
+         18.51
+        ],
+        [
+         15.33,
+         18.88
+        ],
+        [
+         16,
+         19.26
+        ],
+        [
+         16.67,
+         19.64
+        ],
+        [
+         17.33,
+         20.03
+        ],
+        [
+         18,
+         20.43
+        ],
+        [
+         18.67,
+         20.84
+        ],
+        [
+         19.33,
+         21.25
+        ],
+        [
+         20,
+         21.67
+        ],
+        [
+         20.67,
+         22.1
+        ],
+        [
+         21.33,
+         22.54
+        ],
+        [
+         22,
+         22.99
+        ],
+        [
+         22.67,
+         23.45
+        ],
+        [
+         23.33,
+         23.92
+        ],
+        [
+         24,
+         24.39
+        ],
+        [
+         24.67,
+         24.88
+        ],
+        [
+         25.33,
+         25.37
+        ],
+        [
+         26,
+         25.88
+        ],
+        [
+         26.67,
+         26.39
+        ],
+        [
+         27.33,
+         26.92
+        ],
+        [
+         28,
+         27.46
+        ],
+        [
+         28.67,
+         28
+        ],
+        [
+         29.33,
+         28.56
+        ],
+        [
+         30,
+         29.13
+        ],
+        [
+         30.67,
+         29.71
+        ],
+        [
+         31.33,
+         30.3
+        ],
+        [
+         32,
+         30.9
+        ],
+        [
+         32.67,
+         31.52
+        ],
+        [
+         33.33,
+         32.14
+        ],
+        [
+         34,
+         32.78
+        ],
+        [
+         34.67,
+         33.44
+        ],
+        [
+         35.33,
+         34.1
+        ],
+        [
+         36,
+         34.78
+        ],
+        [
+         36.67,
+         35.47
+        ],
+        [
+         37.33,
+         36.18
+        ],
+        [
+         38,
+         36.9
+        ],
+        [
+         38.67,
+         37.63
+        ],
+        [
+         39.33,
+         38.38
+        ],
+        [
+         40,
+         39.14
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $12.00(1 + i)^t, with i = 2% and i = 3% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$21.67",
+   "numeric": {
+    "value": 21.67,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: Price(t) = P(1 + i)^t.",
+    "Substitute: $12.00 × 1.03^20 = $21.67.",
+    "Spreadsheet: =12*(1+0.03)^20.",
+    "So the same item costs $21.67: a dollar then buys about 55¢ of today's goods."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-05",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After 30 years, how much more does the item cost with 3% inflation than with 2%?",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $120.00 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 400,
+      "step": 100,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         120
+        ],
+        [
+         0.67,
+         121.59
+        ],
+        [
+         1.33,
+         123.21
+        ],
+        [
+         2,
+         124.85
+        ],
+        [
+         2.67,
+         126.51
+        ],
+        [
+         3.33,
+         128.19
+        ],
+        [
+         4,
+         129.89
+        ],
+        [
+         4.67,
+         131.62
+        ],
+        [
+         5.33,
+         133.37
+        ],
+        [
+         6,
+         135.14
+        ],
+        [
+         6.67,
+         136.94
+        ],
+        [
+         7.33,
+         138.76
+        ],
+        [
+         8,
+         140.6
+        ],
+        [
+         8.67,
+         142.47
+        ],
+        [
+         9.33,
+         144.36
+        ],
+        [
+         10,
+         146.28
+        ],
+        [
+         10.67,
+         148.22
+        ],
+        [
+         11.33,
+         150.19
+        ],
+        [
+         12,
+         152.19
+        ],
+        [
+         12.67,
+         154.21
+        ],
+        [
+         13.33,
+         156.26
+        ],
+        [
+         14,
+         158.34
+        ],
+        [
+         14.67,
+         160.44
+        ],
+        [
+         15.33,
+         162.57
+        ],
+        [
+         16,
+         164.73
+        ],
+        [
+         16.67,
+         166.92
+        ],
+        [
+         17.33,
+         169.14
+        ],
+        [
+         18,
+         171.39
+        ],
+        [
+         18.67,
+         173.67
+        ],
+        [
+         19.33,
+         175.98
+        ],
+        [
+         20,
+         178.31
+        ],
+        [
+         20.67,
+         180.68
+        ],
+        [
+         21.33,
+         183.08
+        ],
+        [
+         22,
+         185.52
+        ],
+        [
+         22.67,
+         187.98
+        ],
+        [
+         23.33,
+         190.48
+        ],
+        [
+         24,
+         193.01
+        ],
+        [
+         24.67,
+         195.58
+        ],
+        [
+         25.33,
+         198.18
+        ],
+        [
+         26,
+         200.81
+        ],
+        [
+         26.67,
+         203.48
+        ],
+        [
+         27.33,
+         206.18
+        ],
+        [
+         28,
+         208.92
+        ],
+        [
+         28.67,
+         211.7
+        ],
+        [
+         29.33,
+         214.51
+        ],
+        [
+         30,
+         217.36
+        ],
+        [
+         30.67,
+         220.25
+        ],
+        [
+         31.33,
+         223.18
+        ],
+        [
+         32,
+         226.14
+        ],
+        [
+         32.67,
+         229.15
+        ],
+        [
+         33.33,
+         232.2
+        ],
+        [
+         34,
+         235.28
+        ],
+        [
+         34.67,
+         238.41
+        ],
+        [
+         35.33,
+         241.58
+        ],
+        [
+         36,
+         244.79
+        ],
+        [
+         36.67,
+         248.04
+        ],
+        [
+         37.33,
+         251.34
+        ],
+        [
+         38,
+         254.68
+        ],
+        [
+         38.67,
+         258.06
+        ],
+        [
+         39.33,
+         261.49
+        ],
+        [
+         40,
+         264.96
+        ]
+       ]
+      },
+      {
+       "name": "3% inflation",
+       "pts": [
+        [
+         0,
+         120
+        ],
+        [
+         0.67,
+         122.39
+        ],
+        [
+         1.33,
+         124.82
+        ],
+        [
+         2,
+         127.31
+        ],
+        [
+         2.67,
+         129.84
+        ],
+        [
+         3.33,
+         132.43
+        ],
+        [
+         4,
+         135.06
+        ],
+        [
+         4.67,
+         137.75
+        ],
+        [
+         5.33,
+         140.49
+        ],
+        [
+         6,
+         143.29
+        ],
+        [
+         6.67,
+         146.14
+        ],
+        [
+         7.33,
+         149.05
+        ],
+        [
+         8,
+         152.01
+        ],
+        [
+         8.67,
+         155.04
+        ],
+        [
+         9.33,
+         158.12
+        ],
+        [
+         10,
+         161.27
+        ],
+        [
+         10.67,
+         164.48
+        ],
+        [
+         11.33,
+         167.75
+        ],
+        [
+         12,
+         171.09
+        ],
+        [
+         12.67,
+         174.5
+        ],
+        [
+         13.33,
+         177.97
+        ],
+        [
+         14,
+         181.51
+        ],
+        [
+         14.67,
+         185.12
+        ],
+        [
+         15.33,
+         188.81
+        ],
+        [
+         16,
+         192.56
+        ],
+        [
+         16.67,
+         196.4
+        ],
+        [
+         17.33,
+         200.31
+        ],
+        [
+         18,
+         204.29
+        ],
+        [
+         18.67,
+         208.36
+        ],
+        [
+         19.33,
+         212.5
+        ],
+        [
+         20,
+         216.73
+        ],
+        [
+         20.67,
+         221.05
+        ],
+        [
+         21.33,
+         225.45
+        ],
+        [
+         22,
+         229.93
+        ],
+        [
+         22.67,
+         234.51
+        ],
+        [
+         23.33,
+         239.18
+        ],
+        [
+         24,
+         243.94
+        ],
+        [
+         24.67,
+         248.79
+        ],
+        [
+         25.33,
+         253.74
+        ],
+        [
+         26,
+         258.79
+        ],
+        [
+         26.67,
+         263.94
+        ],
+        [
+         27.33,
+         269.19
+        ],
+        [
+         28,
+         274.55
+        ],
+        [
+         28.67,
+         280.02
+        ],
+        [
+         29.33,
+         285.59
+        ],
+        [
+         30,
+         291.27
+        ],
+        [
+         30.67,
+         297.07
+        ],
+        [
+         31.33,
+         302.98
+        ],
+        [
+         32,
+         309.01
+        ],
+        [
+         32.67,
+         315.16
+        ],
+        [
+         33.33,
+         321.43
+        ],
+        [
+         34,
+         327.83
+        ],
+        [
+         34.67,
+         334.35
+        ],
+        [
+         35.33,
+         341.01
+        ],
+        [
+         36,
+         347.79
+        ],
+        [
+         36.67,
+         354.71
+        ],
+        [
+         37.33,
+         361.77
+        ],
+        [
+         38,
+         368.97
+        ],
+        [
+         38.67,
+         376.32
+        ],
+        [
+         39.33,
+         383.81
+        ],
+        [
+         40,
+         391.44
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $120.00(1 + i)^t, with i = 2% and i = 3% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$73.91",
+   "numeric": {
+    "value": 73.91,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = P(1 + 0.03)^t − P(1 + 0.02)^t.",
+    "Substitute: $291.27 − $217.36 = $73.91.",
+    "Spreadsheet: =120*(1+0.03)^30-120*(1+0.02)^30.",
+    "So a few points of inflation add $73.91 to this one price after 30 years. Retirement plans have to assume a rate, and the choice matters."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-06",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "advanced",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "With 3% inflation, after how many whole years has the price first at least doubled?",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $12 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.67,
+         12.16
+        ],
+        [
+         1.33,
+         12.32
+        ],
+        [
+         2,
+         12.48
+        ],
+        [
+         2.67,
+         12.65
+        ],
+        [
+         3.33,
+         12.82
+        ],
+        [
+         4,
+         12.99
+        ],
+        [
+         4.67,
+         13.16
+        ],
+        [
+         5.33,
+         13.34
+        ],
+        [
+         6,
+         13.51
+        ],
+        [
+         6.67,
+         13.69
+        ],
+        [
+         7.33,
+         13.88
+        ],
+        [
+         8,
+         14.06
+        ],
+        [
+         8.67,
+         14.25
+        ],
+        [
+         9.33,
+         14.44
+        ],
+        [
+         10,
+         14.63
+        ],
+        [
+         10.67,
+         14.82
+        ],
+        [
+         11.33,
+         15.02
+        ],
+        [
+         12,
+         15.22
+        ],
+        [
+         12.67,
+         15.42
+        ],
+        [
+         13.33,
+         15.63
+        ],
+        [
+         14,
+         15.83
+        ],
+        [
+         14.67,
+         16.04
+        ],
+        [
+         15.33,
+         16.26
+        ],
+        [
+         16,
+         16.47
+        ],
+        [
+         16.67,
+         16.69
+        ],
+        [
+         17.33,
+         16.91
+        ],
+        [
+         18,
+         17.14
+        ],
+        [
+         18.67,
+         17.37
+        ],
+        [
+         19.33,
+         17.6
+        ],
+        [
+         20,
+         17.83
+        ],
+        [
+         20.67,
+         18.07
+        ],
+        [
+         21.33,
+         18.31
+        ],
+        [
+         22,
+         18.55
+        ],
+        [
+         22.67,
+         18.8
+        ],
+        [
+         23.33,
+         19.05
+        ],
+        [
+         24,
+         19.3
+        ],
+        [
+         24.67,
+         19.56
+        ],
+        [
+         25.33,
+         19.82
+        ],
+        [
+         26,
+         20.08
+        ],
+        [
+         26.67,
+         20.35
+        ],
+        [
+         27.33,
+         20.62
+        ],
+        [
+         28,
+         20.89
+        ],
+        [
+         28.67,
+         21.17
+        ],
+        [
+         29.33,
+         21.45
+        ],
+        [
+         30,
+         21.74
+        ],
+        [
+         30.67,
+         22.03
+        ],
+        [
+         31.33,
+         22.32
+        ],
+        [
+         32,
+         22.61
+        ],
+        [
+         32.67,
+         22.92
+        ],
+        [
+         33.33,
+         23.22
+        ],
+        [
+         34,
+         23.53
+        ],
+        [
+         34.67,
+         23.84
+        ],
+        [
+         35.33,
+         24.16
+        ],
+        [
+         36,
+         24.48
+        ],
+        [
+         36.67,
+         24.8
+        ],
+        [
+         37.33,
+         25.13
+        ],
+        [
+         38,
+         25.47
+        ],
+        [
+         38.67,
+         25.81
+        ],
+        [
+         39.33,
+         26.15
+        ],
+        [
+         40,
+         26.5
+        ]
+       ]
+      },
+      {
+       "name": "3% inflation",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.67,
+         12.24
+        ],
+        [
+         1.33,
+         12.48
+        ],
+        [
+         2,
+         12.73
+        ],
+        [
+         2.67,
+         12.98
+        ],
+        [
+         3.33,
+         13.24
+        ],
+        [
+         4,
+         13.51
+        ],
+        [
+         4.67,
+         13.77
+        ],
+        [
+         5.33,
+         14.05
+        ],
+        [
+         6,
+         14.33
+        ],
+        [
+         6.67,
+         14.61
+        ],
+        [
+         7.33,
+         14.9
+        ],
+        [
+         8,
+         15.2
+        ],
+        [
+         8.67,
+         15.5
+        ],
+        [
+         9.33,
+         15.81
+        ],
+        [
+         10,
+         16.13
+        ],
+        [
+         10.67,
+         16.45
+        ],
+        [
+         11.33,
+         16.78
+        ],
+        [
+         12,
+         17.11
+        ],
+        [
+         12.67,
+         17.45
+        ],
+        [
+         13.33,
+         17.8
+        ],
+        [
+         14,
+         18.15
+        ],
+        [
+         14.67,
+         18.51
+        ],
+        [
+         15.33,
+         18.88
+        ],
+        [
+         16,
+         19.26
+        ],
+        [
+         16.67,
+         19.64
+        ],
+        [
+         17.33,
+         20.03
+        ],
+        [
+         18,
+         20.43
+        ],
+        [
+         18.67,
+         20.84
+        ],
+        [
+         19.33,
+         21.25
+        ],
+        [
+         20,
+         21.67
+        ],
+        [
+         20.67,
+         22.1
+        ],
+        [
+         21.33,
+         22.54
+        ],
+        [
+         22,
+         22.99
+        ],
+        [
+         22.67,
+         23.45
+        ],
+        [
+         23.33,
+         23.92
+        ],
+        [
+         24,
+         24.39
+        ],
+        [
+         24.67,
+         24.88
+        ],
+        [
+         25.33,
+         25.37
+        ],
+        [
+         26,
+         25.88
+        ],
+        [
+         26.67,
+         26.39
+        ],
+        [
+         27.33,
+         26.92
+        ],
+        [
+         28,
+         27.46
+        ],
+        [
+         28.67,
+         28
+        ],
+        [
+         29.33,
+         28.56
+        ],
+        [
+         30,
+         29.13
+        ],
+        [
+         30.67,
+         29.71
+        ],
+        [
+         31.33,
+         30.3
+        ],
+        [
+         32,
+         30.9
+        ],
+        [
+         32.67,
+         31.52
+        ],
+        [
+         33.33,
+         32.14
+        ],
+        [
+         34,
+         32.78
+        ],
+        [
+         34.67,
+         33.44
+        ],
+        [
+         35.33,
+         34.1
+        ],
+        [
+         36,
+         34.78
+        ],
+        [
+         36.67,
+         35.47
+        ],
+        [
+         37.33,
+         36.18
+        ],
+        [
+         38,
+         36.9
+        ],
+        [
+         38.67,
+         37.63
+        ],
+        [
+         39.33,
+         38.38
+        ],
+        [
+         40,
+         39.14
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $12(1 + i)^t, with i = 2% and i = 3% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "24",
+   "numeric": {
+    "value": 24,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve (1 + i)^t ≥ 2, so t ≥ ln 2 ÷ ln(1 + i).",
+    "Substitute: ln 2 ÷ ln 1.03 = 23.45, so 24 years. (Rule of 72: 72 ÷ 3 ≈ 24.0.)",
+    "Spreadsheet: =ROUNDUP(LN(2)/LN(1+0.03),0).",
+    "So prices double in 24 years; Nadia would need twice the income then to buy the same things."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-07",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "support",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "With 4% inflation, what will the $20.00 item cost in 20 years? Use Price(t) = $20.00(1 + 0.04)^t.",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $20.00 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         20
+        ],
+        [
+         0.67,
+         20.27
+        ],
+        [
+         1.33,
+         20.54
+        ],
+        [
+         2,
+         20.81
+        ],
+        [
+         2.67,
+         21.08
+        ],
+        [
+         3.33,
+         21.36
+        ],
+        [
+         4,
+         21.65
+        ],
+        [
+         4.67,
+         21.94
+        ],
+        [
+         5.33,
+         22.23
+        ],
+        [
+         6,
+         22.52
+        ],
+        [
+         6.67,
+         22.82
+        ],
+        [
+         7.33,
+         23.13
+        ],
+        [
+         8,
+         23.43
+        ],
+        [
+         8.67,
+         23.74
+        ],
+        [
+         9.33,
+         24.06
+        ],
+        [
+         10,
+         24.38
+        ],
+        [
+         10.67,
+         24.7
+        ],
+        [
+         11.33,
+         25.03
+        ],
+        [
+         12,
+         25.36
+        ],
+        [
+         12.67,
+         25.7
+        ],
+        [
+         13.33,
+         26.04
+        ],
+        [
+         14,
+         26.39
+        ],
+        [
+         14.67,
+         26.74
+        ],
+        [
+         15.33,
+         27.1
+        ],
+        [
+         16,
+         27.46
+        ],
+        [
+         16.67,
+         27.82
+        ],
+        [
+         17.33,
+         28.19
+        ],
+        [
+         18,
+         28.56
+        ],
+        [
+         18.67,
+         28.94
+        ],
+        [
+         19.33,
+         29.33
+        ],
+        [
+         20,
+         29.72
+        ],
+        [
+         20.67,
+         30.11
+        ],
+        [
+         21.33,
+         30.51
+        ],
+        [
+         22,
+         30.92
+        ],
+        [
+         22.67,
+         31.33
+        ],
+        [
+         23.33,
+         31.75
+        ],
+        [
+         24,
+         32.17
+        ],
+        [
+         24.67,
+         32.6
+        ],
+        [
+         25.33,
+         33.03
+        ],
+        [
+         26,
+         33.47
+        ],
+        [
+         26.67,
+         33.91
+        ],
+        [
+         27.33,
+         34.36
+        ],
+        [
+         28,
+         34.82
+        ],
+        [
+         28.67,
+         35.28
+        ],
+        [
+         29.33,
+         35.75
+        ],
+        [
+         30,
+         36.23
+        ],
+        [
+         30.67,
+         36.71
+        ],
+        [
+         31.33,
+         37.2
+        ],
+        [
+         32,
+         37.69
+        ],
+        [
+         32.67,
+         38.19
+        ],
+        [
+         33.33,
+         38.7
+        ],
+        [
+         34,
+         39.21
+        ],
+        [
+         34.67,
+         39.73
+        ],
+        [
+         35.33,
+         40.26
+        ],
+        [
+         36,
+         40.8
+        ],
+        [
+         36.67,
+         41.34
+        ],
+        [
+         37.33,
+         41.89
+        ],
+        [
+         38,
+         42.45
+        ],
+        [
+         38.67,
+         43.01
+        ],
+        [
+         39.33,
+         43.58
+        ],
+        [
+         40,
+         44.16
+        ]
+       ]
+      },
+      {
+       "name": "4% inflation",
+       "pts": [
+        [
+         0,
+         20
+        ],
+        [
+         0.67,
+         20.53
+        ],
+        [
+         1.33,
+         21.07
+        ],
+        [
+         2,
+         21.63
+        ],
+        [
+         2.67,
+         22.21
+        ],
+        [
+         3.33,
+         22.79
+        ],
+        [
+         4,
+         23.4
+        ],
+        [
+         4.67,
+         24.02
+        ],
+        [
+         5.33,
+         24.65
+        ],
+        [
+         6,
+         25.31
+        ],
+        [
+         6.67,
+         25.98
+        ],
+        [
+         7.33,
+         26.66
+        ],
+        [
+         8,
+         27.37
+        ],
+        [
+         8.67,
+         28.1
+        ],
+        [
+         9.33,
+         28.84
+        ],
+        [
+         10,
+         29.6
+        ],
+        [
+         10.67,
+         30.39
+        ],
+        [
+         11.33,
+         31.19
+        ],
+        [
+         12,
+         32.02
+        ],
+        [
+         12.67,
+         32.87
+        ],
+        [
+         13.33,
+         33.74
+        ],
+        [
+         14,
+         34.63
+        ],
+        [
+         14.67,
+         35.55
+        ],
+        [
+         15.33,
+         36.49
+        ],
+        [
+         16,
+         37.46
+        ],
+        [
+         16.67,
+         38.45
+        ],
+        [
+         17.33,
+         39.47
+        ],
+        [
+         18,
+         40.52
+        ],
+        [
+         18.67,
+         41.59
+        ],
+        [
+         19.33,
+         42.69
+        ],
+        [
+         20,
+         43.82
+        ],
+        [
+         20.67,
+         44.98
+        ],
+        [
+         21.33,
+         46.18
+        ],
+        [
+         22,
+         47.4
+        ],
+        [
+         22.67,
+         48.65
+        ],
+        [
+         23.33,
+         49.94
+        ],
+        [
+         24,
+         51.27
+        ],
+        [
+         24.67,
+         52.62
+        ],
+        [
+         25.33,
+         54.02
+        ],
+        [
+         26,
+         55.45
+        ],
+        [
+         26.67,
+         56.92
+        ],
+        [
+         27.33,
+         58.43
+        ],
+        [
+         28,
+         59.97
+        ],
+        [
+         28.67,
+         61.56
+        ],
+        [
+         29.33,
+         63.19
+        ],
+        [
+         30,
+         64.87
+        ],
+        [
+         30.67,
+         66.59
+        ],
+        [
+         31.33,
+         68.35
+        ],
+        [
+         32,
+         70.16
+        ],
+        [
+         32.67,
+         72.02
+        ],
+        [
+         33.33,
+         73.93
+        ],
+        [
+         34,
+         75.89
+        ],
+        [
+         34.67,
+         77.9
+        ],
+        [
+         35.33,
+         79.96
+        ],
+        [
+         36,
+         82.08
+        ],
+        [
+         36.67,
+         84.25
+        ],
+        [
+         37.33,
+         86.49
+        ],
+        [
+         38,
+         88.78
+        ],
+        [
+         38.67,
+         91.13
+        ],
+        [
+         39.33,
+         93.54
+        ],
+        [
+         40,
+         96.02
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $20.00(1 + i)^t, with i = 2% and i = 4% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$43.82",
+   "numeric": {
+    "value": 43.82,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: Price(t) = P(1 + i)^t.",
+    "Substitute: $20.00 × 1.04^20 = $43.82.",
+    "Spreadsheet: =20*(1+0.04)^20.",
+    "So the same item costs $43.82: a dollar then buys about 46¢ of today's goods."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-08",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After 30 years, how much more does the item cost with 4% inflation than with 2%?",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $120.00 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 600,
+      "step": 200,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         120
+        ],
+        [
+         0.67,
+         121.59
+        ],
+        [
+         1.33,
+         123.21
+        ],
+        [
+         2,
+         124.85
+        ],
+        [
+         2.67,
+         126.51
+        ],
+        [
+         3.33,
+         128.19
+        ],
+        [
+         4,
+         129.89
+        ],
+        [
+         4.67,
+         131.62
+        ],
+        [
+         5.33,
+         133.37
+        ],
+        [
+         6,
+         135.14
+        ],
+        [
+         6.67,
+         136.94
+        ],
+        [
+         7.33,
+         138.76
+        ],
+        [
+         8,
+         140.6
+        ],
+        [
+         8.67,
+         142.47
+        ],
+        [
+         9.33,
+         144.36
+        ],
+        [
+         10,
+         146.28
+        ],
+        [
+         10.67,
+         148.22
+        ],
+        [
+         11.33,
+         150.19
+        ],
+        [
+         12,
+         152.19
+        ],
+        [
+         12.67,
+         154.21
+        ],
+        [
+         13.33,
+         156.26
+        ],
+        [
+         14,
+         158.34
+        ],
+        [
+         14.67,
+         160.44
+        ],
+        [
+         15.33,
+         162.57
+        ],
+        [
+         16,
+         164.73
+        ],
+        [
+         16.67,
+         166.92
+        ],
+        [
+         17.33,
+         169.14
+        ],
+        [
+         18,
+         171.39
+        ],
+        [
+         18.67,
+         173.67
+        ],
+        [
+         19.33,
+         175.98
+        ],
+        [
+         20,
+         178.31
+        ],
+        [
+         20.67,
+         180.68
+        ],
+        [
+         21.33,
+         183.08
+        ],
+        [
+         22,
+         185.52
+        ],
+        [
+         22.67,
+         187.98
+        ],
+        [
+         23.33,
+         190.48
+        ],
+        [
+         24,
+         193.01
+        ],
+        [
+         24.67,
+         195.58
+        ],
+        [
+         25.33,
+         198.18
+        ],
+        [
+         26,
+         200.81
+        ],
+        [
+         26.67,
+         203.48
+        ],
+        [
+         27.33,
+         206.18
+        ],
+        [
+         28,
+         208.92
+        ],
+        [
+         28.67,
+         211.7
+        ],
+        [
+         29.33,
+         214.51
+        ],
+        [
+         30,
+         217.36
+        ],
+        [
+         30.67,
+         220.25
+        ],
+        [
+         31.33,
+         223.18
+        ],
+        [
+         32,
+         226.14
+        ],
+        [
+         32.67,
+         229.15
+        ],
+        [
+         33.33,
+         232.2
+        ],
+        [
+         34,
+         235.28
+        ],
+        [
+         34.67,
+         238.41
+        ],
+        [
+         35.33,
+         241.58
+        ],
+        [
+         36,
+         244.79
+        ],
+        [
+         36.67,
+         248.04
+        ],
+        [
+         37.33,
+         251.34
+        ],
+        [
+         38,
+         254.68
+        ],
+        [
+         38.67,
+         258.06
+        ],
+        [
+         39.33,
+         261.49
+        ],
+        [
+         40,
+         264.96
+        ]
+       ]
+      },
+      {
+       "name": "4% inflation",
+       "pts": [
+        [
+         0,
+         120
+        ],
+        [
+         0.67,
+         123.18
+        ],
+        [
+         1.33,
+         126.44
+        ],
+        [
+         2,
+         129.79
+        ],
+        [
+         2.67,
+         133.23
+        ],
+        [
+         3.33,
+         136.76
+        ],
+        [
+         4,
+         140.38
+        ],
+        [
+         4.67,
+         144.1
+        ],
+        [
+         5.33,
+         147.92
+        ],
+        [
+         6,
+         151.84
+        ],
+        [
+         6.67,
+         155.86
+        ],
+        [
+         7.33,
+         159.99
+        ],
+        [
+         8,
+         164.23
+        ],
+        [
+         8.67,
+         168.58
+        ],
+        [
+         9.33,
+         173.05
+        ],
+        [
+         10,
+         177.63
+        ],
+        [
+         10.67,
+         182.34
+        ],
+        [
+         11.33,
+         187.17
+        ],
+        [
+         12,
+         192.12
+        ],
+        [
+         12.67,
+         197.21
+        ],
+        [
+         13.33,
+         202.44
+        ],
+        [
+         14,
+         207.8
+        ],
+        [
+         14.67,
+         213.31
+        ],
+        [
+         15.33,
+         218.96
+        ],
+        [
+         16,
+         224.76
+        ],
+        [
+         16.67,
+         230.71
+        ],
+        [
+         17.33,
+         236.82
+        ],
+        [
+         18,
+         243.1
+        ],
+        [
+         18.67,
+         249.54
+        ],
+        [
+         19.33,
+         256.15
+        ],
+        [
+         20,
+         262.93
+        ],
+        [
+         20.67,
+         269.9
+        ],
+        [
+         21.33,
+         277.05
+        ],
+        [
+         22,
+         284.39
+        ],
+        [
+         22.67,
+         291.92
+        ],
+        [
+         23.33,
+         299.66
+        ],
+        [
+         24,
+         307.6
+        ],
+        [
+         24.67,
+         315.75
+        ],
+        [
+         25.33,
+         324.11
+        ],
+        [
+         26,
+         332.7
+        ],
+        [
+         26.67,
+         341.51
+        ],
+        [
+         27.33,
+         350.56
+        ],
+        [
+         28,
+         359.84
+        ],
+        [
+         28.67,
+         369.38
+        ],
+        [
+         29.33,
+         379.16
+        ],
+        [
+         30,
+         389.21
+        ],
+        [
+         30.67,
+         399.52
+        ],
+        [
+         31.33,
+         410.1
+        ],
+        [
+         32,
+         420.97
+        ],
+        [
+         32.67,
+         432.12
+        ],
+        [
+         33.33,
+         443.57
+        ],
+        [
+         34,
+         455.32
+        ],
+        [
+         34.67,
+         467.38
+        ],
+        [
+         35.33,
+         479.76
+        ],
+        [
+         36,
+         492.47
+        ],
+        [
+         36.67,
+         505.52
+        ],
+        [
+         37.33,
+         518.91
+        ],
+        [
+         38,
+         532.66
+        ],
+        [
+         38.67,
+         546.77
+        ],
+        [
+         39.33,
+         561.25
+        ],
+        [
+         40,
+         576.12
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $120.00(1 + i)^t, with i = 2% and i = 4% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$171.84",
+   "numeric": {
+    "value": 171.84,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = P(1 + 0.04)^t − P(1 + 0.02)^t.",
+    "Substitute: $389.21 − $217.36 = $171.84.",
+    "Spreadsheet: =120*(1+0.04)^30-120*(1+0.02)^30.",
+    "So a few points of inflation add $171.84 to this one price after 30 years. Retirement plans have to assume a rate, and the choice matters."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-lv-m-inflation-curves-09",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "support",
+   "family": "lv-m-inflation-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "With 5% inflation, what will the $45.00 item cost in 5 years? Use Price(t) = $45.00(1 + 0.05)^t.",
+   "scenario": {
+    "graph": {
+     "title": "Price of a $45.00 item with inflation",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Price",
+      "min": 0,
+      "max": 400,
+      "step": 100,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "2% inflation",
+       "pts": [
+        [
+         0,
+         45
+        ],
+        [
+         0.67,
+         45.6
+        ],
+        [
+         1.33,
+         46.2
+        ],
+        [
+         2,
+         46.82
+        ],
+        [
+         2.67,
+         47.44
+        ],
+        [
+         3.33,
+         48.07
+        ],
+        [
+         4,
+         48.71
+        ],
+        [
+         4.67,
+         49.36
+        ],
+        [
+         5.33,
+         50.01
+        ],
+        [
+         6,
+         50.68
+        ],
+        [
+         6.67,
+         51.35
+        ],
+        [
+         7.33,
+         52.03
+        ],
+        [
+         8,
+         52.72
+        ],
+        [
+         8.67,
+         53.43
+        ],
+        [
+         9.33,
+         54.14
+        ],
+        [
+         10,
+         54.85
+        ],
+        [
+         10.67,
+         55.58
+        ],
+        [
+         11.33,
+         56.32
+        ],
+        [
+         12,
+         57.07
+        ],
+        [
+         12.67,
+         57.83
+        ],
+        [
+         13.33,
+         58.6
+        ],
+        [
+         14,
+         59.38
+        ],
+        [
+         14.67,
+         60.17
+        ],
+        [
+         15.33,
+         60.97
+        ],
+        [
+         16,
+         61.78
+        ],
+        [
+         16.67,
+         62.6
+        ],
+        [
+         17.33,
+         63.43
+        ],
+        [
+         18,
+         64.27
+        ],
+        [
+         18.67,
+         65.13
+        ],
+        [
+         19.33,
+         65.99
+        ],
+        [
+         20,
+         66.87
+        ],
+        [
+         20.67,
+         67.76
+        ],
+        [
+         21.33,
+         68.66
+        ],
+        [
+         22,
+         69.57
+        ],
+        [
+         22.67,
+         70.49
+        ],
+        [
+         23.33,
+         71.43
+        ],
+        [
+         24,
+         72.38
+        ],
+        [
+         24.67,
+         73.34
+        ],
+        [
+         25.33,
+         74.32
+        ],
+        [
+         26,
+         75.3
+        ],
+        [
+         26.67,
+         76.3
+        ],
+        [
+         27.33,
+         77.32
+        ],
+        [
+         28,
+         78.35
+        ],
+        [
+         28.67,
+         79.39
+        ],
+        [
+         29.33,
+         80.44
+        ],
+        [
+         30,
+         81.51
+        ],
+        [
+         30.67,
+         82.59
+        ],
+        [
+         31.33,
+         83.69
+        ],
+        [
+         32,
+         84.8
+        ],
+        [
+         32.67,
+         85.93
+        ],
+        [
+         33.33,
+         87.07
+        ],
+        [
+         34,
+         88.23
+        ],
+        [
+         34.67,
+         89.4
+        ],
+        [
+         35.33,
+         90.59
+        ],
+        [
+         36,
+         91.79
+        ],
+        [
+         36.67,
+         93.01
+        ],
+        [
+         37.33,
+         94.25
+        ],
+        [
+         38,
+         95.5
+        ],
+        [
+         38.67,
+         96.77
+        ],
+        [
+         39.33,
+         98.06
+        ],
+        [
+         40,
+         99.36
+        ]
+       ]
+      },
+      {
+       "name": "5% inflation",
+       "pts": [
+        [
+         0,
+         45
+        ],
+        [
+         0.67,
+         46.49
+        ],
+        [
+         1.33,
+         48.02
+        ],
+        [
+         2,
+         49.61
+        ],
+        [
+         2.67,
+         51.25
+        ],
+        [
+         3.33,
+         52.95
+        ],
+        [
+         4,
+         54.7
+        ],
+        [
+         4.67,
+         56.51
+        ],
+        [
+         5.33,
+         58.37
+        ],
+        [
+         6,
+         60.3
+        ],
+        [
+         6.67,
+         62.3
+        ],
+        [
+         7.33,
+         64.36
+        ],
+        [
+         8,
+         66.49
+        ],
+        [
+         8.67,
+         68.68
+        ],
+        [
+         9.33,
+         70.95
+        ],
+        [
+         10,
+         73.3
+        ],
+        [
+         10.67,
+         75.72
+        ],
+        [
+         11.33,
+         78.23
+        ],
+        [
+         12,
+         80.81
+        ],
+        [
+         12.67,
+         83.49
+        ],
+        [
+         13.33,
+         86.25
+        ],
+        [
+         14,
+         89.1
+        ],
+        [
+         14.67,
+         92.04
+        ],
+        [
+         15.33,
+         95.09
+        ],
+        [
+         16,
+         98.23
+        ],
+        [
+         16.67,
+         101.48
+        ],
+        [
+         17.33,
+         104.83
+        ],
+        [
+         18,
+         108.3
+        ],
+        [
+         18.67,
+         111.88
+        ],
+        [
+         19.33,
+         115.58
+        ],
+        [
+         20,
+         119.4
+        ],
+        [
+         20.67,
+         123.35
+        ],
+        [
+         21.33,
+         127.42
+        ],
+        [
+         22,
+         131.64
+        ],
+        [
+         22.67,
+         135.99
+        ],
+        [
+         23.33,
+         140.48
+        ],
+        [
+         24,
+         145.13
+        ],
+        [
+         24.67,
+         149.93
+        ],
+        [
+         25.33,
+         154.88
+        ],
+        [
+         26,
+         160.01
+        ],
+        [
+         26.67,
+         165.3
+        ],
+        [
+         27.33,
+         170.76
+        ],
+        [
+         28,
+         176.41
+        ],
+        [
+         28.67,
+         182.24
+        ],
+        [
+         29.33,
+         188.26
+        ],
+        [
+         30,
+         194.49
+        ],
+        [
+         30.67,
+         200.92
+        ],
+        [
+         31.33,
+         207.56
+        ],
+        [
+         32,
+         214.42
+        ],
+        [
+         32.67,
+         221.51
+        ],
+        [
+         33.33,
+         228.84
+        ],
+        [
+         34,
+         236.4
+        ],
+        [
+         34.67,
+         244.22
+        ],
+        [
+         35.33,
+         252.29
+        ],
+        [
+         36,
+         260.63
+        ],
+        [
+         36.67,
+         269.25
+        ],
+        [
+         37.33,
+         278.15
+        ],
+        [
+         38,
+         287.35
+        ],
+        [
+         38.67,
+         296.85
+        ],
+        [
+         39.33,
+         306.66
+        ],
+        [
+         40,
+         316.8
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "Price(t) = $45.00(1 + i)^t, with i = 2% and i = 5% a year."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$57.43",
+   "numeric": {
+    "value": 57.43,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: Price(t) = P(1 + i)^t.",
+    "Substitute: $45.00 × 1.05^5 = $57.43.",
+    "Spreadsheet: =45*(1+0.05)^5.",
+    "So the same item costs $57.43: a dollar then buys about 78¢ of today's goods."
    ]
   },
   {
@@ -7945,8 +13304,11 @@
    "answer": "$26,969.53",
    "solutionSteps": [
     "Mistake: Multiplied instead of dividing; future dollars are worth less today, so divide by (1 + i)^t.",
+    "Formula: value today = future amount ÷ (1 + inflation)^years.",
     "Value = $50,000.00 ÷ (1 + 0.025)^25 = $26,969.53.",
-    "Correct result: $26,969.53."
+    "Correct result: $26,969.53.",
+    "Spreadsheet or calculator: =50000.00/(1+0.025)^25",
+    "So the answer is $26,969.53; inflation means the same dollars buy less over time."
    ],
    "numeric": {
     "value": 26969.53,
@@ -8042,9 +13404,12 @@
    "answer": "$450,263.65",
    "solutionSteps": [
     "Mistake: Counted the deposits only and left out compound growth.",
+    "Formula: FV = c((1 + r)^n − 1)/r with r.",
     "FV = c((1 + r)^n − 1)/r with r = 0.07/12, n = 420.",
     "FV = $450,263.65.",
-    "Correct result: $450,263.65."
+    "Correct result: $450,263.65.",
+    "Spreadsheet or calculator: =FV(0.07/12,420,-250)",
+    "So the answer is $450,263.65; starting early lets compounding carry more of the load."
    ],
    "numeric": {
     "value": 450263.65,
@@ -8139,8 +13504,11 @@
    "answer": "$540",
    "solutionSteps": [
     "Mistake: Used (1 − rate); the tax saved is contribution × marginal rate.",
+    "Formula: tax saved now = contribution × marginal tax rate.",
     "Tax saved ≈ $4,500 × 0.12 = $540.",
-    "Correct result: $540."
+    "Correct result: $540.",
+    "Spreadsheet or calculator: =4500*0.12",
+    "So the answer is $540; always contribute enough to get the full employer match."
    ],
    "numeric": {
     "value": 540,
@@ -8233,8 +13601,11 @@
    "answer": "39",
    "solutionSteps": [
     "Mistake: Added the ages; years left = retirement age − current age.",
+    "Formula: years left = retirement age − current age.",
     "62 − 23 = 39 years.",
-    "Correct result: 39."
+    "Correct result: 39.",
+    "Spreadsheet or calculator: =62-23",
+    "So the answer is 39; plan in today's dollars to see what savings will really buy."
    ],
    "numeric": {
     "value": 39,

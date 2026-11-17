@@ -1,7 +1,19 @@
 {
  "schema": "fa-resources-1",
  "courseId": "financial-algebra",
+ "levels": [
+  "support",
+  "standard",
+  "advanced"
+ ],
+ "classroomLevelCodes": {
+  "support": "cp2",
+  "standard": "cp1",
+  "advanced": "honors"
+ },
  "generated": "scripts/build-hub.mjs",
+ "pacingGuide": "financial/pacing/index.html",
+ "spreadsheetLabs": "financial/spreadsheet-labs/index.html",
  "units": [
   {
    "unitId": "income",
@@ -10,28 +22,78 @@
    "skills": [
     {
      "id": "income-skill-01",
-     "name": "Compare salary and hourly pay"
+     "name": "Compare salary and hourly pay",
+     "standards": [
+      "Earning Income 12-1: Compensation for a job",
+      "Earning Income 12-4: Wages and productivity"
+     ]
     },
     {
      "id": "income-skill-02",
-     "name": "Calculate gross and net income"
+     "name": "Calculate gross and net income",
+     "standards": [
+      "Earning Income 12-1: Compensation for a job",
+      "Earning Income 12-6: Federal, state and local taxes"
+     ]
     },
     {
      "id": "income-skill-03",
-     "name": "Interpret pay stubs"
+     "name": "Interpret pay stubs",
+     "standards": [
+      "Earning Income 12-6: Federal, state and local taxes",
+      "Earning Income 12-7: Major types of taxes"
+     ]
     },
     {
      "id": "income-skill-04",
-     "name": "Model income taxes"
+     "name": "Model income taxes",
+     "standards": [
+      "Earning Income 12-6: Federal, state and local taxes",
+      "Earning Income 12-7: Major types of taxes",
+      "Earning Income 12-9: Tax deductions and credits"
+     ]
     }
    ],
-   "questionCount": 186,
-   "classroomExportCount": 159,
+   "questionCount": 252,
+   "classroomExportCount": 198,
    "flashcards": 24,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=income&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=income&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=income&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=income&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=income&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=income&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=income&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=income&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=income&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=income",
     "flashcards": "financial/flashcards/index.html?unit=income",
     "cheatSheet": "artifacts/financial-algebra-income-cheat-sheet/cheat-sheet.pdf",
@@ -40,6 +102,8 @@
      "path": "financial/decision-lab/index.html?lab=income",
      "teacherPath": "financial/decision-lab/index.html?lab=income&teacher=1"
     },
+    "spreadsheetLabs": [],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "job-offer-showdown",
@@ -72,40 +136,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=income&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=income&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=income&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=income&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=income&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=income&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -115,28 +146,78 @@
    "skills": [
     {
      "id": "budgeting-skill-01",
-     "name": "Calculate monthly cash flow"
+     "name": "Calculate monthly cash flow",
+     "standards": [
+      "Spending 12-1: Budgets and financial goals"
+     ]
     },
     {
      "id": "budgeting-skill-02",
-     "name": "Analyze fixed and variable expenses"
+     "name": "Analyze fixed and variable expenses",
+     "standards": [
+      "Spending 12-1: Budgets and financial goals",
+      "Spending 12-9: Financial record-keeping"
+     ]
     },
     {
      "id": "budgeting-skill-03",
-     "name": "Model financial constraints"
+     "name": "Model financial constraints",
+     "standards": [
+      "Spending 12-1: Budgets and financial goals",
+      "Spending 12-2: Factors influencing consumer decisions",
+      "Earning Income 12-11: Small business ownership"
+     ]
     },
     {
      "id": "budgeting-skill-04",
-     "name": "Compare spending decisions"
+     "name": "Compare spending decisions",
+     "standards": [
+      "Spending 12-2: Factors influencing consumer decisions",
+      "Spending 12-3: Durable goods purchases",
+      "Spending 12-5: Pre-purchase research"
+     ]
     }
    ],
-   "questionCount": 200,
-   "classroomExportCount": 173,
+   "questionCount": 261,
+   "classroomExportCount": 207,
    "flashcards": 26,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=budgeting&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=budgeting&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=budgeting&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=budgeting&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=budgeting&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=budgeting&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=budgeting&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=budgeting&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=budgeting&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=budgeting",
     "flashcards": "financial/flashcards/index.html?unit=budgeting",
     "cheatSheet": "artifacts/financial-algebra-budgeting-cheat-sheet/cheat-sheet.pdf",
@@ -145,6 +226,15 @@
      "path": "financial/decision-lab/index.html?lab=budgeting",
      "teacherPath": "financial/decision-lab/index.html?lab=budgeting&teacher=1"
     },
+    "spreadsheetLabs": [
+     {
+      "title": "Spreadsheet Lab 1: Monthly Budget",
+      "path": "financial/spreadsheet-labs/index.html?lab=budget",
+      "template": "financial/spreadsheet-labs/budget.xlsx",
+      "description": "Build a monthly budget with SUM, SUMIF, absolute references and Goal Seek."
+     }
+    ],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "survive-on-your-salary",
@@ -184,40 +274,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=budgeting&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=budgeting&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=budgeting&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=budgeting&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=budgeting&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=budgeting&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -227,32 +284,85 @@
    "skills": [
     {
      "id": "banking-skill-01",
-     "name": "Understand account fees"
+     "name": "Understand account fees",
+     "standards": [
+      "Saving 12-2: Interest rates and fees",
+      "Saving 12-5: Regulation of financial institutions"
+     ]
     },
     {
      "id": "banking-skill-02",
-     "name": "Calculate simple interest"
+     "name": "Calculate simple interest",
+     "standards": [
+      "Saving 12-2: Interest rates and fees"
+     ]
     },
     {
      "id": "banking-skill-03",
-     "name": "Compare savings products"
+     "name": "Compare savings products",
+     "standards": [
+      "Saving 12-1: Types of savings accounts",
+      "Saving 12-2: Interest rates and fees",
+      "Saving 12-4: Inflation and savings"
+     ]
     },
     {
      "id": "banking-skill-04",
-     "name": "Interpret bank statements"
+     "name": "Interpret bank statements",
+     "standards": [
+      "Spending 12-9: Financial record-keeping",
+      "Saving 12-3: Electronic and mobile payments"
+     ]
     },
     {
      "id": "banking-skill-05",
-     "name": "Spot scams and protect your identity"
+     "name": "Spot scams and protect your identity",
+     "standards": [
+      "Managing Risk 12-11: Identity theft and online risk",
+      "Spending 12-8: Consumer protection laws"
+     ]
     }
    ],
-   "questionCount": 187,
-   "classroomExportCount": 155,
+   "questionCount": 266,
+   "classroomExportCount": 225,
    "flashcards": 29,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=banking&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=banking&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=banking&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=banking&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=banking&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=banking&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=banking&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=banking&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=banking&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=banking",
     "flashcards": "financial/flashcards/index.html?unit=banking",
     "cheatSheet": "artifacts/financial-algebra-banking-cheat-sheet/cheat-sheet.pdf",
@@ -261,6 +371,8 @@
      "path": "financial/decision-lab/index.html?lab=banking",
      "teacherPath": "financial/decision-lab/index.html?lab=banking&teacher=1"
     },
+    "spreadsheetLabs": [],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "emergency-fund-plan",
@@ -293,40 +405,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=banking&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=banking&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=banking&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=banking&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=banking&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=banking&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -336,32 +415,84 @@
    "skills": [
     {
      "id": "credit-skill-01",
-     "name": "Calculate monthly interest"
+     "name": "Calculate monthly interest",
+     "standards": [
+      "Managing Credit 12-1: Comparing the cost of credit (APR)"
+     ]
     },
     {
      "id": "credit-skill-02",
-     "name": "Evaluate credit card repayment"
+     "name": "Evaluate credit card repayment",
+     "standards": [
+      "Managing Credit 12-1: Comparing the cost of credit (APR)",
+      "Managing Credit 12-10: Debt management help"
+     ]
     },
     {
      "id": "credit-skill-03",
-     "name": "Compare repayment strategies"
+     "name": "Compare repayment strategies",
+     "standards": [
+      "Managing Credit 12-10: Debt management help"
+     ]
     },
     {
      "id": "credit-skill-04",
-     "name": "Interpret credit costs"
+     "name": "Interpret credit costs",
+     "standards": [
+      "Managing Credit 12-1: Comparing the cost of credit (APR)",
+      "Managing Credit 12-12: Consumer credit protection laws"
+     ]
     },
     {
      "id": "credit-skill-05",
-     "name": "Understand credit scores and reports"
+     "name": "Understand credit scores and reports",
+     "standards": [
+      "Managing Credit 12-7: Credit reports",
+      "Managing Credit 12-8: Credit scores",
+      "Managing Credit 12-9: Other users of credit reports"
+     ]
     }
    ],
-   "questionCount": 186,
-   "classroomExportCount": 153,
+   "questionCount": 278,
+   "classroomExportCount": 227,
    "flashcards": 28,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=credit&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=credit&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=credit&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=credit&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=credit&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=credit&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=credit&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=credit&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=credit&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=credit",
     "flashcards": "financial/flashcards/index.html?unit=credit",
     "cheatSheet": "artifacts/financial-algebra-credit-cheat-sheet/cheat-sheet.pdf",
@@ -370,6 +501,8 @@
      "path": "financial/decision-lab/index.html?lab=credit",
      "teacherPath": "financial/decision-lab/index.html?lab=credit&teacher=1"
     },
+    "spreadsheetLabs": [],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "escape-the-debt-trap",
@@ -402,40 +535,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=credit&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=credit&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=credit&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=credit&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=credit&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=credit&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -445,32 +545,85 @@
    "skills": [
     {
      "id": "borrowing-skill-01",
-     "name": "Model installment loans"
+     "name": "Model installment loans",
+     "standards": [
+      "Managing Credit 12-1: Comparing the cost of credit (APR)",
+      "Managing Credit 12-2: Secured and unsecured loans"
+     ]
     },
     {
      "id": "borrowing-skill-02",
-     "name": "Compare APR and loan term"
+     "name": "Compare APR and loan term",
+     "standards": [
+      "Managing Credit 12-1: Comparing the cost of credit (APR)"
+     ]
     },
     {
      "id": "borrowing-skill-03",
-     "name": "Build amortization schedules"
+     "name": "Build amortization schedules",
+     "standards": [
+      "Managing Credit 12-1: Comparing the cost of credit (APR)",
+      "Managing Credit 12-3: Mortgage payments"
+     ]
     },
     {
      "id": "borrowing-skill-04",
-     "name": "Analyze total borrowing cost"
+     "name": "Analyze total borrowing cost",
+     "standards": [
+      "Managing Credit 12-1: Comparing the cost of credit (APR)",
+      "Managing Credit 12-13: Alternative financial services"
+     ]
     },
     {
      "id": "borrowing-skill-05",
-     "name": "Calculate the total cost of car ownership"
+     "name": "Calculate the total cost of car ownership",
+     "standards": [
+      "Spending 12-3: Durable goods purchases",
+      "Managing Risk 12-7: Auto, homeowner's and renter's insurance",
+      "Managing Credit 12-6: Down payments"
+     ]
     }
    ],
-   "questionCount": 167,
-   "classroomExportCount": 141,
+   "questionCount": 281,
+   "classroomExportCount": 228,
    "flashcards": 27,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=borrowing&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=borrowing&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=borrowing&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=borrowing&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=borrowing&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=borrowing&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=borrowing&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=borrowing&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=borrowing&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=borrowing",
     "flashcards": "financial/flashcards/index.html?unit=borrowing",
     "cheatSheet": "artifacts/financial-algebra-borrowing-cheat-sheet/cheat-sheet.pdf",
@@ -479,6 +632,15 @@
      "path": "financial/decision-lab/index.html?lab=borrowing",
      "teacherPath": "financial/decision-lab/index.html?lab=borrowing&teacher=1"
     },
+    "spreadsheetLabs": [
+     {
+      "title": "Spreadsheet Lab 2: Amortization Table",
+      "path": "financial/spreadsheet-labs/index.html?lab=amortization",
+      "template": "financial/spreadsheet-labs/amortization.xlsx",
+      "description": "Build a full loan amortization table with PMT, ROUND and fill-down formulas."
+     }
+    ],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "your-first-car",
@@ -511,40 +673,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=borrowing&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=borrowing&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=borrowing&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=borrowing&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=borrowing&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=borrowing&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -554,28 +683,78 @@
    "skills": [
     {
      "id": "investing-skill-01",
-     "name": "Calculate compound growth"
+     "name": "Calculate compound growth",
+     "standards": [
+      "Saving 12-2: Interest rates and fees",
+      "Investing 12-2: Investment cash flows and compounding"
+     ]
     },
     {
      "id": "investing-skill-02",
-     "name": "Model recurring contributions"
+     "name": "Model recurring contributions",
+     "standards": [
+      "Investing 12-2: Investment cash flows and compounding",
+      "Saving 12-7: Employer retirement and health savings plans"
+     ]
     },
     {
      "id": "investing-skill-03",
-     "name": "Compare investment scenarios"
+     "name": "Compare investment scenarios",
+     "standards": [
+      "Investing 12-3: Risk and expected return",
+      "Investing 12-7: Investment expenses"
+     ]
     },
     {
      "id": "investing-skill-04",
-     "name": "Interpret investment risk"
+     "name": "Interpret investment risk",
+     "standards": [
+      "Investing 12-1: Risk tolerance",
+      "Investing 12-3: Risk and expected return",
+      "Investing 12-6: Diversification and asset allocation"
+     ]
     }
    ],
-   "questionCount": 150,
-   "classroomExportCount": 131,
+   "questionCount": 232,
+   "classroomExportCount": 186,
    "flashcards": 22,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=investing&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=investing&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=investing&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=investing&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=investing&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=investing&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=investing&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=investing&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=investing&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=investing",
     "flashcards": "financial/flashcards/index.html?unit=investing",
     "cheatSheet": "artifacts/financial-algebra-investing-cheat-sheet/cheat-sheet.pdf",
@@ -584,6 +763,15 @@
      "path": "financial/decision-lab/index.html?lab=investing",
      "teacherPath": "financial/decision-lab/index.html?lab=investing&teacher=1"
     },
+    "spreadsheetLabs": [
+     {
+      "title": "Spreadsheet Lab 3: PMT and FV",
+      "path": "financial/spreadsheet-labs/index.html?lab=pmt-fv",
+      "template": "financial/spreadsheet-labs/pmt-fv.xlsx",
+      "description": "Use PMT and FV for loan payments, savings growth and saving for a goal."
+     }
+    ],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "investment-plan",
@@ -616,40 +804,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=investing&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=investing&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=investing&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=investing&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=investing&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=investing&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -659,32 +814,85 @@
    "skills": [
     {
      "id": "housing-skill-01",
-     "name": "Compare rental and ownership costs"
+     "name": "Compare rental and ownership costs",
+     "standards": [
+      "Spending 12-6: Renting vs. buying a home"
+     ]
     },
     {
      "id": "housing-skill-02",
-     "name": "Model a mortgage"
+     "name": "Model a mortgage",
+     "standards": [
+      "Managing Credit 12-3: Mortgage payments",
+      "Managing Credit 12-6: Down payments"
+     ]
     },
     {
      "id": "housing-skill-03",
-     "name": "Estimate ownership expenses"
+     "name": "Estimate ownership expenses",
+     "standards": [
+      "Spending 12-6: Renting vs. buying a home",
+      "Managing Risk 12-7: Auto, homeowner's and renter's insurance"
+     ]
     },
     {
      "id": "housing-skill-04",
-     "name": "Analyze opportunity cost"
+     "name": "Analyze opportunity cost",
+     "standards": [
+      "Spending 12-6: Renting vs. buying a home",
+      "Spending 12-2: Factors influencing consumer decisions"
+     ]
     },
     {
      "id": "housing-skill-05",
-     "name": "Plan the costs of renting"
+     "name": "Plan the costs of renting",
+     "standards": [
+      "Spending 12-6: Renting vs. buying a home",
+      "Spending 12-8: Consumer protection laws",
+      "Managing Risk 12-7: Auto, homeowner's and renter's insurance"
+     ]
     }
    ],
-   "questionCount": 182,
-   "classroomExportCount": 159,
+   "questionCount": 275,
+   "classroomExportCount": 234,
    "flashcards": 28,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=housing&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=housing&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=housing&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=housing&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=housing&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=housing&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=housing&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=housing&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=housing&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=housing",
     "flashcards": "financial/flashcards/index.html?unit=housing",
     "cheatSheet": "artifacts/financial-algebra-housing-cheat-sheet/cheat-sheet.pdf",
@@ -693,6 +901,8 @@
      "path": "financial/decision-lab/index.html?lab=housing",
      "teacherPath": "financial/decision-lab/index.html?lab=housing&teacher=1"
     },
+    "spreadsheetLabs": [],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "rent-or-buy",
@@ -725,40 +935,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=housing&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=housing&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=housing&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=housing&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=housing&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=housing&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -768,28 +945,77 @@
    "skills": [
     {
      "id": "insurance-skill-01",
-     "name": "Compare premiums and deductibles"
+     "name": "Compare premiums and deductibles",
+     "standards": [
+      "Managing Risk 12-1: Risk and the cost of insurance",
+      "Managing Risk 12-4: Premiums and reducing risk"
+     ]
     },
     {
      "id": "insurance-skill-02",
-     "name": "Model out-of-pocket costs"
+     "name": "Model out-of-pocket costs",
+     "standards": [
+      "Managing Risk 12-5: Health insurance"
+     ]
     },
     {
      "id": "insurance-skill-03",
-     "name": "Calculate expected value"
+     "name": "Calculate expected value",
+     "standards": [
+      "Managing Risk 12-1: Risk and the cost of insurance",
+      "Managing Risk 12-2: Insurance purchase decisions"
+     ]
     },
     {
      "id": "insurance-skill-04",
-     "name": "Evaluate financial risk"
+     "name": "Evaluate financial risk",
+     "standards": [
+      "Managing Risk 12-2: Insurance purchase decisions",
+      "Managing Risk 12-6: Disability insurance",
+      "Managing Risk 12-8: Life insurance"
+     ]
     }
    ],
-   "questionCount": 141,
-   "classroomExportCount": 114,
+   "questionCount": 231,
+   "classroomExportCount": 177,
    "flashcards": 22,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=insurance&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=insurance&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=insurance&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=insurance&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=insurance&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=insurance&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=insurance&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=insurance&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=insurance&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=insurance",
     "flashcards": "financial/flashcards/index.html?unit=insurance",
     "cheatSheet": "artifacts/financial-algebra-insurance-cheat-sheet/cheat-sheet.pdf",
@@ -798,6 +1024,8 @@
      "path": "financial/decision-lab/index.html?lab=insurance",
      "teacherPath": "financial/decision-lab/index.html?lab=insurance&teacher=1"
     },
+    "spreadsheetLabs": [],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "protect-a-household",
@@ -830,40 +1058,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=insurance&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=insurance&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=insurance&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=insurance&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=insurance&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=insurance&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -873,28 +1068,76 @@
    "skills": [
     {
      "id": "college-skill-01",
-     "name": "Estimate education costs"
+     "name": "Estimate education costs",
+     "standards": [
+      "Earning Income 12-3: Costs and benefits of education",
+      "Managing Credit 12-4: Financing postsecondary education"
+     ]
     },
     {
      "id": "college-skill-02",
-     "name": "Model student loan payments"
+     "name": "Model student loan payments",
+     "standards": [
+      "Managing Credit 12-4: Financing postsecondary education",
+      "Managing Credit 12-5: Federal and private student loans"
+     ]
     },
     {
      "id": "college-skill-03",
-     "name": "Compare career earnings"
+     "name": "Compare career earnings",
+     "standards": [
+      "Earning Income 12-3: Costs and benefits of education",
+      "Earning Income 12-4: Wages and productivity"
+     ]
     },
     {
      "id": "college-skill-04",
-     "name": "Analyze payback periods"
+     "name": "Analyze payback periods",
+     "standards": [
+      "Earning Income 12-3: Costs and benefits of education"
+     ]
     }
    ],
-   "questionCount": 136,
-   "classroomExportCount": 106,
+   "questionCount": 213,
+   "classroomExportCount": 174,
    "flashcards": 22,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=college&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=college&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=college&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=college&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=college&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=college&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=college&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=college&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=college&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=college",
     "flashcards": "financial/flashcards/index.html?unit=college",
     "cheatSheet": "artifacts/financial-algebra-college-cheat-sheet/cheat-sheet.pdf",
@@ -903,6 +1146,8 @@
      "path": "financial/decision-lab/index.html?lab=college",
      "teacherPath": "financial/decision-lab/index.html?lab=college&teacher=1"
     },
+    "spreadsheetLabs": [],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "compare-education-pathways",
@@ -935,40 +1180,7 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=college&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=college&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=college&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=college&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=college&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=college&mode=worksheet&format=error"
+    ]
    }
   },
   {
@@ -978,28 +1190,78 @@
    "skills": [
     {
      "id": "retirement-skill-01",
-     "name": "Model inflation"
+     "name": "Model inflation",
+     "standards": [
+      "Saving 12-4: Inflation and savings",
+      "Investing 12-4: Inflation and real returns"
+     ]
     },
     {
      "id": "retirement-skill-02",
-     "name": "Estimate retirement savings"
+     "name": "Estimate retirement savings",
+     "standards": [
+      "Earning Income 12-10: Retirement income sources",
+      "Saving 12-7: Employer retirement and health savings plans"
+     ]
     },
     {
      "id": "retirement-skill-03",
-     "name": "Compare account contributions"
+     "name": "Compare account contributions",
+     "standards": [
+      "Saving 12-6: Tax incentives for saving",
+      "Saving 12-7: Employer retirement and health savings plans",
+      "Investing 12-8: Tax rules for investments"
+     ]
     },
     {
      "id": "retirement-skill-04",
-     "name": "Analyze purchasing power"
+     "name": "Analyze purchasing power",
+     "standards": [
+      "Investing 12-4: Inflation and real returns",
+      "Saving 12-4: Inflation and savings"
+     ]
     }
    ],
-   "questionCount": 137,
-   "classroomExportCount": 119,
+   "questionCount": 222,
+   "classroomExportCount": 186,
    "flashcards": 21,
    "resources": {
+    "games": [
+     {
+      "id": "showdown",
+      "title": "Showdown",
+      "path": "financial/games/index.html?unit=retirement&game=showdown",
+      "description": "Teams choose categories and point values in a financial review showdown."
+     },
+     {
+      "id": "connect-four",
+      "title": "Connect 4",
+      "path": "financial/games/index.html?unit=retirement&game=connect-four",
+      "description": "Answer correctly to earn a disc. Includes the chance to steal."
+     },
+     {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe",
+      "path": "financial/games/index.html?unit=retirement&game=tic-tac-toe",
+      "description": "Solve a financial question to claim a square for your team."
+     },
+     {
+      "id": "picture-reveal",
+      "title": "Picture Reveal",
+      "path": "financial/games/index.html?unit=retirement&game=picture-reveal",
+      "description": "Uncover a mystery picture by answering financial questions."
+     },
+     {
+      "id": "detective",
+      "title": "Detective",
+      "path": "financial/games/index.html?unit=retirement&game=detective",
+      "description": "Solve financial questions, collect evidence, and crack the case."
+     }
+    ],
     "lessonPlan": "financial/generators/index.html?unit=retirement&mode=lesson",
     "worksheet": "financial/generators/index.html?unit=retirement&mode=worksheet",
     "assessment": "financial/generators/index.html?unit=retirement&mode=assessment",
+    "errorAnalysis": "financial/generators/index.html?unit=retirement&mode=worksheet&format=error",
     "practiceTest": "financial/practice/index.html?unit=retirement",
     "flashcards": "financial/flashcards/index.html?unit=retirement",
     "cheatSheet": "artifacts/financial-algebra-retirement-cheat-sheet/cheat-sheet.pdf",
@@ -1008,6 +1270,8 @@
      "path": "financial/decision-lab/index.html?lab=retirement",
      "teacherPath": "financial/decision-lab/index.html?lab=retirement&teacher=1"
     },
+    "spreadsheetLabs": [],
+    "pacingGuide": "financial/pacing/index.html",
     "projects": [
      {
       "slug": "retirement-strategy",
@@ -1047,51 +1311,8 @@
       "game": "detective",
       "note": "Uses the Classroom bank (multiple-choice/short-answer items only)."
      }
-    ],
-    "games": [
-     {
-      "id": "showdown",
-      "title": "Showdown",
-      "path": "financial/games/index.html?unit=retirement&game=showdown",
-      "description": "Teams choose categories and point values."
-     },
-     {
-      "id": "connect-four",
-      "title": "Connect 4",
-      "path": "financial/games/index.html?unit=retirement&game=connect-four",
-      "description": "Answer correctly to earn a disc; includes stealing."
-     },
-     {
-      "id": "tic-tac-toe",
-      "title": "Tic-Tac-Toe",
-      "path": "financial/games/index.html?unit=retirement&game=tic-tac-toe",
-      "description": "Solve a financial question to claim a square."
-     },
-     {
-      "id": "picture-reveal",
-      "title": "Picture Reveal",
-      "path": "financial/games/index.html?unit=retirement&game=picture-reveal",
-      "description": "Answer questions to uncover the mystery picture."
-     },
-     {
-      "id": "detective",
-      "title": "Detective",
-      "path": "financial/games/index.html?unit=retirement&game=detective",
-      "description": "Collect evidence and crack the case."
-     }
-    ],
-    "errorAnalysis": "financial/generators/index.html?unit=retirement&mode=worksheet&format=error"
+    ]
    }
   }
- ],
- "levels": [
-  "support",
-  "standard",
-  "advanced"
- ],
- "classroomLevelCodes": {
-  "support": "cp2",
-  "standard": "cp1",
-  "advanced": "honors"
- }
+ ]
 }

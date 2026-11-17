@@ -13,25 +13,53 @@
  "skills": [
   {
    "id": "credit-skill-01",
-   "name": "Calculate monthly interest"
+   "name": "Calculate monthly interest",
+   "standards": [
+    "Managing Credit 12-1: Comparing the cost of credit (APR)"
+   ]
   },
   {
    "id": "credit-skill-02",
-   "name": "Evaluate credit card repayment"
+   "name": "Evaluate credit card repayment",
+   "standards": [
+    "Managing Credit 12-1: Comparing the cost of credit (APR)",
+    "Managing Credit 12-10: Debt management help"
+   ]
   },
   {
    "id": "credit-skill-03",
-   "name": "Compare repayment strategies"
+   "name": "Compare repayment strategies",
+   "standards": [
+    "Managing Credit 12-10: Debt management help"
+   ]
   },
   {
    "id": "credit-skill-04",
-   "name": "Interpret credit costs"
+   "name": "Interpret credit costs",
+   "standards": [
+    "Managing Credit 12-1: Comparing the cost of credit (APR)",
+    "Managing Credit 12-12: Consumer credit protection laws"
+   ]
   },
   {
    "id": "credit-skill-05",
-   "name": "Understand credit scores and reports"
+   "name": "Understand credit scores and reports",
+   "standards": [
+    "Managing Credit 12-7: Credit reports",
+    "Managing Credit 12-8: Credit scores",
+    "Managing Credit 12-9: Other users of credit reports"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": []
+ },
  "vocab": [
   {
    "term": "APR (annual percentage rate)",
@@ -2949,8 +2977,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12.",
     "Monthly rate = 23.99% ÷ 12 = 1.9992%.",
-    "$3,961.52 × 0.2399 ÷ 12 = $79.20."
+    "$3,961.52 × 0.2399 ÷ 12 = $79.20.",
+    "Spreadsheet or calculator: =3961.52*0.2399/12",
+    "So the answer is $79.20; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -2977,8 +3008,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12.",
     "Monthly rate = 26.99% ÷ 12 = 2.2492%.",
-    "$2,369.89 × 0.2699 ÷ 12 = $53.30."
+    "$2,369.89 × 0.2699 ÷ 12 = $53.30.",
+    "Spreadsheet or calculator: =2369.89*0.2699/12",
+    "So the answer is $53.30; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3005,8 +3039,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12.",
     "Monthly rate = 17.99% ÷ 12 = 1.4992%.",
-    "$5,480.16 × 0.1799 ÷ 12 = $82.16."
+    "$5,480.16 × 0.1799 ÷ 12 = $82.16.",
+    "Spreadsheet or calculator: =5480.16*0.1799/12",
+    "So the answer is $82.16; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3033,8 +3070,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12.",
     "Monthly rate = 23.99% ÷ 12 = 1.9992%.",
-    "$1,194.89 × 0.2399 ÷ 12 = $23.89."
+    "$1,194.89 × 0.2399 ÷ 12 = $23.89.",
+    "Spreadsheet or calculator: =1194.89*0.2399/12",
+    "So the answer is $23.89; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3061,8 +3101,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12.",
     "Monthly rate = 21.49% ÷ 12 = 1.7908%.",
-    "$475.82 × 0.2149 ÷ 12 = $8.52."
+    "$475.82 × 0.2149 ÷ 12 = $8.52.",
+    "Spreadsheet or calculator: =475.82*0.2149/12",
+    "So the answer is $8.52; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3089,8 +3132,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12.",
     "Monthly rate = 21.49% ÷ 12 = 1.7908%.",
-    "$3,678.00 × 0.2149 ÷ 12 = $65.87."
+    "$3,678.00 × 0.2149 ÷ 12 = $65.87.",
+    "Spreadsheet or calculator: =3678.00*0.2149/12",
+    "So the answer is $65.87; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3117,8 +3163,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12.",
     "Monthly rate = 17.99% ÷ 12 = 1.4992%.",
-    "$3,887.98 × 0.1799 ÷ 12 = $58.29."
+    "$3,887.98 × 0.1799 ÷ 12 = $58.29.",
+    "Spreadsheet or calculator: =3887.98*0.1799/12",
+    "So the answer is $58.29; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3145,8 +3194,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1030 × 11 + 1145 × 19) ÷ 30 = $1,102.83.",
-    "Interest = $1,102.83 × 0.1899 ÷ 365 × 30 = $17.21."
+    "Interest = $1,102.83 × 0.1899 ÷ 365 × 30 = $17.21.",
+    "Spreadsheet or calculator: =1102.83*0.1899/365*30",
+    "So the answer is ADB $1,102.83; interest $17.21; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3173,8 +3225,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1280 × 9 + 1845 × 21) ÷ 30 = $1,675.50.",
-    "Interest = $1,675.50 × 0.2199 ÷ 365 × 30 = $30.28."
+    "Interest = $1,675.50 × 0.2199 ÷ 365 × 30 = $30.28.",
+    "Spreadsheet or calculator: =1675.50*0.2199/365*30",
+    "So the answer is ADB $1,675.50; interest $30.28; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3201,8 +3256,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1110 × 15 + 1425 × 15) ÷ 30 = $1,267.50.",
-    "Interest = $1,267.50 × 0.2499 ÷ 365 × 30 = $26.03."
+    "Interest = $1,267.50 × 0.2499 ÷ 365 × 30 = $26.03.",
+    "Spreadsheet or calculator: =1267.50*0.2499/365*30",
+    "So the answer is ADB $1,267.50; interest $26.03; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3229,8 +3287,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1240 × 9 + 1825 × 21) ÷ 30 = $1,649.50.",
-    "Interest = $1,649.50 × 0.2499 ÷ 365 × 30 = $33.88."
+    "Interest = $1,649.50 × 0.2499 ÷ 365 × 30 = $33.88.",
+    "Spreadsheet or calculator: =1649.50*0.2499/365*30",
+    "So the answer is ADB $1,649.50; interest $33.88; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3257,8 +3318,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (810 × 15 + 1200 × 15) ÷ 30 = $1,005.00.",
-    "Interest = $1,005.00 × 0.2199 ÷ 365 × 30 = $18.16."
+    "Interest = $1,005.00 × 0.2199 ÷ 365 × 30 = $18.16.",
+    "Spreadsheet or calculator: =1005.00*0.2199/365*30",
+    "So the answer is ADB $1,005.00; interest $18.16; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3285,8 +3349,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (910 × 9 + 1480 × 21) ÷ 30 = $1,309.00.",
-    "Interest = $1,309.00 × 0.2499 ÷ 365 × 30 = $26.89."
+    "Interest = $1,309.00 × 0.2499 ÷ 365 × 30 = $26.89.",
+    "Spreadsheet or calculator: =1309.00*0.2499/365*30",
+    "So the answer is ADB $1,309.00; interest $26.89; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -3313,9 +3380,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: minimum = balance × APR ÷ 12 + 1% × balance.",
     "Interest = $115.17.",
     "1% of balance = $60.11.",
-    "Minimum = $175.28; principal reduction = $60.11."
+    "Minimum = $175.28; principal reduction = $60.11.",
+    "So the answer is $175.28; only $60.11 reduces the balance; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -3342,9 +3411,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: minimum = balance × APR ÷ 12 + 1% × balance.",
     "Interest = $69.31.",
     "1% of balance = $41.61.",
-    "Minimum = $110.92; principal reduction = $41.61."
+    "Minimum = $110.92; principal reduction = $41.61.",
+    "So the answer is $110.92; only $41.61 reduces the balance; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -3371,16 +3442,18 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: minimum = balance × APR ÷ 12 + 1% × balance.",
     "Interest = $13.65.",
     "1% of balance = $8.19.",
-    "Minimum = $25.00; principal reduction = $11.35."
+    "Minimum = $25.00; principal reduction = $11.35.",
+    "So the answer is $25.00; only $11.35 reduces the balance; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
    "id": "fa-credit-s02-min-pay-04",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "advanced",
+   "level": "standard",
    "family": "min-pay",
    "type": "calculation",
    "activityTypes": [
@@ -3400,9 +3473,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: minimum = balance × APR ÷ 12 + 1% × balance.",
     "Interest = $92.02.",
     "1% of balance = $42.49.",
-    "Minimum = $134.51; principal reduction = $42.49."
+    "Minimum = $134.51; principal reduction = $42.49.",
+    "So the answer is $134.51; only $42.49 reduces the balance; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -3429,9 +3504,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: minimum = balance × APR ÷ 12 + 1% × balance.",
     "Interest = $31.54.",
     "1% of balance = $16.46.",
-    "Minimum = $48.00; principal reduction = $16.46."
+    "Minimum = $48.00; principal reduction = $16.46.",
+    "So the answer is $48.00; only $16.46 reduces the balance; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -3458,9 +3535,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: minimum = balance × APR ÷ 12 + 1% × balance.",
     "Interest = $54.38.",
     "1% of balance = $32.64.",
-    "Minimum = $87.02; principal reduction = $32.64."
+    "Minimum = $87.02; principal reduction = $32.64.",
+    "So the answer is $87.02; only $32.64 reduces the balance; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -3506,8 +3585,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; new balance = balance + interest − payment; compare the totals.",
     "Simulate plan B month by month (interest = balance × APR ÷ 12): 22 months, interest $804.34.",
     "Savings = $5,615.32 − $804.34 = $4,810.98.",
+    "Spreadsheet or calculator: =5615.32-804.34",
     "Plan B also finishes 175 months (14.6 years) sooner."
    ]
   },
@@ -3554,8 +3635,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; new balance = balance + interest − payment; compare the totals.",
     "Simulate plan B month by month (interest = balance × APR ÷ 12): 13 months, interest $325.29.",
     "Savings = $3,648.00 − $325.29 = $3,322.71.",
+    "Spreadsheet or calculator: =3648.00-325.29",
     "Plan B also finishes 156 months (13.0 years) sooner."
    ]
   },
@@ -3602,8 +3685,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; new balance = balance + interest − payment; compare the totals.",
     "Simulate plan B month by month (interest = balance × APR ÷ 12): 72 months, interest $4,871.80.",
     "Savings = $10,021.78 − $4,871.80 = $5,149.98.",
+    "Spreadsheet or calculator: =10021.78-4871.80",
     "Plan B also finishes 175 months (14.6 years) sooner."
    ]
   },
@@ -3650,8 +3735,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; new balance = balance + interest − payment; compare the totals.",
     "Simulate plan B month by month (interest = balance × APR ÷ 12): 13 months, interest $421.60.",
     "Savings = $4,696.32 − $421.60 = $4,274.72.",
+    "Spreadsheet or calculator: =4696.32-421.60",
     "Plan B also finishes 165 months (13.8 years) sooner."
    ]
   },
@@ -3698,8 +3785,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; new balance = balance + interest − payment; compare the totals.",
     "Simulate plan B month by month (interest = balance × APR ÷ 12): 10 months, interest $194.61.",
     "Savings = $2,358.33 − $194.61 = $2,163.72.",
+    "Spreadsheet or calculator: =2358.33-194.61",
     "Plan B also finishes 121 months (10.1 years) sooner."
    ]
   },
@@ -3746,8 +3835,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; new balance = balance + interest − payment; compare the totals.",
     "Simulate plan B month by month (interest = balance × APR ÷ 12): 42 months, interest $1,440.67.",
     "Savings = $5,147.28 − $1,440.67 = $3,706.61.",
+    "Spreadsheet or calculator: =5147.28-1440.67",
     "Plan B also finishes 154 months (12.8 years) sooner."
    ]
   },
@@ -3794,8 +3885,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; new balance = balance + interest − payment; compare the totals.",
     "Simulate plan B month by month (interest = balance × APR ÷ 12): 35 months, interest $1,871.10.",
     "Savings = $8,488.89 − $1,871.10 = $6,617.79.",
+    "Spreadsheet or calculator: =8488.89-1871.10",
     "Plan B also finishes 197 months (16.4 years) sooner."
    ]
   },
@@ -3825,6 +3918,7 @@
    "solutionSteps": [
     "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.2199 || 12]], n = 36.",
     "PMT = $49.64.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,36,-1300)",
     "Total interest ≈ $487.04."
    ]
   },
@@ -3854,6 +3948,7 @@
    "solutionSteps": [
     "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.2199 || 12]], n = 18.",
     "PMT = $138.02.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,18,-2100)",
     "Total interest ≈ $384.36."
    ]
   },
@@ -3883,6 +3978,7 @@
    "solutionSteps": [
     "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.1899 || 12]], n = 24.",
     "PMT = $70.57.",
+    "Spreadsheet or calculator: =PMT(0.1899/12,24,-1400)",
     "Total interest ≈ $293.68."
    ]
   },
@@ -3912,6 +4008,7 @@
    "solutionSteps": [
     "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.1899 || 12]], n = 36.",
     "PMT = $128.28.",
+    "Spreadsheet or calculator: =PMT(0.1899/12,36,-3500)",
     "Total interest ≈ $1,118.08."
    ]
   },
@@ -3941,6 +4038,7 @@
    "solutionSteps": [
     "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.2199 || 12]], n = 12.",
     "PMT = $439.87.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,12,-4700)",
     "Total interest ≈ $578.44."
    ]
   },
@@ -3970,6 +4068,7 @@
    "solutionSteps": [
     "Use PMT = [[P · i || 1 − (1 + i)^(−n)]] with i = [[0.1899 || 12]], n = 36.",
     "PMT = $183.25.",
+    "Spreadsheet or calculator: =PMT(0.1899/12,36,-5000)",
     "Total interest ≈ $1,597.00."
    ]
   },
@@ -4025,9 +4124,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $778.28 in 18 months.",
     "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $957.38 in 19 months.",
     "Avalanche saves $179.10.",
+    "Spreadsheet or calculator: =957.38-778.28",
     "When the smallest balance also has the highest APR, both methods start the same way."
    ]
   },
@@ -4083,9 +4184,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $907.67 in 19 months.",
     "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $1,187.09 in 20 months.",
     "Avalanche saves $279.42.",
+    "Spreadsheet or calculator: =1187.09-907.67",
     "When the smallest balance also has the highest APR, both methods start the same way."
    ]
   },
@@ -4141,9 +4244,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $423.31 in 13 months.",
     "Snowball order (smallest balance): Store card → Visa → Personal loan; total interest $538.25 in 13 months.",
     "Avalanche saves $114.94.",
+    "Spreadsheet or calculator: =538.25-423.31",
     "When the smallest balance also has the highest APR, both methods start the same way."
    ]
   },
@@ -4151,7 +4256,7 @@
    "id": "fa-credit-s03-aval-snow-04",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "advanced",
+   "level": "standard",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4199,9 +4304,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $806.55 in 19 months.",
     "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $1,003.72 in 20 months.",
     "Avalanche saves $197.17.",
+    "Spreadsheet or calculator: =1003.72-806.55",
     "When the smallest balance also has the highest APR, both methods start the same way."
    ]
   },
@@ -4257,9 +4364,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $565.40 in 16 months.",
     "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $678.20 in 17 months.",
     "Avalanche saves $112.80.",
+    "Spreadsheet or calculator: =678.20-565.40",
     "When the smallest balance also has the highest APR, both methods start the same way."
    ]
   },
@@ -4315,9 +4424,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $740.52 in 16 months.",
     "Snowball order (smallest balance): Store card → Personal loan → Visa; total interest $978.40 in 17 months.",
     "Avalanche saves $237.88.",
+    "Spreadsheet or calculator: =978.40-740.52",
     "When the smallest balance also has the highest APR, both methods start the same way."
    ]
   },
@@ -4373,6 +4484,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $447.77 in 13 months.",
     "Snowball order (smallest balance): Store card → Visa → Personal loan; total interest $447.77 in 13 months.",
     "Avalanche saves $0.00.",
@@ -4431,6 +4543,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest under each order (avalanche: highest APR first; snowball: smallest balance first); difference = snowball − avalanche.",
     "Avalanche order (highest APR): Store card → Visa → Personal loan; total interest $525.28 in 17 months.",
     "Snowball order (smallest balance): Store card → Visa → Personal loan; total interest $525.28 in 17 months.",
     "Avalanche saves $0.00.",
@@ -4459,9 +4572,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $3,000.00 × 1.05 = $3,150.00.",
     "Paid during promo: $200.00 × 18 = $3,600.00.",
     "Remaining = $0.00 — paid off during the promo.",
+    "Spreadsheet or calculator: =3150.00-(3000.00*1.05)",
     "For comparison, staying at 24.99% costs $634.37 in interest."
    ]
   },
@@ -4487,9 +4602,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $2,600.00 × 1.05 = $2,730.00.",
     "Paid during promo: $200.00 × 18 = $3,600.00.",
     "Remaining = $0.00 — paid off during the promo.",
+    "Spreadsheet or calculator: =2730.00-(2600.00*1.05)",
     "For comparison, staying at 24.99% costs $463.90 in interest."
    ]
   },
@@ -4515,9 +4632,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $4,200.00 × 1.03 = $4,326.00.",
     "Paid during promo: $200.00 × 18 = $3,600.00.",
     "Remaining = $726.00 (now charged the regular APR).",
+    "Spreadsheet or calculator: =(4200.00*1.03)-(200.00*18)",
     "For comparison, staying at 24.99% costs $1,380.22 in interest."
    ]
   },
@@ -4543,9 +4662,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $4,200.00 × 1.03 = $4,326.00.",
     "Paid during promo: $250.00 × 18 = $4,500.00.",
     "Remaining = $0.00 — paid off during the promo.",
+    "Spreadsheet or calculator: =4326.00-(4200.00*1.03)",
     "For comparison, staying at 24.99% costs $1,022.78 in interest."
    ]
   },
@@ -4571,9 +4692,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $1,600.00 × 1.04 = $1,664.00.",
     "Paid during promo: $150.00 × 15 = $2,250.00.",
     "Remaining = $0.00 — paid off during the promo.",
+    "Spreadsheet or calculator: =1664.00-(1600.00*1.04)",
     "For comparison, staying at 24.99% costs $228.37 in interest."
    ]
   },
@@ -4599,9 +4722,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $3,700.00 × 1.04 = $3,848.00.",
     "Paid during promo: $200.00 × 18 = $3,600.00.",
     "Remaining = $248.00 (now charged the regular APR).",
+    "Spreadsheet or calculator: =(3700.00*1.04)-(200.00*18)",
     "For comparison, staying at 24.99% costs $1,021.82 in interest."
    ]
   },
@@ -4627,9 +4752,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $4,300.00 × 1.04 = $4,472.00.",
     "Paid during promo: $250.00 × 15 = $3,750.00.",
     "Remaining = $722.00 (now charged the regular APR).",
+    "Spreadsheet or calculator: =(4300.00*1.04)-(250.00*15)",
     "For comparison, staying at 24.99% costs $1,079.58 in interest."
    ]
   },
@@ -4655,9 +4782,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $2,900.00 × 1.05 = $3,045.00.",
     "Paid during promo: $150.00 × 15 = $2,250.00.",
     "Remaining = $795.00 (now charged the regular APR).",
+    "Spreadsheet or calculator: =(2900.00*1.05)-(150.00*15)",
     "For comparison, staying at 24.99% costs $849.44 in interest."
    ]
   },
@@ -4683,9 +4812,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: transferred balance = balance × (1 + fee); compare total interest and fees on each card.",
     "Transferred balance = $4,100.00 × 1.03 = $4,223.00.",
     "Paid during promo: $200.00 × 12 = $2,400.00.",
     "Remaining = $1,823.00 (now charged the regular APR).",
+    "Spreadsheet or calculator: =(4100.00*1.03)-(200.00*12)",
     "For comparison, staying at 24.99% costs $1,302.11 in interest."
    ]
   },
@@ -4783,7 +4914,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "$1,415.14 ÷ $5,000.00 = 28.3%."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$1,415.14 ÷ $5,000.00 = 28.3%.",
+    "Spreadsheet or calculator: =1415.14/5000.00 (then format as a percent)",
+    "So the answer is 28.3%; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -4876,7 +5010,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "($2,302.02 − $140.00) × 0.2799 ÷ 12 = $50.43."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "($2,302.02 − $140.00) × 0.2799 ÷ 12 = $50.43.",
+    "Spreadsheet or calculator: =(2302.02-140.00)*0.2799/12",
+    "So the answer is $50.43; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -4977,7 +5114,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$954.29 − $160.00 + purchases $265.80 + interest $15.22 = $1,075.31."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$954.29 − $160.00 + purchases $265.80 + interest $15.22 = $1,075.31.",
+    "So the answer is $1,075.31; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5078,7 +5217,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,099.93 − $70.00 + purchases $239.29 + interest $19.73 + late fee $35.00 = $1,323.95."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$1,099.93 − $70.00 + purchases $239.29 + interest $19.73 + late fee $35.00 = $1,323.95.",
+    "So the answer is $1,323.95; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5179,7 +5320,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,644.70 − $260.00 + purchases $467.25 + interest $32.30 = $1,884.25."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$1,644.70 − $260.00 + purchases $467.25 + interest $32.30 = $1,884.25.",
+    "So the answer is $1,884.25; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5276,7 +5419,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "$1,459.51 ÷ $1,500.00 = 97.3%."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$1,459.51 ÷ $1,500.00 = 97.3%.",
+    "Spreadsheet or calculator: =1459.51/1500.00 (then format as a percent)",
+    "So the answer is 97.3%; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5377,7 +5523,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "$655.13 ÷ $3,000.00 = 21.8%."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$655.13 ÷ $3,000.00 = 21.8%.",
+    "Spreadsheet or calculator: =655.13/3000.00 (then format as a percent)",
+    "So the answer is 21.84%; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5474,7 +5623,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "($634.16 − $250.00) × 0.1999 ÷ 12 = $6.40."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "($634.16 − $250.00) × 0.1999 ÷ 12 = $6.40.",
+    "Spreadsheet or calculator: =(634.16-250.00)*0.1999/12",
+    "So the answer is $6.40; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5575,7 +5727,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$739.81 − $170.00 + purchases $277.13 + interest $13.29 = $860.23."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$739.81 − $170.00 + purchases $277.13 + interest $13.29 = $860.23.",
+    "So the answer is $860.23; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5672,7 +5826,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,596.79 − $135.00 + purchases $133.21 + interest $28.01 + late fee $35.00 = $1,658.01."
+    "Formula: utilization = new balance ÷ credit limit.",
+    "$1,596.79 − $135.00 + purchases $133.21 + interest $28.01 + late fee $35.00 = $1,658.01.",
+    "So the answer is $1,658.01; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5699,9 +5855,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 0.05 × $240.00) = $12.00.",
     "Interest = $240.00 × 0.2799 ÷ 365 × 60 = $11.04.",
-    "Total = $23.04 (≈ 9.6% of the amount borrowed)."
+    "Total = $23.04 (≈ 9.6% of the amount borrowed).",
+    "Spreadsheet or calculator: =(240.00*0.2799/365*60)+(MAX(10.00,0.05*240.00))",
+    "So the answer is $23.04; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5728,9 +5887,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 0.05 × $420.00) = $21.00.",
     "Interest = $420.00 × 0.2999 ÷ 365 × 30 = $10.35.",
-    "Total = $31.35 (≈ 7.5% of the amount borrowed)."
+    "Total = $31.35 (≈ 7.5% of the amount borrowed).",
+    "Spreadsheet or calculator: =(420.00*0.2999/365*30)+(MAX(10.00,0.05*420.00))",
+    "So the answer is $31.35; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5757,9 +5919,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 0.05 × $220.00) = $11.00.",
     "Interest = $220.00 × 0.2999 ÷ 365 × 30 = $5.42.",
-    "Total = $16.42 (≈ 7.5% of the amount borrowed)."
+    "Total = $16.42 (≈ 7.5% of the amount borrowed).",
+    "Spreadsheet or calculator: =(220.00*0.2999/365*30)+(MAX(10.00,0.05*220.00))",
+    "So the answer is $16.42; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5786,9 +5951,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 0.05 × $160.00) = $10.00.",
     "Interest = $160.00 × 0.2799 ÷ 365 × 45 = $5.52.",
-    "Total = $15.52 (≈ 9.7% of the amount borrowed)."
+    "Total = $15.52 (≈ 9.7% of the amount borrowed).",
+    "Spreadsheet or calculator: =(160.00*0.2799/365*45)+(MAX(10.00,0.05*160.00))",
+    "So the answer is $15.52; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5815,9 +5983,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 0.05 × $140.00) = $10.00.",
     "Interest = $140.00 × 0.2999 ÷ 365 × 30 = $3.45.",
-    "Total = $13.45 (≈ 9.6% of the amount borrowed)."
+    "Total = $13.45 (≈ 9.6% of the amount borrowed).",
+    "Spreadsheet or calculator: =(140.00*0.2999/365*30)+(MAX(10.00,0.05*140.00))",
+    "So the answer is $13.45; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5844,9 +6015,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 0.05 × $200.00) = $10.00.",
     "Interest = $200.00 × 0.2799 ÷ 365 × 30 = $4.60.",
-    "Total = $14.60 (≈ 7.3% of the amount borrowed)."
+    "Total = $14.60 (≈ 7.3% of the amount borrowed).",
+    "Spreadsheet or calculator: =(200.00*0.2799/365*30)+(MAX(10.00,0.05*200.00))",
+    "So the answer is $14.60; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -5873,9 +6047,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 0.05 × $100.00) = $10.00.",
     "Interest = $100.00 × 0.2999 ÷ 365 × 30 = $2.46.",
-    "Total = $12.46 (≈ 12.5% of the amount borrowed)."
+    "Total = $12.46 (≈ 12.5% of the amount borrowed).",
+    "Spreadsheet or calculator: =(100.00*0.2999/365*30)+(MAX(10.00,0.05*100.00))",
+    "So the answer is $12.46; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -6314,9 +6491,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = (statement balance − payment) × APR ÷ 12.",
     "Unpaid balance = $1,264.53 − $180.00 = $1,084.53.",
     "Monthly rate = 19.99% ÷ 12.",
-    "Interest ≈ $1,084.53 × 0.01666 = $18.07. Paying the full $1,264.53 would make this $0.00."
+    "Interest ≈ $1,084.53 × 0.01666 = $18.07. Paying the full $1,264.53 would make this $0.00.",
+    "Spreadsheet or calculator: =1084.53*0.01666",
+    "So the answer is $18.07; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -6343,9 +6523,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = (statement balance − payment) × APR ÷ 12.",
     "Unpaid balance = $2,039.46 − $220.00 = $1,819.46.",
     "Monthly rate = 24.99% ÷ 12.",
-    "Interest ≈ $1,819.46 × 0.02082 = $37.89. Paying the full $2,039.46 would make this $0.00."
+    "Interest ≈ $1,819.46 × 0.02082 = $37.89. Paying the full $2,039.46 would make this $0.00.",
+    "Spreadsheet or calculator: =1819.46*0.02082",
+    "So the answer is $37.89; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -6372,9 +6555,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = (statement balance − payment) × APR ÷ 12.",
     "Unpaid balance = $1,107.63 − $810.00 = $297.63.",
     "Monthly rate = 24.99% ÷ 12.",
-    "Interest ≈ $297.63 × 0.02082 = $6.20. Paying the full $1,107.63 would make this $0.00."
+    "Interest ≈ $297.63 × 0.02082 = $6.20. Paying the full $1,107.63 would make this $0.00.",
+    "Spreadsheet or calculator: =297.63*0.02082",
+    "So the answer is $6.20; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -6401,9 +6587,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = (statement balance − payment) × APR ÷ 12.",
     "Unpaid balance = $1,509.28 − $920.00 = $589.28.",
     "Monthly rate = 22.49% ÷ 12.",
-    "Interest ≈ $589.28 × 0.01874 = $11.04. Paying the full $1,509.28 would make this $0.00."
+    "Interest ≈ $589.28 × 0.01874 = $11.04. Paying the full $1,509.28 would make this $0.00.",
+    "Spreadsheet or calculator: =589.28*0.01874",
+    "So the answer is $11.04; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -6430,9 +6619,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = (statement balance − payment) × APR ÷ 12.",
     "Unpaid balance = $1,187.06 − $850.00 = $337.06.",
     "Monthly rate = 27.99% ÷ 12.",
-    "Interest ≈ $337.06 × 0.02332 = $7.86. Paying the full $1,187.06 would make this $0.00."
+    "Interest ≈ $337.06 × 0.02332 = $7.86. Paying the full $1,187.06 would make this $0.00.",
+    "Spreadsheet or calculator: =337.06*0.02332",
+    "So the answer is $7.86; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -6459,9 +6651,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = (statement balance − payment) × APR ÷ 12.",
     "Unpaid balance = $2,044.46 − $700.00 = $1,344.46.",
     "Monthly rate = 19.99% ÷ 12.",
-    "Interest ≈ $1,344.46 × 0.01666 = $22.40. Paying the full $2,044.46 would make this $0.00."
+    "Interest ≈ $1,344.46 × 0.01666 = $22.40. Paying the full $2,044.46 would make this $0.00.",
+    "Spreadsheet or calculator: =1344.46*0.01666",
+    "So the answer is $22.40; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -6488,9 +6683,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = (statement balance − payment) × APR ÷ 12.",
     "Unpaid balance = $2,557.20 − $1,480.00 = $1,077.20.",
     "Monthly rate = 19.99% ÷ 12.",
-    "Interest ≈ $1,077.20 × 0.01666 = $17.94. Paying the full $2,557.20 would make this $0.00."
+    "Interest ≈ $1,077.20 × 0.01666 = $17.94. Paying the full $2,557.20 would make this $0.00.",
+    "Spreadsheet or calculator: =1077.20*0.01666",
+    "So the answer is $17.94; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -6517,8 +6715,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Utilization = balance ÷ limit.",
     "Utilization = balance ÷ limit.",
     "Balance ≤ 10% × $2,000 = $200.",
+    "Spreadsheet or calculator: =10%*2000",
     "Lower utilization generally helps a credit score."
    ]
   },
@@ -6546,8 +6746,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Utilization = balance ÷ limit.",
     "Utilization = balance ÷ limit.",
     "Balance ≤ 30% × $6,500 = $1,950.",
+    "Spreadsheet or calculator: =30%*6500",
     "Lower utilization generally helps a credit score."
    ]
   },
@@ -6575,8 +6777,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Utilization = balance ÷ limit.",
     "Utilization = balance ÷ limit.",
     "Balance ≤ 10% × $4,500 = $450.",
+    "Spreadsheet or calculator: =10%*4500",
     "Lower utilization generally helps a credit score."
    ]
   },
@@ -6604,8 +6808,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Utilization = balance ÷ limit.",
     "Utilization = balance ÷ limit.",
     "Balance ≤ 10% × $6,500 = $650.",
+    "Spreadsheet or calculator: =10%*6500",
     "Lower utilization generally helps a credit score."
    ]
   },
@@ -6633,8 +6839,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Utilization = balance ÷ limit.",
     "Utilization = balance ÷ limit.",
     "Balance ≤ 10% × $1,500 = $150.",
+    "Spreadsheet or calculator: =10%*1500",
     "Lower utilization generally helps a credit score."
    ]
   },
@@ -6662,8 +6870,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Utilization = balance ÷ limit.",
     "Utilization = balance ÷ limit.",
     "Balance ≤ 10% × $9,000 = $900.",
+    "Spreadsheet or calculator: =10%*9000",
     "Lower utilization generally helps a credit score."
    ]
   },
@@ -6691,8 +6901,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Utilization = balance ÷ limit.",
     "Utilization = balance ÷ limit.",
     "Balance ≤ 10% × $7,500 = $750.",
+    "Spreadsheet or calculator: =10%*7500",
     "Lower utilization generally helps a credit score."
    ]
   },
@@ -6720,8 +6932,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = late fee + balance × (penalty APR − old APR) ÷ 12.",
     "Extra interest = $2,851.63 × (29.99% − 21.99%) ÷ 12 = $19.01.",
     "Add the late fee: $19.01 + $35.00 = $54.01.",
+    "Spreadsheet or calculator: =19.01+35.00",
     "A penalty APR can last many months, so the real cost is usually higher."
    ]
   },
@@ -6749,8 +6963,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = late fee + balance × (penalty APR − old APR) ÷ 12.",
     "Extra interest = $2,188.96 × (29.99% − 21.99%) ÷ 12 = $14.59.",
     "Add the late fee: $14.59 + $30.00 = $44.59.",
+    "Spreadsheet or calculator: =14.59+30.00",
     "A penalty APR can last many months, so the real cost is usually higher."
    ]
   },
@@ -6778,8 +6994,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = late fee + balance × (penalty APR − old APR) ÷ 12.",
     "Extra interest = $3,683.04 × (29.99% − 21.99%) ÷ 12 = $24.55.",
     "Add the late fee: $24.55 + $30.00 = $54.55.",
+    "Spreadsheet or calculator: =24.55+30.00",
     "A penalty APR can last many months, so the real cost is usually higher."
    ]
   },
@@ -6807,8 +7025,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = late fee + balance × (penalty APR − old APR) ÷ 12.",
     "Extra interest = $2,205.11 × (29.99% − 23.99%) ÷ 12 = $11.03.",
     "Add the late fee: $11.03 + $30.00 = $41.03.",
+    "Spreadsheet or calculator: =11.03+30.00",
     "A penalty APR can last many months, so the real cost is usually higher."
    ]
   },
@@ -6836,8 +7056,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = late fee + balance × (penalty APR − old APR) ÷ 12.",
     "Extra interest = $2,709.79 × (29.99% − 23.99%) ÷ 12 = $13.55.",
     "Add the late fee: $13.55 + $35.00 = $48.55.",
+    "Spreadsheet or calculator: =13.55+35.00",
     "A penalty APR can last many months, so the real cost is usually higher."
    ]
   },
@@ -6865,8 +7087,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = late fee + balance × (penalty APR − old APR) ÷ 12.",
     "Extra interest = $1,300.14 × (29.99% − 23.99%) ÷ 12 = $6.50.",
     "Add the late fee: $6.50 + $30.00 = $36.50.",
+    "Spreadsheet or calculator: =6.50+30.00",
     "A penalty APR can last many months, so the real cost is usually higher."
    ]
   },
@@ -6894,8 +7118,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: fee = transfer rate × balance, compared with one month of interest = balance × APR ÷ 12.",
     "Fee = 5% × $5,350.00 = $267.50.",
     "One month of interest on the old card ≈ $5,350.00 × 25.99% ÷ 12 = $115.87.",
+    "Spreadsheet or calculator: =5%*5350.00",
     "The fee equals about 2.3 months of the old interest, so the transfer pays off if the promo lasts longer and the balance is paid down."
    ]
   },
@@ -6923,8 +7149,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: fee = transfer rate × balance, compared with one month of interest = balance × APR ÷ 12.",
     "Fee = 3% × $3,450.00 = $103.50.",
     "One month of interest on the old card ≈ $3,450.00 × 25.99% ÷ 12 = $74.72.",
+    "Spreadsheet or calculator: =3%*3450.00",
     "The fee equals about 1.4 months of the old interest, so the transfer pays off if the promo lasts longer and the balance is paid down."
    ]
   },
@@ -6952,8 +7180,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: fee = transfer rate × balance, compared with one month of interest = balance × APR ÷ 12.",
     "Fee = 5% × $5,450.00 = $272.50.",
     "One month of interest on the old card ≈ $5,450.00 × 22.99% ÷ 12 = $104.41.",
+    "Spreadsheet or calculator: =5%*5450.00",
     "The fee equals about 2.6 months of the old interest, so the transfer pays off if the promo lasts longer and the balance is paid down."
    ]
   },
@@ -6981,8 +7211,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: fee = transfer rate × balance, compared with one month of interest = balance × APR ÷ 12.",
     "Fee = 4% × $2,050.00 = $82.00.",
     "One month of interest on the old card ≈ $2,050.00 × 22.99% ÷ 12 = $39.27.",
+    "Spreadsheet or calculator: =4%*2050.00",
     "The fee equals about 2.1 months of the old interest, so the transfer pays off if the promo lasts longer and the balance is paid down."
    ]
   },
@@ -7010,8 +7242,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: fee = transfer rate × balance, compared with one month of interest = balance × APR ÷ 12.",
     "Fee = 5% × $5,450.00 = $272.50.",
     "One month of interest on the old card ≈ $5,450.00 × 25.99% ÷ 12 = $118.04.",
+    "Spreadsheet or calculator: =5%*5450.00",
     "The fee equals about 2.3 months of the old interest, so the transfer pays off if the promo lasts longer and the balance is paid down."
    ]
   },
@@ -7039,8 +7273,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: fee = transfer rate × balance, compared with one month of interest = balance × APR ÷ 12.",
     "Fee = 4% × $4,250.00 = $170.00.",
     "One month of interest on the old card ≈ $4,250.00 × 22.99% ÷ 12 = $81.42.",
+    "Spreadsheet or calculator: =4%*4250.00",
     "The fee equals about 2.1 months of the old interest, so the transfer pays off if the promo lasts longer and the balance is paid down."
    ]
   },
@@ -7068,8 +7304,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: fee = transfer rate × balance, compared with one month of interest = balance × APR ÷ 12.",
     "Fee = 4% × $6,500.00 = $260.00.",
     "One month of interest on the old card ≈ $6,500.00 × 22.99% ÷ 12 = $124.53.",
+    "Spreadsheet or calculator: =4%*6500.00",
     "The fee equals about 2.1 months of the old interest, so the transfer pays off if the promo lasts longer and the balance is paid down."
    ]
   },
@@ -7097,9 +7335,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: principal = payment − interest; new balance = balance − principal.",
     "Interest = $3,628.96 × 24.99% ÷ 12 = $75.57.",
     "Principal = $245.00 − $75.57 = $169.43.",
-    "New balance = $3,628.96 − $169.43 = $3,459.53."
+    "New balance = $3,628.96 − $169.43 = $3,459.53.",
+    "Spreadsheet or calculator: =245.00-75.57",
+    "So the answer is $169.43; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -7126,9 +7367,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: principal = payment − interest; new balance = balance − principal.",
     "Interest = $3,328.81 × 24.99% ÷ 12 = $69.32.",
     "Principal = $85.00 − $69.32 = $15.68.",
-    "New balance = $3,328.81 − $15.68 = $3,313.13."
+    "New balance = $3,328.81 − $15.68 = $3,313.13.",
+    "Spreadsheet or calculator: =85.00-69.32",
+    "So the answer is $15.68; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -7155,9 +7399,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: principal = payment − interest; new balance = balance − principal.",
     "Interest = $2,974.88 × 24.99% ÷ 12 = $61.95.",
     "Principal = $230.00 − $61.95 = $168.05.",
-    "New balance = $2,974.88 − $168.05 = $2,806.83."
+    "New balance = $2,974.88 − $168.05 = $2,806.83.",
+    "Spreadsheet or calculator: =230.00-61.95",
+    "So the answer is $168.05; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -7184,9 +7431,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: principal = payment − interest; new balance = balance − principal.",
     "Interest = $2,015.54 × 24.99% ÷ 12 = $41.97.",
     "Principal = $120.00 − $41.97 = $78.03.",
-    "New balance = $2,015.54 − $78.03 = $1,937.51."
+    "New balance = $2,015.54 − $78.03 = $1,937.51.",
+    "Spreadsheet or calculator: =120.00-41.97",
+    "So the answer is $78.03; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -7213,9 +7463,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: principal = payment − interest; new balance = balance − principal.",
     "Interest = $3,054.93 × 24.99% ÷ 12 = $63.62.",
     "Principal = $205.00 − $63.62 = $141.38.",
-    "New balance = $3,054.93 − $141.38 = $2,913.55."
+    "New balance = $3,054.93 − $141.38 = $2,913.55.",
+    "Spreadsheet or calculator: =205.00-63.62",
+    "So the answer is $141.38; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -7242,9 +7495,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: principal = payment − interest; new balance = balance − principal.",
     "Interest = $2,122.61 × 18.99% ÷ 12 = $33.59.",
     "Principal = $60.00 − $33.59 = $26.41.",
-    "New balance = $2,122.61 − $26.41 = $2,096.20."
+    "New balance = $2,122.61 − $26.41 = $2,096.20.",
+    "Spreadsheet or calculator: =60.00-33.59",
+    "So the answer is $26.41; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -7271,9 +7527,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: principal = payment − interest; new balance = balance − principal.",
     "Interest = $2,295.16 × 21.99% ÷ 12 = $42.06.",
     "Principal = $210.00 − $42.06 = $167.94.",
-    "New balance = $2,295.16 − $167.94 = $2,127.22."
+    "New balance = $2,295.16 − $167.94 = $2,127.22.",
+    "Spreadsheet or calculator: =210.00-42.06",
+    "So the answer is $167.94; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -7298,9 +7557,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $627.92 × 48 = $30,140.16.",
     "Fair score: $684.79 × 48 = $32,869.92.",
-    "Difference = $2,729.76. A better score is worth real money."
+    "Difference = $2,729.76. A better score is worth real money.",
+    "Spreadsheet or calculator: =(684.79*48)-(627.92*48)",
+    "So the answer is $2,729.76; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7325,9 +7587,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $322.84 × 60 = $19,370.40.",
     "Fair score: $375.43 × 60 = $22,525.80.",
-    "Difference = $3,155.40. A better score is worth real money."
+    "Difference = $3,155.40. A better score is worth real money.",
+    "Spreadsheet or calculator: =(375.43*60)-(322.84*60)",
+    "So the answer is $3,155.40; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7352,9 +7617,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $652.16 × 48 = $31,303.68.",
     "Fair score: $710.75 × 48 = $34,116.00.",
-    "Difference = $2,812.32. A better score is worth real money."
+    "Difference = $2,812.32. A better score is worth real money.",
+    "Spreadsheet or calculator: =(710.75*48)-(652.16*48)",
+    "So the answer is $2,812.32; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7379,9 +7647,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $587.13 × 48 = $28,182.24.",
     "Fair score: $658.35 × 48 = $31,600.80.",
-    "Difference = $3,418.56. A better score is worth real money."
+    "Difference = $3,418.56. A better score is worth real money.",
+    "Spreadsheet or calculator: =(658.35*48)-(587.13*48)",
+    "So the answer is $3,418.56; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7406,9 +7677,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $376.99 × 60 = $22,619.40.",
     "Fair score: $414.32 × 60 = $24,859.20.",
-    "Difference = $2,239.80. A better score is worth real money."
+    "Difference = $2,239.80. A better score is worth real money.",
+    "Spreadsheet or calculator: =(414.32*60)-(376.99*60)",
+    "So the answer is $2,239.80; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7433,9 +7707,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $355.72 × 48 = $17,074.56.",
     "Fair score: $387.68 × 48 = $18,608.64.",
-    "Difference = $1,534.08. A better score is worth real money."
+    "Difference = $1,534.08. A better score is worth real money.",
+    "Spreadsheet or calculator: =(387.68*48)-(355.72*48)",
+    "So the answer is $1,534.08; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7460,9 +7737,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $481.44 × 48 = $23,109.12.",
     "Fair score: $519.93 × 48 = $24,956.64.",
-    "Difference = $1,847.52. A better score is worth real money."
+    "Difference = $1,847.52. A better score is worth real money.",
+    "Spreadsheet or calculator: =(519.93*48)-(481.44*48)",
+    "So the answer is $1,847.52; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7487,9 +7767,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: extra cost = (fair-score payment − good-score payment) × months.",
     "Good score: $720.95 × 48 = $34,605.60.",
     "Fair score: $801.21 × 48 = $38,458.08.",
-    "Difference = $3,852.48. A better score is worth real money."
+    "Difference = $3,852.48. A better score is worth real money.",
+    "Spreadsheet or calculator: =(801.21*48)-(720.95*48)",
+    "So the answer is $3,852.48; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -7516,8 +7799,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: utilization = total balances ÷ total limits.",
     "Total balances = $3,940; total limits = $7,500.",
     "Utilization = $3,940 ÷ $7,500 = 0.5253.",
+    "Spreadsheet or calculator: =3940/7500 (then format as a percent)",
     "≈ 52.5%. Many lenders like to see under 30%."
    ]
   },
@@ -7545,8 +7830,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: utilization = total balances ÷ total limits.",
     "Total balances = $1,570; total limits = $5,000.",
     "Utilization = $1,570 ÷ $5,000 = 0.3140.",
+    "Spreadsheet or calculator: =1570/5000 (then format as a percent)",
     "≈ 31.4%. Many lenders like to see under 30%."
    ]
   },
@@ -7574,8 +7861,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: utilization = total balances ÷ total limits.",
     "Total balances = $1,620; total limits = $5,500.",
     "Utilization = $1,620 ÷ $5,500 = 0.2945.",
+    "Spreadsheet or calculator: =1620/5500 (then format as a percent)",
     "≈ 29.4%. Many lenders like to see under 30%."
    ]
   },
@@ -7603,8 +7892,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: utilization = total balances ÷ total limits.",
     "Total balances = $1,610; total limits = $4,500.",
     "Utilization = $1,610 ÷ $4,500 = 0.3578.",
+    "Spreadsheet or calculator: =1610/4500 (then format as a percent)",
     "≈ 35.8%. Many lenders like to see under 30%."
    ]
   },
@@ -7632,8 +7923,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: utilization = total balances ÷ total limits.",
     "Total balances = $1,740; total limits = $8,000.",
     "Utilization = $1,740 ÷ $8,000 = 0.2175.",
+    "Spreadsheet or calculator: =1740/8000 (then format as a percent)",
     "≈ 21.8%. Many lenders like to see under 30%."
    ]
   },
@@ -7661,8 +7954,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: utilization = total balances ÷ total limits.",
     "Total balances = $770; total limits = $4,500.",
     "Utilization = $770 ÷ $4,500 = 0.1711.",
+    "Spreadsheet or calculator: =770/4500 (then format as a percent)",
     "≈ 17.1%. Many lenders like to see under 30%."
    ]
   },
@@ -7690,8 +7985,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: utilization = total balances ÷ total limits.",
     "Total balances = $1,730; total limits = $6,000.",
     "Utilization = $1,730 ÷ $6,000 = 0.2883.",
+    "Spreadsheet or calculator: =1730/6000 (then format as a percent)",
     "≈ 28.8%. Many lenders like to see under 30%."
    ]
   },
@@ -7719,8 +8016,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: average age = sum of account ages ÷ number of accounts.",
     "Average now = (7 + 5 + 1) ÷ 3 = 4.33.",
     "After closing: (5 + 1) ÷ 2 = 3.",
+    "Spreadsheet or calculator: =(5+1)/2",
     "Closing the oldest account shortens credit history, which can lower a score."
    ]
   },
@@ -7748,8 +8047,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: average age = sum of account ages ÷ number of accounts.",
     "Average now = (6 + 2 + 0) ÷ 3 = 2.67.",
     "After closing: (2 + 0) ÷ 2 = 1.",
+    "Spreadsheet or calculator: =(2+0)/2",
     "Closing the oldest account shortens credit history, which can lower a score."
    ]
   },
@@ -7777,8 +8078,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: average age = sum of account ages ÷ number of accounts.",
     "Average now = (8 + 4 + 0) ÷ 3 = 4.",
     "After closing: (4 + 0) ÷ 2 = 2.",
+    "Spreadsheet or calculator: =(4+0)/2",
     "Closing the oldest account shortens credit history, which can lower a score."
    ]
   },
@@ -7806,8 +8109,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: average age = sum of account ages ÷ number of accounts.",
     "Average now = (10 + 5 + 1) ÷ 3 = 5.33.",
     "After closing: (5 + 1) ÷ 2 = 3.",
+    "Spreadsheet or calculator: =(5+1)/2",
     "Closing the oldest account shortens credit history, which can lower a score."
    ]
   },
@@ -7835,8 +8140,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: average age = sum of account ages ÷ number of accounts.",
     "Average now = (9 + 4 + 0) ÷ 3 = 4.33.",
     "After closing: (4 + 0) ÷ 2 = 2.",
+    "Spreadsheet or calculator: =(4+0)/2",
     "Closing the oldest account shortens credit history, which can lower a score."
    ]
   },
@@ -7864,8 +8171,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: average age = sum of account ages ÷ number of accounts.",
     "Average now = (10 + 4 + 1) ÷ 3 = 5.",
     "After closing: (4 + 1) ÷ 2 = 2.5.",
+    "Spreadsheet or calculator: =(4+1)/2",
     "Closing the oldest account shortens credit history, which can lower a score."
    ]
   },
@@ -8133,7 +8442,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,700 × 0.01 = $17."
+    "Formula: Interest = balance × monthly rate.",
+    "$1,700 × 0.01 = $17.",
+    "Spreadsheet or calculator: =1700*0.01",
+    "So the answer is $17; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8160,7 +8472,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,050 × 0.02 = $21."
+    "Formula: Interest = balance × monthly rate.",
+    "$1,050 × 0.02 = $21.",
+    "Spreadsheet or calculator: =1050*0.02",
+    "So the answer is $21; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8187,7 +8502,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,150.00 × 0.01 = $11.50."
+    "Formula: Interest = balance × monthly rate.",
+    "$1,150.00 × 0.01 = $11.50.",
+    "Spreadsheet or calculator: =1150.00*0.01",
+    "So the answer is $11.50; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8214,7 +8532,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$650 × 0.02 = $13."
+    "Formula: Interest = balance × monthly rate.",
+    "$650 × 0.02 = $13.",
+    "Spreadsheet or calculator: =650*0.02",
+    "So the answer is $13; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8241,7 +8562,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,700 × 0.01 = $17."
+    "Formula: Interest = balance × monthly rate.",
+    "$1,700 × 0.01 = $17.",
+    "Spreadsheet or calculator: =1700*0.01",
+    "So the answer is $17; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8268,7 +8592,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$350.00 × 0.01 = $3.50."
+    "Formula: Interest = balance × monthly rate.",
+    "$350.00 × 0.01 = $3.50.",
+    "Spreadsheet or calculator: =350.00*0.01",
+    "So the answer is $3.50; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8295,7 +8622,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$400 × 0.01 = $4."
+    "Formula: Interest = balance × monthly rate.",
+    "$400 × 0.01 = $4.",
+    "Spreadsheet or calculator: =400*0.01",
+    "So the answer is $4; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8322,7 +8652,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,300 × 0.01 = $13."
+    "Formula: Interest = balance × monthly rate.",
+    "$1,300 × 0.01 = $13.",
+    "Spreadsheet or calculator: =1300*0.01",
+    "So the answer is $13; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8349,8 +8682,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (415×7 + 895×8 + 745×15) ÷ 30 = $708.00.",
-    "Interest = $708.00 × 0.2499 ÷ 365 × 30 = $14.54."
+    "Interest = $708.00 × 0.2499 ÷ 365 × 30 = $14.54.",
+    "Spreadsheet or calculator: =708.00*0.2499/365*30",
+    "So the answer is $14.54; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8377,8 +8713,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (915×9 + 1260×11 + 1105×10) ÷ 30 = $1,104.83.",
-    "Interest = $1,104.83 × 0.2299 ÷ 365 × 30 = $20.88."
+    "Interest = $1,104.83 × 0.2299 ÷ 365 × 30 = $20.88.",
+    "Spreadsheet or calculator: =1104.83*0.2299/365*30",
+    "So the answer is $20.88; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8405,8 +8744,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1130×8 + 1230×10 + 1130×12) ÷ 30 = $1,163.33.",
-    "Interest = $1,163.33 × 0.2499 ÷ 365 × 30 = $23.89."
+    "Interest = $1,163.33 × 0.2499 ÷ 365 × 30 = $23.89.",
+    "Spreadsheet or calculator: =1163.33*0.2499/365*30",
+    "So the answer is $23.89; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8433,8 +8775,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (460×7 + 820×12 + 770×11) ÷ 30 = $717.67.",
-    "Interest = $717.67 × 0.2299 ÷ 365 × 30 = $13.56."
+    "Interest = $717.67 × 0.2299 ÷ 365 × 30 = $13.56.",
+    "Spreadsheet or calculator: =717.67*0.2299/365*30",
+    "So the answer is $13.56; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8461,8 +8806,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (630×8 + 945×9 + 865×13) ÷ 30 = $826.33.",
-    "Interest = $826.33 × 0.2499 ÷ 365 × 30 = $16.97."
+    "Interest = $826.33 × 0.2499 ÷ 365 × 30 = $16.97.",
+    "Spreadsheet or calculator: =826.33*0.2499/365*30",
+    "So the answer is $16.97; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8489,8 +8837,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1085×6 + 1480×8 + 1305×16) ÷ 30 = $1,307.67.",
-    "Interest = $1,307.67 × 0.2499 ÷ 365 × 30 = $26.86."
+    "Interest = $1,307.67 × 0.2499 ÷ 365 × 30 = $26.86.",
+    "Spreadsheet or calculator: =1307.67*0.2499/365*30",
+    "So the answer is $26.86; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8517,8 +8868,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (730×9 + 1110×9 + 960×12) ÷ 30 = $936.00.",
-    "Interest = $936.00 × 0.1999 ÷ 365 × 30 = $15.38."
+    "Interest = $936.00 × 0.1999 ÷ 365 × 30 = $15.38.",
+    "Spreadsheet or calculator: =936.00*0.1999/365*30",
+    "So the answer is $15.38; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8545,8 +8899,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (585×9 + 845×12 + 705×9) ÷ 30 = $725.00.",
-    "Interest = $725.00 × 0.2299 ÷ 365 × 30 = $13.70."
+    "Interest = $725.00 × 0.2299 ÷ 365 × 30 = $13.70.",
+    "Spreadsheet or calculator: =725.00*0.2299/365*30",
+    "So the answer is $13.70; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8573,8 +8930,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (685×9 + 940×9 + 825×12) ÷ 30 = $817.50.",
-    "Interest = $817.50 × 0.2299 ÷ 365 × 30 = $15.45."
+    "Interest = $817.50 × 0.2299 ÷ 365 × 30 = $15.45.",
+    "Spreadsheet or calculator: =817.50*0.2299/365*30",
+    "So the answer is $15.45; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8601,8 +8961,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1170×7 + 1655×12 + 1410×11) ÷ 30 = $1,452.00.",
-    "Interest = $1,452.00 × 0.2499 ÷ 365 × 30 = $29.82."
+    "Interest = $1,452.00 × 0.2499 ÷ 365 × 30 = $29.82.",
+    "Spreadsheet or calculator: =1452.00*0.2499/365*30",
+    "So the answer is $29.82; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8629,8 +8992,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (995×9 + 1395×12 + 1220×9) ÷ 30 = $1,222.50.",
-    "Interest = $1,222.50 × 0.2499 ÷ 365 × 30 = $25.11."
+    "Interest = $1,222.50 × 0.2499 ÷ 365 × 30 = $25.11.",
+    "Spreadsheet or calculator: =1222.50*0.2499/365*30",
+    "So the answer is $25.11; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8657,8 +9023,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ADB = Σ(balance × days) ÷ days in cycle; interest = ADB × APR ÷ 365 × days.",
     "ADB = (1090×9 + 1350×8 + 1270×13) ÷ 30 = $1,237.33.",
-    "Interest = $1,237.33 × 0.2499 ÷ 365 × 30 = $25.41."
+    "Interest = $1,237.33 × 0.2499 ÷ 365 × 30 = $25.41.",
+    "Spreadsheet or calculator: =1237.33*0.2499/365*30",
+    "So the answer is $25.41; paying the full statement balance avoids this interest entirely."
    ]
   },
   {
@@ -8685,7 +9054,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$1,250 ÷ $100 = 12.50 → 13 months."
+    "Formula: Months = balance ÷ payment.",
+    "$1,250 ÷ $100 = 12.50 → 13 months.",
+    "Spreadsheet or calculator: =ROUNDUP(1250/100,0)",
+    "So the answer is 13; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8712,7 +9084,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$800 ÷ $50 = 16.00 → 16 months."
+    "Formula: Months = balance ÷ payment.",
+    "$800 ÷ $50 = 16.00 → 16 months.",
+    "Spreadsheet or calculator: =800/50",
+    "So the answer is 16; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8739,7 +9114,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$1,900 ÷ $50 = 38.00 → 38 months."
+    "Formula: Months = balance ÷ payment.",
+    "$1,900 ÷ $50 = 38.00 → 38 months.",
+    "Spreadsheet or calculator: =1900/50",
+    "So the answer is 38; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8766,7 +9144,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$1,450 ÷ $75 = 19.33 → 20 months."
+    "Formula: Months = balance ÷ payment.",
+    "$1,450 ÷ $75 = 19.33 → 20 months.",
+    "Spreadsheet or calculator: =ROUNDUP(1450/75,0)",
+    "So the answer is 20; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8793,7 +9174,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$950 ÷ $200 = 4.75 → 5 months."
+    "Formula: Months = balance ÷ payment.",
+    "$950 ÷ $200 = 4.75 → 5 months.",
+    "Spreadsheet or calculator: =ROUNDUP(950/200,0)",
+    "So the answer is 5; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8820,7 +9204,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$1,250 ÷ $150 = 8.33 → 9 months."
+    "Formula: Months = balance ÷ payment.",
+    "$1,250 ÷ $150 = 8.33 → 9 months.",
+    "Spreadsheet or calculator: =ROUNDUP(1250/150,0)",
+    "So the answer is 9; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8847,7 +9234,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$650 ÷ $150 = 4.33 → 5 months."
+    "Formula: Months = balance ÷ payment.",
+    "$650 ÷ $150 = 4.33 → 5 months.",
+    "Spreadsheet or calculator: =ROUNDUP(650/150,0)",
+    "So the answer is 5; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8874,7 +9264,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "$2,200 ÷ $150 = 14.67 → 15 months."
+    "Formula: Months = balance ÷ payment.",
+    "$2,200 ÷ $150 = 14.67 → 15 months.",
+    "Spreadsheet or calculator: =ROUNDUP(2200/150,0)",
+    "So the answer is 15; paying more than the minimum shortens payoff and cuts interest."
    ]
   },
   {
@@ -8901,8 +9294,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.2499 ÷ 12 = 0.020825.",
     "P = $3,300.00 × i ÷ (1 − (1 + i)^−36) = $131.19.",
+    "Spreadsheet or calculator: =PMT(0.2499/12,36,-3300)",
     "Total paid $4,722.84; interest $1,422.84."
    ]
   },
@@ -8930,8 +9325,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.1899 ÷ 12 = 0.015825.",
     "P = $3,600.00 × i ÷ (1 − (1 + i)^−12) = $331.75.",
+    "Spreadsheet or calculator: =PMT(0.1899/12,12,-3600)",
     "Total paid $3,981.00; interest $381.00."
    ]
   },
@@ -8959,8 +9356,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.2199 ÷ 12 = 0.018325.",
     "P = $5,400.00 × i ÷ (1 − (1 + i)^−24) = $280.12.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,24,-5400)",
     "Total paid $6,722.88; interest $1,322.88."
    ]
   },
@@ -8988,8 +9387,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.2199 ÷ 12 = 0.018325.",
     "P = $3,800.00 × i ÷ (1 − (1 + i)^−18) = $249.75.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,18,-3800)",
     "Total paid $4,495.50; interest $695.50."
    ]
   },
@@ -9017,8 +9418,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.1899 ÷ 12 = 0.015825.",
     "P = $5,500.00 × i ÷ (1 − (1 + i)^−36) = $201.58.",
+    "Spreadsheet or calculator: =PMT(0.1899/12,36,-5500)",
     "Total paid $7,256.88; interest $1,756.88."
    ]
   },
@@ -9046,8 +9449,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.2199 ÷ 12 = 0.018325.",
     "P = $1,900.00 × i ÷ (1 − (1 + i)^−18) = $124.88.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,18,-1900)",
     "Total paid $2,247.84; interest $347.84."
    ]
   },
@@ -9075,8 +9480,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.2199 ÷ 12 = 0.018325.",
     "P = $2,000.00 × i ÷ (1 − (1 + i)^−18) = $131.45.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,18,-2000)",
     "Total paid $2,366.10; interest $366.10."
    ]
   },
@@ -9104,8 +9511,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.2199 ÷ 12 = 0.018325.",
     "P = $2,300.00 × i ÷ (1 − (1 + i)^−36) = $87.83.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,36,-2300)",
     "Total paid $3,161.88; interest $861.88."
    ]
   },
@@ -9133,8 +9542,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = B × i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
     "i = 0.2199 ÷ 12 = 0.018325.",
     "P = $1,900.00 × i ÷ (1 − (1 + i)^−24) = $98.56.",
+    "Spreadsheet or calculator: =PMT(0.2199/12,24,-1900)",
     "Total paid $2,365.44; interest $465.44."
    ]
   },
@@ -9162,7 +9573,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,600 × 0.03 = $108."
+    "Formula: Fee = balance × fee rate.",
+    "$3,600 × 0.03 = $108.",
+    "Spreadsheet or calculator: =3600*0.03",
+    "So the answer is $108; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9189,7 +9603,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,300 × 0.04 = $172."
+    "Formula: Fee = balance × fee rate.",
+    "$4,300 × 0.04 = $172.",
+    "Spreadsheet or calculator: =4300*0.04",
+    "So the answer is $172; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9216,7 +9633,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,500 × 0.05 = $225."
+    "Formula: Fee = balance × fee rate.",
+    "$4,500 × 0.05 = $225.",
+    "Spreadsheet or calculator: =4500*0.05",
+    "So the answer is $225; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9243,7 +9663,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,800 × 0.04 = $72."
+    "Formula: Fee = balance × fee rate.",
+    "$1,800 × 0.04 = $72.",
+    "Spreadsheet or calculator: =1800*0.04",
+    "So the answer is $72; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9270,7 +9693,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$5,000 × 0.04 = $200."
+    "Formula: Fee = balance × fee rate.",
+    "$5,000 × 0.04 = $200.",
+    "Spreadsheet or calculator: =5000*0.04",
+    "So the answer is $200; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9297,7 +9723,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,900 × 0.05 = $145."
+    "Formula: Fee = balance × fee rate.",
+    "$2,900 × 0.05 = $145.",
+    "Spreadsheet or calculator: =2900*0.05",
+    "So the answer is $145; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9324,7 +9753,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,900 × 0.03 = $117."
+    "Formula: Fee = balance × fee rate.",
+    "$3,900 × 0.03 = $117.",
+    "Spreadsheet or calculator: =3900*0.03",
+    "So the answer is $117; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9351,7 +9783,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,200 × 0.03 = $126."
+    "Formula: Fee = balance × fee rate.",
+    "$4,200 × 0.03 = $126.",
+    "Spreadsheet or calculator: =4200*0.03",
+    "So the answer is $126; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9378,7 +9813,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,300 × 0.04 = $132."
+    "Formula: Fee = balance × fee rate.",
+    "$3,300 × 0.04 = $132.",
+    "Spreadsheet or calculator: =3300*0.04",
+    "So the answer is $132; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9403,9 +9841,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $150.00 × 0.2499 ÷ 12 = $3.12.",
     "Extra on the Visa saves $150.00 × 0.1499 ÷ 12 = $1.87.",
-    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(150.00*0.2499/12)-(150.00*0.1499/12)",
+    "So the answer is $1.25; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9430,9 +9871,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $100.00 × 0.2799 ÷ 12 = $2.33.",
     "Extra on the Visa saves $100.00 × 0.1799 ÷ 12 = $1.50.",
-    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(100.00*0.2799/12)-(100.00*0.1799/12)",
+    "So the answer is $0.83; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9457,9 +9901,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $150.00 × 0.2799 ÷ 12 = $3.50.",
     "Extra on the Visa saves $150.00 × 0.1799 ÷ 12 = $2.25.",
-    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(150.00*0.2799/12)-(150.00*0.1799/12)",
+    "So the answer is $1.25; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9484,9 +9931,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $150.00 × 0.2799 ÷ 12 = $3.50.",
     "Extra on the Visa saves $150.00 × 0.1499 ÷ 12 = $1.87.",
-    "Difference = $1.63 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $1.63 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(150.00*0.2799/12)-(150.00*0.1499/12)",
+    "So the answer is $1.63; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9511,9 +9961,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $100.00 × 0.2499 ÷ 12 = $2.08.",
     "Extra on the Visa saves $100.00 × 0.1499 ÷ 12 = $1.25.",
-    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(100.00*0.2499/12)-(100.00*0.1499/12)",
+    "So the answer is $0.83; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9538,9 +9991,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $200.00 × 0.2499 ÷ 12 = $4.17.",
     "Extra on the Visa saves $200.00 × 0.1799 ÷ 12 = $3.00.",
-    "Difference = $1.17 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $1.17 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(200.00*0.2499/12)-(200.00*0.1799/12)",
+    "So the answer is $1.17; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9565,9 +10021,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $100.00 × 0.2499 ÷ 12 = $2.08.",
     "Extra on the Visa saves $100.00 × 0.1499 ÷ 12 = $1.25.",
-    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(100.00*0.2499/12)-(100.00*0.1499/12)",
+    "So the answer is $0.83; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9592,9 +10051,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $200.00 × 0.2499 ÷ 12 = $4.17.",
     "Extra on the Visa saves $200.00 × 0.1499 ÷ 12 = $2.50.",
-    "Difference = $1.67 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $1.67 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(200.00*0.2499/12)-(200.00*0.1499/12)",
+    "So the answer is $1.67; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9619,9 +10081,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $150.00 × 0.2499 ÷ 12 = $3.12.",
     "Extra on the Visa saves $150.00 × 0.1499 ÷ 12 = $1.87.",
-    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(150.00*0.2499/12)-(150.00*0.1499/12)",
+    "So the answer is $1.25; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9646,9 +10111,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly interest saved = extra payment × APR ÷ 12, for each card; difference = higher − lower.",
     "Extra on the store card saves $150.00 × 0.2499 ÷ 12 = $3.12.",
     "Extra on the Visa saves $150.00 × 0.1799 ÷ 12 = $2.25.",
-    "Difference = $0.88 per month, and it keeps growing: that is the avalanche method."
+    "Difference = $0.88 per month, and it keeps growing: that is the avalanche method.",
+    "Spreadsheet or calculator: =(150.00*0.2499/12)-(150.00*0.1799/12)",
+    "So the answer is $0.88; choose the plan that costs least and that you can keep up with."
    ]
   },
   {
@@ -9668,14 +10136,17 @@
    "gameEligible": true,
    "prompt": "Riley has a $4,000 credit limit and a $1,900 balance. Utilization = balance ÷ limit × 100%. What is their utilization?",
    "format": "short-answer",
-   "answer": "48%",
+   "answer": "47.5%",
    "numeric": {
     "value": 47.5,
     "tolerance": 0.01,
     "unit": "%"
    },
    "solutionSteps": [
-    "$1,900 ÷ $4,000 = 0.47 = 47.5%."
+    "Formula: utilization = balance ÷ limit × 100%.",
+    "$1,900 ÷ $4,000 = 0.475 = 47.5%.",
+    "Spreadsheet or calculator: =1900/4000 (then format as a percent)",
+    "So the answer is 47.5%; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9702,7 +10173,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "$600 ÷ $2,000 = 0.30 = 30%."
+    "Formula: utilization = balance ÷ limit × 100%.",
+    "$600 ÷ $2,000 = 0.3 = 30%.",
+    "Spreadsheet or calculator: =600/2000 (then format as a percent)",
+    "So the answer is 30%; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9729,7 +10203,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "$200 ÷ $1,000 = 0.20 = 20%."
+    "Formula: utilization = balance ÷ limit × 100%.",
+    "$200 ÷ $1,000 = 0.2 = 20%.",
+    "Spreadsheet or calculator: =200/1000 (then format as a percent)",
+    "So the answer is 20%; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9756,7 +10233,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "$3,000 ÷ $4,000 = 0.75 = 75%."
+    "Formula: utilization = balance ÷ limit × 100%.",
+    "$3,000 ÷ $4,000 = 0.75 = 75%.",
+    "Spreadsheet or calculator: =3000/4000 (then format as a percent)",
+    "So the answer is 75%; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9783,9 +10263,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 5% × $640.00) = $32.00.",
     "Interest = $640.00 × 0.2799 ÷ 365 × 50 = $24.54.",
-    "Total = $56.54."
+    "Total = $56.54.",
+    "Spreadsheet or calculator: =(640.00*0.2799/365*50)+(MAX(10.00,5%*640.00))",
+    "So the answer is $56.54; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9812,9 +10295,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 5% × $360.00) = $18.00.",
     "Interest = $360.00 × 0.2999 ÷ 365 × 20 = $5.92.",
-    "Total = $23.92."
+    "Total = $23.92.",
+    "Spreadsheet or calculator: =(360.00*0.2999/365*20)+(MAX(10.00,5%*360.00))",
+    "So the answer is $23.92; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9841,9 +10327,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 5% × $620.00) = $31.00.",
     "Interest = $620.00 × 0.2999 ÷ 365 × 20 = $10.19.",
-    "Total = $41.19."
+    "Total = $41.19.",
+    "Spreadsheet or calculator: =(620.00*0.2999/365*20)+(MAX(10.00,5%*620.00))",
+    "So the answer is $41.19; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9870,9 +10359,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = max(minimum fee, fee rate × amount) + amount × APR ÷ 365 × days.",
     "Fee = max($10.00, 5% × $760.00) = $38.00.",
     "Interest = $760.00 × 0.2799 ÷ 365 × 20 = $11.66.",
-    "Total = $49.66."
+    "Total = $49.66.",
+    "Spreadsheet or calculator: =(760.00*0.2799/365*20)+(MAX(10.00,5%*760.00))",
+    "So the answer is $49.66; numbers like this on a statement show what carrying a balance really costs."
    ]
   },
   {
@@ -9897,7 +10389,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: year it drops off = year of the late payment + 7.",
     "2019 + 7 = 2026.",
+    "Spreadsheet or calculator: =2019+7",
     "Paying on time from now on still helps the score long before then."
    ]
   },
@@ -9923,7 +10417,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: year it drops off = year of the late payment + 7.",
     "2022 + 7 = 2029.",
+    "Spreadsheet or calculator: =2022+7",
     "Paying on time from now on still helps the score long before then."
    ]
   },
@@ -9949,7 +10445,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: year it drops off = year of the late payment + 7.",
     "2022 + 7 = 2029.",
+    "Spreadsheet or calculator: =2022+7",
     "Paying on time from now on still helps the score long before then."
    ]
   },
@@ -9975,7 +10473,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: year it drops off = year of the late payment + 7.",
     "2023 + 7 = 2030.",
+    "Spreadsheet or calculator: =2023+7",
     "Paying on time from now on still helps the score long before then."
    ]
   },
@@ -10001,9 +10501,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n) at each rate; extra cost = (fair payment − strong payment) × 360.",
     "Strong: payment $2,124.22.",
     "Fair: payment $2,412.29.",
-    "Difference × 360 = $103,703.66."
+    "Difference × 360 = $103,703.66.",
+    "So the answer is $103,703.66; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -10028,9 +10530,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n) at each rate; extra cost = (fair payment − strong payment) × 360.",
     "Strong: payment $1,390.55.",
     "Fair: payment $1,576.11.",
-    "Difference × 360 = $66,800.62."
+    "Difference × 360 = $66,800.62.",
+    "So the answer is $66,800.62; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -10055,9 +10559,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n) at each rate; extra cost = (fair payment − strong payment) × 360.",
     "Strong: payment $1,621.50.",
     "Fair: payment $1,791.03.",
-    "Difference × 360 = $61,032.73."
+    "Difference × 360 = $61,032.73.",
+    "So the answer is $61,032.73; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -10082,9 +10588,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n) at each rate; extra cost = (fair payment − strong payment) × 360.",
     "Strong: payment $1,693.22.",
     "Fair: payment $1,875.98.",
-    "Difference × 360 = $65,794.49."
+    "Difference × 360 = $65,794.49.",
+    "So the answer is $65,794.49; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -10109,9 +10617,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n) at each rate; extra cost = (fair payment − strong payment) × 360.",
     "Strong: payment $1,362.06.",
     "Fair: payment $1,504.47.",
-    "Difference × 360 = $51,267.50."
+    "Difference × 360 = $51,267.50.",
+    "So the answer is $51,267.50; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -10136,9 +10646,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n) at each rate; extra cost = (fair payment − strong payment) × 360.",
     "Strong: payment $2,216.58.",
     "Fair: payment $2,517.17.",
-    "Difference × 360 = $108,212.51."
+    "Difference × 360 = $108,212.51.",
+    "So the answer is $108,212.51; on-time payments and low utilization build a stronger score."
    ]
   },
   {
@@ -10222,7 +10734,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "Add the last column: 2 + 2 + 0 + 0 = 4.",
+    "Spreadsheet or calculator: =2+2+0+0",
     "Payment history is the largest factor in most scores."
    ]
   },
@@ -10307,8 +10821,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "Revolving balances = $1,940; limits = $8,250.",
     "$1,940 ÷ $8,250 = 0.2352 ≈ 23.5%.",
+    "Spreadsheet or calculator: =1940/8250 (then format as a percent)",
     "The installment loan is not part of utilization."
    ]
   },
@@ -10393,8 +10909,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "10% of total limits = 0.10 × $7,250 = $725.",
     "Pay down = $3,290 − $725 = $2,565.",
+    "Spreadsheet or calculator: =3290-725",
     "Paying before the statement closes lowers the balance that gets reported."
    ]
   },
@@ -10479,7 +10997,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "Add the last column: 1 + 1 + 1 + 0 = 3.",
+    "Spreadsheet or calculator: =1+1+1+0",
     "Payment history is the largest factor in most scores."
    ]
   },
@@ -10564,8 +11084,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "Revolving balances = $5,610; limits = $11,750.",
     "$5,610 ÷ $11,750 = 0.4774 ≈ 47.7%.",
+    "Spreadsheet or calculator: =5610/11750 (then format as a percent)",
     "The installment loan is not part of utilization."
    ]
   },
@@ -10650,8 +11172,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "10% of total limits = 0.10 × $6,750 = $675.",
     "Pay down = $3,450 − $675 = $2,775.",
+    "Spreadsheet or calculator: =3450-675",
     "Paying before the statement closes lowers the balance that gets reported."
    ]
   },
@@ -10736,7 +11260,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "Add the last column: 0 + 2 + 1 + 0 = 3.",
+    "Spreadsheet or calculator: =0+2+1+0",
     "Payment history is the largest factor in most scores."
    ]
   },
@@ -10821,8 +11347,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "Revolving balances = $4,880; limits = $7,750.",
     "$4,880 ÷ $7,750 = 0.6297 ≈ 63.0%.",
+    "Spreadsheet or calculator: =4880/7750 (then format as a percent)",
     "The installment loan is not part of utilization."
    ]
   },
@@ -10907,9 +11435,4961 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total late payments = sum of the 30-day-late column.",
     "10% of total limits = 0.10 × $7,500 = $750.",
     "Pay down = $3,440 − $750 = $2,690.",
+    "Spreadsheet or calculator: =3440-750",
     "Paying before the statement closes lowers the balance that gets reported."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Zara carries a $2,950.00 balance on Card A. Using I(B) = (APR ÷ 12) × B, what is one month's interest?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 19.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.39
+        ],
+        [
+         166.67,
+         2.78
+        ],
+        [
+         250,
+         4.16
+        ],
+        [
+         333.33,
+         5.55
+        ],
+        [
+         416.67,
+         6.94
+        ],
+        [
+         500,
+         8.33
+        ],
+        [
+         583.33,
+         9.72
+        ],
+        [
+         666.67,
+         11.11
+        ],
+        [
+         750,
+         12.49
+        ],
+        [
+         833.33,
+         13.88
+        ],
+        [
+         916.67,
+         15.27
+        ],
+        [
+         1000,
+         16.66
+        ],
+        [
+         1083.33,
+         18.05
+        ],
+        [
+         1166.67,
+         19.43
+        ],
+        [
+         1250,
+         20.82
+        ],
+        [
+         1333.33,
+         22.21
+        ],
+        [
+         1416.67,
+         23.6
+        ],
+        [
+         1500,
+         24.99
+        ],
+        [
+         1583.33,
+         26.38
+        ],
+        [
+         1666.67,
+         27.76
+        ],
+        [
+         1750,
+         29.15
+        ],
+        [
+         1833.33,
+         30.54
+        ],
+        [
+         1916.67,
+         31.93
+        ],
+        [
+         2000,
+         33.32
+        ],
+        [
+         2083.33,
+         34.7
+        ],
+        [
+         2166.67,
+         36.09
+        ],
+        [
+         2250,
+         37.48
+        ],
+        [
+         2333.33,
+         38.87
+        ],
+        [
+         2416.67,
+         40.26
+        ],
+        [
+         2500,
+         41.65
+        ],
+        [
+         2583.33,
+         43.03
+        ],
+        [
+         2666.67,
+         44.42
+        ],
+        [
+         2750,
+         45.81
+        ],
+        [
+         2833.33,
+         47.2
+        ],
+        [
+         2916.67,
+         48.59
+        ],
+        [
+         3000,
+         49.98
+        ],
+        [
+         3083.33,
+         51.36
+        ],
+        [
+         3166.67,
+         52.75
+        ],
+        [
+         3250,
+         54.14
+        ],
+        [
+         3333.33,
+         55.53
+        ],
+        [
+         3416.67,
+         56.92
+        ],
+        [
+         3500,
+         58.3
+        ],
+        [
+         3583.33,
+         59.69
+        ],
+        [
+         3666.67,
+         61.08
+        ],
+        [
+         3750,
+         62.47
+        ],
+        [
+         3833.33,
+         63.86
+        ],
+        [
+         3916.67,
+         65.25
+        ],
+        [
+         4000,
+         66.63
+        ],
+        [
+         4083.33,
+         68.02
+        ],
+        [
+         4166.67,
+         69.41
+        ],
+        [
+         4250,
+         70.8
+        ],
+        [
+         4333.33,
+         72.19
+        ],
+        [
+         4416.67,
+         73.57
+        ],
+        [
+         4500,
+         74.96
+        ],
+        [
+         4583.33,
+         76.35
+        ],
+        [
+         4666.67,
+         77.74
+        ],
+        [
+         4750,
+         79.13
+        ],
+        [
+         4833.33,
+         80.52
+        ],
+        [
+         4916.67,
+         81.9
+        ],
+        [
+         5000,
+         83.29
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 29.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         2.08
+        ],
+        [
+         166.67,
+         4.17
+        ],
+        [
+         250,
+         6.25
+        ],
+        [
+         333.33,
+         8.33
+        ],
+        [
+         416.67,
+         10.41
+        ],
+        [
+         500,
+         12.5
+        ],
+        [
+         583.33,
+         14.58
+        ],
+        [
+         666.67,
+         16.66
+        ],
+        [
+         750,
+         18.74
+        ],
+        [
+         833.33,
+         20.83
+        ],
+        [
+         916.67,
+         22.91
+        ],
+        [
+         1000,
+         24.99
+        ],
+        [
+         1083.33,
+         27.07
+        ],
+        [
+         1166.67,
+         29.16
+        ],
+        [
+         1250,
+         31.24
+        ],
+        [
+         1333.33,
+         33.32
+        ],
+        [
+         1416.67,
+         35.4
+        ],
+        [
+         1500,
+         37.49
+        ],
+        [
+         1583.33,
+         39.57
+        ],
+        [
+         1666.67,
+         41.65
+        ],
+        [
+         1750,
+         43.74
+        ],
+        [
+         1833.33,
+         45.82
+        ],
+        [
+         1916.67,
+         47.9
+        ],
+        [
+         2000,
+         49.98
+        ],
+        [
+         2083.33,
+         52.07
+        ],
+        [
+         2166.67,
+         54.15
+        ],
+        [
+         2250,
+         56.23
+        ],
+        [
+         2333.33,
+         58.31
+        ],
+        [
+         2416.67,
+         60.4
+        ],
+        [
+         2500,
+         62.48
+        ],
+        [
+         2583.33,
+         64.56
+        ],
+        [
+         2666.67,
+         66.64
+        ],
+        [
+         2750,
+         68.73
+        ],
+        [
+         2833.33,
+         70.81
+        ],
+        [
+         2916.67,
+         72.89
+        ],
+        [
+         3000,
+         74.98
+        ],
+        [
+         3083.33,
+         77.06
+        ],
+        [
+         3166.67,
+         79.14
+        ],
+        [
+         3250,
+         81.22
+        ],
+        [
+         3333.33,
+         83.31
+        ],
+        [
+         3416.67,
+         85.39
+        ],
+        [
+         3500,
+         87.47
+        ],
+        [
+         3583.33,
+         89.55
+        ],
+        [
+         3666.67,
+         91.64
+        ],
+        [
+         3750,
+         93.72
+        ],
+        [
+         3833.33,
+         95.8
+        ],
+        [
+         3916.67,
+         97.88
+        ],
+        [
+         4000,
+         99.97
+        ],
+        [
+         4083.33,
+         102.05
+        ],
+        [
+         4166.67,
+         104.13
+        ],
+        [
+         4250,
+         106.21
+        ],
+        [
+         4333.33,
+         108.3
+        ],
+        [
+         4416.67,
+         110.38
+        ],
+        [
+         4500,
+         112.46
+        ],
+        [
+         4583.33,
+         114.55
+        ],
+        [
+         4666.67,
+         116.63
+        ],
+        [
+         4750,
+         118.71
+        ],
+        [
+         4833.33,
+         120.79
+        ],
+        [
+         4916.67,
+         122.88
+        ],
+        [
+         5000,
+         124.96
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 19.99%. Card B: APR 29.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$49.14",
+   "numeric": {
+    "value": 49.14,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: I = (APR ÷ 12) × B.",
+    "Substitute: (0.1999 ÷ 12) × $2,950.00 = $49.14.",
+    "Spreadsheet: =0.1999/12*2950.",
+    "So carrying the balance costs $49.14 this month, about $589.68 over a year if nothing changes."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On a $2,500.00 balance, how much more interest does Card B charge in a month than Card A? (The vertical gap between the lines.)",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 19.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.39
+        ],
+        [
+         166.67,
+         2.78
+        ],
+        [
+         250,
+         4.16
+        ],
+        [
+         333.33,
+         5.55
+        ],
+        [
+         416.67,
+         6.94
+        ],
+        [
+         500,
+         8.33
+        ],
+        [
+         583.33,
+         9.72
+        ],
+        [
+         666.67,
+         11.11
+        ],
+        [
+         750,
+         12.49
+        ],
+        [
+         833.33,
+         13.88
+        ],
+        [
+         916.67,
+         15.27
+        ],
+        [
+         1000,
+         16.66
+        ],
+        [
+         1083.33,
+         18.05
+        ],
+        [
+         1166.67,
+         19.43
+        ],
+        [
+         1250,
+         20.82
+        ],
+        [
+         1333.33,
+         22.21
+        ],
+        [
+         1416.67,
+         23.6
+        ],
+        [
+         1500,
+         24.99
+        ],
+        [
+         1583.33,
+         26.38
+        ],
+        [
+         1666.67,
+         27.76
+        ],
+        [
+         1750,
+         29.15
+        ],
+        [
+         1833.33,
+         30.54
+        ],
+        [
+         1916.67,
+         31.93
+        ],
+        [
+         2000,
+         33.32
+        ],
+        [
+         2083.33,
+         34.7
+        ],
+        [
+         2166.67,
+         36.09
+        ],
+        [
+         2250,
+         37.48
+        ],
+        [
+         2333.33,
+         38.87
+        ],
+        [
+         2416.67,
+         40.26
+        ],
+        [
+         2500,
+         41.65
+        ],
+        [
+         2583.33,
+         43.03
+        ],
+        [
+         2666.67,
+         44.42
+        ],
+        [
+         2750,
+         45.81
+        ],
+        [
+         2833.33,
+         47.2
+        ],
+        [
+         2916.67,
+         48.59
+        ],
+        [
+         3000,
+         49.98
+        ],
+        [
+         3083.33,
+         51.36
+        ],
+        [
+         3166.67,
+         52.75
+        ],
+        [
+         3250,
+         54.14
+        ],
+        [
+         3333.33,
+         55.53
+        ],
+        [
+         3416.67,
+         56.92
+        ],
+        [
+         3500,
+         58.3
+        ],
+        [
+         3583.33,
+         59.69
+        ],
+        [
+         3666.67,
+         61.08
+        ],
+        [
+         3750,
+         62.47
+        ],
+        [
+         3833.33,
+         63.86
+        ],
+        [
+         3916.67,
+         65.25
+        ],
+        [
+         4000,
+         66.63
+        ],
+        [
+         4083.33,
+         68.02
+        ],
+        [
+         4166.67,
+         69.41
+        ],
+        [
+         4250,
+         70.8
+        ],
+        [
+         4333.33,
+         72.19
+        ],
+        [
+         4416.67,
+         73.57
+        ],
+        [
+         4500,
+         74.96
+        ],
+        [
+         4583.33,
+         76.35
+        ],
+        [
+         4666.67,
+         77.74
+        ],
+        [
+         4750,
+         79.13
+        ],
+        [
+         4833.33,
+         80.52
+        ],
+        [
+         4916.67,
+         81.9
+        ],
+        [
+         5000,
+         83.29
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 24.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.74
+        ],
+        [
+         166.67,
+         3.47
+        ],
+        [
+         250,
+         5.21
+        ],
+        [
+         333.33,
+         6.94
+        ],
+        [
+         416.67,
+         8.68
+        ],
+        [
+         500,
+         10.41
+        ],
+        [
+         583.33,
+         12.15
+        ],
+        [
+         666.67,
+         13.88
+        ],
+        [
+         750,
+         15.62
+        ],
+        [
+         833.33,
+         17.35
+        ],
+        [
+         916.67,
+         19.09
+        ],
+        [
+         1000,
+         20.83
+        ],
+        [
+         1083.33,
+         22.56
+        ],
+        [
+         1166.67,
+         24.3
+        ],
+        [
+         1250,
+         26.03
+        ],
+        [
+         1333.33,
+         27.77
+        ],
+        [
+         1416.67,
+         29.5
+        ],
+        [
+         1500,
+         31.24
+        ],
+        [
+         1583.33,
+         32.97
+        ],
+        [
+         1666.67,
+         34.71
+        ],
+        [
+         1750,
+         36.44
+        ],
+        [
+         1833.33,
+         38.18
+        ],
+        [
+         1916.67,
+         39.91
+        ],
+        [
+         2000,
+         41.65
+        ],
+        [
+         2083.33,
+         43.39
+        ],
+        [
+         2166.67,
+         45.12
+        ],
+        [
+         2250,
+         46.86
+        ],
+        [
+         2333.33,
+         48.59
+        ],
+        [
+         2416.67,
+         50.33
+        ],
+        [
+         2500,
+         52.06
+        ],
+        [
+         2583.33,
+         53.8
+        ],
+        [
+         2666.67,
+         55.53
+        ],
+        [
+         2750,
+         57.27
+        ],
+        [
+         2833.33,
+         59
+        ],
+        [
+         2916.67,
+         60.74
+        ],
+        [
+         3000,
+         62.48
+        ],
+        [
+         3083.33,
+         64.21
+        ],
+        [
+         3166.67,
+         65.95
+        ],
+        [
+         3250,
+         67.68
+        ],
+        [
+         3333.33,
+         69.42
+        ],
+        [
+         3416.67,
+         71.15
+        ],
+        [
+         3500,
+         72.89
+        ],
+        [
+         3583.33,
+         74.62
+        ],
+        [
+         3666.67,
+         76.36
+        ],
+        [
+         3750,
+         78.09
+        ],
+        [
+         3833.33,
+         79.83
+        ],
+        [
+         3916.67,
+         81.56
+        ],
+        [
+         4000,
+         83.3
+        ],
+        [
+         4083.33,
+         85.04
+        ],
+        [
+         4166.67,
+         86.77
+        ],
+        [
+         4250,
+         88.51
+        ],
+        [
+         4333.33,
+         90.24
+        ],
+        [
+         4416.67,
+         91.98
+        ],
+        [
+         4500,
+         93.71
+        ],
+        [
+         4583.33,
+         95.45
+        ],
+        [
+         4666.67,
+         97.18
+        ],
+        [
+         4750,
+         98.92
+        ],
+        [
+         4833.33,
+         100.65
+        ],
+        [
+         4916.67,
+         102.39
+        ],
+        [
+         5000,
+         104.13
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 19.99%. Card B: APR 24.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$10.42",
+   "numeric": {
+    "value": 10.42,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = (APR_B − APR_A) ÷ 12 × B.",
+    "Substitute: [[0.2499 − 0.1999 || 12]] × $2,500.00 = $10.42.",
+    "Spreadsheet: =(0.2499-0.1999)/12*2500.",
+    "So Card B costs $10.42 more each month on this balance. The gap grows with the balance because the lines have different slopes."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "What Card B balance makes the monthly interest exactly $75.00? Round to the nearest cent.",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 19.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.39
+        ],
+        [
+         166.67,
+         2.78
+        ],
+        [
+         250,
+         4.16
+        ],
+        [
+         333.33,
+         5.55
+        ],
+        [
+         416.67,
+         6.94
+        ],
+        [
+         500,
+         8.33
+        ],
+        [
+         583.33,
+         9.72
+        ],
+        [
+         666.67,
+         11.11
+        ],
+        [
+         750,
+         12.49
+        ],
+        [
+         833.33,
+         13.88
+        ],
+        [
+         916.67,
+         15.27
+        ],
+        [
+         1000,
+         16.66
+        ],
+        [
+         1083.33,
+         18.05
+        ],
+        [
+         1166.67,
+         19.43
+        ],
+        [
+         1250,
+         20.82
+        ],
+        [
+         1333.33,
+         22.21
+        ],
+        [
+         1416.67,
+         23.6
+        ],
+        [
+         1500,
+         24.99
+        ],
+        [
+         1583.33,
+         26.38
+        ],
+        [
+         1666.67,
+         27.76
+        ],
+        [
+         1750,
+         29.15
+        ],
+        [
+         1833.33,
+         30.54
+        ],
+        [
+         1916.67,
+         31.93
+        ],
+        [
+         2000,
+         33.32
+        ],
+        [
+         2083.33,
+         34.7
+        ],
+        [
+         2166.67,
+         36.09
+        ],
+        [
+         2250,
+         37.48
+        ],
+        [
+         2333.33,
+         38.87
+        ],
+        [
+         2416.67,
+         40.26
+        ],
+        [
+         2500,
+         41.65
+        ],
+        [
+         2583.33,
+         43.03
+        ],
+        [
+         2666.67,
+         44.42
+        ],
+        [
+         2750,
+         45.81
+        ],
+        [
+         2833.33,
+         47.2
+        ],
+        [
+         2916.67,
+         48.59
+        ],
+        [
+         3000,
+         49.98
+        ],
+        [
+         3083.33,
+         51.36
+        ],
+        [
+         3166.67,
+         52.75
+        ],
+        [
+         3250,
+         54.14
+        ],
+        [
+         3333.33,
+         55.53
+        ],
+        [
+         3416.67,
+         56.92
+        ],
+        [
+         3500,
+         58.3
+        ],
+        [
+         3583.33,
+         59.69
+        ],
+        [
+         3666.67,
+         61.08
+        ],
+        [
+         3750,
+         62.47
+        ],
+        [
+         3833.33,
+         63.86
+        ],
+        [
+         3916.67,
+         65.25
+        ],
+        [
+         4000,
+         66.63
+        ],
+        [
+         4083.33,
+         68.02
+        ],
+        [
+         4166.67,
+         69.41
+        ],
+        [
+         4250,
+         70.8
+        ],
+        [
+         4333.33,
+         72.19
+        ],
+        [
+         4416.67,
+         73.57
+        ],
+        [
+         4500,
+         74.96
+        ],
+        [
+         4583.33,
+         76.35
+        ],
+        [
+         4666.67,
+         77.74
+        ],
+        [
+         4750,
+         79.13
+        ],
+        [
+         4833.33,
+         80.52
+        ],
+        [
+         4916.67,
+         81.9
+        ],
+        [
+         5000,
+         83.29
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 27.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.94
+        ],
+        [
+         166.67,
+         3.89
+        ],
+        [
+         250,
+         5.83
+        ],
+        [
+         333.33,
+         7.78
+        ],
+        [
+         416.67,
+         9.72
+        ],
+        [
+         500,
+         11.66
+        ],
+        [
+         583.33,
+         13.61
+        ],
+        [
+         666.67,
+         15.55
+        ],
+        [
+         750,
+         17.49
+        ],
+        [
+         833.33,
+         19.44
+        ],
+        [
+         916.67,
+         21.38
+        ],
+        [
+         1000,
+         23.33
+        ],
+        [
+         1083.33,
+         25.27
+        ],
+        [
+         1166.67,
+         27.21
+        ],
+        [
+         1250,
+         29.16
+        ],
+        [
+         1333.33,
+         31.1
+        ],
+        [
+         1416.67,
+         33.04
+        ],
+        [
+         1500,
+         34.99
+        ],
+        [
+         1583.33,
+         36.93
+        ],
+        [
+         1666.67,
+         38.88
+        ],
+        [
+         1750,
+         40.82
+        ],
+        [
+         1833.33,
+         42.76
+        ],
+        [
+         1916.67,
+         44.71
+        ],
+        [
+         2000,
+         46.65
+        ],
+        [
+         2083.33,
+         48.59
+        ],
+        [
+         2166.67,
+         50.54
+        ],
+        [
+         2250,
+         52.48
+        ],
+        [
+         2333.33,
+         54.43
+        ],
+        [
+         2416.67,
+         56.37
+        ],
+        [
+         2500,
+         58.31
+        ],
+        [
+         2583.33,
+         60.26
+        ],
+        [
+         2666.67,
+         62.2
+        ],
+        [
+         2750,
+         64.14
+        ],
+        [
+         2833.33,
+         66.09
+        ],
+        [
+         2916.67,
+         68.03
+        ],
+        [
+         3000,
+         69.98
+        ],
+        [
+         3083.33,
+         71.92
+        ],
+        [
+         3166.67,
+         73.86
+        ],
+        [
+         3250,
+         75.81
+        ],
+        [
+         3333.33,
+         77.75
+        ],
+        [
+         3416.67,
+         79.69
+        ],
+        [
+         3500,
+         81.64
+        ],
+        [
+         3583.33,
+         83.58
+        ],
+        [
+         3666.67,
+         85.53
+        ],
+        [
+         3750,
+         87.47
+        ],
+        [
+         3833.33,
+         89.41
+        ],
+        [
+         3916.67,
+         91.36
+        ],
+        [
+         4000,
+         93.3
+        ],
+        [
+         4083.33,
+         95.24
+        ],
+        [
+         4166.67,
+         97.19
+        ],
+        [
+         4250,
+         99.13
+        ],
+        [
+         4333.33,
+         101.08
+        ],
+        [
+         4416.67,
+         103.02
+        ],
+        [
+         4500,
+         104.96
+        ],
+        [
+         4583.33,
+         106.91
+        ],
+        [
+         4666.67,
+         108.85
+        ],
+        [
+         4750,
+         110.79
+        ],
+        [
+         4833.33,
+         112.74
+        ],
+        [
+         4916.67,
+         114.68
+        ],
+        [
+         5000,
+         116.63
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 19.99%. Card B: APR 27.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,215.43",
+   "numeric": {
+    "value": 3215.43,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: solve (APR ÷ 12) × B = I for B: B = [[I || APR ÷ 12]].",
+    "Substitute: B = [[$75.00 || 0.2799 ÷ 12]] = $3,215.43.",
+    "Spreadsheet: =75/(0.2799/12).",
+    "So a balance of about $3,215.00 on Card B costs $75.00 a month in interest, $900.00 a year, before paying down any of the balance."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Hana carries a $2,700.00 balance on Card A. Using I(B) = (APR ÷ 12) × B, what is one month's interest?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 19.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.39
+        ],
+        [
+         166.67,
+         2.78
+        ],
+        [
+         250,
+         4.16
+        ],
+        [
+         333.33,
+         5.55
+        ],
+        [
+         416.67,
+         6.94
+        ],
+        [
+         500,
+         8.33
+        ],
+        [
+         583.33,
+         9.72
+        ],
+        [
+         666.67,
+         11.11
+        ],
+        [
+         750,
+         12.49
+        ],
+        [
+         833.33,
+         13.88
+        ],
+        [
+         916.67,
+         15.27
+        ],
+        [
+         1000,
+         16.66
+        ],
+        [
+         1083.33,
+         18.05
+        ],
+        [
+         1166.67,
+         19.43
+        ],
+        [
+         1250,
+         20.82
+        ],
+        [
+         1333.33,
+         22.21
+        ],
+        [
+         1416.67,
+         23.6
+        ],
+        [
+         1500,
+         24.99
+        ],
+        [
+         1583.33,
+         26.38
+        ],
+        [
+         1666.67,
+         27.76
+        ],
+        [
+         1750,
+         29.15
+        ],
+        [
+         1833.33,
+         30.54
+        ],
+        [
+         1916.67,
+         31.93
+        ],
+        [
+         2000,
+         33.32
+        ],
+        [
+         2083.33,
+         34.7
+        ],
+        [
+         2166.67,
+         36.09
+        ],
+        [
+         2250,
+         37.48
+        ],
+        [
+         2333.33,
+         38.87
+        ],
+        [
+         2416.67,
+         40.26
+        ],
+        [
+         2500,
+         41.65
+        ],
+        [
+         2583.33,
+         43.03
+        ],
+        [
+         2666.67,
+         44.42
+        ],
+        [
+         2750,
+         45.81
+        ],
+        [
+         2833.33,
+         47.2
+        ],
+        [
+         2916.67,
+         48.59
+        ],
+        [
+         3000,
+         49.98
+        ],
+        [
+         3083.33,
+         51.36
+        ],
+        [
+         3166.67,
+         52.75
+        ],
+        [
+         3250,
+         54.14
+        ],
+        [
+         3333.33,
+         55.53
+        ],
+        [
+         3416.67,
+         56.92
+        ],
+        [
+         3500,
+         58.3
+        ],
+        [
+         3583.33,
+         59.69
+        ],
+        [
+         3666.67,
+         61.08
+        ],
+        [
+         3750,
+         62.47
+        ],
+        [
+         3833.33,
+         63.86
+        ],
+        [
+         3916.67,
+         65.25
+        ],
+        [
+         4000,
+         66.63
+        ],
+        [
+         4083.33,
+         68.02
+        ],
+        [
+         4166.67,
+         69.41
+        ],
+        [
+         4250,
+         70.8
+        ],
+        [
+         4333.33,
+         72.19
+        ],
+        [
+         4416.67,
+         73.57
+        ],
+        [
+         4500,
+         74.96
+        ],
+        [
+         4583.33,
+         76.35
+        ],
+        [
+         4666.67,
+         77.74
+        ],
+        [
+         4750,
+         79.13
+        ],
+        [
+         4833.33,
+         80.52
+        ],
+        [
+         4916.67,
+         81.9
+        ],
+        [
+         5000,
+         83.29
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 24.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.74
+        ],
+        [
+         166.67,
+         3.47
+        ],
+        [
+         250,
+         5.21
+        ],
+        [
+         333.33,
+         6.94
+        ],
+        [
+         416.67,
+         8.68
+        ],
+        [
+         500,
+         10.41
+        ],
+        [
+         583.33,
+         12.15
+        ],
+        [
+         666.67,
+         13.88
+        ],
+        [
+         750,
+         15.62
+        ],
+        [
+         833.33,
+         17.35
+        ],
+        [
+         916.67,
+         19.09
+        ],
+        [
+         1000,
+         20.83
+        ],
+        [
+         1083.33,
+         22.56
+        ],
+        [
+         1166.67,
+         24.3
+        ],
+        [
+         1250,
+         26.03
+        ],
+        [
+         1333.33,
+         27.77
+        ],
+        [
+         1416.67,
+         29.5
+        ],
+        [
+         1500,
+         31.24
+        ],
+        [
+         1583.33,
+         32.97
+        ],
+        [
+         1666.67,
+         34.71
+        ],
+        [
+         1750,
+         36.44
+        ],
+        [
+         1833.33,
+         38.18
+        ],
+        [
+         1916.67,
+         39.91
+        ],
+        [
+         2000,
+         41.65
+        ],
+        [
+         2083.33,
+         43.39
+        ],
+        [
+         2166.67,
+         45.12
+        ],
+        [
+         2250,
+         46.86
+        ],
+        [
+         2333.33,
+         48.59
+        ],
+        [
+         2416.67,
+         50.33
+        ],
+        [
+         2500,
+         52.06
+        ],
+        [
+         2583.33,
+         53.8
+        ],
+        [
+         2666.67,
+         55.53
+        ],
+        [
+         2750,
+         57.27
+        ],
+        [
+         2833.33,
+         59
+        ],
+        [
+         2916.67,
+         60.74
+        ],
+        [
+         3000,
+         62.48
+        ],
+        [
+         3083.33,
+         64.21
+        ],
+        [
+         3166.67,
+         65.95
+        ],
+        [
+         3250,
+         67.68
+        ],
+        [
+         3333.33,
+         69.42
+        ],
+        [
+         3416.67,
+         71.15
+        ],
+        [
+         3500,
+         72.89
+        ],
+        [
+         3583.33,
+         74.62
+        ],
+        [
+         3666.67,
+         76.36
+        ],
+        [
+         3750,
+         78.09
+        ],
+        [
+         3833.33,
+         79.83
+        ],
+        [
+         3916.67,
+         81.56
+        ],
+        [
+         4000,
+         83.3
+        ],
+        [
+         4083.33,
+         85.04
+        ],
+        [
+         4166.67,
+         86.77
+        ],
+        [
+         4250,
+         88.51
+        ],
+        [
+         4333.33,
+         90.24
+        ],
+        [
+         4416.67,
+         91.98
+        ],
+        [
+         4500,
+         93.71
+        ],
+        [
+         4583.33,
+         95.45
+        ],
+        [
+         4666.67,
+         97.18
+        ],
+        [
+         4750,
+         98.92
+        ],
+        [
+         4833.33,
+         100.65
+        ],
+        [
+         4916.67,
+         102.39
+        ],
+        [
+         5000,
+         104.13
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 19.99%. Card B: APR 24.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$44.98",
+   "numeric": {
+    "value": 44.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: I = (APR ÷ 12) × B.",
+    "Substitute: (0.1999 ÷ 12) × $2,700.00 = $44.98.",
+    "Spreadsheet: =0.1999/12*2700.",
+    "So carrying the balance costs $44.98 this month, about $539.76 over a year if nothing changes."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On a $3,600.00 balance, how much more interest does Card B charge in a month than Card A? (The vertical gap between the lines.)",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 18%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.25
+        ],
+        [
+         166.67,
+         2.5
+        ],
+        [
+         250,
+         3.75
+        ],
+        [
+         333.33,
+         5
+        ],
+        [
+         416.67,
+         6.25
+        ],
+        [
+         500,
+         7.5
+        ],
+        [
+         583.33,
+         8.75
+        ],
+        [
+         666.67,
+         10
+        ],
+        [
+         750,
+         11.25
+        ],
+        [
+         833.33,
+         12.5
+        ],
+        [
+         916.67,
+         13.75
+        ],
+        [
+         1000,
+         15
+        ],
+        [
+         1083.33,
+         16.25
+        ],
+        [
+         1166.67,
+         17.5
+        ],
+        [
+         1250,
+         18.75
+        ],
+        [
+         1333.33,
+         20
+        ],
+        [
+         1416.67,
+         21.25
+        ],
+        [
+         1500,
+         22.5
+        ],
+        [
+         1583.33,
+         23.75
+        ],
+        [
+         1666.67,
+         25
+        ],
+        [
+         1750,
+         26.25
+        ],
+        [
+         1833.33,
+         27.5
+        ],
+        [
+         1916.67,
+         28.75
+        ],
+        [
+         2000,
+         30
+        ],
+        [
+         2083.33,
+         31.25
+        ],
+        [
+         2166.67,
+         32.5
+        ],
+        [
+         2250,
+         33.75
+        ],
+        [
+         2333.33,
+         35
+        ],
+        [
+         2416.67,
+         36.25
+        ],
+        [
+         2500,
+         37.5
+        ],
+        [
+         2583.33,
+         38.75
+        ],
+        [
+         2666.67,
+         40
+        ],
+        [
+         2750,
+         41.25
+        ],
+        [
+         2833.33,
+         42.5
+        ],
+        [
+         2916.67,
+         43.75
+        ],
+        [
+         3000,
+         45
+        ],
+        [
+         3083.33,
+         46.25
+        ],
+        [
+         3166.67,
+         47.5
+        ],
+        [
+         3250,
+         48.75
+        ],
+        [
+         3333.33,
+         50
+        ],
+        [
+         3416.67,
+         51.25
+        ],
+        [
+         3500,
+         52.5
+        ],
+        [
+         3583.33,
+         53.75
+        ],
+        [
+         3666.67,
+         55
+        ],
+        [
+         3750,
+         56.25
+        ],
+        [
+         3833.33,
+         57.5
+        ],
+        [
+         3916.67,
+         58.75
+        ],
+        [
+         4000,
+         60
+        ],
+        [
+         4083.33,
+         61.25
+        ],
+        [
+         4166.67,
+         62.5
+        ],
+        [
+         4250,
+         63.75
+        ],
+        [
+         4333.33,
+         65
+        ],
+        [
+         4416.67,
+         66.25
+        ],
+        [
+         4500,
+         67.5
+        ],
+        [
+         4583.33,
+         68.75
+        ],
+        [
+         4666.67,
+         70
+        ],
+        [
+         4750,
+         71.25
+        ],
+        [
+         4833.33,
+         72.5
+        ],
+        [
+         4916.67,
+         73.75
+        ],
+        [
+         5000,
+         75
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 27.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.94
+        ],
+        [
+         166.67,
+         3.89
+        ],
+        [
+         250,
+         5.83
+        ],
+        [
+         333.33,
+         7.78
+        ],
+        [
+         416.67,
+         9.72
+        ],
+        [
+         500,
+         11.66
+        ],
+        [
+         583.33,
+         13.61
+        ],
+        [
+         666.67,
+         15.55
+        ],
+        [
+         750,
+         17.49
+        ],
+        [
+         833.33,
+         19.44
+        ],
+        [
+         916.67,
+         21.38
+        ],
+        [
+         1000,
+         23.33
+        ],
+        [
+         1083.33,
+         25.27
+        ],
+        [
+         1166.67,
+         27.21
+        ],
+        [
+         1250,
+         29.16
+        ],
+        [
+         1333.33,
+         31.1
+        ],
+        [
+         1416.67,
+         33.04
+        ],
+        [
+         1500,
+         34.99
+        ],
+        [
+         1583.33,
+         36.93
+        ],
+        [
+         1666.67,
+         38.88
+        ],
+        [
+         1750,
+         40.82
+        ],
+        [
+         1833.33,
+         42.76
+        ],
+        [
+         1916.67,
+         44.71
+        ],
+        [
+         2000,
+         46.65
+        ],
+        [
+         2083.33,
+         48.59
+        ],
+        [
+         2166.67,
+         50.54
+        ],
+        [
+         2250,
+         52.48
+        ],
+        [
+         2333.33,
+         54.43
+        ],
+        [
+         2416.67,
+         56.37
+        ],
+        [
+         2500,
+         58.31
+        ],
+        [
+         2583.33,
+         60.26
+        ],
+        [
+         2666.67,
+         62.2
+        ],
+        [
+         2750,
+         64.14
+        ],
+        [
+         2833.33,
+         66.09
+        ],
+        [
+         2916.67,
+         68.03
+        ],
+        [
+         3000,
+         69.98
+        ],
+        [
+         3083.33,
+         71.92
+        ],
+        [
+         3166.67,
+         73.86
+        ],
+        [
+         3250,
+         75.81
+        ],
+        [
+         3333.33,
+         77.75
+        ],
+        [
+         3416.67,
+         79.69
+        ],
+        [
+         3500,
+         81.64
+        ],
+        [
+         3583.33,
+         83.58
+        ],
+        [
+         3666.67,
+         85.53
+        ],
+        [
+         3750,
+         87.47
+        ],
+        [
+         3833.33,
+         89.41
+        ],
+        [
+         3916.67,
+         91.36
+        ],
+        [
+         4000,
+         93.3
+        ],
+        [
+         4083.33,
+         95.24
+        ],
+        [
+         4166.67,
+         97.19
+        ],
+        [
+         4250,
+         99.13
+        ],
+        [
+         4333.33,
+         101.08
+        ],
+        [
+         4416.67,
+         103.02
+        ],
+        [
+         4500,
+         104.96
+        ],
+        [
+         4583.33,
+         106.91
+        ],
+        [
+         4666.67,
+         108.85
+        ],
+        [
+         4750,
+         110.79
+        ],
+        [
+         4833.33,
+         112.74
+        ],
+        [
+         4916.67,
+         114.68
+        ],
+        [
+         5000,
+         116.63
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 18%. Card B: APR 27.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$29.97",
+   "numeric": {
+    "value": 29.97,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = (APR_B − APR_A) ÷ 12 × B.",
+    "Substitute: [[0.2799 − 0.18 || 12]] × $3,600.00 = $29.97.",
+    "Spreadsheet: =(0.2799-0.18)/12*3600.",
+    "So Card B costs $29.97 more each month on this balance. The gap grows with the balance because the lines have different slopes."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "What Card B balance makes the monthly interest exactly $30.00? Round to the nearest cent.",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 21.49%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.49
+        ],
+        [
+         166.67,
+         2.98
+        ],
+        [
+         250,
+         4.48
+        ],
+        [
+         333.33,
+         5.97
+        ],
+        [
+         416.67,
+         7.46
+        ],
+        [
+         500,
+         8.95
+        ],
+        [
+         583.33,
+         10.45
+        ],
+        [
+         666.67,
+         11.94
+        ],
+        [
+         750,
+         13.43
+        ],
+        [
+         833.33,
+         14.92
+        ],
+        [
+         916.67,
+         16.42
+        ],
+        [
+         1000,
+         17.91
+        ],
+        [
+         1083.33,
+         19.4
+        ],
+        [
+         1166.67,
+         20.89
+        ],
+        [
+         1250,
+         22.39
+        ],
+        [
+         1333.33,
+         23.88
+        ],
+        [
+         1416.67,
+         25.37
+        ],
+        [
+         1500,
+         26.86
+        ],
+        [
+         1583.33,
+         28.35
+        ],
+        [
+         1666.67,
+         29.85
+        ],
+        [
+         1750,
+         31.34
+        ],
+        [
+         1833.33,
+         32.83
+        ],
+        [
+         1916.67,
+         34.32
+        ],
+        [
+         2000,
+         35.82
+        ],
+        [
+         2083.33,
+         37.31
+        ],
+        [
+         2166.67,
+         38.8
+        ],
+        [
+         2250,
+         40.29
+        ],
+        [
+         2333.33,
+         41.79
+        ],
+        [
+         2416.67,
+         43.28
+        ],
+        [
+         2500,
+         44.77
+        ],
+        [
+         2583.33,
+         46.26
+        ],
+        [
+         2666.67,
+         47.76
+        ],
+        [
+         2750,
+         49.25
+        ],
+        [
+         2833.33,
+         50.74
+        ],
+        [
+         2916.67,
+         52.23
+        ],
+        [
+         3000,
+         53.73
+        ],
+        [
+         3083.33,
+         55.22
+        ],
+        [
+         3166.67,
+         56.71
+        ],
+        [
+         3250,
+         58.2
+        ],
+        [
+         3333.33,
+         59.69
+        ],
+        [
+         3416.67,
+         61.19
+        ],
+        [
+         3500,
+         62.68
+        ],
+        [
+         3583.33,
+         64.17
+        ],
+        [
+         3666.67,
+         65.66
+        ],
+        [
+         3750,
+         67.16
+        ],
+        [
+         3833.33,
+         68.65
+        ],
+        [
+         3916.67,
+         70.14
+        ],
+        [
+         4000,
+         71.63
+        ],
+        [
+         4083.33,
+         73.13
+        ],
+        [
+         4166.67,
+         74.62
+        ],
+        [
+         4250,
+         76.11
+        ],
+        [
+         4333.33,
+         77.6
+        ],
+        [
+         4416.67,
+         79.1
+        ],
+        [
+         4500,
+         80.59
+        ],
+        [
+         4583.33,
+         82.08
+        ],
+        [
+         4666.67,
+         83.57
+        ],
+        [
+         4750,
+         85.06
+        ],
+        [
+         4833.33,
+         86.56
+        ],
+        [
+         4916.67,
+         88.05
+        ],
+        [
+         5000,
+         89.54
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 29.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         2.08
+        ],
+        [
+         166.67,
+         4.17
+        ],
+        [
+         250,
+         6.25
+        ],
+        [
+         333.33,
+         8.33
+        ],
+        [
+         416.67,
+         10.41
+        ],
+        [
+         500,
+         12.5
+        ],
+        [
+         583.33,
+         14.58
+        ],
+        [
+         666.67,
+         16.66
+        ],
+        [
+         750,
+         18.74
+        ],
+        [
+         833.33,
+         20.83
+        ],
+        [
+         916.67,
+         22.91
+        ],
+        [
+         1000,
+         24.99
+        ],
+        [
+         1083.33,
+         27.07
+        ],
+        [
+         1166.67,
+         29.16
+        ],
+        [
+         1250,
+         31.24
+        ],
+        [
+         1333.33,
+         33.32
+        ],
+        [
+         1416.67,
+         35.4
+        ],
+        [
+         1500,
+         37.49
+        ],
+        [
+         1583.33,
+         39.57
+        ],
+        [
+         1666.67,
+         41.65
+        ],
+        [
+         1750,
+         43.74
+        ],
+        [
+         1833.33,
+         45.82
+        ],
+        [
+         1916.67,
+         47.9
+        ],
+        [
+         2000,
+         49.98
+        ],
+        [
+         2083.33,
+         52.07
+        ],
+        [
+         2166.67,
+         54.15
+        ],
+        [
+         2250,
+         56.23
+        ],
+        [
+         2333.33,
+         58.31
+        ],
+        [
+         2416.67,
+         60.4
+        ],
+        [
+         2500,
+         62.48
+        ],
+        [
+         2583.33,
+         64.56
+        ],
+        [
+         2666.67,
+         66.64
+        ],
+        [
+         2750,
+         68.73
+        ],
+        [
+         2833.33,
+         70.81
+        ],
+        [
+         2916.67,
+         72.89
+        ],
+        [
+         3000,
+         74.98
+        ],
+        [
+         3083.33,
+         77.06
+        ],
+        [
+         3166.67,
+         79.14
+        ],
+        [
+         3250,
+         81.22
+        ],
+        [
+         3333.33,
+         83.31
+        ],
+        [
+         3416.67,
+         85.39
+        ],
+        [
+         3500,
+         87.47
+        ],
+        [
+         3583.33,
+         89.55
+        ],
+        [
+         3666.67,
+         91.64
+        ],
+        [
+         3750,
+         93.72
+        ],
+        [
+         3833.33,
+         95.8
+        ],
+        [
+         3916.67,
+         97.88
+        ],
+        [
+         4000,
+         99.97
+        ],
+        [
+         4083.33,
+         102.05
+        ],
+        [
+         4166.67,
+         104.13
+        ],
+        [
+         4250,
+         106.21
+        ],
+        [
+         4333.33,
+         108.3
+        ],
+        [
+         4416.67,
+         110.38
+        ],
+        [
+         4500,
+         112.46
+        ],
+        [
+         4583.33,
+         114.55
+        ],
+        [
+         4666.67,
+         116.63
+        ],
+        [
+         4750,
+         118.71
+        ],
+        [
+         4833.33,
+         120.79
+        ],
+        [
+         4916.67,
+         122.88
+        ],
+        [
+         5000,
+         124.96
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 21.49%. Card B: APR 29.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,200.40",
+   "numeric": {
+    "value": 1200.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: solve (APR ÷ 12) × B = I for B: B = [[I || APR ÷ 12]].",
+    "Substitute: B = [[$30.00 || 0.2999 ÷ 12]] = $1,200.40.",
+    "Spreadsheet: =30/(0.2999/12).",
+    "So a balance of about $1,200.00 on Card B costs $30.00 a month in interest, $360.00 a year, before paying down any of the balance."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Diego carries a $2,700.00 balance on Card A. Using I(B) = (APR ÷ 12) × B, what is one month's interest?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 21.49%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.49
+        ],
+        [
+         166.67,
+         2.98
+        ],
+        [
+         250,
+         4.48
+        ],
+        [
+         333.33,
+         5.97
+        ],
+        [
+         416.67,
+         7.46
+        ],
+        [
+         500,
+         8.95
+        ],
+        [
+         583.33,
+         10.45
+        ],
+        [
+         666.67,
+         11.94
+        ],
+        [
+         750,
+         13.43
+        ],
+        [
+         833.33,
+         14.92
+        ],
+        [
+         916.67,
+         16.42
+        ],
+        [
+         1000,
+         17.91
+        ],
+        [
+         1083.33,
+         19.4
+        ],
+        [
+         1166.67,
+         20.89
+        ],
+        [
+         1250,
+         22.39
+        ],
+        [
+         1333.33,
+         23.88
+        ],
+        [
+         1416.67,
+         25.37
+        ],
+        [
+         1500,
+         26.86
+        ],
+        [
+         1583.33,
+         28.35
+        ],
+        [
+         1666.67,
+         29.85
+        ],
+        [
+         1750,
+         31.34
+        ],
+        [
+         1833.33,
+         32.83
+        ],
+        [
+         1916.67,
+         34.32
+        ],
+        [
+         2000,
+         35.82
+        ],
+        [
+         2083.33,
+         37.31
+        ],
+        [
+         2166.67,
+         38.8
+        ],
+        [
+         2250,
+         40.29
+        ],
+        [
+         2333.33,
+         41.79
+        ],
+        [
+         2416.67,
+         43.28
+        ],
+        [
+         2500,
+         44.77
+        ],
+        [
+         2583.33,
+         46.26
+        ],
+        [
+         2666.67,
+         47.76
+        ],
+        [
+         2750,
+         49.25
+        ],
+        [
+         2833.33,
+         50.74
+        ],
+        [
+         2916.67,
+         52.23
+        ],
+        [
+         3000,
+         53.73
+        ],
+        [
+         3083.33,
+         55.22
+        ],
+        [
+         3166.67,
+         56.71
+        ],
+        [
+         3250,
+         58.2
+        ],
+        [
+         3333.33,
+         59.69
+        ],
+        [
+         3416.67,
+         61.19
+        ],
+        [
+         3500,
+         62.68
+        ],
+        [
+         3583.33,
+         64.17
+        ],
+        [
+         3666.67,
+         65.66
+        ],
+        [
+         3750,
+         67.16
+        ],
+        [
+         3833.33,
+         68.65
+        ],
+        [
+         3916.67,
+         70.14
+        ],
+        [
+         4000,
+         71.63
+        ],
+        [
+         4083.33,
+         73.13
+        ],
+        [
+         4166.67,
+         74.62
+        ],
+        [
+         4250,
+         76.11
+        ],
+        [
+         4333.33,
+         77.6
+        ],
+        [
+         4416.67,
+         79.1
+        ],
+        [
+         4500,
+         80.59
+        ],
+        [
+         4583.33,
+         82.08
+        ],
+        [
+         4666.67,
+         83.57
+        ],
+        [
+         4750,
+         85.06
+        ],
+        [
+         4833.33,
+         86.56
+        ],
+        [
+         4916.67,
+         88.05
+        ],
+        [
+         5000,
+         89.54
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 24.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.74
+        ],
+        [
+         166.67,
+         3.47
+        ],
+        [
+         250,
+         5.21
+        ],
+        [
+         333.33,
+         6.94
+        ],
+        [
+         416.67,
+         8.68
+        ],
+        [
+         500,
+         10.41
+        ],
+        [
+         583.33,
+         12.15
+        ],
+        [
+         666.67,
+         13.88
+        ],
+        [
+         750,
+         15.62
+        ],
+        [
+         833.33,
+         17.35
+        ],
+        [
+         916.67,
+         19.09
+        ],
+        [
+         1000,
+         20.83
+        ],
+        [
+         1083.33,
+         22.56
+        ],
+        [
+         1166.67,
+         24.3
+        ],
+        [
+         1250,
+         26.03
+        ],
+        [
+         1333.33,
+         27.77
+        ],
+        [
+         1416.67,
+         29.5
+        ],
+        [
+         1500,
+         31.24
+        ],
+        [
+         1583.33,
+         32.97
+        ],
+        [
+         1666.67,
+         34.71
+        ],
+        [
+         1750,
+         36.44
+        ],
+        [
+         1833.33,
+         38.18
+        ],
+        [
+         1916.67,
+         39.91
+        ],
+        [
+         2000,
+         41.65
+        ],
+        [
+         2083.33,
+         43.39
+        ],
+        [
+         2166.67,
+         45.12
+        ],
+        [
+         2250,
+         46.86
+        ],
+        [
+         2333.33,
+         48.59
+        ],
+        [
+         2416.67,
+         50.33
+        ],
+        [
+         2500,
+         52.06
+        ],
+        [
+         2583.33,
+         53.8
+        ],
+        [
+         2666.67,
+         55.53
+        ],
+        [
+         2750,
+         57.27
+        ],
+        [
+         2833.33,
+         59
+        ],
+        [
+         2916.67,
+         60.74
+        ],
+        [
+         3000,
+         62.48
+        ],
+        [
+         3083.33,
+         64.21
+        ],
+        [
+         3166.67,
+         65.95
+        ],
+        [
+         3250,
+         67.68
+        ],
+        [
+         3333.33,
+         69.42
+        ],
+        [
+         3416.67,
+         71.15
+        ],
+        [
+         3500,
+         72.89
+        ],
+        [
+         3583.33,
+         74.62
+        ],
+        [
+         3666.67,
+         76.36
+        ],
+        [
+         3750,
+         78.09
+        ],
+        [
+         3833.33,
+         79.83
+        ],
+        [
+         3916.67,
+         81.56
+        ],
+        [
+         4000,
+         83.3
+        ],
+        [
+         4083.33,
+         85.04
+        ],
+        [
+         4166.67,
+         86.77
+        ],
+        [
+         4250,
+         88.51
+        ],
+        [
+         4333.33,
+         90.24
+        ],
+        [
+         4416.67,
+         91.98
+        ],
+        [
+         4500,
+         93.71
+        ],
+        [
+         4583.33,
+         95.45
+        ],
+        [
+         4666.67,
+         97.18
+        ],
+        [
+         4750,
+         98.92
+        ],
+        [
+         4833.33,
+         100.65
+        ],
+        [
+         4916.67,
+         102.39
+        ],
+        [
+         5000,
+         104.13
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 21.49%. Card B: APR 24.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$48.35",
+   "numeric": {
+    "value": 48.35,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: I = (APR ÷ 12) × B.",
+    "Substitute: (0.2149 ÷ 12) × $2,700.00 = $48.35.",
+    "Spreadsheet: =0.2149/12*2700.",
+    "So carrying the balance costs $48.35 this month, about $580.20 over a year if nothing changes."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "standard",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "On a $3,100.00 balance, how much more interest does Card B charge in a month than Card A? (The vertical gap between the lines.)",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 21.49%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.49
+        ],
+        [
+         166.67,
+         2.98
+        ],
+        [
+         250,
+         4.48
+        ],
+        [
+         333.33,
+         5.97
+        ],
+        [
+         416.67,
+         7.46
+        ],
+        [
+         500,
+         8.95
+        ],
+        [
+         583.33,
+         10.45
+        ],
+        [
+         666.67,
+         11.94
+        ],
+        [
+         750,
+         13.43
+        ],
+        [
+         833.33,
+         14.92
+        ],
+        [
+         916.67,
+         16.42
+        ],
+        [
+         1000,
+         17.91
+        ],
+        [
+         1083.33,
+         19.4
+        ],
+        [
+         1166.67,
+         20.89
+        ],
+        [
+         1250,
+         22.39
+        ],
+        [
+         1333.33,
+         23.88
+        ],
+        [
+         1416.67,
+         25.37
+        ],
+        [
+         1500,
+         26.86
+        ],
+        [
+         1583.33,
+         28.35
+        ],
+        [
+         1666.67,
+         29.85
+        ],
+        [
+         1750,
+         31.34
+        ],
+        [
+         1833.33,
+         32.83
+        ],
+        [
+         1916.67,
+         34.32
+        ],
+        [
+         2000,
+         35.82
+        ],
+        [
+         2083.33,
+         37.31
+        ],
+        [
+         2166.67,
+         38.8
+        ],
+        [
+         2250,
+         40.29
+        ],
+        [
+         2333.33,
+         41.79
+        ],
+        [
+         2416.67,
+         43.28
+        ],
+        [
+         2500,
+         44.77
+        ],
+        [
+         2583.33,
+         46.26
+        ],
+        [
+         2666.67,
+         47.76
+        ],
+        [
+         2750,
+         49.25
+        ],
+        [
+         2833.33,
+         50.74
+        ],
+        [
+         2916.67,
+         52.23
+        ],
+        [
+         3000,
+         53.73
+        ],
+        [
+         3083.33,
+         55.22
+        ],
+        [
+         3166.67,
+         56.71
+        ],
+        [
+         3250,
+         58.2
+        ],
+        [
+         3333.33,
+         59.69
+        ],
+        [
+         3416.67,
+         61.19
+        ],
+        [
+         3500,
+         62.68
+        ],
+        [
+         3583.33,
+         64.17
+        ],
+        [
+         3666.67,
+         65.66
+        ],
+        [
+         3750,
+         67.16
+        ],
+        [
+         3833.33,
+         68.65
+        ],
+        [
+         3916.67,
+         70.14
+        ],
+        [
+         4000,
+         71.63
+        ],
+        [
+         4083.33,
+         73.13
+        ],
+        [
+         4166.67,
+         74.62
+        ],
+        [
+         4250,
+         76.11
+        ],
+        [
+         4333.33,
+         77.6
+        ],
+        [
+         4416.67,
+         79.1
+        ],
+        [
+         4500,
+         80.59
+        ],
+        [
+         4583.33,
+         82.08
+        ],
+        [
+         4666.67,
+         83.57
+        ],
+        [
+         4750,
+         85.06
+        ],
+        [
+         4833.33,
+         86.56
+        ],
+        [
+         4916.67,
+         88.05
+        ],
+        [
+         5000,
+         89.54
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 24.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.74
+        ],
+        [
+         166.67,
+         3.47
+        ],
+        [
+         250,
+         5.21
+        ],
+        [
+         333.33,
+         6.94
+        ],
+        [
+         416.67,
+         8.68
+        ],
+        [
+         500,
+         10.41
+        ],
+        [
+         583.33,
+         12.15
+        ],
+        [
+         666.67,
+         13.88
+        ],
+        [
+         750,
+         15.62
+        ],
+        [
+         833.33,
+         17.35
+        ],
+        [
+         916.67,
+         19.09
+        ],
+        [
+         1000,
+         20.83
+        ],
+        [
+         1083.33,
+         22.56
+        ],
+        [
+         1166.67,
+         24.3
+        ],
+        [
+         1250,
+         26.03
+        ],
+        [
+         1333.33,
+         27.77
+        ],
+        [
+         1416.67,
+         29.5
+        ],
+        [
+         1500,
+         31.24
+        ],
+        [
+         1583.33,
+         32.97
+        ],
+        [
+         1666.67,
+         34.71
+        ],
+        [
+         1750,
+         36.44
+        ],
+        [
+         1833.33,
+         38.18
+        ],
+        [
+         1916.67,
+         39.91
+        ],
+        [
+         2000,
+         41.65
+        ],
+        [
+         2083.33,
+         43.39
+        ],
+        [
+         2166.67,
+         45.12
+        ],
+        [
+         2250,
+         46.86
+        ],
+        [
+         2333.33,
+         48.59
+        ],
+        [
+         2416.67,
+         50.33
+        ],
+        [
+         2500,
+         52.06
+        ],
+        [
+         2583.33,
+         53.8
+        ],
+        [
+         2666.67,
+         55.53
+        ],
+        [
+         2750,
+         57.27
+        ],
+        [
+         2833.33,
+         59
+        ],
+        [
+         2916.67,
+         60.74
+        ],
+        [
+         3000,
+         62.48
+        ],
+        [
+         3083.33,
+         64.21
+        ],
+        [
+         3166.67,
+         65.95
+        ],
+        [
+         3250,
+         67.68
+        ],
+        [
+         3333.33,
+         69.42
+        ],
+        [
+         3416.67,
+         71.15
+        ],
+        [
+         3500,
+         72.89
+        ],
+        [
+         3583.33,
+         74.62
+        ],
+        [
+         3666.67,
+         76.36
+        ],
+        [
+         3750,
+         78.09
+        ],
+        [
+         3833.33,
+         79.83
+        ],
+        [
+         3916.67,
+         81.56
+        ],
+        [
+         4000,
+         83.3
+        ],
+        [
+         4083.33,
+         85.04
+        ],
+        [
+         4166.67,
+         86.77
+        ],
+        [
+         4250,
+         88.51
+        ],
+        [
+         4333.33,
+         90.24
+        ],
+        [
+         4416.67,
+         91.98
+        ],
+        [
+         4500,
+         93.71
+        ],
+        [
+         4583.33,
+         95.45
+        ],
+        [
+         4666.67,
+         97.18
+        ],
+        [
+         4750,
+         98.92
+        ],
+        [
+         4833.33,
+         100.65
+        ],
+        [
+         4916.67,
+         102.39
+        ],
+        [
+         5000,
+         104.13
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 21.49%. Card B: APR 24.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$9.04",
+   "numeric": {
+    "value": 9.04,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = (APR_B − APR_A) ÷ 12 × B.",
+    "Substitute: [[0.2499 − 0.2149 || 12]] × $3,100.00 = $9.04.",
+    "Spreadsheet: =(0.2499-0.2149)/12*3100.",
+    "So Card B costs $9.04 more each month on this balance. The gap grows with the balance because the lines have different slopes."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-m-interest-lines-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-m-interest-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "What Card B balance makes the monthly interest exactly $80.00? Round to the nearest cent.",
+   "scenario": {
+    "graph": {
+     "title": "Monthly interest on a credit card balance",
+     "x": {
+      "label": "Balance B",
+      "min": 0,
+      "max": 5000,
+      "step": 1000,
+      "money": true
+     },
+     "y": {
+      "label": "Monthly interest I(B)",
+      "min": 0,
+      "max": 125,
+      "step": 25,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Card A, APR 21.49%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.49
+        ],
+        [
+         166.67,
+         2.98
+        ],
+        [
+         250,
+         4.48
+        ],
+        [
+         333.33,
+         5.97
+        ],
+        [
+         416.67,
+         7.46
+        ],
+        [
+         500,
+         8.95
+        ],
+        [
+         583.33,
+         10.45
+        ],
+        [
+         666.67,
+         11.94
+        ],
+        [
+         750,
+         13.43
+        ],
+        [
+         833.33,
+         14.92
+        ],
+        [
+         916.67,
+         16.42
+        ],
+        [
+         1000,
+         17.91
+        ],
+        [
+         1083.33,
+         19.4
+        ],
+        [
+         1166.67,
+         20.89
+        ],
+        [
+         1250,
+         22.39
+        ],
+        [
+         1333.33,
+         23.88
+        ],
+        [
+         1416.67,
+         25.37
+        ],
+        [
+         1500,
+         26.86
+        ],
+        [
+         1583.33,
+         28.35
+        ],
+        [
+         1666.67,
+         29.85
+        ],
+        [
+         1750,
+         31.34
+        ],
+        [
+         1833.33,
+         32.83
+        ],
+        [
+         1916.67,
+         34.32
+        ],
+        [
+         2000,
+         35.82
+        ],
+        [
+         2083.33,
+         37.31
+        ],
+        [
+         2166.67,
+         38.8
+        ],
+        [
+         2250,
+         40.29
+        ],
+        [
+         2333.33,
+         41.79
+        ],
+        [
+         2416.67,
+         43.28
+        ],
+        [
+         2500,
+         44.77
+        ],
+        [
+         2583.33,
+         46.26
+        ],
+        [
+         2666.67,
+         47.76
+        ],
+        [
+         2750,
+         49.25
+        ],
+        [
+         2833.33,
+         50.74
+        ],
+        [
+         2916.67,
+         52.23
+        ],
+        [
+         3000,
+         53.73
+        ],
+        [
+         3083.33,
+         55.22
+        ],
+        [
+         3166.67,
+         56.71
+        ],
+        [
+         3250,
+         58.2
+        ],
+        [
+         3333.33,
+         59.69
+        ],
+        [
+         3416.67,
+         61.19
+        ],
+        [
+         3500,
+         62.68
+        ],
+        [
+         3583.33,
+         64.17
+        ],
+        [
+         3666.67,
+         65.66
+        ],
+        [
+         3750,
+         67.16
+        ],
+        [
+         3833.33,
+         68.65
+        ],
+        [
+         3916.67,
+         70.14
+        ],
+        [
+         4000,
+         71.63
+        ],
+        [
+         4083.33,
+         73.13
+        ],
+        [
+         4166.67,
+         74.62
+        ],
+        [
+         4250,
+         76.11
+        ],
+        [
+         4333.33,
+         77.6
+        ],
+        [
+         4416.67,
+         79.1
+        ],
+        [
+         4500,
+         80.59
+        ],
+        [
+         4583.33,
+         82.08
+        ],
+        [
+         4666.67,
+         83.57
+        ],
+        [
+         4750,
+         85.06
+        ],
+        [
+         4833.33,
+         86.56
+        ],
+        [
+         4916.67,
+         88.05
+        ],
+        [
+         5000,
+         89.54
+        ]
+       ]
+      },
+      {
+       "name": "Card B, APR 24.99%",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         83.33,
+         1.74
+        ],
+        [
+         166.67,
+         3.47
+        ],
+        [
+         250,
+         5.21
+        ],
+        [
+         333.33,
+         6.94
+        ],
+        [
+         416.67,
+         8.68
+        ],
+        [
+         500,
+         10.41
+        ],
+        [
+         583.33,
+         12.15
+        ],
+        [
+         666.67,
+         13.88
+        ],
+        [
+         750,
+         15.62
+        ],
+        [
+         833.33,
+         17.35
+        ],
+        [
+         916.67,
+         19.09
+        ],
+        [
+         1000,
+         20.83
+        ],
+        [
+         1083.33,
+         22.56
+        ],
+        [
+         1166.67,
+         24.3
+        ],
+        [
+         1250,
+         26.03
+        ],
+        [
+         1333.33,
+         27.77
+        ],
+        [
+         1416.67,
+         29.5
+        ],
+        [
+         1500,
+         31.24
+        ],
+        [
+         1583.33,
+         32.97
+        ],
+        [
+         1666.67,
+         34.71
+        ],
+        [
+         1750,
+         36.44
+        ],
+        [
+         1833.33,
+         38.18
+        ],
+        [
+         1916.67,
+         39.91
+        ],
+        [
+         2000,
+         41.65
+        ],
+        [
+         2083.33,
+         43.39
+        ],
+        [
+         2166.67,
+         45.12
+        ],
+        [
+         2250,
+         46.86
+        ],
+        [
+         2333.33,
+         48.59
+        ],
+        [
+         2416.67,
+         50.33
+        ],
+        [
+         2500,
+         52.06
+        ],
+        [
+         2583.33,
+         53.8
+        ],
+        [
+         2666.67,
+         55.53
+        ],
+        [
+         2750,
+         57.27
+        ],
+        [
+         2833.33,
+         59
+        ],
+        [
+         2916.67,
+         60.74
+        ],
+        [
+         3000,
+         62.48
+        ],
+        [
+         3083.33,
+         64.21
+        ],
+        [
+         3166.67,
+         65.95
+        ],
+        [
+         3250,
+         67.68
+        ],
+        [
+         3333.33,
+         69.42
+        ],
+        [
+         3416.67,
+         71.15
+        ],
+        [
+         3500,
+         72.89
+        ],
+        [
+         3583.33,
+         74.62
+        ],
+        [
+         3666.67,
+         76.36
+        ],
+        [
+         3750,
+         78.09
+        ],
+        [
+         3833.33,
+         79.83
+        ],
+        [
+         3916.67,
+         81.56
+        ],
+        [
+         4000,
+         83.3
+        ],
+        [
+         4083.33,
+         85.04
+        ],
+        [
+         4166.67,
+         86.77
+        ],
+        [
+         4250,
+         88.51
+        ],
+        [
+         4333.33,
+         90.24
+        ],
+        [
+         4416.67,
+         91.98
+        ],
+        [
+         4500,
+         93.71
+        ],
+        [
+         4583.33,
+         95.45
+        ],
+        [
+         4666.67,
+         97.18
+        ],
+        [
+         4750,
+         98.92
+        ],
+        [
+         4833.33,
+         100.65
+        ],
+        [
+         4916.67,
+         102.39
+        ],
+        [
+         5000,
+         104.13
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "I(B) = (APR ÷ 12) × B. Card A: APR 21.49%. Card B: APR 24.99%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,841.54",
+   "numeric": {
+    "value": 3841.54,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: solve (APR ÷ 12) × B = I for B: B = [[I || APR ÷ 12]].",
+    "Substitute: B = [[$80.00 || 0.2499 ÷ 12]] = $3,841.54.",
+    "Spreadsheet: =80/(0.2499/12).",
+    "So a balance of about $3,842.00 on Card B costs $80.00 a month in interest, $960.00 a year, before paying down any of the balance."
    ]
   },
   {
@@ -10999,9 +16479,12 @@
    "answer": "$44.71",
    "solutionSteps": [
     "Mistake: Used 30 days instead of the 31 days in the billing cycle.",
+    "Formula: interest = ADB × APR ÷ 365 × days in the cycle.",
     "Daily rate = 0.2299 ÷ 365.",
     "$2,290.00 × 0.2299 ÷ 365 × 31 = $44.71.",
-    "Correct result: $44.71."
+    "Correct result: $44.71.",
+    "Spreadsheet or calculator: =2290.00*0.2299/365*31",
+    "So the answer is $44.71; paying the full statement balance avoids this interest entirely."
    ],
    "numeric": {
     "value": 44.71,
@@ -11067,7 +16550,7 @@
    "id": "fa-credit-s02-err-principal-paid-01",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "principal-paid-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -11096,9 +16579,12 @@
    "answer": "$98.25",
    "solutionSteps": [
     "Mistake: Forgot that part of the payment covers the month’s interest; only the rest reduces the balance.",
+    "Formula: principal = payment − balance × APR ÷ 12.",
     "Interest = $1,450.00 × 0.18 ÷ 12 = $21.75.",
     "Principal paid = $120.00 − $21.75 = $98.25.",
-    "Correct result: $98.25."
+    "Correct result: $98.25.",
+    "Spreadsheet or calculator: =120.00-21.75",
+    "So the answer is $98.25; paying more than the minimum shortens payoff and cuts interest."
    ],
    "numeric": {
     "value": 98.25,
@@ -11165,7 +16651,7 @@
    "id": "fa-credit-s03-err-transfer-fee-01",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "transfer-fee-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -11193,9 +16679,12 @@
    "answer": "$5,460",
    "solutionSteps": [
     "Mistake: Ignored the balance-transfer fee, which is added to the new balance.",
+    "Formula: new balance = balance + fee rate × balance.",
     "Fee = 5% × $5,200 = $260.",
     "New balance = $5,200 + $260 = $5,460.",
-    "Correct result: $5,460."
+    "Correct result: $5,460.",
+    "Spreadsheet or calculator: =5200+260",
+    "So the answer is $5,460; choose the plan that costs least and that you can keep up with."
    ],
    "numeric": {
     "value": 5460,
@@ -11290,9 +16779,12 @@
    "answer": "$240",
    "solutionSteps": [
     "Mistake: Reported the total paid instead of the extra cost; cost of credit = total paid − price.",
+    "Formula: cost of credit = total paid − price.",
     "Total paid = $85 × 24 = $2,040.",
     "Cost of credit = $2,040 − $1,800 = $240.",
-    "Correct result: $240."
+    "Correct result: $240.",
+    "Spreadsheet or calculator: =2040-1800",
+    "So the answer is $240; numbers like this on a statement show what carrying a balance really costs."
    ],
    "numeric": {
     "value": 240,

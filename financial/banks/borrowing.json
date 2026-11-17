@@ -13,25 +13,59 @@
  "skills": [
   {
    "id": "borrowing-skill-01",
-   "name": "Model installment loans"
+   "name": "Model installment loans",
+   "standards": [
+    "Managing Credit 12-1: Comparing the cost of credit (APR)",
+    "Managing Credit 12-2: Secured and unsecured loans"
+   ]
   },
   {
    "id": "borrowing-skill-02",
-   "name": "Compare APR and loan term"
+   "name": "Compare APR and loan term",
+   "standards": [
+    "Managing Credit 12-1: Comparing the cost of credit (APR)"
+   ]
   },
   {
    "id": "borrowing-skill-03",
-   "name": "Build amortization schedules"
+   "name": "Build amortization schedules",
+   "standards": [
+    "Managing Credit 12-1: Comparing the cost of credit (APR)",
+    "Managing Credit 12-3: Mortgage payments"
+   ]
   },
   {
    "id": "borrowing-skill-04",
-   "name": "Analyze total borrowing cost"
+   "name": "Analyze total borrowing cost",
+   "standards": [
+    "Managing Credit 12-1: Comparing the cost of credit (APR)",
+    "Managing Credit 12-13: Alternative financial services"
+   ]
   },
   {
    "id": "borrowing-skill-05",
-   "name": "Calculate the total cost of car ownership"
+   "name": "Calculate the total cost of car ownership",
+   "standards": [
+    "Spending 12-3: Durable goods purchases",
+    "Managing Risk 12-7: Auto, homeowner's and renter's insurance",
+    "Managing Credit 12-6: Down payments"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": [
+   {
+    "title": "Spreadsheet Lab 2: Amortization Table",
+    "path": "financial/spreadsheet-labs/index.html?lab=amortization"
+   }
+  ]
+ },
  "vocab": [
   {
    "term": "Installment loan",
@@ -2678,9 +2712,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $26,400.00 − $1,500.00 = $24,900.00.",
     "i = [[0.099 || 12]] = 0.008250; n = 72.",
-    "PMT = [[24900 × i || 1 − (1 + i)^(−72)]] = $460.04."
+    "PMT = [[24900 × i || 1 − (1 + i)^(−72)]] = $460.04.",
+    "Spreadsheet or calculator: =PMT(0.099/12,72,-24900)",
+    "So the answer is $460.04; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2707,9 +2744,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $22,700.00 − $5,000.00 = $17,700.00.",
     "i = [[0.059 || 12]] = 0.004917; n = 60.",
-    "PMT = [[17700 × i || 1 − (1 + i)^(−60)]] = $341.37."
+    "PMT = [[17700 × i || 1 − (1 + i)^(−60)]] = $341.37.",
+    "Spreadsheet or calculator: =PMT(0.059/12,60,-17700)",
+    "So the answer is $341.37; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2736,9 +2776,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $26,400.00 − $2,500.00 = $23,900.00.",
     "i = [[0.089 || 12]] = 0.007417; n = 48.",
-    "PMT = [[23900 × i || 1 − (1 + i)^(−48)]] = $593.62."
+    "PMT = [[23900 × i || 1 − (1 + i)^(−48)]] = $593.62.",
+    "Spreadsheet or calculator: =PMT(0.089/12,48,-23900)",
+    "So the answer is $593.62; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2765,9 +2808,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $18,900.00 − $1,000.00 = $17,900.00.",
     "i = [[0.069 || 12]] = 0.005750; n = 36.",
-    "PMT = [[17900 × i || 1 − (1 + i)^(−36)]] = $551.88."
+    "PMT = [[17900 × i || 1 − (1 + i)^(−36)]] = $551.88.",
+    "Spreadsheet or calculator: =PMT(0.069/12,36,-17900)",
+    "So the answer is $551.88; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2794,9 +2840,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $31,200.00 − $3,500.00 = $27,700.00.",
     "i = [[0.059 || 12]] = 0.004917; n = 72.",
-    "PMT = [[27700 × i || 1 − (1 + i)^(−72)]] = $457.76."
+    "PMT = [[27700 × i || 1 − (1 + i)^(−72)]] = $457.76.",
+    "Spreadsheet or calculator: =PMT(0.059/12,72,-27700)",
+    "So the answer is $457.76; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2823,9 +2872,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $14,500.00 − $1,500.00 = $13,000.00.",
     "i = [[0.069 || 12]] = 0.005750; n = 72.",
-    "PMT = [[13000 × i || 1 − (1 + i)^(−72)]] = $221.01."
+    "PMT = [[13000 × i || 1 − (1 + i)^(−72)]] = $221.01.",
+    "Spreadsheet or calculator: =PMT(0.069/12,72,-13000)",
+    "So the answer is $221.01; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2852,9 +2904,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $22,700.00 − $2,500.00 = $20,200.00.",
     "i = [[0.099 || 12]] = 0.008250; n = 48.",
-    "PMT = [[20200 × i || 1 − (1 + i)^(−48)]] = $511.35."
+    "PMT = [[20200 × i || 1 − (1 + i)^(−48)]] = $511.35.",
+    "Spreadsheet or calculator: =PMT(0.099/12,48,-20200)",
+    "So the answer is $511.35; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2881,9 +2936,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = APR ÷ 12, n = months.",
     "Amount financed P = $26,400.00 − $1,000.00 = $25,400.00.",
     "i = [[0.079 || 12]] = 0.006583; n = 60.",
-    "PMT = [[25400 × i || 1 − (1 + i)^(−60)]] = $513.81."
+    "PMT = [[25400 × i || 1 − (1 + i)^(−60)]] = $513.81.",
+    "Spreadsheet or calculator: =PMT(0.079/12,60,-25400)",
+    "So the answer is $513.81; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -2910,8 +2968,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Solve PMT formula for P: P = [[PMT(1 − (1 + i)^(−n)) || i]].",
     "i = 0.004917, n = 48 → P ≈ $10,665.89.",
+    "Spreadsheet or calculator: =PV(0.059/12,48,-250)",
     "Round down so the payment stays within budget."
    ]
   },
@@ -2939,8 +2999,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Solve PMT formula for P: P = [[PMT(1 − (1 + i)^(−n)) || i]].",
     "i = 0.006583, n = 60 → P ≈ $22,245.76.",
+    "Spreadsheet or calculator: =PV(0.079/12,60,-450)",
     "Round down so the payment stays within budget."
    ]
   },
@@ -2968,8 +3030,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Solve PMT formula for P: P = [[PMT(1 − (1 + i)^(−n)) || i]].",
     "i = 0.005750, n = 60 → P ≈ $12,655.63.",
+    "Spreadsheet or calculator: =PV(0.069/12,60,-250)",
     "Round down so the payment stays within budget."
    ]
   },
@@ -2997,8 +3061,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Solve PMT formula for P: P = [[PMT(1 − (1 + i)^(−n)) || i]].",
     "i = 0.005750, n = 60 → P ≈ $15,186.76.",
+    "Spreadsheet or calculator: =PV(0.069/12,60,-300)",
     "Round down so the payment stays within budget."
    ]
   },
@@ -3026,8 +3092,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Solve PMT formula for P: P = [[PMT(1 − (1 + i)^(−n)) || i]].",
     "i = 0.004917, n = 60 → P ≈ $19,443.82.",
+    "Spreadsheet or calculator: =PV(0.059/12,60,-375)",
     "Round down so the payment stays within budget."
    ]
   },
@@ -3055,8 +3123,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Solve PMT formula for P: P = [[PMT(1 − (1 + i)^(−n)) || i]].",
     "i = 0.006583, n = 48 → P ≈ $15,390.29.",
+    "Spreadsheet or calculator: =PV(0.079/12,48,-375)",
     "Round down so the payment stays within budget."
    ]
   },
@@ -3103,8 +3173,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest = payment × months − amount financed, for each term; compare the two.",
     "72-month payment = $450.53; total paid ≈ $32,437.91; interest $5,937.91.",
     "Difference = $5,937.91 − $3,900.64 = $2,037.27.",
+    "Spreadsheet or calculator: =5937.91-3900.64",
     "The longer term lowers the payment by $182.82 but costs more overall."
    ]
   },
@@ -3151,8 +3223,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest = payment × months − amount financed, for each term; compare the two.",
     "72-month payment = $347.04; total paid ≈ $24,986.89; interest $3,986.89.",
     "Difference = $3,986.89 − $2,626.71 = $1,360.18.",
+    "Spreadsheet or calculator: =3986.89-2626.71",
     "The longer term lowers the payment by $145.18 but costs more overall."
    ]
   },
@@ -3160,7 +3234,7 @@
    "id": "fa-borrowing-s02-term-compare-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "advanced",
+   "level": "standard",
    "family": "term-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3199,8 +3273,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest = payment × months − amount financed, for each term; compare the two.",
     "84-month payment = $247.53; total paid ≈ $20,792.66; interest $3,792.66.",
     "Difference = $3,792.66 − $2,672.01 = $1,120.65.",
+    "Spreadsheet or calculator: =3792.66-2672.01",
     "The longer term lowers the payment by $80.34 but costs more overall."
    ]
   },
@@ -3247,8 +3323,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest = payment × months − amount financed, for each term; compare the two.",
     "72-month payment = $271.01; total paid ≈ $19,512.65; interest $4,012.65.",
     "Difference = $4,012.65 − $2,628.34 = $1,384.31.",
+    "Spreadsheet or calculator: =4012.65-2628.34",
     "The longer term lowers the payment by $106.66 but costs more overall."
    ]
   },
@@ -3295,8 +3373,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest = payment × months − amount financed, for each term; compare the two.",
     "84-month payment = $422.26; total paid ≈ $35,469.74; interest $6,469.74.",
     "Difference = $6,469.74 − $4,558.26 = $1,911.48.",
+    "Spreadsheet or calculator: =6469.74-4558.26",
     "The longer term lowers the payment by $137.04 but costs more overall."
    ]
   },
@@ -3343,8 +3423,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest = payment × months − amount financed, for each term; compare the two.",
     "72-month payment = $410.88; total paid ≈ $29,583.72; interest $6,083.72.",
     "Difference = $6,083.72 − $3,984.89 = $2,098.83.",
+    "Spreadsheet or calculator: =6083.72-3984.89",
     "The longer term lowers the payment by $161.72 but costs more overall."
    ]
   },
@@ -3391,8 +3473,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total interest = payment × months − amount financed, for each term; compare the two.",
     "84-month payment = $349.46; total paid ≈ $29,354.17; interest $5,354.17.",
     "Difference = $5,354.17 − $3,772.34 = $1,581.83.",
+    "Spreadsheet or calculator: =5354.17-3772.34",
     "The longer term lowers the payment by $113.41 but costs more overall."
    ]
   },
@@ -3700,9 +3784,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: payment = (cap cost − residual) ÷ months + (cap cost + residual) × money factor.",
     "Depreciation fee = [[29000 − 15080 || 36]] = $386.67.",
     "Rent charge = (29000 + 15080) × 0.0021 = $92.57.",
-    "Payment = $479.23; equivalent APR ≈ 5.04%."
+    "Payment = $479.23; equivalent APR ≈ 5.04%.",
+    "Spreadsheet or calculator: =((29000+15080)*0.0021)+((29000-15080)/36)",
+    "So the answer is $479.23; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -3729,9 +3816,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: payment = (cap cost − residual) ÷ months + (cap cost + residual) × money factor.",
     "Depreciation fee = [[34500 − 18975 || 36]] = $431.25.",
     "Rent charge = (34500 + 18975) × 0.0021 = $112.30.",
-    "Payment = $543.55; equivalent APR ≈ 5.04%."
+    "Payment = $543.55; equivalent APR ≈ 5.04%.",
+    "Spreadsheet or calculator: =((34500+18975)*0.0021)+((34500-18975)/36)",
+    "So the answer is $543.55; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -3758,9 +3848,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: payment = (cap cost − residual) ÷ months + (cap cost + residual) × money factor.",
     "Depreciation fee = [[34000 − 17680 || 36]] = $453.33.",
     "Rent charge = (34000 + 17680) × 0.0025 = $129.20.",
-    "Payment = $582.53; equivalent APR ≈ 6.00%."
+    "Payment = $582.53; equivalent APR ≈ 6.00%.",
+    "Spreadsheet or calculator: =((34000+17680)*0.0025)+((34000-17680)/36)",
+    "So the answer is $582.53; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -3787,9 +3880,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: payment = (cap cost − residual) ÷ months + (cap cost + residual) × money factor.",
     "Depreciation fee = [[34000 − 19720 || 36]] = $396.67.",
     "Rent charge = (34000 + 19720) × 0.0018 = $96.70.",
-    "Payment = $493.36; equivalent APR ≈ 4.32%."
+    "Payment = $493.36; equivalent APR ≈ 4.32%.",
+    "Spreadsheet or calculator: =((34000+19720)*0.0018)+((34000-19720)/36)",
+    "So the answer is $493.36; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -3816,9 +3912,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: payment = (cap cost − residual) ÷ months + (cap cost + residual) × money factor.",
     "Depreciation fee = [[34000 − 20400 || 36]] = $377.78.",
     "Rent charge = (34000 + 20400) × 0.003 = $163.20.",
-    "Payment = $540.98; equivalent APR ≈ 7.20%."
+    "Payment = $540.98; equivalent APR ≈ 7.20%.",
+    "Spreadsheet or calculator: =((34000+20400)*0.003)+((34000-20400)/36)",
+    "So the answer is $540.98; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -3845,9 +3944,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: payment = (cap cost − residual) ÷ months + (cap cost + residual) × money factor.",
     "Depreciation fee = [[31500 − 18900 || 36]] = $350.00.",
     "Rent charge = (31500 + 18900) × 0.003 = $151.20.",
-    "Payment = $501.20; equivalent APR ≈ 7.20%."
+    "Payment = $501.20; equivalent APR ≈ 7.20%.",
+    "Spreadsheet or calculator: =((31500+18900)*0.003)+((31500-18900)/36)",
+    "So the answer is $501.20; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -3874,9 +3976,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Payment 1: interest = previous balance × [[0.059 || 12]] = $61.46; principal = $231.53; balance $12,268.47.",
     "Payment 2: interest = previous balance × [[0.059 || 12]] = $60.32; principal = $232.67; balance $12,035.80.",
-    "Payment 3: interest = previous balance × [[0.059 || 12]] = $59.18; principal = $233.81; balance $11,801.99."
+    "Payment 3: interest = previous balance × [[0.059 || 12]] = $59.18; principal = $233.81; balance $11,801.99.",
+    "Spreadsheet or calculator: =12035.80-233.81",
+    "So the answer is $11,801.99; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -3903,9 +4008,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Payment 1: interest = previous balance × [[0.075 || 12]] = $153.13; principal = $337.80; balance $24,162.20.",
     "Payment 2: interest = previous balance × [[0.075 || 12]] = $151.01; principal = $339.92; balance $23,822.28.",
-    "Payment 3: interest = previous balance × [[0.075 || 12]] = $148.89; principal = $342.04; balance $23,480.24."
+    "Payment 3: interest = previous balance × [[0.075 || 12]] = $148.89; principal = $342.04; balance $23,480.24.",
+    "Spreadsheet or calculator: =23822.28-342.04",
+    "So the answer is $23,480.24; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -3932,9 +4040,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Payment 1: interest = previous balance × [[0.084 || 12]] = $108.50; principal = $208.76; balance $15,291.24.",
     "Payment 2: interest = previous balance × [[0.084 || 12]] = $107.04; principal = $210.22; balance $15,081.02.",
-    "Payment 3: interest = previous balance × [[0.084 || 12]] = $105.57; principal = $211.69; balance $14,869.33."
+    "Payment 3: interest = previous balance × [[0.084 || 12]] = $105.57; principal = $211.69; balance $14,869.33.",
+    "Spreadsheet or calculator: =15081.02-14869.33",
+    "So the answer is $211.69; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -3961,8 +4072,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Payment 1: interest = previous balance × [[0.084 || 12]] = $147.00; principal = $282.84; balance $20,717.16.",
-    "Payment 2: interest = previous balance × [[0.084 || 12]] = $145.02; principal = $284.82; balance $20,432.34."
+    "Payment 2: interest = previous balance × [[0.084 || 12]] = $145.02; principal = $284.82; balance $20,432.34.",
+    "So the answer is $145.02; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -3989,8 +4102,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Payment 1: interest = previous balance × [[0.069 || 12]] = $103.50; principal = $252.07; balance $17,747.93.",
-    "Payment 2: interest = previous balance × [[0.069 || 12]] = $102.05; principal = $253.52; balance $17,494.41."
+    "Payment 2: interest = previous balance × [[0.069 || 12]] = $102.05; principal = $253.52; balance $17,494.41.",
+    "So the answer is $102.05; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4017,7 +4132,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Payment 1: interest = previous balance × [[0.084 || 12]] = $112.00; principal = $215.49; balance $15,784.51."
+    "Formula: each month: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
+    "Payment 1: interest = previous balance × [[0.084 || 12]] = $112.00; principal = $215.49; balance $15,784.51.",
+    "So the answer is $15,784.51; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4044,8 +4161,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each month: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Payment 1: interest = previous balance × [[0.059 || 12]] = $147.50; principal = $555.68; balance $29,444.32.",
-    "Payment 2: interest = previous balance × [[0.059 || 12]] = $144.77; principal = $558.41; balance $28,885.91."
+    "Payment 2: interest = previous balance × [[0.059 || 12]] = $144.77; principal = $558.41; balance $28,885.91.",
+    "Spreadsheet or calculator: =29444.32-558.41",
+    "So the answer is $28,885.91; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4158,7 +4278,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Final payment = remaining balance + last interest = $463.16."
+    "Formula: final payment = remaining balance + that month's interest.",
+    "Final payment = remaining balance + last interest = $463.16.",
+    "So the answer is $463.16; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4271,7 +4393,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$19,500.00 − $10,381.22 = $9,118.78. Less than half the principal is repaid at the halfway point because early payments are interest-heavy."
+    "Formula: final payment = remaining balance + that month's interest.",
+    "$19,500.00 − $10,381.22 = $9,118.78. Less than half the principal is repaid at the halfway point because early payments are interest-heavy.",
+    "Spreadsheet or calculator: =19500.00-10381.22",
+    "So the answer is $9,118.78; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4384,7 +4509,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Sum of interest for months 1–12 = $1,173.17."
+    "Formula: final payment = remaining balance + that month's interest.",
+    "Sum of interest for months 1–12 = $1,173.17.",
+    "So the answer is $1,173.17; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4497,7 +4624,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$23,000.00 − $12,324.13 = $10,675.87. Less than half the principal is repaid at the halfway point because early payments are interest-heavy."
+    "Formula: final payment = remaining balance + that month's interest.",
+    "$23,000.00 − $12,324.13 = $10,675.87. Less than half the principal is repaid at the halfway point because early payments are interest-heavy.",
+    "Spreadsheet or calculator: =23000.00-12324.13",
+    "So the answer is $10,675.87; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4610,7 +4740,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Final payment = remaining balance + last interest = $509.95."
+    "Formula: final payment = remaining balance + that month's interest.",
+    "Final payment = remaining balance + last interest = $509.95.",
+    "So the answer is $509.95; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -4635,8 +4767,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: months saved = regular term − new term; interest saved = regular interest − new interest.",
     "Regular: 60 months, interest $3,740.01.",
     "With $404.00/month: 52 months, interest $3,169.43.",
+    "Spreadsheet or calculator: =3740.01-3169.43",
     "Saved $570.58 and 8 months. (Confirm the lender applies extra to principal with no prepayment penalty.)"
    ]
   },
@@ -4662,8 +4796,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: months saved = regular term − new term; interest saved = regular interest − new interest.",
     "Regular: 60 months, interest $3,881.45.",
     "With $406.36/month: 47 months, interest $2,991.79.",
+    "Spreadsheet or calculator: =3881.45-2991.79",
     "Saved $889.66 and 13 months. (Confirm the lender applies extra to principal with no prepayment penalty.)"
    ]
   },
@@ -4689,8 +4825,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: months saved = regular term − new term; interest saved = regular interest − new interest.",
     "Regular: 60 months, interest $5,336.96.",
     "With $530.62/month: 50 months, interest $4,386.71.",
+    "Spreadsheet or calculator: =5336.96-4386.71",
     "Saved $950.25 and 10 months. (Confirm the lender applies extra to principal with no prepayment penalty.)"
    ]
   },
@@ -4716,8 +4854,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: months saved = regular term − new term; interest saved = regular interest − new interest.",
     "Regular: 60 months, interest $3,612.31.",
     "With $410.20/month: 56 months, interest $3,344.29.",
+    "Spreadsheet or calculator: =3612.31-3344.29",
     "Saved $268.02 and 4 months. (Confirm the lender applies extra to principal with no prepayment penalty.)"
    ]
   },
@@ -4743,8 +4883,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: months saved = regular term − new term; interest saved = regular interest − new interest.",
     "Regular: 60 months, interest $3,633.07.",
     "With $368.89/month: 56 months, interest $3,324.44.",
+    "Spreadsheet or calculator: =3633.07-3324.44",
     "Saved $308.63 and 4 months. (Confirm the lender applies extra to principal with no prepayment penalty.)"
    ]
   },
@@ -4770,8 +4912,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: months saved = regular term − new term; interest saved = regular interest − new interest.",
     "Regular: 60 months, interest $4,167.94.",
     "With $544.47/month: 48 months, interest $3,264.16.",
+    "Spreadsheet or calculator: =4167.94-3264.16",
     "Saved $903.78 and 12 months. (Confirm the lender applies extra to principal with no prepayment penalty.)"
    ]
   },
@@ -4844,7 +4988,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,000.00 + $25,460.64 = $29,460.64."
+    "Formula: total sale price = down payment + total of payments.",
+    "$4,000.00 + $25,460.64 = $29,460.64.",
+    "Spreadsheet or calculator: =4000.00+25460.64",
+    "So the answer is $29,460.64; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -4916,7 +5063,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$557.06 × 60 = $33,423.60."
+    "Formula: total sale price = down payment + total of payments.",
+    "$557.06 × 60 = $33,423.60.",
+    "Spreadsheet or calculator: =557.06*60",
+    "So the answer is $33,423.60; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -4988,7 +5138,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,500.00 + $36,319.68 = $38,819.68."
+    "Formula: total sale price = down payment + total of payments.",
+    "$2,500.00 + $36,319.68 = $38,819.68.",
+    "Spreadsheet or calculator: =2500.00+36319.68",
+    "So the answer is $38,819.68; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -5060,7 +5213,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Total of payments $16,345.20 − amount financed $12,000.00 = $4,345.20."
+    "Formula: total sale price = down payment + total of payments.",
+    "Total of payments $16,345.20 − amount financed $12,000.00 = $4,345.20.",
+    "Spreadsheet or calculator: =16345.20-12000.00",
+    "So the answer is $4,345.20; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -5132,7 +5288,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Payments with warranty $27,466.20 − payments without $25,056.00 = $2,410.20 (warranty price $1,895.00 + its interest)."
+    "Formula: total sale price = down payment + total of payments.",
+    "Payments with warranty $27,466.20 − payments without $25,056.00 = $2,410.20 (warranty price $1,895.00 + its interest).",
+    "Spreadsheet or calculator: =27466.20-25056.00",
+    "So the answer is $2,410.20; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -5204,7 +5363,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,500.00 + $17,654.40 = $19,154.40."
+    "Formula: total sale price = down payment + total of payments.",
+    "$1,500.00 + $17,654.40 = $19,154.40.",
+    "Spreadsheet or calculator: =1500.00+17654.40",
+    "So the answer is $19,154.40; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -5703,8 +5865,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $801.62 × 36 = $28,858.32.",
     "Interest = total paid − amount borrowed = $28,858.32 − $26,000.00 = $2,858.32.",
+    "Spreadsheet or calculator: =28858.32-26000.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5732,8 +5896,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $339.15 × 36 = $12,209.40.",
     "Interest = total paid − amount borrowed = $12,209.40 − $11,000.00 = $1,209.40.",
+    "Spreadsheet or calculator: =12209.40-11000.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5761,8 +5927,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $371.83 × 72 = $26,771.76.",
     "Interest = total paid − amount borrowed = $26,771.76 − $22,500.00 = $4,271.76.",
+    "Spreadsheet or calculator: =26771.76-22500.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5790,8 +5958,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $236.04 × 72 = $16,994.88.",
     "Interest = total paid − amount borrowed = $16,994.88 − $13,500.00 = $3,494.88.",
+    "Spreadsheet or calculator: =16994.88-13500.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5819,8 +5989,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $525.94 × 60 = $31,556.40.",
     "Interest = total paid − amount borrowed = $31,556.40 − $26,000.00 = $5,556.40.",
+    "Spreadsheet or calculator: =31556.40-26000.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5848,8 +6020,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $335.82 × 60 = $20,149.20.",
     "Interest = total paid − amount borrowed = $20,149.20 − $17,000.00 = $3,149.20.",
+    "Spreadsheet or calculator: =20149.20-17000.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5877,8 +6051,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $293.31 × 60 = $17,598.60.",
     "Interest = total paid − amount borrowed = $17,598.60 − $14,500.00 = $3,098.60.",
+    "Spreadsheet or calculator: =17598.60-14500.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5906,8 +6082,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × number of payments − amount borrowed.",
     "Total paid = $645.78 × 48 = $30,997.44.",
     "Interest = total paid − amount borrowed = $30,997.44 − $26,000.00 = $4,997.44.",
+    "Spreadsheet or calculator: =30997.44-26000.00",
     "Longer terms lower the payment but raise total interest."
    ]
   },
@@ -5935,9 +6113,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: amount financed = price − down payment − trade-in.",
     "Down payment = 20% × $25,750 = $5,150.",
     "Trade-in reduces the amount by $1,500.",
-    "Amount financed = $19,100."
+    "Amount financed = $19,100.",
+    "So the answer is $19,100; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -5964,9 +6144,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: amount financed = price − down payment − trade-in.",
     "Down payment = 15% × $17,500 = $2,625.",
     "No trade-in.",
-    "Amount financed = $14,875."
+    "Amount financed = $14,875.",
+    "Spreadsheet or calculator: =17500-2625",
+    "So the answer is $14,875; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -5993,9 +6176,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: amount financed = price − down payment − trade-in.",
     "Down payment = 15% × $17,250.00 = $2,587.50.",
     "Trade-in reduces the amount by $1,500.00.",
-    "Amount financed = $13,162.50."
+    "Amount financed = $13,162.50.",
+    "So the answer is $13,162.50; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -6022,9 +6207,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: amount financed = price − down payment − trade-in.",
     "Down payment = 10% × $23,000 = $2,300.",
     "No trade-in.",
-    "Amount financed = $20,700."
+    "Amount financed = $20,700.",
+    "Spreadsheet or calculator: =23000-2300",
+    "So the answer is $20,700; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -6051,9 +6239,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: amount financed = price − down payment − trade-in.",
     "Down payment = 20% × $19,250 = $3,850.",
     "No trade-in.",
-    "Amount financed = $15,400."
+    "Amount financed = $15,400.",
+    "Spreadsheet or calculator: =19250-3850",
+    "So the answer is $15,400; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -6080,9 +6271,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: amount financed = price − down payment − trade-in.",
     "Down payment = 20% × $24,250 = $4,850.",
     "Trade-in reduces the amount by $2,500.",
-    "Amount financed = $16,900."
+    "Amount financed = $16,900.",
+    "So the answer is $16,900; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -6109,9 +6302,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: amount financed = price − down payment − trade-in.",
     "Down payment = 10% × $20,500 = $2,050.",
     "No trade-in.",
-    "Amount financed = $18,450."
+    "Amount financed = $18,450.",
+    "Spreadsheet or calculator: =20500-2050",
+    "So the answer is $18,450; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -6138,9 +6334,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Interest = $12,000.00 × 8.5% ÷ 12 = $85.00.",
     "Principal = $246.20 − $85.00 = $161.20.",
-    "Balance after payment 1 = $11,838.80."
+    "Balance after payment 1 = $11,838.80.",
+    "Spreadsheet or calculator: =246.20-85.00",
+    "So the answer is $161.20; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -6167,9 +6366,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Interest = $13,000.00 × 8.5% ÷ 12 = $92.08.",
     "Principal = $320.43 − $92.08 = $228.35.",
-    "Balance after payment 1 = $12,771.65."
+    "Balance after payment 1 = $12,771.65.",
+    "Spreadsheet or calculator: =320.43-92.08",
+    "So the answer is $228.35; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -6196,9 +6398,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Interest = $22,500.00 × 4.9% ÷ 12 = $91.88.",
     "Principal = $517.14 − $91.88 = $425.26.",
-    "Balance after payment 1 = $22,074.74."
+    "Balance after payment 1 = $22,074.74.",
+    "Spreadsheet or calculator: =517.14-91.88",
+    "So the answer is $425.26; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -6225,9 +6430,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Interest = $19,500.00 × 6.4% ÷ 12 = $104.00.",
     "Principal = $380.63 − $104.00 = $276.63.",
-    "Balance after payment 1 = $19,223.37."
+    "Balance after payment 1 = $19,223.37.",
+    "Spreadsheet or calculator: =380.63-104.00",
+    "So the answer is $276.63; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -6254,9 +6462,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Interest = $9,500.00 × 4.9% ÷ 12 = $38.79.",
     "Principal = $178.84 − $38.79 = $140.05.",
-    "Balance after payment 1 = $9,359.95."
+    "Balance after payment 1 = $9,359.95.",
+    "Spreadsheet or calculator: =178.84-38.79",
+    "So the answer is $140.05; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -6283,9 +6494,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Interest = $19,000.00 × 4.9% ÷ 12 = $77.58.",
     "Principal = $357.68 − $77.58 = $280.10.",
-    "Balance after payment 1 = $18,719.90."
+    "Balance after payment 1 = $18,719.90.",
+    "Spreadsheet or calculator: =357.68-77.58",
+    "So the answer is $280.10; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -6312,9 +6526,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12; principal = payment − interest; new balance = balance − principal.",
     "Interest = $27,250.00 × 8.5% ÷ 12 = $193.02.",
     "Principal = $559.08 − $193.02 = $366.06.",
-    "Balance after payment 1 = $26,883.94."
+    "Balance after payment 1 = $26,883.94.",
+    "Spreadsheet or calculator: =559.08-193.02",
+    "So the answer is $366.06; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -6339,9 +6556,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = longer payment × longer months − shorter payment × shorter months.",
     "48 months: $296.44 × 48 = $14,229.12.",
     "72 months: $210.12 × 72 = $15,128.64.",
-    "Difference = $899.52. The lower payment costs more overall."
+    "Difference = $899.52. The lower payment costs more overall.",
+    "Spreadsheet or calculator: =(210.12*72)-(296.44*48)",
+    "So the answer is $899.52; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -6366,9 +6586,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = longer payment × longer months − shorter payment × shorter months.",
     "48 months: $519.85 × 48 = $24,952.80.",
     "72 months: $371.74 × 72 = $26,765.28.",
-    "Difference = $1,812.48. The lower payment costs more overall."
+    "Difference = $1,812.48. The lower payment costs more overall.",
+    "Spreadsheet or calculator: =(371.74*72)-(519.85*48)",
+    "So the answer is $1,812.48; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -6393,9 +6616,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = longer payment × longer months − shorter payment × shorter months.",
     "48 months: $495.67 × 48 = $23,792.16.",
     "72 months: $354.45 × 72 = $25,520.40.",
-    "Difference = $1,728.24. The lower payment costs more overall."
+    "Difference = $1,728.24. The lower payment costs more overall.",
+    "Spreadsheet or calculator: =(354.45*72)-(495.67*48)",
+    "So the answer is $1,728.24; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -6420,9 +6646,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = longer payment × longer months − shorter payment × shorter months.",
     "48 months: $403.15 × 48 = $19,351.20.",
     "72 months: $285.77 × 72 = $20,575.44.",
-    "Difference = $1,224.24. The lower payment costs more overall."
+    "Difference = $1,224.24. The lower payment costs more overall.",
+    "Spreadsheet or calculator: =(285.77*72)-(403.15*48)",
+    "So the answer is $1,224.24; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -6447,9 +6676,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = longer payment × longer months − shorter payment × shorter months.",
     "48 months: $468.32 × 48 = $22,479.36.",
     "72 months: $337.79 × 72 = $24,320.88.",
-    "Difference = $1,841.52. The lower payment costs more overall."
+    "Difference = $1,841.52. The lower payment costs more overall.",
+    "Spreadsheet or calculator: =(337.79*72)-(468.32*48)",
+    "So the answer is $1,841.52; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -6474,9 +6706,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = longer payment × longer months − shorter payment × shorter months.",
     "48 months: $616.56 × 48 = $29,594.88.",
     "72 months: $440.90 × 72 = $31,744.80.",
-    "Difference = $2,149.92. The lower payment costs more overall."
+    "Difference = $2,149.92. The lower payment costs more overall.",
+    "Spreadsheet or calculator: =(440.90*72)-(616.56*48)",
+    "So the answer is $2,149.92; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -6501,9 +6736,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = longer payment × longer months − shorter payment × shorter months.",
     "48 months: $419.02 × 48 = $20,112.96.",
     "72 months: $302.23 × 72 = $21,760.56.",
-    "Difference = $1,647.60. The lower payment costs more overall."
+    "Difference = $1,647.60. The lower payment costs more overall.",
+    "Spreadsheet or calculator: =(302.23*72)-(419.02*48)",
+    "So the answer is $1,647.60; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -6530,9 +6768,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($507.96 + $98.00) × 12 = $7,271.52.",
     "Fuel = 10,000 ÷ 32 × $3.40 = $1,062.50.",
-    "Total = $7,271.52 + $1,062.50 + $1,300.00 = $9,634.02."
+    "Total = $7,271.52 + $1,062.50 + $1,300.00 = $9,634.02.",
+    "Spreadsheet or calculator: =7271.52+1062.50+1300.00",
+    "So the answer is $9,634.02; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6559,9 +6800,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($478.68 + $182.00) × 12 = $7,928.16.",
     "Fuel = 13,000 ÷ 28 × $3.40 = $1,578.57.",
-    "Total = $7,928.16 + $1,578.57 + $1,250.00 = $10,756.73."
+    "Total = $7,928.16 + $1,578.57 + $1,250.00 = $10,756.73.",
+    "Spreadsheet or calculator: =7928.16+1578.57+1250.00",
+    "So the answer is $10,756.73; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6588,9 +6832,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($507.86 + $103.00) × 12 = $7,330.32.",
     "Fuel = 9,500 ÷ 24 × $3.10 = $1,227.08.",
-    "Total = $7,330.32 + $1,227.08 + $1,400.00 = $9,957.40."
+    "Total = $7,330.32 + $1,227.08 + $1,400.00 = $9,957.40.",
+    "Spreadsheet or calculator: =7330.32+1227.08+1400.00",
+    "So the answer is $9,957.40; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6617,9 +6864,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($348.29 + $210.00) × 12 = $6,699.48.",
     "Fuel = 13,000 ÷ 24 × $3.40 = $1,841.67.",
-    "Total = $6,699.48 + $1,841.67 + $500.00 = $9,041.15."
+    "Total = $6,699.48 + $1,841.67 + $500.00 = $9,041.15.",
+    "Spreadsheet or calculator: =6699.48+1841.67+500.00",
+    "So the answer is $9,041.15; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6646,9 +6896,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($334.53 + $210.00) × 12 = $6,534.36.",
     "Fuel = 9,500 ÷ 32 × $3.25 = $964.84.",
-    "Total = $6,534.36 + $964.84 + $600.00 = $8,099.20."
+    "Total = $6,534.36 + $964.84 + $600.00 = $8,099.20.",
+    "Spreadsheet or calculator: =6534.36+964.84+600.00",
+    "So the answer is $8,099.20; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6675,9 +6928,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($440.73 + $156.00) × 12 = $7,160.76.",
     "Fuel = 8,000 ÷ 30 × $3.40 = $906.67.",
-    "Total = $7,160.76 + $906.67 + $1,050.00 = $9,117.43."
+    "Total = $7,160.76 + $906.67 + $1,050.00 = $9,117.43.",
+    "Spreadsheet or calculator: =7160.76+906.67+1050.00",
+    "So the answer is $9,117.43; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6704,9 +6960,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($269.27 + $104.00) × 12 = $4,479.24.",
     "Fuel = 9,500 ÷ 24 × $3.10 = $1,227.08.",
-    "Total = $4,479.24 + $1,227.08 + $1,350.00 = $7,056.32."
+    "Total = $4,479.24 + $1,227.08 + $1,350.00 = $7,056.32.",
+    "Spreadsheet or calculator: =4479.24+1227.08+1350.00",
+    "So the answer is $7,056.32; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6733,9 +6992,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = (loan + insurance) × 12 + miles ÷ MPG × gas price + maintenance.",
     "Loan + insurance = ($263.39 + $95.00) × 12 = $4,300.68.",
     "Fuel = 14,000 ÷ 36 × $3.10 = $1,205.56.",
-    "Total = $4,300.68 + $1,205.56 + $550.00 = $6,056.24."
+    "Total = $4,300.68 + $1,205.56 + $550.00 = $6,056.24.",
+    "Spreadsheet or calculator: =4300.68+1205.56+550.00",
+    "So the answer is $6,056.24; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6760,9 +7022,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fuel cost = miles ÷ MPG × price per gallon; savings = cost A − cost B.",
     "Car A: 11,000 ÷ 26 × $3.20 = $1,353.85.",
     "Car B: 11,000 ÷ 42 × $3.20 = $838.10.",
-    "Savings = $515.75 per year."
+    "Savings = $515.75 per year.",
+    "Spreadsheet or calculator: =(11000/26*3.20)-(11000/42*3.20)",
+    "So the answer is $515.75; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6787,9 +7052,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fuel cost = miles ÷ MPG × price per gallon; savings = cost A − cost B.",
     "Car A: 11,500 ÷ 24 × $3.45 = $1,653.13.",
     "Car B: 11,500 ÷ 34 × $3.45 = $1,166.91.",
-    "Savings = $486.21 per year."
+    "Savings = $486.21 per year.",
+    "Spreadsheet or calculator: =(11500/24*3.45)-(11500/34*3.45)",
+    "So the answer is $486.21; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6814,9 +7082,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fuel cost = miles ÷ MPG × price per gallon; savings = cost A − cost B.",
     "Car A: 10,000 ÷ 24 × $3.75 = $1,562.50.",
     "Car B: 10,000 ÷ 38 × $3.75 = $986.84.",
-    "Savings = $575.66 per year."
+    "Savings = $575.66 per year.",
+    "Spreadsheet or calculator: =(10000/24*3.75)-(10000/38*3.75)",
+    "So the answer is $575.66; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6841,9 +7112,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fuel cost = miles ÷ MPG × price per gallon; savings = cost A − cost B.",
     "Car A: 9,500 ÷ 24 × $3.75 = $1,484.38.",
     "Car B: 9,500 ÷ 48 × $3.75 = $742.19.",
-    "Savings = $742.19 per year."
+    "Savings = $742.19 per year.",
+    "Spreadsheet or calculator: =9500/48*3.75",
+    "So the answer is $742.19; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6868,9 +7142,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fuel cost = miles ÷ MPG × price per gallon; savings = cost A − cost B.",
     "Car A: 11,000 ÷ 26 × $3.75 = $1,586.54.",
     "Car B: 11,000 ÷ 34 × $3.75 = $1,213.24.",
-    "Savings = $373.30 per year."
+    "Savings = $373.30 per year.",
+    "Spreadsheet or calculator: =(11000/26*3.75)-(11000/34*3.75)",
+    "So the answer is $373.30; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6895,9 +7172,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fuel cost = miles ÷ MPG × price per gallon; savings = cost A − cost B.",
     "Car A: 13,500 ÷ 24 × $3.20 = $1,800.00.",
     "Car B: 13,500 ÷ 38 × $3.20 = $1,136.84.",
-    "Savings = $663.16 per year."
+    "Savings = $663.16 per year.",
+    "Spreadsheet or calculator: =(13500/24*3.20)-(13500/38*3.20)",
+    "So the answer is $663.16; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6922,9 +7202,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fuel cost = miles ÷ MPG × price per gallon; savings = cost A − cost B.",
     "Car A: 10,500 ÷ 26 × $3.75 = $1,514.42.",
     "Car B: 10,500 ÷ 42 × $3.75 = $937.50.",
-    "Savings = $576.92 per year."
+    "Savings = $576.92 per year.",
+    "Spreadsheet or calculator: =(10500/26*3.75)-(10500/42*3.75)",
+    "So the answer is $576.92; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6951,9 +7234,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: V = price × (1 − rate)^years.",
     "Value = $31,500 × (1 − 0.2)^3.",
     "= $31,500 × 0.5120 = $16,128.",
-    "Depreciation over 3 years = $15,372, a real cost of ownership."
+    "Depreciation over 3 years = $15,372, a real cost of ownership.",
+    "Spreadsheet or calculator: =31500*0.5120",
+    "So the answer is $16,128; the price is only part of what a car really costs."
    ]
   },
   {
@@ -6980,9 +7266,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: V = price × (1 − rate)^years.",
     "Value = $27,500 × (1 − 0.2)^3.",
     "= $27,500 × 0.5120 = $14,080.",
-    "Depreciation over 3 years = $13,420, a real cost of ownership."
+    "Depreciation over 3 years = $13,420, a real cost of ownership.",
+    "Spreadsheet or calculator: =27500*0.5120",
+    "So the answer is $14,080; the price is only part of what a car really costs."
    ]
   },
   {
@@ -7009,9 +7298,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: V = price × (1 − rate)^years.",
     "Value = $39,500.00 × (1 − 0.18)^4.",
     "= $39,500.00 × 0.4521 = $17,858.81.",
-    "Depreciation over 4 years = $21,641.19, a real cost of ownership."
+    "Depreciation over 4 years = $21,641.19, a real cost of ownership.",
+    "Spreadsheet or calculator: =39500.00*(1-0.18)^4",
+    "So the answer is $17,858.81; the price is only part of what a car really costs."
    ]
   },
   {
@@ -7038,9 +7330,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: V = price × (1 − rate)^years.",
     "Value = $18,500.00 × (1 − 0.12)^5.",
     "= $18,500.00 × 0.5277 = $9,763.04.",
-    "Depreciation over 5 years = $8,736.96, a real cost of ownership."
+    "Depreciation over 5 years = $8,736.96, a real cost of ownership.",
+    "Spreadsheet or calculator: =18500.00*(1-0.12)^5",
+    "So the answer is $9,763.04; the price is only part of what a car really costs."
    ]
   },
   {
@@ -7067,9 +7362,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: V = price × (1 − rate)^years.",
     "Value = $38,500.00 × (1 − 0.18)^5.",
     "= $38,500.00 × 0.3707 = $14,273.48.",
-    "Depreciation over 5 years = $24,226.52, a real cost of ownership."
+    "Depreciation over 5 years = $24,226.52, a real cost of ownership.",
+    "Spreadsheet or calculator: =38500.00*(1-0.18)^5",
+    "So the answer is $14,273.48; the price is only part of what a car really costs."
    ]
   },
   {
@@ -7096,9 +7394,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: V = price × (1 − rate)^years.",
     "Value = $18,000.00 × (1 − 0.12)^5.",
     "= $18,000.00 × 0.5277 = $9,499.17.",
-    "Depreciation over 5 years = $8,500.83, a real cost of ownership."
+    "Depreciation over 5 years = $8,500.83, a real cost of ownership.",
+    "Spreadsheet or calculator: =18000.00*(1-0.12)^5",
+    "So the answer is $9,499.17; the price is only part of what a car really costs."
    ]
   },
   {
@@ -7125,8 +7426,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost per mile = yearly cost ÷ miles driven.",
     "Cost per mile = $6,300.00 ÷ 14,500.",
     "= $0.43 per mile.",
+    "Spreadsheet or calculator: =6300.00/14500",
     "Use cost per mile to compare driving with transit or rideshare."
    ]
   },
@@ -7154,8 +7457,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost per mile = yearly cost ÷ miles driven.",
     "Cost per mile = $6,300.00 ÷ 11,000.",
     "= $0.57 per mile.",
+    "Spreadsheet or calculator: =6300.00/11000",
     "Use cost per mile to compare driving with transit or rideshare."
    ]
   },
@@ -7183,8 +7488,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost per mile = yearly cost ÷ miles driven.",
     "Cost per mile = $10,850.00 ÷ 10,500.",
     "= $1.03 per mile.",
+    "Spreadsheet or calculator: =10850.00/10500",
     "Use cost per mile to compare driving with transit or rideshare."
    ]
   },
@@ -7212,8 +7519,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost per mile = yearly cost ÷ miles driven.",
     "Cost per mile = $6,050.00 ÷ 12,000.",
     "= $0.50 per mile.",
+    "Spreadsheet or calculator: =6050.00/12000",
     "Use cost per mile to compare driving with transit or rideshare."
    ]
   },
@@ -7241,8 +7550,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost per mile = yearly cost ÷ miles driven.",
     "Cost per mile = $10,800.00 ÷ 11,000.",
     "= $0.98 per mile.",
+    "Spreadsheet or calculator: =10800.00/11000",
     "Use cost per mile to compare driving with transit or rideshare."
    ]
   },
@@ -7270,8 +7581,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost per mile = yearly cost ÷ miles driven.",
     "Cost per mile = $8,150.00 ÷ 14,500.",
     "= $0.56 per mile.",
+    "Spreadsheet or calculator: =8150.00/14500",
     "Use cost per mile to compare driving with transit or rideshare."
    ]
   },
@@ -7299,7 +7612,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$240 × 36 = $8,640."
+    "Formula: Total of payments = payment × number of payments.",
+    "$240 × 36 = $8,640.",
+    "Spreadsheet or calculator: =240*36",
+    "So the answer is $8,640; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7326,7 +7642,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$310 × 60 = $18,600."
+    "Formula: Total of payments = payment × number of payments.",
+    "$310 × 60 = $18,600.",
+    "Spreadsheet or calculator: =310*60",
+    "So the answer is $18,600; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7353,7 +7672,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$240 × 60 = $14,400."
+    "Formula: Total of payments = payment × number of payments.",
+    "$240 × 60 = $14,400.",
+    "Spreadsheet or calculator: =240*60",
+    "So the answer is $14,400; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7380,7 +7702,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$220 × 36 = $7,920."
+    "Formula: Total of payments = payment × number of payments.",
+    "$220 × 36 = $7,920.",
+    "Spreadsheet or calculator: =220*36",
+    "So the answer is $7,920; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7407,7 +7732,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$300 × 48 = $14,400."
+    "Formula: Total of payments = payment × number of payments.",
+    "$300 × 48 = $14,400.",
+    "Spreadsheet or calculator: =300*48",
+    "So the answer is $14,400; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7434,7 +7762,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$340 × 60 = $20,400."
+    "Formula: Total of payments = payment × number of payments.",
+    "$340 × 60 = $20,400.",
+    "Spreadsheet or calculator: =340*60",
+    "So the answer is $20,400; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7461,7 +7792,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$260 × 60 = $15,600."
+    "Formula: Total of payments = payment × number of payments.",
+    "$260 × 60 = $15,600.",
+    "Spreadsheet or calculator: =260*60",
+    "So the answer is $15,600; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7488,7 +7822,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$310 × 60 = $18,600."
+    "Formula: Total of payments = payment × number of payments.",
+    "$310 × 60 = $18,600.",
+    "Spreadsheet or calculator: =310*60",
+    "So the answer is $18,600; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7515,7 +7852,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$200 × 60 = $12,000."
+    "Formula: Total of payments = payment × number of payments.",
+    "$200 × 60 = $12,000.",
+    "Spreadsheet or calculator: =200*60",
+    "So the answer is $12,000; make sure the payment fits the budget with insurance and upkeep included."
    ]
   },
   {
@@ -7542,8 +7882,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.079 ÷ 12 = 0.006583.",
     "P = $350.00 × (1 − (1 + i)^−60) ÷ i = $17,302.26.",
+    "Spreadsheet or calculator: =PV(0.079/12,60,-350)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7571,8 +7913,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.079 ÷ 12 = 0.006583.",
     "P = $380.00 × (1 − (1 + i)^−48) ÷ i = $15,595.50.",
+    "Spreadsheet or calculator: =PV(0.079/12,48,-380)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7600,8 +7944,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.059 ÷ 12 = 0.004917.",
     "P = $460.00 × (1 − (1 + i)^−48) ÷ i = $19,625.24.",
+    "Spreadsheet or calculator: =PV(0.059/12,48,-460)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7629,8 +7975,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.069 ÷ 12 = 0.005750.",
     "P = $340.00 × (1 − (1 + i)^−60) ÷ i = $17,211.66.",
+    "Spreadsheet or calculator: =PV(0.069/12,60,-340)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7658,8 +8006,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.079 ÷ 12 = 0.006583.",
     "P = $250.00 × (1 − (1 + i)^−60) ÷ i = $12,358.76.",
+    "Spreadsheet or calculator: =PV(0.079/12,60,-250)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7687,8 +8037,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.059 ÷ 12 = 0.004917.",
     "P = $410.00 × (1 − (1 + i)^−60) ÷ i = $21,258.57.",
+    "Spreadsheet or calculator: =PV(0.059/12,60,-410)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7716,8 +8068,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.059 ÷ 12 = 0.004917.",
     "P = $480.00 × (1 − (1 + i)^−60) ÷ i = $24,888.09.",
+    "Spreadsheet or calculator: =PV(0.059/12,60,-480)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7745,8 +8099,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.069 ÷ 12 = 0.005750.",
     "P = $310.00 × (1 − (1 + i)^−48) ÷ i = $12,970.78.",
+    "Spreadsheet or calculator: =PV(0.069/12,48,-310)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7774,8 +8130,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.079 ÷ 12 = 0.006583.",
     "P = $460.00 × (1 − (1 + i)^−48) ÷ i = $18,878.76.",
+    "Spreadsheet or calculator: =PV(0.079/12,48,-460)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7803,8 +8161,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.059 ÷ 12 = 0.004917.",
     "P = $300.00 × (1 − (1 + i)^−60) ÷ i = $15,555.05.",
+    "Spreadsheet or calculator: =PV(0.059/12,60,-300)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7832,8 +8192,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = payment × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "i = 0.079 ÷ 12 = 0.006583.",
     "P = $340.00 × (1 − (1 + i)^−48) ÷ i = $13,953.86.",
+    "Spreadsheet or calculator: =PV(0.079/12,48,-340)",
     "Remember taxes, fees and insurance on top of the loan."
    ]
   },
@@ -7861,7 +8223,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "9% ÷ 12 = 0.75%."
+    "Formula: Monthly rate = APR ÷ 12.",
+    "9% ÷ 12 = 0.75%.",
+    "Spreadsheet or calculator: =9%/12 (then format as a percent)",
+    "So the answer is 0.75%; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -7888,7 +8253,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "6% ÷ 12 = 0.5%."
+    "Formula: Monthly rate = APR ÷ 12.",
+    "6% ÷ 12 = 0.5%.",
+    "Spreadsheet or calculator: =6%/12 (then format as a percent)",
+    "So the answer is 0.5%; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -7915,7 +8283,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "24% ÷ 12 = 2%."
+    "Formula: Monthly rate = APR ÷ 12.",
+    "24% ÷ 12 = 2%.",
+    "Spreadsheet or calculator: =24%/12 (then format as a percent)",
+    "So the answer is 2%; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -7942,7 +8313,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "18% ÷ 12 = 1.5%."
+    "Formula: Monthly rate = APR ÷ 12.",
+    "18% ÷ 12 = 1.5%.",
+    "Spreadsheet or calculator: =18%/12 (then format as a percent)",
+    "So the answer is 1.5%; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -7969,7 +8343,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "12% ÷ 12 = 1%."
+    "Formula: Monthly rate = APR ÷ 12.",
+    "12% ÷ 12 = 1%.",
+    "Spreadsheet or calculator: =12%/12 (then format as a percent)",
+    "So the answer is 1%; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -7994,9 +8371,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $291.79 × 60 = $17,507.67.",
     "B: $349.28 × 48 + $400.00 = $17,165.54.",
-    "Difference = $342.13."
+    "Difference = $342.13.",
+    "Spreadsheet or calculator: =17507.67-17165.54",
+    "So the answer is $342.13; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8021,9 +8401,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $357.68 × 60 = $21,461.02.",
     "B: $419.71 × 48 + $800.00 = $20,946.22.",
-    "Difference = $514.79."
+    "Difference = $514.79.",
+    "Spreadsheet or calculator: =(357.68*60)-(419.71*48+800.00)",
+    "So the answer is $514.79; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8048,9 +8431,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $308.58 × 60 = $18,514.88.",
     "B: $360.55 × 48 + $800.00 = $18,106.37.",
-    "Difference = $408.52."
+    "Difference = $408.52.",
+    "So the answer is $408.52; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8075,9 +8460,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $470.64 × 60 = $28,238.18.",
     "B: $552.25 × 48 + $800.00 = $27,308.19.",
-    "Difference = $929.99."
+    "Difference = $929.99.",
+    "Spreadsheet or calculator: =28238.18-27308.19",
+    "So the answer is $929.99; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8102,9 +8490,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $404.75 × 60 = $24,284.84.",
     "B: $484.49 × 48 + $400.00 = $23,655.43.",
-    "Difference = $629.40."
+    "Difference = $629.40.",
+    "Spreadsheet or calculator: =(404.75*60)-(484.49*48+400.00)",
+    "So the answer is $629.40; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8129,9 +8520,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $376.51 × 60 = $22,590.54.",
     "B: $441.80 × 48 + $800.00 = $22,006.55.",
-    "Difference = $583.99."
+    "Difference = $583.99.",
+    "Spreadsheet or calculator: =22590.54-22006.55",
+    "So the answer is $583.99; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8156,9 +8550,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $498.87 × 60 = $29,932.47.",
     "B: $585.39 × 48 + $400.00 = $28,498.68.",
-    "Difference = $1,433.79."
+    "Difference = $1,433.79.",
+    "Spreadsheet or calculator: =29932.47-28498.68",
+    "So the answer is $1,433.79; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8183,9 +8580,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total cost = payment × months + fees, for each lender; difference = A − B.",
     "A: $366.44 × 60 = $21,986.42.",
     "B: $428.15 × 48 + $600.00 = $21,151.31.",
-    "Difference = $835.11."
+    "Difference = $835.11.",
+    "Spreadsheet or calculator: =(366.44*60)-(428.15*48+600.00)",
+    "So the answer is $835.11; a lower payment over a longer term usually costs more in total."
    ]
   },
   {
@@ -8212,7 +8612,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$24,000 × 0.005 = $120."
+    "Formula: Interest = balance × monthly rate.",
+    "$24,000 × 0.005 = $120.",
+    "Spreadsheet or calculator: =24000*0.005",
+    "So the answer is $120; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8239,7 +8642,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$22,000 × 0.004 = $88."
+    "Formula: Interest = balance × monthly rate.",
+    "$22,000 × 0.004 = $88.",
+    "Spreadsheet or calculator: =22000*0.004",
+    "So the answer is $88; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8266,7 +8672,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6,000 × 0.004 = $24."
+    "Formula: Interest = balance × monthly rate.",
+    "$6,000 × 0.004 = $24.",
+    "Spreadsheet or calculator: =6000*0.004",
+    "So the answer is $24; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8293,7 +8702,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$19,000 × 0.006 = $114."
+    "Formula: Interest = balance × monthly rate.",
+    "$19,000 × 0.006 = $114.",
+    "Spreadsheet or calculator: =19000*0.006",
+    "So the answer is $114; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8320,7 +8732,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$22,000 × 0.006 = $132."
+    "Formula: Interest = balance × monthly rate.",
+    "$22,000 × 0.006 = $132.",
+    "Spreadsheet or calculator: =22000*0.006",
+    "So the answer is $132; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8347,7 +8762,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20,000 × 0.004 = $80."
+    "Formula: Interest = balance × monthly rate.",
+    "$20,000 × 0.004 = $80.",
+    "Spreadsheet or calculator: =20000*0.004",
+    "So the answer is $80; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8374,7 +8792,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$8,000 × 0.005 = $40."
+    "Formula: Interest = balance × monthly rate.",
+    "$8,000 × 0.005 = $40.",
+    "Spreadsheet or calculator: =8000*0.005",
+    "So the answer is $40; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8401,7 +8822,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$8,000 × 0.006 = $48."
+    "Formula: Interest = balance × monthly rate.",
+    "$8,000 × 0.006 = $48.",
+    "Spreadsheet or calculator: =8000*0.006",
+    "So the answer is $48; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8428,9 +8852,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $110.50, principal $232.57.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $16,533.35."
+    "Balance after 2 payments = $16,533.35.",
+    "So the answer is $16,533.35; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8457,9 +8883,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $123.50, principal $259.94.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $18,478.43."
+    "Balance after 2 payments = $18,478.43.",
+    "So the answer is $18,478.43; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8486,9 +8914,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $156.00, principal $328.34.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $23,341.19."
+    "Balance after 2 payments = $23,341.19.",
+    "So the answer is $23,341.19; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8515,9 +8945,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $118.25, principal $303.43.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $20,891.47."
+    "Balance after 2 payments = $20,891.47.",
+    "So the answer is $20,891.47; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8544,9 +8976,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $96.25, principal $246.98.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $17,004.68."
+    "Balance after 2 payments = $17,004.68.",
+    "So the answer is $17,004.68; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8573,9 +9007,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $101.25, principal $327.49.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $21,843.55."
+    "Balance after 2 payments = $21,843.55.",
+    "So the answer is $21,843.55; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8602,9 +9038,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $65.25, principal $211.05.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $14,076.95."
+    "Balance after 2 payments = $14,076.95.",
+    "So the answer is $14,076.95; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8631,9 +9069,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $126.75, principal $266.78.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $18,964.71."
+    "Balance after 2 payments = $18,964.71.",
+    "So the answer is $18,964.71; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8660,9 +9100,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $56.25, principal $181.94.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $12,135.30."
+    "Balance after 2 payments = $12,135.30.",
+    "So the answer is $12,135.30; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8689,9 +9131,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: each row: interest = balance × APR ÷ 12; principal = payment − interest; balance = balance − principal.",
     "Row 1: interest $58.50, principal $123.13.",
     "Row 2: interest on the new balance, then subtract the principal again.",
-    "Balance after 2 payments = $8,752.94."
+    "Balance after 2 payments = $8,752.94.",
+    "So the answer is $8,752.94; early payments are mostly interest, later ones mostly principal."
    ]
   },
   {
@@ -8718,8 +9162,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$450 × 60 = $27,000.",
-    "+ $1,000 = $28,000."
+    "+ $1,000 = $28,000.",
+    "Spreadsheet or calculator: =(450*60)+1000",
+    "So the answer is $28,000; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8746,8 +9193,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$420 × 36 = $15,120.",
-    "+ $2,500 = $17,620."
+    "+ $2,500 = $17,620.",
+    "Spreadsheet or calculator: =(420*36)+2500",
+    "So the answer is $17,620; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8774,8 +9224,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$360 × 60 = $21,600.",
-    "+ $2,000 = $23,600."
+    "+ $2,000 = $23,600.",
+    "Spreadsheet or calculator: =(360*60)+2000",
+    "So the answer is $23,600; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8802,8 +9255,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$310 × 36 = $11,160.",
-    "+ $4,000 = $15,160."
+    "+ $4,000 = $15,160.",
+    "Spreadsheet or calculator: =(310*36)+4000",
+    "So the answer is $15,160; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8830,8 +9286,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$240 × 36 = $8,640.",
-    "+ $4,000 = $12,640."
+    "+ $4,000 = $12,640.",
+    "Spreadsheet or calculator: =(240*36)+4000",
+    "So the answer is $12,640; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8858,8 +9317,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$400 × 48 = $19,200.",
-    "+ $2,000 = $21,200."
+    "+ $2,000 = $21,200.",
+    "Spreadsheet or calculator: =(400*48)+2000",
+    "So the answer is $21,200; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8886,8 +9348,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$370 × 60 = $22,200.",
-    "+ $1,000 = $23,200."
+    "+ $1,000 = $23,200.",
+    "Spreadsheet or calculator: =(370*60)+1000",
+    "So the answer is $23,200; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8914,8 +9379,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$370 × 36 = $13,320.",
-    "+ $2,500 = $15,820."
+    "+ $2,500 = $15,820.",
+    "Spreadsheet or calculator: =(370*36)+2500",
+    "So the answer is $15,820; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8942,8 +9410,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$240 × 36 = $8,640.",
-    "+ $4,000 = $12,640."
+    "+ $4,000 = $12,640.",
+    "Spreadsheet or calculator: =(240*36)+4000",
+    "So the answer is $12,640; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8970,8 +9441,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$340 × 36 = $12,240.",
-    "+ $4,000 = $16,240."
+    "+ $4,000 = $16,240.",
+    "Spreadsheet or calculator: =(340*36)+4000",
+    "So the answer is $16,240; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -8998,8 +9472,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Total cost = down payment + payment × months.",
     "$240 × 48 = $11,520.",
-    "+ $1,000 = $12,520."
+    "+ $1,000 = $12,520.",
+    "Spreadsheet or calculator: =(240*48)+1000",
+    "So the answer is $12,520; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9026,9 +9503,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $287.62; interest = $4,708.29.",
     "Finance charge = $5,358.29.",
-    "$5,358.29 ÷ $16,000.00 = 33.5%."
+    "$5,358.29 ÷ $16,000.00 = 33.5%.",
+    "Spreadsheet or calculator: =5358.29/16000.00 (then format as a percent)",
+    "So the answer is 33.5%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9055,9 +9535,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $305.73; interest = $3,512.26.",
     "Finance charge = $3,812.26.",
-    "$3,812.26 ÷ $18,500.00 = 20.6%."
+    "$3,812.26 ÷ $18,500.00 = 20.6%.",
+    "Spreadsheet or calculator: =3812.26/18500.00 (then format as a percent)",
+    "So the answer is 20.6%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9084,9 +9567,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $322.25; interest = $3,702.12.",
     "Finance charge = $4,197.12.",
-    "$4,197.12 ÷ $19,500.00 = 21.5%."
+    "$4,197.12 ÷ $19,500.00 = 21.5%.",
+    "Spreadsheet or calculator: =4197.12/19500.00 (then format as a percent)",
+    "So the answer is 21.5%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9113,9 +9599,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $445.26; interest = $5,215.71.",
     "Finance charge = $5,865.71.",
-    "$5,865.71 ÷ $21,500.00 = 27.3%."
+    "$5,865.71 ÷ $21,500.00 = 27.3%.",
+    "Spreadsheet or calculator: =5865.71/21500.00 (then format as a percent)",
+    "So the answer is 27.3%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9142,9 +9631,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $284.49; interest = $3,983.17.",
     "Finance charge = $4,283.17.",
-    "$4,283.17 ÷ $16,500.00 = 26.0%."
+    "$4,283.17 ÷ $16,500.00 = 26.0%.",
+    "Spreadsheet or calculator: =4283.17/16500.00 (then format as a percent)",
+    "So the answer is 26%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9171,9 +9663,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $298.94; interest = $2,436.29.",
     "Finance charge = $3,086.29.",
-    "$3,086.29 ÷ $15,500.00 = 19.9%."
+    "$3,086.29 ÷ $15,500.00 = 19.9%.",
+    "Spreadsheet or calculator: =3086.29/15500.00 (then format as a percent)",
+    "So the answer is 19.9%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9200,9 +9695,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $289.86; interest = $2,891.70.",
     "Finance charge = $3,541.70.",
-    "$3,541.70 ÷ $14,500.00 = 24.4%."
+    "$3,541.70 ÷ $14,500.00 = 24.4%.",
+    "Spreadsheet or calculator: =3541.70/14500.00 (then format as a percent)",
+    "So the answer is 24.4%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9229,9 +9727,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $491.39; interest = $6,880.03.",
     "Finance charge = $7,375.03.",
-    "$7,375.03 ÷ $28,500.00 = 25.9%."
+    "$7,375.03 ÷ $28,500.00 = 25.9%.",
+    "Spreadsheet or calculator: =7375.03/28500.00 (then format as a percent)",
+    "So the answer is 25.9%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9258,9 +9759,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $308.58; interest = $2,514.88.",
     "Finance charge = $3,164.88.",
-    "$3,164.88 ÷ $16,000.00 = 19.8%."
+    "$3,164.88 ÷ $16,000.00 = 19.8%.",
+    "Spreadsheet or calculator: =3164.88/16000.00 (then format as a percent)",
+    "So the answer is 19.8%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9287,9 +9791,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $264.41; interest = $3,037.63.",
     "Finance charge = $3,337.63.",
-    "$3,337.63 ÷ $16,000.00 = 20.9%."
+    "$3,337.63 ÷ $16,000.00 = 20.9%.",
+    "Spreadsheet or calculator: =3337.63/16000.00 (then format as a percent)",
+    "So the answer is 20.9%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9316,9 +9823,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: finance charge = payment × months − amount borrowed + fees; percent = finance charge ÷ amount borrowed.",
     "Payment = $393.49; interest = $4,609.24.",
     "Finance charge = $4,909.24.",
-    "$4,909.24 ÷ $19,000.00 = 25.8%."
+    "$4,909.24 ÷ $19,000.00 = 25.8%.",
+    "Spreadsheet or calculator: =4909.24/19000.00 (then format as a percent)",
+    "So the answer is 25.8%; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9345,8 +9855,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Fuel cost = miles ÷ MPG × price.",
     "600 ÷ 30 = 20 gallons.",
-    "× $4 = $80."
+    "× $4 = $80.",
+    "Spreadsheet or calculator: =(600/30)*4",
+    "So the answer is $80; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9373,8 +9886,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Fuel cost = miles ÷ MPG × price.",
     "1200 ÷ 30 = 40 gallons.",
-    "× $3 = $120."
+    "× $3 = $120.",
+    "Spreadsheet or calculator: =(1200/30)*3",
+    "So the answer is $120; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9401,8 +9917,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Fuel cost = miles ÷ MPG × price.",
     "750 ÷ 25 = 30 gallons.",
-    "× $3 = $90."
+    "× $3 = $90.",
+    "Spreadsheet or calculator: =(750/25)*3",
+    "So the answer is $90; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9429,8 +9948,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Fuel cost = miles ÷ MPG × price.",
     "900 ÷ 30 = 30 gallons.",
-    "× $3 = $90."
+    "× $3 = $90.",
+    "Spreadsheet or calculator: =(900/30)*3",
+    "So the answer is $90; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9457,8 +9979,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Fuel cost = miles ÷ MPG × price.",
     "900 ÷ 25 = 36 gallons.",
-    "× $4 = $144."
+    "× $4 = $144.",
+    "Spreadsheet or calculator: =(900/25)*4",
+    "So the answer is $144; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9483,9 +10008,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $13,351.07 + fuel $4,714.29 = $18,065.36.",
     "B: depreciation $11,326.68 + fuel $7,615.38 = $18,942.07.",
-    "Difference = $876.71: the lower price does not win here."
+    "Difference = $876.71: the lower price does not win here.",
+    "Spreadsheet or calculator: =18942.07-18065.36",
+    "So the answer is $876.71; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9510,9 +10038,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $16,132.55 + fuel $5,210.53 = $21,343.07.",
     "B: depreciation $15,127.20 + fuel $7,615.38 = $22,742.58.",
-    "Difference = $1,399.51: the lower price does not win here."
+    "Difference = $1,399.51: the lower price does not win here.",
+    "Spreadsheet or calculator: =22742.58-21343.07",
+    "So the answer is $1,399.51; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9537,9 +10068,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $15,576.25 + fuel $5,142.86 = $20,719.11.",
     "B: depreciation $14,118.72 + fuel $8,307.69 = $22,426.41.",
-    "Difference = $1,707.30: the lower price does not win here."
+    "Difference = $1,707.30: the lower price does not win here.",
+    "Spreadsheet or calculator: =22426.41-20719.11",
+    "So the answer is $1,707.30; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9564,9 +10098,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $17,523.28 + fuel $5,684.21 = $23,207.49.",
     "B: depreciation $17,816.48 + fuel $9,000.00 = $26,816.48.",
-    "Difference = $3,608.99: the lower price does not win here."
+    "Difference = $3,608.99: the lower price does not win here.",
+    "Spreadsheet or calculator: =26816.48-23207.49",
+    "So the answer is $3,608.99; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9591,9 +10128,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $15,576.25 + fuel $5,684.21 = $21,260.46.",
     "B: depreciation $14,787.61 + fuel $8,307.69 = $23,095.31.",
-    "Difference = $1,834.84: the lower price does not win here."
+    "Difference = $1,834.84: the lower price does not win here.",
+    "So the answer is $1,834.84; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9618,9 +10157,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $17,801.43 + fuel $5,684.21 = $23,485.64.",
     "B: depreciation $18,824.96 + fuel $9,000.00 = $27,824.96.",
-    "Difference = $4,339.32: the lower price does not win here."
+    "Difference = $4,339.32: the lower price does not win here.",
+    "Spreadsheet or calculator: =27824.96-23485.64",
+    "So the answer is $4,339.32; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9645,9 +10187,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $17,245.14 + fuel $5,210.53 = $22,455.66.",
     "B: depreciation $16,360.76 + fuel $8,250.00 = $24,610.76.",
-    "Difference = $2,155.10: the lower price does not win here."
+    "Difference = $2,155.10: the lower price does not win here.",
+    "Spreadsheet or calculator: =24610.76-22455.66",
+    "So the answer is $2,155.10; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9672,9 +10217,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $16,966.99 + fuel $4,714.29 = $21,681.27.",
     "B: depreciation $16,808.00 + fuel $8,250.00 = $25,058.00.",
-    "Difference = $3,376.73: the lower price does not win here."
+    "Difference = $3,376.73: the lower price does not win here.",
+    "Spreadsheet or calculator: =25058.00-21681.27",
+    "So the answer is $3,376.73; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9699,9 +10247,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cost = price × (1 − (1 − rate)^5) + miles ÷ MPG × gas price for each car; difference = B − A.",
     "A: depreciation $14,741.81 + fuel $4,714.29 = $19,456.09.",
     "B: depreciation $13,214.46 + fuel $7,615.38 = $20,829.85.",
-    "Difference = $1,373.75: the lower price does not win here."
+    "Difference = $1,373.75: the lower price does not win here.",
+    "So the answer is $1,373.75; the price is only part of what a car really costs."
    ]
   },
   {
@@ -9768,7 +10318,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$211.26 × 60 = $12,675.60."
+    "Formula: Total of payments = monthly payment × number of payments.",
+    "$211.26 × 60 = $12,675.60.",
+    "Spreadsheet or calculator: =211.26*60",
+    "So the answer is $12,675.60; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9836,6 +10389,7 @@
    },
    "solutionSteps": [
     "$16,999.20 − $14,650.00 = $2,349.20.",
+    "Spreadsheet or calculator: =16999.20-14650.00",
     "The finance charge is the dollar cost of the credit."
    ]
   },
@@ -9903,9 +10457,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: i = APR ÷ 12.",
     "i = 0.0849 ÷ 12; payment = $467.67.",
     "Total of payments = $467.67 × 60 = $28,060.20.",
-    "Total sale price = $1,500.00 + $28,060.20 = $29,560.20."
+    "Total sale price = $1,500.00 + $28,060.20 = $29,560.20.",
+    "Spreadsheet or calculator: =1500.00+28060.20",
+    "So the answer is $29,560.20; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -9972,7 +10529,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$505.61 × 60 = $30,336.60."
+    "Formula: Total of payments = monthly payment × number of payments.",
+    "$505.61 × 60 = $30,336.60.",
+    "Spreadsheet or calculator: =505.61*60",
+    "So the answer is $30,336.60; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -10040,6 +10600,7 @@
    },
    "solutionSteps": [
     "$16,227.00 − $13,500.00 = $2,727.00.",
+    "Spreadsheet or calculator: =16227.00-13500.00",
     "The finance charge is the dollar cost of the credit."
    ]
   },
@@ -10107,9 +10668,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: i = APR ÷ 12.",
     "i = 0.0749 ÷ 12; payment = $286.46.",
     "Total of payments = $286.46 × 48 = $13,750.08.",
-    "Total sale price = $4,000.00 + $13,750.08 = $17,750.08."
+    "Total sale price = $4,000.00 + $13,750.08 = $17,750.08.",
+    "Spreadsheet or calculator: =4000.00+13750.08",
+    "So the answer is $17,750.08; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -10176,7 +10740,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$208.33 × 60 = $12,499.80."
+    "Formula: Total of payments = monthly payment × number of payments.",
+    "$208.33 × 60 = $12,499.80.",
+    "Spreadsheet or calculator: =208.33*60",
+    "So the answer is $12,499.80; compare loans by total cost, not just the monthly payment."
    ]
   },
   {
@@ -10244,6 +10811,7 @@
    },
    "solutionSteps": [
     "$21,654.60 − $18,450.00 = $3,204.60.",
+    "Spreadsheet or calculator: =21654.60-18450.00",
     "The finance charge is the dollar cost of the credit."
    ]
   },
@@ -10311,9 +10879,6063 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: i = APR ÷ 12.",
     "i = 0.0649 ÷ 12; payment = $324.72.",
     "Total of payments = $324.72 × 60 = $19,483.20.",
-    "Total sale price = $2,000.00 + $19,483.20 = $21,483.20."
+    "Total sale price = $2,000.00 + $19,483.20 = $21,483.20.",
+    "Spreadsheet or calculator: =2000.00+19483.20",
+    "So the answer is $21,483.20; compare loans by total cost, not just the monthly payment."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Using Offer A's model A(m) = $240 + $393m, how much has Sam paid after 36 months?",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $240 + $393m",
+       "pts": [
+        [
+         0,
+         240
+        ],
+        [
+         1,
+         633
+        ],
+        [
+         2,
+         1026
+        ],
+        [
+         3,
+         1419
+        ],
+        [
+         4,
+         1812
+        ],
+        [
+         5,
+         2205
+        ],
+        [
+         6,
+         2598
+        ],
+        [
+         7,
+         2991
+        ],
+        [
+         8,
+         3384
+        ],
+        [
+         9,
+         3777
+        ],
+        [
+         10,
+         4170
+        ],
+        [
+         11,
+         4563
+        ],
+        [
+         12,
+         4956
+        ],
+        [
+         13,
+         5349
+        ],
+        [
+         14,
+         5742
+        ],
+        [
+         15,
+         6135
+        ],
+        [
+         16,
+         6528
+        ],
+        [
+         17,
+         6921
+        ],
+        [
+         18,
+         7314
+        ],
+        [
+         19,
+         7707
+        ],
+        [
+         20,
+         8100
+        ],
+        [
+         21,
+         8493
+        ],
+        [
+         22,
+         8886
+        ],
+        [
+         23,
+         9279
+        ],
+        [
+         24,
+         9672
+        ],
+        [
+         25,
+         10065
+        ],
+        [
+         26,
+         10458
+        ],
+        [
+         27,
+         10851
+        ],
+        [
+         28,
+         11244
+        ],
+        [
+         29,
+         11637
+        ],
+        [
+         30,
+         12030
+        ],
+        [
+         31,
+         12423
+        ],
+        [
+         32,
+         12816
+        ],
+        [
+         33,
+         13209
+        ],
+        [
+         34,
+         13602
+        ],
+        [
+         35,
+         13995
+        ],
+        [
+         36,
+         14388
+        ],
+        [
+         37,
+         14781
+        ],
+        [
+         38,
+         15174
+        ],
+        [
+         39,
+         15567
+        ],
+        [
+         40,
+         15960
+        ],
+        [
+         41,
+         16353
+        ],
+        [
+         42,
+         16746
+        ],
+        [
+         43,
+         17139
+        ],
+        [
+         44,
+         17532
+        ],
+        [
+         45,
+         17925
+        ],
+        [
+         46,
+         18318
+        ],
+        [
+         47,
+         18711
+        ],
+        [
+         48,
+         19104
+        ],
+        [
+         49,
+         19497
+        ],
+        [
+         50,
+         19890
+        ],
+        [
+         51,
+         20283
+        ],
+        [
+         52,
+         20676
+        ],
+        [
+         53,
+         21069
+        ],
+        [
+         54,
+         21462
+        ],
+        [
+         55,
+         21855
+        ],
+        [
+         56,
+         22248
+        ],
+        [
+         57,
+         22641
+        ],
+        [
+         58,
+         23034
+        ],
+        [
+         59,
+         23427
+        ],
+        [
+         60,
+         23820
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $401m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         401
+        ],
+        [
+         2,
+         802
+        ],
+        [
+         3,
+         1203
+        ],
+        [
+         4,
+         1604
+        ],
+        [
+         5,
+         2005
+        ],
+        [
+         6,
+         2406
+        ],
+        [
+         7,
+         2807
+        ],
+        [
+         8,
+         3208
+        ],
+        [
+         9,
+         3609
+        ],
+        [
+         10,
+         4010
+        ],
+        [
+         11,
+         4411
+        ],
+        [
+         12,
+         4812
+        ],
+        [
+         13,
+         5213
+        ],
+        [
+         14,
+         5614
+        ],
+        [
+         15,
+         6015
+        ],
+        [
+         16,
+         6416
+        ],
+        [
+         17,
+         6817
+        ],
+        [
+         18,
+         7218
+        ],
+        [
+         19,
+         7619
+        ],
+        [
+         20,
+         8020
+        ],
+        [
+         21,
+         8421
+        ],
+        [
+         22,
+         8822
+        ],
+        [
+         23,
+         9223
+        ],
+        [
+         24,
+         9624
+        ],
+        [
+         25,
+         10025
+        ],
+        [
+         26,
+         10426
+        ],
+        [
+         27,
+         10827
+        ],
+        [
+         28,
+         11228
+        ],
+        [
+         29,
+         11629
+        ],
+        [
+         30,
+         12030
+        ],
+        [
+         31,
+         12431
+        ],
+        [
+         32,
+         12832
+        ],
+        [
+         33,
+         13233
+        ],
+        [
+         34,
+         13634
+        ],
+        [
+         35,
+         14035
+        ],
+        [
+         36,
+         14436
+        ],
+        [
+         37,
+         14837
+        ],
+        [
+         38,
+         15238
+        ],
+        [
+         39,
+         15639
+        ],
+        [
+         40,
+         16040
+        ],
+        [
+         41,
+         16441
+        ],
+        [
+         42,
+         16842
+        ],
+        [
+         43,
+         17243
+        ],
+        [
+         44,
+         17644
+        ],
+        [
+         45,
+         18045
+        ],
+        [
+         46,
+         18446
+        ],
+        [
+         47,
+         18847
+        ],
+        [
+         48,
+         19248
+        ],
+        [
+         49,
+         19649
+        ],
+        [
+         50,
+         20050
+        ],
+        [
+         51,
+         20451
+        ],
+        [
+         52,
+         20852
+        ],
+        [
+         53,
+         21253
+        ],
+        [
+         54,
+         21654
+        ],
+        [
+         55,
+         22055
+        ],
+        [
+         56,
+         22456
+        ],
+        [
+         57,
+         22857
+        ],
+        [
+         58,
+         23258
+        ],
+        [
+         59,
+         23659
+        ],
+        [
+         60,
+         24060
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 30,
+       "y": 12030,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $240 origination fee and $393 a month. Offer B: no fee and $401 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$14,388",
+   "numeric": {
+    "value": 14388,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(m) = fee + payment × m.",
+    "Substitute: $240 + $393 × 36 = $14,388.",
+    "Spreadsheet: =240+393*36.",
+    "So after 36 months Offer A has cost $14,388, against $14,436 for Offer B."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many months have the two offers cost the same total? (Where the lines cross.)",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $600 + $397m",
+       "pts": [
+        [
+         0,
+         600
+        ],
+        [
+         1,
+         997
+        ],
+        [
+         2,
+         1394
+        ],
+        [
+         3,
+         1791
+        ],
+        [
+         4,
+         2188
+        ],
+        [
+         5,
+         2585
+        ],
+        [
+         6,
+         2982
+        ],
+        [
+         7,
+         3379
+        ],
+        [
+         8,
+         3776
+        ],
+        [
+         9,
+         4173
+        ],
+        [
+         10,
+         4570
+        ],
+        [
+         11,
+         4967
+        ],
+        [
+         12,
+         5364
+        ],
+        [
+         13,
+         5761
+        ],
+        [
+         14,
+         6158
+        ],
+        [
+         15,
+         6555
+        ],
+        [
+         16,
+         6952
+        ],
+        [
+         17,
+         7349
+        ],
+        [
+         18,
+         7746
+        ],
+        [
+         19,
+         8143
+        ],
+        [
+         20,
+         8540
+        ],
+        [
+         21,
+         8937
+        ],
+        [
+         22,
+         9334
+        ],
+        [
+         23,
+         9731
+        ],
+        [
+         24,
+         10128
+        ],
+        [
+         25,
+         10525
+        ],
+        [
+         26,
+         10922
+        ],
+        [
+         27,
+         11319
+        ],
+        [
+         28,
+         11716
+        ],
+        [
+         29,
+         12113
+        ],
+        [
+         30,
+         12510
+        ],
+        [
+         31,
+         12907
+        ],
+        [
+         32,
+         13304
+        ],
+        [
+         33,
+         13701
+        ],
+        [
+         34,
+         14098
+        ],
+        [
+         35,
+         14495
+        ],
+        [
+         36,
+         14892
+        ],
+        [
+         37,
+         15289
+        ],
+        [
+         38,
+         15686
+        ],
+        [
+         39,
+         16083
+        ],
+        [
+         40,
+         16480
+        ],
+        [
+         41,
+         16877
+        ],
+        [
+         42,
+         17274
+        ],
+        [
+         43,
+         17671
+        ],
+        [
+         44,
+         18068
+        ],
+        [
+         45,
+         18465
+        ],
+        [
+         46,
+         18862
+        ],
+        [
+         47,
+         19259
+        ],
+        [
+         48,
+         19656
+        ],
+        [
+         49,
+         20053
+        ],
+        [
+         50,
+         20450
+        ],
+        [
+         51,
+         20847
+        ],
+        [
+         52,
+         21244
+        ],
+        [
+         53,
+         21641
+        ],
+        [
+         54,
+         22038
+        ],
+        [
+         55,
+         22435
+        ],
+        [
+         56,
+         22832
+        ],
+        [
+         57,
+         23229
+        ],
+        [
+         58,
+         23626
+        ],
+        [
+         59,
+         24023
+        ],
+        [
+         60,
+         24420
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $412m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         412
+        ],
+        [
+         2,
+         824
+        ],
+        [
+         3,
+         1236
+        ],
+        [
+         4,
+         1648
+        ],
+        [
+         5,
+         2060
+        ],
+        [
+         6,
+         2472
+        ],
+        [
+         7,
+         2884
+        ],
+        [
+         8,
+         3296
+        ],
+        [
+         9,
+         3708
+        ],
+        [
+         10,
+         4120
+        ],
+        [
+         11,
+         4532
+        ],
+        [
+         12,
+         4944
+        ],
+        [
+         13,
+         5356
+        ],
+        [
+         14,
+         5768
+        ],
+        [
+         15,
+         6180
+        ],
+        [
+         16,
+         6592
+        ],
+        [
+         17,
+         7004
+        ],
+        [
+         18,
+         7416
+        ],
+        [
+         19,
+         7828
+        ],
+        [
+         20,
+         8240
+        ],
+        [
+         21,
+         8652
+        ],
+        [
+         22,
+         9064
+        ],
+        [
+         23,
+         9476
+        ],
+        [
+         24,
+         9888
+        ],
+        [
+         25,
+         10300
+        ],
+        [
+         26,
+         10712
+        ],
+        [
+         27,
+         11124
+        ],
+        [
+         28,
+         11536
+        ],
+        [
+         29,
+         11948
+        ],
+        [
+         30,
+         12360
+        ],
+        [
+         31,
+         12772
+        ],
+        [
+         32,
+         13184
+        ],
+        [
+         33,
+         13596
+        ],
+        [
+         34,
+         14008
+        ],
+        [
+         35,
+         14420
+        ],
+        [
+         36,
+         14832
+        ],
+        [
+         37,
+         15244
+        ],
+        [
+         38,
+         15656
+        ],
+        [
+         39,
+         16068
+        ],
+        [
+         40,
+         16480
+        ],
+        [
+         41,
+         16892
+        ],
+        [
+         42,
+         17304
+        ],
+        [
+         43,
+         17716
+        ],
+        [
+         44,
+         18128
+        ],
+        [
+         45,
+         18540
+        ],
+        [
+         46,
+         18952
+        ],
+        [
+         47,
+         19364
+        ],
+        [
+         48,
+         19776
+        ],
+        [
+         49,
+         20188
+        ],
+        [
+         50,
+         20600
+        ],
+        [
+         51,
+         21012
+        ],
+        [
+         52,
+         21424
+        ],
+        [
+         53,
+         21836
+        ],
+        [
+         54,
+         22248
+        ],
+        [
+         55,
+         22660
+        ],
+        [
+         56,
+         23072
+        ],
+        [
+         57,
+         23484
+        ],
+        [
+         58,
+         23896
+        ],
+        [
+         59,
+         24308
+        ],
+        [
+         60,
+         24720
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 40,
+       "y": 16480,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $600 origination fee and $397 a month. Offer B: no fee and $412 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "40",
+   "numeric": {
+    "value": 40,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set A(m) = B(m): fee + p_A·m = p_B·m, so m = [[fee || p_B − p_A]].",
+    "Substitute: m = [[$600 || $412 − $397]] = $600 ÷ $15 = 40.",
+    "Spreadsheet: =600/(412-397).",
+    "So the fee is \"paid back\" by the lower payment after 40 months. If the loan runs longer than that, Offer A costs less overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Both loans run the full 60 months. How much less does the cheaper offer cost in total?",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $480 + $365m",
+       "pts": [
+        [
+         0,
+         480
+        ],
+        [
+         1,
+         845
+        ],
+        [
+         2,
+         1210
+        ],
+        [
+         3,
+         1575
+        ],
+        [
+         4,
+         1940
+        ],
+        [
+         5,
+         2305
+        ],
+        [
+         6,
+         2670
+        ],
+        [
+         7,
+         3035
+        ],
+        [
+         8,
+         3400
+        ],
+        [
+         9,
+         3765
+        ],
+        [
+         10,
+         4130
+        ],
+        [
+         11,
+         4495
+        ],
+        [
+         12,
+         4860
+        ],
+        [
+         13,
+         5225
+        ],
+        [
+         14,
+         5590
+        ],
+        [
+         15,
+         5955
+        ],
+        [
+         16,
+         6320
+        ],
+        [
+         17,
+         6685
+        ],
+        [
+         18,
+         7050
+        ],
+        [
+         19,
+         7415
+        ],
+        [
+         20,
+         7780
+        ],
+        [
+         21,
+         8145
+        ],
+        [
+         22,
+         8510
+        ],
+        [
+         23,
+         8875
+        ],
+        [
+         24,
+         9240
+        ],
+        [
+         25,
+         9605
+        ],
+        [
+         26,
+         9970
+        ],
+        [
+         27,
+         10335
+        ],
+        [
+         28,
+         10700
+        ],
+        [
+         29,
+         11065
+        ],
+        [
+         30,
+         11430
+        ],
+        [
+         31,
+         11795
+        ],
+        [
+         32,
+         12160
+        ],
+        [
+         33,
+         12525
+        ],
+        [
+         34,
+         12890
+        ],
+        [
+         35,
+         13255
+        ],
+        [
+         36,
+         13620
+        ],
+        [
+         37,
+         13985
+        ],
+        [
+         38,
+         14350
+        ],
+        [
+         39,
+         14715
+        ],
+        [
+         40,
+         15080
+        ],
+        [
+         41,
+         15445
+        ],
+        [
+         42,
+         15810
+        ],
+        [
+         43,
+         16175
+        ],
+        [
+         44,
+         16540
+        ],
+        [
+         45,
+         16905
+        ],
+        [
+         46,
+         17270
+        ],
+        [
+         47,
+         17635
+        ],
+        [
+         48,
+         18000
+        ],
+        [
+         49,
+         18365
+        ],
+        [
+         50,
+         18730
+        ],
+        [
+         51,
+         19095
+        ],
+        [
+         52,
+         19460
+        ],
+        [
+         53,
+         19825
+        ],
+        [
+         54,
+         20190
+        ],
+        [
+         55,
+         20555
+        ],
+        [
+         56,
+         20920
+        ],
+        [
+         57,
+         21285
+        ],
+        [
+         58,
+         21650
+        ],
+        [
+         59,
+         22015
+        ],
+        [
+         60,
+         22380
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $377m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         377
+        ],
+        [
+         2,
+         754
+        ],
+        [
+         3,
+         1131
+        ],
+        [
+         4,
+         1508
+        ],
+        [
+         5,
+         1885
+        ],
+        [
+         6,
+         2262
+        ],
+        [
+         7,
+         2639
+        ],
+        [
+         8,
+         3016
+        ],
+        [
+         9,
+         3393
+        ],
+        [
+         10,
+         3770
+        ],
+        [
+         11,
+         4147
+        ],
+        [
+         12,
+         4524
+        ],
+        [
+         13,
+         4901
+        ],
+        [
+         14,
+         5278
+        ],
+        [
+         15,
+         5655
+        ],
+        [
+         16,
+         6032
+        ],
+        [
+         17,
+         6409
+        ],
+        [
+         18,
+         6786
+        ],
+        [
+         19,
+         7163
+        ],
+        [
+         20,
+         7540
+        ],
+        [
+         21,
+         7917
+        ],
+        [
+         22,
+         8294
+        ],
+        [
+         23,
+         8671
+        ],
+        [
+         24,
+         9048
+        ],
+        [
+         25,
+         9425
+        ],
+        [
+         26,
+         9802
+        ],
+        [
+         27,
+         10179
+        ],
+        [
+         28,
+         10556
+        ],
+        [
+         29,
+         10933
+        ],
+        [
+         30,
+         11310
+        ],
+        [
+         31,
+         11687
+        ],
+        [
+         32,
+         12064
+        ],
+        [
+         33,
+         12441
+        ],
+        [
+         34,
+         12818
+        ],
+        [
+         35,
+         13195
+        ],
+        [
+         36,
+         13572
+        ],
+        [
+         37,
+         13949
+        ],
+        [
+         38,
+         14326
+        ],
+        [
+         39,
+         14703
+        ],
+        [
+         40,
+         15080
+        ],
+        [
+         41,
+         15457
+        ],
+        [
+         42,
+         15834
+        ],
+        [
+         43,
+         16211
+        ],
+        [
+         44,
+         16588
+        ],
+        [
+         45,
+         16965
+        ],
+        [
+         46,
+         17342
+        ],
+        [
+         47,
+         17719
+        ],
+        [
+         48,
+         18096
+        ],
+        [
+         49,
+         18473
+        ],
+        [
+         50,
+         18850
+        ],
+        [
+         51,
+         19227
+        ],
+        [
+         52,
+         19604
+        ],
+        [
+         53,
+         19981
+        ],
+        [
+         54,
+         20358
+        ],
+        [
+         55,
+         20735
+        ],
+        [
+         56,
+         21112
+        ],
+        [
+         57,
+         21489
+        ],
+        [
+         58,
+         21866
+        ],
+        [
+         59,
+         22243
+        ],
+        [
+         60,
+         22620
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 40,
+       "y": 15080,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $480 origination fee and $365 a month. Offer B: no fee and $377 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$240",
+   "numeric": {
+    "value": 240,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: difference = |A(n) − B(n)|.",
+    "Substitute: A(60) = $480 + $365 × 60 = $22,380; B(60) = $377 × 60 = $22,620.",
+    "Spreadsheet: =ABS((480+365*60)-377*60).",
+    "So Offer A saves $240: the lines cross at month 40, before the loan ends."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Using Offer A's model A(m) = $210 + $371m, how much has Zara paid after 17 months?",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $210 + $371m",
+       "pts": [
+        [
+         0,
+         210
+        ],
+        [
+         1,
+         581
+        ],
+        [
+         2,
+         952
+        ],
+        [
+         3,
+         1323
+        ],
+        [
+         4,
+         1694
+        ],
+        [
+         5,
+         2065
+        ],
+        [
+         6,
+         2436
+        ],
+        [
+         7,
+         2807
+        ],
+        [
+         8,
+         3178
+        ],
+        [
+         9,
+         3549
+        ],
+        [
+         10,
+         3920
+        ],
+        [
+         11,
+         4291
+        ],
+        [
+         12,
+         4662
+        ],
+        [
+         13,
+         5033
+        ],
+        [
+         14,
+         5404
+        ],
+        [
+         15,
+         5775
+        ],
+        [
+         16,
+         6146
+        ],
+        [
+         17,
+         6517
+        ],
+        [
+         18,
+         6888
+        ],
+        [
+         19,
+         7259
+        ],
+        [
+         20,
+         7630
+        ],
+        [
+         21,
+         8001
+        ],
+        [
+         22,
+         8372
+        ],
+        [
+         23,
+         8743
+        ],
+        [
+         24,
+         9114
+        ],
+        [
+         25,
+         9485
+        ],
+        [
+         26,
+         9856
+        ],
+        [
+         27,
+         10227
+        ],
+        [
+         28,
+         10598
+        ],
+        [
+         29,
+         10969
+        ],
+        [
+         30,
+         11340
+        ],
+        [
+         31,
+         11711
+        ],
+        [
+         32,
+         12082
+        ],
+        [
+         33,
+         12453
+        ],
+        [
+         34,
+         12824
+        ],
+        [
+         35,
+         13195
+        ],
+        [
+         36,
+         13566
+        ],
+        [
+         37,
+         13937
+        ],
+        [
+         38,
+         14308
+        ],
+        [
+         39,
+         14679
+        ],
+        [
+         40,
+         15050
+        ],
+        [
+         41,
+         15421
+        ],
+        [
+         42,
+         15792
+        ],
+        [
+         43,
+         16163
+        ],
+        [
+         44,
+         16534
+        ],
+        [
+         45,
+         16905
+        ],
+        [
+         46,
+         17276
+        ],
+        [
+         47,
+         17647
+        ],
+        [
+         48,
+         18018
+        ],
+        [
+         49,
+         18389
+        ],
+        [
+         50,
+         18760
+        ],
+        [
+         51,
+         19131
+        ],
+        [
+         52,
+         19502
+        ],
+        [
+         53,
+         19873
+        ],
+        [
+         54,
+         20244
+        ],
+        [
+         55,
+         20615
+        ],
+        [
+         56,
+         20986
+        ],
+        [
+         57,
+         21357
+        ],
+        [
+         58,
+         21728
+        ],
+        [
+         59,
+         22099
+        ],
+        [
+         60,
+         22470
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $381m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         381
+        ],
+        [
+         2,
+         762
+        ],
+        [
+         3,
+         1143
+        ],
+        [
+         4,
+         1524
+        ],
+        [
+         5,
+         1905
+        ],
+        [
+         6,
+         2286
+        ],
+        [
+         7,
+         2667
+        ],
+        [
+         8,
+         3048
+        ],
+        [
+         9,
+         3429
+        ],
+        [
+         10,
+         3810
+        ],
+        [
+         11,
+         4191
+        ],
+        [
+         12,
+         4572
+        ],
+        [
+         13,
+         4953
+        ],
+        [
+         14,
+         5334
+        ],
+        [
+         15,
+         5715
+        ],
+        [
+         16,
+         6096
+        ],
+        [
+         17,
+         6477
+        ],
+        [
+         18,
+         6858
+        ],
+        [
+         19,
+         7239
+        ],
+        [
+         20,
+         7620
+        ],
+        [
+         21,
+         8001
+        ],
+        [
+         22,
+         8382
+        ],
+        [
+         23,
+         8763
+        ],
+        [
+         24,
+         9144
+        ],
+        [
+         25,
+         9525
+        ],
+        [
+         26,
+         9906
+        ],
+        [
+         27,
+         10287
+        ],
+        [
+         28,
+         10668
+        ],
+        [
+         29,
+         11049
+        ],
+        [
+         30,
+         11430
+        ],
+        [
+         31,
+         11811
+        ],
+        [
+         32,
+         12192
+        ],
+        [
+         33,
+         12573
+        ],
+        [
+         34,
+         12954
+        ],
+        [
+         35,
+         13335
+        ],
+        [
+         36,
+         13716
+        ],
+        [
+         37,
+         14097
+        ],
+        [
+         38,
+         14478
+        ],
+        [
+         39,
+         14859
+        ],
+        [
+         40,
+         15240
+        ],
+        [
+         41,
+         15621
+        ],
+        [
+         42,
+         16002
+        ],
+        [
+         43,
+         16383
+        ],
+        [
+         44,
+         16764
+        ],
+        [
+         45,
+         17145
+        ],
+        [
+         46,
+         17526
+        ],
+        [
+         47,
+         17907
+        ],
+        [
+         48,
+         18288
+        ],
+        [
+         49,
+         18669
+        ],
+        [
+         50,
+         19050
+        ],
+        [
+         51,
+         19431
+        ],
+        [
+         52,
+         19812
+        ],
+        [
+         53,
+         20193
+        ],
+        [
+         54,
+         20574
+        ],
+        [
+         55,
+         20955
+        ],
+        [
+         56,
+         21336
+        ],
+        [
+         57,
+         21717
+        ],
+        [
+         58,
+         22098
+        ],
+        [
+         59,
+         22479
+        ],
+        [
+         60,
+         22860
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 21,
+       "y": 8001,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $210 origination fee and $371 a month. Offer B: no fee and $381 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6,517",
+   "numeric": {
+    "value": 6517,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(m) = fee + payment × m.",
+    "Substitute: $210 + $371 × 17 = $6,517.",
+    "Spreadsheet: =210+371*17.",
+    "So after 17 months Offer A has cost $6,517, against $6,477 for Offer B."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many months have the two offers cost the same total? (Where the lines cross.)",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $700 + $319m",
+       "pts": [
+        [
+         0,
+         700
+        ],
+        [
+         1,
+         1019
+        ],
+        [
+         2,
+         1338
+        ],
+        [
+         3,
+         1657
+        ],
+        [
+         4,
+         1976
+        ],
+        [
+         5,
+         2295
+        ],
+        [
+         6,
+         2614
+        ],
+        [
+         7,
+         2933
+        ],
+        [
+         8,
+         3252
+        ],
+        [
+         9,
+         3571
+        ],
+        [
+         10,
+         3890
+        ],
+        [
+         11,
+         4209
+        ],
+        [
+         12,
+         4528
+        ],
+        [
+         13,
+         4847
+        ],
+        [
+         14,
+         5166
+        ],
+        [
+         15,
+         5485
+        ],
+        [
+         16,
+         5804
+        ],
+        [
+         17,
+         6123
+        ],
+        [
+         18,
+         6442
+        ],
+        [
+         19,
+         6761
+        ],
+        [
+         20,
+         7080
+        ],
+        [
+         21,
+         7399
+        ],
+        [
+         22,
+         7718
+        ],
+        [
+         23,
+         8037
+        ],
+        [
+         24,
+         8356
+        ],
+        [
+         25,
+         8675
+        ],
+        [
+         26,
+         8994
+        ],
+        [
+         27,
+         9313
+        ],
+        [
+         28,
+         9632
+        ],
+        [
+         29,
+         9951
+        ],
+        [
+         30,
+         10270
+        ],
+        [
+         31,
+         10589
+        ],
+        [
+         32,
+         10908
+        ],
+        [
+         33,
+         11227
+        ],
+        [
+         34,
+         11546
+        ],
+        [
+         35,
+         11865
+        ],
+        [
+         36,
+         12184
+        ],
+        [
+         37,
+         12503
+        ],
+        [
+         38,
+         12822
+        ],
+        [
+         39,
+         13141
+        ],
+        [
+         40,
+         13460
+        ],
+        [
+         41,
+         13779
+        ],
+        [
+         42,
+         14098
+        ],
+        [
+         43,
+         14417
+        ],
+        [
+         44,
+         14736
+        ],
+        [
+         45,
+         15055
+        ],
+        [
+         46,
+         15374
+        ],
+        [
+         47,
+         15693
+        ],
+        [
+         48,
+         16012
+        ],
+        [
+         49,
+         16331
+        ],
+        [
+         50,
+         16650
+        ],
+        [
+         51,
+         16969
+        ],
+        [
+         52,
+         17288
+        ],
+        [
+         53,
+         17607
+        ],
+        [
+         54,
+         17926
+        ],
+        [
+         55,
+         18245
+        ],
+        [
+         56,
+         18564
+        ],
+        [
+         57,
+         18883
+        ],
+        [
+         58,
+         19202
+        ],
+        [
+         59,
+         19521
+        ],
+        [
+         60,
+         19840
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $339m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         339
+        ],
+        [
+         2,
+         678
+        ],
+        [
+         3,
+         1017
+        ],
+        [
+         4,
+         1356
+        ],
+        [
+         5,
+         1695
+        ],
+        [
+         6,
+         2034
+        ],
+        [
+         7,
+         2373
+        ],
+        [
+         8,
+         2712
+        ],
+        [
+         9,
+         3051
+        ],
+        [
+         10,
+         3390
+        ],
+        [
+         11,
+         3729
+        ],
+        [
+         12,
+         4068
+        ],
+        [
+         13,
+         4407
+        ],
+        [
+         14,
+         4746
+        ],
+        [
+         15,
+         5085
+        ],
+        [
+         16,
+         5424
+        ],
+        [
+         17,
+         5763
+        ],
+        [
+         18,
+         6102
+        ],
+        [
+         19,
+         6441
+        ],
+        [
+         20,
+         6780
+        ],
+        [
+         21,
+         7119
+        ],
+        [
+         22,
+         7458
+        ],
+        [
+         23,
+         7797
+        ],
+        [
+         24,
+         8136
+        ],
+        [
+         25,
+         8475
+        ],
+        [
+         26,
+         8814
+        ],
+        [
+         27,
+         9153
+        ],
+        [
+         28,
+         9492
+        ],
+        [
+         29,
+         9831
+        ],
+        [
+         30,
+         10170
+        ],
+        [
+         31,
+         10509
+        ],
+        [
+         32,
+         10848
+        ],
+        [
+         33,
+         11187
+        ],
+        [
+         34,
+         11526
+        ],
+        [
+         35,
+         11865
+        ],
+        [
+         36,
+         12204
+        ],
+        [
+         37,
+         12543
+        ],
+        [
+         38,
+         12882
+        ],
+        [
+         39,
+         13221
+        ],
+        [
+         40,
+         13560
+        ],
+        [
+         41,
+         13899
+        ],
+        [
+         42,
+         14238
+        ],
+        [
+         43,
+         14577
+        ],
+        [
+         44,
+         14916
+        ],
+        [
+         45,
+         15255
+        ],
+        [
+         46,
+         15594
+        ],
+        [
+         47,
+         15933
+        ],
+        [
+         48,
+         16272
+        ],
+        [
+         49,
+         16611
+        ],
+        [
+         50,
+         16950
+        ],
+        [
+         51,
+         17289
+        ],
+        [
+         52,
+         17628
+        ],
+        [
+         53,
+         17967
+        ],
+        [
+         54,
+         18306
+        ],
+        [
+         55,
+         18645
+        ],
+        [
+         56,
+         18984
+        ],
+        [
+         57,
+         19323
+        ],
+        [
+         58,
+         19662
+        ],
+        [
+         59,
+         20001
+        ],
+        [
+         60,
+         20340
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 35,
+       "y": 11865,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $700 origination fee and $319 a month. Offer B: no fee and $339 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "35",
+   "numeric": {
+    "value": 35,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set A(m) = B(m): fee + p_A·m = p_B·m, so m = [[fee || p_B − p_A]].",
+    "Substitute: m = [[$700 || $339 − $319]] = $700 ÷ $20 = 35.",
+    "Spreadsheet: =700/(339-319).",
+    "So the fee is \"paid back\" by the lower payment after 35 months. If the loan runs longer than that, Offer A costs less overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Both loans run the full 60 months. How much less does the cheaper offer cost in total?",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $288 + $344m",
+       "pts": [
+        [
+         0,
+         288
+        ],
+        [
+         1,
+         632
+        ],
+        [
+         2,
+         976
+        ],
+        [
+         3,
+         1320
+        ],
+        [
+         4,
+         1664
+        ],
+        [
+         5,
+         2008
+        ],
+        [
+         6,
+         2352
+        ],
+        [
+         7,
+         2696
+        ],
+        [
+         8,
+         3040
+        ],
+        [
+         9,
+         3384
+        ],
+        [
+         10,
+         3728
+        ],
+        [
+         11,
+         4072
+        ],
+        [
+         12,
+         4416
+        ],
+        [
+         13,
+         4760
+        ],
+        [
+         14,
+         5104
+        ],
+        [
+         15,
+         5448
+        ],
+        [
+         16,
+         5792
+        ],
+        [
+         17,
+         6136
+        ],
+        [
+         18,
+         6480
+        ],
+        [
+         19,
+         6824
+        ],
+        [
+         20,
+         7168
+        ],
+        [
+         21,
+         7512
+        ],
+        [
+         22,
+         7856
+        ],
+        [
+         23,
+         8200
+        ],
+        [
+         24,
+         8544
+        ],
+        [
+         25,
+         8888
+        ],
+        [
+         26,
+         9232
+        ],
+        [
+         27,
+         9576
+        ],
+        [
+         28,
+         9920
+        ],
+        [
+         29,
+         10264
+        ],
+        [
+         30,
+         10608
+        ],
+        [
+         31,
+         10952
+        ],
+        [
+         32,
+         11296
+        ],
+        [
+         33,
+         11640
+        ],
+        [
+         34,
+         11984
+        ],
+        [
+         35,
+         12328
+        ],
+        [
+         36,
+         12672
+        ],
+        [
+         37,
+         13016
+        ],
+        [
+         38,
+         13360
+        ],
+        [
+         39,
+         13704
+        ],
+        [
+         40,
+         14048
+        ],
+        [
+         41,
+         14392
+        ],
+        [
+         42,
+         14736
+        ],
+        [
+         43,
+         15080
+        ],
+        [
+         44,
+         15424
+        ],
+        [
+         45,
+         15768
+        ],
+        [
+         46,
+         16112
+        ],
+        [
+         47,
+         16456
+        ],
+        [
+         48,
+         16800
+        ],
+        [
+         49,
+         17144
+        ],
+        [
+         50,
+         17488
+        ],
+        [
+         51,
+         17832
+        ],
+        [
+         52,
+         18176
+        ],
+        [
+         53,
+         18520
+        ],
+        [
+         54,
+         18864
+        ],
+        [
+         55,
+         19208
+        ],
+        [
+         56,
+         19552
+        ],
+        [
+         57,
+         19896
+        ],
+        [
+         58,
+         20240
+        ],
+        [
+         59,
+         20584
+        ],
+        [
+         60,
+         20928
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $352m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         352
+        ],
+        [
+         2,
+         704
+        ],
+        [
+         3,
+         1056
+        ],
+        [
+         4,
+         1408
+        ],
+        [
+         5,
+         1760
+        ],
+        [
+         6,
+         2112
+        ],
+        [
+         7,
+         2464
+        ],
+        [
+         8,
+         2816
+        ],
+        [
+         9,
+         3168
+        ],
+        [
+         10,
+         3520
+        ],
+        [
+         11,
+         3872
+        ],
+        [
+         12,
+         4224
+        ],
+        [
+         13,
+         4576
+        ],
+        [
+         14,
+         4928
+        ],
+        [
+         15,
+         5280
+        ],
+        [
+         16,
+         5632
+        ],
+        [
+         17,
+         5984
+        ],
+        [
+         18,
+         6336
+        ],
+        [
+         19,
+         6688
+        ],
+        [
+         20,
+         7040
+        ],
+        [
+         21,
+         7392
+        ],
+        [
+         22,
+         7744
+        ],
+        [
+         23,
+         8096
+        ],
+        [
+         24,
+         8448
+        ],
+        [
+         25,
+         8800
+        ],
+        [
+         26,
+         9152
+        ],
+        [
+         27,
+         9504
+        ],
+        [
+         28,
+         9856
+        ],
+        [
+         29,
+         10208
+        ],
+        [
+         30,
+         10560
+        ],
+        [
+         31,
+         10912
+        ],
+        [
+         32,
+         11264
+        ],
+        [
+         33,
+         11616
+        ],
+        [
+         34,
+         11968
+        ],
+        [
+         35,
+         12320
+        ],
+        [
+         36,
+         12672
+        ],
+        [
+         37,
+         13024
+        ],
+        [
+         38,
+         13376
+        ],
+        [
+         39,
+         13728
+        ],
+        [
+         40,
+         14080
+        ],
+        [
+         41,
+         14432
+        ],
+        [
+         42,
+         14784
+        ],
+        [
+         43,
+         15136
+        ],
+        [
+         44,
+         15488
+        ],
+        [
+         45,
+         15840
+        ],
+        [
+         46,
+         16192
+        ],
+        [
+         47,
+         16544
+        ],
+        [
+         48,
+         16896
+        ],
+        [
+         49,
+         17248
+        ],
+        [
+         50,
+         17600
+        ],
+        [
+         51,
+         17952
+        ],
+        [
+         52,
+         18304
+        ],
+        [
+         53,
+         18656
+        ],
+        [
+         54,
+         19008
+        ],
+        [
+         55,
+         19360
+        ],
+        [
+         56,
+         19712
+        ],
+        [
+         57,
+         20064
+        ],
+        [
+         58,
+         20416
+        ],
+        [
+         59,
+         20768
+        ],
+        [
+         60,
+         21120
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 36,
+       "y": 12672,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $288 origination fee and $344 a month. Offer B: no fee and $352 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$192",
+   "numeric": {
+    "value": 192,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: difference = |A(n) − B(n)|.",
+    "Substitute: A(60) = $288 + $344 × 60 = $20,928; B(60) = $352 × 60 = $21,120.",
+    "Spreadsheet: =ABS((288+344*60)-352*60).",
+    "So Offer A saves $192: the lines cross at month 36, before the loan ends."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Using Offer A's model A(m) = $390 + $357m, how much has Tyler paid after 15 months?",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $390 + $357m",
+       "pts": [
+        [
+         0,
+         390
+        ],
+        [
+         1,
+         747
+        ],
+        [
+         2,
+         1104
+        ],
+        [
+         3,
+         1461
+        ],
+        [
+         4,
+         1818
+        ],
+        [
+         5,
+         2175
+        ],
+        [
+         6,
+         2532
+        ],
+        [
+         7,
+         2889
+        ],
+        [
+         8,
+         3246
+        ],
+        [
+         9,
+         3603
+        ],
+        [
+         10,
+         3960
+        ],
+        [
+         11,
+         4317
+        ],
+        [
+         12,
+         4674
+        ],
+        [
+         13,
+         5031
+        ],
+        [
+         14,
+         5388
+        ],
+        [
+         15,
+         5745
+        ],
+        [
+         16,
+         6102
+        ],
+        [
+         17,
+         6459
+        ],
+        [
+         18,
+         6816
+        ],
+        [
+         19,
+         7173
+        ],
+        [
+         20,
+         7530
+        ],
+        [
+         21,
+         7887
+        ],
+        [
+         22,
+         8244
+        ],
+        [
+         23,
+         8601
+        ],
+        [
+         24,
+         8958
+        ],
+        [
+         25,
+         9315
+        ],
+        [
+         26,
+         9672
+        ],
+        [
+         27,
+         10029
+        ],
+        [
+         28,
+         10386
+        ],
+        [
+         29,
+         10743
+        ],
+        [
+         30,
+         11100
+        ],
+        [
+         31,
+         11457
+        ],
+        [
+         32,
+         11814
+        ],
+        [
+         33,
+         12171
+        ],
+        [
+         34,
+         12528
+        ],
+        [
+         35,
+         12885
+        ],
+        [
+         36,
+         13242
+        ],
+        [
+         37,
+         13599
+        ],
+        [
+         38,
+         13956
+        ],
+        [
+         39,
+         14313
+        ],
+        [
+         40,
+         14670
+        ],
+        [
+         41,
+         15027
+        ],
+        [
+         42,
+         15384
+        ],
+        [
+         43,
+         15741
+        ],
+        [
+         44,
+         16098
+        ],
+        [
+         45,
+         16455
+        ],
+        [
+         46,
+         16812
+        ],
+        [
+         47,
+         17169
+        ],
+        [
+         48,
+         17526
+        ],
+        [
+         49,
+         17883
+        ],
+        [
+         50,
+         18240
+        ],
+        [
+         51,
+         18597
+        ],
+        [
+         52,
+         18954
+        ],
+        [
+         53,
+         19311
+        ],
+        [
+         54,
+         19668
+        ],
+        [
+         55,
+         20025
+        ],
+        [
+         56,
+         20382
+        ],
+        [
+         57,
+         20739
+        ],
+        [
+         58,
+         21096
+        ],
+        [
+         59,
+         21453
+        ],
+        [
+         60,
+         21810
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $367m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         367
+        ],
+        [
+         2,
+         734
+        ],
+        [
+         3,
+         1101
+        ],
+        [
+         4,
+         1468
+        ],
+        [
+         5,
+         1835
+        ],
+        [
+         6,
+         2202
+        ],
+        [
+         7,
+         2569
+        ],
+        [
+         8,
+         2936
+        ],
+        [
+         9,
+         3303
+        ],
+        [
+         10,
+         3670
+        ],
+        [
+         11,
+         4037
+        ],
+        [
+         12,
+         4404
+        ],
+        [
+         13,
+         4771
+        ],
+        [
+         14,
+         5138
+        ],
+        [
+         15,
+         5505
+        ],
+        [
+         16,
+         5872
+        ],
+        [
+         17,
+         6239
+        ],
+        [
+         18,
+         6606
+        ],
+        [
+         19,
+         6973
+        ],
+        [
+         20,
+         7340
+        ],
+        [
+         21,
+         7707
+        ],
+        [
+         22,
+         8074
+        ],
+        [
+         23,
+         8441
+        ],
+        [
+         24,
+         8808
+        ],
+        [
+         25,
+         9175
+        ],
+        [
+         26,
+         9542
+        ],
+        [
+         27,
+         9909
+        ],
+        [
+         28,
+         10276
+        ],
+        [
+         29,
+         10643
+        ],
+        [
+         30,
+         11010
+        ],
+        [
+         31,
+         11377
+        ],
+        [
+         32,
+         11744
+        ],
+        [
+         33,
+         12111
+        ],
+        [
+         34,
+         12478
+        ],
+        [
+         35,
+         12845
+        ],
+        [
+         36,
+         13212
+        ],
+        [
+         37,
+         13579
+        ],
+        [
+         38,
+         13946
+        ],
+        [
+         39,
+         14313
+        ],
+        [
+         40,
+         14680
+        ],
+        [
+         41,
+         15047
+        ],
+        [
+         42,
+         15414
+        ],
+        [
+         43,
+         15781
+        ],
+        [
+         44,
+         16148
+        ],
+        [
+         45,
+         16515
+        ],
+        [
+         46,
+         16882
+        ],
+        [
+         47,
+         17249
+        ],
+        [
+         48,
+         17616
+        ],
+        [
+         49,
+         17983
+        ],
+        [
+         50,
+         18350
+        ],
+        [
+         51,
+         18717
+        ],
+        [
+         52,
+         19084
+        ],
+        [
+         53,
+         19451
+        ],
+        [
+         54,
+         19818
+        ],
+        [
+         55,
+         20185
+        ],
+        [
+         56,
+         20552
+        ],
+        [
+         57,
+         20919
+        ],
+        [
+         58,
+         21286
+        ],
+        [
+         59,
+         21653
+        ],
+        [
+         60,
+         22020
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 39,
+       "y": 14313,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $390 origination fee and $357 a month. Offer B: no fee and $367 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$5,745",
+   "numeric": {
+    "value": 5745,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(m) = fee + payment × m.",
+    "Substitute: $390 + $357 × 15 = $5,745.",
+    "Spreadsheet: =390+357*15.",
+    "So after 15 months Offer A has cost $5,745, against $5,505 for Offer B."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many months have the two offers cost the same total? (Where the lines cross.)",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $270 + $337m",
+       "pts": [
+        [
+         0,
+         270
+        ],
+        [
+         1,
+         607
+        ],
+        [
+         2,
+         944
+        ],
+        [
+         3,
+         1281
+        ],
+        [
+         4,
+         1618
+        ],
+        [
+         5,
+         1955
+        ],
+        [
+         6,
+         2292
+        ],
+        [
+         7,
+         2629
+        ],
+        [
+         8,
+         2966
+        ],
+        [
+         9,
+         3303
+        ],
+        [
+         10,
+         3640
+        ],
+        [
+         11,
+         3977
+        ],
+        [
+         12,
+         4314
+        ],
+        [
+         13,
+         4651
+        ],
+        [
+         14,
+         4988
+        ],
+        [
+         15,
+         5325
+        ],
+        [
+         16,
+         5662
+        ],
+        [
+         17,
+         5999
+        ],
+        [
+         18,
+         6336
+        ],
+        [
+         19,
+         6673
+        ],
+        [
+         20,
+         7010
+        ],
+        [
+         21,
+         7347
+        ],
+        [
+         22,
+         7684
+        ],
+        [
+         23,
+         8021
+        ],
+        [
+         24,
+         8358
+        ],
+        [
+         25,
+         8695
+        ],
+        [
+         26,
+         9032
+        ],
+        [
+         27,
+         9369
+        ],
+        [
+         28,
+         9706
+        ],
+        [
+         29,
+         10043
+        ],
+        [
+         30,
+         10380
+        ],
+        [
+         31,
+         10717
+        ],
+        [
+         32,
+         11054
+        ],
+        [
+         33,
+         11391
+        ],
+        [
+         34,
+         11728
+        ],
+        [
+         35,
+         12065
+        ],
+        [
+         36,
+         12402
+        ],
+        [
+         37,
+         12739
+        ],
+        [
+         38,
+         13076
+        ],
+        [
+         39,
+         13413
+        ],
+        [
+         40,
+         13750
+        ],
+        [
+         41,
+         14087
+        ],
+        [
+         42,
+         14424
+        ],
+        [
+         43,
+         14761
+        ],
+        [
+         44,
+         15098
+        ],
+        [
+         45,
+         15435
+        ],
+        [
+         46,
+         15772
+        ],
+        [
+         47,
+         16109
+        ],
+        [
+         48,
+         16446
+        ],
+        [
+         49,
+         16783
+        ],
+        [
+         50,
+         17120
+        ],
+        [
+         51,
+         17457
+        ],
+        [
+         52,
+         17794
+        ],
+        [
+         53,
+         18131
+        ],
+        [
+         54,
+         18468
+        ],
+        [
+         55,
+         18805
+        ],
+        [
+         56,
+         19142
+        ],
+        [
+         57,
+         19479
+        ],
+        [
+         58,
+         19816
+        ],
+        [
+         59,
+         20153
+        ],
+        [
+         60,
+         20490
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $352m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         352
+        ],
+        [
+         2,
+         704
+        ],
+        [
+         3,
+         1056
+        ],
+        [
+         4,
+         1408
+        ],
+        [
+         5,
+         1760
+        ],
+        [
+         6,
+         2112
+        ],
+        [
+         7,
+         2464
+        ],
+        [
+         8,
+         2816
+        ],
+        [
+         9,
+         3168
+        ],
+        [
+         10,
+         3520
+        ],
+        [
+         11,
+         3872
+        ],
+        [
+         12,
+         4224
+        ],
+        [
+         13,
+         4576
+        ],
+        [
+         14,
+         4928
+        ],
+        [
+         15,
+         5280
+        ],
+        [
+         16,
+         5632
+        ],
+        [
+         17,
+         5984
+        ],
+        [
+         18,
+         6336
+        ],
+        [
+         19,
+         6688
+        ],
+        [
+         20,
+         7040
+        ],
+        [
+         21,
+         7392
+        ],
+        [
+         22,
+         7744
+        ],
+        [
+         23,
+         8096
+        ],
+        [
+         24,
+         8448
+        ],
+        [
+         25,
+         8800
+        ],
+        [
+         26,
+         9152
+        ],
+        [
+         27,
+         9504
+        ],
+        [
+         28,
+         9856
+        ],
+        [
+         29,
+         10208
+        ],
+        [
+         30,
+         10560
+        ],
+        [
+         31,
+         10912
+        ],
+        [
+         32,
+         11264
+        ],
+        [
+         33,
+         11616
+        ],
+        [
+         34,
+         11968
+        ],
+        [
+         35,
+         12320
+        ],
+        [
+         36,
+         12672
+        ],
+        [
+         37,
+         13024
+        ],
+        [
+         38,
+         13376
+        ],
+        [
+         39,
+         13728
+        ],
+        [
+         40,
+         14080
+        ],
+        [
+         41,
+         14432
+        ],
+        [
+         42,
+         14784
+        ],
+        [
+         43,
+         15136
+        ],
+        [
+         44,
+         15488
+        ],
+        [
+         45,
+         15840
+        ],
+        [
+         46,
+         16192
+        ],
+        [
+         47,
+         16544
+        ],
+        [
+         48,
+         16896
+        ],
+        [
+         49,
+         17248
+        ],
+        [
+         50,
+         17600
+        ],
+        [
+         51,
+         17952
+        ],
+        [
+         52,
+         18304
+        ],
+        [
+         53,
+         18656
+        ],
+        [
+         54,
+         19008
+        ],
+        [
+         55,
+         19360
+        ],
+        [
+         56,
+         19712
+        ],
+        [
+         57,
+         20064
+        ],
+        [
+         58,
+         20416
+        ],
+        [
+         59,
+         20768
+        ],
+        [
+         60,
+         21120
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 18,
+       "y": 6336,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $270 origination fee and $337 a month. Offer B: no fee and $352 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "18",
+   "numeric": {
+    "value": 18,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set A(m) = B(m): fee + p_A·m = p_B·m, so m = [[fee || p_B − p_A]].",
+    "Substitute: m = [[$270 || $352 − $337]] = $270 ÷ $15 = 18.",
+    "Spreadsheet: =270/(352-337).",
+    "So the fee is \"paid back\" by the lower payment after 18 months. If the loan runs longer than that, Offer A costs less overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-m-offers-cross-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-m-offers-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Both loans run the full 60 months. How much less does the cheaper offer cost in total?",
+   "scenario": {
+    "graph": {
+     "title": "Total paid on two loan offers",
+     "x": {
+      "label": "Months, m",
+      "min": 0,
+      "max": 60,
+      "step": 12,
+      "money": false
+     },
+     "y": {
+      "label": "Total paid",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Offer A: A(m) = $600 + $285m",
+       "pts": [
+        [
+         0,
+         600
+        ],
+        [
+         1,
+         885
+        ],
+        [
+         2,
+         1170
+        ],
+        [
+         3,
+         1455
+        ],
+        [
+         4,
+         1740
+        ],
+        [
+         5,
+         2025
+        ],
+        [
+         6,
+         2310
+        ],
+        [
+         7,
+         2595
+        ],
+        [
+         8,
+         2880
+        ],
+        [
+         9,
+         3165
+        ],
+        [
+         10,
+         3450
+        ],
+        [
+         11,
+         3735
+        ],
+        [
+         12,
+         4020
+        ],
+        [
+         13,
+         4305
+        ],
+        [
+         14,
+         4590
+        ],
+        [
+         15,
+         4875
+        ],
+        [
+         16,
+         5160
+        ],
+        [
+         17,
+         5445
+        ],
+        [
+         18,
+         5730
+        ],
+        [
+         19,
+         6015
+        ],
+        [
+         20,
+         6300
+        ],
+        [
+         21,
+         6585
+        ],
+        [
+         22,
+         6870
+        ],
+        [
+         23,
+         7155
+        ],
+        [
+         24,
+         7440
+        ],
+        [
+         25,
+         7725
+        ],
+        [
+         26,
+         8010
+        ],
+        [
+         27,
+         8295
+        ],
+        [
+         28,
+         8580
+        ],
+        [
+         29,
+         8865
+        ],
+        [
+         30,
+         9150
+        ],
+        [
+         31,
+         9435
+        ],
+        [
+         32,
+         9720
+        ],
+        [
+         33,
+         10005
+        ],
+        [
+         34,
+         10290
+        ],
+        [
+         35,
+         10575
+        ],
+        [
+         36,
+         10860
+        ],
+        [
+         37,
+         11145
+        ],
+        [
+         38,
+         11430
+        ],
+        [
+         39,
+         11715
+        ],
+        [
+         40,
+         12000
+        ],
+        [
+         41,
+         12285
+        ],
+        [
+         42,
+         12570
+        ],
+        [
+         43,
+         12855
+        ],
+        [
+         44,
+         13140
+        ],
+        [
+         45,
+         13425
+        ],
+        [
+         46,
+         13710
+        ],
+        [
+         47,
+         13995
+        ],
+        [
+         48,
+         14280
+        ],
+        [
+         49,
+         14565
+        ],
+        [
+         50,
+         14850
+        ],
+        [
+         51,
+         15135
+        ],
+        [
+         52,
+         15420
+        ],
+        [
+         53,
+         15705
+        ],
+        [
+         54,
+         15990
+        ],
+        [
+         55,
+         16275
+        ],
+        [
+         56,
+         16560
+        ],
+        [
+         57,
+         16845
+        ],
+        [
+         58,
+         17130
+        ],
+        [
+         59,
+         17415
+        ],
+        [
+         60,
+         17700
+        ]
+       ]
+      },
+      {
+       "name": "Offer B: B(m) = $300m",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         300
+        ],
+        [
+         2,
+         600
+        ],
+        [
+         3,
+         900
+        ],
+        [
+         4,
+         1200
+        ],
+        [
+         5,
+         1500
+        ],
+        [
+         6,
+         1800
+        ],
+        [
+         7,
+         2100
+        ],
+        [
+         8,
+         2400
+        ],
+        [
+         9,
+         2700
+        ],
+        [
+         10,
+         3000
+        ],
+        [
+         11,
+         3300
+        ],
+        [
+         12,
+         3600
+        ],
+        [
+         13,
+         3900
+        ],
+        [
+         14,
+         4200
+        ],
+        [
+         15,
+         4500
+        ],
+        [
+         16,
+         4800
+        ],
+        [
+         17,
+         5100
+        ],
+        [
+         18,
+         5400
+        ],
+        [
+         19,
+         5700
+        ],
+        [
+         20,
+         6000
+        ],
+        [
+         21,
+         6300
+        ],
+        [
+         22,
+         6600
+        ],
+        [
+         23,
+         6900
+        ],
+        [
+         24,
+         7200
+        ],
+        [
+         25,
+         7500
+        ],
+        [
+         26,
+         7800
+        ],
+        [
+         27,
+         8100
+        ],
+        [
+         28,
+         8400
+        ],
+        [
+         29,
+         8700
+        ],
+        [
+         30,
+         9000
+        ],
+        [
+         31,
+         9300
+        ],
+        [
+         32,
+         9600
+        ],
+        [
+         33,
+         9900
+        ],
+        [
+         34,
+         10200
+        ],
+        [
+         35,
+         10500
+        ],
+        [
+         36,
+         10800
+        ],
+        [
+         37,
+         11100
+        ],
+        [
+         38,
+         11400
+        ],
+        [
+         39,
+         11700
+        ],
+        [
+         40,
+         12000
+        ],
+        [
+         41,
+         12300
+        ],
+        [
+         42,
+         12600
+        ],
+        [
+         43,
+         12900
+        ],
+        [
+         44,
+         13200
+        ],
+        [
+         45,
+         13500
+        ],
+        [
+         46,
+         13800
+        ],
+        [
+         47,
+         14100
+        ],
+        [
+         48,
+         14400
+        ],
+        [
+         49,
+         14700
+        ],
+        [
+         50,
+         15000
+        ],
+        [
+         51,
+         15300
+        ],
+        [
+         52,
+         15600
+        ],
+        [
+         53,
+         15900
+        ],
+        [
+         54,
+         16200
+        ],
+        [
+         55,
+         16500
+        ],
+        [
+         56,
+         16800
+        ],
+        [
+         57,
+         17100
+        ],
+        [
+         58,
+         17400
+        ],
+        [
+         59,
+         17700
+        ],
+        [
+         60,
+         18000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 40,
+       "y": 12000,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Offer A: $600 origination fee and $285 a month. Offer B: no fee and $300 a month. Both last 60 months."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$300",
+   "numeric": {
+    "value": 300,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: difference = |A(n) − B(n)|.",
+    "Substitute: A(60) = $600 + $285 × 60 = $17,700; B(60) = $300 × 60 = $18,000.",
+    "Spreadsheet: =ABS((600+285*60)-300*60).",
+    "So Offer A saves $300: the lines cross at month 40, before the loan ends."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell C8, =ROUND(E7*$B$2/12,2), display? (The interest in month 1.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$10,000",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "9%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "36",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Andre's amortization template (Spreadsheet Lab 2). B4 displays $318."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$75",
+   "numeric": {
+    "value": 75,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12, rounded to the cent.",
+    "Substitute: $10,000 × 0.09 ÷ 12 = $75.",
+    "Spreadsheet: $B$2 is an absolute reference, so the formula still points at the APR when it is filled down the table.",
+    "So $75 of the first $318 payment is interest; the other $243 pays down the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell E9 display: the balance after payment 2?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$16,000.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "7.5%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "24",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Noah's amortization template (Spreadsheet Lab 2). B4 displays $719.99."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$14,756.15",
+   "numeric": {
+    "value": 14756.15,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: each row: interest = previous balance × APR ÷ 12; principal = payment − interest; new balance = previous balance − principal.",
+    "Row 8: interest $100.00, principal $619.99, balance $15,380.01.",
+    "Row 9: interest = $15,380.01 × 0.075 ÷ 12 = $96.13; principal = $623.86; balance = $15,380.01 − $623.86 = $14,756.15.",
+    "Spreadsheet: select A9:E9 and fill down to row 31 to finish the table; the last balance should be about $0.00.",
+    "So after two payments Noah still owes $14,756.15."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Grace adds cell B5 with =B4*B3-B1. What does it display, the total interest over the life of the loan?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$21,500.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "4.5%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "12",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Grace's amortization template (Spreadsheet Lab 2). B4 displays $1,835.64."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$527.68",
+   "numeric": {
+    "value": 527.68,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: total interest = payment × number of payments − amount borrowed.",
+    "Substitute: $1,835.64 × 12 − $21,500.00 = $22,027.68 − $21,500.00 = $527.68.",
+    "Spreadsheet: =B4*B3-B1, or =SUM(C8:C19) once the table is filled down (the two can differ by a few cents of rounding).",
+    "So borrowing $21,500.00 for 12 months costs $527.68 in interest, 2.5% of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell C8, =ROUND(E7*$B$2/12,2), display? (The interest in month 1.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$11,000.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "7.5%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "24",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Tyler's amortization template (Spreadsheet Lab 2). B4 displays $495.00."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$68.75",
+   "numeric": {
+    "value": 68.75,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12, rounded to the cent.",
+    "Substitute: $11,000.00 × 0.075 ÷ 12 = $68.75.",
+    "Spreadsheet: $B$2 is an absolute reference, so the formula still points at the APR when it is filled down the table.",
+    "So $68.75 of the first $495.00 payment is interest; the other $426.25 pays down the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell E9 display: the balance after payment 2?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$16,500.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "9%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "48",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Fatima's amortization template (Spreadsheet Lab 2). B4 displays $410.60."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$15,924.15",
+   "numeric": {
+    "value": 15924.15,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: each row: interest = previous balance × APR ÷ 12; principal = payment − interest; new balance = previous balance − principal.",
+    "Row 8: interest $123.75, principal $286.85, balance $16,213.15.",
+    "Row 9: interest = $16,213.15 × 0.09 ÷ 12 = $121.60; principal = $289.00; balance = $16,213.15 − $289.00 = $15,924.15.",
+    "Spreadsheet: select A9:E9 and fill down to row 55 to finish the table; the last balance should be about $0.00.",
+    "So after two payments Fatima still owes $15,924.15."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Riley adds cell B5 with =B4*B3-B1. What does it display, the total interest over the life of the loan?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$13,500.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "7.5%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "36",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Riley's amortization template (Spreadsheet Lab 2). B4 displays $419.93."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,617.48",
+   "numeric": {
+    "value": 1617.48,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: total interest = payment × number of payments − amount borrowed.",
+    "Substitute: $419.93 × 36 − $13,500.00 = $15,117.48 − $13,500.00 = $1,617.48.",
+    "Spreadsheet: =B4*B3-B1, or =SUM(C8:C43) once the table is filled down (the two can differ by a few cents of rounding).",
+    "So borrowing $13,500.00 for 36 months costs $1,617.48 in interest, 12.0% of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell C8, =ROUND(E7*$B$2/12,2), display? (The interest in month 1.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$15,500.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "4.5%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "36",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Mateo's amortization template (Spreadsheet Lab 2). B4 displays $461.08."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$58.13",
+   "numeric": {
+    "value": 58.13,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: interest = balance × APR ÷ 12, rounded to the cent.",
+    "Substitute: $15,500.00 × 0.045 ÷ 12 = $58.13.",
+    "Spreadsheet: $B$2 is an absolute reference, so the formula still points at the APR when it is filled down the table.",
+    "So $58.13 of the first $461.08 payment is interest; the other $402.95 pays down the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell E9 display: the balance after payment 2?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$7,000.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "9%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "48",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Owen's amortization template (Spreadsheet Lab 2). B4 displays $174.20."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6,755.69",
+   "numeric": {
+    "value": 6755.69,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: each row: interest = previous balance × APR ÷ 12; principal = payment − interest; new balance = previous balance − principal.",
+    "Row 8: interest $52.50, principal $121.70, balance $6,878.30.",
+    "Row 9: interest = $6,878.30 × 0.09 ÷ 12 = $51.59; principal = $122.61; balance = $6,878.30 − $122.61 = $6,755.69.",
+    "Spreadsheet: select A9:E9 and fill down to row 55 to finish the table; the last balance should be about $0.00.",
+    "So after two payments Owen still owes $6,755.69."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-x-amortization-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-x-amortization",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Owen adds cell B5 with =B4*B3-B1. What does it display, the total interest over the life of the loan?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "rows": [
+      [
+       "1",
+       "Loan amount",
+       "$12,000.00",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2",
+       "APR",
+       "7.5%",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3",
+       "Months",
+       "36",
+       "",
+       "",
+       ""
+      ],
+      [
+       "4",
+       "Payment",
+       "=ROUND(PMT(B2/12,B3,-B1),2)",
+       "",
+       "",
+       ""
+      ],
+      [
+       "5",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "6",
+       "Payment #",
+       "Payment",
+       "Interest",
+       "Principal",
+       "Balance"
+      ],
+      [
+       "7",
+       "0",
+       "",
+       "",
+       "",
+       "=B1"
+      ],
+      [
+       "8",
+       "1",
+       "=$B$4",
+       "=ROUND(E7*$B$2/12,2)",
+       "=B8-C8",
+       "=E7-D8"
+      ],
+      [
+       "9",
+       "2",
+       "=$B$4",
+       "=ROUND(E8*$B$2/12,2)",
+       "=B9-C9",
+       "=E8-D9"
+      ]
+     ],
+     "caption": "Owen's amortization template (Spreadsheet Lab 2). B4 displays $373.27."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,437.72",
+   "numeric": {
+    "value": 1437.72,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: total interest = payment × number of payments − amount borrowed.",
+    "Substitute: $373.27 × 36 − $12,000.00 = $13,437.72 − $12,000.00 = $1,437.72.",
+    "Spreadsheet: =B4*B3-B1, or =SUM(C8:C43) once the table is filled down (the two can differ by a few cents of rounding).",
+    "So borrowing $12,000.00 for 36 months costs $1,437.72 in interest, 12.0% of the loan."
    ]
   },
   {
@@ -10404,9 +17026,12 @@
    "answer": "$284.58",
    "solutionSteps": [
     "Mistake: Used n = 4 (years); monthly payments need n = 48 months.",
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with n = years × 12 and i = APR ÷ 12.",
     "n = 12 × 4 = 48 payments.",
     "r = 0.065 ÷ 12; payment = $284.58.",
-    "Correct result: $284.58."
+    "Correct result: $284.58.",
+    "Spreadsheet or calculator: =PMT(0.065/12,48,-12000)",
+    "So the answer is $284.58; make sure the payment fits the budget with insurance and upkeep included."
    ],
    "numeric": {
     "value": 284.58,
@@ -10474,7 +17099,7 @@
    "id": "fa-borrowing-s02-err-down-payment-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "down-payment-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -10502,9 +17127,12 @@
    "answer": "$22,000",
    "solutionSteps": [
     "Mistake: Did not subtract the down payment from the price.",
+    "Formula: amount financed = price − down payment.",
     "Amount financed = price − down payment.",
     "$26,500 − $4,500 = $22,000.",
-    "Correct result: $22,000."
+    "Correct result: $22,000.",
+    "Spreadsheet or calculator: =26500-4500",
+    "So the answer is $22,000; a lower payment over a longer term usually costs more in total."
    ],
    "numeric": {
     "value": 22000,
@@ -10600,9 +17228,12 @@
    "answer": "$228.26",
    "solutionSteps": [
     "Mistake: Forgot that the first part of each payment goes to interest.",
+    "Formula: principal = payment − balance × APR ÷ 12.",
     "Interest = $12,500.00 × 0.066 ÷ 12 = $68.75.",
     "Principal = $297.01 − $68.75 = $228.26.",
-    "Correct result: $228.26."
+    "Correct result: $228.26.",
+    "Spreadsheet or calculator: =297.01-68.75",
+    "So the answer is $228.26; early payments are mostly interest, later ones mostly principal."
    ],
    "numeric": {
     "value": 228.26,
@@ -10698,9 +17329,12 @@
    "answer": "$18,400",
    "solutionSteps": [
     "Mistake: Added the trade-in value; a trade-in lowers the amount financed.",
+    "Formula: amount financed = price − trade-in − down payment.",
     "Financed = price − trade-in − down payment.",
     "$28,400 − $6,500 − $3,500 = $18,400.",
-    "Correct result: $18,400."
+    "Correct result: $18,400.",
+    "Spreadsheet or calculator: =28400-6500-3500",
+    "So the answer is $18,400; compare loans by total cost, not just the monthly payment."
    ],
    "numeric": {
     "value": 18400,

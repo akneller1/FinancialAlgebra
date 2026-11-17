@@ -73,3 +73,12 @@
 }
 @media (max-width:600px){.fa-sheet{padding:16px}.fa-sheet-head{flex-direction:column}}
 @media (prefers-color-scheme:dark){.fa-doc{background:#16183a}.fa-key{background:#123826;color:#e6fff1}.fa-model{background:#1d2150;color:#eef}.fa-note{background:#3a3210;color:#fff}.fa-sheet{background:#fff;color:#14173a}}
+
+/* Graphs (2026-11-17) */
+.fa-graph{margin:10px 0;max-width:600px}.fa-graph figcaption{font-weight:700;margin-bottom:4px}
+.fa-graph .fa-g-svg{width:100%;height:auto;background:#fff;border:1px solid #c9cbe0;border-radius:8px;font:12px system-ui,sans-serif;fill:#333}
+.fa-g-grid{stroke:#e3e5f0;stroke-width:1}.fa-g-axis{stroke:#555;stroke-width:1.4}.fa-g-lab{font-weight:700;fill:#222}
+.fa-g-mark{fill:#111}.fa-g-mlab{font-weight:700;fill:#111;paint-order:stroke;stroke:#fff;stroke-width:3px}
+.fa-g-key{list-style:none;padding:0;margin:4px 0;display:flex;flex-wrap:wrap;gap:4px 16px}.fa-g-key li{display:flex;align-items:center;gap:6px}
+.fa-g-cap{font-size:.9rem;margin:2px 0}
+@media print{.fa-graph{break-inside:avoid}}

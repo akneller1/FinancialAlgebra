@@ -13,21 +13,47 @@
  "skills": [
   {
    "id": "income-skill-01",
-   "name": "Compare salary and hourly pay"
+   "name": "Compare salary and hourly pay",
+   "standards": [
+    "Earning Income 12-1: Compensation for a job",
+    "Earning Income 12-4: Wages and productivity"
+   ]
   },
   {
    "id": "income-skill-02",
-   "name": "Calculate gross and net income"
+   "name": "Calculate gross and net income",
+   "standards": [
+    "Earning Income 12-1: Compensation for a job",
+    "Earning Income 12-6: Federal, state and local taxes"
+   ]
   },
   {
    "id": "income-skill-03",
-   "name": "Interpret pay stubs"
+   "name": "Interpret pay stubs",
+   "standards": [
+    "Earning Income 12-6: Federal, state and local taxes",
+    "Earning Income 12-7: Major types of taxes"
+   ]
   },
   {
    "id": "income-skill-04",
-   "name": "Model income taxes"
+   "name": "Model income taxes",
+   "standards": [
+    "Earning Income 12-6: Federal, state and local taxes",
+    "Earning Income 12-7: Major types of taxes",
+    "Earning Income 12-9: Tax deductions and credits"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": []
+ },
  "vocab": [
   {
    "term": "Gross pay",
@@ -2519,9 +2545,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly pay = wage × hours per week × 52 (+ overtime hours × 1.5 × wage).",
     "Regular: $16.25 × 30 × 52 = $25,350.00.",
     "No overtime.",
-    "Total = $25,350.00."
+    "Total = $25,350.00.",
+    "Spreadsheet or calculator: =16.25*30*52",
+    "So the answer is $25,350.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2548,9 +2577,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly pay = wage × hours per week × 52 (+ overtime hours × 1.5 × wage).",
     "Regular: $17.50 × 30 × 52 = $27,300.00.",
     "No overtime.",
-    "Total = $27,300.00."
+    "Total = $27,300.00.",
+    "Spreadsheet or calculator: =17.50*30*52",
+    "So the answer is $27,300.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2577,9 +2609,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly pay = wage × hours per week × 52 (+ overtime hours × 1.5 × wage).",
     "Regular: $26.50 × 40 × 52 = $55,120.00.",
     "No overtime.",
-    "Total = $55,120.00."
+    "Total = $55,120.00.",
+    "Spreadsheet or calculator: =26.50*40*52",
+    "So the answer is $55,120.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2606,9 +2641,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly pay = wage × hours per week × 52 (+ overtime hours × 1.5 × wage).",
     "Regular: $16.25 × 40 × 50 = $32,500.00.",
     "No overtime.",
-    "Total = $32,500.00."
+    "Total = $32,500.00.",
+    "Spreadsheet or calculator: =16.25*40*50",
+    "So the answer is $32,500.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2635,9 +2673,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly pay = wage × hours per week × 52 (+ overtime hours × 1.5 × wage).",
     "Regular: $23.40 × 30 × 52 = $36,504.00.",
     "No overtime.",
-    "Total = $36,504.00."
+    "Total = $36,504.00.",
+    "Spreadsheet or calculator: =23.40*30*52",
+    "So the answer is $36,504.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2664,9 +2705,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly pay = wage × hours per week × 52 (+ overtime hours × 1.5 × wage).",
     "Regular: $16.25 × 30 × 52 = $25,350.00.",
     "No overtime.",
-    "Total = $25,350.00."
+    "Total = $25,350.00.",
+    "Spreadsheet or calculator: =16.25*30*52",
+    "So the answer is $25,350.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2693,9 +2737,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly pay = wage × hours per week × 52 (+ overtime hours × 1.5 × wage).",
     "Regular: $26.50 × 40 × 50 = $53,000.00.",
     "Overtime: $26.50 × 1.5 × 3 × 50 = $5,962.50.",
-    "Total = $58,962.50."
+    "Total = $58,962.50.",
+    "Spreadsheet or calculator: =(26.50*1.5*3*50)+(26.50*40*50)",
+    "So the answer is $58,962.50; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2722,8 +2769,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: hourly rate = salary ÷ (40 × 52).",
     "Hours per year = 40 × 52 = 2080.",
-    "$44,000.00 ÷ 2080 = $21.15 per hour."
+    "$44,000.00 ÷ 2080 = $21.15 per hour.",
+    "Spreadsheet or calculator: =44000.00/2080",
+    "So the answer is $21.15; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2750,8 +2800,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: hourly rate = salary ÷ (40 × 52).",
     "Hours per year = 45 × 52 = 2340.",
     "$33,000.00 ÷ 2340 = $14.10 per hour.",
+    "Spreadsheet or calculator: =33000.00/2340",
     "Long hours lower the effective hourly rate of a salary."
    ]
   },
@@ -2779,8 +2831,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: hourly rate = salary ÷ (40 × 52).",
     "Hours per year = 50 × 52 = 2600.",
     "$58,000.00 ÷ 2600 = $22.31 per hour.",
+    "Spreadsheet or calculator: =58000.00/2600",
     "Long hours lower the effective hourly rate of a salary."
    ]
   },
@@ -2808,8 +2862,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: hourly rate = salary ÷ (40 × 52).",
     "Hours per year = 45 × 52 = 2340.",
     "$82,000.00 ÷ 2340 = $35.04 per hour.",
+    "Spreadsheet or calculator: =82000.00/2340",
     "Long hours lower the effective hourly rate of a salary."
    ]
   },
@@ -2837,8 +2893,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: hourly rate = salary ÷ (40 × 52).",
     "Hours per year = 40 × 52 = 2080.",
-    "$52,000 ÷ 2080 = $25 per hour."
+    "$52,000 ÷ 2080 = $25 per hour.",
+    "Spreadsheet or calculator: =52000/2080",
+    "So the answer is $25; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2865,8 +2924,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: hourly rate = salary ÷ (40 × 52).",
     "Hours per year = 40 × 52 = 2080.",
-    "$50,000.00 ÷ 2080 = $24.04 per hour."
+    "$50,000.00 ÷ 2080 = $24.04 per hour.",
+    "Spreadsheet or calculator: =50000.00/2080",
+    "So the answer is $24.04; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -2893,9 +2955,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = 40 × wage + (hours − 40) × 1.5 × wage.",
     "Regular: 40 × $15.75 = $630.00.",
     "Overtime: 6 × 1.5 × $15.75 = $141.75.",
-    "Total = $771.75."
+    "Total = $771.75.",
+    "Spreadsheet or calculator: =(6*1.5*15.75)+(40*15.75)",
+    "So the answer is $771.75; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ],
    "misconceptions": [
     "Paying all hours at 1.5× or paying overtime hours at the regular rate."
@@ -2925,9 +2990,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = 40 × wage + (hours − 40) × 1.5 × wage.",
     "Regular: 40 × $17 = $680.",
     "Overtime: 12 × 1.5 × $17 = $306.",
-    "Total = $986."
+    "Total = $986.",
+    "Spreadsheet or calculator: =(12*1.5*17)+(40*17)",
+    "So the answer is $986; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ],
    "misconceptions": [
     "Paying all hours at 1.5× or paying overtime hours at the regular rate."
@@ -2957,9 +3025,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = 40 × wage + (hours − 40) × 1.5 × wage.",
     "Regular: 40 × $18.60 = $744.00.",
     "Overtime: 10 × 1.5 × $18.60 = $279.00.",
-    "Total = $1,023.00."
+    "Total = $1,023.00.",
+    "Spreadsheet or calculator: =(10*1.5*18.60)+(40*18.60)",
+    "So the answer is $1,023.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ],
    "misconceptions": [
     "Paying all hours at 1.5× or paying overtime hours at the regular rate."
@@ -2989,9 +3060,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = 40 × wage + (hours − 40) × 1.5 × wage.",
     "Regular: 40 × $15.75 = $630.00.",
     "Overtime: 5 × 1.5 × $15.75 = $118.13.",
-    "Total = $748.13."
+    "Total = $748.13.",
+    "Spreadsheet or calculator: =(5*1.5*15.75)+(40*15.75)",
+    "So the answer is $748.13; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ],
    "misconceptions": [
     "Paying all hours at 1.5× or paying overtime hours at the regular rate."
@@ -3021,9 +3095,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = 40 × wage + (hours − 40) × 1.5 × wage.",
     "Regular: 40 × $15.75 = $630.00.",
     "Overtime: 2 × 1.5 × $15.75 = $47.25.",
-    "Total = $677.25."
+    "Total = $677.25.",
+    "Spreadsheet or calculator: =(2*1.5*15.75)+(40*15.75)",
+    "So the answer is $677.25; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ],
    "misconceptions": [
     "Paying all hours at 1.5× or paying overtime hours at the regular rate."
@@ -3053,9 +3130,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = 40 × wage + (hours − 40) × 1.5 × wage.",
     "Regular: 40 × $18.60 = $744.00.",
     "Overtime: 10 × 1.5 × $18.60 = $279.00.",
-    "Total = $1,023.00."
+    "Total = $1,023.00.",
+    "Spreadsheet or calculator: =(10*1.5*18.60)+(40*18.60)",
+    "So the answer is $1,023.00; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ],
    "misconceptions": [
     "Paying all hours at 1.5× or paying overtime hours at the regular rate."
@@ -3085,8 +3165,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 0.03 × $63,500 = $1,905.",
     "Gross = $2,400 + $1,905 = $4,305.",
+    "Spreadsheet or calculator: =2400+1905",
     "Commission income varies; budget on a conservative month."
    ]
   },
@@ -3114,8 +3196,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 0.04 × $74,000 = $2,960.",
     "Gross = $2,400 + $2,960 = $5,360.",
+    "Spreadsheet or calculator: =2400+2960",
     "Commission income varies; budget on a conservative month."
    ]
   },
@@ -3143,8 +3227,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 0.05 × $69,500 = $3,475.",
     "Gross = $2,000 + $3,475 = $5,475.",
+    "Spreadsheet or calculator: =2000+3475",
     "Commission income varies; budget on a conservative month."
    ]
   },
@@ -3172,8 +3258,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 0.03 × $51,000 = $1,530.",
     "Gross = $2,000 + $1,530 = $3,530.",
+    "Spreadsheet or calculator: =2000+1530",
     "Commission income varies; budget on a conservative month."
    ]
   },
@@ -3201,8 +3289,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 0.05 × $49,500 = $2,475.",
     "Gross = $2,400 + $2,475 = $4,875.",
+    "Spreadsheet or calculator: =2400+2475",
     "Commission income varies; budget on a conservative month."
    ]
   },
@@ -3230,8 +3320,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 0.03 × $41,000 = $1,230.",
     "Gross = $2,400 + $1,230 = $3,630.",
+    "Spreadsheet or calculator: =2400+1230",
     "Commission income varies; budget on a conservative month."
    ]
   },
@@ -3945,8 +4037,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross per paycheck = yearly salary ÷ paychecks per year.",
     "monthly → 12 paychecks per year.",
-    "$36,000 ÷ 12 = $3,000."
+    "$36,000 ÷ 12 = $3,000.",
+    "Spreadsheet or calculator: =36000/12",
+    "So the answer is $3,000; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -3973,8 +4068,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross per paycheck = yearly salary ÷ paychecks per year.",
     "semimonthly → 24 paychecks per year.",
-    "$39,000 ÷ 24 = $1,625."
+    "$39,000 ÷ 24 = $1,625.",
+    "Spreadsheet or calculator: =39000/24",
+    "So the answer is $1,625; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4001,8 +4099,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross per paycheck = yearly salary ÷ paychecks per year.",
     "monthly → 12 paychecks per year.",
-    "$49,000.00 ÷ 12 = $4,083.33."
+    "$49,000.00 ÷ 12 = $4,083.33.",
+    "Spreadsheet or calculator: =49000.00/12",
+    "So the answer is $4,083.33; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4029,8 +4130,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross per paycheck = yearly salary ÷ paychecks per year.",
     "semimonthly → 24 paychecks per year.",
-    "$52,000.00 ÷ 24 = $2,166.67."
+    "$52,000.00 ÷ 24 = $2,166.67.",
+    "Spreadsheet or calculator: =52000.00/24",
+    "So the answer is $2,166.67; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4057,8 +4161,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross per paycheck = yearly salary ÷ paychecks per year.",
     "monthly → 12 paychecks per year.",
-    "$37,000.00 ÷ 12 = $3,083.33."
+    "$37,000.00 ÷ 12 = $3,083.33.",
+    "Spreadsheet or calculator: =37000.00/12",
+    "So the answer is $3,083.33; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4085,8 +4192,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross per paycheck = yearly salary ÷ paychecks per year.",
     "biweekly → 26 paychecks per year.",
-    "$58,000.00 ÷ 26 = $2,230.77."
+    "$58,000.00 ÷ 26 = $2,230.77.",
+    "Spreadsheet or calculator: =58000.00/26",
+    "So the answer is $2,230.77; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4113,9 +4223,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − total deductions.",
     "Total deductions = $571.",
     "Net = $2,000 − $571 = $1,429.",
-    "Percent withheld = $571 ÷ $2,000 ≈ 28.6%."
+    "Percent withheld = $571 ÷ $2,000 ≈ 28.6%.",
+    "Spreadsheet or calculator: =2000-571",
+    "So the answer is $1,429; 28.6% withheld; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4142,9 +4255,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − total deductions.",
     "Total deductions = $477.73.",
     "Net = $1,650.00 − $477.73 = $1,172.27.",
-    "Percent withheld = $477.73 ÷ $1,650.00 ≈ 29%."
+    "Percent withheld = $477.73 ÷ $1,650.00 ≈ 29%.",
+    "Spreadsheet or calculator: =1650.00-477.73",
+    "So the answer is $1,172.27; 29% withheld; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4171,9 +4287,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − total deductions.",
     "Total deductions = $459.66.",
     "Net = $1,525.00 − $459.66 = $1,065.34.",
-    "Percent withheld = $459.66 ÷ $1,525.00 ≈ 30.1%."
+    "Percent withheld = $459.66 ÷ $1,525.00 ≈ 30.1%.",
+    "Spreadsheet or calculator: =1525.00-459.66",
+    "So the answer is $1,065.34; 30.1% withheld; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4200,9 +4319,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − total deductions.",
     "Total deductions = $466.49.",
     "Net = $2,075.00 − $466.49 = $1,608.51.",
-    "Percent withheld = $466.49 ÷ $2,075.00 ≈ 22.5%."
+    "Percent withheld = $466.49 ÷ $2,075.00 ≈ 22.5%.",
+    "Spreadsheet or calculator: =2075.00-466.49",
+    "So the answer is $1,608.51; 22.5% withheld; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4229,9 +4351,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − total deductions.",
     "Total deductions = $651.64.",
     "Net = $2,175.00 − $651.64 = $1,523.36.",
-    "Percent withheld = $651.64 ÷ $2,175.00 ≈ 30%."
+    "Percent withheld = $651.64 ÷ $2,175.00 ≈ 30%.",
+    "Spreadsheet or calculator: =2175.00-651.64",
+    "So the answer is $1,523.36; 30% withheld; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4258,9 +4383,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − total deductions.",
     "Total deductions = $417.10.",
     "Net = $1,400.00 − $417.10 = $982.90.",
-    "Percent withheld = $417.10 ÷ $1,400.00 ≈ 29.8%."
+    "Percent withheld = $417.10 ÷ $1,400.00 ≈ 29.8%.",
+    "Spreadsheet or calculator: =1400.00-417.10",
+    "So the answer is $982.90; 29.8% withheld; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -4287,9 +4415,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security = $2,760.00 × 0.062 = $171.12.",
     "Medicare = $2,760.00 × 0.0145 = $40.02.",
-    "FICA = $211.14."
+    "FICA = $211.14.",
+    "Spreadsheet or calculator: =(2760.00*0.0145)+(2760.00*0.062)",
+    "So the answer is $211.14; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -4316,9 +4447,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security = $1,080.00 × 0.062 = $66.96.",
     "Medicare = $1,080.00 × 0.0145 = $15.66.",
-    "FICA = $82.62."
+    "FICA = $82.62.",
+    "Spreadsheet or calculator: =(1080.00*0.0145)+(1080.00*0.062)",
+    "So the answer is $82.62; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -4345,9 +4479,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security = $1,760.00 × 0.062 = $109.12.",
     "Medicare = $1,760.00 × 0.0145 = $25.52.",
-    "FICA = $134.64."
+    "FICA = $134.64.",
+    "Spreadsheet or calculator: =(1760.00*0.0145)+(1760.00*0.062)",
+    "So the answer is $134.64; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -4374,9 +4511,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security = $2,610.00 × 0.062 = $161.82.",
     "Medicare = $2,610.00 × 0.0145 = $37.85.",
-    "FICA = $199.67."
+    "FICA = $199.67.",
+    "Spreadsheet or calculator: =(2610.00*0.0145)+(2610.00*0.062)",
+    "So the answer is $199.67; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -4403,9 +4543,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security = $1,230.00 × 0.062 = $76.26.",
     "Medicare = $1,230.00 × 0.0145 = $17.84.",
-    "FICA = $94.10."
+    "FICA = $94.10.",
+    "Spreadsheet or calculator: =(1230.00*0.0145)+(1230.00*0.062)",
+    "So the answer is $94.10; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -4432,9 +4575,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security = $2,970.00 × 0.062 = $184.14.",
     "Medicare = $2,970.00 × 0.0145 = $43.07.",
-    "FICA = $227.21."
+    "FICA = $227.21.",
+    "Spreadsheet or calculator: =(2970.00*0.0145)+(2970.00*0.062)",
+    "So the answer is $227.21; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -4739,7 +4885,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Gross $1,625.00 − deductions $413.14 = $1,211.86."
+    "Formula: net pay = gross pay − total deductions.",
+    "Gross $1,625.00 − deductions $413.14 = $1,211.86.",
+    "Spreadsheet or calculator: =1625.00-413.14",
+    "So the answer is $1,211.86; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -4839,7 +4988,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$600.63 × 52 = $31,232.76."
+    "Formula: net pay = gross pay − total deductions.",
+    "$600.63 × 52 = $31,232.76.",
+    "Spreadsheet or calculator: =600.63*52",
+    "So the answer is $31,232.76; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -4944,7 +5096,9 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "Total deductions $211.27 ÷ gross $846.15 = 25%."
+    "Formula: net pay = gross pay − total deductions.",
+    "Total deductions $211.27 ÷ gross $846.15 = 25%.",
+    "So the answer is 24.97%; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -5044,7 +5198,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Gross $788.46 − deductions $187.83 = $600.63."
+    "Formula: net pay = gross pay − total deductions.",
+    "Gross $788.46 − deductions $187.83 = $600.63.",
+    "Spreadsheet or calculator: =788.46-187.83",
+    "So the answer is $600.63; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -5144,7 +5301,10 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "Total deductions $285.62 ÷ gross $1,307.69 = 21.8%."
+    "Formula: net pay = gross pay − total deductions.",
+    "Total deductions $285.62 ÷ gross $1,307.69 = 21.8%.",
+    "Spreadsheet or calculator: =PMT(0.0145/12,13,0,-285.62)",
+    "So the answer is 21.84%; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -5239,7 +5399,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Gross $942.31 − deductions $193.05 = $749.26."
+    "Formula: net pay = gross pay − total deductions.",
+    "Gross $942.31 − deductions $193.05 = $749.26.",
+    "Spreadsheet or calculator: =942.31-193.05",
+    "So the answer is $749.26; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -5344,7 +5507,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Gross $1,416.67 − deductions $339.96 = $1,076.71."
+    "Formula: net pay = gross pay − total deductions.",
+    "Gross $1,416.67 − deductions $339.96 = $1,076.71.",
+    "Spreadsheet or calculator: =1416.67-339.96",
+    "So the answer is $1,076.71; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -5449,7 +5615,9 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "Total deductions $386.16 ÷ gross $1,625.00 = 23.8%."
+    "Formula: net pay = gross pay − total deductions.",
+    "Total deductions $386.16 ÷ gross $1,625.00 = 23.8%.",
+    "So the answer is 23.76%; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -5518,10 +5686,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = Σ (40 × wage + overtime hours × 1.5 × wage), week by week.",
     "Week 1: 40 × $18.50 = $740.00.",
     "Week 2: 40 × $18.50 + 4 × 1.5 × $18.50 = $851.00.",
     "The stub paid all 84 hours at the regular rate, missing the overtime premium.",
     "Correct gross = $1,591.00; difference $37.00.",
+    "Spreadsheet or calculator: =(40*18.50+4*1.5*18.50)+(40*18.50)",
     "Overtime is calculated per workweek, not per pay period. Report errors to payroll promptly."
    ]
   },
@@ -5591,10 +5761,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = Σ (40 × wage + overtime hours × 1.5 × wage), week by week.",
     "Week 1: 40 × $21 = $840.",
     "Week 2: 40 × $21 + 8 × 1.5 × $21 = $1,092.",
     "The stub paid all 88 hours at the regular rate, missing the overtime premium.",
     "Correct gross = $1,932; difference $84.",
+    "Spreadsheet or calculator: =(40*21+8*1.5*21)+(40*21)",
     "Overtime is calculated per workweek, not per pay period. Report errors to payroll promptly."
    ]
   },
@@ -5664,10 +5836,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = Σ (40 × wage + overtime hours × 1.5 × wage), week by week.",
     "Week 1: 40 × $17.25 = $690.00.",
     "Week 2: 40 × $17.25 + 10 × 1.5 × $17.25 = $948.75.",
     "The stub paid all 90 hours at the regular rate, missing the overtime premium.",
     "Correct gross = $1,638.75; difference $86.25.",
+    "Spreadsheet or calculator: =(40*17.25+10*1.5*17.25)+(40*17.25)",
     "Overtime is calculated per workweek, not per pay period. Report errors to payroll promptly."
    ]
   },
@@ -5737,10 +5911,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = Σ (40 × wage + overtime hours × 1.5 × wage), week by week.",
     "Week 1: 40 × $18.50 = $740.00.",
     "Week 2: 40 × $18.50 + 4 × 1.5 × $18.50 = $851.00.",
     "The stub paid all 84 hours at the regular rate, missing the overtime premium.",
     "Correct gross = $1,591.00; difference $37.00.",
+    "Spreadsheet or calculator: =(40*18.50+4*1.5*18.50)+(40*18.50)",
     "Overtime is calculated per workweek, not per pay period. Report errors to payroll promptly."
    ]
   },
@@ -5810,10 +5986,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = Σ (40 × wage + overtime hours × 1.5 × wage), week by week.",
     "Week 1: 40 × $18.50 = $740.00.",
     "Week 2: 40 × $18.50 + 6 × 1.5 × $18.50 = $906.50.",
     "The stub paid all 86 hours at the regular rate, missing the overtime premium.",
     "Correct gross = $1,646.50; difference $55.50.",
+    "Spreadsheet or calculator: =(40*18.50+6*1.5*18.50)+(40*18.50)",
     "Overtime is calculated per workweek, not per pay period. Report errors to payroll promptly."
    ]
   },
@@ -6430,10 +6608,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × the first bracket + 12% × (taxable income − first bracket limit), with taxable income = income − standard deduction.",
     "Taxable = $49,000 − $15,000 = $34,000.",
     "10% × ($12,000 − $0) = $1,200",
     "12% × ($34,000 − $12,000) = $2,640",
-    "Total = $3,840; effective rate on gross ≈ 7.8%."
+    "Total = $3,840; effective rate on gross ≈ 7.8%.",
+    "Spreadsheet or calculator: =(12%*(34000-12000))+(10%*(12000-0))",
+    "So the answer is $3,840; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -6460,10 +6641,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × the first bracket + 12% × (taxable income − first bracket limit), with taxable income = income − standard deduction.",
     "Taxable = $48,000 − $15,000 = $33,000.",
     "10% × ($12,000 − $0) = $1,200",
     "12% × ($33,000 − $12,000) = $2,520",
-    "Total = $3,720; effective rate on gross ≈ 7.8%."
+    "Total = $3,720; effective rate on gross ≈ 7.8%.",
+    "Spreadsheet or calculator: =(12%*(33000-12000))+(10%*(12000-0))",
+    "So the answer is $3,720; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -6490,10 +6674,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × the first bracket + 12% × (taxable income − first bracket limit), with taxable income = income − standard deduction.",
     "Taxable = $54,000 − $15,000 = $39,000.",
     "10% × ($12,000 − $0) = $1,200",
     "12% × ($39,000 − $12,000) = $3,240",
-    "Total = $4,440; effective rate on gross ≈ 8.2%."
+    "Total = $4,440; effective rate on gross ≈ 8.2%.",
+    "Spreadsheet or calculator: =(12%*(39000-12000))+(10%*(12000-0))",
+    "So the answer is $4,440; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -6520,10 +6707,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × the first bracket + 12% × (taxable income − first bracket limit), with taxable income = income − standard deduction.",
     "Taxable = $47,000 − $15,000 = $32,000.",
     "10% × ($12,000 − $0) = $1,200",
     "12% × ($32,000 − $12,000) = $2,400",
-    "Total = $3,600; effective rate on gross ≈ 7.7%."
+    "Total = $3,600; effective rate on gross ≈ 7.7%.",
+    "Spreadsheet or calculator: =(12%*(32000-12000))+(10%*(12000-0))",
+    "So the answer is $3,600; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -6550,11 +6740,14 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × the first bracket + 12% × (taxable income − first bracket limit), with taxable income = income − standard deduction.",
     "Taxable = $82,000 − $15,000 = $67,000.",
     "10% × ($12,000 − $0) = $1,200",
     "12% × ($48,000 − $12,000) = $4,320",
     "22% × ($67,000 − $48,000) = $4,180",
-    "Total = $9,700; effective rate on gross ≈ 11.8%."
+    "Total = $9,700; effective rate on gross ≈ 11.8%.",
+    "Spreadsheet or calculator: =(10%*(12000-0))+(12%*(48000-12000))+(22%*(67000-48000))",
+    "So the answer is $9,700; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -6581,10 +6774,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × the first bracket + 12% × (taxable income − first bracket limit), with taxable income = income − standard deduction.",
     "Taxable = $44,000 − $15,000 = $29,000.",
     "10% × ($12,000 − $0) = $1,200",
     "12% × ($29,000 − $12,000) = $2,040",
-    "Total = $3,240; effective rate on gross ≈ 7.4%."
+    "Total = $3,240; effective rate on gross ≈ 7.4%.",
+    "Spreadsheet or calculator: =(12%*(29000-12000))+(10%*(12000-0))",
+    "So the answer is $3,240; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -6611,10 +6807,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × the first bracket + 12% × (taxable income − first bracket limit), with taxable income = income − standard deduction.",
     "Taxable = $50,000 − $15,000 = $35,000.",
     "10% × ($12,000 − $0) = $1,200",
     "12% × ($35,000 − $12,000) = $2,760",
-    "Total = $3,960; effective rate on gross ≈ 7.9%."
+    "Total = $3,960; effective rate on gross ≈ 7.9%.",
+    "Spreadsheet or calculator: =(12%*(35000-12000))+(10%*(12000-0))",
+    "So the answer is $3,960; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -7088,8 +7287,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 4% × $29,000 = $1,160.",
     "Gross pay = base + commission = $2,500 + $1,160 = $3,660.",
+    "Spreadsheet or calculator: =2500+1160",
     "Commission pay rises and falls with sales, so a budget should plan around the base salary."
    ]
   },
@@ -7117,8 +7318,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 6% × $55,500 = $3,330.",
     "Gross pay = base + commission = $2,450 + $3,330 = $5,780.",
+    "Spreadsheet or calculator: =2450+3330",
     "Commission pay rises and falls with sales, so a budget should plan around the base salary."
    ]
   },
@@ -7146,8 +7349,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 3% × $43,500 = $1,305.",
     "Gross pay = base + commission = $2,150 + $1,305 = $3,455.",
+    "Spreadsheet or calculator: =2150+1305",
     "Commission pay rises and falls with sales, so a budget should plan around the base salary."
    ]
   },
@@ -7175,8 +7380,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 6% × $26,000 = $1,560.",
     "Gross pay = base + commission = $2,600 + $1,560 = $4,160.",
+    "Spreadsheet or calculator: =2600+1560",
     "Commission pay rises and falls with sales, so a budget should plan around the base salary."
    ]
   },
@@ -7204,8 +7411,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 6% × $47,500 = $2,850.",
     "Gross pay = base + commission = $1,950 + $2,850 = $4,800.",
+    "Spreadsheet or calculator: =1950+2850",
     "Commission pay rises and falls with sales, so a budget should plan around the base salary."
    ]
   },
@@ -7233,8 +7442,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 3% × $23,500 = $705.",
     "Gross pay = base + commission = $2,450 + $705 = $3,155.",
+    "Spreadsheet or calculator: =2450+705",
     "Commission pay rises and falls with sales, so a budget should plan around the base salary."
    ]
   },
@@ -7262,8 +7473,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: gross pay = base + commission rate × sales.",
     "Commission = 3% × $35,000 = $1,050.",
     "Gross pay = base + commission = $2,750 + $1,050 = $3,800.",
+    "Spreadsheet or calculator: =2750+1050",
     "Commission pay rises and falls with sales, so a budget should plan around the base salary."
    ]
   },
@@ -7291,9 +7504,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security: 6.2% × $1,860.50 = $115.35.",
     "Medicare: 1.45% × $1,860.50 = $26.98.",
-    "FICA = $115.35 + $26.98 = $142.33 (7.65% of gross)."
+    "FICA = $115.35 + $26.98 = $142.33 (7.65% of gross).",
+    "Spreadsheet or calculator: =115.35+26.98",
+    "So the answer is $142.33; plan spending around net pay, the money that actually reaches the bank."
    ],
    "misconceptions": [
     "Using only the Social Security rate, or applying FICA to net pay instead of gross pay."
@@ -7323,9 +7539,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security: 6.2% × $1,597.00 = $99.01.",
     "Medicare: 1.45% × $1,597.00 = $23.16.",
-    "FICA = $99.01 + $23.16 = $122.17 (7.65% of gross)."
+    "FICA = $99.01 + $23.16 = $122.17 (7.65% of gross).",
+    "Spreadsheet or calculator: =99.01+23.16",
+    "So the answer is $122.17; plan spending around net pay, the money that actually reaches the bank."
    ],
    "misconceptions": [
     "Using only the Social Security rate, or applying FICA to net pay instead of gross pay."
@@ -7355,9 +7574,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security: 6.2% × $2,286.50 = $141.76.",
     "Medicare: 1.45% × $2,286.50 = $33.15.",
-    "FICA = $141.76 + $33.15 = $174.91 (7.65% of gross)."
+    "FICA = $141.76 + $33.15 = $174.91 (7.65% of gross).",
+    "Spreadsheet or calculator: =141.76+33.15",
+    "So the answer is $174.91; plan spending around net pay, the money that actually reaches the bank."
    ],
    "misconceptions": [
     "Using only the Social Security rate, or applying FICA to net pay instead of gross pay."
@@ -7387,9 +7609,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security: 6.2% × $2,018.50 = $125.15.",
     "Medicare: 1.45% × $2,018.50 = $29.27.",
-    "FICA = $125.15 + $29.27 = $154.42 (7.65% of gross)."
+    "FICA = $125.15 + $29.27 = $154.42 (7.65% of gross).",
+    "Spreadsheet or calculator: =125.15+29.27",
+    "So the answer is $154.42; plan spending around net pay, the money that actually reaches the bank."
    ],
    "misconceptions": [
     "Using only the Social Security rate, or applying FICA to net pay instead of gross pay."
@@ -7419,9 +7644,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security: 6.2% × $2,516.00 = $155.99.",
     "Medicare: 1.45% × $2,516.00 = $36.48.",
-    "FICA = $155.99 + $36.48 = $192.47 (7.65% of gross)."
+    "FICA = $155.99 + $36.48 = $192.47 (7.65% of gross).",
+    "Spreadsheet or calculator: =155.99+36.48",
+    "So the answer is $192.47; plan spending around net pay, the money that actually reaches the bank."
    ],
    "misconceptions": [
     "Using only the Social Security rate, or applying FICA to net pay instead of gross pay."
@@ -7451,9 +7679,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security: 6.2% × $1,192.00 = $73.90.",
     "Medicare: 1.45% × $1,192.00 = $17.28.",
-    "FICA = $73.90 + $17.28 = $91.18 (7.65% of gross)."
+    "FICA = $73.90 + $17.28 = $91.18 (7.65% of gross).",
+    "Spreadsheet or calculator: =73.90+17.28",
+    "So the answer is $91.18; plan spending around net pay, the money that actually reaches the bank."
    ],
    "misconceptions": [
     "Using only the Social Security rate, or applying FICA to net pay instead of gross pay."
@@ -7483,9 +7714,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FICA = gross × 6.2% + gross × 1.45%.",
     "Social Security: 6.2% × $1,915.00 = $118.73.",
     "Medicare: 1.45% × $1,915.00 = $27.77.",
-    "FICA = $118.73 + $27.77 = $146.50 (7.65% of gross)."
+    "FICA = $118.73 + $27.77 = $146.50 (7.65% of gross).",
+    "Spreadsheet or calculator: =118.73+27.77",
+    "So the answer is $146.50; plan spending around net pay, the money that actually reaches the bank."
    ],
    "misconceptions": [
     "Using only the Social Security rate, or applying FICA to net pay instead of gross pay."
@@ -7515,8 +7749,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: paychecks so far = year-to-date gross ÷ gross per paycheck.",
     "Year-to-date ÷ per-period amount = $34,140 ÷ $1,707.",
     "= 20 paychecks.",
+    "Spreadsheet or calculator: =34140/1707",
     "With 24 semimonthly paychecks in a year, 4 remain."
    ]
   },
@@ -7544,8 +7780,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: paychecks so far = year-to-date gross ÷ gross per paycheck.",
     "Year-to-date ÷ per-period amount = $14,260 ÷ $1,426.",
     "= 10 paychecks.",
+    "Spreadsheet or calculator: =14260/1426",
     "With 24 semimonthly paychecks in a year, 14 remain."
    ]
   },
@@ -7573,8 +7811,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: paychecks so far = year-to-date gross ÷ gross per paycheck.",
     "Year-to-date ÷ per-period amount = $22,657.50 ÷ $1,510.50.",
     "= 15 paychecks.",
+    "Spreadsheet or calculator: =22657.50/1510.50",
     "With 26 biweekly paychecks in a year, 11 remain."
    ]
   },
@@ -7602,8 +7842,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: paychecks so far = year-to-date gross ÷ gross per paycheck.",
     "Year-to-date ÷ per-period amount = $6,939.00 ÷ $1,156.50.",
     "= 6 paychecks.",
+    "Spreadsheet or calculator: =6939.00/1156.50",
     "With 52 weekly paychecks in a year, 46 remain."
    ]
   },
@@ -7631,8 +7873,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: paychecks so far = year-to-date gross ÷ gross per paycheck.",
     "Year-to-date ÷ per-period amount = $23,587.50 ÷ $1,572.50.",
     "= 15 paychecks.",
+    "Spreadsheet or calculator: =23587.50/1572.50",
     "With 52 weekly paychecks in a year, 37 remain."
    ]
   },
@@ -7660,8 +7904,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: paychecks so far = year-to-date gross ÷ gross per paycheck.",
     "Year-to-date ÷ per-period amount = $11,927.50 ÷ $2,385.50.",
     "= 5 paychecks.",
+    "Spreadsheet or calculator: =11927.50/2385.50",
     "With 26 biweekly paychecks in a year, 21 remain."
    ]
   },
@@ -7689,8 +7935,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: paychecks so far = year-to-date gross ÷ gross per paycheck.",
     "Year-to-date ÷ per-period amount = $27,864.00 ÷ $1,741.50.",
     "= 16 paychecks.",
+    "Spreadsheet or calculator: =27864.00/1741.50",
     "With 24 semimonthly paychecks in a year, 8 remain."
    ]
   },
@@ -7718,8 +7966,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − sum of deductions.",
     "Total deductions = $93.27 + $96.38 + $22.54 + $77.73 = $289.92.",
     "Net pay = $1,554.50 − $289.92 = $1,264.58.",
+    "Spreadsheet or calculator: =1554.50-289.92",
     "If the stub shows a different number, there is a payroll error to report."
    ]
   },
@@ -7747,8 +7997,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − sum of deductions.",
     "Total deductions = $169.33 + $149.98 + $35.08 + $120.95 + $120.95 = $596.29.",
     "Net pay = $2,419.00 − $596.29 = $1,822.71.",
+    "Spreadsheet or calculator: =2419.00-596.29",
     "If the stub shows a different number, there is a payroll error to report."
    ]
   },
@@ -7776,8 +8028,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − sum of deductions.",
     "Total deductions = $160.55 + $142.20 + $33.26 + $114.68 + $114.68 = $565.37.",
     "Net pay = $2,293.50 − $565.37 = $1,728.13.",
+    "Spreadsheet or calculator: =2293.50-565.37",
     "If the stub shows a different number, there is a payroll error to report."
    ]
   },
@@ -7805,8 +8059,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − sum of deductions.",
     "Total deductions = $125.28 + $129.46 + $30.28 + $104.40 + $104.40 = $493.82.",
     "Net pay = $2,088.00 − $493.82 = $1,594.18.",
+    "Spreadsheet or calculator: =2088.00-493.82",
     "If the stub shows a different number, there is a payroll error to report."
    ]
   },
@@ -7834,8 +8090,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − sum of deductions.",
     "Total deductions = $108.96 + $84.44 + $19.75 + $54.48 + $40.86 = $308.49.",
     "Net pay = $1,362.00 − $308.49 = $1,053.51.",
+    "Spreadsheet or calculator: =1362.00-308.49",
     "If the stub shows a different number, there is a payroll error to report."
    ]
   },
@@ -7863,8 +8121,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − sum of deductions.",
     "Total deductions = $162.16 + $125.67 + $29.39 + $101.35 + $60.81 = $479.38.",
     "Net pay = $2,027.00 − $479.38 = $1,547.62.",
+    "Spreadsheet or calculator: =2027.00-479.38",
     "If the stub shows a different number, there is a payroll error to report."
    ]
   },
@@ -7892,8 +8152,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net pay = gross pay − sum of deductions.",
     "Total deductions = $189.77 + $130.73 + $30.57 + $63.26 + $63.26 = $477.59.",
     "Net pay = $2,108.50 − $477.59 = $1,630.91.",
+    "Spreadsheet or calculator: =2108.50-477.59",
     "If the stub shows a different number, there is a payroll error to report."
    ]
   },
@@ -7948,10 +8210,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $65,500 − $16,100 = $49,400.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($49,400 − $12,400) = $4,440.",
-    "Total federal income tax = $5,680."
+    "Total federal income tax = $5,680.",
+    "Spreadsheet or calculator: =(12%*(49400-12400))+(10%*(12400-0))",
+    "So the answer is $5,680; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8008,10 +8273,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $32,500 − $16,100 = $16,400.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($16,400 − $12,400) = $480.",
-    "Total federal income tax = $1,720."
+    "Total federal income tax = $1,720.",
+    "Spreadsheet or calculator: =(12%*(16400-12400))+(10%*(12400-0))",
+    "So the answer is $1,720; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8068,10 +8336,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $37,500 − $16,100 = $21,400.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($21,400 − $12,400) = $1,080.",
-    "Total federal income tax = $2,320."
+    "Total federal income tax = $2,320.",
+    "Spreadsheet or calculator: =(12%*(21400-12400))+(10%*(12400-0))",
+    "So the answer is $2,320; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8128,11 +8399,14 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $94,000 − $16,100 = $77,900.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($50,400 − $12,400) = $4,560.",
     "22% × ($77,900 − $50,400) = $6,050.",
-    "Total federal income tax = $11,850."
+    "Total federal income tax = $11,850.",
+    "Spreadsheet or calculator: =(10%*(12400-0))+(12%*(50400-12400))+(22%*(77900-50400))",
+    "So the answer is $11,850; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8189,10 +8463,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $47,500 − $16,100 = $31,400.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($31,400 − $12,400) = $2,280.",
-    "Total federal income tax = $3,520."
+    "Total federal income tax = $3,520.",
+    "Spreadsheet or calculator: =(12%*(31400-12400))+(10%*(12400-0))",
+    "So the answer is $3,520; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8249,11 +8526,14 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $87,000 − $16,100 = $70,900.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($50,400 − $12,400) = $4,560.",
     "22% × ($70,900 − $50,400) = $4,510.",
-    "Total federal income tax = $10,310."
+    "Total federal income tax = $10,310.",
+    "Spreadsheet or calculator: =(10%*(12400-0))+(12%*(50400-12400))+(22%*(70900-50400))",
+    "So the answer is $10,310; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8310,10 +8590,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $63,500 − $16,100 = $47,400.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($47,400 − $12,400) = $4,200.",
-    "Total federal income tax = $5,440."
+    "Total federal income tax = $5,440.",
+    "Spreadsheet or calculator: =(12%*(47400-12400))+(10%*(12400-0))",
+    "So the answer is $5,440; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8370,10 +8653,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: tax = 10% × $12,400 + 12% × (taxable − $12,400) + 22% × (taxable − $50,400 if over), with taxable = income − $16,100.",
     "Taxable income = $41,500 − $16,100 = $25,400.",
     "10% × ($12,400 − $0) = $1,240.",
     "12% × ($25,400 − $12,400) = $1,560.",
-    "Total federal income tax = $2,800."
+    "Total federal income tax = $2,800.",
+    "Spreadsheet or calculator: =(12%*(25400-12400))+(10%*(12400-0))",
+    "So the answer is $2,800; only income inside each bracket is taxed at that bracket's rate."
    ],
    "misconceptions": [
     "Applying the top bracket rate to all taxable income."
@@ -8683,8 +8969,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Social Security tax = 6.2% × the smaller of wages and the wage base.",
     "Only the first $184,500 is taxed for Social Security.",
     "6.2% × $184,500 = $11,439.",
+    "Spreadsheet or calculator: =6.2%*184500",
     "Medicare (1.45%) has no wage base, so it applies to every dollar."
    ]
   },
@@ -8712,8 +9000,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Social Security tax = 6.2% × the smaller of wages and the wage base.",
     "Only the first $184,500 is taxed for Social Security.",
     "6.2% × $184,500 = $11,439.",
+    "Spreadsheet or calculator: =6.2%*184500",
     "Medicare (1.45%) has no wage base, so it applies to every dollar."
    ]
   },
@@ -8741,8 +9031,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Social Security tax = 6.2% × the smaller of wages and the wage base.",
     "Only the first $184,500 is taxed for Social Security.",
     "6.2% × $184,500 = $11,439.",
+    "Spreadsheet or calculator: =6.2%*184500",
     "Medicare (1.45%) has no wage base, so it applies to every dollar."
    ]
   },
@@ -8770,8 +9062,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Social Security tax = 6.2% × the smaller of wages and the wage base.",
     "Only the first $184,500 is taxed for Social Security.",
     "6.2% × $184,500 = $11,439.",
+    "Spreadsheet or calculator: =6.2%*184500",
     "Medicare (1.45%) has no wage base, so it applies to every dollar."
    ]
   },
@@ -8799,8 +9093,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Social Security tax = 6.2% × the smaller of wages and the wage base.",
     "Only the first $184,500 is taxed for Social Security.",
     "6.2% × $184,500 = $11,439.",
+    "Spreadsheet or calculator: =6.2%*184500",
     "Medicare (1.45%) has no wage base, so it applies to every dollar."
    ]
   },
@@ -8828,8 +9124,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Social Security tax = 6.2% × the smaller of wages and the wage base.",
     "Only the first $184,500 is taxed for Social Security.",
     "6.2% × $184,500 = $11,439.",
+    "Spreadsheet or calculator: =6.2%*184500",
     "Medicare (1.45%) has no wage base, so it applies to every dollar."
    ]
   },
@@ -8857,7 +9155,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$23 × 2,080 = $47,840."
+    "Formula: yearly pay = hourly wage × 2,080.",
+    "$23 × 2,080 = $47,840.",
+    "Spreadsheet or calculator: =23*2080",
+    "So the answer is $47,840; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -8884,7 +9185,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$19 × 2,080 = $39,520."
+    "Formula: yearly pay = hourly wage × 2,080.",
+    "$19 × 2,080 = $39,520.",
+    "Spreadsheet or calculator: =19*2080",
+    "So the answer is $39,520; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -8911,7 +9215,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$30 × 2,080 = $62,400."
+    "Formula: yearly pay = hourly wage × 2,080.",
+    "$30 × 2,080 = $62,400.",
+    "Spreadsheet or calculator: =30*2080",
+    "So the answer is $62,400; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -8938,7 +9245,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$23 × 2,080 = $47,840."
+    "Formula: yearly pay = hourly wage × 2,080.",
+    "$23 × 2,080 = $47,840.",
+    "Spreadsheet or calculator: =23*2080",
+    "So the answer is $47,840; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ]
   },
   {
@@ -8963,9 +9273,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Offer B pay = wage × 40 × 50 + wage × 1.5 × overtime hours × 50; difference = |A − B|.",
     "Offer B regular: $22.00 × 40 × 50 = $44,000.00.",
     "Offer B overtime: $22.00 × 1.5 × 5 × 50 = $8,250.00.",
     "Offer B total $52,250.00 vs Offer A $46,000.00: difference $6,250.00.",
+    "Spreadsheet or calculator: =52250.00-46000.00",
     "Per hour, Offer A pays $18.43 because of its long hours."
    ]
   },
@@ -8991,9 +9303,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Offer B pay = wage × 40 × 50 + wage × 1.5 × overtime hours × 50; difference = |A − B|.",
     "Offer B regular: $25.50 × 40 × 50 = $51,000.00.",
     "Offer B overtime: $25.50 × 1.5 × 3 × 50 = $5,737.50.",
     "Offer B total $56,737.50 vs Offer A $56,000.00: difference $737.50.",
+    "Spreadsheet or calculator: =56737.50-56000.00",
     "Per hour, Offer A pays $23.93 because of its long hours."
    ]
   },
@@ -9019,9 +9333,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Offer B pay = wage × 40 × 50 + wage × 1.5 × overtime hours × 50; difference = |A − B|.",
     "Offer B regular: $23.50 × 40 × 50 = $47,000.00.",
     "Offer B overtime: $23.50 × 1.5 × 5 × 50 = $8,812.50.",
     "Offer B total $55,812.50 vs Offer A $51,000.00: difference $4,812.50.",
+    "Spreadsheet or calculator: =55812.50-51000.00",
     "Per hour, Offer A pays $21.79 because of its long hours."
    ]
   },
@@ -9047,9 +9363,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Offer B pay = wage × 40 × 50 + wage × 1.5 × overtime hours × 50; difference = |A − B|.",
     "Offer B regular: $24.00 × 40 × 50 = $48,000.00.",
     "Offer B overtime: $24.00 × 1.5 × 4 × 50 = $7,200.00.",
     "Offer B total $55,200.00 vs Offer A $55,000.00: difference $200.00.",
+    "Spreadsheet or calculator: =55200.00-55000.00",
     "Per hour, Offer A pays $21.15 because of its long hours."
    ]
   },
@@ -9077,7 +9395,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,650 − $490 = $1,160."
+    "Formula: Net pay = gross pay − deductions.",
+    "$1,650 − $490 = $1,160.",
+    "Spreadsheet or calculator: =1650-490",
+    "So the answer is $1,160; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -9104,7 +9425,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,200 − $450 = $1,750."
+    "Formula: Net pay = gross pay − deductions.",
+    "$2,200 − $450 = $1,750.",
+    "Spreadsheet or calculator: =2200-450",
+    "So the answer is $1,750; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -9131,7 +9455,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,200 − $430 = $1,770."
+    "Formula: Net pay = gross pay − deductions.",
+    "$2,200 − $430 = $1,770.",
+    "Spreadsheet or calculator: =2200-430",
+    "So the answer is $1,770; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -9158,7 +9485,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$850 − $230 = $620."
+    "Formula: Net pay = gross pay − deductions.",
+    "$850 − $230 = $620.",
+    "Spreadsheet or calculator: =850-230",
+    "So the answer is $620; plan spending around net pay, the money that actually reaches the bank."
    ]
   },
   {
@@ -9185,8 +9515,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = gross × (1 − rate), so gross = net ÷ (1 − rate).",
     "Net = gross × (1 − 0.18) = gross × 0.82.",
     "Gross = $1,918.00 ÷ 0.82 = $2,339.02.",
+    "Spreadsheet or calculator: =1918.00/0.82",
     "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
    ]
   },
@@ -9214,8 +9546,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = gross × (1 − rate), so gross = net ÷ (1 − rate).",
     "Net = gross × (1 − 0.24) = gross × 0.76.",
     "Gross = $3,143.50 ÷ 0.76 = $4,136.18.",
+    "Spreadsheet or calculator: =3143.50/0.76",
     "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
    ]
   },
@@ -9243,8 +9577,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = gross × (1 − rate), so gross = net ÷ (1 − rate).",
     "Net = gross × (1 − 0.25) = gross × 0.75.",
     "Gross = $2,383.00 ÷ 0.75 = $3,177.33.",
+    "Spreadsheet or calculator: =2383.00/0.75",
     "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
    ]
   },
@@ -9272,8 +9608,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = gross × (1 − rate), so gross = net ÷ (1 − rate).",
     "Net = gross × (1 − 0.24) = gross × 0.76.",
     "Gross = $2,272.00 ÷ 0.76 = $2,989.47.",
+    "Spreadsheet or calculator: =2272.00/0.76",
     "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
    ]
   },
@@ -9301,8 +9639,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = gross × (1 − rate), so gross = net ÷ (1 − rate).",
     "Net = gross × (1 − 0.2) = gross × 0.80.",
     "Gross = $1,306.50 ÷ 0.80 = $1,633.13.",
+    "Spreadsheet or calculator: =1306.50/0.80",
     "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
    ]
   },
@@ -9330,8 +9670,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = gross × (1 − rate), so gross = net ÷ (1 − rate).",
     "Net = gross × (1 − 0.24) = gross × 0.76.",
     "Gross = $1,874.00 ÷ 0.76 = $2,465.79.",
+    "Spreadsheet or calculator: =1874.00/0.76",
     "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
    ]
   },
@@ -9359,8 +9701,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = gross × (1 − rate), so gross = net ÷ (1 − rate).",
     "Net = gross × (1 − 0.24) = gross × 0.76.",
     "Gross = $2,069.50 ÷ 0.76 = $2,723.03.",
+    "Spreadsheet or calculator: =2069.50/0.76",
     "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
    ]
   },
@@ -9388,7 +9732,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20,100 + $1,550 = $21,650."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$20,100 + $1,550 = $21,650.",
+    "Spreadsheet or calculator: =20100+1550",
+    "So the answer is $21,650; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9415,7 +9762,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$19,600 + $1,450 = $21,050."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$19,600 + $1,450 = $21,050.",
+    "Spreadsheet or calculator: =19600+1450",
+    "So the answer is $21,050; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9442,7 +9792,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$27,100 + $1,150 = $28,250."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$27,100 + $1,150 = $28,250.",
+    "Spreadsheet or calculator: =27100+1150",
+    "So the answer is $28,250; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9469,7 +9822,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$12,000 + $1,450 = $13,450."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$12,000 + $1,450 = $13,450.",
+    "Spreadsheet or calculator: =12000+1450",
+    "So the answer is $13,450; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9496,7 +9852,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$9,500 + $1,350 = $10,850."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$9,500 + $1,350 = $10,850.",
+    "Spreadsheet or calculator: =9500+1350",
+    "So the answer is $10,850; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9523,7 +9882,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$11,400 + $1,750 = $13,150."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$11,400 + $1,750 = $13,150.",
+    "Spreadsheet or calculator: =11400+1750",
+    "So the answer is $13,150; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9550,7 +9912,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$19,400 + $1,550 = $20,950."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$19,400 + $1,550 = $20,950.",
+    "Spreadsheet or calculator: =19400+1550",
+    "So the answer is $20,950; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9577,7 +9942,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$27,800 + $1,700 = $29,500."
+    "Formula: New YTD = old YTD + this paycheck.",
+    "$27,800 + $1,700 = $29,500.",
+    "Spreadsheet or calculator: =27800+1700",
+    "So the answer is $29,500; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9602,8 +9970,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing deduction = (gross − net) − the other deductions.",
     "Total deductions = gross − net = $1,677.00 − $1,330.70 = $346.30.",
-    "State tax = $346.30 − ($150.93 + $103.97 + $24.32) = $67.08."
+    "State tax = $346.30 − ($150.93 + $103.97 + $24.32) = $67.08.",
+    "Spreadsheet or calculator: =346.30-(150.93+103.97+24.32)",
+    "So the answer is $67.08; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9628,8 +9999,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing deduction = (gross − net) − the other deductions.",
     "Total deductions = gross − net = $1,845.00 − $1,500.91 = $344.09.",
-    "State tax = $344.09 − ($129.15 + $114.39 + $26.75) = $73.80."
+    "State tax = $344.09 − ($129.15 + $114.39 + $26.75) = $73.80.",
+    "Spreadsheet or calculator: =344.09-(129.15+114.39+26.75)",
+    "So the answer is $73.80; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9654,8 +10028,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing deduction = (gross − net) − the other deductions.",
     "Total deductions = gross − net = $2,267.00 − $1,821.54 = $445.46.",
-    "State tax = $445.46 − ($158.69 + $140.55 + $32.87) = $113.35."
+    "State tax = $445.46 − ($158.69 + $140.55 + $32.87) = $113.35.",
+    "Spreadsheet or calculator: =445.46-(158.69+140.55+32.87)",
+    "So the answer is $113.35; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9680,8 +10057,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing deduction = (gross − net) − the other deductions.",
     "Total deductions = gross − net = $2,610.50 − $2,149.74 = $460.76.",
-    "State tax = $460.76 − ($182.74 + $161.85 + $37.85) = $78.32."
+    "State tax = $460.76 − ($182.74 + $161.85 + $37.85) = $78.32.",
+    "Spreadsheet or calculator: =460.76-(182.74+161.85+37.85)",
+    "So the answer is $78.32; checking the stub each payday catches payroll mistakes early."
    ]
   },
   {
@@ -9708,7 +10088,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.10 × $6,700 = $670."
+    "Formula: tax = 10% × taxable income.",
+    "0.10 × $6,700 = $670.",
+    "Spreadsheet or calculator: =0.10*6700",
+    "So the answer is $670; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -9735,7 +10118,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.10 × $5,000 = $500."
+    "Formula: tax = 10% × taxable income.",
+    "0.10 × $5,000 = $500.",
+    "Spreadsheet or calculator: =0.10*5000",
+    "So the answer is $500; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -9762,7 +10148,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.10 × $7,000 = $700."
+    "Formula: tax = 10% × taxable income.",
+    "0.10 × $7,000 = $700.",
+    "Spreadsheet or calculator: =0.10*7000",
+    "So the answer is $700; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -9789,7 +10178,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "0.10 × $7,900 = $790."
+    "Formula: tax = 10% × taxable income.",
+    "0.10 × $7,900 = $790.",
+    "Spreadsheet or calculator: =0.10*7900",
+    "So the answer is $790; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -9816,6 +10208,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: taxable = income − 401(k) contribution − $16,100; then apply the 2026 brackets.",
     "401(k) = 10% × $114,000 = $11,400.",
     "Taxable = $114,000 − $11,400 − $16,100 = $86,500.",
     "Tax by brackets = $13,742.",
@@ -9846,6 +10239,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: taxable = income − 401(k) contribution − $16,100.00; then apply the 2026 brackets.",
     "401(k) = 6% × $83,000.00 = $4,980.00.",
     "Taxable = $83,000.00 − $4,980.00 − $16,100.00 = $61,920.00.",
     "Tax by brackets = $8,334.40.",
@@ -9876,6 +10270,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: taxable = income − 401(k) contribution − $16,100.00; then apply the 2026 brackets.",
     "401(k) = 8% × $102,000.00 = $8,160.00.",
     "Taxable = $102,000.00 − $8,160.00 − $16,100.00 = $77,740.00.",
     "Tax by brackets = $11,814.80.",
@@ -9906,6 +10301,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: taxable = income − 401(k) contribution − $16,100; then apply the 2026 brackets.",
     "401(k) = 6% × $80,000 = $4,800.",
     "Taxable = $80,000 − $4,800 − $16,100 = $59,100.",
     "Tax by brackets = $7,714.",
@@ -9980,8 +10376,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Federal income tax withheld is in box 2.",
-    "Box 2 = $2,044.00."
+    "Box 2 = $2,044.00.",
+    "So the answer is $2,044.00; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10056,8 +10454,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Box 3 = $81,500.00.",
     "6.2% × $81,500.00 = $5,053.00.",
+    "Spreadsheet or calculator: =6.2%*81500.00",
     "It matches box 4, so the withholding is right."
    ]
   },
@@ -10133,9 +10533,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Taxable income = box 1 − $16,100.00 = $44,321.00 − $16,100.00 = $28,221.00.",
     "Tax = $3,138.52.",
-    "Refund = withheld − tax = $3,078.52 − $3,138.52 = −$60.00 (owes)."
+    "Refund = withheld − tax = $3,078.52 − $3,138.52 = −$60.00 (owes).",
+    "Spreadsheet or calculator: =3078.52-3138.52",
+    "So the answer is −$60.00; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10210,8 +10613,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Federal income tax withheld is in box 2.",
-    "Box 2 = $10,180.32."
+    "Box 2 = $10,180.32.",
+    "So the answer is $10,180.32; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10286,8 +10691,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Box 3 = $45,050.00.",
     "6.2% × $45,050.00 = $2,793.10.",
+    "Spreadsheet or calculator: =6.2%*45050.00",
     "It matches box 4, so the withholding is right."
    ]
   },
@@ -10359,9 +10766,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Taxable income = box 1 − $16,100.00 = $79,050.00 − $16,100.00 = $62,950.00.",
     "Tax = $8,561.00.",
-    "Refund = withheld − tax = $9,251.00 − $8,561.00 = $690.00."
+    "Refund = withheld − tax = $9,251.00 − $8,561.00 = $690.00.",
+    "Spreadsheet or calculator: =9251.00-8561.00",
+    "So the answer is $690.00; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10436,8 +10846,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Federal income tax withheld is in box 2.",
-    "Box 2 = $5,261.24."
+    "Box 2 = $5,261.24.",
+    "So the answer is $5,261.24; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10512,8 +10924,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Box 3 = $39,350.00.",
     "6.2% × $39,350.00 = $2,439.70.",
+    "Spreadsheet or calculator: =6.2%*39350.00",
     "It matches box 4, so the withholding is right."
    ]
   },
@@ -10589,9 +11003,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: federal income tax withheld is box 2 of the W-2.",
     "Taxable income = box 1 − $16,100.00 = $40,467.00 − $16,100.00 = $24,367.00.",
     "Tax = $2,676.04.",
-    "Refund = withheld − tax = $2,336.04 − $2,676.04 = −$340.00 (owes)."
+    "Refund = withheld − tax = $2,336.04 − $2,676.04 = −$340.00 (owes).",
+    "Spreadsheet or calculator: =2336.04-2676.04",
+    "So the answer is −$340.00; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10658,7 +11075,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$77,600 − $16,100 = $61,500."
+    "Formula: Taxable income = line 1a − line 12.",
+    "$77,600 − $16,100 = $61,500.",
+    "Spreadsheet or calculator: =77600-16100",
+    "So the answer is $61,500; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10727,7 +11147,8 @@
    "solutionSteps": [
     "10% of the first $12,400 = $1,240.",
     "12% of $16,400 = $1,968.",
-    "Tax = $3,208."
+    "Tax = $3,208.",
+    "So the answer is $3,208; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10795,7 +11216,9 @@
    },
    "solutionSteps": [
     "Line 15 = $76,450; line 16 = $11,531.",
-    "Refund = $11,181 − $11,531 = −$350."
+    "Refund = $11,181 − $11,531 = −$350.",
+    "Spreadsheet or calculator: =11181-11531",
+    "So the answer is −$350; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10862,7 +11285,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$43,700 − $16,100 = $27,600."
+    "Formula: Taxable income = line 1a − line 12.",
+    "$43,700 − $16,100 = $27,600.",
+    "Spreadsheet or calculator: =43700-16100",
+    "So the answer is $27,600; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10931,7 +11357,8 @@
    "solutionSteps": [
     "10% of the first $12,400 = $1,240.",
     "12% of $28,300 = $3,396.",
-    "Tax = $4,636."
+    "Tax = $4,636.",
+    "So the answer is $4,636; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -10999,7 +11426,9 @@
    },
    "solutionSteps": [
     "Line 15 = $67,050; line 16 = $9,463.",
-    "Refund = $10,103 − $9,463 = $640."
+    "Refund = $10,103 − $9,463 = $640.",
+    "Spreadsheet or calculator: =10103-9463",
+    "So the answer is $640; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -11066,7 +11495,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$50,200 − $16,100 = $34,100."
+    "Formula: Taxable income = line 1a − line 12.",
+    "$50,200 − $16,100 = $34,100.",
+    "Spreadsheet or calculator: =50200-16100",
+    "So the answer is $34,100; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -11135,7 +11567,8 @@
    "solutionSteps": [
     "10% of the first $12,400 = $1,240.",
     "12% of $4,850 = $582.",
-    "Tax = $1,822."
+    "Tax = $1,822.",
+    "So the answer is $1,822; only income inside each bracket is taxed at that bracket's rate."
    ]
   },
   {
@@ -11203,7 +11636,2817 @@
    },
    "solutionSteps": [
     "Line 15 = $25,300; line 16 = $2,788.",
-    "Refund = $3,938 − $2,788 = $1,150."
+    "Refund = $3,938 − $2,788 = $1,150.",
+    "Spreadsheet or calculator: =3938-2788",
+    "So the answer is $1,150; only income inside each bracket is taxed at that bracket's rate."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-01",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "The graph shows tax as a piecewise function of taxable income. Sam has $4,000 of taxable income. What is the slope of the graph at that income, as a percent? (That slope is their marginal tax rate.)",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400, $1,240)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400, $5,800)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400; T(x) = $1,240 + 0.12(x − $12,400) for $12,400 < x ≤ $50,400; T(x) = $5,800 + 0.22(x − $50,400) for $50,400 < x ≤ $105,700. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "10%",
+   "numeric": {
+    "value": 10,
+    "tolerance": 0,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Formula: on each piece, slope = rise ÷ run = tax rate for that bracket.",
+    "$4,000 is in the piece up to $12,400, where T(x) has slope 0.1.",
+    "Spreadsheet: =IF(4000<=12400,10%,IF(4000<=50400,12%,22%)) → 10%.",
+    "So each extra dollar Sam earns is taxed 10¢; the earlier dollars keep their lower rates."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-02",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Use the piecewise function T(x) in the caption. What is the federal tax on $22,000 of taxable income?",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400, $1,240)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400, $5,800)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400; T(x) = $1,240 + 0.12(x − $12,400) for $12,400 < x ≤ $50,400; T(x) = $5,800 + 0.22(x − $50,400) for $50,400 < x ≤ $105,700. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,392",
+   "numeric": {
+    "value": 2392,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: T(x) = $1,240 + 0.12(x − $12,400) for this piece.",
+    "Substitute: $1,240 + 0.12($22,000 − $12,400) = $1,240 + $1,152 = $2,392.",
+    "Spreadsheet: =1240+0.12*(22000-12400).",
+    "So the tax is $2,392, about 10.9% of taxable income, well below the top rate of the piece."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-03",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Elijah's federal tax was $14,320.00. Using T(x) in the caption, what was his taxable income? Round to the nearest dollar.",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400.00, $1,240.00)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400.00, $5,800.00)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400.00; T(x) = $1,240.00 + 0.12(x − $12,400.00) for $12,400.00 < x ≤ $50,400.00; T(x) = $5,800.00 + 0.22(x − $50,400.00) for $50,400.00 < x ≤ $105,700.00. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$89,127.00",
+   "numeric": {
+    "value": 89127,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: find the piece first. T($50,400.00) = $5,800.00, so $14,320.00 is on the 22% piece.",
+    "Solve $5,800.00 + 0.22(x − $50,400.00) = $14,320.00: x = $50,400.00 + [[$14,320.00 − $5,800.00 || 0.22]] = $89,127.27.",
+    "Spreadsheet: =50400+(14320-5800)/0.22.",
+    "So Elijah had about $89,127.00 of taxable income. Working backward through a piecewise function means finding the right piece first."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-04",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "The graph shows tax as a piecewise function of taxable income. Sofia has $3,500 of taxable income. What is the slope of the graph at that income, as a percent? (That slope is her marginal tax rate.)",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400, $1,240)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400, $5,800)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400; T(x) = $1,240 + 0.12(x − $12,400) for $12,400 < x ≤ $50,400; T(x) = $5,800 + 0.22(x − $50,400) for $50,400 < x ≤ $105,700. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "10%",
+   "numeric": {
+    "value": 10,
+    "tolerance": 0,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Formula: on each piece, slope = rise ÷ run = tax rate for that bracket.",
+    "$3,500 is in the piece up to $12,400, where T(x) has slope 0.1.",
+    "Spreadsheet: =IF(3500<=12400,10%,IF(3500<=50400,12%,22%)) → 10%.",
+    "So each extra dollar Sofia earns is taxed 10¢; the earlier dollars keep their lower rates."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-05",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Use the piecewise function T(x) in the caption. What is the federal tax on $62,500 of taxable income?",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400, $1,240)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400, $5,800)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400; T(x) = $1,240 + 0.12(x − $12,400) for $12,400 < x ≤ $50,400; T(x) = $5,800 + 0.22(x − $50,400) for $50,400 < x ≤ $105,700. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$8,462",
+   "numeric": {
+    "value": 8462,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: T(x) = $5,800 + 0.22(x − $50,400) for this piece.",
+    "Substitute: $5,800 + 0.22($62,500 − $50,400) = $5,800 + $2,662 = $8,462.",
+    "Spreadsheet: =5800+0.22*(62500-50400).",
+    "So the tax is $8,462, about 13.5% of taxable income, well below the top rate of the piece."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-06",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Mei's federal tax was $14,120.00. Using T(x) in the caption, what was her taxable income? Round to the nearest dollar.",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400.00, $1,240.00)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400.00, $5,800.00)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400.00; T(x) = $1,240.00 + 0.12(x − $12,400.00) for $12,400.00 < x ≤ $50,400.00; T(x) = $5,800.00 + 0.22(x − $50,400.00) for $50,400.00 < x ≤ $105,700.00. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$88,218.00",
+   "numeric": {
+    "value": 88218,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: find the piece first. T($50,400.00) = $5,800.00, so $14,120.00 is on the 22% piece.",
+    "Solve $5,800.00 + 0.22(x − $50,400.00) = $14,120.00: x = $50,400.00 + [[$14,120.00 − $5,800.00 || 0.22]] = $88,218.18.",
+    "Spreadsheet: =50400+(14120-5800)/0.22.",
+    "So Mei had about $88,218.00 of taxable income. Working backward through a piecewise function means finding the right piece first."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-07",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "The graph shows tax as a piecewise function of taxable income. Aaliyah has $12,000 of taxable income. What is the slope of the graph at that income, as a percent? (That slope is her marginal tax rate.)",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400, $1,240)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400, $5,800)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400; T(x) = $1,240 + 0.12(x − $12,400) for $12,400 < x ≤ $50,400; T(x) = $5,800 + 0.22(x − $50,400) for $50,400 < x ≤ $105,700. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "10%",
+   "numeric": {
+    "value": 10,
+    "tolerance": 0,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Formula: on each piece, slope = rise ÷ run = tax rate for that bracket.",
+    "$12,000 is in the piece up to $12,400, where T(x) has slope 0.1.",
+    "Spreadsheet: =IF(12000<=12400,10%,IF(12000<=50400,12%,22%)) → 10%.",
+    "So each extra dollar Aaliyah earns is taxed 10¢; the earlier dollars keep their lower rates."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-08",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Use the piecewise function T(x) in the caption. What is the federal tax on $27,400 of taxable income?",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400, $1,240)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400, $5,800)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400; T(x) = $1,240 + 0.12(x − $12,400) for $12,400 < x ≤ $50,400; T(x) = $5,800 + 0.22(x − $50,400) for $50,400 < x ≤ $105,700. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,040",
+   "numeric": {
+    "value": 3040,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: T(x) = $1,240 + 0.12(x − $12,400) for this piece.",
+    "Substitute: $1,240 + 0.12($27,400 − $12,400) = $1,240 + $1,800 = $3,040.",
+    "Spreadsheet: =1240+0.12*(27400-12400).",
+    "So the tax is $3,040, about 11.1% of taxable income, well below the top rate of the piece."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-m-tax-piecewise-09",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-m-tax-piecewise",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Noah's federal tax was $7,385.00. Using T(x) in the caption, what was his taxable income? Round to the nearest dollar.",
+   "scenario": {
+    "graph": {
+     "title": "2026 federal income tax, single filer",
+     "x": {
+      "label": "Taxable income x",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "y": {
+      "label": "Tax T(x)",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "T(x)",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         1666.67,
+         166.67
+        ],
+        [
+         3333.33,
+         333.33
+        ],
+        [
+         5000,
+         500
+        ],
+        [
+         6666.67,
+         666.67
+        ],
+        [
+         8333.33,
+         833.33
+        ],
+        [
+         10000,
+         1000
+        ],
+        [
+         11666.67,
+         1166.67
+        ],
+        [
+         13333.33,
+         1352
+        ],
+        [
+         15000,
+         1552
+        ],
+        [
+         16666.67,
+         1752
+        ],
+        [
+         18333.33,
+         1952
+        ],
+        [
+         20000,
+         2152
+        ],
+        [
+         21666.67,
+         2352
+        ],
+        [
+         23333.33,
+         2552
+        ],
+        [
+         25000,
+         2752
+        ],
+        [
+         26666.67,
+         2952
+        ],
+        [
+         28333.33,
+         3152
+        ],
+        [
+         30000,
+         3352
+        ],
+        [
+         31666.67,
+         3552
+        ],
+        [
+         33333.33,
+         3752
+        ],
+        [
+         35000,
+         3952
+        ],
+        [
+         36666.67,
+         4152
+        ],
+        [
+         38333.33,
+         4352
+        ],
+        [
+         40000,
+         4552
+        ],
+        [
+         41666.67,
+         4752
+        ],
+        [
+         43333.33,
+         4952
+        ],
+        [
+         45000,
+         5152
+        ],
+        [
+         46666.67,
+         5352
+        ],
+        [
+         48333.33,
+         5552
+        ],
+        [
+         50000,
+         5752
+        ],
+        [
+         51666.67,
+         6078.67
+        ],
+        [
+         53333.33,
+         6445.33
+        ],
+        [
+         55000,
+         6812
+        ],
+        [
+         56666.67,
+         7178.67
+        ],
+        [
+         58333.33,
+         7545.33
+        ],
+        [
+         60000,
+         7912
+        ],
+        [
+         61666.67,
+         8278.67
+        ],
+        [
+         63333.33,
+         8645.33
+        ],
+        [
+         65000,
+         9012
+        ],
+        [
+         66666.67,
+         9378.67
+        ],
+        [
+         68333.33,
+         9745.33
+        ],
+        [
+         70000,
+         10112
+        ],
+        [
+         71666.67,
+         10478.67
+        ],
+        [
+         73333.33,
+         10845.33
+        ],
+        [
+         75000,
+         11212
+        ],
+        [
+         76666.67,
+         11578.67
+        ],
+        [
+         78333.33,
+         11945.33
+        ],
+        [
+         80000,
+         12312
+        ],
+        [
+         81666.67,
+         12678.67
+        ],
+        [
+         83333.33,
+         13045.33
+        ],
+        [
+         85000,
+         13412
+        ],
+        [
+         86666.67,
+         13778.67
+        ],
+        [
+         88333.33,
+         14145.33
+        ],
+        [
+         90000,
+         14512
+        ],
+        [
+         91666.67,
+         14878.67
+        ],
+        [
+         93333.33,
+         15245.33
+        ],
+        [
+         95000,
+         15612
+        ],
+        [
+         96666.67,
+         15978.67
+        ],
+        [
+         98333.33,
+         16345.33
+        ],
+        [
+         100000,
+         16712
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 12400,
+       "y": 1240,
+       "label": "($12,400.00, $1,240.00)"
+      },
+      {
+       "x": 50400,
+       "y": 5800,
+       "label": "($50,400.00, $5,800.00)"
+      }
+     ],
+     "caption": "T(x) = 0.10x for x ≤ $12,400.00; T(x) = $1,240.00 + 0.12(x − $12,400.00) for $12,400.00 < x ≤ $50,400.00; T(x) = $5,800.00 + 0.22(x − $50,400.00) for $50,400.00 < x ≤ $105,700.00. (2026 federal brackets, single filer.)"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$57,605.00",
+   "numeric": {
+    "value": 57605,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: find the piece first. T($50,400.00) = $5,800.00, so $7,385.00 is on the 22% piece.",
+    "Solve $5,800.00 + 0.22(x − $50,400.00) = $7,385.00: x = $50,400.00 + [[$7,385.00 − $5,800.00 || 0.22]] = $57,604.55.",
+    "Spreadsheet: =50400+(7385-5800)/0.22.",
+    "So Noah had about $57,605.00 of taxable income. Working backward through a piecewise function means finding the right piece first."
    ]
   },
   {
@@ -11293,9 +14536,12 @@
    "answer": "$825",
    "solutionSteps": [
     "Mistake: Paid the overtime hours at the regular rate instead of 1.5 times the rate.",
+    "Formula: gross pay = wage × 40 + wage × 1.5 × overtime hours.",
     "Regular: $15 × 40 = $600.",
     "Overtime: $15 × 1.5 × 10 = $225.",
-    "Correct result: $825."
+    "Correct result: $825.",
+    "Spreadsheet or calculator: =(15*1.5*10)+(15*40)",
+    "So the answer is $825; compare offers on total yearly pay and hours, not the hourly rate or salary alone."
    ],
    "numeric": {
     "value": 825,
@@ -11389,10 +14635,13 @@
    "answer": "$2,056.10",
    "solutionSteps": [
     "Mistake: Subtracted only federal withholding and forgot FICA and state tax.",
+    "Formula: net pay = gross − federal − FICA (7.65% × gross) − state.",
     "FICA: $2,600.00 × 0.0765 = $198.90.",
     "State: $2,600.00 × 0.05 = $130.00.",
     "Net = $2,600.00 − $215.00 − $198.90 − $130.00.",
-    "Correct result: $2,056.10."
+    "Correct result: $2,056.10.",
+    "Spreadsheet or calculator: =2600.00-215.00-198.90-130.00",
+    "So the answer is $2,056.10; plan spending around net pay, the money that actually reaches the bank."
    ],
    "numeric": {
     "value": 2056.1,
@@ -11486,9 +14735,12 @@
    "answer": "$2,000.00",
    "solutionSteps": [
     "Mistake: Divided by 24 (twice a month) instead of 26 biweekly pay periods.",
+    "Formula: gross per paycheck = salary ÷ 26 for biweekly pay.",
     "Biweekly means every two weeks: 52 ÷ 2 = 26 paychecks a year.",
     "$52,000.00 ÷ 26 = $2,000.00.",
-    "Correct result: $2,000.00."
+    "Correct result: $2,000.00.",
+    "Spreadsheet or calculator: =52000.00/26",
+    "So the answer is $2,000.00; checking the stub each payday catches payroll mistakes early."
    ],
    "numeric": {
     "value": 2000,
@@ -11581,9 +14833,11 @@
    "answer": "$3,360",
    "solutionSteps": [
     "Mistake: Forgot to subtract the $15,000 standard deduction before using the tax table.",
+    "Formula: taxable income = gross income − standard deduction; then apply the brackets.",
     "Taxable income = $45,000 − $15,000 = $30,000.",
     "Apply the brackets to $30,000.",
-    "Correct result: $3,360."
+    "Correct result: $3,360.",
+    "So the answer is $3,360; only income inside each bracket is taxed at that bracket's rate."
    ],
    "numeric": {
     "value": 3360,

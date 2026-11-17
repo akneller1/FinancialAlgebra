@@ -946,7 +946,9 @@
    "prompt": "A used car costs $18,000.00 today. If inflation averages 2.5% per year, what will it cost in 25 years?",
    "answer": "$33,370.99",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$18,000.00 × (1 + 0.025)^25 = $33,370.99.",
+    "Spreadsheet or calculator: =18000.00*(1+0.025)^25",
     "Prices rise 85% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -959,7 +961,9 @@
    "prompt": "A month of rent costs $1,450.00 today. If inflation averages 3% per year, what will it cost in 10 years?",
    "answer": "$1,948.68",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$1,450.00 × (1 + 0.03)^10 = $1,948.68.",
+    "Spreadsheet or calculator: =1450.00*(1+0.03)^10",
     "Prices rise 34% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -972,7 +976,9 @@
    "prompt": "A gallon of milk costs $4.20 today. If inflation averages 4% per year, what will it cost in 30 years?",
    "answer": "$13.62",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$4.20 × (1 + 0.04)^30 = $13.62.",
+    "Spreadsheet or calculator: =4.20*(1+0.04)^30",
     "Prices rise 224% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -985,7 +991,9 @@
    "prompt": "A pizza costs $16.00 today. If inflation averages 2.5% per year, what will it cost in 30 years?",
    "answer": "$33.56",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$16.00 × (1 + 0.025)^30 = $33.56.",
+    "Spreadsheet or calculator: =16.00*(1+0.025)^30",
     "Prices rise 110% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -998,7 +1006,9 @@
    "prompt": "A pizza costs $16.00 today. If inflation averages 2% per year, what will it cost in 15 years?",
    "answer": "$21.53",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$16.00 × (1 + 0.02)^15 = $21.53.",
+    "Spreadsheet or calculator: =16.00*(1+0.02)^15",
     "Prices rise 35% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1011,7 +1021,9 @@
    "prompt": "A movie ticket costs $11.50 today. If inflation averages 2% per year, what will it cost in 25 years?",
    "answer": "$18.87",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$11.50 × (1 + 0.02)^25 = $18.87.",
+    "Spreadsheet or calculator: =11.50*(1+0.02)^25",
     "Prices rise 64% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1024,7 +1036,9 @@
    "prompt": "A used car costs $18,000.00 today. If inflation averages 2% per year, what will it cost in 25 years?",
    "answer": "$29,530.91",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$18,000.00 × (1 + 0.02)^25 = $29,530.91.",
+    "Spreadsheet or calculator: =18000.00*(1+0.02)^25",
     "Prices rise 64% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1037,7 +1051,9 @@
    "prompt": "A college credit hour costs $420.00 today. If inflation averages 2% per year, what will it cost in 25 years?",
    "answer": "$689.05",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "$420.00 × (1 + 0.02)^25 = $689.05.",
+    "Spreadsheet or calculator: =420.00*(1+0.02)^25",
     "Prices rise 64% in total."
    ],
    "sourceNotes": "Financial Algebra original item (family future-price; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1050,7 +1066,10 @@
    "prompt": "The CPI rose from 264.3 to 273.3. What was the percent increase in prices (nearest tenth)?",
    "answer": "3.4%",
    "solutionSteps": [
-    "273.3 − 264.3 ÷ 264.3 = 3.4%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "273.3 − 264.3 ÷ 264.3 = 3.4%.",
+    "Spreadsheet or calculator: =(273.3-264.3)/264.3 (then format as a percent)",
+    "So the answer is 3.4%; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family cpi; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1062,7 +1081,10 @@
    "prompt": "An item cost $180.00 when the CPI was 297.7. What is the equivalent price when the CPI is 304?",
    "answer": "$183.81",
    "solutionSteps": [
-    "$180.00 × 304 ÷ 297.7 = $183.81."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "$180.00 × 304 ÷ 297.7 = $183.81.",
+    "Spreadsheet or calculator: =180.00*304/297.7",
+    "So the answer is $183.81; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family cpi; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1074,7 +1096,10 @@
    "prompt": "The CPI rose from 292.9 to 311.9. What was the percent increase in prices (nearest tenth)?",
    "answer": "6.5%",
    "solutionSteps": [
-    "311.9 − 292.9 ÷ 292.9 = 6.5%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "311.9 − 292.9 ÷ 292.9 = 6.5%.",
+    "Spreadsheet or calculator: =(311.9-292.9)/292.9 (then format as a percent)",
+    "So the answer is 6.5%; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family cpi; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1086,7 +1111,10 @@
    "prompt": "The CPI rose from 262.2 to 327.8. What was the percent increase in prices (nearest tenth)?",
    "answer": "25%",
    "solutionSteps": [
-    "327.8 − 262.2 ÷ 262.2 = 25%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "327.8 − 262.2 ÷ 262.2 = 25%.",
+    "Spreadsheet or calculator: =(327.8-262.2)/262.2 (then format as a percent)",
+    "So the answer is 25%; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family cpi; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1098,7 +1126,10 @@
    "prompt": "An item cost $260.00 when the CPI was 274. What is the equivalent price when the CPI is 306.9?",
    "answer": "$291.22",
    "solutionSteps": [
-    "$260.00 × 306.9 ÷ 274 = $291.22."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "$260.00 × 306.9 ÷ 274 = $291.22.",
+    "Spreadsheet or calculator: =260.00*306.9/274",
+    "So the answer is $291.22; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family cpi; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1110,7 +1141,10 @@
    "prompt": "The CPI rose from 253.4 to 316.8. What was the percent increase in prices (nearest tenth)?",
    "answer": "25%",
    "solutionSteps": [
-    "316.8 − 253.4 ÷ 253.4 = 25%."
+    "Formula: inflation = (new CPI − old CPI) ÷ old CPI.",
+    "316.8 − 253.4 ÷ 253.4 = 25%.",
+    "Spreadsheet or calculator: =(316.8-253.4)/253.4 (then format as a percent)",
+    "So the answer is 25%; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family cpi; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1277,8 +1311,10 @@
    "prompt": "Andre wants $72,000.00 per year in retirement (today’s dollars) and expects $19,000.00 per year from Social Security. Using a 3.5% withdrawal guideline, how large a nest egg is needed (today’s dollars)?",
    "answer": "$1,514,285.71",
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $72,000.00 − $19,000.00 = $53,000.00.",
     "Nest egg = $53,000.00 ÷ 0.035 = $1,514,285.71.",
+    "Spreadsheet or calculator: =53000.00/0.035",
     "This is a planning estimate, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family nest-egg; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1291,8 +1327,10 @@
    "prompt": "Luis wants $44,000 per year in retirement (today’s dollars) and expects $24,000 per year from Social Security. Using a 4% withdrawal guideline, how large a nest egg is needed (today’s dollars)?",
    "answer": "$500,000",
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $44,000 − $24,000 = $20,000.",
     "Nest egg = $20,000 ÷ 0.04 = $500,000.",
+    "Spreadsheet or calculator: =20000/0.04",
     "This is a planning estimate, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family nest-egg; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1305,8 +1343,10 @@
    "prompt": "Riley wants $52,000 per year in retirement (today’s dollars) and expects $18,000 per year from Social Security. Using a 4% withdrawal guideline, how large a nest egg is needed (today’s dollars)?",
    "answer": "$850,000",
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $52,000 − $18,000 = $34,000.",
     "Nest egg = $34,000 ÷ 0.04 = $850,000.",
+    "Spreadsheet or calculator: =34000/0.04",
     "This is a planning estimate, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family nest-egg; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1319,8 +1359,10 @@
    "prompt": "Aaliyah wants $46,000.00 per year in retirement (today’s dollars) and expects $19,000.00 per year from Social Security. Using a 3.5% withdrawal guideline, how large a nest egg is needed (today’s dollars)?",
    "answer": "$771,428.57",
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $46,000.00 − $19,000.00 = $27,000.00.",
     "Nest egg = $27,000.00 ÷ 0.035 = $771,428.57.",
+    "Spreadsheet or calculator: =27000.00/0.035",
     "This is a planning estimate, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family nest-egg; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1333,8 +1375,10 @@
    "prompt": "Zara wants $72,000.00 per year in retirement (today’s dollars) and expects $18,000.00 per year from Social Security. Using a 3.5% withdrawal guideline, how large a nest egg is needed (today’s dollars)?",
    "answer": "$1,542,857.14",
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $72,000.00 − $18,000.00 = $54,000.00.",
     "Nest egg = $54,000.00 ÷ 0.035 = $1,542,857.14.",
+    "Spreadsheet or calculator: =54000.00/0.035",
     "This is a planning estimate, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family nest-egg; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1347,8 +1391,10 @@
    "prompt": "Dev wants $44,000 per year in retirement (today’s dollars) and expects $18,000 per year from Social Security. Using a 4% withdrawal guideline, how large a nest egg is needed (today’s dollars)?",
    "answer": "$650,000",
    "solutionSteps": [
+    "Formula: nest egg = (yearly need − other income) ÷ withdrawal rate.",
     "Gap = $44,000 − $18,000 = $26,000.",
     "Nest egg = $26,000 ÷ 0.04 = $650,000.",
+    "Spreadsheet or calculator: =26000/0.04",
     "This is a planning estimate, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family nest-egg; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1361,6 +1407,7 @@
    "prompt": "Marcus, age 22, earns $53,000.00 (assume constant) and contributes 8% to a 401(k). The employer matches 50% of contributions up to 6% of salary. With a hypothetical 5% return compounded monthly, what is the projected balance at 67?",
    "answer": "$984,510.79",
    "solutionSteps": [
+    "Formula: FV = PMT · (1 + i)^N − 1 ÷ i.",
     "Monthly employee = $353.33; match = $132.50; total = $485.83.",
     "FV = PMT · (1 + i)^N − 1 ÷ i, i = 0.05 ÷ 12, N = 540.",
     "Balance ≈ $984,510.79 (future dollars)."
@@ -1375,8 +1422,10 @@
    "prompt": "Isaiah, age 30, earns $59,000.00 (assume constant) and contributes 5% to a 401(k). The employer matches 50% of contributions up to 6% of salary. With a hypothetical 6% return compounded monthly, what is the projected balance at 67?",
    "answer": "$601,544.86",
    "solutionSteps": [
+    "Formula: FV = PMT · (1 + i)^N − 1 ÷ i.",
     "Monthly employee = $245.83; match = $122.92; total = $368.75.",
     "FV = PMT · (1 + i)^N − 1 ÷ i, i = 0.06 ÷ 12, N = 444.",
+    "Spreadsheet or calculator: =FV(0.06/12,444,-368.75)",
     "Balance ≈ $601,544.86 (future dollars)."
    ],
    "sourceNotes": "Financial Algebra original item (family project-bal; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1389,8 +1438,10 @@
    "prompt": "Diego, age 22, earns $41,000.00 (assume constant) and contributes 5% to a 401(k). The employer matches 50% of contributions up to 6% of salary. With a hypothetical 7% return compounded monthly, what is the projected balance at 67?",
    "answer": "$971,852.39",
    "solutionSteps": [
+    "Formula: FV = PMT · (1 + i)^N − 1 ÷ i.",
     "Monthly employee = $170.83; match = $85.42; total = $256.25.",
     "FV = PMT · (1 + i)^N − 1 ÷ i, i = 0.07 ÷ 12, N = 540.",
+    "Spreadsheet or calculator: =FV(0.07/12,540,-256.25)",
     "Balance ≈ $971,852.39 (future dollars)."
    ],
    "sourceNotes": "Financial Algebra original item (family project-bal; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1403,8 +1454,10 @@
    "prompt": "Mateo, age 30, earns $60,000.00 (assume constant) and contributes 10% to a 401(k). The employer matches 50% of contributions up to 6% of salary. With a hypothetical 5% return compounded monthly, what is the projected balance at 67?",
    "answer": "$832,325.91",
    "solutionSteps": [
+    "Formula: FV = PMT · (1 + i)^N − 1 ÷ i.",
     "Monthly employee = $500.00; match = $150.00; total = $650.00.",
     "FV = PMT · (1 + i)^N − 1 ÷ i, i = 0.05 ÷ 12, N = 444.",
+    "Spreadsheet or calculator: =FV(0.05/12,444,-650)",
     "Balance ≈ $832,325.91 (future dollars)."
    ],
    "sourceNotes": "Financial Algebra original item (family project-bal; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1417,8 +1470,10 @@
    "prompt": "Hana, age 30, earns $67,000.00 (assume constant) and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. With a hypothetical 5% return compounded monthly, what is the projected balance at 67?",
    "answer": "$643,451.95",
    "solutionSteps": [
+    "Formula: FV = PMT · (1 + i)^N − 1 ÷ i.",
     "Monthly employee = $335.00; match = $167.50; total = $502.50.",
     "FV = PMT · (1 + i)^N − 1 ÷ i, i = 0.05 ÷ 12, N = 444.",
+    "Spreadsheet or calculator: =FV(0.05/12,444,-502.5)",
     "Balance ≈ $643,451.95 (future dollars)."
    ],
    "sourceNotes": "Financial Algebra original item (family project-bal; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1431,8 +1486,10 @@
    "prompt": "Marcus, age 25, earns $51,000.00 (assume constant) and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. With a hypothetical 6% return compounded monthly, what is the projected balance at 67?",
    "answer": "$868,336.28",
    "solutionSteps": [
+    "Formula: FV = PMT · (1 + i)^N − 1 ÷ i.",
     "Monthly employee = $255.00; match = $127.50; total = $382.50.",
     "FV = PMT · (1 + i)^N − 1 ÷ i, i = 0.06 ÷ 12, N = 504.",
+    "Spreadsheet or calculator: =FV(0.06/12,504,-382.5)",
     "Balance ≈ $868,336.28 (future dollars)."
    ],
    "sourceNotes": "Financial Algebra original item (family project-bal; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1445,6 +1502,7 @@
    "prompt": "Luis, age 40, earns $73,000.00 (assume constant) and contributes 10% to a 401(k). The employer matches 50% of contributions up to 6% of salary. With a hypothetical 7% return compounded monthly, what is the projected balance at 67?",
    "answer": "$756,911.60",
    "solutionSteps": [
+    "Formula: FV = PMT · (1 + i)^N − 1 ÷ i.",
     "Monthly employee = $608.33; match = $182.50; total = $790.83.",
     "FV = PMT · (1 + i)^N − 1 ÷ i, i = 0.07 ÷ 12, N = 324.",
     "Balance ≈ $756,911.60 (future dollars)."
@@ -1607,8 +1665,10 @@
    "prompt": "Mateo earns $77,000 and contributes 2%. The employer matches 100% of contributions up to 5% of salary. What is the yearly match, and how much match is he leaving unclaimed?",
    "answer": "Match $1,540; unclaimed $2,310",
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(2%, 5%) × $77,000 = $1,540.",
     "Match = 1 × that = $1,540.",
+    "Spreadsheet or calculator: =MIN(2%,5%)*77000",
     "Contributing 5% would add $2,310 more per year."
    ],
    "sourceNotes": "Financial Algebra original item (family match; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1621,6 +1681,7 @@
    "prompt": "Camila earns $86,000 and contributes 8%. The employer matches 50% of contributions up to 4% of salary. What is the yearly match, and how much match is she leaving unclaimed?",
    "answer": "Match $1,720; unclaimed $0",
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(8%, 4%) × $86,000 = $3,440.",
     "Match = 0.5 × that = $1,720.",
     "The full match is captured."
@@ -1635,6 +1696,7 @@
    "prompt": "Tyler earns $74,000 and contributes 6%. The employer matches 50% of contributions up to 6% of salary. What is the yearly match, and how much match is he leaving unclaimed?",
    "answer": "Match $2,220; unclaimed $0",
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(6%, 6%) × $74,000 = $4,440.",
     "Match = 0.5 × that = $2,220.",
     "The full match is captured."
@@ -1649,6 +1711,7 @@
    "prompt": "Priya earns $63,000 and contributes 3%. The employer matches 50% of contributions up to 4% of salary. What is the yearly match, and how much match is she leaving unclaimed?",
    "answer": "Match $945; unclaimed $315",
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(3%, 4%) × $63,000 = $1,890.",
     "Match = 0.5 × that = $945.",
     "Contributing 4% would add $315 more per year."
@@ -1663,6 +1726,7 @@
    "prompt": "Sofia earns $89,000 and contributes 4%. The employer matches 50% of contributions up to 4% of salary. What is the yearly match, and how much match is she leaving unclaimed?",
    "answer": "Match $1,780; unclaimed $0",
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(4%, 4%) × $89,000 = $3,560.",
     "Match = 0.5 × that = $1,780.",
     "The full match is captured."
@@ -1677,6 +1741,7 @@
    "prompt": "Isaiah earns $48,000 and contributes 6%. The employer matches 50% of contributions up to 6% of salary. What is the yearly match, and how much match is he leaving unclaimed?",
    "answer": "Match $1,440; unclaimed $0",
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(6%, 6%) × $48,000 = $2,880.",
     "Match = 0.5 × that = $1,440.",
     "The full match is captured."
@@ -1691,6 +1756,7 @@
    "prompt": "Tyler earns $50,000 and contributes 8%. The employer matches 50% of contributions up to 4% of salary. What is the yearly match, and how much match is he leaving unclaimed?",
    "answer": "Match $1,000; unclaimed $0",
    "solutionSteps": [
+    "Formula: match = match rate × the smaller of your contribution % and the cap % × salary.",
     "Matched contribution = min(8%, 4%) × $50,000 = $2,000.",
     "Match = 0.5 × that = $1,000.",
     "The full match is captured."
@@ -1705,6 +1771,7 @@
    "prompt": "Nadia's employer contributed $1,400 in matching funds each year. The plan vests 20% per year of service (fully vested after 5 years). If she leaves after 1 year, how much of the employer match does she keep (ignore growth)?",
    "answer": "$280",
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $1,400 × 1 = $1,400.",
     "Vested = 20% → $280.",
     "Your own contributions are always 100% yours."
@@ -1719,6 +1786,7 @@
    "prompt": "Luis's employer contributed $2,600 in matching funds each year. The plan vests 20% per year of service (fully vested after 5 years). If he leaves after 2 years, how much of the employer match does he keep (ignore growth)?",
    "answer": "$2,080",
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,600 × 2 = $5,200.",
     "Vested = 40% → $2,080.",
     "Your own contributions are always 100% yours."
@@ -1733,6 +1801,7 @@
    "prompt": "Luis's employer contributed $2,500 in matching funds each year. The plan vests 20% per year of service (fully vested after 5 years). If he leaves after 1 year, how much of the employer match does he keep (ignore growth)?",
    "answer": "$500",
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,500 × 1 = $2,500.",
     "Vested = 20% → $500.",
     "Your own contributions are always 100% yours."
@@ -1747,6 +1816,7 @@
    "prompt": "Owen's employer contributed $2,100 in matching funds each year. The plan vests 20% per year of service (fully vested after 5 years). If he leaves after 2 years, how much of the employer match does he keep (ignore growth)?",
    "answer": "$1,680",
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,100 × 2 = $4,200.",
     "Vested = 40% → $1,680.",
     "Your own contributions are always 100% yours."
@@ -1761,6 +1831,7 @@
    "prompt": "Sam's employer contributed $2,400 in matching funds each year. The plan vests 20% per year of service (fully vested after 5 years). If they leaves after 1 year, how much of the employer match does they keep (ignore growth)?",
    "answer": "$480",
    "solutionSteps": [
+    "Formula: vested amount = total employer match × vested percent.",
     "Total match = $2,400 × 1 = $2,400.",
     "Vested = 20% → $480.",
     "Your own contributions are always 100% yours."
@@ -1775,7 +1846,9 @@
    "prompt": "What is $500,000.00 received 10 years from now worth in today’s dollars if inflation averages 3.5% per year?",
    "answer": "$354,459.41",
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "$500,000.00 ÷ (1 + 0.035)^10 = $354,459.41.",
+    "Spreadsheet or calculator: =(500000.00/((1+0.035)^10))",
     "It buys 71% of what $500,000.00 buys today."
    ],
    "sourceNotes": "Financial Algebra original item (family pp; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1788,7 +1861,9 @@
    "prompt": "What is $10,000.00 received 20 years from now worth in today’s dollars if inflation averages 2.5% per year?",
    "answer": "$6,102.71",
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "$10,000.00 ÷ (1 + 0.025)^20 = $6,102.71.",
+    "Spreadsheet or calculator: =(10000.00/((1+0.025)^20))",
     "It buys 61% of what $10,000.00 buys today."
    ],
    "sourceNotes": "Financial Algebra original item (family pp; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1801,7 +1876,9 @@
    "prompt": "What is $100,000.00 received 20 years from now worth in today’s dollars if inflation averages 3.5% per year?",
    "answer": "$50,256.59",
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "$100,000.00 ÷ (1 + 0.035)^20 = $50,256.59.",
+    "Spreadsheet or calculator: =(100000.00/((1+0.035)^20))",
     "It buys 50% of what $100,000.00 buys today."
    ],
    "sourceNotes": "Financial Algebra original item (family pp; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1814,7 +1891,9 @@
    "prompt": "What is $10,000.00 received 10 years from now worth in today’s dollars if inflation averages 2.5% per year?",
    "answer": "$7,811.98",
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "$10,000.00 ÷ (1 + 0.025)^10 = $7,811.98.",
+    "Spreadsheet or calculator: =(10000.00/((1+0.025)^10))",
     "It buys 78% of what $10,000.00 buys today."
    ],
    "sourceNotes": "Financial Algebra original item (family pp; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1827,7 +1906,9 @@
    "prompt": "What is $500,000.00 received 40 years from now worth in today’s dollars if inflation averages 2.5% per year?",
    "answer": "$186,215.31",
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "$500,000.00 ÷ (1 + 0.025)^40 = $186,215.31.",
+    "Spreadsheet or calculator: =(500000.00/((1+0.025)^40))",
     "It buys 37% of what $500,000.00 buys today."
    ],
    "sourceNotes": "Financial Algebra original item (family pp; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1840,7 +1921,9 @@
    "prompt": "What is $100,000.00 received 10 years from now worth in today’s dollars if inflation averages 2.5% per year?",
    "answer": "$78,119.84",
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "$100,000.00 ÷ (1 + 0.025)^10 = $78,119.84.",
+    "Spreadsheet or calculator: =(100000.00/((1+0.025)^10))",
     "It buys 78% of what $100,000.00 buys today."
    ],
    "sourceNotes": "Financial Algebra original item (family pp; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1853,7 +1936,9 @@
    "prompt": "What is $50,000.00 received 40 years from now worth in today’s dollars if inflation averages 3% per year?",
    "answer": "$15,327.84",
    "solutionSteps": [
+    "Formula: present value = future amount ÷ (1 + inflation)^years.",
     "$50,000.00 ÷ (1 + 0.03)^40 = $15,327.84.",
+    "Spreadsheet or calculator: =(50000.00/((1+0.03)^40))",
     "It buys 31% of what $50,000.00 buys today."
    ],
    "sourceNotes": "Financial Algebra original item (family pp; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1866,7 +1951,9 @@
    "prompt": "An account earns 1.5% per year while inflation is 3%. What is the real rate of return (nearest hundredth of a percent)?",
    "answer": "-1.46%",
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = 1 + 0.015 ÷ 1 + 0.03 − 1 = -1.46%.",
+    "Spreadsheet or calculator: =(1+0.015)/(1+0.03)-1 (then format as a percent)",
     "Negative: purchasing power shrinks."
    ],
    "sourceNotes": "Financial Algebra original item (family real-return; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1879,7 +1966,9 @@
    "prompt": "An account earns 8% per year while inflation is 2.5%. What is the real rate of return (nearest hundredth of a percent)?",
    "answer": "5.37%",
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = 1 + 0.08 ÷ 1 + 0.025 − 1 = 5.37%.",
+    "Spreadsheet or calculator: =(1+0.08)/(1+0.025)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ],
    "sourceNotes": "Financial Algebra original item (family real-return; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1892,7 +1981,9 @@
    "prompt": "An account earns 7% per year while inflation is 4%. What is the real rate of return (nearest hundredth of a percent)?",
    "answer": "2.88%",
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = 1 + 0.07 ÷ 1 + 0.04 − 1 = 2.88%.",
+    "Spreadsheet or calculator: =(1+0.07)/(1+0.04)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ],
    "sourceNotes": "Financial Algebra original item (family real-return; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1905,7 +1996,9 @@
    "prompt": "An account earns 1.5% per year while inflation is 2%. What is the real rate of return (nearest hundredth of a percent)?",
    "answer": "-0.49%",
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = 1 + 0.015 ÷ 1 + 0.02 − 1 = -0.49%.",
+    "Spreadsheet or calculator: =(1+0.015)/(1+0.02)-1 (then format as a percent)",
     "Negative: purchasing power shrinks."
    ],
    "sourceNotes": "Financial Algebra original item (family real-return; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1918,7 +2011,9 @@
    "prompt": "An account earns 5% per year while inflation is 3%. What is the real rate of return (nearest hundredth of a percent)?",
    "answer": "1.94%",
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = 1 + 0.05 ÷ 1 + 0.03 − 1 = 1.94%.",
+    "Spreadsheet or calculator: =(1+0.05)/(1+0.03)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ],
    "sourceNotes": "Financial Algebra original item (family real-return; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1931,7 +2026,9 @@
    "prompt": "An account earns 6% per year while inflation is 2.5%. What is the real rate of return (nearest hundredth of a percent)?",
    "answer": "3.41%",
    "solutionSteps": [
+    "Formula: real rate = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real = 1 + 0.06 ÷ 1 + 0.025 − 1 = 3.41%.",
+    "Spreadsheet or calculator: =(1+0.06)/(1+0.025)-1 (then format as a percent)",
     "Approximately nominal − inflation."
    ],
    "sourceNotes": "Financial Algebra original item (family real-return; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1944,8 +2041,10 @@
    "prompt": "Diego earns $94,000 and contributes 8% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
    "answer": "$2,820",
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 8% and 6%.",
     "Matched contribution rate = the smaller of 8% and 6% = 6%.",
     "Match = 50% × 6% × $94,000 = $2,820.",
+    "Spreadsheet or calculator: =50%*6%*94000",
     "This captures the full match."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-match-calc; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1958,8 +2057,10 @@
    "prompt": "Riley earns $51,000 and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
    "answer": "$1,530",
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 6% and 6%.",
     "Matched contribution rate = the smaller of 6% and 6% = 6%.",
     "Match = 50% × 6% × $51,000 = $1,530.",
+    "Spreadsheet or calculator: =50%*6%*51000",
     "This captures the full match."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-match-calc; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1972,8 +2073,10 @@
    "prompt": "Tyler earns $42,000 and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
    "answer": "$1,260",
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 6% and 6%.",
     "Matched contribution rate = the smaller of 6% and 6% = 6%.",
     "Match = 50% × 6% × $42,000 = $1,260.",
+    "Spreadsheet or calculator: =50%*6%*42000",
     "This captures the full match."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-match-calc; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1986,8 +2089,10 @@
    "prompt": "Andre earns $74,000 and contributes 4% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
    "answer": "$1,480",
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 4% and 6%.",
     "Matched contribution rate = the smaller of 4% and 6% = 4%.",
     "Match = 50% × 4% × $74,000 = $1,480.",
+    "Spreadsheet or calculator: =50%*4%*74000",
     "Raising contributions to 6% would earn the full match."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-match-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2000,8 +2105,10 @@
    "prompt": "Hana earns $72,000 and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
    "answer": "$2,160",
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 6% and 6%.",
     "Matched contribution rate = the smaller of 6% and 6% = 6%.",
     "Match = 50% × 6% × $72,000 = $2,160.",
+    "Spreadsheet or calculator: =50%*6%*72000",
     "This captures the full match."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-match-calc; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -2014,8 +2121,10 @@
    "prompt": "Marcus earns $58,000 and contributes 4% to a 401(k). The employer matches 100% of contributions up to 6% of salary. How much does the employer add per year?",
    "answer": "$2,320",
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 4% and 6%.",
     "Matched contribution rate = the smaller of 4% and 6% = 4%.",
     "Match = 100% × 4% × $58,000 = $2,320.",
+    "Spreadsheet or calculator: =100%*4%*58000",
     "Raising contributions to 6% would earn the full match."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-match-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2028,8 +2137,10 @@
    "prompt": "Zara earns $85,000 and contributes 8% to a 401(k). The employer matches 100% of contributions up to 6% of salary. How much does the employer add per year?",
    "answer": "$5,100",
    "solutionSteps": [
+    "Formula: Matched contribution rate = the smaller of 8% and 6%.",
     "Matched contribution rate = the smaller of 8% and 6% = 6%.",
     "Match = 100% × 6% × $85,000 = $5,100.",
+    "Spreadsheet or calculator: =100%*6%*85000",
     "This captures the full match."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-match-calc; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2042,8 +2153,10 @@
    "prompt": "Mateo expects to spend $44,000 per year in retirement and receive $14,000 per year from Social Security. Using the 4% rule, how much should he have saved?",
    "answer": "$750,000",
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $44,000 − $14,000 = $30,000 per year.",
     "4% rule: savings ≈ $30,000 ÷ 0.04 = $750,000.",
+    "Spreadsheet or calculator: =30000/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-nest-egg-4; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -2056,8 +2169,10 @@
    "prompt": "Isaiah expects to spend $50,000 per year in retirement and receive $20,500 per year from Social Security. Using the 4% rule, how much should he have saved?",
    "answer": "$737,500",
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $50,000 − $20,500 = $29,500 per year.",
     "4% rule: savings ≈ $29,500 ÷ 0.04 = $737,500.",
+    "Spreadsheet or calculator: =29500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-nest-egg-4; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2070,8 +2185,10 @@
    "prompt": "Diego expects to spend $55,000 per year in retirement and receive $22,500 per year from Social Security. Using the 4% rule, how much should he have saved?",
    "answer": "$812,500",
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $55,000 − $22,500 = $32,500 per year.",
     "4% rule: savings ≈ $32,500 ÷ 0.04 = $812,500.",
+    "Spreadsheet or calculator: =32500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-nest-egg-4; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2084,8 +2201,10 @@
    "prompt": "Imani expects to spend $69,000 per year in retirement and receive $21,500 per year from Social Security. Using the 4% rule, how much should she have saved?",
    "answer": "$1,187,500",
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $69,000 − $21,500 = $47,500 per year.",
     "4% rule: savings ≈ $47,500 ÷ 0.04 = $1,187,500.",
+    "Spreadsheet or calculator: =47500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-nest-egg-4; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2098,8 +2217,10 @@
    "prompt": "Hana expects to spend $50,000 per year in retirement and receive $20,500 per year from Social Security. Using the 4% rule, how much should she have saved?",
    "answer": "$737,500",
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $50,000 − $20,500 = $29,500 per year.",
     "4% rule: savings ≈ $29,500 ÷ 0.04 = $737,500.",
+    "Spreadsheet or calculator: =29500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-nest-egg-4; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2112,8 +2233,10 @@
    "prompt": "Noah expects to spend $51,000 per year in retirement and receive $18,000 per year from Social Security. Using the 4% rule, how much should he have saved?",
    "answer": "$825,000",
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $51,000 − $18,000 = $33,000 per year.",
     "4% rule: savings ≈ $33,000 ÷ 0.04 = $825,000.",
+    "Spreadsheet or calculator: =33000/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-nest-egg-4; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -2126,8 +2249,10 @@
    "prompt": "Elijah expects to spend $42,000 per year in retirement and receive $17,500 per year from Social Security. Using the 4% rule, how much should he have saved?",
    "answer": "$612,500",
    "solutionSteps": [
+    "Formula: nest egg = (yearly spending − other income) ÷ 4%.",
     "Needed from savings = $42,000 − $17,500 = $24,500 per year.",
     "4% rule: savings ≈ $24,500 ÷ 0.04 = $612,500.",
+    "Spreadsheet or calculator: =24500/0.04",
     "The 4% rule is a rough guide, not a guarantee."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-nest-egg-4; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2140,8 +2265,10 @@
    "prompt": "A month of groceries costs $420.00 today. If inflation averages 2.5% per year, what will it cost in 20 years?",
    "answer": "$688.22",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $420.00 × (1 + 0.025)^20.",
     "= $420.00 × 1.6386 = $688.22.",
+    "Spreadsheet or calculator: =420.00*1.6386",
     "Prices roughly double every 72 ÷ (rate) years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-future-price; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2154,8 +2281,10 @@
    "prompt": "A tank of gas costs $52.00 today. If inflation averages 2.5% per year, what will it cost in 10 years?",
    "answer": "$66.56",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $52.00 × (1 + 0.025)^10.",
     "= $52.00 × 1.2801 = $66.56.",
+    "Spreadsheet or calculator: =52.00*1.2801",
     "Prices roughly double every 72 ÷ (rate) years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-future-price; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2168,8 +2297,10 @@
    "prompt": "A movie ticket costs $13.50 today. If inflation averages 3.5% per year, what will it cost in 10 years?",
    "answer": "$19.04",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $13.50 × (1 + 0.035)^10.",
     "= $13.50 × 1.4106 = $19.04.",
+    "Spreadsheet or calculator: =13.50*1.4106",
     "Prices roughly double every 72 ÷ (rate) years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-future-price; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2182,8 +2313,10 @@
    "prompt": "A used car costs $9,500.00 today. If inflation averages 3% per year, what will it cost in 30 years?",
    "answer": "$23,058.99",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $9,500.00 × (1 + 0.03)^30.",
     "= $9,500.00 × 2.4273 = $23,058.99.",
+    "Spreadsheet or calculator: =9500.00*(1+0.03)^30",
     "Prices roughly double every 72 ÷ (rate) years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-future-price; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2196,8 +2329,10 @@
    "prompt": "A month of groceries costs $420.00 today. If inflation averages 3.5% per year, what will it cost in 10 years?",
    "answer": "$592.45",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $420.00 × (1 + 0.035)^10.",
     "= $420.00 × 1.4106 = $592.45.",
+    "Spreadsheet or calculator: =420.00*1.4106",
     "Prices roughly double every 72 ÷ (rate) years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-future-price; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2210,8 +2345,10 @@
    "prompt": "A year of college tuition costs $11,200.00 today. If inflation averages 3% per year, what will it cost in 10 years?",
    "answer": "$15,051.86",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $11,200.00 × (1 + 0.03)^10.",
     "= $11,200.00 × 1.3439 = $15,051.86.",
+    "Spreadsheet or calculator: =11200.00*(1+0.03)^10",
     "Prices roughly double every 72 ÷ (rate) years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-future-price; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2224,8 +2361,10 @@
    "prompt": "A year of rent costs $18,000.00 today. If inflation averages 2.5% per year, what will it cost in 30 years?",
    "answer": "$37,756.22",
    "solutionSteps": [
+    "Formula: future price = price × (1 + inflation)^years.",
     "Future price = $18,000.00 × (1 + 0.025)^30.",
     "= $18,000.00 × 2.0976 = $37,756.22.",
+    "Spreadsheet or calculator: =18000.00*(1+0.025)^30",
     "Prices roughly double every 72 ÷ (rate) years."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-future-price; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2238,9 +2377,12 @@
    "prompt": "An investment earns 8% per year while inflation is 3.5%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
    "answer": "4.35%",
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.08) ÷ (1 + 0.035) − 1 = 0.04348.",
-    "≈ 4.35%. The shortcut 8% − 3.5% = 4.5% is close but slightly high."
+    "≈ 4.35%. The shortcut 8% − 3.5% = 4.5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.08)/(1+0.035)-1 (then format as a percent)",
+    "So the answer is 4.35%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-real-return; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -2252,9 +2394,12 @@
    "prompt": "An investment earns 4% per year while inflation is 3.5%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
    "answer": "0.48%",
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.04) ÷ (1 + 0.035) − 1 = 0.00483.",
-    "≈ 0.48%. The shortcut 4% − 3.5% = 0.5% is close but slightly high."
+    "≈ 0.48%. The shortcut 4% − 3.5% = 0.5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.04)/(1+0.035)-1 (then format as a percent)",
+    "So the answer is 0.48%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-real-return; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -2266,9 +2411,12 @@
    "prompt": "An investment earns 6% per year while inflation is 2%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
    "answer": "3.92%",
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.06) ÷ (1 + 0.02) − 1 = 0.03922.",
-    "≈ 3.92%. The shortcut 6% − 2% = 4% is close but slightly high."
+    "≈ 3.92%. The shortcut 6% − 2% = 4% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.06)/(1+0.02)-1 (then format as a percent)",
+    "So the answer is 3.92%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-real-return; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -2280,9 +2428,12 @@
    "prompt": "An investment earns 8% per year while inflation is 3%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
    "answer": "4.85%",
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.08) ÷ (1 + 0.03) − 1 = 0.04854.",
-    "≈ 4.85%. The shortcut 8% − 3% = 5% is close but slightly high."
+    "≈ 4.85%. The shortcut 8% − 3% = 5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.08)/(1+0.03)-1 (then format as a percent)",
+    "So the answer is 4.85%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-real-return; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -2294,9 +2445,12 @@
    "prompt": "An investment earns 7% per year while inflation is 2%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
    "answer": "4.9%",
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.07) ÷ (1 + 0.02) − 1 = 0.04902.",
-    "≈ 4.90%. The shortcut 7% − 2% = 5% is close but slightly high."
+    "≈ 4.90%. The shortcut 7% − 2% = 5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.07)/(1+0.02)-1 (then format as a percent)",
+    "So the answer is 4.9%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-real-return; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -2308,9 +2462,12 @@
    "prompt": "An investment earns 4% per year while inflation is 2.5%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
    "answer": "1.46%",
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.04) ÷ (1 + 0.025) − 1 = 0.01463.",
-    "≈ 1.46%. The shortcut 4% − 2.5% = 1.5% is close but slightly high."
+    "≈ 1.46%. The shortcut 4% − 2.5% = 1.5% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.04)/(1+0.025)-1 (then format as a percent)",
+    "So the answer is 1.46%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-real-return; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2322,9 +2479,12 @@
    "prompt": "An investment earns 7% per year while inflation is 3%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
    "answer": "3.88%",
    "solutionSteps": [
+    "Formula: Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
     "(1 + 0.07) ÷ (1 + 0.03) − 1 = 0.03883.",
-    "≈ 3.88%. The shortcut 7% − 3% = 4% is close but slightly high."
+    "≈ 3.88%. The shortcut 7% − 3% = 4% is close but slightly high.",
+    "Spreadsheet or calculator: =(1+0.07)/(1+0.03)-1 (then format as a percent)",
+    "So the answer is 3.88%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-real-return; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -2336,7 +2496,10 @@
    "prompt": "A video game costs $20.00 today. With 3% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$20.60",
    "solutionSteps": [
-    "$20.00 × 1.03 = $20.60."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$20.00 × 1.03 = $20.60.",
+    "Spreadsheet or calculator: =20.00*1.03",
+    "So the answer is $20.60; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2348,7 +2511,10 @@
    "prompt": "A bus pass costs $80.00 today. With 3% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$82.40",
    "solutionSteps": [
-    "$80.00 × 1.03 = $82.40."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$80.00 × 1.03 = $82.40.",
+    "Spreadsheet or calculator: =80.00*1.03",
+    "So the answer is $82.40; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2360,7 +2526,10 @@
    "prompt": "A sandwich costs $20 today. With 5% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$21",
    "solutionSteps": [
-    "$20 × 1.05 = $21."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$20 × 1.05 = $21.",
+    "Spreadsheet or calculator: =20*1.05",
+    "So the answer is $21; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2372,7 +2541,10 @@
    "prompt": "A sandwich costs $20.00 today. With 2% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$20.40",
    "solutionSteps": [
-    "$20.00 × 1.02 = $20.40."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$20.00 × 1.02 = $20.40.",
+    "Spreadsheet or calculator: =20.00*1.02",
+    "So the answer is $20.40; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2384,7 +2556,10 @@
    "prompt": "A haircut costs $60.00 today. With 2% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$61.20",
    "solutionSteps": [
-    "$60.00 × 1.02 = $61.20."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$60.00 × 1.02 = $61.20.",
+    "Spreadsheet or calculator: =60.00*1.02",
+    "So the answer is $61.20; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2396,7 +2571,10 @@
    "prompt": "A bus pass costs $100 today. With 2% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$102",
    "solutionSteps": [
-    "$100 × 1.02 = $102."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$100 × 1.02 = $102.",
+    "Spreadsheet or calculator: =100*1.02",
+    "So the answer is $102; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2408,7 +2586,10 @@
    "prompt": "A bus pass costs $60 today. With 5% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$63",
    "solutionSteps": [
-    "$60 × 1.05 = $63."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$60 × 1.05 = $63.",
+    "Spreadsheet or calculator: =60*1.05",
+    "So the answer is $63; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2420,7 +2601,10 @@
    "prompt": "A bus pass costs $60.00 today. With 2% inflation, next year's price = price × (1 + rate). What will it cost next year?",
    "answer": "$61.20",
    "solutionSteps": [
-    "$60.00 × 1.02 = $61.20."
+    "Formula: next year's price = price × (1 + inflation).",
+    "$60.00 × 1.02 = $61.20.",
+    "Spreadsheet or calculator: =60.00*1.02",
+    "So the answer is $61.20; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-next-year-price; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2432,7 +2616,9 @@
    "prompt": "If inflation averages 2.5% a year, how many years until prices triple (multiply by 3), to the nearest tenth of a year? Solve (1 + rate)^t = 3.",
    "answer": "44.5",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.025) = 44.49.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.025)",
     "Each extra year multiplies prices by the same factor."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2445,8 +2631,11 @@
    "prompt": "If inflation averages 3% a year, how many years until prices double (multiply by 2), to the nearest tenth of a year? Solve (1 + rate)^t = 2.",
    "answer": "23.4",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 2 ÷ log(1.03) = 23.45.",
-    "Rule of 72 check: 72 ÷ 3 = 24.0."
+    "Rule of 72 check: 72 ÷ 3 = 24.0.",
+    "Spreadsheet or calculator: =LOG10(2)/LOG10(1.03)",
+    "So the answer is 23.4; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2458,7 +2647,9 @@
    "prompt": "If inflation averages 2% a year, how many years until prices triple (multiply by 3), to the nearest tenth of a year? Solve (1 + rate)^t = 3.",
    "answer": "55.5",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.02) = 55.48.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.02)",
     "Each extra year multiplies prices by the same factor."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2471,7 +2662,9 @@
    "prompt": "If inflation averages 4% a year, how many years until prices rise by half (multiply by 1.5), to the nearest tenth of a year? Solve (1 + rate)^t = 1.5.",
    "answer": "10.3",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 1.5 ÷ log(1.04) = 10.34.",
+    "Spreadsheet or calculator: =LOG10(1.5)/LOG10(1.04)",
     "Each extra year multiplies prices by the same factor."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2484,7 +2677,9 @@
    "prompt": "If inflation averages 3% a year, how many years until prices triple (multiply by 3), to the nearest tenth of a year? Solve (1 + rate)^t = 3.",
    "answer": "37.2",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.03) = 37.17.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.03)",
     "Each extra year multiplies prices by the same factor."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2497,8 +2692,11 @@
    "prompt": "If inflation averages 2% a year, how many years until prices double (multiply by 2), to the nearest tenth of a year? Solve (1 + rate)^t = 2.",
    "answer": "35",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 2 ÷ log(1.02) = 35.00.",
-    "Rule of 72 check: 72 ÷ 2 = 36.0."
+    "Rule of 72 check: 72 ÷ 2 = 36.0.",
+    "Spreadsheet or calculator: =LOG10(2)/LOG10(1.02)",
+    "So the answer is 35; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2510,7 +2708,9 @@
    "prompt": "If inflation averages 2.5% a year, how many years until prices rise by half (multiply by 1.5), to the nearest tenth of a year? Solve (1 + rate)^t = 1.5.",
    "answer": "16.4",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 1.5 ÷ log(1.025) = 16.42.",
+    "Spreadsheet or calculator: =LOG10(1.5)/LOG10(1.025)",
     "Each extra year multiplies prices by the same factor."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2523,7 +2723,9 @@
    "prompt": "If inflation averages 4% a year, how many years until prices triple (multiply by 3), to the nearest tenth of a year? Solve (1 + rate)^t = 3.",
    "answer": "28",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 3 ÷ log(1.04) = 28.01.",
+    "Spreadsheet or calculator: =LOG10(3)/LOG10(1.04)",
     "Each extra year multiplies prices by the same factor."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2536,8 +2738,11 @@
    "prompt": "If inflation averages 2.5% a year, how many years until prices double (multiply by 2), to the nearest tenth of a year? Solve (1 + rate)^t = 2.",
    "answer": "28.1",
    "solutionSteps": [
+    "Formula: solve (1 + i)^t = 3: t = log 3 ÷ log(1 + i).",
     "t = log 2 ÷ log(1.025) = 28.07.",
-    "Rule of 72 check: 72 ÷ 2.5 = 28.8."
+    "Rule of 72 check: 72 ÷ 2.5 = 28.8.",
+    "Spreadsheet or calculator: =LOG10(2)/LOG10(1.025)",
+    "So the answer is 28.1; inflation means the same dollars buy less over time."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-years-to-multiply; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2549,7 +2754,10 @@
    "prompt": "Leah contributes $6,000 a year for 40 years. Total contributed = yearly amount × years. How much does she put in?",
    "answer": "$240,000",
    "solutionSteps": [
-    "$6,000 × 40 = $240,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$6,000 × 40 = $240,000.",
+    "Spreadsheet or calculator: =6000*40",
+    "So the answer is $240,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2561,7 +2769,10 @@
    "prompt": "Noah contributes $7,000 a year for 30 years. Total contributed = yearly amount × years. How much does he put in?",
    "answer": "$210,000",
    "solutionSteps": [
-    "$7,000 × 30 = $210,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$7,000 × 30 = $210,000.",
+    "Spreadsheet or calculator: =7000*30",
+    "So the answer is $210,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2573,7 +2784,10 @@
    "prompt": "Tyler contributes $4,500 a year for 10 years. Total contributed = yearly amount × years. How much does he put in?",
    "answer": "$45,000",
    "solutionSteps": [
-    "$4,500 × 10 = $45,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$4,500 × 10 = $45,000.",
+    "Spreadsheet or calculator: =4500*10",
+    "So the answer is $45,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2585,7 +2799,10 @@
    "prompt": "Diego contributes $6,500 a year for 40 years. Total contributed = yearly amount × years. How much does he put in?",
    "answer": "$260,000",
    "solutionSteps": [
-    "$6,500 × 40 = $260,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$6,500 × 40 = $260,000.",
+    "Spreadsheet or calculator: =6500*40",
+    "So the answer is $260,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2597,7 +2814,10 @@
    "prompt": "Mateo contributes $3,000 a year for 30 years. Total contributed = yearly amount × years. How much does he put in?",
    "answer": "$90,000",
    "solutionSteps": [
-    "$3,000 × 30 = $90,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$3,000 × 30 = $90,000.",
+    "Spreadsheet or calculator: =3000*30",
+    "So the answer is $90,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2609,7 +2829,10 @@
    "prompt": "Marcus contributes $7,500 a year for 40 years. Total contributed = yearly amount × years. How much does he put in?",
    "answer": "$300,000",
    "solutionSteps": [
-    "$7,500 × 40 = $300,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$7,500 × 40 = $300,000.",
+    "Spreadsheet or calculator: =7500*40",
+    "So the answer is $300,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2621,7 +2844,10 @@
    "prompt": "Priya contributes $2,500 a year for 30 years. Total contributed = yearly amount × years. How much does she put in?",
    "answer": "$75,000",
    "solutionSteps": [
-    "$2,500 × 30 = $75,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$2,500 × 30 = $75,000.",
+    "Spreadsheet or calculator: =2500*30",
+    "So the answer is $75,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2633,7 +2859,10 @@
    "prompt": "Grace contributes $3,000 a year for 10 years. Total contributed = yearly amount × years. How much does she put in?",
    "answer": "$30,000",
    "solutionSteps": [
-    "$3,000 × 10 = $30,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$3,000 × 10 = $30,000.",
+    "Spreadsheet or calculator: =3000*10",
+    "So the answer is $30,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2645,7 +2874,10 @@
    "prompt": "Tyler contributes $2,500 a year for 10 years. Total contributed = yearly amount × years. How much does he put in?",
    "answer": "$25,000",
    "solutionSteps": [
-    "$2,500 × 10 = $25,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$2,500 × 10 = $25,000.",
+    "Spreadsheet or calculator: =2500*10",
+    "So the answer is $25,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2657,7 +2889,10 @@
    "prompt": "Grace contributes $6,000 a year for 10 years. Total contributed = yearly amount × years. How much does she put in?",
    "answer": "$60,000",
    "solutionSteps": [
-    "$6,000 × 10 = $60,000."
+    "Formula: Total contributed = yearly amount × years.",
+    "$6,000 × 10 = $60,000.",
+    "Spreadsheet or calculator: =6000*10",
+    "So the answer is $60,000; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-total; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2669,9 +2904,12 @@
    "prompt": "Grace earns $46,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 30 years at 6% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$346,557.69",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $46,000.00 × 0.06 ÷ 12 × 1.5 = $345.00.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $346,557.69."
+    "FV = $346,557.69.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-345)",
+    "So the answer is $346,557.69; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2683,9 +2921,12 @@
    "prompt": "Mateo earns $43,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 30 years at 6% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$323,956.10",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $43,000.00 × 0.06 ÷ 12 × 1.5 = $322.50.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $323,956.10."
+    "FV = $323,956.10.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-322.5)",
+    "So the answer is $323,956.10; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2697,9 +2938,12 @@
    "prompt": "Maya earns $51,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 20 years at 6% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$176,730.64",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $51,000.00 × 0.06 ÷ 12 × 1.5 = $382.50.",
     "n = 240, i = 0.06 ÷ 12.",
-    "FV = $176,730.64."
+    "FV = $176,730.64.",
+    "Spreadsheet or calculator: =FV(0.06/12,240,-382.5)",
+    "So the answer is $176,730.64; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2711,9 +2955,12 @@
    "prompt": "Diego earns $55,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 20 years at 6% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$190,591.87",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $55,000.00 × 0.06 ÷ 12 × 1.5 = $412.50.",
     "n = 240, i = 0.06 ÷ 12.",
-    "FV = $190,591.87."
+    "FV = $190,591.87.",
+    "Spreadsheet or calculator: =FV(0.06/12,240,-412.5)",
+    "So the answer is $190,591.87; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2725,9 +2972,12 @@
    "prompt": "Jordan earns $57,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 30 years at 6% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$429,430.18",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $57,000.00 × 0.06 ÷ 12 × 1.5 = $427.50.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $429,430.18."
+    "FV = $429,430.18.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-427.5)",
+    "So the answer is $429,430.18; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2739,9 +2989,12 @@
    "prompt": "Aaliyah earns $50,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 30 years at 7% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$457,489.12",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $50,000.00 × 0.06 ÷ 12 × 1.5 = $375.00.",
     "n = 360, i = 0.07 ÷ 12.",
-    "FV = $457,489.12."
+    "FV = $457,489.12.",
+    "Spreadsheet or calculator: =FV(0.07/12,360,-375)",
+    "So the answer is $457,489.12; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2753,9 +3006,12 @@
    "prompt": "Mateo earns $44,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 30 years at 6% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$331,489.96",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $44,000.00 × 0.06 ÷ 12 × 1.5 = $330.00.",
     "n = 360, i = 0.06 ÷ 12.",
-    "FV = $331,489.96."
+    "FV = $331,489.96.",
+    "Spreadsheet or calculator: =FV(0.06/12,360,-330)",
+    "So the answer is $331,489.96; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2767,9 +3023,12 @@
    "prompt": "Fatima earns $42,000.00 and contributes 6% of pay monthly; the employer adds 50% of that. Ignoring raises, what will the account hold after 20 years at 6% compounded monthly? Use FV = D·((1 + i)^n − 1) ÷ i.",
    "answer": "$145,542.88",
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Monthly deposit = $42,000.00 × 0.06 ÷ 12 × 1.5 = $315.00.",
     "n = 240, i = 0.06 ÷ 12.",
-    "FV = $145,542.88."
+    "FV = $145,542.88.",
+    "Spreadsheet or calculator: =FV(0.06/12,240,-315)",
+    "So the answer is $145,542.88; starting early lets compounding carry more of the load."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-match-fv; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2781,7 +3040,10 @@
    "prompt": "Priya earns $43,000 and contributes 3% to a 401(k). Contribution = salary × percent. How much does she contribute in a year?",
    "answer": "$1,290",
    "solutionSteps": [
-    "$43,000 × 0.03 = $1,290."
+    "Formula: Contribution = salary × percent.",
+    "$43,000 × 0.03 = $1,290.",
+    "Spreadsheet or calculator: =43000*0.03",
+    "So the answer is $1,290; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-pct; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2793,7 +3055,10 @@
    "prompt": "Noah earns $47,000 and contributes 5% to a 401(k). Contribution = salary × percent. How much does he contribute in a year?",
    "answer": "$2,350",
    "solutionSteps": [
-    "$47,000 × 0.05 = $2,350."
+    "Formula: Contribution = salary × percent.",
+    "$47,000 × 0.05 = $2,350.",
+    "Spreadsheet or calculator: =47000*0.05",
+    "So the answer is $2,350; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-pct; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2805,7 +3070,10 @@
    "prompt": "Camila earns $64,000 and contributes 10% to a 401(k). Contribution = salary × percent. How much does she contribute in a year?",
    "answer": "$6,400",
    "solutionSteps": [
-    "$64,000 × 0.10 = $6,400."
+    "Formula: Contribution = salary × percent.",
+    "$64,000 × 0.10 = $6,400.",
+    "Spreadsheet or calculator: =64000*0.10",
+    "So the answer is $6,400; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-pct; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2817,7 +3085,10 @@
    "prompt": "Dev earns $57,000 and contributes 5% to a 401(k). Contribution = salary × percent. How much does he contribute in a year?",
    "answer": "$2,850",
    "solutionSteps": [
-    "$57,000 × 0.05 = $2,850."
+    "Formula: Contribution = salary × percent.",
+    "$57,000 × 0.05 = $2,850.",
+    "Spreadsheet or calculator: =57000*0.05",
+    "So the answer is $2,850; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-pct; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2829,7 +3100,10 @@
    "prompt": "Kofi earns $79,000 and contributes 5% to a 401(k). Contribution = salary × percent. How much does he contribute in a year?",
    "answer": "$3,950",
    "solutionSteps": [
-    "$79,000 × 0.05 = $3,950."
+    "Formula: Contribution = salary × percent.",
+    "$79,000 × 0.05 = $3,950.",
+    "Spreadsheet or calculator: =79000*0.05",
+    "So the answer is $3,950; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-contrib-pct; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2841,9 +3115,12 @@
    "prompt": "Maya earns $116,000 in 2026 and takes the $16,100 standard deduction. How much federal income tax does she save by putting 10% of pay into a traditional 401(k)? Brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775.",
    "answer": "$2,552",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $99,900 = $16,690.",
     "With: tax on $88,300 = $14,138.",
-    "Savings = $2,552."
+    "Savings = $2,552.",
+    "Spreadsheet or calculator: =16690-14138",
+    "So the answer is $2,552; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2855,9 +3132,12 @@
    "prompt": "Owen earns $73,000 in 2026 and takes the $16,100 standard deduction. How much federal income tax does he save by putting 10% of pay into a traditional 401(k)? Brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775.",
    "answer": "$1,526",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $56,900 = $7,230.",
     "With: tax on $49,600 = $5,704.",
-    "Savings = $1,526."
+    "Savings = $1,526.",
+    "Spreadsheet or calculator: =7230-5704",
+    "So the answer is $1,526; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2869,9 +3149,12 @@
    "prompt": "Andre earns $98,000 in 2026 and takes the $16,100 standard deduction. How much federal income tax does he save by putting 5% of pay into a traditional 401(k)? Brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775.",
    "answer": "$1,078",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $81,900 = $12,730.",
     "With: tax on $77,000 = $11,652.",
-    "Savings = $1,078."
+    "Savings = $1,078.",
+    "Spreadsheet or calculator: =12730-11652",
+    "So the answer is $1,078; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2883,9 +3166,12 @@
    "prompt": "Imani earns $118,000 in 2026 and takes the $16,100 standard deduction. How much federal income tax does she save by putting 10% of pay into a traditional 401(k)? Brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775.",
    "answer": "$2,596",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $101,900 = $17,130.",
     "With: tax on $90,100 = $14,534.",
-    "Savings = $2,596."
+    "Savings = $2,596.",
+    "Spreadsheet or calculator: =17130-14534",
+    "So the answer is $2,596; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2897,9 +3183,12 @@
    "prompt": "Kofi earns $87,000.00 in 2026 and takes the $16,100.00 standard deduction. How much federal income tax does he save by putting 8% of pay into a traditional 401(k)? Brackets: 10% to $12,400.00; 12% to $50,400.00; 22% to $105,700.00; 24% to $201,775.00.",
    "answer": "$1,531.20",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $70,900.00 = $10,310.00.",
     "With: tax on $63,940.00 = $8,778.80.",
-    "Savings = $1,531.20."
+    "Savings = $1,531.20.",
+    "Spreadsheet or calculator: =10310.00-8778.80",
+    "So the answer is $1,531.20; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2911,9 +3200,12 @@
    "prompt": "Leah earns $56,000 in 2026 and takes the $16,100 standard deduction. How much federal income tax does she save by putting 10% of pay into a traditional 401(k)? Brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775.",
    "answer": "$672",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $39,900 = $4,540.",
     "With: tax on $34,300 = $3,868.",
-    "Savings = $672."
+    "Savings = $672.",
+    "Spreadsheet or calculator: =4540-3868",
+    "So the answer is $672; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2925,9 +3217,12 @@
    "prompt": "Andre earns $93,000 in 2026 and takes the $16,100 standard deduction. How much federal income tax does he save by putting 5% of pay into a traditional 401(k)? Brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775.",
    "answer": "$1,023",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $76,900 = $11,630.",
     "With: tax on $72,250 = $10,607.",
-    "Savings = $1,023."
+    "Savings = $1,023.",
+    "Spreadsheet or calculator: =11630-10607",
+    "So the answer is $1,023; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2939,9 +3234,12 @@
    "prompt": "Marcus earns $57,000.00 in 2026 and takes the $16,100.00 standard deduction. How much federal income tax does he save by putting 8% of pay into a traditional 401(k)? Brackets: 10% to $12,400.00; 12% to $50,400.00; 22% to $105,700.00; 24% to $201,775.00.",
    "answer": "$547.20",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $40,900.00 = $4,660.00.",
     "With: tax on $36,340.00 = $4,112.80.",
-    "Savings = $547.20."
+    "Savings = $547.20.",
+    "Spreadsheet or calculator: =4660.00-4112.80",
+    "So the answer is $547.20; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2953,9 +3251,12 @@
    "prompt": "Imani earns $59,000.00 in 2026 and takes the $16,100.00 standard deduction. How much federal income tax does she save by putting 8% of pay into a traditional 401(k)? Brackets: 10% to $12,400.00; 12% to $50,400.00; 22% to $105,700.00; 24% to $201,775.00.",
    "answer": "$566.40",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $42,900.00 = $4,900.00.",
     "With: tax on $38,180.00 = $4,333.60.",
-    "Savings = $566.40."
+    "Savings = $566.40.",
+    "Spreadsheet or calculator: =4900.00-4333.60",
+    "So the answer is $566.40; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2967,9 +3268,12 @@
    "prompt": "Priya earns $70,000 in 2026 and takes the $16,100 standard deduction. How much federal income tax does she save by putting 5% of pay into a traditional 401(k)? Brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775.",
    "answer": "$770",
    "solutionSteps": [
+    "Formula: tax saved = tax on (income − deduction) − tax on (income − contribution − deduction).",
     "Without: tax on $53,900 = $6,570.",
     "With: tax on $50,400 = $5,800.",
-    "Savings = $770."
+    "Savings = $770.",
+    "Spreadsheet or calculator: =6570-5800",
+    "So the answer is $770; always contribute enough to get the full employer match."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-pretax-savings; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2981,7 +3285,10 @@
    "prompt": "With 4% inflation, $2,000.00 a year from now buys what today's amount ÷ (1 + rate) buys. What is it worth in today's dollars?",
    "answer": "$1,923.08",
    "solutionSteps": [
-    "$2,000.00 ÷ 1.04 = $1,923.08."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$2,000.00 ÷ 1.04 = $1,923.08.",
+    "Spreadsheet or calculator: =2000.00/1.04",
+    "So the answer is $1,923.08; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-worth-next-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2993,7 +3300,10 @@
    "prompt": "With 4% inflation, $100.00 a year from now buys what today's amount ÷ (1 + rate) buys. What is it worth in today's dollars?",
    "answer": "$96.15",
    "solutionSteps": [
-    "$100.00 ÷ 1.04 = $96.15."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$100.00 ÷ 1.04 = $96.15.",
+    "Spreadsheet or calculator: =100.00/1.04",
+    "So the answer is $96.15; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-worth-next-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3005,7 +3315,10 @@
    "prompt": "With 2% inflation, $500.00 a year from now buys what today's amount ÷ (1 + rate) buys. What is it worth in today's dollars?",
    "answer": "$490.20",
    "solutionSteps": [
-    "$500.00 ÷ 1.02 = $490.20."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$500.00 ÷ 1.02 = $490.20.",
+    "Spreadsheet or calculator: =500.00/1.02",
+    "So the answer is $490.20; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-worth-next-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3017,7 +3330,10 @@
    "prompt": "With 5% inflation, $500.00 a year from now buys what today's amount ÷ (1 + rate) buys. What is it worth in today's dollars?",
    "answer": "$476.19",
    "solutionSteps": [
-    "$500.00 ÷ 1.05 = $476.19."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$500.00 ÷ 1.05 = $476.19.",
+    "Spreadsheet or calculator: =500.00/1.05",
+    "So the answer is $476.19; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-worth-next-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3029,7 +3345,10 @@
    "prompt": "With 2% inflation, $1,000.00 a year from now buys what today's amount ÷ (1 + rate) buys. What is it worth in today's dollars?",
    "answer": "$980.39",
    "solutionSteps": [
-    "$1,000.00 ÷ 1.02 = $980.39."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$1,000.00 ÷ 1.02 = $980.39.",
+    "Spreadsheet or calculator: =1000.00/1.02",
+    "So the answer is $980.39; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-worth-next-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3041,7 +3360,10 @@
    "prompt": "With 5% inflation, $2,000.00 a year from now buys what today's amount ÷ (1 + rate) buys. What is it worth in today's dollars?",
    "answer": "$1,904.76",
    "solutionSteps": [
-    "$2,000.00 ÷ 1.05 = $1,904.76."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$2,000.00 ÷ 1.05 = $1,904.76.",
+    "Spreadsheet or calculator: =2000.00/1.05",
+    "So the answer is $1,904.76; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-worth-next-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3053,7 +3375,10 @@
    "prompt": "With 2% inflation, $2,000.00 a year from now buys what today's amount ÷ (1 + rate) buys. What is it worth in today's dollars?",
    "answer": "$1,960.78",
    "solutionSteps": [
-    "$2,000.00 ÷ 1.02 = $1,960.78."
+    "Formula: value in today's dollars = amount ÷ (1 + inflation).",
+    "$2,000.00 ÷ 1.02 = $1,960.78.",
+    "Spreadsheet or calculator: =2000.00/1.02",
+    "So the answer is $1,960.78; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-worth-next-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3065,8 +3390,11 @@
    "prompt": "To grow purchasing power by 5% a year when inflation is 2%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "7.1%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.02) = 1.07100.",
-    "Nominal = 7.10%. Adding the rates gives 7%, slightly low."
+    "Nominal = 7.10%. Adding the rates gives 7%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.02))-1 (then format as a percent)",
+    "So the answer is 7.1%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3078,8 +3406,11 @@
    "prompt": "To grow purchasing power by 4% a year when inflation is 3%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "7.12%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.04)(1 + 0.03) = 1.07120.",
-    "Nominal = 7.12%. Adding the rates gives 7%, slightly low."
+    "Nominal = 7.12%. Adding the rates gives 7%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.04)*(1+0.03))-1 (then format as a percent)",
+    "So the answer is 7.12%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3091,8 +3422,11 @@
    "prompt": "To grow purchasing power by 3% a year when inflation is 2.5%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "5.58%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.025) = 1.05575.",
-    "Nominal = 5.58%. Adding the rates gives 5.5%, slightly low."
+    "Nominal = 5.58%. Adding the rates gives 5.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.025))-1 (then format as a percent)",
+    "So the answer is 5.58%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3104,8 +3438,11 @@
    "prompt": "To grow purchasing power by 3% a year when inflation is 3%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "6.09%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.03) = 1.06090.",
-    "Nominal = 6.09%. Adding the rates gives 6%, slightly low."
+    "Nominal = 6.09%. Adding the rates gives 6%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.03))-1 (then format as a percent)",
+    "So the answer is 6.09%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3117,8 +3454,11 @@
    "prompt": "To grow purchasing power by 3% a year when inflation is 2%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "5.06%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.02) = 1.05060.",
-    "Nominal = 5.06%. Adding the rates gives 5%, slightly low."
+    "Nominal = 5.06%. Adding the rates gives 5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.02))-1 (then format as a percent)",
+    "So the answer is 5.06%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3130,8 +3470,11 @@
    "prompt": "To grow purchasing power by 5% a year when inflation is 3.5%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "8.68%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.035) = 1.08675.",
-    "Nominal = 8.68%. Adding the rates gives 8.5%, slightly low."
+    "Nominal = 8.68%. Adding the rates gives 8.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.035))-1 (then format as a percent)",
+    "So the answer is 8.68%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3143,8 +3486,11 @@
    "prompt": "To grow purchasing power by 5% a year when inflation is 2.5%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "7.63%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.025) = 1.07625.",
-    "Nominal = 7.63%. Adding the rates gives 7.5%, slightly low."
+    "Nominal = 7.63%. Adding the rates gives 7.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.025))-1 (then format as a percent)",
+    "So the answer is 7.63%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3156,8 +3502,11 @@
    "prompt": "To grow purchasing power by 5% a year when inflation is 3%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "8.15%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.05)(1 + 0.03) = 1.08150.",
-    "Nominal = 8.15%. Adding the rates gives 8%, slightly low."
+    "Nominal = 8.15%. Adding the rates gives 8%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.05)*(1+0.03))-1 (then format as a percent)",
+    "So the answer is 8.15%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3169,8 +3518,11 @@
    "prompt": "To grow purchasing power by 4% a year when inflation is 2%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "6.08%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.04)(1 + 0.02) = 1.06080.",
-    "Nominal = 6.08%. Adding the rates gives 6%, slightly low."
+    "Nominal = 6.08%. Adding the rates gives 6%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.04)*(1+0.02))-1 (then format as a percent)",
+    "So the answer is 6.08%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3182,8 +3534,11 @@
    "prompt": "To grow purchasing power by 3% a year when inflation is 3.5%, what nominal return is needed, to the nearest hundredth of a percent? Use (1 + nominal) = (1 + real)(1 + inflation).",
    "answer": "6.61%",
    "solutionSteps": [
+    "Formula: nominal rate = (1 + real rate)(1 + inflation) − 1.",
     "(1 + 0.03)(1 + 0.035) = 1.06605.",
-    "Nominal = 6.61%. Adding the rates gives 6.5%, slightly low."
+    "Nominal = 6.61%. Adding the rates gives 6.5%, slightly low.",
+    "Spreadsheet or calculator: =((1+0.03)*(1+0.035))-1 (then format as a percent)",
+    "So the answer is 6.61%; plan in today's dollars to see what savings will really buy."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-nominal-needed; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   }

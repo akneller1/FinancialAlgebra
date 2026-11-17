@@ -1,0 +1,66 @@
+{
+ "schema": "fa-spreadsheet-labs-1",
+ "labs": [
+  {
+   "slug": "budget",
+   "unit": "budgeting",
+   "skill": "budgeting-skill-01",
+   "title": "Spreadsheet Lab 1: Monthly Budget",
+   "blurb": "Build a monthly budget with SUM, SUMIF, absolute references and Goal Seek.",
+   "file": "budget.xlsx",
+   "family": "lv-x-budget",
+   "steps": [
+    "Go to the Budget sheet. Yellow cells are inputs: replace the sample numbers with your own (or a case-study budget).",
+    "Income: B4 holds net (take-home) pay and B5 any other income. B6 adds them: =SUM(B4:B5).",
+    "Expenses: list each expense in A9:A18, its amount in B9:B18 and its type (Fixed or Variable) in C9:C18.",
+    "B19 totals the expenses: =SUM(B9:B18).",
+    "D9 shows each expense as a share of income: =B9/$B$6. The $ signs keep B6 fixed when you fill D9 down to D18.",
+    "B21 is net cash flow: =B6-B19. Conditional formatting turns it red when it is negative.",
+    "B23 and B24 total fixed and variable expenses with =SUMIF(C9:C18,\"Fixed\",B9:B18) and =SUMIF(C9:C18,\"Variable\",B9:B18).",
+    "Goal: make B21 equal your savings target. In Excel use Data > What-If Analysis > Goal Seek (Set cell B21, To value, By changing a variable expense).",
+    "Answer the Lab 1 questions on the lab page, then write two sentences: which change would you make first, and why?"
+   ],
+   "check": "Check your sheet: with the sample numbers, B6 = $2,950.00, B19 = $2,700.00 and B21 = $250.00."
+  },
+  {
+   "slug": "amortization",
+   "unit": "borrowing",
+   "skill": "borrowing-skill-03",
+   "title": "Spreadsheet Lab 2: Amortization Table",
+   "blurb": "Build a full loan amortization table with PMT, ROUND and fill-down formulas.",
+   "file": "amortization.xlsx",
+   "family": "lv-x-amortization",
+   "steps": [
+    "Go to the Loan sheet. Enter the loan amount in B1, the APR in B2 (as a percent) and the number of monthly payments in B3 (up to 72).",
+    "B4 finds the payment: =ROUND(PMT(B2/12,B3,-B1),2). PMT needs the rate per month (B2/12), the number of payments and the amount borrowed (negative, money you receive).",
+    "Row 8 is payment 0: E8 =B1 is the starting balance.",
+    "Row 9 is payment 1. Interest C9 =ROUND(E8*$B$2/12,2). Principal D9 =B9-C9. Balance E9 =E8-D9.",
+    "The table is already filled down to payment 72. IF formulas leave a row blank once the loan is paid off, and the final payment is adjusted so the balance ends at exactly $0.00.",
+    "B5 totals the interest: =SUM(C9:C80). B6 is the total paid: =SUM(B9:B80).",
+    "Try it: change B3 from 60 to 36. What happens to the payment (B4) and the total interest (B5)? Then try a lower APR.",
+    "Answer the Lab 2 questions on the lab page."
+   ],
+   "check": "Check your sheet: with the sample loan ($18,000 at 6.9% for 60 months), B4 = $355.57, C9 = $103.50 and E10 = $17,494.41."
+  },
+  {
+   "slug": "pmt-fv",
+   "unit": "investing",
+   "skill": "investing-skill-02",
+   "title": "Spreadsheet Lab 3: PMT and FV",
+   "blurb": "Use PMT and FV for loan payments, savings growth and saving for a goal.",
+   "file": "pmt-fv.xlsx",
+   "family": "lv-x-pmt-fv",
+   "steps": [
+    "Go to the Calculator sheet. It has three blocks; yellow cells are inputs.",
+    "Block 1, loan payment: B6 =PMT(B4/12,B5,-B3). The arguments are rate per period, number of periods and present value.",
+    "Block 2, savings growth: B12 =FV(B10/12,B11,-B9). The arguments are rate per period, number of periods and the regular deposit.",
+    "Block 3, saving for a goal: B18 =PMT(B16/12,B17,0,-B15). Present value is 0 and the future value is the goal.",
+    "Check block 3 with =FV(B16/12,B17,-B18) in B19: it should show the goal.",
+    "Signs: money you pay out is negative and money you receive is positive. That is why the inputs have a minus sign.",
+    "Explore: in block 2, how much of the future value is interest? Type =B12-B9*B11 in B13.",
+    "Answer the Lab 3 questions on the lab page."
+   ],
+   "check": "Check your sheet: with the sample numbers, B6 = $469.59, B12 = $15,528.23 and B18 = $314.29."
+  }
+ ]
+}
