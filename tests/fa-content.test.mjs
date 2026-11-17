@@ -16,14 +16,14 @@ test('all ten units have extended banks with valid, unique, complete items', () 
   const allIds = new Set();
   for (const u of course.units) {
     const b = json(`financial/banks/${u.id}.json`);
-    assert.equal(b.schema, 'fa-bank-1'); assert.equal(b.unitId, u.id); assert.equal(b.level, 'standard');
+    assert.equal(b.schema, 'fa-bank-1'); assert.equal(b.unitId, u.id); assert.deepEqual(b.levels, ['support', 'standard', 'advanced']);
     const skills = u.skills.map((_, i) => `${u.id}-skill-${String(i + 1).padStart(2, '0')}`);
     const counts = Object.fromEntries(skills.map(s => [s, 0])), prompts = new Set();
     for (const q of b.questions) {
       assert.ok(!allIds.has(q.id), 'duplicate id ' + q.id); allIds.add(q.id);
       assert.ok(skills.includes(q.skillId), q.id + ' bad skill'); counts[q.skillId]++;
       assert.ok(FORMATS.includes(q.format), q.id + ' format'); assert.ok(TYPES.includes(q.type), q.id + ' type ' + q.type);
-      assert.equal(q.level, 'standard');
+      assert.ok(['support', 'standard', 'advanced'].includes(q.level), q.id + ' level');
       assert.ok(q.prompt && q.prompt.length > 10, q.id + ' prompt');
       assert.ok(q.answer !== undefined && q.answer !== null && String(q.answer).length, q.id + ' answer');
       assert.ok(Array.isArray(q.solutionSteps) && q.solutionSteps.length, q.id + ' steps');
@@ -50,18 +50,20 @@ test('all ten units have extended banks with valid, unique, complete items', () 
   }
 });
 
-test('Classroom exports pass the unchanged production adapter (single level stored as cp1)', async () => {
+test('Classroom exports pass the unchanged production adapter (levels stored as cp2 / cp1 / honors)', async () => {
   globalThis.MK_COURSE_CATALOG = { getSkillRecords: (c, u) => c === 'financial-algebra' ? (course.units.find(x => x.id === u)?.skills || []).map((s, i) => ({ id: `${u}-skill-${String(i + 1).padStart(2, '0')}`, name: s })) : [] };
   await import('./fixtures/question-bank-adapter.js');
   const A = globalThis.MK_QUESTION_BANKS;
   for (const u of course.units) {
     const b = json(`question-banks/financial-algebra/${u.id}.json`);
     const r = A.validate(b); assert.ok(r.ok, u.id + ': ' + r.errors.slice(0, 3).join('; '));
-    assert.ok(b.questions.every(q => q.level === 'cp1'));
+    assert.ok(b.questions.every(q => ['cp2', 'cp1', 'honors'].includes(q.level)));
     assert.ok(A.register(b, { verified: true }).ok);
-    const games = A.select({ courseId: 'financial-algebra', unitId: u.id, level: 'cp1', formats: ['multiple-choice', 'short-answer'] });
-    assert.ok(games.length >= 60, u.id + ' game pool ' + games.length);
-    assert.ok(games.every(q => q.prompt.length < 600), u.id + ' game prompts short enough');
+    for (const level of ['cp2', 'cp1', 'honors']) {
+      const games = A.select({ courseId: 'financial-algebra', unitId: u.id, level, formats: ['multiple-choice', 'short-answer'] });
+      assert.ok(games.length >= 40, u.id + ' ' + level + ' game pool ' + games.length);
+      assert.ok(games.every(q => q.prompt.length < 600), u.id + ' game prompts short enough');
+    }
   }
 });
 

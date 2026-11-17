@@ -3,7 +3,11 @@
  "courseId": "financial-algebra",
  "unitId": "income",
  "unitName": "Careers & Income",
- "level": "standard",
+ "levels": [
+  "support",
+  "standard",
+  "advanced"
+ ],
  "generated": "deterministic",
  "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
  "skills": [
@@ -662,7 +666,7 @@
    {
     "title": "Marginal vs. effective",
     "kind": "html",
-    "html": "<b>Marginal:</b> rate on the next taxable dollar: 12% in the example.<br><b>Effective:</b> average tax rate; state the denominator.<div class=\"ex\">On gross: ⟨\\dfrac{4{,}440}{54{,}000}\\times100\\%\\approx8.22\\%⟩<br>On taxable: ⟨\\dfrac{4{,}440}{39{,}000}\\times100\\%\\approx11.38\\%⟩</div>Only the income in a higher slice gets its higher rate.",
+    "html": "<b>Marginal:</b> rate on the next taxable dollar: 12% in the example.<br><b>Effective:</b> average tax rate; state the denominator.<div class=\"ex\">On gross: ⟨\\dfrac{4{,}440}{54{,}000}\\times100\\%\\approx8.22\\%⟩<br>On taxable: ⟨\\dfrac{4{,}440}{39{,}000}\\times100\\%\\approx11.38\\%⟩</div>Only the income in a higher slice gets its higher rate.<div class=\"ex\"><b>Real 2026 figures (single filers, IRS):</b> standard deduction $16,100; 10% to $12,400, 12% to $50,400, 22% to $105,700. Social Security 6.2% on wages up to $184,500; Medicare 1.45% on all wages.</div>",
     "color": "orange"
    },
    {
@@ -713,7 +717,7 @@
    "id": "fa-income-s02-vocab-def-01",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Gross pay** mean?",
@@ -758,7 +762,7 @@
    "id": "fa-income-s02-vocab-def-02",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Net pay** mean?",
@@ -805,7 +809,7 @@
    "id": "fa-income-s01-vocab-def-03",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Salary** mean?",
@@ -850,7 +854,7 @@
    "id": "fa-income-s01-vocab-def-04",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Hourly wage** mean?",
@@ -895,7 +899,7 @@
    "id": "fa-income-s01-vocab-def-05",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Overtime** mean?",
@@ -940,7 +944,7 @@
    "id": "fa-income-s01-vocab-def-06",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Commission** mean?",
@@ -985,7 +989,7 @@
    "id": "fa-income-s01-vocab-def-07",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Benefits** mean?",
@@ -1030,7 +1034,7 @@
    "id": "fa-income-s02-vocab-def-08",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Pay period** mean?",
@@ -1075,7 +1079,7 @@
    "id": "fa-income-s03-vocab-def-09",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Deduction** mean?",
@@ -1120,7 +1124,7 @@
    "id": "fa-income-s03-vocab-def-10",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Year-to-date (YTD)** mean?",
@@ -1165,7 +1169,7 @@
    "id": "fa-income-s04-vocab-def-11",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **FICA** mean?",
@@ -1210,7 +1214,7 @@
    "id": "fa-income-s04-vocab-def-12",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Withholding** mean?",
@@ -1255,7 +1259,7 @@
    "id": "fa-income-s04-vocab-def-13",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Taxable income** mean?",
@@ -1300,7 +1304,7 @@
    "id": "fa-income-s04-vocab-def-14",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Standard deduction** mean?",
@@ -1345,7 +1349,7 @@
    "id": "fa-income-s04-vocab-def-15",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Marginal tax rate** mean?",
@@ -1392,7 +1396,7 @@
    "id": "fa-income-s04-vocab-def-16",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Effective tax rate** mean?",
@@ -1437,7 +1441,7 @@
    "id": "fa-income-s02-vocab-def-17",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Pre-tax deduction** mean?",
@@ -1482,7 +1486,7 @@
    "id": "fa-income-s04-vocab-def-18",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **W-4 form** mean?",
@@ -1527,7 +1531,7 @@
    "id": "fa-income-s01-concept-01",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which job pays more per year: $21 per hour for 40 hours a week, 50 weeks a year, or a $43,000 salary?",
@@ -1569,7 +1573,7 @@
    "id": "fa-income-s01-concept-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why can comparing two job offers by salary alone be misleading?",
@@ -1611,7 +1615,7 @@
    "id": "fa-income-s01-concept-03",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A worker earns $19.00 per hour. What is the overtime rate?",
@@ -1653,7 +1657,7 @@
    "id": "fa-income-s02-concept-04",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL items that are usually deducted from gross pay.",
@@ -1703,7 +1707,7 @@
    "id": "fa-income-s02-concept-05",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "How does a pre-tax 401(k) contribution affect a paycheck?",
@@ -1745,7 +1749,7 @@
    "id": "fa-income-s03-concept-06",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "On a pay stub, which amount is deposited in the employee’s account?",
@@ -1787,7 +1791,7 @@
    "id": "fa-income-s03-concept-07",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A biweekly pay stub shows gross pay YTD of $18,200 with $1,400 gross per period. Which pay period is it?",
@@ -1829,7 +1833,7 @@
    "id": "fa-income-s04-concept-08",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "In a progressive tax system, which statement is true?",
@@ -1871,7 +1875,7 @@
    "id": "fa-income-s04-concept-09",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Using the Course Tax Table (10% up to $12,000; 12% to $48,000), what is the tax on $30,000 of taxable income?",
@@ -1913,7 +1917,7 @@
    "id": "fa-income-s04-concept-10",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why is a person’s effective tax rate lower than their marginal rate?",
@@ -1955,7 +1959,7 @@
    "id": "fa-income-s04-claim-01",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “I should turn down a raise because it will push me into a higher tax bracket and I will take home less.”",
@@ -1994,7 +1998,7 @@
    "id": "fa-income-s04-claim-cer-01",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2063,7 +2067,7 @@
    "id": "fa-income-s01-claim-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “A higher salary always means a better job.”",
@@ -2102,7 +2106,7 @@
    "id": "fa-income-s01-claim-cer-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2171,7 +2175,7 @@
    "id": "fa-income-s02-claim-03",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Net pay is about the same as gross pay for most workers.”",
@@ -2210,7 +2214,7 @@
    "id": "fa-income-s02-claim-cer-03",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2279,7 +2283,7 @@
    "id": "fa-income-s01-claim-04",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Hourly jobs always pay less than salaried jobs.”",
@@ -2318,7 +2322,7 @@
    "id": "fa-income-s01-claim-cer-04",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2387,7 +2391,7 @@
    "id": "fa-income-s03-claim-05",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “If my pay stub shows a big deduction, my employer is keeping that money.”",
@@ -2426,7 +2430,7 @@
    "id": "fa-income-s03-claim-cer-05",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2669,7 +2673,7 @@
    "id": "fa-income-s01-hourly-annual-07",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "hourly-annual",
    "type": "calculation",
    "activityTypes": [
@@ -2698,7 +2702,7 @@
    "id": "fa-income-s01-salary-hourly-01",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "salary-hourly",
    "type": "calculation",
    "activityTypes": [
@@ -2726,7 +2730,7 @@
    "id": "fa-income-s01-salary-hourly-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "salary-hourly",
    "type": "calculation",
    "activityTypes": [
@@ -2755,7 +2759,7 @@
    "id": "fa-income-s01-salary-hourly-03",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "salary-hourly",
    "type": "calculation",
    "activityTypes": [
@@ -2784,7 +2788,7 @@
    "id": "fa-income-s01-salary-hourly-04",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "salary-hourly",
    "type": "calculation",
    "activityTypes": [
@@ -2813,7 +2817,7 @@
    "id": "fa-income-s01-salary-hourly-05",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "salary-hourly",
    "type": "calculation",
    "activityTypes": [
@@ -2841,7 +2845,7 @@
    "id": "fa-income-s01-salary-hourly-06",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "salary-hourly",
    "type": "calculation",
    "activityTypes": [
@@ -2901,7 +2905,7 @@
    "id": "fa-income-s01-weekly-ot-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "weekly-ot",
    "type": "calculation",
    "activityTypes": [
@@ -2933,7 +2937,7 @@
    "id": "fa-income-s01-weekly-ot-03",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "weekly-ot",
    "type": "calculation",
    "activityTypes": [
@@ -3029,7 +3033,7 @@
    "id": "fa-income-s01-weekly-ot-06",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "weekly-ot",
    "type": "calculation",
    "activityTypes": [
@@ -3235,7 +3239,7 @@
    "id": "fa-income-s01-offer-mc-01",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-mc",
    "type": "comparison",
    "activityTypes": [
@@ -3276,7 +3280,7 @@
    "id": "fa-income-s01-offer-mc-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-mc",
    "type": "comparison",
    "activityTypes": [
@@ -3317,7 +3321,7 @@
    "id": "fa-income-s01-offer-mc-03",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-mc",
    "type": "comparison",
    "activityTypes": [
@@ -3358,7 +3362,7 @@
    "id": "fa-income-s01-offer-mc-04",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-mc",
    "type": "comparison",
    "activityTypes": [
@@ -3399,7 +3403,7 @@
    "id": "fa-income-s01-offer-mc-05",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-mc",
    "type": "comparison",
    "activityTypes": [
@@ -3440,7 +3444,7 @@
    "id": "fa-income-s01-offer-mc-06",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-mc",
    "type": "comparison",
    "activityTypes": [
@@ -3481,7 +3485,7 @@
    "id": "fa-income-s01-offer-or-01",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-or",
    "type": "comparison",
    "activityTypes": [
@@ -3591,7 +3595,7 @@
    "id": "fa-income-s01-offer-or-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-or",
    "type": "comparison",
    "activityTypes": [
@@ -3701,7 +3705,7 @@
    "id": "fa-income-s01-offer-or-03",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-or",
    "type": "comparison",
    "activityTypes": [
@@ -3811,7 +3815,7 @@
    "id": "fa-income-s01-offer-or-04",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "offer-or",
    "type": "comparison",
    "activityTypes": [
@@ -3921,7 +3925,7 @@
    "id": "fa-income-s02-gross-period-01",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "gross-period",
    "type": "calculation",
    "activityTypes": [
@@ -3949,7 +3953,7 @@
    "id": "fa-income-s02-gross-period-02",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "gross-period",
    "type": "calculation",
    "activityTypes": [
@@ -3977,7 +3981,7 @@
    "id": "fa-income-s02-gross-period-03",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "gross-period",
    "type": "calculation",
    "activityTypes": [
@@ -4005,7 +4009,7 @@
    "id": "fa-income-s02-gross-period-04",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "gross-period",
    "type": "calculation",
    "activityTypes": [
@@ -4033,7 +4037,7 @@
    "id": "fa-income-s02-gross-period-05",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "gross-period",
    "type": "calculation",
    "activityTypes": [
@@ -4061,7 +4065,7 @@
    "id": "fa-income-s02-gross-period-06",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "gross-period",
    "type": "calculation",
    "activityTypes": [
@@ -4089,7 +4093,7 @@
    "id": "fa-income-s02-net-from-ded-01",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "net-from-ded",
    "type": "calculation",
    "activityTypes": [
@@ -4118,7 +4122,7 @@
    "id": "fa-income-s02-net-from-ded-02",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "net-from-ded",
    "type": "calculation",
    "activityTypes": [
@@ -4147,7 +4151,7 @@
    "id": "fa-income-s02-net-from-ded-03",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "net-from-ded",
    "type": "calculation",
    "activityTypes": [
@@ -4176,7 +4180,7 @@
    "id": "fa-income-s02-net-from-ded-04",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "net-from-ded",
    "type": "calculation",
    "activityTypes": [
@@ -4205,7 +4209,7 @@
    "id": "fa-income-s02-net-from-ded-05",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "net-from-ded",
    "type": "calculation",
    "activityTypes": [
@@ -4234,7 +4238,7 @@
    "id": "fa-income-s02-net-from-ded-06",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "net-from-ded",
    "type": "calculation",
    "activityTypes": [
@@ -4637,7 +4641,7 @@
    "id": "fa-income-s03-stub-read-01",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "stub-read",
    "type": "document",
    "activityTypes": [
@@ -4742,7 +4746,7 @@
    "id": "fa-income-s03-stub-read-02",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "stub-read",
    "type": "document",
    "activityTypes": [
@@ -4947,7 +4951,7 @@
    "id": "fa-income-s03-stub-read-04",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "stub-read",
    "type": "document",
    "activityTypes": [
@@ -5147,7 +5151,7 @@
    "id": "fa-income-s03-stub-read-06",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "stub-read",
    "type": "document",
    "activityTypes": [
@@ -5242,7 +5246,7 @@
    "id": "fa-income-s03-stub-read-07",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "stub-read",
    "type": "document",
    "activityTypes": [
@@ -5452,7 +5456,7 @@
    "id": "fa-income-s03-stub-error-01",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-error",
    "type": "document",
    "activityTypes": [
@@ -5525,7 +5529,7 @@
    "id": "fa-income-s03-stub-error-02",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-error",
    "type": "document",
    "activityTypes": [
@@ -5598,7 +5602,7 @@
    "id": "fa-income-s03-stub-error-03",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-error",
    "type": "document",
    "activityTypes": [
@@ -5671,7 +5675,7 @@
    "id": "fa-income-s03-stub-error-04",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-error",
    "type": "document",
    "activityTypes": [
@@ -5744,7 +5748,7 @@
    "id": "fa-income-s03-stub-error-05",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-error",
    "type": "document",
    "activityTypes": [
@@ -5817,7 +5821,7 @@
    "id": "fa-income-s03-stub-or-01",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-or",
    "type": "document",
    "activityTypes": [
@@ -5963,7 +5967,7 @@
    "id": "fa-income-s03-stub-or-02",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-or",
    "type": "document",
    "activityTypes": [
@@ -6114,7 +6118,7 @@
    "id": "fa-income-s03-stub-or-03",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-or",
    "type": "document",
    "activityTypes": [
@@ -6260,7 +6264,7 @@
    "id": "fa-income-s03-stub-or-04",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "stub-or",
    "type": "document",
    "activityTypes": [
@@ -6526,7 +6530,7 @@
    "id": "fa-income-s04-tax-calc-05",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "tax-calc",
    "type": "calculation",
    "activityTypes": [
@@ -6557,7 +6561,7 @@
    "id": "fa-income-s04-tax-calc-06",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "tax-calc",
    "type": "calculation",
    "activityTypes": [
@@ -6617,7 +6621,7 @@
    "id": "fa-income-s04-marg-eff-01",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "marg-eff",
    "type": "concept",
    "activityTypes": [
@@ -6656,7 +6660,7 @@
    "id": "fa-income-s04-marg-eff-02",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "marg-eff",
    "type": "concept",
    "activityTypes": [
@@ -6695,7 +6699,7 @@
    "id": "fa-income-s04-marg-eff-03",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "marg-eff",
    "type": "concept",
    "activityTypes": [
@@ -6734,7 +6738,7 @@
    "id": "fa-income-s04-marg-eff-04",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "marg-eff",
    "type": "concept",
    "activityTypes": [
@@ -6773,7 +6777,7 @@
    "id": "fa-income-s04-marg-eff-05",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "marg-eff",
    "type": "concept",
    "activityTypes": [
@@ -6812,7 +6816,7 @@
    "id": "fa-income-s04-marg-eff-06",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "marg-eff",
    "type": "concept",
    "activityTypes": [
@@ -6851,7 +6855,7 @@
    "id": "fa-income-s04-raise-or-01",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "raise-or",
    "type": "reasoning",
    "activityTypes": [
@@ -6922,7 +6926,7 @@
    "id": "fa-income-s04-raise-or-02",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "raise-or",
    "type": "reasoning",
    "activityTypes": [
@@ -6993,7 +6997,7 @@
    "id": "fa-income-s04-raise-or-03",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "raise-or",
    "type": "reasoning",
    "activityTypes": [
@@ -7064,7 +7068,7 @@
    "id": "fa-income-s01-ap-commission-month-01",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-commission-month",
    "type": "calculation",
    "activityTypes": [
@@ -7093,7 +7097,7 @@
    "id": "fa-income-s01-ap-commission-month-02",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-commission-month",
    "type": "calculation",
    "activityTypes": [
@@ -7122,7 +7126,7 @@
    "id": "fa-income-s01-ap-commission-month-03",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-commission-month",
    "type": "calculation",
    "activityTypes": [
@@ -7238,7 +7242,7 @@
    "id": "fa-income-s01-ap-commission-month-07",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-commission-month",
    "type": "calculation",
    "activityTypes": [
@@ -7363,7 +7367,7 @@
    "id": "fa-income-s02-ap-fica-check-04",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-fica-check",
    "type": "calculation",
    "activityTypes": [
@@ -7395,7 +7399,7 @@
    "id": "fa-income-s02-ap-fica-check-05",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-fica-check",
    "type": "calculation",
    "activityTypes": [
@@ -7549,7 +7553,7 @@
    "id": "fa-income-s03-ap-ytd-periods-03",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-ytd-periods",
    "type": "calculation",
    "activityTypes": [
@@ -7636,7 +7640,7 @@
    "id": "fa-income-s03-ap-ytd-periods-06",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-ytd-periods",
    "type": "calculation",
    "activityTypes": [
@@ -7665,7 +7669,7 @@
    "id": "fa-income-s03-ap-ytd-periods-07",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-ytd-periods",
    "type": "calculation",
    "activityTypes": [
@@ -7897,7 +7901,7 @@
    "id": "fa-income-s04-ap-tax-2026-01",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -7957,7 +7961,7 @@
    "id": "fa-income-s04-ap-tax-2026-02",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -8017,7 +8021,7 @@
    "id": "fa-income-s04-ap-tax-2026-03",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -8077,7 +8081,7 @@
    "id": "fa-income-s04-ap-tax-2026-04",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -8138,7 +8142,7 @@
    "id": "fa-income-s04-ap-tax-2026-05",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -8198,7 +8202,7 @@
    "id": "fa-income-s04-ap-tax-2026-06",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -8259,7 +8263,7 @@
    "id": "fa-income-s04-ap-tax-2026-07",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -8319,7 +8323,7 @@
    "id": "fa-income-s04-ap-tax-2026-08",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-tax-2026",
    "type": "calculation",
    "activityTypes": [
@@ -8459,7 +8463,7 @@
    "id": "fa-income-s04-ap-marginal-2026-03",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "ap-marginal-2026",
    "type": "concept",
    "activityTypes": [
@@ -8539,7 +8543,7 @@
    "id": "fa-income-s04-ap-marginal-2026-05",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "ap-marginal-2026",
    "type": "concept",
    "activityTypes": [
@@ -8659,7 +8663,7 @@
    "id": "fa-income-s02-ap-ss-wage-base-01",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-ss-wage-base",
    "type": "calculation",
    "activityTypes": [
@@ -8830,10 +8834,1089 @@
    ]
   },
   {
+   "id": "fa-income-s01-lv-s-hourly-annual-01",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "support",
+   "family": "lv-s-hourly-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya earns $23 per hour and works 2,080 hours a year (40 hours × 52 weeks). Annual pay = hourly rate × 2,080. What is her annual pay?",
+   "format": "short-answer",
+   "answer": "$47,840",
+   "numeric": {
+    "value": 47840,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$23 × 2,080 = $47,840."
+   ]
+  },
+  {
+   "id": "fa-income-s01-lv-s-hourly-annual-02",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "support",
+   "family": "lv-s-hourly-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila earns $19 per hour and works 2,080 hours a year (40 hours × 52 weeks). Annual pay = hourly rate × 2,080. What is her annual pay?",
+   "format": "short-answer",
+   "answer": "$39,520",
+   "numeric": {
+    "value": 39520,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$19 × 2,080 = $39,520."
+   ]
+  },
+  {
+   "id": "fa-income-s01-lv-s-hourly-annual-03",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "support",
+   "family": "lv-s-hourly-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana earns $30 per hour and works 2,080 hours a year (40 hours × 52 weeks). Annual pay = hourly rate × 2,080. What is her annual pay?",
+   "format": "short-answer",
+   "answer": "$62,400",
+   "numeric": {
+    "value": 62400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$30 × 2,080 = $62,400."
+   ]
+  },
+  {
+   "id": "fa-income-s01-lv-s-hourly-annual-04",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "support",
+   "family": "lv-s-hourly-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev earns $23 per hour and works 2,080 hours a year (40 hours × 52 weeks). Annual pay = hourly rate × 2,080. What is his annual pay?",
+   "format": "short-answer",
+   "answer": "$47,840",
+   "numeric": {
+    "value": 47840,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$23 × 2,080 = $47,840."
+   ]
+  },
+  {
+   "id": "fa-income-s01-lv-a-offer-compare-01",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "advanced",
+   "family": "lv-a-offer-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo compares two offers. Offer A: $46,000.00 salary, about 48 hours a week. Offer B: $22.00 per hour for 40 hours plus 5 overtime hours a week at 1.5 times the rate, for 50 weeks. How much more does the higher-paying offer earn in a year?",
+   "format": "short-answer",
+   "answer": "$6,250.00",
+   "numeric": {
+    "value": 6250,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Offer B regular: $22.00 × 40 × 50 = $44,000.00.",
+    "Offer B overtime: $22.00 × 1.5 × 5 × 50 = $8,250.00.",
+    "Offer B total $52,250.00 vs Offer A $46,000.00: difference $6,250.00.",
+    "Per hour, Offer A pays $18.43 because of its long hours."
+   ]
+  },
+  {
+   "id": "fa-income-s01-lv-a-offer-compare-02",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "advanced",
+   "family": "lv-a-offer-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus compares two offers. Offer A: $56,000.00 salary, about 45 hours a week. Offer B: $25.50 per hour for 40 hours plus 3 overtime hours a week at 1.5 times the rate, for 50 weeks. How much more does the higher-paying offer earn in a year?",
+   "format": "short-answer",
+   "answer": "$737.50",
+   "numeric": {
+    "value": 737.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Offer B regular: $25.50 × 40 × 50 = $51,000.00.",
+    "Offer B overtime: $25.50 × 1.5 × 3 × 50 = $5,737.50.",
+    "Offer B total $56,737.50 vs Offer A $56,000.00: difference $737.50.",
+    "Per hour, Offer A pays $23.93 because of its long hours."
+   ]
+  },
+  {
+   "id": "fa-income-s01-lv-a-offer-compare-03",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "advanced",
+   "family": "lv-a-offer-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah compares two offers. Offer A: $51,000.00 salary, about 45 hours a week. Offer B: $23.50 per hour for 40 hours plus 5 overtime hours a week at 1.5 times the rate, for 50 weeks. How much more does the higher-paying offer earn in a year?",
+   "format": "short-answer",
+   "answer": "$4,812.50",
+   "numeric": {
+    "value": 4812.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Offer B regular: $23.50 × 40 × 50 = $47,000.00.",
+    "Offer B overtime: $23.50 × 1.5 × 5 × 50 = $8,812.50.",
+    "Offer B total $55,812.50 vs Offer A $51,000.00: difference $4,812.50.",
+    "Per hour, Offer A pays $21.79 because of its long hours."
+   ]
+  },
+  {
+   "id": "fa-income-s01-lv-a-offer-compare-04",
+   "unitId": "income",
+   "skillId": "income-skill-01",
+   "level": "advanced",
+   "family": "lv-a-offer-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan compares two offers. Offer A: $55,000.00 salary, about 50 hours a week. Offer B: $24.00 per hour for 40 hours plus 4 overtime hours a week at 1.5 times the rate, for 50 weeks. How much more does the higher-paying offer earn in a year?",
+   "format": "short-answer",
+   "answer": "$200.00",
+   "numeric": {
+    "value": 200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Offer B regular: $24.00 × 40 × 50 = $48,000.00.",
+    "Offer B overtime: $24.00 × 1.5 × 4 × 50 = $7,200.00.",
+    "Offer B total $55,200.00 vs Offer A $55,000.00: difference $200.00.",
+    "Per hour, Offer A pays $21.15 because of its long hours."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-s-net-simple-01",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "support",
+   "family": "lv-s-net-simple",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's gross pay is $1,650 and total deductions are $490. Net pay = gross pay − deductions. What is his net pay?",
+   "format": "short-answer",
+   "answer": "$1,160",
+   "numeric": {
+    "value": 1160,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,650 − $490 = $1,160."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-s-net-simple-02",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "support",
+   "family": "lv-s-net-simple",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia's gross pay is $2,200 and total deductions are $450. Net pay = gross pay − deductions. What is her net pay?",
+   "format": "short-answer",
+   "answer": "$1,750",
+   "numeric": {
+    "value": 1750,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,200 − $450 = $1,750."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-s-net-simple-03",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "support",
+   "family": "lv-s-net-simple",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's gross pay is $2,200 and total deductions are $430. Net pay = gross pay − deductions. What is her net pay?",
+   "format": "short-answer",
+   "answer": "$1,770",
+   "numeric": {
+    "value": 1770,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,200 − $430 = $1,770."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-s-net-simple-04",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "support",
+   "family": "lv-s-net-simple",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus's gross pay is $850 and total deductions are $230. Net pay = gross pay − deductions. What is his net pay?",
+   "format": "short-answer",
+   "answer": "$620",
+   "numeric": {
+    "value": 620,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$850 − $230 = $620."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-a-gross-from-net-01",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "advanced",
+   "family": "lv-a-gross-from-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "About 18% of Hana's gross pay goes to taxes and deductions. She wants net pay of $1,918.00 per paycheck. What gross pay per paycheck does she need?",
+   "format": "short-answer",
+   "answer": "$2,339.02",
+   "numeric": {
+    "value": 2339.02,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Net = gross × (1 − 0.18) = gross × 0.82.",
+    "Gross = $1,918.00 ÷ 0.82 = $2,339.02.",
+    "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-a-gross-from-net-02",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "advanced",
+   "family": "lv-a-gross-from-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "About 24% of Imani's gross pay goes to taxes and deductions. She wants net pay of $3,143.50 per paycheck. What gross pay per paycheck does she need?",
+   "format": "short-answer",
+   "answer": "$4,136.18",
+   "numeric": {
+    "value": 4136.18,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Net = gross × (1 − 0.24) = gross × 0.76.",
+    "Gross = $3,143.50 ÷ 0.76 = $4,136.18.",
+    "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-a-gross-from-net-03",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "advanced",
+   "family": "lv-a-gross-from-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "About 25% of Hana's gross pay goes to taxes and deductions. She wants net pay of $2,383.00 per paycheck. What gross pay per paycheck does she need?",
+   "format": "short-answer",
+   "answer": "$3,177.33",
+   "numeric": {
+    "value": 3177.33,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Net = gross × (1 − 0.25) = gross × 0.75.",
+    "Gross = $2,383.00 ÷ 0.75 = $3,177.33.",
+    "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-a-gross-from-net-04",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "advanced",
+   "family": "lv-a-gross-from-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "About 24% of Elijah's gross pay goes to taxes and deductions. He wants net pay of $2,272.00 per paycheck. What gross pay per paycheck does he need?",
+   "format": "short-answer",
+   "answer": "$2,989.47",
+   "numeric": {
+    "value": 2989.47,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Net = gross × (1 − 0.24) = gross × 0.76.",
+    "Gross = $2,272.00 ÷ 0.76 = $2,989.47.",
+    "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-a-gross-from-net-05",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "advanced",
+   "family": "lv-a-gross-from-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "About 20% of Maya's gross pay goes to taxes and deductions. She wants net pay of $1,306.50 per paycheck. What gross pay per paycheck does she need?",
+   "format": "short-answer",
+   "answer": "$1,633.13",
+   "numeric": {
+    "value": 1633.13,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Net = gross × (1 − 0.2) = gross × 0.80.",
+    "Gross = $1,306.50 ÷ 0.80 = $1,633.13.",
+    "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-a-gross-from-net-06",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "advanced",
+   "family": "lv-a-gross-from-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "About 24% of Camila's gross pay goes to taxes and deductions. She wants net pay of $1,874.00 per paycheck. What gross pay per paycheck does she need?",
+   "format": "short-answer",
+   "answer": "$2,465.79",
+   "numeric": {
+    "value": 2465.79,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Net = gross × (1 − 0.24) = gross × 0.76.",
+    "Gross = $1,874.00 ÷ 0.76 = $2,465.79.",
+    "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
+   ]
+  },
+  {
+   "id": "fa-income-s02-lv-a-gross-from-net-07",
+   "unitId": "income",
+   "skillId": "income-skill-02",
+   "level": "advanced",
+   "family": "lv-a-gross-from-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "About 24% of Leah's gross pay goes to taxes and deductions. She wants net pay of $2,069.50 per paycheck. What gross pay per paycheck does she need?",
+   "format": "short-answer",
+   "answer": "$2,723.03",
+   "numeric": {
+    "value": 2723.03,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Net = gross × (1 − 0.24) = gross × 0.76.",
+    "Gross = $2,069.50 ÷ 0.76 = $2,723.03.",
+    "Adding the rate to the net (net × 1.2) is a common mistake: the rate is a share of gross, not of net."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-01",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace's year-to-date gross pay before this paycheck was $20,100. This paycheck's gross pay is $1,550. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$21,650",
+   "numeric": {
+    "value": 21650,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$20,100 + $1,550 = $21,650."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-02",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus's year-to-date gross pay before this paycheck was $19,600. This paycheck's gross pay is $1,450. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$21,050",
+   "numeric": {
+    "value": 21050,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$19,600 + $1,450 = $21,050."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-03",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego's year-to-date gross pay before this paycheck was $27,100. This paycheck's gross pay is $1,150. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$28,250",
+   "numeric": {
+    "value": 28250,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$27,100 + $1,150 = $28,250."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-04",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego's year-to-date gross pay before this paycheck was $12,000. This paycheck's gross pay is $1,450. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$13,450",
+   "numeric": {
+    "value": 13450,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$12,000 + $1,450 = $13,450."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-05",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre's year-to-date gross pay before this paycheck was $9,500. This paycheck's gross pay is $1,350. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$10,850",
+   "numeric": {
+    "value": 10850,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$9,500 + $1,350 = $10,850."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-06",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan's year-to-date gross pay before this paycheck was $11,400. This paycheck's gross pay is $1,750. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$13,150",
+   "numeric": {
+    "value": 13150,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$11,400 + $1,750 = $13,150."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-07",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis's year-to-date gross pay before this paycheck was $19,400. This paycheck's gross pay is $1,550. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$20,950",
+   "numeric": {
+    "value": 20950,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$19,400 + $1,550 = $20,950."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-s-ytd-add-08",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "support",
+   "family": "lv-s-ytd-add",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana's year-to-date gross pay before this paycheck was $27,800. This paycheck's gross pay is $1,700. New YTD = old YTD + this paycheck. What does the stub show for year-to-date gross?",
+   "format": "short-answer",
+   "answer": "$29,500",
+   "numeric": {
+    "value": 29500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$27,800 + $1,700 = $29,500."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-a-missing-deduction-01",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "advanced",
+   "family": "lv-a-missing-deduction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "A pay stub shows gross pay $1,677.00, federal tax $150.93, Social Security $103.97, Medicare $24.32, and net pay $1,330.70. The state tax amount is smudged. What is the state tax?",
+   "format": "short-answer",
+   "answer": "$67.08",
+   "numeric": {
+    "value": 67.08,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deductions = gross − net = $1,677.00 − $1,330.70 = $346.30.",
+    "State tax = $346.30 − ($150.93 + $103.97 + $24.32) = $67.08."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-a-missing-deduction-02",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "advanced",
+   "family": "lv-a-missing-deduction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "A pay stub shows gross pay $1,845.00, federal tax $129.15, Social Security $114.39, Medicare $26.75, and net pay $1,500.91. The state tax amount is smudged. What is the state tax?",
+   "format": "short-answer",
+   "answer": "$73.80",
+   "numeric": {
+    "value": 73.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deductions = gross − net = $1,845.00 − $1,500.91 = $344.09.",
+    "State tax = $344.09 − ($129.15 + $114.39 + $26.75) = $73.80."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-a-missing-deduction-03",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "advanced",
+   "family": "lv-a-missing-deduction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "A pay stub shows gross pay $2,267.00, federal tax $158.69, Social Security $140.55, Medicare $32.87, and net pay $1,821.54. The state tax amount is smudged. What is the state tax?",
+   "format": "short-answer",
+   "answer": "$113.35",
+   "numeric": {
+    "value": 113.35,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deductions = gross − net = $2,267.00 − $1,821.54 = $445.46.",
+    "State tax = $445.46 − ($158.69 + $140.55 + $32.87) = $113.35."
+   ]
+  },
+  {
+   "id": "fa-income-s03-lv-a-missing-deduction-04",
+   "unitId": "income",
+   "skillId": "income-skill-03",
+   "level": "advanced",
+   "family": "lv-a-missing-deduction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "A pay stub shows gross pay $2,610.50, federal tax $182.74, Social Security $161.85, Medicare $37.85, and net pay $2,149.74. The state tax amount is smudged. What is the state tax?",
+   "format": "short-answer",
+   "answer": "$78.32",
+   "numeric": {
+    "value": 78.32,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deductions = gross − net = $2,610.50 − $2,149.74 = $460.76.",
+    "State tax = $460.76 − ($182.74 + $161.85 + $37.85) = $78.32."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-s-tax-10-01",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-s-tax-10",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In 2026 the first $12,400 of a single filer's taxable income is taxed at 10%. Grace has taxable income of $6,700. Tax = 10% × taxable income. What is her federal income tax?",
+   "format": "short-answer",
+   "answer": "$670",
+   "numeric": {
+    "value": 670,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.10 × $6,700 = $670."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-s-tax-10-02",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-s-tax-10",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In 2026 the first $12,400 of a single filer's taxable income is taxed at 10%. Elijah has taxable income of $5,000. Tax = 10% × taxable income. What is his federal income tax?",
+   "format": "short-answer",
+   "answer": "$500",
+   "numeric": {
+    "value": 500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.10 × $5,000 = $500."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-s-tax-10-03",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-s-tax-10",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In 2026 the first $12,400 of a single filer's taxable income is taxed at 10%. Luis has taxable income of $7,000. Tax = 10% × taxable income. What is his federal income tax?",
+   "format": "short-answer",
+   "answer": "$700",
+   "numeric": {
+    "value": 700,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.10 × $7,000 = $700."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-s-tax-10-04",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-s-tax-10",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In 2026 the first $12,400 of a single filer's taxable income is taxed at 10%. Priya has taxable income of $7,900. Tax = 10% × taxable income. What is her federal income tax?",
+   "format": "short-answer",
+   "answer": "$790",
+   "numeric": {
+    "value": 790,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.10 × $7,900 = $790."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-a-tax-401k-2026-01",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-a-tax-401k-2026",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan earns $114,000 in 2026, puts 10% of pay into a traditional 401(k) (pre-tax), and takes the $16,100 standard deduction. Using the 2026 single-filer brackets (10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775), what is their federal income tax?",
+   "format": "short-answer",
+   "answer": "$13,742",
+   "numeric": {
+    "value": 13742,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "401(k) = 10% × $114,000 = $11,400.",
+    "Taxable = $114,000 − $11,400 − $16,100 = $86,500.",
+    "Tax by brackets = $13,742.",
+    "The pre-tax 401(k) lowers taxable income, so it lowers the tax."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-a-tax-401k-2026-02",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-a-tax-401k-2026",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia earns $83,000.00 in 2026, puts 6% of pay into a traditional 401(k) (pre-tax), and takes the $16,100.00 standard deduction. Using the 2026 single-filer brackets (10% to $12,400.00; 12% to $50,400.00; 22% to $105,700.00; 24% to $201,775.00), what is her federal income tax?",
+   "format": "short-answer",
+   "answer": "$8,334.40",
+   "numeric": {
+    "value": 8334.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "401(k) = 6% × $83,000.00 = $4,980.00.",
+    "Taxable = $83,000.00 − $4,980.00 − $16,100.00 = $61,920.00.",
+    "Tax by brackets = $8,334.40.",
+    "The pre-tax 401(k) lowers taxable income, so it lowers the tax."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-a-tax-401k-2026-03",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-a-tax-401k-2026",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah earns $102,000.00 in 2026, puts 8% of pay into a traditional 401(k) (pre-tax), and takes the $16,100.00 standard deduction. Using the 2026 single-filer brackets (10% to $12,400.00; 12% to $50,400.00; 22% to $105,700.00; 24% to $201,775.00), what is her federal income tax?",
+   "format": "short-answer",
+   "answer": "$11,814.80",
+   "numeric": {
+    "value": 11814.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "401(k) = 8% × $102,000.00 = $8,160.00.",
+    "Taxable = $102,000.00 − $8,160.00 − $16,100.00 = $77,740.00.",
+    "Tax by brackets = $11,814.80.",
+    "The pre-tax 401(k) lowers taxable income, so it lowers the tax."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-a-tax-401k-2026-04",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-a-tax-401k-2026",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah earns $80,000 in 2026, puts 6% of pay into a traditional 401(k) (pre-tax), and takes the $16,100 standard deduction. Using the 2026 single-filer brackets (10% to $12,400; 12% to $50,400; 22% to $105,700; 24% to $201,775), what is his federal income tax?",
+   "format": "short-answer",
+   "answer": "$7,714",
+   "numeric": {
+    "value": 7714,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "401(k) = 6% × $80,000 = $4,800.",
+    "Taxable = $80,000 − $4,800 − $16,100 = $59,100.",
+    "Tax by brackets = $7,714.",
+    "The pre-tax 401(k) lowers taxable income, so it lowers the tax."
+   ]
+  },
+  {
    "id": "fa-income-s01-err-weeks-per-year-01",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "weeks-per-year-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8888,7 +9971,7 @@
    "id": "fa-income-s01-err-overtime-rate-01",
    "unitId": "income",
    "skillId": "income-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "overtime-rate-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8930,7 +10013,7 @@
    "id": "fa-income-s02-err-fica-medicare-01",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "fica-medicare-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8984,7 +10067,7 @@
    "id": "fa-income-s02-err-net-deductions-01",
    "unitId": "income",
    "skillId": "income-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "net-deductions-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9081,7 +10164,7 @@
    "id": "fa-income-s03-err-pay-periods-01",
    "unitId": "income",
    "skillId": "income-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "pay-periods-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9123,7 +10206,7 @@
    "id": "fa-income-s04-err-marginal-rate-01",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "marginal-rate-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9177,7 +10260,7 @@
    "id": "fa-income-s04-err-standard-deduction-01",
    "unitId": "income",
    "skillId": "income-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "standard-deduction-error",
    "type": "reasoning",
    "errorAnalysis": true,

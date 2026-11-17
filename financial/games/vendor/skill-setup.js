@@ -93,9 +93,16 @@
       if (sharing && G.parent !== G) G.parent.postMessage({ type: 'teacher-skills-selected', skills: ids }, G.location.origin);
       else if (!shareOnly) start(ids);
     });
+    // Financial Algebra levels (2026-11-17): the student link opens the game at the level chosen here.
+    var lvWrap = null;
+    if (!sharing) { lvWrap = doc.createElement('label'); lvWrap.textContent = 'Student link level '; lvWrap.style.cssText = 'display:block;margin-top:10px';
+      var lvSel = doc.createElement('select'); lvSel.className = 'gm-sel'; lvSel.setAttribute('data-link-level', '');
+      [['cp2', 'Support'], ['cp1', 'Standard'], ['honors', 'Advanced']].forEach(function (o) { var op = doc.createElement('option'); op.value = o[0]; op.textContent = o[1]; lvSel.appendChild(op); });
+      var cur = new URLSearchParams(G.location.search).get('level'); lvSel.value = /^(cp2|cp1|honors)$/.test(cur || '') ? cur : 'cp1';
+      lvWrap.appendChild(lvSel); dialog.appendChild(lvWrap); }
     if (!sharing) button('Generate student link', dialog, function () {
       var ids=inputs.filter(function(i){return i.checked;}).map(function(i){return i.value;});if(!ids.length)return;
-      var url=new URL(G.location.href);url.searchParams.delete('teacher');url.searchParams.delete('teacherShare');url.searchParams.set('student','1');url.searchParams.set('skills',JSON.stringify(ids));
+      var url=new URL(G.location.href);url.searchParams.delete('teacher');url.searchParams.delete('teacherShare');url.searchParams.set('student','1');url.searchParams.set('skills',JSON.stringify(ids));var ls=dialog.querySelector('[data-link-level]');if(ls)url.searchParams.set('level',ls.value);
       var field=dialog.querySelector('[aria-label="Student link"]');if(!field){field=doc.createElement('input');field.readOnly=true;field.setAttribute('aria-label','Student link');field.style.cssText='display:block;box-sizing:border-box;width:100%;padding:12px;margin-top:12px';dialog.appendChild(field);}
       field.value=url.href;field.focus();field.select();
       if(G.navigator.clipboard&&G.navigator.clipboard.writeText)G.navigator.clipboard.writeText(url.href).then(function(){status.textContent='Student link copied!';},function(){status.textContent='Copy the selected student link.';});else status.textContent='Copy the selected student link.';

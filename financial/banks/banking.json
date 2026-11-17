@@ -3,7 +3,11 @@
  "courseId": "financial-algebra",
  "unitId": "banking",
  "unitName": "Banking & Saving",
- "level": "standard",
+ "levels": [
+  "support",
+  "standard",
+  "advanced"
+ ],
  "generated": "deterministic",
  "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
  "skills": [
@@ -508,7 +512,7 @@
  "cheatSheet": {
   "title": "Banking & Saving",
   "focus": "choose accounts, calculate interest and spot fees",
-  "morefocus": "compare savings options and reconcile a statement",
+  "morefocus": "compare savings options, reconcile a statement and spot scams",
   "front": [
    {
     "title": "Accounts & safety",
@@ -694,16 +698,16 @@
     "color": "orange"
    },
    {
-    "title": "Match product to purpose",
+    "title": "Scams & fraud protection",
     "kind": "list",
+    "color": "pink",
     "items": [
-     "Daily bills: accessible checking with manageable fees.",
-     "Emergency fund: liquid savings with dependable access.",
-     "Known future date: compare a CD term with that date.",
-     "Check insurance and ownership limits directly.",
-     "Use alerts, protect login details and review statements; report unexpected transactions promptly."
-    ],
-    "color": "pink"
+     "Red flags: pressure to act now, secrecy, payment by gift card, wire or crypto.",
+     "Never send back an “overpayment”: the check can bounce later and you repay it.",
+     "Debit fraud: liability up to $50 if reported within 2 business days, up to $500 within 60 days of the statement.",
+     "Credit cards: liability is at most $50.",
+     "Use alerts, log in through the bank’s own app, and freeze your credit (free) if your identity is stolen; IdentityTheft.gov has a recovery plan."
+    ]
    },
    {
     "title": "Reminders & mistakes",
@@ -739,7 +743,7 @@
    "id": "fa-banking-s01-vocab-def-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Checking account** mean?",
@@ -784,7 +788,7 @@
    "id": "fa-banking-s03-vocab-def-02",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Savings account** mean?",
@@ -829,7 +833,7 @@
    "id": "fa-banking-s01-vocab-def-03",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Overdraft fee** mean?",
@@ -876,7 +880,7 @@
    "id": "fa-banking-s01-vocab-def-04",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Monthly maintenance fee** mean?",
@@ -921,7 +925,7 @@
    "id": "fa-banking-s01-vocab-def-05",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Minimum balance requirement** mean?",
@@ -966,7 +970,7 @@
    "id": "fa-banking-s01-vocab-def-06",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Out-of-network ATM fee** mean?",
@@ -1011,7 +1015,7 @@
    "id": "fa-banking-s02-vocab-def-07",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Principal** mean?",
@@ -1056,7 +1060,7 @@
    "id": "fa-banking-s02-vocab-def-08",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Simple interest** mean?",
@@ -1101,7 +1105,7 @@
    "id": "fa-banking-s03-vocab-def-09",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Compound interest** mean?",
@@ -1146,7 +1150,7 @@
    "id": "fa-banking-s03-vocab-def-10",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **APY (annual percentage yield)** mean?",
@@ -1193,7 +1197,7 @@
    "id": "fa-banking-s03-vocab-def-11",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Certificate of deposit (CD)** mean?",
@@ -1238,7 +1242,7 @@
    "id": "fa-banking-s03-vocab-def-12",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **FDIC/NCUA insurance** mean?",
@@ -1283,7 +1287,7 @@
    "id": "fa-banking-s03-vocab-def-13",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit union** mean?",
@@ -1328,7 +1332,7 @@
    "id": "fa-banking-s04-vocab-def-14",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Bank statement** mean?",
@@ -1373,7 +1377,7 @@
    "id": "fa-banking-s04-vocab-def-15",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Reconcile** mean?",
@@ -1418,7 +1422,7 @@
    "id": "fa-banking-s04-vocab-def-16",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Outstanding transaction** mean?",
@@ -1463,7 +1467,7 @@
    "id": "fa-banking-s01-vocab-def-17",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Direct deposit** mean?",
@@ -1508,7 +1512,7 @@
    "id": "fa-banking-s03-vocab-def-18",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Liquidity** mean?",
@@ -1553,7 +1557,7 @@
    "id": "fa-banking-s05-vocab-def-19",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Phishing** mean?",
@@ -1598,7 +1602,7 @@
    "id": "fa-banking-s05-vocab-def-20",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Identity theft** mean?",
@@ -1643,7 +1647,7 @@
    "id": "fa-banking-s05-vocab-def-21",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit freeze** mean?",
@@ -1688,7 +1692,7 @@
    "id": "fa-banking-s05-vocab-def-22",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Fraud alert** mean?",
@@ -1733,7 +1737,7 @@
    "id": "fa-banking-s05-vocab-def-23",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Fake check scam** mean?",
@@ -1778,7 +1782,7 @@
    "id": "fa-banking-s01-concept-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which habit is most likely to avoid overdraft fees?",
@@ -1820,7 +1824,7 @@
    "id": "fa-banking-s01-concept-02",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A checking account charges $10/month unless you have direct deposit of at least $500. Who pays the fee?",
@@ -1862,7 +1866,7 @@
    "id": "fa-banking-s02-concept-03",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "In I = Prt, what does t represent?",
@@ -1904,7 +1908,7 @@
    "id": "fa-banking-s02-concept-04",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "$1,500.00 earns simple interest at 4% per year. How much interest is earned in 9 months?",
@@ -1946,7 +1950,7 @@
    "id": "fa-banking-s03-concept-05",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Two accounts each have a 3.60% interest rate. Account X compounds monthly; Account Y compounds annually. Which earns more?",
@@ -1988,7 +1992,7 @@
    "id": "fa-banking-s03-concept-06",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why might someone keep an emergency fund in a savings account instead of a 5-year CD with a higher rate?",
@@ -2030,7 +2034,7 @@
    "id": "fa-banking-s03-concept-07",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL true statements about FDIC/NCUA insurance.",
@@ -2075,7 +2079,7 @@
    "id": "fa-banking-s04-concept-08",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Your register shows $842.15, but the statement shows $1,042.15. A $200.00 check you wrote has not cleared. What explains the difference?",
@@ -2117,7 +2121,7 @@
    "id": "fa-banking-s04-concept-09",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which line on a bank statement should you investigate immediately?",
@@ -2159,7 +2163,7 @@
    "id": "fa-banking-s05-concept-10",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Your bank calls and asks you to confirm your PIN to stop a fraud alert. What should you do?",
@@ -2201,7 +2205,7 @@
    "id": "fa-banking-s05-concept-11",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL warning signs of a scam.",
@@ -2247,7 +2251,7 @@
    "id": "fa-banking-s05-concept-12",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which federal site helps you report identity theft and make a recovery plan?",
@@ -2289,7 +2293,7 @@
    "id": "fa-banking-s01-claim-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Bank fees are too small to matter.”",
@@ -2328,7 +2332,7 @@
    "id": "fa-banking-s01-claim-cer-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2397,7 +2401,7 @@
    "id": "fa-banking-s03-claim-02",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “The account with the highest interest rate is always the best place for savings.”",
@@ -2436,7 +2440,7 @@
    "id": "fa-banking-s03-claim-cer-02",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2505,7 +2509,7 @@
    "id": "fa-banking-s02-claim-03",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Doubling the time doubles the interest earned, no matter what.”",
@@ -2544,7 +2548,7 @@
    "id": "fa-banking-s02-claim-cer-03",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2613,7 +2617,7 @@
    "id": "fa-banking-s04-claim-04",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “If the bank statement balance is higher than I expected, I have extra money to spend.”",
@@ -2652,7 +2656,7 @@
    "id": "fa-banking-s04-claim-cer-04",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2721,7 +2725,7 @@
    "id": "fa-banking-s05-claim-05",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “If a check has cleared in my account, it cannot bounce.”",
@@ -2760,7 +2764,7 @@
    "id": "fa-banking-s05-claim-cer-05",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2859,7 +2863,7 @@
    "id": "fa-banking-s01-fee-annual-02",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "fee-annual",
    "type": "calculation",
    "activityTypes": [
@@ -2979,7 +2983,7 @@
    "id": "fa-banking-s01-fee-annual-06",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "fee-annual",
    "type": "calculation",
    "activityTypes": [
@@ -3009,7 +3013,7 @@
    "id": "fa-banking-s01-overdraft-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "overdraft",
    "type": "scenario",
    "activityTypes": [
@@ -3040,7 +3044,7 @@
    "id": "fa-banking-s01-overdraft-02",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "overdraft",
    "type": "scenario",
    "activityTypes": [
@@ -3071,7 +3075,7 @@
    "id": "fa-banking-s01-overdraft-03",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "overdraft",
    "type": "scenario",
    "activityTypes": [
@@ -3102,7 +3106,7 @@
    "id": "fa-banking-s01-overdraft-04",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "overdraft",
    "type": "scenario",
    "activityTypes": [
@@ -3133,7 +3137,7 @@
    "id": "fa-banking-s01-overdraft-05",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "overdraft",
    "type": "scenario",
    "activityTypes": [
@@ -3164,7 +3168,7 @@
    "id": "fa-banking-s01-overdraft-06",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "overdraft",
    "type": "scenario",
    "activityTypes": [
@@ -3195,7 +3199,7 @@
    "id": "fa-banking-s01-acct-choose-or-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "acct-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -3303,7 +3307,7 @@
    "id": "fa-banking-s01-acct-choose-or-02",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "acct-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -3411,7 +3415,7 @@
    "id": "fa-banking-s01-acct-choose-or-03",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "acct-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -3519,7 +3523,7 @@
    "id": "fa-banking-s01-acct-choose-or-04",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "acct-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -3819,7 +3823,7 @@
    "id": "fa-banking-s02-simple-i-07",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "simple-i",
    "type": "calculation",
    "activityTypes": [
@@ -3851,7 +3855,7 @@
    "id": "fa-banking-s02-simple-solve-01",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "simple-solve",
    "type": "calculation",
    "activityTypes": [
@@ -3879,7 +3883,7 @@
    "id": "fa-banking-s02-simple-solve-02",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "simple-solve",
    "type": "calculation",
    "activityTypes": [
@@ -3907,7 +3911,7 @@
    "id": "fa-banking-s02-simple-solve-03",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "simple-solve",
    "type": "calculation",
    "activityTypes": [
@@ -3991,7 +3995,7 @@
    "id": "fa-banking-s02-simple-solve-06",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "simple-solve",
    "type": "calculation",
    "activityTypes": [
@@ -4019,7 +4023,7 @@
    "id": "fa-banking-s02-cd-simple-01",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "cd-simple",
    "type": "scenario",
    "activityTypes": [
@@ -4047,7 +4051,7 @@
    "id": "fa-banking-s02-cd-simple-02",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "cd-simple",
    "type": "scenario",
    "activityTypes": [
@@ -4075,7 +4079,7 @@
    "id": "fa-banking-s02-cd-simple-03",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "cd-simple",
    "type": "scenario",
    "activityTypes": [
@@ -4103,7 +4107,7 @@
    "id": "fa-banking-s02-cd-simple-04",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "cd-simple",
    "type": "scenario",
    "activityTypes": [
@@ -4131,7 +4135,7 @@
    "id": "fa-banking-s02-cd-simple-05",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "cd-simple",
    "type": "scenario",
    "activityTypes": [
@@ -4159,7 +4163,7 @@
    "id": "fa-banking-s03-apy-01",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "apy",
    "type": "calculation",
    "activityTypes": [
@@ -4217,7 +4221,7 @@
    "id": "fa-banking-s03-apy-03",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "apy",
    "type": "calculation",
    "activityTypes": [
@@ -4275,7 +4279,7 @@
    "id": "fa-banking-s03-apy-05",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "apy",
    "type": "calculation",
    "activityTypes": [
@@ -4304,7 +4308,7 @@
    "id": "fa-banking-s03-apy-06",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "apy",
    "type": "calculation",
    "activityTypes": [
@@ -4333,7 +4337,7 @@
    "id": "fa-banking-s03-apy-07",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "apy",
    "type": "calculation",
    "activityTypes": [
@@ -4418,7 +4422,7 @@
    "id": "fa-banking-s03-compound-compare-02",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "compound-compare",
    "type": "comparison",
    "activityTypes": [
@@ -4472,7 +4476,7 @@
    "id": "fa-banking-s03-compound-compare-04",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "compound-compare",
    "type": "comparison",
    "activityTypes": [
@@ -4499,7 +4503,7 @@
    "id": "fa-banking-s03-compound-compare-05",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "compound-compare",
    "type": "comparison",
    "activityTypes": [
@@ -4526,7 +4530,7 @@
    "id": "fa-banking-s03-compound-compare-06",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "compound-compare",
    "type": "comparison",
    "activityTypes": [
@@ -4580,7 +4584,7 @@
    "id": "fa-banking-s03-compound-compare-08",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "compound-compare",
    "type": "comparison",
    "activityTypes": [
@@ -4607,7 +4611,7 @@
    "id": "fa-banking-s03-product-choose-01",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "product-choose",
    "type": "comparison",
    "activityTypes": [
@@ -4647,7 +4651,7 @@
    "id": "fa-banking-s03-product-choose-02",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "product-choose",
    "type": "comparison",
    "activityTypes": [
@@ -4687,7 +4691,7 @@
    "id": "fa-banking-s03-product-choose-03",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "product-choose",
    "type": "comparison",
    "activityTypes": [
@@ -4727,7 +4731,7 @@
    "id": "fa-banking-s03-product-choose-04",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "product-choose",
    "type": "comparison",
    "activityTypes": [
@@ -4767,7 +4771,7 @@
    "id": "fa-banking-s03-product-choose-05",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "product-choose",
    "type": "comparison",
    "activityTypes": [
@@ -5000,7 +5004,7 @@
    "id": "fa-banking-s04-statement-end-03",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "statement-end",
    "type": "document",
    "activityTypes": [
@@ -5294,7 +5298,7 @@
    "id": "fa-banking-s04-statement-end-06",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "statement-end",
    "type": "document",
    "activityTypes": [
@@ -5457,7 +5461,7 @@
    "id": "fa-banking-s04-reconcile-03",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "reconcile",
    "type": "calculation",
    "activityTypes": [
@@ -5487,7 +5491,7 @@
    "id": "fa-banking-s04-reconcile-04",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "reconcile",
    "type": "calculation",
    "activityTypes": [
@@ -5517,7 +5521,7 @@
    "id": "fa-banking-s04-reconcile-05",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "reconcile",
    "type": "calculation",
    "activityTypes": [
@@ -5547,7 +5551,7 @@
    "id": "fa-banking-s04-reconcile-06",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "reconcile",
    "type": "calculation",
    "activityTypes": [
@@ -5577,7 +5581,7 @@
    "id": "fa-banking-s04-reconcile-07",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "reconcile",
    "type": "calculation",
    "activityTypes": [
@@ -5637,7 +5641,7 @@
    "id": "fa-banking-s04-fraud-or-01",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "fraud-or",
    "type": "document",
    "activityTypes": [
@@ -5779,7 +5783,7 @@
    "id": "fa-banking-s04-fraud-or-02",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "fraud-or",
    "type": "document",
    "activityTypes": [
@@ -5921,7 +5925,7 @@
    "id": "fa-banking-s04-fraud-or-03",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "fraud-or",
    "type": "document",
    "activityTypes": [
@@ -6266,7 +6270,7 @@
    "id": "fa-banking-s01-ap-fee-waiver-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-fee-waiver",
    "type": "calculation",
    "activityTypes": [
@@ -6295,7 +6299,7 @@
    "id": "fa-banking-s01-ap-fee-waiver-02",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-fee-waiver",
    "type": "calculation",
    "activityTypes": [
@@ -6411,7 +6415,7 @@
    "id": "fa-banking-s01-ap-fee-waiver-06",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-fee-waiver",
    "type": "calculation",
    "activityTypes": [
@@ -7340,7 +7344,7 @@
    "id": "fa-banking-s05-debit-liability-05",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "debit-liability",
    "type": "calculation",
    "activityTypes": [
@@ -7369,7 +7373,7 @@
    "id": "fa-banking-s05-debit-liability-06",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "debit-liability",
    "type": "calculation",
    "activityTypes": [
@@ -7398,7 +7402,7 @@
    "id": "fa-banking-s05-debit-liability-07",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "debit-liability",
    "type": "calculation",
    "activityTypes": [
@@ -7427,7 +7431,7 @@
    "id": "fa-banking-s05-credit-vs-debit-01",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "credit-vs-debit",
    "type": "comparison",
    "activityTypes": [
@@ -7454,7 +7458,7 @@
    "id": "fa-banking-s05-credit-vs-debit-02",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "credit-vs-debit",
    "type": "comparison",
    "activityTypes": [
@@ -7481,7 +7485,7 @@
    "id": "fa-banking-s05-credit-vs-debit-03",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "credit-vs-debit",
    "type": "comparison",
    "activityTypes": [
@@ -7508,7 +7512,7 @@
    "id": "fa-banking-s05-credit-vs-debit-04",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "credit-vs-debit",
    "type": "comparison",
    "activityTypes": [
@@ -7535,7 +7539,7 @@
    "id": "fa-banking-s05-credit-vs-debit-05",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "credit-vs-debit",
    "type": "comparison",
    "activityTypes": [
@@ -7562,7 +7566,7 @@
    "id": "fa-banking-s05-credit-vs-debit-06",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "credit-vs-debit",
    "type": "comparison",
    "activityTypes": [
@@ -7669,7 +7673,7 @@
    "id": "fa-banking-s05-scam-spot-03",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "scam-spot",
    "type": "scenario",
    "activityTypes": [
@@ -7789,7 +7793,7 @@
    "id": "fa-banking-s05-scam-spot-06",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "scam-spot",
    "type": "scenario",
    "activityTypes": [
@@ -7829,7 +7833,7 @@
    "id": "fa-banking-s05-scam-spot-07",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "scam-spot",
    "type": "scenario",
    "activityTypes": [
@@ -7869,7 +7873,7 @@
    "id": "fa-banking-s05-scam-spot-08",
    "unitId": "banking",
    "skillId": "banking-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "scam-spot",
    "type": "scenario",
    "activityTypes": [
@@ -7906,10 +7910,1907 @@
    ]
   },
   {
+   "id": "fa-banking-s01-lv-s-fee-year-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-s-fee-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo's checking account charges a $15 monthly fee. Yearly cost = monthly fee × 12. How much does he pay in a year?",
+   "format": "short-answer",
+   "answer": "$180",
+   "numeric": {
+    "value": 180,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$15 × 12 = $180."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-s-fee-year-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-s-fee-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's checking account charges a $5 monthly fee. Yearly cost = monthly fee × 12. How much does he pay in a year?",
+   "format": "short-answer",
+   "answer": "$60",
+   "numeric": {
+    "value": 60,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$5 × 12 = $60."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-s-fee-year-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-s-fee-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani's checking account charges a $10 monthly fee. Yearly cost = monthly fee × 12. How much does she pay in a year?",
+   "format": "short-answer",
+   "answer": "$120",
+   "numeric": {
+    "value": 120,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$10 × 12 = $120."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-s-fee-year-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-s-fee-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia's checking account charges a $12 monthly fee. Yearly cost = monthly fee × 12. How much does she pay in a year?",
+   "format": "short-answer",
+   "answer": "$144",
+   "numeric": {
+    "value": 144,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$12 × 12 = $144."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-s-fee-year-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-s-fee-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's checking account charges a $15 monthly fee. Yearly cost = monthly fee × 12. How much does he pay in a year?",
+   "format": "short-answer",
+   "answer": "$180",
+   "numeric": {
+    "value": 180,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$15 × 12 = $180."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-a-fee-breakeven-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-a-fee-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A savings account charges $8 a month but pays 3% APY. What balance earns enough interest in a year to cover the fees?",
+   "format": "short-answer",
+   "answer": "$3,200",
+   "numeric": {
+    "value": 3200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Yearly fees = $8 × 12 = $96.",
+    "Balance × 0.03 = $96, so balance = $96 ÷ 0.03 = $3,200.",
+    "Below that balance the account loses money."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-a-fee-breakeven-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-a-fee-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A savings account charges $8 a month but pays 5% APY. What balance earns enough interest in a year to cover the fees?",
+   "format": "short-answer",
+   "answer": "$1,920",
+   "numeric": {
+    "value": 1920,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Yearly fees = $8 × 12 = $96.",
+    "Balance × 0.05 = $96, so balance = $96 ÷ 0.05 = $1,920.",
+    "Below that balance the account loses money."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-a-fee-breakeven-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-a-fee-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A savings account charges $12 a month but pays 5% APY. What balance earns enough interest in a year to cover the fees?",
+   "format": "short-answer",
+   "answer": "$2,880",
+   "numeric": {
+    "value": 2880,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Yearly fees = $12 × 12 = $144.",
+    "Balance × 0.05 = $144, so balance = $144 ÷ 0.05 = $2,880.",
+    "Below that balance the account loses money."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-a-fee-breakeven-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-a-fee-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A savings account charges $12 a month but pays 4.5% APY. What balance earns enough interest in a year to cover the fees?",
+   "format": "short-answer",
+   "answer": "$3,200",
+   "numeric": {
+    "value": 3200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Yearly fees = $12 × 12 = $144.",
+    "Balance × 0.045 = $144, so balance = $144 ÷ 0.045 = $3,200.",
+    "Below that balance the account loses money."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-a-fee-breakeven-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-a-fee-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A savings account charges $6 a month but pays 4.5% APY. What balance earns enough interest in a year to cover the fees?",
+   "format": "short-answer",
+   "answer": "$1,600",
+   "numeric": {
+    "value": 1600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Yearly fees = $6 × 12 = $72.",
+    "Balance × 0.045 = $72, so balance = $72 ÷ 0.045 = $1,600.",
+    "Below that balance the account loses money."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani deposits $3,600 at 4% simple interest for 2 years. Use I = P × r × t. How much interest does she earn?",
+   "format": "short-answer",
+   "answer": "$288",
+   "numeric": {
+    "value": 288,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $3,600 × 0.04 × 2 = $288."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei deposits $3,500 at 3% simple interest for 4 years. Use I = P × r × t. How much interest does she earn?",
+   "format": "short-answer",
+   "answer": "$420",
+   "numeric": {
+    "value": 420,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $3,500 × 0.03 × 4 = $420."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus deposits $2,300 at 4% simple interest for 4 years. Use I = P × r × t. How much interest does he earn?",
+   "format": "short-answer",
+   "answer": "$368",
+   "numeric": {
+    "value": 368,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $2,300 × 0.04 × 4 = $368."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah deposits $2,900 at 3% simple interest for 3 years. Use I = P × r × t. How much interest does he earn?",
+   "format": "short-answer",
+   "answer": "$261",
+   "numeric": {
+    "value": 261,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $2,900 × 0.03 × 3 = $261."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley deposits $3,800 at 2% simple interest for 3 years. Use I = P × r × t. How much interest does they earn?",
+   "format": "short-answer",
+   "answer": "$228",
+   "numeric": {
+    "value": 228,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $3,800 × 0.02 × 3 = $228."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei deposits $2,200 at 2% simple interest for 4 years. Use I = P × r × t. How much interest does she earn?",
+   "format": "short-answer",
+   "answer": "$176",
+   "numeric": {
+    "value": 176,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $2,200 × 0.02 × 4 = $176."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego deposits $4,900 at 3% simple interest for 2 years. Use I = P × r × t. How much interest does he earn?",
+   "format": "short-answer",
+   "answer": "$294",
+   "numeric": {
+    "value": 294,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $4,900 × 0.03 × 2 = $294."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-08",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi deposits $1,200 at 5% simple interest for 3 years. Use I = P × r × t. How much interest does he earn?",
+   "format": "short-answer",
+   "answer": "$180",
+   "numeric": {
+    "value": 180,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $1,200 × 0.05 × 3 = $180."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-s-si-basic-09",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "support",
+   "family": "lv-s-si-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima deposits $4,500 at 4% simple interest for 2 years. Use I = P × r × t. How much interest does she earn?",
+   "format": "short-answer",
+   "answer": "$360",
+   "numeric": {
+    "value": 360,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "I = $4,500 × 0.04 × 2 = $360."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis has $8,750 earning 3% simple interest. How many years will it take to earn $1,250 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "4.76",
+   "numeric": {
+    "value": 4.76,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $1,250 ÷ ($8,750 × 0.03) = 4.76."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi has $4,250 earning 3% simple interest. How many years will it take to earn $775 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "6.08",
+   "numeric": {
+    "value": 6.08,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $775 ÷ ($4,250 × 0.03) = 6.08."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia has $4,000 earning 4% simple interest. How many years will it take to earn $800 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "5",
+   "numeric": {
+    "value": 5,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $800 ÷ ($4,000 × 0.04) = 5."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia has $2,500 earning 2.5% simple interest. How many years will it take to earn $950 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "15.2",
+   "numeric": {
+    "value": 15.2,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $950 ÷ ($2,500 × 0.025) = 15.2."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam has $8,750 earning 4% simple interest. How many years will it take to earn $1,275 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "3.64",
+   "numeric": {
+    "value": 3.64,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $1,275 ÷ ($8,750 × 0.04) = 3.64."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia has $4,750 earning 2.5% simple interest. How many years will it take to earn $1,350 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "11.37",
+   "numeric": {
+    "value": 11.37,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $1,350 ÷ ($4,750 × 0.025) = 11.37."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev has $5,000 earning 3.5% simple interest. How many years will it take to earn $500 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "2.86",
+   "numeric": {
+    "value": 2.86,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $500 ÷ ($5,000 × 0.035) = 2.86."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-08",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah has $5,750 earning 4% simple interest. How many years will it take to earn $1,450 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "6.3",
+   "numeric": {
+    "value": 6.3,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $1,450 ÷ ($5,750 × 0.04) = 6.3."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-lv-a-si-time-09",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "advanced",
+   "family": "lv-a-si-time",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya has $5,000 earning 4% simple interest. How many years will it take to earn $600 in interest, to the nearest hundredth of a year?",
+   "format": "short-answer",
+   "answer": "3",
+   "numeric": {
+    "value": 3,
+    "tolerance": 0.01,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "I = Prt, so t = I ÷ (P × r).",
+    "t = $600 ÷ ($5,000 × 0.04) = 3."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-s-cd-year-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "support",
+   "family": "lv-s-cd-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani puts $3,500 in a 1-year CD paying 4% APY. Interest = deposit × APY. How much interest does she earn?",
+   "format": "short-answer",
+   "answer": "$140",
+   "numeric": {
+    "value": 140,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,500 × 0.04 = $140."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-s-cd-year-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "support",
+   "family": "lv-s-cd-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia puts $2,500 in a 1-year CD paying 5% APY. Interest = deposit × APY. How much interest does she earn?",
+   "format": "short-answer",
+   "answer": "$125",
+   "numeric": {
+    "value": 125,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,500 × 0.05 = $125."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-s-cd-year-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "support",
+   "family": "lv-s-cd-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan puts $2,000 in a 1-year CD paying 4% APY. Interest = deposit × APY. How much interest does they earn?",
+   "format": "short-answer",
+   "answer": "$80",
+   "numeric": {
+    "value": 80,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,000 × 0.04 = $80."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-s-cd-year-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "support",
+   "family": "lv-s-cd-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley puts $1,000 in a 1-year CD paying 3% APY. Interest = deposit × APY. How much interest does they earn?",
+   "format": "short-answer",
+   "answer": "$30",
+   "numeric": {
+    "value": 30,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,000 × 0.03 = $30."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-a-cd-penalty-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "advanced",
+   "family": "lv-a-cd-penalty",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus has $10,000.00. A 2-year CD pays 4.5% simple interest but charges 3 months of interest if cashed out early; a savings account pays 3.8%. He expects to need the money after 18 months. Using simple interest, how much more does the better choice earn?",
+   "format": "short-answer",
+   "answer": "$7.50",
+   "numeric": {
+    "value": 7.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "CD: $10,000.00 × 0.045 × 1.5 = $675.00, minus penalty $10,000.00 × 0.045 ÷ 12 × 3 = $112.50 → $562.50.",
+    "Savings: $10,000.00 × 0.038 × 1.5 = $570.00.",
+    "The savings account earns $7.50 more."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-a-cd-penalty-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "advanced",
+   "family": "lv-a-cd-penalty",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah has $8,500.00. A 2-year CD pays 4.5% simple interest but charges 3 months of interest if cashed out early; a savings account pays 3.8%. He expects to need the money after 18 months. Using simple interest, how much more does the better choice earn?",
+   "format": "short-answer",
+   "answer": "$6.37",
+   "numeric": {
+    "value": 6.37,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "CD: $8,500.00 × 0.045 × 1.5 = $573.75, minus penalty $8,500.00 × 0.045 ÷ 12 × 3 = $95.63 → $478.13.",
+    "Savings: $8,500.00 × 0.038 × 1.5 = $484.50.",
+    "The savings account earns $6.37 more."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-a-cd-penalty-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "advanced",
+   "family": "lv-a-cd-penalty",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego has $11,500.00. A 2-year CD pays 4.5% simple interest but charges 6 months of interest if cashed out early; a savings account pays 3.8%. He expects to need the money after 18 months. Using simple interest, how much more does the better choice earn?",
+   "format": "short-answer",
+   "answer": "$138.00",
+   "numeric": {
+    "value": 138,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "CD: $11,500.00 × 0.045 × 1.5 = $776.25, minus penalty $11,500.00 × 0.045 ÷ 12 × 6 = $258.75 → $517.50.",
+    "Savings: $11,500.00 × 0.038 × 1.5 = $655.50.",
+    "The savings account earns $138.00 more."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-a-cd-penalty-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "advanced",
+   "family": "lv-a-cd-penalty",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley has $8,000. A 2-year CD pays 4.5% simple interest but charges 3 months of interest if cashed out early; a savings account pays 3%. They expects to need the money after 18 months. Using simple interest, how much more does the better choice earn?",
+   "format": "short-answer",
+   "answer": "$90",
+   "numeric": {
+    "value": 90,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "CD: $8,000 × 0.045 × 1.5 = $540, minus penalty $8,000 × 0.045 ÷ 12 × 3 = $90 → $450.",
+    "Savings: $8,000 × 0.03 × 1.5 = $360.",
+    "The CD earns $90 more."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-a-cd-penalty-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "advanced",
+   "family": "lv-a-cd-penalty",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler has $12,500.00. A 2-year CD pays 5.2% simple interest but charges 6 months of interest if cashed out early; a savings account pays 3.5%. He expects to need the money after 18 months. Using simple interest, how much more does the better choice earn?",
+   "format": "short-answer",
+   "answer": "$6.25",
+   "numeric": {
+    "value": 6.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "CD: $12,500.00 × 0.052 × 1.5 = $975.00, minus penalty $12,500.00 × 0.052 ÷ 12 × 6 = $325.00 → $650.00.",
+    "Savings: $12,500.00 × 0.035 × 1.5 = $656.25.",
+    "The savings account earns $6.25 more."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-a-cd-penalty-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "advanced",
+   "family": "lv-a-cd-penalty",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah has $13,000.00. A 2-year CD pays 4.5% simple interest but charges 6 months of interest if cashed out early; a savings account pays 3.8%. She expects to need the money after 18 months. Using simple interest, how much more does the better choice earn?",
+   "format": "short-answer",
+   "answer": "$156.00",
+   "numeric": {
+    "value": 156,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "CD: $13,000.00 × 0.045 × 1.5 = $877.50, minus penalty $13,000.00 × 0.045 ÷ 12 × 6 = $292.50 → $585.00.",
+    "Savings: $13,000.00 × 0.038 × 1.5 = $741.00.",
+    "The savings account earns $156.00 more."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-lv-a-cd-penalty-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "advanced",
+   "family": "lv-a-cd-penalty",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler has $4,500.00. A 2-year CD pays 4.5% simple interest but charges 6 months of interest if cashed out early; a savings account pays 3.5%. He expects to need the money after 18 months. Using simple interest, how much more does the better choice earn?",
+   "format": "short-answer",
+   "answer": "$33.75",
+   "numeric": {
+    "value": 33.75,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "CD: $4,500.00 × 0.045 × 1.5 = $303.75, minus penalty $4,500.00 × 0.045 ÷ 12 × 6 = $101.25 → $202.50.",
+    "Savings: $4,500.00 × 0.035 × 1.5 = $236.25.",
+    "The savings account earns $33.75 more."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre's statement starts at $1,410. Deposits total $530 and withdrawals total $510. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$1,430",
+   "numeric": {
+    "value": 1430,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,410 + $530 − $510 = $1,430."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's statement starts at $380. Deposits total $750 and withdrawals total $560. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$570",
+   "numeric": {
+    "value": 570,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$380 + $750 − $560 = $570."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's statement starts at $670. Deposits total $500 and withdrawals total $620. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$550",
+   "numeric": {
+    "value": 550,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$670 + $500 − $620 = $550."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei's statement starts at $1,010. Deposits total $620 and withdrawals total $700. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$930",
+   "numeric": {
+    "value": 930,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,010 + $620 − $700 = $930."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus's statement starts at $1,140. Deposits total $220 and withdrawals total $650. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$710",
+   "numeric": {
+    "value": 710,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,140 + $220 − $650 = $710."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego's statement starts at $980. Deposits total $210 and withdrawals total $540. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$650",
+   "numeric": {
+    "value": 650,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$980 + $210 − $540 = $650."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah's statement starts at $1,160. Deposits total $860 and withdrawals total $90. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$1,930",
+   "numeric": {
+    "value": 1930,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,160 + $860 − $90 = $1,930."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-08",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis's statement starts at $1,370. Deposits total $630 and withdrawals total $430. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$1,570",
+   "numeric": {
+    "value": 1570,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,370 + $630 − $430 = $1,570."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-09",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley's statement starts at $1,260. Deposits total $820 and withdrawals total $300. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$1,780",
+   "numeric": {
+    "value": 1780,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,260 + $820 − $300 = $1,780."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-s-ending-balance-10",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "support",
+   "family": "lv-s-ending-balance",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's statement starts at $980. Deposits total $160 and withdrawals total $350. Ending balance = start + deposits − withdrawals. What is the ending balance?",
+   "format": "short-answer",
+   "answer": "$790",
+   "numeric": {
+    "value": 790,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$980 + $160 − $350 = $790."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana's statement: starting balance $797.32, deposits $654.71 and $75.84, checks $294.53 and $73.48, one debit-card purchase with the amount torn off, and an ending balance of $917.83. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$242.03",
+   "numeric": {
+    "value": 242.03,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $1,159.86.",
+    "Purchase = $1,159.86 − $917.83 = $242.03."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre's statement: starting balance $1,927.87, deposits $775.12 and $340.07, checks $111.36 and $218.97, one debit-card purchase with the amount torn off, and an ending balance of $2,663.93. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$48.80",
+   "numeric": {
+    "value": 48.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $2,712.73.",
+    "Purchase = $2,712.73 − $2,663.93 = $48.80."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's statement: starting balance $530.69, deposits $272.87 and $164.22, checks $23.53 and $197.68, one debit-card purchase with the amount torn off, and an ending balance of $525.59. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$220.98",
+   "numeric": {
+    "value": 220.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $746.57.",
+    "Purchase = $746.57 − $525.59 = $220.98."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah's statement: starting balance $449.05, deposits $702.51 and $99.27, checks $213.65 and $258.77, one debit-card purchase with the amount torn off, and an ending balance of $628.08. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$150.33",
+   "numeric": {
+    "value": 150.33,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $778.41.",
+    "Purchase = $778.41 − $628.08 = $150.33."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley's statement: starting balance $1,325.20, deposits $672.44 and $82.56, checks $224.50 and $175.90, one debit-card purchase with the amount torn off, and an ending balance of $1,437.59. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$242.21",
+   "numeric": {
+    "value": 242.21,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $1,679.80.",
+    "Purchase = $1,679.80 − $1,437.59 = $242.21."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev's statement: starting balance $1,249.72, deposits $160.73 and $247.09, checks $20.16 and $219.98, one debit-card purchase with the amount torn off, and an ending balance of $1,221.15. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$196.25",
+   "numeric": {
+    "value": 196.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $1,417.40.",
+    "Purchase = $1,417.40 − $1,221.15 = $196.25."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah's statement: starting balance $1,266.74, deposits $435.12 and $136.06, checks $172.67 and $277.74, one debit-card purchase with the amount torn off, and an ending balance of $1,354.16. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$33.35",
+   "numeric": {
+    "value": 33.35,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $1,387.51.",
+    "Purchase = $1,387.51 − $1,354.16 = $33.35."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-lv-a-missing-transaction-08",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "advanced",
+   "family": "lv-a-missing-transaction",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara's statement: starting balance $1,719.77, deposits $746.55 and $219.30, checks $218.44 and $223.86, one debit-card purchase with the amount torn off, and an ending balance of $2,021.52. What was the purchase amount?",
+   "format": "short-answer",
+   "answer": "$221.80",
+   "numeric": {
+    "value": 221.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Start + deposits − checks = $2,243.32.",
+    "Purchase = $2,243.32 − $2,021.52 = $221.80."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-s-debit-50-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "support",
+   "family": "lv-s-debit-50",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A thief spends $880 with Priya's stolen debit card. She reports it within two business days, so her loss is capped at $50. Refund = amount stolen − $50. How much does the bank give back?",
+   "format": "short-answer",
+   "answer": "$830",
+   "numeric": {
+    "value": 830,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$880 − $50 = $830."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-s-debit-50-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "support",
+   "family": "lv-s-debit-50",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A thief spends $600 with Fatima's stolen debit card. She reports it within two business days, so her loss is capped at $50. Refund = amount stolen − $50. How much does the bank give back?",
+   "format": "short-answer",
+   "answer": "$550",
+   "numeric": {
+    "value": 550,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$600 − $50 = $550."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-s-debit-50-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "support",
+   "family": "lv-s-debit-50",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A thief spends $770 with Grace's stolen debit card. She reports it within two business days, so her loss is capped at $50. Refund = amount stolen − $50. How much does the bank give back?",
+   "format": "short-answer",
+   "answer": "$720",
+   "numeric": {
+    "value": 720,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$770 − $50 = $720."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-s-debit-50-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "support",
+   "family": "lv-s-debit-50",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A thief spends $490 with Nadia's stolen debit card. She reports it within two business days, so her loss is capped at $50. Refund = amount stolen − $50. How much does the bank give back?",
+   "format": "short-answer",
+   "answer": "$440",
+   "numeric": {
+    "value": 440,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$490 − $50 = $440."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-s-debit-50-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "support",
+   "family": "lv-s-debit-50",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A thief spends $740 with Luis's stolen debit card. He reports it within two business days, so his loss is capped at $50. Refund = amount stolen − $50. How much does the bank give back?",
+   "format": "short-answer",
+   "answer": "$690",
+   "numeric": {
+    "value": 690,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$740 − $50 = $690."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila accepted a $1,800 check for a $440 item and sent the buyer the difference; the check bounced with a $35 fee. The same week her debit card was used for $1,050 and she reported it after five days (limit $500). What is her total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$1,895",
+   "numeric": {
+    "value": 1895,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $1,800 − $440 + $35 = $1,395.",
+    "Debit fraud reported after two business days: the smaller of $1,050 and $500 = $500.",
+    "Total = $1,895."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus accepted a $2,500 check for a $400 item and sent the buyer the difference; the check bounced with a $25 fee. The same week his debit card was used for $1,010 and he reported it after five days (limit $500). What is his total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$2,625",
+   "numeric": {
+    "value": 2625,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $2,500 − $400 + $25 = $2,125.",
+    "Debit fraud reported after two business days: the smaller of $1,010 and $500 = $500.",
+    "Total = $2,625."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah accepted a $2,450 check for a $410 item and sent the buyer the difference; the check bounced with a $35 fee. The same week his debit card was used for $930 and he reported it after five days (limit $500). What is his total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$2,575",
+   "numeric": {
+    "value": 2575,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $2,450 − $410 + $35 = $2,075.",
+    "Debit fraud reported after two business days: the smaller of $930 and $500 = $500.",
+    "Total = $2,575."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei accepted a $2,700 check for a $400 item and sent the buyer the difference; the check bounced with a $35 fee. The same week her debit card was used for $1,380 and she reported it after five days (limit $500). What is her total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$2,835",
+   "numeric": {
+    "value": 2835,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $2,700 − $400 + $35 = $2,335.",
+    "Debit fraud reported after two business days: the smaller of $1,380 and $500 = $500.",
+    "Total = $2,835."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley accepted a $2,350 check for a $210 item and sent the buyer the difference; the check bounced with a $25 fee. The same week their debit card was used for $660 and they reported it after five days (limit $500). What is their total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$2,665",
+   "numeric": {
+    "value": 2665,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $2,350 − $210 + $25 = $2,165.",
+    "Debit fraud reported after two business days: the smaller of $660 and $500 = $500.",
+    "Total = $2,665."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara accepted a $2,400 check for a $300 item and sent the buyer the difference; the check bounced with a $35 fee. The same week her debit card was used for $1,190 and she reported it after five days (limit $500). What is her total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$2,635",
+   "numeric": {
+    "value": 2635,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $2,400 − $300 + $35 = $2,135.",
+    "Debit fraud reported after two business days: the smaller of $1,190 and $500 = $500.",
+    "Total = $2,635."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima accepted a $2,350 check for a $430 item and sent the buyer the difference; the check bounced with a $25 fee. The same week her debit card was used for $780 and she reported it after five days (limit $500). What is her total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$2,445",
+   "numeric": {
+    "value": 2445,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $2,350 − $430 + $25 = $1,945.",
+    "Debit fraud reported after two business days: the smaller of $780 and $500 = $500.",
+    "Total = $2,445."
+   ]
+  },
+  {
+   "id": "fa-banking-s05-lv-a-scam-total-08",
+   "unitId": "banking",
+   "skillId": "banking-skill-05",
+   "level": "advanced",
+   "family": "lv-a-scam-total",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis accepted a $2,700 check for a $370 item and sent the buyer the difference; the check bounced with a $35 fee. The same week his debit card was used for $1,180 and he reported it after five days (limit $500). What is his total loss, not counting the item?",
+   "format": "short-answer",
+   "answer": "$2,865",
+   "numeric": {
+    "value": 2865,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fake check: $2,700 − $370 + $35 = $2,365.",
+    "Debit fraud reported after two business days: the smaller of $1,180 and $500 = $500.",
+    "Total = $2,865."
+   ]
+  },
+  {
    "id": "fa-banking-s01-err-overdraft-count-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "overdraft-count-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8005,7 +9906,7 @@
    "id": "fa-banking-s02-err-months-as-years-01",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "months-as-years-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8060,7 +9961,7 @@
    "id": "fa-banking-s02-err-percent-as-whole-01",
    "unitId": "banking",
    "skillId": "banking-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "percent-as-whole-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8256,7 +10157,7 @@
    "id": "fa-banking-s04-err-statement-fee-01",
    "unitId": "banking",
    "skillId": "banking-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "statement-fee-error",
    "type": "reasoning",
    "errorAnalysis": true,

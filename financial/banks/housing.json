@@ -3,7 +3,11 @@
  "courseId": "financial-algebra",
  "unitId": "housing",
  "unitName": "Housing: Rent or Buy",
- "level": "standard",
+ "levels": [
+  "support",
+  "standard",
+  "advanced"
+ ],
  "generated": "deterministic",
  "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
  "skills": [
@@ -488,7 +492,7 @@
  "cheatSheet": {
   "title": "Housing: Rent or Buy",
   "focus": "estimate the full cost of renting and owning",
-  "morefocus": "compare time horizons, equity and opportunity cost",
+  "morefocus": "plan the cost of renting and compare time horizons, equity and opportunity cost",
   "front": [
    {
     "title": "Housing vocabulary",
@@ -657,10 +661,22 @@
     "color": "orange"
    },
    {
-    "title": "Compare on the same basis",
-    "kind": "html",
-    "html": "Over the same horizon, total cash paid before sale (down payment, closing and monthly outflows) minus net sale proceeds gives a basic net cost.<div class=\"ex\"><b>Net sale proceeds</b> = sale price − remaining mortgage − sale costs.<br>If sale costs are already subtracted here, do not add them a second time.</div>Add opportunity cost consistently, or compare full ending net worth. Do not mix the two methods.",
-    "color": "pink"
+    "title": "Renting your first place",
+    "kind": "example",
+    "color": "pink",
+    "text": "Guideline: rent ≤ 30% of gross monthly income. Prorated rent = ⟨\\text{rent}\\times\\dfrac{\\text{days lived}}{\\text{days in month}}⟩. Deposits cover damage, not normal wear and tear.",
+    "example": "Earn $19/hour, 40 hours a week, 52 weeks a year.",
+    "steps": [
+     [
+      "Monthly gross:",
+      "⟨\\dfrac{19(40)(52)}{12}\\approx3{,}293.33⟩"
+     ],
+     [
+      "30% guideline:",
+      "⟨0.30(3{,}293.33)\\approx988.00⟩"
+     ]
+    ],
+    "answer": "Keep rent at or below about $988 a month"
    },
    {
     "title": "Reminders & mistakes",
@@ -696,7 +712,7 @@
    "id": "fa-housing-s01-vocab-def-01",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Lease (rental)** mean?",
@@ -741,7 +757,7 @@
    "id": "fa-housing-s01-vocab-def-02",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Security deposit** mean?",
@@ -786,7 +802,7 @@
    "id": "fa-housing-s01-vocab-def-03",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Renters insurance** mean?",
@@ -831,7 +847,7 @@
    "id": "fa-housing-s02-vocab-def-04",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Mortgage** mean?",
@@ -876,7 +892,7 @@
    "id": "fa-housing-s02-vocab-def-05",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Principal and interest (P&I)** mean?",
@@ -921,7 +937,7 @@
    "id": "fa-housing-s03-vocab-def-06",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **PITI** mean?",
@@ -966,7 +982,7 @@
    "id": "fa-housing-s02-vocab-def-07",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Down payment** mean?",
@@ -1011,7 +1027,7 @@
    "id": "fa-housing-s03-vocab-def-08",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Private mortgage insurance (PMI)** mean?",
@@ -1056,7 +1072,7 @@
    "id": "fa-housing-s03-vocab-def-09",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Closing costs** mean?",
@@ -1101,7 +1117,7 @@
    "id": "fa-housing-s03-vocab-def-10",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Property tax** mean?",
@@ -1146,7 +1162,7 @@
    "id": "fa-housing-s04-vocab-def-11",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Equity** mean?",
@@ -1191,7 +1207,7 @@
    "id": "fa-housing-s04-vocab-def-12",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Appreciation** mean?",
@@ -1238,7 +1254,7 @@
    "id": "fa-housing-s04-vocab-def-13",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Opportunity cost (housing)** mean?",
@@ -1283,7 +1299,7 @@
    "id": "fa-housing-s01-vocab-def-14",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Front-end ratio** mean?",
@@ -1328,7 +1344,7 @@
    "id": "fa-housing-s01-vocab-def-15",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Debt-to-income ratio (DTI)** mean?",
@@ -1373,7 +1389,7 @@
    "id": "fa-housing-s03-vocab-def-16",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **HOA fee** mean?",
@@ -1418,7 +1434,7 @@
    "id": "fa-housing-s03-vocab-def-17",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Maintenance reserve** mean?",
@@ -1463,7 +1479,7 @@
    "id": "fa-housing-s05-vocab-def-18",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Rent-to-income ratio** mean?",
@@ -1508,7 +1524,7 @@
    "id": "fa-housing-s05-vocab-def-19",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Prorated rent** mean?",
@@ -1553,7 +1569,7 @@
    "id": "fa-housing-s05-vocab-def-20",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Move-in costs** mean?",
@@ -1598,7 +1614,7 @@
    "id": "fa-housing-s05-vocab-def-21",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Normal wear and tear** mean?",
@@ -1643,7 +1659,7 @@
    "id": "fa-housing-s05-vocab-def-22",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Roommate agreement** mean?",
@@ -1688,7 +1704,7 @@
    "id": "fa-housing-s01-concept-01",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A household earns $6,000 gross per month. Using a 28% front-end ratio, what is the maximum housing payment?",
@@ -1730,7 +1746,7 @@
    "id": "fa-housing-s01-concept-02",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which cost does a renter usually NOT pay directly?",
@@ -1772,7 +1788,7 @@
    "id": "fa-housing-s02-concept-03",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why does a 15-year mortgage have higher payments than a 30-year mortgage for the same loan?",
@@ -1814,7 +1830,7 @@
    "id": "fa-housing-s03-concept-04",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL costs of owning a home that are not part of principal and interest.",
@@ -1865,7 +1881,7 @@
    "id": "fa-housing-s03-concept-05",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "PMI is typically required on a conventional loan when…",
@@ -1907,7 +1923,7 @@
    "id": "fa-housing-s04-concept-06",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A home bought for $300,000 with a $270,000 loan is worth $330,000 when the balance is $255,000. What is the equity?",
@@ -1949,7 +1965,7 @@
    "id": "fa-housing-s04-concept-07",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why can renting be cheaper than buying for someone who will move in 2 years?",
@@ -1991,7 +2007,7 @@
    "id": "fa-housing-s05-concept-08",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "What does renters insurance usually cover?",
@@ -2033,7 +2049,7 @@
    "id": "fa-housing-s05-concept-09",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which charge can a landlord usually deduct from a security deposit?",
@@ -2075,7 +2091,7 @@
    "id": "fa-housing-s05-concept-10",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL items to check before signing a lease.",
@@ -2126,7 +2142,7 @@
    "id": "fa-housing-s04-claim-01",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Renting is always a waste of money.”",
@@ -2165,7 +2181,7 @@
    "id": "fa-housing-s04-claim-cer-01",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2234,7 +2250,7 @@
    "id": "fa-housing-s04-claim-02",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “A house is always a great investment because home prices go up.”",
@@ -2273,7 +2289,7 @@
    "id": "fa-housing-s04-claim-cer-02",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2342,7 +2358,7 @@
    "id": "fa-housing-s02-claim-03",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “If the bank approves me for a mortgage, I can afford the house.”",
@@ -2381,7 +2397,7 @@
    "id": "fa-housing-s02-claim-cer-03",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2450,7 +2466,7 @@
    "id": "fa-housing-s03-claim-04",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “My mortgage payment is my only housing cost as an owner.”",
@@ -2489,7 +2505,7 @@
    "id": "fa-housing-s03-claim-cer-04",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2558,7 +2574,7 @@
    "id": "fa-housing-s05-claim-05",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Renting is just throwing money away.”",
@@ -2597,7 +2613,7 @@
    "id": "fa-housing-s05-claim-cer-05",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2874,7 +2890,7 @@
    "id": "fa-housing-s01-rent-total-02",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "rent-total",
    "type": "calculation",
    "activityTypes": [
@@ -3014,7 +3030,7 @@
    "id": "fa-housing-s01-rent-vs-own-mo-01",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "rent-vs-own-mo",
    "type": "comparison",
    "activityTypes": [
@@ -3054,7 +3070,7 @@
    "id": "fa-housing-s01-rent-vs-own-mo-02",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "rent-vs-own-mo",
    "type": "comparison",
    "activityTypes": [
@@ -3094,7 +3110,7 @@
    "id": "fa-housing-s01-rent-vs-own-mo-03",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "rent-vs-own-mo",
    "type": "comparison",
    "activityTypes": [
@@ -3174,7 +3190,7 @@
    "id": "fa-housing-s01-rent-vs-own-mo-05",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "rent-vs-own-mo",
    "type": "comparison",
    "activityTypes": [
@@ -3370,7 +3386,7 @@
    "id": "fa-housing-s02-mortgage-pmt-05",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "mortgage-pmt",
    "type": "calculation",
    "activityTypes": [
@@ -3486,7 +3502,7 @@
    "id": "fa-housing-s02-term-15-30-01",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-15-30",
    "type": "comparison",
    "activityTypes": [
@@ -3533,7 +3549,7 @@
    "id": "fa-housing-s02-term-15-30-02",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-15-30",
    "type": "comparison",
    "activityTypes": [
@@ -3580,7 +3596,7 @@
    "id": "fa-housing-s02-term-15-30-03",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-15-30",
    "type": "comparison",
    "activityTypes": [
@@ -3627,7 +3643,7 @@
    "id": "fa-housing-s02-term-15-30-04",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-15-30",
    "type": "comparison",
    "activityTypes": [
@@ -3674,7 +3690,7 @@
    "id": "fa-housing-s02-term-15-30-05",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-15-30",
    "type": "comparison",
    "activityTypes": [
@@ -3721,7 +3737,7 @@
    "id": "fa-housing-s02-term-15-30-06",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-15-30",
    "type": "comparison",
    "activityTypes": [
@@ -3913,7 +3929,7 @@
    "id": "fa-housing-s03-piti-01",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "piti",
    "type": "calculation",
    "activityTypes": [
@@ -3942,7 +3958,7 @@
    "id": "fa-housing-s03-piti-02",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "piti",
    "type": "calculation",
    "activityTypes": [
@@ -3971,7 +3987,7 @@
    "id": "fa-housing-s03-piti-03",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "piti",
    "type": "calculation",
    "activityTypes": [
@@ -4000,7 +4016,7 @@
    "id": "fa-housing-s03-piti-04",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "piti",
    "type": "calculation",
    "activityTypes": [
@@ -4029,7 +4045,7 @@
    "id": "fa-housing-s03-piti-05",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "piti",
    "type": "calculation",
    "activityTypes": [
@@ -4058,7 +4074,7 @@
    "id": "fa-housing-s03-piti-06",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "piti",
    "type": "calculation",
    "activityTypes": [
@@ -4087,7 +4103,7 @@
    "id": "fa-housing-s03-piti-07",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "piti",
    "type": "calculation",
    "activityTypes": [
@@ -4290,7 +4306,7 @@
    "id": "fa-housing-s03-estimate-doc-01",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "estimate-doc",
    "type": "document",
    "activityTypes": [
@@ -4382,7 +4398,7 @@
    "id": "fa-housing-s03-estimate-doc-02",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "estimate-doc",
    "type": "document",
    "activityTypes": [
@@ -4474,7 +4490,7 @@
    "id": "fa-housing-s03-estimate-doc-03",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "estimate-doc",
    "type": "document",
    "activityTypes": [
@@ -4658,7 +4674,7 @@
    "id": "fa-housing-s03-estimate-doc-05",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "estimate-doc",
    "type": "document",
    "activityTypes": [
@@ -4952,7 +4968,7 @@
    "id": "fa-housing-s04-opp-cost-02",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "opp-cost",
    "type": "calculation",
    "activityTypes": [
@@ -5092,7 +5108,7 @@
    "id": "fa-housing-s04-rvb-or-01",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "rvb-or",
    "type": "comparison",
    "activityTypes": [
@@ -5202,7 +5218,7 @@
    "id": "fa-housing-s04-rvb-or-02",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "rvb-or",
    "type": "comparison",
    "activityTypes": [
@@ -5312,7 +5328,7 @@
    "id": "fa-housing-s04-rvb-or-03",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "rvb-or",
    "type": "comparison",
    "activityTypes": [
@@ -5422,7 +5438,7 @@
    "id": "fa-housing-s04-rvb-or-04",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "rvb-or",
    "type": "comparison",
    "activityTypes": [
@@ -5532,7 +5548,7 @@
    "id": "fa-housing-s02-ap-rule-28-01",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-rule-28",
    "type": "calculation",
    "activityTypes": [
@@ -5619,7 +5635,7 @@
    "id": "fa-housing-s02-ap-rule-28-04",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-rule-28",
    "type": "calculation",
    "activityTypes": [
@@ -5648,7 +5664,7 @@
    "id": "fa-housing-s02-ap-rule-28-05",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-rule-28",
    "type": "calculation",
    "activityTypes": [
@@ -5677,7 +5693,7 @@
    "id": "fa-housing-s02-ap-rule-28-06",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-rule-28",
    "type": "calculation",
    "activityTypes": [
@@ -5706,7 +5722,7 @@
    "id": "fa-housing-s02-ap-rule-28-07",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-rule-28",
    "type": "calculation",
    "activityTypes": [
@@ -5735,7 +5751,7 @@
    "id": "fa-housing-s02-ap-cash-to-close-01",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-cash-to-close",
    "type": "calculation",
    "activityTypes": [
@@ -5764,7 +5780,7 @@
    "id": "fa-housing-s02-ap-cash-to-close-02",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-cash-to-close",
    "type": "calculation",
    "activityTypes": [
@@ -5793,7 +5809,7 @@
    "id": "fa-housing-s02-ap-cash-to-close-03",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-cash-to-close",
    "type": "calculation",
    "activityTypes": [
@@ -5822,7 +5838,7 @@
    "id": "fa-housing-s02-ap-cash-to-close-04",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-cash-to-close",
    "type": "calculation",
    "activityTypes": [
@@ -5851,7 +5867,7 @@
    "id": "fa-housing-s02-ap-cash-to-close-05",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-cash-to-close",
    "type": "calculation",
    "activityTypes": [
@@ -5880,7 +5896,7 @@
    "id": "fa-housing-s02-ap-cash-to-close-06",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-cash-to-close",
    "type": "calculation",
    "activityTypes": [
@@ -5909,7 +5925,7 @@
    "id": "fa-housing-s02-ap-cash-to-close-07",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-cash-to-close",
    "type": "calculation",
    "activityTypes": [
@@ -6141,7 +6157,7 @@
    "id": "fa-housing-s04-ap-opportunity-01",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-opportunity",
    "type": "calculation",
    "activityTypes": [
@@ -6170,7 +6186,7 @@
    "id": "fa-housing-s04-ap-opportunity-02",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-opportunity",
    "type": "calculation",
    "activityTypes": [
@@ -6286,7 +6302,7 @@
    "id": "fa-housing-s04-ap-opportunity-06",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-opportunity",
    "type": "calculation",
    "activityTypes": [
@@ -6344,7 +6360,7 @@
    "id": "fa-housing-s05-rent-30-01",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "rent-30",
    "type": "calculation",
    "activityTypes": [
@@ -6373,7 +6389,7 @@
    "id": "fa-housing-s05-rent-30-02",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "rent-30",
    "type": "calculation",
    "activityTypes": [
@@ -6518,7 +6534,7 @@
    "id": "fa-housing-s05-rent-30-07",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "rent-30",
    "type": "calculation",
    "activityTypes": [
@@ -6547,7 +6563,7 @@
    "id": "fa-housing-s05-move-in-01",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "move-in",
    "type": "calculation",
    "activityTypes": [
@@ -6721,7 +6737,7 @@
    "id": "fa-housing-s05-move-in-07",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "move-in",
    "type": "calculation",
    "activityTypes": [
@@ -6895,7 +6911,7 @@
    "id": "fa-housing-s05-prorate-06",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "prorate",
    "type": "calculation",
    "activityTypes": [
@@ -6953,7 +6969,7 @@
    "id": "fa-housing-s05-roommate-split-01",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "roommate-split",
    "type": "calculation",
    "activityTypes": [
@@ -6982,7 +6998,7 @@
    "id": "fa-housing-s05-roommate-split-02",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "roommate-split",
    "type": "calculation",
    "activityTypes": [
@@ -7011,7 +7027,7 @@
    "id": "fa-housing-s05-roommate-split-03",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "roommate-split",
    "type": "calculation",
    "activityTypes": [
@@ -7040,7 +7056,7 @@
    "id": "fa-housing-s05-roommate-split-04",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "roommate-split",
    "type": "calculation",
    "activityTypes": [
@@ -7069,7 +7085,7 @@
    "id": "fa-housing-s05-roommate-split-05",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "roommate-split",
    "type": "calculation",
    "activityTypes": [
@@ -7098,7 +7114,7 @@
    "id": "fa-housing-s05-roommate-split-06",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "roommate-split",
    "type": "calculation",
    "activityTypes": [
@@ -7127,7 +7143,7 @@
    "id": "fa-housing-s05-deposit-back-01",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "deposit-back",
    "type": "calculation",
    "activityTypes": [
@@ -7156,7 +7172,7 @@
    "id": "fa-housing-s05-deposit-back-02",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "deposit-back",
    "type": "calculation",
    "activityTypes": [
@@ -7185,7 +7201,7 @@
    "id": "fa-housing-s05-deposit-back-03",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "deposit-back",
    "type": "calculation",
    "activityTypes": [
@@ -7214,7 +7230,7 @@
    "id": "fa-housing-s05-deposit-back-04",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "deposit-back",
    "type": "calculation",
    "activityTypes": [
@@ -7243,7 +7259,7 @@
    "id": "fa-housing-s05-deposit-back-05",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "deposit-back",
    "type": "calculation",
    "activityTypes": [
@@ -7272,7 +7288,7 @@
    "id": "fa-housing-s05-deposit-back-06",
    "unitId": "housing",
    "skillId": "housing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "deposit-back",
    "type": "calculation",
    "activityTypes": [
@@ -7295,6 +7311,2101 @@
     "Faded paint after years of normal use is wear and tear, so it cannot be deducted.",
     "Deductions = $0 + $150 = $150.",
     "Refund = $1,100 − $150 = $950."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis pays $1,325 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$15,900",
+   "numeric": {
+    "value": 15900,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,325 × 12 = $15,900."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani pays $2,175 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$26,100",
+   "numeric": {
+    "value": 26100,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,175 × 12 = $26,100."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani pays $1,075 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$12,900",
+   "numeric": {
+    "value": 12900,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,075 × 12 = $12,900."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah pays $900 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$10,800",
+   "numeric": {
+    "value": 10800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$900 × 12 = $10,800."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley pays $2,025 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$24,300",
+   "numeric": {
+    "value": 24300,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,025 × 12 = $24,300."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah pays $2,150 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$25,800",
+   "numeric": {
+    "value": 25800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,150 × 12 = $25,800."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler pays $1,325 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$15,900",
+   "numeric": {
+    "value": 15900,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,325 × 12 = $15,900."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana pays $1,875 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$22,500",
+   "numeric": {
+    "value": 22500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,875 × 12 = $22,500."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler pays $900 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$10,800",
+   "numeric": {
+    "value": 10800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$900 × 12 = $10,800."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-s-rent-year-10",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-s-rent-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler pays $1,350 a month in rent. Yearly rent = monthly rent × 12. What is the yearly rent?",
+   "format": "short-answer",
+   "answer": "$16,200",
+   "numeric": {
+    "value": 16200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,350 × 12 = $16,200."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's rent is $1,975.00 a month this year and rises 4% each year. How much rent will he pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$73,981.92",
+   "numeric": {
+    "value": 73981.92,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,975.00 × 12 = $23,700.00.",
+    "Year 2: $2,054.00 × 12; Year 3: $2,136.16 × 12.",
+    "Total = $73,981.92."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's rent is $1,800.00 a month this year and rises 5% each year. How much rent will he pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$68,094.00",
+   "numeric": {
+    "value": 68094,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,800.00 × 12 = $21,600.00.",
+    "Year 2: $1,890.00 × 12; Year 3: $1,984.50 × 12.",
+    "Total = $68,094.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's rent is $1,975.00 a month this year and rises 3% each year. How much rent will she pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$73,254.33",
+   "numeric": {
+    "value": 73254.33,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,975.00 × 12 = $23,700.00.",
+    "Year 2: $2,034.25 × 12; Year 3: $2,095.28 × 12.",
+    "Total = $73,254.33."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's rent is $1,275.00 a month this year and rises 4% each year. How much rent will she pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$47,760.48",
+   "numeric": {
+    "value": 47760.48,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,275.00 × 12 = $15,300.00.",
+    "Year 2: $1,326.00 × 12; Year 3: $1,379.04 × 12.",
+    "Total = $47,760.48."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's rent is $1,550.00 a month this year and rises 4% each year. How much rent will he pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$58,061.76",
+   "numeric": {
+    "value": 58061.76,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,550.00 × 12 = $18,600.00.",
+    "Year 2: $1,612.00 × 12; Year 3: $1,676.48 × 12.",
+    "Total = $58,061.76."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's rent is $1,000.00 a month this year and rises 3% each year. How much rent will he pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$37,090.80",
+   "numeric": {
+    "value": 37090.8,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,000.00 × 12 = $12,000.00.",
+    "Year 2: $1,030.00 × 12; Year 3: $1,060.90 × 12.",
+    "Total = $37,090.80."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's rent is $1,825.00 a month this year and rises 3% each year. How much rent will she pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$67,690.71",
+   "numeric": {
+    "value": 67690.71,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,825.00 × 12 = $21,900.00.",
+    "Year 2: $1,879.75 × 12; Year 3: $1,936.14 × 12.",
+    "Total = $67,690.71."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's rent is $1,000.00 a month this year and rises 5% each year. How much rent will he pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$37,830.00",
+   "numeric": {
+    "value": 37830,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,000.00 × 12 = $12,000.00.",
+    "Year 2: $1,050.00 × 12; Year 3: $1,102.50 × 12.",
+    "Total = $37,830.00."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia's rent is $1,200.00 a month this year and rises 4% each year. How much rent will she pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$44,951.04",
+   "numeric": {
+    "value": 44951.04,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,200.00 × 12 = $14,400.00.",
+    "Year 2: $1,248.00 × 12; Year 3: $1,297.92 × 12.",
+    "Total = $44,951.04."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-10",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's rent is $975.00 a month this year and rises 4% each year. How much rent will he pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$36,522.72",
+   "numeric": {
+    "value": 36522.72,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $975.00 × 12 = $11,700.00.",
+    "Year 2: $1,014.00 × 12; Year 3: $1,054.56 × 12.",
+    "Total = $36,522.72."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-11",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's rent is $1,675.00 a month this year and rises 4% each year. How much rent will she pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$62,744.16",
+   "numeric": {
+    "value": 62744.16,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,675.00 × 12 = $20,100.00.",
+    "Year 2: $1,742.00 × 12; Year 3: $1,811.68 × 12.",
+    "Total = $62,744.16."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-12",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah's rent is $1,025.00 a month this year and rises 5% each year. How much rent will she pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$38,775.75",
+   "numeric": {
+    "value": 38775.75,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,025.00 × 12 = $12,300.00.",
+    "Year 2: $1,076.25 × 12; Year 3: $1,130.06 × 12.",
+    "Total = $38,775.75."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-13",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's rent is $2,000 a month this year and rises 5% each year. How much rent will he pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$75,660",
+   "numeric": {
+    "value": 75660,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $2,000 × 12 = $24,000.",
+    "Year 2: $2,100 × 12; Year 3: $2,205 × 12.",
+    "Total = $75,660."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-a-rent-growth-14",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-rent-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia's rent is $1,625.00 a month this year and rises 5% each year. How much rent will she pay in total over the next 3 years?",
+   "format": "short-answer",
+   "answer": "$61,473.75",
+   "numeric": {
+    "value": 61473.75,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1: $1,625.00 × 12 = $19,500.00.",
+    "Year 2: $1,706.25 × 12; Year 3: $1,791.56 × 12.",
+    "Total = $61,473.75."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-s-loan-amount-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "support",
+   "family": "lv-s-loan-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam buys a $250,000 home with a $50,000 down payment. Loan = price − down payment. How much does they borrow?",
+   "format": "short-answer",
+   "answer": "$200,000",
+   "numeric": {
+    "value": 200000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$250,000 − $50,000 = $200,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-s-loan-amount-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "support",
+   "family": "lv-s-loan-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia buys a $270,000 home with a $55,000 down payment. Loan = price − down payment. How much does she borrow?",
+   "format": "short-answer",
+   "answer": "$215,000",
+   "numeric": {
+    "value": 215000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$270,000 − $55,000 = $215,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-s-loan-amount-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "support",
+   "family": "lv-s-loan-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace buys a $240,000 home with a $15,000 down payment. Loan = price − down payment. How much does she borrow?",
+   "format": "short-answer",
+   "answer": "$225,000",
+   "numeric": {
+    "value": 225000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$240,000 − $15,000 = $225,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-s-loan-amount-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "support",
+   "family": "lv-s-loan-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah buys a $160,000 home with a $80,000 down payment. Loan = price − down payment. How much does he borrow?",
+   "format": "short-answer",
+   "answer": "$80,000",
+   "numeric": {
+    "value": 80000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$160,000 − $80,000 = $80,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-a-mortgage-interest-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-mortgage-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley takes a $350,000.00 mortgage at 6.5% for 30 years. How much interest will they pay over the whole loan? Use payment = P·i ÷ (1 − (1 + i)^−n), i = rate ÷ 12.",
+   "format": "short-answer",
+   "answer": "$446,405.71",
+   "numeric": {
+    "value": 446405.71,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "n = 360; payment = $2,212.24.",
+    "Total paid = $796,405.71.",
+    "Interest = $446,405.71."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-a-mortgage-interest-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-mortgage-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah takes a $195,000.00 mortgage at 7% for 15 years. How much interest will she pay over the whole loan? Use payment = P·i ÷ (1 − (1 + i)^−n), i = rate ÷ 12.",
+   "format": "short-answer",
+   "answer": "$120,488.72",
+   "numeric": {
+    "value": 120488.72,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "n = 180; payment = $1,752.72.",
+    "Total paid = $315,488.72.",
+    "Interest = $120,488.72."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-a-mortgage-interest-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-mortgage-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya takes a $325,000.00 mortgage at 7% for 30 years. How much interest will she pay over the whole loan? Use payment = P·i ÷ (1 − (1 + i)^−n), i = rate ÷ 12.",
+   "format": "short-answer",
+   "answer": "$453,403.92",
+   "numeric": {
+    "value": 453403.92,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "n = 360; payment = $2,162.23.",
+    "Total paid = $778,403.92.",
+    "Interest = $453,403.92."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-a-mortgage-interest-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-mortgage-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara takes a $255,000.00 mortgage at 7% for 30 years. How much interest will she pay over the whole loan? Use payment = P·i ÷ (1 − (1 + i)^−n), i = rate ÷ 12.",
+   "format": "short-answer",
+   "answer": "$355,747.69",
+   "numeric": {
+    "value": 355747.69,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "n = 360; payment = $1,696.52.",
+    "Total paid = $610,747.69.",
+    "Interest = $355,747.69."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-a-mortgage-interest-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-mortgage-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo takes a $365,000.00 mortgage at 7% for 15 years. How much interest will he pay over the whole loan? Use payment = P·i ÷ (1 − (1 + i)^−n), i = rate ÷ 12.",
+   "format": "short-answer",
+   "answer": "$225,530.17",
+   "numeric": {
+    "value": 225530.17,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "n = 180; payment = $3,280.72.",
+    "Total paid = $590,530.17.",
+    "Interest = $225,530.17."
+   ]
+  },
+  {
+   "id": "fa-housing-s02-lv-a-mortgage-interest-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-mortgage-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler takes a $345,000.00 mortgage at 6.5% for 30 years. How much interest will he pay over the whole loan? Use payment = P·i ÷ (1 − (1 + i)^−n), i = rate ÷ 12.",
+   "format": "short-answer",
+   "answer": "$440,028.49",
+   "numeric": {
+    "value": 440028.49,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "n = 360; payment = $2,180.63.",
+    "Total paid = $785,028.49.",
+    "Interest = $440,028.49."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-s-tax-month-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "support",
+   "family": "lv-s-tax-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A home's property tax is $4,620 a year. Monthly amount = yearly tax ÷ 12. How much is set aside each month?",
+   "format": "short-answer",
+   "answer": "$385",
+   "numeric": {
+    "value": 385,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$4,620 ÷ 12 = $385."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-s-tax-month-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "support",
+   "family": "lv-s-tax-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A home's property tax is $4,020 a year. Monthly amount = yearly tax ÷ 12. How much is set aside each month?",
+   "format": "short-answer",
+   "answer": "$335",
+   "numeric": {
+    "value": 335,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$4,020 ÷ 12 = $335."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-s-tax-month-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "support",
+   "family": "lv-s-tax-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A home's property tax is $3,840 a year. Monthly amount = yearly tax ÷ 12. How much is set aside each month?",
+   "format": "short-answer",
+   "answer": "$320",
+   "numeric": {
+    "value": 320,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,840 ÷ 12 = $320."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-s-tax-month-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "support",
+   "family": "lv-s-tax-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A home's property tax is $5,820 a year. Monthly amount = yearly tax ÷ 12. How much is set aside each month?",
+   "format": "short-answer",
+   "answer": "$485",
+   "numeric": {
+    "value": 485,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$5,820 ÷ 12 = $485."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-s-tax-month-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "support",
+   "family": "lv-s-tax-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A home's property tax is $6,840 a year. Monthly amount = yearly tax ÷ 12. How much is set aside each month?",
+   "format": "short-answer",
+   "answer": "$570",
+   "numeric": {
+    "value": 570,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$6,840 ÷ 12 = $570."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya buys a $375,000.00 home with 10% down on a 30-year loan at 7%. Property tax is 1.1% of the price per year, insurance is $1,200.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$2,886.02",
+   "numeric": {
+    "value": 2886.02,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $337,500.00; P&I = $2,245.40.",
+    "Tax $343.75, insurance $100.00, PMI $196.88 per month.",
+    "Total = $2,886.02."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya buys a $405,000.00 home with 5% down on a 30-year loan at 6.5%. Property tax is 1.4% of the price per year, insurance is $2,000.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$3,295.49",
+   "numeric": {
+    "value": 3295.49,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $384,750.00; P&I = $2,431.88.",
+    "Tax $472.50, insurance $166.67, PMI $224.44 per month.",
+    "Total = $3,295.49."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah buys a $340,000.00 home with 5% down on a 30-year loan at 7%. Property tax is 1.1% of the price per year, insurance is $1,800.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$2,799.01",
+   "numeric": {
+    "value": 2799.01,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $323,000.00; P&I = $2,148.93.",
+    "Tax $311.67, insurance $150.00, PMI $188.42 per month.",
+    "Total = $2,799.01."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace buys a $360,000.00 home with 5% down on a 30-year loan at 6.5%. Property tax is 1.1% of the price per year, insurance is $1,600.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$2,824.51",
+   "numeric": {
+    "value": 2824.51,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $342,000.00; P&I = $2,161.67.",
+    "Tax $330.00, insurance $133.33, PMI $199.50 per month.",
+    "Total = $2,824.51."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara buys a $275,000.00 home with 10% down on a 30-year loan at 7%. Property tax is 1.4% of the price per year, insurance is $1,300.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$2,220.17",
+   "numeric": {
+    "value": 2220.17,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $247,500.00; P&I = $1,646.62.",
+    "Tax $320.83, insurance $108.33, PMI $144.38 per month.",
+    "Total = $2,220.17."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler buys a $295,000.00 home with 10% down on a 30-year loan at 6.5%. Property tax is 1.1% of the price per year, insurance is $1,200.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$2,203.43",
+   "numeric": {
+    "value": 2203.43,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $265,500.00; P&I = $1,678.14.",
+    "Tax $270.42, insurance $100.00, PMI $154.88 per month.",
+    "Total = $2,203.43."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah buys a $230,000.00 home with 10% down on a 30-year loan at 7%. Property tax is 1.4% of the price per year, insurance is $1,400.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$1,882.93",
+   "numeric": {
+    "value": 1882.93,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $207,000.00; P&I = $1,377.18.",
+    "Tax $268.33, insurance $116.67, PMI $120.75 per month.",
+    "Total = $1,882.93."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen buys a $395,000.00 home with 10% down on a 30-year loan at 6.5%. Property tax is 1.4% of the price per year, insurance is $1,600.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$3,048.54",
+   "numeric": {
+    "value": 3048.54,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $355,500.00; P&I = $2,247.00.",
+    "Tax $460.83, insurance $133.33, PMI $207.38 per month.",
+    "Total = $3,048.54."
+   ]
+  },
+  {
+   "id": "fa-housing-s03-lv-a-piti-pmi-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-piti-pmi",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler buys a $280,000.00 home with 5% down on a 30-year loan at 6.5%. Property tax is 1.4% of the price per year, insurance is $2,200.00 a year, and PMI is 0.7% of the loan per year because the down payment is under 20%. What is the total monthly payment (PITI + PMI)?",
+   "format": "short-answer",
+   "answer": "$2,346.47",
+   "numeric": {
+    "value": 2346.47,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan = $266,000.00; P&I = $1,681.30.",
+    "Tax $326.67, insurance $183.33, PMI $155.17 per month.",
+    "Total = $2,346.47."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen uses $10,000 of savings for a down payment instead of keeping it in an account earning 4%. Lost interest for one year = amount × rate. How much interest does he give up?",
+   "format": "short-answer",
+   "answer": "$400",
+   "numeric": {
+    "value": 400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$10,000 × 0.04 = $400."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana uses $20,000 of savings for a down payment instead of keeping it in an account earning 5%. Lost interest for one year = amount × rate. How much interest does she give up?",
+   "format": "short-answer",
+   "answer": "$1,000",
+   "numeric": {
+    "value": 1000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$20,000 × 0.05 = $1,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia uses $50,000 of savings for a down payment instead of keeping it in an account earning 3%. Lost interest for one year = amount × rate. How much interest does she give up?",
+   "format": "short-answer",
+   "answer": "$1,500",
+   "numeric": {
+    "value": 1500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$50,000 × 0.03 = $1,500."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen uses $60,000 of savings for a down payment instead of keeping it in an account earning 5%. Lost interest for one year = amount × rate. How much interest does he give up?",
+   "format": "short-answer",
+   "answer": "$3,000",
+   "numeric": {
+    "value": 3000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$60,000 × 0.05 = $3,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei uses $25,000 of savings for a down payment instead of keeping it in an account earning 4%. Lost interest for one year = amount × rate. How much interest does she give up?",
+   "format": "short-answer",
+   "answer": "$1,000",
+   "numeric": {
+    "value": 1000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$25,000 × 0.04 = $1,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima uses $50,000 of savings for a down payment instead of keeping it in an account earning 5%. Lost interest for one year = amount × rate. How much interest does she give up?",
+   "format": "short-answer",
+   "answer": "$2,500",
+   "numeric": {
+    "value": 2500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$50,000 × 0.05 = $2,500."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace uses $40,000 of savings for a down payment instead of keeping it in an account earning 5%. Lost interest for one year = amount × rate. How much interest does she give up?",
+   "format": "short-answer",
+   "answer": "$2,000",
+   "numeric": {
+    "value": 2000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$40,000 × 0.05 = $2,000."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara uses $20,000 of savings for a down payment instead of keeping it in an account earning 4%. Lost interest for one year = amount × rate. How much interest does she give up?",
+   "format": "short-answer",
+   "answer": "$800",
+   "numeric": {
+    "value": 800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$20,000 × 0.04 = $800."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis uses $50,000 of savings for a down payment instead of keeping it in an account earning 5%. Lost interest for one year = amount × rate. How much interest does he give up?",
+   "format": "short-answer",
+   "answer": "$2,500",
+   "numeric": {
+    "value": 2500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$50,000 × 0.05 = $2,500."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-s-lost-interest-10",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "support",
+   "family": "lv-s-lost-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya uses $45,000 of savings for a down payment instead of keeping it in an account earning 5%. Lost interest for one year = amount × rate. How much interest does she give up?",
+   "format": "short-answer",
+   "answer": "$2,250",
+   "numeric": {
+    "value": 2250,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$45,000 × 0.05 = $2,250."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-a-equity-vs-invest-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-equity-vs-invest",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima puts 20% down on a $220,000.00 home. Over 5 years the home appreciates 4% a year, while the down payment could have earned 7% a year invested. Comparing appreciation on the whole home with growth of the down payment only, how big is the difference after 5 years?",
+   "format": "short-answer",
+   "answer": "$29,951.36",
+   "numeric": {
+    "value": 29951.36,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Home gain = $220,000.00 × (1.04^5 − 1) = $47,663.64.",
+    "Investment gain = $44,000.00 × (1.07.000000000000001^5 − 1) = $17,712.28.",
+    "Difference = $29,951.36. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-a-equity-vs-invest-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-equity-vs-invest",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila puts 10% down on a $250,000.00 home. Over 5 years the home appreciates 2% a year, while the down payment could have earned 6% a year invested. Comparing appreciation on the whole home with growth of the down payment only, how big is the difference after 5 years?",
+   "format": "short-answer",
+   "answer": "$17,564.56",
+   "numeric": {
+    "value": 17564.56,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Home gain = $250,000.00 × (1.02^5 − 1) = $26,020.20.",
+    "Investment gain = $25,000.00 × (1.06^5 − 1) = $8,455.64.",
+    "Difference = $17,564.56. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-a-equity-vs-invest-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-equity-vs-invest",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam puts 10% down on a $370,000.00 home. Over 5 years the home appreciates 3% a year, while the down payment could have earned 5% a year invested. Comparing appreciation on the whole home with growth of the down payment only, how big is the difference after 5 years?",
+   "format": "short-answer",
+   "answer": "$48,708.99",
+   "numeric": {
+    "value": 48708.99,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Home gain = $370,000.00 × (1.03^5 − 1) = $58,931.41.",
+    "Investment gain = $37,000.00 × (1.05^5 − 1) = $10,222.42.",
+    "Difference = $48,708.99. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-a-equity-vs-invest-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-equity-vs-invest",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah puts 10% down on a $240,000.00 home. Over 5 years the home appreciates 4% a year, while the down payment could have earned 7% a year invested. Comparing appreciation on the whole home with growth of the down payment only, how big is the difference after 5 years?",
+   "format": "short-answer",
+   "answer": "$42,335.46",
+   "numeric": {
+    "value": 42335.46,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Home gain = $240,000.00 × (1.04^5 − 1) = $51,996.70.",
+    "Investment gain = $24,000.00 × (1.07.000000000000001^5 − 1) = $9,661.24.",
+    "Difference = $42,335.46. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-a-equity-vs-invest-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-equity-vs-invest",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia puts 20% down on a $300,000.00 home. Over 5 years the home appreciates 2% a year, while the down payment could have earned 7% a year invested. Comparing appreciation on the whole home with growth of the down payment only, how big is the difference after 5 years?",
+   "format": "short-answer",
+   "answer": "$7,071.14",
+   "numeric": {
+    "value": 7071.14,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Home gain = $300,000.00 × (1.02^5 − 1) = $31,224.24.",
+    "Investment gain = $60,000.00 × (1.07.000000000000001^5 − 1) = $24,153.10.",
+    "Difference = $7,071.14. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-a-equity-vs-invest-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-equity-vs-invest",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila puts 10% down on a $390,000.00 home. Over 5 years the home appreciates 3% a year, while the down payment could have earned 5% a year invested. Comparing appreciation on the whole home with growth of the down payment only, how big is the difference after 5 years?",
+   "format": "short-answer",
+   "answer": "$51,341.91",
+   "numeric": {
+    "value": 51341.91,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Home gain = $390,000.00 × (1.03^5 − 1) = $62,116.89.",
+    "Investment gain = $39,000.00 × (1.05^5 − 1) = $10,774.98.",
+    "Difference = $51,341.91. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+   ]
+  },
+  {
+   "id": "fa-housing-s04-lv-a-equity-vs-invest-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-equity-vs-invest",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis puts 10% down on a $390,000.00 home. Over 5 years the home appreciates 2% a year, while the down payment could have earned 5% a year invested. Comparing appreciation on the whole home with growth of the down payment only, how big is the difference after 5 years?",
+   "format": "short-answer",
+   "answer": "$29,816.53",
+   "numeric": {
+    "value": 29816.53,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Home gain = $390,000.00 × (1.02^5 − 1) = $40,591.51.",
+    "Investment gain = $39,000.00 × (1.05^5 − 1) = $10,774.98.",
+    "Difference = $29,816.53. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-s-split-3-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "support",
+   "family": "lv-s-split-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah and two roommates split a $1,650 rent evenly. Each share = rent ÷ 3. What is each person's share?",
+   "format": "short-answer",
+   "answer": "$550",
+   "numeric": {
+    "value": 550,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,650 ÷ 3 = $550."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-s-split-3-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "support",
+   "family": "lv-s-split-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila and two roommates split a $2,400 rent evenly. Each share = rent ÷ 3. What is each person's share?",
+   "format": "short-answer",
+   "answer": "$800",
+   "numeric": {
+    "value": 800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,400 ÷ 3 = $800."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-s-split-3-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "support",
+   "family": "lv-s-split-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani and two roommates split a $1,800 rent evenly. Each share = rent ÷ 3. What is each person's share?",
+   "format": "short-answer",
+   "answer": "$600",
+   "numeric": {
+    "value": 600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,800 ÷ 3 = $600."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-s-split-3-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "support",
+   "family": "lv-s-split-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler and two roommates split a $1,650 rent evenly. Each share = rent ÷ 3. What is each person's share?",
+   "format": "short-answer",
+   "answer": "$550",
+   "numeric": {
+    "value": 550,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,650 ÷ 3 = $550."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-a-two-year-lease-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-two-year-lease",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre signs a 12-month lease at $1,375/month and renews for a second year at a 4% increase. Renters insurance is $18 a month. The $1,375 deposit is refunded in full. What does he spend on rent and insurance over the two years?",
+   "format": "short-answer",
+   "answer": "$34,092",
+   "numeric": {
+    "value": 34092,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1 rent: $16,500. Year 2: $1,430 × 12 = $17,160.",
+    "Insurance: $18 × 24 = $432.",
+    "Total = $34,092 (the refunded deposit is not a cost)."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-a-two-year-lease-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-two-year-lease",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah signs a 12-month lease at $1,350/month and renews for a second year at a 4% increase. Renters insurance is $15 a month. The $1,350 deposit is refunded in full. What does she spend on rent and insurance over the two years?",
+   "format": "short-answer",
+   "answer": "$33,408",
+   "numeric": {
+    "value": 33408,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1 rent: $16,200. Year 2: $1,404 × 12 = $16,848.",
+    "Insurance: $15 × 24 = $360.",
+    "Total = $33,408 (the refunded deposit is not a cost)."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-a-two-year-lease-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-two-year-lease",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah signs a 12-month lease at $1,475.00/month and renews for a second year at a 5% increase. Renters insurance is $15.00 a month. The $1,475.00 deposit is refunded in full. What does she spend on rent and insurance over the two years?",
+   "format": "short-answer",
+   "answer": "$36,645.00",
+   "numeric": {
+    "value": 36645,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1 rent: $17,700.00. Year 2: $1,548.75 × 12 = $18,585.00.",
+    "Insurance: $15.00 × 24 = $360.00.",
+    "Total = $36,645.00 (the refunded deposit is not a cost)."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-a-two-year-lease-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-two-year-lease",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan signs a 12-month lease at $1,650.00/month and renews for a second year at a 3% increase. Renters insurance is $12.00 a month. The $1,650.00 deposit is refunded in full. What does they spend on rent and insurance over the two years?",
+   "format": "short-answer",
+   "answer": "$40,482.00",
+   "numeric": {
+    "value": 40482,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1 rent: $19,800.00. Year 2: $1,699.50 × 12 = $20,394.00.",
+    "Insurance: $12.00 × 24 = $288.00.",
+    "Total = $40,482.00 (the refunded deposit is not a cost)."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-a-two-year-lease-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-two-year-lease",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia signs a 12-month lease at $1,025.00/month and renews for a second year at a 3% increase. Renters insurance is $15.00 a month. The $1,025.00 deposit is refunded in full. What does she spend on rent and insurance over the two years?",
+   "format": "short-answer",
+   "answer": "$25,329.00",
+   "numeric": {
+    "value": 25329,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1 rent: $12,300.00. Year 2: $1,055.75 × 12 = $12,669.00.",
+    "Insurance: $15.00 × 24 = $360.00.",
+    "Total = $25,329.00 (the refunded deposit is not a cost)."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-a-two-year-lease-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-two-year-lease",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani signs a 12-month lease at $1,875/month and renews for a second year at a 4% increase. Renters insurance is $15 a month. The $1,875 deposit is refunded in full. What does she spend on rent and insurance over the two years?",
+   "format": "short-answer",
+   "answer": "$46,260",
+   "numeric": {
+    "value": 46260,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Year 1 rent: $22,500. Year 2: $1,950 × 12 = $23,400.",
+    "Insurance: $15 × 24 = $360.",
+    "Total = $46,260 (the refunded deposit is not a cost)."
    ]
   },
   {
@@ -7453,7 +9564,7 @@
    "id": "fa-housing-s02-err-loan-amount-01",
    "unitId": "housing",
    "skillId": "housing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "loan-amount-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -7549,7 +9660,7 @@
    "id": "fa-housing-s03-err-closing-costs-01",
    "unitId": "housing",
    "skillId": "housing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "closing-costs-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -7591,7 +9702,7 @@
    "id": "fa-housing-s04-err-opportunity-cost-01",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "opportunity-cost-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -7646,7 +9757,7 @@
    "id": "fa-housing-s04-err-twenty-eight-01",
    "unitId": "housing",
    "skillId": "housing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "twenty-eight-error",
    "type": "reasoning",
    "errorAnalysis": true,

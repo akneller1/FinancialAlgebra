@@ -1,13 +1,14 @@
 /* Builds Financial Algebra question banks from authored content.
  * Outputs:
  *   financial/banks/<unit>.json                 extended FA bank (schema "fa-bank-1")
- *   question-banks/financial-algebra/<unit>.json  Classroom schemaVersion 1 export (level "cp1" = the single Standard level)
+ *   question-banks/financial-algebra/<unit>.json  Classroom schemaVersion 1 export (levels support/standard/advanced → cp2/cp1/honors)
  *   financial/banks/index.json                  unit list + counts
  *   financial/flashcards/decks.js               flashcard decks (window.FA_DECKS)
  * Usage: node scripts/build-banks.mjs [unitId ...]
  */
 import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'node:fs';
 import { buildUnit } from '../financial/content/kit.mjs';
+import { assignLevels, CLASSROOM_CODE } from '../financial/content/levels.mjs';
 import { course } from '../src/course.js';
 const root = new URL('../', import.meta.url);
 const P = p => new URL(p, root);
@@ -21,7 +22,8 @@ export async function loadContent(id) {
   const { applied } = await import(P('financial/content/applied-20261116.mjs').href);
   const { newSkills } = await import(P('financial/content/new-skills-20261116.mjs').href);
   const ns = newSkills[id];
-  return { ...content, families: content.families.concat(applied[id] || [], ns ? ns.families : []),
+  const { levelFamilies } = await import(P('financial/content/levels-20261117.mjs').href);
+  return { ...content, families: content.families.concat(applied[id] || [], ns ? ns.families : [], levelFamilies[id] || []),
     vocab: content.vocab.concat(ns ? ns.vocab : []), concepts: (content.concepts || []).concat(ns ? ns.concepts : []),
     claims: (content.claims || []).concat(ns ? ns.claims : []), lessons: content.lessons.concat(ns ? [ns.lesson] : []) };
 }
@@ -39,12 +41,12 @@ export function toClassroom(q) {
   if (!ok) return null;
   const sc = q.scenario || {};
   const prompt = strip((sc.text ? sc.text + '\n' : '') + q.prompt + tableText(sc.table) + docText(sc.document));
-  const out = { id: q.id, skillId: q.skillId, level: 'cp1', format: q.format, prompt, answer: q.format === 'select-all' ? q.answer : strip(q.answer), solutionSteps: q.solutionSteps.map(strip).filter(Boolean) };
+  const out = { id: q.id, skillId: q.skillId, level: CLASSROOM_CODE[q.level] || 'cp1', format: q.format, prompt, answer: q.format === 'select-all' ? q.answer : strip(q.answer), solutionSteps: q.solutionSteps.map(strip).filter(Boolean) };
   if (q.options) out.options = q.options.map(o => ({ text: strip(o.text), correct: o.correct }));
   if (q.parts) out.parts = q.parts.map(p => ({ prompt: strip(p.prompt), answer: strip(p.answer) }));
   if (q.rubric) out.solutionSteps = out.solutionSteps.concat('Rubric (' + q.rubric.reduce((s, c) => s + c.points, 0) + ' pts):', ...q.rubric.map(c => `${c.criterion} (${c.points}): ${c.full}`));
   if (q.modelResponse) out.solutionSteps.push('Model response: ' + strip(q.modelResponse));
-  out.sourceNotes = `Financial Algebra original item (family ${q.family}; type ${q.type}). Fictional scenario; hypothetical values. Single course level "standard" stored as cp1 for Classroom schema compatibility.`;
+  out.sourceNotes = `Financial Algebra original item (family ${q.family}; type ${q.type}). Fictional scenario; hypothetical values. Level ${q.level} (Classroom code ${CLASSROOM_CODE[q.level] || 'cp1'}).`;
   return out;
 }
 export async function buildAll(ids = UNIT_ORDER) {
@@ -59,7 +61,9 @@ export async function buildAll(ids = UNIT_ORDER) {
     const prior = existsSync(P(`financial/banks/${id}.json`)) ? JSON.parse(readFileSync(P(`financial/banks/${id}.json`), 'utf8')).questions || [] : [];
     const made = new Set(questions.map(q => q.id));
     for (const q of prior) if (q.errorAnalysis === true && !made.has(q.id)) questions.push(q);
-    const ext = { schema: 'fa-bank-1', courseId: 'financial-algebra', unitId: id, unitName: unit.name, level: 'standard', generated: 'deterministic', assumptions: 'All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.', skills: unit.skills.map((s, i) => ({ id: `${id}-skill-${String(i + 1).padStart(2, '0')}`, name: s })), vocab: content.vocab, lessons: content.lessons, cheatSheet: content.cheatSheet, questions };
+    // Three levels (2026-11-17): written-for-level families keep theirs; everything else is sorted by effort.
+    assignLevels(questions);
+    const ext = { schema: 'fa-bank-1', courseId: 'financial-algebra', unitId: id, unitName: unit.name, levels: ['support', 'standard', 'advanced'], generated: 'deterministic', assumptions: 'All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.', skills: unit.skills.map((s, i) => ({ id: `${id}-skill-${String(i + 1).padStart(2, '0')}`, name: s })), vocab: content.vocab, lessons: content.lessons, cheatSheet: content.cheatSheet, questions };
     mkdirSync(P('financial/banks'), { recursive: true }); mkdirSync(P('question-banks/financial-algebra'), { recursive: true });
     writeFileSync(P(`financial/banks/${id}.json`), JSON.stringify(ext, null, 1));
     const cls = { schemaVersion: 1, courseId: 'financial-algebra', unitId: id, questions: questions.map(toClassroom).filter(Boolean) };

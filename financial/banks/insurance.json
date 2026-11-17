@@ -3,7 +3,11 @@
  "courseId": "financial-algebra",
  "unitId": "insurance",
  "unitName": "Insurance & Risk",
- "level": "standard",
+ "levels": [
+  "support",
+  "standard",
+  "advanced"
+ ],
  "generated": "deterministic",
  "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
  "skills": [
@@ -628,7 +632,7 @@
    "id": "fa-insurance-s01-vocab-def-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Premium** mean?",
@@ -673,7 +677,7 @@
    "id": "fa-insurance-s01-vocab-def-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Deductible** mean?",
@@ -718,7 +722,7 @@
    "id": "fa-insurance-s02-vocab-def-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Copay** mean?",
@@ -763,7 +767,7 @@
    "id": "fa-insurance-s02-vocab-def-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Coinsurance** mean?",
@@ -808,7 +812,7 @@
    "id": "fa-insurance-s02-vocab-def-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Out-of-pocket maximum** mean?",
@@ -853,7 +857,7 @@
    "id": "fa-insurance-s01-vocab-def-06",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Claim** mean?",
@@ -898,7 +902,7 @@
    "id": "fa-insurance-s04-vocab-def-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Policy limit** mean?",
@@ -943,7 +947,7 @@
    "id": "fa-insurance-s03-vocab-def-08",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Expected value** mean?",
@@ -988,7 +992,7 @@
    "id": "fa-insurance-s03-vocab-def-09",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Risk pooling** mean?",
@@ -1033,7 +1037,7 @@
    "id": "fa-insurance-s04-vocab-def-10",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Liability insurance** mean?",
@@ -1078,7 +1082,7 @@
    "id": "fa-insurance-s04-vocab-def-11",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Collision coverage** mean?",
@@ -1123,7 +1127,7 @@
    "id": "fa-insurance-s04-vocab-def-12",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Comprehensive coverage** mean?",
@@ -1168,7 +1172,7 @@
    "id": "fa-insurance-s02-vocab-def-13",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Network (in-network)** mean?",
@@ -1213,7 +1217,7 @@
    "id": "fa-insurance-s01-vocab-def-14",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Health savings account (HSA)** mean?",
@@ -1258,7 +1262,7 @@
    "id": "fa-insurance-s04-vocab-def-15",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Self-insure** mean?",
@@ -1303,7 +1307,7 @@
    "id": "fa-insurance-s04-vocab-def-16",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Risk tolerance (insurance)** mean?",
@@ -1348,7 +1352,7 @@
    "id": "fa-insurance-s01-concept-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Raising a deductible usually has what effect on the premium?",
@@ -1390,7 +1394,7 @@
    "id": "fa-insurance-s02-concept-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A plan has a $1,500 deductible and 20% coinsurance. You have a $5,000 covered bill and have paid nothing yet this year. What do you pay?",
@@ -1432,7 +1436,7 @@
    "id": "fa-insurance-s02-concept-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "After you reach the out-of-pocket maximum…",
@@ -1474,7 +1478,7 @@
    "id": "fa-insurance-s03-concept-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A 2% chance of a $10,000 loss and a 98% chance of no loss. What is the expected loss?",
@@ -1516,7 +1520,7 @@
    "id": "fa-insurance-s03-concept-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why can insurance premiums exceed a person’s expected loss and still be a good choice?",
@@ -1603,7 +1607,7 @@
    "id": "fa-insurance-s04-concept-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which coverage is required by most states for drivers?",
@@ -1645,7 +1649,7 @@
    "id": "fa-insurance-s01-claim-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “The plan with the lowest premium is always the cheapest.”",
@@ -1684,7 +1688,7 @@
    "id": "fa-insurance-s01-claim-cer-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -1753,7 +1757,7 @@
    "id": "fa-insurance-s03-claim-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Insurance is a waste of money if you never file a claim.”",
@@ -1792,7 +1796,7 @@
    "id": "fa-insurance-s03-claim-cer-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -1900,7 +1904,7 @@
    "id": "fa-insurance-s04-claim-cer-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2008,7 +2012,7 @@
    "id": "fa-insurance-s04-claim-cer-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2077,7 +2081,7 @@
    "id": "fa-insurance-s01-auto-claim-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "auto-claim",
    "type": "calculation",
    "activityTypes": [
@@ -2105,7 +2109,7 @@
    "id": "fa-insurance-s01-auto-claim-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "auto-claim",
    "type": "calculation",
    "activityTypes": [
@@ -2133,7 +2137,7 @@
    "id": "fa-insurance-s01-auto-claim-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "auto-claim",
    "type": "calculation",
    "activityTypes": [
@@ -2161,7 +2165,7 @@
    "id": "fa-insurance-s01-auto-claim-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "auto-claim",
    "type": "calculation",
    "activityTypes": [
@@ -2189,7 +2193,7 @@
    "id": "fa-insurance-s01-auto-claim-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "auto-claim",
    "type": "calculation",
    "activityTypes": [
@@ -2217,7 +2221,7 @@
    "id": "fa-insurance-s01-auto-claim-06",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "auto-claim",
    "type": "calculation",
    "activityTypes": [
@@ -2245,7 +2249,7 @@
    "id": "fa-insurance-s01-deductible-tradeoff-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "deductible-tradeoff",
    "type": "comparison",
    "activityTypes": [
@@ -2273,7 +2277,7 @@
    "id": "fa-insurance-s01-deductible-tradeoff-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "deductible-tradeoff",
    "type": "comparison",
    "activityTypes": [
@@ -2301,7 +2305,7 @@
    "id": "fa-insurance-s01-deductible-tradeoff-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "deductible-tradeoff",
    "type": "comparison",
    "activityTypes": [
@@ -2329,7 +2333,7 @@
    "id": "fa-insurance-s01-deductible-tradeoff-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "deductible-tradeoff",
    "type": "comparison",
    "activityTypes": [
@@ -2357,7 +2361,7 @@
    "id": "fa-insurance-s01-deductible-tradeoff-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "deductible-tradeoff",
    "type": "comparison",
    "activityTypes": [
@@ -2385,7 +2389,7 @@
    "id": "fa-insurance-s01-deductible-tradeoff-06",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "deductible-tradeoff",
    "type": "comparison",
    "activityTypes": [
@@ -2413,7 +2417,7 @@
    "id": "fa-insurance-s01-premium-annual-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "premium-annual",
    "type": "calculation",
    "activityTypes": [
@@ -2793,7 +2797,7 @@
    "id": "fa-insurance-s02-plan-total-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "plan-total",
    "type": "comparison",
    "activityTypes": [
@@ -2872,7 +2876,7 @@
    "id": "fa-insurance-s02-plan-total-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "plan-total",
    "type": "comparison",
    "activityTypes": [
@@ -2951,7 +2955,7 @@
    "id": "fa-insurance-s02-plan-total-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "plan-total",
    "type": "comparison",
    "activityTypes": [
@@ -3030,7 +3034,7 @@
    "id": "fa-insurance-s02-plan-total-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "plan-total",
    "type": "comparison",
    "activityTypes": [
@@ -3109,7 +3113,7 @@
    "id": "fa-insurance-s02-plan-total-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "plan-total",
    "type": "comparison",
    "activityTypes": [
@@ -3188,7 +3192,7 @@
    "id": "fa-insurance-s02-plan-total-06",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "plan-total",
    "type": "comparison",
    "activityTypes": [
@@ -3267,7 +3271,7 @@
    "id": "fa-insurance-s02-plan-total-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "plan-total",
    "type": "comparison",
    "activityTypes": [
@@ -3510,7 +3514,7 @@
    "id": "fa-insurance-s02-sbc-doc-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "sbc-doc",
    "type": "document",
    "activityTypes": [
@@ -3592,7 +3596,7 @@
    "id": "fa-insurance-s02-sbc-doc-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "sbc-doc",
    "type": "document",
    "activityTypes": [
@@ -3785,7 +3789,7 @@
    "id": "fa-insurance-s03-ev-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev",
    "type": "calculation",
    "activityTypes": [
@@ -3814,7 +3818,7 @@
    "id": "fa-insurance-s03-ev-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev",
    "type": "calculation",
    "activityTypes": [
@@ -3843,7 +3847,7 @@
    "id": "fa-insurance-s03-ev-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev",
    "type": "calculation",
    "activityTypes": [
@@ -3872,7 +3876,7 @@
    "id": "fa-insurance-s03-ev-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev",
    "type": "calculation",
    "activityTypes": [
@@ -3901,7 +3905,7 @@
    "id": "fa-insurance-s03-ev-06",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev",
    "type": "calculation",
    "activityTypes": [
@@ -3930,7 +3934,7 @@
    "id": "fa-insurance-s03-ev-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev",
    "type": "calculation",
    "activityTypes": [
@@ -4104,7 +4108,7 @@
    "id": "fa-insurance-s03-ev-premium-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev-premium",
    "type": "calculation",
    "activityTypes": [
@@ -4249,7 +4253,7 @@
    "id": "fa-insurance-s03-ev-plans-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev-plans",
    "type": "comparison",
    "activityTypes": [
@@ -4359,7 +4363,7 @@
    "id": "fa-insurance-s03-ev-plans-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev-plans",
    "type": "comparison",
    "activityTypes": [
@@ -4469,7 +4473,7 @@
    "id": "fa-insurance-s03-ev-plans-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev-plans",
    "type": "comparison",
    "activityTypes": [
@@ -4579,7 +4583,7 @@
    "id": "fa-insurance-s03-ev-plans-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "ev-plans",
    "type": "comparison",
    "activityTypes": [
@@ -4974,7 +4978,7 @@
    "id": "fa-insurance-s04-liability-limit-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "liability-limit",
    "type": "calculation",
    "activityTypes": [
@@ -5064,7 +5068,7 @@
    "id": "fa-insurance-s04-self-insure-or-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "self-insure-or",
    "type": "reasoning",
    "activityTypes": [
@@ -5136,7 +5140,7 @@
    "id": "fa-insurance-s04-self-insure-or-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "self-insure-or",
    "type": "reasoning",
    "activityTypes": [
@@ -5208,7 +5212,7 @@
    "id": "fa-insurance-s04-self-insure-or-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "self-insure-or",
    "type": "reasoning",
    "activityTypes": [
@@ -5280,7 +5284,7 @@
    "id": "fa-insurance-s04-self-insure-or-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "self-insure-or",
    "type": "reasoning",
    "activityTypes": [
@@ -5555,7 +5559,7 @@
    "id": "fa-insurance-s02-ap-coinsurance-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-coinsurance",
    "type": "calculation",
    "activityTypes": [
@@ -5584,7 +5588,7 @@
    "id": "fa-insurance-s02-ap-coinsurance-02",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-coinsurance",
    "type": "calculation",
    "activityTypes": [
@@ -5613,7 +5617,7 @@
    "id": "fa-insurance-s02-ap-coinsurance-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-coinsurance",
    "type": "calculation",
    "activityTypes": [
@@ -5700,7 +5704,7 @@
    "id": "fa-insurance-s02-ap-coinsurance-06",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-coinsurance",
    "type": "calculation",
    "activityTypes": [
@@ -5729,7 +5733,7 @@
    "id": "fa-insurance-s02-ap-coinsurance-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-coinsurance",
    "type": "calculation",
    "activityTypes": [
@@ -5758,7 +5762,7 @@
    "id": "fa-insurance-s02-ap-coinsurance-08",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-coinsurance",
    "type": "calculation",
    "activityTypes": [
@@ -5845,7 +5849,7 @@
    "id": "fa-insurance-s03-ap-warranty-ev-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ap-warranty-ev",
    "type": "calculation",
    "activityTypes": [
@@ -5874,7 +5878,7 @@
    "id": "fa-insurance-s03-ap-warranty-ev-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ap-warranty-ev",
    "type": "calculation",
    "activityTypes": [
@@ -5961,7 +5965,7 @@
    "id": "fa-insurance-s03-ap-warranty-ev-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ap-warranty-ev",
    "type": "calculation",
    "activityTypes": [
@@ -6071,7 +6075,7 @@
    "id": "fa-insurance-s01-ap-annual-premium-04",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-annual-premium",
    "type": "comparison",
    "activityTypes": [
@@ -6125,7 +6129,7 @@
    "id": "fa-insurance-s01-ap-annual-premium-06",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-annual-premium",
    "type": "comparison",
    "activityTypes": [
@@ -6152,7 +6156,7 @@
    "id": "fa-insurance-s01-ap-annual-premium-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-annual-premium",
    "type": "comparison",
    "activityTypes": [
@@ -6176,10 +6180,1749 @@
    ]
   },
   {
+   "id": "fa-insurance-s01-lv-s-premium-year-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-s-premium-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah's car insurance costs $125 a month. Yearly premium = monthly × 12. What is the yearly premium?",
+   "format": "short-answer",
+   "answer": "$1,500",
+   "numeric": {
+    "value": 1500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$125 × 12 = $1,500."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-s-premium-year-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-s-premium-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya's car insurance costs $210 a month. Yearly premium = monthly × 12. What is the yearly premium?",
+   "format": "short-answer",
+   "answer": "$2,520",
+   "numeric": {
+    "value": 2520,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$210 × 12 = $2,520."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-s-premium-year-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-s-premium-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen's car insurance costs $205 a month. Yearly premium = monthly × 12. What is the yearly premium?",
+   "format": "short-answer",
+   "answer": "$2,460",
+   "numeric": {
+    "value": 2460,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$205 × 12 = $2,460."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-s-premium-year-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-s-premium-year",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace's car insurance costs $75 a month. Yearly premium = monthly × 12. What is the yearly premium?",
+   "format": "short-answer",
+   "answer": "$900",
+   "numeric": {
+    "value": 900,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$75 × 12 = $900."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-a-deductible-breakeven-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-a-deductible-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Raising Imani's deductible from $250 to $2,000 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
+   "format": "short-answer",
+   "answer": "9.7",
+   "numeric": {
+    "value": 9.7,
+    "tolerance": 0.05,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Extra deductible = $2,000 − $250 = $1750.",
+    "$1750 ÷ $180 = 9.72 years.",
+    "If you expect a claim sooner, the lower deductible may be better."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-a-deductible-breakeven-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-a-deductible-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Raising Sam's deductible from $250 to $1,000 lowers the premium by $150 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
+   "format": "short-answer",
+   "answer": "5",
+   "numeric": {
+    "value": 5,
+    "tolerance": 0.05,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Extra deductible = $1,000 − $250 = $750.",
+    "$750 ÷ $150 = 5.00 years.",
+    "If you expect a claim sooner, the lower deductible may be better."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-a-deductible-breakeven-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-a-deductible-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Raising Luis's deductible from $500 to $1,500 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
+   "format": "short-answer",
+   "answer": "5.6",
+   "numeric": {
+    "value": 5.6,
+    "tolerance": 0.05,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Extra deductible = $1,500 − $500 = $1000.",
+    "$1000 ÷ $180 = 5.56 years.",
+    "If you expect a claim sooner, the lower deductible may be better."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-a-deductible-breakeven-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-a-deductible-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Raising Sam's deductible from $250 to $2,000 lowers the premium by $150 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
+   "format": "short-answer",
+   "answer": "11.7",
+   "numeric": {
+    "value": 11.7,
+    "tolerance": 0.05,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Extra deductible = $2,000 − $250 = $1750.",
+    "$1750 ÷ $150 = 11.67 years.",
+    "If you expect a claim sooner, the lower deductible may be better."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-a-deductible-breakeven-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-a-deductible-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Raising Priya's deductible from $250 to $2,000 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
+   "format": "short-answer",
+   "answer": "9.7",
+   "numeric": {
+    "value": 9.7,
+    "tolerance": 0.05,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Extra deductible = $2,000 − $250 = $1750.",
+    "$1750 ÷ $180 = 9.72 years.",
+    "If you expect a claim sooner, the lower deductible may be better."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-a-deductible-breakeven-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-a-deductible-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Raising Nadia's deductible from $500 to $1,500 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
+   "format": "short-answer",
+   "answer": "5.6",
+   "numeric": {
+    "value": 5.6,
+    "tolerance": 0.05,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Extra deductible = $1,500 − $500 = $1000.",
+    "$1000 ÷ $180 = 5.56 years.",
+    "If you expect a claim sooner, the lower deductible may be better."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-a-deductible-breakeven-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-a-deductible-breakeven",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Raising Grace's deductible from $500 to $1,500 lowers the premium by $150 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
+   "format": "short-answer",
+   "answer": "6.7",
+   "numeric": {
+    "value": 6.7,
+    "tolerance": 0.05,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Extra deductible = $1,500 − $500 = $1000.",
+    "$1000 ÷ $150 = 6.67 years.",
+    "If you expect a claim sooner, the lower deductible may be better."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-s-copays-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-s-copays",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya has 7 doctor visits this year with a $40 copay each. Total copays = visits × copay. How much does she pay?",
+   "format": "short-answer",
+   "answer": "$280",
+   "numeric": {
+    "value": 280,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "7 × $40 = $280."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-s-copays-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-s-copays",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus has 8 doctor visits this year with a $30 copay each. Total copays = visits × copay. How much does he pay?",
+   "format": "short-answer",
+   "answer": "$240",
+   "numeric": {
+    "value": 240,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "8 × $30 = $240."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-s-copays-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-s-copays",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya has 4 doctor visits this year with a $20 copay each. Total copays = visits × copay. How much does she pay?",
+   "format": "short-answer",
+   "answer": "$80",
+   "numeric": {
+    "value": 80,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "4 × $20 = $80."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-s-copays-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-s-copays",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo has 8 doctor visits this year with a $30 copay each. Total copays = visits × copay. How much does he pay?",
+   "format": "short-answer",
+   "answer": "$240",
+   "numeric": {
+    "value": 240,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "8 × $30 = $240."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-s-copays-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-s-copays",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah has 8 doctor visits this year with a $40 copay each. Total copays = visits × copay. How much does she pay?",
+   "format": "short-answer",
+   "answer": "$320",
+   "numeric": {
+    "value": 320,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "8 × $40 = $320."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-s-copays-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-s-copays",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia has 3 doctor visits this year with a $40 copay each. Total copays = visits × copay. How much does she pay?",
+   "format": "short-answer",
+   "answer": "$120",
+   "numeric": {
+    "value": 120,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "3 × $40 = $120."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's plan has a $1,500 deductible, 30% coinsurance and a $6,000 out-of-pocket maximum. She has a $2,850 bill in March and a $15,000 bill in June. How much does she pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$6,000",
+   "numeric": {
+    "value": 6000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,500 + coinsurance $405.",
+    "June: remaining deductible $0 + coinsurance $4,500.",
+    "Total $6,405, capped at $6,000 → $6,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah's plan has a $2,000 deductible, 20% coinsurance and a $6,000 out-of-pocket maximum. He has a $1,550 bill in March and a $10,500 bill in June. How much does he pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$4,010",
+   "numeric": {
+    "value": 4010,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,550 + coinsurance $0.",
+    "June: remaining deductible $450 + coinsurance $2,010.",
+    "Total $4,010 → $4,010."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia's plan has a $1,000 deductible, 30% coinsurance and a $4,000 out-of-pocket maximum. She has a $2,750 bill in March and a $6,000 bill in June. How much does she pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$3,325",
+   "numeric": {
+    "value": 3325,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,000 + coinsurance $525.",
+    "June: remaining deductible $0 + coinsurance $1,800.",
+    "Total $3,325 → $3,325."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam's plan has a $1,000 deductible, 30% coinsurance and a $5,000 out-of-pocket maximum. They has a $1,600 bill in March and a $18,500 bill in June. How much does they pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$5,000",
+   "numeric": {
+    "value": 5000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,000 + coinsurance $180.",
+    "June: remaining deductible $0 + coinsurance $5,550.",
+    "Total $6,730, capped at $5,000 → $5,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei's plan has a $1,000 deductible, 20% coinsurance and a $6,000 out-of-pocket maximum. She has a $2,850 bill in March and a $26,000 bill in June. How much does she pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$6,000",
+   "numeric": {
+    "value": 6000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,000 + coinsurance $370.",
+    "June: remaining deductible $0 + coinsurance $5,200.",
+    "Total $6,570, capped at $6,000 → $6,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia's plan has a $1,000 deductible, 30% coinsurance and a $6,000 out-of-pocket maximum. She has a $1,900 bill in March and a $15,000 bill in June. How much does she pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$5,770",
+   "numeric": {
+    "value": 5770,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,000 + coinsurance $270.",
+    "June: remaining deductible $0 + coinsurance $4,500.",
+    "Total $5,770 → $5,770."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen's plan has a $1,000 deductible, 20% coinsurance and a $5,000 out-of-pocket maximum. He has a $1,600 bill in March and a $15,000 bill in June. How much does he pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$4,120",
+   "numeric": {
+    "value": 4120,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,000 + coinsurance $120.",
+    "June: remaining deductible $0 + coinsurance $3,000.",
+    "Total $4,120 → $4,120."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya's plan has a $2,000 deductible, 20% coinsurance and a $4,000 out-of-pocket maximum. She has a $1,850 bill in March and a $10,500 bill in June. How much does she pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$4,000",
+   "numeric": {
+    "value": 4000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,850 + coinsurance $0.",
+    "June: remaining deductible $150 + coinsurance $2,070.",
+    "Total $4,070, capped at $4,000 → $4,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-a-two-bills-oop-09",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-a-two-bills-oop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei's plan has a $2,000 deductible, 20% coinsurance and a $4,000 out-of-pocket maximum. She has a $1,800 bill in March and a $22,500 bill in June. How much does she pay in total for the year?",
+   "format": "short-answer",
+   "answer": "$4,000",
+   "numeric": {
+    "value": 4000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "March: deductible $1,800 + coinsurance $0.",
+    "June: remaining deductible $200 + coinsurance $4,460.",
+    "Total $6,460, capped at $4,000 → $4,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 2% chance of a $11,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$220",
+   "numeric": {
+    "value": 220,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.02 × $11,000 = $220."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 1% chance of a $9,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$90",
+   "numeric": {
+    "value": 90,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.01 × $9,000 = $90."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 2% chance of a $2,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$40",
+   "numeric": {
+    "value": 40,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.02 × $2,000 = $40."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 10% chance of a $17,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$1,700",
+   "numeric": {
+    "value": 1700,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.10 × $17,000 = $1,700."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 1% chance of a $13,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$130",
+   "numeric": {
+    "value": 130,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.01 × $13,000 = $130."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 1% chance of a $19,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$190",
+   "numeric": {
+    "value": 190,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.01 × $19,000 = $190."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 5% chance of a $4,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$200",
+   "numeric": {
+    "value": 200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.05 × $4,000 = $200."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 5% chance of a $7,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$350",
+   "numeric": {
+    "value": 350,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.05 × $7,000 = $350."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-s-ev-one-09",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "support",
+   "family": "lv-s-ev-one",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "There is a 2% chance of a $12,000 loss. Expected loss = probability × amount. What is the expected loss?",
+   "format": "short-answer",
+   "answer": "$240",
+   "numeric": {
+    "value": 240,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "0.02 × $12,000 = $240."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-a-premium-margin-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "advanced",
+   "family": "lv-a-premium-margin",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An insurer covers renters who each have a 3% chance of a $11,000.00 claim. To cover expected claims plus 25% for costs and profit, what yearly premium should it charge each renter?",
+   "format": "short-answer",
+   "answer": "$412.50",
+   "numeric": {
+    "value": 412.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected claim per renter = 0.03 × $11,000.00 = $330.00.",
+    "Add 25%: $330.00 × 1.25 = $412.50."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-a-premium-margin-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "advanced",
+   "family": "lv-a-premium-margin",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An insurer covers renters who each have a 5% chance of a $10,500 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
+   "format": "short-answer",
+   "answer": "$630",
+   "numeric": {
+    "value": 630,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected claim per renter = 0.05 × $10,500 = $525.",
+    "Add 20%: $525 × 1.2 = $630."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-a-premium-margin-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "advanced",
+   "family": "lv-a-premium-margin",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An insurer covers renters who each have a 2% chance of a $5,500 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
+   "format": "short-answer",
+   "answer": "$132",
+   "numeric": {
+    "value": 132,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected claim per renter = 0.02 × $5,500 = $110.",
+    "Add 20%: $110 × 1.2 = $132."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-a-premium-margin-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "advanced",
+   "family": "lv-a-premium-margin",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An insurer covers renters who each have a 2% chance of a $12,000 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
+   "format": "short-answer",
+   "answer": "$288",
+   "numeric": {
+    "value": 288,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected claim per renter = 0.02 × $12,000 = $240.",
+    "Add 20%: $240 × 1.2 = $288."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-a-premium-margin-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "advanced",
+   "family": "lv-a-premium-margin",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An insurer covers renters who each have a 3% chance of a $13,000 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
+   "format": "short-answer",
+   "answer": "$468",
+   "numeric": {
+    "value": 468,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected claim per renter = 0.03 × $13,000 = $390.",
+    "Add 20%: $390 × 1.2 = $468."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-lv-a-premium-margin-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "advanced",
+   "family": "lv-a-premium-margin",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An insurer covers renters who each have a 2% chance of a $14,000 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
+   "format": "short-answer",
+   "answer": "$336",
+   "numeric": {
+    "value": 336,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected claim per renter = 0.02 × $14,000 = $280.",
+    "Add 20%: $280 × 1.2 = $336."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's essential expenses are $2,000 a month. An emergency fund of 3 months = monthly expenses × 3. How much should he save?",
+   "format": "short-answer",
+   "answer": "$6,000",
+   "numeric": {
+    "value": 6000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,000 × 3 = $6,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's essential expenses are $3,400 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
+   "format": "short-answer",
+   "answer": "$20,400",
+   "numeric": {
+    "value": 20400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,400 × 6 = $20,400."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's essential expenses are $4,000 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
+   "format": "short-answer",
+   "answer": "$24,000",
+   "numeric": {
+    "value": 24000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$4,000 × 6 = $24,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's essential expenses are $2,400 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
+   "format": "short-answer",
+   "answer": "$14,400",
+   "numeric": {
+    "value": 14400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,400 × 6 = $14,400."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's essential expenses are $3,200 a month. An emergency fund of 3 months = monthly expenses × 3. How much should she save?",
+   "format": "short-answer",
+   "answer": "$9,600",
+   "numeric": {
+    "value": 9600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,200 × 3 = $9,600."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah's essential expenses are $3,600 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
+   "format": "short-answer",
+   "answer": "$21,600",
+   "numeric": {
+    "value": 21600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,600 × 6 = $21,600."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani's essential expenses are $1,500 a month. An emergency fund of 3 months = monthly expenses × 3. How much should she save?",
+   "format": "short-answer",
+   "answer": "$4,500",
+   "numeric": {
+    "value": 4500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,500 × 3 = $4,500."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's essential expenses are $1,700 a month. An emergency fund of 6 months = monthly expenses × 6. How much should she save?",
+   "format": "short-answer",
+   "answer": "$10,200",
+   "numeric": {
+    "value": 10200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,700 × 6 = $10,200."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-09",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's essential expenses are $3,500 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
+   "format": "short-answer",
+   "answer": "$21,000",
+   "numeric": {
+    "value": 21000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,500 × 6 = $21,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-10",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev's essential expenses are $1,700 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
+   "format": "short-answer",
+   "answer": "$10,200",
+   "numeric": {
+    "value": 10200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,700 × 6 = $10,200."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-s-emergency-fund-11",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "support",
+   "family": "lv-s-emergency-fund",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia's essential expenses are $1,800 a month. An emergency fund of 6 months = monthly expenses × 6. How much should she save?",
+   "format": "short-answer",
+   "answer": "$10,800",
+   "numeric": {
+    "value": 10800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,800 × 6 = $10,800."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev could buy a policy for $1,000 a year with a $2,500 deductible, or go without. In a bad year with a $26,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$22,500",
+   "numeric": {
+    "value": 22500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $1,000 + $2,500 = $3,500.",
+    "Uninsured = $26,000.",
+    "Difference = $22,500: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus could buy a policy for $650 a year with a $1,000 deductible, or go without. In a bad year with a $15,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$13,350",
+   "numeric": {
+    "value": 13350,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $650 + $1,000 = $1,650.",
+    "Uninsured = $15,000.",
+    "Difference = $13,350: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia could buy a policy for $600 a year with a $1,000 deductible, or go without. In a bad year with a $11,000 covered loss, how much more would she pay without insurance?",
+   "format": "short-answer",
+   "answer": "$9,400",
+   "numeric": {
+    "value": 9400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $600 + $1,000 = $1,600.",
+    "Uninsured = $11,000.",
+    "Difference = $9,400: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego could buy a policy for $1,400 a year with a $1,000 deductible, or go without. In a bad year with a $9,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$6,600",
+   "numeric": {
+    "value": 6600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $1,400 + $1,000 = $2,400.",
+    "Uninsured = $9,000.",
+    "Difference = $6,600: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah could buy a policy for $750 a year with a $500 deductible, or go without. In a bad year with a $26,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$24,750",
+   "numeric": {
+    "value": 24750,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $750 + $500 = $1,250.",
+    "Uninsured = $26,000.",
+    "Difference = $24,750: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah could buy a policy for $1,500 a year with a $2,500 deductible, or go without. In a bad year with a $29,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$25,000",
+   "numeric": {
+    "value": 25000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $1,500 + $2,500 = $4,000.",
+    "Uninsured = $29,000.",
+    "Difference = $25,000: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi could buy a policy for $1,450 a year with a $1,000 deductible, or go without. In a bad year with a $18,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$15,550",
+   "numeric": {
+    "value": 15550,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $1,450 + $1,000 = $2,450.",
+    "Uninsured = $18,000.",
+    "Difference = $15,550: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam could buy a policy for $1,250 a year with a $2,500 deductible, or go without. In a bad year with a $11,000 covered loss, how much more would they pay without insurance?",
+   "format": "short-answer",
+   "answer": "$7,250",
+   "numeric": {
+    "value": 7250,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $1,250 + $2,500 = $3,750.",
+    "Uninsured = $11,000.",
+    "Difference = $7,250: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-09",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani could buy a policy for $850 a year with a $1,000 deductible, or go without. In a bad year with a $26,000 covered loss, how much more would she pay without insurance?",
+   "format": "short-answer",
+   "answer": "$24,150",
+   "numeric": {
+    "value": 24150,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $850 + $1,000 = $1,850.",
+    "Uninsured = $26,000.",
+    "Difference = $24,150: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-10",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus could buy a policy for $1,250 a year with a $1,000 deductible, or go without. In a bad year with a $20,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$17,750",
+   "numeric": {
+    "value": 17750,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $1,250 + $1,000 = $2,250.",
+    "Uninsured = $20,000.",
+    "Difference = $17,750: insurance limits the worst case."
+   ]
+  },
+  {
+   "id": "fa-insurance-s04-lv-a-worst-case-11",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-04",
+   "level": "advanced",
+   "family": "lv-a-worst-case",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev could buy a policy for $600 a year with a $1,000 deductible, or go without. In a bad year with a $17,000 covered loss, how much more would he pay without insurance?",
+   "format": "short-answer",
+   "answer": "$15,400",
+   "numeric": {
+    "value": 15400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Insured worst case = premium + deductible = $600 + $1,000 = $1,600.",
+    "Uninsured = $17,000.",
+    "Difference = $15,400: insurance limits the worst case."
+   ]
+  },
+  {
    "id": "fa-insurance-s01-err-annual-premium-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "annual-premium-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -6232,7 +7975,7 @@
    "id": "fa-insurance-s01-err-worst-case-year-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "worst-case-year-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -6433,7 +8176,7 @@
    "id": "fa-insurance-s03-err-ev-single-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ev-single-error",
    "type": "reasoning",
    "errorAnalysis": true,
