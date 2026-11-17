@@ -19,7 +19,11 @@ export async function loadContent(id) {
   const content = (await import(f.href)).default;
   // 2026-11-16 additions: applied scenario families (replacing vocabulary recall) and new skills.
   const { applied } = await import(P('financial/content/applied-20261116.mjs').href);
-  return { ...content, families: content.families.concat(applied[id] || []) };
+  const { newSkills } = await import(P('financial/content/new-skills-20261116.mjs').href);
+  const ns = newSkills[id];
+  return { ...content, families: content.families.concat(applied[id] || [], ns ? ns.families : []),
+    vocab: content.vocab.concat(ns ? ns.vocab : []), concepts: (content.concepts || []).concat(ns ? ns.concepts : []),
+    claims: (content.claims || []).concat(ns ? ns.claims : []), lessons: content.lessons.concat(ns ? [ns.lesson] : []) };
 }
 const strip = s => String(s).replace(/\*\*(.+?)\*\*/g, '$1').replace(/\[\[(.+?)\|\|(.+?)\]\]/g, (_, a, b) => a.trim() + ' ÷ ' + b.trim());
 function tableText(t) {

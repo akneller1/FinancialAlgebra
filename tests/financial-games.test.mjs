@@ -15,7 +15,7 @@ for(const unit of manifest.units){
   const draw=createDeck(bank,ctx.MKWS.rng.make('game-test-'+unit.unitId));
   const slots=bank.skills.flatMap(s=>Array.from({length:5},(_,i)=>({skill:s.id,col:s.id,row:i})));
   for(let round=0;round<3;round++){
-   const deck=draw(slots);assert.equal(deck.length,20);assert.equal(new Set(deck.map(q=>q.id)).size,20);
+   const deck=draw(slots);assert.equal(deck.length,slots.length);assert.equal(new Set(deck.map(q=>q.id)).size,slots.length);
    for(const q of deck){
     const original=bank.questions.find(x=>x.id===q.id),it=gameItem(q,R);
     assert.equal(it.skill,q.slot.skill);assert.equal(it.q.prompt,original.prompt);

@@ -6,11 +6,11 @@ export const course = {
   units: [
     {id:'income', name:'Careers & Income', status:'ready', skills:['Compare salary and hourly pay','Calculate gross and net income','Interpret pay stubs','Model income taxes']},
     {id:'budgeting', name:'Budgeting & Spending', status:'ready', skills:['Calculate monthly cash flow','Analyze fixed and variable expenses','Model financial constraints','Compare spending decisions']},
-    {id:'banking', name:'Banking & Saving', status:'ready', skills:['Understand account fees','Calculate simple interest','Compare savings products','Interpret bank statements']},
-    {id:'credit', name:'Credit Cards & Debt', status:'ready', skills:['Calculate monthly interest','Evaluate credit card repayment','Compare repayment strategies','Interpret credit costs']},
-    {id:'borrowing', name:'Auto Loans & Borrowing', status:'ready', skills:['Model installment loans','Compare APR and loan term','Build amortization schedules','Analyze total borrowing cost']},
+    {id:'banking', name:'Banking & Saving', status:'ready', skills:['Understand account fees','Calculate simple interest','Compare savings products','Interpret bank statements','Spot scams and protect your identity']},
+    {id:'credit', name:'Credit Cards & Debt', status:'ready', skills:['Calculate monthly interest','Evaluate credit card repayment','Compare repayment strategies','Interpret credit costs','Understand credit scores and reports']},
+    {id:'borrowing', name:'Auto Loans & Borrowing', status:'ready', skills:['Model installment loans','Compare APR and loan term','Build amortization schedules','Analyze total borrowing cost','Calculate the total cost of car ownership']},
     {id:'investing', name:'Investing & Compound Growth', status:'ready', skills:['Calculate compound growth','Model recurring contributions','Compare investment scenarios','Interpret investment risk']},
-    {id:'housing', name:'Housing: Rent or Buy', status:'ready', skills:['Compare rental and ownership costs','Model a mortgage','Estimate ownership expenses','Analyze opportunity cost']},
+    {id:'housing', name:'Housing: Rent or Buy', status:'ready', skills:['Compare rental and ownership costs','Model a mortgage','Estimate ownership expenses','Analyze opportunity cost','Plan the costs of renting']},
     {id:'insurance', name:'Insurance & Risk', status:'ready', skills:['Compare premiums and deductibles','Model out-of-pocket costs','Calculate expected value','Evaluate financial risk']},
     {id:'college', name:'College & Career ROI', status:'ready', skills:['Estimate education costs','Model student loan payments','Compare career earnings','Analyze payback periods']},
     {id:'retirement', name:'Retirement & Inflation', status:'ready', skills:['Model inflation','Estimate retirement savings','Compare account contributions','Analyze purchasing power']}

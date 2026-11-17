@@ -39,7 +39,7 @@ test('all ten units have extended banks with valid, unique, complete items', () 
       if (q.numeric) { assert.ok(Number.isFinite(q.numeric.value), q.id + ' numeric'); if (q.numeric.unit === 'USD' && q.format === 'short-answer' && /^[−-]?\$[\d,]+\.\d\d$/.test(q.answer)) assert.equal(Number(q.answer.replace(/[$,]/g, '').replace('−', '-')), q.numeric.value, q.id + ' answer/numeric agree'); }
     }
     for (const s of skills) assert.ok(counts[s] >= 25, `${s} has only ${counts[s]} items`);
-    assert.ok(b.lessons.length === 4 && b.lessons.every(l => l.objectives.length && l.examples.length && l.misconceptions.length), u.id + ' lessons');
+    assert.ok(b.lessons.length === u.skills.length && b.lessons.every(l => l.objectives.length && l.examples.length && l.misconceptions.length), u.id + ' lessons');
     if (b.cheatSheet.front) {
       assert.equal(b.cheatSheet.front.length, 6, u.id + ' front panels');
       assert.equal(b.cheatSheet.back.length, 6, u.id + ' back panels');
