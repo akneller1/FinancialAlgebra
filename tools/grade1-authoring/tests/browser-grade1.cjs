@@ -62,13 +62,21 @@ async function answer(page) {
 
 async function playGame(ctx, game, unit, mode) {
   const url = `http://localhost:${PORT}/${PREFIX}worksheet-generator/grade1-games.html?game=${game}&unit=${unit}` + (mode ? '' : '&student=1&level=cp1');
-  const { page, errors } = await open(ctx, url);
+  let { page, errors } = await open(ctx, url);
   try {
-    await page.waitForSelector('.el-setup, .el-stage, dialog.teacher-skills', { timeout: 10000 });
+    const READY = '.el-setup:not([hidden]), .el-stage, dialog.teacher-skills';
+    await page.waitForSelector(READY + ', .kid-big-play', { timeout: 10000 });
+    { const play = await page.$('.kid-big-play'); if (play) await play.click(); }
+    await page.waitForFunction((sel) => document.querySelector(sel) || /requires teams/.test(document.body.innerText), READY, { timeout: 10000 });
+    // Student links refuse team-only games by design ("This game requires teams"); play those in teacher mode.
+    if (!mode && /requires teams/.test(await page.evaluate(() => document.body.innerText))) {
+      await page.close(); ({ page, errors } = await open(ctx, url.replace('&student=1&level=cp1', '')));
+      await page.waitForSelector(READY, { timeout: 10000 });
+    }
     const dlg = await page.$('dialog.teacher-skills');
-    if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await btn[btn.length - 1].click(); await page.waitForSelector('.el-setup'); }
+    if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await ((await page.$('dialog.teacher-skills button:has-text("Continue")')) || btn[btn.length - 1]).click(); await page.waitForSelector('.el-setup'); }
     if (mode) { await page.evaluate(m => { const r = document.querySelector('input[name=elmode][value="' + m + '"]'); if (r) r.checked = true; }, mode); }
-    const setup = await page.$('.el-setup .el-btn.primary'); if (setup) await setup.click();
+    const setup = await page.$('.el-setup:not([hidden]) .el-btn.primary'); if (setup) { try { await setup.click({ timeout: 2000 }); } catch (e) { /* auto-started */ } }
     await page.waitForSelector('.el-stage', { timeout: 10000 });
     let wrongNotMatched = 0, steps = 0, typed = 0;
     if (game === 'monster-match') {
@@ -88,10 +96,10 @@ async function playGame(ctx, game, unit, mode) {
         }
       }
     } else {
-      while (steps++ < 400) {
+      while (steps++ < 1500) {
         if (await page.$('.el-celebrate')) break;
-        const col = await page.$('.el-grid-btns .el-btn.primary:not([disabled])');
-        if (col && game === 'four-in-a-row') { const cols = await page.$$('.el-grid-btns .el-btn.primary:not([disabled])'); await cols[steps % cols.length].click(); await page.waitForTimeout(20); continue; }
+        const col = game === 'four-in-a-row' ? await page.$('.el-grid-btns .el-btn:not([disabled])') : null;
+        if (col && game === 'four-in-a-row') { const cols = await page.$$('.el-grid-btns .el-btn:not([disabled])'); await cols[steps % cols.length].click(); await page.waitForTimeout(20); continue; }
         const r = await answer(page);
         if (r === 'typed' || r === 'parts') typed++;
         if (r === 'answered' || r === 'none') {
@@ -121,7 +129,7 @@ async function understandingCheck(ctx, unit) {
     try {
       await page.waitForSelector('dialog.teacher-skills, .el-setup', { timeout: 10000 });
       const dlg = await page.$('dialog.teacher-skills');
-      if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await btn[btn.length - 1].click(); }
+      if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await ((await page.$('dialog.teacher-skills button:has-text("Continue")')) || btn[btn.length - 1]).click(); }
       await page.click('.el-setup .el-btn.primary');
       let wrong = 0;
       if (view === 'page') {
@@ -192,7 +200,7 @@ async function studentLinks(ctx) {
       if (dlg) {   // choose only the first two skills
         const boxes = await page.$$('dialog.teacher-skills input[type=checkbox]');
         for (const [i, b] of boxes.entries()) { if (i >= 2 && await b.isChecked()) await b.uncheck({ force: true }); }
-        const btn = await page.$$('dialog.teacher-skills button'); await btn[btn.length - 1].click();
+        const btn = await page.$$('dialog.teacher-skills button'); await ((await page.$('dialog.teacher-skills button:has-text("Continue")')) || btn[btn.length - 1]).click();
       }
       await page.waitForSelector('.el-setup .el-share');
       await page.check('input[name=ellevel][value=honors]', { force: true });
@@ -200,7 +208,7 @@ async function studentLinks(ctx) {
       const link = await page.$eval('.el-share-url', e => e.value);
       if (!/student=1/.test(link) || !/level=honors/.test(link) || !/unit=/.test(link)) throw new Error('link lacks settings: ' + link);
       const s2 = await open(ctx, link.replace(/^https?:\/\/[^/]+/, 'http://localhost:' + PORT));
-      await s2.page.waitForSelector(ready, { timeout: 10000 });
+      await s2.page.waitForSelector(ready + ', .kid-big-play', { timeout: 10000 }); { const play = await s2.page.$('.kid-big-play'); if (play) { await play.click(); await s2.page.waitForSelector(ready, { timeout: 10000 }); } }
       const st = await s2.page.evaluate(() => ({ home: !!document.querySelector('.el-home'), setup: !!document.querySelector('.el-setup'), q: window.__q ? window.__q.level + ' ' + window.__q.skillId : '' }));
       await s2.page.close();
       if (st.setup) throw new Error('student link stopped at the settings panel');
