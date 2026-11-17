@@ -31,7 +31,7 @@ for (const [i, u] of course.units.entries()) {
     }
   });
 }
-const manifest = { schema: 'fa-resources-1', courseId: 'financial-algebra', level: 'standard', classroomLevelCode: 'cp1', generated: 'scripts/build-hub.mjs', units };
+const manifest = { schema: 'fa-resources-1', courseId: 'financial-algebra', levels: ['support', 'standard', 'advanced'], classroomLevelCodes: { support: 'cp2', standard: 'cp1', advanced: 'honors' }, generated: 'scripts/build-hub.mjs', units };
 writeFileSync(P('financial/resources.json'), JSON.stringify(manifest, null, 1));
 const card = (t, href, sub, unitId) => `<a class="fa-panel flat hub-link" href="${resourceHref(href)}"><img src="../${resourceThumbnail(href.replace(/^\.\.\//,''),unitId)}" alt="" width="720" height="450" loading="lazy" style="width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;border-radius:8px"><strong>${R.esc(t)}</strong>${sub ? `<span>${R.esc(sub)}</span>` : ''}</a>`;
 const body = units.map(u => { const r = u.resources; return `<section class="fa-panel" id="${u.unitId}"><h2><span class="fa-pill">Unit ${u.unitNum}</span> ${R.esc(u.name)}</h2><p>${u.skills.map(s => R.esc(s.name)).join(' · ')}</p><p class="fa-doc-kind">${u.questionCount} bank items · ${u.flashcards} flashcards · ${r.projects.length} project${r.projects.length === 1 ? '' : 's'}</p><div class="fa-grid">
