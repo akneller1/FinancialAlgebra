@@ -6,7 +6,7 @@
  *   financial/flashcards/decks.js               flashcard decks (window.FA_DECKS)
  * Usage: node scripts/build-banks.mjs [unitId ...]
  */
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'node:fs';
 import { buildUnit } from '../financial/content/kit.mjs';
 import { course } from '../src/course.js';
 const root = new URL('../', import.meta.url);
@@ -16,7 +16,10 @@ export const UNIT_ORDER = course.units.map(u => u.id);
 export async function loadContent(id) {
   const f = P(`financial/content/${id}.mjs`);
   if (!existsSync(f)) return null;
-  return (await import(f.href)).default;
+  const content = (await import(f.href)).default;
+  // 2026-11-16 additions: applied scenario families (replacing vocabulary recall) and new skills.
+  const { applied } = await import(P('financial/content/applied-20261116.mjs').href);
+  return { ...content, families: content.families.concat(applied[id] || []) };
 }
 const strip = s => String(s).replace(/\*\*(.+?)\*\*/g, '$1').replace(/\[\[(.+?)\|\|(.+?)\]\]/g, (_, a, b) => a.trim() + ' ÷ ' + b.trim());
 function tableText(t) {
@@ -48,6 +51,10 @@ export async function buildAll(ids = UNIT_ORDER) {
     if (!content) continue;
     const unit = course.units.find(u => u.id === id);
     const questions = buildUnit(id, content);
+    // Error Analysis tasks were authored separately and appended to the banks; carry them forward on rebuild.
+    const prior = existsSync(P(`financial/banks/${id}.json`)) ? JSON.parse(readFileSync(P(`financial/banks/${id}.json`), 'utf8')).questions || [] : [];
+    const made = new Set(questions.map(q => q.id));
+    for (const q of prior) if (q.errorAnalysis === true && !made.has(q.id)) questions.push(q);
     const ext = { schema: 'fa-bank-1', courseId: 'financial-algebra', unitId: id, unitName: unit.name, level: 'standard', generated: 'deterministic', assumptions: 'All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.', skills: unit.skills.map((s, i) => ({ id: `${id}-skill-${String(i + 1).padStart(2, '0')}`, name: s })), vocab: content.vocab, lessons: content.lessons, cheatSheet: content.cheatSheet, questions };
     mkdirSync(P('financial/banks'), { recursive: true }); mkdirSync(P('question-banks/financial-algebra'), { recursive: true });
     writeFileSync(P(`financial/banks/${id}.json`), JSON.stringify(ext, null, 1));

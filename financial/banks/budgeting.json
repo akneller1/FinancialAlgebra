@@ -489,111 +489,243 @@
  ],
  "cheatSheet": {
   "title": "Budgeting & Spending",
-  "sections": [
+  "focus": "turn take-home pay into a realistic monthly plan",
+  "morefocus": "compare spending choices and protect your cash buffer",
+  "front": [
    {
-    "h": "Core formulas",
+    "title": "Budget vocabulary",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
     "rows": [
      [
-      "Monthly income (biweekly)",
-      "paycheck × 26 ÷ 12"
-     ],
-     [
-      "Monthly income (weekly)",
-      "paycheck × 52 ÷ 12"
+      "Budget",
+      "A plan for income, spending and saving."
      ],
      [
       "Cash flow",
-      "income − expenses"
+      "Income minus outflows for the same period."
+     ],
+     [
+      "Opportunity cost",
+      "Best alternative you give up."
      ],
      [
       "Sinking fund",
-      "[[irregular bill || months until due]]"
-     ],
-     [
-      "Percent of budget",
-      "[[category || take-home pay]] × 100"
-     ],
-     [
-      "Annual cost of a habit",
-      "price × times/week × 52"
-     ],
-     [
-      "Break-even uses",
-      "[[fixed cost || savings per use]] (round up)"
-     ],
-     [
-      "Unit price",
-      "[[price || quantity]]"
+      "Money saved gradually for a known future bill."
      ]
-    ]
+    ],
+    "after": "",
+    "color": "purple"
    },
    {
-    "h": "Classify every expense twice",
+    "title": "Classify costs twice",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "",
+     "Need",
+     "Want"
+    ],
     "rows": [
      [
-      "Fixed need",
-      "rent, car payment, insurance"
+      "Fixed",
+      "Rent, loan payment",
+      "Streaming contract"
      ],
      [
-      "Fixed want",
-      "streaming, gym contract"
-     ],
-     [
-      "Variable need",
-      "groceries, utilities, gas"
-     ],
-     [
-      "Variable want",
-      "dining out, shopping, events"
+      "Variable",
+      "Groceries, utilities",
+      "Dining, entertainment"
      ]
-    ]
+    ],
+    "after": "Fixed means predictable, not essential. Needs and wants depend on circumstances. A minimum debt payment is an obligation; extra repayment is a separate goal.",
+    "color": "blue"
    },
    {
-    "h": "50/30/20 reference point",
+    "title": "Monthly income",
+    "kind": "example",
+    "text": "Use net pay. Biweekly means 26 standard checks per year, not 24.",
+    "example": "$1,300 take-home every two weeks.",
+    "steps": [
+     [
+      "Annual net:",
+      "⟨1{,}300(26)=33{,}800⟩"
+     ],
+     [
+      "Monthly average:",
+      "⟨\\dfrac{33{,}800}{12}\\approx2{,}816.67⟩"
+     ]
+    ],
+    "answer": "$2,816.67 average per month",
+    "color": "green"
+   },
+   {
+    "title": "A flexible starting point",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "Category",
+     "50–30–20 guideline"
+    ],
     "rows": [
      [
       "Needs",
-      "≈ 50% of take-home"
+      "About 50% of take-home"
      ],
      [
       "Wants",
-      "≈ 30%"
+      "About 30%"
      ],
      [
-      "Savings & extra debt payments",
-      "≈ 20%"
+      "Saving & extra debt",
+      "About 20%"
      ]
     ],
-    "note": "A starting guideline, not a rule. High-cost areas often push needs above 50%."
+    "after": "For $3,000 monthly net: $1,500 needs, $900 wants, $600 saving and extra debt. Adjust for rent, dependents and priorities; this is a starting model, not a rule.",
+    "color": "orange"
+   },
+   {
+    "title": "Irregular bills count",
+    "kind": "example",
+    "text": "Assume the $2,640 expenses below exclude the upcoming insurance bill.",
+    "example": "Monthly income $2,816.67; insurance $780 every 6 months.",
+    "steps": [
+     [
+      "Before insurance:",
+      "⟨2{,}816.67-2{,}640=176.67⟩"
+     ],
+     [
+      "Set aside:",
+      "⟨\\dfrac{780}{6}=130⟩ each month"
+     ],
+     [
+      "Cash left:",
+      "⟨176.67-130=46.67⟩"
+     ]
+    ],
+    "answer": "$46.67 monthly cushion",
+    "color": "pink"
+   },
+   {
+    "title": "Build a workable plan",
+    "kind": "html",
+    "html": "<b>Net income → essentials → minimum debt payments → reserves and goals → flexible spending.</b><ul><li>Assign every dollar a purpose, including savings.</li><li>List annual bills and their due dates.</li><li>Compare planned and actual spending monthly.</li><li>Adjust the plan when income or costs change.</li></ul>Saving is not “leftover spending money.”",
+    "color": "teal"
    }
   ],
-  "example": {
-   "title": "Worked example",
-   "lines": [
-    "Biweekly take-home $1,300 → 1,300 × 26 ÷ 12 = $2,816.67/month",
-    "Expenses $2,640 → cash flow +$176.67",
-    "Car insurance $780 every 6 months → set aside $130/month",
-    "True cash flow = 176.67 − 130 = +$46.67 (thin margin!)"
-   ]
-  },
-  "misconceptions": [
-   "Budgeting with gross pay instead of take-home pay.",
-   "“Biweekly” ≠ “twice a month” (26 vs 24 checks).",
-   "A sale is savings only if you planned to buy the item.",
-   "A lower monthly payment does not mean a lower total cost."
-  ],
-  "questions": [
-   "Is this a need or a want — and who decides?",
-   "What will this cost per year?",
-   "What am I giving up (opportunity cost)?",
-   "Which irregular bills are coming in the next 12 months?",
-   "What will I do if income drops for a month?"
-  ],
-  "tips": [
-   "Pay yourself first: automate savings on payday.",
-   "Round hours and months UP; round maximum spending DOWN.",
-   "Review subscriptions every 3 months.",
-   "Keep a starter emergency fund before extra spending."
+  "back": [
+   {
+    "title": "Which gym is better?",
+    "kind": "example",
+    "text": "Assume equal access and no other fees. A costs $30 monthly; B costs $8 per visit.",
+    "example": "Expect 5 visits per month.",
+    "steps": [
+     [
+      "A:",
+      "$30"
+     ],
+     [
+      "B:",
+      "⟨8(5)=40⟩"
+     ],
+     [
+      "Threshold:",
+      "⟨\\dfrac{30}{8}=3.75⟩ visits"
+     ]
+    ],
+    "answer": "A saves $10 at 5 visits",
+    "color": "purple"
+   },
+   {
+    "title": "Use the break-even point",
+    "kind": "html",
+    "html": "For the gym comparison, A costs less at <b>4 or more visits</b>; B costs less at 0–3 visits.<div class=\"ex\">Before choosing, ask: Will I actually go? Can I cancel? Is the cheaper location convenient?</div>A membership that goes unused may be worse than paying more per visit. Match the plan to likely behavior, not an ideal month.",
+    "color": "blue"
+   },
+   {
+    "title": "Unit price beats labels",
+    "kind": "example",
+    "text": "Assume identical quality and all of the food will be used. Ignore sales tax.",
+    "example": "12 oz for $3.60 or 20 oz for $5.00?",
+    "steps": [
+     [
+      "Small:",
+      "⟨\\dfrac{3.60}{12}=0.30⟩ dollars per oz"
+     ],
+     [
+      "Large:",
+      "⟨\\dfrac{5.00}{20}=0.25⟩ dollars per oz"
+     ]
+    ],
+    "answer": "Large pack is 5¢ less per oz",
+    "color": "green"
+   },
+   {
+    "title": "Small habits add up",
+    "kind": "example",
+    "text": "Assume 52 weeks and exactly 4 purchases each week.",
+    "example": "A $6 purchase, 4 times per week.",
+    "steps": [
+     [
+      "Weekly:",
+      "⟨6(4)=24⟩"
+     ],
+     [
+      "Annual:",
+      "⟨24(52)=1{,}248⟩"
+     ],
+     [
+      "Monthly average:",
+      "⟨\\dfrac{1{,}248}{12}=104⟩"
+     ]
+    ],
+    "answer": "$1,248 per year",
+    "color": "orange"
+   },
+   {
+    "title": "Stress-test the budget",
+    "kind": "list",
+    "items": [
+     "What happens if one paycheck is delayed?",
+     "Which costs can I cut this week?",
+     "Can I cover an urgent repair without new debt?",
+     "Does my bill calendar match actual payday dates?",
+     "Am I counting an automatic savings transfer twice?",
+     "Use an average for planning, but check actual cash available before paying bills."
+    ],
+    "color": "pink"
+   },
+   {
+    "title": "Reminders & mistakes",
+    "kind": "mistakes",
+    "good": [
+     "Compare costs over the same period.",
+     "Bulk buying helps only if it fits your cash and storage."
+    ],
+    "bad": [
+     [
+      "Gross pay budget",
+      "use money actually received."
+     ],
+     [
+      "“Biweekly = twice monthly”",
+      "26 versus 24 standard checks."
+     ],
+     [
+      "Sale equals savings",
+      "only if the purchase was needed."
+     ],
+     [
+      "Positive average cash flow",
+      "still check the timing of bills."
+     ]
+    ],
+    "color": "teal"
+   }
   ]
  },
  "questions": [
@@ -645,87 +777,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s01-vocab-term-01",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A plan that assigns expected income to spending, saving, and debt payments for a period of time”",
-   "format": "multiple-choice",
-   "answer": "Budget",
-   "options": [
-    {
-     "text": "Budget",
-     "correct": true
-    },
-    {
-     "text": "Net income (take-home pay)",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    },
-    {
-     "text": "Savings goal",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Budget.",
-    "Example: Ana plans $1,200 for rent, $350 for groceries, and $200 for savings from her $2,600 monthly take-home pay."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-ex-01",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Ana plans $1,200 for rent, $350 for groceries, and $200 for savings from her $2,600 monthly take-home pay.",
-   "format": "multiple-choice",
-   "answer": "Budget",
-   "options": [
-    {
-     "text": "Variable expense",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Financial constraint",
-     "correct": false
-    },
-    {
-     "text": "Budget",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Budget: A plan that assigns expected income to spending, saving, and debt payments for a period of time"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s01-vocab-def-02",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-01",
@@ -765,87 +816,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-term-02",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Money coming in minus money going out during a period”",
-   "format": "multiple-choice",
-   "answer": "Cash flow",
-   "options": [
-    {
-     "text": "Variable expense",
-     "correct": false
-    },
-    {
-     "text": "Cash flow",
-     "correct": true
-    },
-    {
-     "text": "Sinking fund",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Cash flow.",
-    "Example: Income of $2,900 and expenses of $3,050 produce a −$150 monthly result."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-ex-02",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Income of $2,900 and expenses of $3,050 produce a −$150 monthly result.",
-   "format": "multiple-choice",
-   "answer": "Cash flow",
-   "options": [
-    {
-     "text": "Cash flow",
-     "correct": true
-    },
-    {
-     "text": "Net income (take-home pay)",
-     "correct": false
-    },
-    {
-     "text": "Budget",
-     "correct": false
-    },
-    {
-     "text": "Savings goal",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Cash flow: Money coming in minus money going out during a period"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -897,87 +867,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s01-vocab-term-03",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The amount left over when income is greater than expenses”",
-   "format": "multiple-choice",
-   "answer": "Surplus",
-   "options": [
-    {
-     "text": "Emergency fund",
-     "correct": false
-    },
-    {
-     "text": "50/30/20 guideline",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Surplus",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Surplus.",
-    "Example: After every bill is paid, Theo has $240 left this month."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-ex-03",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? After every bill is paid, Theo has $240 left this month.",
-   "format": "multiple-choice",
-   "answer": "Surplus",
-   "options": [
-    {
-     "text": "Surplus",
-     "correct": true
-    },
-    {
-     "text": "Essential expense (need)",
-     "correct": false
-    },
-    {
-     "text": "Fixed expense",
-     "correct": false
-    },
-    {
-     "text": "Emergency fund",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Surplus: The amount left over when income is greater than expenses"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s01-vocab-def-04",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-01",
@@ -1017,87 +906,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-term-04",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The shortfall when expenses are greater than income”",
-   "format": "multiple-choice",
-   "answer": "Deficit",
-   "options": [
-    {
-     "text": "Deficit",
-     "correct": true
-    },
-    {
-     "text": "Unit price",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": false
-    },
-    {
-     "text": "Variable expense",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Deficit.",
-    "Example: Expenses of $2,480 against income of $2,300 leave a $180 gap covered by a credit card."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-ex-04",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Expenses of $2,480 against income of $2,300 leave a $180 gap covered by a credit card.",
-   "format": "multiple-choice",
-   "answer": "Deficit",
-   "options": [
-    {
-     "text": "Unit price",
-     "correct": false
-    },
-    {
-     "text": "Surplus",
-     "correct": false
-    },
-    {
-     "text": "Financial constraint",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Deficit: The shortfall when expenses are greater than income"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1151,87 +959,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s01-vocab-term-05",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Pay remaining after taxes and other deductions; the amount a budget should be built on”",
-   "format": "multiple-choice",
-   "answer": "Net income (take-home pay)",
-   "options": [
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Impulse purchase",
-     "correct": false
-    },
-    {
-     "text": "Essential expense (need)",
-     "correct": false
-    },
-    {
-     "text": "Net income (take-home pay)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Net income (take-home pay).",
-    "Example: A $1,650 biweekly gross check becomes a $1,282 deposit after withholding."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-ex-05",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $1,650 biweekly gross check becomes a $1,282 deposit after withholding.",
-   "format": "multiple-choice",
-   "answer": "Net income (take-home pay)",
-   "options": [
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Net income (take-home pay)",
-     "correct": true
-    },
-    {
-     "text": "Budget",
-     "correct": false
-    },
-    {
-     "text": "Surplus",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Net income (take-home pay): Pay remaining after taxes and other deductions; the amount a budget should be built on"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s01-vocab-def-06",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-01",
@@ -1271,87 +998,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-term-06",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Money set aside each month for a known, irregular future expense”",
-   "format": "multiple-choice",
-   "answer": "Sinking fund",
-   "options": [
-    {
-     "text": "Sinking fund",
-     "correct": true
-    },
-    {
-     "text": "Fixed expense",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    },
-    {
-     "text": "Emergency fund",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Sinking fund.",
-    "Example: Saving $90 a month so a $1,080 annual car-insurance bill is already covered when it arrives."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s01-vocab-ex-06",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Saving $90 a month so a $1,080 annual car-insurance bill is already covered when it arrives.",
-   "format": "multiple-choice",
-   "answer": "Sinking fund",
-   "options": [
-    {
-     "text": "Opportunity cost",
-     "correct": false
-    },
-    {
-     "text": "50/30/20 guideline",
-     "correct": false
-    },
-    {
-     "text": "Sinking fund",
-     "correct": true
-    },
-    {
-     "text": "Financial constraint",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Sinking fund: Money set aside each month for a known, irregular future expense"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1403,87 +1049,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s02-vocab-term-07",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A cost that stays the same amount each period”",
-   "format": "multiple-choice",
-   "answer": "Fixed expense",
-   "options": [
-    {
-     "text": "Discretionary expense",
-     "correct": false
-    },
-    {
-     "text": "Variable expense",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    },
-    {
-     "text": "Fixed expense",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Fixed expense.",
-    "Example: A $1,325 rent payment that is identical every month under a lease."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s02-vocab-ex-07",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $1,325 rent payment that is identical every month under a lease.",
-   "format": "multiple-choice",
-   "answer": "Fixed expense",
-   "options": [
-    {
-     "text": "Opportunity cost",
-     "correct": false
-    },
-    {
-     "text": "Fixed expense",
-     "correct": true
-    },
-    {
-     "text": "Essential expense (need)",
-     "correct": false
-    },
-    {
-     "text": "Surplus",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Fixed expense: A cost that stays the same amount each period"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s02-vocab-def-08",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-02",
@@ -1523,87 +1088,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s02-vocab-term-08",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A cost whose amount changes from period to period”",
-   "format": "multiple-choice",
-   "answer": "Variable expense",
-   "options": [
-    {
-     "text": "Variable expense",
-     "correct": true
-    },
-    {
-     "text": "Surplus",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": false
-    },
-    {
-     "text": "Cash flow",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Variable expense.",
-    "Example: Grocery spending of $312, $367, and $341 in three consecutive months."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s02-vocab-ex-08",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Grocery spending of $312, $367, and $341 in three consecutive months.",
-   "format": "multiple-choice",
-   "answer": "Variable expense",
-   "options": [
-    {
-     "text": "Essential expense (need)",
-     "correct": false
-    },
-    {
-     "text": "Unit price",
-     "correct": false
-    },
-    {
-     "text": "Sinking fund",
-     "correct": false
-    },
-    {
-     "text": "Variable expense",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Variable expense: A cost whose amount changes from period to period"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1655,87 +1139,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s02-vocab-term-09",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Spending on wants that could be reduced or eliminated without affecting basic needs”",
-   "format": "multiple-choice",
-   "answer": "Discretionary expense",
-   "options": [
-    {
-     "text": "Cash flow",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": true
-    },
-    {
-     "text": "Unit price",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Discretionary expense.",
-    "Example: Concert tickets, takeout meals, and a second streaming service."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s02-vocab-ex-09",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Concert tickets, takeout meals, and a second streaming service.",
-   "format": "multiple-choice",
-   "answer": "Discretionary expense",
-   "options": [
-    {
-     "text": "Budget",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": true
-    },
-    {
-     "text": "Emergency fund",
-     "correct": false
-    },
-    {
-     "text": "Fixed expense",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Discretionary expense: Spending on wants that could be reduced or eliminated without affecting basic needs"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s02-vocab-def-10",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-02",
@@ -1775,87 +1178,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s02-vocab-term-10",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Spending required for basic living or to keep earning income”",
-   "format": "multiple-choice",
-   "answer": "Essential expense (need)",
-   "options": [
-    {
-     "text": "Budget",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Essential expense (need)",
-     "correct": true
-    },
-    {
-     "text": "Fixed expense",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Essential expense (need).",
-    "Example: Rent, basic groceries, utilities, and transportation to work."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s02-vocab-ex-10",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Rent, basic groceries, utilities, and transportation to work.",
-   "format": "multiple-choice",
-   "answer": "Essential expense (need)",
-   "options": [
-    {
-     "text": "Opportunity cost",
-     "correct": false
-    },
-    {
-     "text": "Impulse purchase",
-     "correct": false
-    },
-    {
-     "text": "Savings goal",
-     "correct": false
-    },
-    {
-     "text": "Essential expense (need)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Essential expense (need): Spending required for basic living or to keep earning income"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1909,87 +1231,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s02-vocab-term-11",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A starting-point plan that directs about 50% of take-home pay to needs, 30% to wants, and 20% to savings and extra debt payments”",
-   "format": "multiple-choice",
-   "answer": "50/30/20 guideline",
-   "options": [
-    {
-     "text": "Surplus",
-     "correct": false
-    },
-    {
-     "text": "50/30/20 guideline",
-     "correct": true
-    },
-    {
-     "text": "Savings goal",
-     "correct": false
-    },
-    {
-     "text": "Emergency fund",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines 50/30/20 guideline.",
-    "Example: With $3,000 take-home pay: about $1,500 needs, $900 wants, $600 savings."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s02-vocab-ex-11",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? With $3,000 take-home pay: about $1,500 needs, $900 wants, $600 savings.",
-   "format": "multiple-choice",
-   "answer": "50/30/20 guideline",
-   "options": [
-    {
-     "text": "Net income (take-home pay)",
-     "correct": false
-    },
-    {
-     "text": "Surplus",
-     "correct": false
-    },
-    {
-     "text": "50/30/20 guideline",
-     "correct": true
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of 50/30/20 guideline: A starting-point plan that directs about 50% of take-home pay to needs, 30% to wants, and 20% to savings and extra debt payments"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s03-vocab-def-12",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-03",
@@ -2029,87 +1270,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s03-vocab-term-12",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Savings reserved for unexpected expenses or income loss, often targeted at 3–6 months of essential expenses”",
-   "format": "multiple-choice",
-   "answer": "Emergency fund",
-   "options": [
-    {
-     "text": "50/30/20 guideline",
-     "correct": false
-    },
-    {
-     "text": "Impulse purchase",
-     "correct": false
-    },
-    {
-     "text": "Fixed expense",
-     "correct": false
-    },
-    {
-     "text": "Emergency fund",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Emergency fund.",
-    "Example: Keeping $6,600 in savings when essential expenses are $2,200 per month (3 months)."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s03-vocab-ex-12",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Keeping $6,600 in savings when essential expenses are $2,200 per month (3 months).",
-   "format": "multiple-choice",
-   "answer": "Emergency fund",
-   "options": [
-    {
-     "text": "Variable expense",
-     "correct": false
-    },
-    {
-     "text": "Sales tax",
-     "correct": false
-    },
-    {
-     "text": "Emergency fund",
-     "correct": true
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Emergency fund: Savings reserved for unexpected expenses or income loss, often targeted at 3–6 months of essential expenses"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2161,87 +1321,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s03-vocab-term-13",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A limit, such as income or a savings target, that restricts which spending choices are possible”",
-   "format": "multiple-choice",
-   "answer": "Financial constraint",
-   "options": [
-    {
-     "text": "Sinking fund",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    },
-    {
-     "text": "Unit price",
-     "correct": false
-    },
-    {
-     "text": "Financial constraint",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Financial constraint.",
-    "Example: Rent must be at most 30% of gross income: r ≤ 0.30 × 4,000."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s03-vocab-ex-13",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Rent must be at most 30% of gross income: r ≤ 0.30 × 4,000.",
-   "format": "multiple-choice",
-   "answer": "Financial constraint",
-   "options": [
-    {
-     "text": "Budget",
-     "correct": false
-    },
-    {
-     "text": "50/30/20 guideline",
-     "correct": false
-    },
-    {
-     "text": "Unit price",
-     "correct": false
-    },
-    {
-     "text": "Financial constraint",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Financial constraint: A limit, such as income or a savings target, that restricts which spending choices are possible"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s03-vocab-def-14",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-03",
@@ -2281,87 +1360,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s03-vocab-term-14",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A specific amount of money to accumulate by a target date”",
-   "format": "multiple-choice",
-   "answer": "Savings goal",
-   "options": [
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    },
-    {
-     "text": "Cash flow",
-     "correct": false
-    },
-    {
-     "text": "Essential expense (need)",
-     "correct": false
-    },
-    {
-     "text": "Savings goal",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Savings goal.",
-    "Example: $2,400 for a used-car down payment within 12 months requires $200 per month."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s03-vocab-ex-14",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $2,400 for a used-car down payment within 12 months requires $200 per month.",
-   "format": "multiple-choice",
-   "answer": "Savings goal",
-   "options": [
-    {
-     "text": "Savings goal",
-     "correct": true
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": false
-    },
-    {
-     "text": "Surplus",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Savings goal: A specific amount of money to accumulate by a target date"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2415,87 +1413,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s04-vocab-term-15",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The value of the next-best alternative given up when making a choice”",
-   "format": "multiple-choice",
-   "answer": "Opportunity cost",
-   "options": [
-    {
-     "text": "Opportunity cost",
-     "correct": true
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    },
-    {
-     "text": "Emergency fund",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Opportunity cost.",
-    "Example: Spending $1,200 a year on takeout lunches means not putting that $1,200 toward an emergency fund."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s04-vocab-ex-15",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Spending $1,200 a year on takeout lunches means not putting that $1,200 toward an emergency fund.",
-   "format": "multiple-choice",
-   "answer": "Opportunity cost",
-   "options": [
-    {
-     "text": "Variable expense",
-     "correct": false
-    },
-    {
-     "text": "Savings goal",
-     "correct": false
-    },
-    {
-     "text": "50/30/20 guideline",
-     "correct": false
-    },
-    {
-     "text": "Opportunity cost",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Opportunity cost: The value of the next-best alternative given up when making a choice"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s04-vocab-def-16",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-04",
@@ -2541,87 +1458,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s04-vocab-term-16",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The cost per single unit (ounce, item, load) used to compare package sizes fairly”",
-   "format": "multiple-choice",
-   "answer": "Unit price",
-   "options": [
-    {
-     "text": "Unit price",
-     "correct": true
-    },
-    {
-     "text": "Net income (take-home pay)",
-     "correct": false
-    },
-    {
-     "text": "Sinking fund",
-     "correct": false
-    },
-    {
-     "text": "Impulse purchase",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Unit price.",
-    "Example: $8.99 for 24 oz is about $0.375 per ounce."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s04-vocab-ex-16",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $8.99 for 24 oz is about $0.375 per ounce.",
-   "format": "multiple-choice",
-   "answer": "Unit price",
-   "options": [
-    {
-     "text": "Impulse purchase",
-     "correct": false
-    },
-    {
-     "text": "Unit price",
-     "correct": true
-    },
-    {
-     "text": "Net income (take-home pay)",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Unit price: The cost per single unit (ounce, item, load) used to compare package sizes fairly"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s04-vocab-def-17",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-04",
@@ -2661,87 +1497,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s04-vocab-term-17",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “An unplanned purchase made on the spot, often influenced by marketing or emotion”",
-   "format": "multiple-choice",
-   "answer": "Impulse purchase",
-   "options": [
-    {
-     "text": "Impulse purchase",
-     "correct": true
-    },
-    {
-     "text": "Financial constraint",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Essential expense (need)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Impulse purchase.",
-    "Example: Buying a $45 gadget near the checkout that was not on the list."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s04-vocab-ex-17",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Buying a $45 gadget near the checkout that was not on the list.",
-   "format": "multiple-choice",
-   "answer": "Impulse purchase",
-   "options": [
-    {
-     "text": "Unit price",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": false
-    },
-    {
-     "text": "Impulse purchase",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Impulse purchase: An unplanned purchase made on the spot, often influenced by marketing or emotion"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2795,87 +1550,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-budgeting-s04-vocab-term-18",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A short-term financing plan that splits a purchase into installments, sometimes with late fees or interest”",
-   "format": "multiple-choice",
-   "answer": "Buy now, pay later (BNPL)",
-   "options": [
-    {
-     "text": "Sinking fund",
-     "correct": false
-    },
-    {
-     "text": "Net income (take-home pay)",
-     "correct": false
-    },
-    {
-     "text": "Discretionary expense",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Buy now, pay later (BNPL).",
-    "Example: A $240 jacket paid in four $60 installments every two weeks."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s04-vocab-ex-18",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $240 jacket paid in four $60 installments every two weeks.",
-   "format": "multiple-choice",
-   "answer": "Buy now, pay later (BNPL)",
-   "options": [
-    {
-     "text": "Budget",
-     "correct": false
-    },
-    {
-     "text": "Financial constraint",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    },
-    {
-     "text": "Buy now, pay later (BNPL)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Buy now, pay later (BNPL): A short-term financing plan that splits a purchase into installments, sometimes with late fees or interest"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-budgeting-s04-vocab-def-19",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-04",
@@ -2915,87 +1589,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s04-vocab-term-19",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A percent of the purchase price collected by the state at the time of sale”",
-   "format": "multiple-choice",
-   "answer": "Sales tax",
-   "options": [
-    {
-     "text": "Financial constraint",
-     "correct": false
-    },
-    {
-     "text": "Sales tax",
-     "correct": true
-    },
-    {
-     "text": "Savings goal",
-     "correct": false
-    },
-    {
-     "text": "Deficit",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Sales tax.",
-    "Example: A $40.00 item with 6.25% sales tax costs $42.50."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-budgeting-s04-vocab-ex-19",
-   "unitId": "budgeting",
-   "skillId": "budgeting-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $40.00 item with 6.25% sales tax costs $42.50.",
-   "format": "multiple-choice",
-   "answer": "Sales tax",
-   "options": [
-    {
-     "text": "50/30/20 guideline",
-     "correct": false
-    },
-    {
-     "text": "Savings goal",
-     "correct": false
-    },
-    {
-     "text": "Sales tax",
-     "correct": true
-    },
-    {
-     "text": "Opportunity cost",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Sales tax: A percent of the purchase price collected by the state at the time of sale"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -10481,6 +9074,825 @@
    ]
   },
   {
+   "id": "fa-budgeting-s01-ap-rule-503020-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "ap-rule-503020",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan takes home $2,325.00 per month and follows the 50/30/20 guideline. How much should go to needs each month?",
+   "format": "short-answer",
+   "answer": "$1,162.50",
+   "numeric": {
+    "value": 1162.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
+    "Needs: 50% × $2,325.00 = $1,162.50.",
+    "The guideline is a starting point; high rent may push needs above 50%."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-ap-rule-503020-02",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "ap-rule-503020",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan takes home $3,675.00 per month and follows the 50/30/20 guideline. How much should go to wants each month?",
+   "format": "short-answer",
+   "answer": "$1,102.50",
+   "numeric": {
+    "value": 1102.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
+    "Wants: 30% × $3,675.00 = $1,102.50.",
+    "The guideline is a starting point; high rent may push needs above 50%."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-ap-rule-503020-03",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "ap-rule-503020",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler takes home $2,350 per month and follows the 50/30/20 guideline. How much should go to needs each month?",
+   "format": "short-answer",
+   "answer": "$1,175",
+   "numeric": {
+    "value": 1175,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
+    "Needs: 50% × $2,350 = $1,175.",
+    "The guideline is a starting point; high rent may push needs above 50%."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-ap-rule-503020-04",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "ap-rule-503020",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei takes home $3,725 per month and follows the 50/30/20 guideline. How much should go to savings and debt payments each month?",
+   "format": "short-answer",
+   "answer": "$745",
+   "numeric": {
+    "value": 745,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
+    "Savings and debt payments: 20% × $3,725 = $745.",
+    "The guideline is a starting point; high rent may push needs above 50%."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-ap-rule-503020-05",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "ap-rule-503020",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana takes home $4,075.00 per month and follows the 50/30/20 guideline. How much should go to wants each month?",
+   "format": "short-answer",
+   "answer": "$1,222.50",
+   "numeric": {
+    "value": 1222.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
+    "Wants: 30% × $4,075.00 = $1,222.50.",
+    "The guideline is a starting point; high rent may push needs above 50%."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-ap-rule-503020-06",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "ap-rule-503020",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah takes home $4,075.00 per month and follows the 50/30/20 guideline. How much should go to needs each month?",
+   "format": "short-answer",
+   "answer": "$2,037.50",
+   "numeric": {
+    "value": 2037.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
+    "Needs: 50% × $4,075.00 = $2,037.50.",
+    "The guideline is a starting point; high rent may push needs above 50%."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-ap-rule-503020-07",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "ap-rule-503020",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre takes home $4,175.00 per month and follows the 50/30/20 guideline. How much should go to needs each month?",
+   "format": "short-answer",
+   "answer": "$2,087.50",
+   "numeric": {
+    "value": 2087.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
+    "Needs: 50% × $4,175.00 = $2,087.50.",
+    "The guideline is a starting point; high rent may push needs above 50%."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-ap-variable-average-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "ap-variable-average",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's electric costs for the last three months were $94.55, $143.49, $207.32. What monthly amount should he budget, using the average?",
+   "format": "short-answer",
+   "answer": "$148.45",
+   "numeric": {
+    "value": 148.45,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum = $445.36.",
+    "Average = sum ÷ 3 = $148.45.",
+    "Variable expenses change month to month, so budgets use an average (or a little more)."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-ap-variable-average-02",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "ap-variable-average",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's phone data overage costs for the last three months were $144.44, $166.07, $122.54. What monthly amount should he budget, using the average?",
+   "format": "short-answer",
+   "answer": "$144.35",
+   "numeric": {
+    "value": 144.35,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum = $433.05.",
+    "Average = sum ÷ 3 = $144.35.",
+    "Variable expenses change month to month, so budgets use an average (or a little more)."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-ap-variable-average-03",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "ap-variable-average",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's electric costs for the last three months were $215.25, $125.91, $79.63. What monthly amount should she budget, using the average?",
+   "format": "short-answer",
+   "answer": "$140.26",
+   "numeric": {
+    "value": 140.26,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum = $420.79.",
+    "Average = sum ÷ 3 = $140.26.",
+    "Variable expenses change month to month, so budgets use an average (or a little more)."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-ap-variable-average-04",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "ap-variable-average",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's electric costs for the last three months were $199.86, $212.01, $121.00. What monthly amount should he budget, using the average?",
+   "format": "short-answer",
+   "answer": "$177.62",
+   "numeric": {
+    "value": 177.62,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum = $532.87.",
+    "Average = sum ÷ 3 = $177.62.",
+    "Variable expenses change month to month, so budgets use an average (or a little more)."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-ap-variable-average-05",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "ap-variable-average",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's gas (fuel) costs for the last three months were $217.04, $70.37, $69.16. What monthly amount should he budget, using the average?",
+   "format": "short-answer",
+   "answer": "$118.86",
+   "numeric": {
+    "value": 118.86,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum = $356.57.",
+    "Average = sum ÷ 3 = $118.86.",
+    "Variable expenses change month to month, so budgets use an average (or a little more)."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-ap-variable-average-06",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "ap-variable-average",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah's grocery costs for the last three months were $199.15, $60.51, $185.53. What monthly amount should he budget, using the average?",
+   "format": "short-answer",
+   "answer": "$148.40",
+   "numeric": {
+    "value": 148.4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum = $445.19.",
+    "Average = sum ÷ 3 = $148.40.",
+    "Variable expenses change month to month, so budgets use an average (or a little more)."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-ap-variable-average-07",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "ap-variable-average",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah's grocery costs for the last three months were $125.84, $175.60, $154.29. What monthly amount should she budget, using the average?",
+   "format": "short-answer",
+   "answer": "$151.91",
+   "numeric": {
+    "value": 151.91,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Sum = $455.73.",
+    "Average = sum ÷ 3 = $151.91.",
+    "Variable expenses change month to month, so budgets use an average (or a little more)."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-ap-max-units-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "ap-max-units",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis has $500 for a party. The room costs $60, and each guest's meal costs $18. Write the inequality 60 + 18g ≤ 500. What is the greatest number of guests he can invite?",
+   "format": "short-answer",
+   "answer": "24",
+   "numeric": {
+    "value": 24,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "18g ≤ 500 − 60 = 440.",
+    "g ≤ 24.44.",
+    "Guests must be whole people, so round down: 24 guests."
+   ],
+   "misconceptions": [
+    "Rounding up, which goes over budget."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-ap-max-units-02",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "ap-max-units",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani has $410.00 for a party. The room costs $35.00, and each guest's meal costs $16.75. Write the inequality 35 + 16.75g ≤ 410. What is the greatest number of guests she can invite?",
+   "format": "short-answer",
+   "answer": "22",
+   "numeric": {
+    "value": 22,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "16.75g ≤ 410 − 35 = 375.",
+    "g ≤ 22.39.",
+    "Guests must be whole people, so round down: 22 guests."
+   ],
+   "misconceptions": [
+    "Rounding up, which goes over budget."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-ap-max-units-03",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "ap-max-units",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo has $380 for a party. The room costs $75, and each guest's meal costs $18. Write the inequality 75 + 18g ≤ 380. What is the greatest number of guests he can invite?",
+   "format": "short-answer",
+   "answer": "16",
+   "numeric": {
+    "value": 16,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "18g ≤ 380 − 75 = 305.",
+    "g ≤ 16.94.",
+    "Guests must be whole people, so round down: 16 guests."
+   ],
+   "misconceptions": [
+    "Rounding up, which goes over budget."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-ap-max-units-04",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "ap-max-units",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo has $400.00 for a party. The room costs $60.00, and each guest's meal costs $12.50. Write the inequality 60 + 12.5g ≤ 400. What is the greatest number of guests he can invite?",
+   "format": "short-answer",
+   "answer": "27",
+   "numeric": {
+    "value": 27,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "12.5g ≤ 400 − 60 = 340.",
+    "g ≤ 27.20.",
+    "Guests must be whole people, so round down: 27 guests."
+   ],
+   "misconceptions": [
+    "Rounding up, which goes over budget."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-ap-max-units-05",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "ap-max-units",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia has $320 for a party. The room costs $40, and each guest's meal costs $14. Write the inequality 40 + 14g ≤ 320. What is the greatest number of guests she can invite?",
+   "format": "short-answer",
+   "answer": "20",
+   "numeric": {
+    "value": 20,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "14g ≤ 320 − 40 = 280.",
+    "g ≤ 20.",
+    "Guests must be whole people, so round down: 20 guests."
+   ],
+   "misconceptions": [
+    "Rounding up, which goes over budget."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-ap-max-units-06",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "ap-max-units",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace has $360.00 for a party. The room costs $25.00, and each guest's meal costs $16.75. Write the inequality 25 + 16.75g ≤ 360. What is the greatest number of guests she can invite?",
+   "format": "short-answer",
+   "answer": "20",
+   "numeric": {
+    "value": 20,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "16.75g ≤ 360 − 25 = 335.",
+    "g ≤ 20.",
+    "Guests must be whole people, so round down: 20 guests."
+   ],
+   "misconceptions": [
+    "Rounding up, which goes over budget."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-ap-max-units-07",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "ap-max-units",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah has $310.00 for a party. The room costs $45.00, and each guest's meal costs $16.75. Write the inequality 45 + 16.75g ≤ 310. What is the greatest number of guests he can invite?",
+   "format": "short-answer",
+   "answer": "15",
+   "numeric": {
+    "value": 15,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "16.75g ≤ 310 − 45 = 265.",
+    "g ≤ 15.82.",
+    "Guests must be whole people, so round down: 15 guests."
+   ],
+   "misconceptions": [
+    "Rounding up, which goes over budget."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-ap-annual-plan-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "ap-annual-plan",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A cloud storage plan costs $24.99 per month or $239.90 paid once per year. If Hana would keep it all year, how much does the annual plan save?",
+   "format": "short-answer",
+   "answer": "$59.98",
+   "numeric": {
+    "value": 59.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly for a year = $24.99 × 12 = $299.88.",
+    "Savings = $299.88 − $239.90 = $59.98.",
+    "The annual plan only saves money if you would really keep the service for the whole year."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-ap-annual-plan-02",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "ap-annual-plan",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A video streaming plan costs $9.99 per month or $95.90 paid once per year. If Leah would keep it all year, how much does the annual plan save?",
+   "format": "short-answer",
+   "answer": "$23.98",
+   "numeric": {
+    "value": 23.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly for a year = $9.99 × 12 = $119.88.",
+    "Savings = $119.88 − $95.90 = $23.98.",
+    "The annual plan only saves money if you would really keep the service for the whole year."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-ap-annual-plan-03",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "ap-annual-plan",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A video streaming plan costs $9.99 per month or $89.91 paid once per year. If Kofi would keep it all year, how much does the annual plan save?",
+   "format": "short-answer",
+   "answer": "$29.97",
+   "numeric": {
+    "value": 29.97,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly for a year = $9.99 × 12 = $119.88.",
+    "Savings = $119.88 − $89.91 = $29.97.",
+    "The annual plan only saves money if you would really keep the service for the whole year."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-ap-annual-plan-04",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "ap-annual-plan",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A music streaming plan costs $14.99 per month or $149.30 paid once per year. If Diego would keep it all year, how much does the annual plan save?",
+   "format": "short-answer",
+   "answer": "$30.58",
+   "numeric": {
+    "value": 30.58,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly for a year = $14.99 × 12 = $179.88.",
+    "Savings = $179.88 − $149.30 = $30.58.",
+    "The annual plan only saves money if you would really keep the service for the whole year."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-ap-annual-plan-05",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "ap-annual-plan",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A cloud storage plan costs $9.99 per month or $99.50 paid once per year. If Mateo would keep it all year, how much does the annual plan save?",
+   "format": "short-answer",
+   "answer": "$20.38",
+   "numeric": {
+    "value": 20.38,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly for a year = $9.99 × 12 = $119.88.",
+    "Savings = $119.88 − $99.50 = $20.38.",
+    "The annual plan only saves money if you would really keep the service for the whole year."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-ap-annual-plan-06",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "ap-annual-plan",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A gym plan costs $34.99 per month or $314.91 paid once per year. If Sam would keep it all year, how much does the annual plan save?",
+   "format": "short-answer",
+   "answer": "$104.97",
+   "numeric": {
+    "value": 104.97,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly for a year = $34.99 × 12 = $419.88.",
+    "Savings = $419.88 − $314.91 = $104.97.",
+    "The annual plan only saves money if you would really keep the service for the whole year."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s04-ap-annual-plan-07",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-04",
+   "level": "standard",
+   "family": "ap-annual-plan",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A cloud storage plan costs $34.99 per month or $356.90 paid once per year. If Mateo would keep it all year, how much does the annual plan save?",
+   "format": "short-answer",
+   "answer": "$62.98",
+   "numeric": {
+    "value": 62.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Monthly for a year = $34.99 × 12 = $419.88.",
+    "Savings = $419.88 − $356.90 = $62.98.",
+    "The annual plan only saves money if you would really keep the service for the whole year."
+   ]
+  },
+  {
    "id": "fa-budgeting-s01-err-biweekly-monthly-01",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-01",
@@ -10556,14 +9968,14 @@
    "calc": {
     "kind": "cashflow",
     "inputs": [
-     3200.0,
-     1150.0,
-     310.0,
-     465.0,
-     215.0,
-     590.0
+     3200,
+     1150,
+     310,
+     465,
+     215,
+     590
     ],
-    "correct": 470.0,
+    "correct": 470,
     "unit": "USD"
    },
    "prompt": "Aisha’s monthly income is $3,200.00. Expenses: rent $1,150.00, utilities $310.00, groceries $465.00, phone/internet $215.00, car costs $590.00. Aisha’s work: Cash flow = expenses − income = $2,730.00 − $3,200.00 = −$470.00. What is the correct monthly cash flow?",
@@ -10576,7 +9988,7 @@
     "Correct result: $470.00."
    ],
    "numeric": {
-    "value": 470.0,
+    "value": 470,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -10602,10 +10014,10 @@
    "calc": {
     "kind": "div",
     "inputs": [
-     1176.0,
+     1176,
      12
     ],
-    "correct": 98.0,
+    "correct": 98,
     "unit": "USD"
    },
    "prompt": "Sofia pays car insurance of $1,176.00 once a year and wants to set aside the same amount each month. Sofia’s work: Sofia budgets $22.62 per month. What mistake did Sofia make?",
@@ -10656,10 +10068,10 @@
    "calc": {
     "kind": "div",
     "inputs": [
-     2400.0,
+     2400,
      6
     ],
-    "correct": 400.0,
+    "correct": 400,
     "unit": "USD"
    },
    "prompt": "Aisha wants $2,400.00 for a laptop in 6 months and will save the same amount each month. Aisha’s work: $2,400.00 × 6 = $14,400.00 per month. How much should be saved each month?",
@@ -10672,7 +10084,7 @@
     "Correct result: $400.00."
    ],
    "numeric": {
-    "value": 400.0,
+    "value": 400,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -10698,10 +10110,10 @@
    "calc": {
     "kind": "pct",
     "inputs": [
-     3920.0,
+     3920,
      50
     ],
-    "correct": 1960.0,
+    "correct": 1960,
     "unit": "USD"
    },
    "prompt": "Hannah’s monthly gross pay is $4,650.00 and take-home pay is $3,920.00. Hannah uses the 50/30/20 guideline for needs. Hannah’s work: Needs = 50% of $4,650.00 = $2,325.00. What mistake did Hannah make?",
@@ -10752,7 +10164,7 @@
    "calc": {
     "kind": "ceil-div",
     "inputs": [
-     420.0,
+     420,
      17.25
     ],
     "correct": 25,
@@ -10851,10 +10263,10 @@
    "calc": {
     "kind": "sum",
     "inputs": [
-     448.0,
-     15.0
+     448,
+     15
     ],
-    "correct": 463.0,
+    "correct": 463,
     "unit": "USD"
    },
    "prompt": "Elena used buy now, pay later: 4 payments of $112.00. One payment was late and charged a $15.00 late fee. Elena’s work: Total cost = 4 × $112.00 = $448.00. What did the purchase really cost?",
@@ -10867,7 +10279,7 @@
     "Correct result: $463.00."
    ],
    "numeric": {
-    "value": 463.0,
+    "value": 463,
     "tolerance": 0.01,
     "unit": "USD"
    }

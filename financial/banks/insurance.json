@@ -378,89 +378,249 @@
  ],
  "cheatSheet": {
   "title": "Insurance & Risk",
-  "sections": [
+  "focus": "understand premiums, deductibles and coverage",
+  "morefocus": "compare annual costs and the risks you can carry",
+  "front": [
    {
-    "h": "Key formulas",
+    "title": "Core insurance terms",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
     "rows": [
      [
-      "Claim payout",
-      "min(loss − deductible, limit)"
+      "Premium",
+      "Price of coverage, paid even with no claim."
      ],
      [
-      "Health out-of-pocket",
-      "min(bills, ded) + coins × (bills − ded) + copays, ≤ OOP max"
+      "Deductible",
+      "Covered loss you pay before specified benefits."
      ],
      [
-      "Total yearly cost",
-      "premium × 12 + out-of-pocket"
+      "Limit",
+      "Maximum covered payment under stated terms."
      ],
      [
-      "Expected value",
-      "Σ p × outcome"
-     ],
-     [
-      "Fair premium (insurer)",
-      "expected claim × (1 + load)"
-     ],
-     [
-      "Deductible break-even",
-      "[[extra deductible || yearly premium savings]]"
+      "Exclusion",
+      "Loss or service the policy does not cover."
      ]
-    ]
+    ],
+    "after": "",
+    "color": "purple"
    },
    {
-    "h": "Coverage map",
+    "title": "What needs protection?",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "Coverage",
+     "Typical purpose"
+    ],
     "rows": [
      [
-      "Your health",
-      "Health insurance"
+      "Health",
+      "Covered medical care."
      ],
      [
-      "Others you injure",
-      "Liability (auto, renters/home)"
+      "Auto liability",
+      "Injury or damage you cause others."
      ],
      [
-      "Your car in a crash",
-      "Collision"
+      "Collision / comprehensive",
+      "Your car: crash / specified noncollision losses."
      ],
      [
-      "Theft, hail, deer",
-      "Comprehensive"
-     ],
-     [
-      "Your belongings (renting)",
-      "Renters insurance"
+      "Renters / homeowners",
+      "Property and specified liability risks."
      ]
-    ]
+    ],
+    "after": "Policies differ. Check exclusions, limits, networks and required endorsements; the name alone does not define coverage.",
+    "color": "blue"
+   },
+   {
+    "title": "A property claim",
+    "kind": "example",
+    "text": "Simplified payout: ⟨\\min(\\max(L-d,0),C)⟩. L = covered loss, d = deductible, C = payout cap; all dollars.",
+    "example": "$8,000 covered loss; $1,000 deductible; $10,000 payout cap.",
+    "steps": [
+     [
+      "After deductible:",
+      "⟨8{,}000-1{,}000=7{,}000⟩"
+     ],
+     [
+      "Apply cap:",
+      "⟨\\min(7{,}000,10{,}000)=7{,}000⟩"
+     ]
+    ],
+    "answer": "$7,000 insurer; $1,000 you",
+    "color": "green"
+   },
+   {
+    "title": "Health-plan terms",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
+    "rows": [
+     [
+      "Coinsurance",
+      "Your share of covered costs after deductible; e.g., 20%."
+     ],
+     [
+      "Copay",
+      "Fixed amount for a specified service."
+     ],
+     [
+      "OOP maximum",
+      "Annual cap on eligible covered out-of-pocket costs; premiums excluded."
+     ],
+     [
+      "Network",
+      "Contracted providers; out-of-network rules may differ."
+     ]
+    ],
+    "after": "",
+    "color": "orange"
+   },
+   {
+    "title": "Simplified health cost",
+    "kind": "html",
+    "html": "For covered in-network bills B, deductible d, coinsurance c and OOP cap M:<br>⟨O=\\min\\{M,\\min(B,d)+c\\max(B-d,0)\\}⟩<br>B, d, M, O are dollars; c is a decimal.<div class=\"ex\">Assume no copays, all costs count toward deductible and cap, and no exclusions. Actual plans may apply separate service rules.</div>Annual total = 12 × monthly premium + O.",
+    "color": "pink"
+   },
+   {
+    "title": "Health-plan example",
+    "kind": "example",
+    "text": "Covered in-network bills $9,000; deductible $2,000; coinsurance 20%; cap $6,000; premium $210 monthly.",
+    "example": "No copays or excluded charges.",
+    "steps": [
+     [
+      "Your covered cost:",
+      "⟨2{,}000+0.20(7{,}000)=3{,}400⟩"
+     ],
+     [
+      "Annual premiums:",
+      "⟨210(12)=2{,}520⟩"
+     ]
+    ],
+    "answer": "$5,920 total annual cost",
+    "color": "teal"
    }
   ],
-  "example": {
-   "title": "Worked example",
-   "lines": [
-    "Silver plan: $2,000 deductible, 20%, $6,000 max; premium $210/mo",
-    "$9,000 in bills: 2,000 + 0.2 × 7,000 = $3,400",
-    "Premiums: $2,520",
-    "Total yearly cost: $5,920"
-   ]
-  },
-  "misconceptions": [
-   "Lowest premium = cheapest plan.",
-   "Insurance is wasted if you never claim.",
-   "After the deductible, insurance pays everything.",
-   "Always choose the lowest deductible."
-  ],
-  "questions": [
-   "What is the worst-case yearly cost?",
-   "Can my savings cover the deductible?",
-   "Are my doctors in network?",
-   "Are my liability limits high enough to protect my savings?",
-   "Which small risks can I self-insure?"
-  ],
-  "tips": [
-   "Insure catastrophes; self-insure small losses.",
-   "Keep the deductible in your emergency fund.",
-   "Review coverage yearly.",
-   "Get several quotes."
+  "back": [
+   {
+    "title": "Which health plan wins?",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "Same covered bills",
+     "Plan A",
+     "Plan B"
+    ],
+    "rows": [
+     [
+      "Monthly premium",
+      "$150",
+      "$250"
+     ],
+     [
+      "Deductible",
+      "$3,000",
+      "$1,000"
+     ],
+     [
+      "Coinsurance / cap",
+      "20% / $6,000",
+      "20% / $4,000"
+     ],
+     [
+      "Total at $0 bills",
+      "$1,800",
+      "$3,000"
+     ],
+     [
+      "Total at $9,000 bills",
+      "$6,000",
+      "$5,600"
+     ]
+    ],
+    "after": "No copays, exclusions or network differences. A saves $1,200 with no claims; B saves $400 at $9,000 bills. Expected care and available cash affect the choice.",
+    "color": "purple"
+   },
+   {
+    "title": "Worst-case budget",
+    "kind": "html",
+    "html": "For covered in-network care in the simplified plans:<br>⟨\\text{Worst annual total}=12p+M⟩<br>p = monthly premium dollars; M = OOP cap.<div class=\"ex\">A: $1,800 + $6,000 = <b>$7,800</b><br>B: $3,000 + $4,000 = <b>$7,000</b></div>Noncovered or out-of-network costs may add more. A deductible is not the same as an OOP maximum.",
+    "color": "blue"
+   },
+   {
+    "title": "Expected loss",
+    "kind": "example",
+    "text": "⟨E=\\sum p_jL_j⟩; p = probability (decimal), L = loss dollars. Expected value is a long-run average.",
+    "example": "2% chance of a $10,000 loss; otherwise no loss.",
+    "steps": [
+     [
+      "Expected loss:",
+      "⟨0.02(10{,}000)+0.98(0)=200⟩"
+     ],
+     [
+      "Reality:",
+      "One year may have $0 or $10,000 loss."
+     ]
+    ],
+    "answer": "$200 expected annual loss",
+    "color": "green"
+   },
+   {
+    "title": "Deductible trade-off",
+    "kind": "html",
+    "html": "Suppose raising a deductible from $500 to $1,500 saves $200 yearly.<div class=\"ex\">Extra risk per qualifying claim = $1,000.<br>⟨\\dfrac{1{,}000}{200}=5⟩ years of premium savings.</div>This is a simple recovery-time comparison, not a prediction of claims. Consider claim frequency and whether you could pay $1,500 tomorrow. A higher deductible can fit larger reserves.",
+    "color": "orange"
+   },
+   {
+    "title": "Compare the whole policy",
+    "kind": "list",
+    "items": [
+     "Same covered risks, limits and exclusions?",
+     "Doctors, hospitals and medicines covered?",
+     "How much could I owe in a bad year?",
+     "Could I pay the deductible without new debt?",
+     "Are liability limits enough for the risk?",
+     "Prioritize losses you cannot comfortably absorb; smaller predictable costs may fit your own reserves."
+    ],
+    "color": "pink"
+   },
+   {
+    "title": "Reminders & mistakes",
+    "kind": "mistakes",
+    "good": [
+     "Premiums buy risk protection, even without a claim.",
+     "Compare both likely use and severe-loss scenarios."
+    ],
+    "bad": [
+     [
+      "Lowest premium = lowest cost",
+      "include your share of claims."
+     ],
+     [
+      "Deductible met = free care",
+      "coinsurance may remain."
+     ],
+     [
+      "OOP cap covers everything",
+      "premiums and exclusions may not count."
+     ],
+     [
+      "Expected cost = cash needed",
+      "a rare loss can be much larger."
+     ]
+    ],
+    "color": "teal"
+   }
   ]
  },
  "questions": [
@@ -504,87 +664,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s01-vocab-term-01",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The amount paid regularly to keep an insurance policy active, whether or not you file a claim”",
-   "format": "multiple-choice",
-   "answer": "Premium",
-   "options": [
-    {
-     "text": "Liability insurance",
-     "correct": false
-    },
-    {
-     "text": "Copay",
-     "correct": false
-    },
-    {
-     "text": "Coinsurance",
-     "correct": false
-    },
-    {
-     "text": "Premium",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Premium.",
-    "Example: $210 per month for a health plan."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s01-vocab-ex-01",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $210 per month for a health plan.",
-   "format": "multiple-choice",
-   "answer": "Premium",
-   "options": [
-    {
-     "text": "Expected value",
-     "correct": false
-    },
-    {
-     "text": "Copay",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Premium",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Premium: The amount paid regularly to keep an insurance policy active, whether or not you file a claim"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -636,87 +715,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s01-vocab-term-02",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The amount you pay for covered costs before the insurer starts paying”",
-   "format": "multiple-choice",
-   "answer": "Deductible",
-   "options": [
-    {
-     "text": "Deductible",
-     "correct": true
-    },
-    {
-     "text": "Expected value",
-     "correct": false
-    },
-    {
-     "text": "Premium",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Deductible.",
-    "Example: With a $1,000 auto deductible, a $3,200 repair costs you $1,000."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s01-vocab-ex-02",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? With a $1,000 auto deductible, a $3,200 repair costs you $1,000.",
-   "format": "multiple-choice",
-   "answer": "Deductible",
-   "options": [
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Deductible",
-     "correct": true
-    },
-    {
-     "text": "Copay",
-     "correct": false
-    },
-    {
-     "text": "Premium",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Deductible: The amount you pay for covered costs before the insurer starts paying"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s02-vocab-def-03",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
@@ -756,87 +754,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s02-vocab-term-03",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A fixed amount paid for a covered service, such as a doctor visit”",
-   "format": "multiple-choice",
-   "answer": "Copay",
-   "options": [
-    {
-     "text": "Policy limit",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Liability insurance",
-     "correct": false
-    },
-    {
-     "text": "Copay",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Copay.",
-    "Example: $30 per primary-care visit."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s02-vocab-ex-03",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $30 per primary-care visit.",
-   "format": "multiple-choice",
-   "answer": "Copay",
-   "options": [
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Deductible",
-     "correct": false
-    },
-    {
-     "text": "Collision coverage",
-     "correct": false
-    },
-    {
-     "text": "Copay",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Copay: A fixed amount paid for a covered service, such as a doctor visit"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -888,87 +805,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s02-vocab-term-04",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Your percent share of covered costs after the deductible is met”",
-   "format": "multiple-choice",
-   "answer": "Coinsurance",
-   "options": [
-    {
-     "text": "Liability insurance",
-     "correct": false
-    },
-    {
-     "text": "Coinsurance",
-     "correct": true
-    },
-    {
-     "text": "Risk pooling",
-     "correct": false
-    },
-    {
-     "text": "Deductible",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Coinsurance.",
-    "Example: 20% of a $4,000 bill after the deductible = $800."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s02-vocab-ex-04",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 20% of a $4,000 bill after the deductible = $800.",
-   "format": "multiple-choice",
-   "answer": "Coinsurance",
-   "options": [
-    {
-     "text": "Copay",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    },
-    {
-     "text": "Coinsurance",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Coinsurance: Your percent share of covered costs after the deductible is met"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s02-vocab-def-05",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
@@ -1008,87 +844,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s02-vocab-term-05",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The most you pay for covered care in a plan year; after that, the plan pays 100% of covered costs”",
-   "format": "multiple-choice",
-   "answer": "Out-of-pocket maximum",
-   "options": [
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    },
-    {
-     "text": "Out-of-pocket maximum",
-     "correct": true
-    },
-    {
-     "text": "Comprehensive coverage",
-     "correct": false
-    },
-    {
-     "text": "Deductible",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Out-of-pocket maximum.",
-    "Example: A $6,000 maximum caps costs even after a $90,000 surgery."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s02-vocab-ex-05",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $6,000 maximum caps costs even after a $90,000 surgery.",
-   "format": "multiple-choice",
-   "answer": "Out-of-pocket maximum",
-   "options": [
-    {
-     "text": "Policy limit",
-     "correct": false
-    },
-    {
-     "text": "Out-of-pocket maximum",
-     "correct": true
-    },
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Copay",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Out-of-pocket maximum: The most you pay for covered care in a plan year; after that, the plan pays 100% of covered costs"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1140,87 +895,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s01-vocab-term-06",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A formal request to an insurer to pay for a covered loss”",
-   "format": "multiple-choice",
-   "answer": "Claim",
-   "options": [
-    {
-     "text": "Expected value",
-     "correct": false
-    },
-    {
-     "text": "Claim",
-     "correct": true
-    },
-    {
-     "text": "Deductible",
-     "correct": false
-    },
-    {
-     "text": "Out-of-pocket maximum",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Claim.",
-    "Example: Filing a claim after a car accident."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s01-vocab-ex-06",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Filing a claim after a car accident.",
-   "format": "multiple-choice",
-   "answer": "Claim",
-   "options": [
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Claim",
-     "correct": true
-    },
-    {
-     "text": "Expected value",
-     "correct": false
-    },
-    {
-     "text": "Policy limit",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Claim: A formal request to an insurer to pay for a covered loss"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s04-vocab-def-07",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
@@ -1260,87 +934,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-term-07",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The maximum amount an insurer will pay for a covered loss”",
-   "format": "multiple-choice",
-   "answer": "Policy limit",
-   "options": [
-    {
-     "text": "Risk pooling",
-     "correct": false
-    },
-    {
-     "text": "Self-insure",
-     "correct": false
-    },
-    {
-     "text": "Policy limit",
-     "correct": true
-    },
-    {
-     "text": "Copay",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Policy limit.",
-    "Example: Liability coverage of $50,000 per person."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-ex-07",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Liability coverage of $50,000 per person.",
-   "format": "multiple-choice",
-   "answer": "Policy limit",
-   "options": [
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Coinsurance",
-     "correct": false
-    },
-    {
-     "text": "Liability insurance",
-     "correct": false
-    },
-    {
-     "text": "Policy limit",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Policy limit: The maximum amount an insurer will pay for a covered loss"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1392,87 +985,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s03-vocab-term-08",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The probability-weighted average of all possible outcomes”",
-   "format": "multiple-choice",
-   "answer": "Expected value",
-   "options": [
-    {
-     "text": "Expected value",
-     "correct": true
-    },
-    {
-     "text": "Premium",
-     "correct": false
-    },
-    {
-     "text": "Policy limit",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Expected value.",
-    "Example: 10% chance of losing $2,000 → expected loss $200."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s03-vocab-ex-08",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 10% chance of losing $2,000 → expected loss $200.",
-   "format": "multiple-choice",
-   "answer": "Expected value",
-   "options": [
-    {
-     "text": "Expected value",
-     "correct": true
-    },
-    {
-     "text": "Risk pooling",
-     "correct": false
-    },
-    {
-     "text": "Liability insurance",
-     "correct": false
-    },
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Expected value: The probability-weighted average of all possible outcomes"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s03-vocab-def-09",
    "unitId": "insurance",
    "skillId": "insurance-skill-03",
@@ -1512,87 +1024,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s03-vocab-term-09",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Many people pay premiums so the losses of the few who have claims can be covered”",
-   "format": "multiple-choice",
-   "answer": "Risk pooling",
-   "options": [
-    {
-     "text": "Risk pooling",
-     "correct": true
-    },
-    {
-     "text": "Premium",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    },
-    {
-     "text": "Liability insurance",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Risk pooling.",
-    "Example: 1,000 drivers each pay $1,200 so the company can pay the accident claims."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s03-vocab-ex-09",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 1,000 drivers each pay $1,200 so the company can pay the accident claims.",
-   "format": "multiple-choice",
-   "answer": "Risk pooling",
-   "options": [
-    {
-     "text": "Risk pooling",
-     "correct": true
-    },
-    {
-     "text": "Coinsurance",
-     "correct": false
-    },
-    {
-     "text": "Liability insurance",
-     "correct": false
-    },
-    {
-     "text": "Premium",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Risk pooling: Many people pay premiums so the losses of the few who have claims can be covered"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1644,87 +1075,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s04-vocab-term-10",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Coverage that pays for injuries or damage you cause to others”",
-   "format": "multiple-choice",
-   "answer": "Liability insurance",
-   "options": [
-    {
-     "text": "Liability insurance",
-     "correct": true
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Policy limit",
-     "correct": false
-    },
-    {
-     "text": "Self-insure",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Liability insurance.",
-    "Example: Auto liability pays the other driver’s repair bills."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-ex-10",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Auto liability pays the other driver’s repair bills.",
-   "format": "multiple-choice",
-   "answer": "Liability insurance",
-   "options": [
-    {
-     "text": "Liability insurance",
-     "correct": true
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Collision coverage",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Liability insurance: Coverage that pays for injuries or damage you cause to others"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s04-vocab-def-11",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
@@ -1764,87 +1114,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-term-11",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Auto coverage that pays to repair your own car after an accident, minus the deductible”",
-   "format": "multiple-choice",
-   "answer": "Collision coverage",
-   "options": [
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Collision coverage",
-     "correct": true
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Collision coverage.",
-    "Example: Optional on an older, low-value car."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-ex-11",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Optional on an older, low-value car.",
-   "format": "multiple-choice",
-   "answer": "Collision coverage",
-   "options": [
-    {
-     "text": "Expected value",
-     "correct": false
-    },
-    {
-     "text": "Coinsurance",
-     "correct": false
-    },
-    {
-     "text": "Collision coverage",
-     "correct": true
-    },
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Collision coverage: Auto coverage that pays to repair your own car after an accident, minus the deductible"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1896,87 +1165,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s04-vocab-term-12",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Auto coverage for non-collision damage such as theft, hail, or hitting a deer”",
-   "format": "multiple-choice",
-   "answer": "Comprehensive coverage",
-   "options": [
-    {
-     "text": "Collision coverage",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    },
-    {
-     "text": "Deductible",
-     "correct": false
-    },
-    {
-     "text": "Comprehensive coverage",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Comprehensive coverage.",
-    "Example: A tree branch falls on a parked car."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-ex-12",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A tree branch falls on a parked car.",
-   "format": "multiple-choice",
-   "answer": "Comprehensive coverage",
-   "options": [
-    {
-     "text": "Deductible",
-     "correct": false
-    },
-    {
-     "text": "Out-of-pocket maximum",
-     "correct": false
-    },
-    {
-     "text": "Self-insure",
-     "correct": false
-    },
-    {
-     "text": "Comprehensive coverage",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Comprehensive coverage: Auto coverage for non-collision damage such as theft, hail, or hitting a deer"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s02-vocab-def-13",
    "unitId": "insurance",
    "skillId": "insurance-skill-02",
@@ -2016,87 +1204,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s02-vocab-term-13",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Doctors and facilities that have agreed to a health plan’s negotiated prices”",
-   "format": "multiple-choice",
-   "answer": "Network (in-network)",
-   "options": [
-    {
-     "text": "Deductible",
-     "correct": false
-    },
-    {
-     "text": "Risk pooling",
-     "correct": false
-    },
-    {
-     "text": "Comprehensive coverage",
-     "correct": false
-    },
-    {
-     "text": "Network (in-network)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Network (in-network).",
-    "Example: Out-of-network visits may cost much more or not count toward the deductible."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s02-vocab-ex-13",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Out-of-network visits may cost much more or not count toward the deductible.",
-   "format": "multiple-choice",
-   "answer": "Network (in-network)",
-   "options": [
-    {
-     "text": "Liability insurance",
-     "correct": false
-    },
-    {
-     "text": "Network (in-network)",
-     "correct": true
-    },
-    {
-     "text": "Claim",
-     "correct": false
-    },
-    {
-     "text": "Risk pooling",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Network (in-network): Doctors and facilities that have agreed to a health plan’s negotiated prices"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2148,87 +1255,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s01-vocab-term-14",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A tax-advantaged account paired with an eligible high-deductible health plan to save for medical costs”",
-   "format": "multiple-choice",
-   "answer": "Health savings account (HSA)",
-   "options": [
-    {
-     "text": "Health savings account (HSA)",
-     "correct": true
-    },
-    {
-     "text": "Risk pooling",
-     "correct": false
-    },
-    {
-     "text": "Coinsurance",
-     "correct": false
-    },
-    {
-     "text": "Comprehensive coverage",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Health savings account (HSA).",
-    "Example: Depositing $100 per month to cover a future deductible."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s01-vocab-ex-14",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Depositing $100 per month to cover a future deductible.",
-   "format": "multiple-choice",
-   "answer": "Health savings account (HSA)",
-   "options": [
-    {
-     "text": "Claim",
-     "correct": false
-    },
-    {
-     "text": "Deductible",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Health savings account (HSA): A tax-advantaged account paired with an eligible high-deductible health plan to save for medical costs"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s04-vocab-def-15",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
@@ -2274,87 +1300,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-insurance-s04-vocab-term-15",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Choosing to cover a possible loss with your own savings instead of buying insurance”",
-   "format": "multiple-choice",
-   "answer": "Self-insure",
-   "options": [
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Self-insure",
-     "correct": true
-    },
-    {
-     "text": "Collision coverage",
-     "correct": false
-    },
-    {
-     "text": "Liability insurance",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Self-insure.",
-    "Example: Skipping collision on a $3,000 car and keeping savings for repairs."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-ex-15",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Skipping collision on a $3,000 car and keeping savings for repairs.",
-   "format": "multiple-choice",
-   "answer": "Self-insure",
-   "options": [
-    {
-     "text": "Self-insure",
-     "correct": true
-    },
-    {
-     "text": "Risk pooling",
-     "correct": false
-    },
-    {
-     "text": "Health savings account (HSA)",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Self-insure: Choosing to cover a possible loss with your own savings instead of buying insurance"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-insurance-s04-vocab-def-16",
    "unitId": "insurance",
    "skillId": "insurance-skill-04",
@@ -2394,87 +1339,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-term-16",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “How much financial uncertainty a person can handle; affects deductible and coverage choices”",
-   "format": "multiple-choice",
-   "answer": "Risk tolerance (insurance)",
-   "options": [
-    {
-     "text": "Self-insure",
-     "correct": false
-    },
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Premium",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Risk tolerance (insurance).",
-    "Example: A person with $500 in savings should avoid a $5,000 deductible."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-insurance-s04-vocab-ex-16",
-   "unitId": "insurance",
-   "skillId": "insurance-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A person with $500 in savings should avoid a $5,000 deductible.",
-   "format": "multiple-choice",
-   "answer": "Risk tolerance (insurance)",
-   "options": [
-    {
-     "text": "Deductible",
-     "correct": false
-    },
-    {
-     "text": "Network (in-network)",
-     "correct": false
-    },
-    {
-     "text": "Premium",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance (insurance)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Risk tolerance (insurance): How much financial uncertainty a person can handle; affects deductible and coverage choices"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -6485,6 +5349,833 @@
    ]
   },
   {
+   "id": "fa-insurance-s01-ap-claim-net-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-claim-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus's car has $2,875 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
+   "format": "short-answer",
+   "answer": "$1,875",
+   "numeric": {
+    "value": 1875,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
+    "$2,875 − $1,000 = $1,875.",
+    "Marcus pays $1,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-claim-net-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-claim-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley's car has $1,450 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
+   "format": "short-answer",
+   "answer": "$450",
+   "numeric": {
+    "value": 450,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
+    "$1,450 − $1,000 = $450.",
+    "Riley pays $1,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-claim-net-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-claim-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo's car has $1,175 of covered damage. The collision deductible is $2,000. How much does the insurance company pay?",
+   "format": "short-answer",
+   "answer": "$0",
+   "numeric": {
+    "value": 0,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
+    "$1,175 − $2,000 = $0.",
+    "The damage is below the deductible, so filing a claim pays nothing."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-claim-net-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-claim-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah's car has $7,550 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
+   "format": "short-answer",
+   "answer": "$6,550",
+   "numeric": {
+    "value": 6550,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
+    "$7,550 − $1,000 = $6,550.",
+    "Leah pays $1,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-claim-net-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-claim-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley's car has $1,550 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
+   "format": "short-answer",
+   "answer": "$550",
+   "numeric": {
+    "value": 550,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
+    "$1,550 − $1,000 = $550.",
+    "Riley pays $1,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-claim-net-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-claim-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah's car has $4,275 of covered damage. The collision deductible is $500. How much does the insurance company pay?",
+   "format": "short-answer",
+   "answer": "$3,775",
+   "numeric": {
+    "value": 3775,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
+    "$4,275 − $500 = $3,775.",
+    "Noah pays $500."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-claim-net-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-claim-net",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya's car has $6,725 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
+   "format": "short-answer",
+   "answer": "$5,725",
+   "numeric": {
+    "value": 5725,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
+    "$6,725 − $1,000 = $5,725.",
+    "Maya pays $1,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis's health plan has a $1,500 deductible, 20% coinsurance and a $6,500 out-of-pocket maximum. A hospital bill is $27,000. How much does Luis pay?",
+   "format": "short-answer",
+   "answer": "$6,500",
+   "numeric": {
+    "value": 6500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Luis pays the first $1,500.",
+    "Coinsurance: 20% × ($27,000 − $1,500) = $5,100.",
+    "Total $6,600, capped at the $6,500 maximum: $6,500."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego's health plan has a $1,000 deductible, 30% coinsurance and a $5,000 out-of-pocket maximum. A hospital bill is $14,500. How much does Diego pay?",
+   "format": "short-answer",
+   "answer": "$5,000",
+   "numeric": {
+    "value": 5000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Diego pays the first $1,000.",
+    "Coinsurance: 30% × ($14,500 − $1,000) = $4,050.",
+    "Total $5,050, capped at the $5,000 maximum: $5,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen's health plan has a $1,000 deductible, 10% coinsurance and a $6,500 out-of-pocket maximum. A hospital bill is $13,400. How much does Owen pay?",
+   "format": "short-answer",
+   "answer": "$2,240",
+   "numeric": {
+    "value": 2240,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Owen pays the first $1,000.",
+    "Coinsurance: 10% × ($13,400 − $1,000) = $1,240.",
+    "Total $2,240: $2,240."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's health plan has a $1,000 deductible, 10% coinsurance and a $6,500 out-of-pocket maximum. A hospital bill is $13,100. How much does Isaiah pay?",
+   "format": "short-answer",
+   "answer": "$2,210",
+   "numeric": {
+    "value": 2210,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Isaiah pays the first $1,000.",
+    "Coinsurance: 10% × ($13,100 − $1,000) = $1,210.",
+    "Total $2,210: $2,210."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's health plan has a $1,000 deductible, 30% coinsurance and a $8,000 out-of-pocket maximum. A hospital bill is $12,300. How much does Camila pay?",
+   "format": "short-answer",
+   "answer": "$4,390",
+   "numeric": {
+    "value": 4390,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Camila pays the first $1,000.",
+    "Coinsurance: 30% × ($12,300 − $1,000) = $3,390.",
+    "Total $4,390: $4,390."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's health plan has a $2,500 deductible, 30% coinsurance and a $5,000 out-of-pocket maximum. A hospital bill is $18,300. How much does Tyler pay?",
+   "format": "short-answer",
+   "answer": "$5,000",
+   "numeric": {
+    "value": 5000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Tyler pays the first $2,500.",
+    "Coinsurance: 30% × ($18,300 − $2,500) = $4,740.",
+    "Total $7,240, capped at the $5,000 maximum: $5,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen's health plan has a $1,000 deductible, 20% coinsurance and a $8,000 out-of-pocket maximum. A hospital bill is $20,200. How much does Owen pay?",
+   "format": "short-answer",
+   "answer": "$4,840",
+   "numeric": {
+    "value": 4840,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Owen pays the first $1,000.",
+    "Coinsurance: 20% × ($20,200 − $1,000) = $3,840.",
+    "Total $4,840: $4,840."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-ap-coinsurance-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "ap-coinsurance",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah's health plan has a $1,000 deductible, 20% coinsurance and a $5,000 out-of-pocket maximum. A hospital bill is $5,100. How much does Leah pay?",
+   "format": "short-answer",
+   "answer": "$1,820",
+   "numeric": {
+    "value": 1820,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible: Leah pays the first $1,000.",
+    "Coinsurance: 20% × ($5,100 − $1,000) = $820.",
+    "Total $1,820: $1,820."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-ap-warranty-ev-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "standard",
+   "family": "ap-warranty-ev",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $135.00 extended warranty on a laptop covers one repair. The chance of needing a $340.00 repair during the warranty is 8%. What is the buyer's expected value of the warranty?",
+   "format": "short-answer",
+   "answer": "−$107.80",
+   "numeric": {
+    "value": -107.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected payout = 8% × $340.00 = $27.20.",
+    "Expected value = $27.20 − $135.00 = −$107.80.",
+    "Negative: on average the buyer loses money, which is how the seller profits."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-ap-warranty-ev-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "standard",
+   "family": "ap-warranty-ev",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $90.00 extended warranty on a phone covers one repair. The chance of needing a $440.00 repair during the warranty is 8%. What is the buyer's expected value of the warranty?",
+   "format": "short-answer",
+   "answer": "−$54.80",
+   "numeric": {
+    "value": -54.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected payout = 8% × $440.00 = $35.20.",
+    "Expected value = $35.20 − $90.00 = −$54.80.",
+    "Negative: on average the buyer loses money, which is how the seller profits."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-ap-warranty-ev-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "standard",
+   "family": "ap-warranty-ev",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $65 extended warranty on a TV covers one repair. The chance of needing a $620 repair during the warranty is 5%. What is the buyer's expected value of the warranty?",
+   "format": "short-answer",
+   "answer": "−$34",
+   "numeric": {
+    "value": -34,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected payout = 5% × $620 = $31.",
+    "Expected value = $31 − $65 = −$34.",
+    "Negative: on average the buyer loses money, which is how the seller profits."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-ap-warranty-ev-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "standard",
+   "family": "ap-warranty-ev",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $145 extended warranty on a TV covers one repair. The chance of needing a $530 repair during the warranty is 10%. What is the buyer's expected value of the warranty?",
+   "format": "short-answer",
+   "answer": "−$92",
+   "numeric": {
+    "value": -92,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected payout = 10% × $530 = $53.",
+    "Expected value = $53 − $145 = −$92.",
+    "Negative: on average the buyer loses money, which is how the seller profits."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-ap-warranty-ev-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "standard",
+   "family": "ap-warranty-ev",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $190.00 extended warranty on a laptop covers one repair. The chance of needing a $450.00 repair during the warranty is 15%. What is the buyer's expected value of the warranty?",
+   "format": "short-answer",
+   "answer": "−$122.50",
+   "numeric": {
+    "value": -122.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected payout = 15% × $450.00 = $67.50.",
+    "Expected value = $67.50 − $190.00 = −$122.50.",
+    "Negative: on average the buyer loses money, which is how the seller profits."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-ap-warranty-ev-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "standard",
+   "family": "ap-warranty-ev",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $220.00 extended warranty on a laptop covers one repair. The chance of needing a $220.00 repair during the warranty is 12%. What is the buyer's expected value of the warranty?",
+   "format": "short-answer",
+   "answer": "−$193.60",
+   "numeric": {
+    "value": -193.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected payout = 12% × $220.00 = $26.40.",
+    "Expected value = $26.40 − $220.00 = −$193.60.",
+    "Negative: on average the buyer loses money, which is how the seller profits."
+   ]
+  },
+  {
+   "id": "fa-insurance-s03-ap-warranty-ev-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-03",
+   "level": "standard",
+   "family": "ap-warranty-ev",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $100 extended warranty on a phone covers one repair. The chance of needing a $610 repair during the warranty is 10%. What is the buyer's expected value of the warranty?",
+   "format": "short-answer",
+   "answer": "−$39",
+   "numeric": {
+    "value": -39,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Expected payout = 10% × $610 = $61.",
+    "Expected value = $61 − $100 = −$39.",
+    "Negative: on average the buyer loses money, which is how the seller profits."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-annual-premium-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-annual-premium",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Plan A costs $165/month with a $1,000 deductible. Plan B costs $193/month with a $500 deductible. If Mateo has one $1,800 claim this year, how much less does the cheaper plan cost in total?",
+   "format": "short-answer",
+   "answer": "$164",
+   "numeric": {
+    "value": 164,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Plan A: $165 × 12 + $1,000 = $2,980.",
+    "Plan B: $193 × 12 + $500 = $2,816.",
+    "Plan B costs $164 less with one claim; with no claims, the lower premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-annual-premium-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-annual-premium",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Plan A costs $137/month with a $2,000 deductible. Plan B costs $205/month with a $250 deductible. If Zara has one $2,900 claim this year, how much less does the cheaper plan cost in total?",
+   "format": "short-answer",
+   "answer": "$934",
+   "numeric": {
+    "value": 934,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Plan A: $137 × 12 + $2,000 = $3,644.",
+    "Plan B: $205 × 12 + $250 = $2,710.",
+    "Plan B costs $934 less with one claim; with no claims, the lower premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-annual-premium-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-annual-premium",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Plan A costs $133/month with a $1,000 deductible. Plan B costs $179/month with a $500 deductible. If Tyler has one $2,000 claim this year, how much less does the cheaper plan cost in total?",
+   "format": "short-answer",
+   "answer": "$52",
+   "numeric": {
+    "value": 52,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Plan A: $133 × 12 + $1,000 = $2,596.",
+    "Plan B: $179 × 12 + $500 = $2,648.",
+    "Plan A costs $52 less with one claim; with no claims, the lower premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-annual-premium-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-annual-premium",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Plan A costs $171/month with a $1,000 deductible. Plan B costs $258/month with a $250 deductible. If Sofia has one $2,600 claim this year, how much less does the cheaper plan cost in total?",
+   "format": "short-answer",
+   "answer": "$294",
+   "numeric": {
+    "value": 294,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Plan A: $171 × 12 + $1,000 = $3,052.",
+    "Plan B: $258 × 12 + $250 = $3,346.",
+    "Plan A costs $294 less with one claim; with no claims, the lower premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-annual-premium-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-annual-premium",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Plan A costs $112/month with a $2,000 deductible. Plan B costs $173/month with a $500 deductible. If Kofi has one $2,000 claim this year, how much less does the cheaper plan cost in total?",
+   "format": "short-answer",
+   "answer": "$768",
+   "numeric": {
+    "value": 768,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Plan A: $112 × 12 + $2,000 = $3,344.",
+    "Plan B: $173 × 12 + $500 = $2,576.",
+    "Plan B costs $768 less with one claim; with no claims, the lower premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-annual-premium-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-annual-premium",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Plan A costs $168/month with a $2,000 deductible. Plan B costs $162/month with a $500 deductible. If Grace has one $2,100 claim this year, how much less does the cheaper plan cost in total?",
+   "format": "short-answer",
+   "answer": "$1,572",
+   "numeric": {
+    "value": 1572,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Plan A: $168 × 12 + $2,000 = $4,016.",
+    "Plan B: $162 × 12 + $500 = $2,444.",
+    "Plan B costs $1,572 less with one claim; with no claims, the lower premium wins."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-ap-annual-premium-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "ap-annual-premium",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Plan A costs $107/month with a $2,000 deductible. Plan B costs $247/month with a $250 deductible. If Imani has one $2,600 claim this year, how much less does the cheaper plan cost in total?",
+   "format": "short-answer",
+   "answer": "$70",
+   "numeric": {
+    "value": 70,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Plan A: $107 × 12 + $2,000 = $3,284.",
+    "Plan B: $247 × 12 + $250 = $3,214.",
+    "Plan B costs $70 less with one claim; with no claims, the lower premium wins."
+   ]
+  },
+  {
    "id": "fa-insurance-s01-err-annual-premium-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
@@ -6508,7 +6199,7 @@
      96.25,
      12
     ],
-    "correct": 1155.0,
+    "correct": 1155,
     "unit": "USD"
    },
    "prompt": "Kenji’s health plan premium is $96.25 per month. Kenji’s work: Yearly premium = $96.25 × 10 = $962.50. What mistake did Kenji make?",
@@ -6558,10 +6249,10 @@
    "calc": {
     "kind": "sum",
     "inputs": [
-     1980.0,
-     1500.0
+     1980,
+     1500
     ],
-    "correct": 3480.0,
+    "correct": 3480,
     "unit": "USD"
    },
    "prompt": "Diego compares plans by the cost in a year when the full deductible is used. Premium: $165.00 per month; deductible $1,500.00; no other costs. Diego’s work: Yearly cost = 12 × $165.00 = $1,980.00. What is the year’s cost if the full deductible is used?",
@@ -6574,7 +6265,7 @@
     "Correct result: $3,480.00."
    ],
    "numeric": {
-    "value": 3480.0,
+    "value": 3480,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -6600,12 +6291,12 @@
    "calc": {
     "kind": "oop",
     "inputs": [
-     6200.0,
-     1500.0,
+     6200,
+     1500,
      30,
      1000000000
     ],
-    "correct": 2910.0,
+    "correct": 2910,
     "unit": "USD"
    },
    "prompt": "Hannah’s bill is $6,200.00. The plan has a $1,500.00 deductible, then 30% coinsurance. Hannah’s work: Hannah pays 30% × $6,200.00 = $1,860.00. What mistake did Hannah make?",
@@ -6657,12 +6348,12 @@
    "calc": {
     "kind": "oop",
     "inputs": [
-     48000.0,
-     2000.0,
+     48000,
+     2000,
      20,
-     6500.0
+     6500
     ],
-    "correct": 6500.0,
+    "correct": 6500,
     "unit": "USD"
    },
    "prompt": "Zara has a $48,000.00 hospital bill. Deductible $2,000.00, then 20% coinsurance, with an out-of-pocket maximum of $6,500.00. Zara’s work: Zara pays $2,000.00 + 20% × $46,000.00 = $11,200.00. What does the patient actually pay?",
@@ -6675,7 +6366,7 @@
     "Correct result: $6,500.00."
    ],
    "numeric": {
-    "value": 6500.0,
+    "value": 6500,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -6708,7 +6399,7 @@
      0.02,
      15000
     ],
-    "correct": 396.0,
+    "correct": 396,
     "unit": "USD"
    },
    "prompt": "Imani estimates yearly repair costs: 90% chance of $0, 8% chance of $1,200, 2% chance of $15,000. Imani’s work: Expected cost = ($0 + $1,200 + $15,000) ÷ 3 = $5,400.00. What mistake did Imani make?",
@@ -6760,9 +6451,9 @@
     "kind": "mult",
     "inputs": [
      0.05,
-     6000.0
+     6000
     ],
-    "correct": 300.0,
+    "correct": 300,
     "unit": "USD"
    },
    "prompt": "A phone-insurance company estimates a 5% chance each year of a $6,000.00 loss per customer. Owen’s work: Expected loss = $6,000.00 ÷ 5% = $1,200.00. What is the expected yearly loss per customer?",
@@ -6774,7 +6465,7 @@
     "Correct result: $300.00."
    ],
    "numeric": {
-    "value": 300.0,
+    "value": 300,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -6800,10 +6491,10 @@
    "calc": {
     "kind": "mult",
     "inputs": [
-     1000.0,
+     1000,
      2
     ],
-    "correct": 2000.0,
+    "correct": 2000,
     "unit": "USD"
    },
    "prompt": "Jordan’s car policy has a $1,000.00 deductible per claim. Jordan files two separate claims ($3,100.00 and $2,200.00). Jordan’s work: Jordan pays the $1,000.00 deductible once. What mistake did Jordan make?",
@@ -6853,10 +6544,10 @@
    "calc": {
     "kind": "mult",
     "inputs": [
-     25.0,
+     25,
      9
     ],
-    "correct": 225.0,
+    "correct": 225,
     "unit": "USD"
    },
    "prompt": "Owen has a $25.00 copay per office visit and makes 9 visits this year. Owen’s work: Owen assumes the copay is paid once per year: $25.00. What are the total copays for the year?",
@@ -6868,7 +6559,7 @@
     "Correct result: $225.00."
    ],
    "numeric": {
-    "value": 225.0,
+    "value": 225,
     "tolerance": 0.01,
     "unit": "USD"
    }

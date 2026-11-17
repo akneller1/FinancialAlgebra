@@ -409,86 +409,231 @@
  ],
  "cheatSheet": {
   "title": "Banking & Saving",
-  "sections": [
+  "focus": "choose accounts, calculate interest and spot fees",
+  "morefocus": "compare savings options and reconcile a statement",
+  "front": [
    {
-    "h": "Key formulas",
+    "title": "Accounts & safety",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
     "rows": [
      [
-      "Simple interest",
-      "I = Prt (t in years)"
+      "Checking",
+      "Frequent payments and deposits."
      ],
      [
-      "Balance (simple)",
-      "A = P + Prt"
+      "Savings",
+      "Accessible reserves; rate may change."
      ],
      [
-      "Compound amount",
-      "A = P(1 + [[r || n]])^(nt)"
+      "CD",
+      "Term deposit; early access may carry a penalty."
      ],
      [
-      "APY",
-      "(1 + [[r || n]])^n − 1"
-     ],
-     [
-      "Annual fee cost",
-      "monthly fee × 12 + per-use fees × uses"
-     ],
-     [
-      "Adjusted balance",
-      "statement − outstanding + deposits in transit"
+      "Deposit insurance",
+      "Eligible deposits at an insured institution; not protection from investment losses."
      ]
-    ]
+    ],
+    "after": "",
+    "color": "purple"
    },
    {
-    "h": "Choosing where to save",
+    "title": "Look past the headline rate",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "Item",
+     "Ask before opening"
+    ],
     "rows": [
      [
-      "Emergency fund",
-      "High-yield savings (liquid)"
+      "APY",
+      "Annual yield including compounding; variable or fixed?"
      ],
      [
-      "Known date 1–2 yrs",
-      "CD matching the date"
+      "Fees",
+      "Monthly, ATM, overdraft, minimum balance?"
      ],
      [
-      "Everyday spending",
-      "Checking with no/waivable fees"
+      "Access",
+      "Transfer limits, holds and withdrawal timing?"
      ],
      [
-      "Safety",
-      "FDIC (banks) / NCUA (credit unions) up to $250,000"
+      "Protection",
+      "Verify institution, ownership category and applicable insurance limits."
      ]
-    ]
+    ],
+    "after": "A high rate may not offset fees or a penalty when you need the cash early.",
+    "color": "blue"
+   },
+   {
+    "title": "Simple interest",
+    "kind": "example",
+    "text": "⟨I=Prt⟩; ⟨A=P+I⟩. P = principal dollars, r = annual decimal rate, t = years; I = interest dollars.",
+    "example": "$2,000 at 4% simple interest for 18 months.",
+    "steps": [
+     [
+      "Time:",
+      "⟨t=\\dfrac{18}{12}=1.5⟩ years"
+     ],
+     [
+      "Interest:",
+      "⟨2{,}000(0.04)(1.5)=120⟩"
+     ]
+    ],
+    "answer": "$120 interest; $2,120 balance",
+    "color": "green"
+   },
+   {
+    "title": "Compound interest",
+    "kind": "html",
+    "html": "⟨A=P\\left(1+\\dfrac{r}{m}\\right)^{mt}⟩<br>P = initial dollars; r = annual nominal decimal rate; m = compounds per year; t = years.<div class=\"ex\">$1,000 at 4% nominal, monthly for 1 year:<br>⟨1{,}000(1+\\tfrac{0.04}{12})^{12}⟩<br><span class=\"ans\">Balance ≈ $1,040.74</span></div>No deposits, withdrawals or fees; rate stays fixed.",
+    "color": "orange"
+   },
+   {
+    "title": "APY vs. nominal rate",
+    "kind": "html",
+    "html": "⟨\\text{APY}=\\left(1+\\dfrac{r}{m}\\right)^m-1⟩<br>r = annual nominal decimal rate; m = compounds per year.<div class=\"ex\">At 4% nominal compounded monthly:<br>⟨(1+\\tfrac{0.04}{12})^{12}-1\\approx0.040742⟩<br><span class=\"ans\">APY ≈ 4.0742%</span></div>APY is already annual; do not compound it monthly again.",
+    "color": "pink"
+   },
+   {
+    "title": "CD penalty",
+    "kind": "example",
+    "text": "Course contract: penalty equals 3 months of simple interest on principal. Contract terms vary.",
+    "example": "$2,000 at 4%; withdraw after 9 months.",
+    "steps": [
+     [
+      "Earned:",
+      "⟨2{,}000(0.04)(\\tfrac{9}{12})=60⟩"
+     ],
+     [
+      "Penalty:",
+      "⟨2{,}000(0.04)(\\tfrac{3}{12})=20⟩"
+     ]
+    ],
+    "answer": "$40 interest kept; $2,040 returned",
+    "color": "teal"
    }
   ],
-  "example": {
-   "title": "Worked example",
-   "lines": [
-    "$2,000 in a CD at 4% simple for 18 months",
-    "I = 2,000 × 0.04 × 1.5 = $120",
-    "Withdraw after 9 months with 3-month penalty:",
-    "Earned $60 − penalty $20 = $40 kept"
-   ]
-  },
-  "misconceptions": [
-   "Using months instead of years for t.",
-   "APR = APY.",
-   "Highest rate is always best.",
-   "Overdraft coverage is free.",
-   "FDIC covers investments."
-  ],
-  "questions": [
-   "What fees could I be charged, and how can they be waived?",
-   "What is the APY, and is it variable?",
-   "How quickly can I access the money?",
-   "Is the institution FDIC- or NCUA-insured?",
-   "Does my record match the statement?"
-  ],
-  "tips": [
-   "Opt out of debit overdraft coverage.",
-   "Use in-network ATMs.",
-   "Keep emergency savings separate from checking.",
-   "Review statements monthly; report fraud fast."
+  "back": [
+   {
+    "title": "Which account is better?",
+    "kind": "example",
+    "text": "Assume constant $1,000 balance for 1 year. Rates below are APYs; no tax, other fees or balance changes.",
+    "example": "A: 4% APY, $5 monthly fee. B: 3% APY, no fee.",
+    "steps": [
+     [
+      "A net interest:",
+      "⟨1{,}000(0.04)-12(5)=-20⟩"
+     ],
+     [
+      "B net interest:",
+      "⟨1{,}000(0.03)=30⟩"
+     ]
+    ],
+    "answer": "B leaves you $50 better off",
+    "color": "purple"
+   },
+   {
+    "title": "Fee break-even",
+    "kind": "html",
+    "html": "For the accounts above, A pays 1 percentage point more but charges $60 yearly.<div class=\"ex\">⟨\\text{Break-even balance}=\\dfrac{60}{0.04-0.03}⟩<br><span class=\"ans\">$6,000 constant balance</span></div>Above $6,000, A earns more under this model; below it, B does. Fee waivers, changing balances and access needs can change the choice.",
+    "color": "blue"
+   },
+   {
+    "title": "Statement vocabulary",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
+    "rows": [
+     [
+      "Deposit in transit",
+      "Recorded by you, not yet by bank."
+     ],
+     [
+      "Outstanding payment",
+      "Recorded by you, not yet cleared."
+     ],
+     [
+      "Reconciliation",
+      "Explain differences between bank and your record."
+     ],
+     [
+      "Available balance",
+      "May differ from statement balance due to pending items or holds."
+     ]
+    ],
+    "after": "",
+    "color": "green"
+   },
+   {
+    "title": "Reconcile the account",
+    "kind": "example",
+    "text": "Subtract outstanding payments; add deposits in transit to the bank statement balance.",
+    "example": "Bank $1,250; uncleared check $80; deposit in transit $200.",
+    "steps": [
+     [
+      "Adjusted bank:",
+      "⟨1{,}250-80+200=1{,}370⟩"
+     ],
+     [
+      "Your record:",
+      "$1,385 minus unrecorded $15 bank fee"
+     ],
+     [
+      "Adjusted record:",
+      "⟨1{,}385-15=1{,}370⟩"
+     ]
+    ],
+    "answer": "Both records agree at $1,370",
+    "color": "orange"
+   },
+   {
+    "title": "Match product to purpose",
+    "kind": "list",
+    "items": [
+     "Daily bills: accessible checking with manageable fees.",
+     "Emergency fund: liquid savings with dependable access.",
+     "Known future date: compare a CD term with that date.",
+     "Check insurance and ownership limits directly.",
+     "Use alerts, protect login details and review statements; report unexpected transactions promptly."
+    ],
+    "color": "pink"
+   },
+   {
+    "title": "Reminders & mistakes",
+    "kind": "mistakes",
+    "good": [
+     "Convert months to years in simple interest.",
+     "Read the early-withdrawal terms before choosing a CD."
+    ],
+    "bad": [
+     [
+      "Highest APY always wins",
+      "include fees and access."
+     ],
+     [
+      "Deposit insurance covers stocks",
+      "it does not insure market losses."
+     ],
+     [
+      "Statement = spendable cash",
+      "pending items can change it."
+     ],
+     [
+      "APR = APY",
+      "compounding may make them differ."
+     ]
+    ],
+    "color": "teal"
+   }
   ]
  },
  "questions": [
@@ -538,87 +683,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s01-vocab-term-01",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A bank account for everyday spending through a debit card, transfers, and checks”",
-   "format": "multiple-choice",
-   "answer": "Checking account",
-   "options": [
-    {
-     "text": "Checking account",
-     "correct": true
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": false
-    },
-    {
-     "text": "Compound interest",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Checking account.",
-    "Example: Paychecks are deposited into checking and rent is paid from it."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-ex-01",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Paychecks are deposited into checking and rent is paid from it.",
-   "format": "multiple-choice",
-   "answer": "Checking account",
-   "options": [
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": false
-    },
-    {
-     "text": "Checking account",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Checking account: A bank account for everyday spending through a debit card, transfers, and checks"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s03-vocab-def-02",
    "unitId": "banking",
    "skillId": "banking-skill-03",
@@ -658,87 +722,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-term-02",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “An account designed for holding money and earning interest, with fewer transactions than checking”",
-   "format": "multiple-choice",
-   "answer": "Savings account",
-   "options": [
-    {
-     "text": "Direct deposit",
-     "correct": false
-    },
-    {
-     "text": "Savings account",
-     "correct": true
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": false
-    },
-    {
-     "text": "Minimum balance requirement",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Savings account.",
-    "Example: An emergency fund kept in a 4.00% APY savings account."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-ex-02",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? An emergency fund kept in a 4.00% APY savings account.",
-   "format": "multiple-choice",
-   "answer": "Savings account",
-   "options": [
-    {
-     "text": "Savings account",
-     "correct": true
-    },
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Minimum balance requirement",
-     "correct": false
-    },
-    {
-     "text": "Compound interest",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Savings account: An account designed for holding money and earning interest, with fewer transactions than checking"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -792,87 +775,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s01-vocab-term-03",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A fee charged when a transaction is paid even though the account does not have enough money”",
-   "format": "multiple-choice",
-   "answer": "Overdraft fee",
-   "options": [
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": true
-    },
-    {
-     "text": "Compound interest",
-     "correct": false
-    },
-    {
-     "text": "Direct deposit",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Overdraft fee.",
-    "Example: A $4.50 coffee triggers a $35.00 overdraft fee."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-ex-03",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $4.50 coffee triggers a $35.00 overdraft fee.",
-   "format": "multiple-choice",
-   "answer": "Overdraft fee",
-   "options": [
-    {
-     "text": "Bank statement",
-     "correct": false
-    },
-    {
-     "text": "FDIC/NCUA insurance",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": true
-    },
-    {
-     "text": "Principal",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Overdraft fee: A fee charged when a transaction is paid even though the account does not have enough money"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s01-vocab-def-04",
    "unitId": "banking",
    "skillId": "banking-skill-01",
@@ -912,87 +814,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-term-04",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A recurring charge for keeping an account open, often waived by meeting a minimum balance or direct-deposit requirement”",
-   "format": "multiple-choice",
-   "answer": "Monthly maintenance fee",
-   "options": [
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Direct deposit",
-     "correct": false
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": true
-    },
-    {
-     "text": "Bank statement",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Monthly maintenance fee.",
-    "Example: $12 per month unless the balance stays above $1,500."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-ex-04",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $12 per month unless the balance stays above $1,500.",
-   "format": "multiple-choice",
-   "answer": "Monthly maintenance fee",
-   "options": [
-    {
-     "text": "Bank statement",
-     "correct": false
-    },
-    {
-     "text": "Out-of-network ATM fee",
-     "correct": false
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": true
-    },
-    {
-     "text": "Checking account",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Monthly maintenance fee: A recurring charge for keeping an account open, often waived by meeting a minimum balance or direct-deposit requirement"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1044,87 +865,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s01-vocab-term-05",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The lowest balance an account must keep to avoid a fee or earn a stated rate”",
-   "format": "multiple-choice",
-   "answer": "Minimum balance requirement",
-   "options": [
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": false
-    },
-    {
-     "text": "Minimum balance requirement",
-     "correct": true
-    },
-    {
-     "text": "Liquidity",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Minimum balance requirement.",
-    "Example: The fee is waived only if the daily balance never drops below $500."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-ex-05",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? The fee is waived only if the daily balance never drops below $500.",
-   "format": "multiple-choice",
-   "answer": "Minimum balance requirement",
-   "options": [
-    {
-     "text": "Credit union",
-     "correct": false
-    },
-    {
-     "text": "Out-of-network ATM fee",
-     "correct": false
-    },
-    {
-     "text": "Reconcile",
-     "correct": false
-    },
-    {
-     "text": "Minimum balance requirement",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Minimum balance requirement: The lowest balance an account must keep to avoid a fee or earn a stated rate"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s01-vocab-def-06",
    "unitId": "banking",
    "skillId": "banking-skill-01",
@@ -1164,87 +904,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-term-06",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A charge for using an ATM not owned by your bank; often charged by both banks”",
-   "format": "multiple-choice",
-   "answer": "Out-of-network ATM fee",
-   "options": [
-    {
-     "text": "Simple interest",
-     "correct": false
-    },
-    {
-     "text": "Reconcile",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    },
-    {
-     "text": "Out-of-network ATM fee",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Out-of-network ATM fee.",
-    "Example: $3.00 from the ATM owner + $2.50 from your bank."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-ex-06",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $3.00 from the ATM owner + $2.50 from your bank.",
-   "format": "multiple-choice",
-   "answer": "Out-of-network ATM fee",
-   "options": [
-    {
-     "text": "Savings account",
-     "correct": false
-    },
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "Out-of-network ATM fee",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Out-of-network ATM fee: A charge for using an ATM not owned by your bank; often charged by both banks"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1296,87 +955,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s02-vocab-term-07",
-   "unitId": "banking",
-   "skillId": "banking-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The original amount of money deposited or borrowed, on which interest is calculated”",
-   "format": "multiple-choice",
-   "answer": "Principal",
-   "options": [
-    {
-     "text": "FDIC/NCUA insurance",
-     "correct": false
-    },
-    {
-     "text": "Principal",
-     "correct": true
-    },
-    {
-     "text": "Compound interest",
-     "correct": false
-    },
-    {
-     "text": "Liquidity",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Principal.",
-    "Example: Depositing $2,000 into a CD."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s02-vocab-ex-07",
-   "unitId": "banking",
-   "skillId": "banking-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Depositing $2,000 into a CD.",
-   "format": "multiple-choice",
-   "answer": "Principal",
-   "options": [
-    {
-     "text": "Principal",
-     "correct": true
-    },
-    {
-     "text": "Bank statement",
-     "correct": false
-    },
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": false
-    },
-    {
-     "text": "FDIC/NCUA insurance",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Principal: The original amount of money deposited or borrowed, on which interest is calculated"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s02-vocab-def-08",
    "unitId": "banking",
    "skillId": "banking-skill-02",
@@ -1422,87 +1000,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s02-vocab-term-08",
-   "unitId": "banking",
-   "skillId": "banking-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Interest calculated only on the original principal: I = Prt”",
-   "format": "multiple-choice",
-   "answer": "Simple interest",
-   "options": [
-    {
-     "text": "Simple interest",
-     "correct": true
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": false
-    },
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Minimum balance requirement",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Simple interest.",
-    "Example: $2,000 at 3% for 2 years earns $120."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s02-vocab-ex-08",
-   "unitId": "banking",
-   "skillId": "banking-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $2,000 at 3% for 2 years earns $120.",
-   "format": "multiple-choice",
-   "answer": "Simple interest",
-   "options": [
-    {
-     "text": "Simple interest",
-     "correct": true
-    },
-    {
-     "text": "Savings account",
-     "correct": false
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": false
-    },
-    {
-     "text": "Direct deposit",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Simple interest: Interest calculated only on the original principal: I = Prt"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s03-vocab-def-09",
    "unitId": "banking",
    "skillId": "banking-skill-03",
@@ -1542,87 +1039,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-term-09",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Interest calculated on the principal plus previously earned interest”",
-   "format": "multiple-choice",
-   "answer": "Compound interest",
-   "options": [
-    {
-     "text": "Compound interest",
-     "correct": true
-    },
-    {
-     "text": "APY (annual percentage yield)",
-     "correct": false
-    },
-    {
-     "text": "Bank statement",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Compound interest.",
-    "Example: $1,000.00 at 5% compounded yearly is $1,102.50 after 2 years."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-ex-09",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $1,000.00 at 5% compounded yearly is $1,102.50 after 2 years.",
-   "format": "multiple-choice",
-   "answer": "Compound interest",
-   "options": [
-    {
-     "text": "Simple interest",
-     "correct": false
-    },
-    {
-     "text": "Compound interest",
-     "correct": true
-    },
-    {
-     "text": "Bank statement",
-     "correct": false
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Compound interest: Interest calculated on the principal plus previously earned interest"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1676,87 +1092,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s03-vocab-term-10",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The actual yearly rate of return including the effect of compounding”",
-   "format": "multiple-choice",
-   "answer": "APY (annual percentage yield)",
-   "options": [
-    {
-     "text": "Checking account",
-     "correct": false
-    },
-    {
-     "text": "APY (annual percentage yield)",
-     "correct": true
-    },
-    {
-     "text": "Reconcile",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines APY (annual percentage yield).",
-    "Example: 4.00% compounded monthly gives an APY of about 4.07%."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-ex-10",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 4.00% compounded monthly gives an APY of about 4.07%.",
-   "format": "multiple-choice",
-   "answer": "APY (annual percentage yield)",
-   "options": [
-    {
-     "text": "Compound interest",
-     "correct": false
-    },
-    {
-     "text": "Minimum balance requirement",
-     "correct": false
-    },
-    {
-     "text": "Checking account",
-     "correct": false
-    },
-    {
-     "text": "APY (annual percentage yield)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of APY (annual percentage yield): The actual yearly rate of return including the effect of compounding"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s03-vocab-def-11",
    "unitId": "banking",
    "skillId": "banking-skill-03",
@@ -1796,87 +1131,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-term-11",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A savings product that pays a fixed rate for a set term, usually with a penalty for early withdrawal”",
-   "format": "multiple-choice",
-   "answer": "Certificate of deposit (CD)",
-   "options": [
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": true
-    },
-    {
-     "text": "Credit union",
-     "correct": false
-    },
-    {
-     "text": "Simple interest",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Certificate of deposit (CD).",
-    "Example: A 12-month CD at 4.25% with a 3-month interest penalty for early withdrawal."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-ex-11",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A 12-month CD at 4.25% with a 3-month interest penalty for early withdrawal.",
-   "format": "multiple-choice",
-   "answer": "Certificate of deposit (CD)",
-   "options": [
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": true
-    },
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "FDIC/NCUA insurance",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Certificate of deposit (CD): A savings product that pays a fixed rate for a set term, usually with a penalty for early withdrawal"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1928,87 +1182,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s03-vocab-term-12",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Federal protection of deposits at insured banks and credit unions, up to $250,000 per depositor per ownership category”",
-   "format": "multiple-choice",
-   "answer": "FDIC/NCUA insurance",
-   "options": [
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Bank statement",
-     "correct": false
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": false
-    },
-    {
-     "text": "FDIC/NCUA insurance",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines FDIC/NCUA insurance.",
-    "Example: If an insured bank fails, deposits up to the limit are protected."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-ex-12",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? If an insured bank fails, deposits up to the limit are protected.",
-   "format": "multiple-choice",
-   "answer": "FDIC/NCUA insurance",
-   "options": [
-    {
-     "text": "FDIC/NCUA insurance",
-     "correct": true
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": false
-    },
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of FDIC/NCUA insurance: Federal protection of deposits at insured banks and credit unions, up to $250,000 per depositor per ownership category"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s03-vocab-def-13",
    "unitId": "banking",
    "skillId": "banking-skill-03",
@@ -2048,87 +1221,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-term-13",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A member-owned, not-for-profit financial cooperative that offers banking services”",
-   "format": "multiple-choice",
-   "answer": "Credit union",
-   "options": [
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "APY (annual percentage yield)",
-     "correct": false
-    },
-    {
-     "text": "Credit union",
-     "correct": true
-    },
-    {
-     "text": "Minimum balance requirement",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Credit union.",
-    "Example: Joining a teachers’ credit union with a $5 membership share."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-ex-13",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Joining a teachers’ credit union with a $5 membership share.",
-   "format": "multiple-choice",
-   "answer": "Credit union",
-   "options": [
-    {
-     "text": "Checking account",
-     "correct": false
-    },
-    {
-     "text": "Credit union",
-     "correct": true
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Credit union: A member-owned, not-for-profit financial cooperative that offers banking services"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2180,87 +1272,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s04-vocab-term-14",
-   "unitId": "banking",
-   "skillId": "banking-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A periodic summary of an account showing the beginning balance, deposits, withdrawals, fees, interest, and ending balance”",
-   "format": "multiple-choice",
-   "answer": "Bank statement",
-   "options": [
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "Bank statement",
-     "correct": true
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Bank statement.",
-    "Example: A monthly PDF statement from your bank’s app."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s04-vocab-ex-14",
-   "unitId": "banking",
-   "skillId": "banking-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A monthly PDF statement from your bank’s app.",
-   "format": "multiple-choice",
-   "answer": "Bank statement",
-   "options": [
-    {
-     "text": "Bank statement",
-     "correct": true
-    },
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "Credit union",
-     "correct": false
-    },
-    {
-     "text": "Monthly maintenance fee",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Bank statement: A periodic summary of an account showing the beginning balance, deposits, withdrawals, fees, interest, and ending balance"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s04-vocab-def-15",
    "unitId": "banking",
    "skillId": "banking-skill-04",
@@ -2300,87 +1311,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s04-vocab-term-15",
-   "unitId": "banking",
-   "skillId": "banking-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “To compare your own records with the bank statement and explain any differences”",
-   "format": "multiple-choice",
-   "answer": "Reconcile",
-   "options": [
-    {
-     "text": "Monthly maintenance fee",
-     "correct": false
-    },
-    {
-     "text": "Checking account",
-     "correct": false
-    },
-    {
-     "text": "Reconcile",
-     "correct": true
-    },
-    {
-     "text": "Simple interest",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Reconcile.",
-    "Example: Matching your register after accounting for a check that has not cleared."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s04-vocab-ex-15",
-   "unitId": "banking",
-   "skillId": "banking-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Matching your register after accounting for a check that has not cleared.",
-   "format": "multiple-choice",
-   "answer": "Reconcile",
-   "options": [
-    {
-     "text": "Simple interest",
-     "correct": false
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": false
-    },
-    {
-     "text": "Checking account",
-     "correct": false
-    },
-    {
-     "text": "Reconcile",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Reconcile: To compare your own records with the bank statement and explain any differences"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2432,87 +1362,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s04-vocab-term-16",
-   "unitId": "banking",
-   "skillId": "banking-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A transaction you recorded that has not yet appeared on the bank statement”",
-   "format": "multiple-choice",
-   "answer": "Outstanding transaction",
-   "options": [
-    {
-     "text": "Savings account",
-     "correct": false
-    },
-    {
-     "text": "Overdraft fee",
-     "correct": false
-    },
-    {
-     "text": "Bank statement",
-     "correct": false
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Outstanding transaction.",
-    "Example: A check written on the 29th that clears next month."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s04-vocab-ex-16",
-   "unitId": "banking",
-   "skillId": "banking-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A check written on the 29th that clears next month.",
-   "format": "multiple-choice",
-   "answer": "Outstanding transaction",
-   "options": [
-    {
-     "text": "Minimum balance requirement",
-     "correct": false
-    },
-    {
-     "text": "Credit union",
-     "correct": false
-    },
-    {
-     "text": "Outstanding transaction",
-     "correct": true
-    },
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Outstanding transaction: A transaction you recorded that has not yet appeared on the bank statement"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s01-vocab-def-17",
    "unitId": "banking",
    "skillId": "banking-skill-01",
@@ -2558,87 +1407,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-banking-s01-vocab-term-17",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “An electronic payment of wages straight into a bank account”",
-   "format": "multiple-choice",
-   "answer": "Direct deposit",
-   "options": [
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "APY (annual percentage yield)",
-     "correct": false
-    },
-    {
-     "text": "Direct deposit",
-     "correct": true
-    },
-    {
-     "text": "Credit union",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Direct deposit.",
-    "Example: Paychecks arrive every other Friday by direct deposit."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s01-vocab-ex-17",
-   "unitId": "banking",
-   "skillId": "banking-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Paychecks arrive every other Friday by direct deposit.",
-   "format": "multiple-choice",
-   "answer": "Direct deposit",
-   "options": [
-    {
-     "text": "Liquidity",
-     "correct": false
-    },
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": false
-    },
-    {
-     "text": "Principal",
-     "correct": false
-    },
-    {
-     "text": "Direct deposit",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Direct deposit: An electronic payment of wages straight into a bank account"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-banking-s03-vocab-def-18",
    "unitId": "banking",
    "skillId": "banking-skill-03",
@@ -2678,87 +1446,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-term-18",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “How quickly and easily money can be accessed without losing value”",
-   "format": "multiple-choice",
-   "answer": "Liquidity",
-   "options": [
-    {
-     "text": "Compound interest",
-     "correct": false
-    },
-    {
-     "text": "Certificate of deposit (CD)",
-     "correct": false
-    },
-    {
-     "text": "Liquidity",
-     "correct": true
-    },
-    {
-     "text": "Bank statement",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Liquidity.",
-    "Example: A savings account is more liquid than a 5-year CD."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-banking-s03-vocab-ex-18",
-   "unitId": "banking",
-   "skillId": "banking-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A savings account is more liquid than a 5-year CD.",
-   "format": "multiple-choice",
-   "answer": "Liquidity",
-   "options": [
-    {
-     "text": "Liquidity",
-     "correct": true
-    },
-    {
-     "text": "FDIC/NCUA insurance",
-     "correct": false
-    },
-    {
-     "text": "Compound interest",
-     "correct": false
-    },
-    {
-     "text": "Simple interest",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Liquidity: How quickly and easily money can be accessed without losing value"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -6812,6 +5499,964 @@
    ]
   },
   {
+   "id": "fa-banking-s01-ap-overdraft-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-overdraft",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya has $99.48 in checking and makes a $179.66 debit-card purchase. The bank covers it and charges a $35.00 overdraft fee. What is the new balance?",
+   "format": "short-answer",
+   "answer": "−$115.18",
+   "numeric": {
+    "value": -115.18,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$99.48 − $179.66 = −$80.18.",
+    "Subtract the fee: −$80.18 − $35.00 = −$115.18.",
+    "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-overdraft-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-overdraft",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre has $249.15 in checking and makes a $300.42 debit-card purchase. The bank covers it and charges a $29.00 overdraft fee. What is the new balance?",
+   "format": "short-answer",
+   "answer": "−$80.27",
+   "numeric": {
+    "value": -80.27,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$249.15 − $300.42 = −$51.27.",
+    "Subtract the fee: −$51.27 − $29.00 = −$80.27.",
+    "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-overdraft-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-overdraft",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace has $156.41 in checking and makes a $200.99 debit-card purchase. The bank covers it and charges a $29.00 overdraft fee. What is the new balance?",
+   "format": "short-answer",
+   "answer": "−$73.58",
+   "numeric": {
+    "value": -73.58,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$156.41 − $200.99 = −$44.58.",
+    "Subtract the fee: −$44.58 − $29.00 = −$73.58.",
+    "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-overdraft-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-overdraft",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan has $234.89 in checking and makes a $295.30 debit-card purchase. The bank covers it and charges a $35.00 overdraft fee. What is the new balance?",
+   "format": "short-answer",
+   "answer": "−$95.41",
+   "numeric": {
+    "value": -95.41,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$234.89 − $295.30 = −$60.41.",
+    "Subtract the fee: −$60.41 − $35.00 = −$95.41.",
+    "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-overdraft-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-overdraft",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana has $134.18 in checking and makes a $212.30 debit-card purchase. The bank covers it and charges a $35.00 overdraft fee. What is the new balance?",
+   "format": "short-answer",
+   "answer": "−$113.12",
+   "numeric": {
+    "value": -113.12,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$134.18 − $212.30 = −$78.12.",
+    "Subtract the fee: −$78.12 − $35.00 = −$113.12.",
+    "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-overdraft-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-overdraft",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus has $201.04 in checking and makes a $253.78 debit-card purchase. The bank covers it and charges a $35.00 overdraft fee. What is the new balance?",
+   "format": "short-answer",
+   "answer": "−$87.74",
+   "numeric": {
+    "value": -87.74,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$201.04 − $253.78 = −$52.74.",
+    "Subtract the fee: −$52.74 − $35.00 = −$87.74.",
+    "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-overdraft-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-overdraft",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia has $223.81 in checking and makes a $278.01 debit-card purchase. The bank covers it and charges a $35.00 overdraft fee. What is the new balance?",
+   "format": "short-answer",
+   "answer": "−$89.20",
+   "numeric": {
+    "value": -89.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$223.81 − $278.01 = −$54.20.",
+    "Subtract the fee: −$54.20 − $35.00 = −$89.20.",
+    "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-fee-waiver-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-fee-waiver",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego's checking account charges $12 in any month the minimum daily balance falls below $500. Over six months the minimum balances were $820, $1,170, $100, $960, $910, $840. What did he pay in monthly fees?",
+   "format": "short-answer",
+   "answer": "$12",
+   "numeric": {
+    "value": 12,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Months below $500: 1.",
+    "1 × $12 = $12.",
+    "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-fee-waiver-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-fee-waiver",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre's checking account charges $12 in any month the minimum daily balance falls below $500. Over six months the minimum balances were $1,010, $1,180, $160, $150, $150, $380. What did he pay in monthly fees?",
+   "format": "short-answer",
+   "answer": "$48",
+   "numeric": {
+    "value": 48,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Months below $500: 4.",
+    "4 × $12 = $48.",
+    "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-fee-waiver-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-fee-waiver",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia's checking account charges $12 in any month the minimum daily balance falls below $1,500. Over six months the minimum balances were $1,220, $1,060, $1,830, $1,980, $1,730, $1,680. What did she pay in monthly fees?",
+   "format": "short-answer",
+   "answer": "$24",
+   "numeric": {
+    "value": 24,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Months below $1,500: 2.",
+    "2 × $12 = $24.",
+    "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-fee-waiver-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-fee-waiver",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's checking account charges $12 in any month the minimum daily balance falls below $1,000. Over six months the minimum balances were $1,150, $910, $590, $1,310, $1,270, $830. What did he pay in monthly fees?",
+   "format": "short-answer",
+   "answer": "$36",
+   "numeric": {
+    "value": 36,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Months below $1,000: 3.",
+    "3 × $12 = $36.",
+    "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-fee-waiver-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-fee-waiver",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev's checking account charges $8 in any month the minimum daily balance falls below $1,500. Over six months the minimum balances were $2,090, $2,040, $2,110, $1,980, $1,540, $1,300. What did he pay in monthly fees?",
+   "format": "short-answer",
+   "answer": "$8",
+   "numeric": {
+    "value": 8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Months below $1,500: 1.",
+    "1 × $8 = $8.",
+    "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-ap-fee-waiver-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "ap-fee-waiver",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's checking account charges $8 in any month the minimum daily balance falls below $500. Over six months the minimum balances were $840, $690, $1,070, $260, $290, −$20. What did she pay in monthly fees?",
+   "format": "short-answer",
+   "answer": "$24",
+   "numeric": {
+    "value": 24,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Months below $500: 3.",
+    "3 × $8 = $24.",
+    "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-ap-si-solve-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "ap-si-solve",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley deposits $7,500 in a CD that pays simple interest. After 2 years it has earned $375 in interest. What is the annual interest rate?",
+   "format": "short-answer",
+   "answer": "2.5%",
+   "numeric": {
+    "value": 2.5,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "I = Prt, so r = I ÷ (P × t).",
+    "r = $375 ÷ ($7,500 × 2) = 0.025.",
+    "As a percent: 2.5%."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-ap-si-solve-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "ap-si-solve",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen deposits $7,000 in a CD that pays simple interest. After 2 years it has earned $420 in interest. What is the annual interest rate?",
+   "format": "short-answer",
+   "answer": "3%",
+   "numeric": {
+    "value": 3,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "I = Prt, so r = I ÷ (P × t).",
+    "r = $420 ÷ ($7,000 × 2) = 0.030.",
+    "As a percent: 3%."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-ap-si-solve-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "ap-si-solve",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace deposits $2,100 in a CD that pays simple interest. After 5 years it has earned $210 in interest. What is the annual interest rate?",
+   "format": "short-answer",
+   "answer": "2%",
+   "numeric": {
+    "value": 2,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "I = Prt, so r = I ÷ (P × t).",
+    "r = $210 ÷ ($2,100 × 5) = 0.020.",
+    "As a percent: 2%."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-ap-si-solve-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "ap-si-solve",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi deposits $5,200 in a CD that pays simple interest. After 5 years it has earned $910 in interest. What is the annual interest rate?",
+   "format": "short-answer",
+   "answer": "3.5%",
+   "numeric": {
+    "value": 3.5,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "I = Prt, so r = I ÷ (P × t).",
+    "r = $910 ÷ ($5,200 × 5) = 0.035.",
+    "As a percent: 3.5%."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-ap-si-solve-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "ap-si-solve",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah deposits $7,700 in a CD that pays simple interest. After 5 years it has earned $1,540 in interest. What is the annual interest rate?",
+   "format": "short-answer",
+   "answer": "4%",
+   "numeric": {
+    "value": 4,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "I = Prt, so r = I ÷ (P × t).",
+    "r = $1,540 ÷ ($7,700 × 5) = 0.040.",
+    "As a percent: 4%."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-ap-si-solve-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "ap-si-solve",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara deposits $3,700 in a CD that pays simple interest. After 5 years it has earned $555 in interest. What is the annual interest rate?",
+   "format": "short-answer",
+   "answer": "3%",
+   "numeric": {
+    "value": 3,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "I = Prt, so r = I ÷ (P × t).",
+    "r = $555 ÷ ($3,700 × 5) = 0.030.",
+    "As a percent: 3%."
+   ]
+  },
+  {
+   "id": "fa-banking-s02-ap-si-solve-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-02",
+   "level": "standard",
+   "family": "ap-si-solve",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam deposits $8,300 in a CD that pays simple interest. After 4 years it has earned $664 in interest. What is the annual interest rate?",
+   "format": "short-answer",
+   "answer": "2%",
+   "numeric": {
+    "value": 2,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "I = Prt, so r = I ÷ (P × t).",
+    "r = $664 ÷ ($8,300 × 4) = 0.020.",
+    "As a percent: 2%."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-ap-apy-compare-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "ap-apy-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus will deposit $7,500.00 for one year. Account A pays 4.8% APR compounded monthly. Account B pays 4.75% APY. How much more interest does the better account earn in one year?",
+   "format": "short-answer",
+   "answer": "$11.78",
+   "numeric": {
+    "value": 11.78,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $7,500.00 × (1 + 0.048/12)¹² − $7,500.00 = $368.03.",
+    "B: $7,500.00 × 0.0475 = $356.25 (APY already includes compounding).",
+    "Account A earns $11.78 more. Compare savings accounts using APY."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-ap-apy-compare-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "ap-apy-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego will deposit $4,000.00 for one year. Account A pays 4.8% APR compounded monthly. Account B pays 4.7% APY. How much more interest does the better account earn in one year?",
+   "format": "short-answer",
+   "answer": "$8.28",
+   "numeric": {
+    "value": 8.28,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $4,000.00 × (1 + 0.048/12)¹² − $4,000.00 = $196.28.",
+    "B: $4,000.00 × 0.047 = $188.00 (APY already includes compounding).",
+    "Account A earns $8.28 more. Compare savings accounts using APY."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-ap-apy-compare-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "ap-apy-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis will deposit $7,000.00 for one year. Account A pays 4.8% APR compounded monthly. Account B pays 4.65% APY. How much more interest does the better account earn in one year?",
+   "format": "short-answer",
+   "answer": "$17.99",
+   "numeric": {
+    "value": 17.99,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $7,000.00 × (1 + 0.048/12)¹² − $7,000.00 = $343.49.",
+    "B: $7,000.00 × 0.0465 = $325.50 (APY already includes compounding).",
+    "Account A earns $17.99 more. Compare savings accounts using APY."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-ap-apy-compare-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "ap-apy-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia will deposit $11,000.00 for one year. Account A pays 4.2% APR compounded monthly. Account B pays 4.05% APY. How much more interest does the better account earn in one year?",
+   "format": "short-answer",
+   "answer": "$25.50",
+   "numeric": {
+    "value": 25.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $11,000.00 × (1 + 0.042/12)¹² − $11,000.00 = $471.00.",
+    "B: $11,000.00 × 0.0405 = $445.50 (APY already includes compounding).",
+    "Account A earns $25.50 more. Compare savings accounts using APY."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-ap-apy-compare-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "ap-apy-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila will deposit $5,500.00 for one year. Account A pays 4.2% APR compounded monthly. Account B pays 4.1% APY. How much more interest does the better account earn in one year?",
+   "format": "short-answer",
+   "answer": "$10.00",
+   "numeric": {
+    "value": 10,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $5,500.00 × (1 + 0.042/12)¹² − $5,500.00 = $235.50.",
+    "B: $5,500.00 × 0.041 = $225.50 (APY already includes compounding).",
+    "Account A earns $10.00 more. Compare savings accounts using APY."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-ap-apy-compare-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "ap-apy-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah will deposit $4,000.00 for one year. Account A pays 4.8% APR compounded monthly. Account B pays 4.7% APY. How much more interest does the better account earn in one year?",
+   "format": "short-answer",
+   "answer": "$8.28",
+   "numeric": {
+    "value": 8.28,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $4,000.00 × (1 + 0.048/12)¹² − $4,000.00 = $196.28.",
+    "B: $4,000.00 × 0.047 = $188.00 (APY already includes compounding).",
+    "Account A earns $8.28 more. Compare savings accounts using APY."
+   ]
+  },
+  {
+   "id": "fa-banking-s03-ap-apy-compare-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-03",
+   "level": "standard",
+   "family": "ap-apy-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah will deposit $11,000.00 for one year. Account A pays 4.5% APR compounded monthly. Account B pays 4.4% APY. How much more interest does the better account earn in one year?",
+   "format": "short-answer",
+   "answer": "$21.34",
+   "numeric": {
+    "value": 21.34,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $11,000.00 × (1 + 0.045/12)¹² − $11,000.00 = $505.34.",
+    "B: $11,000.00 × 0.044 = $484.00 (APY already includes compounding).",
+    "Account A earns $21.34 more. Compare savings accounts using APY."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-ap-reconcile-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "ap-reconcile",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen's bank statement shows a balance of $676.07. A $129.16 deposit has not cleared yet, and two checks for $41.70 and $120.02 are outstanding. What is the adjusted (true) balance?",
+   "format": "short-answer",
+   "answer": "$643.51",
+   "numeric": {
+    "value": 643.51,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
+    "$676.07 + $129.16 − $41.70 − $120.02 = $643.51.",
+    "This should match the balance in the check register."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-ap-reconcile-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "ap-reconcile",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana's bank statement shows a balance of $681.58. A $425.73 deposit has not cleared yet, and two checks for $175.49 and $132.83 are outstanding. What is the adjusted (true) balance?",
+   "format": "short-answer",
+   "answer": "$798.99",
+   "numeric": {
+    "value": 798.99,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
+    "$681.58 + $425.73 − $175.49 − $132.83 = $798.99.",
+    "This should match the balance in the check register."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-ap-reconcile-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "ap-reconcile",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev's bank statement shows a balance of $1,579.03. A $387.99 deposit has not cleared yet, and two checks for $55.82 and $174.51 are outstanding. What is the adjusted (true) balance?",
+   "format": "short-answer",
+   "answer": "$1,736.69",
+   "numeric": {
+    "value": 1736.69,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
+    "$1,579.03 + $387.99 − $55.82 − $174.51 = $1,736.69.",
+    "This should match the balance in the check register."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-ap-reconcile-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "ap-reconcile",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego's bank statement shows a balance of $1,741.36. A $238.00 deposit has not cleared yet, and two checks for $39.98 and $118.92 are outstanding. What is the adjusted (true) balance?",
+   "format": "short-answer",
+   "answer": "$1,820.46",
+   "numeric": {
+    "value": 1820.46,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
+    "$1,741.36 + $238.00 − $39.98 − $118.92 = $1,820.46.",
+    "This should match the balance in the check register."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-ap-reconcile-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "ap-reconcile",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's bank statement shows a balance of $1,004.90. A $477.31 deposit has not cleared yet, and two checks for $73.83 and $122.44 are outstanding. What is the adjusted (true) balance?",
+   "format": "short-answer",
+   "answer": "$1,285.94",
+   "numeric": {
+    "value": 1285.94,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
+    "$1,004.90 + $477.31 − $73.83 − $122.44 = $1,285.94.",
+    "This should match the balance in the check register."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-ap-reconcile-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "ap-reconcile",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen's bank statement shows a balance of $2,049.94. A $247.87 deposit has not cleared yet, and two checks for $162.18 and $146.75 are outstanding. What is the adjusted (true) balance?",
+   "format": "short-answer",
+   "answer": "$1,988.88",
+   "numeric": {
+    "value": 1988.88,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
+    "$2,049.94 + $247.87 − $162.18 − $146.75 = $1,988.88.",
+    "This should match the balance in the check register."
+   ]
+  },
+  {
+   "id": "fa-banking-s04-ap-reconcile-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-04",
+   "level": "standard",
+   "family": "ap-reconcile",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan's bank statement shows a balance of $2,156.76. A $248.36 deposit has not cleared yet, and two checks for $32.62 and $45.89 are outstanding. What is the adjusted (true) balance?",
+   "format": "short-answer",
+   "answer": "$2,326.61",
+   "numeric": {
+    "value": 2326.61,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
+    "$2,156.76 + $248.36 − $32.62 − $45.89 = $2,326.61.",
+    "This should match the balance in the check register."
+   ]
+  },
+  {
    "id": "fa-banking-s01-err-overdraft-count-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
@@ -6832,10 +6477,10 @@
    "calc": {
     "kind": "mult",
     "inputs": [
-     32.0,
+     32,
      2
     ],
-    "correct": 64.0,
+    "correct": 64,
     "unit": "USD"
    },
    "prompt": "Malik’s account went negative and two more purchases cleared while it was overdrawn. The bank charges $32.00 per overdraft item. Malik’s work: Overdraft fees = $32.00. What mistake did Malik make?",
@@ -6928,7 +6573,7 @@
    "calc": {
     "kind": "simple-interest",
     "inputs": [
-     2500.0,
+     2500,
      4.25,
      0.75
     ],
@@ -6983,11 +6628,11 @@
    "calc": {
     "kind": "simple-interest",
     "inputs": [
-     750.0,
+     750,
      4,
      2
     ],
-    "correct": 60.0,
+    "correct": 60,
     "unit": "USD"
    },
    "prompt": "Jordan earns 4% simple annual interest on $750.00 for 2 years. Jordan’s work: I = $750.00 × 4 × 2 = $6,000.00. What is the correct interest?",
@@ -7000,7 +6645,7 @@
     "Correct result: $60.00."
    ],
    "numeric": {
-    "value": 60.0,
+    "value": 60,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -7079,8 +6724,8 @@
    "calc": {
     "kind": "compound",
     "inputs": [
-     2500.0,
-     5.0,
+     2500,
+     5,
      12,
      1
     ],
@@ -7124,7 +6769,7 @@
     "kind": "statement",
     "inputs": [
      560.25,
-     980.0,
+     980,
      1320.75,
      0
     ],
@@ -7180,9 +6825,9 @@
     "kind": "statement",
     "inputs": [
      765.5,
-     1250.0,
+     1250,
      1199.3,
-     12.0
+     12
     ],
     "correct": 804.2,
     "unit": "USD"

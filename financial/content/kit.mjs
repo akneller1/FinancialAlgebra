@@ -119,12 +119,8 @@ export function buildUnit(unitId, content) {
     const others = V.filter(o => o !== v);
     const dDefs = r.sample(others, 3).map(o => o.def);
     push({ skill: v.skill, type: 'vocabulary', prompt: `What does **${v.term}** mean?`, ...mc(r, v.def, dDefs), solutionSteps: [`${v.term}: ${v.def}`, v.example ? 'Example: ' + v.example : 'Connect the term to its use in a budget or contract.'], misconceptions: v.mis ? [v.mis] : [], activityTypes: ['flashcards', 'showdown', 'connect4', 'tictactoe', 'picture-reveal', 'detective', 'worksheet', 'assessment'], gameEligible: true }, 'vocab-def', i);
-    const dTerms = r.sample(others, 3).map(o => o.term);
-    push({ skill: v.skill, type: 'vocabulary', prompt: `Which term matches this description? “${v.def}”`, ...mc(r, v.term, dTerms), solutionSteps: [`The description defines ${v.term}.`, v.example ? 'Example: ' + v.example : ''].filter(Boolean), activityTypes: ['showdown', 'connect4', 'tictactoe', 'picture-reveal', 'worksheet', 'assessment'], gameEligible: true }, 'vocab-term', i);
-    if (v.example) {
-      const dEx = r.sample(others.filter(o => o.example), 3).map(o => o.term);
-      if (dEx.length >= 2) push({ skill: v.skill, type: 'concept', prompt: `Which financial term is illustrated? ${v.example}`, ...mc(r, v.term, dEx), solutionSteps: [`This is an example of ${v.term}: ${v.def}`], activityTypes: ['showdown', 'connect4', 'worksheet', 'assessment'], gameEligible: true }, 'vocab-ex', i);
-    }
+    // One definition check per term. Term-matching and "which term is illustrated" recall were replaced by
+    // applied scenario families in each unit (2026-11-16); Flashcards and the Vocabulary Builder still drill every term.
   });
   (content.concepts || []).forEach((c, i) => {
     const r = rng(unitId + 'c' + i);
