@@ -56,9 +56,9 @@ async function playGame(ctx, game, unit, mode) {
   const url = `http://localhost:${PORT}/worksheet-generator/grade5-games.html?game=${game}&unit=${unit}` + (mode ? '' : '&student=1&level=cp1');
   const { page, errors } = await open(ctx, url);
   try {
-    await page.waitForSelector('.g5-setup, .g5-stage, dialog.teacher-skills', { timeout: 10000 });
+    await page.waitForSelector('.g5-setup:not([hidden]), .g5-stage, dialog.teacher-skills, .kid-big-play', { timeout: 10000 }); { const play = await page.$('.kid-big-play'); if (play) { await play.click(); await page.waitForSelector('.g5-setup, .g5-stage, dialog.teacher-skills', { timeout: 10000 }); } }
     const dlg = await page.$('dialog.teacher-skills');
-    if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await btn[btn.length - 1].click(); await page.waitForSelector('.g5-setup'); }
+    if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await ((await page.$('dialog.teacher-skills button:has-text("Continue")')) || btn[btn.length - 1]).click(); await page.waitForSelector('.g5-setup'); }
     if (mode) { await page.evaluate(m => { const r = document.querySelector('input[name=g5mode][value="' + m + '"]'); if (r) r.checked = true; }, mode); }
     const setup = await page.$('.g5-setup .g5-btn.primary'); if (setup) await setup.click();
     await page.waitForSelector('.g5-stage', { timeout: 10000 });
@@ -111,7 +111,7 @@ async function understandingCheck(ctx, unit) {
     try {
       await page.waitForSelector('dialog.teacher-skills, .g5-setup', { timeout: 10000 });
       const dlg = await page.$('dialog.teacher-skills');
-      if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await btn[btn.length - 1].click(); }
+      if (dlg) { const btn = await page.$$('dialog.teacher-skills button'); await ((await page.$('dialog.teacher-skills button:has-text("Continue")')) || btn[btn.length - 1]).click(); }
       await page.click('.g5-setup .g5-btn.primary');
       let wrong = 0;
       if (view === 'page') {
