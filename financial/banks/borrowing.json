@@ -7443,14 +7443,14 @@
     "correct": 22000,
     "unit": "USD"
    },
-   "prompt": "Mateo buys a $26,500.00 car with a $4,500.00 down payment. Mateo’s work: Amount financed = $26,500.00. What is the correct amount financed?",
+   "prompt": "Mateo buys a $26,500 car with a $4,500 down payment. Mateo’s work: Amount financed = $26,500. What is the correct amount financed?",
    "format": "short-answer",
-   "answer": "$22,000.00",
+   "answer": "$22,000",
    "solutionSteps": [
     "Mistake: Did not subtract the down payment from the price.",
     "Amount financed = price − down payment.",
-    "$26,500.00 − $4,500.00 = $22,000.00.",
-    "Correct result: $22,000.00."
+    "$26,500 − $4,500 = $22,000.",
+    "Correct result: $22,000."
    ],
    "numeric": {
     "value": 22000,
@@ -7639,14 +7639,14 @@
     "correct": 18400,
     "unit": "USD"
    },
-   "prompt": "Mateo buys a $28,400.00 car, gets $6,500.00 for a trade-in, and pays $3,500.00 down. Mateo’s work: Financed = $28,400.00 + $6,500.00 − $3,500.00 = $31,400.00. What is the correct amount financed?",
+   "prompt": "Mateo buys a $28,400 car, gets $6,500 for a trade-in, and pays $3,500 down. Mateo’s work: Financed = $28,400 + $6,500 − $3,500 = $31,400. What is the correct amount financed?",
    "format": "short-answer",
-   "answer": "$18,400.00",
+   "answer": "$18,400",
    "solutionSteps": [
     "Mistake: Added the trade-in value; a trade-in lowers the amount financed.",
     "Financed = price − trade-in − down payment.",
-    "$28,400.00 − $6,500.00 − $3,500.00 = $18,400.00.",
-    "Correct result: $18,400.00."
+    "$28,400 − $6,500 − $3,500 = $18,400.",
+    "Correct result: $18,400."
    ],
    "numeric": {
     "value": 18400,

@@ -158,7 +158,16 @@ def fn_tf(c, text):
     t = text.strip()
     if t.startswith("True."):
         return shown_ok
-    m = re.match(r"False\. The correct answer is (.+)\.$", t)
+    # Since 2026-11-15 Grade 1 uses child-friendly Yes/No claims ("Yes. 4 + 3 = 7." / "No. The answer is 8 eggs.")
+    # as well as True/False. A Yes is right only if the shown value is right and the clause names it
+    # (the full value, or its number without the unit word).
+    if t.startswith("Yes."):
+        clause = t[4:].strip()
+        value = str(shown).strip()
+        num = re.match(r"[\d,]+", value)
+        names = any(v and re.search(r"(?<![\w])" + re.escape(v) + r"(?![\w])", clause, re.I) for v in (value, num.group(0) if num else ""))
+        return bool(shown_ok and clause and names)
+    m = re.fullmatch(r"(?:False\. The correct answer is|No\. The answer is) (.+)\.", t)
     if m:
         return (not shown_ok) and accepts(inner, m.group(1))
     return False
@@ -949,7 +958,23 @@ def main():
                 if not q["diagram"]["spec"].get("alt", "").strip():
                     E("diagram alt missing")
                 if not c.get("diagram"):
-                    E("diagram has no stored data")
+                    # Story pictures (kid-friendly Phase 2, 2026-11-15) are drawn images with no generated diagram
+                    # data. Check them against the question instead: every count in the alt text must appear in it.
+                    story = q["diagram"].get("type") == "image" and "Story picture added" in q.get("sourceNotes", "")
+                    if not story:
+                        E("diagram has no stored data")
+                    else:
+                        alt_n = set(re.findall(r"\d+", q["diagram"]["spec"].get("alt", "")))
+                        text_n = set(re.findall(r"\d+", q["prompt"] + " " + " ".join(o["text"] for o in q.get("options", [])) + " " + str(q["answer"])))
+                        if not alt_n:
+                            E("story picture alt text gives no counts")
+                        else:
+                            # a picture may also show a part or total made from two numbers in the question
+                            # (3 eggs + 9 empty spaces = 12 for "3 + ___ = 12")
+                            ns = [int(x) for x in re.findall(r"\d+", q["prompt"])]
+                            text_n |= {str(a + b) for a in ns for b in ns} | {str(abs(a - b)) for a in ns for b in ns}
+                        if alt_n and not alt_n <= text_n:
+                            E(f"story picture shows counts {sorted(alt_n - text_n)} not in the question")
             chk = c["q"] or {"k": "parts"}
             if chk["k"] == "key":
                 keyed += 1

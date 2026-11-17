@@ -8911,14 +8911,14 @@
     "correct": 825,
     "unit": "USD"
    },
-   "prompt": "Elena earns $15.00 per hour and worked 50 hours this week. Overtime (over 40 hours) pays 1.5 times the regular rate. Elena’s work: $15.00 × 50 = $750.00. What is the correct weekly gross pay?",
+   "prompt": "Elena earns $15 per hour and worked 50 hours this week. Overtime (over 40 hours) pays 1.5 times the regular rate. Elena’s work: $15 × 50 = $750. What is the correct weekly gross pay?",
    "format": "short-answer",
-   "answer": "$825.00",
+   "answer": "$825",
    "solutionSteps": [
     "Mistake: Paid the overtime hours at the regular rate instead of 1.5 times the rate.",
-    "Regular: $15.00 × 40 = $600.00.",
-    "Overtime: $15.00 × 1.5 × 10 = $225.00.",
-    "Correct result: $825.00."
+    "Regular: $15 × 40 = $600.",
+    "Overtime: $15 × 1.5 × 10 = $225.",
+    "Correct result: $825."
    ],
    "numeric": {
     "value": 825,
@@ -9050,7 +9050,7 @@
     "correct": 2220,
     "unit": "USD"
    },
-   "prompt": "Aisha’s pay stub shows gross pay of $2,400.00 and a pre-tax 401(k) contribution of $180.00. Aisha needs the wages that are subject to federal income tax. Aisha’s work: Taxable wages = $2,400.00. What mistake did Aisha make?",
+   "prompt": "Aisha’s pay stub shows gross pay of $2,400 and a pre-tax 401(k) contribution of $180. Aisha needs the wages that are subject to federal income tax. Aisha’s work: Taxable wages = $2,400. What mistake did Aisha make?",
    "format": "multiple-choice",
    "answer": "Did not subtract the pre-tax 401(k) contribution before finding taxable wages.",
    "options": [
@@ -9073,8 +9073,8 @@
    ],
    "solutionSteps": [
     "Pre-tax deductions lower the wages subject to federal income tax.",
-    "$2,400.00 − $180.00 = $2,220.00.",
-    "Correct result: $2,220.00."
+    "$2,400 − $180 = $2,220.",
+    "Correct result: $2,220."
    ]
   },
   {
@@ -9145,7 +9145,7 @@
     "correct": 7720,
     "unit": "USD"
    },
-   "prompt": "Noah has taxable income of $58,000.00. The course tax table taxes 10% up to $12,000, 12% from $12,000 to $48,000, and 22% from $48,000 to $103,000. Noah’s work: Tax = $58,000.00 × 22% = $12,760.00. What mistake did Noah make?",
+   "prompt": "Noah has taxable income of $58,000. The course tax table taxes 10% up to $12,000, 12% from $12,000 to $48,000, and 22% from $48,000 to $103,000. Noah’s work: Tax = $58,000 × 22% = $12,760. What mistake did Noah make?",
    "format": "multiple-choice",
    "answer": "Applied the top (marginal) rate to all of the income instead of taxing each bracket at its own rate.",
    "options": [
@@ -9167,10 +9167,10 @@
     }
    ],
    "solutionSteps": [
-    "10% of the first $12,000 = $1,200.00.",
-    "12% of the next $36,000 = $4,320.00.",
-    "22% of the remaining $10,000.00 = $2,200.00; total $7,720.00.",
-    "Correct result: $7,720.00."
+    "10% of the first $12,000 = $1,200.",
+    "12% of the next $36,000 = $4,320.",
+    "22% of the remaining $10,000 = $2,200; total $7,720.",
+    "Correct result: $7,720."
    ]
   },
   {
@@ -9199,14 +9199,14 @@
     "correct": 3360,
     "unit": "USD"
    },
-   "prompt": "Hannah earns $45,000.00 in gross income with no pre-tax deductions. The course uses a $15,000 standard deduction and the course tax table (10% to $12,000, 12% to $48,000, 22% above). Hannah’s work: Hannah applied the tax table to $45,000.00 and got $5,160.00. What is the correct federal income tax?",
+   "prompt": "Hannah earns $45,000 in gross income with no pre-tax deductions. The course uses a $15,000 standard deduction and the course tax table (10% to $12,000, 12% to $48,000, 22% above). Hannah’s work: Hannah applied the tax table to $45,000 and got $5,160. What is the correct federal income tax?",
    "format": "short-answer",
-   "answer": "$3,360.00",
+   "answer": "$3,360",
    "solutionSteps": [
     "Mistake: Forgot to subtract the $15,000 standard deduction before using the tax table.",
-    "Taxable income = $45,000.00 − $15,000.00 = $30,000.00.",
-    "Apply the brackets to $30,000.00.",
-    "Correct result: $3,360.00."
+    "Taxable income = $45,000 − $15,000 = $30,000.",
+    "Apply the brackets to $30,000.",
+    "Correct result: $3,360."
    ],
    "numeric": {
     "value": 3360,

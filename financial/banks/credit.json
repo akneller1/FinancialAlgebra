@@ -8229,7 +8229,7 @@
     "correct": 101.31,
     "unit": "USD"
    },
-   "prompt": "Hannah’s card sets the minimum payment at 1% of the balance plus that month’s interest (at least $25). Balance $3,200.00, APR 25.99%. Hannah’s work: Minimum = 1% × $3,200.00 = $32.00. What mistake did Hannah make?",
+   "prompt": "Hannah’s card sets the minimum payment at 1% of the balance plus that month’s interest (at least $25.00). Balance $3,200.00, APR 25.99%. Hannah’s work: Minimum = 1% × $3,200.00 = $32.00. What mistake did Hannah make?",
    "format": "multiple-choice",
    "answer": "Left out the month’s interest from the minimum payment.",
    "options": [
@@ -8242,7 +8242,7 @@
      "correct": false
     },
     {
-     "text": "The minimum is always exactly $25.",
+     "text": "The minimum is always exactly $25.00.",
      "correct": false
     },
     {
@@ -8327,7 +8327,7 @@
     "correct": 27.99,
     "unit": "%"
    },
-   "prompt": "Zara has three cards: Card A $600.00 at 17.99%, Card B $2,400.00 at 27.99%, Card C $1,300.00 at 22.49%. Zara wants to use the avalanche method. Zara’s work: Pay extra on Card A first because it has the smallest balance. What mistake did Zara make?",
+   "prompt": "Zara has three cards: Card A $600 at 17.99%, Card B $2,400 at 27.99%, Card C $1,300 at 22.49%. Zara wants to use the avalanche method. Zara’s work: Pay extra on Card A first because it has the smallest balance. What mistake did Zara make?",
    "format": "multiple-choice",
    "answer": "Described the snowball method; the avalanche method pays the highest APR first (Card B).",
    "options": [
@@ -8381,14 +8381,14 @@
     "correct": 5460,
     "unit": "USD"
    },
-   "prompt": "Zara moves a $5,200.00 balance to a 0% intro card with a 5% balance-transfer fee. Zara’s work: New balance = $5,200.00. What is the new balance after the transfer?",
+   "prompt": "Zara moves a $5,200 balance to a 0% intro card with a 5% balance-transfer fee. Zara’s work: New balance = $5,200. What is the new balance after the transfer?",
    "format": "short-answer",
-   "answer": "$5,460.00",
+   "answer": "$5,460",
    "solutionSteps": [
     "Mistake: Ignored the balance-transfer fee, which is added to the new balance.",
-    "Fee = 5% × $5,200.00 = $260.00.",
-    "New balance = $5,200.00 + $260.00 = $5,460.00.",
-    "Correct result: $5,460.00."
+    "Fee = 5% × $5,200 = $260.",
+    "New balance = $5,200 + $260 = $5,460.",
+    "Correct result: $5,460."
    ],
    "numeric": {
     "value": 5460,
@@ -8423,7 +8423,7 @@
     "correct": 32.25,
     "unit": "%"
    },
-   "prompt": "Jordan has two cards: balance $480.00 on a $2,000.00 limit and balance $2,100.00 on a $6,000.00 limit. Jordan computes overall credit utilization. Jordan’s work: Utilization = $480.00 ÷ $2,000.00 + $2,100.00 ÷ $6,000.00 = 59%. What mistake did Jordan make?",
+   "prompt": "Jordan has two cards: balance $480 on a $2,000 limit and balance $2,100 on a $6,000 limit. Jordan computes overall credit utilization. Jordan’s work: Utilization = $480 ÷ $2,000 + $2,100 ÷ $6,000 = 59%. What mistake did Jordan make?",
    "format": "multiple-choice",
    "answer": "Added the two separate percentages; overall utilization is total balances ÷ total limits.",
    "options": [
@@ -8445,8 +8445,8 @@
     }
    ],
    "solutionSteps": [
-    "Total balances = $2,580.00; total limits = $8,000.00.",
-    "$2,580.00 ÷ $8,000.00 = 32.25%.",
+    "Total balances = $2,580; total limits = $8,000.",
+    "$2,580 ÷ $8,000 = 32.25%.",
     "Correct result: 32.25%."
    ]
   },
@@ -8478,14 +8478,14 @@
     "correct": 240,
     "unit": "USD"
    },
-   "prompt": "Noah bought a $1,800.00 laptop on credit and paid $85.00 per month for 24 months. Noah’s work: Cost of credit = $85.00 × 24 = $2,040.00. What was the cost of credit?",
+   "prompt": "Noah bought a $1,800 laptop on credit and paid $85 per month for 24 months. Noah’s work: Cost of credit = $85 × 24 = $2,040. What was the cost of credit?",
    "format": "short-answer",
-   "answer": "$240.00",
+   "answer": "$240",
    "solutionSteps": [
     "Mistake: Reported the total paid instead of the extra cost; cost of credit = total paid − price.",
-    "Total paid = $85.00 × 24 = $2,040.00.",
-    "Cost of credit = $2,040.00 − $1,800.00 = $240.00.",
-    "Correct result: $240.00."
+    "Total paid = $85 × 24 = $2,040.",
+    "Cost of credit = $2,040 − $1,800 = $240.",
+    "Correct result: $240."
    ],
    "numeric": {
     "value": 240,

@@ -5742,14 +5742,14 @@
     "correct": 18400,
     "unit": "USD"
    },
-   "prompt": "Sofia’s cost of attendance is $27,800.00. Aid offer: $9,400.00 in grants and $7,000.00 in federal loans. Sofia’s work: Net price = $27,800.00 − $9,400.00 − $7,000.00 = $11,400.00. What is the correct net price?",
+   "prompt": "Sofia’s cost of attendance is $27,800. Aid offer: $9,400 in grants and $7,000 in federal loans. Sofia’s work: Net price = $27,800 − $9,400 − $7,000 = $11,400. What is the correct net price?",
    "format": "short-answer",
-   "answer": "$18,400.00",
+   "answer": "$18,400",
    "solutionSteps": [
     "Mistake: Subtracted loans; loans must be repaid, so only grants lower the net price.",
     "Net price = cost − grants and scholarships.",
-    "$27,800.00 − $9,400.00 = $18,400.00.",
-    "Correct result: $18,400.00."
+    "$27,800 − $9,400 = $18,400.",
+    "Correct result: $18,400."
    ],
    "numeric": {
     "value": 18400,
@@ -5840,14 +5840,14 @@
     "correct": 6820,
     "unit": "USD"
    },
-   "prompt": "Zara borrows a $5,500.00 unsubsidized loan at 6% simple interest. Interest builds for 4 years in school and is then added to the balance. Zara’s work: Balance at graduation = $5,500.00. What is the balance at graduation?",
+   "prompt": "Zara borrows a $5,500 unsubsidized loan at 6% simple interest. Interest builds for 4 years in school and is then added to the balance. Zara’s work: Balance at graduation = $5,500. What is the balance at graduation?",
    "format": "short-answer",
-   "answer": "$6,820.00",
+   "answer": "$6,820",
    "solutionSteps": [
     "Mistake: Ignored interest that accrues during school on an unsubsidized loan.",
-    "Interest = $5,500.00 × 0.06 × 4 = $1,320.00.",
-    "Balance = $6,820.00.",
-    "Correct result: $6,820.00."
+    "Interest = $5,500 × 0.06 × 4 = $1,320.",
+    "Balance = $6,820.",
+    "Correct result: $6,820."
    ],
    "numeric": {
     "value": 6820,
@@ -5882,7 +5882,7 @@
     "correct": 630000,
     "unit": "USD"
    },
-   "prompt": "Amara compares two careers: $62,000.00 versus $41,000.00 per year over a 30-year career. Amara’s work: Difference over the career = $21,000.00. What mistake did Amara make?",
+   "prompt": "Amara compares two careers: $62,000 versus $41,000 per year over a 30-year career. Amara’s work: Difference over the career = $21,000. What mistake did Amara make?",
    "format": "multiple-choice",
    "answer": "Gave the one-year difference; multiply by the number of working years.",
    "options": [
@@ -5904,9 +5904,9 @@
     }
    ],
    "solutionSteps": [
-    "Yearly difference = $21,000.00.",
-    "× 30 years = $630,000.00.",
-    "Correct result: $630,000.00."
+    "Yearly difference = $21,000.",
+    "× 30 years = $630,000.",
+    "Correct result: $630,000."
    ]
   },
   {
@@ -5936,13 +5936,13 @@
     "correct": 280,
     "unit": "%"
    },
-   "prompt": "A certificate costs $25,000.00 and is expected to raise lifetime earnings by $95,000.00. Imani’s work: ROI = ($95,000.00 − $25,000.00) ÷ $95,000.00 = 73.68%. What is the correct ROI?",
+   "prompt": "A certificate costs $25,000 and is expected to raise lifetime earnings by $95,000. Imani’s work: ROI = ($95,000 − $25,000) ÷ $95,000 = 73.68%. What is the correct ROI?",
    "format": "short-answer",
    "answer": "280%",
    "solutionSteps": [
     "Mistake: Divided by the gain; ROI = (gain − cost) ÷ cost.",
-    "Net gain = $70,000.00.",
-    "ROI = $70,000.00 ÷ $25,000.00 = 280%.",
+    "Net gain = $70,000.",
+    "ROI = $70,000 ÷ $25,000 = 280%.",
     "Correct result: 280%."
    ],
    "numeric": {
@@ -5978,7 +5978,7 @@
     "correct": 4,
     "unit": "years"
    },
-   "prompt": "A program costs $36,000.00. Graduates earn $52,000.00 per year, which is $9,000.00 more than they earn now. Sofia’s work: Payback = $36,000.00 ÷ $52,000.00 = 0.69 years. What mistake did Sofia make?",
+   "prompt": "A program costs $36,000. Graduates earn $52,000 per year, which is $9,000 more than they earn now. Sofia’s work: Payback = $36,000 ÷ $52,000 = 0.69 years. What mistake did Sofia make?",
    "format": "multiple-choice",
    "answer": "Divided by the whole salary; payback uses the increase in earnings.",
    "options": [
@@ -6001,7 +6001,7 @@
    ],
    "solutionSteps": [
     "Payback = cost ÷ yearly increase.",
-    "$36,000.00 ÷ $9,000.00 = 4 years.",
+    "$36,000 ÷ $9,000 = 4 years.",
     "Correct result: 4 years."
    ]
   },
@@ -6032,12 +6032,12 @@
     "correct": 18,
     "unit": "count"
    },
-   "prompt": "A coding course costs $7,200.00 and raises Priya’s take-home pay by $400.00 per month. Priya’s work: Payback = $7,200.00 ÷ ($400.00 × 12 × 12) = 0.12 months. How many months does payback take?",
+   "prompt": "A coding course costs $7,200 and raises Priya’s take-home pay by $400 per month. Priya’s work: Payback = $7,200 ÷ ($400 × 12 × 12) = 0.12 months. How many months does payback take?",
    "format": "short-answer",
    "answer": "18",
    "solutionSteps": [
     "Mistake: Converted to years twice; months to pay back = cost ÷ monthly increase.",
-    "$7,200.00 ÷ $400.00 = 18 months.",
+    "$7,200 ÷ $400 = 18 months.",
     "Correct result: 18."
    ],
    "numeric": {
