@@ -13,25 +13,54 @@
  "skills": [
   {
    "id": "banking-skill-01",
-   "name": "Understand account fees"
+   "name": "Understand account fees",
+   "standards": [
+    "Saving 12-2: Interest rates and fees",
+    "Saving 12-5: Regulation of financial institutions"
+   ]
   },
   {
    "id": "banking-skill-02",
-   "name": "Calculate simple interest"
+   "name": "Calculate simple interest",
+   "standards": [
+    "Saving 12-2: Interest rates and fees"
+   ]
   },
   {
    "id": "banking-skill-03",
-   "name": "Compare savings products"
+   "name": "Compare savings products",
+   "standards": [
+    "Saving 12-1: Types of savings accounts",
+    "Saving 12-2: Interest rates and fees",
+    "Saving 12-4: Inflation and savings"
+   ]
   },
   {
    "id": "banking-skill-04",
-   "name": "Interpret bank statements"
+   "name": "Interpret bank statements",
+   "standards": [
+    "Spending 12-9: Financial record-keeping",
+    "Saving 12-3: Electronic and mobile payments"
+   ]
   },
   {
    "id": "banking-skill-05",
-   "name": "Spot scams and protect your identity"
+   "name": "Spot scams and protect your identity",
+   "standards": [
+    "Managing Risk 12-11: Identity theft and online risk",
+    "Spending 12-8: Consumer protection laws"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": []
+ },
  "vocab": [
   {
    "term": "Checking account",
@@ -2853,17 +2882,20 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = monthly fee × 12 + ATM fees per use × uses per month × 12 + overdraft fees.",
     "Monthly fees: $5.00 × 12 = $60.00.",
     "ATM: ($2.50 + $2.50) × 3 × 12 = $180.00.",
     "Overdrafts: 1 × $35.00 = $35.00.",
-    "Total = $275.00."
+    "Total = $275.00.",
+    "Spreadsheet or calculator: =(5.00*12)+((2.50+2.50)*3*12)+(1*35.00)",
+    "So the answer is $275.00; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
    "id": "fa-banking-s01-fee-annual-02",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "advanced",
+   "level": "standard",
    "family": "fee-annual",
    "type": "calculation",
    "activityTypes": [
@@ -2883,10 +2915,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = monthly fee × 12 + ATM fees per use × uses per month × 12 + overdraft fees.",
     "Monthly fees: $8.00 × 12 = $96.00.",
     "ATM: ($3.50 + $2.50) × 2 × 12 = $144.00.",
     "Overdrafts: 2 × $29.00 = $58.00.",
-    "Total = $298.00."
+    "Total = $298.00.",
+    "Spreadsheet or calculator: =(8.00*12)+((3.50+2.50)*2*12)+(2*29.00)",
+    "So the answer is $298.00; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -2913,10 +2948,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = monthly fee × 12 + ATM fees per use × uses per month × 12 + overdraft fees.",
     "Monthly fees: $15.00 × 12 = $180.00.",
     "ATM: ($2.50 + $2.00) × 4 × 12 = $216.00.",
     "Overdrafts: 0 × $29.00 = $0.00.",
-    "Total = $396.00."
+    "Total = $396.00.",
+    "Spreadsheet or calculator: =((2.50+2.00)*4*12)+(15.00*12)",
+    "So the answer is $396.00; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -2943,10 +2981,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = monthly fee × 12 + ATM fees per use × uses per month × 12 + overdraft fees.",
     "Monthly fees: $8.00 × 12 = $96.00.",
     "ATM: ($3.50 + $2.50) × 1 × 12 = $72.00.",
     "Overdrafts: 2 × $34.00 = $68.00.",
-    "Total = $236.00."
+    "Total = $236.00.",
+    "Spreadsheet or calculator: =(8.00*12)+((3.50+2.50)*1*12)+(2*34.00)",
+    "So the answer is $236.00; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -2973,10 +3014,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = monthly fee × 12 + ATM fees per use × uses per month × 12 + overdraft fees.",
     "Monthly fees: $8.00 × 12 = $96.00.",
     "ATM: ($3.50 + $2.50) × 1 × 12 = $72.00.",
     "Overdrafts: 3 × $35.00 = $105.00.",
-    "Total = $273.00."
+    "Total = $273.00.",
+    "Spreadsheet or calculator: =(8.00*12)+((3.50+2.50)*1*12)+(3*35.00)",
+    "So the answer is $273.00; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -3003,10 +3047,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = monthly fee × 12 + ATM fees per use × uses per month × 12 + overdraft fees.",
     "Monthly fees: $12.00 × 12 = $144.00.",
     "ATM: ($2.50 + $2.50) × 2 × 12 = $120.00.",
     "Overdrafts: 0 × $29.00 = $0.00.",
-    "Total = $264.00."
+    "Total = $264.00.",
+    "Spreadsheet or calculator: =((2.50+2.50)*2*12)+(12.00*12)",
+    "So the answer is $264.00; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -3031,6 +3078,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase, and each purchase that takes the balance below $0.00 adds the overdraft fee.",
     "Gas $38.50 → $16.50",
     "Bookstore $27.15 → balance below $0.00, fee $35.00 → −$45.65",
     "Coffee $5.25 → balance below $0.00, fee $35.00 → −$85.90",
@@ -3062,6 +3110,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase, and each purchase that takes the balance below $0.00 adds the overdraft fee.",
     "Groceries $46.80 → $48.20",
     "Streaming $15.99 → $32.21",
     "Phone bill $65.00 → balance below $0.00, fee $35.00 → −$67.79",
@@ -3093,6 +3142,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase, and each purchase that takes the balance below $0.00 adds the overdraft fee.",
     "Streaming $15.99 → $49.01",
     "Phone bill $65.00 → balance below $0.00, fee $32.00 → −$47.99",
     "Coffee $5.25 → balance below $0.00, fee $32.00 → −$85.24",
@@ -3124,12 +3174,14 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase, and each purchase that takes the balance below $0.00 adds the overdraft fee.",
     "Phone bill $65.00 → $55.00",
     "Streaming $15.99 → $39.01",
     "Bookstore $27.15 → $11.86",
     "Coffee $5.25 → $6.61",
     "Fees charged: 0 ($0.00).",
     "Ending balance: $6.61.",
+    "Spreadsheet or calculator: =11.86-5.25",
     "Declining overdraft coverage would have declined the card instead of charging fees."
    ]
   },
@@ -3155,6 +3207,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase, and each purchase that takes the balance below $0.00 adds the overdraft fee.",
     "Streaming $15.99 → $64.01",
     "Coffee $5.25 → $58.76",
     "Gas $38.50 → $20.26",
@@ -3186,6 +3239,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase, and each purchase that takes the balance below $0.00 adds the overdraft fee.",
     "Bookstore $27.15 → $72.85",
     "Streaming $15.99 → $56.86",
     "Phone bill $65.00 → balance below $0.00, fee $35.00 → −$43.14",
@@ -3651,9 +3705,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = P × r × t, with t in years (months ÷ 12); balance = P + I.",
     "t = 9 ÷ 12 = 0.75 years.",
     "I = $500.00 × 0.02 × 0.75 = $7.50.",
-    "Balance = $507.50."
+    "Balance = $507.50.",
+    "Spreadsheet or calculator: =500.00*0.02*0.75",
+    "So the answer is $7.50 interest; balance $507.50; simple interest grows only on the original deposit."
    ],
    "misconceptions": [
     "Using months as t."
@@ -3683,9 +3740,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = P × r × t, with t in years (months ÷ 12); balance = P + I.",
     "t = 30 ÷ 12 = 2.5 years.",
     "I = $5,750.00 × 0.025 × 2.5 = $359.38.",
-    "Balance = $6,109.38."
+    "Balance = $6,109.38.",
+    "Spreadsheet or calculator: =5750.00*0.025*2.5",
+    "So the answer is $359.38 interest; balance $6,109.38; simple interest grows only on the original deposit."
    ],
    "misconceptions": [
     "Using months as t."
@@ -3715,9 +3775,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = P × r × t, with t in years (months ÷ 12); balance = P + I.",
     "t = 9 ÷ 12 = 0.75 years.",
     "I = $1,000.00 × 0.025 × 0.75 = $18.75.",
-    "Balance = $1,018.75."
+    "Balance = $1,018.75.",
+    "Spreadsheet or calculator: =1000.00*0.025*0.75",
+    "So the answer is $18.75 interest; balance $1,018.75; simple interest grows only on the original deposit."
    ],
    "misconceptions": [
     "Using months as t."
@@ -3747,9 +3810,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = P × r × t, with t in years (months ÷ 12); balance = P + I.",
     "t = 9 ÷ 12 = 0.75 years.",
     "I = $1,250.00 × 0.04 × 0.75 = $37.50.",
-    "Balance = $1,287.50."
+    "Balance = $1,287.50.",
+    "Spreadsheet or calculator: =1250.00*0.04*0.75",
+    "So the answer is $37.50 interest; balance $1,287.50; simple interest grows only on the original deposit."
    ],
    "misconceptions": [
     "Using months as t."
@@ -3779,9 +3845,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = P × r × t, with t in years (months ÷ 12); balance = P + I.",
     "t = 30 ÷ 12 = 2.5 years.",
     "I = $1,000 × 0.04 × 2.5 = $100.",
-    "Balance = $1,100."
+    "Balance = $1,100.",
+    "Spreadsheet or calculator: =1000*0.04*2.5",
+    "So the answer is $100 interest; balance $1,100; simple interest grows only on the original deposit."
    ],
    "misconceptions": [
     "Using months as t."
@@ -3811,9 +3880,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = P × r × t, with t in years (months ÷ 12); balance = P + I.",
     "t = 24 ÷ 12 = 2 years.",
     "I = $4,750 × 0.02 × 2 = $190.",
-    "Balance = $4,940."
+    "Balance = $4,940.",
+    "Spreadsheet or calculator: =4750*0.02*2",
+    "So the answer is $190 interest; balance $4,940; simple interest grows only on the original deposit."
    ],
    "misconceptions": [
     "Using months as t."
@@ -3843,9 +3915,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: I = P × r × t, with t in years (months ÷ 12); balance = P + I.",
     "t = 30 ÷ 12 = 2.5 years.",
     "I = $3,500.00 × 0.035 × 2.5 = $306.25.",
-    "Balance = $3,806.25."
+    "Balance = $3,806.25.",
+    "Spreadsheet or calculator: =3500.00*0.035*2.5",
+    "So the answer is $306.25 interest; balance $3,806.25; simple interest grows only on the original deposit."
    ],
    "misconceptions": [
     "Using months as t."
@@ -3875,8 +3950,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Start from I = Prt and solve for the unknown.",
     "Start from I = Prt and solve for the unknown.",
-    "r = I ÷ (Pt) = $60 ÷ ($1,500 × 2) = 0.02 = 2%."
+    "r = I ÷ (Pt) = $60 ÷ ($1,500 × 2) = 0.02 = 2%.",
+    "Spreadsheet or calculator: =60/(1500*2) (then format as a percent)",
+    "So the answer is 2%; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -3903,8 +3981,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Start from I = Prt and solve for the unknown.",
     "Start from I = Prt and solve for the unknown.",
-    "r = I ÷ (Pt) = $420 ÷ ($3,500 × 3) = 0.04 = 4%."
+    "r = I ÷ (Pt) = $420 ÷ ($3,500 × 3) = 0.04 = 4%.",
+    "Spreadsheet or calculator: =420/(3500*3) (then format as a percent)",
+    "So the answer is 4%; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -3931,8 +4012,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Start from I = Prt and solve for the unknown.",
     "Start from I = Prt and solve for the unknown.",
-    "P = I ÷ (rt) = $120 ÷ (0.02 × 3) = $2,000."
+    "P = I ÷ (rt) = $120 ÷ (0.02 × 3) = $2,000.",
+    "Spreadsheet or calculator: =120/(0.02*3)",
+    "So the answer is $2,000; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -3959,8 +4043,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Start from I = Prt and solve for the unknown.",
     "Start from I = Prt and solve for the unknown.",
-    "t = I ÷ (Pr) = $360 ÷ ($3,000 × 0.04) = 3 years."
+    "t = I ÷ (Pr) = $360 ÷ ($3,000 × 0.04) = 3 years.",
+    "Spreadsheet or calculator: =360/(3000*0.04)",
+    "So the answer is 3; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -3987,8 +4074,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: Start from I = Prt and solve for the unknown.",
     "Start from I = Prt and solve for the unknown.",
-    "r = I ÷ (Pt) = $360 ÷ ($4,500 × 2) = 0.04 = 4%."
+    "r = I ÷ (Pt) = $360 ÷ ($4,500 × 2) = 0.04 = 4%.",
+    "Spreadsheet or calculator: =360/(4500*2) (then format as a percent)",
+    "So the answer is 4%; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -4015,8 +4105,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Start from I = Prt and solve for the unknown.",
     "Start from I = Prt and solve for the unknown.",
-    "P = I ÷ (rt) = $250 ÷ (0.025 × 2) = $5,000."
+    "P = I ÷ (rt) = $250 ÷ (0.025 × 2) = $5,000.",
+    "Spreadsheet or calculator: =250/(0.025*2)",
+    "So the answer is $5,000; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -4041,9 +4134,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest kept = P × r × t earned − penalty (P × r × months of penalty ÷ 12).",
     "Interest earned in 6 months: $3,000 × 0.04 × 0.5 = $60.",
     "Penalty: $3,000 × 0.04 × 0.25 = $30.",
     "Kept = $30 (vs. $180 if held to maturity).",
+    "Spreadsheet or calculator: =3000*0.04*0.25",
     "CDs trade liquidity for a fixed rate."
    ]
   },
@@ -4069,9 +4164,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest kept = P × r × t earned − penalty (P × r × months of penalty ÷ 12).",
     "Interest earned in 6 months: $5,500.00 × 0.0425 × 0.5 = $116.88.",
     "Penalty: $5,500.00 × 0.0425 × 0.25 = $58.44.",
     "Kept = $58.44 (vs. $350.63 if held to maturity).",
+    "Spreadsheet or calculator: =5500.00*0.0425*0.25",
     "CDs trade liquidity for a fixed rate."
    ]
   },
@@ -4097,9 +4194,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest kept = P × r × t earned − penalty (P × r × months of penalty ÷ 12).",
     "Interest earned in 6 months: $1,500.00 × 0.0425 × 0.5 = $31.88.",
     "Penalty: $1,500.00 × 0.0425 × 0.25 = $15.94.",
     "Kept = $15.94 (vs. $95.63 if held to maturity).",
+    "Spreadsheet or calculator: =1500.00*0.0425*0.25",
     "CDs trade liquidity for a fixed rate."
    ]
   },
@@ -4125,9 +4224,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest kept = P × r × t earned − penalty (P × r × months of penalty ÷ 12).",
     "Interest earned in 9 months: $3,500.00 × 0.0375 × 0.75 = $98.44.",
     "Penalty: $3,500.00 × 0.0375 × 0.25 = $32.81.",
     "Kept = $65.63 (vs. $131.25 if held to maturity).",
+    "Spreadsheet or calculator: =(3500.00*0.0375*0.75)-(3500.00*0.0375*0.25)",
     "CDs trade liquidity for a fixed rate."
    ]
   },
@@ -4153,9 +4254,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest kept = P × r × t earned − penalty (P × r × months of penalty ÷ 12).",
     "Interest earned in 9 months: $2,500 × 0.04 × 0.75 = $75.",
     "Penalty: $2,500 × 0.04 × 0.25 = $25.",
     "Kept = $50 (vs. $150 if held to maturity).",
+    "Spreadsheet or calculator: =(2500*0.04*0.75)-(2500*0.04*0.25)",
     "CDs trade liquidity for a fixed rate."
    ]
   },
@@ -4183,8 +4286,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.03 || 4]])^4 − 1.",
     "= 3.03%.",
+    "Spreadsheet or calculator: =(1+0.03/4)^4-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4212,8 +4317,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.035 || 12]])^12 − 1.",
     "= 3.56%.",
+    "Spreadsheet or calculator: =(1+0.035/12)^12-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4241,8 +4348,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.04 || 365]])^365 − 1.",
     "= 4.08%.",
+    "Spreadsheet or calculator: =(1+0.04/365)^365-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4270,8 +4379,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.035 || 4]])^4 − 1.",
     "= 3.55%.",
+    "Spreadsheet or calculator: =(1+0.035/4)^4-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4299,8 +4410,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.03 || 365]])^365 − 1.",
     "= 3.05%.",
+    "Spreadsheet or calculator: =(1+0.03/365)^365-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4328,8 +4441,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.04 || 12]])^12 − 1.",
     "= 4.07%.",
+    "Spreadsheet or calculator: =(1+0.04/12)^12-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4357,8 +4472,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.05 || 365]])^365 − 1.",
     "= 5.13%.",
+    "Spreadsheet or calculator: =(1+0.05/365)^365-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4386,8 +4503,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: APY = (1 + r ÷ n)^n − 1, with n compounding periods per year.",
     "APY = (1 + [[0.05 || 4]])^4 − 1.",
     "= 5.09%.",
+    "Spreadsheet or calculator: =(1+0.05/4)^4-1 (then format as a percent)",
     "APY is higher than the stated rate because of compounding."
    ]
   },
@@ -4413,9 +4532,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $2,500.00(1 + [[0.045 || 12]])^36 = $2,860.62.",
     "Metro National: $2,500.00(1 + [[0.01 || 12]])^36 = $2,576.10.",
-    "Difference = $284.52."
+    "Difference = $284.52.",
+    "Spreadsheet or calculator: =(2500.00*(1+0.045/12)^36)-(2500.00*(1+0.01/12)^36)",
+    "So the answer is $284.52; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4440,9 +4562,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $4,500.00(1 + [[0.035 || 12]])^36 = $4,997.43.",
     "Metro National: $4,500.00(1 + [[0.005 || 12]])^36 = $4,567.99.",
-    "Difference = $429.44."
+    "Difference = $429.44.",
+    "Spreadsheet or calculator: =(4500.00*(1+0.035/12)^36)-(4500.00*(1+0.005/12)^36)",
+    "So the answer is $429.44; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4467,9 +4592,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $1,500.00(1 + [[0.035 || 12]])^36 = $1,665.81.",
     "Metro National: $1,500.00(1 + [[0.01 || 12]])^36 = $1,545.66.",
-    "Difference = $120.15."
+    "Difference = $120.15.",
+    "Spreadsheet or calculator: =(1500.00*(1+0.035/12)^36)-(1500.00*(1+0.01/12)^36)",
+    "So the answer is $120.15; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4494,9 +4622,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $4,000.00(1 + [[0.045 || 12]])^36 = $4,576.99.",
     "Metro National: $4,000.00(1 + [[0.0001 || 12]])^36 = $4,001.20.",
-    "Difference = $575.79."
+    "Difference = $575.79.",
+    "Spreadsheet or calculator: =(4000.00*(1+0.045/12)^36)-(4000.00*(1+0.0001/12)^36)",
+    "So the answer is $575.79; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4521,9 +4652,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $4,000.00(1 + [[0.035 || 12]])^60 = $4,763.77.",
     "Metro National: $4,000.00(1 + [[0.0001 || 12]])^60 = $4,002.00.",
-    "Difference = $761.77."
+    "Difference = $761.77.",
+    "Spreadsheet or calculator: =(4000.00*(1+0.035/12)^60)-(4000.00*(1+0.0001/12)^60)",
+    "So the answer is $761.77; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4548,9 +4682,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $2,000.00(1 + [[0.04 || 12]])^96 = $2,752.79.",
     "Metro National: $2,000.00(1 + [[0.005 || 12]])^96 = $2,081.60.",
-    "Difference = $671.19."
+    "Difference = $671.19.",
+    "Spreadsheet or calculator: =(2000.00*(1+0.04/12)^96)-(2000.00*(1+0.005/12)^96)",
+    "So the answer is $671.19; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4575,9 +4712,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $1,000.00(1 + [[0.04 || 12]])^60 = $1,221.00.",
     "Metro National: $1,000.00(1 + [[0.005 || 12]])^60 = $1,025.31.",
-    "Difference = $195.69."
+    "Difference = $195.69.",
+    "Spreadsheet or calculator: =(1000.00*(1+0.04/12)^60)-(1000.00*(1+0.005/12)^60)",
+    "So the answer is $195.69; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4602,9 +4742,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt) for each account; difference = A₁ − A₂.",
     "Clearwater Online: $3,000.00(1 + [[0.04 || 12]])^96 = $4,129.19.",
     "Metro National: $3,000.00(1 + [[0.005 || 12]])^96 = $3,122.41.",
-    "Difference = $1,006.78."
+    "Difference = $1,006.78.",
+    "Spreadsheet or calculator: =(3000.00*(1+0.04/12)^96)-(3000.00*(1+0.005/12)^96)",
+    "So the answer is $1,006.78; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -4771,7 +4914,7 @@
    "id": "fa-banking-s03-product-choose-05",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "advanced",
+   "level": "standard",
    "family": "product-choose",
    "type": "comparison",
    "activityTypes": [
@@ -4896,9 +5039,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ending balance = beginning balance + deposits − withdrawals and other debits.",
     "Beginning $880.00 + deposits $2,290.00",
     "+ other items −$1,073.73",
-    "Ending = $2,096.27."
+    "Ending = $2,096.27.",
+    "So the answer is $2,096.27; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -4995,9 +5140,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ending balance = beginning balance + deposits − withdrawals and other debits.",
     "Beginning $830.00 + deposits $3,020.00",
     "+ other items −$862.89",
-    "Ending = $2,987.11."
+    "Ending = $2,987.11.",
+    "So the answer is $2,987.11; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5094,8 +5241,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ending balance = beginning balance + deposits − withdrawals and other debits.",
     "Fees: Out-of-network ATM fee $3.00.",
-    "Total = $3.00."
+    "Total = $3.00.",
+    "So the answer is $3.00; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5192,8 +5341,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ending balance = beginning balance + deposits − withdrawals and other debits.",
     "Fees: Monthly service fee $12.00.",
-    "Total = $12.00."
+    "Total = $12.00.",
+    "So the answer is $12.00; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5290,8 +5441,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ending balance = beginning balance + deposits − withdrawals and other debits.",
     "Fees: Monthly service fee $8.00.",
-    "Total = $8.00."
+    "Total = $8.00.",
+    "So the answer is $8.00; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5393,8 +5546,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: ending balance = beginning balance + deposits − withdrawals and other debits.",
     "Fees: Monthly service fee $12.00, Out-of-network ATM fee $5.50.",
-    "Total = $17.50."
+    "Total = $17.50.",
+    "So the answer is $17.50; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5421,10 +5576,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $2,100.34.",
     "Subtract outstanding items: $280.00 + $44.00.",
     "Add the deposit in transit: $400.00.",
-    "Adjusted balance = $2,176.34."
+    "Adjusted balance = $2,176.34.",
+    "So the answer is $2,176.34; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5451,10 +5608,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $1,114.57.",
     "Subtract outstanding items: $290.00 + $15.00.",
     "Add the deposit in transit: $250.00.",
-    "Adjusted balance = $1,059.57."
+    "Adjusted balance = $1,059.57.",
+    "So the answer is $1,059.57; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5481,10 +5640,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $1,510.30.",
     "Subtract outstanding items: $195.00 + $72.00.",
     "Add the deposit in transit: $250.00.",
-    "Adjusted balance = $1,493.30."
+    "Adjusted balance = $1,493.30.",
+    "So the answer is $1,493.30; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5511,10 +5672,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $2,291.39.",
     "Subtract outstanding items: $55.00 + $45.00.",
     "Add the deposit in transit: $400.00.",
-    "Adjusted balance = $2,591.39."
+    "Adjusted balance = $2,591.39.",
+    "So the answer is $2,591.39; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5541,10 +5704,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $1,138.30.",
     "Subtract outstanding items: $70.00 + $37.00.",
     "Add the deposit in transit: $400.00.",
-    "Adjusted balance = $1,431.30."
+    "Adjusted balance = $1,431.30.",
+    "So the answer is $1,431.30; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5571,10 +5736,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $2,275.25.",
     "Subtract outstanding items: $180.00 + $20.00.",
     "Add the deposit in transit: $400.00.",
-    "Adjusted balance = $2,475.25."
+    "Adjusted balance = $2,475.25.",
+    "So the answer is $2,475.25; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5601,10 +5768,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $2,041.42.",
     "Subtract outstanding items: $145.00 + $88.00.",
     "Add the deposit in transit: $250.00.",
-    "Adjusted balance = $2,058.42."
+    "Adjusted balance = $2,058.42.",
+    "So the answer is $2,058.42; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -5631,10 +5800,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: adjusted balance = statement balance − outstanding checks and payments + deposits in transit.",
     "Start with $1,506.86.",
     "Subtract outstanding items: $200.00 + $69.00.",
     "No deposits in transit.",
-    "Adjusted balance = $1,237.86."
+    "Adjusted balance = $1,237.86.",
+    "So the answer is $1,237.86; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -6087,8 +6258,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase − overdraft fee.",
     "$99.48 − $179.66 = −$80.18.",
     "Subtract the fee: −$80.18 − $35.00 = −$115.18.",
+    "Spreadsheet or calculator: =(99.48-179.66)-35.00",
     "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
    ]
   },
@@ -6116,8 +6289,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase − overdraft fee.",
     "$249.15 − $300.42 = −$51.27.",
     "Subtract the fee: −$51.27 − $29.00 = −$80.27.",
+    "Spreadsheet or calculator: =(249.15-300.42)-29.00",
     "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
    ]
   },
@@ -6145,8 +6320,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase − overdraft fee.",
     "$156.41 − $200.99 = −$44.58.",
     "Subtract the fee: −$44.58 − $29.00 = −$73.58.",
+    "Spreadsheet or calculator: =(156.41-200.99)-29.00",
     "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
    ]
   },
@@ -6174,8 +6351,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase − overdraft fee.",
     "$234.89 − $295.30 = −$60.41.",
     "Subtract the fee: −$60.41 − $35.00 = −$95.41.",
+    "Spreadsheet or calculator: =(234.89-295.30)-35.00",
     "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
    ]
   },
@@ -6203,8 +6382,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase − overdraft fee.",
     "$134.18 − $212.30 = −$78.12.",
     "Subtract the fee: −$78.12 − $35.00 = −$113.12.",
+    "Spreadsheet or calculator: =(134.18-212.30)-35.00",
     "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
    ]
   },
@@ -6232,8 +6413,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase − overdraft fee.",
     "$201.04 − $253.78 = −$52.74.",
     "Subtract the fee: −$52.74 − $35.00 = −$87.74.",
+    "Spreadsheet or calculator: =(201.04-253.78)-35.00",
     "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
    ]
   },
@@ -6261,8 +6444,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new balance = balance − purchase − overdraft fee.",
     "$223.81 − $278.01 = −$54.20.",
     "Subtract the fee: −$54.20 − $35.00 = −$89.20.",
+    "Spreadsheet or calculator: =(223.81-278.01)-35.00",
     "A negative balance means the account owes the bank; turning off overdraft coverage would have declined the purchase."
    ]
   },
@@ -6290,8 +6475,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total fees = months below the minimum × monthly fee.",
     "Months below $500: 1.",
     "1 × $12 = $12.",
+    "Spreadsheet or calculator: =1*12",
     "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
    ]
   },
@@ -6319,8 +6506,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total fees = months below the minimum × monthly fee.",
     "Months below $500: 4.",
     "4 × $12 = $48.",
+    "Spreadsheet or calculator: =4*12",
     "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
    ]
   },
@@ -6348,8 +6537,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total fees = months below the minimum × monthly fee.",
     "Months below $1,500: 2.",
     "2 × $12 = $24.",
+    "Spreadsheet or calculator: =2*12",
     "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
    ]
   },
@@ -6377,8 +6568,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total fees = months below the minimum × monthly fee.",
     "Months below $1,000: 3.",
     "3 × $12 = $36.",
+    "Spreadsheet or calculator: =3*12",
     "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
    ]
   },
@@ -6406,8 +6599,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total fees = months below the minimum × monthly fee.",
     "Months below $1,500: 1.",
     "1 × $8 = $8.",
+    "Spreadsheet or calculator: =1*8",
     "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
    ]
   },
@@ -6435,8 +6630,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total fees = months below the minimum × monthly fee.",
     "Months below $500: 3.",
     "3 × $8 = $24.",
+    "Spreadsheet or calculator: =3*8",
     "Keeping a cushion above the minimum, or choosing a no-fee account, avoids the charge."
    ]
   },
@@ -6464,8 +6661,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so r = I ÷ (P × t).",
     "r = $375 ÷ ($7,500 × 2) = 0.025.",
+    "Spreadsheet or calculator: =375/(7500*2) (then format as a percent)",
     "As a percent: 2.5%."
    ]
   },
@@ -6493,8 +6692,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so r = I ÷ (P × t).",
     "r = $420 ÷ ($7,000 × 2) = 0.030.",
+    "Spreadsheet or calculator: =420/(7000*2) (then format as a percent)",
     "As a percent: 3%."
    ]
   },
@@ -6522,8 +6723,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so r = I ÷ (P × t).",
     "r = $210 ÷ ($2,100 × 5) = 0.020.",
+    "Spreadsheet or calculator: =210/(2100*5) (then format as a percent)",
     "As a percent: 2%."
    ]
   },
@@ -6551,8 +6754,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so r = I ÷ (P × t).",
     "r = $910 ÷ ($5,200 × 5) = 0.035.",
+    "Spreadsheet or calculator: =910/(5200*5) (then format as a percent)",
     "As a percent: 3.5%."
    ]
   },
@@ -6580,8 +6785,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so r = I ÷ (P × t).",
     "r = $1,540 ÷ ($7,700 × 5) = 0.040.",
+    "Spreadsheet or calculator: =1540/(7700*5) (then format as a percent)",
     "As a percent: 4%."
    ]
   },
@@ -6609,8 +6816,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so r = I ÷ (P × t).",
     "r = $555 ÷ ($3,700 × 5) = 0.030.",
+    "Spreadsheet or calculator: =555/(3700*5) (then format as a percent)",
     "As a percent: 3%."
    ]
   },
@@ -6638,8 +6847,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so r = I ÷ (P × t).",
     "r = $664 ÷ ($8,300 × 4) = 0.020.",
+    "Spreadsheet or calculator: =664/(8300*4) (then format as a percent)",
     "As a percent: 2%."
    ]
   },
@@ -6665,8 +6876,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P(1 + r ÷ 12)^12 − P for a monthly-compounded APR; interest = P × APY when the APY is given.",
     "A: $7,500.00 × (1 + 0.048/12)¹² − $7,500.00 = $368.03.",
     "B: $7,500.00 × 0.0475 = $356.25 (APY already includes compounding).",
+    "Spreadsheet or calculator: =(7500.00*(1+0.048/12)^12-7500.00)-(7500.00*0.0475)",
     "Account A earns $11.78 more. Compare savings accounts using APY."
    ]
   },
@@ -6692,8 +6905,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P(1 + r ÷ 12)^12 − P for a monthly-compounded APR; interest = P × APY when the APY is given.",
     "A: $4,000.00 × (1 + 0.048/12)¹² − $4,000.00 = $196.28.",
     "B: $4,000.00 × 0.047 = $188.00 (APY already includes compounding).",
+    "Spreadsheet or calculator: =(4000.00*(1+0.048/12)^12-4000.00)-(4000.00*0.047)",
     "Account A earns $8.28 more. Compare savings accounts using APY."
    ]
   },
@@ -6719,8 +6934,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P(1 + r ÷ 12)^12 − P for a monthly-compounded APR; interest = P × APY when the APY is given.",
     "A: $7,000.00 × (1 + 0.048/12)¹² − $7,000.00 = $343.49.",
     "B: $7,000.00 × 0.0465 = $325.50 (APY already includes compounding).",
+    "Spreadsheet or calculator: =(7000.00*(1+0.048/12)^12-7000.00)-(7000.00*0.0465)",
     "Account A earns $17.99 more. Compare savings accounts using APY."
    ]
   },
@@ -6746,8 +6963,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P(1 + r ÷ 12)^12 − P for a monthly-compounded APR; interest = P × APY when the APY is given.",
     "A: $11,000.00 × (1 + 0.042/12)¹² − $11,000.00 = $471.00.",
     "B: $11,000.00 × 0.0405 = $445.50 (APY already includes compounding).",
+    "Spreadsheet or calculator: =(11000.00*(1+0.042/12)^12-11000.00)-(11000.00*0.0405)",
     "Account A earns $25.50 more. Compare savings accounts using APY."
    ]
   },
@@ -6773,8 +6992,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P(1 + r ÷ 12)^12 − P for a monthly-compounded APR; interest = P × APY when the APY is given.",
     "A: $5,500.00 × (1 + 0.042/12)¹² − $5,500.00 = $235.50.",
     "B: $5,500.00 × 0.041 = $225.50 (APY already includes compounding).",
+    "Spreadsheet or calculator: =(5500.00*(1+0.042/12)^12-5500.00)-(5500.00*0.041)",
     "Account A earns $10.00 more. Compare savings accounts using APY."
    ]
   },
@@ -6800,8 +7021,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P(1 + r ÷ 12)^12 − P for a monthly-compounded APR; interest = P × APY when the APY is given.",
     "A: $4,000.00 × (1 + 0.048/12)¹² − $4,000.00 = $196.28.",
     "B: $4,000.00 × 0.047 = $188.00 (APY already includes compounding).",
+    "Spreadsheet or calculator: =(4000.00*(1+0.048/12)^12-4000.00)-(4000.00*0.047)",
     "Account A earns $8.28 more. Compare savings accounts using APY."
    ]
   },
@@ -6827,8 +7050,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = P(1 + r ÷ 12)^12 − P for a monthly-compounded APR; interest = P × APY when the APY is given.",
     "A: $11,000.00 × (1 + 0.045/12)¹² − $11,000.00 = $505.34.",
     "B: $11,000.00 × 0.044 = $484.00 (APY already includes compounding).",
+    "Spreadsheet or calculator: =(11000.00*(1+0.045/12)^12-11000.00)-(11000.00*0.044)",
     "Account A earns $21.34 more. Compare savings accounts using APY."
    ]
   },
@@ -6854,8 +7079,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "$676.07 + $129.16 − $41.70 − $120.02 = $643.51.",
+    "Spreadsheet or calculator: =676.07+129.16-41.70-120.02",
     "This should match the balance in the check register."
    ]
   },
@@ -6881,8 +7108,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "$681.58 + $425.73 − $175.49 − $132.83 = $798.99.",
+    "Spreadsheet or calculator: =681.58+425.73-175.49-132.83",
     "This should match the balance in the check register."
    ]
   },
@@ -6908,8 +7137,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "$1,579.03 + $387.99 − $55.82 − $174.51 = $1,736.69.",
+    "Spreadsheet or calculator: =1579.03+387.99-55.82-174.51",
     "This should match the balance in the check register."
    ]
   },
@@ -6935,8 +7166,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "$1,741.36 + $238.00 − $39.98 − $118.92 = $1,820.46.",
+    "Spreadsheet or calculator: =1741.36+238.00-39.98-118.92",
     "This should match the balance in the check register."
    ]
   },
@@ -6962,8 +7195,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "$1,004.90 + $477.31 − $73.83 − $122.44 = $1,285.94.",
+    "Spreadsheet or calculator: =1004.90+477.31-73.83-122.44",
     "This should match the balance in the check register."
    ]
   },
@@ -6989,8 +7224,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "$2,049.94 + $247.87 − $162.18 − $146.75 = $1,988.88.",
+    "Spreadsheet or calculator: =2049.94+247.87-162.18-146.75",
     "This should match the balance in the check register."
    ]
   },
@@ -7016,8 +7253,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "Adjusted balance = statement balance + deposits in transit − outstanding checks.",
     "$2,156.76 + $248.36 − $32.62 − $45.89 = $2,326.61.",
+    "Spreadsheet or calculator: =2156.76+248.36-32.62-45.89",
     "This should match the balance in the check register."
    ]
   },
@@ -7045,8 +7284,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = money sent back + bank fee (the fake check is reversed).",
     "Amount sent back = $1,980 − $230 = $1,750.",
     "The fake check is reversed, so that money was his own. Add the fee: $1,750 + $15 = $1,765.",
+    "Spreadsheet or calculator: =1750+15",
     "Never accept overpayment and send money back; a legitimate buyer pays the exact price."
    ]
   },
@@ -7074,8 +7315,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = money sent back + bank fee (the fake check is reversed).",
     "Amount sent back = $2,020 − $220 = $1,800.",
     "The fake check is reversed, so that money was his own. Add the fee: $1,800 + $35 = $1,835.",
+    "Spreadsheet or calculator: =1800+35",
     "Never accept overpayment and send money back; a legitimate buyer pays the exact price."
    ]
   },
@@ -7103,8 +7346,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = money sent back + bank fee (the fake check is reversed).",
     "Amount sent back = $2,090 − $440 = $1,650.",
     "The fake check is reversed, so that money was his own. Add the fee: $1,650 + $15 = $1,665.",
+    "Spreadsheet or calculator: =1650+15",
     "Never accept overpayment and send money back; a legitimate buyer pays the exact price."
    ]
   },
@@ -7132,8 +7377,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = money sent back + bank fee (the fake check is reversed).",
     "Amount sent back = $2,250 − $250 = $2,000.",
     "The fake check is reversed, so that money was her own. Add the fee: $2,000 + $25 = $2,025.",
+    "Spreadsheet or calculator: =2000+25",
     "Never accept overpayment and send money back; a legitimate buyer pays the exact price."
    ]
   },
@@ -7161,8 +7408,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = money sent back + bank fee (the fake check is reversed).",
     "Amount sent back = $1,980 − $480 = $1,500.",
     "The fake check is reversed, so that money was her own. Add the fee: $1,500 + $15 = $1,515.",
+    "Spreadsheet or calculator: =1500+15",
     "Never accept overpayment and send money back; a legitimate buyer pays the exact price."
    ]
   },
@@ -7190,8 +7439,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = money sent back + bank fee (the fake check is reversed).",
     "Amount sent back = $1,160 − $310 = $850.",
     "The fake check is reversed, so that money was his own. Add the fee: $850 + $15 = $865.",
+    "Spreadsheet or calculator: =850+15",
     "Never accept overpayment and send money back; a legitimate buyer pays the exact price."
    ]
   },
@@ -7219,8 +7470,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = money sent back + bank fee (the fake check is reversed).",
     "Amount sent back = $1,990 − $190 = $1,800.",
     "The fake check is reversed, so that money was her own. Add the fee: $1,800 + $25 = $1,825.",
+    "Spreadsheet or calculator: =1800+25",
     "Never accept overpayment and send money back; a legitimate buyer pays the exact price."
    ]
   },
@@ -7248,6 +7501,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = the smaller of the fraud amount and the liability limit for when the card was reported.",
     "Reported within two business days: limit $50.",
     "Loss is the smaller of $720 and $50 = $50.",
     "Report a lost card immediately; credit cards cap liability at $50 regardless."
@@ -7277,6 +7531,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = the smaller of the fraud amount and the liability limit for when the card was reported.",
     "Reported within two business days: limit $50.",
     "Loss is the smaller of $1,180 and $50 = $50.",
     "Report a lost card immediately; credit cards cap liability at $50 regardless."
@@ -7306,6 +7561,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = the smaller of the fraud amount and the liability limit for when the card was reported.",
     "Reported within two business days: limit $50.",
     "Loss is the smaller of $970 and $50 = $50.",
     "Report a lost card immediately; credit cards cap liability at $50 regardless."
@@ -7335,6 +7591,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = the smaller of the fraud amount and the liability limit for when the card was reported.",
     "Reported after two business days but within 60 days: limit $500.",
     "Loss is the smaller of $840 and $500 = $500.",
     "Report a lost card immediately; credit cards cap liability at $50 regardless."
@@ -7364,6 +7621,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = the smaller of the fraud amount and the liability limit for when the card was reported.",
     "Reported after two business days but within 60 days: limit $500.",
     "Loss is the smaller of $820 and $500 = $500.",
     "Report a lost card immediately; credit cards cap liability at $50 regardless."
@@ -7393,6 +7651,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = the smaller of the fraud amount and the liability limit for when the card was reported.",
     "Reported after two business days but within 60 days: limit $500.",
     "Loss is the smaller of $670 and $500 = $500.",
     "Report a lost card immediately; credit cards cap liability at $50 regardless."
@@ -7422,6 +7681,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: loss = the smaller of the fraud amount and the liability limit for when the card was reported.",
     "Reported after two business days but within 60 days: limit $500.",
     "Loss is the smaller of $1,600 and $500 = $500.",
     "Report a lost card immediately; credit cards cap liability at $50 regardless."
@@ -7449,9 +7709,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = debit-card liability − credit-card liability (each = the smaller of the loss and its limit).",
     "Debit: smaller of $870 and $500 = $500.",
     "Credit: smaller of $870 and $50 = $50.",
-    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated."
+    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated.",
+    "Spreadsheet or calculator: =500-50",
+    "So the answer is $450; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -7476,9 +7739,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = debit-card liability − credit-card liability (each = the smaller of the loss and its limit).",
     "Debit: smaller of $1,820 and $500 = $500.",
     "Credit: smaller of $1,820 and $50 = $50.",
-    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated."
+    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated.",
+    "Spreadsheet or calculator: =500-50",
+    "So the answer is $450; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -7503,9 +7769,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = debit-card liability − credit-card liability (each = the smaller of the loss and its limit).",
     "Debit: smaller of $1,130 and $500 = $500.",
     "Credit: smaller of $1,130 and $50 = $50.",
-    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated."
+    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated.",
+    "Spreadsheet or calculator: =500-50",
+    "So the answer is $450; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -7530,9 +7799,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = debit-card liability − credit-card liability (each = the smaller of the loss and its limit).",
     "Debit: smaller of $1,770 and $500 = $500.",
     "Credit: smaller of $1,770 and $50 = $50.",
-    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated."
+    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated.",
+    "Spreadsheet or calculator: =500-50",
+    "So the answer is $450; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -7557,9 +7829,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = debit-card liability − credit-card liability (each = the smaller of the loss and its limit).",
     "Debit: smaller of $2,040 and $500 = $500.",
     "Credit: smaller of $2,040 and $50 = $50.",
-    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated."
+    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated.",
+    "Spreadsheet or calculator: =500-50",
+    "So the answer is $450; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -7584,9 +7859,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: difference = debit-card liability − credit-card liability (each = the smaller of the loss and its limit).",
     "Debit: smaller of $1,060 and $500 = $500.",
     "Credit: smaller of $1,060 and $50 = $50.",
-    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated."
+    "Difference = $450. Debit fraud also takes money from your checking account while it is investigated.",
+    "Spreadsheet or calculator: =500-50",
+    "So the answer is $450; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -7933,7 +8211,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$15 × 12 = $180."
+    "Formula: Yearly cost = monthly fee × 12.",
+    "$15 × 12 = $180.",
+    "Spreadsheet or calculator: =15*12",
+    "So the answer is $180; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -7960,7 +8241,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$5 × 12 = $60."
+    "Formula: Yearly cost = monthly fee × 12.",
+    "$5 × 12 = $60.",
+    "Spreadsheet or calculator: =5*12",
+    "So the answer is $60; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -7987,7 +8271,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$10 × 12 = $120."
+    "Formula: Yearly cost = monthly fee × 12.",
+    "$10 × 12 = $120.",
+    "Spreadsheet or calculator: =10*12",
+    "So the answer is $120; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -8014,7 +8301,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$12 × 12 = $144."
+    "Formula: Yearly cost = monthly fee × 12.",
+    "$12 × 12 = $144.",
+    "Spreadsheet or calculator: =12*12",
+    "So the answer is $144; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -8041,7 +8331,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$15 × 12 = $180."
+    "Formula: Yearly cost = monthly fee × 12.",
+    "$15 × 12 = $180.",
+    "Spreadsheet or calculator: =15*12",
+    "So the answer is $180; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ]
   },
   {
@@ -8068,8 +8361,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: balance × APY = monthly fee × 12, so balance = yearly fees ÷ APY.",
     "Yearly fees = $8 × 12 = $96.",
     "Balance × 0.03 = $96, so balance = $96 ÷ 0.03 = $3,200.",
+    "Spreadsheet or calculator: =96/0.03",
     "Below that balance the account loses money."
    ]
   },
@@ -8097,8 +8392,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: balance × APY = monthly fee × 12, so balance = yearly fees ÷ APY.",
     "Yearly fees = $8 × 12 = $96.",
     "Balance × 0.05 = $96, so balance = $96 ÷ 0.05 = $1,920.",
+    "Spreadsheet or calculator: =96/0.05",
     "Below that balance the account loses money."
    ]
   },
@@ -8126,8 +8423,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: balance × APY = monthly fee × 12, so balance = yearly fees ÷ APY.",
     "Yearly fees = $12 × 12 = $144.",
     "Balance × 0.05 = $144, so balance = $144 ÷ 0.05 = $2,880.",
+    "Spreadsheet or calculator: =144/0.05",
     "Below that balance the account loses money."
    ]
   },
@@ -8155,8 +8454,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: balance × APY = monthly fee × 12, so balance = yearly fees ÷ APY.",
     "Yearly fees = $12 × 12 = $144.",
     "Balance × 0.045 = $144, so balance = $144 ÷ 0.045 = $3,200.",
+    "Spreadsheet or calculator: =144/0.045",
     "Below that balance the account loses money."
    ]
   },
@@ -8184,8 +8485,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: balance × APY = monthly fee × 12, so balance = yearly fees ÷ APY.",
     "Yearly fees = $6 × 12 = $72.",
     "Balance × 0.045 = $72, so balance = $72 ÷ 0.045 = $1,600.",
+    "Spreadsheet or calculator: =72/0.045",
     "Below that balance the account loses money."
    ]
   },
@@ -8213,7 +8516,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $3,600 × 0.04 × 2 = $288."
+    "Formula: I = P × r × t.",
+    "I = $3,600 × 0.04 × 2 = $288.",
+    "Spreadsheet or calculator: =3600*0.04*2",
+    "So the answer is $288; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8240,7 +8546,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $3,500 × 0.03 × 4 = $420."
+    "Formula: I = P × r × t.",
+    "I = $3,500 × 0.03 × 4 = $420.",
+    "Spreadsheet or calculator: =3500*0.03*4",
+    "So the answer is $420; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8267,7 +8576,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $2,300 × 0.04 × 4 = $368."
+    "Formula: I = P × r × t.",
+    "I = $2,300 × 0.04 × 4 = $368.",
+    "Spreadsheet or calculator: =2300*0.04*4",
+    "So the answer is $368; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8294,7 +8606,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $2,900 × 0.03 × 3 = $261."
+    "Formula: I = P × r × t.",
+    "I = $2,900 × 0.03 × 3 = $261.",
+    "Spreadsheet or calculator: =2900*0.03*3",
+    "So the answer is $261; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8321,7 +8636,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $3,800 × 0.02 × 3 = $228."
+    "Formula: I = P × r × t.",
+    "I = $3,800 × 0.02 × 3 = $228.",
+    "Spreadsheet or calculator: =3800*0.02*3",
+    "So the answer is $228; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8348,7 +8666,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $2,200 × 0.02 × 4 = $176."
+    "Formula: I = P × r × t.",
+    "I = $2,200 × 0.02 × 4 = $176.",
+    "Spreadsheet or calculator: =2200*0.02*4",
+    "So the answer is $176; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8375,7 +8696,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $4,900 × 0.03 × 2 = $294."
+    "Formula: I = P × r × t.",
+    "I = $4,900 × 0.03 × 2 = $294.",
+    "Spreadsheet or calculator: =4900*0.03*2",
+    "So the answer is $294; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8402,7 +8726,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $1,200 × 0.05 × 3 = $180."
+    "Formula: I = P × r × t.",
+    "I = $1,200 × 0.05 × 3 = $180.",
+    "Spreadsheet or calculator: =1200*0.05*3",
+    "So the answer is $180; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8429,7 +8756,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "I = $4,500 × 0.04 × 2 = $360."
+    "Formula: I = P × r × t.",
+    "I = $4,500 × 0.04 × 2 = $360.",
+    "Spreadsheet or calculator: =4500*0.04*2",
+    "So the answer is $360; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8456,8 +8786,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $1,250 ÷ ($8,750 × 0.03) = 4.76."
+    "t = $1,250 ÷ ($8,750 × 0.03) = 4.76.",
+    "Spreadsheet or calculator: =1250/(8750*0.03)",
+    "So the answer is 4.76; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8484,8 +8817,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $775 ÷ ($4,250 × 0.03) = 6.08."
+    "t = $775 ÷ ($4,250 × 0.03) = 6.08.",
+    "Spreadsheet or calculator: =775/(4250*0.03)",
+    "So the answer is 6.08; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8512,8 +8848,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $800 ÷ ($4,000 × 0.04) = 5."
+    "t = $800 ÷ ($4,000 × 0.04) = 5.",
+    "Spreadsheet or calculator: =800/(4000*0.04)",
+    "So the answer is 5; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8540,8 +8879,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $950 ÷ ($2,500 × 0.025) = 15.2."
+    "t = $950 ÷ ($2,500 × 0.025) = 15.2.",
+    "Spreadsheet or calculator: =950/(2500*0.025)",
+    "So the answer is 15.2; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8568,8 +8910,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $1,275 ÷ ($8,750 × 0.04) = 3.64."
+    "t = $1,275 ÷ ($8,750 × 0.04) = 3.64.",
+    "Spreadsheet or calculator: =1275/(8750*0.04)",
+    "So the answer is 3.64; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8596,8 +8941,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $1,350 ÷ ($4,750 × 0.025) = 11.37."
+    "t = $1,350 ÷ ($4,750 × 0.025) = 11.37.",
+    "Spreadsheet or calculator: =1350/(4750*0.025)",
+    "So the answer is 11.37; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8624,8 +8972,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $500 ÷ ($5,000 × 0.035) = 2.86."
+    "t = $500 ÷ ($5,000 × 0.035) = 2.86.",
+    "Spreadsheet or calculator: =500/(5000*0.035)",
+    "So the answer is 2.86; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8652,8 +9003,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $1,450 ÷ ($5,750 × 0.04) = 6.3."
+    "t = $1,450 ÷ ($5,750 × 0.04) = 6.3.",
+    "Spreadsheet or calculator: =1450/(5750*0.04)",
+    "So the answer is 6.3; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8680,8 +9034,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: I = Prt.",
     "I = Prt, so t = I ÷ (P × r).",
-    "t = $600 ÷ ($5,000 × 0.04) = 3."
+    "t = $600 ÷ ($5,000 × 0.04) = 3.",
+    "Spreadsheet or calculator: =600/(5000*0.04)",
+    "So the answer is 3; simple interest grows only on the original deposit."
    ]
   },
   {
@@ -8708,7 +9065,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,500 × 0.04 = $140."
+    "Formula: Interest = deposit × APY.",
+    "$3,500 × 0.04 = $140.",
+    "Spreadsheet or calculator: =3500*0.04",
+    "So the answer is $140; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -8735,7 +9095,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,500 × 0.05 = $125."
+    "Formula: Interest = deposit × APY.",
+    "$2,500 × 0.05 = $125.",
+    "Spreadsheet or calculator: =2500*0.05",
+    "So the answer is $125; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -8762,7 +9125,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,000 × 0.04 = $80."
+    "Formula: Interest = deposit × APY.",
+    "$2,000 × 0.04 = $80.",
+    "Spreadsheet or calculator: =2000*0.04",
+    "So the answer is $80; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -8789,7 +9155,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,000 × 0.03 = $30."
+    "Formula: Interest = deposit × APY.",
+    "$1,000 × 0.03 = $30.",
+    "Spreadsheet or calculator: =1000*0.03",
+    "So the answer is $30; compare savings options by APY and how easily you can reach the money."
    ]
   },
   {
@@ -8814,8 +9183,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: CD earnings = P × r × t − penalty; savings earnings = P × r × t; compare the two.",
     "CD: $10,000.00 × 0.045 × 1.5 = $675.00, minus penalty $10,000.00 × 0.045 ÷ 12 × 3 = $112.50 → $562.50.",
     "Savings: $10,000.00 × 0.038 × 1.5 = $570.00.",
+    "Spreadsheet or calculator: =570.00-562.50",
     "The savings account earns $7.50 more."
    ]
   },
@@ -8841,8 +9212,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: CD earnings = P × r × t − penalty; savings earnings = P × r × t; compare the two.",
     "CD: $8,500.00 × 0.045 × 1.5 = $573.75, minus penalty $8,500.00 × 0.045 ÷ 12 × 3 = $95.63 → $478.13.",
     "Savings: $8,500.00 × 0.038 × 1.5 = $484.50.",
+    "Spreadsheet or calculator: =484.50-478.13",
     "The savings account earns $6.37 more."
    ]
   },
@@ -8868,8 +9241,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: CD earnings = P × r × t − penalty; savings earnings = P × r × t; compare the two.",
     "CD: $11,500.00 × 0.045 × 1.5 = $776.25, minus penalty $11,500.00 × 0.045 ÷ 12 × 6 = $258.75 → $517.50.",
     "Savings: $11,500.00 × 0.038 × 1.5 = $655.50.",
+    "Spreadsheet or calculator: =655.50-517.50",
     "The savings account earns $138.00 more."
    ]
   },
@@ -8895,8 +9270,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: CD earnings = P × r × t − penalty; savings earnings = P × r × t; compare the two.",
     "CD: $8,000 × 0.045 × 1.5 = $540, minus penalty $8,000 × 0.045 ÷ 12 × 3 = $90 → $450.",
     "Savings: $8,000 × 0.03 × 1.5 = $360.",
+    "Spreadsheet or calculator: =540-450",
     "The CD earns $90 more."
    ]
   },
@@ -8922,8 +9299,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: CD earnings = P × r × t − penalty; savings earnings = P × r × t; compare the two.",
     "CD: $12,500.00 × 0.052 × 1.5 = $975.00, minus penalty $12,500.00 × 0.052 ÷ 12 × 6 = $325.00 → $650.00.",
     "Savings: $12,500.00 × 0.035 × 1.5 = $656.25.",
+    "Spreadsheet or calculator: =656.25-650.00",
     "The savings account earns $6.25 more."
    ]
   },
@@ -8949,8 +9328,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: CD earnings = P × r × t − penalty; savings earnings = P × r × t; compare the two.",
     "CD: $13,000.00 × 0.045 × 1.5 = $877.50, minus penalty $13,000.00 × 0.045 ÷ 12 × 6 = $292.50 → $585.00.",
     "Savings: $13,000.00 × 0.038 × 1.5 = $741.00.",
+    "Spreadsheet or calculator: =741.00-585.00",
     "The savings account earns $156.00 more."
    ]
   },
@@ -8976,8 +9357,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: CD earnings = P × r × t − penalty; savings earnings = P × r × t; compare the two.",
     "CD: $4,500.00 × 0.045 × 1.5 = $303.75, minus penalty $4,500.00 × 0.045 ÷ 12 × 6 = $101.25 → $202.50.",
     "Savings: $4,500.00 × 0.035 × 1.5 = $236.25.",
+    "Spreadsheet or calculator: =236.25-202.50",
     "The savings account earns $33.75 more."
    ]
   },
@@ -9003,7 +9386,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,410 + $530 − $510 = $1,430."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$1,410 + $530 − $510 = $1,430.",
+    "Spreadsheet or calculator: =1410+530-510",
+    "So the answer is $1,430; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9028,7 +9414,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$380 + $750 − $560 = $570."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$380 + $750 − $560 = $570.",
+    "Spreadsheet or calculator: =380+750-560",
+    "So the answer is $570; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9053,7 +9442,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$670 + $500 − $620 = $550."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$670 + $500 − $620 = $550.",
+    "Spreadsheet or calculator: =670+500-620",
+    "So the answer is $550; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9078,7 +9470,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,010 + $620 − $700 = $930."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$1,010 + $620 − $700 = $930.",
+    "Spreadsheet or calculator: =1010+620-700",
+    "So the answer is $930; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9103,7 +9498,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,140 + $220 − $650 = $710."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$1,140 + $220 − $650 = $710.",
+    "Spreadsheet or calculator: =1140+220-650",
+    "So the answer is $710; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9128,7 +9526,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$980 + $210 − $540 = $650."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$980 + $210 − $540 = $650.",
+    "Spreadsheet or calculator: =980+210-540",
+    "So the answer is $650; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9153,7 +9554,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,160 + $860 − $90 = $1,930."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$1,160 + $860 − $90 = $1,930.",
+    "Spreadsheet or calculator: =1160+860-90",
+    "So the answer is $1,930; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9178,7 +9582,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,370 + $630 − $430 = $1,570."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$1,370 + $630 − $430 = $1,570.",
+    "Spreadsheet or calculator: =1370+630-430",
+    "So the answer is $1,570; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9203,7 +9610,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,260 + $820 − $300 = $1,780."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$1,260 + $820 − $300 = $1,780.",
+    "Spreadsheet or calculator: =1260+820-300",
+    "So the answer is $1,780; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9228,7 +9638,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$980 + $160 − $350 = $790."
+    "Formula: Ending balance = start + deposits − withdrawals.",
+    "$980 + $160 − $350 = $790.",
+    "Spreadsheet or calculator: =980+160-350",
+    "So the answer is $790; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9253,8 +9666,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $1,159.86.",
-    "Purchase = $1,159.86 − $917.83 = $242.03."
+    "Purchase = $1,159.86 − $917.83 = $242.03.",
+    "Spreadsheet or calculator: =1159.86-917.83",
+    "So the answer is $242.03; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9279,8 +9695,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $2,712.73.",
-    "Purchase = $2,712.73 − $2,663.93 = $48.80."
+    "Purchase = $2,712.73 − $2,663.93 = $48.80.",
+    "Spreadsheet or calculator: =2712.73-2663.93",
+    "So the answer is $48.80; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9305,8 +9724,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $746.57.",
-    "Purchase = $746.57 − $525.59 = $220.98."
+    "Purchase = $746.57 − $525.59 = $220.98.",
+    "Spreadsheet or calculator: =746.57-525.59",
+    "So the answer is $220.98; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9331,8 +9753,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $778.41.",
-    "Purchase = $778.41 − $628.08 = $150.33."
+    "Purchase = $778.41 − $628.08 = $150.33.",
+    "Spreadsheet or calculator: =778.41-628.08",
+    "So the answer is $150.33; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9357,8 +9782,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $1,679.80.",
-    "Purchase = $1,679.80 − $1,437.59 = $242.21."
+    "Purchase = $1,679.80 − $1,437.59 = $242.21.",
+    "Spreadsheet or calculator: =1679.80-1437.59",
+    "So the answer is $242.21; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9383,8 +9811,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $1,417.40.",
-    "Purchase = $1,417.40 − $1,221.15 = $196.25."
+    "Purchase = $1,417.40 − $1,221.15 = $196.25.",
+    "Spreadsheet or calculator: =1417.40-1221.15",
+    "So the answer is $196.25; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9409,8 +9840,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $1,387.51.",
-    "Purchase = $1,387.51 − $1,354.16 = $33.35."
+    "Purchase = $1,387.51 − $1,354.16 = $33.35.",
+    "Spreadsheet or calculator: =1387.51-1354.16",
+    "So the answer is $33.35; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9435,8 +9869,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: missing purchase = start + deposits − checks − ending balance.",
     "Start + deposits − checks = $2,243.32.",
-    "Purchase = $2,243.32 − $2,021.52 = $221.80."
+    "Purchase = $2,243.32 − $2,021.52 = $221.80.",
+    "Spreadsheet or calculator: =2243.32-2021.52",
+    "So the answer is $221.80; it should match your own register, and any gap is worth tracking down."
    ]
   },
   {
@@ -9463,7 +9900,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$880 − $50 = $830."
+    "Formula: money recovered = fraud amount − $50 liability.",
+    "$880 − $50 = $830.",
+    "Spreadsheet or calculator: =880-50",
+    "So the answer is $830; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9490,7 +9930,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$600 − $50 = $550."
+    "Formula: money recovered = fraud amount − $50 liability.",
+    "$600 − $50 = $550.",
+    "Spreadsheet or calculator: =600-50",
+    "So the answer is $550; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9517,7 +9960,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$770 − $50 = $720."
+    "Formula: money recovered = fraud amount − $50 liability.",
+    "$770 − $50 = $720.",
+    "Spreadsheet or calculator: =770-50",
+    "So the answer is $720; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9544,7 +9990,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$490 − $50 = $440."
+    "Formula: money recovered = fraud amount − $50 liability.",
+    "$490 − $50 = $440.",
+    "Spreadsheet or calculator: =490-50",
+    "So the answer is $440; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9571,7 +10020,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$740 − $50 = $690."
+    "Formula: money recovered = fraud amount − $50 liability.",
+    "$740 − $50 = $690.",
+    "Spreadsheet or calculator: =740-50",
+    "So the answer is $690; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9598,9 +10050,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $1,800 − $440 + $35 = $1,395.",
     "Debit fraud reported after two business days: the smaller of $1,050 and $500 = $500.",
-    "Total = $1,895."
+    "Total = $1,895.",
+    "So the answer is $1,895; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9627,9 +10081,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $2,500 − $400 + $25 = $2,125.",
     "Debit fraud reported after two business days: the smaller of $1,010 and $500 = $500.",
-    "Total = $2,625."
+    "Total = $2,625.",
+    "So the answer is $2,625; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9656,9 +10112,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $2,450 − $410 + $35 = $2,075.",
     "Debit fraud reported after two business days: the smaller of $930 and $500 = $500.",
-    "Total = $2,575."
+    "Total = $2,575.",
+    "So the answer is $2,575; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9685,9 +10143,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $2,700 − $400 + $35 = $2,335.",
     "Debit fraud reported after two business days: the smaller of $1,380 and $500 = $500.",
-    "Total = $2,835."
+    "Total = $2,835.",
+    "So the answer is $2,835; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9714,9 +10174,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $2,350 − $210 + $25 = $2,165.",
     "Debit fraud reported after two business days: the smaller of $660 and $500 = $500.",
-    "Total = $2,665."
+    "Total = $2,665.",
+    "So the answer is $2,665; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9743,9 +10205,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $2,400 − $300 + $35 = $2,135.",
     "Debit fraud reported after two business days: the smaller of $1,190 and $500 = $500.",
-    "Total = $2,635."
+    "Total = $2,635.",
+    "So the answer is $2,635; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9772,9 +10236,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $2,350 − $430 + $25 = $1,945.",
     "Debit fraud reported after two business days: the smaller of $780 and $500 = $500.",
-    "Total = $2,445."
+    "Total = $2,445.",
+    "So the answer is $2,445; reporting fraud quickly and never sending money back keeps losses small."
    ]
   },
   {
@@ -9801,9 +10267,5015 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total loss = fake-check loss + debit-card liability.",
     "Fake check: $2,700 − $370 + $35 = $2,365.",
     "Debit fraud reported after two business days: the smaller of $1,180 and $500 = $500.",
-    "Total = $2,865."
+    "Total = $2,865.",
+    "So the answer is $2,865; reporting fraud quickly and never sending money back keeps losses small."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-01",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Account A charges $12.00 a month plus $0.50 per out-of-network ATM withdrawal. What does it cost Leah in a month with 11 withdrawals?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 50,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $12.00 + $0.50x",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.2,
+         12.1
+        ],
+        [
+         0.4,
+         12.2
+        ],
+        [
+         0.6,
+         12.3
+        ],
+        [
+         0.8,
+         12.4
+        ],
+        [
+         1,
+         12.5
+        ],
+        [
+         1.2,
+         12.6
+        ],
+        [
+         1.4,
+         12.7
+        ],
+        [
+         1.6,
+         12.8
+        ],
+        [
+         1.8,
+         12.9
+        ],
+        [
+         2,
+         13
+        ],
+        [
+         2.2,
+         13.1
+        ],
+        [
+         2.4,
+         13.2
+        ],
+        [
+         2.6,
+         13.3
+        ],
+        [
+         2.8,
+         13.4
+        ],
+        [
+         3,
+         13.5
+        ],
+        [
+         3.2,
+         13.6
+        ],
+        [
+         3.4,
+         13.7
+        ],
+        [
+         3.6,
+         13.8
+        ],
+        [
+         3.8,
+         13.9
+        ],
+        [
+         4,
+         14
+        ],
+        [
+         4.2,
+         14.1
+        ],
+        [
+         4.4,
+         14.2
+        ],
+        [
+         4.6,
+         14.3
+        ],
+        [
+         4.8,
+         14.4
+        ],
+        [
+         5,
+         14.5
+        ],
+        [
+         5.2,
+         14.6
+        ],
+        [
+         5.4,
+         14.7
+        ],
+        [
+         5.6,
+         14.8
+        ],
+        [
+         5.8,
+         14.9
+        ],
+        [
+         6,
+         15
+        ],
+        [
+         6.2,
+         15.1
+        ],
+        [
+         6.4,
+         15.2
+        ],
+        [
+         6.6,
+         15.3
+        ],
+        [
+         6.8,
+         15.4
+        ],
+        [
+         7,
+         15.5
+        ],
+        [
+         7.2,
+         15.6
+        ],
+        [
+         7.4,
+         15.7
+        ],
+        [
+         7.6,
+         15.8
+        ],
+        [
+         7.8,
+         15.9
+        ],
+        [
+         8,
+         16
+        ],
+        [
+         8.2,
+         16.1
+        ],
+        [
+         8.4,
+         16.2
+        ],
+        [
+         8.6,
+         16.3
+        ],
+        [
+         8.8,
+         16.4
+        ],
+        [
+         9,
+         16.5
+        ],
+        [
+         9.2,
+         16.6
+        ],
+        [
+         9.4,
+         16.7
+        ],
+        [
+         9.6,
+         16.8
+        ],
+        [
+         9.8,
+         16.9
+        ],
+        [
+         10,
+         17
+        ],
+        [
+         10.2,
+         17.1
+        ],
+        [
+         10.4,
+         17.2
+        ],
+        [
+         10.6,
+         17.3
+        ],
+        [
+         10.8,
+         17.4
+        ],
+        [
+         11,
+         17.5
+        ],
+        [
+         11.2,
+         17.6
+        ],
+        [
+         11.4,
+         17.7
+        ],
+        [
+         11.6,
+         17.8
+        ],
+        [
+         11.8,
+         17.9
+        ],
+        [
+         12,
+         18
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $3.50x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.7
+        ],
+        [
+         0.4,
+         1.4
+        ],
+        [
+         0.6,
+         2.1
+        ],
+        [
+         0.8,
+         2.8
+        ],
+        [
+         1,
+         3.5
+        ],
+        [
+         1.2,
+         4.2
+        ],
+        [
+         1.4,
+         4.9
+        ],
+        [
+         1.6,
+         5.6
+        ],
+        [
+         1.8,
+         6.3
+        ],
+        [
+         2,
+         7
+        ],
+        [
+         2.2,
+         7.7
+        ],
+        [
+         2.4,
+         8.4
+        ],
+        [
+         2.6,
+         9.1
+        ],
+        [
+         2.8,
+         9.8
+        ],
+        [
+         3,
+         10.5
+        ],
+        [
+         3.2,
+         11.2
+        ],
+        [
+         3.4,
+         11.9
+        ],
+        [
+         3.6,
+         12.6
+        ],
+        [
+         3.8,
+         13.3
+        ],
+        [
+         4,
+         14
+        ],
+        [
+         4.2,
+         14.7
+        ],
+        [
+         4.4,
+         15.4
+        ],
+        [
+         4.6,
+         16.1
+        ],
+        [
+         4.8,
+         16.8
+        ],
+        [
+         5,
+         17.5
+        ],
+        [
+         5.2,
+         18.2
+        ],
+        [
+         5.4,
+         18.9
+        ],
+        [
+         5.6,
+         19.6
+        ],
+        [
+         5.8,
+         20.3
+        ],
+        [
+         6,
+         21
+        ],
+        [
+         6.2,
+         21.7
+        ],
+        [
+         6.4,
+         22.4
+        ],
+        [
+         6.6,
+         23.1
+        ],
+        [
+         6.8,
+         23.8
+        ],
+        [
+         7,
+         24.5
+        ],
+        [
+         7.2,
+         25.2
+        ],
+        [
+         7.4,
+         25.9
+        ],
+        [
+         7.6,
+         26.6
+        ],
+        [
+         7.8,
+         27.3
+        ],
+        [
+         8,
+         28
+        ],
+        [
+         8.2,
+         28.7
+        ],
+        [
+         8.4,
+         29.4
+        ],
+        [
+         8.6,
+         30.1
+        ],
+        [
+         8.8,
+         30.8
+        ],
+        [
+         9,
+         31.5
+        ],
+        [
+         9.2,
+         32.2
+        ],
+        [
+         9.4,
+         32.9
+        ],
+        [
+         9.6,
+         33.6
+        ],
+        [
+         9.8,
+         34.3
+        ],
+        [
+         10,
+         35
+        ],
+        [
+         10.2,
+         35.7
+        ],
+        [
+         10.4,
+         36.4
+        ],
+        [
+         10.6,
+         37.1
+        ],
+        [
+         10.8,
+         37.8
+        ],
+        [
+         11,
+         38.5
+        ],
+        [
+         11.2,
+         39.2
+        ],
+        [
+         11.4,
+         39.9
+        ],
+        [
+         11.6,
+         40.6
+        ],
+        [
+         11.8,
+         41.3
+        ],
+        [
+         12,
+         42
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 4,
+       "y": 14,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $12.00 + $0.50x. Account B: B(x) = $3.50x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$17.50",
+   "numeric": {
+    "value": 17.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(x) = monthly fee + fee per withdrawal × x.",
+    "Substitute: $12.00 + $0.50 × 11 = $17.50.",
+    "Spreadsheet: =12+0.5*11.",
+    "So Account A costs $17.50 that month, less than Account B's $38.50."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-02",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "For how many withdrawals a month do the two accounts cost the same? (Where the lines cross.)",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $12 + $1x",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.2,
+         12.2
+        ],
+        [
+         0.4,
+         12.4
+        ],
+        [
+         0.6,
+         12.6
+        ],
+        [
+         0.8,
+         12.8
+        ],
+        [
+         1,
+         13
+        ],
+        [
+         1.2,
+         13.2
+        ],
+        [
+         1.4,
+         13.4
+        ],
+        [
+         1.6,
+         13.6
+        ],
+        [
+         1.8,
+         13.8
+        ],
+        [
+         2,
+         14
+        ],
+        [
+         2.2,
+         14.2
+        ],
+        [
+         2.4,
+         14.4
+        ],
+        [
+         2.6,
+         14.6
+        ],
+        [
+         2.8,
+         14.8
+        ],
+        [
+         3,
+         15
+        ],
+        [
+         3.2,
+         15.2
+        ],
+        [
+         3.4,
+         15.4
+        ],
+        [
+         3.6,
+         15.6
+        ],
+        [
+         3.8,
+         15.8
+        ],
+        [
+         4,
+         16
+        ],
+        [
+         4.2,
+         16.2
+        ],
+        [
+         4.4,
+         16.4
+        ],
+        [
+         4.6,
+         16.6
+        ],
+        [
+         4.8,
+         16.8
+        ],
+        [
+         5,
+         17
+        ],
+        [
+         5.2,
+         17.2
+        ],
+        [
+         5.4,
+         17.4
+        ],
+        [
+         5.6,
+         17.6
+        ],
+        [
+         5.8,
+         17.8
+        ],
+        [
+         6,
+         18
+        ],
+        [
+         6.2,
+         18.2
+        ],
+        [
+         6.4,
+         18.4
+        ],
+        [
+         6.6,
+         18.6
+        ],
+        [
+         6.8,
+         18.8
+        ],
+        [
+         7,
+         19
+        ],
+        [
+         7.2,
+         19.2
+        ],
+        [
+         7.4,
+         19.4
+        ],
+        [
+         7.6,
+         19.6
+        ],
+        [
+         7.8,
+         19.8
+        ],
+        [
+         8,
+         20
+        ],
+        [
+         8.2,
+         20.2
+        ],
+        [
+         8.4,
+         20.4
+        ],
+        [
+         8.6,
+         20.6
+        ],
+        [
+         8.8,
+         20.8
+        ],
+        [
+         9,
+         21
+        ],
+        [
+         9.2,
+         21.2
+        ],
+        [
+         9.4,
+         21.4
+        ],
+        [
+         9.6,
+         21.6
+        ],
+        [
+         9.8,
+         21.8
+        ],
+        [
+         10,
+         22
+        ],
+        [
+         10.2,
+         22.2
+        ],
+        [
+         10.4,
+         22.4
+        ],
+        [
+         10.6,
+         22.6
+        ],
+        [
+         10.8,
+         22.8
+        ],
+        [
+         11,
+         23
+        ],
+        [
+         11.2,
+         23.2
+        ],
+        [
+         11.4,
+         23.4
+        ],
+        [
+         11.6,
+         23.6
+        ],
+        [
+         11.8,
+         23.8
+        ],
+        [
+         12,
+         24
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $3x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.6
+        ],
+        [
+         0.4,
+         1.2
+        ],
+        [
+         0.6,
+         1.8
+        ],
+        [
+         0.8,
+         2.4
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1.2,
+         3.6
+        ],
+        [
+         1.4,
+         4.2
+        ],
+        [
+         1.6,
+         4.8
+        ],
+        [
+         1.8,
+         5.4
+        ],
+        [
+         2,
+         6
+        ],
+        [
+         2.2,
+         6.6
+        ],
+        [
+         2.4,
+         7.2
+        ],
+        [
+         2.6,
+         7.8
+        ],
+        [
+         2.8,
+         8.4
+        ],
+        [
+         3,
+         9
+        ],
+        [
+         3.2,
+         9.6
+        ],
+        [
+         3.4,
+         10.2
+        ],
+        [
+         3.6,
+         10.8
+        ],
+        [
+         3.8,
+         11.4
+        ],
+        [
+         4,
+         12
+        ],
+        [
+         4.2,
+         12.6
+        ],
+        [
+         4.4,
+         13.2
+        ],
+        [
+         4.6,
+         13.8
+        ],
+        [
+         4.8,
+         14.4
+        ],
+        [
+         5,
+         15
+        ],
+        [
+         5.2,
+         15.6
+        ],
+        [
+         5.4,
+         16.2
+        ],
+        [
+         5.6,
+         16.8
+        ],
+        [
+         5.8,
+         17.4
+        ],
+        [
+         6,
+         18
+        ],
+        [
+         6.2,
+         18.6
+        ],
+        [
+         6.4,
+         19.2
+        ],
+        [
+         6.6,
+         19.8
+        ],
+        [
+         6.8,
+         20.4
+        ],
+        [
+         7,
+         21
+        ],
+        [
+         7.2,
+         21.6
+        ],
+        [
+         7.4,
+         22.2
+        ],
+        [
+         7.6,
+         22.8
+        ],
+        [
+         7.8,
+         23.4
+        ],
+        [
+         8,
+         24
+        ],
+        [
+         8.2,
+         24.6
+        ],
+        [
+         8.4,
+         25.2
+        ],
+        [
+         8.6,
+         25.8
+        ],
+        [
+         8.8,
+         26.4
+        ],
+        [
+         9,
+         27
+        ],
+        [
+         9.2,
+         27.6
+        ],
+        [
+         9.4,
+         28.2
+        ],
+        [
+         9.6,
+         28.8
+        ],
+        [
+         9.8,
+         29.4
+        ],
+        [
+         10,
+         30
+        ],
+        [
+         10.2,
+         30.6
+        ],
+        [
+         10.4,
+         31.2
+        ],
+        [
+         10.6,
+         31.8
+        ],
+        [
+         10.8,
+         32.4
+        ],
+        [
+         11,
+         33
+        ],
+        [
+         11.2,
+         33.6
+        ],
+        [
+         11.4,
+         34.2
+        ],
+        [
+         11.6,
+         34.8
+        ],
+        [
+         11.8,
+         35.4
+        ],
+        [
+         12,
+         36
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 6,
+       "y": 18,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $12 + $1x. Account B: B(x) = $3x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "6",
+   "numeric": {
+    "value": 6,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set A(x) = B(x).",
+    "Substitute: $12 + $1x = $3x → $12 = $2x → x = $12 ÷ $2 = 6.",
+    "Spreadsheet: =12/(3-1).",
+    "So at 6 withdrawals both cost $18. Fewer withdrawals: Account B is cheaper. More: Account A is cheaper."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-03",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Zara makes 9 out-of-network withdrawals every month. Over a year, how much less does the cheaper account cost?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 30,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $12.00 + $0.50x",
+       "pts": [
+        [
+         0,
+         12
+        ],
+        [
+         0.2,
+         12.1
+        ],
+        [
+         0.4,
+         12.2
+        ],
+        [
+         0.6,
+         12.3
+        ],
+        [
+         0.8,
+         12.4
+        ],
+        [
+         1,
+         12.5
+        ],
+        [
+         1.2,
+         12.6
+        ],
+        [
+         1.4,
+         12.7
+        ],
+        [
+         1.6,
+         12.8
+        ],
+        [
+         1.8,
+         12.9
+        ],
+        [
+         2,
+         13
+        ],
+        [
+         2.2,
+         13.1
+        ],
+        [
+         2.4,
+         13.2
+        ],
+        [
+         2.6,
+         13.3
+        ],
+        [
+         2.8,
+         13.4
+        ],
+        [
+         3,
+         13.5
+        ],
+        [
+         3.2,
+         13.6
+        ],
+        [
+         3.4,
+         13.7
+        ],
+        [
+         3.6,
+         13.8
+        ],
+        [
+         3.8,
+         13.9
+        ],
+        [
+         4,
+         14
+        ],
+        [
+         4.2,
+         14.1
+        ],
+        [
+         4.4,
+         14.2
+        ],
+        [
+         4.6,
+         14.3
+        ],
+        [
+         4.8,
+         14.4
+        ],
+        [
+         5,
+         14.5
+        ],
+        [
+         5.2,
+         14.6
+        ],
+        [
+         5.4,
+         14.7
+        ],
+        [
+         5.6,
+         14.8
+        ],
+        [
+         5.8,
+         14.9
+        ],
+        [
+         6,
+         15
+        ],
+        [
+         6.2,
+         15.1
+        ],
+        [
+         6.4,
+         15.2
+        ],
+        [
+         6.6,
+         15.3
+        ],
+        [
+         6.8,
+         15.4
+        ],
+        [
+         7,
+         15.5
+        ],
+        [
+         7.2,
+         15.6
+        ],
+        [
+         7.4,
+         15.7
+        ],
+        [
+         7.6,
+         15.8
+        ],
+        [
+         7.8,
+         15.9
+        ],
+        [
+         8,
+         16
+        ],
+        [
+         8.2,
+         16.1
+        ],
+        [
+         8.4,
+         16.2
+        ],
+        [
+         8.6,
+         16.3
+        ],
+        [
+         8.8,
+         16.4
+        ],
+        [
+         9,
+         16.5
+        ],
+        [
+         9.2,
+         16.6
+        ],
+        [
+         9.4,
+         16.7
+        ],
+        [
+         9.6,
+         16.8
+        ],
+        [
+         9.8,
+         16.9
+        ],
+        [
+         10,
+         17
+        ],
+        [
+         10.2,
+         17.1
+        ],
+        [
+         10.4,
+         17.2
+        ],
+        [
+         10.6,
+         17.3
+        ],
+        [
+         10.8,
+         17.4
+        ],
+        [
+         11,
+         17.5
+        ],
+        [
+         11.2,
+         17.6
+        ],
+        [
+         11.4,
+         17.7
+        ],
+        [
+         11.6,
+         17.8
+        ],
+        [
+         11.8,
+         17.9
+        ],
+        [
+         12,
+         18
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $2.50x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.5
+        ],
+        [
+         0.4,
+         1
+        ],
+        [
+         0.6,
+         1.5
+        ],
+        [
+         0.8,
+         2
+        ],
+        [
+         1,
+         2.5
+        ],
+        [
+         1.2,
+         3
+        ],
+        [
+         1.4,
+         3.5
+        ],
+        [
+         1.6,
+         4
+        ],
+        [
+         1.8,
+         4.5
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         2.2,
+         5.5
+        ],
+        [
+         2.4,
+         6
+        ],
+        [
+         2.6,
+         6.5
+        ],
+        [
+         2.8,
+         7
+        ],
+        [
+         3,
+         7.5
+        ],
+        [
+         3.2,
+         8
+        ],
+        [
+         3.4,
+         8.5
+        ],
+        [
+         3.6,
+         9
+        ],
+        [
+         3.8,
+         9.5
+        ],
+        [
+         4,
+         10
+        ],
+        [
+         4.2,
+         10.5
+        ],
+        [
+         4.4,
+         11
+        ],
+        [
+         4.6,
+         11.5
+        ],
+        [
+         4.8,
+         12
+        ],
+        [
+         5,
+         12.5
+        ],
+        [
+         5.2,
+         13
+        ],
+        [
+         5.4,
+         13.5
+        ],
+        [
+         5.6,
+         14
+        ],
+        [
+         5.8,
+         14.5
+        ],
+        [
+         6,
+         15
+        ],
+        [
+         6.2,
+         15.5
+        ],
+        [
+         6.4,
+         16
+        ],
+        [
+         6.6,
+         16.5
+        ],
+        [
+         6.8,
+         17
+        ],
+        [
+         7,
+         17.5
+        ],
+        [
+         7.2,
+         18
+        ],
+        [
+         7.4,
+         18.5
+        ],
+        [
+         7.6,
+         19
+        ],
+        [
+         7.8,
+         19.5
+        ],
+        [
+         8,
+         20
+        ],
+        [
+         8.2,
+         20.5
+        ],
+        [
+         8.4,
+         21
+        ],
+        [
+         8.6,
+         21.5
+        ],
+        [
+         8.8,
+         22
+        ],
+        [
+         9,
+         22.5
+        ],
+        [
+         9.2,
+         23
+        ],
+        [
+         9.4,
+         23.5
+        ],
+        [
+         9.6,
+         24
+        ],
+        [
+         9.8,
+         24.5
+        ],
+        [
+         10,
+         25
+        ],
+        [
+         10.2,
+         25.5
+        ],
+        [
+         10.4,
+         26
+        ],
+        [
+         10.6,
+         26.5
+        ],
+        [
+         10.8,
+         27
+        ],
+        [
+         11,
+         27.5
+        ],
+        [
+         11.2,
+         28
+        ],
+        [
+         11.4,
+         28.5
+        ],
+        [
+         11.6,
+         29
+        ],
+        [
+         11.8,
+         29.5
+        ],
+        [
+         12,
+         30
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 6,
+       "y": 15,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $12.00 + $0.50x. Account B: B(x) = $2.50x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$72.00",
+   "numeric": {
+    "value": 72,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: yearly difference = 12 × |A(x) − B(x)|.",
+    "Substitute: A(9) = $16.50, B(9) = $22.50; 12 × $6.00 = $72.00.",
+    "Spreadsheet: =12*ABS((12+0.5*9)-2.5*9).",
+    "So Account A saves Zara $72.00 a year: 9 is right of the crossing point at 6."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-04",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Account A charges $7.50 a month plus $1.00 per out-of-network ATM withdrawal. What does it cost Isaiah in a month with 2 withdrawals?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 30,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $7.50 + $1.00x",
+       "pts": [
+        [
+         0,
+         7.5
+        ],
+        [
+         0.2,
+         7.7
+        ],
+        [
+         0.4,
+         7.9
+        ],
+        [
+         0.6,
+         8.1
+        ],
+        [
+         0.8,
+         8.3
+        ],
+        [
+         1,
+         8.5
+        ],
+        [
+         1.2,
+         8.7
+        ],
+        [
+         1.4,
+         8.9
+        ],
+        [
+         1.6,
+         9.1
+        ],
+        [
+         1.8,
+         9.3
+        ],
+        [
+         2,
+         9.5
+        ],
+        [
+         2.2,
+         9.7
+        ],
+        [
+         2.4,
+         9.9
+        ],
+        [
+         2.6,
+         10.1
+        ],
+        [
+         2.8,
+         10.3
+        ],
+        [
+         3,
+         10.5
+        ],
+        [
+         3.2,
+         10.7
+        ],
+        [
+         3.4,
+         10.9
+        ],
+        [
+         3.6,
+         11.1
+        ],
+        [
+         3.8,
+         11.3
+        ],
+        [
+         4,
+         11.5
+        ],
+        [
+         4.2,
+         11.7
+        ],
+        [
+         4.4,
+         11.9
+        ],
+        [
+         4.6,
+         12.1
+        ],
+        [
+         4.8,
+         12.3
+        ],
+        [
+         5,
+         12.5
+        ],
+        [
+         5.2,
+         12.7
+        ],
+        [
+         5.4,
+         12.9
+        ],
+        [
+         5.6,
+         13.1
+        ],
+        [
+         5.8,
+         13.3
+        ],
+        [
+         6,
+         13.5
+        ],
+        [
+         6.2,
+         13.7
+        ],
+        [
+         6.4,
+         13.9
+        ],
+        [
+         6.6,
+         14.1
+        ],
+        [
+         6.8,
+         14.3
+        ],
+        [
+         7,
+         14.5
+        ],
+        [
+         7.2,
+         14.7
+        ],
+        [
+         7.4,
+         14.9
+        ],
+        [
+         7.6,
+         15.1
+        ],
+        [
+         7.8,
+         15.3
+        ],
+        [
+         8,
+         15.5
+        ],
+        [
+         8.2,
+         15.7
+        ],
+        [
+         8.4,
+         15.9
+        ],
+        [
+         8.6,
+         16.1
+        ],
+        [
+         8.8,
+         16.3
+        ],
+        [
+         9,
+         16.5
+        ],
+        [
+         9.2,
+         16.7
+        ],
+        [
+         9.4,
+         16.9
+        ],
+        [
+         9.6,
+         17.1
+        ],
+        [
+         9.8,
+         17.3
+        ],
+        [
+         10,
+         17.5
+        ],
+        [
+         10.2,
+         17.7
+        ],
+        [
+         10.4,
+         17.9
+        ],
+        [
+         10.6,
+         18.1
+        ],
+        [
+         10.8,
+         18.3
+        ],
+        [
+         11,
+         18.5
+        ],
+        [
+         11.2,
+         18.7
+        ],
+        [
+         11.4,
+         18.9
+        ],
+        [
+         11.6,
+         19.1
+        ],
+        [
+         11.8,
+         19.3
+        ],
+        [
+         12,
+         19.5
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $2.50x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.5
+        ],
+        [
+         0.4,
+         1
+        ],
+        [
+         0.6,
+         1.5
+        ],
+        [
+         0.8,
+         2
+        ],
+        [
+         1,
+         2.5
+        ],
+        [
+         1.2,
+         3
+        ],
+        [
+         1.4,
+         3.5
+        ],
+        [
+         1.6,
+         4
+        ],
+        [
+         1.8,
+         4.5
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         2.2,
+         5.5
+        ],
+        [
+         2.4,
+         6
+        ],
+        [
+         2.6,
+         6.5
+        ],
+        [
+         2.8,
+         7
+        ],
+        [
+         3,
+         7.5
+        ],
+        [
+         3.2,
+         8
+        ],
+        [
+         3.4,
+         8.5
+        ],
+        [
+         3.6,
+         9
+        ],
+        [
+         3.8,
+         9.5
+        ],
+        [
+         4,
+         10
+        ],
+        [
+         4.2,
+         10.5
+        ],
+        [
+         4.4,
+         11
+        ],
+        [
+         4.6,
+         11.5
+        ],
+        [
+         4.8,
+         12
+        ],
+        [
+         5,
+         12.5
+        ],
+        [
+         5.2,
+         13
+        ],
+        [
+         5.4,
+         13.5
+        ],
+        [
+         5.6,
+         14
+        ],
+        [
+         5.8,
+         14.5
+        ],
+        [
+         6,
+         15
+        ],
+        [
+         6.2,
+         15.5
+        ],
+        [
+         6.4,
+         16
+        ],
+        [
+         6.6,
+         16.5
+        ],
+        [
+         6.8,
+         17
+        ],
+        [
+         7,
+         17.5
+        ],
+        [
+         7.2,
+         18
+        ],
+        [
+         7.4,
+         18.5
+        ],
+        [
+         7.6,
+         19
+        ],
+        [
+         7.8,
+         19.5
+        ],
+        [
+         8,
+         20
+        ],
+        [
+         8.2,
+         20.5
+        ],
+        [
+         8.4,
+         21
+        ],
+        [
+         8.6,
+         21.5
+        ],
+        [
+         8.8,
+         22
+        ],
+        [
+         9,
+         22.5
+        ],
+        [
+         9.2,
+         23
+        ],
+        [
+         9.4,
+         23.5
+        ],
+        [
+         9.6,
+         24
+        ],
+        [
+         9.8,
+         24.5
+        ],
+        [
+         10,
+         25
+        ],
+        [
+         10.2,
+         25.5
+        ],
+        [
+         10.4,
+         26
+        ],
+        [
+         10.6,
+         26.5
+        ],
+        [
+         10.8,
+         27
+        ],
+        [
+         11,
+         27.5
+        ],
+        [
+         11.2,
+         28
+        ],
+        [
+         11.4,
+         28.5
+        ],
+        [
+         11.6,
+         29
+        ],
+        [
+         11.8,
+         29.5
+        ],
+        [
+         12,
+         30
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 5,
+       "y": 12.5,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $7.50 + $1.00x. Account B: B(x) = $2.50x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$9.50",
+   "numeric": {
+    "value": 9.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(x) = monthly fee + fee per withdrawal × x.",
+    "Substitute: $7.50 + $1.00 × 2 = $9.50.",
+    "Spreadsheet: =7.5+1*2.",
+    "So Account A costs $9.50 that month, more than Account B's $5.00."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-05",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "For how many withdrawals a month do the two accounts cost the same? (Where the lines cross.)",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $4.50 + $1.50x",
+       "pts": [
+        [
+         0,
+         4.5
+        ],
+        [
+         0.2,
+         4.8
+        ],
+        [
+         0.4,
+         5.1
+        ],
+        [
+         0.6,
+         5.4
+        ],
+        [
+         0.8,
+         5.7
+        ],
+        [
+         1,
+         6
+        ],
+        [
+         1.2,
+         6.3
+        ],
+        [
+         1.4,
+         6.6
+        ],
+        [
+         1.6,
+         6.9
+        ],
+        [
+         1.8,
+         7.2
+        ],
+        [
+         2,
+         7.5
+        ],
+        [
+         2.2,
+         7.8
+        ],
+        [
+         2.4,
+         8.1
+        ],
+        [
+         2.6,
+         8.4
+        ],
+        [
+         2.8,
+         8.7
+        ],
+        [
+         3,
+         9
+        ],
+        [
+         3.2,
+         9.3
+        ],
+        [
+         3.4,
+         9.6
+        ],
+        [
+         3.6,
+         9.9
+        ],
+        [
+         3.8,
+         10.2
+        ],
+        [
+         4,
+         10.5
+        ],
+        [
+         4.2,
+         10.8
+        ],
+        [
+         4.4,
+         11.1
+        ],
+        [
+         4.6,
+         11.4
+        ],
+        [
+         4.8,
+         11.7
+        ],
+        [
+         5,
+         12
+        ],
+        [
+         5.2,
+         12.3
+        ],
+        [
+         5.4,
+         12.6
+        ],
+        [
+         5.6,
+         12.9
+        ],
+        [
+         5.8,
+         13.2
+        ],
+        [
+         6,
+         13.5
+        ],
+        [
+         6.2,
+         13.8
+        ],
+        [
+         6.4,
+         14.1
+        ],
+        [
+         6.6,
+         14.4
+        ],
+        [
+         6.8,
+         14.7
+        ],
+        [
+         7,
+         15
+        ],
+        [
+         7.2,
+         15.3
+        ],
+        [
+         7.4,
+         15.6
+        ],
+        [
+         7.6,
+         15.9
+        ],
+        [
+         7.8,
+         16.2
+        ],
+        [
+         8,
+         16.5
+        ],
+        [
+         8.2,
+         16.8
+        ],
+        [
+         8.4,
+         17.1
+        ],
+        [
+         8.6,
+         17.4
+        ],
+        [
+         8.8,
+         17.7
+        ],
+        [
+         9,
+         18
+        ],
+        [
+         9.2,
+         18.3
+        ],
+        [
+         9.4,
+         18.6
+        ],
+        [
+         9.6,
+         18.9
+        ],
+        [
+         9.8,
+         19.2
+        ],
+        [
+         10,
+         19.5
+        ],
+        [
+         10.2,
+         19.8
+        ],
+        [
+         10.4,
+         20.1
+        ],
+        [
+         10.6,
+         20.4
+        ],
+        [
+         10.8,
+         20.7
+        ],
+        [
+         11,
+         21
+        ],
+        [
+         11.2,
+         21.3
+        ],
+        [
+         11.4,
+         21.6
+        ],
+        [
+         11.6,
+         21.9
+        ],
+        [
+         11.8,
+         22.2
+        ],
+        [
+         12,
+         22.5
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $3.00x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.6
+        ],
+        [
+         0.4,
+         1.2
+        ],
+        [
+         0.6,
+         1.8
+        ],
+        [
+         0.8,
+         2.4
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1.2,
+         3.6
+        ],
+        [
+         1.4,
+         4.2
+        ],
+        [
+         1.6,
+         4.8
+        ],
+        [
+         1.8,
+         5.4
+        ],
+        [
+         2,
+         6
+        ],
+        [
+         2.2,
+         6.6
+        ],
+        [
+         2.4,
+         7.2
+        ],
+        [
+         2.6,
+         7.8
+        ],
+        [
+         2.8,
+         8.4
+        ],
+        [
+         3,
+         9
+        ],
+        [
+         3.2,
+         9.6
+        ],
+        [
+         3.4,
+         10.2
+        ],
+        [
+         3.6,
+         10.8
+        ],
+        [
+         3.8,
+         11.4
+        ],
+        [
+         4,
+         12
+        ],
+        [
+         4.2,
+         12.6
+        ],
+        [
+         4.4,
+         13.2
+        ],
+        [
+         4.6,
+         13.8
+        ],
+        [
+         4.8,
+         14.4
+        ],
+        [
+         5,
+         15
+        ],
+        [
+         5.2,
+         15.6
+        ],
+        [
+         5.4,
+         16.2
+        ],
+        [
+         5.6,
+         16.8
+        ],
+        [
+         5.8,
+         17.4
+        ],
+        [
+         6,
+         18
+        ],
+        [
+         6.2,
+         18.6
+        ],
+        [
+         6.4,
+         19.2
+        ],
+        [
+         6.6,
+         19.8
+        ],
+        [
+         6.8,
+         20.4
+        ],
+        [
+         7,
+         21
+        ],
+        [
+         7.2,
+         21.6
+        ],
+        [
+         7.4,
+         22.2
+        ],
+        [
+         7.6,
+         22.8
+        ],
+        [
+         7.8,
+         23.4
+        ],
+        [
+         8,
+         24
+        ],
+        [
+         8.2,
+         24.6
+        ],
+        [
+         8.4,
+         25.2
+        ],
+        [
+         8.6,
+         25.8
+        ],
+        [
+         8.8,
+         26.4
+        ],
+        [
+         9,
+         27
+        ],
+        [
+         9.2,
+         27.6
+        ],
+        [
+         9.4,
+         28.2
+        ],
+        [
+         9.6,
+         28.8
+        ],
+        [
+         9.8,
+         29.4
+        ],
+        [
+         10,
+         30
+        ],
+        [
+         10.2,
+         30.6
+        ],
+        [
+         10.4,
+         31.2
+        ],
+        [
+         10.6,
+         31.8
+        ],
+        [
+         10.8,
+         32.4
+        ],
+        [
+         11,
+         33
+        ],
+        [
+         11.2,
+         33.6
+        ],
+        [
+         11.4,
+         34.2
+        ],
+        [
+         11.6,
+         34.8
+        ],
+        [
+         11.8,
+         35.4
+        ],
+        [
+         12,
+         36
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 3,
+       "y": 9,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $4.50 + $1.50x. Account B: B(x) = $3.00x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "3",
+   "numeric": {
+    "value": 3,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set A(x) = B(x).",
+    "Substitute: $4.50 + $1.50x = $3.00x → $4.50 = $1.50x → x = $4.50 ÷ $1.50 = 3.",
+    "Spreadsheet: =4.5/(3-1.5).",
+    "So at 3 withdrawals both cost $9.00. Fewer withdrawals: Account B is cheaper. More: Account A is cheaper."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-06",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Sofia makes 12 out-of-network withdrawals every month. Over a year, how much less does the cheaper account cost?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $5.00 + $0.50x",
+       "pts": [
+        [
+         0,
+         5
+        ],
+        [
+         0.2,
+         5.1
+        ],
+        [
+         0.4,
+         5.2
+        ],
+        [
+         0.6,
+         5.3
+        ],
+        [
+         0.8,
+         5.4
+        ],
+        [
+         1,
+         5.5
+        ],
+        [
+         1.2,
+         5.6
+        ],
+        [
+         1.4,
+         5.7
+        ],
+        [
+         1.6,
+         5.8
+        ],
+        [
+         1.8,
+         5.9
+        ],
+        [
+         2,
+         6
+        ],
+        [
+         2.2,
+         6.1
+        ],
+        [
+         2.4,
+         6.2
+        ],
+        [
+         2.6,
+         6.3
+        ],
+        [
+         2.8,
+         6.4
+        ],
+        [
+         3,
+         6.5
+        ],
+        [
+         3.2,
+         6.6
+        ],
+        [
+         3.4,
+         6.7
+        ],
+        [
+         3.6,
+         6.8
+        ],
+        [
+         3.8,
+         6.9
+        ],
+        [
+         4,
+         7
+        ],
+        [
+         4.2,
+         7.1
+        ],
+        [
+         4.4,
+         7.2
+        ],
+        [
+         4.6,
+         7.3
+        ],
+        [
+         4.8,
+         7.4
+        ],
+        [
+         5,
+         7.5
+        ],
+        [
+         5.2,
+         7.6
+        ],
+        [
+         5.4,
+         7.7
+        ],
+        [
+         5.6,
+         7.8
+        ],
+        [
+         5.8,
+         7.9
+        ],
+        [
+         6,
+         8
+        ],
+        [
+         6.2,
+         8.1
+        ],
+        [
+         6.4,
+         8.2
+        ],
+        [
+         6.6,
+         8.3
+        ],
+        [
+         6.8,
+         8.4
+        ],
+        [
+         7,
+         8.5
+        ],
+        [
+         7.2,
+         8.6
+        ],
+        [
+         7.4,
+         8.7
+        ],
+        [
+         7.6,
+         8.8
+        ],
+        [
+         7.8,
+         8.9
+        ],
+        [
+         8,
+         9
+        ],
+        [
+         8.2,
+         9.1
+        ],
+        [
+         8.4,
+         9.2
+        ],
+        [
+         8.6,
+         9.3
+        ],
+        [
+         8.8,
+         9.4
+        ],
+        [
+         9,
+         9.5
+        ],
+        [
+         9.2,
+         9.6
+        ],
+        [
+         9.4,
+         9.7
+        ],
+        [
+         9.6,
+         9.8
+        ],
+        [
+         9.8,
+         9.9
+        ],
+        [
+         10,
+         10
+        ],
+        [
+         10.2,
+         10.1
+        ],
+        [
+         10.4,
+         10.2
+        ],
+        [
+         10.6,
+         10.3
+        ],
+        [
+         10.8,
+         10.4
+        ],
+        [
+         11,
+         10.5
+        ],
+        [
+         11.2,
+         10.6
+        ],
+        [
+         11.4,
+         10.7
+        ],
+        [
+         11.6,
+         10.8
+        ],
+        [
+         11.8,
+         10.9
+        ],
+        [
+         12,
+         11
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $3.00x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.6
+        ],
+        [
+         0.4,
+         1.2
+        ],
+        [
+         0.6,
+         1.8
+        ],
+        [
+         0.8,
+         2.4
+        ],
+        [
+         1,
+         3
+        ],
+        [
+         1.2,
+         3.6
+        ],
+        [
+         1.4,
+         4.2
+        ],
+        [
+         1.6,
+         4.8
+        ],
+        [
+         1.8,
+         5.4
+        ],
+        [
+         2,
+         6
+        ],
+        [
+         2.2,
+         6.6
+        ],
+        [
+         2.4,
+         7.2
+        ],
+        [
+         2.6,
+         7.8
+        ],
+        [
+         2.8,
+         8.4
+        ],
+        [
+         3,
+         9
+        ],
+        [
+         3.2,
+         9.6
+        ],
+        [
+         3.4,
+         10.2
+        ],
+        [
+         3.6,
+         10.8
+        ],
+        [
+         3.8,
+         11.4
+        ],
+        [
+         4,
+         12
+        ],
+        [
+         4.2,
+         12.6
+        ],
+        [
+         4.4,
+         13.2
+        ],
+        [
+         4.6,
+         13.8
+        ],
+        [
+         4.8,
+         14.4
+        ],
+        [
+         5,
+         15
+        ],
+        [
+         5.2,
+         15.6
+        ],
+        [
+         5.4,
+         16.2
+        ],
+        [
+         5.6,
+         16.8
+        ],
+        [
+         5.8,
+         17.4
+        ],
+        [
+         6,
+         18
+        ],
+        [
+         6.2,
+         18.6
+        ],
+        [
+         6.4,
+         19.2
+        ],
+        [
+         6.6,
+         19.8
+        ],
+        [
+         6.8,
+         20.4
+        ],
+        [
+         7,
+         21
+        ],
+        [
+         7.2,
+         21.6
+        ],
+        [
+         7.4,
+         22.2
+        ],
+        [
+         7.6,
+         22.8
+        ],
+        [
+         7.8,
+         23.4
+        ],
+        [
+         8,
+         24
+        ],
+        [
+         8.2,
+         24.6
+        ],
+        [
+         8.4,
+         25.2
+        ],
+        [
+         8.6,
+         25.8
+        ],
+        [
+         8.8,
+         26.4
+        ],
+        [
+         9,
+         27
+        ],
+        [
+         9.2,
+         27.6
+        ],
+        [
+         9.4,
+         28.2
+        ],
+        [
+         9.6,
+         28.8
+        ],
+        [
+         9.8,
+         29.4
+        ],
+        [
+         10,
+         30
+        ],
+        [
+         10.2,
+         30.6
+        ],
+        [
+         10.4,
+         31.2
+        ],
+        [
+         10.6,
+         31.8
+        ],
+        [
+         10.8,
+         32.4
+        ],
+        [
+         11,
+         33
+        ],
+        [
+         11.2,
+         33.6
+        ],
+        [
+         11.4,
+         34.2
+        ],
+        [
+         11.6,
+         34.8
+        ],
+        [
+         11.8,
+         35.4
+        ],
+        [
+         12,
+         36
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 6,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $5.00 + $0.50x. Account B: B(x) = $3.00x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$300.00",
+   "numeric": {
+    "value": 300,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: yearly difference = 12 × |A(x) − B(x)|.",
+    "Substitute: A(12) = $11.00, B(12) = $36.00; 12 × $25.00 = $300.00.",
+    "Spreadsheet: =12*ABS((5+0.5*12)-3*12).",
+    "So Account A saves Sofia $300.00 a year: 12 is right of the crossing point at 2."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-07",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "support",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Account A charges $9.00 a month plus $1.50 per out-of-network ATM withdrawal. What does it cost Sam in a month with 6 withdrawals?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 60,
+      "step": 20,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $9.00 + $1.50x",
+       "pts": [
+        [
+         0,
+         9
+        ],
+        [
+         0.2,
+         9.3
+        ],
+        [
+         0.4,
+         9.6
+        ],
+        [
+         0.6,
+         9.9
+        ],
+        [
+         0.8,
+         10.2
+        ],
+        [
+         1,
+         10.5
+        ],
+        [
+         1.2,
+         10.8
+        ],
+        [
+         1.4,
+         11.1
+        ],
+        [
+         1.6,
+         11.4
+        ],
+        [
+         1.8,
+         11.7
+        ],
+        [
+         2,
+         12
+        ],
+        [
+         2.2,
+         12.3
+        ],
+        [
+         2.4,
+         12.6
+        ],
+        [
+         2.6,
+         12.9
+        ],
+        [
+         2.8,
+         13.2
+        ],
+        [
+         3,
+         13.5
+        ],
+        [
+         3.2,
+         13.8
+        ],
+        [
+         3.4,
+         14.1
+        ],
+        [
+         3.6,
+         14.4
+        ],
+        [
+         3.8,
+         14.7
+        ],
+        [
+         4,
+         15
+        ],
+        [
+         4.2,
+         15.3
+        ],
+        [
+         4.4,
+         15.6
+        ],
+        [
+         4.6,
+         15.9
+        ],
+        [
+         4.8,
+         16.2
+        ],
+        [
+         5,
+         16.5
+        ],
+        [
+         5.2,
+         16.8
+        ],
+        [
+         5.4,
+         17.1
+        ],
+        [
+         5.6,
+         17.4
+        ],
+        [
+         5.8,
+         17.7
+        ],
+        [
+         6,
+         18
+        ],
+        [
+         6.2,
+         18.3
+        ],
+        [
+         6.4,
+         18.6
+        ],
+        [
+         6.6,
+         18.9
+        ],
+        [
+         6.8,
+         19.2
+        ],
+        [
+         7,
+         19.5
+        ],
+        [
+         7.2,
+         19.8
+        ],
+        [
+         7.4,
+         20.1
+        ],
+        [
+         7.6,
+         20.4
+        ],
+        [
+         7.8,
+         20.7
+        ],
+        [
+         8,
+         21
+        ],
+        [
+         8.2,
+         21.3
+        ],
+        [
+         8.4,
+         21.6
+        ],
+        [
+         8.6,
+         21.9
+        ],
+        [
+         8.8,
+         22.2
+        ],
+        [
+         9,
+         22.5
+        ],
+        [
+         9.2,
+         22.8
+        ],
+        [
+         9.4,
+         23.1
+        ],
+        [
+         9.6,
+         23.4
+        ],
+        [
+         9.8,
+         23.7
+        ],
+        [
+         10,
+         24
+        ],
+        [
+         10.2,
+         24.3
+        ],
+        [
+         10.4,
+         24.6
+        ],
+        [
+         10.6,
+         24.9
+        ],
+        [
+         10.8,
+         25.2
+        ],
+        [
+         11,
+         25.5
+        ],
+        [
+         11.2,
+         25.8
+        ],
+        [
+         11.4,
+         26.1
+        ],
+        [
+         11.6,
+         26.4
+        ],
+        [
+         11.8,
+         26.7
+        ],
+        [
+         12,
+         27
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $4.50x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.9
+        ],
+        [
+         0.4,
+         1.8
+        ],
+        [
+         0.6,
+         2.7
+        ],
+        [
+         0.8,
+         3.6
+        ],
+        [
+         1,
+         4.5
+        ],
+        [
+         1.2,
+         5.4
+        ],
+        [
+         1.4,
+         6.3
+        ],
+        [
+         1.6,
+         7.2
+        ],
+        [
+         1.8,
+         8.1
+        ],
+        [
+         2,
+         9
+        ],
+        [
+         2.2,
+         9.9
+        ],
+        [
+         2.4,
+         10.8
+        ],
+        [
+         2.6,
+         11.7
+        ],
+        [
+         2.8,
+         12.6
+        ],
+        [
+         3,
+         13.5
+        ],
+        [
+         3.2,
+         14.4
+        ],
+        [
+         3.4,
+         15.3
+        ],
+        [
+         3.6,
+         16.2
+        ],
+        [
+         3.8,
+         17.1
+        ],
+        [
+         4,
+         18
+        ],
+        [
+         4.2,
+         18.9
+        ],
+        [
+         4.4,
+         19.8
+        ],
+        [
+         4.6,
+         20.7
+        ],
+        [
+         4.8,
+         21.6
+        ],
+        [
+         5,
+         22.5
+        ],
+        [
+         5.2,
+         23.4
+        ],
+        [
+         5.4,
+         24.3
+        ],
+        [
+         5.6,
+         25.2
+        ],
+        [
+         5.8,
+         26.1
+        ],
+        [
+         6,
+         27
+        ],
+        [
+         6.2,
+         27.9
+        ],
+        [
+         6.4,
+         28.8
+        ],
+        [
+         6.6,
+         29.7
+        ],
+        [
+         6.8,
+         30.6
+        ],
+        [
+         7,
+         31.5
+        ],
+        [
+         7.2,
+         32.4
+        ],
+        [
+         7.4,
+         33.3
+        ],
+        [
+         7.6,
+         34.2
+        ],
+        [
+         7.8,
+         35.1
+        ],
+        [
+         8,
+         36
+        ],
+        [
+         8.2,
+         36.9
+        ],
+        [
+         8.4,
+         37.8
+        ],
+        [
+         8.6,
+         38.7
+        ],
+        [
+         8.8,
+         39.6
+        ],
+        [
+         9,
+         40.5
+        ],
+        [
+         9.2,
+         41.4
+        ],
+        [
+         9.4,
+         42.3
+        ],
+        [
+         9.6,
+         43.2
+        ],
+        [
+         9.8,
+         44.1
+        ],
+        [
+         10,
+         45
+        ],
+        [
+         10.2,
+         45.9
+        ],
+        [
+         10.4,
+         46.8
+        ],
+        [
+         10.6,
+         47.7
+        ],
+        [
+         10.8,
+         48.6
+        ],
+        [
+         11,
+         49.5
+        ],
+        [
+         11.2,
+         50.4
+        ],
+        [
+         11.4,
+         51.3
+        ],
+        [
+         11.6,
+         52.2
+        ],
+        [
+         11.8,
+         53.1
+        ],
+        [
+         12,
+         54
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 3,
+       "y": 13.5,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $9.00 + $1.50x. Account B: B(x) = $4.50x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$18.00",
+   "numeric": {
+    "value": 18,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: A(x) = monthly fee + fee per withdrawal × x.",
+    "Substitute: $9.00 + $1.50 × 6 = $18.00.",
+    "Spreadsheet: =9+1.5*6.",
+    "So Account A costs $18.00 that month, less than Account B's $27.00."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-08",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "standard",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "For how many withdrawals a month do the two accounts cost the same? (Where the lines cross.)",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 30,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $9.00 + $1.00x",
+       "pts": [
+        [
+         0,
+         9
+        ],
+        [
+         0.2,
+         9.2
+        ],
+        [
+         0.4,
+         9.4
+        ],
+        [
+         0.6,
+         9.6
+        ],
+        [
+         0.8,
+         9.8
+        ],
+        [
+         1,
+         10
+        ],
+        [
+         1.2,
+         10.2
+        ],
+        [
+         1.4,
+         10.4
+        ],
+        [
+         1.6,
+         10.6
+        ],
+        [
+         1.8,
+         10.8
+        ],
+        [
+         2,
+         11
+        ],
+        [
+         2.2,
+         11.2
+        ],
+        [
+         2.4,
+         11.4
+        ],
+        [
+         2.6,
+         11.6
+        ],
+        [
+         2.8,
+         11.8
+        ],
+        [
+         3,
+         12
+        ],
+        [
+         3.2,
+         12.2
+        ],
+        [
+         3.4,
+         12.4
+        ],
+        [
+         3.6,
+         12.6
+        ],
+        [
+         3.8,
+         12.8
+        ],
+        [
+         4,
+         13
+        ],
+        [
+         4.2,
+         13.2
+        ],
+        [
+         4.4,
+         13.4
+        ],
+        [
+         4.6,
+         13.6
+        ],
+        [
+         4.8,
+         13.8
+        ],
+        [
+         5,
+         14
+        ],
+        [
+         5.2,
+         14.2
+        ],
+        [
+         5.4,
+         14.4
+        ],
+        [
+         5.6,
+         14.6
+        ],
+        [
+         5.8,
+         14.8
+        ],
+        [
+         6,
+         15
+        ],
+        [
+         6.2,
+         15.2
+        ],
+        [
+         6.4,
+         15.4
+        ],
+        [
+         6.6,
+         15.6
+        ],
+        [
+         6.8,
+         15.8
+        ],
+        [
+         7,
+         16
+        ],
+        [
+         7.2,
+         16.2
+        ],
+        [
+         7.4,
+         16.4
+        ],
+        [
+         7.6,
+         16.6
+        ],
+        [
+         7.8,
+         16.8
+        ],
+        [
+         8,
+         17
+        ],
+        [
+         8.2,
+         17.2
+        ],
+        [
+         8.4,
+         17.4
+        ],
+        [
+         8.6,
+         17.6
+        ],
+        [
+         8.8,
+         17.8
+        ],
+        [
+         9,
+         18
+        ],
+        [
+         9.2,
+         18.2
+        ],
+        [
+         9.4,
+         18.4
+        ],
+        [
+         9.6,
+         18.6
+        ],
+        [
+         9.8,
+         18.8
+        ],
+        [
+         10,
+         19
+        ],
+        [
+         10.2,
+         19.2
+        ],
+        [
+         10.4,
+         19.4
+        ],
+        [
+         10.6,
+         19.6
+        ],
+        [
+         10.8,
+         19.8
+        ],
+        [
+         11,
+         20
+        ],
+        [
+         11.2,
+         20.2
+        ],
+        [
+         11.4,
+         20.4
+        ],
+        [
+         11.6,
+         20.6
+        ],
+        [
+         11.8,
+         20.8
+        ],
+        [
+         12,
+         21
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $2.50x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.5
+        ],
+        [
+         0.4,
+         1
+        ],
+        [
+         0.6,
+         1.5
+        ],
+        [
+         0.8,
+         2
+        ],
+        [
+         1,
+         2.5
+        ],
+        [
+         1.2,
+         3
+        ],
+        [
+         1.4,
+         3.5
+        ],
+        [
+         1.6,
+         4
+        ],
+        [
+         1.8,
+         4.5
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         2.2,
+         5.5
+        ],
+        [
+         2.4,
+         6
+        ],
+        [
+         2.6,
+         6.5
+        ],
+        [
+         2.8,
+         7
+        ],
+        [
+         3,
+         7.5
+        ],
+        [
+         3.2,
+         8
+        ],
+        [
+         3.4,
+         8.5
+        ],
+        [
+         3.6,
+         9
+        ],
+        [
+         3.8,
+         9.5
+        ],
+        [
+         4,
+         10
+        ],
+        [
+         4.2,
+         10.5
+        ],
+        [
+         4.4,
+         11
+        ],
+        [
+         4.6,
+         11.5
+        ],
+        [
+         4.8,
+         12
+        ],
+        [
+         5,
+         12.5
+        ],
+        [
+         5.2,
+         13
+        ],
+        [
+         5.4,
+         13.5
+        ],
+        [
+         5.6,
+         14
+        ],
+        [
+         5.8,
+         14.5
+        ],
+        [
+         6,
+         15
+        ],
+        [
+         6.2,
+         15.5
+        ],
+        [
+         6.4,
+         16
+        ],
+        [
+         6.6,
+         16.5
+        ],
+        [
+         6.8,
+         17
+        ],
+        [
+         7,
+         17.5
+        ],
+        [
+         7.2,
+         18
+        ],
+        [
+         7.4,
+         18.5
+        ],
+        [
+         7.6,
+         19
+        ],
+        [
+         7.8,
+         19.5
+        ],
+        [
+         8,
+         20
+        ],
+        [
+         8.2,
+         20.5
+        ],
+        [
+         8.4,
+         21
+        ],
+        [
+         8.6,
+         21.5
+        ],
+        [
+         8.8,
+         22
+        ],
+        [
+         9,
+         22.5
+        ],
+        [
+         9.2,
+         23
+        ],
+        [
+         9.4,
+         23.5
+        ],
+        [
+         9.6,
+         24
+        ],
+        [
+         9.8,
+         24.5
+        ],
+        [
+         10,
+         25
+        ],
+        [
+         10.2,
+         25.5
+        ],
+        [
+         10.4,
+         26
+        ],
+        [
+         10.6,
+         26.5
+        ],
+        [
+         10.8,
+         27
+        ],
+        [
+         11,
+         27.5
+        ],
+        [
+         11.2,
+         28
+        ],
+        [
+         11.4,
+         28.5
+        ],
+        [
+         11.6,
+         29
+        ],
+        [
+         11.8,
+         29.5
+        ],
+        [
+         12,
+         30
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 6,
+       "y": 15,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $9.00 + $1.00x. Account B: B(x) = $2.50x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "6",
+   "numeric": {
+    "value": 6,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set A(x) = B(x).",
+    "Substitute: $9.00 + $1.00x = $2.50x → $9.00 = $1.50x → x = $9.00 ÷ $1.50 = 6.",
+    "Spreadsheet: =9/(2.5-1).",
+    "So at 6 withdrawals both cost $15.00. Fewer withdrawals: Account B is cheaper. More: Account A is cheaper."
+   ]
+  },
+  {
+   "id": "fa-banking-s01-lv-m-fee-lines-09",
+   "unitId": "banking",
+   "skillId": "banking-skill-01",
+   "level": "advanced",
+   "family": "lv-m-fee-lines",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Camila makes 1 out-of-network withdrawals every month. Over a year, how much less does the cheaper account cost?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of two checking accounts",
+     "x": {
+      "label": "Out-of-network ATM withdrawals per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost",
+      "min": 0,
+      "max": 25,
+      "step": 5,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Account A: A(x) = $3.00 + $0.50x",
+       "pts": [
+        [
+         0,
+         3
+        ],
+        [
+         0.2,
+         3.1
+        ],
+        [
+         0.4,
+         3.2
+        ],
+        [
+         0.6,
+         3.3
+        ],
+        [
+         0.8,
+         3.4
+        ],
+        [
+         1,
+         3.5
+        ],
+        [
+         1.2,
+         3.6
+        ],
+        [
+         1.4,
+         3.7
+        ],
+        [
+         1.6,
+         3.8
+        ],
+        [
+         1.8,
+         3.9
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         2.2,
+         4.1
+        ],
+        [
+         2.4,
+         4.2
+        ],
+        [
+         2.6,
+         4.3
+        ],
+        [
+         2.8,
+         4.4
+        ],
+        [
+         3,
+         4.5
+        ],
+        [
+         3.2,
+         4.6
+        ],
+        [
+         3.4,
+         4.7
+        ],
+        [
+         3.6,
+         4.8
+        ],
+        [
+         3.8,
+         4.9
+        ],
+        [
+         4,
+         5
+        ],
+        [
+         4.2,
+         5.1
+        ],
+        [
+         4.4,
+         5.2
+        ],
+        [
+         4.6,
+         5.3
+        ],
+        [
+         4.8,
+         5.4
+        ],
+        [
+         5,
+         5.5
+        ],
+        [
+         5.2,
+         5.6
+        ],
+        [
+         5.4,
+         5.7
+        ],
+        [
+         5.6,
+         5.8
+        ],
+        [
+         5.8,
+         5.9
+        ],
+        [
+         6,
+         6
+        ],
+        [
+         6.2,
+         6.1
+        ],
+        [
+         6.4,
+         6.2
+        ],
+        [
+         6.6,
+         6.3
+        ],
+        [
+         6.8,
+         6.4
+        ],
+        [
+         7,
+         6.5
+        ],
+        [
+         7.2,
+         6.6
+        ],
+        [
+         7.4,
+         6.7
+        ],
+        [
+         7.6,
+         6.8
+        ],
+        [
+         7.8,
+         6.9
+        ],
+        [
+         8,
+         7
+        ],
+        [
+         8.2,
+         7.1
+        ],
+        [
+         8.4,
+         7.2
+        ],
+        [
+         8.6,
+         7.3
+        ],
+        [
+         8.8,
+         7.4
+        ],
+        [
+         9,
+         7.5
+        ],
+        [
+         9.2,
+         7.6
+        ],
+        [
+         9.4,
+         7.7
+        ],
+        [
+         9.6,
+         7.8
+        ],
+        [
+         9.8,
+         7.9
+        ],
+        [
+         10,
+         8
+        ],
+        [
+         10.2,
+         8.1
+        ],
+        [
+         10.4,
+         8.2
+        ],
+        [
+         10.6,
+         8.3
+        ],
+        [
+         10.8,
+         8.4
+        ],
+        [
+         11,
+         8.5
+        ],
+        [
+         11.2,
+         8.6
+        ],
+        [
+         11.4,
+         8.7
+        ],
+        [
+         11.6,
+         8.8
+        ],
+        [
+         11.8,
+         8.9
+        ],
+        [
+         12,
+         9
+        ]
+       ]
+      },
+      {
+       "name": "Account B: B(x) = $2.00x",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.2,
+         0.4
+        ],
+        [
+         0.4,
+         0.8
+        ],
+        [
+         0.6,
+         1.2
+        ],
+        [
+         0.8,
+         1.6
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         1.2,
+         2.4
+        ],
+        [
+         1.4,
+         2.8
+        ],
+        [
+         1.6,
+         3.2
+        ],
+        [
+         1.8,
+         3.6
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         2.2,
+         4.4
+        ],
+        [
+         2.4,
+         4.8
+        ],
+        [
+         2.6,
+         5.2
+        ],
+        [
+         2.8,
+         5.6
+        ],
+        [
+         3,
+         6
+        ],
+        [
+         3.2,
+         6.4
+        ],
+        [
+         3.4,
+         6.8
+        ],
+        [
+         3.6,
+         7.2
+        ],
+        [
+         3.8,
+         7.6
+        ],
+        [
+         4,
+         8
+        ],
+        [
+         4.2,
+         8.4
+        ],
+        [
+         4.4,
+         8.8
+        ],
+        [
+         4.6,
+         9.2
+        ],
+        [
+         4.8,
+         9.6
+        ],
+        [
+         5,
+         10
+        ],
+        [
+         5.2,
+         10.4
+        ],
+        [
+         5.4,
+         10.8
+        ],
+        [
+         5.6,
+         11.2
+        ],
+        [
+         5.8,
+         11.6
+        ],
+        [
+         6,
+         12
+        ],
+        [
+         6.2,
+         12.4
+        ],
+        [
+         6.4,
+         12.8
+        ],
+        [
+         6.6,
+         13.2
+        ],
+        [
+         6.8,
+         13.6
+        ],
+        [
+         7,
+         14
+        ],
+        [
+         7.2,
+         14.4
+        ],
+        [
+         7.4,
+         14.8
+        ],
+        [
+         7.6,
+         15.2
+        ],
+        [
+         7.8,
+         15.6
+        ],
+        [
+         8,
+         16
+        ],
+        [
+         8.2,
+         16.4
+        ],
+        [
+         8.4,
+         16.8
+        ],
+        [
+         8.6,
+         17.2
+        ],
+        [
+         8.8,
+         17.6
+        ],
+        [
+         9,
+         18
+        ],
+        [
+         9.2,
+         18.4
+        ],
+        [
+         9.4,
+         18.8
+        ],
+        [
+         9.6,
+         19.2
+        ],
+        [
+         9.8,
+         19.6
+        ],
+        [
+         10,
+         20
+        ],
+        [
+         10.2,
+         20.4
+        ],
+        [
+         10.4,
+         20.8
+        ],
+        [
+         10.6,
+         21.2
+        ],
+        [
+         10.8,
+         21.6
+        ],
+        [
+         11,
+         22
+        ],
+        [
+         11.2,
+         22.4
+        ],
+        [
+         11.4,
+         22.8
+        ],
+        [
+         11.6,
+         23.2
+        ],
+        [
+         11.8,
+         23.6
+        ],
+        [
+         12,
+         24
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 4,
+       "label": "A = B"
+      }
+     ],
+     "caption": "Account A: A(x) = $3.00 + $0.50x. Account B: B(x) = $2.00x."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$18.00",
+   "numeric": {
+    "value": 18,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: yearly difference = 12 × |A(x) − B(x)|.",
+    "Substitute: A(1) = $3.50, B(1) = $2.00; 12 × $1.50 = $18.00.",
+    "Spreadsheet: =12*ABS((3+0.5*1)-2*1).",
+    "So Account B saves Camila $18.00 a year: 1 is left of the crossing point at 2."
    ]
   },
   {
@@ -9864,7 +15336,7 @@
    "id": "fa-banking-s01-err-fee-annualized-01",
    "unitId": "banking",
    "skillId": "banking-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "fee-annualized-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -9892,9 +15364,12 @@
    "answer": "$71.40",
    "solutionSteps": [
     "Mistake: Multiplied by 4 (quarters or weeks) instead of 12 months.",
+    "Formula: yearly fees = monthly fee × 12.",
     "The fee is charged every month.",
     "$5.95 × 12 = $71.40.",
-    "Correct result: $71.40."
+    "Correct result: $71.40.",
+    "Spreadsheet or calculator: =5.95*12",
+    "So the answer is $71.40; account fees and overdrafts come straight out of your balance, so choose and use an account to avoid them."
    ],
    "numeric": {
     "value": 71.4,
@@ -9990,9 +15465,12 @@
    "answer": "$60",
    "solutionSteps": [
     "Mistake: Used 4 instead of the decimal 0.04 for the rate.",
+    "Formula: I = P × r × t, with r as a decimal.",
     "4% = 0.04.",
     "I = $750 × 0.04 × 2 = $60.",
-    "Correct result: $60."
+    "Correct result: $60.",
+    "Spreadsheet or calculator: =750*0.04*2",
+    "So the answer is $60; simple interest grows only on the original deposit."
    ],
    "numeric": {
     "value": 60,
@@ -10057,7 +15535,7 @@
    "id": "fa-banking-s03-err-compound-as-simple-01",
    "unitId": "banking",
    "skillId": "banking-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "compound-as-simple-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -10087,9 +15565,12 @@
    "answer": "$2,627.90",
    "solutionSteps": [
     "Mistake: Treated monthly compounding as simple interest.",
+    "Formula: A = P(1 + r ÷ 12)^(12t).",
     "Monthly rate = 0.05 ÷ 12.",
     "A = $2,500.00 × (1 + 0.05/12)^12 = $2,627.90.",
-    "Correct result: $2,627.90."
+    "Correct result: $2,627.90.",
+    "Spreadsheet or calculator: =2500.00*(1+0.05/12)^12",
+    "So the answer is $2,627.90; compare savings options by APY and how easily you can reach the money."
    ],
    "numeric": {
     "value": 2627.9,
@@ -10187,9 +15668,12 @@
    "answer": "$804.20",
    "solutionSteps": [
     "Mistake: Forgot to subtract the monthly service fee.",
+    "Formula: ending balance = start + deposits − withdrawals − fees.",
     "$765.50 + $1,250.00 − $1,199.30 = $816.20.",
     "Subtract the fee: − $12.00 = $804.20.",
-    "Correct result: $804.20."
+    "Correct result: $804.20.",
+    "Spreadsheet or calculator: =(765.50+1250.00-1199.30)-12.00",
+    "So the answer is $804.20; it should match your own register, and any gap is worth tracking down."
    ],
    "numeric": {
     "value": 804.2,

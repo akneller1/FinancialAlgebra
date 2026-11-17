@@ -13,21 +13,52 @@
  "skills": [
   {
    "id": "investing-skill-01",
-   "name": "Calculate compound growth"
+   "name": "Calculate compound growth",
+   "standards": [
+    "Saving 12-2: Interest rates and fees",
+    "Investing 12-2: Investment cash flows and compounding"
+   ]
   },
   {
    "id": "investing-skill-02",
-   "name": "Model recurring contributions"
+   "name": "Model recurring contributions",
+   "standards": [
+    "Investing 12-2: Investment cash flows and compounding",
+    "Saving 12-7: Employer retirement and health savings plans"
+   ]
   },
   {
    "id": "investing-skill-03",
-   "name": "Compare investment scenarios"
+   "name": "Compare investment scenarios",
+   "standards": [
+    "Investing 12-3: Risk and expected return",
+    "Investing 12-7: Investment expenses"
+   ]
   },
   {
    "id": "investing-skill-04",
-   "name": "Interpret investment risk"
+   "name": "Interpret investment risk",
+   "standards": [
+    "Investing 12-1: Risk tolerance",
+    "Investing 12-3: Risk and expected return",
+    "Investing 12-6: Diversification and asset allocation"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": [
+   {
+    "title": "Spreadsheet Lab 3: PMT and FV",
+    "path": "financial/spreadsheet-labs/index.html?lab=pmt-fv"
+   }
+  ]
+ },
  "vocab": [
   {
    "term": "Compound growth",
@@ -2080,8 +2111,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $1,750.00(1 + [[0.06 || 12]])^60.",
     "A = $2,360.49; growth = $610.49.",
+    "Spreadsheet or calculator: =1750.00*(1+0.06/12)^60",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2109,8 +2142,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $4,250.00(1 + [[0.05 || 1]])^10.",
     "A = $6,922.80; growth = $2,672.80.",
+    "Spreadsheet or calculator: =4250.00*(1+0.05/1)^10",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2138,8 +2173,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $9,250.00(1 + [[0.045 || 1]])^20.",
     "A = $22,308.35; growth = $13,058.35.",
+    "Spreadsheet or calculator: =9250.00*(1+0.045/1)^20",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2167,8 +2204,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $4,250.00(1 + [[0.06 || 12]])^120.",
     "A = $7,732.44; growth = $3,482.44.",
+    "Spreadsheet or calculator: =4250.00*(1+0.06/12)^120",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2196,8 +2235,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $1,250.00(1 + [[0.03 || 4]])^100.",
     "A = $2,638.85; growth = $1,388.85.",
+    "Spreadsheet or calculator: =1250.00*(1+0.03/4)^100",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2225,8 +2266,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $10,000.00(1 + [[0.07 || 12]])^240.",
     "A = $40,387.39; growth = $30,387.39.",
+    "Spreadsheet or calculator: =10000.00*(1+0.07/12)^240",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2254,8 +2297,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $4,750.00(1 + [[0.07 || 4]])^60.",
     "A = $13,451.13; growth = $8,701.13.",
+    "Spreadsheet or calculator: =4750.00*(1+0.07/4)^60",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2283,8 +2328,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + r ÷ n)^(nt).",
     "A = P(1 + [[r || n]])^(nt) = $8,000.00(1 + [[0.03 || 1]])^10.",
     "A = $10,751.33; growth = $2,751.33.",
+    "Spreadsheet or calculator: =8000.00*(1+0.03/1)^10",
     "Returns are assumptions, not guarantees."
    ]
   },
@@ -2312,9 +2359,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: doubling time ≈ 72 ÷ rate; value = start × 2^(years ÷ doubling time).",
     "Doubling time ≈ 72 ÷ 8 = 9 years.",
     "27 years = 3 doublings.",
-    "$2,000 × 2^3 = $16,000 (estimate)."
+    "$2,000 × 2^3 = $16,000 (estimate).",
+    "Spreadsheet or calculator: =2000*2^3",
+    "So the answer is $16,000; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -2341,9 +2391,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: doubling time ≈ 72 ÷ rate; value = start × 2^(years ÷ doubling time).",
     "Doubling time ≈ 72 ÷ 6 = 12 years.",
     "24 years = 2 doublings.",
-    "$3,000 × 2^2 = $12,000 (estimate)."
+    "$3,000 × 2^2 = $12,000 (estimate).",
+    "Spreadsheet or calculator: =3000*2^2",
+    "So the answer is $12,000; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -2370,9 +2423,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: doubling time ≈ 72 ÷ rate; value = start × 2^(years ÷ doubling time).",
     "Doubling time ≈ 72 ÷ 8 = 9 years.",
     "27 years = 3 doublings.",
-    "$3,000 × 2^3 = $24,000 (estimate)."
+    "$3,000 × 2^3 = $24,000 (estimate).",
+    "Spreadsheet or calculator: =3000*2^3",
+    "So the answer is $24,000; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -2399,9 +2455,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: doubling time ≈ 72 ÷ rate; value = start × 2^(years ÷ doubling time).",
     "Doubling time ≈ 72 ÷ 12 = 6 years.",
     "12 years = 2 doublings.",
-    "$3,000 × 2^2 = $12,000 (estimate)."
+    "$3,000 × 2^2 = $12,000 (estimate).",
+    "Spreadsheet or calculator: =3000*2^2",
+    "So the answer is $12,000; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -2428,9 +2487,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: doubling time ≈ 72 ÷ rate; value = start × 2^(years ÷ doubling time).",
     "Doubling time ≈ 72 ÷ 3 = 24 years.",
     "48 years = 2 doublings.",
-    "$3,000 × 2^2 = $12,000 (estimate)."
+    "$3,000 × 2^2 = $12,000 (estimate).",
+    "Spreadsheet or calculator: =3000*2^2",
+    "So the answer is $12,000; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -2457,9 +2519,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: doubling time ≈ 72 ÷ rate; value = start × 2^(years ÷ doubling time).",
     "Doubling time ≈ 72 ÷ 12 = 6 years.",
     "18 years = 3 doublings.",
-    "$8,000 × 2^3 = $64,000 (estimate)."
+    "$8,000 × 2^3 = $64,000 (estimate).",
+    "Spreadsheet or calculator: =8000*2^3",
+    "So the answer is $64,000; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -2486,7 +2551,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: return = (ending value − starting value) ÷ starting value.",
     "Return = [[$1,827.50 − $2,150.00 || $2,150.00]] = -15%.",
+    "Spreadsheet or calculator: =(1827.50-2150.00)/2150.00 (then format as a percent)",
     "A negative return is a loss."
    ]
   },
@@ -2514,7 +2581,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: return = (ending value − starting value) ÷ starting value.",
     "Return = [[$2,809 − $2,650 || $2,650]] = 6%.",
+    "Spreadsheet or calculator: =(2809-2650)/2650 (then format as a percent)",
     "A positive return is a gain."
    ]
   },
@@ -2542,7 +2611,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: return = (ending value − starting value) ÷ starting value.",
     "Return = [[$2,100 − $1,500 || $1,500]] = 40%.",
+    "Spreadsheet or calculator: =(2100-1500)/1500 (then format as a percent)",
     "A positive return is a gain."
    ]
   },
@@ -2570,7 +2641,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: return = (ending value − starting value) ÷ starting value.",
     "Return = [[$4,536 − $4,050 || $4,050]] = 12%.",
+    "Spreadsheet or calculator: =(4536-4050)/4050 (then format as a percent)",
     "A positive return is a gain."
    ]
   },
@@ -2598,7 +2671,9 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: return = (ending value − starting value) ÷ starting value.",
     "Return = [[$3,375 − $2,700 || $2,700]] = 25%.",
+    "Spreadsheet or calculator: =(3375-2700)/2700 (then format as a percent)",
     "A positive return is a gain."
    ]
   },
@@ -2626,9 +2701,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.06 || 12]], N = 120.",
     "FV = $45,066.82.",
-    "Contributions = $275.00 × 120 = $33,000.00; growth = $12,066.82."
+    "Contributions = $275.00 × 120 = $33,000.00; growth = $12,066.82.",
+    "Spreadsheet or calculator: =FV(0.06/12,120,-275)",
+    "So the answer is $45,066.82; growth $12,066.82; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -2655,9 +2733,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.04 || 12]], N = 240.",
     "FV = $174,217.95.",
-    "Contributions = $475.00 × 240 = $114,000.00; growth = $60,217.95."
+    "Contributions = $475.00 × 240 = $114,000.00; growth = $60,217.95.",
+    "Spreadsheet or calculator: =FV(0.04/12,240,-475)",
+    "So the answer is $174,217.95; growth $60,217.95; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -2684,9 +2765,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.04 || 12]], N = 120.",
     "FV = $51,537.43.",
-    "Contributions = $350.00 × 120 = $42,000.00; growth = $9,537.43."
+    "Contributions = $350.00 × 120 = $42,000.00; growth = $9,537.43.",
+    "Spreadsheet or calculator: =FV(0.04/12,120,-350)",
+    "So the answer is $51,537.43; growth $9,537.43; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -2713,9 +2797,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.04 || 12]], N = 360.",
     "FV = $242,917.29.",
-    "Contributions = $350.00 × 360 = $126,000.00; growth = $116,917.29."
+    "Contributions = $350.00 × 360 = $126,000.00; growth = $116,917.29.",
+    "Spreadsheet or calculator: =FV(0.04/12,360,-350)",
+    "So the answer is $242,917.29; growth $116,917.29; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -2742,9 +2829,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.07 || 12]], N = 360.",
     "FV = $213,494.92.",
-    "Contributions = $175.00 × 360 = $63,000.00; growth = $150,494.92."
+    "Contributions = $175.00 × 360 = $63,000.00; growth = $150,494.92.",
+    "Spreadsheet or calculator: =FV(0.07/12,360,-175)",
+    "So the answer is $213,494.92; growth $150,494.92; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -2771,9 +2861,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.06 || 12]], N = 180.",
     "FV = $94,516.08.",
-    "Contributions = $325.00 × 180 = $58,500.00; growth = $36,016.08."
+    "Contributions = $325.00 × 180 = $58,500.00; growth = $36,016.08.",
+    "Spreadsheet or calculator: =FV(0.06/12,180,-325)",
+    "So the answer is $94,516.08; growth $36,016.08; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -2800,9 +2893,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT · [[(1 + i)^N − 1 || i]].",
     "FV = PMT · [[(1 + i)^N − 1 || i]], i = [[0.06 || 12]], N = 240.",
     "FV = $115,510.22.",
-    "Contributions = $250.00 × 240 = $60,000.00; growth = $55,510.22."
+    "Contributions = $250.00 × 240 = $60,000.00; growth = $55,510.22.",
+    "Spreadsheet or calculator: =FV(0.06/12,240,-250)",
+    "So the answer is $115,510.22; growth $55,510.22; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -2829,7 +2925,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = [[FV · i || (1 + i)^N − 1]].",
     "PMT = [[FV · i || (1 + i)^N − 1]], i = [[0.05 || 12]], N = 120.",
+    "Spreadsheet or calculator: =PMT(0.05/12,120,0,-10000)",
     "PMT ≈ $64.40 (round up)."
    ]
   },
@@ -2857,7 +2955,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = [[FV · i || (1 + i)^N − 1]].",
     "PMT = [[FV · i || (1 + i)^N − 1]], i = [[0.04 || 12]], N = 60.",
+    "Spreadsheet or calculator: =PMT(0.04/12,60,0,-10000)",
     "PMT ≈ $150.83 (round up)."
    ]
   },
@@ -2885,7 +2985,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = [[FV · i || (1 + i)^N − 1]].",
     "PMT = [[FV · i || (1 + i)^N − 1]], i = [[0.06 || 12]], N = 96.",
+    "Spreadsheet or calculator: =PMT(0.06/12,96,0,-100000)",
     "PMT ≈ $814.14 (round up)."
    ]
   },
@@ -2913,7 +3015,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = [[FV · i || (1 + i)^N − 1]].",
     "PMT = [[FV · i || (1 + i)^N − 1]], i = [[0.04 || 12]], N = 96.",
+    "Spreadsheet or calculator: =PMT(0.04/12,96,0,-100000)",
     "PMT ≈ $885.59 (round up)."
    ]
   },
@@ -2941,7 +3045,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = [[FV · i || (1 + i)^N − 1]].",
     "PMT = [[FV · i || (1 + i)^N − 1]], i = [[0.05 || 12]], N = 60.",
+    "Spreadsheet or calculator: =PMT(0.05/12,60,0,-10000)",
     "PMT ≈ $147.05 (round up)."
    ]
   },
@@ -2969,7 +3075,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = [[FV · i || (1 + i)^N − 1]].",
     "PMT = [[FV · i || (1 + i)^N − 1]], i = [[0.04 || 12]], N = 96.",
+    "Spreadsheet or calculator: =PMT(0.04/12,96,0,-50000)",
     "PMT ≈ $442.80 (round up)."
    ]
   },
@@ -2995,9 +3103,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT × ((1 + i)^n − 1) ÷ i for each start date; cost of waiting = difference.",
     "Start at 25: FV over 40 years = $597,447.22.",
     "Start at 30: FV over 35 years = $427,413.09.",
-    "Cost of waiting = $170,034.13, though only $18,000.00 more was contributed."
+    "Cost of waiting = $170,034.13, though only $18,000.00 more was contributed.",
+    "Spreadsheet or calculator: =597447.22-427413.09",
+    "So the answer is $170,034.13; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -3022,9 +3133,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT × ((1 + i)^n − 1) ÷ i for each start date; cost of waiting = difference.",
     "Start at 25: FV over 40 years = $393,722.01.",
     "Start at 35: FV over 30 years = $182,995.65.",
-    "Cost of waiting = $210,726.36, though only $18,000.00 more was contributed."
+    "Cost of waiting = $210,726.36, though only $18,000.00 more was contributed.",
+    "Spreadsheet or calculator: =393722.01-182995.65",
+    "So the answer is $210,726.36; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -3049,9 +3163,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT × ((1 + i)^n − 1) ÷ i for each start date; cost of waiting = difference.",
     "Start at 22: FV over 43 years = $605,628.57.",
     "Start at 32: FV over 33 years = $310,354.92.",
-    "Cost of waiting = $295,273.65, though only $30,000.00 more was contributed."
+    "Cost of waiting = $295,273.65, though only $30,000.00 more was contributed.",
+    "Spreadsheet or calculator: =605628.57-310354.92",
+    "So the answer is $295,273.65; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -3076,9 +3193,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT × ((1 + i)^n − 1) ÷ i for each start date; cost of waiting = difference.",
     "Start at 25: FV over 40 years = $524,962.68.",
     "Start at 35: FV over 30 years = $243,994.20.",
-    "Cost of waiting = $280,968.48, though only $24,000.00 more was contributed."
+    "Cost of waiting = $280,968.48, though only $24,000.00 more was contributed.",
+    "Spreadsheet or calculator: =524962.68-243994.20",
+    "So the answer is $280,968.48; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -3103,9 +3223,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT × ((1 + i)^n − 1) ÷ i for each start date; cost of waiting = difference.",
     "Start at 25: FV over 40 years = $381,505.04.",
     "Start at 30: FV over 35 years = $284,023.11.",
-    "Cost of waiting = $97,481.93, though only $15,000.00 more was contributed."
+    "Cost of waiting = $97,481.93, though only $15,000.00 more was contributed.",
+    "Spreadsheet or calculator: =381505.04-284023.11",
+    "So the answer is $97,481.93; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -3130,9 +3253,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = PMT × ((1 + i)^n − 1) ÷ i for each start date; cost of waiting = difference.",
     "Start at 25: FV over 40 years = $228,903.02.",
     "Start at 35: FV over 30 years = $124,838.80.",
-    "Cost of waiting = $104,064.23, though only $18,000.00 more was contributed."
+    "Cost of waiting = $104,064.23, though only $18,000.00 more was contributed.",
+    "So the answer is $104,064.23; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -3157,9 +3282,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + return − expense ratio)^t for each fund; difference = A₁ − A₂.",
     "Fund A: $18,000.00(1 + 0.0597)^30 = $102,508.65.",
     "Fund B: $18,000.00(1 + 0.0525)^30 = $83,547.92.",
-    "Difference = $18,960.74."
+    "Difference = $18,960.74.",
+    "Spreadsheet or calculator: =(18000.00*(1+0.0597)^30)-(18000.00*(1+0.0525)^30)",
+    "So the answer is $18,960.74; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -3184,9 +3312,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + return − expense ratio)^t for each fund; difference = A₁ − A₂.",
     "Fund A: $11,000.00(1 + 0.0595)^30 = $62,290.46.",
     "Fund B: $11,000.00(1 + 0.0500)^30 = $47,541.37.",
-    "Difference = $14,749.09."
+    "Difference = $14,749.09.",
+    "Spreadsheet or calculator: =(11000.00*(1+0.0595)^30)-(11000.00*(1+0.0500)^30)",
+    "So the answer is $14,749.09; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -3211,9 +3342,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + return − expense ratio)^t for each fund; difference = A₁ − A₂.",
     "Fund A: $19,000.00(1 + 0.0595)^25 = $80,589.35.",
     "Fund B: $19,000.00(1 + 0.0500)^25 = $64,340.74.",
-    "Difference = $16,248.60."
+    "Difference = $16,248.60.",
+    "Spreadsheet or calculator: =(19000.00*(1+0.0595)^25)-(19000.00*(1+0.0500)^25)",
+    "So the answer is $16,248.60; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -3238,9 +3372,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + return − expense ratio)^t for each fund; difference = A₁ − A₂.",
     "Fund A: $22,000.00(1 + 0.0695)^20 = $84,340.94.",
     "Fund B: $22,000.00(1 + 0.0600)^20 = $70,556.98.",
-    "Difference = $13,783.96."
+    "Difference = $13,783.96.",
+    "Spreadsheet or calculator: =(22000.00*(1+0.0695)^20)-(22000.00*(1+0.0600)^20)",
+    "So the answer is $13,783.96; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -3265,9 +3402,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + return − expense ratio)^t for each fund; difference = A₁ − A₂.",
     "Fund A: $17,000.00(1 + 0.0595)^20 = $54,009.25.",
     "Fund B: $17,000.00(1 + 0.0475)^20 = $43,006.05.",
-    "Difference = $11,003.20."
+    "Difference = $11,003.20.",
+    "Spreadsheet or calculator: =(17000.00*(1+0.0595)^20)-(17000.00*(1+0.0475)^20)",
+    "So the answer is $11,003.20; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -3292,9 +3432,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: A = P(1 + return − expense ratio)^t for each fund; difference = A₁ − A₂.",
     "Fund A: $9,000.00(1 + 0.0690)^30 = $66,615.25.",
     "Fund B: $9,000.00(1 + 0.0625)^30 = $55,476.71.",
-    "Difference = $11,138.54."
+    "Difference = $11,138.54.",
+    "Spreadsheet or calculator: =(9000.00*(1+0.0690)^30)-(9000.00*(1+0.0625)^30)",
+    "So the answer is $11,138.54; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -3943,8 +4086,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: value = start × (1 + r₁)(1 + r₂)(1 + r₃).",
     "$2,500.00 × 1.12 × 1.08 × 0.95 = $2,872.80.",
     "At a steady 5%: $2,894.06.",
+    "Spreadsheet or calculator: =2500.00*1.12*1.08*0.95",
     "Volatility drags results below the simple average — a loss needs a larger gain to recover."
    ]
   },
@@ -3972,8 +4117,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: value = start × (1 + r₁)(1 + r₂)(1 + r₃).",
     "$3,000.00 × 0.90 × 1.20 × 1.05 = $3,402.00.",
     "At a steady 5%: $3,472.88.",
+    "Spreadsheet or calculator: =3000.00*0.90*1.20*1.05",
     "Volatility drags results below the simple average — a loss needs a larger gain to recover."
    ]
   },
@@ -4001,8 +4148,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: value = start × (1 + r₁)(1 + r₂)(1 + r₃).",
     "$1,000.00 × 0.90 × 1.20 × 1.05 = $1,134.00.",
     "At a steady 5%: $1,157.63.",
+    "Spreadsheet or calculator: =1000.00*0.90*1.20*1.05",
     "Volatility drags results below the simple average — a loss needs a larger gain to recover."
    ]
   },
@@ -4030,8 +4179,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: value = start × (1 + r₁)(1 + r₂)(1 + r₃).",
     "$3,500.00 × 0.90 × 1.20 × 1.05 = $3,969.00.",
     "At a steady 5%: $4,051.69.",
+    "Spreadsheet or calculator: =3500.00*0.90*1.20*1.05",
     "Volatility drags results below the simple average — a loss needs a larger gain to recover."
    ]
   },
@@ -4059,8 +4210,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: value = start × (1 + r₁)(1 + r₂)(1 + r₃).",
     "$5,000.00 × 1.30 × 0.80 × 1.10 = $5,720.00.",
     "At a steady 6.7%: $6,068.15.",
+    "Spreadsheet or calculator: =5000.00*1.30*0.80*1.10",
     "Volatility drags results below the simple average — a loss needs a larger gain to recover."
    ]
   },
@@ -4088,8 +4241,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: value = start × (1 + r₁)(1 + r₂)(1 + r₃).",
     "$5,000.00 × 1.30 × 0.80 × 1.10 = $5,720.00.",
     "At a steady 6.7%: $6,068.15.",
+    "Spreadsheet or calculator: =5000.00*1.30*0.80*1.10",
     "Volatility drags results below the simple average — a loss needs a larger gain to recover."
    ]
   },
@@ -4606,6 +4761,7 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: change in value = market result − fees + contributions.",
     "Market result after fees = $602.00 − $6.02 = $595.98.",
     "Average balance ≈ $13,900.00 + $1,150.00 = $15,050.00.",
     "Return ≈ 4%.",
@@ -4690,6 +4846,7 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: change in value = market result − fees + contributions.",
     "Market result after fees = $550.00 − $27.50 = $522.50.",
     "Average balance ≈ $12,850.00 + $900.00 = $13,750.00.",
     "Return ≈ 3.8%.",
@@ -4774,6 +4931,7 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: change in value = market result − fees + contributions.",
     "Market result after fees = $1,110.00 − $2.96 = $1,107.04.",
     "Average balance ≈ $6,600.00 + $800.00 = $7,400.00.",
     "Return ≈ 15%.",
@@ -4858,6 +5016,7 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: change in value = market result − fees + contributions.",
     "Market result after fees = $622.00 − $31.10 = $590.90.",
     "Average balance ≈ $14,900.00 + $650.00 = $15,550.00.",
     "Return ≈ 3.8%.",
@@ -4942,6 +5101,7 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: change in value = market result − fees + contributions.",
     "Market result after fees = −$362.50 − $65.25 = −$427.75.",
     "Average balance ≈ $6,550.00 + $700.00 = $7,250.00.",
     "Return ≈ -5.9%.",
@@ -4972,8 +5132,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to double ≈ 72 ÷ rate.",
     "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
     "72 ÷ 6 = 12.",
+    "Spreadsheet or calculator: =72/6",
     "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
    ]
   },
@@ -5001,8 +5163,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to double ≈ 72 ÷ rate.",
     "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
     "72 ÷ 6 = 12.",
+    "Spreadsheet or calculator: =72/6",
     "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
    ]
   },
@@ -5030,8 +5194,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to double ≈ 72 ÷ rate.",
     "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
     "72 ÷ 9 = 8.",
+    "Spreadsheet or calculator: =72/9",
     "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
    ]
   },
@@ -5059,8 +5225,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to double ≈ 72 ÷ rate.",
     "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
     "72 ÷ 4 = 18.",
+    "Spreadsheet or calculator: =72/4",
     "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
    ]
   },
@@ -5088,8 +5256,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to double ≈ 72 ÷ rate.",
     "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
     "72 ÷ 4 = 18.",
+    "Spreadsheet or calculator: =72/4",
     "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
    ]
   },
@@ -5117,8 +5287,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to double ≈ 72 ÷ rate.",
     "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
     "72 ÷ 6 = 12.",
+    "Spreadsheet or calculator: =72/6",
     "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
    ]
   },
@@ -5146,8 +5318,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: years to double ≈ 72 ÷ rate.",
     "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
     "72 ÷ 4 = 18.",
+    "Spreadsheet or calculator: =72/4",
     "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
    ]
   },
@@ -5175,9 +5349,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: yield = dividend per share × 4 ÷ price.",
     "Annual dividend = $0.25 × 4 = $1.00.",
     "Yield = $1.00 ÷ $28.50 = 0.0351.",
-    "≈ 3.5%."
+    "≈ 3.5%.",
+    "Spreadsheet or calculator: =1.00/28.50 (then format as a percent)",
+    "So the answer is 3.5%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5204,9 +5381,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: yield = dividend per share × 4 ÷ price.",
     "Annual dividend = $0.32 × 4 = $1.28.",
     "Yield = $1.28 ÷ $84.50 = 0.0151.",
-    "≈ 1.5%."
+    "≈ 1.5%.",
+    "Spreadsheet or calculator: =1.28/84.50 (then format as a percent)",
+    "So the answer is 1.5%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5233,9 +5413,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: yield = dividend per share × 4 ÷ price.",
     "Annual dividend = $0.40 × 4 = $1.60.",
     "Yield = $1.60 ÷ $79.50 = 0.0201.",
-    "≈ 2.0%."
+    "≈ 2.0%.",
+    "Spreadsheet or calculator: =1.60/79.50 (then format as a percent)",
+    "So the answer is 2%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5262,9 +5445,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: yield = dividend per share × 4 ÷ price.",
     "Annual dividend = $0.72 × 4 = $2.88.",
     "Yield = $2.88 ÷ $96.00 = 0.0300.",
-    "≈ 3.0%."
+    "≈ 3.0%.",
+    "Spreadsheet or calculator: =2.88/96.00 (then format as a percent)",
+    "So the answer is 3%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5291,9 +5477,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: yield = dividend per share × 4 ÷ price.",
     "Annual dividend = $0.66 × 4 = $2.64.",
     "Yield = $2.64 ÷ $175.50 = 0.0150.",
-    "≈ 1.5%."
+    "≈ 1.5%.",
+    "Spreadsheet or calculator: =2.64/175.50 (then format as a percent)",
+    "So the answer is 1.5%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5320,9 +5509,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: yield = dividend per share × 4 ÷ price.",
     "Annual dividend = $0.19 × 4 = $0.76.",
     "Yield = $0.76 ÷ $49.50 = 0.0154.",
-    "≈ 1.5%."
+    "≈ 1.5%.",
+    "Spreadsheet or calculator: =0.76/49.50 (then format as a percent)",
+    "So the answer is 1.5%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5349,9 +5541,12 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: yield = dividend per share × 4 ÷ price.",
     "Annual dividend = $0.93 × 4 = $3.72.",
     "Yield = $3.72 ÷ $106.00 = 0.0351.",
-    "≈ 3.5%."
+    "≈ 3.5%.",
+    "Spreadsheet or calculator: =3.72/106.00 (then format as a percent)",
+    "So the answer is 3.5%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5376,9 +5571,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fee = balance × expense ratio; difference = fee B − fee A.",
     "Fund A: 0.03% × $6,500.00 = $1.95.",
     "Fund B: 0.75% × $6,500.00 = $48.75.",
-    "Difference = $46.80 per year, and the gap grows as the balance grows."
+    "Difference = $46.80 per year, and the gap grows as the balance grows.",
+    "Spreadsheet or calculator: =(0.75%*6500.00)-(0.03%*6500.00)",
+    "So the answer is $46.80; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5403,9 +5601,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fee = balance × expense ratio; difference = fee B − fee A.",
     "Fund A: 0.05% × $18,000 = $9.",
     "Fund B: 1% × $18,000 = $180.",
-    "Difference = $171 per year, and the gap grows as the balance grows."
+    "Difference = $171 per year, and the gap grows as the balance grows.",
+    "Spreadsheet or calculator: =(1%*18000)-(0.05%*18000)",
+    "So the answer is $171; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5430,9 +5631,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fee = balance × expense ratio; difference = fee B − fee A.",
     "Fund A: 0.05% × $44,500.00 = $22.25.",
     "Fund B: 0.75% × $44,500.00 = $333.75.",
-    "Difference = $311.50 per year, and the gap grows as the balance grows."
+    "Difference = $311.50 per year, and the gap grows as the balance grows.",
+    "Spreadsheet or calculator: =(0.75%*44500.00)-(0.05%*44500.00)",
+    "So the answer is $311.50; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5457,9 +5661,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fee = balance × expense ratio; difference = fee B − fee A.",
     "Fund A: 0.03% × $13,500.00 = $4.05.",
     "Fund B: 1% × $13,500.00 = $135.00.",
-    "Difference = $130.95 per year, and the gap grows as the balance grows."
+    "Difference = $130.95 per year, and the gap grows as the balance grows.",
+    "Spreadsheet or calculator: =(1%*13500.00)-(0.03%*13500.00)",
+    "So the answer is $130.95; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5484,9 +5691,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fee = balance × expense ratio; difference = fee B − fee A.",
     "Fund A: 0.1% × $27,500.00 = $27.50.",
     "Fund B: 1.2% × $27,500.00 = $330.00.",
-    "Difference = $302.50 per year, and the gap grows as the balance grows."
+    "Difference = $302.50 per year, and the gap grows as the balance grows.",
+    "Spreadsheet or calculator: =(1.2%*27500.00)-(0.1%*27500.00)",
+    "So the answer is $302.50; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5511,9 +5721,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fee = balance × expense ratio; difference = fee B − fee A.",
     "Fund A: 0.03% × $24,500.00 = $7.35.",
     "Fund B: 1% × $24,500.00 = $245.00.",
-    "Difference = $237.65 per year, and the gap grows as the balance grows."
+    "Difference = $237.65 per year, and the gap grows as the balance grows.",
+    "Spreadsheet or calculator: =(1%*24500.00)-(0.03%*24500.00)",
+    "So the answer is $237.65; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5538,9 +5751,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly fee = balance × expense ratio; difference = fee B − fee A.",
     "Fund A: 0.03% × $8,500.00 = $2.55.",
     "Fund B: 0.75% × $8,500.00 = $63.75.",
-    "Difference = $61.20 per year, and the gap grows as the balance grows."
+    "Difference = $61.20 per year, and the gap grows as the balance grows.",
+    "Spreadsheet or calculator: =(0.75%*8500.00)-(0.03%*8500.00)",
+    "So the answer is $61.20; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -5567,9 +5783,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new value = stocks × (1 − drop) + bonds.",
     "Stocks: $16,800 × (1 − 30%) = $11,760.",
     "Bonds: $7,200.",
-    "New value = $18,960, a 21% drop overall. Diversification softened the fall."
+    "New value = $18,960, a 21% drop overall. Diversification softened the fall.",
+    "So the answer is $18,960; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -5596,9 +5814,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new value = stocks × (1 − drop) + bonds.",
     "Stocks: $23,100 × (1 − 15%) = $19,635.",
     "Bonds: $9,900.",
-    "New value = $29,535, a 10.5% drop overall. Diversification softened the fall."
+    "New value = $29,535, a 10.5% drop overall. Diversification softened the fall.",
+    "So the answer is $29,535; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -5625,9 +5845,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new value = stocks × (1 − drop) + bonds.",
     "Stocks: $46,800 × (1 − 30%) = $32,760.",
     "Bonds: $5,200.",
-    "New value = $37,960, a 27% drop overall. Diversification softened the fall."
+    "New value = $37,960, a 27% drop overall. Diversification softened the fall.",
+    "So the answer is $37,960; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -5654,9 +5876,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new value = stocks × (1 − drop) + bonds.",
     "Stocks: $23,400 × (1 − 20%) = $18,720.",
     "Bonds: $2,600.",
-    "New value = $21,320, a 18% drop overall. Diversification softened the fall."
+    "New value = $21,320, a 18% drop overall. Diversification softened the fall.",
+    "So the answer is $21,320; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -5683,9 +5907,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new value = stocks × (1 − drop) + bonds.",
     "Stocks: $48,800 × (1 − 25%) = $36,600.",
     "Bonds: $12,200.",
-    "New value = $48,800, a 20% drop overall. Diversification softened the fall."
+    "New value = $48,800, a 20% drop overall. Diversification softened the fall.",
+    "So the answer is $48,800; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -5712,9 +5938,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new value = stocks × (1 − drop) + bonds.",
     "Stocks: $55,200 × (1 − 20%) = $44,160.",
     "Bonds: $13,800.",
-    "New value = $57,960, a 16% drop overall. Diversification softened the fall."
+    "New value = $57,960, a 16% drop overall. Diversification softened the fall.",
+    "So the answer is $57,960; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -5741,9 +5969,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: new value = stocks × (1 − drop) + bonds.",
     "Stocks: $42,000 × (1 − 30%) = $29,400.",
     "Bonds: $28,000.",
-    "New value = $57,400, a 18% drop overall. Diversification softened the fall."
+    "New value = $57,400, a 18% drop overall. Diversification softened the fall.",
+    "So the answer is $57,400; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -5770,8 +6000,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: growth = FV − monthly deposit × 12 × years.",
     "Total deposited = $100.00 × 12 × 10 = $12,000.00.",
     "Growth = $16,387.93 − $12,000.00 = $4,387.93.",
+    "Spreadsheet or calculator: =16387.93-12000.00",
     "The longer the time, the larger the share that is growth."
    ]
   },
@@ -5799,8 +6031,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: growth = FV − monthly deposit × 12 × years.",
     "Total deposited = $250.00 × 12 × 10 = $30,000.00.",
     "Growth = $43,271.20 − $30,000.00 = $13,271.20.",
+    "Spreadsheet or calculator: =43271.20-30000.00",
     "The longer the time, the larger the share that is growth."
    ]
   },
@@ -5828,8 +6062,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: growth = FV − monthly deposit × 12 × years.",
     "Total deposited = $200.00 × 12 × 30 = $72,000.00.",
     "Growth = $243,994.20 − $72,000.00 = $171,994.20.",
+    "Spreadsheet or calculator: =243994.20-72000.00",
     "The longer the time, the larger the share that is growth."
    ]
   },
@@ -5857,8 +6093,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: growth = FV − monthly deposit × 12 × years.",
     "Total deposited = $250.00 × 12 × 20 = $60,000.00.",
     "Growth = $130,231.66 − $60,000.00 = $70,231.66.",
+    "Spreadsheet or calculator: =130231.66-60000.00",
     "The longer the time, the larger the share that is growth."
    ]
   },
@@ -5886,8 +6124,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: growth = FV − monthly deposit × 12 × years.",
     "Total deposited = $200.00 × 12 × 10 = $24,000.00.",
     "Growth = $32,775.87 − $24,000.00 = $8,775.87.",
+    "Spreadsheet or calculator: =32775.87-24000.00",
     "The longer the time, the larger the share that is growth."
    ]
   },
@@ -5915,8 +6155,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: growth = FV − monthly deposit × 12 × years.",
     "Total deposited = $250.00 × 12 × 20 = $60,000.00.",
     "Growth = $115,510.22 − $60,000.00 = $55,510.22.",
+    "Spreadsheet or calculator: =115510.22-60000.00",
     "The longer the time, the larger the share that is growth."
    ]
   },
@@ -5944,7 +6186,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$800 × 0.04 = $32."
+    "Formula: Growth = amount × rate.",
+    "$800 × 0.04 = $32.",
+    "Spreadsheet or calculator: =800*0.04",
+    "So the answer is $32; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -5971,7 +6216,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$900 × 0.05 = $45."
+    "Formula: Growth = amount × rate.",
+    "$900 × 0.05 = $45.",
+    "Spreadsheet or calculator: =900*0.05",
+    "So the answer is $45; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -5998,7 +6246,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6,100 × 0.04 = $244."
+    "Formula: Growth = amount × rate.",
+    "$6,100 × 0.04 = $244.",
+    "Spreadsheet or calculator: =6100*0.04",
+    "So the answer is $244; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -6025,7 +6276,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$8,000 × 0.04 = $320."
+    "Formula: Growth = amount × rate.",
+    "$8,000 × 0.04 = $320.",
+    "Spreadsheet or calculator: =8000*0.04",
+    "So the answer is $320; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -6052,7 +6306,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$5,200 × 0.05 = $260."
+    "Formula: Growth = amount × rate.",
+    "$5,200 × 0.05 = $260.",
+    "Spreadsheet or calculator: =5200*0.05",
+    "So the answer is $260; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -6079,7 +6336,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$7,000 × 0.08 = $560."
+    "Formula: Growth = amount × rate.",
+    "$7,000 × 0.08 = $560.",
+    "Spreadsheet or calculator: =7000*0.08",
+    "So the answer is $560; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -6106,7 +6366,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$5,000 × 0.08 = $400."
+    "Formula: Growth = amount × rate.",
+    "$5,000 × 0.08 = $400.",
+    "Spreadsheet or calculator: =5000*0.08",
+    "So the answer is $400; the earlier money starts compounding, the more it grows."
    ]
   },
   {
@@ -6133,8 +6396,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $2,000(1 + 0.08)^t ≥ $3,000: (1.08)^t ≥ 1.5.",
     "t ≥ log(1.5) ÷ log(1.08) = 5.27.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(1.5)/LOG10(1.08),0)",
     "So 6 years."
    ]
   },
@@ -6162,8 +6427,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $10,000(1 + 0.05)^t ≥ $25,000: (1.05)^t ≥ 2.5.",
     "t ≥ log(2.5) ÷ log(1.05) = 18.78.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(2.5)/LOG10(1.05),0)",
     "So 19 years."
    ]
   },
@@ -6191,8 +6458,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $10,000(1 + 0.06)^t ≥ $20,000: (1.06)^t ≥ 2.",
     "t ≥ log(2) ÷ log(1.06) = 11.90.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(2)/LOG10(1.06),0)",
     "So 12 years."
    ]
   },
@@ -6220,8 +6489,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $10,000(1 + 0.05)^t ≥ $15,000: (1.05)^t ≥ 1.5.",
     "t ≥ log(1.5) ÷ log(1.05) = 8.31.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(1.5)/LOG10(1.05),0)",
     "So 9 years."
    ]
   },
@@ -6249,8 +6520,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $8,500(1 + 0.08)^t ≥ $12,750: (1.08)^t ≥ 1.5.",
     "t ≥ log(1.5) ÷ log(1.08) = 5.27.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(1.5)/LOG10(1.08),0)",
     "So 6 years."
    ]
   },
@@ -6278,8 +6551,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $6,000(1 + 0.06)^t ≥ $9,000: (1.06)^t ≥ 1.5.",
     "t ≥ log(1.5) ÷ log(1.06) = 6.96.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(1.5)/LOG10(1.06),0)",
     "So 7 years."
    ]
   },
@@ -6307,8 +6582,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $8,000(1 + 0.08)^t ≥ $20,000: (1.08)^t ≥ 2.5.",
     "t ≥ log(2.5) ÷ log(1.08) = 11.91.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(2.5)/LOG10(1.08),0)",
     "So 12 years."
    ]
   },
@@ -6336,8 +6613,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $3,500(1 + 0.05)^t ≥ $7,000: (1.05)^t ≥ 2.",
     "t ≥ log(2) ÷ log(1.05) = 14.21.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(2)/LOG10(1.05),0)",
     "So 15 years."
    ]
   },
@@ -6365,8 +6644,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ target: t ≥ log(target ÷ P) ÷ log(1 + r), rounded up.",
     "Solve $6,500(1 + 0.08)^t ≥ $19,500: (1.08)^t ≥ 3.",
     "t ≥ log(3) ÷ log(1.08) = 14.27.",
+    "Spreadsheet or calculator: =ROUNDUP(LOG10(3)/LOG10(1.08),0)",
     "So 15 years."
    ]
   },
@@ -6394,7 +6675,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$50 × 12 × 10 = $6,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$50 × 12 × 10 = $6,000.",
+    "Spreadsheet or calculator: =50*12*10",
+    "So the answer is $6,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6421,7 +6705,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$75 × 12 × 10 = $9,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$75 × 12 × 10 = $9,000.",
+    "Spreadsheet or calculator: =75*12*10",
+    "So the answer is $9,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6448,7 +6735,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$100 × 12 × 20 = $24,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$100 × 12 × 20 = $24,000.",
+    "Spreadsheet or calculator: =100*12*20",
+    "So the answer is $24,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6475,7 +6765,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$200 × 12 × 20 = $48,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$200 × 12 × 20 = $48,000.",
+    "Spreadsheet or calculator: =200*12*20",
+    "So the answer is $48,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6502,7 +6795,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$75 × 12 × 10 = $9,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$75 × 12 × 10 = $9,000.",
+    "Spreadsheet or calculator: =75*12*10",
+    "So the answer is $9,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6529,7 +6825,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$200 × 12 × 5 = $12,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$200 × 12 × 5 = $12,000.",
+    "Spreadsheet or calculator: =200*12*5",
+    "So the answer is $12,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6556,7 +6855,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$75 × 12 × 20 = $18,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$75 × 12 × 20 = $18,000.",
+    "Spreadsheet or calculator: =75*12*20",
+    "So the answer is $18,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6583,7 +6885,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$50 × 12 × 10 = $6,000."
+    "Formula: Total deposited = monthly amount × 12 × years.",
+    "$50 × 12 × 10 = $6,000.",
+    "Spreadsheet or calculator: =50*12*10",
+    "So the answer is $6,000; steady deposits plus time do most of the work."
    ]
   },
   {
@@ -6610,8 +6915,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.07 ÷ 12; n = 10 × 12 = 120.",
     "D = $23,000.00 × i ÷ ((1 + i)^120 − 1) = $132.88.",
+    "Spreadsheet or calculator: =PMT(0.07/12,120,0,-23000)",
     "Deposits total $15,945.60; the rest is growth."
    ]
   },
@@ -6639,8 +6946,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.05 ÷ 12; n = 8 × 12 = 96.",
     "D = $30,000.00 × i ÷ ((1 + i)^96 − 1) = $254.80.",
+    "Spreadsheet or calculator: =PMT(0.05/12,96,0,-30000)",
     "Deposits total $24,460.80; the rest is growth."
    ]
   },
@@ -6668,8 +6977,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.05 ÷ 12; n = 10 × 12 = 120.",
     "D = $50,000.00 × i ÷ ((1 + i)^120 − 1) = $321.99.",
+    "Spreadsheet or calculator: =PMT(0.05/12,120,0,-50000)",
     "Deposits total $38,638.80; the rest is growth."
    ]
   },
@@ -6697,8 +7008,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.07 ÷ 12; n = 15 × 12 = 180.",
     "D = $30,000.00 × i ÷ ((1 + i)^180 − 1) = $94.65.",
+    "Spreadsheet or calculator: =PMT(0.07/12,180,0,-30000)",
     "Deposits total $17,037.00; the rest is growth."
    ]
   },
@@ -6726,8 +7039,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.05 ÷ 12; n = 5 × 12 = 60.",
     "D = $22,000.00 × i ÷ ((1 + i)^60 − 1) = $323.50.",
+    "Spreadsheet or calculator: =PMT(0.05/12,60,0,-22000)",
     "Deposits total $19,410.00; the rest is growth."
    ]
   },
@@ -6755,8 +7070,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.05 ÷ 12; n = 5 × 12 = 60.",
     "D = $50,000.00 × i ÷ ((1 + i)^60 − 1) = $735.23.",
+    "Spreadsheet or calculator: =PMT(0.05/12,60,0,-50000)",
     "Deposits total $44,113.80; the rest is growth."
    ]
   },
@@ -6784,8 +7101,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.06 ÷ 12; n = 15 × 12 = 180.",
     "D = $28,000.00 × i ÷ ((1 + i)^180 − 1) = $96.28.",
+    "Spreadsheet or calculator: =PMT(0.06/12,180,0,-28000)",
     "Deposits total $17,330.40; the rest is growth."
    ]
   },
@@ -6813,8 +7132,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.06 ÷ 12; n = 5 × 12 = 60.",
     "D = $16,000.00 × i ÷ ((1 + i)^60 − 1) = $229.32.",
+    "Spreadsheet or calculator: =PMT(0.06/12,60,0,-16000)",
     "Deposits total $13,759.20; the rest is growth."
    ]
   },
@@ -6842,8 +7163,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.06 ÷ 12; n = 8 × 12 = 96.",
     "D = $56,000.00 × i ÷ ((1 + i)^96 − 1) = $455.92.",
+    "Spreadsheet or calculator: =PMT(0.06/12,96,0,-56000)",
     "Deposits total $43,768.32; the rest is growth."
    ]
   },
@@ -6871,8 +7194,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: D = FV × i ÷ ((1 + i)^n − 1), with i = rate ÷ 12 and n = months.",
     "i = 0.07 ÷ 12; n = 5 × 12 = 60.",
     "D = $54,000.00 × i ÷ ((1 + i)^60 − 1) = $754.26.",
+    "Spreadsheet or calculator: =PMT(0.07/12,60,0,-54000)",
     "Deposits total $45,255.60; the rest is growth."
    ]
   },
@@ -6898,7 +7223,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$8,000 × (0.06 − 0.02) = $320."
+    "Formula: difference after one year = amount × (rate₁ − rate₂).",
+    "$8,000 × (0.06 − 0.02) = $320.",
+    "Spreadsheet or calculator: =8000*(0.06-0.02)",
+    "So the answer is $320; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -6923,7 +7251,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,500 × (0.08 − 0.03) = $175."
+    "Formula: difference after one year = amount × (rate₁ − rate₂).",
+    "$3,500 × (0.08 − 0.03) = $175.",
+    "Spreadsheet or calculator: =3500*(0.08-0.03)",
+    "So the answer is $175; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -6948,7 +7279,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$5,000 × (0.08 − 0.02) = $300."
+    "Formula: difference after one year = amount × (rate₁ − rate₂).",
+    "$5,000 × (0.08 − 0.02) = $300.",
+    "Spreadsheet or calculator: =5000*(0.08-0.02)",
+    "So the answer is $300; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -6973,7 +7307,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$8,000 × (0.07 − 0.03) = $320."
+    "Formula: difference after one year = amount × (rate₁ − rate₂).",
+    "$8,000 × (0.07 − 0.03) = $320.",
+    "Spreadsheet or calculator: =8000*(0.07-0.03)",
+    "So the answer is $320; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -6998,7 +7335,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,000 × (0.06 − 0.03) = $30."
+    "Formula: difference after one year = amount × (rate₁ − rate₂).",
+    "$1,000 × (0.06 − 0.03) = $30.",
+    "Spreadsheet or calculator: =1000*(0.06-0.03)",
+    "So the answer is $30; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7023,9 +7363,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Start at 25: n = 480, FV = $298,723.61.",
     "Start at 35: n = 360, FV = $150,677.26.",
-    "Difference = $148,046.35, though the extra deposits were only $18000.00."
+    "Difference = $148,046.35, though the extra deposits were only $18000.00.",
+    "Spreadsheet or calculator: =298723.61-150677.26",
+    "So the answer is $148,046.35; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7050,9 +7393,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Start at 25: n = 480, FV = $393,722.01.",
     "Start at 35: n = 360, FV = $182,995.65.",
-    "Difference = $210,726.36, though the extra deposits were only $18000.00."
+    "Difference = $210,726.36, though the extra deposits were only $18000.00.",
+    "Spreadsheet or calculator: =393722.01-182995.65",
+    "So the answer is $210,726.36; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7077,9 +7423,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Start at 25: n = 480, FV = $199,149.07.",
     "Start at 35: n = 360, FV = $100,451.50.",
-    "Difference = $98,697.57, though the extra deposits were only $12000.00."
+    "Difference = $98,697.57, though the extra deposits were only $12000.00.",
+    "Spreadsheet or calculator: =199149.07-100451.50",
+    "So the answer is $98,697.57; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7104,9 +7453,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Start at 25: n = 480, FV = $262,481.34.",
     "Start at 35: n = 360, FV = $121,997.10.",
-    "Difference = $140,484.24, though the extra deposits were only $12000.00."
+    "Difference = $140,484.24, though the extra deposits were only $12000.00.",
+    "Spreadsheet or calculator: =262481.34-121997.10",
+    "So the answer is $140,484.24; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7131,9 +7483,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: FV = D·((1 + i)^n − 1) ÷ i.",
     "Start at 25: n = 480, FV = $398,298.15.",
     "Start at 35: n = 360, FV = $200,903.01.",
-    "Difference = $197,395.14, though the extra deposits were only $24000.00."
+    "Difference = $197,395.14, though the extra deposits were only $24000.00.",
+    "Spreadsheet or calculator: =398298.15-200903.01",
+    "So the answer is $197,395.14; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7160,7 +7515,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6,000 × 0.15 = $900."
+    "Formula: Loss = value × percent drop.",
+    "$6,000 × 0.15 = $900.",
+    "Spreadsheet or calculator: =6000*0.15",
+    "So the answer is $900; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -7187,7 +7545,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$18,000 × 0.25 = $4,500."
+    "Formula: Loss = value × percent drop.",
+    "$18,000 × 0.25 = $4,500.",
+    "Spreadsheet or calculator: =18000*0.25",
+    "So the answer is $4,500; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -7214,7 +7575,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$7,000 × 0.20 = $1,400."
+    "Formula: Loss = value × percent drop.",
+    "$7,000 × 0.20 = $1,400.",
+    "Spreadsheet or calculator: =7000*0.20",
+    "So the answer is $1,400; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -7241,7 +7605,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$14,000 × 0.25 = $3,500."
+    "Formula: Loss = value × percent drop.",
+    "$14,000 × 0.25 = $3,500.",
+    "Spreadsheet or calculator: =14000*0.25",
+    "So the answer is $3,500; higher expected returns come with bigger swings, so diversify and plan for time."
    ]
   },
   {
@@ -7268,8 +7635,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: overall change = (1 + r₁)(1 + r₂) − 1.",
     "Multiply the growth factors: 1.30 × 0.90 = 1.1700.",
     "Change = 17.00%.",
+    "Spreadsheet or calculator: =(1.30*0.90)-1 (then format as a percent)",
     "Equal percent gains and losses do not cancel out."
    ]
   },
@@ -7297,8 +7666,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: overall change = (1 + r₁)(1 + r₂) − 1.",
     "Multiply the growth factors: 1.30 × 0.80 = 1.0400.",
     "Change = 4.00%.",
+    "Spreadsheet or calculator: =(1.30*0.80)-1 (then format as a percent)",
     "Equal percent gains and losses do not cancel out."
    ]
   },
@@ -7326,8 +7697,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: overall change = (1 + r₁)(1 + r₂) − 1.",
     "Multiply the growth factors: 1.25 × 0.75 = 0.9375.",
     "Change = -6.25%.",
+    "Spreadsheet or calculator: =(1.25*0.75)-1 (then format as a percent)",
     "Equal percent gains and losses do not cancel out."
    ]
   },
@@ -7355,8 +7728,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: overall change = (1 + r₁)(1 + r₂) − 1.",
     "Multiply the growth factors: 1.25 × 0.75 = 0.9375.",
     "Change = -6.25%.",
+    "Spreadsheet or calculator: =(1.25*0.75)-1 (then format as a percent)",
     "Equal percent gains and losses do not cancel out."
    ]
   },
@@ -7384,8 +7759,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: overall change = (1 + r₁)(1 + r₂) − 1.",
     "Multiply the growth factors: 1.10 × 0.70 = 0.7700.",
     "Change = -23.00%.",
+    "Spreadsheet or calculator: =(1.10*0.70)-1 (then format as a percent)",
     "Equal percent gains and losses do not cancel out."
    ]
   },
@@ -7413,8 +7790,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: overall change = (1 + r₁)(1 + r₂) − 1.",
     "Multiply the growth factors: 1.25 × 0.90 = 1.1250.",
     "Change = 12.50%.",
+    "Spreadsheet or calculator: =(1.25*0.90)-1 (then format as a percent)",
     "Equal percent gains and losses do not cancel out."
    ]
   },
@@ -7442,8 +7821,10 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: overall change = (1 + r₁)(1 + r₂) − 1.",
     "Multiply the growth factors: 1.10 × 0.80 = 0.8800.",
     "Change = -12.00%.",
+    "Spreadsheet or calculator: =(1.10*0.80)-1 (then format as a percent)",
     "Equal percent gains and losses do not cancel out."
    ]
   },
@@ -7493,7 +7874,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$12,500.00 × 0.95% = $118.75."
+    "Formula: Yearly fee = balance × expense ratio.",
+    "$12,500.00 × 0.95% = $118.75.",
+    "Spreadsheet or calculator: =12500.00*0.95%",
+    "So the answer is $118.75; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7542,7 +7926,9 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "8% − 0.1% = 7.90%."
+    "8% − 0.1% = 7.90%.",
+    "Spreadsheet or calculator: =8%-0.1% (then format as a percent)",
+    "So the answer is 7.9%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7593,7 +7979,9 @@
    "solutionSteps": [
     "This fund: $37,500.00 × (1 + 0.0535)^20 = $106,346.22.",
     "1.2% fund: × (1 + 0.0480)^20 = $95,776.05.",
-    "Difference = $10,570.17."
+    "Difference = $10,570.17.",
+    "Spreadsheet or calculator: =106346.22-95776.05",
+    "So the answer is $10,570.17; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7642,7 +8030,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20,000 × 0.95% = $190."
+    "Formula: Yearly fee = balance × expense ratio.",
+    "$20,000 × 0.95% = $190.",
+    "Spreadsheet or calculator: =20000*0.95%",
+    "So the answer is $190; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7691,7 +8082,9 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "6% − 0.65% = 5.35%."
+    "6% − 0.65% = 5.35%.",
+    "Spreadsheet or calculator: =6%-0.65% (then format as a percent)",
+    "So the answer is 5.35%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7742,7 +8135,9 @@
    "solutionSteps": [
     "This fund: $33,000.00 × (1 + 0.0705)^20 = $128,898.35.",
     "1.2% fund: × (1 + 0.0680)^20 = $123,009.60.",
-    "Difference = $5,888.76."
+    "Difference = $5,888.76.",
+    "Spreadsheet or calculator: =(33000.00*(1+0.0705)^20)-123009.60",
+    "So the answer is $5,888.76; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7791,7 +8186,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$17,000.00 × 0.04% = $6.80."
+    "Formula: Yearly fee = balance × expense ratio.",
+    "$17,000.00 × 0.04% = $6.80.",
+    "Spreadsheet or calculator: =17000.00*0.04%",
+    "So the answer is $6.80; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7840,7 +8238,9 @@
     "unit": "%"
    },
    "solutionSteps": [
-    "8% − 0.65% = 7.35%."
+    "8% − 0.65% = 7.35%.",
+    "Spreadsheet or calculator: =8%-0.65% (then format as a percent)",
+    "So the answer is 7.35%; small differences in return or fees add up over many years."
    ]
   },
   {
@@ -7891,7 +8291,5508 @@
    "solutionSteps": [
     "This fund: $10,000.00 × (1 + 0.0635)^20 = $34,257.04.",
     "1.2% fund: × (1 + 0.0580)^20 = $30,882.56.",
-    "Difference = $3,374.48."
+    "Difference = $3,374.48.",
+    "Spreadsheet or calculator: =34257.04-30882.56",
+    "So the answer is $3,374.48; small differences in return or fees add up over many years."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "support",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Luis invests $3,500.00 at 9% a year, compounded yearly. Using V(t) = $3,500.00(1 + 0.09)^t, what is it worth after 12 years?",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $3,500.00 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 50000,
+      "step": 10000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "3% a year",
+       "pts": [
+        [
+         0,
+         3500
+        ],
+        [
+         0.5,
+         3552.11
+        ],
+        [
+         1,
+         3605
+        ],
+        [
+         1.5,
+         3658.68
+        ],
+        [
+         2,
+         3713.15
+        ],
+        [
+         2.5,
+         3768.44
+        ],
+        [
+         3,
+         3824.54
+        ],
+        [
+         3.5,
+         3881.49
+        ],
+        [
+         4,
+         3939.28
+        ],
+        [
+         4.5,
+         3997.93
+        ],
+        [
+         5,
+         4057.46
+        ],
+        [
+         5.5,
+         4117.87
+        ],
+        [
+         6,
+         4179.18
+        ],
+        [
+         6.5,
+         4241.41
+        ],
+        [
+         7,
+         4304.56
+        ],
+        [
+         7.5,
+         4368.65
+        ],
+        [
+         8,
+         4433.7
+        ],
+        [
+         8.5,
+         4499.71
+        ],
+        [
+         9,
+         4566.71
+        ],
+        [
+         9.5,
+         4634.7
+        ],
+        [
+         10,
+         4703.71
+        ],
+        [
+         10.5,
+         4773.74
+        ],
+        [
+         11,
+         4844.82
+        ],
+        [
+         11.5,
+         4916.95
+        ],
+        [
+         12,
+         4990.16
+        ],
+        [
+         12.5,
+         5064.46
+        ],
+        [
+         13,
+         5139.87
+        ],
+        [
+         13.5,
+         5216.4
+        ],
+        [
+         14,
+         5294.06
+        ],
+        [
+         14.5,
+         5372.89
+        ],
+        [
+         15,
+         5452.89
+        ],
+        [
+         15.5,
+         5534.07
+        ],
+        [
+         16,
+         5616.47
+        ],
+        [
+         16.5,
+         5700.1
+        ],
+        [
+         17,
+         5784.97
+        ],
+        [
+         17.5,
+         5871.1
+        ],
+        [
+         18,
+         5958.52
+        ],
+        [
+         18.5,
+         6047.23
+        ],
+        [
+         19,
+         6137.27
+        ],
+        [
+         19.5,
+         6228.65
+        ],
+        [
+         20,
+         6321.39
+        ],
+        [
+         20.5,
+         6415.51
+        ],
+        [
+         21,
+         6511.03
+        ],
+        [
+         21.5,
+         6607.97
+        ],
+        [
+         22,
+         6706.36
+        ],
+        [
+         22.5,
+         6806.21
+        ],
+        [
+         23,
+         6907.55
+        ],
+        [
+         23.5,
+         7010.4
+        ],
+        [
+         24,
+         7114.78
+        ],
+        [
+         24.5,
+         7220.71
+        ],
+        [
+         25,
+         7328.22
+        ],
+        [
+         25.5,
+         7437.33
+        ],
+        [
+         26,
+         7548.07
+        ],
+        [
+         26.5,
+         7660.45
+        ],
+        [
+         27,
+         7774.51
+        ],
+        [
+         27.5,
+         7890.27
+        ],
+        [
+         28,
+         8007.75
+        ],
+        [
+         28.5,
+         8126.98
+        ],
+        [
+         29,
+         8247.98
+        ],
+        [
+         29.5,
+         8370.78
+        ],
+        [
+         30,
+         8495.42
+        ]
+       ]
+      },
+      {
+       "name": "9% a year",
+       "pts": [
+        [
+         0,
+         3500
+        ],
+        [
+         0.5,
+         3654.11
+        ],
+        [
+         1,
+         3815
+        ],
+        [
+         1.5,
+         3982.98
+        ],
+        [
+         2,
+         4158.35
+        ],
+        [
+         2.5,
+         4341.44
+        ],
+        [
+         3,
+         4532.6
+        ],
+        [
+         3.5,
+         4732.17
+        ],
+        [
+         4,
+         4940.54
+        ],
+        [
+         4.5,
+         5158.07
+        ],
+        [
+         5,
+         5385.18
+        ],
+        [
+         5.5,
+         5622.3
+        ],
+        [
+         6,
+         5869.85
+        ],
+        [
+         6.5,
+         6128.3
+        ],
+        [
+         7,
+         6398.14
+        ],
+        [
+         7.5,
+         6679.85
+        ],
+        [
+         8,
+         6973.97
+        ],
+        [
+         8.5,
+         7281.04
+        ],
+        [
+         9,
+         7601.63
+        ],
+        [
+         9.5,
+         7936.33
+        ],
+        [
+         10,
+         8285.77
+        ],
+        [
+         10.5,
+         8650.6
+        ],
+        [
+         11,
+         9031.49
+        ],
+        [
+         11.5,
+         9429.15
+        ],
+        [
+         12,
+         9844.33
+        ],
+        [
+         12.5,
+         10277.78
+        ],
+        [
+         13,
+         10730.32
+        ],
+        [
+         13.5,
+         11202.78
+        ],
+        [
+         14,
+         11696.04
+        ],
+        [
+         14.5,
+         12211.03
+        ],
+        [
+         15,
+         12748.69
+        ],
+        [
+         15.5,
+         13310.02
+        ],
+        [
+         16,
+         13896.07
+        ],
+        [
+         16.5,
+         14507.92
+        ],
+        [
+         17,
+         15146.72
+        ],
+        [
+         17.5,
+         15813.64
+        ],
+        [
+         18,
+         16509.92
+        ],
+        [
+         18.5,
+         17236.86
+        ],
+        [
+         19,
+         17995.81
+        ],
+        [
+         19.5,
+         18788.18
+        ],
+        [
+         20,
+         19615.44
+        ],
+        [
+         20.5,
+         20479.12
+        ],
+        [
+         21,
+         21380.83
+        ],
+        [
+         21.5,
+         22322.24
+        ],
+        [
+         22,
+         23305.1
+        ],
+        [
+         22.5,
+         24331.24
+        ],
+        [
+         23,
+         25402.56
+        ],
+        [
+         23.5,
+         26521.05
+        ],
+        [
+         24,
+         27688.79
+        ],
+        [
+         24.5,
+         28907.95
+        ],
+        [
+         25,
+         30180.78
+        ],
+        [
+         25.5,
+         31509.66
+        ],
+        [
+         26,
+         32897.05
+        ],
+        [
+         26.5,
+         34345.53
+        ],
+        [
+         27,
+         35857.79
+        ],
+        [
+         27.5,
+         37436.63
+        ],
+        [
+         28,
+         39084.99
+        ],
+        [
+         28.5,
+         40805.93
+        ],
+        [
+         29,
+         42602.64
+        ],
+        [
+         29.5,
+         44478.46
+        ],
+        [
+         30,
+         46436.87
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $3,500.00(1 + r)^t, compounded yearly, with r = 3% and r = 9%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$9,844.33",
+   "numeric": {
+    "value": 9844.33,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: V(t) = P(1 + r)^t.",
+    "Substitute: $3,500.00 × 1.09^12 = $9,844.33.",
+    "Spreadsheet: =FV(0.09,12,0,-3500) or =3500*(1+0.09)^12.",
+    "So $3,500.00 grows to $9,844.33, 2.81 times the start, without adding money."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After 20 years, how much more is the 9% investment worth than the 4% one? (The gap between the curves.)",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $9,500.00 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 150000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "4% a year",
+       "pts": [
+        [
+         0,
+         9500
+        ],
+        [
+         0.5,
+         9688.14
+        ],
+        [
+         1,
+         9880
+        ],
+        [
+         1.5,
+         10075.66
+        ],
+        [
+         2,
+         10275.2
+        ],
+        [
+         2.5,
+         10478.69
+        ],
+        [
+         3,
+         10686.21
+        ],
+        [
+         3.5,
+         10897.84
+        ],
+        [
+         4,
+         11113.66
+        ],
+        [
+         4.5,
+         11333.75
+        ],
+        [
+         5,
+         11558.2
+        ],
+        [
+         5.5,
+         11787.1
+        ],
+        [
+         6,
+         12020.53
+        ],
+        [
+         6.5,
+         12258.58
+        ],
+        [
+         7,
+         12501.35
+        ],
+        [
+         7.5,
+         12748.93
+        ],
+        [
+         8,
+         13001.41
+        ],
+        [
+         8.5,
+         13258.88
+        ],
+        [
+         9,
+         13521.46
+        ],
+        [
+         9.5,
+         13789.24
+        ],
+        [
+         10,
+         14062.32
+        ],
+        [
+         10.5,
+         14340.81
+        ],
+        [
+         11,
+         14624.81
+        ],
+        [
+         11.5,
+         14914.44
+        ],
+        [
+         12,
+         15209.81
+        ],
+        [
+         12.5,
+         15511.02
+        ],
+        [
+         13,
+         15818.2
+        ],
+        [
+         13.5,
+         16131.46
+        ],
+        [
+         14,
+         16450.93
+        ],
+        [
+         14.5,
+         16776.72
+        ],
+        [
+         15,
+         17108.96
+        ],
+        [
+         15.5,
+         17447.79
+        ],
+        [
+         16,
+         17793.32
+        ],
+        [
+         16.5,
+         18145.7
+        ],
+        [
+         17,
+         18505.05
+        ],
+        [
+         17.5,
+         18871.53
+        ],
+        [
+         18,
+         19245.26
+        ],
+        [
+         18.5,
+         19626.39
+        ],
+        [
+         19,
+         20015.07
+        ],
+        [
+         19.5,
+         20411.44
+        ],
+        [
+         20,
+         20815.67
+        ],
+        [
+         20.5,
+         21227.9
+        ],
+        [
+         21,
+         21648.3
+        ],
+        [
+         21.5,
+         22077.02
+        ],
+        [
+         22,
+         22514.23
+        ],
+        [
+         22.5,
+         22960.1
+        ],
+        [
+         23,
+         23414.8
+        ],
+        [
+         23.5,
+         23878.5
+        ],
+        [
+         24,
+         24351.39
+        ],
+        [
+         24.5,
+         24833.64
+        ],
+        [
+         25,
+         25325.45
+        ],
+        [
+         25.5,
+         25826.99
+        ],
+        [
+         26,
+         26338.46
+        ],
+        [
+         26.5,
+         26860.07
+        ],
+        [
+         27,
+         27392
+        ],
+        [
+         27.5,
+         27934.47
+        ],
+        [
+         28,
+         28487.68
+        ],
+        [
+         28.5,
+         29051.85
+        ],
+        [
+         29,
+         29627.19
+        ],
+        [
+         29.5,
+         30213.92
+        ],
+        [
+         30,
+         30812.28
+        ]
+       ]
+      },
+      {
+       "name": "9% a year",
+       "pts": [
+        [
+         0,
+         9500
+        ],
+        [
+         0.5,
+         9918.29
+        ],
+        [
+         1,
+         10355
+        ],
+        [
+         1.5,
+         10810.94
+        ],
+        [
+         2,
+         11286.95
+        ],
+        [
+         2.5,
+         11783.92
+        ],
+        [
+         3,
+         12302.78
+        ],
+        [
+         3.5,
+         12844.47
+        ],
+        [
+         4,
+         13410.03
+        ],
+        [
+         4.5,
+         14000.48
+        ],
+        [
+         5,
+         14616.93
+        ],
+        [
+         5.5,
+         15260.52
+        ],
+        [
+         6,
+         15932.45
+        ],
+        [
+         6.5,
+         16633.97
+        ],
+        [
+         7,
+         17366.37
+        ],
+        [
+         7.5,
+         18131.02
+        ],
+        [
+         8,
+         18929.35
+        ],
+        [
+         8.5,
+         19762.82
+        ],
+        [
+         9,
+         20632.99
+        ],
+        [
+         9.5,
+         21541.47
+        ],
+        [
+         10,
+         22489.95
+        ],
+        [
+         10.5,
+         23480.2
+        ],
+        [
+         11,
+         24514.05
+        ],
+        [
+         11.5,
+         25593.42
+        ],
+        [
+         12,
+         26720.32
+        ],
+        [
+         12.5,
+         27896.83
+        ],
+        [
+         13,
+         29125.14
+        ],
+        [
+         13.5,
+         30407.54
+        ],
+        [
+         14,
+         31746.41
+        ],
+        [
+         14.5,
+         33144.22
+        ],
+        [
+         15,
+         34603.58
+        ],
+        [
+         15.5,
+         36127.2
+        ],
+        [
+         16,
+         37717.91
+        ],
+        [
+         16.5,
+         39378.65
+        ],
+        [
+         17,
+         41112.52
+        ],
+        [
+         17.5,
+         42922.73
+        ],
+        [
+         18,
+         44812.64
+        ],
+        [
+         18.5,
+         46785.77
+        ],
+        [
+         19,
+         48845.78
+        ],
+        [
+         19.5,
+         50996.49
+        ],
+        [
+         20,
+         53241.9
+        ],
+        [
+         20.5,
+         55586.18
+        ],
+        [
+         21,
+         58033.67
+        ],
+        [
+         21.5,
+         60588.93
+        ],
+        [
+         22,
+         63256.7
+        ],
+        [
+         22.5,
+         66041.94
+        ],
+        [
+         23,
+         68949.81
+        ],
+        [
+         23.5,
+         71985.71
+        ],
+        [
+         24,
+         75155.29
+        ],
+        [
+         24.5,
+         78464.43
+        ],
+        [
+         25,
+         81919.27
+        ],
+        [
+         25.5,
+         85526.22
+        ],
+        [
+         26,
+         89292
+        ],
+        [
+         26.5,
+         93223.59
+        ],
+        [
+         27,
+         97328.28
+        ],
+        [
+         27.5,
+         101613.71
+        ],
+        [
+         28,
+         106087.83
+        ],
+        [
+         28.5,
+         110758.94
+        ],
+        [
+         29,
+         115635.73
+        ],
+        [
+         29.5,
+         120727.25
+        ],
+        [
+         30,
+         126042.95
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $9,500.00(1 + r)^t, compounded yearly, with r = 4% and r = 9%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$32,426.23",
+   "numeric": {
+    "value": 32426.23,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = P(1 + 0.09)^t − P(1 + 0.04)^t.",
+    "Substitute: $53,241.90 − $20,815.67 = $32,426.23.",
+    "Spreadsheet: =9500*(1+0.09)^20-9500*(1+0.04)^20.",
+    "So the higher rate is worth $32,426.23 more after 20 years. The curves pull apart faster each year because each year's growth earns growth too."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "advanced",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "At 7% a year, after how many whole years is Mateo's investment first worth at least twice the $5,000 he started with?",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $5,000 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 40000,
+      "step": 10000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "4% a year",
+       "pts": [
+        [
+         0,
+         5000
+        ],
+        [
+         0.5,
+         5099.02
+        ],
+        [
+         1,
+         5200
+        ],
+        [
+         1.5,
+         5302.98
+        ],
+        [
+         2,
+         5408
+        ],
+        [
+         2.5,
+         5515.1
+        ],
+        [
+         3,
+         5624.32
+        ],
+        [
+         3.5,
+         5735.7
+        ],
+        [
+         4,
+         5849.29
+        ],
+        [
+         4.5,
+         5965.13
+        ],
+        [
+         5,
+         6083.26
+        ],
+        [
+         5.5,
+         6203.74
+        ],
+        [
+         6,
+         6326.6
+        ],
+        [
+         6.5,
+         6451.89
+        ],
+        [
+         7,
+         6579.66
+        ],
+        [
+         7.5,
+         6709.96
+        ],
+        [
+         8,
+         6842.85
+        ],
+        [
+         8.5,
+         6978.36
+        ],
+        [
+         9,
+         7116.56
+        ],
+        [
+         9.5,
+         7257.49
+        ],
+        [
+         10,
+         7401.22
+        ],
+        [
+         10.5,
+         7547.79
+        ],
+        [
+         11,
+         7697.27
+        ],
+        [
+         11.5,
+         7849.71
+        ],
+        [
+         12,
+         8005.16
+        ],
+        [
+         12.5,
+         8163.69
+        ],
+        [
+         13,
+         8325.37
+        ],
+        [
+         13.5,
+         8490.24
+        ],
+        [
+         14,
+         8658.38
+        ],
+        [
+         14.5,
+         8829.85
+        ],
+        [
+         15,
+         9004.72
+        ],
+        [
+         15.5,
+         9183.05
+        ],
+        [
+         16,
+         9364.91
+        ],
+        [
+         16.5,
+         9550.37
+        ],
+        [
+         17,
+         9739.5
+        ],
+        [
+         17.5,
+         9932.38
+        ],
+        [
+         18,
+         10129.08
+        ],
+        [
+         18.5,
+         10329.68
+        ],
+        [
+         19,
+         10534.25
+        ],
+        [
+         19.5,
+         10742.87
+        ],
+        [
+         20,
+         10955.62
+        ],
+        [
+         20.5,
+         11172.58
+        ],
+        [
+         21,
+         11393.84
+        ],
+        [
+         21.5,
+         11619.48
+        ],
+        [
+         22,
+         11849.59
+        ],
+        [
+         22.5,
+         12084.26
+        ],
+        [
+         23,
+         12323.58
+        ],
+        [
+         23.5,
+         12567.63
+        ],
+        [
+         24,
+         12816.52
+        ],
+        [
+         24.5,
+         13070.34
+        ],
+        [
+         25,
+         13329.18
+        ],
+        [
+         25.5,
+         13593.15
+        ],
+        [
+         26,
+         13862.35
+        ],
+        [
+         26.5,
+         14136.88
+        ],
+        [
+         27,
+         14416.84
+        ],
+        [
+         27.5,
+         14702.35
+        ],
+        [
+         28,
+         14993.52
+        ],
+        [
+         28.5,
+         15290.45
+        ],
+        [
+         29,
+         15593.26
+        ],
+        [
+         29.5,
+         15902.06
+        ],
+        [
+         30,
+         16216.99
+        ]
+       ]
+      },
+      {
+       "name": "7% a year",
+       "pts": [
+        [
+         0,
+         5000
+        ],
+        [
+         0.5,
+         5172.04
+        ],
+        [
+         1,
+         5350
+        ],
+        [
+         1.5,
+         5534.08
+        ],
+        [
+         2,
+         5724.5
+        ],
+        [
+         2.5,
+         5921.47
+        ],
+        [
+         3,
+         6125.22
+        ],
+        [
+         3.5,
+         6335.97
+        ],
+        [
+         4,
+         6553.98
+        ],
+        [
+         4.5,
+         6779.49
+        ],
+        [
+         5,
+         7012.76
+        ],
+        [
+         5.5,
+         7254.05
+        ],
+        [
+         6,
+         7503.65
+        ],
+        [
+         6.5,
+         7761.84
+        ],
+        [
+         7,
+         8028.91
+        ],
+        [
+         7.5,
+         8305.17
+        ],
+        [
+         8,
+         8590.93
+        ],
+        [
+         8.5,
+         8886.53
+        ],
+        [
+         9,
+         9192.3
+        ],
+        [
+         9.5,
+         9508.58
+        ],
+        [
+         10,
+         9835.76
+        ],
+        [
+         10.5,
+         10174.19
+        ],
+        [
+         11,
+         10524.26
+        ],
+        [
+         11.5,
+         10886.38
+        ],
+        [
+         12,
+         11260.96
+        ],
+        [
+         12.5,
+         11648.43
+        ],
+        [
+         13,
+         12049.23
+        ],
+        [
+         13.5,
+         12463.82
+        ],
+        [
+         14,
+         12892.67
+        ],
+        [
+         14.5,
+         13336.28
+        ],
+        [
+         15,
+         13795.16
+        ],
+        [
+         15.5,
+         14269.82
+        ],
+        [
+         16,
+         14760.82
+        ],
+        [
+         16.5,
+         15268.71
+        ],
+        [
+         17,
+         15794.08
+        ],
+        [
+         17.5,
+         16337.52
+        ],
+        [
+         18,
+         16899.66
+        ],
+        [
+         18.5,
+         17481.15
+        ],
+        [
+         19,
+         18082.64
+        ],
+        [
+         19.5,
+         18704.83
+        ],
+        [
+         20,
+         19348.42
+        ],
+        [
+         20.5,
+         20014.16
+        ],
+        [
+         21,
+         20702.81
+        ],
+        [
+         21.5,
+         21415.16
+        ],
+        [
+         22,
+         22152.01
+        ],
+        [
+         22.5,
+         22914.22
+        ],
+        [
+         23,
+         23702.65
+        ],
+        [
+         23.5,
+         24518.21
+        ],
+        [
+         24,
+         25361.83
+        ],
+        [
+         24.5,
+         26234.49
+        ],
+        [
+         25,
+         27137.16
+        ],
+        [
+         25.5,
+         28070.9
+        ],
+        [
+         26,
+         29036.76
+        ],
+        [
+         26.5,
+         30035.86
+        ],
+        [
+         27,
+         31069.34
+        ],
+        [
+         27.5,
+         32138.37
+        ],
+        [
+         28,
+         33244.19
+        ],
+        [
+         28.5,
+         34388.06
+        ],
+        [
+         29,
+         35571.29
+        ],
+        [
+         29.5,
+         36795.22
+        ],
+        [
+         30,
+         38061.28
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $5,000(1 + r)^t, compounded yearly, with r = 4% and r = 7%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "11",
+   "numeric": {
+    "value": 11,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ 2P, so t ≥ ln 2 ÷ ln(1 + r).",
+    "Substitute: t ≥ ln 2 ÷ ln 1.07 = 10.24, so 11 whole years.",
+    "Spreadsheet: =ROUNDUP(NPER(0.07,0,-5000,10000),0) or =ROUNDUP(LN(2)/LN(1+0.07),0).",
+    "So the money doubles in 11 years at 7%. At 4% it would take 18 years."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "support",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Noah invests $4,500.00 at 7% a year, compounded yearly. Using V(t) = $4,500.00(1 + 0.07)^t, what is it worth after 13 years?",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $4,500.00 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 40000,
+      "step": 10000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "3% a year",
+       "pts": [
+        [
+         0,
+         4500
+        ],
+        [
+         0.5,
+         4567
+        ],
+        [
+         1,
+         4635
+        ],
+        [
+         1.5,
+         4704.01
+        ],
+        [
+         2,
+         4774.05
+        ],
+        [
+         2.5,
+         4845.13
+        ],
+        [
+         3,
+         4917.27
+        ],
+        [
+         3.5,
+         4990.49
+        ],
+        [
+         4,
+         5064.79
+        ],
+        [
+         4.5,
+         5140.2
+        ],
+        [
+         5,
+         5216.73
+        ],
+        [
+         5.5,
+         5294.41
+        ],
+        [
+         6,
+         5373.24
+        ],
+        [
+         6.5,
+         5453.24
+        ],
+        [
+         7,
+         5534.43
+        ],
+        [
+         7.5,
+         5616.84
+        ],
+        [
+         8,
+         5700.47
+        ],
+        [
+         8.5,
+         5785.34
+        ],
+        [
+         9,
+         5871.48
+        ],
+        [
+         9.5,
+         5958.9
+        ],
+        [
+         10,
+         6047.62
+        ],
+        [
+         10.5,
+         6137.67
+        ],
+        [
+         11,
+         6229.05
+        ],
+        [
+         11.5,
+         6321.8
+        ],
+        [
+         12,
+         6415.92
+        ],
+        [
+         12.5,
+         6511.45
+        ],
+        [
+         13,
+         6608.4
+        ],
+        [
+         13.5,
+         6706.8
+        ],
+        [
+         14,
+         6806.65
+        ],
+        [
+         14.5,
+         6908
+        ],
+        [
+         15,
+         7010.85
+        ],
+        [
+         15.5,
+         7115.24
+        ],
+        [
+         16,
+         7221.18
+        ],
+        [
+         16.5,
+         7328.7
+        ],
+        [
+         17,
+         7437.81
+        ],
+        [
+         17.5,
+         7548.56
+        ],
+        [
+         18,
+         7660.95
+        ],
+        [
+         18.5,
+         7775.01
+        ],
+        [
+         19,
+         7890.78
+        ],
+        [
+         19.5,
+         8008.26
+        ],
+        [
+         20,
+         8127.5
+        ],
+        [
+         20.5,
+         8248.51
+        ],
+        [
+         21,
+         8371.33
+        ],
+        [
+         21.5,
+         8495.97
+        ],
+        [
+         22,
+         8622.47
+        ],
+        [
+         22.5,
+         8750.85
+        ],
+        [
+         23,
+         8881.14
+        ],
+        [
+         23.5,
+         9013.37
+        ],
+        [
+         24,
+         9147.57
+        ],
+        [
+         24.5,
+         9283.77
+        ],
+        [
+         25,
+         9422
+        ],
+        [
+         25.5,
+         9562.29
+        ],
+        [
+         26,
+         9704.66
+        ],
+        [
+         26.5,
+         9849.15
+        ],
+        [
+         27,
+         9995.8
+        ],
+        [
+         27.5,
+         10144.63
+        ],
+        [
+         28,
+         10295.67
+        ],
+        [
+         28.5,
+         10448.97
+        ],
+        [
+         29,
+         10604.54
+        ],
+        [
+         29.5,
+         10762.44
+        ],
+        [
+         30,
+         10922.68
+        ]
+       ]
+      },
+      {
+       "name": "7% a year",
+       "pts": [
+        [
+         0,
+         4500
+        ],
+        [
+         0.5,
+         4654.84
+        ],
+        [
+         1,
+         4815
+        ],
+        [
+         1.5,
+         4980.67
+        ],
+        [
+         2,
+         5152.05
+        ],
+        [
+         2.5,
+         5329.32
+        ],
+        [
+         3,
+         5512.69
+        ],
+        [
+         3.5,
+         5702.37
+        ],
+        [
+         4,
+         5898.58
+        ],
+        [
+         4.5,
+         6101.54
+        ],
+        [
+         5,
+         6311.48
+        ],
+        [
+         5.5,
+         6528.65
+        ],
+        [
+         6,
+         6753.29
+        ],
+        [
+         6.5,
+         6985.65
+        ],
+        [
+         7,
+         7226.02
+        ],
+        [
+         7.5,
+         7474.65
+        ],
+        [
+         8,
+         7731.84
+        ],
+        [
+         8.5,
+         7997.88
+        ],
+        [
+         9,
+         8273.07
+        ],
+        [
+         9.5,
+         8557.73
+        ],
+        [
+         10,
+         8852.18
+        ],
+        [
+         10.5,
+         9156.77
+        ],
+        [
+         11,
+         9471.83
+        ],
+        [
+         11.5,
+         9797.74
+        ],
+        [
+         12,
+         10134.86
+        ],
+        [
+         12.5,
+         10483.58
+        ],
+        [
+         13,
+         10844.3
+        ],
+        [
+         13.5,
+         11217.43
+        ],
+        [
+         14,
+         11603.4
+        ],
+        [
+         14.5,
+         12002.65
+        ],
+        [
+         15,
+         12415.64
+        ],
+        [
+         15.5,
+         12842.84
+        ],
+        [
+         16,
+         13284.74
+        ],
+        [
+         16.5,
+         13741.84
+        ],
+        [
+         17,
+         14214.67
+        ],
+        [
+         17.5,
+         14703.77
+        ],
+        [
+         18,
+         15209.7
+        ],
+        [
+         18.5,
+         15733.03
+        ],
+        [
+         19,
+         16274.37
+        ],
+        [
+         19.5,
+         16834.34
+        ],
+        [
+         20,
+         17413.58
+        ],
+        [
+         20.5,
+         18012.75
+        ],
+        [
+         21,
+         18632.53
+        ],
+        [
+         21.5,
+         19273.64
+        ],
+        [
+         22,
+         19936.81
+        ],
+        [
+         22.5,
+         20622.79
+        ],
+        [
+         23,
+         21332.38
+        ],
+        [
+         23.5,
+         22066.39
+        ],
+        [
+         24,
+         22825.65
+        ],
+        [
+         24.5,
+         23611.04
+        ],
+        [
+         25,
+         24423.45
+        ],
+        [
+         25.5,
+         25263.81
+        ],
+        [
+         26,
+         26133.09
+        ],
+        [
+         26.5,
+         27032.28
+        ],
+        [
+         27,
+         27962.4
+        ],
+        [
+         27.5,
+         28924.54
+        ],
+        [
+         28,
+         29919.77
+        ],
+        [
+         28.5,
+         30949.25
+        ],
+        [
+         29,
+         32014.16
+        ],
+        [
+         29.5,
+         33115.7
+        ],
+        [
+         30,
+         34255.15
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $4,500.00(1 + r)^t, compounded yearly, with r = 3% and r = 7%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$10,844.30",
+   "numeric": {
+    "value": 10844.3,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: V(t) = P(1 + r)^t.",
+    "Substitute: $4,500.00 × 1.07^13 = $10,844.30.",
+    "Spreadsheet: =FV(0.07,13,0,-4500) or =4500*(1+0.07)^13.",
+    "So $4,500.00 grows to $10,844.30, 2.41 times the start, without adding money."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After 15 years, how much more is the 7% investment worth than the 3% one? (The gap between the curves.)",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $1,000.00 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 8000,
+      "step": 2000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "3% a year",
+       "pts": [
+        [
+         0,
+         1000
+        ],
+        [
+         0.5,
+         1014.89
+        ],
+        [
+         1,
+         1030
+        ],
+        [
+         1.5,
+         1045.34
+        ],
+        [
+         2,
+         1060.9
+        ],
+        [
+         2.5,
+         1076.7
+        ],
+        [
+         3,
+         1092.73
+        ],
+        [
+         3.5,
+         1109
+        ],
+        [
+         4,
+         1125.51
+        ],
+        [
+         4.5,
+         1142.27
+        ],
+        [
+         5,
+         1159.27
+        ],
+        [
+         5.5,
+         1176.53
+        ],
+        [
+         6,
+         1194.05
+        ],
+        [
+         6.5,
+         1211.83
+        ],
+        [
+         7,
+         1229.87
+        ],
+        [
+         7.5,
+         1248.19
+        ],
+        [
+         8,
+         1266.77
+        ],
+        [
+         8.5,
+         1285.63
+        ],
+        [
+         9,
+         1304.77
+        ],
+        [
+         9.5,
+         1324.2
+        ],
+        [
+         10,
+         1343.92
+        ],
+        [
+         10.5,
+         1363.93
+        ],
+        [
+         11,
+         1384.23
+        ],
+        [
+         11.5,
+         1404.84
+        ],
+        [
+         12,
+         1425.76
+        ],
+        [
+         12.5,
+         1446.99
+        ],
+        [
+         13,
+         1468.53
+        ],
+        [
+         13.5,
+         1490.4
+        ],
+        [
+         14,
+         1512.59
+        ],
+        [
+         14.5,
+         1535.11
+        ],
+        [
+         15,
+         1557.97
+        ],
+        [
+         15.5,
+         1581.16
+        ],
+        [
+         16,
+         1604.71
+        ],
+        [
+         16.5,
+         1628.6
+        ],
+        [
+         17,
+         1652.85
+        ],
+        [
+         17.5,
+         1677.46
+        ],
+        [
+         18,
+         1702.43
+        ],
+        [
+         18.5,
+         1727.78
+        ],
+        [
+         19,
+         1753.51
+        ],
+        [
+         19.5,
+         1779.61
+        ],
+        [
+         20,
+         1806.11
+        ],
+        [
+         20.5,
+         1833
+        ],
+        [
+         21,
+         1860.29
+        ],
+        [
+         21.5,
+         1887.99
+        ],
+        [
+         22,
+         1916.1
+        ],
+        [
+         22.5,
+         1944.63
+        ],
+        [
+         23,
+         1973.59
+        ],
+        [
+         23.5,
+         2002.97
+        ],
+        [
+         24,
+         2032.79
+        ],
+        [
+         24.5,
+         2063.06
+        ],
+        [
+         25,
+         2093.78
+        ],
+        [
+         25.5,
+         2124.95
+        ],
+        [
+         26,
+         2156.59
+        ],
+        [
+         26.5,
+         2188.7
+        ],
+        [
+         27,
+         2221.29
+        ],
+        [
+         27.5,
+         2254.36
+        ],
+        [
+         28,
+         2287.93
+        ],
+        [
+         28.5,
+         2321.99
+        ],
+        [
+         29,
+         2356.57
+        ],
+        [
+         29.5,
+         2391.65
+        ],
+        [
+         30,
+         2427.26
+        ]
+       ]
+      },
+      {
+       "name": "7% a year",
+       "pts": [
+        [
+         0,
+         1000
+        ],
+        [
+         0.5,
+         1034.41
+        ],
+        [
+         1,
+         1070
+        ],
+        [
+         1.5,
+         1106.82
+        ],
+        [
+         2,
+         1144.9
+        ],
+        [
+         2.5,
+         1184.29
+        ],
+        [
+         3,
+         1225.04
+        ],
+        [
+         3.5,
+         1267.19
+        ],
+        [
+         4,
+         1310.8
+        ],
+        [
+         4.5,
+         1355.9
+        ],
+        [
+         5,
+         1402.55
+        ],
+        [
+         5.5,
+         1450.81
+        ],
+        [
+         6,
+         1500.73
+        ],
+        [
+         6.5,
+         1552.37
+        ],
+        [
+         7,
+         1605.78
+        ],
+        [
+         7.5,
+         1661.03
+        ],
+        [
+         8,
+         1718.19
+        ],
+        [
+         8.5,
+         1777.31
+        ],
+        [
+         9,
+         1838.46
+        ],
+        [
+         9.5,
+         1901.72
+        ],
+        [
+         10,
+         1967.15
+        ],
+        [
+         10.5,
+         2034.84
+        ],
+        [
+         11,
+         2104.85
+        ],
+        [
+         11.5,
+         2177.28
+        ],
+        [
+         12,
+         2252.19
+        ],
+        [
+         12.5,
+         2329.69
+        ],
+        [
+         13,
+         2409.85
+        ],
+        [
+         13.5,
+         2492.76
+        ],
+        [
+         14,
+         2578.53
+        ],
+        [
+         14.5,
+         2667.26
+        ],
+        [
+         15,
+         2759.03
+        ],
+        [
+         15.5,
+         2853.96
+        ],
+        [
+         16,
+         2952.16
+        ],
+        [
+         16.5,
+         3053.74
+        ],
+        [
+         17,
+         3158.82
+        ],
+        [
+         17.5,
+         3267.5
+        ],
+        [
+         18,
+         3379.93
+        ],
+        [
+         18.5,
+         3496.23
+        ],
+        [
+         19,
+         3616.53
+        ],
+        [
+         19.5,
+         3740.97
+        ],
+        [
+         20,
+         3869.68
+        ],
+        [
+         20.5,
+         4002.83
+        ],
+        [
+         21,
+         4140.56
+        ],
+        [
+         21.5,
+         4283.03
+        ],
+        [
+         22,
+         4430.4
+        ],
+        [
+         22.5,
+         4582.84
+        ],
+        [
+         23,
+         4740.53
+        ],
+        [
+         23.5,
+         4903.64
+        ],
+        [
+         24,
+         5072.37
+        ],
+        [
+         24.5,
+         5246.9
+        ],
+        [
+         25,
+         5427.43
+        ],
+        [
+         25.5,
+         5614.18
+        ],
+        [
+         26,
+         5807.35
+        ],
+        [
+         26.5,
+         6007.17
+        ],
+        [
+         27,
+         6213.87
+        ],
+        [
+         27.5,
+         6427.67
+        ],
+        [
+         28,
+         6648.84
+        ],
+        [
+         28.5,
+         6877.61
+        ],
+        [
+         29,
+         7114.26
+        ],
+        [
+         29.5,
+         7359.04
+        ],
+        [
+         30,
+         7612.26
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $1,000.00(1 + r)^t, compounded yearly, with r = 3% and r = 7%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,201.06",
+   "numeric": {
+    "value": 1201.06,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = P(1 + 0.07)^t − P(1 + 0.03)^t.",
+    "Substitute: $2,759.03 − $1,557.97 = $1,201.06.",
+    "Spreadsheet: =1000*(1+0.07)^15-1000*(1+0.03)^15.",
+    "So the higher rate is worth $1,201.06 more after 15 years. The curves pull apart faster each year because each year's growth earns growth too."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "advanced",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "At 9% a year, after how many whole years is Dev's investment first worth at least twice the $7,000 he started with?",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $7,000 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 100000,
+      "step": 20000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "4% a year",
+       "pts": [
+        [
+         0,
+         7000
+        ],
+        [
+         0.5,
+         7138.63
+        ],
+        [
+         1,
+         7280
+        ],
+        [
+         1.5,
+         7424.17
+        ],
+        [
+         2,
+         7571.2
+        ],
+        [
+         2.5,
+         7721.14
+        ],
+        [
+         3,
+         7874.05
+        ],
+        [
+         3.5,
+         8029.98
+        ],
+        [
+         4,
+         8189.01
+        ],
+        [
+         4.5,
+         8351.18
+        ],
+        [
+         5,
+         8516.57
+        ],
+        [
+         5.5,
+         8685.23
+        ],
+        [
+         6,
+         8857.23
+        ],
+        [
+         6.5,
+         9032.64
+        ],
+        [
+         7,
+         9211.52
+        ],
+        [
+         7.5,
+         9393.95
+        ],
+        [
+         8,
+         9579.98
+        ],
+        [
+         8.5,
+         9769.7
+        ],
+        [
+         9,
+         9963.18
+        ],
+        [
+         9.5,
+         10160.49
+        ],
+        [
+         10,
+         10361.71
+        ],
+        [
+         10.5,
+         10566.91
+        ],
+        [
+         11,
+         10776.18
+        ],
+        [
+         11.5,
+         10989.59
+        ],
+        [
+         12,
+         11207.23
+        ],
+        [
+         12.5,
+         11429.17
+        ],
+        [
+         13,
+         11655.51
+        ],
+        [
+         13.5,
+         11886.34
+        ],
+        [
+         14,
+         12121.74
+        ],
+        [
+         14.5,
+         12361.79
+        ],
+        [
+         15,
+         12606.6
+        ],
+        [
+         15.5,
+         12856.26
+        ],
+        [
+         16,
+         13110.87
+        ],
+        [
+         16.5,
+         13370.52
+        ],
+        [
+         17,
+         13635.3
+        ],
+        [
+         17.5,
+         13905.34
+        ],
+        [
+         18,
+         14180.72
+        ],
+        [
+         18.5,
+         14461.55
+        ],
+        [
+         19,
+         14747.94
+        ],
+        [
+         19.5,
+         15040.01
+        ],
+        [
+         20,
+         15337.86
+        ],
+        [
+         20.5,
+         15641.61
+        ],
+        [
+         21,
+         15951.38
+        ],
+        [
+         21.5,
+         16267.28
+        ],
+        [
+         22,
+         16589.43
+        ],
+        [
+         22.5,
+         16917.97
+        ],
+        [
+         23,
+         17253.01
+        ],
+        [
+         23.5,
+         17594.69
+        ],
+        [
+         24,
+         17943.13
+        ],
+        [
+         24.5,
+         18298.47
+        ],
+        [
+         25,
+         18660.85
+        ],
+        [
+         25.5,
+         19030.41
+        ],
+        [
+         26,
+         19407.29
+        ],
+        [
+         26.5,
+         19791.63
+        ],
+        [
+         27,
+         20183.58
+        ],
+        [
+         27.5,
+         20583.29
+        ],
+        [
+         28,
+         20990.92
+        ],
+        [
+         28.5,
+         21406.63
+        ],
+        [
+         29,
+         21830.56
+        ],
+        [
+         29.5,
+         22262.89
+        ],
+        [
+         30,
+         22703.78
+        ]
+       ]
+      },
+      {
+       "name": "9% a year",
+       "pts": [
+        [
+         0,
+         7000
+        ],
+        [
+         0.5,
+         7308.21
+        ],
+        [
+         1,
+         7630
+        ],
+        [
+         1.5,
+         7965.95
+        ],
+        [
+         2,
+         8316.7
+        ],
+        [
+         2.5,
+         8682.89
+        ],
+        [
+         3,
+         9065.2
+        ],
+        [
+         3.5,
+         9464.35
+        ],
+        [
+         4,
+         9881.07
+        ],
+        [
+         4.5,
+         10316.14
+        ],
+        [
+         5,
+         10770.37
+        ],
+        [
+         5.5,
+         11244.59
+        ],
+        [
+         6,
+         11739.7
+        ],
+        [
+         6.5,
+         12256.61
+        ],
+        [
+         7,
+         12796.27
+        ],
+        [
+         7.5,
+         13359.7
+        ],
+        [
+         8,
+         13947.94
+        ],
+        [
+         8.5,
+         14562.08
+        ],
+        [
+         9,
+         15203.25
+        ],
+        [
+         9.5,
+         15872.66
+        ],
+        [
+         10,
+         16571.55
+        ],
+        [
+         10.5,
+         17301.2
+        ],
+        [
+         11,
+         18062.98
+        ],
+        [
+         11.5,
+         18858.31
+        ],
+        [
+         12,
+         19688.65
+        ],
+        [
+         12.5,
+         20555.56
+        ],
+        [
+         13,
+         21460.63
+        ],
+        [
+         13.5,
+         22405.56
+        ],
+        [
+         14,
+         23392.09
+        ],
+        [
+         14.5,
+         24422.06
+        ],
+        [
+         15,
+         25497.38
+        ],
+        [
+         15.5,
+         26620.04
+        ],
+        [
+         16,
+         27792.14
+        ],
+        [
+         16.5,
+         29015.85
+        ],
+        [
+         17,
+         30293.43
+        ],
+        [
+         17.5,
+         31627.27
+        ],
+        [
+         18,
+         33019.84
+        ],
+        [
+         18.5,
+         34473.73
+        ],
+        [
+         19,
+         35991.63
+        ],
+        [
+         19.5,
+         37576.36
+        ],
+        [
+         20,
+         39230.88
+        ],
+        [
+         20.5,
+         40958.24
+        ],
+        [
+         21,
+         42761.65
+        ],
+        [
+         21.5,
+         44644.48
+        ],
+        [
+         22,
+         46610.2
+        ],
+        [
+         22.5,
+         48662.48
+        ],
+        [
+         23,
+         50805.12
+        ],
+        [
+         23.5,
+         53042.1
+        ],
+        [
+         24,
+         55377.58
+        ],
+        [
+         24.5,
+         57815.89
+        ],
+        [
+         25,
+         60361.56
+        ],
+        [
+         25.5,
+         63019.32
+        ],
+        [
+         26,
+         65794.11
+        ],
+        [
+         26.5,
+         68691.06
+        ],
+        [
+         27,
+         71715.57
+        ],
+        [
+         27.5,
+         74873.26
+        ],
+        [
+         28,
+         78169.98
+        ],
+        [
+         28.5,
+         81611.85
+        ],
+        [
+         29,
+         85205.27
+        ],
+        [
+         29.5,
+         88956.92
+        ],
+        [
+         30,
+         92873.75
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $7,000(1 + r)^t, compounded yearly, with r = 4% and r = 9%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "9",
+   "numeric": {
+    "value": 9,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ 2P, so t ≥ ln 2 ÷ ln(1 + r).",
+    "Substitute: t ≥ ln 2 ÷ ln 1.09 = 8.04, so 9 whole years.",
+    "Spreadsheet: =ROUNDUP(NPER(0.09,0,-7000,14000),0) or =ROUNDUP(LN(2)/LN(1+0.09),0).",
+    "So the money doubles in 9 years at 9%. At 4% it would take 18 years."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-07",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "support",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Fatima invests $9,500.00 at 7% a year, compounded yearly. Using V(t) = $9,500.00(1 + 0.07)^t, what is it worth after 5 years?",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $9,500.00 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 80000,
+      "step": 20000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "4% a year",
+       "pts": [
+        [
+         0,
+         9500
+        ],
+        [
+         0.5,
+         9688.14
+        ],
+        [
+         1,
+         9880
+        ],
+        [
+         1.5,
+         10075.66
+        ],
+        [
+         2,
+         10275.2
+        ],
+        [
+         2.5,
+         10478.69
+        ],
+        [
+         3,
+         10686.21
+        ],
+        [
+         3.5,
+         10897.84
+        ],
+        [
+         4,
+         11113.66
+        ],
+        [
+         4.5,
+         11333.75
+        ],
+        [
+         5,
+         11558.2
+        ],
+        [
+         5.5,
+         11787.1
+        ],
+        [
+         6,
+         12020.53
+        ],
+        [
+         6.5,
+         12258.58
+        ],
+        [
+         7,
+         12501.35
+        ],
+        [
+         7.5,
+         12748.93
+        ],
+        [
+         8,
+         13001.41
+        ],
+        [
+         8.5,
+         13258.88
+        ],
+        [
+         9,
+         13521.46
+        ],
+        [
+         9.5,
+         13789.24
+        ],
+        [
+         10,
+         14062.32
+        ],
+        [
+         10.5,
+         14340.81
+        ],
+        [
+         11,
+         14624.81
+        ],
+        [
+         11.5,
+         14914.44
+        ],
+        [
+         12,
+         15209.81
+        ],
+        [
+         12.5,
+         15511.02
+        ],
+        [
+         13,
+         15818.2
+        ],
+        [
+         13.5,
+         16131.46
+        ],
+        [
+         14,
+         16450.93
+        ],
+        [
+         14.5,
+         16776.72
+        ],
+        [
+         15,
+         17108.96
+        ],
+        [
+         15.5,
+         17447.79
+        ],
+        [
+         16,
+         17793.32
+        ],
+        [
+         16.5,
+         18145.7
+        ],
+        [
+         17,
+         18505.05
+        ],
+        [
+         17.5,
+         18871.53
+        ],
+        [
+         18,
+         19245.26
+        ],
+        [
+         18.5,
+         19626.39
+        ],
+        [
+         19,
+         20015.07
+        ],
+        [
+         19.5,
+         20411.44
+        ],
+        [
+         20,
+         20815.67
+        ],
+        [
+         20.5,
+         21227.9
+        ],
+        [
+         21,
+         21648.3
+        ],
+        [
+         21.5,
+         22077.02
+        ],
+        [
+         22,
+         22514.23
+        ],
+        [
+         22.5,
+         22960.1
+        ],
+        [
+         23,
+         23414.8
+        ],
+        [
+         23.5,
+         23878.5
+        ],
+        [
+         24,
+         24351.39
+        ],
+        [
+         24.5,
+         24833.64
+        ],
+        [
+         25,
+         25325.45
+        ],
+        [
+         25.5,
+         25826.99
+        ],
+        [
+         26,
+         26338.46
+        ],
+        [
+         26.5,
+         26860.07
+        ],
+        [
+         27,
+         27392
+        ],
+        [
+         27.5,
+         27934.47
+        ],
+        [
+         28,
+         28487.68
+        ],
+        [
+         28.5,
+         29051.85
+        ],
+        [
+         29,
+         29627.19
+        ],
+        [
+         29.5,
+         30213.92
+        ],
+        [
+         30,
+         30812.28
+        ]
+       ]
+      },
+      {
+       "name": "7% a year",
+       "pts": [
+        [
+         0,
+         9500
+        ],
+        [
+         0.5,
+         9826.88
+        ],
+        [
+         1,
+         10165
+        ],
+        [
+         1.5,
+         10514.76
+        ],
+        [
+         2,
+         10876.55
+        ],
+        [
+         2.5,
+         11250.79
+        ],
+        [
+         3,
+         11637.91
+        ],
+        [
+         3.5,
+         12038.35
+        ],
+        [
+         4,
+         12452.56
+        ],
+        [
+         4.5,
+         12881.03
+        ],
+        [
+         5,
+         13324.24
+        ],
+        [
+         5.5,
+         13782.7
+        ],
+        [
+         6,
+         14256.94
+        ],
+        [
+         6.5,
+         14747.49
+        ],
+        [
+         7,
+         15254.92
+        ],
+        [
+         7.5,
+         15779.82
+        ],
+        [
+         8,
+         16322.77
+        ],
+        [
+         8.5,
+         16884.4
+        ],
+        [
+         9,
+         17465.36
+        ],
+        [
+         9.5,
+         18066.31
+        ],
+        [
+         10,
+         18687.94
+        ],
+        [
+         10.5,
+         19330.95
+        ],
+        [
+         11,
+         19996.09
+        ],
+        [
+         11.5,
+         20684.12
+        ],
+        [
+         12,
+         21395.82
+        ],
+        [
+         12.5,
+         22132.01
+        ],
+        [
+         13,
+         22893.53
+        ],
+        [
+         13.5,
+         23681.25
+        ],
+        [
+         14,
+         24496.07
+        ],
+        [
+         14.5,
+         25338.94
+        ],
+        [
+         15,
+         26210.8
+        ],
+        [
+         15.5,
+         27112.66
+        ],
+        [
+         16,
+         28045.56
+        ],
+        [
+         16.5,
+         29010.55
+        ],
+        [
+         17,
+         30008.74
+        ],
+        [
+         17.5,
+         31041.29
+        ],
+        [
+         18,
+         32109.36
+        ],
+        [
+         18.5,
+         33214.18
+        ],
+        [
+         19,
+         34357.01
+        ],
+        [
+         19.5,
+         35539.17
+        ],
+        [
+         20,
+         36762
+        ],
+        [
+         20.5,
+         38026.91
+        ],
+        [
+         21,
+         39335.34
+        ],
+        [
+         21.5,
+         40688.79
+        ],
+        [
+         22,
+         42088.82
+        ],
+        [
+         22.5,
+         43537.01
+        ],
+        [
+         23,
+         45035.03
+        ],
+        [
+         23.5,
+         46584.6
+        ],
+        [
+         24,
+         48187.49
+        ],
+        [
+         24.5,
+         49845.52
+        ],
+        [
+         25,
+         51560.61
+        ],
+        [
+         25.5,
+         53334.71
+        ],
+        [
+         26,
+         55169.85
+        ],
+        [
+         26.5,
+         57068.14
+        ],
+        [
+         27,
+         59031.74
+        ],
+        [
+         27.5,
+         61062.91
+        ],
+        [
+         28,
+         63163.96
+        ],
+        [
+         28.5,
+         65337.31
+        ],
+        [
+         29,
+         67585.44
+        ],
+        [
+         29.5,
+         69910.92
+        ],
+        [
+         30,
+         72316.42
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $9,500.00(1 + r)^t, compounded yearly, with r = 4% and r = 7%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$13,324.24",
+   "numeric": {
+    "value": 13324.24,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: V(t) = P(1 + r)^t.",
+    "Substitute: $9,500.00 × 1.07^5 = $13,324.24.",
+    "Spreadsheet: =FV(0.07,5,0,-9500) or =9500*(1+0.07)^5.",
+    "So $9,500.00 grows to $13,324.24, 1.40 times the start, without adding money."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-08",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After 15 years, how much more is the 7% investment worth than the 3% one? (The gap between the curves.)",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $3,000.00 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 25000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "3% a year",
+       "pts": [
+        [
+         0,
+         3000
+        ],
+        [
+         0.5,
+         3044.67
+        ],
+        [
+         1,
+         3090
+        ],
+        [
+         1.5,
+         3136.01
+        ],
+        [
+         2,
+         3182.7
+        ],
+        [
+         2.5,
+         3230.09
+        ],
+        [
+         3,
+         3278.18
+        ],
+        [
+         3.5,
+         3326.99
+        ],
+        [
+         4,
+         3376.53
+        ],
+        [
+         4.5,
+         3426.8
+        ],
+        [
+         5,
+         3477.82
+        ],
+        [
+         5.5,
+         3529.6
+        ],
+        [
+         6,
+         3582.16
+        ],
+        [
+         6.5,
+         3635.49
+        ],
+        [
+         7,
+         3689.62
+        ],
+        [
+         7.5,
+         3744.56
+        ],
+        [
+         8,
+         3800.31
+        ],
+        [
+         8.5,
+         3856.89
+        ],
+        [
+         9,
+         3914.32
+        ],
+        [
+         9.5,
+         3972.6
+        ],
+        [
+         10,
+         4031.75
+        ],
+        [
+         10.5,
+         4091.78
+        ],
+        [
+         11,
+         4152.7
+        ],
+        [
+         11.5,
+         4214.53
+        ],
+        [
+         12,
+         4277.28
+        ],
+        [
+         12.5,
+         4340.97
+        ],
+        [
+         13,
+         4405.6
+        ],
+        [
+         13.5,
+         4471.2
+        ],
+        [
+         14,
+         4537.77
+        ],
+        [
+         14.5,
+         4605.33
+        ],
+        [
+         15,
+         4673.9
+        ],
+        [
+         15.5,
+         4743.49
+        ],
+        [
+         16,
+         4814.12
+        ],
+        [
+         16.5,
+         4885.8
+        ],
+        [
+         17,
+         4958.54
+        ],
+        [
+         17.5,
+         5032.37
+        ],
+        [
+         18,
+         5107.3
+        ],
+        [
+         18.5,
+         5183.34
+        ],
+        [
+         19,
+         5260.52
+        ],
+        [
+         19.5,
+         5338.84
+        ],
+        [
+         20,
+         5418.33
+        ],
+        [
+         20.5,
+         5499.01
+        ],
+        [
+         21,
+         5580.88
+        ],
+        [
+         21.5,
+         5663.98
+        ],
+        [
+         22,
+         5748.31
+        ],
+        [
+         22.5,
+         5833.9
+        ],
+        [
+         23,
+         5920.76
+        ],
+        [
+         23.5,
+         6008.91
+        ],
+        [
+         24,
+         6098.38
+        ],
+        [
+         24.5,
+         6189.18
+        ],
+        [
+         25,
+         6281.33
+        ],
+        [
+         25.5,
+         6374.86
+        ],
+        [
+         26,
+         6469.77
+        ],
+        [
+         26.5,
+         6566.1
+        ],
+        [
+         27,
+         6663.87
+        ],
+        [
+         27.5,
+         6763.09
+        ],
+        [
+         28,
+         6863.78
+        ],
+        [
+         28.5,
+         6965.98
+        ],
+        [
+         29,
+         7069.7
+        ],
+        [
+         29.5,
+         7174.96
+        ],
+        [
+         30,
+         7281.79
+        ]
+       ]
+      },
+      {
+       "name": "7% a year",
+       "pts": [
+        [
+         0,
+         3000
+        ],
+        [
+         0.5,
+         3103.22
+        ],
+        [
+         1,
+         3210
+        ],
+        [
+         1.5,
+         3320.45
+        ],
+        [
+         2,
+         3434.7
+        ],
+        [
+         2.5,
+         3552.88
+        ],
+        [
+         3,
+         3675.13
+        ],
+        [
+         3.5,
+         3801.58
+        ],
+        [
+         4,
+         3932.39
+        ],
+        [
+         4.5,
+         4067.69
+        ],
+        [
+         5,
+         4207.66
+        ],
+        [
+         5.5,
+         4352.43
+        ],
+        [
+         6,
+         4502.19
+        ],
+        [
+         6.5,
+         4657.1
+        ],
+        [
+         7,
+         4817.34
+        ],
+        [
+         7.5,
+         4983.1
+        ],
+        [
+         8,
+         5154.56
+        ],
+        [
+         8.5,
+         5331.92
+        ],
+        [
+         9,
+         5515.38
+        ],
+        [
+         9.5,
+         5705.15
+        ],
+        [
+         10,
+         5901.45
+        ],
+        [
+         10.5,
+         6104.51
+        ],
+        [
+         11,
+         6314.56
+        ],
+        [
+         11.5,
+         6531.83
+        ],
+        [
+         12,
+         6756.57
+        ],
+        [
+         12.5,
+         6989.06
+        ],
+        [
+         13,
+         7229.54
+        ],
+        [
+         13.5,
+         7478.29
+        ],
+        [
+         14,
+         7735.6
+        ],
+        [
+         14.5,
+         8001.77
+        ],
+        [
+         15,
+         8277.09
+        ],
+        [
+         15.5,
+         8561.89
+        ],
+        [
+         16,
+         8856.49
+        ],
+        [
+         16.5,
+         9161.23
+        ],
+        [
+         17,
+         9476.45
+        ],
+        [
+         17.5,
+         9802.51
+        ],
+        [
+         18,
+         10139.8
+        ],
+        [
+         18.5,
+         10488.69
+        ],
+        [
+         19,
+         10849.58
+        ],
+        [
+         19.5,
+         11222.9
+        ],
+        [
+         20,
+         11609.05
+        ],
+        [
+         20.5,
+         12008.5
+        ],
+        [
+         21,
+         12421.69
+        ],
+        [
+         21.5,
+         12849.09
+        ],
+        [
+         22,
+         13291.21
+        ],
+        [
+         22.5,
+         13748.53
+        ],
+        [
+         23,
+         14221.59
+        ],
+        [
+         23.5,
+         14710.93
+        ],
+        [
+         24,
+         15217.1
+        ],
+        [
+         24.5,
+         15740.69
+        ],
+        [
+         25,
+         16282.3
+        ],
+        [
+         25.5,
+         16842.54
+        ],
+        [
+         26,
+         17422.06
+        ],
+        [
+         26.5,
+         18021.52
+        ],
+        [
+         27,
+         18641.6
+        ],
+        [
+         27.5,
+         19283.02
+        ],
+        [
+         28,
+         19946.52
+        ],
+        [
+         28.5,
+         20632.84
+        ],
+        [
+         29,
+         21342.77
+        ],
+        [
+         29.5,
+         22077.13
+        ],
+        [
+         30,
+         22836.77
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $3,000.00(1 + r)^t, compounded yearly, with r = 3% and r = 7%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,603.19",
+   "numeric": {
+    "value": 3603.19,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: gap = P(1 + 0.07)^t − P(1 + 0.03)^t.",
+    "Substitute: $8,277.09 − $4,673.90 = $3,603.19.",
+    "Spreadsheet: =3000*(1+0.07)^15-3000*(1+0.03)^15.",
+    "So the higher rate is worth $3,603.19 more after 15 years. The curves pull apart faster each year because each year's growth earns growth too."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-lv-m-growth-curves-09",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "advanced",
+   "family": "lv-m-growth-curves",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "At 8% a year, after how many whole years is Maya's investment first worth at least three times the $1,500 she started with?",
+   "scenario": {
+    "graph": {
+     "title": "Growth of $1,500 at two rates",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "money": false
+     },
+     "y": {
+      "label": "Value",
+      "min": 0,
+      "max": 20000,
+      "step": 5000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "4% a year",
+       "pts": [
+        [
+         0,
+         1500
+        ],
+        [
+         0.5,
+         1529.71
+        ],
+        [
+         1,
+         1560
+        ],
+        [
+         1.5,
+         1590.89
+        ],
+        [
+         2,
+         1622.4
+        ],
+        [
+         2.5,
+         1654.53
+        ],
+        [
+         3,
+         1687.3
+        ],
+        [
+         3.5,
+         1720.71
+        ],
+        [
+         4,
+         1754.79
+        ],
+        [
+         4.5,
+         1789.54
+        ],
+        [
+         5,
+         1824.98
+        ],
+        [
+         5.5,
+         1861.12
+        ],
+        [
+         6,
+         1897.98
+        ],
+        [
+         6.5,
+         1935.57
+        ],
+        [
+         7,
+         1973.9
+        ],
+        [
+         7.5,
+         2012.99
+        ],
+        [
+         8,
+         2052.85
+        ],
+        [
+         8.5,
+         2093.51
+        ],
+        [
+         9,
+         2134.97
+        ],
+        [
+         9.5,
+         2177.25
+        ],
+        [
+         10,
+         2220.37
+        ],
+        [
+         10.5,
+         2264.34
+        ],
+        [
+         11,
+         2309.18
+        ],
+        [
+         11.5,
+         2354.91
+        ],
+        [
+         12,
+         2401.55
+        ],
+        [
+         12.5,
+         2449.11
+        ],
+        [
+         13,
+         2497.61
+        ],
+        [
+         13.5,
+         2547.07
+        ],
+        [
+         14,
+         2597.51
+        ],
+        [
+         14.5,
+         2648.96
+        ],
+        [
+         15,
+         2701.42
+        ],
+        [
+         15.5,
+         2754.91
+        ],
+        [
+         16,
+         2809.47
+        ],
+        [
+         16.5,
+         2865.11
+        ],
+        [
+         17,
+         2921.85
+        ],
+        [
+         17.5,
+         2979.71
+        ],
+        [
+         18,
+         3038.72
+        ],
+        [
+         18.5,
+         3098.9
+        ],
+        [
+         19,
+         3160.27
+        ],
+        [
+         19.5,
+         3222.86
+        ],
+        [
+         20,
+         3286.68
+        ],
+        [
+         20.5,
+         3351.77
+        ],
+        [
+         21,
+         3418.15
+        ],
+        [
+         21.5,
+         3485.84
+        ],
+        [
+         22,
+         3554.88
+        ],
+        [
+         22.5,
+         3625.28
+        ],
+        [
+         23,
+         3697.07
+        ],
+        [
+         23.5,
+         3770.29
+        ],
+        [
+         24,
+         3844.96
+        ],
+        [
+         24.5,
+         3921.1
+        ],
+        [
+         25,
+         3998.75
+        ],
+        [
+         25.5,
+         4077.95
+        ],
+        [
+         26,
+         4158.7
+        ],
+        [
+         26.5,
+         4241.06
+        ],
+        [
+         27,
+         4325.05
+        ],
+        [
+         27.5,
+         4410.71
+        ],
+        [
+         28,
+         4498.05
+        ],
+        [
+         28.5,
+         4587.13
+        ],
+        [
+         29,
+         4677.98
+        ],
+        [
+         29.5,
+         4770.62
+        ],
+        [
+         30,
+         4865.1
+        ]
+       ]
+      },
+      {
+       "name": "8% a year",
+       "pts": [
+        [
+         0,
+         1500
+        ],
+        [
+         0.5,
+         1558.85
+        ],
+        [
+         1,
+         1620
+        ],
+        [
+         1.5,
+         1683.55
+        ],
+        [
+         2,
+         1749.6
+        ],
+        [
+         2.5,
+         1818.24
+        ],
+        [
+         3,
+         1889.57
+        ],
+        [
+         3.5,
+         1963.7
+        ],
+        [
+         4,
+         2040.73
+        ],
+        [
+         4.5,
+         2120.79
+        ],
+        [
+         5,
+         2203.99
+        ],
+        [
+         5.5,
+         2290.46
+        ],
+        [
+         6,
+         2380.31
+        ],
+        [
+         6.5,
+         2473.69
+        ],
+        [
+         7,
+         2570.74
+        ],
+        [
+         7.5,
+         2671.59
+        ],
+        [
+         8,
+         2776.4
+        ],
+        [
+         8.5,
+         2885.31
+        ],
+        [
+         9,
+         2998.51
+        ],
+        [
+         9.5,
+         3116.14
+        ],
+        [
+         10,
+         3238.39
+        ],
+        [
+         10.5,
+         3365.43
+        ],
+        [
+         11,
+         3497.46
+        ],
+        [
+         11.5,
+         3634.67
+        ],
+        [
+         12,
+         3777.26
+        ],
+        [
+         12.5,
+         3925.44
+        ],
+        [
+         13,
+         4079.44
+        ],
+        [
+         13.5,
+         4239.47
+        ],
+        [
+         14,
+         4405.79
+        ],
+        [
+         14.5,
+         4578.63
+        ],
+        [
+         15,
+         4758.25
+        ],
+        [
+         15.5,
+         4944.92
+        ],
+        [
+         16,
+         5138.91
+        ],
+        [
+         16.5,
+         5340.52
+        ],
+        [
+         17,
+         5550.03
+        ],
+        [
+         17.5,
+         5767.76
+        ],
+        [
+         18,
+         5994.03
+        ],
+        [
+         18.5,
+         6229.18
+        ],
+        [
+         19,
+         6473.55
+        ],
+        [
+         19.5,
+         6727.51
+        ],
+        [
+         20,
+         6991.44
+        ],
+        [
+         20.5,
+         7265.71
+        ],
+        [
+         21,
+         7550.75
+        ],
+        [
+         21.5,
+         7846.97
+        ],
+        [
+         22,
+         8154.81
+        ],
+        [
+         22.5,
+         8474.73
+        ],
+        [
+         23,
+         8807.2
+        ],
+        [
+         23.5,
+         9152.71
+        ],
+        [
+         24,
+         9511.77
+        ],
+        [
+         24.5,
+         9884.92
+        ],
+        [
+         25,
+         10272.71
+        ],
+        [
+         25.5,
+         10675.72
+        ],
+        [
+         26,
+         11094.53
+        ],
+        [
+         26.5,
+         11529.77
+        ],
+        [
+         27,
+         11982.09
+        ],
+        [
+         27.5,
+         12452.16
+        ],
+        [
+         28,
+         12940.66
+        ],
+        [
+         28.5,
+         13448.33
+        ],
+        [
+         29,
+         13975.91
+        ],
+        [
+         29.5,
+         14524.19
+        ],
+        [
+         30,
+         15093.99
+        ]
+       ]
+      }
+     ],
+     "marks": [],
+     "caption": "V(t) = $1,500(1 + r)^t, compounded yearly, with r = 4% and r = 8%."
+    }
+   },
+   "format": "short-answer",
+   "answer": "15",
+   "numeric": {
+    "value": 15,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve P(1 + r)^t ≥ 3P, so t ≥ ln 3 ÷ ln(1 + r).",
+    "Substitute: t ≥ ln 3 ÷ ln 1.08 = 14.27, so 15 whole years.",
+    "Spreadsheet: =ROUNDUP(NPER(0.08,0,-1500,4500),0) or =ROUNDUP(LN(3)/LN(1+0.08),0).",
+    "So the money triples in 15 years at 8%. At 4% it would take 29 years."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "support",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Andre saves the same amount every month. What does cell B4, =FV(B2/12,B3,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Monthly deposit",
+       "$125.00"
+      ],
+      [
+       "2",
+       "APR",
+       "7%"
+      ],
+      [
+       "3",
+       "Months",
+       "60"
+      ],
+      [
+       "4",
+       "Future value",
+       "=FV(B2/12,B3,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$8,949.11",
+   "numeric": {
+    "value": 8949.11,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: FV = deposit × [(1 + i)^n − 1] ÷ i, with i = APR ÷ 12.",
+    "Substitute: $125.00 × [(1 + 0.07 ÷ 12)^60 − 1] ÷ (0.07 ÷ 12) = $8,949.11.",
+    "Spreadsheet: =FV(rate per period, number of periods, payment). The deposit is negative because it leaves your pocket.",
+    "So $125.00 a month for 5 years grows to $8,949.11; $7,500.00 of that is deposits and $1,449.11 is interest."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What monthly payment does cell B4, =PMT(B2/12,B3,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Amount borrowed",
+       "$15,000.00"
+      ],
+      [
+       "2",
+       "APR",
+       "4.9%"
+      ],
+      [
+       "3",
+       "Months",
+       "72"
+      ],
+      [
+       "4",
+       "Monthly payment",
+       "=PMT(B2/12,B3,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$240.88",
+   "numeric": {
+    "value": 240.88,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: PMT = P × i ÷ [1 − (1 + i)^−n], with i = APR ÷ 12.",
+    "Substitute: $15,000.00 × (0.049 ÷ 12) ÷ [1 − (1 + 0.049 ÷ 12)^−72] = $240.88.",
+    "Spreadsheet: =PMT(rate per period, number of periods, present value). -B1 makes the answer positive.",
+    "So Zara pays $240.88 a month, $17,343.36 in all: $2,343.36 of interest."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "advanced",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Leah wants $17,000.00 in 24 months for a car down payment. What monthly deposit does cell B4, =PMT(B2/12,B3,0,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Savings goal",
+       "$17,000.00"
+      ],
+      [
+       "2",
+       "APR",
+       "3%"
+      ],
+      [
+       "3",
+       "Months",
+       "24"
+      ],
+      [
+       "4",
+       "Deposit needed",
+       "=PMT(B2/12,B3,0,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$688.18",
+   "numeric": {
+    "value": 688.18,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: deposit = goal × i ÷ [(1 + i)^n − 1], the FV formula solved for the deposit.",
+    "Substitute: $17,000.00 × (0.03 ÷ 12) ÷ [(1 + 0.03 ÷ 12)^24 − 1] = $688.18.",
+    "Spreadsheet: =PMT(rate, periods, 0, -goal): present value 0, future value = the goal. Check with =FV(B2/12,B3,-B4), which should show the goal.",
+    "So Leah needs to save $688.18 a month; interest supplies $483.68 of the goal."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "support",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Isaiah saves the same amount every month. What does cell B4, =FV(B2/12,B3,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Monthly deposit",
+       "$150.00"
+      ],
+      [
+       "2",
+       "APR",
+       "7%"
+      ],
+      [
+       "3",
+       "Months",
+       "180"
+      ],
+      [
+       "4",
+       "Future value",
+       "=FV(B2/12,B3,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$47,544.34",
+   "numeric": {
+    "value": 47544.34,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: FV = deposit × [(1 + i)^n − 1] ÷ i, with i = APR ÷ 12.",
+    "Substitute: $150.00 × [(1 + 0.07 ÷ 12)^180 − 1] ÷ (0.07 ÷ 12) = $47,544.34.",
+    "Spreadsheet: =FV(rate per period, number of periods, payment). The deposit is negative because it leaves your pocket.",
+    "So $150.00 a month for 15 years grows to $47,544.34; $27,000.00 of that is deposits and $20,544.34 is interest."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What monthly payment does cell B4, =PMT(B2/12,B3,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Amount borrowed",
+       "$9,500.00"
+      ],
+      [
+       "2",
+       "APR",
+       "6.9%"
+      ],
+      [
+       "3",
+       "Months",
+       "48"
+      ],
+      [
+       "4",
+       "Monthly payment",
+       "=PMT(B2/12,B3,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$227.05",
+   "numeric": {
+    "value": 227.05,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: PMT = P × i ÷ [1 − (1 + i)^−n], with i = APR ÷ 12.",
+    "Substitute: $9,500.00 × (0.069 ÷ 12) ÷ [1 − (1 + 0.069 ÷ 12)^−48] = $227.05.",
+    "Spreadsheet: =PMT(rate per period, number of periods, present value). -B1 makes the answer positive.",
+    "So Elijah pays $227.05 a month, $10,898.40 in all: $1,398.40 of interest."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "advanced",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Grace wants $35,000.00 in 24 months for a car down payment. What monthly deposit does cell B4, =PMT(B2/12,B3,0,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Savings goal",
+       "$35,000.00"
+      ],
+      [
+       "2",
+       "APR",
+       "3%"
+      ],
+      [
+       "3",
+       "Months",
+       "24"
+      ],
+      [
+       "4",
+       "Deposit needed",
+       "=PMT(B2/12,B3,0,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,416.84",
+   "numeric": {
+    "value": 1416.84,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: deposit = goal × i ÷ [(1 + i)^n − 1], the FV formula solved for the deposit.",
+    "Substitute: $35,000.00 × (0.03 ÷ 12) ÷ [(1 + 0.03 ÷ 12)^24 − 1] = $1,416.84.",
+    "Spreadsheet: =PMT(rate, periods, 0, -goal): present value 0, future value = the goal. Check with =FV(B2/12,B3,-B4), which should show the goal.",
+    "So Grace needs to save $1,416.84 a month; interest supplies $995.84 of the goal."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-07",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "support",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Owen saves the same amount every month. What does cell B4, =FV(B2/12,B3,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Monthly deposit",
+       "$75.00"
+      ],
+      [
+       "2",
+       "APR",
+       "4%"
+      ],
+      [
+       "3",
+       "Months",
+       "180"
+      ],
+      [
+       "4",
+       "Future value",
+       "=FV(B2/12,B3,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$18,456.79",
+   "numeric": {
+    "value": 18456.79,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: FV = deposit × [(1 + i)^n − 1] ÷ i, with i = APR ÷ 12.",
+    "Substitute: $75.00 × [(1 + 0.04 ÷ 12)^180 − 1] ÷ (0.04 ÷ 12) = $18,456.79.",
+    "Spreadsheet: =FV(rate per period, number of periods, payment). The deposit is negative because it leaves your pocket.",
+    "So $75.00 a month for 15 years grows to $18,456.79; $13,500.00 of that is deposits and $4,956.79 is interest."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-08",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What monthly payment does cell B4, =PMT(B2/12,B3,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Amount borrowed",
+       "$11,000.00"
+      ],
+      [
+       "2",
+       "APR",
+       "5.9%"
+      ],
+      [
+       "3",
+       "Months",
+       "72"
+      ],
+      [
+       "4",
+       "Monthly payment",
+       "=PMT(B2/12,B3,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$181.78",
+   "numeric": {
+    "value": 181.78,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: PMT = P × i ÷ [1 − (1 + i)^−n], with i = APR ÷ 12.",
+    "Substitute: $11,000.00 × (0.059 ÷ 12) ÷ [1 − (1 + 0.059 ÷ 12)^−72] = $181.78.",
+    "Spreadsheet: =PMT(rate per period, number of periods, present value). -B1 makes the answer positive.",
+    "So Tyler pays $181.78 a month, $13,088.16 in all: $2,088.16 of interest."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-lv-x-pmt-fv-09",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "advanced",
+   "family": "lv-x-pmt-fv",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Camila wants $24,000.00 in 48 months for a car down payment. What monthly deposit does cell B4, =PMT(B2/12,B3,0,-B1), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Savings goal",
+       "$24,000.00"
+      ],
+      [
+       "2",
+       "APR",
+       "4%"
+      ],
+      [
+       "3",
+       "Months",
+       "48"
+      ],
+      [
+       "4",
+       "Deposit needed",
+       "=PMT(B2/12,B3,0,-B1)"
+      ]
+     ],
+     "caption": "PMT and FV template (Spreadsheet Lab 3)."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$461.90",
+   "numeric": {
+    "value": 461.9,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: deposit = goal × i ÷ [(1 + i)^n − 1], the FV formula solved for the deposit.",
+    "Substitute: $24,000.00 × (0.04 ÷ 12) ÷ [(1 + 0.04 ÷ 12)^48 − 1] = $461.90.",
+    "Spreadsheet: =PMT(rate, periods, 0, -goal): present value 0, future value = the goal. Check with =FV(B2/12,B3,-B4), which should show the goal.",
+    "So Camila needs to save $461.90 a month; interest supplies $1,828.80 of the goal."
    ]
   },
   {
@@ -7984,9 +13885,12 @@
    "answer": "$4,842.43",
    "solutionSteps": [
     "Mistake: Used the annual rate for each month; the monthly rate is r ÷ 12.",
+    "Formula: A = P(1 + r ÷ 12)^(12t).",
     "Monthly rate = 0.06 ÷ 12; n = 96 months.",
     "A = $3,000.00 × (1 + 0.06/12)^96 = $4,842.43.",
-    "Correct result: $4,842.43."
+    "Correct result: $4,842.43.",
+    "Spreadsheet or calculator: =3000.00*(1+0.06/12)^96",
+    "So the answer is $4,842.43; the earlier money starts compounding, the more it grows."
    ],
    "numeric": {
     "value": 4842.43,
@@ -8082,9 +13986,12 @@
    "answer": "$37,804.73",
    "solutionSteps": [
     "Mistake: Used the annual rate as the monthly rate.",
+    "Formula: FV = PMT × ((1 + i)^n − 1) ÷ i, with i = APR ÷ 12 and n = months.",
     "r = 0.066 ÷ 12 per month; n = 96.",
     "FV = $37,804.73.",
-    "Correct result: $37,804.73."
+    "Correct result: $37,804.73.",
+    "Spreadsheet or calculator: =FV(0.066/12,96,-300)",
+    "So the answer is $37,804.73; steady deposits plus time do most of the work."
    ],
    "numeric": {
     "value": 37804.73,
@@ -8178,9 +14085,12 @@
    "answer": "12 years",
    "solutionSteps": [
     "Mistake: Multiplied instead of dividing; years ≈ 72 ÷ rate.",
+    "Formula: years to double ≈ 72 ÷ rate (as a whole number).",
     "Rule of 72: years ≈ 72 ÷ 6.",
     "≈ 12 years.",
-    "Correct result: 12 years."
+    "Correct result: 12 years.",
+    "Spreadsheet or calculator: =72/6",
+    "So the answer is 12 years; small differences in return or fees add up over many years."
    ],
    "numeric": {
     "value": 12,
@@ -8275,9 +14185,11 @@
    "answer": "5%",
    "solutionSteps": [
     "Mistake: Added inflation; it reduces purchasing power, so subtract it.",
+    "Formula: real return ≈ nominal return − inflation.",
     "Real return ≈ nominal return − inflation.",
     "9% − 4% = 5%.",
-    "Correct result: 5%."
+    "Correct result: 5%.",
+    "So the answer is 5%; higher expected returns come with bigger swings, so diversify and plan for time."
    ],
    "numeric": {
     "value": 5,

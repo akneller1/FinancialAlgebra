@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spreadsheet Labs · Financial Algebra | Mr. K's Classroom</title>
+<meta name="description" content="Ready-made Excel and Google Sheets templates for Financial Algebra: a monthly budget, a loan amortization table and PMT and FV calculations, with step-by-step instructions and matching questions.">
+<link rel="canonical" href="https://mrksclassroom.com/financial/spreadsheet-labs/">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../lib/fa.css">
+<style>
+.sl-list{list-style:none;padding:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.sl-steps{list-style:decimal;padding-left:1.5em}.sl-steps li{margin:6px 0}.sl-steps code,.sl-q code{background:#eef0fb;padding:1px 4px;border-radius:4px;font-size:.95em}
+.sl-dl{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.sl-check{background:#f3fbf6;border-left:4px solid #178a52;padding:8px 12px}
+.sl-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:10px 0}
+@media (prefers-color-scheme:dark){.sl-steps code,.sl-q code{background:#23264f}.sl-check{background:#123826}}
+@media print{.sl-tools,.sl-dl,nav,.no-print{display:none!important}}
+</style>
+</head>
+<body>
+<main class="fa-page" id="main" tabindex="-1">
+<nav><a href="../index.html">Financial Algebra</a> · <a href="./">Spreadsheet Labs</a></nav>
+<header><p class="fa-pill">Spreadsheet Lab · Financial Algebra</p><h1 id="title">Spreadsheet Labs</h1>
+<p id="lead">Ready-made templates for Google Sheets and Excel, each with step-by-step instructions and a matching question set at three levels.</p></header>
+<div id="app"><p role="status">Loading…</p></div>
+</main>
+<noscript>The lab list needs JavaScript. The templates are <a href="budget.xlsx">budget.xlsx</a>, <a href="amortization.xlsx">amortization.xlsx</a> and <a href="pmt-fv.xlsx">pmt-fv.xlsx</a>.</noscript>
+<script src="../lib/finance.js"></script>
+<script src="../lib/render.js"></script>
+<script>
+(function () {
+  'use strict';
+  var R = window.FA_RENDER, app = document.getElementById('app'), params = new URLSearchParams(location.search);
+  var esc = R.esc, code = function (s) { return esc(s).replace(/(=[A-Z]+\([^)]*\)[^\s,.]*|=[A-Z$0-9*\/+\-]+(?:\([^)]*\))?)/g, '<code>$1</code>'); };
+  var LEVELS = { support: 'Support', standard: 'Standard', advanced: 'Advanced', all: 'All levels' };
+  fetch('labs.json').then(function (r) { return r.json(); }).then(function (data) {
+    var lab = data.labs.find(function (l) { return l.slug === params.get('lab'); });
+    if (!lab) {
+      app.innerHTML = '<ul class="sl-list">' + data.labs.map(function (l, i) {
+        return '<li class="fa-panel"><h2><a href="?lab=' + l.slug + '">' + esc(l.title) + '</a></h2><p>' + esc(l.blurb) + '</p><p><a class="fa-btn" href="' + l.file + '" download>Download template (.xlsx)</a> <a class="fa-btn primary" href="?lab=' + l.slug + '">Open lab →</a></p></li>';
+      }).join('') + '</ul><h2>Using the templates in Google Sheets</h2><p>Download the .xlsx file, then in Google Sheets choose <strong>File → Import → Upload</strong> and pick the file (or upload it to Drive and open it with Google Sheets). Every formula works in both programs.</p>';
+      return;
+    }
+    document.title = lab.title + ' · Financial Algebra | Mr. K\'s Classroom';
+    document.getElementById('title').textContent = lab.title;
+    document.getElementById('lead').textContent = lab.blurb;
+    var level = LEVELS[params.get('level')] ? params.get('level') : 'all', key = params.get('key') === '1';
+    var h = '<div class="sl-dl"><a class="fa-btn primary" href="' + lab.file + '" download>Download the template (.xlsx)</a><a class="fa-btn" href="./">All Spreadsheet Labs</a></div>' +
+      '<p class="no-print">Google Sheets: <strong>File → Import → Upload</strong>, then choose the downloaded file. Excel: open it directly.</p>' +
+      '<section class="fa-panel"><h2>Steps</h2><ol class="sl-steps">' + lab.steps.map(function (s) { return '<li>' + code(s) + '</li>'; }).join('') + '</ol><p class="sl-check">' + code(lab.check) + '</p></section>' +
+      '<section><h2>Questions</h2><div class="sl-tools"><label class="fa-field">Level<select id="lv">' + Object.keys(LEVELS).map(function (k) { return '<option value="' + k + '"' + (k === level ? ' selected' : '') + '>' + LEVELS[k] + '</option>'; }).join('') + '</select></label>' +
+      '<label class="fa-field"><span><input type="checkbox" id="key"' + (key ? ' checked' : '') + '> Show answer key</span></label><button class="fa-btn" id="print" type="button">Print</button></div><div id="qs" role="status">Loading questions…</div></section>';
+    app.innerHTML = h;
+    fetch('../banks/' + lab.unit + '.json').then(function (r) { return r.json(); }).then(function (bank) {
+      var all = bank.questions.filter(function (q) { return q.family === lab.family; });
+      function draw() {
+        var lv = document.getElementById('lv').value, k = document.getElementById('key').checked;
+        var qs = all.filter(function (q) { return lv === 'all' || q.level === lv; });
+        document.getElementById('qs').innerHTML = qs.map(function (q, i) { return '<div class="sl-q">' + R.question(q, { n: i + 1, teacher: k, showType: false }) + '</div>'; }).join('') || '<p>No questions at this level.</p>';
+        var u = new URL(location.href); u.searchParams.set('level', lv); if (k) u.searchParams.set('key', '1'); else u.searchParams.delete('key'); history.replaceState(null, '', u);
+      }
+      document.getElementById('lv').onchange = draw; document.getElementById('key').onchange = draw; document.getElementById('print').onclick = function () { print(); };
+      draw();
+    });
+  }).catch(function () { app.innerHTML = '<p>The labs could not be loaded. Please reload the page.</p>'; });
+})();
+</script>
+</body>
+</html>

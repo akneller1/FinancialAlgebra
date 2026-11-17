@@ -976,7 +976,9 @@
    "prompt": "Leah's car has $2,950 of collision damage. The collision deductible is $250. How much does the insurer pay, and how much does Leah pay?",
    "answer": "Insurer $2,700; Leah $250",
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $2,950 − $250 = $2,700.",
+    "Spreadsheet or calculator: =2950-250",
     "Leah pays the deductible: $250."
    ],
    "sourceNotes": "Financial Algebra original item (family auto-claim; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -989,7 +991,9 @@
    "prompt": "Dev's car has $2,550 of collision damage. The collision deductible is $1,000. How much does the insurer pay, and how much does Dev pay?",
    "answer": "Insurer $1,550; Dev $1,000",
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $2,550 − $1,000 = $1,550.",
+    "Spreadsheet or calculator: =2550-1000",
     "Dev pays the deductible: $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family auto-claim; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1002,7 +1006,9 @@
    "prompt": "Andre's car has $3,300 of collision damage. The collision deductible is $500. How much does the insurer pay, and how much does Andre pay?",
    "answer": "Insurer $2,800; Andre $500",
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $3,300 − $500 = $2,800.",
+    "Spreadsheet or calculator: =3300-500",
     "Andre pays the deductible: $500."
    ],
    "sourceNotes": "Financial Algebra original item (family auto-claim; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1015,7 +1021,9 @@
    "prompt": "Noah's car has $6,150 of collision damage. The collision deductible is $1,000. How much does the insurer pay, and how much does Noah pay?",
    "answer": "Insurer $5,150; Noah $1,000",
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $6,150 − $1,000 = $5,150.",
+    "Spreadsheet or calculator: =6150-1000",
     "Noah pays the deductible: $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family auto-claim; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1028,7 +1036,9 @@
    "prompt": "Hana's car has $8,000 of collision damage. The collision deductible is $1,000. How much does the insurer pay, and how much does Hana pay?",
    "answer": "Insurer $7,000; Hana $1,000",
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $8,000 − $1,000 = $7,000.",
+    "Spreadsheet or calculator: =8000-1000",
     "Hana pays the deductible: $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family auto-claim; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1041,7 +1051,9 @@
    "prompt": "Noah's car has $3,950 of collision damage. The collision deductible is $1,000. How much does the insurer pay, and how much does Noah pay?",
    "answer": "Insurer $2,950; Noah $1,000",
    "solutionSteps": [
+    "Formula: insurer pays = damage − deductible; you pay the deductible.",
     "Insurer pays damage − deductible = $3,950 − $1,000 = $2,950.",
+    "Spreadsheet or calculator: =3950-1000",
     "Noah pays the deductible: $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family auto-claim; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -1054,9 +1066,11 @@
    "prompt": "Dev can choose a $500 deductible (annual premium $1,580) or a $1,500 deductible (annual premium $1,360). How many years without a claim does it take for the premium savings to cover the extra $1,000 deductible risk? (Round up.)",
    "answer": "5",
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $220 per year.",
     "Extra deductible = $1,000.",
     "$1,000 ÷ $220 ≈ 4.55 → 5 years.",
+    "Spreadsheet or calculator: =ROUNDUP(1000/220,0)",
     "If claims happen less often than once every 4.5 years and savings can cover $1,500, the higher deductible makes sense."
    ],
    "sourceNotes": "Financial Algebra original item (family deductible-tradeoff; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1069,9 +1083,11 @@
    "prompt": "Tyler can choose a $500 deductible (annual premium $1,320) or a $1,000 deductible (annual premium $1,160). How many years without a claim does it take for the premium savings to cover the extra $500 deductible risk? (Round up.)",
    "answer": "4",
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $160 per year.",
     "Extra deductible = $500.",
     "$500 ÷ $160 ≈ 3.13 → 4 years.",
+    "Spreadsheet or calculator: =ROUNDUP(500/160,0)",
     "If claims happen less often than once every 3.1 years and savings can cover $1,000, the higher deductible makes sense."
    ],
    "sourceNotes": "Financial Algebra original item (family deductible-tradeoff; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1084,9 +1100,11 @@
    "prompt": "Noah can choose a $500 deductible (annual premium $1,480) or a $1,000 deductible (annual premium $1,120). How many years without a claim does it take for the premium savings to cover the extra $500 deductible risk? (Round up.)",
    "answer": "2",
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $360 per year.",
     "Extra deductible = $500.",
     "$500 ÷ $360 ≈ 1.39 → 2 years.",
+    "Spreadsheet or calculator: =ROUNDUP(500/360,0)",
     "If claims happen less often than once every 1.4 years and savings can cover $1,000, the higher deductible makes sense."
    ],
    "sourceNotes": "Financial Algebra original item (family deductible-tradeoff; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1099,9 +1117,11 @@
    "prompt": "Imani can choose a $250 deductible (annual premium $1,400) or a $1,000 deductible (annual premium $1,160). How many years without a claim does it take for the premium savings to cover the extra $750 deductible risk? (Round up.)",
    "answer": "4",
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $240 per year.",
     "Extra deductible = $750.",
     "$750 ÷ $240 ≈ 3.13 → 4 years.",
+    "Spreadsheet or calculator: =ROUNDUP(750/240,0)",
     "If claims happen less often than once every 3.1 years and savings can cover $1,000, the higher deductible makes sense."
    ],
    "sourceNotes": "Financial Algebra original item (family deductible-tradeoff; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1114,9 +1134,11 @@
    "prompt": "Noah can choose a $500 deductible (annual premium $1,840) or a $1,500 deductible (annual premium $1,660). How many years without a claim does it take for the premium savings to cover the extra $1,000 deductible risk? (Round up.)",
    "answer": "6",
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $180 per year.",
     "Extra deductible = $1,000.",
     "$1,000 ÷ $180 ≈ 5.56 → 6 years.",
+    "Spreadsheet or calculator: =ROUNDUP(1000/180,0)",
     "If claims happen less often than once every 5.6 years and savings can cover $1,500, the higher deductible makes sense."
    ],
    "sourceNotes": "Financial Algebra original item (family deductible-tradeoff; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1129,9 +1151,11 @@
    "prompt": "Hana can choose a $250 deductible (annual premium $1,840) or a $1,000 deductible (annual premium $1,560). How many years without a claim does it take for the premium savings to cover the extra $750 deductible risk? (Round up.)",
    "answer": "3",
    "solutionSteps": [
+    "Formula: break-even = extra deductible ÷ yearly premium savings.",
     "Premium savings = $280 per year.",
     "Extra deductible = $750.",
     "$750 ÷ $280 ≈ 2.68 → 3 years.",
+    "Spreadsheet or calculator: =ROUNDUP(750/280,0)",
     "If claims happen less often than once every 2.7 years and savings can cover $1,000, the higher deductible makes sense."
    ],
    "sourceNotes": "Financial Algebra original item (family deductible-tradeoff; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1144,8 +1168,11 @@
    "prompt": "Luis pays $205 per month for health insurance (through payroll), $110 per month for auto insurance, and $19 per month for renters insurance. What is the total yearly cost of premiums, and what share of a $48,000 gross salary is that (nearest tenth of a percent)?",
    "answer": "$4,008; 8.4%",
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(205 + 110 + 19) × 12 = $4,008.",
-    "$4,008 ÷ $48,000 ≈ 8.4%."
+    "$4,008 ÷ $48,000 ≈ 8.4%.",
+    "Spreadsheet or calculator: =(205+110+19)*12",
+    "So the answer is $4,008; 8.4%; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family premium-annual; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -1157,8 +1184,11 @@
    "prompt": "Camila pays $320 per month for health insurance (through payroll), $140 per month for auto insurance, and $12 per month for renters insurance. What is the total yearly cost of premiums, and what share of a $48,000 gross salary is that (nearest tenth of a percent)?",
    "answer": "$5,664; 11.8%",
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(320 + 140 + 12) × 12 = $5,664.",
-    "$5,664 ÷ $48,000 ≈ 11.8%."
+    "$5,664 ÷ $48,000 ≈ 11.8%.",
+    "Spreadsheet or calculator: =(320+140+12)*12",
+    "So the answer is $5,664; 11.8%; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family premium-annual; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1170,8 +1200,11 @@
    "prompt": "Grace pays $85 per month for health insurance (through payroll), $130 per month for auto insurance, and $12 per month for renters insurance. What is the total yearly cost of premiums, and what share of a $48,000 gross salary is that (nearest tenth of a percent)?",
    "answer": "$2,724; 5.7%",
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(85 + 130 + 12) × 12 = $2,724.",
-    "$2,724 ÷ $48,000 ≈ 5.7%."
+    "$2,724 ÷ $48,000 ≈ 5.7%.",
+    "Spreadsheet or calculator: =(85+130+12)*12",
+    "So the answer is $2,724; 5.7%; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family premium-annual; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1183,8 +1216,11 @@
    "prompt": "Priya pays $310 per month for health insurance (through payroll), $190 per month for auto insurance, and $12 per month for renters insurance. What is the total yearly cost of premiums, and what share of a $48,000 gross salary is that (nearest tenth of a percent)?",
    "answer": "$6,144; 12.8%",
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(310 + 190 + 12) × 12 = $6,144.",
-    "$6,144 ÷ $48,000 ≈ 12.8%."
+    "$6,144 ÷ $48,000 ≈ 12.8%.",
+    "Spreadsheet or calculator: =(310+190+12)*12",
+    "So the answer is $6,144; 12.8%; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family premium-annual; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1196,8 +1232,11 @@
    "prompt": "Isaiah pays $230 per month for health insurance (through payroll), $110 per month for auto insurance, and $12 per month for renters insurance. What is the total yearly cost of premiums, and what share of a $48,000 gross salary is that (nearest tenth of a percent)?",
    "answer": "$4,224; 8.8%",
    "solutionSteps": [
+    "Formula: yearly premiums = (sum of monthly premiums) × 12; share of income = yearly premiums ÷ income.",
     "(230 + 110 + 12) × 12 = $4,224.",
-    "$4,224 ÷ $48,000 ≈ 8.8%."
+    "$4,224 ÷ $48,000 ≈ 8.8%.",
+    "Spreadsheet or calculator: =(230+110+12)*12",
+    "So the answer is $4,224; 8.8%; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family premium-annual; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1209,10 +1248,12 @@
    "prompt": "Imani has the Bronze plan: deductible $6,000, 20% coinsurance, no copays, out-of-pocket maximum $8,000. This year she has $3,000 in covered bills (other than visits) and 0 office visits. What does she pay out of pocket (not counting premiums)?",
    "answer": "$3,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $3,000.",
     "Coinsurance: 20% × $0 = $0.",
     "Copays: 0 × $0 = $0.",
-    "Sum = $3,000, capped at $8,000 → $3,000."
+    "Sum = $3,000, capped at $8,000 → $3,000.",
+    "So the answer is $3,000; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1224,10 +1265,12 @@
    "prompt": "Leah has the Bronze plan: deductible $6,000, 20% coinsurance, no copays, out-of-pocket maximum $8,000. This year she has $23,600 in covered bills (other than visits) and 5 office visits. What does she pay out of pocket (not counting premiums)?",
    "answer": "$8,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $6,000.",
     "Coinsurance: 20% × $17,600 = $3,520.",
     "Copays: 5 × $0 = $0.",
-    "Sum = $9,520, capped at $8,000 → $8,000."
+    "Sum = $9,520, capped at $8,000 → $8,000.",
+    "So the answer is $8,000; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1239,10 +1282,12 @@
    "prompt": "Nadia has the Silver plan: deductible $2,000, 20% coinsurance, $35 copay per visit, out-of-pocket maximum $6,000. This year she has $28,800 in covered bills (other than visits) and 8 office visits. What does she pay out of pocket (not counting premiums)?",
    "answer": "$6,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $2,000.",
     "Coinsurance: 20% × $26,800 = $5,360.",
     "Copays: 8 × $35 = $280.",
-    "Sum = $7,640, capped at $6,000 → $6,000."
+    "Sum = $7,640, capped at $6,000 → $6,000.",
+    "So the answer is $6,000; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1254,10 +1299,13 @@
    "prompt": "Owen has the Gold plan: deductible $500, 10% coinsurance, $20 copay per visit, out-of-pocket maximum $3,000. This year he has $19,900 in covered bills (other than visits) and 3 office visits. What does he pay out of pocket (not counting premiums)?",
    "answer": "$2,500",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $500.",
     "Coinsurance: 10% × $19,400 = $1,940.",
     "Copays: 3 × $20 = $60.",
-    "Sum = $2,500, capped at $3,000 → $2,500."
+    "Sum = $2,500, capped at $3,000 → $2,500.",
+    "Spreadsheet or calculator: =3000-500",
+    "So the answer is $2,500; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1269,10 +1317,12 @@
    "prompt": "Grace has the Gold plan: deductible $500, 10% coinsurance, $20 copay per visit, out-of-pocket maximum $3,000. This year she has $26,050 in covered bills (other than visits) and 8 office visits. What does she pay out of pocket (not counting premiums)?",
    "answer": "$3,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $500.",
     "Coinsurance: 10% × $25,550 = $2,555.",
     "Copays: 8 × $20 = $160.",
-    "Sum = $3,215, capped at $3,000 → $3,000."
+    "Sum = $3,215, capped at $3,000 → $3,000.",
+    "So the answer is $3,000; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1284,10 +1334,12 @@
    "prompt": "Aaliyah has the Gold plan: deductible $500, 10% coinsurance, $20 copay per visit, out-of-pocket maximum $3,000. This year she has $10,050 in covered bills (other than visits) and 6 office visits. What does she pay out of pocket (not counting premiums)?",
    "answer": "$1,575",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $500.",
     "Coinsurance: 10% × $9,550 = $955.",
     "Copays: 6 × $20 = $120.",
-    "Sum = $1,575, capped at $3,000 → $1,575."
+    "Sum = $1,575, capped at $3,000 → $1,575.",
+    "So the answer is $1,575; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1299,10 +1351,12 @@
    "prompt": "Kofi has the Bronze plan: deductible $6,000, 20% coinsurance, no copays, out-of-pocket maximum $8,000. This year he has $28,050 in covered bills (other than visits) and 0 office visits. What does he pay out of pocket (not counting premiums)?",
    "answer": "$8,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $6,000.",
     "Coinsurance: 20% × $22,050 = $4,410.",
     "Copays: 0 × $0 = $0.",
-    "Sum = $10,410, capped at $8,000 → $8,000."
+    "Sum = $10,410, capped at $8,000 → $8,000.",
+    "So the answer is $8,000; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1314,10 +1368,12 @@
    "prompt": "Dev has the Silver plan: deductible $2,000, 20% coinsurance, $35 copay per visit, out-of-pocket maximum $6,000. This year he has $29,100 in covered bills (other than visits) and 6 office visits. What does he pay out of pocket (not counting premiums)?",
    "answer": "$6,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible portion + coinsurance × (bill − deductible) + copays, capped at the out-of-pocket maximum.",
     "Deductible portion: $2,000.",
     "Coinsurance: 20% × $27,100 = $5,420.",
     "Copays: 6 × $35 = $210.",
-    "Sum = $7,630, capped at $6,000 → $6,000."
+    "Sum = $7,630, capped at $6,000 → $6,000.",
+    "So the answer is $6,000; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family oop; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
@@ -1329,8 +1385,10 @@
    "prompt": "Maya buys a $320.00 concert tickets. Over a year there is a 12% chance of damage costing 40% of its value to fix. A protection plan costs $15.00 per month with no deductible. What is the expected yearly loss without the plan, and how does it compare with the plan’s yearly cost?",
    "answer": "Expected loss $15.36; plan costs $180.00 per year",
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.12 × $128.00 = $15.36.",
     "Plan = $15.00 × 12 = $180.00.",
+    "Spreadsheet or calculator: =0.12*128.00",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ],
    "sourceNotes": "Financial Algebra original item (family ev; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1343,8 +1401,10 @@
    "prompt": "Owen buys a $320.00 concert tickets. Over a year there is a 12% chance of damage costing 40% of its value to fix. A protection plan costs $12.00 per month with no deductible. What is the expected yearly loss without the plan, and how does it compare with the plan’s yearly cost?",
    "answer": "Expected loss $15.36; plan costs $144.00 per year",
    "solutionSteps": [
+    "Formula: expected cost = Σ probability × cost; compare with the plan price.",
     "EV = 0.12 × $128.00 = $15.36.",
     "Plan = $12.00 × 12 = $144.00.",
+    "Spreadsheet or calculator: =0.12*128.00",
     "On average the plan costs more than it pays — that is how insurers profit. It may still be worth it if a loss would be hard to afford."
    ],
    "sourceNotes": "Financial Algebra original item (family ev; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1357,8 +1417,10 @@
    "prompt": "An insurer covers 5,000 similar renters. Each has a 2% chance per year of a $12,000 claim. The insurer adds 25% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$300",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.02 × $12,000 = $240.",
     "Premium = $240 × 1.25 = $300.",
+    "Spreadsheet or calculator: =240*1.25",
     "Total premiums ≈ $1,500,000 vs. expected claims ≈ $1,200,000 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1371,8 +1433,10 @@
    "prompt": "An insurer covers 1,000 similar renters. Each has a 3% chance per year of a $18,000 claim. The insurer adds 20% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$648",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.03 × $18,000 = $540.",
     "Premium = $540 × 1.2 = $648.",
+    "Spreadsheet or calculator: =540*1.2",
     "Total premiums ≈ $648,000 vs. expected claims ≈ $540,000 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1385,8 +1449,10 @@
    "prompt": "An insurer covers 5,000 similar renters. Each has a 5% chance per year of a $26,000 claim. The insurer adds 15% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$1,495",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.05 × $26,000 = $1,300.",
     "Premium = $1,300 × 1.15 = $1,495.",
+    "Spreadsheet or calculator: =1300*1.15",
     "Total premiums ≈ $7,475,000 vs. expected claims ≈ $6,500,000 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1399,8 +1465,10 @@
    "prompt": "An insurer covers 5,000 similar renters. Each has a 3% chance per year of a $23,000.00 claim. The insurer adds 15% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$793.50",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.03 × $23,000.00 = $690.00.",
     "Premium = $690.00 × 1.15 = $793.50.",
+    "Spreadsheet or calculator: =690.00*1.15",
     "Total premiums ≈ $3,967,500.00 vs. expected claims ≈ $3,450,000.00 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -1413,8 +1481,10 @@
    "prompt": "An insurer covers 1,000 similar renters. Each has a 5% chance per year of a $22,000 claim. The insurer adds 25% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$1,375",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.05 × $22,000 = $1,100.",
     "Premium = $1,100 × 1.25 = $1,375.",
+    "Spreadsheet or calculator: =1100*1.25",
     "Total premiums ≈ $1,375,000 vs. expected claims ≈ $1,100,000 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1427,8 +1497,10 @@
    "prompt": "An insurer covers 1,000 similar renters. Each has a 5% chance per year of a $10,000 claim. The insurer adds 15% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$575",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.05 × $10,000 = $500.",
     "Premium = $500 × 1.15 = $575.",
+    "Spreadsheet or calculator: =500*1.15",
     "Total premiums ≈ $575,000 vs. expected claims ≈ $500,000 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1441,8 +1513,10 @@
    "prompt": "An insurer covers 10,000 similar renters. Each has a 2% chance per year of a $16,000 claim. The insurer adds 20% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$384",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.02 × $16,000 = $320.",
     "Premium = $320 × 1.2 = $384.",
+    "Spreadsheet or calculator: =320*1.2",
     "Total premiums ≈ $3,840,000 vs. expected claims ≈ $3,200,000 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1455,8 +1529,10 @@
    "prompt": "An insurer covers 10,000 similar renters. Each has a 3% chance per year of a $28,000 claim. The insurer adds 20% to the expected claim cost for expenses and profit. What annual premium should it charge each customer?",
    "answer": "$1,008",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + markup).",
     "Expected claim per customer = 0.03 × $28,000 = $840.",
     "Premium = $840 × 1.2 = $1,008.",
+    "Spreadsheet or calculator: =840*1.2",
     "Total premiums ≈ $10,080,000 vs. expected claims ≈ $8,400,000 — risk pooling."
    ],
    "sourceNotes": "Financial Algebra original item (family ev-premium; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -1776,6 +1852,7 @@
    "prompt": "Nadia causes an accident. One other driver has $91,000 in medical bills and $26,000 in vehicle damage. Her liability limits are 25/50/25 (thousands: per-person injury / per-accident injury / property). How much could Nadia be personally responsible for?",
    "answer": "$67,000",
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $66,000.",
     "Property: up to $25,000 → $25,000; remaining $1,000.",
     "Personal exposure = $67,000.",
@@ -1791,6 +1868,7 @@
    "prompt": "Imani causes an accident. One other driver has $53,000 in medical bills and $19,000 in vehicle damage. Her liability limits are 25/50/25 (thousands: per-person injury / per-accident injury / property). How much could Imani be personally responsible for?",
    "answer": "$28,000",
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $28,000.",
     "Property: up to $25,000 → $19,000; remaining $0.",
     "Personal exposure = $28,000.",
@@ -1806,6 +1884,7 @@
    "prompt": "Zara causes an accident. One other driver has $99,000 in medical bills and $28,000 in vehicle damage. Her liability limits are 50/100/50 (thousands: per-person injury / per-accident injury / property). How much could Zara be personally responsible for?",
    "answer": "$49,000",
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $50,000 per person → $50,000; remaining $49,000.",
     "Property: up to $50,000 → $28,000; remaining $0.",
     "Personal exposure = $49,000.",
@@ -1816,17 +1895,18 @@
   {
    "id": "fa-insurance-s04-liability-limit-04",
    "skillId": "insurance-skill-04",
-   "level": "honors",
+   "level": "cp1",
    "format": "short-answer",
    "prompt": "Mateo causes an accident. One other driver has $45,000 in medical bills and $47,000 in vehicle damage. His liability limits are 25/50/25 (thousands: per-person injury / per-accident injury / property). How much could Mateo be personally responsible for?",
    "answer": "$42,000",
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $20,000.",
     "Property: up to $25,000 → $25,000; remaining $22,000.",
     "Personal exposure = $42,000.",
     "Higher limits cost relatively little and protect savings and future income."
    ],
-   "sourceNotes": "Financial Algebra original item (family liability-limit; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
+   "sourceNotes": "Financial Algebra original item (family liability-limit; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
   },
   {
    "id": "fa-insurance-s04-liability-limit-05",
@@ -1836,6 +1916,7 @@
    "prompt": "Hana causes an accident. One other driver has $32,000 in medical bills and $27,000 in vehicle damage. Her liability limits are 50/100/50 (thousands: per-person injury / per-accident injury / property). How much could Hana be personally responsible for?",
    "answer": "$0",
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $50,000 per person → $32,000; remaining $0.",
     "Property: up to $50,000 → $27,000; remaining $0.",
     "Personal exposure = $0.",
@@ -1851,6 +1932,7 @@
    "prompt": "Mei causes an accident. One other driver has $113,000 in medical bills and $60,000 in vehicle damage. Her liability limits are 25/50/25 (thousands: per-person injury / per-accident injury / property). How much could Mei be personally responsible for?",
    "answer": "$123,000",
    "solutionSteps": [
+    "Formula: you pay = the part of each loss above its policy limit.",
     "Injury: insurer pays up to $25,000 per person → $25,000; remaining $88,000.",
     "Property: up to $25,000 → $25,000; remaining $35,000.",
     "Personal exposure = $123,000.",
@@ -2018,8 +2100,10 @@
    "prompt": "Marcus's car has $2,875 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
    "answer": "$1,875",
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$2,875 − $1,000 = $1,875.",
+    "Spreadsheet or calculator: =2875-1000",
     "Marcus pays $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-claim-net; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2032,8 +2116,10 @@
    "prompt": "Riley's car has $1,450 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
    "answer": "$450",
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$1,450 − $1,000 = $450.",
+    "Spreadsheet or calculator: =1450-1000",
     "Riley pays $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-claim-net; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2046,6 +2132,7 @@
    "prompt": "Mateo's car has $1,175 of covered damage. The collision deductible is $2,000. How much does the insurance company pay?",
    "answer": "$0",
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$1,175 − $2,000 = $0.",
     "The damage is below the deductible, so filing a claim pays nothing."
@@ -2060,8 +2147,10 @@
    "prompt": "Leah's car has $7,550 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
    "answer": "$6,550",
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$7,550 − $1,000 = $6,550.",
+    "Spreadsheet or calculator: =7550-1000",
     "Leah pays $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-claim-net; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2074,8 +2163,10 @@
    "prompt": "Riley's car has $1,550 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
    "answer": "$550",
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$1,550 − $1,000 = $550.",
+    "Spreadsheet or calculator: =1550-1000",
     "Riley pays $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-claim-net; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2088,8 +2179,10 @@
    "prompt": "Noah's car has $4,275 of covered damage. The collision deductible is $500. How much does the insurance company pay?",
    "answer": "$3,775",
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$4,275 − $500 = $3,775.",
+    "Spreadsheet or calculator: =4275-500",
     "Noah pays $500."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-claim-net; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2102,8 +2195,10 @@
    "prompt": "Maya's car has $6,725 of covered damage. The collision deductible is $1,000. How much does the insurance company pay?",
    "answer": "$5,725",
    "solutionSteps": [
+    "Formula: insurer pays = covered damage − deductible.",
     "The policyholder pays the deductible first; insurance pays the rest of a covered loss.",
     "$6,725 − $1,000 = $5,725.",
+    "Spreadsheet or calculator: =6725-1000",
     "Maya pays $1,000."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-claim-net; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2116,6 +2211,7 @@
    "prompt": "Luis's health plan has a $1,500 deductible, 20% coinsurance and a $6,500 out-of-pocket maximum. A hospital bill is $27,000. How much does Luis pay?",
    "answer": "$6,500",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Luis pays the first $1,500.",
     "Coinsurance: 20% × ($27,000 − $1,500) = $5,100.",
     "Total $6,600, capped at the $6,500 maximum: $6,500."
@@ -2130,6 +2226,7 @@
    "prompt": "Diego's health plan has a $1,000 deductible, 30% coinsurance and a $5,000 out-of-pocket maximum. A hospital bill is $14,500. How much does Diego pay?",
    "answer": "$5,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Diego pays the first $1,000.",
     "Coinsurance: 30% × ($14,500 − $1,000) = $4,050.",
     "Total $5,050, capped at the $5,000 maximum: $5,000."
@@ -2144,6 +2241,7 @@
    "prompt": "Owen's health plan has a $1,000 deductible, 10% coinsurance and a $6,500 out-of-pocket maximum. A hospital bill is $13,400. How much does Owen pay?",
    "answer": "$2,240",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Owen pays the first $1,000.",
     "Coinsurance: 10% × ($13,400 − $1,000) = $1,240.",
     "Total $2,240: $2,240."
@@ -2158,6 +2256,7 @@
    "prompt": "Isaiah's health plan has a $1,000 deductible, 10% coinsurance and a $6,500 out-of-pocket maximum. A hospital bill is $13,100. How much does Isaiah pay?",
    "answer": "$2,210",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Isaiah pays the first $1,000.",
     "Coinsurance: 10% × ($13,100 − $1,000) = $1,210.",
     "Total $2,210: $2,210."
@@ -2172,6 +2271,7 @@
    "prompt": "Camila's health plan has a $1,000 deductible, 30% coinsurance and a $8,000 out-of-pocket maximum. A hospital bill is $12,300. How much does Camila pay?",
    "answer": "$4,390",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Camila pays the first $1,000.",
     "Coinsurance: 30% × ($12,300 − $1,000) = $3,390.",
     "Total $4,390: $4,390."
@@ -2186,6 +2286,7 @@
    "prompt": "Tyler's health plan has a $2,500 deductible, 30% coinsurance and a $5,000 out-of-pocket maximum. A hospital bill is $18,300. How much does Tyler pay?",
    "answer": "$5,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Tyler pays the first $2,500.",
     "Coinsurance: 30% × ($18,300 − $2,500) = $4,740.",
     "Total $7,240, capped at the $5,000 maximum: $5,000."
@@ -2200,6 +2301,7 @@
    "prompt": "Owen's health plan has a $1,000 deductible, 20% coinsurance and a $8,000 out-of-pocket maximum. A hospital bill is $20,200. How much does Owen pay?",
    "answer": "$4,840",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Owen pays the first $1,000.",
     "Coinsurance: 20% × ($20,200 − $1,000) = $3,840.",
     "Total $4,840: $4,840."
@@ -2214,6 +2316,7 @@
    "prompt": "Leah's health plan has a $1,000 deductible, 20% coinsurance and a $5,000 out-of-pocket maximum. A hospital bill is $5,100. How much does Leah pay?",
    "answer": "$1,820",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bill − deductible), capped at the out-of-pocket maximum.",
     "Deductible: Leah pays the first $1,000.",
     "Coinsurance: 20% × ($5,100 − $1,000) = $820.",
     "Total $1,820: $1,820."
@@ -2228,8 +2331,10 @@
    "prompt": "A $135.00 extended warranty on a laptop covers one repair. The chance of needing a $340.00 repair during the warranty is 8%. What is the buyer's expected value of the warranty?",
    "answer": "−$107.80",
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 8% × $340.00 = $27.20.",
     "Expected value = $27.20 − $135.00 = −$107.80.",
+    "Spreadsheet or calculator: =27.20-135.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-warranty-ev; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2242,8 +2347,10 @@
    "prompt": "A $90.00 extended warranty on a phone covers one repair. The chance of needing a $440.00 repair during the warranty is 8%. What is the buyer's expected value of the warranty?",
    "answer": "−$54.80",
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 8% × $440.00 = $35.20.",
     "Expected value = $35.20 − $90.00 = −$54.80.",
+    "Spreadsheet or calculator: =35.20-90.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-warranty-ev; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2256,8 +2363,10 @@
    "prompt": "A $65 extended warranty on a TV covers one repair. The chance of needing a $620 repair during the warranty is 5%. What is the buyer's expected value of the warranty?",
    "answer": "−$34",
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 5% × $620 = $31.",
     "Expected value = $31 − $65 = −$34.",
+    "Spreadsheet or calculator: =31-65",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-warranty-ev; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -2270,8 +2379,10 @@
    "prompt": "A $145 extended warranty on a TV covers one repair. The chance of needing a $530 repair during the warranty is 10%. What is the buyer's expected value of the warranty?",
    "answer": "−$92",
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 10% × $530 = $53.",
     "Expected value = $53 − $145 = −$92.",
+    "Spreadsheet or calculator: =53-145",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-warranty-ev; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -2284,8 +2395,10 @@
    "prompt": "A $190.00 extended warranty on a laptop covers one repair. The chance of needing a $450.00 repair during the warranty is 15%. What is the buyer's expected value of the warranty?",
    "answer": "−$122.50",
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 15% × $450.00 = $67.50.",
     "Expected value = $67.50 − $190.00 = −$122.50.",
+    "Spreadsheet or calculator: =67.50-190.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-warranty-ev; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2298,8 +2411,10 @@
    "prompt": "A $220.00 extended warranty on a laptop covers one repair. The chance of needing a $220.00 repair during the warranty is 12%. What is the buyer's expected value of the warranty?",
    "answer": "−$193.60",
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 12% × $220.00 = $26.40.",
     "Expected value = $26.40 − $220.00 = −$193.60.",
+    "Spreadsheet or calculator: =26.40-220.00",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-warranty-ev; type calculation). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2312,8 +2427,10 @@
    "prompt": "A $100 extended warranty on a phone covers one repair. The chance of needing a $610 repair during the warranty is 10%. What is the buyer's expected value of the warranty?",
    "answer": "−$39",
    "solutionSteps": [
+    "Formula: expected value = probability × repair cost − warranty price.",
     "Expected payout = 10% × $610 = $61.",
     "Expected value = $61 − $100 = −$39.",
+    "Spreadsheet or calculator: =61-100",
     "Negative: on average the buyer loses money, which is how the seller profits."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-warranty-ev; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
@@ -2326,8 +2443,10 @@
    "prompt": "Plan A costs $165/month with a $1,000 deductible. Plan B costs $193/month with a $500 deductible. If Mateo has one $1,800 claim this year, how much less does the cheaper plan cost in total?",
    "answer": "$164",
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $165 × 12 + $1,000 = $2,980.",
     "Plan B: $193 × 12 + $500 = $2,816.",
+    "Spreadsheet or calculator: =(165*12+1000)-(193*12+500)",
     "Plan B costs $164 less with one claim; with no claims, the lower premium wins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-annual-premium; type comparison). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2340,8 +2459,10 @@
    "prompt": "Plan A costs $137/month with a $2,000 deductible. Plan B costs $205/month with a $250 deductible. If Zara has one $2,900 claim this year, how much less does the cheaper plan cost in total?",
    "answer": "$934",
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $137 × 12 + $2,000 = $3,644.",
     "Plan B: $205 × 12 + $250 = $2,710.",
+    "Spreadsheet or calculator: =(137*12+2000)-(205*12+250)",
     "Plan B costs $934 less with one claim; with no claims, the lower premium wins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-annual-premium; type comparison). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2354,8 +2475,10 @@
    "prompt": "Plan A costs $133/month with a $1,000 deductible. Plan B costs $179/month with a $500 deductible. If Tyler has one $2,000 claim this year, how much less does the cheaper plan cost in total?",
    "answer": "$52",
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $133 × 12 + $1,000 = $2,596.",
     "Plan B: $179 × 12 + $500 = $2,648.",
+    "Spreadsheet or calculator: =(179*12+500)-(133*12+1000)",
     "Plan A costs $52 less with one claim; with no claims, the lower premium wins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-annual-premium; type comparison). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2368,8 +2491,10 @@
    "prompt": "Plan A costs $171/month with a $1,000 deductible. Plan B costs $258/month with a $250 deductible. If Sofia has one $2,600 claim this year, how much less does the cheaper plan cost in total?",
    "answer": "$294",
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $171 × 12 + $1,000 = $3,052.",
     "Plan B: $258 × 12 + $250 = $3,346.",
+    "Spreadsheet or calculator: =(258*12+250)-(171*12+1000)",
     "Plan A costs $294 less with one claim; with no claims, the lower premium wins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-annual-premium; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2382,8 +2507,10 @@
    "prompt": "Plan A costs $112/month with a $2,000 deductible. Plan B costs $173/month with a $500 deductible. If Kofi has one $2,000 claim this year, how much less does the cheaper plan cost in total?",
    "answer": "$768",
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $112 × 12 + $2,000 = $3,344.",
     "Plan B: $173 × 12 + $500 = $2,576.",
+    "Spreadsheet or calculator: =(112*12+2000)-(173*12+500)",
     "Plan B costs $768 less with one claim; with no claims, the lower premium wins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-annual-premium; type comparison). Fictional scenario; hypothetical values. Level standard (Classroom code cp1)."
@@ -2396,8 +2523,10 @@
    "prompt": "Plan A costs $168/month with a $2,000 deductible. Plan B costs $162/month with a $500 deductible. If Grace has one $2,100 claim this year, how much less does the cheaper plan cost in total?",
    "answer": "$1,572",
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $168 × 12 + $2,000 = $4,016.",
     "Plan B: $162 × 12 + $500 = $2,444.",
+    "Spreadsheet or calculator: =(168*12+2000)-(162*12+500)",
     "Plan B costs $1,572 less with one claim; with no claims, the lower premium wins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-annual-premium; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2410,8 +2539,10 @@
    "prompt": "Plan A costs $107/month with a $2,000 deductible. Plan B costs $247/month with a $250 deductible. If Imani has one $2,600 claim this year, how much less does the cheaper plan cost in total?",
    "answer": "$70",
    "solutionSteps": [
+    "Formula: worst-case year = monthly premium × 12 + deductible, for each plan.",
     "Plan A: $107 × 12 + $2,000 = $3,284.",
     "Plan B: $247 × 12 + $250 = $3,214.",
+    "Spreadsheet or calculator: =(107*12+2000)-(247*12+250)",
     "Plan B costs $70 less with one claim; with no claims, the lower premium wins."
    ],
    "sourceNotes": "Financial Algebra original item (family ap-annual-premium; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2424,7 +2555,10 @@
    "prompt": "Aaliyah's car insurance costs $125 a month. Yearly premium = monthly × 12. What is the yearly premium?",
    "answer": "$1,500",
    "solutionSteps": [
-    "$125 × 12 = $1,500."
+    "Formula: Yearly premium = monthly × 12.",
+    "$125 × 12 = $1,500.",
+    "Spreadsheet or calculator: =125*12",
+    "So the answer is $1,500; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-premium-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2436,7 +2570,10 @@
    "prompt": "Priya's car insurance costs $210 a month. Yearly premium = monthly × 12. What is the yearly premium?",
    "answer": "$2,520",
    "solutionSteps": [
-    "$210 × 12 = $2,520."
+    "Formula: Yearly premium = monthly × 12.",
+    "$210 × 12 = $2,520.",
+    "Spreadsheet or calculator: =210*12",
+    "So the answer is $2,520; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-premium-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2448,7 +2585,10 @@
    "prompt": "Owen's car insurance costs $205 a month. Yearly premium = monthly × 12. What is the yearly premium?",
    "answer": "$2,460",
    "solutionSteps": [
-    "$205 × 12 = $2,460."
+    "Formula: Yearly premium = monthly × 12.",
+    "$205 × 12 = $2,460.",
+    "Spreadsheet or calculator: =205*12",
+    "So the answer is $2,460; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-premium-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2460,7 +2600,10 @@
    "prompt": "Grace's car insurance costs $75 a month. Yearly premium = monthly × 12. What is the yearly premium?",
    "answer": "$900",
    "solutionSteps": [
-    "$75 × 12 = $900."
+    "Formula: Yearly premium = monthly × 12.",
+    "$75 × 12 = $900.",
+    "Spreadsheet or calculator: =75*12",
+    "So the answer is $900; weigh the premium against what you would pay in a bad year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-premium-year; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2472,8 +2615,10 @@
    "prompt": "Raising Imani's deductible from $250 to $2,000 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
    "answer": "9.7",
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $2,000 − $250 = $1750.",
     "$1750 ÷ $180 = 9.72 years.",
+    "Spreadsheet or calculator: =1750/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-deductible-breakeven; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2486,8 +2631,10 @@
    "prompt": "Raising Sam's deductible from $250 to $1,000 lowers the premium by $150 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
    "answer": "5",
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,000 − $250 = $750.",
     "$750 ÷ $150 = 5.00 years.",
+    "Spreadsheet or calculator: =750/150",
     "If you expect a claim sooner, the lower deductible may be better."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-deductible-breakeven; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2500,8 +2647,10 @@
    "prompt": "Raising Luis's deductible from $500 to $1,500 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
    "answer": "5.6",
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,500 − $500 = $1000.",
     "$1000 ÷ $180 = 5.56 years.",
+    "Spreadsheet or calculator: =1000/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-deductible-breakeven; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2514,8 +2663,10 @@
    "prompt": "Raising Sam's deductible from $250 to $2,000 lowers the premium by $150 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
    "answer": "11.7",
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $2,000 − $250 = $1750.",
     "$1750 ÷ $150 = 11.67 years.",
+    "Spreadsheet or calculator: =1750/150",
     "If you expect a claim sooner, the lower deductible may be better."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-deductible-breakeven; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2528,8 +2679,10 @@
    "prompt": "Raising Priya's deductible from $250 to $2,000 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
    "answer": "9.7",
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $2,000 − $250 = $1750.",
     "$1750 ÷ $180 = 9.72 years.",
+    "Spreadsheet or calculator: =1750/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-deductible-breakeven; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2542,8 +2695,10 @@
    "prompt": "Raising Nadia's deductible from $500 to $1,500 lowers the premium by $180 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
    "answer": "5.6",
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,500 − $500 = $1000.",
     "$1000 ÷ $180 = 5.56 years.",
+    "Spreadsheet or calculator: =1000/180",
     "If you expect a claim sooner, the lower deductible may be better."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-deductible-breakeven; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2556,8 +2711,10 @@
    "prompt": "Raising Grace's deductible from $500 to $1,500 lowers the premium by $150 a year. How many claim-free years does it take for the premium savings to equal the extra deductible, to the nearest tenth of a year?",
    "answer": "6.7",
    "solutionSteps": [
+    "Formula: years to break even = extra deductible ÷ yearly premium savings.",
     "Extra deductible = $1,500 − $500 = $1000.",
     "$1000 ÷ $150 = 6.67 years.",
+    "Spreadsheet or calculator: =1000/150",
     "If you expect a claim sooner, the lower deductible may be better."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-deductible-breakeven; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2570,7 +2727,10 @@
    "prompt": "Maya has 7 doctor visits this year with a $40 copay each. Total copays = visits × copay. How much does she pay?",
    "answer": "$280",
    "solutionSteps": [
-    "7 × $40 = $280."
+    "Formula: Total copays = visits × copay.",
+    "7 × $40 = $280.",
+    "Spreadsheet or calculator: =7*40",
+    "So the answer is $280; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-copays; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2582,7 +2742,10 @@
    "prompt": "Marcus has 8 doctor visits this year with a $30 copay each. Total copays = visits × copay. How much does he pay?",
    "answer": "$240",
    "solutionSteps": [
-    "8 × $30 = $240."
+    "Formula: Total copays = visits × copay.",
+    "8 × $30 = $240.",
+    "Spreadsheet or calculator: =8*30",
+    "So the answer is $240; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-copays; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2594,7 +2757,10 @@
    "prompt": "Priya has 4 doctor visits this year with a $20 copay each. Total copays = visits × copay. How much does she pay?",
    "answer": "$80",
    "solutionSteps": [
-    "4 × $20 = $80."
+    "Formula: Total copays = visits × copay.",
+    "4 × $20 = $80.",
+    "Spreadsheet or calculator: =4*20",
+    "So the answer is $80; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-copays; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2606,7 +2772,10 @@
    "prompt": "Mateo has 8 doctor visits this year with a $30 copay each. Total copays = visits × copay. How much does he pay?",
    "answer": "$240",
    "solutionSteps": [
-    "8 × $30 = $240."
+    "Formula: Total copays = visits × copay.",
+    "8 × $30 = $240.",
+    "Spreadsheet or calculator: =8*30",
+    "So the answer is $240; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-copays; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2618,7 +2787,10 @@
    "prompt": "Aaliyah has 8 doctor visits this year with a $40 copay each. Total copays = visits × copay. How much does she pay?",
    "answer": "$320",
    "solutionSteps": [
-    "8 × $40 = $320."
+    "Formula: Total copays = visits × copay.",
+    "8 × $40 = $320.",
+    "Spreadsheet or calculator: =8*40",
+    "So the answer is $320; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-copays; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2630,7 +2802,10 @@
    "prompt": "Nadia has 3 doctor visits this year with a $40 copay each. Total copays = visits × copay. How much does she pay?",
    "answer": "$120",
    "solutionSteps": [
-    "3 × $40 = $120."
+    "Formula: Total copays = visits × copay.",
+    "3 × $40 = $120.",
+    "Spreadsheet or calculator: =3*40",
+    "So the answer is $120; the out-of-pocket maximum caps your worst year."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-copays; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2642,8 +2817,10 @@
    "prompt": "Fatima's plan has a $1,500 deductible, 30% coinsurance and a $6,000 out-of-pocket maximum. She has a $2,850 bill in March and a $15,000 bill in June. How much does she pay in total for the year?",
    "answer": "$6,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,500 + coinsurance $405.",
     "June: remaining deductible $0 + coinsurance $4,500.",
+    "Spreadsheet or calculator: =6405-405",
     "Total $6,405, capped at $6,000 → $6,000."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-two-bills-oop; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
@@ -2656,6 +2833,7 @@
    "prompt": "Noah's plan has a $2,000 deductible, 20% coinsurance and a $6,000 out-of-pocket maximum. He has a $1,550 bill in March and a $10,500 bill in June. How much does he pay in total for the year?",
    "answer": "$4,010",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,550 + coinsurance $0.",
     "June: remaining deductible $450 + coinsurance $2,010.",
     "Total $4,010 → $4,010."
@@ -2670,6 +2848,7 @@
    "prompt": "Nadia's plan has a $1,000 deductible, 30% coinsurance and a $4,000 out-of-pocket maximum. She has a $2,750 bill in March and a $6,000 bill in June. How much does she pay in total for the year?",
    "answer": "$3,325",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $525.",
     "June: remaining deductible $0 + coinsurance $1,800.",
     "Total $3,325 → $3,325."
@@ -2684,6 +2863,7 @@
    "prompt": "Sam's plan has a $1,000 deductible, 30% coinsurance and a $5,000 out-of-pocket maximum. They has a $1,600 bill in March and a $18,500 bill in June. How much does they pay in total for the year?",
    "answer": "$5,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $180.",
     "June: remaining deductible $0 + coinsurance $5,550.",
     "Total $6,730, capped at $5,000 → $5,000."
@@ -2698,6 +2878,7 @@
    "prompt": "Mei's plan has a $1,000 deductible, 20% coinsurance and a $6,000 out-of-pocket maximum. She has a $2,850 bill in March and a $26,000 bill in June. How much does she pay in total for the year?",
    "answer": "$6,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $370.",
     "June: remaining deductible $0 + coinsurance $5,200.",
     "Total $6,570, capped at $6,000 → $6,000."
@@ -2712,6 +2893,7 @@
    "prompt": "Nadia's plan has a $1,000 deductible, 30% coinsurance and a $6,000 out-of-pocket maximum. She has a $1,900 bill in March and a $15,000 bill in June. How much does she pay in total for the year?",
    "answer": "$5,770",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $270.",
     "June: remaining deductible $0 + coinsurance $4,500.",
     "Total $5,770 → $5,770."
@@ -2726,6 +2908,7 @@
    "prompt": "Owen's plan has a $1,000 deductible, 20% coinsurance and a $5,000 out-of-pocket maximum. He has a $1,600 bill in March and a $15,000 bill in June. How much does he pay in total for the year?",
    "answer": "$4,120",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,000 + coinsurance $120.",
     "June: remaining deductible $0 + coinsurance $3,000.",
     "Total $4,120 → $4,120."
@@ -2740,6 +2923,7 @@
    "prompt": "Maya's plan has a $2,000 deductible, 20% coinsurance and a $4,000 out-of-pocket maximum. She has a $1,850 bill in March and a $10,500 bill in June. How much does she pay in total for the year?",
    "answer": "$4,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,850 + coinsurance $0.",
     "June: remaining deductible $150 + coinsurance $2,070.",
     "Total $4,070, capped at $4,000 → $4,000."
@@ -2754,6 +2938,7 @@
    "prompt": "Mei's plan has a $2,000 deductible, 20% coinsurance and a $4,000 out-of-pocket maximum. She has a $1,800 bill in March and a $22,500 bill in June. How much does she pay in total for the year?",
    "answer": "$4,000",
    "solutionSteps": [
+    "Formula: out-of-pocket = deductible + coinsurance × (bills − deductible), capped at the out-of-pocket maximum.",
     "March: deductible $1,800 + coinsurance $0.",
     "June: remaining deductible $200 + coinsurance $4,460.",
     "Total $6,460, capped at $4,000 → $4,000."
@@ -2768,7 +2953,10 @@
    "prompt": "There is a 2% chance of a $11,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$220",
    "solutionSteps": [
-    "0.02 × $11,000 = $220."
+    "Formula: Expected loss = probability × amount.",
+    "0.02 × $11,000 = $220.",
+    "Spreadsheet or calculator: =0.02*11000",
+    "So the answer is $220; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2780,7 +2968,10 @@
    "prompt": "There is a 1% chance of a $9,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$90",
    "solutionSteps": [
-    "0.01 × $9,000 = $90."
+    "Formula: Expected loss = probability × amount.",
+    "0.01 × $9,000 = $90.",
+    "Spreadsheet or calculator: =0.01*9000",
+    "So the answer is $90; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2792,7 +2983,10 @@
    "prompt": "There is a 2% chance of a $2,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$40",
    "solutionSteps": [
-    "0.02 × $2,000 = $40."
+    "Formula: Expected loss = probability × amount.",
+    "0.02 × $2,000 = $40.",
+    "Spreadsheet or calculator: =0.02*2000",
+    "So the answer is $40; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2804,7 +2998,10 @@
    "prompt": "There is a 10% chance of a $17,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$1,700",
    "solutionSteps": [
-    "0.10 × $17,000 = $1,700."
+    "Formula: Expected loss = probability × amount.",
+    "0.10 × $17,000 = $1,700.",
+    "Spreadsheet or calculator: =0.10*17000",
+    "So the answer is $1,700; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2816,7 +3013,10 @@
    "prompt": "There is a 1% chance of a $13,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$130",
    "solutionSteps": [
-    "0.01 × $13,000 = $130."
+    "Formula: Expected loss = probability × amount.",
+    "0.01 × $13,000 = $130.",
+    "Spreadsheet or calculator: =0.01*13000",
+    "So the answer is $130; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2828,7 +3028,10 @@
    "prompt": "There is a 1% chance of a $19,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$190",
    "solutionSteps": [
-    "0.01 × $19,000 = $190."
+    "Formula: Expected loss = probability × amount.",
+    "0.01 × $19,000 = $190.",
+    "Spreadsheet or calculator: =0.01*19000",
+    "So the answer is $190; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2840,7 +3043,10 @@
    "prompt": "There is a 5% chance of a $4,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$200",
    "solutionSteps": [
-    "0.05 × $4,000 = $200."
+    "Formula: Expected loss = probability × amount.",
+    "0.05 × $4,000 = $200.",
+    "Spreadsheet or calculator: =0.05*4000",
+    "So the answer is $200; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2852,7 +3058,10 @@
    "prompt": "There is a 5% chance of a $7,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$350",
    "solutionSteps": [
-    "0.05 × $7,000 = $350."
+    "Formula: Expected loss = probability × amount.",
+    "0.05 × $7,000 = $350.",
+    "Spreadsheet or calculator: =0.05*7000",
+    "So the answer is $350; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2864,7 +3073,10 @@
    "prompt": "There is a 2% chance of a $12,000 loss. Expected loss = probability × amount. What is the expected loss?",
    "answer": "$240",
    "solutionSteps": [
-    "0.02 × $12,000 = $240."
+    "Formula: Expected loss = probability × amount.",
+    "0.02 × $12,000 = $240.",
+    "Spreadsheet or calculator: =0.02*12000",
+    "So the answer is $240; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-ev-one; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2876,8 +3088,11 @@
    "prompt": "An insurer covers renters who each have a 3% chance of a $11,000.00 claim. To cover expected claims plus 25% for costs and profit, what yearly premium should it charge each renter?",
    "answer": "$412.50",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.03 × $11,000.00 = $330.00.",
-    "Add 25%: $330.00 × 1.25 = $412.50."
+    "Add 25%: $330.00 × 1.25 = $412.50.",
+    "Spreadsheet or calculator: =330.00*1.25",
+    "So the answer is $412.50; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-premium-margin; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2889,8 +3104,11 @@
    "prompt": "An insurer covers renters who each have a 5% chance of a $10,500 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
    "answer": "$630",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.05 × $10,500 = $525.",
-    "Add 20%: $525 × 1.2 = $630."
+    "Add 20%: $525 × 1.2 = $630.",
+    "Spreadsheet or calculator: =525*1.2",
+    "So the answer is $630; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-premium-margin; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2902,8 +3120,11 @@
    "prompt": "An insurer covers renters who each have a 2% chance of a $5,500 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
    "answer": "$132",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.02 × $5,500 = $110.",
-    "Add 20%: $110 × 1.2 = $132."
+    "Add 20%: $110 × 1.2 = $132.",
+    "Spreadsheet or calculator: =110*1.2",
+    "So the answer is $132; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-premium-margin; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2915,8 +3136,11 @@
    "prompt": "An insurer covers renters who each have a 2% chance of a $12,000 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
    "answer": "$288",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.02 × $12,000 = $240.",
-    "Add 20%: $240 × 1.2 = $288."
+    "Add 20%: $240 × 1.2 = $288.",
+    "Spreadsheet or calculator: =240*1.2",
+    "So the answer is $288; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-premium-margin; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2928,8 +3152,11 @@
    "prompt": "An insurer covers renters who each have a 3% chance of a $13,000 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
    "answer": "$468",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.03 × $13,000 = $390.",
-    "Add 20%: $390 × 1.2 = $468."
+    "Add 20%: $390 × 1.2 = $468.",
+    "Spreadsheet or calculator: =390*1.2",
+    "So the answer is $468; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-premium-margin; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2941,8 +3168,11 @@
    "prompt": "An insurer covers renters who each have a 2% chance of a $14,000 claim. To cover expected claims plus 20% for costs and profit, what yearly premium should it charge each renter?",
    "answer": "$336",
    "solutionSteps": [
+    "Formula: premium = probability × claim × (1 + margin).",
     "Expected claim per renter = 0.02 × $14,000 = $280.",
-    "Add 20%: $280 × 1.2 = $336."
+    "Add 20%: $280 × 1.2 = $336.",
+    "Spreadsheet or calculator: =280*1.2",
+    "So the answer is $336; insure against losses you could not afford, not small ones."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-premium-margin; type calculation). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -2954,7 +3184,10 @@
    "prompt": "Tyler's essential expenses are $2,000 a month. An emergency fund of 3 months = monthly expenses × 3. How much should he save?",
    "answer": "$6,000",
    "solutionSteps": [
-    "$2,000 × 3 = $6,000."
+    "Formula: An emergency fund of 3 months = monthly expenses × 3.",
+    "$2,000 × 3 = $6,000.",
+    "Spreadsheet or calculator: =2000*3",
+    "So the answer is $6,000; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2966,7 +3199,10 @@
    "prompt": "Kofi's essential expenses are $3,400 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
    "answer": "$20,400",
    "solutionSteps": [
-    "$3,400 × 6 = $20,400."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$3,400 × 6 = $20,400.",
+    "Spreadsheet or calculator: =3400*6",
+    "So the answer is $20,400; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2978,7 +3214,10 @@
    "prompt": "Kofi's essential expenses are $4,000 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
    "answer": "$24,000",
    "solutionSteps": [
-    "$4,000 × 6 = $24,000."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$4,000 × 6 = $24,000.",
+    "Spreadsheet or calculator: =4000*6",
+    "So the answer is $24,000; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -2990,7 +3229,10 @@
    "prompt": "Elijah's essential expenses are $2,400 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
    "answer": "$14,400",
    "solutionSteps": [
-    "$2,400 × 6 = $14,400."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$2,400 × 6 = $14,400.",
+    "Spreadsheet or calculator: =2400*6",
+    "So the answer is $14,400; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3002,7 +3244,10 @@
    "prompt": "Camila's essential expenses are $3,200 a month. An emergency fund of 3 months = monthly expenses × 3. How much should she save?",
    "answer": "$9,600",
    "solutionSteps": [
-    "$3,200 × 3 = $9,600."
+    "Formula: An emergency fund of 3 months = monthly expenses × 3.",
+    "$3,200 × 3 = $9,600.",
+    "Spreadsheet or calculator: =3200*3",
+    "So the answer is $9,600; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3014,7 +3259,10 @@
    "prompt": "Noah's essential expenses are $3,600 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
    "answer": "$21,600",
    "solutionSteps": [
-    "$3,600 × 6 = $21,600."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$3,600 × 6 = $21,600.",
+    "Spreadsheet or calculator: =3600*6",
+    "So the answer is $21,600; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3026,7 +3274,10 @@
    "prompt": "Imani's essential expenses are $1,500 a month. An emergency fund of 3 months = monthly expenses × 3. How much should she save?",
    "answer": "$4,500",
    "solutionSteps": [
-    "$1,500 × 3 = $4,500."
+    "Formula: An emergency fund of 3 months = monthly expenses × 3.",
+    "$1,500 × 3 = $4,500.",
+    "Spreadsheet or calculator: =1500*3",
+    "So the answer is $4,500; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3038,7 +3289,10 @@
    "prompt": "Fatima's essential expenses are $1,700 a month. An emergency fund of 6 months = monthly expenses × 6. How much should she save?",
    "answer": "$10,200",
    "solutionSteps": [
-    "$1,700 × 6 = $10,200."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$1,700 × 6 = $10,200.",
+    "Spreadsheet or calculator: =1700*6",
+    "So the answer is $10,200; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3050,7 +3304,10 @@
    "prompt": "Isaiah's essential expenses are $3,500 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
    "answer": "$21,000",
    "solutionSteps": [
-    "$3,500 × 6 = $21,000."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$3,500 × 6 = $21,000.",
+    "Spreadsheet or calculator: =3500*6",
+    "So the answer is $21,000; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3062,7 +3319,10 @@
    "prompt": "Dev's essential expenses are $1,700 a month. An emergency fund of 6 months = monthly expenses × 6. How much should he save?",
    "answer": "$10,200",
    "solutionSteps": [
-    "$1,700 × 6 = $10,200."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$1,700 × 6 = $10,200.",
+    "Spreadsheet or calculator: =1700*6",
+    "So the answer is $10,200; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3074,7 +3334,10 @@
    "prompt": "Nadia's essential expenses are $1,800 a month. An emergency fund of 6 months = monthly expenses × 6. How much should she save?",
    "answer": "$10,800",
    "solutionSteps": [
-    "$1,800 × 6 = $10,800."
+    "Formula: An emergency fund of 6 months = monthly expenses × 6.",
+    "$1,800 × 6 = $10,800.",
+    "Spreadsheet or calculator: =1800*6",
+    "So the answer is $10,800; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-s-emergency-fund; type calculation). Fictional scenario; hypothetical values. Level support (Classroom code cp2)."
   },
@@ -3086,9 +3349,12 @@
    "prompt": "Dev could buy a policy for $1,000 a year with a $2,500 deductible, or go without. In a bad year with a $26,000 covered loss, how much more would he pay without insurance?",
    "answer": "$22,500",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,000 + $2,500 = $3,500.",
     "Uninsured = $26,000.",
-    "Difference = $22,500: insurance limits the worst case."
+    "Difference = $22,500: insurance limits the worst case.",
+    "Spreadsheet or calculator: =26000-3500",
+    "So the answer is $22,500; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3100,9 +3366,12 @@
    "prompt": "Marcus could buy a policy for $650 a year with a $1,000 deductible, or go without. In a bad year with a $15,000 covered loss, how much more would he pay without insurance?",
    "answer": "$13,350",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $650 + $1,000 = $1,650.",
     "Uninsured = $15,000.",
-    "Difference = $13,350: insurance limits the worst case."
+    "Difference = $13,350: insurance limits the worst case.",
+    "Spreadsheet or calculator: =15000-1650",
+    "So the answer is $13,350; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3114,9 +3383,12 @@
    "prompt": "Sofia could buy a policy for $600 a year with a $1,000 deductible, or go without. In a bad year with a $11,000 covered loss, how much more would she pay without insurance?",
    "answer": "$9,400",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $600 + $1,000 = $1,600.",
     "Uninsured = $11,000.",
-    "Difference = $9,400: insurance limits the worst case."
+    "Difference = $9,400: insurance limits the worst case.",
+    "Spreadsheet or calculator: =11000-1600",
+    "So the answer is $9,400; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3128,9 +3400,12 @@
    "prompt": "Diego could buy a policy for $1,400 a year with a $1,000 deductible, or go without. In a bad year with a $9,000 covered loss, how much more would he pay without insurance?",
    "answer": "$6,600",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,400 + $1,000 = $2,400.",
     "Uninsured = $9,000.",
-    "Difference = $6,600: insurance limits the worst case."
+    "Difference = $6,600: insurance limits the worst case.",
+    "Spreadsheet or calculator: =9000-2400",
+    "So the answer is $6,600; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3142,9 +3417,12 @@
    "prompt": "Noah could buy a policy for $750 a year with a $500 deductible, or go without. In a bad year with a $26,000 covered loss, how much more would he pay without insurance?",
    "answer": "$24,750",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $750 + $500 = $1,250.",
     "Uninsured = $26,000.",
-    "Difference = $24,750: insurance limits the worst case."
+    "Difference = $24,750: insurance limits the worst case.",
+    "Spreadsheet or calculator: =26000-1250",
+    "So the answer is $24,750; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3156,9 +3434,12 @@
    "prompt": "Isaiah could buy a policy for $1,500 a year with a $2,500 deductible, or go without. In a bad year with a $29,000 covered loss, how much more would he pay without insurance?",
    "answer": "$25,000",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,500 + $2,500 = $4,000.",
     "Uninsured = $29,000.",
-    "Difference = $25,000: insurance limits the worst case."
+    "Difference = $25,000: insurance limits the worst case.",
+    "Spreadsheet or calculator: =29000-4000",
+    "So the answer is $25,000; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3170,9 +3451,12 @@
    "prompt": "Kofi could buy a policy for $1,450 a year with a $1,000 deductible, or go without. In a bad year with a $18,000 covered loss, how much more would he pay without insurance?",
    "answer": "$15,550",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,450 + $1,000 = $2,450.",
     "Uninsured = $18,000.",
-    "Difference = $15,550: insurance limits the worst case."
+    "Difference = $15,550: insurance limits the worst case.",
+    "Spreadsheet or calculator: =18000-2450",
+    "So the answer is $15,550; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3184,9 +3468,12 @@
    "prompt": "Sam could buy a policy for $1,250 a year with a $2,500 deductible, or go without. In a bad year with a $11,000 covered loss, how much more would they pay without insurance?",
    "answer": "$7,250",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,250 + $2,500 = $3,750.",
     "Uninsured = $11,000.",
-    "Difference = $7,250: insurance limits the worst case."
+    "Difference = $7,250: insurance limits the worst case.",
+    "Spreadsheet or calculator: =11000-3750",
+    "So the answer is $7,250; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3198,9 +3485,12 @@
    "prompt": "Imani could buy a policy for $850 a year with a $1,000 deductible, or go without. In a bad year with a $26,000 covered loss, how much more would she pay without insurance?",
    "answer": "$24,150",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $850 + $1,000 = $1,850.",
     "Uninsured = $26,000.",
-    "Difference = $24,150: insurance limits the worst case."
+    "Difference = $24,150: insurance limits the worst case.",
+    "Spreadsheet or calculator: =26000-1850",
+    "So the answer is $24,150; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3212,9 +3502,12 @@
    "prompt": "Marcus could buy a policy for $1,250 a year with a $1,000 deductible, or go without. In a bad year with a $20,000 covered loss, how much more would he pay without insurance?",
    "answer": "$17,750",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $1,250 + $1,000 = $2,250.",
     "Uninsured = $20,000.",
-    "Difference = $17,750: insurance limits the worst case."
+    "Difference = $17,750: insurance limits the worst case.",
+    "Spreadsheet or calculator: =20000-2250",
+    "So the answer is $17,750; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   },
@@ -3226,9 +3519,12 @@
    "prompt": "Dev could buy a policy for $600 a year with a $1,000 deductible, or go without. In a bad year with a $17,000 covered loss, how much more would he pay without insurance?",
    "answer": "$15,400",
    "solutionSteps": [
+    "Formula: savings = uninsured loss − (premium + deductible).",
     "Insured worst case = premium + deductible = $600 + $1,000 = $1,600.",
     "Uninsured = $17,000.",
-    "Difference = $15,400: insurance limits the worst case."
+    "Difference = $15,400: insurance limits the worst case.",
+    "Spreadsheet or calculator: =17000-1600",
+    "So the answer is $15,400; use numbers like this to decide which risks are worth insuring."
    ],
    "sourceNotes": "Financial Algebra original item (family lv-a-worst-case; type comparison). Fictional scenario; hypothetical values. Level advanced (Classroom code honors)."
   }

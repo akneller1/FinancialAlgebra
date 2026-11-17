@@ -78,11 +78,13 @@ function resourceSections(unit){
  resourceCard('Worksheet',r.worksheet,'Choose skills and create practice with an answer key.',unit)+
  resourceCard('Error Analysis',r.errorAnalysis,'Find and correct mistakes in fictional students’ financial calculations.',unit)+
  resourceCard('Assessment',r.assessment,'Create a unit assessment with worked solutions.',unit)+'</ul></section>'+
- '<section class="algebra-unit-section" id="games"><h2>Games</h2><p>Play with financial vocabulary, concepts, calculations, and real-life choices. Standard level.</p><ul class="finance-resource-grid">'+
+ '<section class="algebra-unit-section" id="games"><h2>Games</h2><p>Play with financial vocabulary, concepts, calculations, and real-life choices at Support, Standard or Advanced level.</p><ul class="finance-resource-grid">'+
  r.games.map(g=>resourceCard(g.title,g.path,g.description,unit)).join('')+'</ul></section>'+
  '<section class="algebra-unit-section"><h2>Decision Lab</h2><p>Compare real-life choices, explore assumptions, and explain your decision.</p><ul class="finance-resource-grid">'+
  resourceCard(r.decisionLab.title,r.decisionLab.path,'A guided seven-step investigation with a printable summary.',unit)+
  resourceCard('Teacher guide',r.decisionLab.teacherPath,'Teaching prompts, model reasoning, and discussion guidance.',unit)+'</ul></section>'+
+ ((r.spreadsheetLabs||[]).length?'<section class="algebra-unit-section"><h2>Spreadsheet Lab</h2><p>A ready-made Google Sheets and Excel template with step-by-step instructions and matching questions.</p><ul class="finance-resource-grid">'+
+ r.spreadsheetLabs.map(l=>resourceCard(l.title,l.path,l.description,unit)).join('')+'</ul></section>':'')+
  '<section class="algebra-unit-section"><h2>Study Guides</h2><ul class="finance-resource-grid">'+
  resourceCard('Flashcards',r.flashcards,'Study financial vocabulary, formulas, and principles.',unit)+
  resourceCard('Cheat Sheet',r.cheatSheet,'A two-page printable reference.',unit)+
@@ -106,7 +108,8 @@ function courseView(){
  const lead=crumbs([['Home','https://mrksclassroom.com/'],[course.name,null]])+
  '<h1 tabindex="-1">'+esc(course.name)+'</h1>'+
  '<p class="band-blurb">Apply algebra to income, budgeting, banking, borrowing, investing, and everyday financial choices.</p>'+
- '<p class="band-meta">'+course.units.length+' units · 40 skills · one course level: Standard</p>';
+ '<p class="band-meta">'+course.units.length+' units · '+course.units.reduce((n,u)=>n+u.skills.length,0)+' skills · three levels: Support, Standard and Advanced</p>'+
+ '<p class="band-meta"><a href="'+esc(resourceHref('financial/pacing/index.html'))+'">Pacing guide and standards map</a> · <a href="'+esc(resourceHref('financial/spreadsheet-labs/index.html'))+'">Spreadsheet Labs</a></p>';
  return band(lead,true,'course')+'<section class="section"><div class="wrap">'+
  '<h2 class="course-units-title">Browse by unit</h2>'+
  '<p class="course-units-status">Explore lesson plans, worksheets, assessments, games, Decision Labs, study guides, and projects. All scenarios use fictional financial information and illustrative rates.</p>'+

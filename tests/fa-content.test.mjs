@@ -10,7 +10,7 @@ const root = new URL('../', import.meta.url), P = p => new URL(p, root).pathname
 const json = p => JSON.parse(readFileSync(P(p), 'utf8'));
 const BAD = /\b(NaN|undefined|Infinity|null)\b|\[object Object\]/;
 const FORMATS = ['multiple-choice', 'select-all', 'short-answer', 'open-response'];
-const TYPES = ['vocabulary', 'concept', 'scenario', 'comparison', 'document', 'calculation', 'reasoning', 'claim'];
+const TYPES = ['vocabulary', 'concept', 'scenario', 'comparison', 'document', 'calculation', 'reasoning', 'claim', 'modeling'];
 
 test('all ten units have extended banks with valid, unique, complete items', () => {
   const allIds = new Set();

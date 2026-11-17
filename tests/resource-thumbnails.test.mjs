@@ -23,7 +23,7 @@ test('all ten unit views show a local thumbnail on every resource card',async()=
   const resources=manifest.units.find(u=>u.unitId===unit.id).resources;
   assert.match(main.innerHTML,/Error Analysis/);
   assert.match(main.innerHTML,/format=error/);
-  assert.equal(cards.length,9+resources.projects.length+resources.games.length,unit.id+' resource count');
+  assert.equal(cards.length,9+resources.projects.length+resources.games.length+(resources.spreadsheetLabs||[]).length,unit.id+' resource count');
   for(const card of cards){
    assert.match(card,/<img class="finance-resource-thumb"/);
    for(const match of card.matchAll(/(?:href|src)="([^"]+)"/g)){

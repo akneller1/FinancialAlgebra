@@ -13,21 +13,52 @@
  "skills": [
   {
    "id": "budgeting-skill-01",
-   "name": "Calculate monthly cash flow"
+   "name": "Calculate monthly cash flow",
+   "standards": [
+    "Spending 12-1: Budgets and financial goals"
+   ]
   },
   {
    "id": "budgeting-skill-02",
-   "name": "Analyze fixed and variable expenses"
+   "name": "Analyze fixed and variable expenses",
+   "standards": [
+    "Spending 12-1: Budgets and financial goals",
+    "Spending 12-9: Financial record-keeping"
+   ]
   },
   {
    "id": "budgeting-skill-03",
-   "name": "Model financial constraints"
+   "name": "Model financial constraints",
+   "standards": [
+    "Spending 12-1: Budgets and financial goals",
+    "Spending 12-2: Factors influencing consumer decisions",
+    "Earning Income 12-11: Small business ownership"
+   ]
   },
   {
    "id": "budgeting-skill-04",
-   "name": "Compare spending decisions"
+   "name": "Compare spending decisions",
+   "standards": [
+    "Spending 12-2: Factors influencing consumer decisions",
+    "Spending 12-3: Durable goods purchases",
+    "Spending 12-5: Pre-purchase research"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": [
+   {
+    "title": "Spreadsheet Lab 1: Monthly Budget",
+    "path": "financial/spreadsheet-labs/index.html?lab=budget"
+   }
+  ]
+ },
  "vocab": [
   {
    "term": "Budget",
@@ -2844,9 +2875,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,220.00 × 26 ÷ 12 = $2,643.33.",
     "Total expenses = $2,957.00.",
-    "Cash flow = $2,643.33 − $2,957.00 = −$313.67, a deficit."
+    "Cash flow = $2,643.33 − $2,957.00 = −$313.67, a deficit.",
+    "Spreadsheet or calculator: =2643.33-2957.00",
+    "So the answer is −$313.67; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($2,440.00) understates income."
@@ -2924,9 +2958,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,340.00 × 26 ÷ 12 = $2,903.33.",
     "Total expenses = $2,657.00.",
-    "Cash flow = $2,903.33 − $2,657.00 = $246.33, a surplus."
+    "Cash flow = $2,903.33 − $2,657.00 = $246.33, a surplus.",
+    "Spreadsheet or calculator: =2903.33-2657.00",
+    "So the answer is $246.33; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($2,680.00) understates income."
@@ -3004,9 +3041,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,280.00 × 26 ÷ 12 = $2,773.33.",
     "Total expenses = $1,827.00.",
-    "Cash flow = $2,773.33 − $1,827.00 = $946.33, a surplus."
+    "Cash flow = $2,773.33 − $1,827.00 = $946.33, a surplus.",
+    "Spreadsheet or calculator: =2773.33-1827.00",
+    "So the answer is $946.33; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($2,560.00) understates income."
@@ -3088,9 +3128,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,200 × 26 ÷ 12 = $2,600.",
     "Total expenses = $2,628.",
-    "Cash flow = $2,600 − $2,628 = −$28, a deficit."
+    "Cash flow = $2,600 − $2,628 = −$28, a deficit.",
+    "Spreadsheet or calculator: =2600-2628",
+    "So the answer is −$28; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($2,400) understates income."
@@ -3168,9 +3211,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,320 × 26 ÷ 12 = $2,860.",
     "Total expenses = $2,348.",
-    "Cash flow = $2,860 − $2,348 = $512, a surplus."
+    "Cash flow = $2,860 − $2,348 = $512, a surplus.",
+    "Spreadsheet or calculator: =2860-2348",
+    "So the answer is $512; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($2,640) understates income."
@@ -3256,9 +3302,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,640.00 × 26 ÷ 12 = $3,553.33.",
     "Total expenses = $2,417.00.",
-    "Cash flow = $3,553.33 − $2,417.00 = $1,136.33, a surplus."
+    "Cash flow = $3,553.33 − $2,417.00 = $1,136.33, a surplus.",
+    "Spreadsheet or calculator: =3553.33-2417.00",
+    "So the answer is $1,136.33; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($3,280.00) understates income."
@@ -3344,9 +3393,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,560 × 26 ÷ 12 = $3,380.",
     "Total expenses = $3,313.",
-    "Cash flow = $3,380 − $3,313 = $67, a surplus."
+    "Cash flow = $3,380 − $3,313 = $67, a surplus.",
+    "Spreadsheet or calculator: =3380-3313",
+    "So the answer is $67; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($3,120) understates income."
@@ -3428,9 +3480,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly income = paycheck × paychecks per year ÷ 12; cash flow = monthly income − expenses.",
     "Average monthly income = $1,120.00 × 26 ÷ 12 = $2,426.67.",
     "Total expenses = $2,873.00.",
-    "Cash flow = $2,426.67 − $2,873.00 = −$446.33, a deficit."
+    "Cash flow = $2,426.67 − $2,873.00 = −$446.33, a deficit.",
+    "Spreadsheet or calculator: =2426.67-2873.00",
+    "So the answer is −$446.33; a positive monthly cash flow is what makes saving possible."
    ],
    "misconceptions": [
     "Using 2 paychecks per month ($2,240.00) understates income."
@@ -3780,10 +3835,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly set-aside = sum of (yearly cost ÷ 12) for each irregular expense.",
     "Back-to-school supplies (annual): $360 ÷ 12 = $30 per month",
     "Car registration & inspection (annual): $132 ÷ 12 = $11 per month",
     "Car maintenance (estimated per year): $780 ÷ 12 = $65 per month",
-    "Total monthly set-aside = $106."
+    "Total monthly set-aside = $106.",
+    "Spreadsheet or calculator: =(360/12)+(132/12)+(780/12)",
+    "So the answer is $106; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -3836,10 +3894,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly set-aside = sum of (yearly cost ÷ 12) for each irregular expense.",
     "Car registration & inspection (annual): $168 ÷ 12 = $14 per month",
     "Holiday gifts (December): $240 ÷ 12 = $20 per month",
     "Car maintenance (estimated per year): $900 ÷ 12 = $75 per month",
-    "Total monthly set-aside = $109."
+    "Total monthly set-aside = $109.",
+    "Spreadsheet or calculator: =(168/12)+(240/12)+(900/12)",
+    "So the answer is $109; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -3892,10 +3953,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly set-aside = sum of (yearly cost ÷ 12) for each irregular expense.",
     "Holiday gifts (December): $300.00 ÷ 12 = $25.00 per month",
     "Car insurance (paid every 6 months): $810.00 ÷ 6 = $135.00 per month",
     "Back-to-school supplies (annual): $210.00 ÷ 12 = $17.50 per month",
-    "Total monthly set-aside = $177.50."
+    "Total monthly set-aside = $177.50.",
+    "Spreadsheet or calculator: =(300.00/12)+(810.00/6)+(210.00/12)",
+    "So the answer is $177.50; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -3948,10 +4012,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly set-aside = sum of (yearly cost ÷ 12) for each irregular expense.",
     "Car insurance (paid every 6 months): $870 ÷ 6 = $145 per month",
     "Car registration & inspection (annual): $168 ÷ 12 = $14 per month",
     "Car maintenance (estimated per year): $720 ÷ 12 = $60 per month",
-    "Total monthly set-aside = $219."
+    "Total monthly set-aside = $219.",
+    "Spreadsheet or calculator: =(870/6)+(168/12)+(720/12)",
+    "So the answer is $219; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4004,10 +4071,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly set-aside = sum of (yearly cost ÷ 12) for each irregular expense.",
     "Car registration & inspection (annual): $180 ÷ 12 = $15 per month",
     "Renters insurance (annual): $180 ÷ 12 = $15 per month",
     "Amazon Prime-style membership (annual): $144 ÷ 12 = $12 per month",
-    "Total monthly set-aside = $42."
+    "Total monthly set-aside = $42.",
+    "Spreadsheet or calculator: =(180/12)+(180/12)+(144/12)",
+    "So the answer is $42; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4060,10 +4130,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly set-aside = sum of (yearly cost ÷ 12) for each irregular expense.",
     "Car maintenance (estimated per year): $540 ÷ 12 = $45 per month",
     "Car registration & inspection (annual): $108 ÷ 12 = $9 per month",
     "Renters insurance (annual): $216 ÷ 12 = $18 per month",
-    "Total monthly set-aside = $72."
+    "Total monthly set-aside = $72.",
+    "Spreadsheet or calculator: =(540/12)+(108/12)+(216/12)",
+    "So the answer is $72; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4116,10 +4189,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly set-aside = sum of (yearly cost ÷ 12) for each irregular expense.",
     "Amazon Prime-style membership (annual): $144 ÷ 12 = $12 per month",
     "Renters insurance (annual): $228 ÷ 12 = $19 per month",
     "Holiday gifts (December): $420 ÷ 12 = $35 per month",
-    "Total monthly set-aside = $66."
+    "Total monthly set-aside = $66.",
+    "Spreadsheet or calculator: =(144/12)+(228/12)+(420/12)",
+    "So the answer is $66; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4233,9 +4309,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = deposits − withdrawals, adding back transfers to your own savings.",
     "Deposits: $1,300.00 + $300.00 + $1,300.00 = $2,900.00.",
     "Withdrawals total $1,828.99.",
-    "Net excluding the $100.00 savings transfer = $1,071.01 + $100.00 = $1,171.01."
+    "Net excluding the $100.00 savings transfer = $1,071.01 + $100.00 = $1,171.01.",
+    "Spreadsheet or calculator: =1071.01+100.00",
+    "So the answer is $1,171.01; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4349,9 +4428,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = deposits − withdrawals, adding back transfers to your own savings.",
     "Deposits: $1,280.00 + $120.00 + $1,280.00 = $2,680.00.",
     "Withdrawals total $1,681.99.",
-    "Net excluding the $100.00 savings transfer = $998.01 + $100.00 = $1,098.01."
+    "Net excluding the $100.00 savings transfer = $998.01 + $100.00 = $1,098.01.",
+    "Spreadsheet or calculator: =998.01+100.00",
+    "So the answer is $1,098.01; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4465,9 +4547,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = deposits − withdrawals, adding back transfers to your own savings.",
     "Deposits: $1,360.00 + $120.00 + $1,360.00 = $2,840.00.",
     "Withdrawals total $1,627.99.",
-    "Net excluding the $200.00 savings transfer = $1,212.01 + $200.00 = $1,412.01."
+    "Net excluding the $200.00 savings transfer = $1,212.01 + $200.00 = $1,412.01.",
+    "Spreadsheet or calculator: =1212.01+200.00",
+    "So the answer is $1,412.01; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4581,16 +4666,19 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = deposits − withdrawals, adding back transfers to your own savings.",
     "Deposits: $1,360.00 + $180.00 + $1,360.00 = $2,900.00.",
     "Withdrawals total $1,736.99.",
-    "Net = $2,900.00 − $1,736.99 = $1,163.01."
+    "Net = $2,900.00 − $1,736.99 = $1,163.01.",
+    "Spreadsheet or calculator: =2900.00-1736.99",
+    "So the answer is $1,163.01; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
    "id": "fa-budgeting-s01-cf-statement-05",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-01",
-   "level": "advanced",
+   "level": "standard",
    "family": "cf-statement",
    "type": "document",
    "activityTypes": [
@@ -4697,9 +4785,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = deposits − withdrawals, adding back transfers to your own savings.",
     "Deposits: $1,240.00 + $240.00 + $1,240.00 = $2,720.00.",
     "Withdrawals total $1,886.99.",
-    "Total out = $1,886.99."
+    "Total out = $1,886.99.",
+    "So the answer is $1,886.99; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -4813,9 +4903,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: net = deposits − withdrawals, adding back transfers to your own savings.",
     "Deposits: $1,320.00 + $280.00 + $1,320.00 = $2,920.00.",
     "Withdrawals total $1,616.99.",
-    "Net = $2,920.00 − $1,616.99 = $1,303.01."
+    "Net = $2,920.00 − $1,616.99 = $1,303.01.",
+    "Spreadsheet or calculator: =2920.00-1616.99",
+    "So the answer is $1,303.01; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -5616,8 +5709,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = average of past months × (1 + buffer).",
     "Average = (144 + 159 + 107 + 124) ÷ 4 = $133.50.",
     "Add 5%: $133.50 × 1.05 = $140.18.",
+    "Spreadsheet or calculator: =133.50*1.05",
     "The buffer protects against a higher-than-usual month."
    ]
   },
@@ -5645,8 +5740,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = average of past months × (1 + buffer).",
     "Average = (237 + 236 + 127 + 89) ÷ 4 = $172.25.",
     "Add 5%: $172.25 × 1.05 = $180.86.",
+    "Spreadsheet or calculator: =172.25*1.05",
     "The buffer protects against a higher-than-usual month."
    ]
   },
@@ -5674,8 +5771,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = average of past months × (1 + buffer).",
     "Average = (77 + 158 + 152 + 76) ÷ 4 = $115.75.",
     "Add 5%: $115.75 × 1.05 = $121.54.",
+    "Spreadsheet or calculator: =115.75*1.05",
     "The buffer protects against a higher-than-usual month."
    ]
   },
@@ -5703,8 +5802,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = average of past months × (1 + buffer).",
     "Average = (118 + 181 + 170 + 198) ÷ 4 = $166.75.",
     "Add 10%: $166.75 × 1.1 = $183.43.",
+    "Spreadsheet or calculator: =166.75*1.1",
     "The buffer protects against a higher-than-usual month."
    ]
   },
@@ -5732,8 +5833,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = average of past months × (1 + buffer).",
     "Average = (122 + 205 + 168 + 206) ÷ 4 = $175.25.",
     "Add 10%: $175.25 × 1.1 = $192.78.",
+    "Spreadsheet or calculator: =175.25*1.1",
     "The buffer protects against a higher-than-usual month."
    ]
   },
@@ -5761,8 +5864,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = average of past months × (1 + buffer).",
     "Average = (292 + 410 + 325 + 372) ÷ 4 = $349.75.",
     "Add 10%: $349.75 × 1.1 = $384.73.",
+    "Spreadsheet or calculator: =349.75*1.1",
     "The buffer protects against a higher-than-usual month."
    ]
   },
@@ -5790,8 +5895,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = average of past months × (1 + buffer).",
     "Average = (126 + 66 + 110 + 132) ÷ 4 = $108.50.",
     "Add 10%: $108.50 × 1.1 = $119.35.",
+    "Spreadsheet or calculator: =108.50*1.1",
     "The buffer protects against a higher-than-usual month."
    ]
   },
@@ -5817,9 +5924,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = take-home − needs − wants; difference = actual needs − 50% × take-home.",
     "Savings = $3,100 − $1,798 − $651 = $651.",
     "Guideline needs: 50% × $3,100 = $1,550.",
     "Difference = $1,798 − $1,550 = $248.",
+    "Spreadsheet or calculator: =1798-1550",
     "The guideline is a reference point, not a requirement; explain whether the difference is reasonable."
    ]
   },
@@ -5845,9 +5954,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = take-home − needs − wants; difference = actual needs − 50% × take-home.",
     "Savings = $3,700 − $2,035 − $1,073 = $592.",
     "Guideline wants: 30% × $3,700 = $1,110.",
     "Difference = $1,073 − $1,110 = −$37.",
+    "Spreadsheet or calculator: =1073-1110",
     "The guideline is a reference point, not a requirement; explain whether the difference is reasonable."
    ]
   },
@@ -5873,9 +5984,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = take-home − needs − wants; difference = actual needs − 50% × take-home.",
     "Savings = $2,600 − $1,586 − $624 = $390.",
     "Guideline savings: 20% × $2,600 = $520.",
     "Difference = $390 − $520 = −$130.",
+    "Spreadsheet or calculator: =390-520",
     "The guideline is a reference point, not a requirement; explain whether the difference is reasonable."
    ]
   },
@@ -5901,9 +6014,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = take-home − needs − wants; difference = actual needs − 50% × take-home.",
     "Savings = $2,400 − $1,392 − $792 = $216.",
     "Guideline needs: 50% × $2,400 = $1,200.",
     "Difference = $1,392 − $1,200 = $192.",
+    "Spreadsheet or calculator: =1392-1200",
     "The guideline is a reference point, not a requirement; explain whether the difference is reasonable."
    ]
   },
@@ -5929,9 +6044,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = take-home − needs − wants; difference = actual needs − 50% × take-home.",
     "Savings = $2,500 − $1,175 − $600 = $725.",
     "Guideline savings: 20% × $2,500 = $500.",
     "Difference = $725 − $500 = $225.",
+    "Spreadsheet or calculator: =725-500",
     "The guideline is a reference point, not a requirement; explain whether the difference is reasonable."
    ]
   },
@@ -5957,9 +6074,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = take-home − needs − wants; difference = actual needs − 50% × take-home.",
     "Savings = $3,600 − $1,872 − $1,188 = $540.",
     "Guideline savings: 20% × $3,600 = $720.",
     "Difference = $540 − $720 = −$180.",
+    "Spreadsheet or calculator: =540-720",
     "The guideline is a reference point, not a requirement; explain whether the difference is reasonable."
    ]
   },
@@ -5985,9 +6104,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = take-home − needs − wants; difference = actual needs − 50% × take-home.",
     "Savings = $3,700 − $1,924 − $1,073 = $703.",
     "Guideline wants: 30% × $3,700 = $1,110.",
     "Difference = $1,073 − $1,110 = −$37.",
+    "Spreadsheet or calculator: =1073-1110",
     "The guideline is a reference point, not a requirement; explain whether the difference is reasonable."
    ]
   },
@@ -6631,8 +6752,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (yearly gross ÷ 12).",
     "Gross monthly = $44,000.00 ÷ 12 = $3,666.67.",
-    "r ≤ 0.3 × $3,666.67 = $1,100.00."
+    "r ≤ 0.3 × $3,666.67 = $1,100.00.",
+    "Spreadsheet or calculator: =0.3*3666.67",
+    "So the answer is $1,100.00; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -6659,8 +6783,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (yearly gross ÷ 12).",
     "Gross monthly = $47,000.00 ÷ 12 = $3,916.67.",
-    "r ≤ 0.3 × $3,916.67 = $1,175.00."
+    "r ≤ 0.3 × $3,916.67 = $1,175.00.",
+    "Spreadsheet or calculator: =0.3*3916.67",
+    "So the answer is $1,175.00; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -6687,8 +6814,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (yearly gross ÷ 12).",
     "Gross monthly = $44,000.00 ÷ 12 = $3,666.67.",
-    "r ≤ 0.25 × $3,666.67 = $916.67."
+    "r ≤ 0.25 × $3,666.67 = $916.67.",
+    "Spreadsheet or calculator: =0.25*3666.67",
+    "So the answer is $916.67; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -6715,8 +6845,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (yearly gross ÷ 12).",
     "Gross monthly = $33,000.00 ÷ 12 = $2,750.00.",
-    "r ≤ 0.25 × $2,750.00 = $687.50."
+    "r ≤ 0.25 × $2,750.00 = $687.50.",
+    "Spreadsheet or calculator: =0.25*2750.00",
+    "So the answer is $687.50; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -6743,8 +6876,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (yearly gross ÷ 12).",
     "Gross monthly = $52,000.00 ÷ 12 = $4,333.33.",
-    "r ≤ 0.25 × $4,333.33 = $1,083.33."
+    "r ≤ 0.25 × $4,333.33 = $1,083.33.",
+    "Spreadsheet or calculator: =0.25*4333.33",
+    "So the answer is $1,083.33; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -6771,8 +6907,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (yearly gross ÷ 12).",
     "Gross monthly = $49,000.00 ÷ 12 = $4,083.33.",
-    "r ≤ 0.3 × $4,083.33 = $1,225.00."
+    "r ≤ 0.3 × $4,083.33 = $1,225.00.",
+    "Spreadsheet or calculator: =0.3*4083.33",
+    "So the answer is $1,225.00; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -6799,8 +6938,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (yearly gross ÷ 12).",
     "Gross monthly = $37,000.00 ÷ 12 = $3,083.33.",
-    "r ≤ 0.3 × $3,083.33 = $925.00."
+    "r ≤ 0.3 × $3,083.33 = $925.00.",
+    "Spreadsheet or calculator: =0.3*3083.33",
+    "So the answer is $925.00; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -6827,6 +6969,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: hours ≥ (cost with tax − savings) ÷ (wage × share kept), rounded up.",
     "Total cost = $420.00 × 1.0625 = $446.25.",
     "Still needed = $446.25 − $25.00 = $421.25.",
     "Take-home per hour = $15.50 × 0.88 = $13.64.",
@@ -6857,6 +7000,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: hours ≥ (cost with tax − savings) ÷ (wage × share kept), rounded up.",
     "Total cost = $640.00 × 1.0625 = $680.00.",
     "Still needed = $680.00 − $25.00 = $655.00.",
     "Take-home per hour = $19.50 × 0.9 = $17.55.",
@@ -6887,6 +7031,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: hours ≥ (cost with tax − savings) ÷ (wage × share kept), rounded up.",
     "Total cost = $760.00 × 1.0625 = $807.50.",
     "Still needed = $807.50 − $0.00 = $807.50.",
     "Take-home per hour = $16.00 × 0.88 = $14.08.",
@@ -6917,9 +7062,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: hours ≥ (cost with tax − savings) ÷ (wage × share kept), rounded up.",
     "Total cost = $420.00 × 1.0625 = $446.25.",
     "Still needed = $446.25 − $200.00 = $246.25.",
     "Take-home per hour = $16.75 × 0.92 = $15.41.",
+    "Spreadsheet or calculator: =ROUNDUP(16.75*0.92,0)",
     "Solve $15.41h ≥ $246.25: h ≥ 15.98 → 16 hours (round up)."
    ]
   },
@@ -6947,6 +7094,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: hours ≥ (cost with tax − savings) ÷ (wage × share kept), rounded up.",
     "Total cost = $420.00 × 1.0625 = $446.25.",
     "Still needed = $446.25 − $50.00 = $396.25.",
     "Take-home per hour = $16.75 × 0.9 = $15.08.",
@@ -6977,6 +7125,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: hours ≥ (cost with tax − savings) ÷ (wage × share kept), rounded up.",
     "Total cost = $420.00 × 1.0625 = $446.25.",
     "Still needed = $446.25 − $100.00 = $346.25.",
     "Take-home per hour = $16.00 × 0.92 = $14.72.",
@@ -7007,6 +7156,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: hours ≥ (cost with tax − savings) ÷ (wage × share kept), rounded up.",
     "Total cost = $980.00 × 1.0625 = $1,041.25.",
     "Still needed = $1,041.25 − $50.00 = $991.25.",
     "Take-home per hour = $15.50 × 0.88 = $13.64.",
@@ -7037,6 +7187,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly saving ≥ (goal − already saved) ÷ months.",
     "Remaining = $3,750.00 − $600.00 = $3,150.00.",
     "8m ≥ $3,150.00 → m ≥ $393.75 per month.",
     "Round up to the cent so the goal is actually reached."
@@ -7066,6 +7217,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly saving ≥ (goal − already saved) ÷ months.",
     "Remaining = $2,900 − $500 = $2,400.",
     "6m ≥ $2,400 → m ≥ $400 per month.",
     "Round up to the cent so the goal is actually reached."
@@ -7095,6 +7247,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly saving ≥ (goal − already saved) ÷ months.",
     "Remaining = $2,500.00 − $0.00 = $2,500.00.",
     "6m ≥ $2,500.00 → m ≥ $416.67 per month.",
     "Round up to the cent so the goal is actually reached."
@@ -7124,6 +7277,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly saving ≥ (goal − already saved) ÷ months.",
     "Remaining = $1,200 − $300 = $900.",
     "10m ≥ $900 → m ≥ $90 per month.",
     "Round up to the cent so the goal is actually reached."
@@ -7153,6 +7307,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly saving ≥ (goal − already saved) ÷ months.",
     "Remaining = $3,900 − $600 = $3,300.",
     "10m ≥ $3,300 → m ≥ $330 per month.",
     "Round up to the cent so the goal is actually reached."
@@ -7182,6 +7337,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly saving ≥ (goal − already saved) ÷ months.",
     "Remaining = $3,000.00 − $450.00 = $2,550.00.",
     "18m ≥ $2,550.00 → m ≥ $141.67 per month.",
     "Round up to the cent so the goal is actually reached."
@@ -7211,6 +7367,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly saving ≥ (goal − already saved) ÷ months.",
     "Remaining = $1,300.00 − $50.00 = $1,250.00.",
     "8m ≥ $1,250.00 → m ≥ $156.25 per month.",
     "Round up to the cent so the goal is actually reached."
@@ -7472,9 +7629,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = (months of expenses × monthly expenses − saved) ÷ monthly saving, rounded up.",
     "Target = 3 × $2,700 = $8,100.",
     "Remaining = $7,100.",
-    "$7,100 ÷ $300 ≈ 23.67 → 24 months."
+    "$7,100 ÷ $300 ≈ 23.67 → 24 months.",
+    "Spreadsheet or calculator: =ROUNDUP(7100/300,0)",
+    "So the answer is 24; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -7499,9 +7659,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = (months of expenses × monthly expenses − saved) ÷ monthly saving, rounded up.",
     "Target = 3 × $2,900 = $8,700.",
     "Remaining = $7,200.",
-    "$7,200 ÷ $325 ≈ 22.15 → 23 months."
+    "$7,200 ÷ $325 ≈ 22.15 → 23 months.",
+    "Spreadsheet or calculator: =ROUNDUP(7200/325,0)",
+    "So the answer is 23; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -7526,9 +7689,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = (months of expenses × monthly expenses − saved) ÷ monthly saving, rounded up.",
     "Target = 4 × $1,950 = $7,800.",
     "Remaining = $5,300.",
-    "$5,300 ÷ $175 ≈ 30.29 → 31 months."
+    "$5,300 ÷ $175 ≈ 30.29 → 31 months.",
+    "Spreadsheet or calculator: =ROUNDUP(5300/175,0)",
+    "So the answer is 31; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -7553,9 +7719,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = (months of expenses × monthly expenses − saved) ÷ monthly saving, rounded up.",
     "Target = 3 × $2,300 = $6,900.",
     "Remaining = $4,900.",
-    "$4,900 ÷ $200 ≈ 24.5 → 25 months."
+    "$4,900 ÷ $200 ≈ 24.5 → 25 months.",
+    "Spreadsheet or calculator: =ROUNDUP(4900/200,0)",
+    "So the answer is 25; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -7580,9 +7749,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = (months of expenses × monthly expenses − saved) ÷ monthly saving, rounded up.",
     "Target = 3 × $2,250 = $6,750.",
     "Remaining = $5,500.",
-    "$5,500 ÷ $225 ≈ 24.44 → 25 months."
+    "$5,500 ÷ $225 ≈ 24.44 → 25 months.",
+    "Spreadsheet or calculator: =ROUNDUP(5500/225,0)",
+    "So the answer is 25; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -7607,9 +7779,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even visits = membership cost ÷ price per visit, rounded up.",
     "Pay per visit: 3 × $8.00 = $24.00.",
     "Membership: $29.00.",
     "Break-even: $29.00 ÷ $8.00 ≈ 3.63, so 4 or more visits make the membership cheaper.",
+    "Spreadsheet or calculator: =29.00-25.00",
     "The $25.00 joining fee spread over 12 months adds $2.08 per month."
    ],
    "misconceptions": [
@@ -7639,9 +7813,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even visits = membership cost ÷ price per visit, rounded up.",
     "Pay per visit: 8 × $6.00 = $48.00.",
     "Membership: $35.00.",
     "Break-even: $35.00 ÷ $6.00 ≈ 5.83, so 6 or more visits make the membership cheaper.",
+    "Spreadsheet or calculator: =ROUNDUP(35.00/6.00,0)",
     "The $25.00 joining fee spread over 12 months adds $2.08 per month."
    ],
    "misconceptions": [
@@ -7671,9 +7847,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even visits = membership cost ÷ price per visit, rounded up.",
     "Pay per visit: 8 × $8.00 = $64.00.",
     "Membership: $29.00.",
     "Break-even: $29.00 ÷ $8.00 ≈ 3.63, so 4 or more visits make the membership cheaper.",
+    "Spreadsheet or calculator: =ROUNDUP(29.00/8.00,0)",
     "The $49.00 joining fee spread over 12 months adds $4.08 per month."
    ],
    "misconceptions": [
@@ -7703,9 +7881,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even visits = membership cost ÷ price per visit, rounded up.",
     "Pay per visit: 7 × $8.00 = $56.00.",
     "Membership: $35.00.",
     "Break-even: $35.00 ÷ $8.00 ≈ 4.38, so 5 or more visits make the membership cheaper.",
+    "Spreadsheet or calculator: =ROUNDUP(35.00/8.00,0)",
     "The $25.00 joining fee spread over 12 months adds $2.08 per month."
    ],
    "misconceptions": [
@@ -7735,9 +7915,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even visits = membership cost ÷ price per visit, rounded up.",
     "Pay per visit: 4 × $8.00 = $32.00.",
     "Membership: $35.00.",
     "Break-even: $35.00 ÷ $8.00 ≈ 4.38, so 5 or more visits make the membership cheaper.",
+    "Spreadsheet or calculator: =ROUNDUP(35.00/8.00,0)",
     "The $49.00 joining fee spread over 12 months adds $4.08 per month."
    ],
    "misconceptions": [
@@ -7767,9 +7949,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even visits = membership cost ÷ price per visit, rounded up.",
     "Pay per visit: 5 × $6.00 = $30.00.",
     "Membership: $35.00.",
     "Break-even: $35.00 ÷ $6.00 ≈ 5.83, so 6 or more visits make the membership cheaper.",
+    "Spreadsheet or calculator: =ROUNDUP(35.00/6.00,0)",
     "The $49.00 joining fee spread over 12 months adds $4.08 per month."
    ],
    "misconceptions": [
@@ -7799,9 +7983,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: break-even visits = membership cost ÷ price per visit, rounded up.",
     "Pay per visit: 6 × $7.00 = $42.00.",
     "Membership: $29.00.",
     "Break-even: $29.00 ÷ $7.00 ≈ 4.14, so 5 or more visits make the membership cheaper.",
+    "Spreadsheet or calculator: =ROUNDUP(29.00/7.00,0)",
     "The $25.00 joining fee spread over 12 months adds $2.08 per month."
    ],
    "misconceptions": [
@@ -7833,7 +8019,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = price × times per week × 52.",
     "$5.75 × 5 × 52 = $1,495.00 per year.",
+    "Spreadsheet or calculator: =5.75*5*52",
     "Opportunity cost: that $1,495.00 could fund a large share of a starter emergency fund."
    ]
   },
@@ -7861,7 +8049,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = price × times per week × 52.",
     "$11.50 × 5 × 52 = $2,990.00 per year.",
+    "Spreadsheet or calculator: =11.50*5*52",
     "Opportunity cost: that $2,990.00 could fund a large share of a starter emergency fund."
    ]
   },
@@ -7889,7 +8079,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = price × times per week × 52.",
     "$13.80 × 2 × 52 = $1,435.20 per year.",
+    "Spreadsheet or calculator: =13.80*2*52",
     "Opportunity cost: that $1,435.20 could fund a large share of a starter emergency fund."
    ]
   },
@@ -7917,7 +8109,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = price × times per week × 52.",
     "$11.50 × 5 × 52 = $2,990.00 per year.",
+    "Spreadsheet or calculator: =11.50*5*52",
     "Opportunity cost: that $2,990.00 could fund a large share of a starter emergency fund."
    ]
   },
@@ -7945,7 +8139,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = price × times per week × 52.",
     "$4.10 × 5 × 52 = $1,066.00 per year.",
+    "Spreadsheet or calculator: =4.10*5*52",
     "Opportunity cost: that $1,066.00 could fund a large share of a starter emergency fund."
    ]
   },
@@ -7973,7 +8169,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = price × times per week × 52.",
     "$5.75 × 5 × 52 = $1,495.00 per year.",
+    "Spreadsheet or calculator: =5.75*5*52",
     "Opportunity cost: that $1,495.00 could fund a large share of a starter emergency fund."
    ]
   },
@@ -8001,7 +8199,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: yearly cost = price × times per week × 52.",
     "$5.75 × 5 × 52 = $1,495.00 per year.",
+    "Spreadsheet or calculator: =5.75*5*52",
     "Opportunity cost: that $1,495.00 could fund a large share of a starter emergency fund."
    ]
   },
@@ -8229,9 +8429,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = regular price × (1 − discount) × (1 + tax rate).",
     "Sale price = $520.00 × 0.6 = $312.00.",
     "Tax = $312.00 × 0.0625 = $19.50.",
     "Total = $331.50.",
+    "Spreadsheet or calculator: =(312.00*0.0625)+(520.00*0.6)",
     "Ask: was this purchase planned? Savings only matter if you intended to buy it."
    ]
   },
@@ -8239,7 +8441,7 @@
    "id": "fa-budgeting-s04-sp-sale-02",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "sp-sale",
    "type": "calculation",
    "activityTypes": [
@@ -8259,9 +8461,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = regular price × (1 − discount) × (1 + tax rate).",
     "Sale price = $164.50 × 0.6 = $98.70.",
     "Tax = $98.70 × 0.0625 = $6.17.",
     "Total = $104.87.",
+    "Spreadsheet or calculator: =(98.70*0.0625)+(164.50*0.6)",
     "Ask: was this purchase planned? Savings only matter if you intended to buy it."
    ]
   },
@@ -8289,9 +8493,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = regular price × (1 − discount) × (1 + tax rate).",
     "Sale price = $129.99 × 0.8 = $103.99.",
     "Tax = $103.99 × 0.0625 = $6.50.",
     "Total = $110.49.",
+    "Spreadsheet or calculator: =(103.99*0.0625)+(129.99*0.8)",
     "Ask: was this purchase planned? Savings only matter if you intended to buy it."
    ]
   },
@@ -8319,9 +8525,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = regular price × (1 − discount) × (1 + tax rate).",
     "Sale price = $520 × 0.8 = $416.",
     "Tax = $416 × 0.0625 = $26.",
     "Total = $442.",
+    "Spreadsheet or calculator: =(416*0.0625)+(520*0.8)",
     "Ask: was this purchase planned? Savings only matter if you intended to buy it."
    ]
   },
@@ -8349,9 +8557,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = regular price × (1 − discount) × (1 + tax rate).",
     "Sale price = $520.00 × 0.75 = $390.00.",
     "Tax = $390.00 × 0.0625 = $24.38.",
     "Total = $414.38.",
+    "Spreadsheet or calculator: =(390.00*0.0625)+(520.00*0.75)",
     "Ask: was this purchase planned? Savings only matter if you intended to buy it."
    ]
   },
@@ -8379,9 +8589,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = regular price × (1 − discount) × (1 + tax rate).",
     "Sale price = $449.99 × 0.6 = $269.99.",
     "Tax = $269.99 × 0.0625 = $16.87.",
     "Total = $286.86.",
+    "Spreadsheet or calculator: =(269.99*0.0625)+(449.99*0.6)",
     "Ask: was this purchase planned? Savings only matter if you intended to buy it."
    ]
   },
@@ -8409,9 +8621,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = regular price × (1 − discount) × (1 + tax rate).",
     "Sale price = $189.00 × 0.6 = $113.40.",
     "Tax = $113.40 × 0.0625 = $7.09.",
     "Total = $120.49.",
+    "Spreadsheet or calculator: =(113.40*0.0625)+(189.00*0.6)",
     "Ask: was this purchase planned? Savings only matter if you intended to buy it."
    ]
   },
@@ -9101,8 +9315,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: needs = 50%, wants = 30%, savings and debt = 20% of take-home pay.",
     "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
     "Needs: 50% × $2,325.00 = $1,162.50.",
+    "Spreadsheet or calculator: =50%*2325.00",
     "The guideline is a starting point; high rent may push needs above 50%."
    ]
   },
@@ -9130,8 +9346,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: needs = 50%, wants = 30%, savings and debt = 20% of take-home pay.",
     "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
     "Wants: 30% × $3,675.00 = $1,102.50.",
+    "Spreadsheet or calculator: =30%*3675.00",
     "The guideline is a starting point; high rent may push needs above 50%."
    ]
   },
@@ -9159,8 +9377,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: needs = 50%, wants = 30%, savings and debt = 20% of take-home pay.",
     "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
     "Needs: 50% × $2,350 = $1,175.",
+    "Spreadsheet or calculator: =50%*2350",
     "The guideline is a starting point; high rent may push needs above 50%."
    ]
   },
@@ -9188,8 +9408,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: needs = 50%, wants = 30%, savings and debt = 20% of take-home pay.",
     "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
     "Savings and debt payments: 20% × $3,725 = $745.",
+    "Spreadsheet or calculator: =20%*3725",
     "The guideline is a starting point; high rent may push needs above 50%."
    ]
   },
@@ -9217,8 +9439,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: needs = 50%, wants = 30%, savings and debt = 20% of take-home pay.",
     "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
     "Wants: 30% × $4,075.00 = $1,222.50.",
+    "Spreadsheet or calculator: =30%*4075.00",
     "The guideline is a starting point; high rent may push needs above 50%."
    ]
   },
@@ -9246,8 +9470,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: needs = 50%, wants = 30%, savings and debt = 20% of take-home pay.",
     "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
     "Needs: 50% × $4,075.00 = $2,037.50.",
+    "Spreadsheet or calculator: =50%*4075.00",
     "The guideline is a starting point; high rent may push needs above 50%."
    ]
   },
@@ -9275,8 +9501,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: needs = 50%, wants = 30%, savings and debt = 20% of take-home pay.",
     "50/30/20 means 50% needs, 30% wants, 20% savings and debt payments.",
     "Needs: 50% × $4,175.00 = $2,087.50.",
+    "Spreadsheet or calculator: =50%*4175.00",
     "The guideline is a starting point; high rent may push needs above 50%."
    ]
   },
@@ -9304,6 +9532,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = sum of past months ÷ number of months.",
     "Sum = $445.36.",
     "Average = sum ÷ 3 = $148.45.",
     "Variable expenses change month to month, so budgets use an average (or a little more)."
@@ -9333,6 +9562,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = sum of past months ÷ number of months.",
     "Sum = $433.05.",
     "Average = sum ÷ 3 = $144.35.",
     "Variable expenses change month to month, so budgets use an average (or a little more)."
@@ -9362,6 +9592,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = sum of past months ÷ number of months.",
     "Sum = $420.79.",
     "Average = sum ÷ 3 = $140.26.",
     "Variable expenses change month to month, so budgets use an average (or a little more)."
@@ -9391,6 +9622,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = sum of past months ÷ number of months.",
     "Sum = $532.87.",
     "Average = sum ÷ 3 = $177.62.",
     "Variable expenses change month to month, so budgets use an average (or a little more)."
@@ -9420,6 +9652,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = sum of past months ÷ number of months.",
     "Sum = $356.57.",
     "Average = sum ÷ 3 = $118.86.",
     "Variable expenses change month to month, so budgets use an average (or a little more)."
@@ -9449,6 +9682,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = sum of past months ÷ number of months.",
     "Sum = $445.19.",
     "Average = sum ÷ 3 = $148.40.",
     "Variable expenses change month to month, so budgets use an average (or a little more)."
@@ -9478,6 +9712,7 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: budget = sum of past months ÷ number of months.",
     "Sum = $455.73.",
     "Average = sum ÷ 3 = $151.91.",
     "Variable expenses change month to month, so budgets use an average (or a little more)."
@@ -9507,6 +9742,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: fixed cost + cost per unit × units ≤ budget, so units ≤ (budget − fixed) ÷ cost per unit, rounded down.",
     "18g ≤ 500 − 60 = 440.",
     "g ≤ 24.44.",
     "Guests must be whole people, so round down: 24 guests."
@@ -9539,6 +9775,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: fixed cost + cost per unit × units ≤ budget, so units ≤ (budget − fixed) ÷ cost per unit, rounded down.",
     "16.75g ≤ 410 − 35 = 375.",
     "g ≤ 22.39.",
     "Guests must be whole people, so round down: 22 guests."
@@ -9571,6 +9808,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: fixed cost + cost per unit × units ≤ budget, so units ≤ (budget − fixed) ÷ cost per unit, rounded down.",
     "18g ≤ 380 − 75 = 305.",
     "g ≤ 16.94.",
     "Guests must be whole people, so round down: 16 guests."
@@ -9603,6 +9841,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: fixed cost + cost per unit × units ≤ budget, so units ≤ (budget − fixed) ÷ cost per unit, rounded down.",
     "12.5g ≤ 400 − 60 = 340.",
     "g ≤ 27.20.",
     "Guests must be whole people, so round down: 27 guests."
@@ -9635,6 +9874,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: fixed cost + cost per unit × units ≤ budget, so units ≤ (budget − fixed) ÷ cost per unit, rounded down.",
     "14g ≤ 320 − 40 = 280.",
     "g ≤ 20.",
     "Guests must be whole people, so round down: 20 guests."
@@ -9667,6 +9907,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: fixed cost + cost per unit × units ≤ budget, so units ≤ (budget − fixed) ÷ cost per unit, rounded down.",
     "16.75g ≤ 360 − 25 = 335.",
     "g ≤ 20.",
     "Guests must be whole people, so round down: 20 guests."
@@ -9699,6 +9940,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: fixed cost + cost per unit × units ≤ budget, so units ≤ (budget − fixed) ÷ cost per unit, rounded down.",
     "16.75g ≤ 310 − 45 = 265.",
     "g ≤ 15.82.",
     "Guests must be whole people, so round down: 15 guests."
@@ -9729,8 +9971,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = monthly price × 12 − yearly price.",
     "Monthly for a year = $24.99 × 12 = $299.88.",
     "Savings = $299.88 − $239.90 = $59.98.",
+    "Spreadsheet or calculator: =299.88-239.90",
     "The annual plan only saves money if you would really keep the service for the whole year."
    ]
   },
@@ -9756,8 +10000,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = monthly price × 12 − yearly price.",
     "Monthly for a year = $9.99 × 12 = $119.88.",
     "Savings = $119.88 − $95.90 = $23.98.",
+    "Spreadsheet or calculator: =119.88-95.90",
     "The annual plan only saves money if you would really keep the service for the whole year."
    ]
   },
@@ -9783,8 +10029,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = monthly price × 12 − yearly price.",
     "Monthly for a year = $9.99 × 12 = $119.88.",
     "Savings = $119.88 − $89.91 = $29.97.",
+    "Spreadsheet or calculator: =119.88-89.91",
     "The annual plan only saves money if you would really keep the service for the whole year."
    ]
   },
@@ -9810,8 +10058,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = monthly price × 12 − yearly price.",
     "Monthly for a year = $14.99 × 12 = $179.88.",
     "Savings = $179.88 − $149.30 = $30.58.",
+    "Spreadsheet or calculator: =179.88-149.30",
     "The annual plan only saves money if you would really keep the service for the whole year."
    ]
   },
@@ -9837,8 +10087,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = monthly price × 12 − yearly price.",
     "Monthly for a year = $9.99 × 12 = $119.88.",
     "Savings = $119.88 − $99.50 = $20.38.",
+    "Spreadsheet or calculator: =119.88-99.50",
     "The annual plan only saves money if you would really keep the service for the whole year."
    ]
   },
@@ -9864,8 +10116,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = monthly price × 12 − yearly price.",
     "Monthly for a year = $34.99 × 12 = $419.88.",
     "Savings = $419.88 − $314.91 = $104.97.",
+    "Spreadsheet or calculator: =419.88-314.91",
     "The annual plan only saves money if you would really keep the service for the whole year."
    ]
   },
@@ -9891,8 +10145,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: savings = monthly price × 12 − yearly price.",
     "Monthly for a year = $34.99 × 12 = $419.88.",
     "Savings = $419.88 − $356.90 = $62.98.",
+    "Spreadsheet or calculator: =419.88-356.90",
     "The annual plan only saves money if you would really keep the service for the whole year."
    ]
   },
@@ -9920,7 +10176,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Cash flow = income − expenses.",
     "$3,250 − $1,500 = $1,750.",
+    "Spreadsheet or calculator: =3250-1500",
     "Positive cash flow can go to savings."
    ]
   },
@@ -9948,7 +10206,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Cash flow = income − expenses.",
     "$1,950 − $2,850 = −$900.",
+    "Spreadsheet or calculator: =1950-2850",
     "Negative cash flow means spending more than earning."
    ]
   },
@@ -9976,7 +10236,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Cash flow = income − expenses.",
     "$4,200 − $3,850 = $350.",
+    "Spreadsheet or calculator: =4200-3850",
     "Positive cash flow can go to savings."
    ]
   },
@@ -10004,7 +10266,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: Cash flow = income − expenses.",
     "$2,000 − $1,500 = $500.",
+    "Spreadsheet or calculator: =2000-1500",
     "Positive cash flow can go to savings."
    ]
   },
@@ -10032,9 +10296,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = goal ÷ (income − spending − yearly bills ÷ 12), rounded up.",
     "Set aside the yearly bill monthly: $800.00 ÷ 12 = $66.67.",
     "Monthly savings = $3,600.00 − $1,800.00 − $66.67 = $1,733.33.",
-    "$2,500.00 ÷ $1,733.33 = 1.44, so 2 months (round up)."
+    "$2,500.00 ÷ $1,733.33 = 1.44, so 2 months (round up).",
+    "Spreadsheet or calculator: =ROUNDUP(2500.00/1733.33,0)",
+    "So the answer is 2; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -10061,9 +10328,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = goal ÷ (income − spending − yearly bills ÷ 12), rounded up.",
     "Set aside the yearly bill monthly: $1,400.00 ÷ 12 = $116.67.",
     "Monthly savings = $2,400.00 − $1,800.00 − $116.67 = $483.33.",
-    "$5,000.00 ÷ $483.33 = 10.34, so 11 months (round up)."
+    "$5,000.00 ÷ $483.33 = 10.34, so 11 months (round up).",
+    "Spreadsheet or calculator: =ROUNDUP(5000.00/483.33,0)",
+    "So the answer is 11; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -10090,9 +10360,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = goal ÷ (income − spending − yearly bills ÷ 12), rounded up.",
     "Set aside the yearly bill monthly: $1,500 ÷ 12 = $125.",
     "Monthly savings = $3,700 − $2,050 − $125 = $1,525.",
-    "$5,500 ÷ $1,525 = 3.61, so 4 months (round up)."
+    "$5,500 ÷ $1,525 = 3.61, so 4 months (round up).",
+    "Spreadsheet or calculator: =ROUNDUP(5500/1525,0)",
+    "So the answer is 4; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -10119,9 +10392,12 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: months = goal ÷ (income − spending − yearly bills ÷ 12), rounded up.",
     "Set aside the yearly bill monthly: $650.00 ÷ 12 = $54.17.",
     "Monthly savings = $4,150.00 − $2,900.00 − $54.17 = $1,195.83.",
-    "$3,600.00 ÷ $1,195.83 = 3.01, so 4 months (round up)."
+    "$3,600.00 ÷ $1,195.83 = 3.01, so 4 months (round up).",
+    "Spreadsheet or calculator: =ROUNDUP(3600.00/1195.83,0)",
+    "So the answer is 4; a positive monthly cash flow is what makes saving possible."
    ]
   },
   {
@@ -10148,7 +10424,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,325 + $70 + $390 = $1,785."
+    "Formula: total fixed expenses = sum of the fixed expenses.",
+    "$1,325 + $70 + $390 = $1,785.",
+    "Spreadsheet or calculator: =1325+70+390",
+    "So the answer is $1,785; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10175,7 +10454,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$850 + $65 + $290 = $1,205."
+    "Formula: total fixed expenses = sum of the fixed expenses.",
+    "$850 + $65 + $290 = $1,205.",
+    "Spreadsheet or calculator: =850+65+290",
+    "So the answer is $1,205; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10202,7 +10484,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,300 + $75 + $400 = $1,775."
+    "Formula: total fixed expenses = sum of the fixed expenses.",
+    "$1,300 + $75 + $400 = $1,775.",
+    "Spreadsheet or calculator: =1300+75+400",
+    "So the answer is $1,775; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10229,7 +10514,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$725 + $50 + $250 = $1,025."
+    "Formula: total fixed expenses = sum of the fixed expenses.",
+    "$725 + $50 + $250 = $1,025.",
+    "Spreadsheet or calculator: =725+50+250",
+    "So the answer is $1,025; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10256,7 +10544,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$875 + $70 + $230 = $1,175."
+    "Formula: total fixed expenses = sum of the fixed expenses.",
+    "$875 + $70 + $230 = $1,175.",
+    "Spreadsheet or calculator: =875+70+230",
+    "So the answer is $1,175; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10283,7 +10574,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,150 + $70 + $270 = $1,490."
+    "Formula: total fixed expenses = sum of the fixed expenses.",
+    "$1,150 + $70 + $270 = $1,490.",
+    "Spreadsheet or calculator: =1150+70+270",
+    "So the answer is $1,490; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10310,8 +10604,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: percent cut = amount to free up ÷ current spending.",
     "Percent cut = $215 ÷ $760.",
-    "= 0.2829 ≈ 28.3%."
+    "= 0.2829 ≈ 28.3%.",
+    "Spreadsheet or calculator: =215/760 (then format as a percent)",
+    "So the answer is 28.3%; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10338,8 +10635,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: percent cut = amount to free up ÷ current spending.",
     "Percent cut = $110 ÷ $730.",
-    "= 0.1507 ≈ 15.1%."
+    "= 0.1507 ≈ 15.1%.",
+    "Spreadsheet or calculator: =110/730 (then format as a percent)",
+    "So the answer is 15.1%; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10366,8 +10666,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: percent cut = amount to free up ÷ current spending.",
     "Percent cut = $190 ÷ $760.",
-    "= 0.2500 ≈ 25.0%."
+    "= 0.2500 ≈ 25.0%.",
+    "Spreadsheet or calculator: =190/760 (then format as a percent)",
+    "So the answer is 25%; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10394,8 +10697,11 @@
     "unit": "%"
    },
    "solutionSteps": [
+    "Formula: percent cut = amount to free up ÷ current spending.",
     "Percent cut = $130 ÷ $690.",
-    "= 0.1884 ≈ 18.8%."
+    "= 0.1884 ≈ 18.8%.",
+    "Spreadsheet or calculator: =130/690 (then format as a percent)",
+    "So the answer is 18.8%; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10422,7 +10728,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Number of books = budget ÷ price.",
     "$75 ÷ $8 = 9.38.",
+    "Spreadsheet or calculator: =ROUNDDOWN(75/8,0)",
     "Round down: 9 books."
    ]
   },
@@ -10450,7 +10758,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Number of books = budget ÷ price.",
     "$40 ÷ $12 = 3.33.",
+    "Spreadsheet or calculator: =ROUNDDOWN(40/12,0)",
     "Round down: 3 books."
    ]
   },
@@ -10478,7 +10788,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Number of books = budget ÷ price.",
     "$90 ÷ $8 = 11.25.",
+    "Spreadsheet or calculator: =ROUNDDOWN(90/8,0)",
     "Round down: 11 books."
    ]
   },
@@ -10506,7 +10818,9 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: Number of books = budget ÷ price.",
     "$200 ÷ $15 = 13.33.",
+    "Spreadsheet or calculator: =ROUNDDOWN(200/15,0)",
     "Round down: 13 books."
    ]
   },
@@ -10534,9 +10848,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: items ≤ (budget ÷ (1 + tax) − fixed costs) ÷ price each, rounded down.",
     "Before tax, the total must be ≤ $280.00 ÷ 1.08 = $259.26.",
     "Coaches' lunches = 2 × $10.75 = $21.50.",
-    "Tickets ≤ ($259.26 − $21.50) ÷ $14.50 = 16.40 → 16."
+    "Tickets ≤ ($259.26 − $21.50) ÷ $14.50 = 16.40 → 16.",
+    "So the answer is 16; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -10563,9 +10879,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: items ≤ (budget ÷ (1 + tax) − fixed costs) ÷ price each, rounded down.",
     "Before tax, the total must be ≤ $280.00 ÷ 1.08 = $259.26.",
     "Coaches' lunches = 5 × $10.75 = $53.75.",
-    "Tickets ≤ ($259.26 − $53.75) ÷ $13.75 = 14.95 → 14."
+    "Tickets ≤ ($259.26 − $53.75) ÷ $13.75 = 14.95 → 14.",
+    "So the answer is 14; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -10592,9 +10910,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: items ≤ (budget ÷ (1 + tax) − fixed costs) ÷ price each, rounded down.",
     "Before tax, the total must be ≤ $150.00 ÷ 1.08 = $138.89.",
     "Coaches' lunches = 4 × $9.25 = $37.00.",
-    "Tickets ≤ ($138.89 − $37.00) ÷ $13.75 = 7.41 → 7."
+    "Tickets ≤ ($138.89 − $37.00) ÷ $13.75 = 7.41 → 7.",
+    "So the answer is 7; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -10621,9 +10941,11 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: items ≤ (budget ÷ (1 + tax) − fixed costs) ÷ price each, rounded down.",
     "Before tax, the total must be ≤ $190.00 ÷ 1.08 = $175.93.",
     "Coaches' lunches = 2 × $8.50 = $17.00.",
-    "Tickets ≤ ($175.93 − $17.00) ÷ $14.50 = 10.96 → 10."
+    "Tickets ≤ ($175.93 − $17.00) ÷ $14.50 = 10.96 → 10.",
+    "So the answer is 10; knowing the limit first keeps the plan inside the budget."
    ]
   },
   {
@@ -10650,7 +10972,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4 × 5 × 52 = $1,040."
+    "Formula: Yearly cost = price × days per week × 52.",
+    "$4 × 5 × 52 = $1,040.",
+    "Spreadsheet or calculator: =4*5*52",
+    "So the answer is $1,040; compare the total cost over the time you will really use it."
    ]
   },
   {
@@ -10677,7 +11002,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6 × 5 × 52 = $1,560."
+    "Formula: Yearly cost = price × days per week × 52.",
+    "$6 × 5 × 52 = $1,560.",
+    "Spreadsheet or calculator: =6*5*52",
+    "So the answer is $1,560; compare the total cost over the time you will really use it."
    ]
   },
   {
@@ -10704,7 +11032,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3 × 5 × 52 = $780."
+    "Formula: Yearly cost = price × days per week × 52.",
+    "$3 × 5 × 52 = $780.",
+    "Spreadsheet or calculator: =3*5*52",
+    "So the answer is $780; compare the total cost over the time you will really use it."
    ]
   },
   {
@@ -10731,7 +11062,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4 × 5 × 52 = $1,040."
+    "Formula: Yearly cost = price × days per week × 52.",
+    "$4 × 5 × 52 = $1,040.",
+    "Spreadsheet or calculator: =4*5*52",
+    "So the answer is $1,040; compare the total cost over the time you will really use it."
    ]
   },
   {
@@ -10756,6 +11090,7 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: renting n times costs rent × n; buying is cheaper once rent × n ≥ price, so n ≥ price ÷ rent.",
     "Renting n times costs $25n; buying costs $200.",
     "$200 ÷ $25 = 8.00.",
     "Buying is cheaper from use 9 on."
@@ -10783,8 +11118,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: renting n times costs rent × n; buying is cheaper once rent × n ≥ price, so n ≥ price ÷ rent.",
     "Renting n times costs $25n; buying costs $310.",
     "$310 ÷ $25 = 12.40.",
+    "Spreadsheet or calculator: =ROUNDUP(310/25,0)",
     "Buying is cheaper from use 13 on."
    ]
   },
@@ -10810,8 +11147,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: renting n times costs rent × n; buying is cheaper once rent × n ≥ price, so n ≥ price ÷ rent.",
     "Renting n times costs $25n; buying costs $310.",
     "$310 ÷ $25 = 12.40.",
+    "Spreadsheet or calculator: =ROUNDUP(310/25,0)",
     "Buying is cheaper from use 13 on."
    ]
   },
@@ -10837,8 +11176,10 @@
     "unit": "count"
    },
    "solutionSteps": [
+    "Formula: renting n times costs rent × n; buying is cheaper once rent × n ≥ price, so n ≥ price ÷ rent.",
     "Renting n times costs $50n; buying costs $270.",
     "$270 ÷ $50 = 5.40.",
+    "Spreadsheet or calculator: =ROUNDUP(270/50,0)",
     "Buying is cheaper from use 6 on."
    ]
   },
@@ -10911,7 +11252,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "44,133 − 43,163 = 970 kWh."
+    "Formula: Usage = current reading − previous reading.",
+    "44,133 − 43,163 = 970 kWh.",
+    "Spreadsheet or calculator: =44133-43163",
+    "So the answer is 970 kWh; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -10985,7 +11329,9 @@
    "solutionSteps": [
     "Usage = 416 kWh.",
     "416 × $0.13 = $54.08.",
-    "+ $15.00 = $69.08."
+    "+ $15.00 = $69.08.",
+    "Spreadsheet or calculator: =(416*0.13)+15.00",
+    "So the answer is $69.08; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -11059,7 +11405,9 @@
    "solutionSteps": [
     "Charges = 871 × $0.13 + $15.00 = $128.23.",
     "With 5% tax: $128.23 × 1.05 = $134.64.",
-    "$134.64 − $140.00 = −$5.36."
+    "$134.64 − $140.00 = −$5.36.",
+    "Spreadsheet or calculator: =134.64-140.00",
+    "So the answer is −$5.36; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -11131,7 +11479,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "56,649 − 55,411 = 1238 kWh."
+    "Formula: Usage = current reading − previous reading.",
+    "56,649 − 55,411 = 1238 kWh.",
+    "Spreadsheet or calculator: =56649-55411",
+    "So the answer is 1238 kWh; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -11205,7 +11556,9 @@
    "solutionSteps": [
     "Usage = 481 kWh.",
     "481 × $0.16 = $76.96.",
-    "+ $12.00 = $88.96."
+    "+ $12.00 = $88.96.",
+    "Spreadsheet or calculator: =(481*0.16)+12.00",
+    "So the answer is $88.96; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -11279,7 +11632,9 @@
    "solutionSteps": [
     "Charges = 1356 × $0.13 + $12.00 = $188.28.",
     "With 5% tax: $188.28 × 1.05 = $197.69.",
-    "$197.69 − $110.00 = $87.69."
+    "$197.69 − $110.00 = $87.69.",
+    "Spreadsheet or calculator: =197.69-110.00",
+    "So the answer is $87.69; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -11351,7 +11706,10 @@
     "unit": "count"
    },
    "solutionSteps": [
-    "51,845 − 50,950 = 895 kWh."
+    "Formula: Usage = current reading − previous reading.",
+    "51,845 − 50,950 = 895 kWh.",
+    "Spreadsheet or calculator: =51845-50950",
+    "So the answer is 895 kWh; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -11425,7 +11783,9 @@
    "solutionSteps": [
     "Usage = 567 kWh.",
     "567 × $0.18 = $102.06.",
-    "+ $10.00 = $112.06."
+    "+ $10.00 = $112.06.",
+    "Spreadsheet or calculator: =(567*0.18)+10.00",
+    "So the answer is $112.06; variable costs are where a budget can usually be trimmed first."
    ]
   },
   {
@@ -11499,7 +11859,3636 @@
    "solutionSteps": [
     "Charges = 1298 × $0.16 + $10.00 = $217.68.",
     "With 5% tax: $217.68 × 1.05 = $228.56.",
-    "$228.56 − $100.00 = $128.56."
+    "$228.56 − $100.00 = $128.56.",
+    "Spreadsheet or calculator: =228.56-100.00",
+    "So the answer is $128.56; variable costs are where a budget can usually be trimmed first."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "support",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "The bike-share membership costs C(x) = $25.00 + $1.50x a month, where x is the number of rides. What does Riley pay in a month with 11 rides?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a bike-share membership",
+     "x": {
+      "label": "Rides per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 50,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         25
+        ],
+        [
+         0.2,
+         25.3
+        ],
+        [
+         0.4,
+         25.6
+        ],
+        [
+         0.6,
+         25.9
+        ],
+        [
+         0.8,
+         26.2
+        ],
+        [
+         1,
+         26.5
+        ],
+        [
+         1.2,
+         26.8
+        ],
+        [
+         1.4,
+         27.1
+        ],
+        [
+         1.6,
+         27.4
+        ],
+        [
+         1.8,
+         27.7
+        ],
+        [
+         2,
+         28
+        ],
+        [
+         2.2,
+         28.3
+        ],
+        [
+         2.4,
+         28.6
+        ],
+        [
+         2.6,
+         28.9
+        ],
+        [
+         2.8,
+         29.2
+        ],
+        [
+         3,
+         29.5
+        ],
+        [
+         3.2,
+         29.8
+        ],
+        [
+         3.4,
+         30.1
+        ],
+        [
+         3.6,
+         30.4
+        ],
+        [
+         3.8,
+         30.7
+        ],
+        [
+         4,
+         31
+        ],
+        [
+         4.2,
+         31.3
+        ],
+        [
+         4.4,
+         31.6
+        ],
+        [
+         4.6,
+         31.9
+        ],
+        [
+         4.8,
+         32.2
+        ],
+        [
+         5,
+         32.5
+        ],
+        [
+         5.2,
+         32.8
+        ],
+        [
+         5.4,
+         33.1
+        ],
+        [
+         5.6,
+         33.4
+        ],
+        [
+         5.8,
+         33.7
+        ],
+        [
+         6,
+         34
+        ],
+        [
+         6.2,
+         34.3
+        ],
+        [
+         6.4,
+         34.6
+        ],
+        [
+         6.6,
+         34.9
+        ],
+        [
+         6.8,
+         35.2
+        ],
+        [
+         7,
+         35.5
+        ],
+        [
+         7.2,
+         35.8
+        ],
+        [
+         7.4,
+         36.1
+        ],
+        [
+         7.6,
+         36.4
+        ],
+        [
+         7.8,
+         36.7
+        ],
+        [
+         8,
+         37
+        ],
+        [
+         8.2,
+         37.3
+        ],
+        [
+         8.4,
+         37.6
+        ],
+        [
+         8.6,
+         37.9
+        ],
+        [
+         8.8,
+         38.2
+        ],
+        [
+         9,
+         38.5
+        ],
+        [
+         9.2,
+         38.8
+        ],
+        [
+         9.4,
+         39.1
+        ],
+        [
+         9.6,
+         39.4
+        ],
+        [
+         9.8,
+         39.7
+        ],
+        [
+         10,
+         40
+        ],
+        [
+         10.2,
+         40.3
+        ],
+        [
+         10.4,
+         40.6
+        ],
+        [
+         10.6,
+         40.9
+        ],
+        [
+         10.8,
+         41.2
+        ],
+        [
+         11,
+         41.5
+        ],
+        [
+         11.2,
+         41.8
+        ],
+        [
+         11.4,
+         42.1
+        ],
+        [
+         11.6,
+         42.4
+        ],
+        [
+         11.8,
+         42.7
+        ],
+        [
+         12,
+         43
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 28,
+       "label": "(2, $28.00)"
+      },
+      {
+       "x": 8,
+       "y": 37,
+       "label": "(8, $37.00)"
+      }
+     ],
+     "caption": "C(x) = $25.00 + $1.50x"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$41.50",
+   "numeric": {
+    "value": 41.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: C(x) = fixed fee + price per ride × x.",
+    "Substitute: $25.00 + $1.50 × 11 = $41.50.",
+    "Spreadsheet: =25+1.5*11.",
+    "So Riley's bill is $41.50; the point (11, $41.50) is on the line."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-02",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Use the two marked points on the graph of the tutoring service's monthly cost. What is the slope of the line, the price per hour?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a tutoring service",
+     "x": {
+      "label": "Hours of tutoring per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 250,
+      "step": 50,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         30
+        ],
+        [
+         0.2,
+         33
+        ],
+        [
+         0.4,
+         36
+        ],
+        [
+         0.6,
+         39
+        ],
+        [
+         0.8,
+         42
+        ],
+        [
+         1,
+         45
+        ],
+        [
+         1.2,
+         48
+        ],
+        [
+         1.4,
+         51
+        ],
+        [
+         1.6,
+         54
+        ],
+        [
+         1.8,
+         57
+        ],
+        [
+         2,
+         60
+        ],
+        [
+         2.2,
+         63
+        ],
+        [
+         2.4,
+         66
+        ],
+        [
+         2.6,
+         69
+        ],
+        [
+         2.8,
+         72
+        ],
+        [
+         3,
+         75
+        ],
+        [
+         3.2,
+         78
+        ],
+        [
+         3.4,
+         81
+        ],
+        [
+         3.6,
+         84
+        ],
+        [
+         3.8,
+         87
+        ],
+        [
+         4,
+         90
+        ],
+        [
+         4.2,
+         93
+        ],
+        [
+         4.4,
+         96
+        ],
+        [
+         4.6,
+         99
+        ],
+        [
+         4.8,
+         102
+        ],
+        [
+         5,
+         105
+        ],
+        [
+         5.2,
+         108
+        ],
+        [
+         5.4,
+         111
+        ],
+        [
+         5.6,
+         114
+        ],
+        [
+         5.8,
+         117
+        ],
+        [
+         6,
+         120
+        ],
+        [
+         6.2,
+         123
+        ],
+        [
+         6.4,
+         126
+        ],
+        [
+         6.6,
+         129
+        ],
+        [
+         6.8,
+         132
+        ],
+        [
+         7,
+         135
+        ],
+        [
+         7.2,
+         138
+        ],
+        [
+         7.4,
+         141
+        ],
+        [
+         7.6,
+         144
+        ],
+        [
+         7.8,
+         147
+        ],
+        [
+         8,
+         150
+        ],
+        [
+         8.2,
+         153
+        ],
+        [
+         8.4,
+         156
+        ],
+        [
+         8.6,
+         159
+        ],
+        [
+         8.8,
+         162
+        ],
+        [
+         9,
+         165
+        ],
+        [
+         9.2,
+         168
+        ],
+        [
+         9.4,
+         171
+        ],
+        [
+         9.6,
+         174
+        ],
+        [
+         9.8,
+         177
+        ],
+        [
+         10,
+         180
+        ],
+        [
+         10.2,
+         183
+        ],
+        [
+         10.4,
+         186
+        ],
+        [
+         10.6,
+         189
+        ],
+        [
+         10.8,
+         192
+        ],
+        [
+         11,
+         195
+        ],
+        [
+         11.2,
+         198
+        ],
+        [
+         11.4,
+         201
+        ],
+        [
+         11.6,
+         204
+        ],
+        [
+         11.8,
+         207
+        ],
+        [
+         12,
+         210
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 60,
+       "label": "(2, $60)"
+      },
+      {
+       "x": 8,
+       "y": 150,
+       "label": "(8, $150)"
+      }
+     ],
+     "caption": "The cost is a linear function: a flat monthly fee plus a fixed price for each unit."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$15",
+   "numeric": {
+    "value": 15,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: slope m = [[C₂ − C₁ || x₂ − x₁]].",
+    "Substitute: [[$150 − $60 || 8 − 2]] = $90 ÷ 6 = $15.",
+    "Spreadsheet: =SLOPE({60.00,150.00},{2,8}) or =(150-60)/(8-2).",
+    "So every extra hour adds $15 to the bill; the y-intercept, $30, is the fee paid even with 0 hours of tutoring."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-03",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "advanced",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Leah budgets $209 a month for the tutoring service, which costs C(x) = $40 + $18x. What is the greatest whole number of hours of tutoring she can use and stay within budget?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a tutoring service",
+     "x": {
+      "label": "Hours of tutoring per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 300,
+      "step": 100,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         40
+        ],
+        [
+         0.2,
+         43.6
+        ],
+        [
+         0.4,
+         47.2
+        ],
+        [
+         0.6,
+         50.8
+        ],
+        [
+         0.8,
+         54.4
+        ],
+        [
+         1,
+         58
+        ],
+        [
+         1.2,
+         61.6
+        ],
+        [
+         1.4,
+         65.2
+        ],
+        [
+         1.6,
+         68.8
+        ],
+        [
+         1.8,
+         72.4
+        ],
+        [
+         2,
+         76
+        ],
+        [
+         2.2,
+         79.6
+        ],
+        [
+         2.4,
+         83.2
+        ],
+        [
+         2.6,
+         86.8
+        ],
+        [
+         2.8,
+         90.4
+        ],
+        [
+         3,
+         94
+        ],
+        [
+         3.2,
+         97.6
+        ],
+        [
+         3.4,
+         101.2
+        ],
+        [
+         3.6,
+         104.8
+        ],
+        [
+         3.8,
+         108.4
+        ],
+        [
+         4,
+         112
+        ],
+        [
+         4.2,
+         115.6
+        ],
+        [
+         4.4,
+         119.2
+        ],
+        [
+         4.6,
+         122.8
+        ],
+        [
+         4.8,
+         126.4
+        ],
+        [
+         5,
+         130
+        ],
+        [
+         5.2,
+         133.6
+        ],
+        [
+         5.4,
+         137.2
+        ],
+        [
+         5.6,
+         140.8
+        ],
+        [
+         5.8,
+         144.4
+        ],
+        [
+         6,
+         148
+        ],
+        [
+         6.2,
+         151.6
+        ],
+        [
+         6.4,
+         155.2
+        ],
+        [
+         6.6,
+         158.8
+        ],
+        [
+         6.8,
+         162.4
+        ],
+        [
+         7,
+         166
+        ],
+        [
+         7.2,
+         169.6
+        ],
+        [
+         7.4,
+         173.2
+        ],
+        [
+         7.6,
+         176.8
+        ],
+        [
+         7.8,
+         180.4
+        ],
+        [
+         8,
+         184
+        ],
+        [
+         8.2,
+         187.6
+        ],
+        [
+         8.4,
+         191.2
+        ],
+        [
+         8.6,
+         194.8
+        ],
+        [
+         8.8,
+         198.4
+        ],
+        [
+         9,
+         202
+        ],
+        [
+         9.2,
+         205.6
+        ],
+        [
+         9.4,
+         209.2
+        ],
+        [
+         9.6,
+         212.8
+        ],
+        [
+         9.8,
+         216.4
+        ],
+        [
+         10,
+         220
+        ],
+        [
+         10.2,
+         223.6
+        ],
+        [
+         10.4,
+         227.2
+        ],
+        [
+         10.6,
+         230.8
+        ],
+        [
+         10.8,
+         234.4
+        ],
+        [
+         11,
+         238
+        ],
+        [
+         11.2,
+         241.6
+        ],
+        [
+         11.4,
+         245.2
+        ],
+        [
+         11.6,
+         248.8
+        ],
+        [
+         11.8,
+         252.4
+        ],
+        [
+         12,
+         256
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 76,
+       "label": "(2, $76)"
+      },
+      {
+       "x": 8,
+       "y": 184,
+       "label": "(8, $184)"
+      }
+     ],
+     "caption": "C(x) = $40 + $18x"
+    }
+   },
+   "format": "short-answer",
+   "answer": "9",
+   "numeric": {
+    "value": 9,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve C(x) ≤ budget: $40 + $18x ≤ $209.",
+    "Substitute: x ≤ [[$209 − $40 || $18]] = 9.39.",
+    "Spreadsheet: =ROUNDDOWN((209-40)/18,0).",
+    "So Leah can use 9 hours of tutoring; one more would cost $220, over the $209 budget. On the graph, it is the last whole x where the line is at or below $209."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-04",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "support",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "The bike-share membership costs C(x) = $15.00 + $2.50x a month, where x is the number of rides. What does Aaliyah pay in a month with 5 rides?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a bike-share membership",
+     "x": {
+      "label": "Rides per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 50,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         15
+        ],
+        [
+         0.2,
+         15.5
+        ],
+        [
+         0.4,
+         16
+        ],
+        [
+         0.6,
+         16.5
+        ],
+        [
+         0.8,
+         17
+        ],
+        [
+         1,
+         17.5
+        ],
+        [
+         1.2,
+         18
+        ],
+        [
+         1.4,
+         18.5
+        ],
+        [
+         1.6,
+         19
+        ],
+        [
+         1.8,
+         19.5
+        ],
+        [
+         2,
+         20
+        ],
+        [
+         2.2,
+         20.5
+        ],
+        [
+         2.4,
+         21
+        ],
+        [
+         2.6,
+         21.5
+        ],
+        [
+         2.8,
+         22
+        ],
+        [
+         3,
+         22.5
+        ],
+        [
+         3.2,
+         23
+        ],
+        [
+         3.4,
+         23.5
+        ],
+        [
+         3.6,
+         24
+        ],
+        [
+         3.8,
+         24.5
+        ],
+        [
+         4,
+         25
+        ],
+        [
+         4.2,
+         25.5
+        ],
+        [
+         4.4,
+         26
+        ],
+        [
+         4.6,
+         26.5
+        ],
+        [
+         4.8,
+         27
+        ],
+        [
+         5,
+         27.5
+        ],
+        [
+         5.2,
+         28
+        ],
+        [
+         5.4,
+         28.5
+        ],
+        [
+         5.6,
+         29
+        ],
+        [
+         5.8,
+         29.5
+        ],
+        [
+         6,
+         30
+        ],
+        [
+         6.2,
+         30.5
+        ],
+        [
+         6.4,
+         31
+        ],
+        [
+         6.6,
+         31.5
+        ],
+        [
+         6.8,
+         32
+        ],
+        [
+         7,
+         32.5
+        ],
+        [
+         7.2,
+         33
+        ],
+        [
+         7.4,
+         33.5
+        ],
+        [
+         7.6,
+         34
+        ],
+        [
+         7.8,
+         34.5
+        ],
+        [
+         8,
+         35
+        ],
+        [
+         8.2,
+         35.5
+        ],
+        [
+         8.4,
+         36
+        ],
+        [
+         8.6,
+         36.5
+        ],
+        [
+         8.8,
+         37
+        ],
+        [
+         9,
+         37.5
+        ],
+        [
+         9.2,
+         38
+        ],
+        [
+         9.4,
+         38.5
+        ],
+        [
+         9.6,
+         39
+        ],
+        [
+         9.8,
+         39.5
+        ],
+        [
+         10,
+         40
+        ],
+        [
+         10.2,
+         40.5
+        ],
+        [
+         10.4,
+         41
+        ],
+        [
+         10.6,
+         41.5
+        ],
+        [
+         10.8,
+         42
+        ],
+        [
+         11,
+         42.5
+        ],
+        [
+         11.2,
+         43
+        ],
+        [
+         11.4,
+         43.5
+        ],
+        [
+         11.6,
+         44
+        ],
+        [
+         11.8,
+         44.5
+        ],
+        [
+         12,
+         45
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 20,
+       "label": "(2, $20.00)"
+      },
+      {
+       "x": 10,
+       "y": 40,
+       "label": "(10, $40.00)"
+      }
+     ],
+     "caption": "C(x) = $15.00 + $2.50x"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$27.50",
+   "numeric": {
+    "value": 27.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: C(x) = fixed fee + price per ride × x.",
+    "Substitute: $15.00 + $2.50 × 5 = $27.50.",
+    "Spreadsheet: =15+2.5*5.",
+    "So Aaliyah's bill is $27.50; the point (5, $27.50) is on the line."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-05",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "standard",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Use the two marked points on the graph of the phone plan's monthly cost. What is the slope of the line, the price per GB?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a phone plan",
+     "x": {
+      "label": "Gigabytes of data per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 80,
+      "step": 20,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         20
+        ],
+        [
+         0.2,
+         21
+        ],
+        [
+         0.4,
+         22
+        ],
+        [
+         0.6,
+         23
+        ],
+        [
+         0.8,
+         24
+        ],
+        [
+         1,
+         25
+        ],
+        [
+         1.2,
+         26
+        ],
+        [
+         1.4,
+         27
+        ],
+        [
+         1.6,
+         28
+        ],
+        [
+         1.8,
+         29
+        ],
+        [
+         2,
+         30
+        ],
+        [
+         2.2,
+         31
+        ],
+        [
+         2.4,
+         32
+        ],
+        [
+         2.6,
+         33
+        ],
+        [
+         2.8,
+         34
+        ],
+        [
+         3,
+         35
+        ],
+        [
+         3.2,
+         36
+        ],
+        [
+         3.4,
+         37
+        ],
+        [
+         3.6,
+         38
+        ],
+        [
+         3.8,
+         39
+        ],
+        [
+         4,
+         40
+        ],
+        [
+         4.2,
+         41
+        ],
+        [
+         4.4,
+         42
+        ],
+        [
+         4.6,
+         43
+        ],
+        [
+         4.8,
+         44
+        ],
+        [
+         5,
+         45
+        ],
+        [
+         5.2,
+         46
+        ],
+        [
+         5.4,
+         47
+        ],
+        [
+         5.6,
+         48
+        ],
+        [
+         5.8,
+         49
+        ],
+        [
+         6,
+         50
+        ],
+        [
+         6.2,
+         51
+        ],
+        [
+         6.4,
+         52
+        ],
+        [
+         6.6,
+         53
+        ],
+        [
+         6.8,
+         54
+        ],
+        [
+         7,
+         55
+        ],
+        [
+         7.2,
+         56
+        ],
+        [
+         7.4,
+         57
+        ],
+        [
+         7.6,
+         58
+        ],
+        [
+         7.8,
+         59
+        ],
+        [
+         8,
+         60
+        ],
+        [
+         8.2,
+         61
+        ],
+        [
+         8.4,
+         62
+        ],
+        [
+         8.6,
+         63
+        ],
+        [
+         8.8,
+         64
+        ],
+        [
+         9,
+         65
+        ],
+        [
+         9.2,
+         66
+        ],
+        [
+         9.4,
+         67
+        ],
+        [
+         9.6,
+         68
+        ],
+        [
+         9.8,
+         69
+        ],
+        [
+         10,
+         70
+        ],
+        [
+         10.2,
+         71
+        ],
+        [
+         10.4,
+         72
+        ],
+        [
+         10.6,
+         73
+        ],
+        [
+         10.8,
+         74
+        ],
+        [
+         11,
+         75
+        ],
+        [
+         11.2,
+         76
+        ],
+        [
+         11.4,
+         77
+        ],
+        [
+         11.6,
+         78
+        ],
+        [
+         11.8,
+         79
+        ],
+        [
+         12,
+         80
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 30,
+       "label": "(2, $30)"
+      },
+      {
+       "x": 10,
+       "y": 70,
+       "label": "(10, $70)"
+      }
+     ],
+     "caption": "The cost is a linear function: a flat monthly fee plus a fixed price for each unit."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$5",
+   "numeric": {
+    "value": 5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: slope m = [[C₂ − C₁ || x₂ − x₁]].",
+    "Substitute: [[$70 − $30 || 10 − 2]] = $40 ÷ 8 = $5.",
+    "Spreadsheet: =SLOPE({30.00,70.00},{2,10}) or =(70-30)/(10-2).",
+    "So every extra GB adds $5 to the bill; the y-intercept, $20, is the fee paid even with 0 gigabytes of data."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-06",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "advanced",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Imani budgets $79 a month for the phone plan, which costs C(x) = $35 + $4x. What is the greatest whole number of gigabytes of data she can use and stay within budget?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a phone plan",
+     "x": {
+      "label": "Gigabytes of data per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         35
+        ],
+        [
+         0.2,
+         35.8
+        ],
+        [
+         0.4,
+         36.6
+        ],
+        [
+         0.6,
+         37.4
+        ],
+        [
+         0.8,
+         38.2
+        ],
+        [
+         1,
+         39
+        ],
+        [
+         1.2,
+         39.8
+        ],
+        [
+         1.4,
+         40.6
+        ],
+        [
+         1.6,
+         41.4
+        ],
+        [
+         1.8,
+         42.2
+        ],
+        [
+         2,
+         43
+        ],
+        [
+         2.2,
+         43.8
+        ],
+        [
+         2.4,
+         44.6
+        ],
+        [
+         2.6,
+         45.4
+        ],
+        [
+         2.8,
+         46.2
+        ],
+        [
+         3,
+         47
+        ],
+        [
+         3.2,
+         47.8
+        ],
+        [
+         3.4,
+         48.6
+        ],
+        [
+         3.6,
+         49.4
+        ],
+        [
+         3.8,
+         50.2
+        ],
+        [
+         4,
+         51
+        ],
+        [
+         4.2,
+         51.8
+        ],
+        [
+         4.4,
+         52.6
+        ],
+        [
+         4.6,
+         53.4
+        ],
+        [
+         4.8,
+         54.2
+        ],
+        [
+         5,
+         55
+        ],
+        [
+         5.2,
+         55.8
+        ],
+        [
+         5.4,
+         56.6
+        ],
+        [
+         5.6,
+         57.4
+        ],
+        [
+         5.8,
+         58.2
+        ],
+        [
+         6,
+         59
+        ],
+        [
+         6.2,
+         59.8
+        ],
+        [
+         6.4,
+         60.6
+        ],
+        [
+         6.6,
+         61.4
+        ],
+        [
+         6.8,
+         62.2
+        ],
+        [
+         7,
+         63
+        ],
+        [
+         7.2,
+         63.8
+        ],
+        [
+         7.4,
+         64.6
+        ],
+        [
+         7.6,
+         65.4
+        ],
+        [
+         7.8,
+         66.2
+        ],
+        [
+         8,
+         67
+        ],
+        [
+         8.2,
+         67.8
+        ],
+        [
+         8.4,
+         68.6
+        ],
+        [
+         8.6,
+         69.4
+        ],
+        [
+         8.8,
+         70.2
+        ],
+        [
+         9,
+         71
+        ],
+        [
+         9.2,
+         71.8
+        ],
+        [
+         9.4,
+         72.6
+        ],
+        [
+         9.6,
+         73.4
+        ],
+        [
+         9.8,
+         74.2
+        ],
+        [
+         10,
+         75
+        ],
+        [
+         10.2,
+         75.8
+        ],
+        [
+         10.4,
+         76.6
+        ],
+        [
+         10.6,
+         77.4
+        ],
+        [
+         10.8,
+         78.2
+        ],
+        [
+         11,
+         79
+        ],
+        [
+         11.2,
+         79.8
+        ],
+        [
+         11.4,
+         80.6
+        ],
+        [
+         11.6,
+         81.4
+        ],
+        [
+         11.8,
+         82.2
+        ],
+        [
+         12,
+         83
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 43,
+       "label": "(2, $43)"
+      },
+      {
+       "x": 8,
+       "y": 67,
+       "label": "(8, $67)"
+      }
+     ],
+     "caption": "C(x) = $35 + $4x"
+    }
+   },
+   "format": "short-answer",
+   "answer": "11",
+   "numeric": {
+    "value": 11,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve C(x) ≤ budget: $35 + $4x ≤ $79.",
+    "Substitute: x ≤ [[$79 − $35 || $4]] = 11.00.",
+    "Spreadsheet: =ROUNDDOWN((79-35)/4,0).",
+    "So Imani can use 11 gigabytes of data; one more would cost $83, over the $79 budget. On the graph, it is the last whole x where the line is at or below $79."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-07",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "support",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "The phone plan costs C(x) = $35 + $3x a month, where x is the number of gigabytes of data. What does Camila pay in a month with 5 gigabytes of data?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a phone plan",
+     "x": {
+      "label": "Gigabytes of data per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 80,
+      "step": 20,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         35
+        ],
+        [
+         0.2,
+         35.6
+        ],
+        [
+         0.4,
+         36.2
+        ],
+        [
+         0.6,
+         36.8
+        ],
+        [
+         0.8,
+         37.4
+        ],
+        [
+         1,
+         38
+        ],
+        [
+         1.2,
+         38.6
+        ],
+        [
+         1.4,
+         39.2
+        ],
+        [
+         1.6,
+         39.8
+        ],
+        [
+         1.8,
+         40.4
+        ],
+        [
+         2,
+         41
+        ],
+        [
+         2.2,
+         41.6
+        ],
+        [
+         2.4,
+         42.2
+        ],
+        [
+         2.6,
+         42.8
+        ],
+        [
+         2.8,
+         43.4
+        ],
+        [
+         3,
+         44
+        ],
+        [
+         3.2,
+         44.6
+        ],
+        [
+         3.4,
+         45.2
+        ],
+        [
+         3.6,
+         45.8
+        ],
+        [
+         3.8,
+         46.4
+        ],
+        [
+         4,
+         47
+        ],
+        [
+         4.2,
+         47.6
+        ],
+        [
+         4.4,
+         48.2
+        ],
+        [
+         4.6,
+         48.8
+        ],
+        [
+         4.8,
+         49.4
+        ],
+        [
+         5,
+         50
+        ],
+        [
+         5.2,
+         50.6
+        ],
+        [
+         5.4,
+         51.2
+        ],
+        [
+         5.6,
+         51.8
+        ],
+        [
+         5.8,
+         52.4
+        ],
+        [
+         6,
+         53
+        ],
+        [
+         6.2,
+         53.6
+        ],
+        [
+         6.4,
+         54.2
+        ],
+        [
+         6.6,
+         54.8
+        ],
+        [
+         6.8,
+         55.4
+        ],
+        [
+         7,
+         56
+        ],
+        [
+         7.2,
+         56.6
+        ],
+        [
+         7.4,
+         57.2
+        ],
+        [
+         7.6,
+         57.8
+        ],
+        [
+         7.8,
+         58.4
+        ],
+        [
+         8,
+         59
+        ],
+        [
+         8.2,
+         59.6
+        ],
+        [
+         8.4,
+         60.2
+        ],
+        [
+         8.6,
+         60.8
+        ],
+        [
+         8.8,
+         61.4
+        ],
+        [
+         9,
+         62
+        ],
+        [
+         9.2,
+         62.6
+        ],
+        [
+         9.4,
+         63.2
+        ],
+        [
+         9.6,
+         63.8
+        ],
+        [
+         9.8,
+         64.4
+        ],
+        [
+         10,
+         65
+        ],
+        [
+         10.2,
+         65.6
+        ],
+        [
+         10.4,
+         66.2
+        ],
+        [
+         10.6,
+         66.8
+        ],
+        [
+         10.8,
+         67.4
+        ],
+        [
+         11,
+         68
+        ],
+        [
+         11.2,
+         68.6
+        ],
+        [
+         11.4,
+         69.2
+        ],
+        [
+         11.6,
+         69.8
+        ],
+        [
+         11.8,
+         70.4
+        ],
+        [
+         12,
+         71
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 41,
+       "label": "(2, $41)"
+      },
+      {
+       "x": 10,
+       "y": 65,
+       "label": "(10, $65)"
+      }
+     ],
+     "caption": "C(x) = $35 + $3x"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$50",
+   "numeric": {
+    "value": 50,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: C(x) = fixed fee + price per GB × x.",
+    "Substitute: $35 + $3 × 5 = $50.",
+    "Spreadsheet: =35+3*5.",
+    "So Camila's bill is $50; the point (5, $50) is on the line."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-08",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "advanced",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Tyler budgets $39.00 a month for the bike-share membership, which costs C(x) = $15.00 + $2.50x. What is the greatest whole number of rides he can use and stay within budget?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a bike-share membership",
+     "x": {
+      "label": "Rides per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 50,
+      "step": 10,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         15
+        ],
+        [
+         0.2,
+         15.5
+        ],
+        [
+         0.4,
+         16
+        ],
+        [
+         0.6,
+         16.5
+        ],
+        [
+         0.8,
+         17
+        ],
+        [
+         1,
+         17.5
+        ],
+        [
+         1.2,
+         18
+        ],
+        [
+         1.4,
+         18.5
+        ],
+        [
+         1.6,
+         19
+        ],
+        [
+         1.8,
+         19.5
+        ],
+        [
+         2,
+         20
+        ],
+        [
+         2.2,
+         20.5
+        ],
+        [
+         2.4,
+         21
+        ],
+        [
+         2.6,
+         21.5
+        ],
+        [
+         2.8,
+         22
+        ],
+        [
+         3,
+         22.5
+        ],
+        [
+         3.2,
+         23
+        ],
+        [
+         3.4,
+         23.5
+        ],
+        [
+         3.6,
+         24
+        ],
+        [
+         3.8,
+         24.5
+        ],
+        [
+         4,
+         25
+        ],
+        [
+         4.2,
+         25.5
+        ],
+        [
+         4.4,
+         26
+        ],
+        [
+         4.6,
+         26.5
+        ],
+        [
+         4.8,
+         27
+        ],
+        [
+         5,
+         27.5
+        ],
+        [
+         5.2,
+         28
+        ],
+        [
+         5.4,
+         28.5
+        ],
+        [
+         5.6,
+         29
+        ],
+        [
+         5.8,
+         29.5
+        ],
+        [
+         6,
+         30
+        ],
+        [
+         6.2,
+         30.5
+        ],
+        [
+         6.4,
+         31
+        ],
+        [
+         6.6,
+         31.5
+        ],
+        [
+         6.8,
+         32
+        ],
+        [
+         7,
+         32.5
+        ],
+        [
+         7.2,
+         33
+        ],
+        [
+         7.4,
+         33.5
+        ],
+        [
+         7.6,
+         34
+        ],
+        [
+         7.8,
+         34.5
+        ],
+        [
+         8,
+         35
+        ],
+        [
+         8.2,
+         35.5
+        ],
+        [
+         8.4,
+         36
+        ],
+        [
+         8.6,
+         36.5
+        ],
+        [
+         8.8,
+         37
+        ],
+        [
+         9,
+         37.5
+        ],
+        [
+         9.2,
+         38
+        ],
+        [
+         9.4,
+         38.5
+        ],
+        [
+         9.6,
+         39
+        ],
+        [
+         9.8,
+         39.5
+        ],
+        [
+         10,
+         40
+        ],
+        [
+         10.2,
+         40.5
+        ],
+        [
+         10.4,
+         41
+        ],
+        [
+         10.6,
+         41.5
+        ],
+        [
+         10.8,
+         42
+        ],
+        [
+         11,
+         42.5
+        ],
+        [
+         11.2,
+         43
+        ],
+        [
+         11.4,
+         43.5
+        ],
+        [
+         11.6,
+         44
+        ],
+        [
+         11.8,
+         44.5
+        ],
+        [
+         12,
+         45
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 20,
+       "label": "(2, $20.00)"
+      },
+      {
+       "x": 6,
+       "y": 30,
+       "label": "(6, $30.00)"
+      }
+     ],
+     "caption": "C(x) = $15.00 + $2.50x"
+    }
+   },
+   "format": "short-answer",
+   "answer": "9",
+   "numeric": {
+    "value": 9,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: solve C(x) ≤ budget: $15.00 + $2.50x ≤ $39.00.",
+    "Substitute: x ≤ [[$39.00 − $15.00 || $2.50]] = 9.60.",
+    "Spreadsheet: =ROUNDDOWN((39-15)/2.5,0).",
+    "So Tyler can use 9 rides; one more would cost $40.00, over the $39.00 budget. On the graph, it is the last whole x where the line is at or below $39.00."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s03-lv-m-linear-cost-09",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-03",
+   "level": "support",
+   "family": "lv-m-linear-cost",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "The phone plan costs C(x) = $35 + $2x a month, where x is the number of gigabytes of data. What does Mateo pay in a month with 11 gigabytes of data?",
+   "scenario": {
+    "graph": {
+     "title": "Monthly cost of a phone plan",
+     "x": {
+      "label": "Gigabytes of data per month, x",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "money": false
+     },
+     "y": {
+      "label": "Monthly cost C(x)",
+      "min": 0,
+      "max": 60,
+      "step": 20,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "C(x)",
+       "pts": [
+        [
+         0,
+         35
+        ],
+        [
+         0.2,
+         35.4
+        ],
+        [
+         0.4,
+         35.8
+        ],
+        [
+         0.6,
+         36.2
+        ],
+        [
+         0.8,
+         36.6
+        ],
+        [
+         1,
+         37
+        ],
+        [
+         1.2,
+         37.4
+        ],
+        [
+         1.4,
+         37.8
+        ],
+        [
+         1.6,
+         38.2
+        ],
+        [
+         1.8,
+         38.6
+        ],
+        [
+         2,
+         39
+        ],
+        [
+         2.2,
+         39.4
+        ],
+        [
+         2.4,
+         39.8
+        ],
+        [
+         2.6,
+         40.2
+        ],
+        [
+         2.8,
+         40.6
+        ],
+        [
+         3,
+         41
+        ],
+        [
+         3.2,
+         41.4
+        ],
+        [
+         3.4,
+         41.8
+        ],
+        [
+         3.6,
+         42.2
+        ],
+        [
+         3.8,
+         42.6
+        ],
+        [
+         4,
+         43
+        ],
+        [
+         4.2,
+         43.4
+        ],
+        [
+         4.4,
+         43.8
+        ],
+        [
+         4.6,
+         44.2
+        ],
+        [
+         4.8,
+         44.6
+        ],
+        [
+         5,
+         45
+        ],
+        [
+         5.2,
+         45.4
+        ],
+        [
+         5.4,
+         45.8
+        ],
+        [
+         5.6,
+         46.2
+        ],
+        [
+         5.8,
+         46.6
+        ],
+        [
+         6,
+         47
+        ],
+        [
+         6.2,
+         47.4
+        ],
+        [
+         6.4,
+         47.8
+        ],
+        [
+         6.6,
+         48.2
+        ],
+        [
+         6.8,
+         48.6
+        ],
+        [
+         7,
+         49
+        ],
+        [
+         7.2,
+         49.4
+        ],
+        [
+         7.4,
+         49.8
+        ],
+        [
+         7.6,
+         50.2
+        ],
+        [
+         7.8,
+         50.6
+        ],
+        [
+         8,
+         51
+        ],
+        [
+         8.2,
+         51.4
+        ],
+        [
+         8.4,
+         51.8
+        ],
+        [
+         8.6,
+         52.2
+        ],
+        [
+         8.8,
+         52.6
+        ],
+        [
+         9,
+         53
+        ],
+        [
+         9.2,
+         53.4
+        ],
+        [
+         9.4,
+         53.8
+        ],
+        [
+         9.6,
+         54.2
+        ],
+        [
+         9.8,
+         54.6
+        ],
+        [
+         10,
+         55
+        ],
+        [
+         10.2,
+         55.4
+        ],
+        [
+         10.4,
+         55.8
+        ],
+        [
+         10.6,
+         56.2
+        ],
+        [
+         10.8,
+         56.6
+        ],
+        [
+         11,
+         57
+        ],
+        [
+         11.2,
+         57.4
+        ],
+        [
+         11.4,
+         57.8
+        ],
+        [
+         11.6,
+         58.2
+        ],
+        [
+         11.8,
+         58.6
+        ],
+        [
+         12,
+         59
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 2,
+       "y": 39,
+       "label": "(2, $39)"
+      },
+      {
+       "x": 8,
+       "y": 51,
+       "label": "(8, $51)"
+      }
+     ],
+     "caption": "C(x) = $35 + $2x"
+    }
+   },
+   "format": "short-answer",
+   "answer": "$57",
+   "numeric": {
+    "value": 57,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: C(x) = fixed fee + price per GB × x.",
+    "Substitute: $35 + $2 × 11 = $57.",
+    "Spreadsheet: =35+2*11.",
+    "So Mateo's bill is $57; the point (11, $57) is on the line."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "support",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell B9, =SUM(B3:B8), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$2,675"
+      ],
+      [
+       "3",
+       "Rent",
+       "$1,275"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$140"
+      ],
+      [
+       "5",
+       "Phone",
+       "$80"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$350"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$180"
+      ],
+      [
+       "8",
+       "Fun",
+       "$60"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Jordan's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,085",
+   "numeric": {
+    "value": 2085,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: =SUM(B3:B8) adds every expense in rows 3 to 8.",
+    "Substitute: $1,275 + $140 + $80 + $350 + $180 + $60 = $2,085.",
+    "Spreadsheet: type =SUM( then drag from B3 to B8 and close the parenthesis.",
+    "So Jordan's expenses total $2,085 a month."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-02",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell B10, =B2-B9, display? (A negative result means a deficit.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$3,500"
+      ],
+      [
+       "3",
+       "Rent",
+       "$675"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$110"
+      ],
+      [
+       "5",
+       "Phone",
+       "$75"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$340"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$130"
+      ],
+      [
+       "8",
+       "Fun",
+       "$80"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Imani's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,090",
+   "numeric": {
+    "value": 2090,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: net cash flow = income − total expenses, so =B2-B9.",
+    "Substitute: $3,500 − $1,410 = $2,090.",
+    "Spreadsheet: B9 must hold =SUM(B3:B8) first; B10 then updates whenever any amount changes.",
+    "So Imani has $2,090 left each month for savings or goals."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-03",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "advanced",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Aaliyah wants B10 to show exactly $200 so it can go to savings. What amount in B8 (Fun) does that? (In Excel this is Data → What-If Analysis → Goal Seek; in Google Sheets, solve it by hand or with the Goal Seek add-on.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$2,125"
+      ],
+      [
+       "3",
+       "Rent",
+       "$675"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$115"
+      ],
+      [
+       "5",
+       "Phone",
+       "$55"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$340"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$100"
+      ],
+      [
+       "8",
+       "Fun",
+       "$150"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Aaliyah's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$640",
+   "numeric": {
+    "value": 640,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: B2 − (other expenses + B8) = $200, so B8 = B2 − other expenses − $200.",
+    "Substitute: other expenses = $1,285; B8 = $2,125 − $1,285 − $200 = $640.",
+    "Spreadsheet: Goal Seek with Set cell B10, To value 200, By changing cell B8.",
+    "So Aaliyah could spend up to $640 on Fun and still save $200."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-04",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "support",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell B9, =SUM(B3:B8), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$2,300"
+      ],
+      [
+       "3",
+       "Rent",
+       "$850"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$60"
+      ],
+      [
+       "5",
+       "Phone",
+       "$60"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$380"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$110"
+      ],
+      [
+       "8",
+       "Fun",
+       "$200"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Imani's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,660",
+   "numeric": {
+    "value": 1660,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: =SUM(B3:B8) adds every expense in rows 3 to 8.",
+    "Substitute: $850 + $60 + $60 + $380 + $110 + $200 = $1,660.",
+    "Spreadsheet: type =SUM( then drag from B3 to B8 and close the parenthesis.",
+    "So Imani's expenses total $1,660 a month."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-05",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell B10, =B2-B9, display? (A negative result means a deficit.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$2,350"
+      ],
+      [
+       "3",
+       "Rent",
+       "$775"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$160"
+      ],
+      [
+       "5",
+       "Phone",
+       "$40"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$290"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$140"
+      ],
+      [
+       "8",
+       "Fun",
+       "$170"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Dev's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$775",
+   "numeric": {
+    "value": 775,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: net cash flow = income − total expenses, so =B2-B9.",
+    "Substitute: $2,350 − $1,575 = $775.",
+    "Spreadsheet: B9 must hold =SUM(B3:B8) first; B10 then updates whenever any amount changes.",
+    "So Dev has $775 left each month for savings or goals."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-06",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "advanced",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Tyler wants B10 to show exactly $200 so it can go to savings. What amount in B8 (Fun) does that? (In Excel this is Data → What-If Analysis → Goal Seek; in Google Sheets, solve it by hand or with the Goal Seek add-on.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$3,350"
+      ],
+      [
+       "3",
+       "Rent",
+       "$1,100"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$60"
+      ],
+      [
+       "5",
+       "Phone",
+       "$75"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$210"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$140"
+      ],
+      [
+       "8",
+       "Fun",
+       "$90"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Tyler's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,565",
+   "numeric": {
+    "value": 1565,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: B2 − (other expenses + B8) = $200, so B8 = B2 − other expenses − $200.",
+    "Substitute: other expenses = $1,585; B8 = $3,350 − $1,585 − $200 = $1,565.",
+    "Spreadsheet: Goal Seek with Set cell B10, To value 200, By changing cell B8.",
+    "So Tyler could spend up to $1,565 on Fun and still save $200."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-07",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "support",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell B9, =SUM(B3:B8), display?",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$1,800"
+      ],
+      [
+       "3",
+       "Rent",
+       "$700"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$105"
+      ],
+      [
+       "5",
+       "Phone",
+       "$70"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$390"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$170"
+      ],
+      [
+       "8",
+       "Fun",
+       "$50"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Dev's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,485",
+   "numeric": {
+    "value": 1485,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: =SUM(B3:B8) adds every expense in rows 3 to 8.",
+    "Substitute: $700 + $105 + $70 + $390 + $170 + $50 = $1,485.",
+    "Spreadsheet: type =SUM( then drag from B3 to B8 and close the parenthesis.",
+    "So Dev's expenses total $1,485 a month."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-08",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "standard",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "What value does cell B10, =B2-B9, display? (A negative result means a deficit.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$2,275"
+      ],
+      [
+       "3",
+       "Rent",
+       "$1,100"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$100"
+      ],
+      [
+       "5",
+       "Phone",
+       "$65"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$200"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$180"
+      ],
+      [
+       "8",
+       "Fun",
+       "$170"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Hana's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$460",
+   "numeric": {
+    "value": 460,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: net cash flow = income − total expenses, so =B2-B9.",
+    "Substitute: $2,275 − $1,815 = $460.",
+    "Spreadsheet: B9 must hold =SUM(B3:B8) first; B10 then updates whenever any amount changes.",
+    "So Hana has $460 left each month for savings or goals."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s01-lv-x-budget-09",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-01",
+   "level": "advanced",
+   "family": "lv-x-budget",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "spreadsheet-lab"
+   ],
+   "gameEligible": false,
+   "prompt": "Imani wants B10 to show exactly $100 so it can go to savings. What amount in B8 (Fun) does that? (In Excel this is Data → What-If Analysis → Goal Seek; in Google Sheets, solve it by hand or with the Goal Seek add-on.)",
+   "scenario": {
+    "table": {
+     "headers": [
+      "",
+      "A",
+      "B"
+     ],
+     "rows": [
+      [
+       "1",
+       "Item",
+       "Monthly amount"
+      ],
+      [
+       "2",
+       "Net pay (monthly)",
+       "$3,175"
+      ],
+      [
+       "3",
+       "Rent",
+       "$1,300"
+      ],
+      [
+       "4",
+       "Utilities",
+       "$95"
+      ],
+      [
+       "5",
+       "Phone",
+       "$50"
+      ],
+      [
+       "6",
+       "Groceries",
+       "$360"
+      ],
+      [
+       "7",
+       "Gas and transit",
+       "$170"
+      ],
+      [
+       "8",
+       "Fun",
+       "$150"
+      ],
+      [
+       "9",
+       "Total expenses",
+       "=SUM(B3:B8)"
+      ],
+      [
+       "10",
+       "Net cash flow",
+       "=B2-B9"
+      ]
+     ],
+     "caption": "Imani's budget template (Spreadsheet Lab 1). Formulas are shown in B9 and B10."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,100",
+   "numeric": {
+    "value": 1100,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: B2 − (other expenses + B8) = $100, so B8 = B2 − other expenses − $100.",
+    "Substitute: other expenses = $1,975; B8 = $3,175 − $1,975 − $100 = $1,100.",
+    "Spreadsheet: Goal Seek with Set cell B10, To value 100, By changing cell B8.",
+    "So Imani could spend up to $1,100 on Fun and still save $100."
    ]
   },
   {
@@ -11561,7 +15550,7 @@
    "id": "fa-budgeting-s01-err-cash-flow-sign-01",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-flow-sign-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -11593,9 +15582,12 @@
    "answer": "$470",
    "solutionSteps": [
     "Mistake: Reversed the subtraction; cash flow is income minus expenses.",
+    "Formula: cash flow = income − total expenses.",
     "Total expenses = $2,730.",
     "Cash flow = $3,200 − $2,730 = $470.",
-    "Correct result: $470."
+    "Correct result: $470.",
+    "Spreadsheet or calculator: =3200-2730",
+    "So the answer is $470; a positive monthly cash flow is what makes saving possible."
    ],
    "numeric": {
     "value": 470,
@@ -11689,9 +15681,12 @@
    "answer": "$400",
    "solutionSteps": [
     "Mistake: Multiplied by the number of months instead of dividing the goal among them.",
+    "Formula: monthly saving = goal ÷ months.",
     "Spread the goal over 6 months.",
     "$2,400 ÷ 6 = $400.",
-    "Correct result: $400."
+    "Correct result: $400.",
+    "Spreadsheet or calculator: =2400/6",
+    "So the answer is $400; variable costs are where a budget can usually be trimmed first."
    ],
    "numeric": {
     "value": 400,
@@ -11785,9 +15780,12 @@
    "answer": "25",
    "solutionSteps": [
     "Mistake: Divided the wage by the goal instead of the goal by the wage.",
+    "Formula: hours = goal ÷ hourly wage, rounded up.",
     "Hours = $420.00 ÷ $17.25 = 24.35.",
     "Round UP to reach the goal: 25 hours.",
-    "Correct result: 25."
+    "Correct result: 25.",
+    "Spreadsheet or calculator: =ROUNDUP(420.00/17.25,0)",
+    "So the answer is 25; knowing the limit first keeps the plan inside the budget."
    ],
    "numeric": {
     "value": 25,
@@ -11799,7 +15797,7 @@
    "id": "fa-budgeting-s04-err-unit-price-01",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-04",
-   "level": "advanced",
+   "level": "standard",
    "family": "unit-price-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -11856,7 +15854,7 @@
    "id": "fa-budgeting-s04-err-bnpl-fee-01",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-04",
-   "level": "support",
+   "level": "advanced",
    "family": "bnpl-fee-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -11884,9 +15882,12 @@
    "answer": "$463",
    "solutionSteps": [
     "Mistake: Left out the late fee from the total cost.",
+    "Formula: total cost = installments × payment + late fees.",
     "Payments: 4 × $112 = $448.",
     "Add the late fee: $448 + $15 = $463.",
-    "Correct result: $463."
+    "Correct result: $463.",
+    "Spreadsheet or calculator: =448+15",
+    "So the answer is $463; compare the total cost over the time you will really use it."
    ],
    "numeric": {
     "value": 463,

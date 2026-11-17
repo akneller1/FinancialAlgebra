@@ -13,25 +13,54 @@
  "skills": [
   {
    "id": "housing-skill-01",
-   "name": "Compare rental and ownership costs"
+   "name": "Compare rental and ownership costs",
+   "standards": [
+    "Spending 12-6: Renting vs. buying a home"
+   ]
   },
   {
    "id": "housing-skill-02",
-   "name": "Model a mortgage"
+   "name": "Model a mortgage",
+   "standards": [
+    "Managing Credit 12-3: Mortgage payments",
+    "Managing Credit 12-6: Down payments"
+   ]
   },
   {
    "id": "housing-skill-03",
-   "name": "Estimate ownership expenses"
+   "name": "Estimate ownership expenses",
+   "standards": [
+    "Spending 12-6: Renting vs. buying a home",
+    "Managing Risk 12-7: Auto, homeowner's and renter's insurance"
+   ]
   },
   {
    "id": "housing-skill-04",
-   "name": "Analyze opportunity cost"
+   "name": "Analyze opportunity cost",
+   "standards": [
+    "Spending 12-6: Renting vs. buying a home",
+    "Spending 12-2: Factors influencing consumer decisions"
+   ]
   },
   {
    "id": "housing-skill-05",
-   "name": "Plan the costs of renting"
+   "name": "Plan the costs of renting",
+   "standards": [
+    "Spending 12-6: Renting vs. buying a home",
+    "Spending 12-8: Consumer protection laws",
+    "Managing Risk 12-7: Auto, homeowner's and renter's insurance"
+   ]
   }
  ],
+ "standardsSource": {
+  "title": "National Standards for Personal Financial Education (2021)",
+  "publisher": "Council for Economic Education and Jump$tart Coalition",
+  "url": "https://www.jumpstart.org/what-we-do/support-financial-education/standards-2021/"
+ },
+ "planning": {
+  "pacingGuide": "financial/pacing/index.html",
+  "spreadsheetLabs": []
+ },
  "vocab": [
   {
    "term": "Lease (rental)",
@@ -2702,10 +2731,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Gross monthly = $7,750.",
     "Front-end: 0.28 × $7,750 = $2,170.",
     "Back-end: 0.36 × $7,750 − $0 = $2,790.",
-    "Maximum = smaller value = $2,170."
+    "Maximum = smaller value = $2,170.",
+    "Spreadsheet or calculator: =0.28*7750",
+    "So the answer is $2,170; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2732,10 +2764,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Gross monthly = $10,416.67.",
     "Front-end: 0.28 × $10,416.67 = $2,916.67.",
     "Back-end: 0.36 × $10,416.67 − $650.00 = $3,100.00.",
-    "Maximum = smaller value = $2,916.67."
+    "Maximum = smaller value = $2,916.67.",
+    "Spreadsheet or calculator: =0.28*10416.67",
+    "So the answer is $2,916.67; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2762,10 +2797,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Gross monthly = $5,000.",
     "Front-end: 0.28 × $5,000 = $1,400.",
     "Back-end: 0.36 × $5,000 − $450 = $1,350.",
-    "Maximum = smaller value = $1,350."
+    "Maximum = smaller value = $1,350.",
+    "Spreadsheet or calculator: =0.36*5000-450",
+    "So the answer is $1,350; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2792,10 +2830,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Gross monthly = $7,166.67.",
     "Front-end: 0.28 × $7,166.67 = $2,006.67.",
     "Back-end: 0.36 × $7,166.67 − $50.00 = $2,530.00.",
-    "Maximum = smaller value = $2,006.67."
+    "Maximum = smaller value = $2,006.67.",
+    "Spreadsheet or calculator: =0.28*7166.67",
+    "So the answer is $2,006.67; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2822,10 +2863,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Gross monthly = $7,583.33.",
     "Front-end: 0.28 × $7,583.33 = $2,123.33.",
     "Back-end: 0.36 × $7,583.33 − $0.00 = $2,730.00.",
-    "Maximum = smaller value = $2,123.33."
+    "Maximum = smaller value = $2,123.33.",
+    "Spreadsheet or calculator: =0.28*7583.33",
+    "So the answer is $2,123.33; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2852,10 +2896,13 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: P = PMT × (1 − (1 + i)^−n) ÷ i, with i = APR ÷ 12.",
     "Gross monthly = $10,250.",
     "Front-end: 0.28 × $10,250 = $2,870.",
     "Back-end: 0.36 × $10,250 − $100 = $3,590.",
-    "Maximum = smaller value = $2,870."
+    "Maximum = smaller value = $2,870.",
+    "Spreadsheet or calculator: =0.28*10250",
+    "So the answer is $2,870; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2882,8 +2929,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = Σ 12 × (rent × (1 + g)^(k − 1) + insurance), for years k = 1 to 5.",
     "Year k rent = $1,400.00 × (1 + 0.02)^(k−1).",
-    "Sum over 5 years of 12 × (rent + $18.00) = $88,507.87."
+    "Sum over 5 years of 12 × (rent + $18.00) = $88,507.87.",
+    "So the answer is $88,507.87; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2910,8 +2959,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = Σ 12 × (rent × (1 + g)^(k − 1) + insurance), for years k = 1 to 5.",
     "Year k rent = $2,500 × (1 + 0.05)^(k−1).",
-    "Sum over 3 years of 12 × (rent + $15) = $95,115."
+    "Sum over 3 years of 12 × (rent + $15) = $95,115.",
+    "So the answer is $95,115; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2938,8 +2989,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = Σ 12 × (rent × (1 + g)^(k − 1) + insurance), for years k = 1 to 5.",
     "Year k rent = $1,775.00 × (1 + 0.03)^(k−1).",
-    "Sum over 4 years of 12 × (rent + $12.00) = $89,687.26."
+    "Sum over 4 years of 12 × (rent + $12.00) = $89,687.26.",
+    "So the answer is $89,687.26; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2966,8 +3019,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = Σ 12 × (rent × (1 + g)^(k − 1) + insurance), for years k = 1 to 5.",
     "Year k rent = $1,750.00 × (1 + 0.05)^(k−1).",
-    "Sum over 3 years of 12 × (rent + $18.00) = $66,850.50."
+    "Sum over 3 years of 12 × (rent + $18.00) = $66,850.50.",
+    "So the answer is $66,850.50; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -2994,8 +3049,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = Σ 12 × (rent × (1 + g)^(k − 1) + insurance), for years k = 1 to 5.",
     "Year k rent = $2,375.00 × (1 + 0.05)^(k−1).",
-    "Sum over 3 years of 12 × (rent + $15.00) = $90,386.25."
+    "Sum over 3 years of 12 × (rent + $15.00) = $90,386.25.",
+    "So the answer is $90,386.25; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -3022,15 +3079,17 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = Σ 12 × (rent × (1 + g)^(k − 1) + insurance), for years k = 1 to 5.",
     "Year k rent = $1,800.00 × (1 + 0.04)^(k−1).",
-    "Sum over 4 years of 12 × (rent + $12.00) = $92,299.62."
+    "Sum over 4 years of 12 × (rent + $12.00) = $92,299.62.",
+    "So the answer is $92,299.62; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
    "id": "fa-housing-s01-rent-vs-own-mo-01",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "advanced",
+   "level": "standard",
    "family": "rent-vs-own-mo",
    "type": "comparison",
    "activityTypes": [
@@ -3290,9 +3349,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $400,000.00 × 0.9 = $360,000.00.",
     "i = [[0.07 || 12]], n = 360.",
-    "P&I = $2,395.09."
+    "P&I = $2,395.09.",
+    "Spreadsheet or calculator: =PMT(0.07/12,360,-360000)",
+    "So the answer is $2,395.09; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3319,9 +3381,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $280,000.00 × 0.95 = $266,000.00.",
     "i = [[0.0675 || 12]], n = 180.",
-    "P&I = $2,353.86."
+    "P&I = $2,353.86.",
+    "Spreadsheet or calculator: =PMT(0.0675/12,180,-266000)",
+    "So the answer is $2,353.86; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3348,9 +3413,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $380,000.00 × 0.95 = $361,000.00.",
     "i = [[0.0625 || 12]], n = 360.",
-    "P&I = $2,222.74."
+    "P&I = $2,222.74.",
+    "Spreadsheet or calculator: =PMT(0.0625/12,360,-361000)",
+    "So the answer is $2,222.74; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3377,9 +3445,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $240,000.00 × 0.95 = $228,000.00.",
     "i = [[0.07 || 12]], n = 360.",
-    "P&I = $1,516.89."
+    "P&I = $1,516.89.",
+    "Spreadsheet or calculator: =PMT(0.07/12,360,-228000)",
+    "So the answer is $1,516.89; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3406,9 +3477,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $270,000.00 × 0.8 = $216,000.00.",
     "i = [[0.07 || 12]], n = 360.",
-    "P&I = $1,437.05."
+    "P&I = $1,437.05.",
+    "Spreadsheet or calculator: =PMT(0.07/12,360,-216000)",
+    "So the answer is $1,437.05; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3435,9 +3509,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $220,000.00 × 0.95 = $209,000.00.",
     "i = [[0.0675 || 12]], n = 180.",
-    "P&I = $1,849.46."
+    "P&I = $1,849.46.",
+    "Spreadsheet or calculator: =PMT(0.0675/12,180,-209000)",
+    "So the answer is $1,849.46; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3464,9 +3541,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $305,000.00 × 0.8 = $244,000.00.",
     "i = [[0.07 || 12]], n = 360.",
-    "P&I = $1,623.34."
+    "P&I = $1,623.34.",
+    "Spreadsheet or calculator: =PMT(0.07/12,360,-244000)",
+    "So the answer is $1,623.34; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3493,9 +3573,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n), with P = price − down payment, i = rate ÷ 12, n = years × 12.",
     "Loan = $315,000.00 × 0.9 = $283,500.00.",
     "i = [[0.0625 || 12]], n = 360.",
-    "P&I = $1,745.56."
+    "P&I = $1,745.56.",
+    "Spreadsheet or calculator: =PMT(0.0625/12,360,-283500)",
+    "So the answer is $1,745.56; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3541,8 +3624,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × months − loan amount, for each term; savings = 30-year interest − 15-year interest.",
     "15-year payment = $3,375.43; interest ≈ $3,375.43 × 180 − $400,000.00 = $207,577.40.",
-    "Savings = $326,403.00, but the payment is $781.04 higher each month."
+    "Savings = $326,403.00, but the payment is $781.04 higher each month.",
+    "So the answer is $326,403.00; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3588,8 +3673,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × months − loan amount, for each term; savings = 30-year interest − 15-year interest.",
     "15-year payment = $2,615.96; interest ≈ $2,615.96 × 180 − $310,000.00 = $160,872.80.",
-    "Savings = $252,961.20, but the payment is $605.31 higher each month."
+    "Savings = $252,961.20, but the payment is $605.31 higher each month.",
+    "So the answer is $252,961.20; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3635,8 +3722,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × months − loan amount, for each term; savings = 30-year interest − 15-year interest.",
     "15-year payment = $3,215.34; interest ≈ $3,215.34 × 180 − $375,000.00 = $203,761.20.",
-    "Savings = $319,395.60, but the payment is $720.46 higher each month."
+    "Savings = $319,395.60, but the payment is $720.46 higher each month.",
+    "So the answer is $319,395.60; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3682,8 +3771,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × months − loan amount, for each term; savings = 30-year interest − 15-year interest.",
     "15-year payment = $3,114.04; interest ≈ $3,114.04 × 180 − $375,000.00 = $185,527.20.",
-    "Savings = $292,766.40, but the payment is $743.78 higher each month."
+    "Savings = $292,766.40, but the payment is $743.78 higher each month.",
+    "So the answer is $292,766.40; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3729,8 +3820,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × months − loan amount, for each term; savings = 30-year interest − 15-year interest.",
     "15-year payment = $2,229.30; interest ≈ $2,229.30 × 180 − $260,000.00 = $141,274.00.",
-    "Savings = $221,450.40, but the payment is $499.51 higher each month."
+    "Savings = $221,450.40, but the payment is $499.51 higher each month.",
+    "So the answer is $221,450.40; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3776,8 +3869,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = payment × months − loan amount, for each term; savings = 30-year interest − 15-year interest.",
     "15-year payment = $1,868.42; interest ≈ $1,868.42 × 180 − $225,000.00 = $111,315.60.",
-    "Savings = $175,658.40, but the payment is $446.27 higher each month."
+    "Savings = $175,658.40, but the payment is $446.27 higher each month.",
+    "So the answer is $175,658.40; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -3804,8 +3899,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = loan × rate ÷ 12; principal = payment − interest.",
     "Interest = $315,000.00 × [[0.07 || 12]] = $1,837.50.",
     "Principal = $2,095.70 − $1,837.50 = $258.20.",
+    "Spreadsheet or calculator: =315000.00*0.07/12",
     "Only 12.3% of the first payment builds equity."
    ]
   },
@@ -3833,8 +3930,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = loan × rate ÷ 12; principal = payment − interest.",
     "Interest = $305,000.00 × [[0.0675 || 12]] = $1,715.63.",
     "Principal = $1,978.22 − $1,715.63 = $262.59.",
+    "Spreadsheet or calculator: =305000.00*0.0675/12",
     "Only 13.3% of the first payment builds equity."
    ]
   },
@@ -3862,8 +3961,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = loan × rate ÷ 12; principal = payment − interest.",
     "Interest = $260,000.00 × [[0.07 || 12]] = $1,516.67.",
     "Principal = $1,729.79 − $1,516.67 = $213.12.",
+    "Spreadsheet or calculator: =260000.00*0.07/12",
     "Only 12.3% of the first payment builds equity."
    ]
   },
@@ -3891,8 +3992,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = loan × rate ÷ 12; principal = payment − interest.",
     "Interest = $340,000.00 × [[0.06 || 12]] = $1,700.00.",
     "Principal = $2,038.47 − $1,700.00 = $338.47.",
+    "Spreadsheet or calculator: =340000.00*0.06/12",
     "Only 16.6% of the first payment builds equity."
    ]
   },
@@ -3920,8 +4023,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: interest = loan × rate ÷ 12; principal = payment − interest.",
     "Interest = $330,000.00 × [[0.0675 || 12]] = $1,856.25.",
     "Principal = $2,140.37 − $1,856.25 = $284.12.",
+    "Spreadsheet or calculator: =330000.00*0.0675/12",
     "Only 13.3% of the first payment builds equity."
    ]
   },
@@ -3949,9 +4054,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PITI = P&I + yearly property tax ÷ 12 + yearly insurance ÷ 12 + PMI.",
     "P&I = $1,967.22.",
     "Tax = $443.75; insurance = $133.33; PMI = $186.38.",
-    "Total = $2,730.68."
+    "Total = $2,730.68.",
+    "So the answer is $2,730.68; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -3978,9 +4085,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PITI = P&I + yearly property tax ÷ 12 + yearly insurance ÷ 12 + PMI.",
     "P&I = $1,921.49.",
     "Tax = $411.67; insurance = $116.67; PMI = $0.00.",
-    "Total = $2,449.83."
+    "Total = $2,449.83.",
+    "So the answer is $2,449.83; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4007,9 +4116,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PITI = P&I + yearly property tax ÷ 12 + yearly insurance ÷ 12 + PMI.",
     "P&I = $2,602.94.",
     "Tax = $333.75; insurance = $183.33; PMI = $246.60; HOA = $275.00.",
-    "Total = $3,641.62."
+    "Total = $3,641.62.",
+    "So the answer is $3,641.62; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4036,9 +4147,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PITI = P&I + yearly property tax ÷ 12 + yearly insurance ÷ 12 + PMI.",
     "P&I = $1,365.27.",
     "Tax = $337.50; insurance = $158.33; PMI = $0.00; HOA = $275.00.",
-    "Total = $2,136.10."
+    "Total = $2,136.10.",
+    "So the answer is $2,136.10; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4065,9 +4178,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PITI = P&I + yearly property tax ÷ 12 + yearly insurance ÷ 12 + PMI.",
     "P&I = $2,531.43.",
     "Tax = $482.08; insurance = $183.33; PMI = $233.63.",
-    "Total = $3,430.47."
+    "Total = $3,430.47.",
+    "So the answer is $3,430.47; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4094,9 +4209,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PITI = P&I + yearly property tax ÷ 12 + yearly insurance ÷ 12 + PMI.",
     "P&I = $2,231.18.",
     "Tax = $537.50; insurance = $158.33; PMI = $0.00; HOA = $275.00.",
-    "Total = $3,202.01."
+    "Total = $3,202.01.",
+    "So the answer is $3,202.01; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4123,9 +4240,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PITI = P&I + yearly property tax ÷ 12 + yearly insurance ÷ 12 + PMI.",
     "P&I = $2,231.18.",
     "Tax = $394.17; insurance = $166.67; PMI = $0.00; HOA = $150.00.",
-    "Total = $2,942.02."
+    "Total = $2,942.02.",
+    "So the answer is $2,942.02; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4152,9 +4271,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment + closing costs + moving costs.",
     "Down payment = $52,000.",
     "Closing costs = $5,200.",
-    "Total = $61,200 (plus an emergency fund for repairs!)."
+    "Total = $61,200 (plus an emergency fund for repairs!).",
+    "So the answer is $61,200; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4181,9 +4302,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment + closing costs + moving costs.",
     "Down payment = $60,000.",
     "Closing costs = $9,000.",
-    "Total = $70,500 (plus an emergency fund for repairs!)."
+    "Total = $70,500 (plus an emergency fund for repairs!).",
+    "So the answer is $70,500; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4210,9 +4333,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment + closing costs + moving costs.",
     "Down payment = $8,925.",
     "Closing costs = $7,650.",
-    "Total = $19,075 (plus an emergency fund for repairs!)."
+    "Total = $19,075 (plus an emergency fund for repairs!).",
+    "So the answer is $19,075; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4239,9 +4364,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment + closing costs + moving costs.",
     "Down payment = $13,750.",
     "Closing costs = $5,500.",
-    "Total = $21,750 (plus an emergency fund for repairs!)."
+    "Total = $21,750 (plus an emergency fund for repairs!).",
+    "So the answer is $21,750; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4268,9 +4395,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment + closing costs + moving costs.",
     "Down payment = $12,600.",
     "Closing costs = $10,800.",
-    "Total = $25,900 (plus an emergency fund for repairs!)."
+    "Total = $25,900 (plus an emergency fund for repairs!).",
+    "So the answer is $25,900; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4297,9 +4426,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment + closing costs + moving costs.",
     "Down payment = $68,000.",
     "Closing costs = $10,200.",
-    "Total = $79,700 (plus an emergency fund for repairs!)."
+    "Total = $79,700 (plus an emergency fund for repairs!).",
+    "So the answer is $79,700; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4391,7 +4522,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,909.21 × 12 = $34,910.52."
+    "Formula: yearly total = monthly payment × 12.",
+    "$2,909.21 × 12 = $34,910.52.",
+    "Spreadsheet or calculator: =2909.21*12",
+    "So the answer is $34,910.52; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4483,7 +4617,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Tax $350.00 + insurance $140.00 + PMI $157.50 = $647.50."
+    "Formula: yearly total = monthly payment × 12.",
+    "Tax $350.00 + insurance $140.00 + PMI $157.50 = $647.50.",
+    "So the answer is $647.50; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4575,7 +4711,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Tax $375.00 + insurance $140.00 + PMI $168.75 = $683.75."
+    "Formula: yearly total = monthly payment × 12.",
+    "Tax $375.00 + insurance $140.00 + PMI $168.75 = $683.75.",
+    "So the answer is $683.75; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4667,7 +4805,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$38,500.00 + $10,780.00 = $49,280.00."
+    "Formula: yearly total = monthly payment × 12.",
+    "$38,500.00 + $10,780.00 = $49,280.00.",
+    "Spreadsheet or calculator: =38500.00+10780.00",
+    "So the answer is $49,280.00; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4759,7 +4900,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "Tax $380.00 + insurance $140.00 + PMI $171.00 = $691.00."
+    "Formula: yearly total = monthly payment × 12.",
+    "Tax $380.00 + insurance $140.00 + PMI $171.00 = $691.00.",
+    "So the answer is $691.00; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -4786,9 +4929,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: equity = price × (1 + g)^years − loan balance.",
     "Value = $315,000.00 × (1 + 0.04)^3 = $354,332.16.",
     "Loan balance after 36 payments ≈ $242,131.75.",
-    "Equity = $112,200.41."
+    "Equity = $112,200.41.",
+    "Spreadsheet or calculator: =354332.16-242131.75",
+    "So the answer is $112,200.41; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -4815,9 +4961,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: equity = price × (1 + g)^years − loan balance.",
     "Value = $315,000.00 × (1 − 0.01)^5 = $299,561.87.",
     "Loan balance after 60 payments ≈ $237,211.77.",
-    "Equity = $62,350.10."
+    "Equity = $62,350.10.",
+    "Spreadsheet or calculator: =299561.87-237211.77",
+    "So the answer is $62,350.10; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -4844,9 +4993,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: equity = price × (1 + g)^years − loan balance.",
     "Value = $285,000.00 × (1 − 0.01)^3 = $276,535.22.",
     "Loan balance after 36 payments ≈ $219,831.12.",
-    "Equity = $56,704.10."
+    "Equity = $56,704.10.",
+    "Spreadsheet or calculator: =276535.22-219831.12",
+    "So the answer is $56,704.10; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -4873,9 +5025,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: equity = price × (1 + g)^years − loan balance.",
     "Value = $340,000.00 × (1 + 0.02)^10 = $414,458.10.",
     "Loan balance after 120 payments ≈ $259,414.64.",
-    "Equity = $155,043.47."
+    "Equity = $155,043.47.",
+    "So the answer is $155,043.47; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -4902,9 +5056,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: equity = price × (1 + g)^years − loan balance.",
     "Value = $420,000.00 × (1 − 0.01)^3 = $407,525.58.",
     "Loan balance after 36 payments ≈ $363,197.82.",
-    "Equity = $44,327.76."
+    "Equity = $44,327.76.",
+    "Spreadsheet or calculator: =407525.58-363197.82",
+    "So the answer is $44,327.76; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -4931,9 +5088,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: equity = price × (1 + g)^years − loan balance.",
     "Value = $365,000.00 × (1 + 0.04)^10 = $540,289.16.",
     "Loan balance after 120 payments ≈ $293,960.52.",
-    "Equity = $246,328.64."
+    "Equity = $246,328.64.",
+    "Spreadsheet or calculator: =540289.16-293960.52",
+    "So the answer is $246,328.64; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -4960,7 +5120,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "$70,000.00(1 + 0.04)^10 − $70,000.00 = $33,617.10.",
+    "Spreadsheet or calculator: =70000.00*(1+0.04)^10-70000.00",
     "A fair rent-vs-buy comparison includes this lost growth."
    ]
   },
@@ -4988,7 +5150,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "$85,000.00(1 + 0.06)^10 − $85,000.00 = $67,222.05.",
+    "Spreadsheet or calculator: =85000.00*(1+0.06)^10-85000.00",
     "A fair rent-vs-buy comparison includes this lost growth."
    ]
   },
@@ -5016,7 +5180,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "$55,000.00(1 + 0.06)^7 − $55,000.00 = $27,699.66.",
+    "Spreadsheet or calculator: =55000.00*(1+0.06)^7-55000.00",
     "A fair rent-vs-buy comparison includes this lost growth."
    ]
   },
@@ -5044,7 +5210,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "$90,000.00(1 + 0.05)^5 − $90,000.00 = $24,865.34.",
+    "Spreadsheet or calculator: =90000.00*(1+0.05)^5-90000.00",
     "A fair rent-vs-buy comparison includes this lost growth."
    ]
   },
@@ -5072,7 +5240,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "$35,000.00(1 + 0.04)^7 − $35,000.00 = $11,057.61.",
+    "Spreadsheet or calculator: =35000.00*(1+0.04)^7-35000.00",
     "A fair rent-vs-buy comparison includes this lost growth."
    ]
   },
@@ -5100,7 +5270,9 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "$70,000.00(1 + 0.05)^7 − $70,000.00 = $28,497.03.",
+    "Spreadsheet or calculator: =70000.00*(1+0.05)^7-70000.00",
     "A fair rent-vs-buy comparison includes this lost growth."
    ]
   },
@@ -5568,8 +5740,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum housing cost = 28% × (yearly income ÷ 12).",
     "Gross monthly income = $71,000.00 ÷ 12 = $5,916.67.",
     "28% × $5,916.67 = $1,656.67.",
+    "Spreadsheet or calculator: =28%*5916.67",
     "The payment includes principal, interest, property tax and insurance."
    ]
   },
@@ -5597,8 +5771,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum housing cost = 28% × (yearly income ÷ 12).",
     "Gross monthly income = $113,000.00 ÷ 12 = $9,416.67.",
     "28% × $9,416.67 = $2,636.67.",
+    "Spreadsheet or calculator: =28%*9416.67",
     "The payment includes principal, interest, property tax and insurance."
    ]
   },
@@ -5626,8 +5802,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum housing cost = 28% × (yearly income ÷ 12).",
     "Gross monthly income = $49,000.00 ÷ 12 = $4,083.33.",
     "28% × $4,083.33 = $1,143.33.",
+    "Spreadsheet or calculator: =28%*4083.33",
     "The payment includes principal, interest, property tax and insurance."
    ]
   },
@@ -5655,8 +5833,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum housing cost = 28% × (yearly income ÷ 12).",
     "Gross monthly income = $83,000.00 ÷ 12 = $6,916.67.",
     "28% × $6,916.67 = $1,936.67.",
+    "Spreadsheet or calculator: =28%*6916.67",
     "The payment includes principal, interest, property tax and insurance."
    ]
   },
@@ -5684,8 +5864,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum housing cost = 28% × (yearly income ÷ 12).",
     "Gross monthly income = $119,000.00 ÷ 12 = $9,916.67.",
     "28% × $9,916.67 = $2,776.67.",
+    "Spreadsheet or calculator: =28%*9916.67",
     "The payment includes principal, interest, property tax and insurance."
    ]
   },
@@ -5713,8 +5895,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum housing cost = 28% × (yearly income ÷ 12).",
     "Gross monthly income = $48,000 ÷ 12 = $4,000.",
     "28% × $4,000 = $1,120.",
+    "Spreadsheet or calculator: =28%*4000",
     "The payment includes principal, interest, property tax and insurance."
    ]
   },
@@ -5742,8 +5926,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum housing cost = 28% × (yearly income ÷ 12).",
     "Gross monthly income = $49,000.00 ÷ 12 = $4,083.33.",
     "28% × $4,083.33 = $1,143.33.",
+    "Spreadsheet or calculator: =28%*4083.33",
     "The payment includes principal, interest, property tax and insurance."
    ]
   },
@@ -5771,9 +5957,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment % × price + closing % × price.",
     "Down payment = 3.5% × $300,000 = $10,500.",
     "Closing costs = 2% × $300,000 = $6,000.",
-    "Cash needed = $16,500."
+    "Cash needed = $16,500.",
+    "Spreadsheet or calculator: =(2%*300000)+(3.5%*300000)",
+    "So the answer is $16,500; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -5800,9 +5989,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment % × price + closing % × price.",
     "Down payment = 3.5% × $245,000 = $8,575.",
     "Closing costs = 3% × $245,000 = $7,350.",
-    "Cash needed = $15,925."
+    "Cash needed = $15,925.",
+    "Spreadsheet or calculator: =(3%*245000)+(3.5%*245000)",
+    "So the answer is $15,925; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -5829,9 +6021,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment % × price + closing % × price.",
     "Down payment = 10% × $290,000 = $29,000.",
     "Closing costs = 4% × $290,000 = $11,600.",
-    "Cash needed = $40,600."
+    "Cash needed = $40,600.",
+    "Spreadsheet or calculator: =(4%*290000)+(10%*290000)",
+    "So the answer is $40,600; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -5858,9 +6053,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment % × price + closing % × price.",
     "Down payment = 3.5% × $270,000 = $9,450.",
     "Closing costs = 3% × $270,000 = $8,100.",
-    "Cash needed = $17,550."
+    "Cash needed = $17,550.",
+    "Spreadsheet or calculator: =(3%*270000)+(3.5%*270000)",
+    "So the answer is $17,550; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -5887,9 +6085,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment % × price + closing % × price.",
     "Down payment = 5% × $310,000 = $15,500.",
     "Closing costs = 3% × $310,000 = $9,300.",
-    "Cash needed = $24,800."
+    "Cash needed = $24,800.",
+    "Spreadsheet or calculator: =(3%*310000)+(5%*310000)",
+    "So the answer is $24,800; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -5916,9 +6117,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment % × price + closing % × price.",
     "Down payment = 5% × $225,000 = $11,250.",
     "Closing costs = 2% × $225,000 = $4,500.",
-    "Cash needed = $15,750."
+    "Cash needed = $15,750.",
+    "Spreadsheet or calculator: =(2%*225000)+(5%*225000)",
+    "So the answer is $15,750; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -5945,9 +6149,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: cash to close = down payment % × price + closing % × price.",
     "Down payment = 10% × $350,000 = $35,000.",
     "Closing costs = 3% × $350,000 = $10,500.",
-    "Cash needed = $45,500."
+    "Cash needed = $45,500.",
+    "Spreadsheet or calculator: =(3%*350000)+(10%*350000)",
+    "So the answer is $45,500; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -5974,9 +6181,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly escrow = (assessed value × tax rate + yearly insurance) ÷ 12.",
     "Property tax = 0.9% × $180,000.00 = $1,620.00 per year.",
     "Tax + insurance = $3,220.00 per year.",
-    "÷ 12 = $268.33 per month."
+    "÷ 12 = $268.33 per month.",
+    "So the answer is $268.33; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -6003,9 +6212,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly escrow = (assessed value × tax rate + yearly insurance) ÷ 12.",
     "Property tax = 1.1% × $300,000.00 = $3,300.00 per year.",
     "Tax + insurance = $5,550.00 per year.",
-    "÷ 12 = $462.50 per month."
+    "÷ 12 = $462.50 per month.",
+    "So the answer is $462.50; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -6032,9 +6243,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly escrow = (assessed value × tax rate + yearly insurance) ÷ 12.",
     "Property tax = 1.8% × $345,000.00 = $6,210.00 per year.",
     "Tax + insurance = $8,510.00 per year.",
-    "÷ 12 = $709.17 per month."
+    "÷ 12 = $709.17 per month.",
+    "So the answer is $709.17; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -6061,9 +6274,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly escrow = (assessed value × tax rate + yearly insurance) ÷ 12.",
     "Property tax = 0.9% × $435,000.00 = $3,915.00 per year.",
     "Tax + insurance = $5,865.00 per year.",
-    "÷ 12 = $488.75 per month."
+    "÷ 12 = $488.75 per month.",
+    "So the answer is $488.75; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -6090,9 +6305,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly escrow = (assessed value × tax rate + yearly insurance) ÷ 12.",
     "Property tax = 1.4% × $310,000.00 = $4,340.00 per year.",
     "Tax + insurance = $6,690.00 per year.",
-    "÷ 12 = $557.50 per month."
+    "÷ 12 = $557.50 per month.",
+    "So the answer is $557.50; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -6119,9 +6336,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly escrow = (assessed value × tax rate + yearly insurance) ÷ 12.",
     "Property tax = 1.4% × $400,000.00 = $5,600.00 per year.",
     "Tax + insurance = $6,850.00 per year.",
-    "÷ 12 = $570.83 per month."
+    "÷ 12 = $570.83 per month.",
+    "So the answer is $570.83; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -6148,9 +6367,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly escrow = (assessed value × tax rate + yearly insurance) ÷ 12.",
     "Property tax = 0.9% × $435,000.00 = $3,915.00 per year.",
     "Tax + insurance = $6,315.00 per year.",
-    "÷ 12 = $526.25 per month."
+    "÷ 12 = $526.25 per month.",
+    "So the answer is $526.25; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -6177,8 +6398,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "Invested value = $64,000.00 × (1 + 0.06)^5 = $85,646.44.",
     "Opportunity cost = $85,646.44 − $64,000.00 = $21,646.44.",
+    "Spreadsheet or calculator: =85646.44-64000.00",
     "Home equity can also grow, so compare both sides before deciding."
    ]
   },
@@ -6206,8 +6429,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "Invested value = $72,000.00 × (1 + 0.06)^5 = $96,352.24.",
     "Opportunity cost = $96,352.24 − $72,000.00 = $24,352.24.",
+    "Spreadsheet or calculator: =96352.24-72000.00",
     "Home equity can also grow, so compare both sides before deciding."
    ]
   },
@@ -6235,8 +6460,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "Invested value = $42,000.00 × (1 + 0.04)^10 = $62,170.26.",
     "Opportunity cost = $62,170.26 − $42,000.00 = $20,170.26.",
+    "Spreadsheet or calculator: =62170.26-42000.00",
     "Home equity can also grow, so compare both sides before deciding."
    ]
   },
@@ -6264,8 +6491,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "Invested value = $40,000.00 × (1 + 0.04)^5 = $48,666.12.",
     "Opportunity cost = $48,666.12 − $40,000.00 = $8,666.12.",
+    "Spreadsheet or calculator: =48666.12-40000.00",
     "Home equity can also grow, so compare both sides before deciding."
    ]
   },
@@ -6293,8 +6522,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "Invested value = $30,000.00 × (1 + 0.04)^5 = $36,499.59.",
     "Opportunity cost = $36,499.59 − $30,000.00 = $6,499.59.",
+    "Spreadsheet or calculator: =36499.59-30000.00",
     "Home equity can also grow, so compare both sides before deciding."
    ]
   },
@@ -6322,8 +6553,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "Invested value = $76,000.00 × (1 + 0.06)^10 = $136,104.42.",
     "Opportunity cost = $136,104.42 − $76,000.00 = $60,104.42.",
+    "Spreadsheet or calculator: =136104.42-76000.00",
     "Home equity can also grow, so compare both sides before deciding."
    ]
   },
@@ -6351,8 +6584,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: opportunity cost = amount × (1 + r)^years − amount.",
     "Invested value = $39,000.00 × (1 + 0.06)^5 = $52,190.80.",
     "Opportunity cost = $52,190.80 − $39,000.00 = $13,190.80.",
+    "Spreadsheet or calculator: =52190.80-39000.00",
     "Home equity can also grow, so compare both sides before deciding."
    ]
   },
@@ -6380,9 +6615,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (wage × hours × 52 ÷ 12).",
     "Gross yearly = $21 × 40 × 52 = $43,680.",
     "Monthly = ÷ 12 = $3,640.",
-    "30% × $3,640 = $1,092."
+    "30% × $3,640 = $1,092.",
+    "Spreadsheet or calculator: =30%*3640",
+    "So the answer is $1,092; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6409,9 +6647,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (wage × hours × 52 ÷ 12).",
     "Gross yearly = $21 × 40 × 52 = $43,680.",
     "Monthly = ÷ 12 = $3,640.",
-    "30% × $3,640 = $1,092."
+    "30% × $3,640 = $1,092.",
+    "Spreadsheet or calculator: =30%*3640",
+    "So the answer is $1,092; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6438,9 +6679,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (wage × hours × 52 ÷ 12).",
     "Gross yearly = $19.00 × 40 × 52 = $39,520.00.",
     "Monthly = ÷ 12 = $3,293.33.",
-    "30% × $3,293.33 = $988.00."
+    "30% × $3,293.33 = $988.00.",
+    "Spreadsheet or calculator: =30%*3293.33",
+    "So the answer is $988.00; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6467,9 +6711,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (wage × hours × 52 ÷ 12).",
     "Gross yearly = $26.50 × 40 × 52 = $55,120.00.",
     "Monthly = ÷ 12 = $4,593.33.",
-    "30% × $4,593.33 = $1,378.00."
+    "30% × $4,593.33 = $1,378.00.",
+    "Spreadsheet or calculator: =30%*4593.33",
+    "So the answer is $1,378.00; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6496,9 +6743,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (wage × hours × 52 ÷ 12).",
     "Gross yearly = $16.00 × 40 × 52 = $33,280.00.",
     "Monthly = ÷ 12 = $2,773.33.",
-    "30% × $2,773.33 = $832.00."
+    "30% × $2,773.33 = $832.00.",
+    "Spreadsheet or calculator: =30%*2773.33",
+    "So the answer is $832.00; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6525,9 +6775,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (wage × hours × 52 ÷ 12).",
     "Gross yearly = $17.50 × 40 × 52 = $36,400.00.",
     "Monthly = ÷ 12 = $3,033.33.",
-    "30% × $3,033.33 = $910.00."
+    "30% × $3,033.33 = $910.00.",
+    "Spreadsheet or calculator: =30%*3033.33",
+    "So the answer is $910.00; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6554,9 +6807,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: maximum rent = 30% × (wage × hours × 52 ÷ 12).",
     "Gross yearly = $24 × 40 × 52 = $49,920.",
     "Monthly = ÷ 12 = $4,160.",
-    "30% × $4,160 = $1,248."
+    "30% × $4,160 = $1,248.",
+    "Spreadsheet or calculator: =30%*4160",
+    "So the answer is $1,248; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6583,9 +6839,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = first month's rent + deposit + fees + moving costs.",
     "Rent due up front = $1,525.",
     "Add deposit, fee and truck: $1,525 + $75 + $215.",
-    "Total = $3,340."
+    "Total = $3,340.",
+    "So the answer is $3,340; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6612,9 +6870,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = first month's rent + deposit + fees + moving costs.",
     "Rent due up front = $1,150.",
     "Add deposit, fee and truck: $1,150 + $35 + $95.",
-    "Total = $2,430."
+    "Total = $2,430.",
+    "So the answer is $2,430; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6641,9 +6901,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = first month's rent + deposit + fees + moving costs.",
     "Rent due up front = $1,425.",
     "Add deposit, fee and truck: $1,425 + $35 + $215.",
-    "Total = $3,100."
+    "Total = $3,100.",
+    "So the answer is $3,100; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6670,9 +6932,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = first month's rent + deposit + fees + moving costs.",
     "Rent due up front = $950 × 2 = $1,900.",
     "Add deposit, fee and truck: $950 + $75 + $275.",
-    "Total = $3,200."
+    "Total = $3,200.",
+    "Spreadsheet or calculator: =(950*2)+(950+75+275)",
+    "So the answer is $3,200; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6699,9 +6964,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = first month's rent + deposit + fees + moving costs.",
     "Rent due up front = $1,050 × 2 = $2,100.",
     "Add deposit, fee and truck: $1,050 + $35 + $250.",
-    "Total = $3,435."
+    "Total = $3,435.",
+    "Spreadsheet or calculator: =(1050*2)+(1050+35+250)",
+    "So the answer is $3,435; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6728,9 +6996,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = first month's rent + deposit + fees + moving costs.",
     "Rent due up front = $1,225 × 2 = $2,450.",
     "Add deposit, fee and truck: $1,225 + $35 + $255.",
-    "Total = $3,965."
+    "Total = $3,965.",
+    "Spreadsheet or calculator: =(1225*2)+(1225+35+255)",
+    "So the answer is $3,965; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6757,9 +7028,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = first month's rent + deposit + fees + moving costs.",
     "Rent due up front = $1,375.00 × 2 = $2,750.00.",
     "Add deposit, fee and truck: $2,062.50 + $75.00 + $100.00.",
-    "Total = $4,987.50."
+    "Total = $4,987.50.",
+    "Spreadsheet or calculator: =(1375.00*2)+(2062.50+75.00+100.00)",
+    "So the answer is $4,987.50; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6786,9 +7060,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: prorated rent = monthly rent ÷ days in month × days lived.",
     "Days lived = 31 − 18 + 1 = 14.",
     "Daily rent = $1,425.00 ÷ 31 = $45.97.",
-    "Prorated rent = $1,425.00 × 14/31 = $643.55."
+    "Prorated rent = $1,425.00 × 14/31 = $643.55.",
+    "Spreadsheet or calculator: =1425.00*14/31",
+    "So the answer is $643.55; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6815,9 +7092,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: prorated rent = monthly rent ÷ days in month × days lived.",
     "Days lived = 31 − 8 + 1 = 24.",
     "Daily rent = $1,925.00 ÷ 31 = $62.10.",
-    "Prorated rent = $1,925.00 × 24/31 = $1,490.32."
+    "Prorated rent = $1,925.00 × 24/31 = $1,490.32.",
+    "Spreadsheet or calculator: =1925.00*24/31",
+    "So the answer is $1,490.32; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6844,9 +7124,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: prorated rent = monthly rent ÷ days in month × days lived.",
     "Days lived = 31 − 22 + 1 = 10.",
     "Daily rent = $1,200.00 ÷ 31 = $38.71.",
-    "Prorated rent = $1,200.00 × 10/31 = $387.10."
+    "Prorated rent = $1,200.00 × 10/31 = $387.10.",
+    "Spreadsheet or calculator: =1200.00*10/31",
+    "So the answer is $387.10; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6873,9 +7156,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: prorated rent = monthly rent ÷ days in month × days lived.",
     "Days lived = 31 − 7 + 1 = 25.",
     "Daily rent = $1,500.00 ÷ 31 = $48.39.",
-    "Prorated rent = $1,500.00 × 25/31 = $1,209.68."
+    "Prorated rent = $1,500.00 × 25/31 = $1,209.68.",
+    "Spreadsheet or calculator: =1500.00*25/31",
+    "So the answer is $1,209.68; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6902,9 +7188,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: prorated rent = monthly rent ÷ days in month × days lived.",
     "Days lived = 30 − 22 + 1 = 9.",
     "Daily rent = $1,725.00 ÷ 30 = $57.50.",
-    "Prorated rent = $1,725.00 × 9/30 = $517.50."
+    "Prorated rent = $1,725.00 × 9/30 = $517.50.",
+    "Spreadsheet or calculator: =1725.00*9/30",
+    "So the answer is $517.50; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6931,9 +7220,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: prorated rent = monthly rent ÷ days in month × days lived.",
     "Days lived = 30 − 22 + 1 = 9.",
     "Daily rent = $2,100 ÷ 30 = $70.",
-    "Prorated rent = $2,100 × 9/30 = $630."
+    "Prorated rent = $2,100 × 9/30 = $630.",
+    "Spreadsheet or calculator: =2100*9/30",
+    "So the answer is $630; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6960,9 +7252,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: prorated rent = monthly rent ÷ days in month × days lived.",
     "Days lived = 31 − 8 + 1 = 24.",
     "Daily rent = $1,750.00 ÷ 31 = $56.45.",
-    "Prorated rent = $1,750.00 × 24/31 = $1,354.84."
+    "Prorated rent = $1,750.00 × 24/31 = $1,354.84.",
+    "Spreadsheet or calculator: =1750.00*24/31",
+    "So the answer is $1,354.84; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -6989,9 +7284,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: your share = your rent percent × rent + utilities ÷ number of roommates.",
     "Rent share = 55% × $2,000 = $1,100.",
     "Utilities = $230 ÷ 2 = $115.",
-    "Total = $1,215."
+    "Total = $1,215.",
+    "Spreadsheet or calculator: =(230/2)+(55%*2000)",
+    "So the answer is $1,215; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7018,9 +7316,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: your share = your rent percent × rent + utilities ÷ number of roommates.",
     "Rent share = 40% × $1,450.00 = $580.00.",
     "Utilities = $125.00 ÷ 2 = $62.50.",
-    "Total = $642.50."
+    "Total = $642.50.",
+    "Spreadsheet or calculator: =(125.00/2)+(40%*1450.00)",
+    "So the answer is $642.50; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7047,9 +7348,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: your share = your rent percent × rent + utilities ÷ number of roommates.",
     "Rent share = 55% × $2,800 = $1,540.",
     "Utilities = $210 ÷ 2 = $105.",
-    "Total = $1,645."
+    "Total = $1,645.",
+    "Spreadsheet or calculator: =(210/2)+(55%*2800)",
+    "So the answer is $1,645; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7076,9 +7380,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: your share = your rent percent × rent + utilities ÷ number of roommates.",
     "Rent share = 60% × $2,700.00 = $1,620.00.",
     "Utilities = $235.00 ÷ 2 = $117.50.",
-    "Total = $1,737.50."
+    "Total = $1,737.50.",
+    "Spreadsheet or calculator: =(235.00/2)+(60%*2700.00)",
+    "So the answer is $1,737.50; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7105,9 +7412,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: your share = your rent percent × rent + utilities ÷ number of roommates.",
     "Rent share = 45% × $2,800.00 = $1,260.00.",
     "Utilities = $255.00 ÷ 2 = $127.50.",
-    "Total = $1,387.50."
+    "Total = $1,387.50.",
+    "Spreadsheet or calculator: =(255.00/2)+(45%*2800.00)",
+    "So the answer is $1,387.50; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7134,9 +7444,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: your share = your rent percent × rent + utilities ÷ number of roommates.",
     "Rent share = 45% × $2,250.00 = $1,012.50.",
     "Utilities = $230.00 ÷ 2 = $115.00.",
-    "Total = $1,127.50."
+    "Total = $1,127.50.",
+    "Spreadsheet or calculator: =(230.00/2)+(45%*2250.00)",
+    "So the answer is $1,127.50; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7163,9 +7476,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: refund = deposit − allowed deductions (damage beyond normal wear and tear).",
     "Faded paint after years of normal use is wear and tear, so it cannot be deducted.",
     "Deductions = $120 + $0 = $120.",
-    "Refund = $1,700 − $120 = $1,580."
+    "Refund = $1,700 − $120 = $1,580.",
+    "Spreadsheet or calculator: =1700-120",
+    "So the answer is $1,580; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7192,9 +7508,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: refund = deposit − allowed deductions (damage beyond normal wear and tear).",
     "Faded paint after years of normal use is wear and tear, so it cannot be deducted.",
     "Deductions = $0 + $225 = $225.",
-    "Refund = $1,950 − $225 = $1,725."
+    "Refund = $1,950 − $225 = $1,725.",
+    "Spreadsheet or calculator: =1950-225",
+    "So the answer is $1,725; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7221,9 +7540,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: refund = deposit − allowed deductions (damage beyond normal wear and tear).",
     "Faded paint after years of normal use is wear and tear, so it cannot be deducted.",
     "Deductions = $120 + $0 = $120.",
-    "Refund = $1,350 − $120 = $1,230."
+    "Refund = $1,350 − $120 = $1,230.",
+    "Spreadsheet or calculator: =1350-120",
+    "So the answer is $1,230; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7250,9 +7572,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: refund = deposit − allowed deductions (damage beyond normal wear and tear).",
     "Faded paint after years of normal use is wear and tear, so it cannot be deducted.",
     "Deductions = $120 + $225 = $345.",
-    "Refund = $1,150 − $345 = $805."
+    "Refund = $1,150 − $345 = $805.",
+    "Spreadsheet or calculator: =1150-345",
+    "So the answer is $805; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7279,9 +7604,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: refund = deposit − allowed deductions (damage beyond normal wear and tear).",
     "Faded paint after years of normal use is wear and tear, so it cannot be deducted.",
     "Deductions = $0 + $150 = $150.",
-    "Refund = $1,850 − $150 = $1,700."
+    "Refund = $1,850 − $150 = $1,700.",
+    "Spreadsheet or calculator: =1850-150",
+    "So the answer is $1,700; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7308,9 +7636,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: refund = deposit − allowed deductions (damage beyond normal wear and tear).",
     "Faded paint after years of normal use is wear and tear, so it cannot be deducted.",
     "Deductions = $0 + $150 = $150.",
-    "Refund = $1,100 − $150 = $950."
+    "Refund = $1,100 − $150 = $950.",
+    "Spreadsheet or calculator: =1100-150",
+    "So the answer is $950; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -7337,7 +7668,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,325 × 12 = $15,900."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$1,325 × 12 = $15,900.",
+    "Spreadsheet or calculator: =1325*12",
+    "So the answer is $15,900; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7364,7 +7698,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,175 × 12 = $26,100."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$2,175 × 12 = $26,100.",
+    "Spreadsheet or calculator: =2175*12",
+    "So the answer is $26,100; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7391,7 +7728,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,075 × 12 = $12,900."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$1,075 × 12 = $12,900.",
+    "Spreadsheet or calculator: =1075*12",
+    "So the answer is $12,900; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7418,7 +7758,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$900 × 12 = $10,800."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$900 × 12 = $10,800.",
+    "Spreadsheet or calculator: =900*12",
+    "So the answer is $10,800; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7445,7 +7788,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,025 × 12 = $24,300."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$2,025 × 12 = $24,300.",
+    "Spreadsheet or calculator: =2025*12",
+    "So the answer is $24,300; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7472,7 +7818,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,150 × 12 = $25,800."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$2,150 × 12 = $25,800.",
+    "Spreadsheet or calculator: =2150*12",
+    "So the answer is $25,800; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7499,7 +7848,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,325 × 12 = $15,900."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$1,325 × 12 = $15,900.",
+    "Spreadsheet or calculator: =1325*12",
+    "So the answer is $15,900; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7526,7 +7878,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,875 × 12 = $22,500."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$1,875 × 12 = $22,500.",
+    "Spreadsheet or calculator: =1875*12",
+    "So the answer is $22,500; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7553,7 +7908,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$900 × 12 = $10,800."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$900 × 12 = $10,800.",
+    "Spreadsheet or calculator: =900*12",
+    "So the answer is $10,800; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7580,7 +7938,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,350 × 12 = $16,200."
+    "Formula: Yearly rent = monthly rent × 12.",
+    "$1,350 × 12 = $16,200.",
+    "Spreadsheet or calculator: =1350*12",
+    "So the answer is $16,200; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7607,9 +7968,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,975.00 × 12 = $23,700.00.",
     "Year 2: $2,054.00 × 12; Year 3: $2,136.16 × 12.",
-    "Total = $73,981.92."
+    "Total = $73,981.92.",
+    "Spreadsheet or calculator: =(1975.00*12)+(2054.00*12)+(2136.16*12)",
+    "So the answer is $73,981.92; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7636,9 +8000,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,800.00 × 12 = $21,600.00.",
     "Year 2: $1,890.00 × 12; Year 3: $1,984.50 × 12.",
-    "Total = $68,094.00."
+    "Total = $68,094.00.",
+    "Spreadsheet or calculator: =(1800.00*12)+(1890.00*12)+(1984.50*12)",
+    "So the answer is $68,094.00; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7665,9 +8032,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,975.00 × 12 = $23,700.00.",
     "Year 2: $2,034.25 × 12; Year 3: $2,095.28 × 12.",
-    "Total = $73,254.33."
+    "Total = $73,254.33.",
+    "Spreadsheet or calculator: =(1975.00*12)+(2034.25*12)+(2095.28*12)",
+    "So the answer is $73,254.33; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7694,9 +8064,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,275.00 × 12 = $15,300.00.",
     "Year 2: $1,326.00 × 12; Year 3: $1,379.04 × 12.",
-    "Total = $47,760.48."
+    "Total = $47,760.48.",
+    "Spreadsheet or calculator: =(1275.00*12)+(1326.00*12)+(1379.04*12)",
+    "So the answer is $47,760.48; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7723,9 +8096,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,550.00 × 12 = $18,600.00.",
     "Year 2: $1,612.00 × 12; Year 3: $1,676.48 × 12.",
-    "Total = $58,061.76."
+    "Total = $58,061.76.",
+    "Spreadsheet or calculator: =(1550.00*12)+(1612.00*12)+(1676.48*12)",
+    "So the answer is $58,061.76; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7752,9 +8128,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,000.00 × 12 = $12,000.00.",
     "Year 2: $1,030.00 × 12; Year 3: $1,060.90 × 12.",
-    "Total = $37,090.80."
+    "Total = $37,090.80.",
+    "Spreadsheet or calculator: =(1000.00*12)+(1030.00*12)+(1060.90*12)",
+    "So the answer is $37,090.80; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7781,9 +8160,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,825.00 × 12 = $21,900.00.",
     "Year 2: $1,879.75 × 12; Year 3: $1,936.14 × 12.",
-    "Total = $67,690.71."
+    "Total = $67,690.71.",
+    "Spreadsheet or calculator: =(1825.00*12)+(1879.75*12)+(1936.14*12)",
+    "So the answer is $67,690.71; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7810,9 +8192,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,000.00 × 12 = $12,000.00.",
     "Year 2: $1,050.00 × 12; Year 3: $1,102.50 × 12.",
-    "Total = $37,830.00."
+    "Total = $37,830.00.",
+    "Spreadsheet or calculator: =(1000.00*12)+(1050.00*12)+(1102.50*12)",
+    "So the answer is $37,830.00; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7839,9 +8224,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,200.00 × 12 = $14,400.00.",
     "Year 2: $1,248.00 × 12; Year 3: $1,297.92 × 12.",
-    "Total = $44,951.04."
+    "Total = $44,951.04.",
+    "Spreadsheet or calculator: =(1200.00*12)+(1248.00*12)+(1297.92*12)",
+    "So the answer is $44,951.04; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7868,9 +8256,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $975.00 × 12 = $11,700.00.",
     "Year 2: $1,014.00 × 12; Year 3: $1,054.56 × 12.",
-    "Total = $36,522.72."
+    "Total = $36,522.72.",
+    "Spreadsheet or calculator: =(975.00*12)+(1014.00*12)+(1054.56*12)",
+    "So the answer is $36,522.72; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7897,9 +8288,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,675.00 × 12 = $20,100.00.",
     "Year 2: $1,742.00 × 12; Year 3: $1,811.68 × 12.",
-    "Total = $62,744.16."
+    "Total = $62,744.16.",
+    "Spreadsheet or calculator: =(1675.00*12)+(1742.00*12)+(1811.68*12)",
+    "So the answer is $62,744.16; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7926,9 +8320,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,025.00 × 12 = $12,300.00.",
     "Year 2: $1,076.25 × 12; Year 3: $1,130.06 × 12.",
-    "Total = $38,775.75."
+    "Total = $38,775.75.",
+    "Spreadsheet or calculator: =(1025.00*12)+(1076.25*12)+(1130.06*12)",
+    "So the answer is $38,775.75; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7955,9 +8352,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $2,000 × 12 = $24,000.",
     "Year 2: $2,100 × 12; Year 3: $2,205 × 12.",
-    "Total = $75,660."
+    "Total = $75,660.",
+    "Spreadsheet or calculator: =(2000*12)+(2100*12)+(2205*12)",
+    "So the answer is $75,660; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -7984,9 +8384,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = 12 × rent × (1 + (1 + g) + (1 + g)²).",
     "Year 1: $1,625.00 × 12 = $19,500.00.",
     "Year 2: $1,706.25 × 12; Year 3: $1,791.56 × 12.",
-    "Total = $61,473.75."
+    "Total = $61,473.75.",
+    "Spreadsheet or calculator: =(1625.00*12)+(1706.25*12)+(1791.56*12)",
+    "So the answer is $61,473.75; put renting and owning side by side over the same number of years before deciding."
    ]
   },
   {
@@ -8013,7 +8416,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$250,000 − $50,000 = $200,000."
+    "Formula: Loan = price − down payment.",
+    "$250,000 − $50,000 = $200,000.",
+    "Spreadsheet or calculator: =250000-50000",
+    "So the answer is $200,000; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8040,7 +8446,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$270,000 − $55,000 = $215,000."
+    "Formula: Loan = price − down payment.",
+    "$270,000 − $55,000 = $215,000.",
+    "Spreadsheet or calculator: =270000-55000",
+    "So the answer is $215,000; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8067,7 +8476,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$240,000 − $15,000 = $225,000."
+    "Formula: Loan = price − down payment.",
+    "$240,000 − $15,000 = $225,000.",
+    "Spreadsheet or calculator: =240000-15000",
+    "So the answer is $225,000; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8094,7 +8506,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$160,000 − $80,000 = $80,000."
+    "Formula: Loan = price − down payment.",
+    "$160,000 − $80,000 = $80,000.",
+    "Spreadsheet or calculator: =160000-80000",
+    "So the answer is $80,000; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8121,9 +8536,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "n = 360; payment = $2,212.24.",
     "Total paid = $796,405.71.",
-    "Interest = $446,405.71."
+    "Interest = $446,405.71.",
+    "So the answer is $446,405.71; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8150,9 +8567,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "n = 180; payment = $1,752.72.",
     "Total paid = $315,488.72.",
-    "Interest = $120,488.72."
+    "Interest = $120,488.72.",
+    "So the answer is $120,488.72; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8179,9 +8598,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "n = 360; payment = $2,162.23.",
     "Total paid = $778,403.92.",
-    "Interest = $453,403.92."
+    "Interest = $453,403.92.",
+    "So the answer is $453,403.92; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8208,9 +8629,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "n = 360; payment = $1,696.52.",
     "Total paid = $610,747.69.",
-    "Interest = $355,747.69."
+    "Interest = $355,747.69.",
+    "So the answer is $355,747.69; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8237,9 +8660,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "n = 180; payment = $3,280.72.",
     "Total paid = $590,530.17.",
-    "Interest = $225,530.17."
+    "Interest = $225,530.17.",
+    "So the answer is $225,530.17; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8266,9 +8691,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: PMT = P × i ÷ (1 − (1 + i)^−n); total interest = PMT × n − P.",
     "n = 360; payment = $2,180.63.",
     "Total paid = $785,028.49.",
-    "Interest = $440,028.49."
+    "Interest = $440,028.49.",
+    "So the answer is $440,028.49; lenders and budgets both look at this monthly number."
    ]
   },
   {
@@ -8295,7 +8722,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,620 ÷ 12 = $385."
+    "Formula: Monthly amount = yearly tax ÷ 12.",
+    "$4,620 ÷ 12 = $385.",
+    "Spreadsheet or calculator: =4620/12",
+    "So the answer is $385; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8322,7 +8752,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$4,020 ÷ 12 = $335."
+    "Formula: Monthly amount = yearly tax ÷ 12.",
+    "$4,020 ÷ 12 = $335.",
+    "Spreadsheet or calculator: =4020/12",
+    "So the answer is $335; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8349,7 +8782,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$3,840 ÷ 12 = $320."
+    "Formula: Monthly amount = yearly tax ÷ 12.",
+    "$3,840 ÷ 12 = $320.",
+    "Spreadsheet or calculator: =3840/12",
+    "So the answer is $320; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8376,7 +8812,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$5,820 ÷ 12 = $485."
+    "Formula: Monthly amount = yearly tax ÷ 12.",
+    "$5,820 ÷ 12 = $485.",
+    "Spreadsheet or calculator: =5820/12",
+    "So the answer is $485; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8403,7 +8842,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$6,840 ÷ 12 = $570."
+    "Formula: Monthly amount = yearly tax ÷ 12.",
+    "$6,840 ÷ 12 = $570.",
+    "Spreadsheet or calculator: =6840/12",
+    "So the answer is $570; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8430,9 +8872,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $337,500.00; P&I = $2,245.40.",
     "Tax $343.75, insurance $100.00, PMI $196.88 per month.",
-    "Total = $2,886.02."
+    "Total = $2,886.02.",
+    "So the answer is $2,886.02; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8459,9 +8903,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $384,750.00; P&I = $2,431.88.",
     "Tax $472.50, insurance $166.67, PMI $224.44 per month.",
-    "Total = $3,295.49."
+    "Total = $3,295.49.",
+    "So the answer is $3,295.49; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8488,9 +8934,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $323,000.00; P&I = $2,148.93.",
     "Tax $311.67, insurance $150.00, PMI $188.42 per month.",
-    "Total = $2,799.01."
+    "Total = $2,799.01.",
+    "So the answer is $2,799.01; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8517,9 +8965,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $342,000.00; P&I = $2,161.67.",
     "Tax $330.00, insurance $133.33, PMI $199.50 per month.",
-    "Total = $2,824.51."
+    "Total = $2,824.51.",
+    "So the answer is $2,824.51; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8546,9 +8996,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $247,500.00; P&I = $1,646.62.",
     "Tax $320.83, insurance $108.33, PMI $144.38 per month.",
-    "Total = $2,220.17."
+    "Total = $2,220.17.",
+    "So the answer is $2,220.17; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8575,9 +9027,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $265,500.00; P&I = $1,678.14.",
     "Tax $270.42, insurance $100.00, PMI $154.88 per month.",
-    "Total = $2,203.43."
+    "Total = $2,203.43.",
+    "So the answer is $2,203.43; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8604,9 +9058,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $207,000.00; P&I = $1,377.18.",
     "Tax $268.33, insurance $116.67, PMI $120.75 per month.",
-    "Total = $1,882.93."
+    "Total = $1,882.93.",
+    "So the answer is $1,882.93; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8633,9 +9089,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $355,500.00; P&I = $2,247.00.",
     "Tax $460.83, insurance $133.33, PMI $207.38 per month.",
-    "Total = $3,048.54."
+    "Total = $3,048.54.",
+    "So the answer is $3,048.54; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8662,9 +9120,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: monthly cost = PMT + property tax ÷ 12 + insurance ÷ 12 + PMI.",
     "Loan = $266,000.00; P&I = $1,681.30.",
     "Tax $326.67, insurance $183.33, PMI $155.17 per month.",
-    "Total = $2,346.47."
+    "Total = $2,346.47.",
+    "So the answer is $2,346.47; budget for these costs on top of the mortgage payment."
    ]
   },
   {
@@ -8691,7 +9151,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$10,000 × 0.04 = $400."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$10,000 × 0.04 = $400.",
+    "Spreadsheet or calculator: =10000*0.04",
+    "So the answer is $400; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8718,7 +9181,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20,000 × 0.05 = $1,000."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$20,000 × 0.05 = $1,000.",
+    "Spreadsheet or calculator: =20000*0.05",
+    "So the answer is $1,000; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8745,7 +9211,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$50,000 × 0.03 = $1,500."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$50,000 × 0.03 = $1,500.",
+    "Spreadsheet or calculator: =50000*0.03",
+    "So the answer is $1,500; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8772,7 +9241,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$60,000 × 0.05 = $3,000."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$60,000 × 0.05 = $3,000.",
+    "Spreadsheet or calculator: =60000*0.05",
+    "So the answer is $3,000; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8799,7 +9271,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$25,000 × 0.04 = $1,000."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$25,000 × 0.04 = $1,000.",
+    "Spreadsheet or calculator: =25000*0.04",
+    "So the answer is $1,000; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8826,7 +9301,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$50,000 × 0.05 = $2,500."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$50,000 × 0.05 = $2,500.",
+    "Spreadsheet or calculator: =50000*0.05",
+    "So the answer is $2,500; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8853,7 +9331,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$40,000 × 0.05 = $2,000."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$40,000 × 0.05 = $2,000.",
+    "Spreadsheet or calculator: =40000*0.05",
+    "So the answer is $2,000; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8880,7 +9361,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$20,000 × 0.04 = $800."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$20,000 × 0.04 = $800.",
+    "Spreadsheet or calculator: =20000*0.04",
+    "So the answer is $800; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8907,7 +9391,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$50,000 × 0.05 = $2,500."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$50,000 × 0.05 = $2,500.",
+    "Spreadsheet or calculator: =50000*0.05",
+    "So the answer is $2,500; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8934,7 +9421,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$45,000 × 0.05 = $2,250."
+    "Formula: Lost interest for one year = amount × rate.",
+    "$45,000 × 0.05 = $2,250.",
+    "Spreadsheet or calculator: =45000*0.05",
+    "So the answer is $2,250; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8959,9 +9449,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: home gain = price × ((1 + g)^t − 1); investment gain = down payment × ((1 + r)^t − 1); difference.",
     "Home gain = $220,000.00 × (1.04^5 − 1) = $47,663.64.",
     "Investment gain = $44,000.00 × (1.07.000000000000001^5 − 1) = $17,712.28.",
-    "Difference = $29,951.36. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+    "Difference = $29,951.36. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it.",
+    "Spreadsheet or calculator: =47663.64-17712.28",
+    "So the answer is $29,951.36; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -8986,9 +9479,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: home gain = price × ((1 + g)^t − 1); investment gain = down payment × ((1 + r)^t − 1); difference.",
     "Home gain = $250,000.00 × (1.02^5 − 1) = $26,020.20.",
     "Investment gain = $25,000.00 × (1.06^5 − 1) = $8,455.64.",
-    "Difference = $17,564.56. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+    "Difference = $17,564.56. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it.",
+    "Spreadsheet or calculator: =(250000.00*(1.02^5-1))-(25000.00*(1.06^5-1))",
+    "So the answer is $17,564.56; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -9013,9 +9509,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: home gain = price × ((1 + g)^t − 1); investment gain = down payment × ((1 + r)^t − 1); difference.",
     "Home gain = $370,000.00 × (1.03^5 − 1) = $58,931.41.",
     "Investment gain = $37,000.00 × (1.05^5 − 1) = $10,222.42.",
-    "Difference = $48,708.99. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+    "Difference = $48,708.99. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it.",
+    "Spreadsheet or calculator: =(370000.00*(1.03^5-1))-(37000.00*(1.05^5-1))",
+    "So the answer is $48,708.99; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -9040,9 +9539,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: home gain = price × ((1 + g)^t − 1); investment gain = down payment × ((1 + r)^t − 1); difference.",
     "Home gain = $240,000.00 × (1.04^5 − 1) = $51,996.70.",
     "Investment gain = $24,000.00 × (1.07.000000000000001^5 − 1) = $9,661.24.",
-    "Difference = $42,335.46. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+    "Difference = $42,335.46. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it.",
+    "Spreadsheet or calculator: =51996.70-9661.24",
+    "So the answer is $42,335.46; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -9067,9 +9569,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: home gain = price × ((1 + g)^t − 1); investment gain = down payment × ((1 + r)^t − 1); difference.",
     "Home gain = $300,000.00 × (1.02^5 − 1) = $31,224.24.",
     "Investment gain = $60,000.00 × (1.07.000000000000001^5 − 1) = $24,153.10.",
-    "Difference = $7,071.14. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+    "Difference = $7,071.14. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it.",
+    "Spreadsheet or calculator: =31224.24-24153.10",
+    "So the answer is $7,071.14; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -9094,9 +9599,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: home gain = price × ((1 + g)^t − 1); investment gain = down payment × ((1 + r)^t − 1); difference.",
     "Home gain = $390,000.00 × (1.03^5 − 1) = $62,116.89.",
     "Investment gain = $39,000.00 × (1.05^5 − 1) = $10,774.98.",
-    "Difference = $51,341.91. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+    "Difference = $51,341.91. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it.",
+    "Spreadsheet or calculator: =(390000.00*(1.03^5-1))-(39000.00*(1.05^5-1))",
+    "So the answer is $51,341.91; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -9121,9 +9629,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: home gain = price × ((1 + g)^t − 1); investment gain = down payment × ((1 + r)^t − 1); difference.",
     "Home gain = $390,000.00 × (1.02^5 − 1) = $40,591.51.",
     "Investment gain = $39,000.00 × (1.05^5 − 1) = $10,774.98.",
-    "Difference = $29,816.53. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it."
+    "Difference = $29,816.53. Leverage lets a small down payment gain on the whole price, though selling costs and repairs reduce it.",
+    "Spreadsheet or calculator: =(390000.00*(1.02^5-1))-(39000.00*(1.05^5-1))",
+    "So the answer is $29,816.53; money tied up in a home could have grown elsewhere."
    ]
   },
   {
@@ -9150,7 +9661,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,650 ÷ 3 = $550."
+    "Formula: Each share = rent ÷ 3.",
+    "$1,650 ÷ 3 = $550.",
+    "Spreadsheet or calculator: =1650/3",
+    "So the answer is $550; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9177,7 +9691,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$2,400 ÷ 3 = $800."
+    "Formula: Each share = rent ÷ 3.",
+    "$2,400 ÷ 3 = $800.",
+    "Spreadsheet or calculator: =2400/3",
+    "So the answer is $800; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9204,7 +9721,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,800 ÷ 3 = $600."
+    "Formula: Each share = rent ÷ 3.",
+    "$1,800 ÷ 3 = $600.",
+    "Spreadsheet or calculator: =1800/3",
+    "So the answer is $600; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9231,7 +9751,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,650 ÷ 3 = $550."
+    "Formula: Each share = rent ÷ 3.",
+    "$1,650 ÷ 3 = $550.",
+    "Spreadsheet or calculator: =1650/3",
+    "So the answer is $550; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9258,9 +9781,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = year-1 rent × 12 + year-2 rent × 12 + insurance × 24.",
     "Year 1 rent: $16,500. Year 2: $1,430 × 12 = $17,160.",
     "Insurance: $18 × 24 = $432.",
-    "Total = $34,092 (the refunded deposit is not a cost)."
+    "Total = $34,092 (the refunded deposit is not a cost).",
+    "So the answer is $34,092; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9287,9 +9812,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = year-1 rent × 12 + year-2 rent × 12 + insurance × 24.",
     "Year 1 rent: $16,200. Year 2: $1,404 × 12 = $16,848.",
     "Insurance: $15 × 24 = $360.",
-    "Total = $33,408 (the refunded deposit is not a cost)."
+    "Total = $33,408 (the refunded deposit is not a cost).",
+    "So the answer is $33,408; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9316,9 +9843,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = year-1 rent × 12 + year-2 rent × 12 + insurance × 24.",
     "Year 1 rent: $17,700.00. Year 2: $1,548.75 × 12 = $18,585.00.",
     "Insurance: $15.00 × 24 = $360.00.",
-    "Total = $36,645.00 (the refunded deposit is not a cost)."
+    "Total = $36,645.00 (the refunded deposit is not a cost).",
+    "So the answer is $36,645.00; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9345,9 +9874,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = year-1 rent × 12 + year-2 rent × 12 + insurance × 24.",
     "Year 1 rent: $19,800.00. Year 2: $1,699.50 × 12 = $20,394.00.",
     "Insurance: $12.00 × 24 = $288.00.",
-    "Total = $40,482.00 (the refunded deposit is not a cost)."
+    "Total = $40,482.00 (the refunded deposit is not a cost).",
+    "So the answer is $40,482.00; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9374,9 +9905,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = year-1 rent × 12 + year-2 rent × 12 + insurance × 24.",
     "Year 1 rent: $12,300.00. Year 2: $1,055.75 × 12 = $12,669.00.",
     "Insurance: $15.00 × 24 = $360.00.",
-    "Total = $25,329.00 (the refunded deposit is not a cost)."
+    "Total = $25,329.00 (the refunded deposit is not a cost).",
+    "So the answer is $25,329.00; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9403,9 +9936,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: total = year-1 rent × 12 + year-2 rent × 12 + insurance × 24.",
     "Year 1 rent: $22,500. Year 2: $1,950 × 12 = $23,400.",
     "Insurance: $15 × 24 = $360.",
-    "Total = $46,260 (the refunded deposit is not a cost)."
+    "Total = $46,260 (the refunded deposit is not a cost).",
+    "So the answer is $46,260; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9482,7 +10017,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,250 + $25 + $1,250 + $250 = $2,775."
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
+    "$1,250 + $25 + $1,250 + $250 = $2,775.",
+    "Spreadsheet or calculator: =1250+25+1250+250",
+    "So the answer is $2,775; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9559,8 +10097,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
     "Days after the 5th: 9 − 5 = 4.",
-    "$75 + $15 × 4 = $135."
+    "$75 + $15 × 4 = $135.",
+    "Spreadsheet or calculator: =75+15*4",
+    "So the answer is $135; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9637,9 +10178,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
     "Rent + pet rent = $1,625 × 12 = $19,500.",
     "Insurance = $15 × 12 = $180.",
-    "Total = $19,680."
+    "Total = $19,680.",
+    "Spreadsheet or calculator: =(15*12)+(1625*12)",
+    "So the answer is $19,680; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9716,7 +10260,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,350 + $25 + $1,350 + $300 = $3,025."
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
+    "$1,350 + $25 + $1,350 + $300 = $3,025.",
+    "Spreadsheet or calculator: =1350+25+1350+300",
+    "So the answer is $3,025; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9793,8 +10340,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
     "Days after the 5th: 7 − 5 = 2.",
-    "$50 + $10 × 2 = $70."
+    "$50 + $10 × 2 = $70.",
+    "Spreadsheet or calculator: =50+10*2",
+    "So the answer is $70; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9871,9 +10421,12 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
     "Rent + pet rent = $1,400 × 12 = $16,800.",
     "Insurance = $18 × 12 = $216.",
-    "Total = $17,016."
+    "Total = $17,016.",
+    "Spreadsheet or calculator: =(18*12)+(1400*12)",
+    "So the answer is $17,016; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -9950,7 +10503,10 @@
     "unit": "USD"
    },
    "solutionSteps": [
-    "$1,150 + $0 + $1,150 + $0 = $2,300."
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
+    "$1,150 + $0 + $1,150 + $0 = $2,300.",
+    "Spreadsheet or calculator: =1150+0+1150+0",
+    "So the answer is $2,300; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -10027,8 +10583,11 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
     "Days after the 5th: 14 − 5 = 9.",
-    "$75 + $10 × 9 = $165."
+    "$75 + $10 × 9 = $165.",
+    "Spreadsheet or calculator: =75+10*9",
+    "So the answer is $165; read the lease and plan for move-in cash before you sign."
    ]
   },
   {
@@ -10105,9 +10664,5016 @@
     "unit": "USD"
    },
    "solutionSteps": [
+    "Formula: move-in cost = rent + pet rent + security deposit + pet deposit.",
     "Rent + pet rent = $1,125 × 12 = $13,500.",
     "Insurance = $12 × 12 = $144.",
-    "Total = $13,644."
+    "Total = $13,644.",
+    "Spreadsheet or calculator: =(12*12)+(1125*12)",
+    "So the answer is $13,644; read the lease and plan for move-in cash before you sign."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Using the buying model, what are Luis's total unrecoverable costs after 7 years?",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 200000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $17,400t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         2900
+        ],
+        [
+         0.33,
+         5800
+        ],
+        [
+         0.5,
+         8700
+        ],
+        [
+         0.67,
+         11600
+        ],
+        [
+         0.83,
+         14500
+        ],
+        [
+         1,
+         17400
+        ],
+        [
+         1.17,
+         20300
+        ],
+        [
+         1.33,
+         23200
+        ],
+        [
+         1.5,
+         26100
+        ],
+        [
+         1.67,
+         29000
+        ],
+        [
+         1.83,
+         31900
+        ],
+        [
+         2,
+         34800
+        ],
+        [
+         2.17,
+         37700
+        ],
+        [
+         2.33,
+         40600
+        ],
+        [
+         2.5,
+         43500
+        ],
+        [
+         2.67,
+         46400
+        ],
+        [
+         2.83,
+         49300
+        ],
+        [
+         3,
+         52200
+        ],
+        [
+         3.17,
+         55100
+        ],
+        [
+         3.33,
+         58000
+        ],
+        [
+         3.5,
+         60900
+        ],
+        [
+         3.67,
+         63800
+        ],
+        [
+         3.83,
+         66700
+        ],
+        [
+         4,
+         69600
+        ],
+        [
+         4.17,
+         72500
+        ],
+        [
+         4.33,
+         75400
+        ],
+        [
+         4.5,
+         78300
+        ],
+        [
+         4.67,
+         81200
+        ],
+        [
+         4.83,
+         84100
+        ],
+        [
+         5,
+         87000
+        ],
+        [
+         5.17,
+         89900
+        ],
+        [
+         5.33,
+         92800
+        ],
+        [
+         5.5,
+         95700
+        ],
+        [
+         5.67,
+         98600
+        ],
+        [
+         5.83,
+         101500
+        ],
+        [
+         6,
+         104400
+        ],
+        [
+         6.17,
+         107300
+        ],
+        [
+         6.33,
+         110200
+        ],
+        [
+         6.5,
+         113100
+        ],
+        [
+         6.67,
+         116000
+        ],
+        [
+         6.83,
+         118900
+        ],
+        [
+         7,
+         121800
+        ],
+        [
+         7.17,
+         124700
+        ],
+        [
+         7.33,
+         127600
+        ],
+        [
+         7.5,
+         130500
+        ],
+        [
+         7.67,
+         133400
+        ],
+        [
+         7.83,
+         136300
+        ],
+        [
+         8,
+         139200
+        ],
+        [
+         8.17,
+         142100
+        ],
+        [
+         8.33,
+         145000
+        ],
+        [
+         8.5,
+         147900
+        ],
+        [
+         8.67,
+         150800
+        ],
+        [
+         8.83,
+         153700
+        ],
+        [
+         9,
+         156600
+        ],
+        [
+         9.17,
+         159500
+        ],
+        [
+         9.33,
+         162400
+        ],
+        [
+         9.5,
+         165300
+        ],
+        [
+         9.67,
+         168200
+        ],
+        [
+         9.83,
+         171100
+        ],
+        [
+         10,
+         174000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $24,000 + $14,400t",
+       "pts": [
+        [
+         0,
+         24000
+        ],
+        [
+         0.17,
+         26400
+        ],
+        [
+         0.33,
+         28800
+        ],
+        [
+         0.5,
+         31200
+        ],
+        [
+         0.67,
+         33600
+        ],
+        [
+         0.83,
+         36000
+        ],
+        [
+         1,
+         38400
+        ],
+        [
+         1.17,
+         40800
+        ],
+        [
+         1.33,
+         43200
+        ],
+        [
+         1.5,
+         45600
+        ],
+        [
+         1.67,
+         48000
+        ],
+        [
+         1.83,
+         50400
+        ],
+        [
+         2,
+         52800
+        ],
+        [
+         2.17,
+         55200
+        ],
+        [
+         2.33,
+         57600
+        ],
+        [
+         2.5,
+         60000
+        ],
+        [
+         2.67,
+         62400
+        ],
+        [
+         2.83,
+         64800
+        ],
+        [
+         3,
+         67200
+        ],
+        [
+         3.17,
+         69600
+        ],
+        [
+         3.33,
+         72000
+        ],
+        [
+         3.5,
+         74400
+        ],
+        [
+         3.67,
+         76800
+        ],
+        [
+         3.83,
+         79200
+        ],
+        [
+         4,
+         81600
+        ],
+        [
+         4.17,
+         84000
+        ],
+        [
+         4.33,
+         86400
+        ],
+        [
+         4.5,
+         88800
+        ],
+        [
+         4.67,
+         91200
+        ],
+        [
+         4.83,
+         93600
+        ],
+        [
+         5,
+         96000
+        ],
+        [
+         5.17,
+         98400
+        ],
+        [
+         5.33,
+         100800
+        ],
+        [
+         5.5,
+         103200
+        ],
+        [
+         5.67,
+         105600
+        ],
+        [
+         5.83,
+         108000
+        ],
+        [
+         6,
+         110400
+        ],
+        [
+         6.17,
+         112800
+        ],
+        [
+         6.33,
+         115200
+        ],
+        [
+         6.5,
+         117600
+        ],
+        [
+         6.67,
+         120000
+        ],
+        [
+         6.83,
+         122400
+        ],
+        [
+         7,
+         124800
+        ],
+        [
+         7.17,
+         127200
+        ],
+        [
+         7.33,
+         129600
+        ],
+        [
+         7.5,
+         132000
+        ],
+        [
+         7.67,
+         134400
+        ],
+        [
+         7.83,
+         136800
+        ],
+        [
+         8,
+         139200
+        ],
+        [
+         8.17,
+         141600
+        ],
+        [
+         8.33,
+         144000
+        ],
+        [
+         8.5,
+         146400
+        ],
+        [
+         8.67,
+         148800
+        ],
+        [
+         8.83,
+         151200
+        ],
+        [
+         9,
+         153600
+        ],
+        [
+         9.17,
+         156000
+        ],
+        [
+         9.33,
+         158400
+        ],
+        [
+         9.5,
+         160800
+        ],
+        [
+         9.67,
+         163200
+        ],
+        [
+         9.83,
+         165600
+        ],
+        [
+         10,
+         168000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 8,
+       "y": 139200,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $17,400 a year. Buying costs $24,000 up front (closing and moving costs) plus $14,400 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$124,800",
+   "numeric": {
+    "value": 124800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: Buy(t) = up-front cost + yearly cost × t.",
+    "Substitute: $24,000 + $14,400 × 7 = $124,800.",
+    "Spreadsheet: =24000+14400*7.",
+    "So buying has cost $124,800 after 7 years, compared with $121,800 for renting."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many years do renting and buying have the same total unrecoverable cost (the break-even point)?",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 200000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $15,600t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         2600
+        ],
+        [
+         0.33,
+         5200
+        ],
+        [
+         0.5,
+         7800
+        ],
+        [
+         0.67,
+         10400
+        ],
+        [
+         0.83,
+         13000
+        ],
+        [
+         1,
+         15600
+        ],
+        [
+         1.17,
+         18200
+        ],
+        [
+         1.33,
+         20800
+        ],
+        [
+         1.5,
+         23400
+        ],
+        [
+         1.67,
+         26000
+        ],
+        [
+         1.83,
+         28600
+        ],
+        [
+         2,
+         31200
+        ],
+        [
+         2.17,
+         33800
+        ],
+        [
+         2.33,
+         36400
+        ],
+        [
+         2.5,
+         39000
+        ],
+        [
+         2.67,
+         41600
+        ],
+        [
+         2.83,
+         44200
+        ],
+        [
+         3,
+         46800
+        ],
+        [
+         3.17,
+         49400
+        ],
+        [
+         3.33,
+         52000
+        ],
+        [
+         3.5,
+         54600
+        ],
+        [
+         3.67,
+         57200
+        ],
+        [
+         3.83,
+         59800
+        ],
+        [
+         4,
+         62400
+        ],
+        [
+         4.17,
+         65000
+        ],
+        [
+         4.33,
+         67600
+        ],
+        [
+         4.5,
+         70200
+        ],
+        [
+         4.67,
+         72800
+        ],
+        [
+         4.83,
+         75400
+        ],
+        [
+         5,
+         78000
+        ],
+        [
+         5.17,
+         80600
+        ],
+        [
+         5.33,
+         83200
+        ],
+        [
+         5.5,
+         85800
+        ],
+        [
+         5.67,
+         88400
+        ],
+        [
+         5.83,
+         91000
+        ],
+        [
+         6,
+         93600
+        ],
+        [
+         6.17,
+         96200
+        ],
+        [
+         6.33,
+         98800
+        ],
+        [
+         6.5,
+         101400
+        ],
+        [
+         6.67,
+         104000
+        ],
+        [
+         6.83,
+         106600
+        ],
+        [
+         7,
+         109200
+        ],
+        [
+         7.17,
+         111800
+        ],
+        [
+         7.33,
+         114400
+        ],
+        [
+         7.5,
+         117000
+        ],
+        [
+         7.67,
+         119600
+        ],
+        [
+         7.83,
+         122200
+        ],
+        [
+         8,
+         124800
+        ],
+        [
+         8.17,
+         127400
+        ],
+        [
+         8.33,
+         130000
+        ],
+        [
+         8.5,
+         132600
+        ],
+        [
+         8.67,
+         135200
+        ],
+        [
+         8.83,
+         137800
+        ],
+        [
+         9,
+         140400
+        ],
+        [
+         9.17,
+         143000
+        ],
+        [
+         9.33,
+         145600
+        ],
+        [
+         9.5,
+         148200
+        ],
+        [
+         9.67,
+         150800
+        ],
+        [
+         9.83,
+         153400
+        ],
+        [
+         10,
+         156000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $14,000 + $13,600t",
+       "pts": [
+        [
+         0,
+         14000
+        ],
+        [
+         0.17,
+         16266.67
+        ],
+        [
+         0.33,
+         18533.33
+        ],
+        [
+         0.5,
+         20800
+        ],
+        [
+         0.67,
+         23066.67
+        ],
+        [
+         0.83,
+         25333.33
+        ],
+        [
+         1,
+         27600
+        ],
+        [
+         1.17,
+         29866.67
+        ],
+        [
+         1.33,
+         32133.33
+        ],
+        [
+         1.5,
+         34400
+        ],
+        [
+         1.67,
+         36666.67
+        ],
+        [
+         1.83,
+         38933.33
+        ],
+        [
+         2,
+         41200
+        ],
+        [
+         2.17,
+         43466.67
+        ],
+        [
+         2.33,
+         45733.33
+        ],
+        [
+         2.5,
+         48000
+        ],
+        [
+         2.67,
+         50266.67
+        ],
+        [
+         2.83,
+         52533.33
+        ],
+        [
+         3,
+         54800
+        ],
+        [
+         3.17,
+         57066.67
+        ],
+        [
+         3.33,
+         59333.33
+        ],
+        [
+         3.5,
+         61600
+        ],
+        [
+         3.67,
+         63866.67
+        ],
+        [
+         3.83,
+         66133.33
+        ],
+        [
+         4,
+         68400
+        ],
+        [
+         4.17,
+         70666.67
+        ],
+        [
+         4.33,
+         72933.33
+        ],
+        [
+         4.5,
+         75200
+        ],
+        [
+         4.67,
+         77466.67
+        ],
+        [
+         4.83,
+         79733.33
+        ],
+        [
+         5,
+         82000
+        ],
+        [
+         5.17,
+         84266.67
+        ],
+        [
+         5.33,
+         86533.33
+        ],
+        [
+         5.5,
+         88800
+        ],
+        [
+         5.67,
+         91066.67
+        ],
+        [
+         5.83,
+         93333.33
+        ],
+        [
+         6,
+         95600
+        ],
+        [
+         6.17,
+         97866.67
+        ],
+        [
+         6.33,
+         100133.33
+        ],
+        [
+         6.5,
+         102400
+        ],
+        [
+         6.67,
+         104666.67
+        ],
+        [
+         6.83,
+         106933.33
+        ],
+        [
+         7,
+         109200
+        ],
+        [
+         7.17,
+         111466.67
+        ],
+        [
+         7.33,
+         113733.33
+        ],
+        [
+         7.5,
+         116000
+        ],
+        [
+         7.67,
+         118266.67
+        ],
+        [
+         7.83,
+         120533.33
+        ],
+        [
+         8,
+         122800
+        ],
+        [
+         8.17,
+         125066.67
+        ],
+        [
+         8.33,
+         127333.33
+        ],
+        [
+         8.5,
+         129600
+        ],
+        [
+         8.67,
+         131866.67
+        ],
+        [
+         8.83,
+         134133.33
+        ],
+        [
+         9,
+         136400
+        ],
+        [
+         9.17,
+         138666.67
+        ],
+        [
+         9.33,
+         140933.33
+        ],
+        [
+         9.5,
+         143200
+        ],
+        [
+         9.67,
+         145466.67
+        ],
+        [
+         9.83,
+         147733.33
+        ],
+        [
+         10,
+         150000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 7,
+       "y": 109200,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $15,600 a year. Buying costs $14,000 up front (closing and moving costs) plus $13,600 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "7",
+   "numeric": {
+    "value": 7,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set Rent(t) = Buy(t): R·t = U + O·t, so t = [[U || R − O]].",
+    "Substitute: t = [[$14,000 || $15,600 − $13,600]] = $14,000 ÷ $2,000 = 7.",
+    "Spreadsheet: =14000/(15600-13600).",
+    "So buying only pays off for someone who stays more than 7 years; a shorter stay favors renting."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Hana expects to move after 2 years. Which costs less over that time, and by how much? Give the difference.",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 200000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $19,800t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         3300
+        ],
+        [
+         0.33,
+         6600
+        ],
+        [
+         0.5,
+         9900
+        ],
+        [
+         0.67,
+         13200
+        ],
+        [
+         0.83,
+         16500
+        ],
+        [
+         1,
+         19800
+        ],
+        [
+         1.17,
+         23100
+        ],
+        [
+         1.33,
+         26400
+        ],
+        [
+         1.5,
+         29700
+        ],
+        [
+         1.67,
+         33000
+        ],
+        [
+         1.83,
+         36300
+        ],
+        [
+         2,
+         39600
+        ],
+        [
+         2.17,
+         42900
+        ],
+        [
+         2.33,
+         46200
+        ],
+        [
+         2.5,
+         49500
+        ],
+        [
+         2.67,
+         52800
+        ],
+        [
+         2.83,
+         56100
+        ],
+        [
+         3,
+         59400
+        ],
+        [
+         3.17,
+         62700
+        ],
+        [
+         3.33,
+         66000
+        ],
+        [
+         3.5,
+         69300
+        ],
+        [
+         3.67,
+         72600
+        ],
+        [
+         3.83,
+         75900
+        ],
+        [
+         4,
+         79200
+        ],
+        [
+         4.17,
+         82500
+        ],
+        [
+         4.33,
+         85800
+        ],
+        [
+         4.5,
+         89100
+        ],
+        [
+         4.67,
+         92400
+        ],
+        [
+         4.83,
+         95700
+        ],
+        [
+         5,
+         99000
+        ],
+        [
+         5.17,
+         102300
+        ],
+        [
+         5.33,
+         105600
+        ],
+        [
+         5.5,
+         108900
+        ],
+        [
+         5.67,
+         112200
+        ],
+        [
+         5.83,
+         115500
+        ],
+        [
+         6,
+         118800
+        ],
+        [
+         6.17,
+         122100
+        ],
+        [
+         6.33,
+         125400
+        ],
+        [
+         6.5,
+         128700
+        ],
+        [
+         6.67,
+         132000
+        ],
+        [
+         6.83,
+         135300
+        ],
+        [
+         7,
+         138600
+        ],
+        [
+         7.17,
+         141900
+        ],
+        [
+         7.33,
+         145200
+        ],
+        [
+         7.5,
+         148500
+        ],
+        [
+         7.67,
+         151800
+        ],
+        [
+         7.83,
+         155100
+        ],
+        [
+         8,
+         158400
+        ],
+        [
+         8.17,
+         161700
+        ],
+        [
+         8.33,
+         165000
+        ],
+        [
+         8.5,
+         168300
+        ],
+        [
+         8.67,
+         171600
+        ],
+        [
+         8.83,
+         174900
+        ],
+        [
+         9,
+         178200
+        ],
+        [
+         9.17,
+         181500
+        ],
+        [
+         9.33,
+         184800
+        ],
+        [
+         9.5,
+         188100
+        ],
+        [
+         9.67,
+         191400
+        ],
+        [
+         9.83,
+         194700
+        ],
+        [
+         10,
+         198000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $24,000 + $16,800t",
+       "pts": [
+        [
+         0,
+         24000
+        ],
+        [
+         0.17,
+         26800
+        ],
+        [
+         0.33,
+         29600
+        ],
+        [
+         0.5,
+         32400
+        ],
+        [
+         0.67,
+         35200
+        ],
+        [
+         0.83,
+         38000
+        ],
+        [
+         1,
+         40800
+        ],
+        [
+         1.17,
+         43600
+        ],
+        [
+         1.33,
+         46400
+        ],
+        [
+         1.5,
+         49200
+        ],
+        [
+         1.67,
+         52000
+        ],
+        [
+         1.83,
+         54800
+        ],
+        [
+         2,
+         57600
+        ],
+        [
+         2.17,
+         60400
+        ],
+        [
+         2.33,
+         63200
+        ],
+        [
+         2.5,
+         66000
+        ],
+        [
+         2.67,
+         68800
+        ],
+        [
+         2.83,
+         71600
+        ],
+        [
+         3,
+         74400
+        ],
+        [
+         3.17,
+         77200
+        ],
+        [
+         3.33,
+         80000
+        ],
+        [
+         3.5,
+         82800
+        ],
+        [
+         3.67,
+         85600
+        ],
+        [
+         3.83,
+         88400
+        ],
+        [
+         4,
+         91200
+        ],
+        [
+         4.17,
+         94000
+        ],
+        [
+         4.33,
+         96800
+        ],
+        [
+         4.5,
+         99600
+        ],
+        [
+         4.67,
+         102400
+        ],
+        [
+         4.83,
+         105200
+        ],
+        [
+         5,
+         108000
+        ],
+        [
+         5.17,
+         110800
+        ],
+        [
+         5.33,
+         113600
+        ],
+        [
+         5.5,
+         116400
+        ],
+        [
+         5.67,
+         119200
+        ],
+        [
+         5.83,
+         122000
+        ],
+        [
+         6,
+         124800
+        ],
+        [
+         6.17,
+         127600
+        ],
+        [
+         6.33,
+         130400
+        ],
+        [
+         6.5,
+         133200
+        ],
+        [
+         6.67,
+         136000
+        ],
+        [
+         6.83,
+         138800
+        ],
+        [
+         7,
+         141600
+        ],
+        [
+         7.17,
+         144400
+        ],
+        [
+         7.33,
+         147200
+        ],
+        [
+         7.5,
+         150000
+        ],
+        [
+         7.67,
+         152800
+        ],
+        [
+         7.83,
+         155600
+        ],
+        [
+         8,
+         158400
+        ],
+        [
+         8.17,
+         161200
+        ],
+        [
+         8.33,
+         164000
+        ],
+        [
+         8.5,
+         166800
+        ],
+        [
+         8.67,
+         169600
+        ],
+        [
+         8.83,
+         172400
+        ],
+        [
+         9,
+         175200
+        ],
+        [
+         9.17,
+         178000
+        ],
+        [
+         9.33,
+         180800
+        ],
+        [
+         9.5,
+         183600
+        ],
+        [
+         9.67,
+         186400
+        ],
+        [
+         9.83,
+         189200
+        ],
+        [
+         10,
+         192000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 8,
+       "y": 158400,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $19,800 a year. Buying costs $24,000 up front (closing and moving costs) plus $16,800 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$18,000",
+   "numeric": {
+    "value": 18000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: difference = |Rent(t) − Buy(t)|.",
+    "Substitute: Rent(2) = $39,600; Buy(2) = $57,600.",
+    "Spreadsheet: =ABS(19800*2-(24000+16800*2)).",
+    "So renting saves $18,000: 2 years is before the 8-year break-even."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Using the buying model, what are Mateo's total unrecoverable costs after 3 years?",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 250000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $21,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         3500
+        ],
+        [
+         0.33,
+         7000
+        ],
+        [
+         0.5,
+         10500
+        ],
+        [
+         0.67,
+         14000
+        ],
+        [
+         0.83,
+         17500
+        ],
+        [
+         1,
+         21000
+        ],
+        [
+         1.17,
+         24500
+        ],
+        [
+         1.33,
+         28000
+        ],
+        [
+         1.5,
+         31500
+        ],
+        [
+         1.67,
+         35000
+        ],
+        [
+         1.83,
+         38500
+        ],
+        [
+         2,
+         42000
+        ],
+        [
+         2.17,
+         45500
+        ],
+        [
+         2.33,
+         49000
+        ],
+        [
+         2.5,
+         52500
+        ],
+        [
+         2.67,
+         56000
+        ],
+        [
+         2.83,
+         59500
+        ],
+        [
+         3,
+         63000
+        ],
+        [
+         3.17,
+         66500
+        ],
+        [
+         3.33,
+         70000
+        ],
+        [
+         3.5,
+         73500
+        ],
+        [
+         3.67,
+         77000
+        ],
+        [
+         3.83,
+         80500
+        ],
+        [
+         4,
+         84000
+        ],
+        [
+         4.17,
+         87500
+        ],
+        [
+         4.33,
+         91000
+        ],
+        [
+         4.5,
+         94500
+        ],
+        [
+         4.67,
+         98000
+        ],
+        [
+         4.83,
+         101500
+        ],
+        [
+         5,
+         105000
+        ],
+        [
+         5.17,
+         108500
+        ],
+        [
+         5.33,
+         112000
+        ],
+        [
+         5.5,
+         115500
+        ],
+        [
+         5.67,
+         119000
+        ],
+        [
+         5.83,
+         122500
+        ],
+        [
+         6,
+         126000
+        ],
+        [
+         6.17,
+         129500
+        ],
+        [
+         6.33,
+         133000
+        ],
+        [
+         6.5,
+         136500
+        ],
+        [
+         6.67,
+         140000
+        ],
+        [
+         6.83,
+         143500
+        ],
+        [
+         7,
+         147000
+        ],
+        [
+         7.17,
+         150500
+        ],
+        [
+         7.33,
+         154000
+        ],
+        [
+         7.5,
+         157500
+        ],
+        [
+         7.67,
+         161000
+        ],
+        [
+         7.83,
+         164500
+        ],
+        [
+         8,
+         168000
+        ],
+        [
+         8.17,
+         171500
+        ],
+        [
+         8.33,
+         175000
+        ],
+        [
+         8.5,
+         178500
+        ],
+        [
+         8.67,
+         182000
+        ],
+        [
+         8.83,
+         185500
+        ],
+        [
+         9,
+         189000
+        ],
+        [
+         9.17,
+         192500
+        ],
+        [
+         9.33,
+         196000
+        ],
+        [
+         9.5,
+         199500
+        ],
+        [
+         9.67,
+         203000
+        ],
+        [
+         9.83,
+         206500
+        ],
+        [
+         10,
+         210000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $15,000 + $18,500t",
+       "pts": [
+        [
+         0,
+         15000
+        ],
+        [
+         0.17,
+         18083.33
+        ],
+        [
+         0.33,
+         21166.67
+        ],
+        [
+         0.5,
+         24250
+        ],
+        [
+         0.67,
+         27333.33
+        ],
+        [
+         0.83,
+         30416.67
+        ],
+        [
+         1,
+         33500
+        ],
+        [
+         1.17,
+         36583.33
+        ],
+        [
+         1.33,
+         39666.67
+        ],
+        [
+         1.5,
+         42750
+        ],
+        [
+         1.67,
+         45833.33
+        ],
+        [
+         1.83,
+         48916.67
+        ],
+        [
+         2,
+         52000
+        ],
+        [
+         2.17,
+         55083.33
+        ],
+        [
+         2.33,
+         58166.67
+        ],
+        [
+         2.5,
+         61250
+        ],
+        [
+         2.67,
+         64333.33
+        ],
+        [
+         2.83,
+         67416.67
+        ],
+        [
+         3,
+         70500
+        ],
+        [
+         3.17,
+         73583.33
+        ],
+        [
+         3.33,
+         76666.67
+        ],
+        [
+         3.5,
+         79750
+        ],
+        [
+         3.67,
+         82833.33
+        ],
+        [
+         3.83,
+         85916.67
+        ],
+        [
+         4,
+         89000
+        ],
+        [
+         4.17,
+         92083.33
+        ],
+        [
+         4.33,
+         95166.67
+        ],
+        [
+         4.5,
+         98250
+        ],
+        [
+         4.67,
+         101333.33
+        ],
+        [
+         4.83,
+         104416.67
+        ],
+        [
+         5,
+         107500
+        ],
+        [
+         5.17,
+         110583.33
+        ],
+        [
+         5.33,
+         113666.67
+        ],
+        [
+         5.5,
+         116750
+        ],
+        [
+         5.67,
+         119833.33
+        ],
+        [
+         5.83,
+         122916.67
+        ],
+        [
+         6,
+         126000
+        ],
+        [
+         6.17,
+         129083.33
+        ],
+        [
+         6.33,
+         132166.67
+        ],
+        [
+         6.5,
+         135250
+        ],
+        [
+         6.67,
+         138333.33
+        ],
+        [
+         6.83,
+         141416.67
+        ],
+        [
+         7,
+         144500
+        ],
+        [
+         7.17,
+         147583.33
+        ],
+        [
+         7.33,
+         150666.67
+        ],
+        [
+         7.5,
+         153750
+        ],
+        [
+         7.67,
+         156833.33
+        ],
+        [
+         7.83,
+         159916.67
+        ],
+        [
+         8,
+         163000
+        ],
+        [
+         8.17,
+         166083.33
+        ],
+        [
+         8.33,
+         169166.67
+        ],
+        [
+         8.5,
+         172250
+        ],
+        [
+         8.67,
+         175333.33
+        ],
+        [
+         8.83,
+         178416.67
+        ],
+        [
+         9,
+         181500
+        ],
+        [
+         9.17,
+         184583.33
+        ],
+        [
+         9.33,
+         187666.67
+        ],
+        [
+         9.5,
+         190750
+        ],
+        [
+         9.67,
+         193833.33
+        ],
+        [
+         9.83,
+         196916.67
+        ],
+        [
+         10,
+         200000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 6,
+       "y": 126000,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $21,000 a year. Buying costs $15,000 up front (closing and moving costs) plus $18,500 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$70,500",
+   "numeric": {
+    "value": 70500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: Buy(t) = up-front cost + yearly cost × t.",
+    "Substitute: $15,000 + $18,500 × 3 = $70,500.",
+    "Spreadsheet: =15000+18500*3.",
+    "So buying has cost $70,500 after 3 years, compared with $63,000 for renting."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many years do renting and buying have the same total unrecoverable cost (the break-even point)?",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 200000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $19,200t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         3200
+        ],
+        [
+         0.33,
+         6400
+        ],
+        [
+         0.5,
+         9600
+        ],
+        [
+         0.67,
+         12800
+        ],
+        [
+         0.83,
+         16000
+        ],
+        [
+         1,
+         19200
+        ],
+        [
+         1.17,
+         22400
+        ],
+        [
+         1.33,
+         25600
+        ],
+        [
+         1.5,
+         28800
+        ],
+        [
+         1.67,
+         32000
+        ],
+        [
+         1.83,
+         35200
+        ],
+        [
+         2,
+         38400
+        ],
+        [
+         2.17,
+         41600
+        ],
+        [
+         2.33,
+         44800
+        ],
+        [
+         2.5,
+         48000
+        ],
+        [
+         2.67,
+         51200
+        ],
+        [
+         2.83,
+         54400
+        ],
+        [
+         3,
+         57600
+        ],
+        [
+         3.17,
+         60800
+        ],
+        [
+         3.33,
+         64000
+        ],
+        [
+         3.5,
+         67200
+        ],
+        [
+         3.67,
+         70400
+        ],
+        [
+         3.83,
+         73600
+        ],
+        [
+         4,
+         76800
+        ],
+        [
+         4.17,
+         80000
+        ],
+        [
+         4.33,
+         83200
+        ],
+        [
+         4.5,
+         86400
+        ],
+        [
+         4.67,
+         89600
+        ],
+        [
+         4.83,
+         92800
+        ],
+        [
+         5,
+         96000
+        ],
+        [
+         5.17,
+         99200
+        ],
+        [
+         5.33,
+         102400
+        ],
+        [
+         5.5,
+         105600
+        ],
+        [
+         5.67,
+         108800
+        ],
+        [
+         5.83,
+         112000
+        ],
+        [
+         6,
+         115200
+        ],
+        [
+         6.17,
+         118400
+        ],
+        [
+         6.33,
+         121600
+        ],
+        [
+         6.5,
+         124800
+        ],
+        [
+         6.67,
+         128000
+        ],
+        [
+         6.83,
+         131200
+        ],
+        [
+         7,
+         134400
+        ],
+        [
+         7.17,
+         137600
+        ],
+        [
+         7.33,
+         140800
+        ],
+        [
+         7.5,
+         144000
+        ],
+        [
+         7.67,
+         147200
+        ],
+        [
+         7.83,
+         150400
+        ],
+        [
+         8,
+         153600
+        ],
+        [
+         8.17,
+         156800
+        ],
+        [
+         8.33,
+         160000
+        ],
+        [
+         8.5,
+         163200
+        ],
+        [
+         8.67,
+         166400
+        ],
+        [
+         8.83,
+         169600
+        ],
+        [
+         9,
+         172800
+        ],
+        [
+         9.17,
+         176000
+        ],
+        [
+         9.33,
+         179200
+        ],
+        [
+         9.5,
+         182400
+        ],
+        [
+         9.67,
+         185600
+        ],
+        [
+         9.83,
+         188800
+        ],
+        [
+         10,
+         192000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $10,000 + $17,200t",
+       "pts": [
+        [
+         0,
+         10000
+        ],
+        [
+         0.17,
+         12866.67
+        ],
+        [
+         0.33,
+         15733.33
+        ],
+        [
+         0.5,
+         18600
+        ],
+        [
+         0.67,
+         21466.67
+        ],
+        [
+         0.83,
+         24333.33
+        ],
+        [
+         1,
+         27200
+        ],
+        [
+         1.17,
+         30066.67
+        ],
+        [
+         1.33,
+         32933.33
+        ],
+        [
+         1.5,
+         35800
+        ],
+        [
+         1.67,
+         38666.67
+        ],
+        [
+         1.83,
+         41533.33
+        ],
+        [
+         2,
+         44400
+        ],
+        [
+         2.17,
+         47266.67
+        ],
+        [
+         2.33,
+         50133.33
+        ],
+        [
+         2.5,
+         53000
+        ],
+        [
+         2.67,
+         55866.67
+        ],
+        [
+         2.83,
+         58733.33
+        ],
+        [
+         3,
+         61600
+        ],
+        [
+         3.17,
+         64466.67
+        ],
+        [
+         3.33,
+         67333.33
+        ],
+        [
+         3.5,
+         70200
+        ],
+        [
+         3.67,
+         73066.67
+        ],
+        [
+         3.83,
+         75933.33
+        ],
+        [
+         4,
+         78800
+        ],
+        [
+         4.17,
+         81666.67
+        ],
+        [
+         4.33,
+         84533.33
+        ],
+        [
+         4.5,
+         87400
+        ],
+        [
+         4.67,
+         90266.67
+        ],
+        [
+         4.83,
+         93133.33
+        ],
+        [
+         5,
+         96000
+        ],
+        [
+         5.17,
+         98866.67
+        ],
+        [
+         5.33,
+         101733.33
+        ],
+        [
+         5.5,
+         104600
+        ],
+        [
+         5.67,
+         107466.67
+        ],
+        [
+         5.83,
+         110333.33
+        ],
+        [
+         6,
+         113200
+        ],
+        [
+         6.17,
+         116066.67
+        ],
+        [
+         6.33,
+         118933.33
+        ],
+        [
+         6.5,
+         121800
+        ],
+        [
+         6.67,
+         124666.67
+        ],
+        [
+         6.83,
+         127533.33
+        ],
+        [
+         7,
+         130400
+        ],
+        [
+         7.17,
+         133266.67
+        ],
+        [
+         7.33,
+         136133.33
+        ],
+        [
+         7.5,
+         139000
+        ],
+        [
+         7.67,
+         141866.67
+        ],
+        [
+         7.83,
+         144733.33
+        ],
+        [
+         8,
+         147600
+        ],
+        [
+         8.17,
+         150466.67
+        ],
+        [
+         8.33,
+         153333.33
+        ],
+        [
+         8.5,
+         156200
+        ],
+        [
+         8.67,
+         159066.67
+        ],
+        [
+         8.83,
+         161933.33
+        ],
+        [
+         9,
+         164800
+        ],
+        [
+         9.17,
+         167666.67
+        ],
+        [
+         9.33,
+         170533.33
+        ],
+        [
+         9.5,
+         173400
+        ],
+        [
+         9.67,
+         176266.67
+        ],
+        [
+         9.83,
+         179133.33
+        ],
+        [
+         10,
+         182000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 5,
+       "y": 96000,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $19,200 a year. Buying costs $10,000 up front (closing and moving costs) plus $17,200 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "5",
+   "numeric": {
+    "value": 5,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set Rent(t) = Buy(t): R·t = U + O·t, so t = [[U || R − O]].",
+    "Substitute: t = [[$10,000 || $19,200 − $17,200]] = $10,000 ÷ $2,000 = 5.",
+    "Spreadsheet: =10000/(19200-17200).",
+    "So buying only pays off for someone who stays more than 5 years; a shorter stay favors renting."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Priya expects to move after 9 years. Which costs less over that time, and by how much? Give the difference.",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 250000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $20,400t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         3400
+        ],
+        [
+         0.33,
+         6800
+        ],
+        [
+         0.5,
+         10200
+        ],
+        [
+         0.67,
+         13600
+        ],
+        [
+         0.83,
+         17000
+        ],
+        [
+         1,
+         20400
+        ],
+        [
+         1.17,
+         23800
+        ],
+        [
+         1.33,
+         27200
+        ],
+        [
+         1.5,
+         30600
+        ],
+        [
+         1.67,
+         34000
+        ],
+        [
+         1.83,
+         37400
+        ],
+        [
+         2,
+         40800
+        ],
+        [
+         2.17,
+         44200
+        ],
+        [
+         2.33,
+         47600
+        ],
+        [
+         2.5,
+         51000
+        ],
+        [
+         2.67,
+         54400
+        ],
+        [
+         2.83,
+         57800
+        ],
+        [
+         3,
+         61200
+        ],
+        [
+         3.17,
+         64600
+        ],
+        [
+         3.33,
+         68000
+        ],
+        [
+         3.5,
+         71400
+        ],
+        [
+         3.67,
+         74800
+        ],
+        [
+         3.83,
+         78200
+        ],
+        [
+         4,
+         81600
+        ],
+        [
+         4.17,
+         85000
+        ],
+        [
+         4.33,
+         88400
+        ],
+        [
+         4.5,
+         91800
+        ],
+        [
+         4.67,
+         95200
+        ],
+        [
+         4.83,
+         98600
+        ],
+        [
+         5,
+         102000
+        ],
+        [
+         5.17,
+         105400
+        ],
+        [
+         5.33,
+         108800
+        ],
+        [
+         5.5,
+         112200
+        ],
+        [
+         5.67,
+         115600
+        ],
+        [
+         5.83,
+         119000
+        ],
+        [
+         6,
+         122400
+        ],
+        [
+         6.17,
+         125800
+        ],
+        [
+         6.33,
+         129200
+        ],
+        [
+         6.5,
+         132600
+        ],
+        [
+         6.67,
+         136000
+        ],
+        [
+         6.83,
+         139400
+        ],
+        [
+         7,
+         142800
+        ],
+        [
+         7.17,
+         146200
+        ],
+        [
+         7.33,
+         149600
+        ],
+        [
+         7.5,
+         153000
+        ],
+        [
+         7.67,
+         156400
+        ],
+        [
+         7.83,
+         159800
+        ],
+        [
+         8,
+         163200
+        ],
+        [
+         8.17,
+         166600
+        ],
+        [
+         8.33,
+         170000
+        ],
+        [
+         8.5,
+         173400
+        ],
+        [
+         8.67,
+         176800
+        ],
+        [
+         8.83,
+         180200
+        ],
+        [
+         9,
+         183600
+        ],
+        [
+         9.17,
+         187000
+        ],
+        [
+         9.33,
+         190400
+        ],
+        [
+         9.5,
+         193800
+        ],
+        [
+         9.67,
+         197200
+        ],
+        [
+         9.83,
+         200600
+        ],
+        [
+         10,
+         204000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $6,000 + $18,900t",
+       "pts": [
+        [
+         0,
+         6000
+        ],
+        [
+         0.17,
+         9150
+        ],
+        [
+         0.33,
+         12300
+        ],
+        [
+         0.5,
+         15450
+        ],
+        [
+         0.67,
+         18600
+        ],
+        [
+         0.83,
+         21750
+        ],
+        [
+         1,
+         24900
+        ],
+        [
+         1.17,
+         28050
+        ],
+        [
+         1.33,
+         31200
+        ],
+        [
+         1.5,
+         34350
+        ],
+        [
+         1.67,
+         37500
+        ],
+        [
+         1.83,
+         40650
+        ],
+        [
+         2,
+         43800
+        ],
+        [
+         2.17,
+         46950
+        ],
+        [
+         2.33,
+         50100
+        ],
+        [
+         2.5,
+         53250
+        ],
+        [
+         2.67,
+         56400
+        ],
+        [
+         2.83,
+         59550
+        ],
+        [
+         3,
+         62700
+        ],
+        [
+         3.17,
+         65850
+        ],
+        [
+         3.33,
+         69000
+        ],
+        [
+         3.5,
+         72150
+        ],
+        [
+         3.67,
+         75300
+        ],
+        [
+         3.83,
+         78450
+        ],
+        [
+         4,
+         81600
+        ],
+        [
+         4.17,
+         84750
+        ],
+        [
+         4.33,
+         87900
+        ],
+        [
+         4.5,
+         91050
+        ],
+        [
+         4.67,
+         94200
+        ],
+        [
+         4.83,
+         97350
+        ],
+        [
+         5,
+         100500
+        ],
+        [
+         5.17,
+         103650
+        ],
+        [
+         5.33,
+         106800
+        ],
+        [
+         5.5,
+         109950
+        ],
+        [
+         5.67,
+         113100
+        ],
+        [
+         5.83,
+         116250
+        ],
+        [
+         6,
+         119400
+        ],
+        [
+         6.17,
+         122550
+        ],
+        [
+         6.33,
+         125700
+        ],
+        [
+         6.5,
+         128850
+        ],
+        [
+         6.67,
+         132000
+        ],
+        [
+         6.83,
+         135150
+        ],
+        [
+         7,
+         138300
+        ],
+        [
+         7.17,
+         141450
+        ],
+        [
+         7.33,
+         144600
+        ],
+        [
+         7.5,
+         147750
+        ],
+        [
+         7.67,
+         150900
+        ],
+        [
+         7.83,
+         154050
+        ],
+        [
+         8,
+         157200
+        ],
+        [
+         8.17,
+         160350
+        ],
+        [
+         8.33,
+         163500
+        ],
+        [
+         8.5,
+         166650
+        ],
+        [
+         8.67,
+         169800
+        ],
+        [
+         8.83,
+         172950
+        ],
+        [
+         9,
+         176100
+        ],
+        [
+         9.17,
+         179250
+        ],
+        [
+         9.33,
+         182400
+        ],
+        [
+         9.5,
+         185550
+        ],
+        [
+         9.67,
+         188700
+        ],
+        [
+         9.83,
+         191850
+        ],
+        [
+         10,
+         195000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 4,
+       "y": 81600,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $20,400 a year. Buying costs $6,000 up front (closing and moving costs) plus $18,900 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$7,500",
+   "numeric": {
+    "value": 7500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: difference = |Rent(t) − Buy(t)|.",
+    "Substitute: Rent(9) = $183,600; Buy(9) = $176,100.",
+    "Spreadsheet: =ABS(20400*9-(6000+18900*9)).",
+    "So buying saves $7,500: 9 years is after the 4-year break-even."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "support",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Using the buying model, what are Grace's total unrecoverable costs after 5 years?",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 250000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $21,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         3500
+        ],
+        [
+         0.33,
+         7000
+        ],
+        [
+         0.5,
+         10500
+        ],
+        [
+         0.67,
+         14000
+        ],
+        [
+         0.83,
+         17500
+        ],
+        [
+         1,
+         21000
+        ],
+        [
+         1.17,
+         24500
+        ],
+        [
+         1.33,
+         28000
+        ],
+        [
+         1.5,
+         31500
+        ],
+        [
+         1.67,
+         35000
+        ],
+        [
+         1.83,
+         38500
+        ],
+        [
+         2,
+         42000
+        ],
+        [
+         2.17,
+         45500
+        ],
+        [
+         2.33,
+         49000
+        ],
+        [
+         2.5,
+         52500
+        ],
+        [
+         2.67,
+         56000
+        ],
+        [
+         2.83,
+         59500
+        ],
+        [
+         3,
+         63000
+        ],
+        [
+         3.17,
+         66500
+        ],
+        [
+         3.33,
+         70000
+        ],
+        [
+         3.5,
+         73500
+        ],
+        [
+         3.67,
+         77000
+        ],
+        [
+         3.83,
+         80500
+        ],
+        [
+         4,
+         84000
+        ],
+        [
+         4.17,
+         87500
+        ],
+        [
+         4.33,
+         91000
+        ],
+        [
+         4.5,
+         94500
+        ],
+        [
+         4.67,
+         98000
+        ],
+        [
+         4.83,
+         101500
+        ],
+        [
+         5,
+         105000
+        ],
+        [
+         5.17,
+         108500
+        ],
+        [
+         5.33,
+         112000
+        ],
+        [
+         5.5,
+         115500
+        ],
+        [
+         5.67,
+         119000
+        ],
+        [
+         5.83,
+         122500
+        ],
+        [
+         6,
+         126000
+        ],
+        [
+         6.17,
+         129500
+        ],
+        [
+         6.33,
+         133000
+        ],
+        [
+         6.5,
+         136500
+        ],
+        [
+         6.67,
+         140000
+        ],
+        [
+         6.83,
+         143500
+        ],
+        [
+         7,
+         147000
+        ],
+        [
+         7.17,
+         150500
+        ],
+        [
+         7.33,
+         154000
+        ],
+        [
+         7.5,
+         157500
+        ],
+        [
+         7.67,
+         161000
+        ],
+        [
+         7.83,
+         164500
+        ],
+        [
+         8,
+         168000
+        ],
+        [
+         8.17,
+         171500
+        ],
+        [
+         8.33,
+         175000
+        ],
+        [
+         8.5,
+         178500
+        ],
+        [
+         8.67,
+         182000
+        ],
+        [
+         8.83,
+         185500
+        ],
+        [
+         9,
+         189000
+        ],
+        [
+         9.17,
+         192500
+        ],
+        [
+         9.33,
+         196000
+        ],
+        [
+         9.5,
+         199500
+        ],
+        [
+         9.67,
+         203000
+        ],
+        [
+         9.83,
+         206500
+        ],
+        [
+         10,
+         210000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $10,000 + $18,500t",
+       "pts": [
+        [
+         0,
+         10000
+        ],
+        [
+         0.17,
+         13083.33
+        ],
+        [
+         0.33,
+         16166.67
+        ],
+        [
+         0.5,
+         19250
+        ],
+        [
+         0.67,
+         22333.33
+        ],
+        [
+         0.83,
+         25416.67
+        ],
+        [
+         1,
+         28500
+        ],
+        [
+         1.17,
+         31583.33
+        ],
+        [
+         1.33,
+         34666.67
+        ],
+        [
+         1.5,
+         37750
+        ],
+        [
+         1.67,
+         40833.33
+        ],
+        [
+         1.83,
+         43916.67
+        ],
+        [
+         2,
+         47000
+        ],
+        [
+         2.17,
+         50083.33
+        ],
+        [
+         2.33,
+         53166.67
+        ],
+        [
+         2.5,
+         56250
+        ],
+        [
+         2.67,
+         59333.33
+        ],
+        [
+         2.83,
+         62416.67
+        ],
+        [
+         3,
+         65500
+        ],
+        [
+         3.17,
+         68583.33
+        ],
+        [
+         3.33,
+         71666.67
+        ],
+        [
+         3.5,
+         74750
+        ],
+        [
+         3.67,
+         77833.33
+        ],
+        [
+         3.83,
+         80916.67
+        ],
+        [
+         4,
+         84000
+        ],
+        [
+         4.17,
+         87083.33
+        ],
+        [
+         4.33,
+         90166.67
+        ],
+        [
+         4.5,
+         93250
+        ],
+        [
+         4.67,
+         96333.33
+        ],
+        [
+         4.83,
+         99416.67
+        ],
+        [
+         5,
+         102500
+        ],
+        [
+         5.17,
+         105583.33
+        ],
+        [
+         5.33,
+         108666.67
+        ],
+        [
+         5.5,
+         111750
+        ],
+        [
+         5.67,
+         114833.33
+        ],
+        [
+         5.83,
+         117916.67
+        ],
+        [
+         6,
+         121000
+        ],
+        [
+         6.17,
+         124083.33
+        ],
+        [
+         6.33,
+         127166.67
+        ],
+        [
+         6.5,
+         130250
+        ],
+        [
+         6.67,
+         133333.33
+        ],
+        [
+         6.83,
+         136416.67
+        ],
+        [
+         7,
+         139500
+        ],
+        [
+         7.17,
+         142583.33
+        ],
+        [
+         7.33,
+         145666.67
+        ],
+        [
+         7.5,
+         148750
+        ],
+        [
+         7.67,
+         151833.33
+        ],
+        [
+         7.83,
+         154916.67
+        ],
+        [
+         8,
+         158000
+        ],
+        [
+         8.17,
+         161083.33
+        ],
+        [
+         8.33,
+         164166.67
+        ],
+        [
+         8.5,
+         167250
+        ],
+        [
+         8.67,
+         170333.33
+        ],
+        [
+         8.83,
+         173416.67
+        ],
+        [
+         9,
+         176500
+        ],
+        [
+         9.17,
+         179583.33
+        ],
+        [
+         9.33,
+         182666.67
+        ],
+        [
+         9.5,
+         185750
+        ],
+        [
+         9.67,
+         188833.33
+        ],
+        [
+         9.83,
+         191916.67
+        ],
+        [
+         10,
+         195000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 4,
+       "y": 84000,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $21,000 a year. Buying costs $10,000 up front (closing and moving costs) plus $18,500 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$102,500",
+   "numeric": {
+    "value": 102500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: Buy(t) = up-front cost + yearly cost × t.",
+    "Substitute: $10,000 + $18,500 × 5 = $102,500.",
+    "Spreadsheet: =10000+18500*5.",
+    "So buying has cost $102,500 after 5 years, compared with $105,000 for renting."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "standard",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "After how many years do renting and buying have the same total unrecoverable cost (the break-even point)?",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 200000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $18,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         3000
+        ],
+        [
+         0.33,
+         6000
+        ],
+        [
+         0.5,
+         9000
+        ],
+        [
+         0.67,
+         12000
+        ],
+        [
+         0.83,
+         15000
+        ],
+        [
+         1,
+         18000
+        ],
+        [
+         1.17,
+         21000
+        ],
+        [
+         1.33,
+         24000
+        ],
+        [
+         1.5,
+         27000
+        ],
+        [
+         1.67,
+         30000
+        ],
+        [
+         1.83,
+         33000
+        ],
+        [
+         2,
+         36000
+        ],
+        [
+         2.17,
+         39000
+        ],
+        [
+         2.33,
+         42000
+        ],
+        [
+         2.5,
+         45000
+        ],
+        [
+         2.67,
+         48000
+        ],
+        [
+         2.83,
+         51000
+        ],
+        [
+         3,
+         54000
+        ],
+        [
+         3.17,
+         57000
+        ],
+        [
+         3.33,
+         60000
+        ],
+        [
+         3.5,
+         63000
+        ],
+        [
+         3.67,
+         66000
+        ],
+        [
+         3.83,
+         69000
+        ],
+        [
+         4,
+         72000
+        ],
+        [
+         4.17,
+         75000
+        ],
+        [
+         4.33,
+         78000
+        ],
+        [
+         4.5,
+         81000
+        ],
+        [
+         4.67,
+         84000
+        ],
+        [
+         4.83,
+         87000
+        ],
+        [
+         5,
+         90000
+        ],
+        [
+         5.17,
+         93000
+        ],
+        [
+         5.33,
+         96000
+        ],
+        [
+         5.5,
+         99000
+        ],
+        [
+         5.67,
+         102000
+        ],
+        [
+         5.83,
+         105000
+        ],
+        [
+         6,
+         108000
+        ],
+        [
+         6.17,
+         111000
+        ],
+        [
+         6.33,
+         114000
+        ],
+        [
+         6.5,
+         117000
+        ],
+        [
+         6.67,
+         120000
+        ],
+        [
+         6.83,
+         123000
+        ],
+        [
+         7,
+         126000
+        ],
+        [
+         7.17,
+         129000
+        ],
+        [
+         7.33,
+         132000
+        ],
+        [
+         7.5,
+         135000
+        ],
+        [
+         7.67,
+         138000
+        ],
+        [
+         7.83,
+         141000
+        ],
+        [
+         8,
+         144000
+        ],
+        [
+         8.17,
+         147000
+        ],
+        [
+         8.33,
+         150000
+        ],
+        [
+         8.5,
+         153000
+        ],
+        [
+         8.67,
+         156000
+        ],
+        [
+         8.83,
+         159000
+        ],
+        [
+         9,
+         162000
+        ],
+        [
+         9.17,
+         165000
+        ],
+        [
+         9.33,
+         168000
+        ],
+        [
+         9.5,
+         171000
+        ],
+        [
+         9.67,
+         174000
+        ],
+        [
+         9.83,
+         177000
+        ],
+        [
+         10,
+         180000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $15,000 + $15,500t",
+       "pts": [
+        [
+         0,
+         15000
+        ],
+        [
+         0.17,
+         17583.33
+        ],
+        [
+         0.33,
+         20166.67
+        ],
+        [
+         0.5,
+         22750
+        ],
+        [
+         0.67,
+         25333.33
+        ],
+        [
+         0.83,
+         27916.67
+        ],
+        [
+         1,
+         30500
+        ],
+        [
+         1.17,
+         33083.33
+        ],
+        [
+         1.33,
+         35666.67
+        ],
+        [
+         1.5,
+         38250
+        ],
+        [
+         1.67,
+         40833.33
+        ],
+        [
+         1.83,
+         43416.67
+        ],
+        [
+         2,
+         46000
+        ],
+        [
+         2.17,
+         48583.33
+        ],
+        [
+         2.33,
+         51166.67
+        ],
+        [
+         2.5,
+         53750
+        ],
+        [
+         2.67,
+         56333.33
+        ],
+        [
+         2.83,
+         58916.67
+        ],
+        [
+         3,
+         61500
+        ],
+        [
+         3.17,
+         64083.33
+        ],
+        [
+         3.33,
+         66666.67
+        ],
+        [
+         3.5,
+         69250
+        ],
+        [
+         3.67,
+         71833.33
+        ],
+        [
+         3.83,
+         74416.67
+        ],
+        [
+         4,
+         77000
+        ],
+        [
+         4.17,
+         79583.33
+        ],
+        [
+         4.33,
+         82166.67
+        ],
+        [
+         4.5,
+         84750
+        ],
+        [
+         4.67,
+         87333.33
+        ],
+        [
+         4.83,
+         89916.67
+        ],
+        [
+         5,
+         92500
+        ],
+        [
+         5.17,
+         95083.33
+        ],
+        [
+         5.33,
+         97666.67
+        ],
+        [
+         5.5,
+         100250
+        ],
+        [
+         5.67,
+         102833.33
+        ],
+        [
+         5.83,
+         105416.67
+        ],
+        [
+         6,
+         108000
+        ],
+        [
+         6.17,
+         110583.33
+        ],
+        [
+         6.33,
+         113166.67
+        ],
+        [
+         6.5,
+         115750
+        ],
+        [
+         6.67,
+         118333.33
+        ],
+        [
+         6.83,
+         120916.67
+        ],
+        [
+         7,
+         123500
+        ],
+        [
+         7.17,
+         126083.33
+        ],
+        [
+         7.33,
+         128666.67
+        ],
+        [
+         7.5,
+         131250
+        ],
+        [
+         7.67,
+         133833.33
+        ],
+        [
+         7.83,
+         136416.67
+        ],
+        [
+         8,
+         139000
+        ],
+        [
+         8.17,
+         141583.33
+        ],
+        [
+         8.33,
+         144166.67
+        ],
+        [
+         8.5,
+         146750
+        ],
+        [
+         8.67,
+         149333.33
+        ],
+        [
+         8.83,
+         151916.67
+        ],
+        [
+         9,
+         154500
+        ],
+        [
+         9.17,
+         157083.33
+        ],
+        [
+         9.33,
+         159666.67
+        ],
+        [
+         9.5,
+         162250
+        ],
+        [
+         9.67,
+         164833.33
+        ],
+        [
+         9.83,
+         167416.67
+        ],
+        [
+         10,
+         170000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 6,
+       "y": 108000,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $18,000 a year. Buying costs $15,000 up front (closing and moving costs) plus $15,500 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "6",
+   "numeric": {
+    "value": 6,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Formula: set Rent(t) = Buy(t): R·t = U + O·t, so t = [[U || R − O]].",
+    "Substitute: t = [[$15,000 || $18,000 − $15,500]] = $15,000 ÷ $2,500 = 6.",
+    "Spreadsheet: =15000/(18000-15500).",
+    "So buying only pays off for someone who stays more than 6 years; a shorter stay favors renting."
+   ]
+  },
+  {
+   "id": "fa-housing-s01-lv-m-rent-buy-cross-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-01",
+   "level": "advanced",
+   "family": "lv-m-rent-buy-cross",
+   "type": "modeling",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson",
+    "practice-test"
+   ],
+   "gameEligible": false,
+   "prompt": "Owen expects to move after 3 years. Which costs less over that time, and by how much? Give the difference.",
+   "scenario": {
+    "graph": {
+     "title": "Unrecoverable housing costs over time",
+     "x": {
+      "label": "Years, t",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "money": false
+     },
+     "y": {
+      "label": "Total cost",
+      "min": 0,
+      "max": 250000,
+      "step": 50000,
+      "money": true
+     },
+     "series": [
+      {
+       "name": "Rent: $21,000t",
+       "pts": [
+        [
+         0,
+         0
+        ],
+        [
+         0.17,
+         3500
+        ],
+        [
+         0.33,
+         7000
+        ],
+        [
+         0.5,
+         10500
+        ],
+        [
+         0.67,
+         14000
+        ],
+        [
+         0.83,
+         17500
+        ],
+        [
+         1,
+         21000
+        ],
+        [
+         1.17,
+         24500
+        ],
+        [
+         1.33,
+         28000
+        ],
+        [
+         1.5,
+         31500
+        ],
+        [
+         1.67,
+         35000
+        ],
+        [
+         1.83,
+         38500
+        ],
+        [
+         2,
+         42000
+        ],
+        [
+         2.17,
+         45500
+        ],
+        [
+         2.33,
+         49000
+        ],
+        [
+         2.5,
+         52500
+        ],
+        [
+         2.67,
+         56000
+        ],
+        [
+         2.83,
+         59500
+        ],
+        [
+         3,
+         63000
+        ],
+        [
+         3.17,
+         66500
+        ],
+        [
+         3.33,
+         70000
+        ],
+        [
+         3.5,
+         73500
+        ],
+        [
+         3.67,
+         77000
+        ],
+        [
+         3.83,
+         80500
+        ],
+        [
+         4,
+         84000
+        ],
+        [
+         4.17,
+         87500
+        ],
+        [
+         4.33,
+         91000
+        ],
+        [
+         4.5,
+         94500
+        ],
+        [
+         4.67,
+         98000
+        ],
+        [
+         4.83,
+         101500
+        ],
+        [
+         5,
+         105000
+        ],
+        [
+         5.17,
+         108500
+        ],
+        [
+         5.33,
+         112000
+        ],
+        [
+         5.5,
+         115500
+        ],
+        [
+         5.67,
+         119000
+        ],
+        [
+         5.83,
+         122500
+        ],
+        [
+         6,
+         126000
+        ],
+        [
+         6.17,
+         129500
+        ],
+        [
+         6.33,
+         133000
+        ],
+        [
+         6.5,
+         136500
+        ],
+        [
+         6.67,
+         140000
+        ],
+        [
+         6.83,
+         143500
+        ],
+        [
+         7,
+         147000
+        ],
+        [
+         7.17,
+         150500
+        ],
+        [
+         7.33,
+         154000
+        ],
+        [
+         7.5,
+         157500
+        ],
+        [
+         7.67,
+         161000
+        ],
+        [
+         7.83,
+         164500
+        ],
+        [
+         8,
+         168000
+        ],
+        [
+         8.17,
+         171500
+        ],
+        [
+         8.33,
+         175000
+        ],
+        [
+         8.5,
+         178500
+        ],
+        [
+         8.67,
+         182000
+        ],
+        [
+         8.83,
+         185500
+        ],
+        [
+         9,
+         189000
+        ],
+        [
+         9.17,
+         192500
+        ],
+        [
+         9.33,
+         196000
+        ],
+        [
+         9.5,
+         199500
+        ],
+        [
+         9.67,
+         203000
+        ],
+        [
+         9.83,
+         206500
+        ],
+        [
+         10,
+         210000
+        ]
+       ]
+      },
+      {
+       "name": "Buy: $15,000 + $18,000t",
+       "pts": [
+        [
+         0,
+         15000
+        ],
+        [
+         0.17,
+         18000
+        ],
+        [
+         0.33,
+         21000
+        ],
+        [
+         0.5,
+         24000
+        ],
+        [
+         0.67,
+         27000
+        ],
+        [
+         0.83,
+         30000
+        ],
+        [
+         1,
+         33000
+        ],
+        [
+         1.17,
+         36000
+        ],
+        [
+         1.33,
+         39000
+        ],
+        [
+         1.5,
+         42000
+        ],
+        [
+         1.67,
+         45000
+        ],
+        [
+         1.83,
+         48000
+        ],
+        [
+         2,
+         51000
+        ],
+        [
+         2.17,
+         54000
+        ],
+        [
+         2.33,
+         57000
+        ],
+        [
+         2.5,
+         60000
+        ],
+        [
+         2.67,
+         63000
+        ],
+        [
+         2.83,
+         66000
+        ],
+        [
+         3,
+         69000
+        ],
+        [
+         3.17,
+         72000
+        ],
+        [
+         3.33,
+         75000
+        ],
+        [
+         3.5,
+         78000
+        ],
+        [
+         3.67,
+         81000
+        ],
+        [
+         3.83,
+         84000
+        ],
+        [
+         4,
+         87000
+        ],
+        [
+         4.17,
+         90000
+        ],
+        [
+         4.33,
+         93000
+        ],
+        [
+         4.5,
+         96000
+        ],
+        [
+         4.67,
+         99000
+        ],
+        [
+         4.83,
+         102000
+        ],
+        [
+         5,
+         105000
+        ],
+        [
+         5.17,
+         108000
+        ],
+        [
+         5.33,
+         111000
+        ],
+        [
+         5.5,
+         114000
+        ],
+        [
+         5.67,
+         117000
+        ],
+        [
+         5.83,
+         120000
+        ],
+        [
+         6,
+         123000
+        ],
+        [
+         6.17,
+         126000
+        ],
+        [
+         6.33,
+         129000
+        ],
+        [
+         6.5,
+         132000
+        ],
+        [
+         6.67,
+         135000
+        ],
+        [
+         6.83,
+         138000
+        ],
+        [
+         7,
+         141000
+        ],
+        [
+         7.17,
+         144000
+        ],
+        [
+         7.33,
+         147000
+        ],
+        [
+         7.5,
+         150000
+        ],
+        [
+         7.67,
+         153000
+        ],
+        [
+         7.83,
+         156000
+        ],
+        [
+         8,
+         159000
+        ],
+        [
+         8.17,
+         162000
+        ],
+        [
+         8.33,
+         165000
+        ],
+        [
+         8.5,
+         168000
+        ],
+        [
+         8.67,
+         171000
+        ],
+        [
+         8.83,
+         174000
+        ],
+        [
+         9,
+         177000
+        ],
+        [
+         9.17,
+         180000
+        ],
+        [
+         9.33,
+         183000
+        ],
+        [
+         9.5,
+         186000
+        ],
+        [
+         9.67,
+         189000
+        ],
+        [
+         9.83,
+         192000
+        ],
+        [
+         10,
+         195000
+        ]
+       ]
+      }
+     ],
+     "marks": [
+      {
+       "x": 5,
+       "y": 105000,
+       "label": "break-even"
+      }
+     ],
+     "caption": "Renting costs $21,000 a year. Buying costs $15,000 up front (closing and moving costs) plus $18,000 a year in mortgage interest, property tax, insurance and upkeep. Equity is not counted."
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6,000",
+   "numeric": {
+    "value": 6000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Formula: difference = |Rent(t) − Buy(t)|.",
+    "Substitute: Rent(3) = $63,000; Buy(3) = $69,000.",
+    "Spreadsheet: =ABS(21000*3-(15000+18000*3)).",
+    "So renting saves $6,000: 3 years is before the 5-year break-even."
    ]
   },
   {
@@ -10169,7 +15735,7 @@
    "id": "fa-housing-s01-err-tax-monthly-01",
    "unitId": "housing",
    "skillId": "housing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "tax-monthly-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -10197,9 +15763,12 @@
    "answer": "$365",
    "solutionSteps": [
     "Mistake: Added the yearly amount to every month instead of one-twelfth of it.",
+    "Formula: monthly escrow = yearly tax ÷ 12.",
     "Escrow spreads the annual tax over 12 months.",
     "$4,380 ÷ 12 = $365.",
-    "Correct result: $365."
+    "Correct result: $365.",
+    "Spreadsheet or calculator: =4380/12",
+    "So the answer is $365; put renting and owning side by side over the same number of years before deciding."
    ],
    "numeric": {
     "value": 365,
@@ -10294,9 +15863,12 @@
    "answer": "$250,750",
    "solutionSteps": [
     "Mistake: Computed the down payment, not the loan; the loan is the remaining percent of the price.",
+    "Formula: loan = price × (1 − down-payment percent).",
     "Down payment = 15%; loan = 85% of the price.",
     "$295,000 × 0.85 = $250,750.",
-    "Correct result: $250,750."
+    "Correct result: $250,750.",
+    "Spreadsheet or calculator: =295000*0.85",
+    "So the answer is $250,750; lenders and budgets both look at this monthly number."
    ],
    "numeric": {
     "value": 250750,
@@ -10390,9 +15962,12 @@
    "answer": "$9,300",
    "solutionSteps": [
     "Mistake: Took the percent of the down payment instead of the purchase price.",
+    "Formula: closing costs = closing percent × purchase price.",
     "3% of the purchase price.",
     "$310,000 × 0.03 = $9,300.",
-    "Correct result: $9,300."
+    "Correct result: $9,300.",
+    "Spreadsheet or calculator: =310000*0.03",
+    "So the answer is $9,300; budget for these costs on top of the mortgage payment."
    ],
    "numeric": {
     "value": 9300,
@@ -10487,9 +16062,12 @@
    "answer": "$1,820.00",
    "solutionSteps": [
     "Mistake: Used take-home pay; the 28% guideline uses gross income.",
+    "Formula: maximum housing cost = 28% × gross monthly income.",
     "28% of gross income.",
     "$6,500.00 × 0.28 = $1,820.00.",
-    "Correct result: $1,820.00."
+    "Correct result: $1,820.00.",
+    "Spreadsheet or calculator: =6500.00*0.28",
+    "So the answer is $1,820.00; money tied up in a home could have grown elsewhere."
    ],
    "numeric": {
     "value": 1820,
