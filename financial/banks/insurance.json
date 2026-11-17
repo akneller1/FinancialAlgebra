@@ -6255,14 +6255,14 @@
     "correct": 3480,
     "unit": "USD"
    },
-   "prompt": "Diego compares plans by the cost in a year when the full deductible is used. Premium: $165.00 per month; deductible $1,500.00; no other costs. Diego’s work: Yearly cost = 12 × $165.00 = $1,980.00. What is the year’s cost if the full deductible is used?",
+   "prompt": "Diego compares plans by the cost in a year when the full deductible is used. Premium: $165 per month; deductible $1,500; no other costs. Diego’s work: Yearly cost = 12 × $165 = $1,980. What is the year’s cost if the full deductible is used?",
    "format": "short-answer",
-   "answer": "$3,480.00",
+   "answer": "$3,480",
    "solutionSteps": [
     "Mistake: Left out the deductible from the year’s cost.",
-    "Premiums: $1,980.00.",
-    "Add the deductible: $1,980.00 + $1,500.00 = $3,480.00.",
-    "Correct result: $3,480.00."
+    "Premiums: $1,980.",
+    "Add the deductible: $1,980 + $1,500 = $3,480.",
+    "Correct result: $3,480."
    ],
    "numeric": {
     "value": 3480,
@@ -6299,7 +6299,7 @@
     "correct": 2910,
     "unit": "USD"
    },
-   "prompt": "Hannah’s bill is $6,200.00. The plan has a $1,500.00 deductible, then 30% coinsurance. Hannah’s work: Hannah pays 30% × $6,200.00 = $1,860.00. What mistake did Hannah make?",
+   "prompt": "Hannah’s bill is $6,200. The plan has a $1,500 deductible, then 30% coinsurance. Hannah’s work: Hannah pays 30% × $6,200 = $1,860. What mistake did Hannah make?",
    "format": "multiple-choice",
    "answer": "Applied coinsurance to the whole bill; first pay the deductible, then the percent of the rest.",
    "options": [
@@ -6321,10 +6321,10 @@
     }
    ],
    "solutionSteps": [
-    "Deductible: $1,500.00.",
-    "Coinsurance: 30% × ($6,200.00 − $1,500.00) = $1,410.00.",
-    "Total = $2,910.00.",
-    "Correct result: $2,910.00."
+    "Deductible: $1,500.",
+    "Coinsurance: 30% × ($6,200 − $1,500) = $1,410.",
+    "Total = $2,910.",
+    "Correct result: $2,910."
    ]
   },
   {
@@ -6356,14 +6356,14 @@
     "correct": 6500,
     "unit": "USD"
    },
-   "prompt": "Zara has a $48,000.00 hospital bill. Deductible $2,000.00, then 20% coinsurance, with an out-of-pocket maximum of $6,500.00. Zara’s work: Zara pays $2,000.00 + 20% × $46,000.00 = $11,200.00. What does the patient actually pay?",
+   "prompt": "Zara has a $48,000 hospital bill. Deductible $2,000, then 20% coinsurance, with an out-of-pocket maximum of $6,500. Zara’s work: Zara pays $2,000 + 20% × $46,000 = $11,200. What does the patient actually pay?",
    "format": "short-answer",
-   "answer": "$6,500.00",
+   "answer": "$6,500",
    "solutionSteps": [
     "Mistake: Ignored the out-of-pocket maximum, which caps what the patient pays.",
-    "Deductible + coinsurance = $11,200.00.",
-    "This is above the cap, so the patient pays $6,500.00.",
-    "Correct result: $6,500.00."
+    "Deductible + coinsurance = $11,200.",
+    "This is above the cap, so the patient pays $6,500.",
+    "Correct result: $6,500."
    ],
    "numeric": {
     "value": 6500,
@@ -6402,7 +6402,7 @@
     "correct": 396,
     "unit": "USD"
    },
-   "prompt": "Imani estimates yearly repair costs: 90% chance of $0, 8% chance of $1,200, 2% chance of $15,000. Imani’s work: Expected cost = ($0 + $1,200 + $15,000) ÷ 3 = $5,400.00. What mistake did Imani make?",
+   "prompt": "Imani estimates yearly repair costs: 90% chance of $0, 8% chance of $1,200, 2% chance of $15,000. Imani’s work: Expected cost = ($0 + $1,200 + $15,000) ÷ 3 = $5,400. What mistake did Imani make?",
    "format": "multiple-choice",
    "answer": "Averaged the outcomes equally instead of weighting each by its probability.",
    "options": [
@@ -6425,8 +6425,8 @@
    ],
    "solutionSteps": [
     "E = Σ p·x.",
-    "0.9(0) + 0.08(1,200) + 0.02(15,000) = $396.00.",
-    "Correct result: $396.00."
+    "0.9(0) + 0.08(1,200) + 0.02(15,000) = $396.",
+    "Correct result: $396."
    ]
   },
   {
@@ -6456,13 +6456,13 @@
     "correct": 300,
     "unit": "USD"
    },
-   "prompt": "A phone-insurance company estimates a 5% chance each year of a $6,000.00 loss per customer. Owen’s work: Expected loss = $6,000.00 ÷ 5% = $1,200.00. What is the expected yearly loss per customer?",
+   "prompt": "A phone-insurance company estimates a 5% chance each year of a $6,000 loss per customer. Owen’s work: Expected loss = $6,000 ÷ 5% = $1,200. What is the expected yearly loss per customer?",
    "format": "short-answer",
-   "answer": "$300.00",
+   "answer": "$300",
    "solutionSteps": [
     "Mistake: Divided by the percent; expected loss = probability × loss.",
-    "0.05 × $6,000.00 = $300.00.",
-    "Correct result: $300.00."
+    "0.05 × $6,000 = $300.",
+    "Correct result: $300."
    ],
    "numeric": {
     "value": 300,
@@ -6497,7 +6497,7 @@
     "correct": 2000,
     "unit": "USD"
    },
-   "prompt": "Jordan’s car policy has a $1,000.00 deductible per claim. Jordan files two separate claims ($3,100.00 and $2,200.00). Jordan’s work: Jordan pays the $1,000.00 deductible once. What mistake did Jordan make?",
+   "prompt": "Jordan’s car policy has a $1,000 deductible per claim. Jordan files two separate claims ($3,100 and $2,200). Jordan’s work: Jordan pays the $1,000 deductible once. What mistake did Jordan make?",
    "format": "multiple-choice",
    "answer": "The deductible applies to each claim, so it is paid twice.",
    "options": [
@@ -6519,8 +6519,8 @@
     }
    ],
    "solutionSteps": [
-    "Two claims × $1,000.00 = $2,000.00.",
-    "Correct result: $2,000.00."
+    "Two claims × $1,000 = $2,000.",
+    "Correct result: $2,000."
    ]
   },
   {
@@ -6550,13 +6550,13 @@
     "correct": 225,
     "unit": "USD"
    },
-   "prompt": "Owen has a $25.00 copay per office visit and makes 9 visits this year. Owen’s work: Owen assumes the copay is paid once per year: $25.00. What are the total copays for the year?",
+   "prompt": "Owen has a $25 copay per office visit and makes 9 visits this year. Owen’s work: Owen assumes the copay is paid once per year: $25. What are the total copays for the year?",
    "format": "short-answer",
-   "answer": "$225.00",
+   "answer": "$225",
    "solutionSteps": [
     "Mistake: A copay is charged for each visit, not once per year.",
-    "9 visits × $25.00 = $225.00.",
-    "Correct result: $225.00."
+    "9 visits × $25 = $225.",
+    "Correct result: $225."
    ],
    "numeric": {
     "value": 225,

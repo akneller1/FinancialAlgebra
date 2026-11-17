@@ -5555,7 +5555,7 @@
     "correct": 2560,
     "unit": "USD"
    },
-   "prompt": "Elena earns $64,000.00 and contributes 10% to a 401(k). The employer matches 100% of contributions up to 4% of salary. Elena’s work: Employer match = 10% × $64,000.00 = $6,400.00. What mistake did Elena make?",
+   "prompt": "Elena earns $64,000 and contributes 10% to a 401(k). The employer matches 100% of contributions up to 4% of salary. Elena’s work: Employer match = 10% × $64,000 = $6,400. What mistake did Elena make?",
    "format": "multiple-choice",
    "answer": "Ignored the cap; the employer matches only up to 4% of salary.",
    "options": [
@@ -5578,8 +5578,8 @@
    ],
    "solutionSteps": [
     "Matched percent = min(10%, 4%) = 4%.",
-    "4% × $64,000.00 = $2,560.00.",
-    "Correct result: $2,560.00."
+    "4% × $64,000 = $2,560.",
+    "Correct result: $2,560."
    ]
   },
   {
@@ -5609,13 +5609,13 @@
     "correct": 540,
     "unit": "USD"
    },
-   "prompt": "Noah contributes $4,500.00 to a traditional (pre-tax) retirement account and is in the 12% federal bracket. Noah’s work: Tax saved this year = $4,500.00 × (1 − 0.12) = $3,960.00. How much federal tax is saved this year?",
+   "prompt": "Noah contributes $4,500 to a traditional (pre-tax) retirement account and is in the 12% federal bracket. Noah’s work: Tax saved this year = $4,500 × (1 − 0.12) = $3,960. How much federal tax is saved this year?",
    "format": "short-answer",
-   "answer": "$540.00",
+   "answer": "$540",
    "solutionSteps": [
     "Mistake: Used (1 − rate); the tax saved is contribution × marginal rate.",
-    "Tax saved ≈ $4,500.00 × 0.12 = $540.00.",
-    "Correct result: $540.00."
+    "Tax saved ≈ $4,500 × 0.12 = $540.",
+    "Correct result: $540."
    ],
    "numeric": {
     "value": 540,
