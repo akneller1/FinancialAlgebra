@@ -140,7 +140,7 @@ export function buildUnit(unitId, content) {
       const r = rng(`${unitId}:${fam.id}:${k}`);
       const q = fam.gen(r, k);
       if (!q) continue;
-      const base = { skill: fam.skill, type: fam.type, activityTypes: fam.activities || defaultActivities(fam.type, q.format), gameEligible: fam.game ?? (q.format !== 'open-response' && !q.scenario?.document && (q.prompt.length < 280)) };
+      const base = { skill: fam.skill, ...(fam.level ? { level: fam.level } : {}), type: fam.type, activityTypes: fam.activities || defaultActivities(fam.type, q.format), gameEligible: fam.game ?? (q.format !== 'open-response' && !q.scenario?.document && (q.prompt.length < 280)) };
       if (q.format === 'open-response' && !q.rubric) q.rubric = rubric(fam.rubric);
       if (push({ ...base, ...q }, fam.id, made)) made++;
     }

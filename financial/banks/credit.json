@@ -3,7 +3,11 @@
  "courseId": "financial-algebra",
  "unitId": "credit",
  "unitName": "Credit Cards & Debt",
- "level": "standard",
+ "levels": [
+  "support",
+  "standard",
+  "advanced"
+ ],
  "generated": "deterministic",
  "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
  "skills": [
@@ -506,7 +510,7 @@
  "cheatSheet": {
   "title": "Credit Cards & Debt",
   "focus": "read card terms, estimate interest and understand utilization",
-  "morefocus": "compare repayment and transfer choices",
+  "morefocus": "compare repayment choices and read your credit report",
   "front": [
    {
     "title": "Card vocabulary",
@@ -586,7 +590,7 @@
    {
     "title": "Fixed-payment payoff",
     "kind": "html",
-    "html": "⟨D=\\dfrac{Pi}{1-(1+i)^{-N}}⟩<br>P = starting debt dollars; i = monthly decimal rate; N = number of monthly payments; D = dollars paid monthly.<div class=\"ex\">$3,000 at 24.99% APR over 26 months:<br>⟨D\\approx150.60⟩<br><span class=\"ans\">Plan about $150.60 monthly</span></div>Assumes fixed rate, no fees or new charges; final payment adjusts. At zero rate, ⟨D=\\tfrac{P}{N}⟩.",
+    "html": "⟨D=\\dfrac{Pi}{1-(1+i)^{-N}}⟩<br>P = starting debt; i = monthly decimal rate; N = number of monthly payments; D = monthly payment.<div class=\"ex\">$3,000 at 24.99% APR over 26 months:<br>⟨D\\approx150.60⟩<br><span class=\"ans\">Plan about $150.60 monthly</span></div>Assumes fixed rate, no fees or new charges; final payment adjusts.",
     "color": "pink"
    },
    {
@@ -680,16 +684,16 @@
     "color": "orange"
    },
    {
-    "title": "A practical card routine",
+    "title": "Credit scores & reports",
     "kind": "list",
+    "color": "pink",
     "items": [
-     "Check the statement for unfamiliar charges.",
-     "Know the due date, APR and annual fee.",
-     "If possible, pay the full statement balance by the due date to preserve a purchase grace period.",
-     "Autopay at least the minimum can help avoid missed payments; keep enough cash in the account.",
-     "Stop new charges while paying down costly debt."
-    ],
-    "color": "pink"
+     "Score factors: payment history (largest), amounts owed and utilization, length of history, new credit, credit mix. Income is not included.",
+     "Free reports from all three bureaus: AnnualCreditReport.com. Checking your own is a soft inquiry with no effect.",
+     "Applying for credit is a hard inquiry and can lower a score a little for a while.",
+     "Dispute wrong items with the bureau; an account you never opened may mean identity theft.",
+     "A better score means a lower APR: $20,000 for 60 months at 6% vs 11% costs about $2,900 less."
+    ]
    },
    {
     "title": "Reminders & mistakes",
@@ -725,7 +729,7 @@
    "id": "fa-credit-s01-vocab-def-01",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **APR (annual percentage rate)** mean?",
@@ -772,7 +776,7 @@
    "id": "fa-credit-s01-vocab-def-02",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Periodic rate** mean?",
@@ -817,7 +821,7 @@
    "id": "fa-credit-s01-vocab-def-03",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Balance** mean?",
@@ -862,7 +866,7 @@
    "id": "fa-credit-s01-vocab-def-04",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Grace period** mean?",
@@ -907,7 +911,7 @@
    "id": "fa-credit-s01-vocab-def-05",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Average daily balance** mean?",
@@ -952,7 +956,7 @@
    "id": "fa-credit-s02-vocab-def-06",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Minimum payment** mean?",
@@ -999,7 +1003,7 @@
    "id": "fa-credit-s04-vocab-def-07",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit limit** mean?",
@@ -1044,7 +1048,7 @@
    "id": "fa-credit-s04-vocab-def-08",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit utilization** mean?",
@@ -1089,7 +1093,7 @@
    "id": "fa-credit-s04-vocab-def-09",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit score** mean?",
@@ -1134,7 +1138,7 @@
    "id": "fa-credit-s04-vocab-def-10",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit report** mean?",
@@ -1179,7 +1183,7 @@
    "id": "fa-credit-s04-vocab-def-11",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Late fee** mean?",
@@ -1224,7 +1228,7 @@
    "id": "fa-credit-s03-vocab-def-12",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Debt avalanche** mean?",
@@ -1269,7 +1273,7 @@
    "id": "fa-credit-s03-vocab-def-13",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Debt snowball** mean?",
@@ -1314,7 +1318,7 @@
    "id": "fa-credit-s03-vocab-def-14",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Balance transfer** mean?",
@@ -1359,7 +1363,7 @@
    "id": "fa-credit-s04-vocab-def-15",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Cash advance** mean?",
@@ -1404,7 +1408,7 @@
    "id": "fa-credit-s02-vocab-def-16",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Revolving credit** mean?",
@@ -1449,7 +1453,7 @@
    "id": "fa-credit-s05-vocab-def-17",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit bureau** mean?",
@@ -1494,7 +1498,7 @@
    "id": "fa-credit-s05-vocab-def-18",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Payment history** mean?",
@@ -1539,7 +1543,7 @@
    "id": "fa-credit-s05-vocab-def-19",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Hard inquiry** mean?",
@@ -1584,7 +1588,7 @@
    "id": "fa-credit-s05-vocab-def-20",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Soft inquiry** mean?",
@@ -1629,7 +1633,7 @@
    "id": "fa-credit-s05-vocab-def-21",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Length of credit history** mean?",
@@ -1674,7 +1678,7 @@
    "id": "fa-credit-s05-vocab-def-22",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Credit dispute** mean?",
@@ -1719,7 +1723,7 @@
    "id": "fa-credit-s01-concept-01",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A card has a 22.8% APR. What is the monthly periodic rate?",
@@ -1761,7 +1765,7 @@
    "id": "fa-credit-s01-concept-02",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "When can you avoid all interest on new credit card purchases?",
@@ -1803,7 +1807,7 @@
    "id": "fa-credit-s02-concept-03",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why does paying only the minimum take so long?",
@@ -1845,7 +1849,7 @@
    "id": "fa-credit-s03-concept-04",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which strategy minimizes total interest when paying off several debts?",
@@ -1887,7 +1891,7 @@
    "id": "fa-credit-s04-concept-05",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A $4,000 limit card has a $1,600 balance. What is the utilization rate?",
@@ -1929,7 +1933,7 @@
    "id": "fa-credit-s04-concept-06",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL actions that generally help a credit score.",
@@ -1979,7 +1983,7 @@
    "id": "fa-credit-s04-concept-07",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why is a cash advance usually more expensive than a purchase?",
@@ -2021,7 +2025,7 @@
    "id": "fa-credit-s02-concept-08",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A student pays a $600 balance in full every month. How much interest does the student pay?",
@@ -2063,7 +2067,7 @@
    "id": "fa-credit-s05-concept-09",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which factor usually has the biggest effect on a credit score?",
@@ -2105,7 +2109,7 @@
    "id": "fa-credit-s05-concept-10",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Where can you get free copies of your credit reports from all three bureaus?",
@@ -2147,7 +2151,7 @@
    "id": "fa-credit-s05-concept-11",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL items that appear on a credit report.",
@@ -2193,7 +2197,7 @@
    "id": "fa-credit-s05-concept-12",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Your report lists a credit card you never opened. What is the best first step?",
@@ -2235,7 +2239,7 @@
    "id": "fa-credit-s05-concept-13",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Checking your own credit report does what to your score?",
@@ -2277,7 +2281,7 @@
    "id": "fa-credit-s02-claim-01",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Paying only the minimum on a credit card is an efficient repayment strategy.”",
@@ -2316,7 +2320,7 @@
    "id": "fa-credit-s02-claim-cer-01",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2385,7 +2389,7 @@
    "id": "fa-credit-s04-claim-02",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Carrying a balance helps build credit.”",
@@ -2424,7 +2428,7 @@
    "id": "fa-credit-s04-claim-cer-02",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2493,7 +2497,7 @@
    "id": "fa-credit-s03-claim-03",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “A 0% balance transfer always saves money.”",
@@ -2532,7 +2536,7 @@
    "id": "fa-credit-s03-claim-cer-03",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2601,7 +2605,7 @@
    "id": "fa-credit-s01-claim-04",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “A 20% APR means I pay 20% of my balance in interest every month.”",
@@ -2640,7 +2644,7 @@
    "id": "fa-credit-s01-claim-cer-04",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2709,7 +2713,7 @@
    "id": "fa-credit-s05-claim-05",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Checking your own credit score lowers it.”",
@@ -2748,7 +2752,7 @@
    "id": "fa-credit-s05-claim-cer-05",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2817,7 +2821,7 @@
    "id": "fa-credit-s05-claim-06",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “A higher credit score saves money on a loan.”",
@@ -2856,7 +2860,7 @@
    "id": "fa-credit-s05-claim-cer-06",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2981,7 +2985,7 @@
    "id": "fa-credit-s01-mo-interest-03",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "mo-interest",
    "type": "calculation",
    "activityTypes": [
@@ -3037,7 +3041,7 @@
    "id": "fa-credit-s01-mo-interest-05",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "mo-interest",
    "type": "calculation",
    "activityTypes": [
@@ -3376,7 +3380,7 @@
    "id": "fa-credit-s02-min-pay-04",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "min-pay",
    "type": "calculation",
    "activityTypes": [
@@ -3463,7 +3467,7 @@
    "id": "fa-credit-s02-payoff-compare-01",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "payoff-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3511,7 +3515,7 @@
    "id": "fa-credit-s02-payoff-compare-02",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "payoff-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3559,7 +3563,7 @@
    "id": "fa-credit-s02-payoff-compare-03",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "payoff-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3607,7 +3611,7 @@
    "id": "fa-credit-s02-payoff-compare-04",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "payoff-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3655,7 +3659,7 @@
    "id": "fa-credit-s02-payoff-compare-05",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "payoff-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3703,7 +3707,7 @@
    "id": "fa-credit-s02-payoff-compare-06",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "payoff-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3751,7 +3755,7 @@
    "id": "fa-credit-s02-payoff-compare-07",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "payoff-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3973,7 +3977,7 @@
    "id": "fa-credit-s03-aval-snow-01",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4031,7 +4035,7 @@
    "id": "fa-credit-s03-aval-snow-02",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4147,7 +4151,7 @@
    "id": "fa-credit-s03-aval-snow-04",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4205,7 +4209,7 @@
    "id": "fa-credit-s03-aval-snow-05",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4263,7 +4267,7 @@
    "id": "fa-credit-s03-aval-snow-06",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4321,7 +4325,7 @@
    "id": "fa-credit-s03-aval-snow-07",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4379,7 +4383,7 @@
    "id": "fa-credit-s03-aval-snow-08",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "aval-snow",
    "type": "comparison",
    "activityTypes": [
@@ -4786,7 +4790,7 @@
    "id": "fa-credit-s04-stmt-read-02",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "stmt-read",
    "type": "document",
    "activityTypes": [
@@ -4879,7 +4883,7 @@
    "id": "fa-credit-s04-stmt-read-03",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "stmt-read",
    "type": "document",
    "activityTypes": [
@@ -4980,7 +4984,7 @@
    "id": "fa-credit-s04-stmt-read-04",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "stmt-read",
    "type": "document",
    "activityTypes": [
@@ -5081,7 +5085,7 @@
    "id": "fa-credit-s04-stmt-read-05",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "stmt-read",
    "type": "document",
    "activityTypes": [
@@ -5477,7 +5481,7 @@
    "id": "fa-credit-s04-stmt-read-09",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "stmt-read",
    "type": "document",
    "activityTypes": [
@@ -5578,7 +5582,7 @@
    "id": "fa-credit-s04-stmt-read-10",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "stmt-read",
    "type": "document",
    "activityTypes": [
@@ -5675,7 +5679,7 @@
    "id": "fa-credit-s04-cash-adv-01",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-adv",
    "type": "calculation",
    "activityTypes": [
@@ -5704,7 +5708,7 @@
    "id": "fa-credit-s04-cash-adv-02",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-adv",
    "type": "calculation",
    "activityTypes": [
@@ -5733,7 +5737,7 @@
    "id": "fa-credit-s04-cash-adv-03",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-adv",
    "type": "calculation",
    "activityTypes": [
@@ -5762,7 +5766,7 @@
    "id": "fa-credit-s04-cash-adv-04",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-adv",
    "type": "calculation",
    "activityTypes": [
@@ -5791,7 +5795,7 @@
    "id": "fa-credit-s04-cash-adv-05",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-adv",
    "type": "calculation",
    "activityTypes": [
@@ -5820,7 +5824,7 @@
    "id": "fa-credit-s04-cash-adv-06",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-adv",
    "type": "calculation",
    "activityTypes": [
@@ -5849,7 +5853,7 @@
    "id": "fa-credit-s04-cash-adv-07",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cash-adv",
    "type": "calculation",
    "activityTypes": [
@@ -5878,7 +5882,7 @@
    "id": "fa-credit-s04-card-choose-or-01",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "card-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -5981,7 +5985,7 @@
    "id": "fa-credit-s04-card-choose-or-02",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "card-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -6084,7 +6088,7 @@
    "id": "fa-credit-s04-card-choose-or-03",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "card-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -6187,7 +6191,7 @@
    "id": "fa-credit-s04-card-choose-or-04",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "card-choose-or",
    "type": "comparison",
    "activityTypes": [
@@ -6377,7 +6381,7 @@
    "id": "fa-credit-s01-ap-carry-part-04",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-carry-part",
    "type": "calculation",
    "activityTypes": [
@@ -6435,7 +6439,7 @@
    "id": "fa-credit-s01-ap-carry-part-06",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-carry-part",
    "type": "calculation",
    "activityTypes": [
@@ -6464,7 +6468,7 @@
    "id": "fa-credit-s01-ap-carry-part-07",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-carry-part",
    "type": "calculation",
    "activityTypes": [
@@ -6725,7 +6729,7 @@
    "id": "fa-credit-s04-ap-late-cost-02",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-late-cost",
    "type": "calculation",
    "activityTypes": [
@@ -6783,7 +6787,7 @@
    "id": "fa-credit-s04-ap-late-cost-04",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-late-cost",
    "type": "calculation",
    "activityTypes": [
@@ -6841,7 +6845,7 @@
    "id": "fa-credit-s04-ap-late-cost-06",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "ap-late-cost",
    "type": "calculation",
    "activityTypes": [
@@ -6870,7 +6874,7 @@
    "id": "fa-credit-s03-ap-transfer-fee-01",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ap-transfer-fee",
    "type": "calculation",
    "activityTypes": [
@@ -6928,7 +6932,7 @@
    "id": "fa-credit-s03-ap-transfer-fee-03",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ap-transfer-fee",
    "type": "calculation",
    "activityTypes": [
@@ -6957,7 +6961,7 @@
    "id": "fa-credit-s03-ap-transfer-fee-04",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ap-transfer-fee",
    "type": "calculation",
    "activityTypes": [
@@ -6986,7 +6990,7 @@
    "id": "fa-credit-s03-ap-transfer-fee-05",
    "unitId": "credit",
    "skillId": "credit-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "ap-transfer-fee",
    "type": "calculation",
    "activityTypes": [
@@ -7073,7 +7077,7 @@
    "id": "fa-credit-s02-ap-payment-split-01",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-payment-split",
    "type": "calculation",
    "activityTypes": [
@@ -7102,7 +7106,7 @@
    "id": "fa-credit-s02-ap-payment-split-02",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-payment-split",
    "type": "calculation",
    "activityTypes": [
@@ -7131,7 +7135,7 @@
    "id": "fa-credit-s02-ap-payment-split-03",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-payment-split",
    "type": "calculation",
    "activityTypes": [
@@ -7160,7 +7164,7 @@
    "id": "fa-credit-s02-ap-payment-split-04",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-payment-split",
    "type": "calculation",
    "activityTypes": [
@@ -7218,7 +7222,7 @@
    "id": "fa-credit-s02-ap-payment-split-06",
    "unitId": "credit",
    "skillId": "credit-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "ap-payment-split",
    "type": "calculation",
    "activityTypes": [
@@ -7276,7 +7280,7 @@
    "id": "fa-credit-s05-cs-score-cost-01",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7303,7 +7307,7 @@
    "id": "fa-credit-s05-cs-score-cost-02",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7330,7 +7334,7 @@
    "id": "fa-credit-s05-cs-score-cost-03",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7357,7 +7361,7 @@
    "id": "fa-credit-s05-cs-score-cost-04",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7384,7 +7388,7 @@
    "id": "fa-credit-s05-cs-score-cost-05",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7411,7 +7415,7 @@
    "id": "fa-credit-s05-cs-score-cost-06",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7438,7 +7442,7 @@
    "id": "fa-credit-s05-cs-score-cost-07",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7465,7 +7469,7 @@
    "id": "fa-credit-s05-cs-score-cost-08",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-score-cost",
    "type": "comparison",
    "activityTypes": [
@@ -7608,7 +7612,7 @@
    "id": "fa-credit-s05-cs-overall-util-05",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-overall-util",
    "type": "calculation",
    "activityTypes": [
@@ -7840,7 +7844,7 @@
    "id": "fa-credit-s05-cs-avg-age-06",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "cs-avg-age",
    "type": "calculation",
    "activityTypes": [
@@ -7909,7 +7913,7 @@
    "id": "fa-credit-s05-cs-report-action-02",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "cs-report-action",
    "type": "scenario",
    "activityTypes": [
@@ -8029,7 +8033,7 @@
    "id": "fa-credit-s05-cs-report-action-05",
    "unitId": "credit",
    "skillId": "credit-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "cs-report-action",
    "type": "scenario",
    "activityTypes": [
@@ -8106,10 +8110,2042 @@
    ]
   },
   {
+   "id": "fa-credit-s01-lv-s-mo-rate-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego's card charges 1% interest per month. He owes $1,700. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$17",
+   "numeric": {
+    "value": 17,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,700 × 0.01 = $17."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-s-mo-rate-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana's card charges 2% interest per month. She owes $1,050. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$21",
+   "numeric": {
+    "value": 21,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,050 × 0.02 = $21."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-s-mo-rate-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's card charges 1% interest per month. She owes $1,150.00. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$11.50",
+   "numeric": {
+    "value": 11.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,150.00 × 0.01 = $11.50."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-s-mo-rate-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's card charges 2% interest per month. He owes $650. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$13",
+   "numeric": {
+    "value": 13,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$650 × 0.02 = $13."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-s-mo-rate-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana's card charges 1% interest per month. She owes $1,700. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$17",
+   "numeric": {
+    "value": 17,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,700 × 0.01 = $17."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-s-mo-rate-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana's card charges 1% interest per month. She owes $350.00. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$3.50",
+   "numeric": {
+    "value": 3.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$350.00 × 0.01 = $3.50."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-s-mo-rate-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's card charges 1% interest per month. He owes $400. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$4",
+   "numeric": {
+    "value": 4,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$400 × 0.01 = $4."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-s-mo-rate-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "support",
+   "family": "lv-s-mo-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya's card charges 1% interest per month. She owes $1,300. Interest = balance × monthly rate. How much interest is charged this month?",
+   "format": "short-answer",
+   "answer": "$13",
+   "numeric": {
+    "value": 13,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,300 × 0.01 = $13."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Maya's balance was $415.00 for 7 days, $895.00 for 8 days, and $745.00 for 15 days. The APR is 24.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$14.54",
+   "numeric": {
+    "value": 14.54,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (415×7 + 895×8 + 745×15) ÷ 30 = $708.00.",
+    "Interest = $708.00 × 0.2499 ÷ 365 × 30 = $14.54."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Aaliyah's balance was $915.00 for 9 days, $1,260.00 for 11 days, and $1,105.00 for 10 days. The APR is 22.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$20.88",
+   "numeric": {
+    "value": 20.88,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (915×9 + 1260×11 + 1105×10) ÷ 30 = $1,104.83.",
+    "Interest = $1,104.83 × 0.2299 ÷ 365 × 30 = $20.88."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Leah's balance was $1,130.00 for 8 days, $1,230.00 for 10 days, and $1,130.00 for 12 days. The APR is 24.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$23.89",
+   "numeric": {
+    "value": 23.89,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1130×8 + 1230×10 + 1130×12) ÷ 30 = $1,163.33.",
+    "Interest = $1,163.33 × 0.2499 ÷ 365 × 30 = $23.89."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Jordan's balance was $460.00 for 7 days, $820.00 for 12 days, and $770.00 for 11 days. The APR is 22.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$13.56",
+   "numeric": {
+    "value": 13.56,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (460×7 + 820×12 + 770×11) ÷ 30 = $717.67.",
+    "Interest = $717.67 × 0.2299 ÷ 365 × 30 = $13.56."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Hana's balance was $630.00 for 8 days, $945.00 for 9 days, and $865.00 for 13 days. The APR is 24.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$16.97",
+   "numeric": {
+    "value": 16.97,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (630×8 + 945×9 + 865×13) ÷ 30 = $826.33.",
+    "Interest = $826.33 × 0.2499 ÷ 365 × 30 = $16.97."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Owen's balance was $1,085.00 for 6 days, $1,480.00 for 8 days, and $1,305.00 for 16 days. The APR is 24.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$26.86",
+   "numeric": {
+    "value": 26.86,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1085×6 + 1480×8 + 1305×16) ÷ 30 = $1,307.67.",
+    "Interest = $1,307.67 × 0.2499 ÷ 365 × 30 = $26.86."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Isaiah's balance was $730.00 for 9 days, $1,110.00 for 9 days, and $960.00 for 12 days. The APR is 19.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$15.38",
+   "numeric": {
+    "value": 15.38,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (730×9 + 1110×9 + 960×12) ÷ 30 = $936.00.",
+    "Interest = $936.00 × 0.1999 ÷ 365 × 30 = $15.38."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Fatima's balance was $585.00 for 9 days, $845.00 for 12 days, and $705.00 for 9 days. The APR is 22.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$13.70",
+   "numeric": {
+    "value": 13.7,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (585×9 + 845×12 + 705×9) ÷ 30 = $725.00.",
+    "Interest = $725.00 × 0.2299 ÷ 365 × 30 = $13.70."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Zara's balance was $685.00 for 9 days, $940.00 for 9 days, and $825.00 for 12 days. The APR is 22.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$15.45",
+   "numeric": {
+    "value": 15.45,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (685×9 + 940×9 + 825×12) ÷ 30 = $817.50.",
+    "Interest = $817.50 × 0.2299 ÷ 365 × 30 = $15.45."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-10",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Jordan's balance was $1,170.00 for 7 days, $1,655.00 for 12 days, and $1,410.00 for 11 days. The APR is 24.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$29.82",
+   "numeric": {
+    "value": 29.82,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1170×7 + 1655×12 + 1410×11) ÷ 30 = $1,452.00.",
+    "Interest = $1,452.00 × 0.2499 ÷ 365 × 30 = $29.82."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-11",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Leah's balance was $995.00 for 9 days, $1,395.00 for 12 days, and $1,220.00 for 9 days. The APR is 24.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$25.11",
+   "numeric": {
+    "value": 25.11,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (995×9 + 1395×12 + 1220×9) ÷ 30 = $1,222.50.",
+    "Interest = $1,222.50 × 0.2499 ÷ 365 × 30 = $25.11."
+   ]
+  },
+  {
+   "id": "fa-credit-s01-lv-a-adb-3-12",
+   "unitId": "credit",
+   "skillId": "credit-skill-01",
+   "level": "advanced",
+   "family": "lv-a-adb-3",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "In a 30-day cycle Kofi's balance was $1,090.00 for 9 days, $1,350.00 for 8 days, and $1,270.00 for 13 days. The APR is 24.99%. Using the average daily balance and a daily rate of APR ÷ 365, what is the interest for the cycle?",
+   "format": "short-answer",
+   "answer": "$25.41",
+   "numeric": {
+    "value": 25.41,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "ADB = (1090×9 + 1350×8 + 1270×13) ÷ 30 = $1,237.33.",
+    "Interest = $1,237.33 × 0.2499 ÷ 365 × 30 = $25.41."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah owes $1,250 on a 0% interest card and pays $100 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "13",
+   "numeric": {
+    "value": 13,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$1,250 ÷ $100 = 12.50 → 13 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah owes $800 on a 0% interest card and pays $50 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "16",
+   "numeric": {
+    "value": 16,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$800 ÷ $50 = 16.00 → 16 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia owes $1,900 on a 0% interest card and pays $50 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "38",
+   "numeric": {
+    "value": 38,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$1,900 ÷ $50 = 38.00 → 38 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler owes $1,450 on a 0% interest card and pays $75 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "20",
+   "numeric": {
+    "value": 20,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$1,450 ÷ $75 = 19.33 → 20 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei owes $950 on a 0% interest card and pays $200 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "5",
+   "numeric": {
+    "value": 5,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$950 ÷ $200 = 4.75 → 5 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima owes $1,250 on a 0% interest card and pays $150 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "9",
+   "numeric": {
+    "value": 9,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$1,250 ÷ $150 = 8.33 → 9 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo owes $650 on a 0% interest card and pays $150 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "5",
+   "numeric": {
+    "value": 5,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$650 ÷ $150 = 4.33 → 5 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-s-zero-months-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "support",
+   "family": "lv-s-zero-months",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara owes $2,200 on a 0% interest card and pays $150 a month. Months = balance ÷ payment, rounded up. How many months to pay it off?",
+   "format": "short-answer",
+   "answer": "15",
+   "numeric": {
+    "value": 15,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "$2,200 ÷ $150 = 14.67 → 15 months."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen wants to pay off $3,300.00 at 24.99% APR in 36 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$131.19",
+   "numeric": {
+    "value": 131.19,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.2499 ÷ 12 = 0.020825.",
+    "P = $3,300.00 × i ÷ (1 − (1 + i)^−36) = $131.19.",
+    "Total paid $4,722.84; interest $1,422.84."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima wants to pay off $3,600.00 at 18.99% APR in 12 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$331.75",
+   "numeric": {
+    "value": 331.75,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.1899 ÷ 12 = 0.015825.",
+    "P = $3,600.00 × i ÷ (1 − (1 + i)^−12) = $331.75.",
+    "Total paid $3,981.00; interest $381.00."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan wants to pay off $5,400.00 at 21.99% APR in 24 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$280.12",
+   "numeric": {
+    "value": 280.12,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.2199 ÷ 12 = 0.018325.",
+    "P = $5,400.00 × i ÷ (1 − (1 + i)^−24) = $280.12.",
+    "Total paid $6,722.88; interest $1,322.88."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya wants to pay off $3,800.00 at 21.99% APR in 18 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$249.75",
+   "numeric": {
+    "value": 249.75,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.2199 ÷ 12 = 0.018325.",
+    "P = $3,800.00 × i ÷ (1 − (1 + i)^−18) = $249.75.",
+    "Total paid $4,495.50; interest $695.50."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler wants to pay off $5,500.00 at 18.99% APR in 36 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$201.58",
+   "numeric": {
+    "value": 201.58,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.1899 ÷ 12 = 0.015825.",
+    "P = $5,500.00 × i ÷ (1 − (1 + i)^−36) = $201.58.",
+    "Total paid $7,256.88; interest $1,756.88."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila wants to pay off $1,900.00 at 21.99% APR in 18 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$124.88",
+   "numeric": {
+    "value": 124.88,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.2199 ÷ 12 = 0.018325.",
+    "P = $1,900.00 × i ÷ (1 − (1 + i)^−18) = $124.88.",
+    "Total paid $2,247.84; interest $347.84."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo wants to pay off $2,000.00 at 21.99% APR in 18 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$131.45",
+   "numeric": {
+    "value": 131.45,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.2199 ÷ 12 = 0.018325.",
+    "P = $2,000.00 × i ÷ (1 − (1 + i)^−18) = $131.45.",
+    "Total paid $2,366.10; interest $366.10."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego wants to pay off $2,300.00 at 21.99% APR in 36 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$87.83",
+   "numeric": {
+    "value": 87.83,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.2199 ÷ 12 = 0.018325.",
+    "P = $2,300.00 × i ÷ (1 − (1 + i)^−36) = $87.83.",
+    "Total paid $3,161.88; interest $861.88."
+   ]
+  },
+  {
+   "id": "fa-credit-s02-lv-a-payoff-payment-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-02",
+   "level": "advanced",
+   "family": "lv-a-payoff-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani wants to pay off $1,900.00 at 21.99% APR in 24 equal monthly payments with no new charges. What is the monthly payment? Use P = B·i ÷ (1 − (1 + i)^−n), with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$98.56",
+   "numeric": {
+    "value": 98.56,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.2199 ÷ 12 = 0.018325.",
+    "P = $1,900.00 × i ÷ (1 − (1 + i)^−24) = $98.56.",
+    "Total paid $2,365.44; interest $465.44."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila transfers $3,600 to a card with a 3% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$108",
+   "numeric": {
+    "value": 108,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,600 × 0.03 = $108."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara transfers $4,300 to a card with a 4% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$172",
+   "numeric": {
+    "value": 172,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$4,300 × 0.04 = $172."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley transfers $4,500 to a card with a 5% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$225",
+   "numeric": {
+    "value": 225,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$4,500 × 0.05 = $225."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi transfers $1,800 to a card with a 4% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$72",
+   "numeric": {
+    "value": 72,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,800 × 0.04 = $72."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam transfers $5,000 to a card with a 4% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$200",
+   "numeric": {
+    "value": 200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$5,000 × 0.04 = $200."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila transfers $2,900 to a card with a 5% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$145",
+   "numeric": {
+    "value": 145,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$2,900 × 0.05 = $145."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre transfers $3,900 to a card with a 3% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$117",
+   "numeric": {
+    "value": 117,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,900 × 0.03 = $117."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus transfers $4,200 to a card with a 3% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$126",
+   "numeric": {
+    "value": 126,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$4,200 × 0.03 = $126."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-s-bt-fee-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "support",
+   "family": "lv-s-bt-fee",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam transfers $3,300 to a card with a 4% transfer fee. Fee = balance × fee rate. What is the fee?",
+   "format": "short-answer",
+   "answer": "$132",
+   "numeric": {
+    "value": 132,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$3,300 × 0.04 = $132."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan owes $850.00 on a store card at 24.99% and $3,500.00 on a Visa at 14.99%. They has $150.00 extra this month. How much more interest does they avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$1.25",
+   "numeric": {
+    "value": 1.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $150.00 × 0.2499 ÷ 12 = $3.12.",
+    "Extra on the Visa saves $150.00 × 0.1499 ÷ 12 = $1.87.",
+    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia owes $900.00 on a store card at 27.99% and $2,600.00 on a Visa at 17.99%. She has $100.00 extra this month. How much more interest does she avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$0.83",
+   "numeric": {
+    "value": 0.83,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $100.00 × 0.2799 ÷ 12 = $2.33.",
+    "Extra on the Visa saves $100.00 × 0.1799 ÷ 12 = $1.50.",
+    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley owes $750.00 on a store card at 27.99% and $2,100.00 on a Visa at 17.99%. They has $150.00 extra this month. How much more interest does they avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$1.25",
+   "numeric": {
+    "value": 1.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $150.00 × 0.2799 ÷ 12 = $3.50.",
+    "Extra on the Visa saves $150.00 × 0.1799 ÷ 12 = $2.25.",
+    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre owes $400.00 on a store card at 27.99% and $3,000.00 on a Visa at 14.99%. He has $150.00 extra this month. How much more interest does he avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$1.63",
+   "numeric": {
+    "value": 1.63,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $150.00 × 0.2799 ÷ 12 = $3.50.",
+    "Extra on the Visa saves $150.00 × 0.1499 ÷ 12 = $1.87.",
+    "Difference = $1.63 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia owes $900.00 on a store card at 24.99% and $2,400.00 on a Visa at 14.99%. She has $100.00 extra this month. How much more interest does she avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$0.83",
+   "numeric": {
+    "value": 0.83,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $100.00 × 0.2499 ÷ 12 = $2.08.",
+    "Extra on the Visa saves $100.00 × 0.1499 ÷ 12 = $1.25.",
+    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia owes $600.00 on a store card at 24.99% and $2,900.00 on a Visa at 17.99%. She has $200.00 extra this month. How much more interest does she avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$1.17",
+   "numeric": {
+    "value": 1.17,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $200.00 × 0.2499 ÷ 12 = $4.17.",
+    "Extra on the Visa saves $200.00 × 0.1799 ÷ 12 = $3.00.",
+    "Difference = $1.17 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam owes $700.00 on a store card at 24.99% and $3,200.00 on a Visa at 14.99%. They has $100.00 extra this month. How much more interest does they avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$0.83",
+   "numeric": {
+    "value": 0.83,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $100.00 × 0.2499 ÷ 12 = $2.08.",
+    "Extra on the Visa saves $100.00 × 0.1499 ÷ 12 = $1.25.",
+    "Difference = $0.83 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam owes $850.00 on a store card at 24.99% and $2,400.00 on a Visa at 14.99%. They has $200.00 extra this month. How much more interest does they avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$1.67",
+   "numeric": {
+    "value": 1.67,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $200.00 × 0.2499 ÷ 12 = $4.17.",
+    "Extra on the Visa saves $200.00 × 0.1499 ÷ 12 = $2.50.",
+    "Difference = $1.67 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya owes $650.00 on a store card at 24.99% and $2,500.00 on a Visa at 14.99%. She has $150.00 extra this month. How much more interest does she avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$1.25",
+   "numeric": {
+    "value": 1.25,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $150.00 × 0.2499 ÷ 12 = $3.12.",
+    "Extra on the Visa saves $150.00 × 0.1499 ÷ 12 = $1.87.",
+    "Difference = $1.25 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s03-lv-a-avalanche-first-10",
+   "unitId": "credit",
+   "skillId": "credit-skill-03",
+   "level": "advanced",
+   "family": "lv-a-avalanche-first",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana owes $700.00 on a store card at 24.99% and $3,300.00 on a Visa at 17.99%. She has $150.00 extra this month. How much more interest does she avoid next month by sending the extra to the higher-APR card instead of the other one?",
+   "format": "short-answer",
+   "answer": "$0.88",
+   "numeric": {
+    "value": 0.88,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Extra on the store card saves $150.00 × 0.2499 ÷ 12 = $3.12.",
+    "Extra on the Visa saves $150.00 × 0.1799 ÷ 12 = $2.25.",
+    "Difference = $0.88 per month, and it keeps growing: that is the avalanche method."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-s-util-basic-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "support",
+   "family": "lv-s-util-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley has a $4,000 credit limit and a $1,900 balance. Utilization = balance ÷ limit × 100%. What is their utilization?",
+   "format": "short-answer",
+   "answer": "48%",
+   "numeric": {
+    "value": 47.5,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "$1,900 ÷ $4,000 = 0.47 = 47.5%."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-s-util-basic-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "support",
+   "family": "lv-s-util-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah has a $2,000 credit limit and a $600 balance. Utilization = balance ÷ limit × 100%. What is her utilization?",
+   "format": "short-answer",
+   "answer": "30%",
+   "numeric": {
+    "value": 30,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "$600 ÷ $2,000 = 0.30 = 30%."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-s-util-basic-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "support",
+   "family": "lv-s-util-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler has a $1,000 credit limit and a $200 balance. Utilization = balance ÷ limit × 100%. What is his utilization?",
+   "format": "short-answer",
+   "answer": "20%",
+   "numeric": {
+    "value": 20,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "$200 ÷ $1,000 = 0.20 = 20%."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-s-util-basic-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "support",
+   "family": "lv-s-util-basic",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace has a $4,000 credit limit and a $3,000 balance. Utilization = balance ÷ limit × 100%. What is her utilization?",
+   "format": "short-answer",
+   "answer": "75%",
+   "numeric": {
+    "value": 75,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "$3,000 ÷ $4,000 = 0.75 = 75%."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-a-cash-adv-cost-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "advanced",
+   "family": "lv-a-cash-adv-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani takes a $640.00 cash advance with a fee of 5% (at least $10.00) and 27.99% APR charged daily from day one. She repays it after 50 days. What is the total cost of the advance?",
+   "format": "short-answer",
+   "answer": "$56.54",
+   "numeric": {
+    "value": 56.54,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10.00, 5% × $640.00) = $32.00.",
+    "Interest = $640.00 × 0.2799 ÷ 365 × 50 = $24.54.",
+    "Total = $56.54."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-a-cash-adv-cost-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "advanced",
+   "family": "lv-a-cash-adv-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila takes a $360.00 cash advance with a fee of 5% (at least $10.00) and 29.99% APR charged daily from day one. She repays it after 20 days. What is the total cost of the advance?",
+   "format": "short-answer",
+   "answer": "$23.92",
+   "numeric": {
+    "value": 23.92,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10.00, 5% × $360.00) = $18.00.",
+    "Interest = $360.00 × 0.2999 ÷ 365 × 20 = $5.92.",
+    "Total = $23.92."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-a-cash-adv-cost-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "advanced",
+   "family": "lv-a-cash-adv-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana takes a $620.00 cash advance with a fee of 5% (at least $10.00) and 29.99% APR charged daily from day one. She repays it after 20 days. What is the total cost of the advance?",
+   "format": "short-answer",
+   "answer": "$41.19",
+   "numeric": {
+    "value": 41.19,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10.00, 5% × $620.00) = $31.00.",
+    "Interest = $620.00 × 0.2999 ÷ 365 × 20 = $10.19.",
+    "Total = $41.19."
+   ]
+  },
+  {
+   "id": "fa-credit-s04-lv-a-cash-adv-cost-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-04",
+   "level": "advanced",
+   "family": "lv-a-cash-adv-cost",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler takes a $760.00 cash advance with a fee of 5% (at least $10.00) and 27.99% APR charged daily from day one. He repays it after 20 days. What is the total cost of the advance?",
+   "format": "short-answer",
+   "answer": "$49.66",
+   "numeric": {
+    "value": 49.66,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fee = max($10.00, 5% × $760.00) = $38.00.",
+    "Interest = $760.00 × 0.2799 ÷ 365 × 20 = $11.66.",
+    "Total = $49.66."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-s-drop-off-year-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "support",
+   "family": "lv-s-drop-off-year",
+   "type": "concept",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A late payment stays on a credit report for about 7 years. Maya missed a payment in 2019. In what year will it drop off? (Year + 7)",
+   "format": "short-answer",
+   "answer": "2026",
+   "numeric": {
+    "value": 2026,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "2019 + 7 = 2026.",
+    "Paying on time from now on still helps the score long before then."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-s-drop-off-year-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "support",
+   "family": "lv-s-drop-off-year",
+   "type": "concept",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A late payment stays on a credit report for about 7 years. Imani missed a payment in 2022. In what year will it drop off? (Year + 7)",
+   "format": "short-answer",
+   "answer": "2029",
+   "numeric": {
+    "value": 2029,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "2022 + 7 = 2029.",
+    "Paying on time from now on still helps the score long before then."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-s-drop-off-year-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "support",
+   "family": "lv-s-drop-off-year",
+   "type": "concept",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A late payment stays on a credit report for about 7 years. Mei missed a payment in 2022. In what year will it drop off? (Year + 7)",
+   "format": "short-answer",
+   "answer": "2029",
+   "numeric": {
+    "value": 2029,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "2022 + 7 = 2029.",
+    "Paying on time from now on still helps the score long before then."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-s-drop-off-year-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "support",
+   "family": "lv-s-drop-off-year",
+   "type": "concept",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A late payment stays on a credit report for about 7 years. Priya missed a payment in 2023. In what year will it drop off? (Year + 7)",
+   "format": "short-answer",
+   "answer": "2030",
+   "numeric": {
+    "value": 2030,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "2023 + 7 = 2030.",
+    "Paying on time from now on still helps the score long before then."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-a-mortgage-score-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-a-mortgage-score",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre borrows $345,000.00 for 30 years. With a strong credit score the rate is 6.25%; with a fair score it is 7.5%. How much more interest does the fair-score loan cost over 30 years? (Payment = P·i ÷ (1 − (1 + i)^−360), i = rate ÷ 12)",
+   "format": "short-answer",
+   "answer": "$103,703.66",
+   "numeric": {
+    "value": 103703.66,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Strong: payment $2,124.22.",
+    "Fair: payment $2,412.29.",
+    "Difference × 360 = $103,703.66."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-a-mortgage-score-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-a-mortgage-score",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia borrows $220,000.00 for 30 years. With a strong credit score the rate is 6.5%; with a fair score it is 7.75%. How much more interest does the fair-score loan cost over 30 years? (Payment = P·i ÷ (1 − (1 + i)^−360), i = rate ÷ 12)",
+   "format": "short-answer",
+   "answer": "$66,800.62",
+   "numeric": {
+    "value": 66800.62,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Strong: payment $1,390.55.",
+    "Fair: payment $1,576.11.",
+    "Difference × 360 = $66,800.62."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-a-mortgage-score-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-a-mortgage-score",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley borrows $250,000.00 for 30 years. With a strong credit score the rate is 6.75%; with a fair score it is 7.75%. How much more interest does the fair-score loan cost over 30 years? (Payment = P·i ÷ (1 − (1 + i)^−360), i = rate ÷ 12)",
+   "format": "short-answer",
+   "answer": "$61,032.73",
+   "numeric": {
+    "value": 61032.73,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Strong: payment $1,621.50.",
+    "Fair: payment $1,791.03.",
+    "Difference × 360 = $61,032.73."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-a-mortgage-score-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-a-mortgage-score",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah borrows $275,000.00 for 30 years. With a strong credit score the rate is 6.25%; with a fair score it is 7.25%. How much more interest does the fair-score loan cost over 30 years? (Payment = P·i ÷ (1 − (1 + i)^−360), i = rate ÷ 12)",
+   "format": "short-answer",
+   "answer": "$65,794.49",
+   "numeric": {
+    "value": 65794.49,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Strong: payment $1,693.22.",
+    "Fair: payment $1,875.98.",
+    "Difference × 360 = $65,794.49."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-a-mortgage-score-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-a-mortgage-score",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima borrows $210,000.00 for 30 years. With a strong credit score the rate is 6.75%; with a fair score it is 7.75%. How much more interest does the fair-score loan cost over 30 years? (Payment = P·i ÷ (1 − (1 + i)^−360), i = rate ÷ 12)",
+   "format": "short-answer",
+   "answer": "$51,267.50",
+   "numeric": {
+    "value": 51267.5,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Strong: payment $1,362.06.",
+    "Fair: payment $1,504.47.",
+    "Difference × 360 = $51,267.50."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-a-mortgage-score-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-a-mortgage-score",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei borrows $360,000.00 for 30 years. With a strong credit score the rate is 6.25%; with a fair score it is 7.5%. How much more interest does the fair-score loan cost over 30 years? (Payment = P·i ÷ (1 − (1 + i)^−360), i = rate ÷ 12)",
+   "format": "short-answer",
+   "answer": "$108,212.51",
+   "numeric": {
+    "value": 108212.51,
+    "tolerance": 2,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Strong: payment $2,216.58.",
+    "Fair: payment $2,517.17.",
+    "Difference × 360 = $108,212.51."
+   ]
+  },
+  {
    "id": "fa-credit-s01-err-apr-monthly-01",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-monthly-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8163,7 +10199,7 @@
    "id": "fa-credit-s01-err-daily-31-01",
    "unitId": "credit",
    "skillId": "credit-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "daily-31-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -8454,7 +10490,7 @@
    "id": "fa-credit-s04-err-cost-of-credit-01",
    "unitId": "credit",
    "skillId": "credit-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "cost-of-credit-error",
    "type": "reasoning",
    "errorAnalysis": true,

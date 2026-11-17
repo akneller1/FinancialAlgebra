@@ -4,7 +4,7 @@ import {course,getUnit,getSkillRecords} from '../src/course.js';
 
 test('Financial Algebra has ten resource-ready units and one level',()=>{
  assert.equal(course.id,'financial-algebra');
- assert.deepEqual(course.levels,['standard']);
+ assert.deepEqual(course.levels,['support','standard','advanced']);
  assert.equal(course.units.length,10);
  assert.ok(course.units.every(u=>u.status==='ready'));
  assert.equal(course.units.reduce((n,u)=>n+u.skills.length,0),44);

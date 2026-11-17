@@ -23,6 +23,9 @@
   function load() { try { return JSON.parse(G.localStorage.getItem(KEY) || '{}') || {}; } catch (e) { return {}; } }
   function save(o) { try { G.localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) { /* private window: settings are not remembered */ } }
   var saved = load();
+  /* A teacher's student link carries the level (?level=cp2|cp1|honors); it wins over this browser's saved choice. */
+  (function () { if (!G.location) return; var lv = new URLSearchParams(G.location.search || '').get('level'); if (/^(cp2|cp1|honors)$/.test(lv || '')) { saved.level = lv; saved.preset = lv; } })();
+  if (saved.level && GB.LEVELS && !GB.LEVELS[saved.level]) saved.level = 'cp1';
   if (G.MK_GRADE_GAME_COURSE && (!saved.level || !GB.LEVELS[saved.level])) saved.level = 'cp1';
   function $(s, r) { return (r || doc).querySelector(s); }
   function $$(s, r) { return Array.prototype.slice.call((r || doc).querySelectorAll(s)); }
@@ -169,10 +172,10 @@
   /* =========================== SHOWDOWN =========================== */
   function showdown() {
     body.classList.add('dark');
-    var PRESETS = { cp1: [1, 2, 3, 4, 5] }; // Financial Algebra has one Standard level.
+    var PRESETS = { cp2: [1, 1, 1, 1, 1], cp1: [2, 2, 2, 2, 2], honors: [3, 3, 3, 3, 3], mixed: [1, 1, 2, 3, 3] }; // Financial Algebra levels (2026-11-17); the deck maps tiers 1/2/3 to Support/Standard/Advanced
     var NAMES = G.MK_GRADE_GAME_COURSE ? { cp2:'Remedial',cp1:'Standard',honors:'Advanced',mixed:'Mixed (Remedial → Advanced)' } : { cp2: 'CP2', cp1: 'CP1', honors: 'Honors', mixed: 'Mixed (100 easy → 500 Honors)' };
     if (G.MK_GRADE_GAME_COURSE) { PRESETS = {cp2:[1,1,1,2,2],cp1:[2,2,3,3,3],honors:[3,3,4,4,4],mixed:[1,2,2,3,4]}; }
-    NAMES = {cp1:'Standard'};
+    NAMES = { cp2: 'Support', cp1: 'Standard', honors: 'Advanced', mixed: 'Mixed (100 Support → 500 Advanced)' };
     var S = { preset: saved.preset || 'cp1', teams: saved.teams || ['Team 1', 'Team 2'], score: [], cells: {}, open: null, showOpts: false, showAns: false };
     GB._state = function () { return S; };
     /* one category per skill group; a unit with fewer than three groups gets one category per skill instead */

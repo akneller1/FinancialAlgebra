@@ -2,7 +2,7 @@ export const course = {
   id: 'financial-algebra',
   name: 'Financial Algebra',
   subtitle: 'Learn the mathematics behind real financial decisions.',
-  levels: ['standard'],
+  levels: ['support', 'standard', 'advanced'],
   units: [
     {id:'income', name:'Careers & Income', status:'ready', skills:['Compare salary and hourly pay','Calculate gross and net income','Interpret pay stubs','Model income taxes']},
     {id:'budgeting', name:'Budgeting & Spending', status:'ready', skills:['Calculate monthly cash flow','Analyze fixed and variable expenses','Model financial constraints','Compare spending decisions']},

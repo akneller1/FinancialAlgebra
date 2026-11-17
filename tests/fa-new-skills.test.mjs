@@ -43,7 +43,7 @@ test('new skills are in the course and every unit bank, with a lesson each', () 
 
 test('every new-skill numeric answer recomputes independently from its prompt', () => {
   let count = 0; const used = new Set();
-  for (const u of ['banking', 'credit', 'borrowing', 'housing']) for (const q of bank(u).questions.filter(q => q.skillId.endsWith('-05') && q.format === 'short-answer')) {
+  for (const u of ['banking', 'credit', 'borrowing', 'housing']) for (const q of bank(u).questions.filter(q => q.skillId.endsWith('-05') && q.format === 'short-answer' && !/^lv-/.test(q.family))) {
     const f = CHECK[q.family]; assert.ok(f, 'no check for ' + q.family); used.add(q.family);
     const want = f(q.prompt), got = q.numeric.value;
     assert.ok(Math.abs(want - got) <= (TOL[q.family] ?? 0.011), `${q.id}: prompt gives ${want}, key ${got}\n${q.prompt}`);

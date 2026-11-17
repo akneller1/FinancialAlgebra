@@ -3,7 +3,11 @@
  "courseId": "financial-algebra",
  "unitId": "borrowing",
  "unitName": "Auto Loans & Borrowing",
- "level": "standard",
+ "levels": [
+  "support",
+  "standard",
+  "advanced"
+ ],
  "generated": "deterministic",
  "assumptions": "All people, employers, institutions, prices, and rates are fictional or illustrative. See financial/lib/finance.js ASSUMPTIONS.",
  "skills": [
@@ -488,7 +492,7 @@
  "cheatSheet": {
   "title": "Auto Loans & Borrowing",
   "focus": "compare payments, APR, term and total borrowing cost",
-  "morefocus": "trace amortization and judge affordability",
+  "morefocus": "trace amortization, judge affordability and total the cost of owning a car",
   "front": [
    {
     "title": "Loan vocabulary",
@@ -679,17 +683,26 @@
     "color": "orange"
    },
    {
-    "title": "Compare complete offers",
-    "kind": "list",
-    "items": [
-     "Same vehicle price and cash down?",
-     "Same fees, APR and payment timing?",
-     "Total of payments and any final balloon payment?",
-     "For a lease: upfront charges, mileage, wear and buyout terms?",
-     "How much will the car cost to operate?",
-     "A lower payment may fit today; ask whether the longer term creates negative-equity risk."
+    "title": "Total cost of ownership",
+    "kind": "example",
+    "color": "pink",
+    "text": "Yearly cost = payments + insurance + fuel + maintenance (+ registration, depreciation). Fuel = ⟨\\dfrac{\\text{miles}}{\\text{MPG}}⟩ × price per gallon.",
+    "example": "$350/month loan, $140/month insurance, 12,000 miles at 30 MPG, $3.40/gal, $900 maintenance.",
+    "steps": [
+     [
+      "Payments + insurance:",
+      "⟨(350+140)(12)=5{,}880⟩"
+     ],
+     [
+      "Fuel:",
+      "⟨\\dfrac{12{,}000}{30}(3.40)=1{,}360⟩"
+     ],
+     [
+      "Total:",
+      "⟨5{,}880+1{,}360+900=8{,}140⟩"
+     ]
     ],
-    "color": "pink"
+    "answer": "$8,140 a year, about $0.68 per mile"
    },
    {
     "title": "Reminders & mistakes",
@@ -725,7 +738,7 @@
    "id": "fa-borrowing-s01-vocab-def-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Installment loan** mean?",
@@ -770,7 +783,7 @@
    "id": "fa-borrowing-s02-vocab-def-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Loan term** mean?",
@@ -815,7 +828,7 @@
    "id": "fa-borrowing-s01-vocab-def-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Down payment** mean?",
@@ -860,7 +873,7 @@
    "id": "fa-borrowing-s03-vocab-def-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Amortization** mean?",
@@ -905,7 +918,7 @@
    "id": "fa-borrowing-s03-vocab-def-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Amortization schedule** mean?",
@@ -950,7 +963,7 @@
    "id": "fa-borrowing-s04-vocab-def-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Finance charge** mean?",
@@ -995,7 +1008,7 @@
    "id": "fa-borrowing-s04-vocab-def-07",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Total of payments** mean?",
@@ -1040,7 +1053,7 @@
    "id": "fa-borrowing-s04-vocab-def-08",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Upside down (negative equity)** mean?",
@@ -1087,7 +1100,7 @@
    "id": "fa-borrowing-s04-vocab-def-09",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Depreciation** mean?",
@@ -1132,7 +1145,7 @@
    "id": "fa-borrowing-s02-vocab-def-10",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Lease** mean?",
@@ -1177,7 +1190,7 @@
    "id": "fa-borrowing-s02-vocab-def-11",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Residual value** mean?",
@@ -1222,7 +1235,7 @@
    "id": "fa-borrowing-s02-vocab-def-12",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Money factor** mean?",
@@ -1267,7 +1280,7 @@
    "id": "fa-borrowing-s01-vocab-def-13",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Collateral** mean?",
@@ -1312,7 +1325,7 @@
    "id": "fa-borrowing-s01-vocab-def-14",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Cosigner** mean?",
@@ -1357,7 +1370,7 @@
    "id": "fa-borrowing-s03-vocab-def-15",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Prepayment** mean?",
@@ -1402,7 +1415,7 @@
    "id": "fa-borrowing-s04-vocab-def-16",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Total cost of ownership** mean?",
@@ -1447,7 +1460,7 @@
    "id": "fa-borrowing-s05-vocab-def-17",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Liability insurance** mean?",
@@ -1492,7 +1505,7 @@
    "id": "fa-borrowing-s05-vocab-def-18",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Collision coverage** mean?",
@@ -1537,7 +1550,7 @@
    "id": "fa-borrowing-s05-vocab-def-19",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Comprehensive coverage** mean?",
@@ -1582,7 +1595,7 @@
    "id": "fa-borrowing-s05-vocab-def-20",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Fuel economy (MPG)** mean?",
@@ -1627,7 +1640,7 @@
    "id": "fa-borrowing-s05-vocab-def-21",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "vocab-def",
    "type": "vocabulary",
    "prompt": "What does **Cost per mile** mean?",
@@ -1672,7 +1685,7 @@
    "id": "fa-borrowing-s02-concept-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Two loans have the same APR. Loan A lasts 48 months and Loan B lasts 72 months. Which statement is true?",
@@ -1714,7 +1727,7 @@
    "id": "fa-borrowing-s01-concept-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "In PMT = P·i ÷ (1 − (1 + i)^(−n)), for a 5-year auto loan at 6% APR with monthly payments, what are i and n?",
@@ -1756,7 +1769,7 @@
    "id": "fa-borrowing-s03-concept-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "In an amortization schedule, what happens to the interest portion of each payment over time?",
@@ -1798,7 +1811,7 @@
    "id": "fa-borrowing-s04-concept-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why do dealers often ask “What monthly payment can you afford?”",
@@ -1840,7 +1853,7 @@
    "id": "fa-borrowing-s02-concept-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "A lease has a money factor of 0.0021. What is the approximate equivalent APR?",
@@ -1882,7 +1895,7 @@
    "id": "fa-borrowing-s01-concept-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL changes that lower the monthly payment on an auto loan.",
@@ -1970,7 +1983,7 @@
    "id": "fa-borrowing-s05-concept-08",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Select ALL costs that are part of owning a car besides the loan payment.",
@@ -2021,7 +2034,7 @@
    "id": "fa-borrowing-s05-concept-09",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Which kind of car insurance pays for damage you cause to someone else?",
@@ -2063,7 +2076,7 @@
    "id": "fa-borrowing-s05-concept-10",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "concept",
    "type": "concept",
    "prompt": "Why does a new car usually lose value fastest in its first few years?",
@@ -2105,7 +2118,7 @@
    "id": "fa-borrowing-s04-claim-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “The lowest monthly payment is the cheapest financing option.”",
@@ -2144,7 +2157,7 @@
    "id": "fa-borrowing-s04-claim-cer-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2213,7 +2226,7 @@
    "id": "fa-borrowing-s02-claim-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Leasing is always a waste of money compared with buying.”",
@@ -2252,7 +2265,7 @@
    "id": "fa-borrowing-s02-claim-cer-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2321,7 +2334,7 @@
    "id": "fa-borrowing-s03-claim-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “Paying an extra $50 a month on a car loan barely makes a difference.”",
@@ -2360,7 +2373,7 @@
    "id": "fa-borrowing-s03-claim-cer-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2429,7 +2442,7 @@
    "id": "fa-borrowing-s01-claim-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “If I qualify for a loan, I can afford the car.”",
@@ -2468,7 +2481,7 @@
    "id": "fa-borrowing-s01-claim-cer-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2537,7 +2550,7 @@
    "id": "fa-borrowing-s05-claim-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "claim",
    "type": "claim",
    "prompt": "Evaluate the claim: “The car with the lower price is cheaper to own.”",
@@ -2576,7 +2589,7 @@
    "id": "fa-borrowing-s05-claim-cer-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "claim-cer",
    "type": "claim",
    "format": "open-response",
@@ -2645,7 +2658,7 @@
    "id": "fa-borrowing-s01-pmt-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "pmt",
    "type": "calculation",
    "activityTypes": [
@@ -2674,7 +2687,7 @@
    "id": "fa-borrowing-s01-pmt-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "pmt",
    "type": "calculation",
    "activityTypes": [
@@ -2732,7 +2745,7 @@
    "id": "fa-borrowing-s01-pmt-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "pmt",
    "type": "calculation",
    "activityTypes": [
@@ -2790,7 +2803,7 @@
    "id": "fa-borrowing-s01-pmt-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "pmt",
    "type": "calculation",
    "activityTypes": [
@@ -2848,7 +2861,7 @@
    "id": "fa-borrowing-s01-pmt-08",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "pmt",
    "type": "calculation",
    "activityTypes": [
@@ -3147,7 +3160,7 @@
    "id": "fa-borrowing-s02-term-compare-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3195,7 +3208,7 @@
    "id": "fa-borrowing-s02-term-compare-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "term-compare",
    "type": "comparison",
    "activityTypes": [
@@ -3387,7 +3400,7 @@
    "id": "fa-borrowing-s02-apr-offers-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-offers",
    "type": "comparison",
    "activityTypes": [
@@ -3427,7 +3440,7 @@
    "id": "fa-borrowing-s02-apr-offers-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-offers",
    "type": "comparison",
    "activityTypes": [
@@ -3467,7 +3480,7 @@
    "id": "fa-borrowing-s02-apr-offers-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-offers",
    "type": "comparison",
    "activityTypes": [
@@ -3507,7 +3520,7 @@
    "id": "fa-borrowing-s02-apr-offers-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-offers",
    "type": "comparison",
    "activityTypes": [
@@ -3547,7 +3560,7 @@
    "id": "fa-borrowing-s02-apr-offers-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-offers",
    "type": "comparison",
    "activityTypes": [
@@ -3587,7 +3600,7 @@
    "id": "fa-borrowing-s02-apr-offers-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-offers",
    "type": "comparison",
    "activityTypes": [
@@ -3627,7 +3640,7 @@
    "id": "fa-borrowing-s02-apr-offers-07",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "advanced",
    "family": "apr-offers",
    "type": "comparison",
    "activityTypes": [
@@ -3667,7 +3680,7 @@
    "id": "fa-borrowing-s02-lease-pay-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "lease-pay",
    "type": "calculation",
    "activityTypes": [
@@ -3696,7 +3709,7 @@
    "id": "fa-borrowing-s02-lease-pay-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "lease-pay",
    "type": "calculation",
    "activityTypes": [
@@ -3725,7 +3738,7 @@
    "id": "fa-borrowing-s02-lease-pay-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "lease-pay",
    "type": "calculation",
    "activityTypes": [
@@ -3783,7 +3796,7 @@
    "id": "fa-borrowing-s02-lease-pay-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "lease-pay",
    "type": "calculation",
    "activityTypes": [
@@ -3812,7 +3825,7 @@
    "id": "fa-borrowing-s02-lease-pay-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
-   "level": "standard",
+   "level": "support",
    "family": "lease-pay",
    "type": "calculation",
    "activityTypes": [
@@ -3928,7 +3941,7 @@
    "id": "fa-borrowing-s03-amort-row-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "amort-row",
    "type": "calculation",
    "activityTypes": [
@@ -3956,7 +3969,7 @@
    "id": "fa-borrowing-s03-amort-row-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "amort-row",
    "type": "calculation",
    "activityTypes": [
@@ -3984,7 +3997,7 @@
    "id": "fa-borrowing-s03-amort-row-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "amort-row",
    "type": "calculation",
    "activityTypes": [
@@ -4011,7 +4024,7 @@
    "id": "fa-borrowing-s03-amort-row-07",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "amort-row",
    "type": "calculation",
    "activityTypes": [
@@ -4378,7 +4391,7 @@
    "id": "fa-borrowing-s03-amort-doc-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "support",
    "family": "amort-doc",
    "type": "document",
    "activityTypes": [
@@ -4604,7 +4617,7 @@
    "id": "fa-borrowing-s03-prepay-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "prepay",
    "type": "comparison",
    "activityTypes": [
@@ -4631,7 +4644,7 @@
    "id": "fa-borrowing-s03-prepay-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "prepay",
    "type": "comparison",
    "activityTypes": [
@@ -4658,7 +4671,7 @@
    "id": "fa-borrowing-s03-prepay-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "prepay",
    "type": "comparison",
    "activityTypes": [
@@ -4685,7 +4698,7 @@
    "id": "fa-borrowing-s03-prepay-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "prepay",
    "type": "comparison",
    "activityTypes": [
@@ -4712,7 +4725,7 @@
    "id": "fa-borrowing-s03-prepay-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "prepay",
    "type": "comparison",
    "activityTypes": [
@@ -4739,7 +4752,7 @@
    "id": "fa-borrowing-s03-prepay-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "prepay",
    "type": "comparison",
    "activityTypes": [
@@ -5198,7 +5211,7 @@
    "id": "fa-borrowing-s04-tco-or-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "tco-or",
    "type": "comparison",
    "activityTypes": [
@@ -5316,7 +5329,7 @@
    "id": "fa-borrowing-s04-tco-or-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "tco-or",
    "type": "comparison",
    "activityTypes": [
@@ -5434,7 +5447,7 @@
    "id": "fa-borrowing-s04-tco-or-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "tco-or",
    "type": "comparison",
    "activityTypes": [
@@ -5552,7 +5565,7 @@
    "id": "fa-borrowing-s04-tco-or-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "tco-or",
    "type": "comparison",
    "activityTypes": [
@@ -5931,7 +5944,7 @@
    "id": "fa-borrowing-s01-ap-down-payment-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-down-payment",
    "type": "calculation",
    "activityTypes": [
@@ -6076,7 +6089,7 @@
    "id": "fa-borrowing-s01-ap-down-payment-07",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "support",
    "family": "ap-down-payment",
    "type": "calculation",
    "activityTypes": [
@@ -6526,7 +6539,7 @@
    "id": "fa-borrowing-s05-tco-annual-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "tco-annual",
    "type": "calculation",
    "activityTypes": [
@@ -6729,7 +6742,7 @@
    "id": "fa-borrowing-s05-fuel-compare-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "fuel-compare",
    "type": "comparison",
    "activityTypes": [
@@ -6756,7 +6769,7 @@
    "id": "fa-borrowing-s05-fuel-compare-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "fuel-compare",
    "type": "comparison",
    "activityTypes": [
@@ -6783,7 +6796,7 @@
    "id": "fa-borrowing-s05-fuel-compare-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "fuel-compare",
    "type": "comparison",
    "activityTypes": [
@@ -6810,7 +6823,7 @@
    "id": "fa-borrowing-s05-fuel-compare-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "fuel-compare",
    "type": "comparison",
    "activityTypes": [
@@ -6837,7 +6850,7 @@
    "id": "fa-borrowing-s05-fuel-compare-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "fuel-compare",
    "type": "comparison",
    "activityTypes": [
@@ -6864,7 +6877,7 @@
    "id": "fa-borrowing-s05-fuel-compare-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "fuel-compare",
    "type": "comparison",
    "activityTypes": [
@@ -6891,7 +6904,7 @@
    "id": "fa-borrowing-s05-fuel-compare-07",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "advanced",
    "family": "fuel-compare",
    "type": "comparison",
    "activityTypes": [
@@ -6918,7 +6931,7 @@
    "id": "fa-borrowing-s05-car-depreciate-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "car-depreciate",
    "type": "calculation",
    "activityTypes": [
@@ -6947,7 +6960,7 @@
    "id": "fa-borrowing-s05-car-depreciate-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "car-depreciate",
    "type": "calculation",
    "activityTypes": [
@@ -6976,7 +6989,7 @@
    "id": "fa-borrowing-s05-car-depreciate-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "car-depreciate",
    "type": "calculation",
    "activityTypes": [
@@ -7005,7 +7018,7 @@
    "id": "fa-borrowing-s05-car-depreciate-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-05",
-   "level": "standard",
+   "level": "support",
    "family": "car-depreciate",
    "type": "calculation",
    "activityTypes": [
@@ -7263,6 +7276,2435 @@
    ]
   },
   {
+   "id": "fa-borrowing-s01-lv-s-total-payments-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi's car loan payment is $240 a month for 36 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$8,640",
+   "numeric": {
+    "value": 8640,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$240 × 36 = $8,640."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia's car loan payment is $310 a month for 60 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$18,600",
+   "numeric": {
+    "value": 18600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$310 × 60 = $18,600."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah's car loan payment is $240 a month for 60 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$14,400",
+   "numeric": {
+    "value": 14400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$240 × 60 = $14,400."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's car loan payment is $220 a month for 36 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$7,920",
+   "numeric": {
+    "value": 7920,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$220 × 36 = $7,920."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre's car loan payment is $300 a month for 48 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$14,400",
+   "numeric": {
+    "value": 14400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$300 × 48 = $14,400."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah's car loan payment is $340 a month for 60 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$20,400",
+   "numeric": {
+    "value": 20400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$340 × 60 = $20,400."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's car loan payment is $260 a month for 60 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$15,600",
+   "numeric": {
+    "value": 15600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$260 × 60 = $15,600."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah's car loan payment is $310 a month for 60 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$18,600",
+   "numeric": {
+    "value": 18600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$310 × 60 = $18,600."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-s-total-payments-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "support",
+   "family": "lv-s-total-payments",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah's car loan payment is $200 a month for 60 months. Total of payments = payment × number of payments. What is the total?",
+   "format": "short-answer",
+   "answer": "$12,000",
+   "numeric": {
+    "value": 12000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$200 × 60 = $12,000."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi can afford $350.00 a month for 60 months at 7.9% APR. What is the largest amount he can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$17,302.26",
+   "numeric": {
+    "value": 17302.26,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.079 ÷ 12 = 0.006583.",
+    "P = $350.00 × (1 − (1 + i)^−60) ÷ i = $17,302.26.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah can afford $380.00 a month for 48 months at 7.9% APR. What is the largest amount he can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$15,595.50",
+   "numeric": {
+    "value": 15595.5,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.079 ÷ 12 = 0.006583.",
+    "P = $380.00 × (1 − (1 + i)^−48) ÷ i = $15,595.50.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya can afford $460.00 a month for 48 months at 5.9% APR. What is the largest amount she can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$19,625.24",
+   "numeric": {
+    "value": 19625.24,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.059 ÷ 12 = 0.004917.",
+    "P = $460.00 × (1 − (1 + i)^−48) ÷ i = $19,625.24.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev can afford $340.00 a month for 60 months at 6.9% APR. What is the largest amount he can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$17,211.66",
+   "numeric": {
+    "value": 17211.66,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.069 ÷ 12 = 0.005750.",
+    "P = $340.00 × (1 − (1 + i)^−60) ÷ i = $17,211.66.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam can afford $250.00 a month for 60 months at 7.9% APR. What is the largest amount they can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$12,358.76",
+   "numeric": {
+    "value": 12358.76,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.079 ÷ 12 = 0.006583.",
+    "P = $250.00 × (1 − (1 + i)^−60) ÷ i = $12,358.76.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia can afford $410.00 a month for 60 months at 5.9% APR. What is the largest amount she can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$21,258.57",
+   "numeric": {
+    "value": 21258.57,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.059 ÷ 12 = 0.004917.",
+    "P = $410.00 × (1 − (1 + i)^−60) ÷ i = $21,258.57.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev can afford $480.00 a month for 60 months at 5.9% APR. What is the largest amount he can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$24,888.09",
+   "numeric": {
+    "value": 24888.09,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.059 ÷ 12 = 0.004917.",
+    "P = $480.00 × (1 − (1 + i)^−60) ÷ i = $24,888.09.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace can afford $310.00 a month for 48 months at 6.9% APR. What is the largest amount she can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$12,970.78",
+   "numeric": {
+    "value": 12970.78,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.069 ÷ 12 = 0.005750.",
+    "P = $310.00 × (1 − (1 + i)^−48) ÷ i = $12,970.78.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia can afford $460.00 a month for 48 months at 7.9% APR. What is the largest amount she can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$18,878.76",
+   "numeric": {
+    "value": 18878.76,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.079 ÷ 12 = 0.006583.",
+    "P = $460.00 × (1 − (1 + i)^−48) ÷ i = $18,878.76.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-10",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah can afford $300.00 a month for 60 months at 5.9% APR. What is the largest amount he can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$15,555.05",
+   "numeric": {
+    "value": 15555.05,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.059 ÷ 12 = 0.004917.",
+    "P = $300.00 × (1 − (1 + i)^−60) ÷ i = $15,555.05.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-lv-a-afford-amount-11",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "advanced",
+   "family": "lv-a-afford-amount",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei can afford $340.00 a month for 48 months at 7.9% APR. What is the largest amount she can borrow? Use P = payment × (1 − (1 + i)^−n) ÷ i with i = APR ÷ 12.",
+   "format": "short-answer",
+   "answer": "$13,953.86",
+   "numeric": {
+    "value": 13953.86,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.079 ÷ 12 = 0.006583.",
+    "P = $340.00 × (1 − (1 + i)^−48) ÷ i = $13,953.86.",
+    "Remember taxes, fees and insurance on top of the loan."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-s-monthly-rate-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-s-monthly-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan has an APR of 9%. Monthly rate = APR ÷ 12. What is the monthly rate?",
+   "format": "short-answer",
+   "answer": "0.75%",
+   "numeric": {
+    "value": 0.75,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "9% ÷ 12 = 0.75%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-s-monthly-rate-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-s-monthly-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan has an APR of 6%. Monthly rate = APR ÷ 12. What is the monthly rate?",
+   "format": "short-answer",
+   "answer": "0.5%",
+   "numeric": {
+    "value": 0.5,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "6% ÷ 12 = 0.5%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-s-monthly-rate-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-s-monthly-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan has an APR of 24%. Monthly rate = APR ÷ 12. What is the monthly rate?",
+   "format": "short-answer",
+   "answer": "2%",
+   "numeric": {
+    "value": 2,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "24% ÷ 12 = 2%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-s-monthly-rate-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-s-monthly-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan has an APR of 18%. Monthly rate = APR ÷ 12. What is the monthly rate?",
+   "format": "short-answer",
+   "answer": "1.5%",
+   "numeric": {
+    "value": 1.5,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "18% ÷ 12 = 1.5%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-s-monthly-rate-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "support",
+   "family": "lv-s-monthly-rate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan has an APR of 12%. Monthly rate = APR ÷ 12. What is the monthly rate?",
+   "format": "short-answer",
+   "answer": "1%",
+   "numeric": {
+    "value": 1,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "12% ÷ 12 = 1%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley is financing $15,500.00. Lender A: 4.9% APR for 60 months, no fees. Lender B: 3.9% APR for 48 months plus a $400.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$342.13",
+   "numeric": {
+    "value": 342.13,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $291.79 × 60 = $17,507.67.",
+    "B: $349.28 × 48 + $400.00 = $17,165.54.",
+    "Difference = $342.13."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah is financing $19,000.00. Lender A: 4.9% APR for 60 months, no fees. Lender B: 2.9% APR for 48 months plus a $800.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$514.79",
+   "numeric": {
+    "value": 514.79,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $357.68 × 60 = $21,461.02.",
+    "B: $419.71 × 48 + $800.00 = $20,946.22.",
+    "Difference = $514.79."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani is financing $16,000.00. Lender A: 5.9% APR for 60 months, no fees. Lender B: 3.9% APR for 48 months plus a $800.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$408.52",
+   "numeric": {
+    "value": 408.52,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $308.58 × 60 = $18,514.88.",
+    "B: $360.55 × 48 + $800.00 = $18,106.37.",
+    "Difference = $408.52."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis is financing $25,000.00. Lender A: 4.9% APR for 60 months, no fees. Lender B: 2.9% APR for 48 months plus a $800.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$929.99",
+   "numeric": {
+    "value": 929.99,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $470.64 × 60 = $28,238.18.",
+    "B: $552.25 × 48 + $800.00 = $27,308.19.",
+    "Difference = $929.99."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei is financing $21,500.00. Lender A: 4.9% APR for 60 months, no fees. Lender B: 3.9% APR for 48 months plus a $400.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$629.40",
+   "numeric": {
+    "value": 629.4,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $404.75 × 60 = $24,284.84.",
+    "B: $484.49 × 48 + $400.00 = $23,655.43.",
+    "Difference = $629.40."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila is financing $20,000.00. Lender A: 4.9% APR for 60 months, no fees. Lender B: 2.9% APR for 48 months plus a $800.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$583.99",
+   "numeric": {
+    "value": 583.99,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $376.51 × 60 = $22,590.54.",
+    "B: $441.80 × 48 + $800.00 = $22,006.55.",
+    "Difference = $583.99."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus is financing $26,500.00. Lender A: 4.9% APR for 60 months, no fees. Lender B: 2.9% APR for 48 months plus a $400.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$1,433.79",
+   "numeric": {
+    "value": 1433.79,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $498.87 × 60 = $29,932.47.",
+    "B: $585.39 × 48 + $400.00 = $28,498.68.",
+    "Difference = $1,433.79."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-lv-a-offer-total-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "advanced",
+   "family": "lv-a-offer-total",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah is financing $19,000.00. Lender A: 5.9% APR for 60 months, no fees. Lender B: 3.9% APR for 48 months plus a $600.00 loan fee. How much less does the cheaper offer cost in total?",
+   "format": "short-answer",
+   "answer": "$835.11",
+   "numeric": {
+    "value": 835.11,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: $366.44 × 60 = $21,986.42.",
+    "B: $428.15 × 48 + $600.00 = $21,151.31.",
+    "Difference = $835.11."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $24,000 and the monthly rate is 0.005. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$120",
+   "numeric": {
+    "value": 120,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$24,000 × 0.005 = $120."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $22,000 and the monthly rate is 0.004. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$88",
+   "numeric": {
+    "value": 88,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$22,000 × 0.004 = $88."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $6,000 and the monthly rate is 0.004. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$24",
+   "numeric": {
+    "value": 24,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$6,000 × 0.004 = $24."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $19,000 and the monthly rate is 0.006. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$114",
+   "numeric": {
+    "value": 114,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$19,000 × 0.006 = $114."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $22,000 and the monthly rate is 0.006. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$132",
+   "numeric": {
+    "value": 132,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$22,000 × 0.006 = $132."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $20,000 and the monthly rate is 0.004. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$80",
+   "numeric": {
+    "value": 80,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$20,000 × 0.004 = $80."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $8,000 and the monthly rate is 0.005. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$40",
+   "numeric": {
+    "value": 40,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$8,000 × 0.005 = $40."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-s-first-int-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "support",
+   "family": "lv-s-first-int",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A loan balance is $8,000 and the monthly rate is 0.006. Interest = balance × monthly rate. How much interest is in the first payment?",
+   "format": "short-answer",
+   "answer": "$48",
+   "numeric": {
+    "value": 48,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$8,000 × 0.006 = $48."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $17,000.00 car loan at 7.8% APR has a payment of $343.07. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$16,533.35",
+   "numeric": {
+    "value": 16533.35,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $110.50, principal $232.57.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $16,533.35."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $19,000.00 car loan at 7.8% APR has a payment of $383.44. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$18,478.43",
+   "numeric": {
+    "value": 18478.43,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $123.50, principal $259.94.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $18,478.43."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $24,000.00 car loan at 7.8% APR has a payment of $484.34. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$23,341.19",
+   "numeric": {
+    "value": 23341.19,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $156.00, principal $328.34.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $23,341.19."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $21,500.00 car loan at 6.6% APR has a payment of $421.68. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$20,891.47",
+   "numeric": {
+    "value": 20891.47,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $118.25, principal $303.43.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $20,891.47."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $17,500.00 car loan at 6.6% APR has a payment of $343.23. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$17,004.68",
+   "numeric": {
+    "value": 17004.68,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $96.25, principal $246.98.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $17,004.68."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $22,500.00 car loan at 5.4% APR has a payment of $428.74. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$21,843.55",
+   "numeric": {
+    "value": 21843.55,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $101.25, principal $327.49.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $21,843.55."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $14,500.00 car loan at 5.4% APR has a payment of $276.30. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$14,076.95",
+   "numeric": {
+    "value": 14076.95,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $65.25, principal $211.05.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $14,076.95."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $19,500.00 car loan at 7.8% APR has a payment of $393.53. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$18,964.71",
+   "numeric": {
+    "value": 18964.71,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $126.75, principal $266.78.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $18,964.71."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $12,500.00 car loan at 5.4% APR has a payment of $238.19. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$12,135.30",
+   "numeric": {
+    "value": 12135.3,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $56.25, principal $181.94.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $12,135.30."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-lv-a-balance-2-10",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "advanced",
+   "family": "lv-a-balance-2",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $9,000.00 car loan at 7.8% APR has a payment of $181.63. Build the first two rows of the amortization schedule (round interest to the cent each month). What is the balance after payment 2?",
+   "format": "short-answer",
+   "answer": "$8,752.94",
+   "numeric": {
+    "value": 8752.94,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Row 1: interest $58.50, principal $123.13.",
+    "Row 2: interest on the new balance, then subtract the principal again.",
+    "Balance after 2 payments = $8,752.94."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah pays $1,000 down and $450 a month for 60 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$28,000",
+   "numeric": {
+    "value": 28000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$450 × 60 = $27,000.",
+    "+ $1,000 = $28,000."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi pays $2,500 down and $420 a month for 36 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$17,620",
+   "numeric": {
+    "value": 17620,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$420 × 36 = $15,120.",
+    "+ $2,500 = $17,620."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego pays $2,000 down and $360 a month for 60 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$23,600",
+   "numeric": {
+    "value": 23600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$360 × 60 = $21,600.",
+    "+ $2,000 = $23,600."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah pays $4,000 down and $310 a month for 36 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$15,160",
+   "numeric": {
+    "value": 15160,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$310 × 36 = $11,160.",
+    "+ $4,000 = $15,160."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia pays $4,000 down and $240 a month for 36 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$12,640",
+   "numeric": {
+    "value": 12640,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$240 × 36 = $8,640.",
+    "+ $4,000 = $12,640."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara pays $2,000 down and $400 a month for 48 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$21,200",
+   "numeric": {
+    "value": 21200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$400 × 48 = $19,200.",
+    "+ $2,000 = $21,200."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei pays $1,000 down and $370 a month for 60 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$23,200",
+   "numeric": {
+    "value": 23200,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$370 × 60 = $22,200.",
+    "+ $1,000 = $23,200."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah pays $2,500 down and $370 a month for 36 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$15,820",
+   "numeric": {
+    "value": 15820,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$370 × 36 = $13,320.",
+    "+ $2,500 = $15,820."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah pays $4,000 down and $240 a month for 36 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$12,640",
+   "numeric": {
+    "value": 12640,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$240 × 36 = $8,640.",
+    "+ $4,000 = $12,640."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-10",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah pays $4,000 down and $340 a month for 36 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$16,240",
+   "numeric": {
+    "value": 16240,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$340 × 36 = $12,240.",
+    "+ $4,000 = $16,240."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-s-cost-down-11",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-s-cost-down",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley pays $1,000 down and $240 a month for 48 months. Total cost = down payment + payment × months. What is the total cost?",
+   "format": "short-answer",
+   "answer": "$12,520",
+   "numeric": {
+    "value": 12520,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$240 × 48 = $11,520.",
+    "+ $1,000 = $12,520."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $16,000.00 loan at 8.9% APR for 72 months also has $650.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "33.5%",
+   "numeric": {
+    "value": 33.49,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $287.62; interest = $4,708.29.",
+    "Finance charge = $5,358.29.",
+    "$5,358.29 ÷ $16,000.00 = 33.5%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $18,500.00 loan at 5.9% APR for 72 months also has $300.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "20.6%",
+   "numeric": {
+    "value": 20.61,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $305.73; interest = $3,512.26.",
+    "Finance charge = $3,812.26.",
+    "$3,812.26 ÷ $18,500.00 = 20.6%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $19,500.00 loan at 5.9% APR for 72 months also has $495.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "21.5%",
+   "numeric": {
+    "value": 21.52,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $322.25; interest = $3,702.12.",
+    "Finance charge = $4,197.12.",
+    "$4,197.12 ÷ $19,500.00 = 21.5%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $21,500.00 loan at 8.9% APR for 60 months also has $650.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "27.3%",
+   "numeric": {
+    "value": 27.28,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $445.26; interest = $5,215.71.",
+    "Finance charge = $5,865.71.",
+    "$5,865.71 ÷ $21,500.00 = 27.3%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $16,500.00 loan at 7.4% APR for 72 months also has $300.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "26%",
+   "numeric": {
+    "value": 25.96,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $284.49; interest = $3,983.17.",
+    "Finance charge = $4,283.17.",
+    "$4,283.17 ÷ $16,500.00 = 26.0%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $15,500.00 loan at 5.9% APR for 60 months also has $650.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "19.9%",
+   "numeric": {
+    "value": 19.91,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $298.94; interest = $2,436.29.",
+    "Finance charge = $3,086.29.",
+    "$3,086.29 ÷ $15,500.00 = 19.9%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $14,500.00 loan at 7.4% APR for 60 months also has $650.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "24.4%",
+   "numeric": {
+    "value": 24.43,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $289.86; interest = $2,891.70.",
+    "Finance charge = $3,541.70.",
+    "$3,541.70 ÷ $14,500.00 = 24.4%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $28,500.00 loan at 7.4% APR for 72 months also has $495.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "25.9%",
+   "numeric": {
+    "value": 25.88,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $491.39; interest = $6,880.03.",
+    "Finance charge = $7,375.03.",
+    "$7,375.03 ÷ $28,500.00 = 25.9%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $16,000.00 loan at 5.9% APR for 60 months also has $650.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "19.8%",
+   "numeric": {
+    "value": 19.78,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $308.58; interest = $2,514.88.",
+    "Finance charge = $3,164.88.",
+    "$3,164.88 ÷ $16,000.00 = 19.8%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-10",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $16,000.00 loan at 5.9% APR for 72 months also has $300.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "20.9%",
+   "numeric": {
+    "value": 20.86,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $264.41; interest = $3,037.63.",
+    "Finance charge = $3,337.63.",
+    "$3,337.63 ÷ $16,000.00 = 20.9%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-a-finance-pct-11",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-a-finance-pct",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A $19,000.00 loan at 8.9% APR for 60 months also has $300.00 in fees. The finance charge is all interest plus fees. What percent of the amount borrowed is the finance charge, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "25.8%",
+   "numeric": {
+    "value": 25.84,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Payment = $393.49; interest = $4,609.24.",
+    "Finance charge = $4,909.24.",
+    "$4,909.24 ÷ $19,000.00 = 25.8%."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-s-gas-month-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "support",
+   "family": "lv-s-gas-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus drives 600 miles a month in a car that gets 30 miles per gallon, with gas at $4 a gallon. Fuel cost = miles ÷ MPG × price. What is the monthly fuel cost?",
+   "format": "short-answer",
+   "answer": "$80",
+   "numeric": {
+    "value": 80,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "600 ÷ 30 = 20 gallons.",
+    "× $4 = $80."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-s-gas-month-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "support",
+   "family": "lv-s-gas-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah drives 1200 miles a month in a car that gets 30 miles per gallon, with gas at $3 a gallon. Fuel cost = miles ÷ MPG × price. What is the monthly fuel cost?",
+   "format": "short-answer",
+   "answer": "$120",
+   "numeric": {
+    "value": 120,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "1200 ÷ 30 = 40 gallons.",
+    "× $3 = $120."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-s-gas-month-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "support",
+   "family": "lv-s-gas-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus drives 750 miles a month in a car that gets 25 miles per gallon, with gas at $3 a gallon. Fuel cost = miles ÷ MPG × price. What is the monthly fuel cost?",
+   "format": "short-answer",
+   "answer": "$90",
+   "numeric": {
+    "value": 90,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "750 ÷ 25 = 30 gallons.",
+    "× $3 = $90."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-s-gas-month-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "support",
+   "family": "lv-s-gas-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah drives 900 miles a month in a car that gets 30 miles per gallon, with gas at $3 a gallon. Fuel cost = miles ÷ MPG × price. What is the monthly fuel cost?",
+   "format": "short-answer",
+   "answer": "$90",
+   "numeric": {
+    "value": 90,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "900 ÷ 30 = 30 gallons.",
+    "× $3 = $90."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-s-gas-month-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "support",
+   "family": "lv-s-gas-month",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego drives 900 miles a month in a car that gets 25 miles per gallon, with gas at $4 a gallon. Fuel cost = miles ÷ MPG × price. What is the monthly fuel cost?",
+   "format": "short-answer",
+   "answer": "$144",
+   "numeric": {
+    "value": 144,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "900 ÷ 25 = 36 gallons.",
+    "× $4 = $144."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus compares Car A ($24,000.00, loses 15% of its value a year, 42 MPG) with Car B ($18,000.00, loses 18% a year, 26 MPG). Over 5 years of 12,000 miles a year with gas at $3.30, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$876.71",
+   "numeric": {
+    "value": 876.71,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $13,351.07 + fuel $4,714.29 = $18,065.36.",
+    "B: depreciation $11,326.68 + fuel $7,615.38 = $18,942.07.",
+    "Difference = $876.71: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah compares Car A ($29,000.00, loses 15% of its value a year, 38 MPG) with Car B ($22,500.00, loses 20% a year, 26 MPG). Over 5 years of 12,000 miles a year with gas at $3.30, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$1,399.51",
+   "numeric": {
+    "value": 1399.51,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $16,132.55 + fuel $5,210.53 = $21,343.07.",
+    "B: depreciation $15,127.20 + fuel $7,615.38 = $22,742.58.",
+    "Difference = $1,399.51: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev compares Car A ($28,000.00, loses 15% of its value a year, 42 MPG) with Car B ($21,000.00, loses 20% a year, 26 MPG). Over 5 years of 12,000 miles a year with gas at $3.60, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$1,707.30",
+   "numeric": {
+    "value": 1707.3,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $15,576.25 + fuel $5,142.86 = $20,719.11.",
+    "B: depreciation $14,118.72 + fuel $8,307.69 = $22,426.41.",
+    "Difference = $1,707.30: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah compares Car A ($31,500.00, loses 15% of its value a year, 38 MPG) with Car B ($26,500.00, loses 20% a year, 24 MPG). Over 5 years of 12,000 miles a year with gas at $3.60, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$3,608.99",
+   "numeric": {
+    "value": 3608.99,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $17,523.28 + fuel $5,684.21 = $23,207.49.",
+    "B: depreciation $17,816.48 + fuel $9,000.00 = $26,816.48.",
+    "Difference = $3,608.99: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev compares Car A ($28,000.00, loses 15% of its value a year, 38 MPG) with Car B ($23,500.00, loses 18% a year, 26 MPG). Over 5 years of 12,000 miles a year with gas at $3.60, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$1,834.84",
+   "numeric": {
+    "value": 1834.84,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $15,576.25 + fuel $5,684.21 = $21,260.46.",
+    "B: depreciation $14,787.61 + fuel $8,307.69 = $23,095.31.",
+    "Difference = $1,834.84: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei compares Car A ($32,000.00, loses 15% of its value a year, 38 MPG) with Car B ($28,000.00, loses 20% a year, 24 MPG). Over 5 years of 12,000 miles a year with gas at $3.60, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$4,339.32",
+   "numeric": {
+    "value": 4339.32,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $17,801.43 + fuel $5,684.21 = $23,485.64.",
+    "B: depreciation $18,824.96 + fuel $9,000.00 = $27,824.96.",
+    "Difference = $4,339.32: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima compares Car A ($31,000.00, loses 15% of its value a year, 38 MPG) with Car B ($26,000.00, loses 18% a year, 24 MPG). Over 5 years of 12,000 miles a year with gas at $3.30, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$2,155.10",
+   "numeric": {
+    "value": 2155.1,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $17,245.14 + fuel $5,210.53 = $22,455.66.",
+    "B: depreciation $16,360.76 + fuel $8,250.00 = $24,610.76.",
+    "Difference = $2,155.10: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam compares Car A ($30,500.00, loses 15% of its value a year, 42 MPG) with Car B ($25,000.00, loses 20% a year, 24 MPG). Over 5 years of 12,000 miles a year with gas at $3.30, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$3,376.73",
+   "numeric": {
+    "value": 3376.73,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $16,966.99 + fuel $4,714.29 = $21,681.27.",
+    "B: depreciation $16,808.00 + fuel $8,250.00 = $25,058.00.",
+    "Difference = $3,376.73: the lower price does not win here."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-lv-a-five-year-tco-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "advanced",
+   "family": "lv-a-five-year-tco",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia compares Car A ($26,500.00, loses 15% of its value a year, 42 MPG) with Car B ($21,000.00, loses 18% a year, 26 MPG). Over 5 years of 12,000 miles a year with gas at $3.30, counting depreciation and fuel only, how much less does the cheaper-to-own car cost?",
+   "format": "short-answer",
+   "answer": "$1,373.75",
+   "numeric": {
+    "value": 1373.75,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "A: depreciation $14,741.81 + fuel $4,714.29 = $19,456.09.",
+    "B: depreciation $13,214.46 + fuel $7,615.38 = $20,829.85.",
+    "Difference = $1,373.75: the lower price does not win here."
+   ]
+  },
+  {
    "id": "fa-borrowing-s01-err-annual-rate-formula-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
@@ -7321,7 +9763,7 @@
    "id": "fa-borrowing-s01-err-years-as-n-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
-   "level": "standard",
+   "level": "advanced",
    "family": "years-as-n-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -7517,7 +9959,7 @@
    "id": "fa-borrowing-s03-err-principal-month1-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
-   "level": "standard",
+   "level": "advanced",
    "family": "principal-month1-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -7560,7 +10002,7 @@
    "id": "fa-borrowing-s04-err-simple-vs-amortized-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "simple-vs-amortized-error",
    "type": "reasoning",
    "errorAnalysis": true,
@@ -7615,7 +10057,7 @@
    "id": "fa-borrowing-s04-err-trade-in-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
-   "level": "standard",
+   "level": "advanced",
    "family": "trade-in-error",
    "type": "reasoning",
    "errorAnalysis": true,

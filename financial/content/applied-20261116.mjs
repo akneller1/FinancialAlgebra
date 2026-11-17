@@ -221,7 +221,7 @@ const college = [
     return { prompt: `Career A pays ${$0(a)} per year and Career B pays ${$0(b)} per year. Ignoring raises, how much more does Career B earn over ${yrs} years?`,
       ...numeric(d), solutionSteps: [`Yearly difference = ${$0(b)} − ${$0(a)} = ${$0(b - a)}.`, `× ${yrs} years = ${money(d)}.`, 'Also weigh training cost and time out of the workforce.'] }; } },
   { id: 'payback-simple', skill: 4, type: 'calculation', count: 7, gen(r) {
-    const cost = r.step(12000, 60000, 1000), gain = r.step(4000, 15000, 500), yrs = r2(cost / gain);
+    const cost = r.step(12000, 60000, 1000), gain = r.step(4000, 15000, 500), yrs = cost / gain;
     return { prompt: `A certificate program costs ${$0(cost)} and is expected to raise yearly earnings by ${$0(gain)}. To the nearest tenth of a year, how long until the extra earnings cover the cost?`,
       ...numeric(Math.round(yrs * 10) / 10, { unit: 'count', display: (Math.round(yrs * 10) / 10) + ' years', tolerance: 0.05 }), solutionSteps: ['Payback period = cost ÷ yearly gain.', `${$0(cost)} ÷ ${$0(gain)} = ${yrs.toFixed(2)}.`, `≈ ${(Math.round(yrs * 10) / 10)} years.`] }; } }
 ];

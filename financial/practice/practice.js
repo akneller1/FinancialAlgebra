@@ -3,20 +3,23 @@
 'use strict';
 const R=window.FA_RENDER,$=id=>document.getElementById(id),p=new URLSearchParams(location.search),student=p.get('student')==='1';
 let bank,index,items=[],results={};
+/* Levels (2026-11-17). A student link carries ?level= (support/standard/advanced/all, or Classroom's cp2/cp1/honors). */
+const LEVEL_CODES={cp2:'support',cp1:'standard',honors:'advanced'},levelOf=v=>{v=String(v||'').toLowerCase();return ['support','standard','advanced','all'].includes(v)?v:LEVEL_CODES[v]||null;};
+const level=()=>$('level')?$('level').value:'standard',atLevel=(q,l)=>l==='all'||!q.level||q.level===l;
 const selected=()=>[...document.querySelectorAll('[data-skill]:checked')].map(x=>x.value);
 function shuffle(list){const a=list.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function eligible(q){return q.format!=='open-response'&&(q.options?.length||(q.numeric&&!String(q.answer).includes(';')));}
 async function load(unit){
  if(!index.units.some(u=>u.unitId===unit))unit=index.units[0].unitId;
- const r=await fetch('../banks/'+unit+'.json');if(!r.ok)throw Error();bank=await r.json();$('unit').value=unit;$('unitTitle').textContent=bank.unitName;
+ const r=await fetch('../banks/'+unit+'.json');if(!r.ok)throw Error();bank=await r.json();$('unit').value=unit;if(levelOf(p.get('level'))&&$('level'))$('level').value=levelOf(p.get('level'));$('unitTitle').textContent=bank.unitName;
  let assigned;try{assigned=p.has('skills')?JSON.parse(p.get('skills')):null;if(assigned&&!Array.isArray(assigned))assigned=[];}catch{assigned=[];}
  $('skills').innerHTML='<legend>Skills</legend>'+bank.skills.map(s=>'<label style="display:block;margin:8px 0"><input type="checkbox" data-skill value="'+R.esc(s.id)+'"'+(!assigned||assigned.includes(s.id)?' checked':'')+'> '+R.esc(s.name)+'</label>').join('');
  $('questions').innerHTML='';$('review').hidden=true;$('shareResult').hidden=true;$('status').textContent='Choose skills and start a practice test.';
  if(student){$('teacherNav').hidden=true;$('setup').hidden=true;start();}
 }
-function start(ids=selected()){
+function start(ids=selected()){const lv=level();
  if(!ids.length){$('status').textContent='Select at least one skill, or ask your teacher for a new link.';return;}
- const pool=shuffle(bank.questions.filter(q=>ids.includes(q.skillId)&&eligible(q))),first=ids.map(id=>pool.find(q=>q.skillId===id)).filter(Boolean);
+ const pool=shuffle(bank.questions.filter(q=>ids.includes(q.skillId)&&eligible(q)&&atLevel(q,lv))),first=ids.map(id=>pool.find(q=>q.skillId===id)).filter(Boolean);
  items=shuffle(first.concat(pool.filter(q=>!first.includes(q))).slice(0,12));results={};
  if(!items.length){$('status').textContent='No practice questions available for these skills.';return;}
  $('questions').innerHTML=items.map((q,i)=>'<section class="fa-panel">'+R.question({...q,options:null},{n:i+1,showType:false})+'<div class="practice-choices">'+(q.options?q.options.map((o,j)=>'<label><input type="'+(q.format==='select-all'?'checkbox':'radio')+'" name="q'+i+'" value="'+j+'"> '+R.rich(o.text)+'</label>').join(''):'<label class="fa-field">Your answer'+(q.numeric.unit==='USD'?' ($)':q.numeric.unit==='%'?' (%)':'')+'<input id="answer'+i+'" inputmode="decimal"></label>')+'</div><button class="fa-btn" data-check="'+i+'">Check answer</button><div role="status" id="feedback'+i+'"></div></section>').join('');$('review').hidden=false;update();
@@ -33,7 +36,7 @@ $('questions').onclick=e=>{
  $('feedback'+i).innerHTML='<p class="fa-key"><strong>'+(results[i]?'Correct.':'Review this one.')+'</strong> '+R.rich(Array.isArray(q.answer)?q.answer.join('; '):q.answer)+'</p><ol>'+q.solutionSteps.map(s=>'<li>'+R.rich(s)+'</li>').join('')+'</ol>';b.disabled=true;b.closest('section').querySelectorAll('input').forEach(x=>x.disabled=true);update();
 };
 $('start').onclick=()=>start();$('retry').onclick=()=>start([...new Set(items.filter((q,i)=>results[i]===false).map(q=>q.skillId))]);$('unit').onchange=()=>load($('unit').value).catch(fail);
-$('share').onclick=()=>{if(!selected().length){$('status').textContent='Select at least one skill.';return;}const url=new URL(location.href);url.search='';url.hash='';url.searchParams.set('unit',bank.unitId);url.searchParams.set('student','1');url.searchParams.set('skills',JSON.stringify(selected()));$('shareLink').value=url.href;$('shareResult').hidden=false;$('shareLink').select();};
+$('share').onclick=()=>{if(!selected().length){$('status').textContent='Select at least one skill.';return;}const url=new URL(location.href);url.search='';url.hash='';url.searchParams.set('unit',bank.unitId);url.searchParams.set('student','1');url.searchParams.set('skills',JSON.stringify(selected()));url.searchParams.set('level',level());$('shareLink').value=url.href;$('shareResult').hidden=false;$('shareLink').select();};
 $('copy').onclick=async()=>{try{await navigator.clipboard.writeText($('shareLink').value);$('status').textContent='Student link copied.';}catch{$('shareLink').focus();$('shareLink').select();}};
 function fail(){$('status').textContent='Unable to load the practice test. Please reload and try again.';}
 try{const r=await fetch('../banks/index.json');if(!r.ok)throw Error();index=await r.json();$('unit').innerHTML=index.units.map(u=>'<option value="'+R.esc(u.unitId)+'">'+R.esc(u.name)+'</option>').join('');await load(p.get('unit')||'income');}catch{fail();}
