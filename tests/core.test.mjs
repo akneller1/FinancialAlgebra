@@ -7,7 +7,7 @@ test('Financial Algebra has ten resource-ready units and one level',()=>{
  assert.deepEqual(course.levels,['standard']);
  assert.equal(course.units.length,10);
  assert.ok(course.units.every(u=>u.status==='ready'));
- assert.equal(course.units.reduce((n,u)=>n+u.skills.length,0),40);
+ assert.equal(course.units.reduce((n,u)=>n+u.skills.length,0),44);
 });
 test('Financial Algebra IDs are unchanged and stable for future questions',()=>{
  assert.deepEqual(course.units.map(u=>u.id),[

@@ -370,89 +370,202 @@
  ],
  "cheatSheet": {
   "title": "Retirement & Inflation",
-  "sections": [
+  "focus": "model inflation, real value and retirement accounts",
+  "morefocus": "compare tax timing, employer matches and saving plans",
+  "front": [
    {
-    "h": "Key formulas",
+    "title": "Inflation vocabulary",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
     "rows": [
      [
-      "Future price",
-      "price × (1 + i)^t"
+      "Inflation",
+      "Rise in the general price level over time."
      ],
      [
-      "Today’s dollars",
-      "[[future amount || (1 + i)^t]]"
+      "Nominal dollars",
+      "Dollars in the year they are received."
      ],
      [
-      "Inflation from CPI",
-      "[[CPI₂ − CPI₁ || CPI₁]]"
+      "Real dollars",
+      "Purchasing power expressed in a chosen base year."
      ],
      [
-      "Real return",
-      "[[1 + nominal || 1 + inflation]] − 1"
-     ],
-     [
-      "Employer match",
-      "match rate × min(your %, limit) × salary"
-     ],
-     [
-      "Nest egg",
-      "[[spending − other income || 0.04]]"
-     ],
-     [
-      "Balance projection",
-      "FV = PMT · [[(1 + i)^N − 1 || i]]"
+      "CPI",
+      "Price index for a specified consumer basket; personal costs may differ."
      ]
-    ]
+    ],
+    "after": "",
+    "color": "purple"
    },
    {
-    "h": "Account types",
-    "rows": [
+    "title": "Future price",
+    "kind": "example",
+    "text": "⟨F=C(1+f)^t⟩. C = today’s price dollars; f = annual decimal inflation; t = years.",
+    "example": "A $100 purchase; 3% inflation for 10 years.",
+    "steps": [
      [
-      "Traditional 401(k)/IRA",
-      "Tax break now; taxed at withdrawal"
+      "Factor:",
+      "⟨1.03^{10}\\approx1.343916⟩"
      ],
      [
-      "Roth 401(k)/IRA",
-      "Taxed now; qualified withdrawals tax-free"
+      "Future price:",
+      "⟨100(1.03)^{10}\\approx134.39⟩"
+     ]
+    ],
+    "answer": "About $134.39 in year 10",
+    "color": "blue"
+   },
+   {
+    "title": "Bring dollars back to today",
+    "kind": "html",
+    "html": "⟨C=\\dfrac{F}{(1+f)^t}⟩<br>F = future dollars; f = annual decimal inflation; t = years; C = today’s purchasing power.<div class=\"ex\">$50,000 received in 20 years at 2.5% inflation:<br>⟨\\dfrac{50{,}000}{1.025^{20}}\\approx30{,}513.55⟩<br><span class=\"ans\">About $30,513.55 today</span></div>Use the same base year when comparing amounts.",
+    "color": "green"
+   },
+   {
+    "title": "CPI & real return",
+    "kind": "html",
+    "html": "⟨\\text{Inflation}=\\dfrac{\\text{CPI}_{2}-\\text{CPI}_{1}}{\\text{CPI}_{1}}⟩<br>CPI 200 → 210 gives ⟨\\tfrac{10}{200}=5\\%⟩.<br>⟨\\text{Real return}=\\dfrac{1+r}{1+f}-1⟩<br>r = nominal return, f = inflation; both decimal rates for the same period.<div class=\"ex\">6% return, 2.5% inflation:<br>⟨\\tfrac{1.06}{1.025}-1\\approx3.41\\%⟩ real.</div>Subtracting inflation is a rough approximation.",
+    "color": "orange"
+   },
+   {
+    "title": "Account tax timing",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "Account",
+     "General model"
+    ],
+    "rows": [
+     [
+      "Traditional",
+      "Eligible contributions may reduce tax now; withdrawals generally taxed."
+     ],
+     [
+      "Roth",
+      "After-tax contributions; qualified withdrawals tax-free."
      ],
      [
       "Employer match",
-      "Part of pay; may vest over time"
+      "Extra compensation; terms and tax treatment vary."
      ],
      [
-      "Social Security",
-      "Partial income replacement"
+      "Vesting",
+      "How much employer money you keep when leaving."
      ]
-    ]
+    ],
+    "after": "Eligibility, limits, withdrawal rules and penalties depend on the plan and applicable rules. Compare after-tax amounts.",
+    "color": "pink"
+   },
+   {
+    "title": "Calculate a match",
+    "kind": "example",
+    "text": "Employer matches 50% of contributions up to 6% of salary; assume all match is vested.",
+    "example": "$50,000 salary; employee contributes 6%.",
+    "steps": [
+     [
+      "Employee:",
+      "⟨50{,}000(0.06)=3{,}000⟩ yearly"
+     ],
+     [
+      "Employer:",
+      "⟨0.50(3{,}000)=1{,}500⟩ yearly"
+     ],
+     [
+      "Combined monthly:",
+      "⟨\\tfrac{4{,}500}{12}=375⟩"
+     ]
+    ],
+    "answer": "$375 monthly goes to retirement",
+    "color": "teal"
    }
   ],
-  "example": {
-   "title": "Worked example",
-   "lines": [
-    "Age 25, $50,000 salary, 6% + 50% match → $375/month",
-    "At a hypothetical 6% for 42 years ≈ $851,000 (future $)",
-    "At 2.5% inflation ≈ $302,000 in today’s dollars",
-    "4% guideline → ≈ $12,000/yr (today’s $) + Social Security"
-   ]
-  },
-  "misconceptions": [
-   "Small inflation does not matter.",
-   "Cash is safest for decades.",
-   "Social Security covers everything.",
-   "Future-dollar projections show real wealth."
-  ],
-  "questions": [
-   "Am I getting the full match?",
-   "What is this projection in today’s dollars?",
-   "Roth or traditional — is my tax rate higher now or later?",
-   "When does the match vest?",
-   "What return and inflation are assumed?"
-  ],
-  "tips": [
-   "Start early and automate.",
-   "Increase contributions 1% per year.",
-   "Always capture the full match.",
-   "Check projections in today’s dollars."
+  "back": [
+   {
+    "title": "Project regular saving",
+    "kind": "html",
+    "html": "⟨F=D\\dfrac{(1+i)^N-1}{i}⟩<br>D = end-of-month deposit dollars; i = monthly decimal return; N = months; F = future dollars.<div class=\"ex\">$375 monthly for 42 years at hypothetical 6% nominal, compounded monthly:<br>⟨i=\\tfrac{0.06}{12},\\quad N=504⟩<br><span class=\"ans\">About $851,310.08 future dollars</span></div>No starting balance, fees or tax; constant return and deposits.",
+    "color": "purple"
+   },
+   {
+    "title": "Interpret that projection",
+    "kind": "example",
+    "text": "Use the same $851,310.08 future balance and 42-year horizon; assume 2.5% annual inflation.",
+    "example": "What purchasing power does it represent?",
+    "steps": [
+     [
+      "Today’s value:",
+      "⟨\\dfrac{851{,}310.08}{1.025^{42}}\\approx301{,}776.51⟩"
+     ],
+     [
+      "Contributed:",
+      "⟨375(504)=189{,}000⟩ nominal dollars"
+     ]
+    ],
+    "answer": "About $301,776.51 today",
+    "color": "blue"
+   },
+   {
+    "title": "Roth or traditional?",
+    "kind": "example",
+    "text": "Same $1,000 pretax earnings; both investments double. Eligible traditional deduction; 20% tax now, 10% on later withdrawal.",
+    "example": "Compare after-tax retirement dollars.",
+    "steps": [
+     [
+      "Traditional:",
+      "⟨1{,}000(2)(1-0.10)=1{,}800⟩"
+     ],
+     [
+      "Roth:",
+      "⟨1{,}000(1-0.20)(2)=1{,}600⟩"
+     ]
+    ],
+    "answer": "Traditional gives $200 more here",
+    "color": "green"
+   },
+   {
+    "title": "When could Roth win?",
+    "kind": "html",
+    "html": "If the later tax rate were 30% instead, with all other assumptions unchanged:<div class=\"ex\">Traditional: ⟨1{,}000(2)(0.70)=1{,}400⟩<br>Roth: ⟨1{,}000(0.80)(2)=1{,}600⟩<br><span class=\"ans\">Roth gives $200 more</span></div>Equal tax rates give equal after-tax results in this model. Actual choice also depends on eligibility, cash flow, flexibility and uncertain future rates.",
+    "color": "orange"
+   },
+   {
+    "title": "Spending target: a scenario",
+    "kind": "html",
+    "html": "⟨\\text{Savings target}=\\dfrac{\\text{annual spending gap}}{w}⟩<br>Gap = spending minus other reliable income; w = assumed starting withdrawal fraction.<div class=\"ex\">$40,000 spending − $16,000 other income = $24,000 gap.<br>At assumed 4%: ⟨\\tfrac{24{,}000}{0.04}=600{,}000⟩.</div>A 4% scenario is not a guarantee. Include taxes, time horizon, fees and market risk; use consistent year dollars.",
+    "color": "pink"
+   },
+   {
+    "title": "Reminders & mistakes",
+    "kind": "mistakes",
+    "good": [
+     "Consider the full match when cash flow and plan terms allow.",
+     "Review saving, inflation and return assumptions over time."
+    ],
+    "bad": [
+     [
+      "Future balance = current wealth",
+      "convert purchasing power."
+     ],
+     [
+      "Match is always yours immediately",
+      "check vesting."
+     ],
+     [
+      "Social Security covers every cost",
+      "estimate your own gap."
+     ],
+     [
+      "A fixed return is certain",
+      "test lower-return scenarios."
+     ]
+    ],
+    "color": "teal"
+   }
   ]
  },
  "questions": [
@@ -496,87 +609,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s01-vocab-term-01",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A general rise in prices over time, which reduces what each dollar can buy”",
-   "format": "multiple-choice",
-   "answer": "Inflation",
-   "options": [
-    {
-     "text": "Inflation",
-     "correct": true
-    },
-    {
-     "text": "Nest egg",
-     "correct": false
-    },
-    {
-     "text": "Employer match",
-     "correct": false
-    },
-    {
-     "text": "Vesting",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Inflation.",
-    "Example: 3% inflation turns a $100 grocery bill into about $103 next year."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s01-vocab-ex-01",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 3% inflation turns a $100 grocery bill into about $103 next year.",
-   "format": "multiple-choice",
-   "answer": "Inflation",
-   "options": [
-    {
-     "text": "Inflation",
-     "correct": true
-    },
-    {
-     "text": "401(k)",
-     "correct": false
-    },
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": false
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Inflation: A general rise in prices over time, which reduces what each dollar can buy"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -628,87 +660,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s01-vocab-term-02",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A government measure of the average change in prices paid by consumers for a basket of goods and services”",
-   "format": "multiple-choice",
-   "answer": "Consumer Price Index (CPI)",
-   "options": [
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": true
-    },
-    {
-     "text": "Roth account",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    },
-    {
-     "text": "IRA",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Consumer Price Index (CPI).",
-    "Example: If CPI rises from 300 to 309, prices rose 3%."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s01-vocab-ex-02",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? If CPI rises from 300 to 309, prices rose 3%.",
-   "format": "multiple-choice",
-   "answer": "Consumer Price Index (CPI)",
-   "options": [
-    {
-     "text": "Roth account",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": true
-    },
-    {
-     "text": "Purchasing power",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Consumer Price Index (CPI): A government measure of the average change in prices paid by consumers for a basket of goods and services"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s04-vocab-def-03",
    "unitId": "retirement",
    "skillId": "retirement-skill-04",
@@ -748,87 +699,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s04-vocab-term-03",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The amount of goods and services a sum of money can buy”",
-   "format": "multiple-choice",
-   "answer": "Purchasing power",
-   "options": [
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    },
-    {
-     "text": "Purchasing power",
-     "correct": true
-    },
-    {
-     "text": "401(k)",
-     "correct": false
-    },
-    {
-     "text": "Real rate of return",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Purchasing power.",
-    "Example: $1,000 in 20 years at 3% inflation buys what about $554 buys today."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s04-vocab-ex-03",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $1,000 in 20 years at 3% inflation buys what about $554 buys today.",
-   "format": "multiple-choice",
-   "answer": "Purchasing power",
-   "options": [
-    {
-     "text": "Purchasing power",
-     "correct": true
-    },
-    {
-     "text": "Social Security",
-     "correct": false
-    },
-    {
-     "text": "Roth account",
-     "correct": false
-    },
-    {
-     "text": "Nest egg",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Purchasing power: The amount of goods and services a sum of money can buy"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -880,87 +750,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s04-vocab-term-04",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A future amount converted into what it would buy at today’s prices”",
-   "format": "multiple-choice",
-   "answer": "Real value (today’s dollars)",
-   "options": [
-    {
-     "text": "Nest egg",
-     "correct": false
-    },
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": true
-    },
-    {
-     "text": "Traditional (pre-tax) account",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Real value (today’s dollars).",
-    "Example: $1,000,000 in 40 years at 2.5% inflation ≈ $372,000 today."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s04-vocab-ex-04",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $1,000,000 in 40 years at 2.5% inflation ≈ $372,000 today.",
-   "format": "multiple-choice",
-   "answer": "Real value (today’s dollars)",
-   "options": [
-    {
-     "text": "Nominal value",
-     "correct": false
-    },
-    {
-     "text": "4% guideline",
-     "correct": false
-    },
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": true
-    },
-    {
-     "text": "Roth account",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Real value (today’s dollars): A future amount converted into what it would buy at today’s prices"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s04-vocab-def-05",
    "unitId": "retirement",
    "skillId": "retirement-skill-04",
@@ -1000,87 +789,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s04-vocab-term-05",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “An amount in the dollars of the time, not adjusted for inflation”",
-   "format": "multiple-choice",
-   "answer": "Nominal value",
-   "options": [
-    {
-     "text": "Employer match",
-     "correct": false
-    },
-    {
-     "text": "IRA",
-     "correct": false
-    },
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Nominal value.",
-    "Example: A $4 price in 2040 dollars."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s04-vocab-ex-05",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $4 price in 2040 dollars.",
-   "format": "multiple-choice",
-   "answer": "Nominal value",
-   "options": [
-    {
-     "text": "Nominal value",
-     "correct": true
-    },
-    {
-     "text": "Nest egg",
-     "correct": false
-    },
-    {
-     "text": "Roth account",
-     "correct": false
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Nominal value: An amount in the dollars of the time, not adjusted for inflation"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1132,87 +840,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s03-vocab-term-06",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “An employer-sponsored retirement savings plan funded by payroll contributions, often with an employer match”",
-   "format": "multiple-choice",
-   "answer": "401(k)",
-   "options": [
-    {
-     "text": "Nest egg",
-     "correct": false
-    },
-    {
-     "text": "401(k)",
-     "correct": true
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    },
-    {
-     "text": "Social Security",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines 401(k).",
-    "Example: Contributing 6% of each paycheck."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-ex-06",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Contributing 6% of each paycheck.",
-   "format": "multiple-choice",
-   "answer": "401(k)",
-   "options": [
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": false
-    },
-    {
-     "text": "Vesting",
-     "correct": false
-    },
-    {
-     "text": "401(k)",
-     "correct": true
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of 401(k): An employer-sponsored retirement savings plan funded by payroll contributions, often with an employer match"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s03-vocab-def-07",
    "unitId": "retirement",
    "skillId": "retirement-skill-03",
@@ -1252,87 +879,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-term-07",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Money an employer contributes based on the employee’s own contributions, up to a limit”",
-   "format": "multiple-choice",
-   "answer": "Employer match",
-   "options": [
-    {
-     "text": "IRA",
-     "correct": false
-    },
-    {
-     "text": "Employer match",
-     "correct": true
-    },
-    {
-     "text": "Traditional (pre-tax) account",
-     "correct": false
-    },
-    {
-     "text": "Real rate of return",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Employer match.",
-    "Example: 50% match on contributions up to 6% of salary."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-ex-07",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 50% match on contributions up to 6% of salary.",
-   "format": "multiple-choice",
-   "answer": "Employer match",
-   "options": [
-    {
-     "text": "Real rate of return",
-     "correct": false
-    },
-    {
-     "text": "Employer match",
-     "correct": true
-    },
-    {
-     "text": "4% guideline",
-     "correct": false
-    },
-    {
-     "text": "Social Security",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Employer match: Money an employer contributes based on the employee’s own contributions, up to a limit"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1384,87 +930,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s03-vocab-term-08",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The schedule by which an employee gains full ownership of employer contributions”",
-   "format": "multiple-choice",
-   "answer": "Vesting",
-   "options": [
-    {
-     "text": "Vesting",
-     "correct": true
-    },
-    {
-     "text": "Inflation",
-     "correct": false
-    },
-    {
-     "text": "4% guideline",
-     "correct": false
-    },
-    {
-     "text": "Employer match",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Vesting.",
-    "Example: Match fully owned after 3 years of service."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-ex-08",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Match fully owned after 3 years of service.",
-   "format": "multiple-choice",
-   "answer": "Vesting",
-   "options": [
-    {
-     "text": "Inflation",
-     "correct": false
-    },
-    {
-     "text": "Employer match",
-     "correct": false
-    },
-    {
-     "text": "Vesting",
-     "correct": true
-    },
-    {
-     "text": "Social Security",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Vesting: The schedule by which an employee gains full ownership of employer contributions"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s03-vocab-def-09",
    "unitId": "retirement",
    "skillId": "retirement-skill-03",
@@ -1504,87 +969,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-term-09",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A retirement account funded with pre-tax dollars; withdrawals in retirement are taxed”",
-   "format": "multiple-choice",
-   "answer": "Traditional (pre-tax) account",
-   "options": [
-    {
-     "text": "Employer match",
-     "correct": false
-    },
-    {
-     "text": "IRA",
-     "correct": false
-    },
-    {
-     "text": "Traditional (pre-tax) account",
-     "correct": true
-    },
-    {
-     "text": "Nest egg",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Traditional (pre-tax) account.",
-    "Example: Traditional 401(k) or IRA."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-ex-09",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Traditional 401(k) or IRA.",
-   "format": "multiple-choice",
-   "answer": "Traditional (pre-tax) account",
-   "options": [
-    {
-     "text": "Traditional (pre-tax) account",
-     "correct": true
-    },
-    {
-     "text": "Nest egg",
-     "correct": false
-    },
-    {
-     "text": "Vesting",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Traditional (pre-tax) account: A retirement account funded with pre-tax dollars; withdrawals in retirement are taxed"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1636,87 +1020,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s03-vocab-term-10",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A retirement account funded with after-tax dollars; qualified withdrawals in retirement are tax-free”",
-   "format": "multiple-choice",
-   "answer": "Roth account",
-   "options": [
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": false
-    },
-    {
-     "text": "Inflation",
-     "correct": false
-    },
-    {
-     "text": "Roth account",
-     "correct": true
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Roth account.",
-    "Example: Roth IRA contributions from a summer job."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-ex-10",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Roth IRA contributions from a summer job.",
-   "format": "multiple-choice",
-   "answer": "Roth account",
-   "options": [
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": false
-    },
-    {
-     "text": "Roth account",
-     "correct": true
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    },
-    {
-     "text": "Purchasing power",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Roth account: A retirement account funded with after-tax dollars; qualified withdrawals in retirement are tax-free"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s03-vocab-def-11",
    "unitId": "retirement",
    "skillId": "retirement-skill-03",
@@ -1762,87 +1065,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s03-vocab-term-11",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “An Individual Retirement Account opened by a person rather than through an employer”",
-   "format": "multiple-choice",
-   "answer": "IRA",
-   "options": [
-    {
-     "text": "Real rate of return",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    },
-    {
-     "text": "IRA",
-     "correct": true
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines IRA.",
-    "Example: Opening a Roth IRA at a brokerage."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s03-vocab-ex-11",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Opening a Roth IRA at a brokerage.",
-   "format": "multiple-choice",
-   "answer": "IRA",
-   "options": [
-    {
-     "text": "Purchasing power",
-     "correct": false
-    },
-    {
-     "text": "IRA",
-     "correct": true
-    },
-    {
-     "text": "Inflation",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of IRA: An Individual Retirement Account opened by a person rather than through an employer"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s02-vocab-def-12",
    "unitId": "retirement",
    "skillId": "retirement-skill-02",
@@ -1882,87 +1104,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s02-vocab-term-12",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The total savings accumulated for retirement”",
-   "format": "multiple-choice",
-   "answer": "Nest egg",
-   "options": [
-    {
-     "text": "Nominal value",
-     "correct": false
-    },
-    {
-     "text": "401(k)",
-     "correct": false
-    },
-    {
-     "text": "Nest egg",
-     "correct": true
-    },
-    {
-     "text": "4% guideline",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Nest egg.",
-    "Example: A goal of $900,000 by age 67."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s02-vocab-ex-12",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A goal of $900,000 by age 67.",
-   "format": "multiple-choice",
-   "answer": "Nest egg",
-   "options": [
-    {
-     "text": "Nominal value",
-     "correct": false
-    },
-    {
-     "text": "Nest egg",
-     "correct": true
-    },
-    {
-     "text": "Roth account",
-     "correct": false
-    },
-    {
-     "text": "4% guideline",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Nest egg: The total savings accumulated for retirement"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2016,87 +1157,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s02-vocab-term-13",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A planning rule of thumb that withdrawing about 4% of savings in the first year of retirement (adjusted for inflation after) may last about 30 years”",
-   "format": "multiple-choice",
-   "answer": "4% guideline",
-   "options": [
-    {
-     "text": "Nest egg",
-     "correct": false
-    },
-    {
-     "text": "4% guideline",
-     "correct": true
-    },
-    {
-     "text": "401(k)",
-     "correct": false
-    },
-    {
-     "text": "Nominal value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines 4% guideline.",
-    "Example: $800,000 × 4% = $32,000 first-year withdrawal."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s02-vocab-ex-13",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $800,000 × 4% = $32,000 first-year withdrawal.",
-   "format": "multiple-choice",
-   "answer": "4% guideline",
-   "options": [
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    },
-    {
-     "text": "Vesting",
-     "correct": false
-    },
-    {
-     "text": "Employer match",
-     "correct": false
-    },
-    {
-     "text": "4% guideline",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of 4% guideline: A planning rule of thumb that withdrawing about 4% of savings in the first year of retirement (adjusted for inflation after) may last about 30 years"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s02-vocab-def-14",
    "unitId": "retirement",
    "skillId": "retirement-skill-02",
@@ -2142,87 +1202,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-retirement-s02-vocab-term-14",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A federal program funded by payroll taxes that provides retirement, disability, and survivor benefits”",
-   "format": "multiple-choice",
-   "answer": "Social Security",
-   "options": [
-    {
-     "text": "Inflation",
-     "correct": false
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    },
-    {
-     "text": "Nest egg",
-     "correct": false
-    },
-    {
-     "text": "Social Security",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Social Security.",
-    "Example: A monthly benefit beginning at age 62–70."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s02-vocab-ex-14",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A monthly benefit beginning at age 62–70.",
-   "format": "multiple-choice",
-   "answer": "Social Security",
-   "options": [
-    {
-     "text": "Real rate of return",
-     "correct": false
-    },
-    {
-     "text": "Social Security",
-     "correct": true
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    },
-    {
-     "text": "401(k)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Social Security: A federal program funded by payroll taxes that provides retirement, disability, and survivor benefits"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-retirement-s04-vocab-def-15",
    "unitId": "retirement",
    "skillId": "retirement-skill-04",
@@ -2262,87 +1241,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s04-vocab-term-15",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A return adjusted for inflation: (1 + nominal) ÷ (1 + inflation) − 1”",
-   "format": "multiple-choice",
-   "answer": "Real rate of return",
-   "options": [
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": false
-    },
-    {
-     "text": "Traditional (pre-tax) account",
-     "correct": false
-    },
-    {
-     "text": "Consumer Price Index (CPI)",
-     "correct": false
-    },
-    {
-     "text": "Real rate of return",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Real rate of return.",
-    "Example: 6% nominal and 2.5% inflation → about 3.4% real."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-retirement-s04-vocab-ex-15",
-   "unitId": "retirement",
-   "skillId": "retirement-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 6% nominal and 2.5% inflation → about 3.4% real.",
-   "format": "multiple-choice",
-   "answer": "Real rate of return",
-   "options": [
-    {
-     "text": "Vesting",
-     "correct": false
-    },
-    {
-     "text": "IRA",
-     "correct": false
-    },
-    {
-     "text": "Real rate of return",
-     "correct": true
-    },
-    {
-     "text": "Real value (today’s dollars)",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Real rate of return: A return adjusted for inflation: (1 + nominal) ÷ (1 + inflation) − 1"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -5623,6 +4521,818 @@
    ]
   },
   {
+   "id": "fa-retirement-s03-ap-match-calc-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "ap-match-calc",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego earns $94,000 and contributes 8% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
+   "format": "short-answer",
+   "answer": "$2,820",
+   "numeric": {
+    "value": 2820,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Matched contribution rate = the smaller of 8% and 6% = 6%.",
+    "Match = 50% × 6% × $94,000 = $2,820.",
+    "This captures the full match."
+   ]
+  },
+  {
+   "id": "fa-retirement-s03-ap-match-calc-02",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "ap-match-calc",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley earns $51,000 and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
+   "format": "short-answer",
+   "answer": "$1,530",
+   "numeric": {
+    "value": 1530,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Matched contribution rate = the smaller of 6% and 6% = 6%.",
+    "Match = 50% × 6% × $51,000 = $1,530.",
+    "This captures the full match."
+   ]
+  },
+  {
+   "id": "fa-retirement-s03-ap-match-calc-03",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "ap-match-calc",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler earns $42,000 and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
+   "format": "short-answer",
+   "answer": "$1,260",
+   "numeric": {
+    "value": 1260,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Matched contribution rate = the smaller of 6% and 6% = 6%.",
+    "Match = 50% × 6% × $42,000 = $1,260.",
+    "This captures the full match."
+   ]
+  },
+  {
+   "id": "fa-retirement-s03-ap-match-calc-04",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "ap-match-calc",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Andre earns $74,000 and contributes 4% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
+   "format": "short-answer",
+   "answer": "$1,480",
+   "numeric": {
+    "value": 1480,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Matched contribution rate = the smaller of 4% and 6% = 4%.",
+    "Match = 50% × 4% × $74,000 = $1,480.",
+    "Raising contributions to 6% would earn the full match."
+   ]
+  },
+  {
+   "id": "fa-retirement-s03-ap-match-calc-05",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "ap-match-calc",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana earns $72,000 and contributes 6% to a 401(k). The employer matches 50% of contributions up to 6% of salary. How much does the employer add per year?",
+   "format": "short-answer",
+   "answer": "$2,160",
+   "numeric": {
+    "value": 2160,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Matched contribution rate = the smaller of 6% and 6% = 6%.",
+    "Match = 50% × 6% × $72,000 = $2,160.",
+    "This captures the full match."
+   ]
+  },
+  {
+   "id": "fa-retirement-s03-ap-match-calc-06",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "ap-match-calc",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus earns $58,000 and contributes 4% to a 401(k). The employer matches 100% of contributions up to 6% of salary. How much does the employer add per year?",
+   "format": "short-answer",
+   "answer": "$2,320",
+   "numeric": {
+    "value": 2320,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Matched contribution rate = the smaller of 4% and 6% = 4%.",
+    "Match = 100% × 4% × $58,000 = $2,320.",
+    "Raising contributions to 6% would earn the full match."
+   ]
+  },
+  {
+   "id": "fa-retirement-s03-ap-match-calc-07",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-03",
+   "level": "standard",
+   "family": "ap-match-calc",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara earns $85,000 and contributes 8% to a 401(k). The employer matches 100% of contributions up to 6% of salary. How much does the employer add per year?",
+   "format": "short-answer",
+   "answer": "$5,100",
+   "numeric": {
+    "value": 5100,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Matched contribution rate = the smaller of 8% and 6% = 6%.",
+    "Match = 100% × 6% × $85,000 = $5,100.",
+    "This captures the full match."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-ap-nest-egg-4-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "ap-nest-egg-4",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mateo expects to spend $44,000 per year in retirement and receive $14,000 per year from Social Security. Using the 4% rule, how much should he have saved?",
+   "format": "short-answer",
+   "answer": "$750,000",
+   "numeric": {
+    "value": 750000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Needed from savings = $44,000 − $14,000 = $30,000 per year.",
+    "4% rule: savings ≈ $30,000 ÷ 0.04 = $750,000.",
+    "The 4% rule is a rough guide, not a guarantee."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-ap-nest-egg-4-02",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "ap-nest-egg-4",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah expects to spend $50,000 per year in retirement and receive $20,500 per year from Social Security. Using the 4% rule, how much should he have saved?",
+   "format": "short-answer",
+   "answer": "$737,500",
+   "numeric": {
+    "value": 737500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Needed from savings = $50,000 − $20,500 = $29,500 per year.",
+    "4% rule: savings ≈ $29,500 ÷ 0.04 = $737,500.",
+    "The 4% rule is a rough guide, not a guarantee."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-ap-nest-egg-4-03",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "ap-nest-egg-4",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego expects to spend $55,000 per year in retirement and receive $22,500 per year from Social Security. Using the 4% rule, how much should he have saved?",
+   "format": "short-answer",
+   "answer": "$812,500",
+   "numeric": {
+    "value": 812500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Needed from savings = $55,000 − $22,500 = $32,500 per year.",
+    "4% rule: savings ≈ $32,500 ÷ 0.04 = $812,500.",
+    "The 4% rule is a rough guide, not a guarantee."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-ap-nest-egg-4-04",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "ap-nest-egg-4",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani expects to spend $69,000 per year in retirement and receive $21,500 per year from Social Security. Using the 4% rule, how much should she have saved?",
+   "format": "short-answer",
+   "answer": "$1,187,500",
+   "numeric": {
+    "value": 1187500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Needed from savings = $69,000 − $21,500 = $47,500 per year.",
+    "4% rule: savings ≈ $47,500 ÷ 0.04 = $1,187,500.",
+    "The 4% rule is a rough guide, not a guarantee."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-ap-nest-egg-4-05",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "ap-nest-egg-4",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana expects to spend $50,000 per year in retirement and receive $20,500 per year from Social Security. Using the 4% rule, how much should she have saved?",
+   "format": "short-answer",
+   "answer": "$737,500",
+   "numeric": {
+    "value": 737500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Needed from savings = $50,000 − $20,500 = $29,500 per year.",
+    "4% rule: savings ≈ $29,500 ÷ 0.04 = $737,500.",
+    "The 4% rule is a rough guide, not a guarantee."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-ap-nest-egg-4-06",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "ap-nest-egg-4",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah expects to spend $51,000 per year in retirement and receive $18,000 per year from Social Security. Using the 4% rule, how much should he have saved?",
+   "format": "short-answer",
+   "answer": "$825,000",
+   "numeric": {
+    "value": 825000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Needed from savings = $51,000 − $18,000 = $33,000 per year.",
+    "4% rule: savings ≈ $33,000 ÷ 0.04 = $825,000.",
+    "The 4% rule is a rough guide, not a guarantee."
+   ]
+  },
+  {
+   "id": "fa-retirement-s02-ap-nest-egg-4-07",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-02",
+   "level": "standard",
+   "family": "ap-nest-egg-4",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah expects to spend $42,000 per year in retirement and receive $17,500 per year from Social Security. Using the 4% rule, how much should he have saved?",
+   "format": "short-answer",
+   "answer": "$612,500",
+   "numeric": {
+    "value": 612500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Needed from savings = $42,000 − $17,500 = $24,500 per year.",
+    "4% rule: savings ≈ $24,500 ÷ 0.04 = $612,500.",
+    "The 4% rule is a rough guide, not a guarantee."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-ap-future-price-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "ap-future-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A month of groceries costs $420.00 today. If inflation averages 2.5% per year, what will it cost in 20 years?",
+   "format": "short-answer",
+   "answer": "$688.22",
+   "numeric": {
+    "value": 688.22,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Future price = $420.00 × (1 + 0.025)^20.",
+    "= $420.00 × 1.6386 = $688.22.",
+    "Prices roughly double every 72 ÷ (rate) years."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-ap-future-price-02",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "ap-future-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A tank of gas costs $52.00 today. If inflation averages 2.5% per year, what will it cost in 10 years?",
+   "format": "short-answer",
+   "answer": "$66.56",
+   "numeric": {
+    "value": 66.56,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Future price = $52.00 × (1 + 0.025)^10.",
+    "= $52.00 × 1.2801 = $66.56.",
+    "Prices roughly double every 72 ÷ (rate) years."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-ap-future-price-03",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "ap-future-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A movie ticket costs $13.50 today. If inflation averages 3.5% per year, what will it cost in 10 years?",
+   "format": "short-answer",
+   "answer": "$19.04",
+   "numeric": {
+    "value": 19.04,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Future price = $13.50 × (1 + 0.035)^10.",
+    "= $13.50 × 1.4106 = $19.04.",
+    "Prices roughly double every 72 ÷ (rate) years."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-ap-future-price-04",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "ap-future-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A used car costs $9,500.00 today. If inflation averages 3% per year, what will it cost in 30 years?",
+   "format": "short-answer",
+   "answer": "$23,058.99",
+   "numeric": {
+    "value": 23058.99,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Future price = $9,500.00 × (1 + 0.03)^30.",
+    "= $9,500.00 × 2.4273 = $23,058.99.",
+    "Prices roughly double every 72 ÷ (rate) years."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-ap-future-price-05",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "ap-future-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A month of groceries costs $420.00 today. If inflation averages 3.5% per year, what will it cost in 10 years?",
+   "format": "short-answer",
+   "answer": "$592.45",
+   "numeric": {
+    "value": 592.45,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Future price = $420.00 × (1 + 0.035)^10.",
+    "= $420.00 × 1.4106 = $592.45.",
+    "Prices roughly double every 72 ÷ (rate) years."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-ap-future-price-06",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "ap-future-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A year of college tuition costs $11,200.00 today. If inflation averages 3% per year, what will it cost in 10 years?",
+   "format": "short-answer",
+   "answer": "$15,051.86",
+   "numeric": {
+    "value": 15051.86,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Future price = $11,200.00 × (1 + 0.03)^10.",
+    "= $11,200.00 × 1.3439 = $15,051.86.",
+    "Prices roughly double every 72 ÷ (rate) years."
+   ]
+  },
+  {
+   "id": "fa-retirement-s01-ap-future-price-07",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-01",
+   "level": "standard",
+   "family": "ap-future-price",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A year of rent costs $18,000.00 today. If inflation averages 2.5% per year, what will it cost in 30 years?",
+   "format": "short-answer",
+   "answer": "$37,756.22",
+   "numeric": {
+    "value": 37756.22,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Future price = $18,000.00 × (1 + 0.025)^30.",
+    "= $18,000.00 × 2.0976 = $37,756.22.",
+    "Prices roughly double every 72 ÷ (rate) years."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-ap-real-return-01",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "ap-real-return",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An investment earns 8% per year while inflation is 3.5%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
+   "format": "short-answer",
+   "answer": "4.35%",
+   "numeric": {
+    "value": 4.35,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
+    "(1 + 0.08) ÷ (1 + 0.035) − 1 = 0.04348.",
+    "≈ 4.35%. The shortcut 8% − 3.5% = 4.5% is close but slightly high."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-ap-real-return-02",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "ap-real-return",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An investment earns 4% per year while inflation is 3.5%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
+   "format": "short-answer",
+   "answer": "0.48%",
+   "numeric": {
+    "value": 0.48,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
+    "(1 + 0.04) ÷ (1 + 0.035) − 1 = 0.00483.",
+    "≈ 0.48%. The shortcut 4% − 3.5% = 0.5% is close but slightly high."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-ap-real-return-03",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "ap-real-return",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An investment earns 6% per year while inflation is 2%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
+   "format": "short-answer",
+   "answer": "3.92%",
+   "numeric": {
+    "value": 3.92,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
+    "(1 + 0.06) ÷ (1 + 0.02) − 1 = 0.03922.",
+    "≈ 3.92%. The shortcut 6% − 2% = 4% is close but slightly high."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-ap-real-return-04",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "ap-real-return",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An investment earns 8% per year while inflation is 3%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
+   "format": "short-answer",
+   "answer": "4.85%",
+   "numeric": {
+    "value": 4.85,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
+    "(1 + 0.08) ÷ (1 + 0.03) − 1 = 0.04854.",
+    "≈ 4.85%. The shortcut 8% − 3% = 5% is close but slightly high."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-ap-real-return-05",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "ap-real-return",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An investment earns 7% per year while inflation is 2%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
+   "format": "short-answer",
+   "answer": "4.9%",
+   "numeric": {
+    "value": 4.9,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
+    "(1 + 0.07) ÷ (1 + 0.02) − 1 = 0.04902.",
+    "≈ 4.90%. The shortcut 7% − 2% = 5% is close but slightly high."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-ap-real-return-06",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "ap-real-return",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An investment earns 4% per year while inflation is 2.5%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
+   "format": "short-answer",
+   "answer": "1.46%",
+   "numeric": {
+    "value": 1.46,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
+    "(1 + 0.04) ÷ (1 + 0.025) − 1 = 0.01463.",
+    "≈ 1.46%. The shortcut 4% − 2.5% = 1.5% is close but slightly high."
+   ]
+  },
+  {
+   "id": "fa-retirement-s04-ap-real-return-07",
+   "unitId": "retirement",
+   "skillId": "retirement-skill-04",
+   "level": "standard",
+   "family": "ap-real-return",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "An investment earns 7% per year while inflation is 3%. What is the real (inflation-adjusted) return, to the nearest hundredth of a percent?",
+   "format": "short-answer",
+   "answer": "3.88%",
+   "numeric": {
+    "value": 3.88,
+    "tolerance": 0.01,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Real return = (1 + nominal) ÷ (1 + inflation) − 1.",
+    "(1 + 0.07) ÷ (1 + 0.03) − 1 = 0.03883.",
+    "≈ 3.88%. The shortcut 7% − 3% = 4% is close but slightly high."
+   ]
+  },
+  {
    "id": "fa-retirement-s01-err-inflation-linear-01",
    "unitId": "retirement",
    "skillId": "retirement-skill-01",
@@ -5698,7 +5408,7 @@
    "calc": {
     "kind": "pv",
     "inputs": [
-     50000.0,
+     50000,
      2.5,
      25
     ],
@@ -5740,7 +5450,7 @@
    "calc": {
     "kind": "pct-div",
     "inputs": [
-     800000.0,
+     800000,
      4,
      12
     ],
@@ -5795,8 +5505,8 @@
    "calc": {
     "kind": "annuity",
     "inputs": [
-     250.0,
-     7.0,
+     250,
+     7,
      420
     ],
     "correct": 450263.65,
@@ -5838,11 +5548,11 @@
    "calc": {
     "kind": "match",
     "inputs": [
-     64000.0,
+     64000,
      10,
      4
     ],
-    "correct": 2560.0,
+    "correct": 2560,
     "unit": "USD"
    },
    "prompt": "Elena earns $64,000.00 and contributes 10% to a 401(k). The employer matches 100% of contributions up to 4% of salary. Elena’s work: Employer match = 10% × $64,000.00 = $6,400.00. What mistake did Elena make?",
@@ -5893,10 +5603,10 @@
    "calc": {
     "kind": "pct",
     "inputs": [
-     4500.0,
+     4500,
      12
     ],
-    "correct": 540.0,
+    "correct": 540,
     "unit": "USD"
    },
    "prompt": "Noah contributes $4,500.00 to a traditional (pre-tax) retirement account and is in the 12% federal bracket. Noah’s work: Tax saved this year = $4,500.00 × (1 − 0.12) = $3,960.00. How much federal tax is saved this year?",
@@ -5908,7 +5618,7 @@
     "Correct result: $540.00."
    ],
    "numeric": {
-    "value": 540.0,
+    "value": 540,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -5934,10 +5644,10 @@
    "calc": {
     "kind": "sub",
     "inputs": [
-     6.0,
-     2.0
+     6,
+     2
     ],
-    "correct": 4.0,
+    "correct": 4,
     "unit": "%"
    },
    "prompt": "Jordan’s retirement account earns 6% per year and inflation is 2%. Jordan’s work: Growth in purchasing power ≈ 6% + 2% = 8%. What mistake did Jordan make?",

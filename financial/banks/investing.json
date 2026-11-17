@@ -377,89 +377,186 @@
  ],
  "cheatSheet": {
   "title": "Investing & Compound Growth",
-  "sections": [
+  "focus": "model compound growth and regular deposits",
+  "morefocus": "compare risk, fees and investment horizons",
+  "front": [
    {
-    "h": "Key formulas",
+    "title": "Investment vocabulary",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
     "rows": [
      [
-      "Compound amount",
-      "A = P(1 + [[r || n]])^(nt)"
+      "Stock",
+      "Ownership share; value and dividends can change."
      ],
      [
-      "Future value of deposits",
-      "FV = PMT · [[(1 + i)^N − 1 || i]]"
+      "Bond",
+      "Debt issued by a borrower; interest and default risk."
      ],
      [
-      "Deposit for a goal",
-      "PMT = [[FV · i || (1 + i)^N − 1]]"
+      "Fund",
+      "Basket of holdings; breadth and fees vary."
      ],
      [
-      "Rule of 72",
-      "years to double ≈ [[72 || rate %]]"
-     ],
-     [
-      "Percent return",
-      "[[end − start || start]]"
-     ],
-     [
-      "Real return",
-      "[[1 + nominal || 1 + inflation]] − 1"
-     ],
-     [
-      "Gain to recover a loss",
-      "[[1 || 1 − loss]] − 1"
+      "Diversification",
+      "Spread exposure; reduces concentration, not all risk."
      ]
-    ]
+    ],
+    "after": "",
+    "color": "purple"
    },
    {
-    "h": "Match the horizon",
+    "title": "Grow a lump sum",
+    "kind": "html",
+    "html": "⟨A=P\\left(1+\\dfrac{r}{m}\\right)^{mt}⟩<br>P = initial dollars; A = ending dollars; r = nominal annual decimal return; m = compounds per year; t = years.<div class=\"ex\">$1,000 at a hypothetical 6%, annually for 10 years:<br>⟨1{,}000(1.06)^{10}\\approx1{,}790.85⟩<br><span class=\"ans\">About $1,790.85</span></div>No deposits, fees or taxes; a constant return is a model, not a promise.",
+    "color": "blue"
+   },
+   {
+    "title": "Regular deposits",
+    "kind": "html",
+    "html": "⟨F=D\\dfrac{(1+i)^N-1}{i}⟩<br>D = dollars deposited at each period’s end; i = decimal return per period; N = deposit count; F = future dollars.<br>For monthly deposits: ⟨i=\\tfrac{r}{12}⟩, ⟨N=12t⟩.<div class=\"ex\">Assumes no initial balance, fixed return, no fees or tax. At 0% return, ⟨F=DN⟩.</div>Beginning-of-period deposits grow one extra period: multiply by ⟨1+i⟩.",
+    "color": "green"
+   },
+   {
+    "title": "Long-term deposit example",
+    "kind": "example",
+    "text": "Hypothetical 7% nominal annual return, monthly compounding; month-end deposits; no fees or tax.",
+    "example": "$200 monthly for 35 years.",
+    "steps": [
+     [
+      "Periods:",
+      "⟨N=420,\\quad i=\\tfrac{0.07}{12}⟩"
+     ],
+     [
+      "Future value:",
+      "⟨F\\approx360{,}210.92⟩"
+     ],
+     [
+      "Contributions:",
+      "⟨200(420)=84{,}000⟩"
+     ]
+    ],
+    "answer": "$276,210.92 modeled growth",
+    "color": "orange"
+   },
+   {
+    "title": "Deposit needed for a goal",
+    "kind": "html",
+    "html": "⟨D=\\dfrac{Fi}{(1+i)^N-1}⟩<br>F = goal in future dollars; i = decimal return per period; N = deposits.<div class=\"ex\">Goal $10,000; 60 month-end deposits; hypothetical 6% nominal return:<br>⟨D=\\dfrac{10{,}000(0.005)}{(1.005)^{60}-1}⟩<br><span class=\"ans\">About $143.33 monthly</span></div>No starting balance, fees or tax; plan extra margin because actual returns vary.",
+    "color": "pink"
+   },
+   {
+    "title": "Match risk to the goal",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "Need the money",
+     "What to consider"
+    ],
     "rows": [
      [
-      "< 3 years",
-      "Savings, CDs"
+      "Soon / essential goal",
+      "Accessible cash or suitable insured deposits."
      ],
      [
-      "3–10 years",
-      "Mix of bonds and stocks"
+      "Several years away",
+      "Balance growth potential with possible losses."
      ],
      [
-      "10+ years",
-      "Diversified stock-heavy funds"
-     ],
-     [
-      "Any horizon",
-      "Diversify; keep fees low"
+      "Decades away",
+      "Diversified investments may fit; losses still occur."
      ]
-    ]
+    ],
+    "after": "Time horizon, ability to absorb loss and willingness to take risk all matter. A long horizon does not guarantee a gain.",
+    "color": "teal"
    }
   ],
-  "example": {
-   "title": "Worked example",
-   "lines": [
-    "$200/month for 35 years at a hypothetical 7%",
-    "i = 0.07 ÷ 12, N = 420",
-    "FV ≈ $360,000; contributions $84,000",
-    "Growth ≈ $276,000 — time does most of the work"
-   ]
-  },
-  "misconceptions": [
-   "High average returns are guaranteed.",
-   "Doubling the rate doubles the result.",
-   "Small fees do not matter.",
-   "Diversification eliminates risk."
-  ],
-  "questions": [
-   "When will I need this money?",
-   "What could I lose in a bad year?",
-   "What are the fees?",
-   "Am I diversified?",
-   "Have I built an emergency fund and paid off high-interest debt first?"
-  ],
-  "tips": [
-   "Start early, even small.",
-   "Automate contributions.",
-   "Prefer low-cost diversified funds.",
-   "Don’t panic-sell in downturns if your horizon is long."
+  "back": [
+   {
+    "title": "Which fund costs less?",
+    "kind": "example",
+    "text": "Same gross 7% return assumed, 20 years, $10,000 initial; approximate net return = gross − annual fee. No tax; difference uses unrounded balances.",
+    "example": "A fee 0.2%; B fee 1.0%.",
+    "steps": [
+     [
+      "A:",
+      "⟨10{,}000(1.068)^{20}\\approx37{,}275.64⟩"
+     ],
+     [
+      "B:",
+      "⟨10{,}000(1.06)^{20}\\approx32{,}071.35⟩"
+     ]
+    ],
+    "answer": "A ends about $5,204.28 higher",
+    "color": "purple"
+   },
+   {
+    "title": "Compare beyond the fee",
+    "kind": "html",
+    "html": "The fee comparison favors A <b>if risk, holdings and services are otherwise equal</b>. Ask what each fund owns and whether advice or restrictions differ.<div class=\"ex\"><b>Expense ratio:</b> annual fund cost as a percent of assets.<br>0.2% of $10,000 = $20 for one year at a constant balance.</div>Small recurring costs can compound into a large difference. Compare like with like.",
+    "color": "blue"
+   },
+   {
+    "title": "Return & purchasing power",
+    "kind": "html",
+    "html": "⟨\\text{Return}=\\dfrac{\\text{end}-\\text{start}}{\\text{start}}⟩<br>No added or withdrawn cash; add distributions to the ending value when measuring total return.<br>⟨\\text{Real return}=\\dfrac{1+r}{1+f}-1⟩<br>r = nominal return; f = inflation, both annual decimals.<div class=\"ex\">7% return, 3% inflation:<br>⟨\\tfrac{1.07}{1.03}-1\\approx3.88\\%⟩ real gain.</div>Subtracting inflation is only an approximation.",
+    "color": "green"
+   },
+   {
+    "title": "A loss needs a bigger gain",
+    "kind": "example",
+    "text": "Percent changes apply to the new balance, not always the original amount.",
+    "example": "$1,000 falls 20% to $800.",
+    "steps": [
+     [
+      "A 20% recovery:",
+      "⟨800(1.20)=960⟩"
+     ],
+     [
+      "Gain needed:",
+      "⟨\\dfrac{1{,}000-800}{800}=25\\%⟩"
+     ]
+    ],
+    "answer": "Need 25% to recover a 20% loss",
+    "color": "orange"
+   },
+   {
+    "title": "Rule of 72",
+    "kind": "html",
+    "html": "Approximate doubling time:<br>⟨\\text{years}\\approx\\dfrac{72}{\\text{annual rate in percent}}⟩<div class=\"ex\">At hypothetical 6% growth:<br>⟨\\tfrac{72}{6}=12⟩ years (approximate).<br>Exact factor after 12 years: ⟨1.06^{12}\\approx2.012⟩.</div>Use 6 in the shortcut, not 0.06. Best as a rough estimate for moderate positive rates; actual market paths differ.",
+    "color": "pink"
+   },
+   {
+    "title": "Reminders & mistakes",
+    "kind": "mistakes",
+    "good": [
+     "State return, deposit timing, fees and time period.",
+     "Keep money for near-term essential needs accessible."
+    ],
+    "bad": [
+     [
+      "Average return = guaranteed",
+      "real results fluctuate."
+     ],
+     [
+      "Diversification eliminates risk",
+      "it cannot prevent all losses."
+     ],
+     [
+      "Future dollars = today’s value",
+      "adjust for inflation."
+     ],
+     [
+      "Higher past return proves better",
+      "compare risk and costs too."
+     ]
+    ],
+    "color": "teal"
+   }
   ]
  },
  "questions": [
@@ -503,87 +600,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s01-vocab-term-01",
-   "unitId": "investing",
-   "skillId": "investing-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Growth in which earnings are added to the balance and then earn returns themselves”",
-   "format": "multiple-choice",
-   "answer": "Compound growth",
-   "options": [
-    {
-     "text": "Compound growth",
-     "correct": true
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Rate of return",
-     "correct": false
-    },
-    {
-     "text": "Rule of 72",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Compound growth.",
-    "Example: $1,000.00 growing 7% per year becomes $1,070.00, then $1,144.90."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s01-vocab-ex-01",
-   "unitId": "investing",
-   "skillId": "investing-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $1,000.00 growing 7% per year becomes $1,070.00, then $1,144.90.",
-   "format": "multiple-choice",
-   "answer": "Compound growth",
-   "options": [
-    {
-     "text": "Rule of 72",
-     "correct": false
-    },
-    {
-     "text": "Real return",
-     "correct": false
-    },
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Compound growth",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Compound growth: Growth in which earnings are added to the balance and then earn returns themselves"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -635,87 +651,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s01-vocab-term-02",
-   "unitId": "investing",
-   "skillId": "investing-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The gain or loss on an investment over a period, expressed as a percent of the starting value”",
-   "format": "multiple-choice",
-   "answer": "Rate of return",
-   "options": [
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Rate of return",
-     "correct": true
-    },
-    {
-     "text": "Volatility",
-     "correct": false
-    },
-    {
-     "text": "Stock",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Rate of return.",
-    "Example: A $500 investment worth $540 a year later returned 8%."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s01-vocab-ex-02",
-   "unitId": "investing",
-   "skillId": "investing-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A $500 investment worth $540 a year later returned 8%.",
-   "format": "multiple-choice",
-   "answer": "Rate of return",
-   "options": [
-    {
-     "text": "Rule of 72",
-     "correct": false
-    },
-    {
-     "text": "Index fund",
-     "correct": false
-    },
-    {
-     "text": "Rate of return",
-     "correct": true
-    },
-    {
-     "text": "Stock",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Rate of return: The gain or loss on an investment over a period, expressed as a percent of the starting value"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s01-vocab-def-03",
    "unitId": "investing",
    "skillId": "investing-skill-01",
@@ -755,87 +690,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s01-vocab-term-03",
-   "unitId": "investing",
-   "skillId": "investing-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A shortcut estimating years to double: 72 divided by the annual percent return”",
-   "format": "multiple-choice",
-   "answer": "Rule of 72",
-   "options": [
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Rule of 72",
-     "correct": true
-    },
-    {
-     "text": "Real return",
-     "correct": false
-    },
-    {
-     "text": "Stock",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Rule of 72.",
-    "Example: At 6%, money doubles in about 72 ÷ 6 = 12 years."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s01-vocab-ex-03",
-   "unitId": "investing",
-   "skillId": "investing-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? At 6%, money doubles in about 72 ÷ 6 = 12 years.",
-   "format": "multiple-choice",
-   "answer": "Rule of 72",
-   "options": [
-    {
-     "text": "Stock",
-     "correct": false
-    },
-    {
-     "text": "Rule of 72",
-     "correct": true
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": false
-    },
-    {
-     "text": "Compound growth",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Rule of 72: A shortcut estimating years to double: 72 divided by the annual percent return"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -887,87 +741,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s02-vocab-term-04",
-   "unitId": "investing",
-   "skillId": "investing-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A regular, repeated deposit into an investment, such as monthly”",
-   "format": "multiple-choice",
-   "answer": "Recurring contribution",
-   "options": [
-    {
-     "text": "Time horizon",
-     "correct": false
-    },
-    {
-     "text": "Dollar-cost averaging",
-     "correct": false
-    },
-    {
-     "text": "Recurring contribution",
-     "correct": true
-    },
-    {
-     "text": "Rule of 72",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Recurring contribution.",
-    "Example: $100 automatically invested on the 1st of every month."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s02-vocab-ex-04",
-   "unitId": "investing",
-   "skillId": "investing-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $100 automatically invested on the 1st of every month.",
-   "format": "multiple-choice",
-   "answer": "Recurring contribution",
-   "options": [
-    {
-     "text": "Real return",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": false
-    },
-    {
-     "text": "Recurring contribution",
-     "correct": true
-    },
-    {
-     "text": "Bond",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Recurring contribution: A regular, repeated deposit into an investment, such as monthly"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s02-vocab-def-05",
    "unitId": "investing",
    "skillId": "investing-skill-02",
@@ -1007,87 +780,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s02-vocab-term-05",
-   "unitId": "investing",
-   "skillId": "investing-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The value of money or a series of payments at a future date given a rate of return”",
-   "format": "multiple-choice",
-   "answer": "Future value",
-   "options": [
-    {
-     "text": "Bond",
-     "correct": false
-    },
-    {
-     "text": "Index fund",
-     "correct": false
-    },
-    {
-     "text": "Rate of return",
-     "correct": false
-    },
-    {
-     "text": "Future value",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Future value.",
-    "Example: FV of $200/month for 30 years at 6% ≈ $200,903."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s02-vocab-ex-05",
-   "unitId": "investing",
-   "skillId": "investing-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? FV of $200/month for 30 years at 6% ≈ $200,903.",
-   "format": "multiple-choice",
-   "answer": "Future value",
-   "options": [
-    {
-     "text": "Compound growth",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": false
-    },
-    {
-     "text": "Future value",
-     "correct": true
-    },
-    {
-     "text": "Time horizon",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Future value: The value of money or a series of payments at a future date given a rate of return"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1139,87 +831,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s02-vocab-term-06",
-   "unitId": "investing",
-   "skillId": "investing-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Investing a fixed dollar amount on a regular schedule regardless of price”",
-   "format": "multiple-choice",
-   "answer": "Dollar-cost averaging",
-   "options": [
-    {
-     "text": "Risk",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": false
-    },
-    {
-     "text": "Bond",
-     "correct": false
-    },
-    {
-     "text": "Dollar-cost averaging",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Dollar-cost averaging.",
-    "Example: Buying more shares when prices are low and fewer when high with the same $150."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s02-vocab-ex-06",
-   "unitId": "investing",
-   "skillId": "investing-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Buying more shares when prices are low and fewer when high with the same $150.",
-   "format": "multiple-choice",
-   "answer": "Dollar-cost averaging",
-   "options": [
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Time horizon",
-     "correct": false
-    },
-    {
-     "text": "Index fund",
-     "correct": false
-    },
-    {
-     "text": "Dollar-cost averaging",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Dollar-cost averaging: Investing a fixed dollar amount on a regular schedule regardless of price"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s03-vocab-def-07",
    "unitId": "investing",
    "skillId": "investing-skill-03",
@@ -1259,87 +870,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-term-07",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A share of ownership in a company whose value can rise or fall”",
-   "format": "multiple-choice",
-   "answer": "Stock",
-   "options": [
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Rule of 72",
-     "correct": false
-    },
-    {
-     "text": "Stock",
-     "correct": true
-    },
-    {
-     "text": "Bond",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Stock.",
-    "Example: Owning 10 shares of a fictional company, Brightline Energy."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-ex-07",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Owning 10 shares of a fictional company, Brightline Energy.",
-   "format": "multiple-choice",
-   "answer": "Stock",
-   "options": [
-    {
-     "text": "Risk",
-     "correct": false
-    },
-    {
-     "text": "Dollar-cost averaging",
-     "correct": false
-    },
-    {
-     "text": "Stock",
-     "correct": true
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Stock: A share of ownership in a company whose value can rise or fall"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1391,87 +921,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s03-vocab-term-08",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A loan to a government or company that pays interest and returns principal at maturity”",
-   "format": "multiple-choice",
-   "answer": "Bond",
-   "options": [
-    {
-     "text": "Bond",
-     "correct": true
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": false
-    },
-    {
-     "text": "Compound growth",
-     "correct": false
-    },
-    {
-     "text": "Rule of 72",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Bond.",
-    "Example: A 10-year bond paying 4% interest per year."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-ex-08",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A 10-year bond paying 4% interest per year.",
-   "format": "multiple-choice",
-   "answer": "Bond",
-   "options": [
-    {
-     "text": "Risk",
-     "correct": false
-    },
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Bond",
-     "correct": true
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Bond: A loan to a government or company that pays interest and returns principal at maturity"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s03-vocab-def-09",
    "unitId": "investing",
    "skillId": "investing-skill-03",
@@ -1511,87 +960,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-term-09",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A fund that holds the investments in a market index to match its performance at low cost”",
-   "format": "multiple-choice",
-   "answer": "Index fund",
-   "options": [
-    {
-     "text": "Compound growth",
-     "correct": false
-    },
-    {
-     "text": "Volatility",
-     "correct": false
-    },
-    {
-     "text": "Recurring contribution",
-     "correct": false
-    },
-    {
-     "text": "Index fund",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Index fund.",
-    "Example: A fund tracking a broad U.S. stock index."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-ex-09",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A fund tracking a broad U.S. stock index.",
-   "format": "multiple-choice",
-   "answer": "Index fund",
-   "options": [
-    {
-     "text": "Risk",
-     "correct": false
-    },
-    {
-     "text": "Index fund",
-     "correct": true
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Rule of 72",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Index fund: A fund that holds the investments in a market index to match its performance at low cost"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1643,87 +1011,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s03-vocab-term-10",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The yearly fee a fund charges, as a percent of the amount invested”",
-   "format": "multiple-choice",
-   "answer": "Expense ratio",
-   "options": [
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Time horizon",
-     "correct": false
-    },
-    {
-     "text": "Expense ratio",
-     "correct": true
-    },
-    {
-     "text": "Real return",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Expense ratio.",
-    "Example: 0.05% vs. 1.00% — on $50,000, that is $25 vs. $500 per year."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-ex-10",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 0.05% vs. 1.00% — on $50,000, that is $25 vs. $500 per year.",
-   "format": "multiple-choice",
-   "answer": "Expense ratio",
-   "options": [
-    {
-     "text": "Expense ratio",
-     "correct": true
-    },
-    {
-     "text": "Risk",
-     "correct": false
-    },
-    {
-     "text": "Time horizon",
-     "correct": false
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Expense ratio: The yearly fee a fund charges, as a percent of the amount invested"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s04-vocab-def-11",
    "unitId": "investing",
    "skillId": "investing-skill-04",
@@ -1763,87 +1050,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s04-vocab-term-11",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Spreading money across many investments so that one loss has less impact”",
-   "format": "multiple-choice",
-   "answer": "Diversification",
-   "options": [
-    {
-     "text": "Stock",
-     "correct": false
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Time horizon",
-     "correct": false
-    },
-    {
-     "text": "Diversification",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Diversification.",
-    "Example: Owning hundreds of companies through an index fund instead of one stock."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s04-vocab-ex-11",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Owning hundreds of companies through an index fund instead of one stock.",
-   "format": "multiple-choice",
-   "answer": "Diversification",
-   "options": [
-    {
-     "text": "Rate of return",
-     "correct": false
-    },
-    {
-     "text": "Recurring contribution",
-     "correct": false
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Diversification",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Diversification: Spreading money across many investments so that one loss has less impact"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -1895,87 +1101,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s04-vocab-term-12",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The possibility that actual returns differ from expected returns, including losing money”",
-   "format": "multiple-choice",
-   "answer": "Risk",
-   "options": [
-    {
-     "text": "Compound growth",
-     "correct": false
-    },
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Volatility",
-     "correct": false
-    },
-    {
-     "text": "Risk",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Risk.",
-    "Example: A stock fund could fall 20% in a bad year."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s04-vocab-ex-12",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A stock fund could fall 20% in a bad year.",
-   "format": "multiple-choice",
-   "answer": "Risk",
-   "options": [
-    {
-     "text": "Risk",
-     "correct": true
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Index fund",
-     "correct": false
-    },
-    {
-     "text": "Rule of 72",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Risk: The possibility that actual returns differ from expected returns, including losing money"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s04-vocab-def-13",
    "unitId": "investing",
    "skillId": "investing-skill-04",
@@ -2015,87 +1140,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s04-vocab-term-13",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “How much an investment’s value moves up and down over time”",
-   "format": "multiple-choice",
-   "answer": "Volatility",
-   "options": [
-    {
-     "text": "Bond",
-     "correct": false
-    },
-    {
-     "text": "Volatility",
-     "correct": true
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": false
-    },
-    {
-     "text": "Future value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Volatility.",
-    "Example: Returns of +25%, −15%, +18% are more volatile than +5%, +4%, +6%."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s04-vocab-ex-13",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Returns of +25%, −15%, +18% are more volatile than +5%, +4%, +6%.",
-   "format": "multiple-choice",
-   "answer": "Volatility",
-   "options": [
-    {
-     "text": "Volatility",
-     "correct": true
-    },
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Compound growth",
-     "correct": false
-    },
-    {
-     "text": "Risk",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Volatility: How much an investment’s value moves up and down over time"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -2147,87 +1191,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s04-vocab-term-14",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “How long until the money is needed”",
-   "format": "multiple-choice",
-   "answer": "Time horizon",
-   "options": [
-    {
-     "text": "Index fund",
-     "correct": false
-    },
-    {
-     "text": "Risk",
-     "correct": false
-    },
-    {
-     "text": "Dollar-cost averaging",
-     "correct": false
-    },
-    {
-     "text": "Time horizon",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Time horizon.",
-    "Example: Retirement in 45 years vs. a car purchase in 2 years."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s04-vocab-ex-14",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Retirement in 45 years vs. a car purchase in 2 years.",
-   "format": "multiple-choice",
-   "answer": "Time horizon",
-   "options": [
-    {
-     "text": "Time horizon",
-     "correct": true
-    },
-    {
-     "text": "Rate of return",
-     "correct": false
-    },
-    {
-     "text": "Real return",
-     "correct": false
-    },
-    {
-     "text": "Index fund",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Time horizon: How long until the money is needed"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s04-vocab-def-15",
    "unitId": "investing",
    "skillId": "investing-skill-04",
@@ -2273,87 +1236,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-investing-s04-vocab-term-15",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A person’s ability and willingness to accept investment losses”",
-   "format": "multiple-choice",
-   "answer": "Risk tolerance",
-   "options": [
-    {
-     "text": "Volatility",
-     "correct": false
-    },
-    {
-     "text": "Time horizon",
-     "correct": false
-    },
-    {
-     "text": "Compound growth",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Risk tolerance.",
-    "Example: Someone who would sell in panic after a 10% drop has low risk tolerance."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s04-vocab-ex-15",
-   "unitId": "investing",
-   "skillId": "investing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Someone who would sell in panic after a 10% drop has low risk tolerance.",
-   "format": "multiple-choice",
-   "answer": "Risk tolerance",
-   "options": [
-    {
-     "text": "Time horizon",
-     "correct": false
-    },
-    {
-     "text": "Risk tolerance",
-     "correct": true
-    },
-    {
-     "text": "Dollar-cost averaging",
-     "correct": false
-    },
-    {
-     "text": "Rate of return",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Risk tolerance: A person’s ability and willingness to accept investment losses"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-investing-s03-vocab-def-16",
    "unitId": "investing",
    "skillId": "investing-skill-03",
@@ -2393,87 +1275,6 @@
     "tictactoe",
     "picture-reveal",
     "detective",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-term-16",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Return after adjusting for inflation”",
-   "format": "multiple-choice",
-   "answer": "Real return",
-   "options": [
-    {
-     "text": "Diversification",
-     "correct": false
-    },
-    {
-     "text": "Bond",
-     "correct": false
-    },
-    {
-     "text": "Real return",
-     "correct": true
-    },
-    {
-     "text": "Index fund",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Real return.",
-    "Example: 7% return with 3% inflation ≈ 3.9% real return."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-investing-s03-vocab-ex-16",
-   "unitId": "investing",
-   "skillId": "investing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 7% return with 3% inflation ≈ 3.9% real return.",
-   "format": "multiple-choice",
-   "answer": "Real return",
-   "options": [
-    {
-     "text": "Future value",
-     "correct": false
-    },
-    {
-     "text": "Stock",
-     "correct": false
-    },
-    {
-     "text": "Volatility",
-     "correct": false
-    },
-    {
-     "text": "Real return",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Real return: Return after adjusting for inflation"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
     "worksheet",
     "assessment"
    ],
@@ -6144,6 +4945,978 @@
    ]
   },
   {
+   "id": "fa-investing-s01-ap-rule-72-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "ap-rule-72",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev's investment grows about 6% per year. Using the Rule of 72, about how many years will it take to double?",
+   "format": "short-answer",
+   "answer": "12 years",
+   "numeric": {
+    "value": 12,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
+    "72 ÷ 6 = 12.",
+    "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-ap-rule-72-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "ap-rule-72",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah's investment grows about 6% per year. Using the Rule of 72, about how many years will it take to double?",
+   "format": "short-answer",
+   "answer": "12 years",
+   "numeric": {
+    "value": 12,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
+    "72 ÷ 6 = 12.",
+    "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-ap-rule-72-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "ap-rule-72",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima's investment grows about 9% per year. Using the Rule of 72, about how many years will it take to double?",
+   "format": "short-answer",
+   "answer": "8 years",
+   "numeric": {
+    "value": 8,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
+    "72 ÷ 9 = 8.",
+    "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-ap-rule-72-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "ap-rule-72",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia's investment grows about 4% per year. Using the Rule of 72, about how many years will it take to double?",
+   "format": "short-answer",
+   "answer": "18 years",
+   "numeric": {
+    "value": 18,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
+    "72 ÷ 4 = 18.",
+    "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-ap-rule-72-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "ap-rule-72",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya's investment grows about 4% per year. Using the Rule of 72, about how many years will it take to double?",
+   "format": "short-answer",
+   "answer": "18 years",
+   "numeric": {
+    "value": 18,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
+    "72 ÷ 4 = 18.",
+    "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-ap-rule-72-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "ap-rule-72",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sam's investment grows about 6% per year. Using the Rule of 72, about how many years will it take to double?",
+   "format": "short-answer",
+   "answer": "12 years",
+   "numeric": {
+    "value": 12,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
+    "72 ÷ 6 = 12.",
+    "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
+   ]
+  },
+  {
+   "id": "fa-investing-s01-ap-rule-72-07",
+   "unitId": "investing",
+   "skillId": "investing-skill-01",
+   "level": "standard",
+   "family": "ap-rule-72",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Hana's investment grows about 4% per year. Using the Rule of 72, about how many years will it take to double?",
+   "format": "short-answer",
+   "answer": "18 years",
+   "numeric": {
+    "value": 18,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Rule of 72: years to double ≈ 72 ÷ annual rate (as a whole number).",
+    "72 ÷ 4 = 18.",
+    "The rule is an estimate; it is most accurate for rates between about 6% and 10%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-div-yield-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-div-yield",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A stock trades at $28.50 and pays a quarterly dividend of $0.25. What is its annual dividend yield, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "3.5%",
+   "numeric": {
+    "value": 3.51,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Annual dividend = $0.25 × 4 = $1.00.",
+    "Yield = $1.00 ÷ $28.50 = 0.0351.",
+    "≈ 3.5%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-div-yield-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-div-yield",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A stock trades at $84.50 and pays a quarterly dividend of $0.32. What is its annual dividend yield, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "1.5%",
+   "numeric": {
+    "value": 1.51,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Annual dividend = $0.32 × 4 = $1.28.",
+    "Yield = $1.28 ÷ $84.50 = 0.0151.",
+    "≈ 1.5%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-div-yield-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-div-yield",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A stock trades at $79.50 and pays a quarterly dividend of $0.40. What is its annual dividend yield, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "2%",
+   "numeric": {
+    "value": 2.01,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Annual dividend = $0.40 × 4 = $1.60.",
+    "Yield = $1.60 ÷ $79.50 = 0.0201.",
+    "≈ 2.0%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-div-yield-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-div-yield",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A stock trades at $96.00 and pays a quarterly dividend of $0.72. What is its annual dividend yield, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "3%",
+   "numeric": {
+    "value": 3,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Annual dividend = $0.72 × 4 = $2.88.",
+    "Yield = $2.88 ÷ $96.00 = 0.0300.",
+    "≈ 3.0%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-div-yield-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-div-yield",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A stock trades at $175.50 and pays a quarterly dividend of $0.66. What is its annual dividend yield, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "1.5%",
+   "numeric": {
+    "value": 1.5,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Annual dividend = $0.66 × 4 = $2.64.",
+    "Yield = $2.64 ÷ $175.50 = 0.0150.",
+    "≈ 1.5%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-div-yield-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-div-yield",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A stock trades at $49.50 and pays a quarterly dividend of $0.19. What is its annual dividend yield, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "1.5%",
+   "numeric": {
+    "value": 1.54,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Annual dividend = $0.19 × 4 = $0.76.",
+    "Yield = $0.76 ÷ $49.50 = 0.0154.",
+    "≈ 1.5%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-div-yield-07",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-div-yield",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A stock trades at $106.00 and pays a quarterly dividend of $0.93. What is its annual dividend yield, to the nearest tenth of a percent?",
+   "format": "short-answer",
+   "answer": "3.5%",
+   "numeric": {
+    "value": 3.51,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Annual dividend = $0.93 × 4 = $3.72.",
+    "Yield = $3.72 ÷ $106.00 = 0.0351.",
+    "≈ 3.5%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-expense-ratio-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-expense-ratio",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah has $6,500.00 invested. Fund A charges an expense ratio of 0.03%; Fund B charges 0.75%. How much more does Fund B cost per year?",
+   "format": "short-answer",
+   "answer": "$46.80",
+   "numeric": {
+    "value": 46.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fund A: 0.03% × $6,500.00 = $1.95.",
+    "Fund B: 0.75% × $6,500.00 = $48.75.",
+    "Difference = $46.80 per year, and the gap grows as the balance grows."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-expense-ratio-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-expense-ratio",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima has $18,000 invested. Fund A charges an expense ratio of 0.05%; Fund B charges 1%. How much more does Fund B cost per year?",
+   "format": "short-answer",
+   "answer": "$171",
+   "numeric": {
+    "value": 171,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fund A: 0.05% × $18,000 = $9.",
+    "Fund B: 1% × $18,000 = $180.",
+    "Difference = $171 per year, and the gap grows as the balance grows."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-expense-ratio-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-expense-ratio",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi has $44,500.00 invested. Fund A charges an expense ratio of 0.05%; Fund B charges 0.75%. How much more does Fund B cost per year?",
+   "format": "short-answer",
+   "answer": "$311.50",
+   "numeric": {
+    "value": 311.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fund A: 0.05% × $44,500.00 = $22.25.",
+    "Fund B: 0.75% × $44,500.00 = $333.75.",
+    "Difference = $311.50 per year, and the gap grows as the balance grows."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-expense-ratio-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-expense-ratio",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen has $13,500.00 invested. Fund A charges an expense ratio of 0.03%; Fund B charges 1%. How much more does Fund B cost per year?",
+   "format": "short-answer",
+   "answer": "$130.95",
+   "numeric": {
+    "value": 130.95,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fund A: 0.03% × $13,500.00 = $4.05.",
+    "Fund B: 1% × $13,500.00 = $135.00.",
+    "Difference = $130.95 per year, and the gap grows as the balance grows."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-expense-ratio-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-expense-ratio",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego has $27,500.00 invested. Fund A charges an expense ratio of 0.1%; Fund B charges 1.2%. How much more does Fund B cost per year?",
+   "format": "short-answer",
+   "answer": "$302.50",
+   "numeric": {
+    "value": 302.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fund A: 0.1% × $27,500.00 = $27.50.",
+    "Fund B: 1.2% × $27,500.00 = $330.00.",
+    "Difference = $302.50 per year, and the gap grows as the balance grows."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-expense-ratio-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-expense-ratio",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya has $24,500.00 invested. Fund A charges an expense ratio of 0.03%; Fund B charges 1%. How much more does Fund B cost per year?",
+   "format": "short-answer",
+   "answer": "$237.65",
+   "numeric": {
+    "value": 237.65,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fund A: 0.03% × $24,500.00 = $7.35.",
+    "Fund B: 1% × $24,500.00 = $245.00.",
+    "Difference = $237.65 per year, and the gap grows as the balance grows."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-ap-expense-ratio-07",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "ap-expense-ratio",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah has $8,500.00 invested. Fund A charges an expense ratio of 0.03%; Fund B charges 0.75%. How much more does Fund B cost per year?",
+   "format": "short-answer",
+   "answer": "$61.20",
+   "numeric": {
+    "value": 61.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Fund A: 0.03% × $8,500.00 = $2.55.",
+    "Fund B: 0.75% × $8,500.00 = $63.75.",
+    "Difference = $61.20 per year, and the gap grows as the balance grows."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-ap-allocation-drop-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "ap-allocation-drop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis has $24,000 invested: 70% in stocks and the rest in bonds. If stocks fall 30% and bonds stay flat, what is the new portfolio value?",
+   "format": "short-answer",
+   "answer": "$18,960",
+   "numeric": {
+    "value": 18960,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Stocks: $16,800 × (1 − 30%) = $11,760.",
+    "Bonds: $7,200.",
+    "New value = $18,960, a 21% drop overall. Diversification softened the fall."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-ap-allocation-drop-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "ap-allocation-drop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Imani has $33,000 invested: 70% in stocks and the rest in bonds. If stocks fall 15% and bonds stay flat, what is the new portfolio value?",
+   "format": "short-answer",
+   "answer": "$29,535",
+   "numeric": {
+    "value": 29535,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Stocks: $23,100 × (1 − 15%) = $19,635.",
+    "Bonds: $9,900.",
+    "New value = $29,535, a 10.5% drop overall. Diversification softened the fall."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-ap-allocation-drop-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "ap-allocation-drop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev has $52,000 invested: 90% in stocks and the rest in bonds. If stocks fall 30% and bonds stay flat, what is the new portfolio value?",
+   "format": "short-answer",
+   "answer": "$37,960",
+   "numeric": {
+    "value": 37960,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Stocks: $46,800 × (1 − 30%) = $32,760.",
+    "Bonds: $5,200.",
+    "New value = $37,960, a 27% drop overall. Diversification softened the fall."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-ap-allocation-drop-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "ap-allocation-drop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan has $26,000 invested: 90% in stocks and the rest in bonds. If stocks fall 20% and bonds stay flat, what is the new portfolio value?",
+   "format": "short-answer",
+   "answer": "$21,320",
+   "numeric": {
+    "value": 21320,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Stocks: $23,400 × (1 − 20%) = $18,720.",
+    "Bonds: $2,600.",
+    "New value = $21,320, a 18% drop overall. Diversification softened the fall."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-ap-allocation-drop-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "ap-allocation-drop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Mei has $61,000 invested: 80% in stocks and the rest in bonds. If stocks fall 25% and bonds stay flat, what is the new portfolio value?",
+   "format": "short-answer",
+   "answer": "$48,800",
+   "numeric": {
+    "value": 48800,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Stocks: $48,800 × (1 − 25%) = $36,600.",
+    "Bonds: $12,200.",
+    "New value = $48,800, a 20% drop overall. Diversification softened the fall."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-ap-allocation-drop-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "ap-allocation-drop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley has $69,000 invested: 80% in stocks and the rest in bonds. If stocks fall 20% and bonds stay flat, what is the new portfolio value?",
+   "format": "short-answer",
+   "answer": "$57,960",
+   "numeric": {
+    "value": 57960,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Stocks: $55,200 × (1 − 20%) = $44,160.",
+    "Bonds: $13,800.",
+    "New value = $57,960, a 16% drop overall. Diversification softened the fall."
+   ]
+  },
+  {
+   "id": "fa-investing-s04-ap-allocation-drop-07",
+   "unitId": "investing",
+   "skillId": "investing-skill-04",
+   "level": "standard",
+   "family": "ap-allocation-drop",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah has $70,000 invested: 60% in stocks and the rest in bonds. If stocks fall 30% and bonds stay flat, what is the new portfolio value?",
+   "format": "short-answer",
+   "answer": "$57,400",
+   "numeric": {
+    "value": 57400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Stocks: $42,000 × (1 − 30%) = $29,400.",
+    "Bonds: $28,000.",
+    "New value = $57,400, a 18% drop overall. Diversification softened the fall."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-ap-contributed-vs-growth-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "ap-contributed-vs-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley invests $100.00 per month for 10 years at 6% compounded monthly and ends with $16,387.93. How much of that is growth (not their own deposits)?",
+   "format": "short-answer",
+   "answer": "$4,387.93",
+   "numeric": {
+    "value": 4387.93,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deposited = $100.00 × 12 × 10 = $12,000.00.",
+    "Growth = $16,387.93 − $12,000.00 = $4,387.93.",
+    "The longer the time, the larger the share that is growth."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-ap-contributed-vs-growth-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "ap-contributed-vs-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah invests $250.00 per month for 10 years at 7% compounded monthly and ends with $43,271.20. How much of that is growth (not her own deposits)?",
+   "format": "short-answer",
+   "answer": "$13,271.20",
+   "numeric": {
+    "value": 13271.2,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deposited = $250.00 × 12 × 10 = $30,000.00.",
+    "Growth = $43,271.20 − $30,000.00 = $13,271.20.",
+    "The longer the time, the larger the share that is growth."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-ap-contributed-vs-growth-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "ap-contributed-vs-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley invests $200.00 per month for 30 years at 7% compounded monthly and ends with $243,994.20. How much of that is growth (not their own deposits)?",
+   "format": "short-answer",
+   "answer": "$171,994.20",
+   "numeric": {
+    "value": 171994.2,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deposited = $200.00 × 12 × 30 = $72,000.00.",
+    "Growth = $243,994.20 − $72,000.00 = $171,994.20.",
+    "The longer the time, the larger the share that is growth."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-ap-contributed-vs-growth-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "ap-contributed-vs-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Marcus invests $250.00 per month for 20 years at 7% compounded monthly and ends with $130,231.66. How much of that is growth (not his own deposits)?",
+   "format": "short-answer",
+   "answer": "$70,231.66",
+   "numeric": {
+    "value": 70231.66,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deposited = $250.00 × 12 × 20 = $60,000.00.",
+    "Growth = $130,231.66 − $60,000.00 = $70,231.66.",
+    "The longer the time, the larger the share that is growth."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-ap-contributed-vs-growth-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "ap-contributed-vs-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila invests $200.00 per month for 10 years at 6% compounded monthly and ends with $32,775.87. How much of that is growth (not her own deposits)?",
+   "format": "short-answer",
+   "answer": "$8,775.87",
+   "numeric": {
+    "value": 8775.87,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deposited = $200.00 × 12 × 10 = $24,000.00.",
+    "Growth = $32,775.87 − $24,000.00 = $8,775.87.",
+    "The longer the time, the larger the share that is growth."
+   ]
+  },
+  {
+   "id": "fa-investing-s02-ap-contributed-vs-growth-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-02",
+   "level": "standard",
+   "family": "ap-contributed-vs-growth",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley invests $250.00 per month for 20 years at 6% compounded monthly and ends with $115,510.22. How much of that is growth (not their own deposits)?",
+   "format": "short-answer",
+   "answer": "$55,510.22",
+   "numeric": {
+    "value": 55510.22,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total deposited = $250.00 × 12 × 20 = $60,000.00.",
+    "Growth = $115,510.22 − $60,000.00 = $55,510.22.",
+    "The longer the time, the larger the share that is growth."
+   ]
+  },
+  {
    "id": "fa-investing-s01-err-linear-growth-01",
    "unitId": "investing",
    "skillId": "investing-skill-01",
@@ -6164,7 +5937,7 @@
    "calc": {
     "kind": "compound",
     "inputs": [
-     8000.0,
+     8000,
      7,
      1,
      10
@@ -6220,8 +5993,8 @@
    "calc": {
     "kind": "compound",
     "inputs": [
-     3000.0,
-     6.0,
+     3000,
+     6,
      12,
      8
     ],
@@ -6264,7 +6037,7 @@
    "calc": {
     "kind": "annuity",
     "inputs": [
-     150.0,
+     150,
      7.2,
      240
     ],
@@ -6319,7 +6092,7 @@
    "calc": {
     "kind": "annuity",
     "inputs": [
-     300.0,
+     300,
      6.6,
      96
     ],
@@ -6362,10 +6135,10 @@
    "calc": {
     "kind": "pct-change",
     "inputs": [
-     40.0,
-     52.0
+     40,
+     52
     ],
-    "correct": 30.0,
+    "correct": 30,
     "unit": "%"
    },
    "prompt": "Hannah bought a share for $40.00 and sold it for $52.00. Hannah’s work: Return = ($52.00 − $40.00) ÷ $52.00 = 23.08%. What mistake did Hannah make?",
@@ -6419,7 +6192,7 @@
      72,
      6
     ],
-    "correct": 12.0,
+    "correct": 12,
     "unit": "years"
    },
    "prompt": "Imani estimates how long money takes to double at 6% per year using the Rule of 72. Imani’s work: Years = 72 × 6 = 432. About how many years does it take to double?",
@@ -6432,7 +6205,7 @@
     "Correct result: 12 years."
    ],
    "numeric": {
-    "value": 12.0,
+    "value": 12,
     "tolerance": 0.05,
     "unit": "years"
    }
@@ -6458,11 +6231,11 @@
    "calc": {
     "kind": "fee",
     "inputs": [
-     10000.0,
-     8.0,
+     10000,
+     8,
      1.5
     ],
-    "correct": 10650.0,
+    "correct": 10650,
     "unit": "USD"
    },
    "prompt": "Diego’s $10,000.00 fund earned 8% this year before a 1.5% annual fee on assets. Diego’s work: Fee = 1.5% of the gain, so the balance is $10,788.00. What mistake did Diego make?",
@@ -6513,10 +6286,10 @@
    "calc": {
     "kind": "sub",
     "inputs": [
-     9.0,
-     4.0
+     9,
+     4
     ],
-    "correct": 5.0,
+    "correct": 5,
     "unit": "%"
    },
    "prompt": "Sofia’s investment returned 9% while inflation was 4%. Sofia estimates the real return. Sofia’s work: Real return ≈ 9% + 4% = 13%. What is the approximate real return?",
@@ -6529,7 +6302,7 @@
     "Correct result: 5%."
    ],
    "numeric": {
-    "value": 5.0,
+    "value": 5,
     "tolerance": 0.01,
     "unit": "percent"
    }

@@ -22,6 +22,10 @@
   {
    "id": "borrowing-skill-04",
    "name": "Analyze total borrowing cost"
+  },
+  {
+   "id": "borrowing-skill-05",
+   "name": "Calculate the total cost of car ownership"
   }
  ],
  "vocab": [
@@ -121,6 +125,36 @@
    "skill": 4,
    "def": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
    "example": "A cheaper car with high repair costs can cost more over 5 years."
+  },
+  {
+   "term": "Liability insurance",
+   "skill": 5,
+   "def": "Car insurance that pays for injuries and damage you cause to others; required by law in most states",
+   "example": "It pays for the other driver’s car, not yours."
+  },
+  {
+   "term": "Collision coverage",
+   "skill": 5,
+   "def": "Car insurance that pays to repair your own car after a crash, minus the deductible",
+   "example": "A $500 deductible on a $3,200 repair pays $2,700."
+  },
+  {
+   "term": "Comprehensive coverage",
+   "skill": 5,
+   "def": "Car insurance for non-crash damage such as theft, hail, fire or hitting a deer",
+   "example": "A cracked windshield from hail."
+  },
+  {
+   "term": "Fuel economy (MPG)",
+   "skill": 5,
+   "def": "Miles a car travels per gallon of fuel",
+   "example": "12,000 miles at 30 MPG uses 400 gallons."
+  },
+  {
+   "term": "Cost per mile",
+   "skill": 5,
+   "def": "Total yearly cost of owning a car divided by the miles driven",
+   "example": "$7,200 ÷ 12,000 miles = $0.60 per mile."
   }
  ],
  "lessons": [
@@ -384,89 +418,306 @@
     ]
    },
    "realWorld": "The Truth in Lending Act requires these disclosures before you sign."
+  },
+  {
+   "skill": 5,
+   "title": "What a Car Really Costs",
+   "minutes": 55,
+   "objectives": [
+    "List the costs of owning a car beyond the payment.",
+    "Calculate yearly fuel, insurance and maintenance costs and cost per mile.",
+    "Compare two cars by total cost of ownership."
+   ],
+   "vocab": [
+    "Liability insurance",
+    "Collision coverage",
+    "Comprehensive coverage",
+    "Fuel economy (MPG)",
+    "Cost per mile"
+   ],
+   "hook": "The ad says “Only $299 a month!” Ask: what will this car really cost you each year?",
+   "notes": [
+    {
+     "h": "Total cost of ownership",
+     "body": "Payment + insurance + fuel + maintenance + registration/fees + depreciation."
+    },
+    {
+     "h": "Fuel",
+     "body": "Gallons = miles ÷ MPG; fuel cost = gallons × price per gallon."
+    },
+    {
+     "h": "Insurance types",
+     "body": "Liability covers others (required in most states); collision and comprehensive cover your car, minus a deductible."
+    }
+   ],
+   "examples": [
+    {
+     "problem": "$350/month loan, $140/month insurance, 12,000 miles at 30 MPG and $3.40/gal, $900 maintenance.",
+     "steps": [
+      "(350 + 140) × 12 = $5,880",
+      "12,000 ÷ 30 × 3.40 = $1,360",
+      "5,880 + 1,360 + 900 = $8,140"
+     ],
+     "answer": "$8,140 per year, about $0.68 per mile."
+    }
+   ],
+   "discussion": [
+    "When might a more expensive car be the better deal?"
+   ],
+   "misconceptions": [
+    [
+     "The monthly payment is the cost of the car.",
+     "Insurance, fuel, upkeep and depreciation often add thousands per year."
+    ]
+   ],
+   "reflection": [
+    "What monthly amount would you set aside for car costs besides the payment?"
+   ],
+   "extension": "Compare total five-year cost of a new and a three-year-old used version of the same model.",
+   "differentiation": {
+    "support": [
+     "Provide a cost table with each category labeled."
+    ],
+    "extend": [
+     "Add depreciation and compare cost per mile for two cars over five years."
+    ]
+   },
+   "realWorld": "Transportation is the second-largest expense for many households."
   }
  ],
  "cheatSheet": {
   "title": "Auto Loans & Borrowing",
-  "sections": [
+  "focus": "compare payments, APR, term and total borrowing cost",
+  "morefocus": "trace amortization and judge affordability",
+  "front": [
    {
-    "h": "Key formulas",
+    "title": "Loan vocabulary",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
     "rows": [
-     [
-      "Monthly rate i",
-      "[[APR || 12]]"
-     ],
-     [
-      "Payment",
-      "PMT = [[P · i || 1 − (1 + i)^(−n)]]"
-     ],
-     [
-      "Max loan for a payment",
-      "P = [[PMT(1 − (1 + i)^(−n)) || i]]"
-     ],
-     [
-      "Total of payments",
-      "PMT × n"
-     ],
-     [
-      "Finance charge",
-      "total of payments − amount financed"
-     ],
-     [
-      "Lease payment",
-      "[[cap − residual || months]] + (cap + residual) × MF"
-     ],
-     [
-      "APR from money factor",
-      "MF × 2,400"
-     ]
-    ]
-   },
-   {
-    "h": "Amortization row",
-    "rows": [
-     [
-      "Interest",
-      "balance × i"
-     ],
      [
       "Principal",
-      "payment − interest"
+      "Amount borrowed and still unpaid."
+     ],
+     [
+      "Interest rate",
+      "Rate used to calculate interest charges."
+     ],
+     [
+      "APR",
+      "Annualized borrowing cost including certain fees."
+     ],
+     [
+      "Term",
+      "Time allowed to repay; months here."
+     ]
+    ],
+    "after": "",
+    "color": "purple"
+   },
+   {
+    "title": "Installment payment",
+    "kind": "html",
+    "html": "⟨D=\\dfrac{Pi}{1-(1+i)^{-N}}⟩<br>P = amount borrowed in dollars; i = monthly interest rate; N = monthly payments; D = dollars per month.<br>⟨i=\\dfrac{r}{12}⟩ with annual decimal interest rate r.<div class=\"ex\">Fixed rate; payments at month end; no fees. At 0% interest: ⟨D=\\tfrac{P}{N}⟩.</div>APR equals r only in the simplified no-fee model.",
+    "color": "blue"
+   },
+   {
+    "title": "Payment & finance cost",
+    "kind": "example",
+    "text": "Assume $22,000 financed, 6.9% annual interest, no fees, 48 monthly payments.",
+    "example": "⟨i=\\tfrac{0.069}{12}⟩; formula gives D ≈ $525.80.",
+    "steps": [
+     [
+      "Total payments:",
+      "⟨48D\\approx25{,}238.27⟩"
+     ],
+     [
+      "Interest:",
+      "⟨48D-22{,}000\\approx3{,}238.27⟩"
+     ]
+    ],
+    "answer": "About $3,238.27 interest",
+    "color": "green"
+   },
+   {
+    "title": "One amortization row",
+    "kind": "html",
+    "html": "Each month:<br>⟨I=B i⟩<br>⟨Q=D-I⟩<br>⟨B_{\\text{new}}=B-Q⟩<br>B = opening balance dollars; I = interest dollars; Q = principal dollars; D = payment.<div class=\"ex\">Use the rate for <b>one payment period</b>. Interest generally shrinks as the balance falls; more of a fixed payment then reduces principal.</div>Keep full precision in projections; round money at the final step.",
+    "color": "orange"
+   },
+   {
+    "title": "First payment example",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "Item",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "Opening balance",
+      "$22,000.00"
+     ],
+     [
+      "Interest at 0.575% monthly",
+      "$126.50"
+     ],
+     [
+      "Payment (rounded)",
+      "$525.80"
+     ],
+     [
+      "Principal repaid",
+      "$399.30"
      ],
      [
       "New balance",
-      "balance − principal"
+      "$21,600.70"
      ]
-    ]
+    ],
+    "after": "This row uses cent-rounded payment and interest. Later rows and the final payment can differ slightly from a full-precision projection.",
+    "color": "pink"
+   },
+   {
+    "title": "Find amount financed",
+    "kind": "list",
+    "items": [
+     "Start with out-the-door price: vehicle, tax, title and fees.",
+     "Subtract down payment and net trade-in equity.",
+     "If trade-in debt exceeds value, negative equity may be added to the new loan.",
+     "Compare financing with and without add-ons.",
+     "A $25,000 total price − $3,000 cash down gives $22,000 financed, assuming no trade-in or other financed costs."
+    ],
+    "color": "teal"
    }
   ],
-  "example": {
-   "title": "Worked example",
-   "lines": [
-    "$22,000 at 6.9%",
-    "48 months: $525.81/month → total $25,238.88",
-    "84 months: $330.83/month → total $27,789.72",
-    "Longer term costs about $2,551 more"
-   ]
-  },
-  "misconceptions": [
-   "Lowest payment = cheapest loan.",
-   "Interest is the same every month.",
-   "Add-ons cost only their sticker price.",
-   "Loan approval = affordability."
-  ],
-  "questions": [
-   "What is the out-the-door price?",
-   "What APR do I qualify for elsewhere?",
-   "What is the total of payments?",
-   "How long until I owe less than the car is worth?",
-   "What will insurance, fuel, and maintenance cost?"
-  ],
-  "tips": [
-   "Get preapproved before visiting the dealer.",
-   "Negotiate price, then APR, then term.",
-   "Avoid financing add-ons.",
-   "Keep the term as short as your budget allows."
+  "back": [
+   {
+    "title": "Which term is better?",
+    "kind": "table",
+    "plain": true,
+    "head": [
+     "$22,000 at 6.9%",
+     "48 months",
+     "84 months"
+    ],
+    "rows": [
+     [
+      "Monthly payment",
+      "$525.80",
+      "$330.96"
+     ],
+     [
+      "Total repaid ≈",
+      "$25,238.27",
+      "$27,801.02"
+     ],
+     [
+      "Interest ≈",
+      "$3,238.27",
+      "$5,801.02"
+     ]
+    ],
+    "after": "Fixed rate, no fees; totals use unrounded payments. The 48-month loan saves about $2,562.75 interest. The 84-month option eases monthly cash flow but keeps debt longer.",
+    "color": "purple"
+   },
+   {
+    "title": "Maximum loan for a budget",
+    "kind": "html",
+    "html": "⟨P=\\dfrac{D[1-(1+i)^{-N}]}{i}⟩<br>D = affordable monthly loan payment; i = monthly decimal rate; N = months.<div class=\"ex\">At 6% interest over 60 months with D = $300:<br>⟨P=\\dfrac{300[1-(1.005)^{-60}]}{0.005}⟩<br><span class=\"ans\">About $15,517.67 financed</span></div>Reserve cash for insurance, fuel, repairs and registration too.",
+    "color": "blue"
+   },
+   {
+    "title": "Lease vocabulary",
+    "kind": "table",
+    "plain": false,
+    "head": [
+     "Term",
+     "Meaning / quick example"
+    ],
+    "rows": [
+     [
+      "Capitalized cost",
+      "Negotiated lease price, adjusted by contract items."
+     ],
+     [
+      "Residual",
+      "Contract’s estimated end-of-lease value."
+     ],
+     [
+      "Money factor",
+      "Factor used for lease finance charge."
+     ],
+     [
+      "Mileage limit",
+      "Going over it may create an extra charge."
+     ]
+    ],
+    "after": "",
+    "color": "green"
+   },
+   {
+    "title": "Simplified lease payment",
+    "kind": "example",
+    "text": "Before taxes and fees: depreciation + finance charge. Contract terms determine actual costs.",
+    "example": "Cap cost $30,000; residual $18,000; 36 months; money factor 0.002.",
+    "steps": [
+     [
+      "Depreciation:",
+      "⟨\\dfrac{30{,}000-18{,}000}{36}\\approx333.33⟩"
+     ],
+     [
+      "Finance:",
+      "⟨(30{,}000+18{,}000)(0.002)=96⟩"
+     ]
+    ],
+    "answer": "About $429.33 per month",
+    "color": "orange"
+   },
+   {
+    "title": "Compare complete offers",
+    "kind": "list",
+    "items": [
+     "Same vehicle price and cash down?",
+     "Same fees, APR and payment timing?",
+     "Total of payments and any final balloon payment?",
+     "For a lease: upfront charges, mileage, wear and buyout terms?",
+     "How much will the car cost to operate?",
+     "A lower payment may fit today; ask whether the longer term creates negative-equity risk."
+    ],
+    "color": "pink"
+   },
+   {
+    "title": "Reminders & mistakes",
+    "kind": "mistakes",
+    "good": [
+     "Choose an affordable total cost, not only a payment.",
+     "Money factor × 2,400 approximates lease APR in percent."
+    ],
+    "bad": [
+     [
+      "APR always equals interest rate",
+      "fees may make APR higher."
+     ],
+     [
+      "Approval means affordable",
+      "test your own budget."
+     ],
+     [
+      "Interest stays constant",
+      "it follows the outstanding balance."
+     ],
+     [
+      "Lease payments build equity",
+      "ownership requires a separate purchase."
+     ]
+    ],
+    "color": "teal"
+   }
   ]
  },
  "questions": [
@@ -482,15 +733,15 @@
    "answer": "A loan repaid in equal scheduled payments over a fixed term",
    "options": [
     {
-     "text": "Paying more than the required payment to reduce the principal faster",
-     "correct": false
-    },
-    {
-     "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
+     "text": "A table showing each payment’s interest, principal, and remaining balance",
      "correct": false
     },
     {
      "text": "An asset pledged to secure a loan that the lender can take if payments stop",
+     "correct": false
+    },
+    {
+     "text": "Owing more on a loan than the item is worth",
      "correct": false
     },
     {
@@ -516,87 +767,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s01-vocab-term-01",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A loan repaid in equal scheduled payments over a fixed term”",
-   "format": "multiple-choice",
-   "answer": "Installment loan",
-   "options": [
-    {
-     "text": "Installment loan",
-     "correct": true
-    },
-    {
-     "text": "Amortization schedule",
-     "correct": false
-    },
-    {
-     "text": "Loan term",
-     "correct": false
-    },
-    {
-     "text": "Residual value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Installment loan.",
-    "Example: A 60-month auto loan with $412.18 monthly payments."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s01-vocab-ex-01",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A 60-month auto loan with $412.18 monthly payments.",
-   "format": "multiple-choice",
-   "answer": "Installment loan",
-   "options": [
-    {
-     "text": "Lease",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Installment loan",
-     "correct": true
-    },
-    {
-     "text": "Prepayment",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Installment loan: A loan repaid in equal scheduled payments over a fixed term"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s02-vocab-def-02",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
@@ -608,20 +778,20 @@
    "answer": "The length of time to repay a loan",
    "options": [
     {
-     "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
+     "text": "Miles a car travels per gallon of fuel",
      "correct": false
     },
     {
-     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
+     "text": "Car insurance that pays to repair your own car after a crash, minus the deductible",
+     "correct": false
+    },
+    {
+     "text": "Car insurance that pays for injuries and damage you cause to others; required by law in most states",
      "correct": false
     },
     {
      "text": "The length of time to repay a loan",
      "correct": true
-    },
-    {
-     "text": "Owing more on a loan than the item is worth",
-     "correct": false
     }
    ],
    "solutionSteps": [
@@ -642,87 +812,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s02-vocab-term-02",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The length of time to repay a loan”",
-   "format": "multiple-choice",
-   "answer": "Loan term",
-   "options": [
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Prepayment",
-     "correct": false
-    },
-    {
-     "text": "Total cost of ownership",
-     "correct": false
-    },
-    {
-     "text": "Loan term",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Loan term.",
-    "Example: 48 months vs. 72 months."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s02-vocab-ex-02",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 48 months vs. 72 months.",
-   "format": "multiple-choice",
-   "answer": "Loan term",
-   "options": [
-    {
-     "text": "Prepayment",
-     "correct": false
-    },
-    {
-     "text": "Loan term",
-     "correct": true
-    },
-    {
-     "text": "Finance charge",
-     "correct": false
-    },
-    {
-     "text": "Total cost of ownership",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Loan term: The length of time to repay a loan"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s01-vocab-def-03",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
@@ -734,19 +823,19 @@
    "answer": "Cash paid up front that reduces the amount borrowed",
    "options": [
     {
+     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
+     "correct": false
+    },
+    {
      "text": "Cash paid up front that reduces the amount borrowed",
      "correct": true
     },
     {
-     "text": "The sum of all scheduled payments over the life of a loan",
+     "text": "Car insurance that pays for injuries and damage you cause to others; required by law in most states",
      "correct": false
     },
     {
-     "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
-     "correct": false
-    },
-    {
-     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
+     "text": "The length of time to repay a loan",
      "correct": false
     }
    ],
@@ -768,87 +857,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s01-vocab-term-03",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Cash paid up front that reduces the amount borrowed”",
-   "format": "multiple-choice",
-   "answer": "Down payment",
-   "options": [
-    {
-     "text": "Down payment",
-     "correct": true
-    },
-    {
-     "text": "Upside down (negative equity)",
-     "correct": false
-    },
-    {
-     "text": "Residual value",
-     "correct": false
-    },
-    {
-     "text": "Total of payments",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Down payment.",
-    "Example: $3,000 down on a $20,000 car means borrowing $17,000."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s01-vocab-ex-03",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $3,000 down on a $20,000 car means borrowing $17,000.",
-   "format": "multiple-choice",
-   "answer": "Down payment",
-   "options": [
-    {
-     "text": "Residual value",
-     "correct": false
-    },
-    {
-     "text": "Down payment",
-     "correct": true
-    },
-    {
-     "text": "Total of payments",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Down payment: Cash paid up front that reduces the amount borrowed"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s03-vocab-def-04",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
@@ -860,11 +868,7 @@
    "answer": "Paying off a loan through regular payments that cover interest first and then principal",
    "options": [
     {
-     "text": "A loan repaid in equal scheduled payments over a fixed term",
-     "correct": false
-    },
-    {
-     "text": "A table showing each payment’s interest, principal, and remaining balance",
+     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
      "correct": false
     },
     {
@@ -872,7 +876,11 @@
      "correct": true
     },
     {
-     "text": "A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it",
+     "text": "The total dollar cost of credit, including interest and certain fees",
+     "correct": false
+    },
+    {
+     "text": "A table showing each payment’s interest, principal, and remaining balance",
      "correct": false
     }
    ],
@@ -894,87 +902,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s03-vocab-term-04",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Paying off a loan through regular payments that cover interest first and then principal”",
-   "format": "multiple-choice",
-   "answer": "Amortization",
-   "options": [
-    {
-     "text": "Amortization",
-     "correct": true
-    },
-    {
-     "text": "Down payment",
-     "correct": false
-    },
-    {
-     "text": "Total cost of ownership",
-     "correct": false
-    },
-    {
-     "text": "Installment loan",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Amortization.",
-    "Example: Early payments are mostly interest; later payments are mostly principal."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s03-vocab-ex-04",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Early payments are mostly interest; later payments are mostly principal.",
-   "format": "multiple-choice",
-   "answer": "Amortization",
-   "options": [
-    {
-     "text": "Residual value",
-     "correct": false
-    },
-    {
-     "text": "Cosigner",
-     "correct": false
-    },
-    {
-     "text": "Depreciation",
-     "correct": false
-    },
-    {
-     "text": "Amortization",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Amortization: Paying off a loan through regular payments that cover interest first and then principal"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s03-vocab-def-05",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
@@ -986,20 +913,20 @@
    "answer": "A table showing each payment’s interest, principal, and remaining balance",
    "options": [
     {
-     "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
+     "text": "The sum of all scheduled payments over the life of a loan",
+     "correct": false
+    },
+    {
+     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
+     "correct": false
+    },
+    {
+     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
      "correct": false
     },
     {
      "text": "A table showing each payment’s interest, principal, and remaining balance",
      "correct": true
-    },
-    {
-     "text": "The decline in an asset’s value over time",
-     "correct": false
-    },
-    {
-     "text": "Paying off a loan through regular payments that cover interest first and then principal",
-     "correct": false
     }
    ],
    "solutionSteps": [
@@ -1020,87 +947,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s03-vocab-term-05",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A table showing each payment’s interest, principal, and remaining balance”",
-   "format": "multiple-choice",
-   "answer": "Amortization schedule",
-   "options": [
-    {
-     "text": "Lease",
-     "correct": false
-    },
-    {
-     "text": "Depreciation",
-     "correct": false
-    },
-    {
-     "text": "Total of payments",
-     "correct": false
-    },
-    {
-     "text": "Amortization schedule",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Amortization schedule.",
-    "Example: Month 1: interest $93.75, principal $318.43, balance $17,681.57."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s03-vocab-ex-05",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Month 1: interest $93.75, principal $318.43, balance $17,681.57.",
-   "format": "multiple-choice",
-   "answer": "Amortization schedule",
-   "options": [
-    {
-     "text": "Amortization schedule",
-     "correct": true
-    },
-    {
-     "text": "Prepayment",
-     "correct": false
-    },
-    {
-     "text": "Upside down (negative equity)",
-     "correct": false
-    },
-    {
-     "text": "Total of payments",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Amortization schedule: A table showing each payment’s interest, principal, and remaining balance"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s04-vocab-def-06",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
@@ -1112,7 +958,7 @@
    "answer": "The total dollar cost of credit, including interest and certain fees",
    "options": [
     {
-     "text": "A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it",
+     "text": "Car insurance that pays to repair your own car after a crash, minus the deductible",
      "correct": false
     },
     {
@@ -1120,11 +966,11 @@
      "correct": true
     },
     {
-     "text": "Paying off a loan through regular payments that cover interest first and then principal",
+     "text": "Paying more than the required payment to reduce the principal faster",
      "correct": false
     },
     {
-     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
+     "text": "A person who agrees to repay a loan if the borrower does not",
      "correct": false
     }
    ],
@@ -1146,87 +992,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s04-vocab-term-06",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The total dollar cost of credit, including interest and certain fees”",
-   "format": "multiple-choice",
-   "answer": "Finance charge",
-   "options": [
-    {
-     "text": "Total of payments",
-     "correct": false
-    },
-    {
-     "text": "Finance charge",
-     "correct": true
-    },
-    {
-     "text": "Amortization schedule",
-     "correct": false
-    },
-    {
-     "text": "Prepayment",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Finance charge.",
-    "Example: Total of payments $24,730.80 − amount financed $21,000.00 = $3,730.80."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s04-vocab-ex-06",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Total of payments $24,730.80 − amount financed $21,000.00 = $3,730.80.",
-   "format": "multiple-choice",
-   "answer": "Finance charge",
-   "options": [
-    {
-     "text": "Depreciation",
-     "correct": false
-    },
-    {
-     "text": "Finance charge",
-     "correct": true
-    },
-    {
-     "text": "Loan term",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Finance charge: The total dollar cost of credit, including interest and certain fees"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s04-vocab-def-07",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
@@ -1238,11 +1003,11 @@
    "answer": "The sum of all scheduled payments over the life of a loan",
    "options": [
     {
-     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
+     "text": "A person who agrees to repay a loan if the borrower does not",
      "correct": false
     },
     {
-     "text": "Paying more than the required payment to reduce the principal faster",
+     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
      "correct": false
     },
     {
@@ -1250,7 +1015,7 @@
      "correct": true
     },
     {
-     "text": "Owing more on a loan than the item is worth",
+     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
      "correct": false
     }
    ],
@@ -1272,87 +1037,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s04-vocab-term-07",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The sum of all scheduled payments over the life of a loan”",
-   "format": "multiple-choice",
-   "answer": "Total of payments",
-   "options": [
-    {
-     "text": "Total cost of ownership",
-     "correct": false
-    },
-    {
-     "text": "Total of payments",
-     "correct": true
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Prepayment",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Total of payments.",
-    "Example: $412.18 × 60 = $24,730.80."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s04-vocab-ex-07",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? $412.18 × 60 = $24,730.80.",
-   "format": "multiple-choice",
-   "answer": "Total of payments",
-   "options": [
-    {
-     "text": "Total of payments",
-     "correct": true
-    },
-    {
-     "text": "Money factor",
-     "correct": false
-    },
-    {
-     "text": "Amortization schedule",
-     "correct": false
-    },
-    {
-     "text": "Residual value",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Total of payments: The sum of all scheduled payments over the life of a loan"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s04-vocab-def-08",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
@@ -1364,19 +1048,19 @@
    "answer": "Owing more on a loan than the item is worth",
    "options": [
     {
-     "text": "Paying more than the required payment to reduce the principal faster",
-     "correct": false
-    },
-    {
      "text": "Owing more on a loan than the item is worth",
      "correct": true
     },
     {
-     "text": "A table showing each payment’s interest, principal, and remaining balance",
+     "text": "Paying more than the required payment to reduce the principal faster",
      "correct": false
     },
     {
-     "text": "A person who agrees to repay a loan if the borrower does not",
+     "text": "Car insurance that pays for injuries and damage you cause to others; required by law in most states",
+     "correct": false
+    },
+    {
+     "text": "The sum of all scheduled payments over the life of a loan",
      "correct": false
     }
    ],
@@ -1400,87 +1084,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s04-vocab-term-08",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Owing more on a loan than the item is worth”",
-   "format": "multiple-choice",
-   "answer": "Upside down (negative equity)",
-   "options": [
-    {
-     "text": "Money factor",
-     "correct": false
-    },
-    {
-     "text": "Installment loan",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Upside down (negative equity)",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Upside down (negative equity).",
-    "Example: Owing $17,500 on a car worth $14,000."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s04-vocab-ex-08",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? Owing $17,500 on a car worth $14,000.",
-   "format": "multiple-choice",
-   "answer": "Upside down (negative equity)",
-   "options": [
-    {
-     "text": "Amortization schedule",
-     "correct": false
-    },
-    {
-     "text": "Upside down (negative equity)",
-     "correct": true
-    },
-    {
-     "text": "Residual value",
-     "correct": false
-    },
-    {
-     "text": "Money factor",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Upside down (negative equity): Owing more on a loan than the item is worth"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s04-vocab-def-09",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
@@ -1492,19 +1095,19 @@
    "answer": "The decline in an asset’s value over time",
    "options": [
     {
+     "text": "Car insurance that pays to repair your own car after a crash, minus the deductible",
+     "correct": false
+    },
+    {
      "text": "The decline in an asset’s value over time",
      "correct": true
     },
     {
-     "text": "Paying more than the required payment to reduce the principal faster",
+     "text": "Owing more on a loan than the item is worth",
      "correct": false
     },
     {
-     "text": "Paying off a loan through regular payments that cover interest first and then principal",
-     "correct": false
-    },
-    {
-     "text": "The estimated value of a leased vehicle at the end of the lease",
+     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
      "correct": false
     }
    ],
@@ -1526,87 +1129,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s04-vocab-term-09",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The decline in an asset’s value over time”",
-   "format": "multiple-choice",
-   "answer": "Depreciation",
-   "options": [
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Depreciation",
-     "correct": true
-    },
-    {
-     "text": "Cosigner",
-     "correct": false
-    },
-    {
-     "text": "Loan term",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Depreciation.",
-    "Example: A new car losing about 15–20% of its value in the first year."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s04-vocab-ex-09",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A new car losing about 15–20% of its value in the first year.",
-   "format": "multiple-choice",
-   "answer": "Depreciation",
-   "options": [
-    {
-     "text": "Lease",
-     "correct": false
-    },
-    {
-     "text": "Amortization schedule",
-     "correct": false
-    },
-    {
-     "text": "Money factor",
-     "correct": false
-    },
-    {
-     "text": "Depreciation",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Depreciation: The decline in an asset’s value over time"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s02-vocab-def-10",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
@@ -1618,19 +1140,19 @@
    "answer": "A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it",
    "options": [
     {
-     "text": "The total dollar cost of credit, including interest and certain fees",
-     "correct": false
-    },
-    {
-     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
-     "correct": false
-    },
-    {
      "text": "A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it",
      "correct": true
     },
     {
-     "text": "Owing more on a loan than the item is worth",
+     "text": "Total yearly cost of owning a car divided by the miles driven",
+     "correct": false
+    },
+    {
+     "text": "A person who agrees to repay a loan if the borrower does not",
+     "correct": false
+    },
+    {
+     "text": "The decline in an asset’s value over time",
      "correct": false
     }
    ],
@@ -1652,87 +1174,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s02-vocab-term-10",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it”",
-   "format": "multiple-choice",
-   "answer": "Lease",
-   "options": [
-    {
-     "text": "Total of payments",
-     "correct": false
-    },
-    {
-     "text": "Loan term",
-     "correct": false
-    },
-    {
-     "text": "Lease",
-     "correct": true
-    },
-    {
-     "text": "Money factor",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Lease.",
-    "Example: 36-month lease at $389/month with a 12,000-mile annual limit."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s02-vocab-ex-10",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 36-month lease at $389/month with a 12,000-mile annual limit.",
-   "format": "multiple-choice",
-   "answer": "Lease",
-   "options": [
-    {
-     "text": "Loan term",
-     "correct": false
-    },
-    {
-     "text": "Installment loan",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Lease",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Lease: A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s02-vocab-def-11",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
@@ -1744,19 +1185,19 @@
    "answer": "The estimated value of a leased vehicle at the end of the lease",
    "options": [
     {
+     "text": "Total yearly cost of owning a car divided by the miles driven",
+     "correct": false
+    },
+    {
+     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
+     "correct": false
+    },
+    {
      "text": "The estimated value of a leased vehicle at the end of the lease",
      "correct": true
     },
     {
-     "text": "Paying off a loan through regular payments that cover interest first and then principal",
-     "correct": false
-    },
-    {
-     "text": "The sum of all scheduled payments over the life of a loan",
-     "correct": false
-    },
-    {
-     "text": "The decline in an asset’s value over time",
+     "text": "Miles a car travels per gallon of fuel",
      "correct": false
     }
    ],
@@ -1778,87 +1219,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s02-vocab-term-11",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The estimated value of a leased vehicle at the end of the lease”",
-   "format": "multiple-choice",
-   "answer": "Residual value",
-   "options": [
-    {
-     "text": "Cosigner",
-     "correct": false
-    },
-    {
-     "text": "Upside down (negative equity)",
-     "correct": false
-    },
-    {
-     "text": "Residual value",
-     "correct": true
-    },
-    {
-     "text": "Money factor",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Residual value.",
-    "Example: 58% of a $31,000 MSRP = $17,980."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s02-vocab-ex-11",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 58% of a $31,000 MSRP = $17,980.",
-   "format": "multiple-choice",
-   "answer": "Residual value",
-   "options": [
-    {
-     "text": "Total cost of ownership",
-     "correct": false
-    },
-    {
-     "text": "Residual value",
-     "correct": true
-    },
-    {
-     "text": "Installment loan",
-     "correct": false
-    },
-    {
-     "text": "Money factor",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Residual value: The estimated value of a leased vehicle at the end of the lease"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s02-vocab-def-12",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-02",
@@ -1870,19 +1230,19 @@
    "answer": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
    "options": [
     {
+     "text": "The total dollar cost of credit, including interest and certain fees",
+     "correct": false
+    },
+    {
+     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
+     "correct": false
+    },
+    {
      "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
      "correct": true
     },
     {
-     "text": "Cash paid up front that reduces the amount borrowed",
-     "correct": false
-    },
-    {
-     "text": "A person who agrees to repay a loan if the borrower does not",
-     "correct": false
-    },
-    {
-     "text": "The sum of all scheduled payments over the life of a loan",
+     "text": "The decline in an asset’s value over time",
      "correct": false
     }
    ],
@@ -1904,87 +1264,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s02-vocab-term-12",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR”",
-   "format": "multiple-choice",
-   "answer": "Money factor",
-   "options": [
-    {
-     "text": "Money factor",
-     "correct": true
-    },
-    {
-     "text": "Total of payments",
-     "correct": false
-    },
-    {
-     "text": "Down payment",
-     "correct": false
-    },
-    {
-     "text": "Installment loan",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Money factor.",
-    "Example: 0.0025 × 2,400 = 6% APR."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s02-vocab-ex-12",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-02",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? 0.0025 × 2,400 = 6% APR.",
-   "format": "multiple-choice",
-   "answer": "Money factor",
-   "options": [
-    {
-     "text": "Prepayment",
-     "correct": false
-    },
-    {
-     "text": "Money factor",
-     "correct": true
-    },
-    {
-     "text": "Total cost of ownership",
-     "correct": false
-    },
-    {
-     "text": "Amortization",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Money factor: The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s01-vocab-def-13",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
@@ -1996,19 +1275,19 @@
    "answer": "An asset pledged to secure a loan that the lender can take if payments stop",
    "options": [
     {
-     "text": "A loan repaid in equal scheduled payments over a fixed term",
-     "correct": false
-    },
-    {
-     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
-     "correct": false
-    },
-    {
      "text": "An asset pledged to secure a loan that the lender can take if payments stop",
      "correct": true
     },
     {
-     "text": "Paying more than the required payment to reduce the principal faster",
+     "text": "Miles a car travels per gallon of fuel",
+     "correct": false
+    },
+    {
+     "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
+     "correct": false
+    },
+    {
+     "text": "A table showing each payment’s interest, principal, and remaining balance",
      "correct": false
     }
    ],
@@ -2030,87 +1309,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s01-vocab-term-13",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “An asset pledged to secure a loan that the lender can take if payments stop”",
-   "format": "multiple-choice",
-   "answer": "Collateral",
-   "options": [
-    {
-     "text": "Down payment",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": true
-    },
-    {
-     "text": "Finance charge",
-     "correct": false
-    },
-    {
-     "text": "Prepayment",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Collateral.",
-    "Example: The car is collateral for an auto loan."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s01-vocab-ex-13",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? The car is collateral for an auto loan.",
-   "format": "multiple-choice",
-   "answer": "Collateral",
-   "options": [
-    {
-     "text": "Finance charge",
-     "correct": false
-    },
-    {
-     "text": "Down payment",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": true
-    },
-    {
-     "text": "Amortization",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Collateral: An asset pledged to secure a loan that the lender can take if payments stop"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s01-vocab-def-14",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
@@ -2122,20 +1320,20 @@
    "answer": "A person who agrees to repay a loan if the borrower does not",
    "options": [
     {
-     "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
-     "correct": false
-    },
-    {
-     "text": "A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it",
-     "correct": false
-    },
-    {
-     "text": "Paying more than the required payment to reduce the principal faster",
-     "correct": false
-    },
-    {
      "text": "A person who agrees to repay a loan if the borrower does not",
      "correct": true
+    },
+    {
+     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
+     "correct": false
+    },
+    {
+     "text": "A table showing each payment’s interest, principal, and remaining balance",
+     "correct": false
+    },
+    {
+     "text": "The estimated value of a leased vehicle at the end of the lease",
+     "correct": false
     }
    ],
    "solutionSteps": [
@@ -2156,87 +1354,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s01-vocab-term-14",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “A person who agrees to repay a loan if the borrower does not”",
-   "format": "multiple-choice",
-   "answer": "Cosigner",
-   "options": [
-    {
-     "text": "Down payment",
-     "correct": false
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Total of payments",
-     "correct": false
-    },
-    {
-     "text": "Cosigner",
-     "correct": true
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Cosigner.",
-    "Example: A parent cosigns a teen’s first auto loan."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s01-vocab-ex-14",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-01",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A parent cosigns a teen’s first auto loan.",
-   "format": "multiple-choice",
-   "answer": "Cosigner",
-   "options": [
-    {
-     "text": "Cosigner",
-     "correct": true
-    },
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Amortization",
-     "correct": false
-    },
-    {
-     "text": "Prepayment",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Cosigner: A person who agrees to repay a loan if the borrower does not"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s03-vocab-def-15",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-03",
@@ -2248,19 +1365,19 @@
    "answer": "Paying more than the required payment to reduce the principal faster",
    "options": [
     {
+     "text": "A loan repaid in equal scheduled payments over a fixed term",
+     "correct": false
+    },
+    {
      "text": "Paying more than the required payment to reduce the principal faster",
      "correct": true
     },
     {
-     "text": "The decline in an asset’s value over time",
+     "text": "A table showing each payment’s interest, principal, and remaining balance",
      "correct": false
     },
     {
-     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
-     "correct": false
-    },
-    {
-     "text": "A loan repaid in equal scheduled payments over a fixed term",
+     "text": "Car insurance that pays to repair your own car after a crash, minus the deductible",
      "correct": false
     }
    ],
@@ -2282,87 +1399,6 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s03-vocab-term-15",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-03",
-   "level": "standard",
-   "family": "vocab-term",
-   "type": "vocabulary",
-   "prompt": "Which term matches this description? “Paying more than the required payment to reduce the principal faster”",
-   "format": "multiple-choice",
-   "answer": "Prepayment",
-   "options": [
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Amortization schedule",
-     "correct": false
-    },
-    {
-     "text": "Prepayment",
-     "correct": true
-    },
-    {
-     "text": "Lease",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "The description defines Prepayment.",
-    "Example: An extra $50 each month shortens a loan and cuts interest."
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "tictactoe",
-    "picture-reveal",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
-   "id": "fa-borrowing-s03-vocab-ex-15",
-   "unitId": "borrowing",
-   "skillId": "borrowing-skill-03",
-   "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? An extra $50 each month shortens a loan and cuts interest.",
-   "format": "multiple-choice",
-   "answer": "Prepayment",
-   "options": [
-    {
-     "text": "Collateral",
-     "correct": false
-    },
-    {
-     "text": "Prepayment",
-     "correct": true
-    },
-    {
-     "text": "Lease",
-     "correct": false
-    },
-    {
-     "text": "Down payment",
-     "correct": false
-    }
-   ],
-   "solutionSteps": [
-    "This is an example of Prepayment: Paying more than the required payment to reduce the principal faster"
-   ],
-   "activityTypes": [
-    "showdown",
-    "connect4",
-    "worksheet",
-    "assessment"
-   ],
-   "gameEligible": true
-  },
-  {
    "id": "fa-borrowing-s04-vocab-def-16",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-04",
@@ -2374,7 +1410,7 @@
    "answer": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
    "options": [
     {
-     "text": "The estimated value of a leased vehicle at the end of the lease",
+     "text": "Car insurance that pays to repair your own car after a crash, minus the deductible",
      "correct": false
     },
     {
@@ -2382,7 +1418,7 @@
      "correct": false
     },
     {
-     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
+     "text": "Paying more than the required payment to reduce the principal faster",
      "correct": false
     },
     {
@@ -2408,81 +1444,225 @@
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s04-vocab-term-16",
+   "id": "fa-borrowing-s05-vocab-def-17",
    "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
+   "skillId": "borrowing-skill-05",
    "level": "standard",
-   "family": "vocab-term",
+   "family": "vocab-def",
    "type": "vocabulary",
-   "prompt": "Which term matches this description? “All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value”",
+   "prompt": "What does **Liability insurance** mean?",
    "format": "multiple-choice",
-   "answer": "Total cost of ownership",
+   "answer": "Car insurance that pays for injuries and damage you cause to others; required by law in most states",
    "options": [
     {
-     "text": "Amortization",
+     "text": "The decline in an asset’s value over time",
      "correct": false
     },
     {
-     "text": "Depreciation",
+     "text": "The total dollar cost of credit, including interest and certain fees",
      "correct": false
     },
     {
-     "text": "Total cost of ownership",
+     "text": "Car insurance for non-crash damage such as theft, hail, fire or hitting a deer",
+     "correct": false
+    },
+    {
+     "text": "Car insurance that pays for injuries and damage you cause to others; required by law in most states",
      "correct": true
-    },
-    {
-     "text": "Total of payments",
-     "correct": false
     }
    ],
    "solutionSteps": [
-    "The description defines Total cost of ownership.",
-    "Example: A cheaper car with high repair costs can cost more over 5 years."
+    "Liability insurance: Car insurance that pays for injuries and damage you cause to others; required by law in most states",
+    "Example: It pays for the other driver’s car, not yours."
    ],
+   "misconceptions": [],
    "activityTypes": [
+    "flashcards",
     "showdown",
     "connect4",
     "tictactoe",
     "picture-reveal",
+    "detective",
     "worksheet",
     "assessment"
    ],
    "gameEligible": true
   },
   {
-   "id": "fa-borrowing-s04-vocab-ex-16",
+   "id": "fa-borrowing-s05-vocab-def-18",
    "unitId": "borrowing",
-   "skillId": "borrowing-skill-04",
+   "skillId": "borrowing-skill-05",
    "level": "standard",
-   "family": "vocab-ex",
-   "type": "concept",
-   "prompt": "Which financial term is illustrated? A cheaper car with high repair costs can cost more over 5 years.",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Collision coverage** mean?",
    "format": "multiple-choice",
-   "answer": "Total cost of ownership",
+   "answer": "Car insurance that pays to repair your own car after a crash, minus the deductible",
    "options": [
     {
-     "text": "Loan term",
-     "correct": false
-    },
-    {
-     "text": "Total cost of ownership",
+     "text": "Car insurance that pays to repair your own car after a crash, minus the deductible",
      "correct": true
     },
     {
-     "text": "Amortization schedule",
+     "text": "Owing more on a loan than the item is worth",
      "correct": false
     },
     {
-     "text": "Prepayment",
+     "text": "Miles a car travels per gallon of fuel",
+     "correct": false
+    },
+    {
+     "text": "All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value",
      "correct": false
     }
    ],
    "solutionSteps": [
-    "This is an example of Total cost of ownership: All costs of having a vehicle over time: price or payments, interest, insurance, fuel, maintenance, fees, and lost value"
+    "Collision coverage: Car insurance that pays to repair your own car after a crash, minus the deductible",
+    "Example: A $500 deductible on a $3,200 repair pays $2,700."
    ],
+   "misconceptions": [],
    "activityTypes": [
+    "flashcards",
     "showdown",
     "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-borrowing-s05-vocab-def-19",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Comprehensive coverage** mean?",
+   "format": "multiple-choice",
+   "answer": "Car insurance for non-crash damage such as theft, hail, fire or hitting a deer",
+   "options": [
+    {
+     "text": "Paying more than the required payment to reduce the principal faster",
+     "correct": false
+    },
+    {
+     "text": "A contract to use a vehicle for a set term and mileage in exchange for payments, without owning it",
+     "correct": false
+    },
+    {
+     "text": "A loan repaid in equal scheduled payments over a fixed term",
+     "correct": false
+    },
+    {
+     "text": "Car insurance for non-crash damage such as theft, hail, fire or hitting a deer",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Comprehensive coverage: Car insurance for non-crash damage such as theft, hail, fire or hitting a deer",
+    "Example: A cracked windshield from hail."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-borrowing-s05-vocab-def-20",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Fuel economy (MPG)** mean?",
+   "format": "multiple-choice",
+   "answer": "Miles a car travels per gallon of fuel",
+   "options": [
+    {
+     "text": "An asset pledged to secure a loan that the lender can take if payments stop",
+     "correct": false
+    },
+    {
+     "text": "A loan repaid in equal scheduled payments over a fixed term",
+     "correct": false
+    },
+    {
+     "text": "Miles a car travels per gallon of fuel",
+     "correct": true
+    },
+    {
+     "text": "Total yearly cost of owning a car divided by the miles driven",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Fuel economy (MPG): Miles a car travels per gallon of fuel",
+    "Example: 12,000 miles at 30 MPG uses 400 gallons."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-borrowing-s05-vocab-def-21",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "vocab-def",
+   "type": "vocabulary",
+   "prompt": "What does **Cost per mile** mean?",
+   "format": "multiple-choice",
+   "answer": "Total yearly cost of owning a car divided by the miles driven",
+   "options": [
+    {
+     "text": "The length of time to repay a loan",
+     "correct": false
+    },
+    {
+     "text": "The decline in an asset’s value over time",
+     "correct": false
+    },
+    {
+     "text": "Total yearly cost of owning a car divided by the miles driven",
+     "correct": true
+    },
+    {
+     "text": "The lease version of an interest rate; multiply by 2,400 to estimate an equivalent APR",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Cost per mile: Total yearly cost of owning a car divided by the miles driven",
+    "Example: $7,200.00 ÷ 12,000 miles = $0.60 per mile."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "flashcards",
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "picture-reveal",
+    "detective",
     "worksheet",
     "assessment"
    ],
@@ -2774,6 +1954,141 @@
    ],
    "solutionSteps": [
     "Value − balance = −$2,300."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-borrowing-s05-concept-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Select ALL costs that are part of owning a car besides the loan payment.",
+   "format": "select-all",
+   "answer": [
+    "Insurance",
+    "Fuel",
+    "Maintenance and repairs",
+    "Registration and fees"
+   ],
+   "options": [
+    {
+     "text": "The sticker price paid again each year",
+     "correct": false
+    },
+    {
+     "text": "Maintenance and repairs",
+     "correct": true
+    },
+    {
+     "text": "Sales tax every month",
+     "correct": false
+    },
+    {
+     "text": "Fuel",
+     "correct": true
+    },
+    {
+     "text": "Registration and fees",
+     "correct": true
+    },
+    {
+     "text": "Insurance",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Total cost of ownership adds insurance, fuel, upkeep, fees and depreciation to financing."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-borrowing-s05-concept-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Which kind of car insurance pays for damage you cause to someone else?",
+   "format": "multiple-choice",
+   "answer": "Liability",
+   "options": [
+    {
+     "text": "Collision",
+     "correct": false
+    },
+    {
+     "text": "Comprehensive",
+     "correct": false
+    },
+    {
+     "text": "Gap",
+     "correct": false
+    },
+    {
+     "text": "Liability",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "Liability covers others; collision and comprehensive cover your own car."
+   ],
+   "misconceptions": [],
+   "activityTypes": [
+    "showdown",
+    "connect4",
+    "tictactoe",
+    "detective",
+    "worksheet",
+    "assessment"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-borrowing-s05-concept-10",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "concept",
+   "type": "concept",
+   "prompt": "Why does a new car usually lose value fastest in its first few years?",
+   "format": "multiple-choice",
+   "answer": "Depreciation is steepest early in a car’s life",
+   "options": [
+    {
+     "text": "Insurance stops covering it",
+     "correct": false
+    },
+    {
+     "text": "Depreciation is steepest early in a car’s life",
+     "correct": true
+    },
+    {
+     "text": "Fuel economy falls by half",
+     "correct": false
+    },
+    {
+     "text": "The loan rate rises",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Cars commonly lose a large share of value in the first years."
    ],
    "misconceptions": [],
    "activityTypes": [
@@ -3181,6 +2496,114 @@
     "Sometimes true. Approval reflects the lender’s risk, not your full budget. Some approved buyers can afford the car; others cannot once insurance, fuel, maintenance, and savings goals are included. Check the whole budget, not just the approval."
    ],
    "modelResponse": "Sometimes true. Approval reflects the lender’s risk, not your full budget. Some approved buyers can afford the car; others cannot once insurance, fuel, maintenance, and savings goals are included. Check the whole budget, not just the approval.",
+   "rubric": [
+    {
+     "criterion": "Financial accuracy",
+     "points": 4,
+     "full": "All calculations correct, labeled, and rounded to cents where money is reported.",
+     "partial": "Minor arithmetic or rounding errors that do not change the conclusion.",
+     "none": "Major errors or missing calculations."
+    },
+    {
+     "criterion": "Use of evidence",
+     "points": 4,
+     "full": "Supports the verdict with a correct, specific numerical example.",
+     "partial": "Uses some numbers but leaves claims unsupported.",
+     "none": "No reference to the data."
+    },
+    {
+     "criterion": "Reasoning & tradeoffs",
+     "points": 4,
+     "full": "Weighs at least two advantages/disadvantages, including a non-numeric factor, and states assumptions.",
+     "partial": "Mentions tradeoffs without weighing them.",
+     "none": "Opinion only."
+    },
+    {
+     "criterion": "Recommendation & communication",
+     "points": 4,
+     "full": "Clear, defensible recommendation; explains what new information would change it. Alternative defensible conclusions earn full credit.",
+     "partial": "Recommendation present but vague.",
+     "none": "No recommendation."
+    }
+   ],
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false
+  },
+  {
+   "id": "fa-borrowing-s05-claim-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "claim",
+   "type": "claim",
+   "prompt": "Evaluate the claim: “The car with the lower price is cheaper to own.”",
+   "format": "multiple-choice",
+   "answer": "Sometimes true — it depends on the situation",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": false
+    },
+    {
+     "text": "Sometimes true — it depends on the situation",
+     "correct": true
+    },
+    {
+     "text": "Never true",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "Sometimes. Fuel, insurance, repairs and depreciation can make a cheaper car cost more over several years."
+   ],
+   "modelResponse": "Sometimes. Fuel, insurance, repairs and depreciation can make a cheaper car cost more over several years.",
+   "misconceptions": [
+    "The car with the lower price is cheaper to own."
+   ],
+   "activityTypes": [
+    "showdown",
+    "worksheet",
+    "assessment",
+    "detective"
+   ],
+   "gameEligible": true
+  },
+  {
+   "id": "fa-borrowing-s05-claim-cer-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "claim-cer",
+   "type": "claim",
+   "format": "open-response",
+   "prompt": "A friend says: “The car with the lower price is cheaper to own.” Do you agree? Use a specific numerical example to support or refute the claim.",
+   "parts": [
+    {
+     "prompt": "State whether the claim is always, sometimes, or never true.",
+     "answer": "Sometimes true — it depends on the situation"
+    },
+    {
+     "prompt": "Give a specific numerical example.",
+     "answer": "A $2,000.00 cheaper car that gets 22 MPG instead of 35 MPG spends about $700.00 more on fuel per year at 12,000 miles and $3.50/gal."
+    },
+    {
+     "prompt": "Explain the financial principle involved.",
+     "answer": "Sometimes. Fuel, insurance, repairs and depreciation can make a cheaper car cost more over several years."
+    },
+    {
+     "prompt": "Describe a situation where a reasonable person might see it differently.",
+     "answer": "Answers vary; accept any defensible situation."
+    }
+   ],
+   "answer": "Sometimes true — it depends on the situation",
+   "solutionSteps": [
+    "Sometimes. Fuel, insurance, repairs and depreciation can make a cheaper car cost more over several years."
+   ],
+   "modelResponse": "Sometimes. Fuel, insurance, repairs and depreciation can make a cheaper car cost more over several years. Example: A $2,000.00 cheaper car that gets 22 MPG instead of 35 MPG spends about $700.00 more on fuel per year at 12,000 miles and $3.50/gal.",
    "rubric": [
     {
      "criterion": "Financial accuracy",
@@ -6244,6 +5667,1602 @@
    ]
   },
   {
+   "id": "fa-borrowing-s04-ap-total-interest-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara borrows $26,000.00 for a car at 6.9% APR for 36 months. The monthly payment is $801.62. How much interest will she pay over the loan?",
+   "format": "short-answer",
+   "answer": "$2,858.32",
+   "numeric": {
+    "value": 2858.32,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $801.62 × 36 = $28,858.32.",
+    "Interest = total paid − amount borrowed = $28,858.32 − $26,000.00 = $2,858.32.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-ap-total-interest-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev borrows $11,000.00 for a car at 6.9% APR for 36 months. The monthly payment is $339.15. How much interest will he pay over the loan?",
+   "format": "short-answer",
+   "answer": "$1,209.40",
+   "numeric": {
+    "value": 1209.4,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $339.15 × 36 = $12,209.40.",
+    "Interest = total paid − amount borrowed = $12,209.40 − $11,000.00 = $1,209.40.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-ap-total-interest-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley borrows $22,500.00 for a car at 5.9% APR for 72 months. The monthly payment is $371.83. How much interest will they pay over the loan?",
+   "format": "short-answer",
+   "answer": "$4,271.76",
+   "numeric": {
+    "value": 4271.76,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $371.83 × 72 = $26,771.76.",
+    "Interest = total paid − amount borrowed = $26,771.76 − $22,500.00 = $4,271.76.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-ap-total-interest-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah borrows $13,500.00 for a car at 7.9% APR for 72 months. The monthly payment is $236.04. How much interest will he pay over the loan?",
+   "format": "short-answer",
+   "answer": "$3,494.88",
+   "numeric": {
+    "value": 3494.88,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $236.04 × 72 = $16,994.88.",
+    "Interest = total paid − amount borrowed = $16,994.88 − $13,500.00 = $3,494.88.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-ap-total-interest-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya borrows $26,000.00 for a car at 7.9% APR for 60 months. The monthly payment is $525.94. How much interest will she pay over the loan?",
+   "format": "short-answer",
+   "answer": "$5,556.40",
+   "numeric": {
+    "value": 5556.4,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $525.94 × 60 = $31,556.40.",
+    "Interest = total paid − amount borrowed = $31,556.40 − $26,000.00 = $5,556.40.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-ap-total-interest-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Nadia borrows $17,000.00 for a car at 6.9% APR for 60 months. The monthly payment is $335.82. How much interest will she pay over the loan?",
+   "format": "short-answer",
+   "answer": "$3,149.20",
+   "numeric": {
+    "value": 3149.2,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $335.82 × 60 = $20,149.20.",
+    "Interest = total paid − amount borrowed = $20,149.20 − $17,000.00 = $3,149.20.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-ap-total-interest-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah borrows $14,500.00 for a car at 7.9% APR for 60 months. The monthly payment is $293.31. How much interest will he pay over the loan?",
+   "format": "short-answer",
+   "answer": "$3,098.60",
+   "numeric": {
+    "value": 3098.6,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $293.31 × 60 = $17,598.60.",
+    "Interest = total paid − amount borrowed = $17,598.60 − $14,500.00 = $3,098.60.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-ap-total-interest-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "ap-total-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley borrows $26,000.00 for a car at 8.9% APR for 48 months. The monthly payment is $645.78. How much interest will they pay over the loan?",
+   "format": "short-answer",
+   "answer": "$4,997.44",
+   "numeric": {
+    "value": 4997.44,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Total paid = $645.78 × 48 = $30,997.44.",
+    "Interest = total paid − amount borrowed = $30,997.44 − $26,000.00 = $4,997.44.",
+    "Longer terms lower the payment but raise total interest."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-ap-down-payment-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "ap-down-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen buys a car for $25,750, puts 20% down, and gets $1,500 for a trade-in. How much does he need to finance?",
+   "format": "short-answer",
+   "answer": "$19,100",
+   "numeric": {
+    "value": 19100,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = 20% × $25,750 = $5,150.",
+    "Trade-in reduces the amount by $1,500.",
+    "Amount financed = $19,100."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-ap-down-payment-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "ap-down-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owen buys a car for $17,500, puts 15% down. How much does he need to finance?",
+   "format": "short-answer",
+   "answer": "$14,875",
+   "numeric": {
+    "value": 14875,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = 15% × $17,500 = $2,625.",
+    "No trade-in.",
+    "Amount financed = $14,875."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-ap-down-payment-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "ap-down-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace buys a car for $17,250.00, puts 15% down, and gets $1,500.00 for a trade-in. How much does she need to finance?",
+   "format": "short-answer",
+   "answer": "$13,162.50",
+   "numeric": {
+    "value": 13162.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = 15% × $17,250.00 = $2,587.50.",
+    "Trade-in reduces the amount by $1,500.00.",
+    "Amount financed = $13,162.50."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-ap-down-payment-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "ap-down-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Riley buys a car for $23,000, puts 10% down. How much does they need to finance?",
+   "format": "short-answer",
+   "answer": "$20,700",
+   "numeric": {
+    "value": 20700,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = 10% × $23,000 = $2,300.",
+    "No trade-in.",
+    "Amount financed = $20,700."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-ap-down-payment-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "ap-down-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya buys a car for $19,250, puts 20% down. How much does she need to finance?",
+   "format": "short-answer",
+   "answer": "$15,400",
+   "numeric": {
+    "value": 15400,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = 20% × $19,250 = $3,850.",
+    "No trade-in.",
+    "Amount financed = $15,400."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-ap-down-payment-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "ap-down-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace buys a car for $24,250, puts 20% down, and gets $2,500 for a trade-in. How much does she need to finance?",
+   "format": "short-answer",
+   "answer": "$16,900",
+   "numeric": {
+    "value": 16900,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = 20% × $24,250 = $4,850.",
+    "Trade-in reduces the amount by $2,500.",
+    "Amount financed = $16,900."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s01-ap-down-payment-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-01",
+   "level": "standard",
+   "family": "ap-down-payment",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev buys a car for $20,500, puts 10% down. How much does he need to finance?",
+   "format": "short-answer",
+   "answer": "$18,450",
+   "numeric": {
+    "value": 18450,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Down payment = 10% × $20,500 = $2,050.",
+    "No trade-in.",
+    "Amount financed = $18,450."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-ap-first-interest-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "ap-first-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "The first row of an amortization schedule for a $12,000.00 loan at 8.5% APR has a payment of $246.20. How much of that first payment goes to principal?",
+   "format": "short-answer",
+   "answer": "$161.20",
+   "numeric": {
+    "value": 161.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $12,000.00 × 8.5% ÷ 12 = $85.00.",
+    "Principal = $246.20 − $85.00 = $161.20.",
+    "Balance after payment 1 = $11,838.80."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-ap-first-interest-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "ap-first-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "The first row of an amortization schedule for a $13,000.00 loan at 8.5% APR has a payment of $320.43. How much of that first payment goes to principal?",
+   "format": "short-answer",
+   "answer": "$228.35",
+   "numeric": {
+    "value": 228.35,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $13,000.00 × 8.5% ÷ 12 = $92.08.",
+    "Principal = $320.43 − $92.08 = $228.35.",
+    "Balance after payment 1 = $12,771.65."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-ap-first-interest-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "ap-first-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "The first row of an amortization schedule for a $22,500.00 loan at 4.9% APR has a payment of $517.14. How much of that first payment goes to principal?",
+   "format": "short-answer",
+   "answer": "$425.26",
+   "numeric": {
+    "value": 425.26,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $22,500.00 × 4.9% ÷ 12 = $91.88.",
+    "Principal = $517.14 − $91.88 = $425.26.",
+    "Balance after payment 1 = $22,074.74."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-ap-first-interest-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "ap-first-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "The first row of an amortization schedule for a $19,500.00 loan at 6.4% APR has a payment of $380.63. How much of that first payment goes to principal?",
+   "format": "short-answer",
+   "answer": "$276.63",
+   "numeric": {
+    "value": 276.63,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $19,500.00 × 6.4% ÷ 12 = $104.00.",
+    "Principal = $380.63 − $104.00 = $276.63.",
+    "Balance after payment 1 = $19,223.37."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-ap-first-interest-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "ap-first-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "The first row of an amortization schedule for a $9,500.00 loan at 4.9% APR has a payment of $178.84. How much of that first payment goes to principal?",
+   "format": "short-answer",
+   "answer": "$140.05",
+   "numeric": {
+    "value": 140.05,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $9,500.00 × 4.9% ÷ 12 = $38.79.",
+    "Principal = $178.84 − $38.79 = $140.05.",
+    "Balance after payment 1 = $9,359.95."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-ap-first-interest-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "ap-first-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "The first row of an amortization schedule for a $19,000.00 loan at 4.9% APR has a payment of $357.68. How much of that first payment goes to principal?",
+   "format": "short-answer",
+   "answer": "$280.10",
+   "numeric": {
+    "value": 280.1,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $19,000.00 × 4.9% ÷ 12 = $77.58.",
+    "Principal = $357.68 − $77.58 = $280.10.",
+    "Balance after payment 1 = $18,719.90."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s03-ap-first-interest-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-03",
+   "level": "standard",
+   "family": "ap-first-interest",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "The first row of an amortization schedule for a $27,250.00 loan at 8.5% APR has a payment of $559.08. How much of that first payment goes to principal?",
+   "format": "short-answer",
+   "answer": "$366.06",
+   "numeric": {
+    "value": 366.06,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Interest = $27,250.00 × 8.5% ÷ 12 = $193.02.",
+    "Principal = $559.08 − $193.02 = $366.06.",
+    "Balance after payment 1 = $26,883.94."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-ap-term-compare-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "ap-term-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis can finance $12,500.00 at 6.5% APR for 48 months ($296.44/month) or 72 months ($210.12/month). How much more does the 72-month loan cost in total?",
+   "format": "short-answer",
+   "answer": "$899.52",
+   "numeric": {
+    "value": 899.52,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "48 months: $296.44 × 48 = $14,229.12.",
+    "72 months: $210.12 × 72 = $15,128.64.",
+    "Difference = $899.52. The lower payment costs more overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-ap-term-compare-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "ap-term-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Noah can finance $21,500.00 at 7.5% APR for 48 months ($519.85/month) or 72 months ($371.74/month). How much more does the 72-month loan cost in total?",
+   "format": "short-answer",
+   "answer": "$1,812.48",
+   "numeric": {
+    "value": 1812.48,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "48 months: $519.85 × 48 = $24,952.80.",
+    "72 months: $371.74 × 72 = $26,765.28.",
+    "Difference = $1,812.48. The lower payment costs more overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-ap-term-compare-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "ap-term-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Maya can finance $20,500.00 at 7.5% APR for 48 months ($495.67/month) or 72 months ($354.45/month). How much more does the 72-month loan cost in total?",
+   "format": "short-answer",
+   "answer": "$1,728.24",
+   "numeric": {
+    "value": 1728.24,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "48 months: $495.67 × 48 = $23,792.16.",
+    "72 months: $354.45 × 72 = $25,520.40.",
+    "Difference = $1,728.24. The lower payment costs more overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-ap-term-compare-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "ap-term-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila can finance $17,000.00 at 6.5% APR for 48 months ($403.15/month) or 72 months ($285.77/month). How much more does the 72-month loan cost in total?",
+   "format": "short-answer",
+   "answer": "$1,224.24",
+   "numeric": {
+    "value": 1224.24,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "48 months: $403.15 × 48 = $19,351.20.",
+    "72 months: $285.77 × 72 = $20,575.44.",
+    "Difference = $1,224.24. The lower payment costs more overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-ap-term-compare-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "ap-term-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Elijah can finance $19,000.00 at 8.5% APR for 48 months ($468.32/month) or 72 months ($337.79/month). How much more does the 72-month loan cost in total?",
+   "format": "short-answer",
+   "answer": "$1,841.52",
+   "numeric": {
+    "value": 1841.52,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "48 months: $468.32 × 48 = $22,479.36.",
+    "72 months: $337.79 × 72 = $24,320.88.",
+    "Difference = $1,841.52. The lower payment costs more overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-ap-term-compare-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "ap-term-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Fatima can finance $25,500.00 at 7.5% APR for 48 months ($616.56/month) or 72 months ($440.90/month). How much more does the 72-month loan cost in total?",
+   "format": "short-answer",
+   "answer": "$2,149.92",
+   "numeric": {
+    "value": 2149.92,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "48 months: $616.56 × 48 = $29,594.88.",
+    "72 months: $440.90 × 72 = $31,744.80.",
+    "Difference = $2,149.92. The lower payment costs more overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s02-ap-term-compare-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-02",
+   "level": "standard",
+   "family": "ap-term-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Diego can finance $17,000.00 at 8.5% APR for 48 months ($419.02/month) or 72 months ($302.23/month). How much more does the 72-month loan cost in total?",
+   "format": "short-answer",
+   "answer": "$1,647.60",
+   "numeric": {
+    "value": 1647.6,
+    "tolerance": 0.05,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "48 months: $419.02 × 48 = $20,112.96.",
+    "72 months: $302.23 × 72 = $21,760.56.",
+    "Difference = $1,647.60. The lower payment costs more overall."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev's car costs $507.96/month for the loan and $98.00/month for insurance. He drives 10,000 miles a year at 32 MPG with gas at $3.40/gallon, and budgets $1,300.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$9,634.02",
+   "numeric": {
+    "value": 9634.02,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($507.96 + $98.00) × 12 = $7,271.52.",
+    "Fuel = 10,000 ÷ 32 × $3.40 = $1,062.50.",
+    "Total = $7,271.52 + $1,062.50 + $1,300.00 = $9,634.02."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Aaliyah's car costs $478.68/month for the loan and $182.00/month for insurance. She drives 13,000 miles a year at 28 MPG with gas at $3.40/gallon, and budgets $1,250.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$10,756.73",
+   "numeric": {
+    "value": 10756.73,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($478.68 + $182.00) × 12 = $7,928.16.",
+    "Fuel = 13,000 ÷ 28 × $3.40 = $1,578.57.",
+    "Total = $7,928.16 + $1,578.57 + $1,250.00 = $10,756.73."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler's car costs $507.86/month for the loan and $103.00/month for insurance. He drives 9,500 miles a year at 24 MPG with gas at $3.10/gallon, and budgets $1,400.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$9,957.40",
+   "numeric": {
+    "value": 9957.4,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($507.86 + $103.00) × 12 = $7,330.32.",
+    "Fuel = 9,500 ÷ 24 × $3.10 = $1,227.08.",
+    "Total = $7,330.32 + $1,227.08 + $1,400.00 = $9,957.40."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Camila's car costs $348.29/month for the loan and $210.00/month for insurance. She drives 13,000 miles a year at 24 MPG with gas at $3.40/gallon, and budgets $500.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$9,041.15",
+   "numeric": {
+    "value": 9041.15,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($348.29 + $210.00) × 12 = $6,699.48.",
+    "Fuel = 13,000 ÷ 24 × $3.40 = $1,841.67.",
+    "Total = $6,699.48 + $1,841.67 + $500.00 = $9,041.15."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Isaiah's car costs $334.53/month for the loan and $210.00/month for insurance. He drives 9,500 miles a year at 32 MPG with gas at $3.25/gallon, and budgets $600.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$8,099.20",
+   "numeric": {
+    "value": 8099.2,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($334.53 + $210.00) × 12 = $6,534.36.",
+    "Fuel = 9,500 ÷ 32 × $3.25 = $964.84.",
+    "Total = $6,534.36 + $964.84 + $600.00 = $8,099.20."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Grace's car costs $440.73/month for the loan and $156.00/month for insurance. She drives 8,000 miles a year at 30 MPG with gas at $3.40/gallon, and budgets $1,050.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$9,117.43",
+   "numeric": {
+    "value": 9117.43,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($440.73 + $156.00) × 12 = $7,160.76.",
+    "Fuel = 8,000 ÷ 30 × $3.40 = $906.67.",
+    "Total = $7,160.76 + $906.67 + $1,050.00 = $9,117.43."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Priya's car costs $269.27/month for the loan and $104.00/month for insurance. She drives 9,500 miles a year at 24 MPG with gas at $3.10/gallon, and budgets $1,350.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$7,056.32",
+   "numeric": {
+    "value": 7056.32,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($269.27 + $104.00) × 12 = $4,479.24.",
+    "Fuel = 9,500 ÷ 24 × $3.10 = $1,227.08.",
+    "Total = $4,479.24 + $1,227.08 + $1,350.00 = $7,056.32."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-tco-annual-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "tco-annual",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Luis's car costs $263.39/month for the loan and $95.00/month for insurance. He drives 14,000 miles a year at 36 MPG with gas at $3.10/gallon, and budgets $550.00 a year for maintenance. What is the total yearly cost?",
+   "format": "short-answer",
+   "answer": "$6,056.24",
+   "numeric": {
+    "value": 6056.24,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Loan + insurance = ($263.39 + $95.00) × 12 = $4,300.68.",
+    "Fuel = 14,000 ÷ 36 × $3.10 = $1,205.56.",
+    "Total = $4,300.68 + $1,205.56 + $550.00 = $6,056.24."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-fuel-compare-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "fuel-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Sofia drives 11,000 miles a year. Car A gets 26 MPG and Car B gets 42 MPG. With gas at $3.20/gallon, how much less does Car B spend on fuel per year?",
+   "format": "short-answer",
+   "answer": "$515.75",
+   "numeric": {
+    "value": 515.75,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Car A: 11,000 ÷ 26 × $3.20 = $1,353.85.",
+    "Car B: 11,000 ÷ 42 × $3.20 = $838.10.",
+    "Savings = $515.75 per year."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-fuel-compare-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "fuel-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Jordan drives 11,500 miles a year. Car A gets 24 MPG and Car B gets 34 MPG. With gas at $3.45/gallon, how much less does Car B spend on fuel per year?",
+   "format": "short-answer",
+   "answer": "$486.21",
+   "numeric": {
+    "value": 486.21,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Car A: 11,500 ÷ 24 × $3.45 = $1,653.13.",
+    "Car B: 11,500 ÷ 34 × $3.45 = $1,166.91.",
+    "Savings = $486.21 per year."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-fuel-compare-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "fuel-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Kofi drives 10,000 miles a year. Car A gets 24 MPG and Car B gets 38 MPG. With gas at $3.75/gallon, how much less does Car B spend on fuel per year?",
+   "format": "short-answer",
+   "answer": "$575.66",
+   "numeric": {
+    "value": 575.66,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Car A: 10,000 ÷ 24 × $3.75 = $1,562.50.",
+    "Car B: 10,000 ÷ 38 × $3.75 = $986.84.",
+    "Savings = $575.66 per year."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-fuel-compare-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "fuel-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Zara drives 9,500 miles a year. Car A gets 24 MPG and Car B gets 48 MPG. With gas at $3.75/gallon, how much less does Car B spend on fuel per year?",
+   "format": "short-answer",
+   "answer": "$742.19",
+   "numeric": {
+    "value": 742.19,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Car A: 9,500 ÷ 24 × $3.75 = $1,484.38.",
+    "Car B: 9,500 ÷ 48 × $3.75 = $742.19.",
+    "Savings = $742.19 per year."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-fuel-compare-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "fuel-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Tyler drives 11,000 miles a year. Car A gets 26 MPG and Car B gets 34 MPG. With gas at $3.75/gallon, how much less does Car B spend on fuel per year?",
+   "format": "short-answer",
+   "answer": "$373.30",
+   "numeric": {
+    "value": 373.3,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Car A: 11,000 ÷ 26 × $3.75 = $1,586.54.",
+    "Car B: 11,000 ÷ 34 × $3.75 = $1,213.24.",
+    "Savings = $373.30 per year."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-fuel-compare-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "fuel-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Dev drives 13,500 miles a year. Car A gets 24 MPG and Car B gets 38 MPG. With gas at $3.20/gallon, how much less does Car B spend on fuel per year?",
+   "format": "short-answer",
+   "answer": "$663.16",
+   "numeric": {
+    "value": 663.16,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Car A: 13,500 ÷ 24 × $3.20 = $1,800.00.",
+    "Car B: 13,500 ÷ 38 × $3.20 = $1,136.84.",
+    "Savings = $663.16 per year."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-fuel-compare-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "fuel-compare",
+   "type": "comparison",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Leah drives 10,500 miles a year. Car A gets 26 MPG and Car B gets 42 MPG. With gas at $3.75/gallon, how much less does Car B spend on fuel per year?",
+   "format": "short-answer",
+   "answer": "$576.92",
+   "numeric": {
+    "value": 576.92,
+    "tolerance": 0.02,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Car A: 10,500 ÷ 26 × $3.75 = $1,514.42.",
+    "Car B: 10,500 ÷ 42 × $3.75 = $937.50.",
+    "Savings = $576.92 per year."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-car-depreciate-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "car-depreciate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A new car costs $31,500 and loses 20% of its value each year. What is it worth after 3 years?",
+   "format": "short-answer",
+   "answer": "$16,128",
+   "numeric": {
+    "value": 16128,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $31,500 × (1 − 0.2)^3.",
+    "= $31,500 × 0.5120 = $16,128.",
+    "Depreciation over 3 years = $15,372, a real cost of ownership."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-car-depreciate-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "car-depreciate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A new car costs $27,500 and loses 20% of its value each year. What is it worth after 3 years?",
+   "format": "short-answer",
+   "answer": "$14,080",
+   "numeric": {
+    "value": 14080,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $27,500 × (1 − 0.2)^3.",
+    "= $27,500 × 0.5120 = $14,080.",
+    "Depreciation over 3 years = $13,420, a real cost of ownership."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-car-depreciate-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "car-depreciate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A new car costs $39,500.00 and loses 18% of its value each year. What is it worth after 4 years?",
+   "format": "short-answer",
+   "answer": "$17,858.81",
+   "numeric": {
+    "value": 17858.81,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $39,500.00 × (1 − 0.18)^4.",
+    "= $39,500.00 × 0.4521 = $17,858.81.",
+    "Depreciation over 4 years = $21,641.19, a real cost of ownership."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-car-depreciate-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "car-depreciate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A new car costs $18,500.00 and loses 12% of its value each year. What is it worth after 5 years?",
+   "format": "short-answer",
+   "answer": "$9,763.04",
+   "numeric": {
+    "value": 9763.04,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $18,500.00 × (1 − 0.12)^5.",
+    "= $18,500.00 × 0.5277 = $9,763.04.",
+    "Depreciation over 5 years = $8,736.96, a real cost of ownership."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-car-depreciate-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "car-depreciate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A new car costs $38,500.00 and loses 18% of its value each year. What is it worth after 5 years?",
+   "format": "short-answer",
+   "answer": "$14,273.48",
+   "numeric": {
+    "value": 14273.48,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $38,500.00 × (1 − 0.18)^5.",
+    "= $38,500.00 × 0.3707 = $14,273.48.",
+    "Depreciation over 5 years = $24,226.52, a real cost of ownership."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-car-depreciate-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "car-depreciate",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "A new car costs $18,000.00 and loses 12% of its value each year. What is it worth after 5 years?",
+   "format": "short-answer",
+   "answer": "$9,499.17",
+   "numeric": {
+    "value": 9499.17,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Value = $18,000.00 × (1 − 0.12)^5.",
+    "= $18,000.00 × 0.5277 = $9,499.17.",
+    "Depreciation over 5 years = $8,500.83, a real cost of ownership."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-cost-mile-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "cost-mile",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owning her car costs Zara $6,300.00 a year in total, and she drives 14,500 miles. What is the cost per mile?",
+   "format": "short-answer",
+   "answer": "$0.43",
+   "numeric": {
+    "value": 0.43,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Cost per mile = $6,300.00 ÷ 14,500.",
+    "= $0.43 per mile.",
+    "Use cost per mile to compare driving with transit or rideshare."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-cost-mile-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "cost-mile",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owning her car costs Imani $6,300.00 a year in total, and she drives 11,000 miles. What is the cost per mile?",
+   "format": "short-answer",
+   "answer": "$0.57",
+   "numeric": {
+    "value": 0.57,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Cost per mile = $6,300.00 ÷ 11,000.",
+    "= $0.57 per mile.",
+    "Use cost per mile to compare driving with transit or rideshare."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-cost-mile-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "cost-mile",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owning his car costs Tyler $10,850.00 a year in total, and he drives 10,500 miles. What is the cost per mile?",
+   "format": "short-answer",
+   "answer": "$1.03",
+   "numeric": {
+    "value": 1.03,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Cost per mile = $10,850.00 ÷ 10,500.",
+    "= $1.03 per mile.",
+    "Use cost per mile to compare driving with transit or rideshare."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-cost-mile-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "cost-mile",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owning her car costs Grace $6,050.00 a year in total, and she drives 12,000 miles. What is the cost per mile?",
+   "format": "short-answer",
+   "answer": "$0.50",
+   "numeric": {
+    "value": 0.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Cost per mile = $6,050.00 ÷ 12,000.",
+    "= $0.50 per mile.",
+    "Use cost per mile to compare driving with transit or rideshare."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-cost-mile-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "cost-mile",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owning his car costs Elijah $10,800.00 a year in total, and he drives 11,000 miles. What is the cost per mile?",
+   "format": "short-answer",
+   "answer": "$0.98",
+   "numeric": {
+    "value": 0.98,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Cost per mile = $10,800.00 ÷ 11,000.",
+    "= $0.98 per mile.",
+    "Use cost per mile to compare driving with transit or rideshare."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s05-cost-mile-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-05",
+   "level": "standard",
+   "family": "cost-mile",
+   "type": "calculation",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "showdown",
+    "escape-room",
+    "practice-test"
+   ],
+   "gameEligible": true,
+   "prompt": "Owning her car costs Hana $8,150.00 a year in total, and she drives 14,500 miles. What is the cost per mile?",
+   "format": "short-answer",
+   "answer": "$0.56",
+   "numeric": {
+    "value": 0.56,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Cost per mile = $8,150.00 ÷ 14,500.",
+    "= $0.56 per mile.",
+    "Use cost per mile to compare driving with transit or rideshare."
+   ]
+  },
+  {
    "id": "fa-borrowing-s01-err-annual-rate-formula-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",
@@ -6264,7 +7283,7 @@
    "calc": {
     "kind": "loan-payment",
     "inputs": [
-     15600.0,
+     15600,
      6.9,
      48
     ],
@@ -6319,7 +7338,7 @@
    "calc": {
     "kind": "loan-payment",
     "inputs": [
-     12000.0,
+     12000,
      6.5,
      48
     ],
@@ -6362,7 +7381,7 @@
    "calc": {
     "kind": "loan-total",
     "inputs": [
-     20000.0,
+     20000,
      6.4,
      48
     ],
@@ -6418,10 +7437,10 @@
    "calc": {
     "kind": "sub",
     "inputs": [
-     26500.0,
-     4500.0
+     26500,
+     4500
     ],
-    "correct": 22000.0,
+    "correct": 22000,
     "unit": "USD"
    },
    "prompt": "Mateo buys a $26,500.00 car with a $4,500.00 down payment. Mateo’s work: Amount financed = $26,500.00. What is the correct amount financed?",
@@ -6434,7 +7453,7 @@
     "Correct result: $22,000.00."
    ],
    "numeric": {
-    "value": 22000.0,
+    "value": 22000,
     "tolerance": 0.01,
     "unit": "USD"
    }
@@ -6460,7 +7479,7 @@
    "calc": {
     "kind": "amort2",
     "inputs": [
-     15000.0,
+     15000,
      7.2,
      298.44
     ],
@@ -6515,7 +7534,7 @@
    "calc": {
     "kind": "amort1",
     "inputs": [
-     12500.0,
+     12500,
      6.6,
      297.01
     ],
@@ -6558,11 +7577,11 @@
    "calc": {
     "kind": "loan-interest",
     "inputs": [
-     14000.0,
-     7.0,
+     14000,
+     7,
      48
     ],
-    "correct": 2092.0,
+    "correct": 2092,
     "unit": "USD"
    },
    "prompt": "Sofia borrows $14,000.00 at 7% APR for 4 years; the monthly payment is $335.25. Sofia’s work: Total interest = $14,000.00 × 0.07 × 4 = $3,920.00. What mistake did Sofia make?",
@@ -6613,11 +7632,11 @@
    "calc": {
     "kind": "sub2",
     "inputs": [
-     28400.0,
-     6500.0,
-     3500.0
+     28400,
+     6500,
+     3500
     ],
-    "correct": 18400.0,
+    "correct": 18400,
     "unit": "USD"
    },
    "prompt": "Mateo buys a $28,400.00 car, gets $6,500.00 for a trade-in, and pays $3,500.00 down. Mateo’s work: Financed = $28,400.00 + $6,500.00 − $3,500.00 = $31,400.00. What is the correct amount financed?",
@@ -6630,7 +7649,7 @@
     "Correct result: $18,400.00."
    ],
    "numeric": {
-    "value": 18400.0,
+    "value": 18400,
     "tolerance": 0.01,
     "unit": "USD"
    }
