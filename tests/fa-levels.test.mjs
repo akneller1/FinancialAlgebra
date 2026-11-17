@@ -40,7 +40,7 @@ test('every new level question recomputes independently from its text', () => {
   let n = 0;
   for (const u of course.units) {
     const fams = Object.fromEntries((levelFamilies[u.id] || []).map(f => [f.id, f]));
-    for (const q of json(`financial/banks/${u.id}.json`).questions.filter(q => /^lv-/.test(q.family))) {
+    for (const q of json(`financial/banks/${u.id}.json`).questions.filter(q => /^lv-[sa]-/.test(q.family))) {   // lv-d- document families: tests/fa-documents.test.mjs
       const f = fams[q.family]; assert.ok(f, 'no family ' + q.family);
       assert.equal(q.level, f.level, q.id);
       const want = f.verify(q.prompt), got = q.numeric.value, tol = Math.max(q.numeric.tolerance ?? 0.01, 0.011);

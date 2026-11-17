@@ -7448,6 +7448,453 @@
    ]
   },
   {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-01",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "support",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Mei has $12,500.00 in this fund. Yearly fee = balance × expense ratio. What is the fee?",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Harbor Growth Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.95%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "8%"
+      ],
+      [
+       "Holdings",
+       "70% stocks / 30% bonds"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$118.75",
+   "numeric": {
+    "value": 118.75,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$12,500.00 × 0.95% = $118.75."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-02",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is the fund's return after fees, as a percent to the nearest hundredth? (Return before fees − expense ratio)",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Pine Ridge Balanced Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.1%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "8%"
+      ],
+      [
+       "Holdings",
+       "120 large companies"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "7.9%",
+   "numeric": {
+    "value": 7.9,
+    "tolerance": 0.005,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "8% − 0.1% = 7.90%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-03",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "advanced",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "If this fund keeps its average return, how much more would Sam's $37,500.00 grow to in 20 years here than in a similar fund charging 1.2% a year? (Grow by return − fee each year.)",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Harbor Growth Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.65%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "6%"
+      ],
+      [
+       "Holdings",
+       "70% stocks / 30% bonds"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$10,570.17",
+   "numeric": {
+    "value": 10570.17,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "This fund: $37,500.00 × (1 + 0.0535)^20 = $106,346.22.",
+    "1.2% fund: × (1 + 0.0480)^20 = $95,776.05.",
+    "Difference = $10,570.17."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-04",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "support",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Nadia has $20,000 in this fund. Yearly fee = balance × expense ratio. What is the fee?",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Pine Ridge Balanced Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.95%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "8%"
+      ],
+      [
+       "Holdings",
+       "70% stocks / 30% bonds"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$190",
+   "numeric": {
+    "value": 190,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$20,000 × 0.95% = $190."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-05",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is the fund's return after fees, as a percent to the nearest hundredth? (Return before fees − expense ratio)",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Pine Ridge Balanced Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.65%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "6%"
+      ],
+      [
+       "Holdings",
+       "120 large companies"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "5.35%",
+   "numeric": {
+    "value": 5.35,
+    "tolerance": 0.005,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "6% − 0.65% = 5.35%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-06",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "advanced",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "If this fund keeps its average return, how much more would Fatima's $33,000.00 grow to in 20 years here than in a similar fund charging 1.2% a year? (Grow by return − fee each year.)",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Harbor Growth Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.95%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "8%"
+      ],
+      [
+       "Holdings",
+       "120 large companies"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$5,888.76",
+   "numeric": {
+    "value": 5888.76,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "This fund: $33,000.00 × (1 + 0.0705)^20 = $128,898.35.",
+    "1.2% fund: × (1 + 0.0680)^20 = $123,009.60.",
+    "Difference = $5,888.76."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-07",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "support",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Mateo has $17,000.00 in this fund. Yearly fee = balance × expense ratio. What is the fee?",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Cedar Total Market Index Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.04%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "7%"
+      ],
+      [
+       "Holdings",
+       "120 large companies"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6.80",
+   "numeric": {
+    "value": 6.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$17,000.00 × 0.04% = $6.80."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-08",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "standard",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is the fund's return after fees, as a percent to the nearest hundredth? (Return before fees − expense ratio)",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Cedar Total Market Index Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.65%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "8%"
+      ],
+      [
+       "Holdings",
+       "120 large companies"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "7.35%",
+   "numeric": {
+    "value": 7.35,
+    "tolerance": 0.005,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "8% − 0.65% = 7.35%."
+   ]
+  },
+  {
+   "id": "fa-investing-s03-lv-d-fund-fact-sheet-09",
+   "unitId": "investing",
+   "skillId": "investing-skill-03",
+   "level": "advanced",
+   "family": "lv-d-fund-fact-sheet",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "If this fund keeps its average return, how much more would Owen's $10,000.00 grow to in 20 years here than in a similar fund charging 1.2% a year? (Grow by return − fee each year.)",
+   "scenario": {
+    "document": {
+     "kind": "fund-fact-sheet",
+     "title": "Pine Ridge Balanced Fund — Fact Sheet",
+     "meta": [
+      [
+       "Expense ratio",
+       "0.65%"
+      ],
+      [
+       "10-year average annual return (before fees)",
+       "7%"
+      ],
+      [
+       "Holdings",
+       "3,500 U.S. stocks"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Past returns do not guarantee future results."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,374.48",
+   "numeric": {
+    "value": 3374.48,
+    "tolerance": 1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "This fund: $10,000.00 × (1 + 0.0635)^20 = $34,257.04.",
+    "1.2% fund: × (1 + 0.0580)^20 = $30,882.56.",
+    "Difference = $3,374.48."
+   ]
+  },
+  {
    "id": "fa-investing-s01-err-linear-growth-01",
    "unitId": "investing",
    "skillId": "investing-skill-01",

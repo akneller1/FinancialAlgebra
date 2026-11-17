@@ -10142,6 +10142,777 @@
    ]
   },
   {
+   "id": "fa-credit-s05-lv-d-credit-report-01",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "support",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How many 30-day late payments in all does Nadia's report show?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Nadia"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$2,250",
+        "$820",
+        "2"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$1,000",
+        "$610",
+        "2"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$2,750",
+        "$480",
+        "0"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$14,450",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "4",
+   "numeric": {
+    "value": 4,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Add the last column: 2 + 2 + 0 + 0 = 4.",
+    "Payment history is the largest factor in most scores."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-02",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "standard",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is Mei's overall credit utilization on revolving accounts, to the nearest tenth of a percent?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Mei"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$3,500",
+        "$810",
+        "1"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$4,000",
+        "$970",
+        "0"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$750",
+        "$160",
+        "1"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$10,550",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "23.5%",
+   "numeric": {
+    "value": 23.52,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Revolving balances = $1,940; limits = $8,250.",
+    "$1,940 ÷ $8,250 = 0.2352 ≈ 23.5%.",
+    "The installment loan is not part of utilization."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-03",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Kofi wants overall revolving utilization at 10% before applying for a mortgage. What is the least total amount he must pay down on the cards?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Kofi"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$3,000",
+        "$2,080",
+        "0"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$2,500",
+        "$790",
+        "0"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$1,750",
+        "$420",
+        "0"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$10,250",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,565",
+   "numeric": {
+    "value": 2565,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "10% of total limits = 0.10 × $7,250 = $725.",
+    "Pay down = $3,290 − $725 = $2,565.",
+    "Paying before the statement closes lowers the balance that gets reported."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-04",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "support",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How many 30-day late payments in all does Hana's report show?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Hana"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$3,000",
+        "$110",
+        "1"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$4,750",
+        "$1,190",
+        "1"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$1,500",
+        "$1,200",
+        "1"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$9,150",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "3",
+   "numeric": {
+    "value": 3,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Add the last column: 1 + 1 + 1 + 0 = 3.",
+    "Payment history is the largest factor in most scores."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-05",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "standard",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is Riley's overall credit utilization on revolving accounts, to the nearest tenth of a percent?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Riley"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$2,000",
+        "$450",
+        "2"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$4,750",
+        "$1,210",
+        "0"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$5,000",
+        "$3,950",
+        "0"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$13,050",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "47.7%",
+   "numeric": {
+    "value": 47.74,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Revolving balances = $5,610; limits = $11,750.",
+    "$5,610 ÷ $11,750 = 0.4774 ≈ 47.7%.",
+    "The installment loan is not part of utilization."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-06",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fatima wants overall revolving utilization at 10% before applying for a mortgage. What is the least total amount she must pay down on the cards?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Fatima"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$2,250",
+        "$1,270",
+        "0"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$1,750",
+        "$850",
+        "0"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$2,750",
+        "$1,330",
+        "2"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$8,900",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,775",
+   "numeric": {
+    "value": 2775,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "10% of total limits = 0.10 × $6,750 = $675.",
+    "Pay down = $3,450 − $675 = $2,775.",
+    "Paying before the statement closes lowers the balance that gets reported."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-07",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "support",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How many 30-day late payments in all does Fatima's report show?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Fatima"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$3,250",
+        "$1,670",
+        "0"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$1,250",
+        "$540",
+        "2"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$2,750",
+        "$1,600",
+        "1"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$13,600",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "3",
+   "numeric": {
+    "value": 3,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "Add the last column: 0 + 2 + 1 + 0 = 3.",
+    "Payment history is the largest factor in most scores."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-08",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "standard",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is Imani's overall credit utilization on revolving accounts, to the nearest tenth of a percent?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Imani"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$3,750",
+        "$2,080",
+        "0"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$1,500",
+        "$1,030",
+        "0"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$2,500",
+        "$1,770",
+        "1"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$7,050",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "63%",
+   "numeric": {
+    "value": 62.97,
+    "tolerance": 0.05,
+    "unit": "%"
+   },
+   "solutionSteps": [
+    "Revolving balances = $4,880; limits = $7,750.",
+    "$4,880 ÷ $7,750 = 0.6297 ≈ 63.0%.",
+    "The installment loan is not part of utilization."
+   ]
+  },
+  {
+   "id": "fa-credit-s05-lv-d-credit-report-09",
+   "unitId": "credit",
+   "skillId": "credit-skill-05",
+   "level": "advanced",
+   "family": "lv-d-credit-report",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Grace wants overall revolving utilization at 10% before applying for a mortgage. What is the least total amount she must pay down on the cards?",
+   "scenario": {
+    "document": {
+     "kind": "credit-report",
+     "title": "Credit Report Excerpt — Fictional Bureau",
+     "meta": [
+      [
+       "Consumer",
+       "Grace"
+      ],
+      [
+       "Report date",
+       "Nov 1, 2026"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Account",
+       "Type",
+       "Limit",
+       "Balance",
+       "30-day lates (24 mo)"
+      ],
+      "rows": [
+       [
+        "Northstar Visa",
+        "Revolving",
+        "$1,750",
+        "$1,060",
+        "0"
+       ],
+       [
+        "Bayline Mastercard",
+        "Revolving",
+        "$3,250",
+        "$2,380",
+        "0"
+       ],
+       [
+        "Summit Store Card",
+        "Revolving",
+        "$2,500",
+        "$0",
+        "0"
+       ],
+       [
+        "Crestview Auto Loan",
+        "Installment",
+        "—",
+        "$11,300",
+        "0"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Utilization counts revolving accounts only."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,690",
+   "numeric": {
+    "value": 2690,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "10% of total limits = 0.10 × $7,500 = $750.",
+    "Pay down = $3,440 − $750 = $2,690.",
+    "Paying before the statement closes lowers the balance that gets reported."
+   ]
+  },
+  {
    "id": "fa-credit-s01-err-apr-monthly-01",
    "unitId": "credit",
    "skillId": "credit-skill-01",

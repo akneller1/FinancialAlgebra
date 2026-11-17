@@ -9913,6 +9913,1300 @@
    ]
   },
   {
+   "id": "fa-income-s04-lv-d-w2-01",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Nadia's W-2. How much federal income tax was withheld during the year?",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Nadia"
+      ],
+      [
+       "Employer",
+       "Harbor City Logistics"
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$33,200.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$2,044.00"
+      ],
+      [
+       "3 Social security wages",
+       "$33,200.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$2,058.40"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$33,200.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$481.40"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,044.00",
+   "numeric": {
+    "value": 2044,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Federal income tax withheld is in box 2.",
+    "Box 2 = $2,044.00."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-02",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Social Security tax is 6.2% of box 3. Check Isaiah's W-2: what should box 4 be?",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Isaiah"
+      ],
+      [
+       "Employer",
+       "Harbor City Logistics"
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$76,610.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$7,684.20"
+      ],
+      [
+       "3 Social security wages",
+       "$81,500.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$5,053.00"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$81,500.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$1,181.75"
+      ],
+      [
+       "12a Code D (401(k) deferrals)",
+       "$4,890.00"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$5,053.00",
+   "numeric": {
+    "value": 5053,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Box 3 = $81,500.00.",
+    "6.2% × $81,500.00 = $5,053.00.",
+    "It matches box 4, so the withholding is right."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-03",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Using Fatima's W-2 and the 2026 figures for a single filer (standard deduction $16,100.00; 10% to $12,400.00, 12% to $50,400.00, 22% to $105,700.00), what refund will she get? If she owes money, give a negative number.",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Fatima"
+      ],
+      [
+       "Employer",
+       "Westfield Design Co."
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$44,321.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$3,078.52"
+      ],
+      [
+       "3 Social security wages",
+       "$47,150.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$2,923.30"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$47,150.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$683.68"
+      ],
+      [
+       "12a Code D (401(k) deferrals)",
+       "$2,829.00"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "−$60.00",
+   "numeric": {
+    "value": -60,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Taxable income = box 1 − $16,100.00 = $44,321.00 − $16,100.00 = $28,221.00.",
+    "Tax = $3,138.52.",
+    "Refund = withheld − tax = $3,078.52 − $3,138.52 = −$60.00 (owes)."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-04",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Elijah's W-2. How much federal income tax was withheld during the year?",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Elijah"
+      ],
+      [
+       "Employer",
+       "Lakeview Credit Union"
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$81,456.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$10,180.32"
+      ],
+      [
+       "3 Social security wages",
+       "$84,850.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$5,260.70"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$84,850.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$1,230.33"
+      ],
+      [
+       "12a Code D (401(k) deferrals)",
+       "$3,394.00"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$10,180.32",
+   "numeric": {
+    "value": 10180.32,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Federal income tax withheld is in box 2.",
+    "Box 2 = $10,180.32."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-05",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Social Security tax is 6.2% of box 3. Check Diego's W-2: what should box 4 be?",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Diego"
+      ],
+      [
+       "Employer",
+       "Brookside Medical Group"
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$43,248.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$3,559.76"
+      ],
+      [
+       "3 Social security wages",
+       "$45,050.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$2,793.10"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$45,050.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$653.23"
+      ],
+      [
+       "12a Code D (401(k) deferrals)",
+       "$1,802.00"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,793.10",
+   "numeric": {
+    "value": 2793.1,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Box 3 = $45,050.00.",
+    "6.2% × $45,050.00 = $2,793.10.",
+    "It matches box 4, so the withholding is right."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-06",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Using Maya's W-2 and the 2026 figures for a single filer (standard deduction $16,100.00; 10% to $12,400.00, 12% to $50,400.00, 22% to $105,700.00), what refund will she get? If she owes money, give a negative number.",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Maya"
+      ],
+      [
+       "Employer",
+       "Brookside Medical Group"
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$79,050.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$9,251.00"
+      ],
+      [
+       "3 Social security wages",
+       "$79,050.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$4,901.10"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$79,050.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$1,146.23"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$690.00",
+   "numeric": {
+    "value": 690,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Taxable income = box 1 − $16,100.00 = $79,050.00 − $16,100.00 = $62,950.00.",
+    "Tax = $8,561.00.",
+    "Refund = withheld − tax = $9,251.00 − $8,561.00 = $690.00."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-07",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Use Tyler's W-2. How much federal income tax was withheld during the year?",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Tyler"
+      ],
+      [
+       "Employer",
+       "Westfield Design Co."
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$60,677.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$5,261.24"
+      ],
+      [
+       "3 Social security wages",
+       "$64,550.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$4,002.10"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$64,550.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$935.98"
+      ],
+      [
+       "12a Code D (401(k) deferrals)",
+       "$3,873.00"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$5,261.24",
+   "numeric": {
+    "value": 5261.24,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Federal income tax withheld is in box 2.",
+    "Box 2 = $5,261.24."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-08",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Social Security tax is 6.2% of box 3. Check Owen's W-2: what should box 4 be?",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Owen"
+      ],
+      [
+       "Employer",
+       "Maple Falls School District"
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$37,776.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$3,503.12"
+      ],
+      [
+       "3 Social security wages",
+       "$39,350.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$2,439.70"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$39,350.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$570.58"
+      ],
+      [
+       "12a Code D (401(k) deferrals)",
+       "$1,574.00"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,439.70",
+   "numeric": {
+    "value": 2439.7,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Box 3 = $39,350.00.",
+    "6.2% × $39,350.00 = $2,439.70.",
+    "It matches box 4, so the withholding is right."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-w2-09",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-d-w2",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Using Owen's W-2 and the 2026 figures for a single filer (standard deduction $16,100.00; 10% to $12,400.00, 12% to $50,400.00, 22% to $105,700.00), what refund will he get? If he owes money, give a negative number.",
+   "scenario": {
+    "document": {
+     "kind": "w2",
+     "title": "Form W-2 Wage and Tax Statement 2026",
+     "meta": [
+      [
+       "Employee",
+       "Owen"
+      ],
+      [
+       "Employer",
+       "Pine Ridge Builders"
+      ]
+     ],
+     "boxes": [
+      [
+       "1 Wages, tips, other compensation",
+       "$40,467.00"
+      ],
+      [
+       "2 Federal income tax withheld",
+       "$2,336.04"
+      ],
+      [
+       "3 Social security wages",
+       "$43,050.00"
+      ],
+      [
+       "4 Social security tax withheld",
+       "$2,669.10"
+      ],
+      [
+       "5 Medicare wages and tips",
+       "$43,050.00"
+      ],
+      [
+       "6 Medicare tax withheld",
+       "$624.23"
+      ],
+      [
+       "12a Code D (401(k) deferrals)",
+       "$2,583.00"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "Box 1 leaves out pre-tax 401(k) deferrals; boxes 3 and 5 include them."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "−$340.00",
+   "numeric": {
+    "value": -340,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Taxable income = box 1 − $16,100.00 = $40,467.00 − $16,100.00 = $24,367.00.",
+    "Tax = $2,676.04.",
+    "Refund = withheld − tax = $2,336.04 − $2,676.04 = −$340.00 (owes)."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-01",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in line 15 of Riley's simplified 1040. Taxable income = line 1a − line 12.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Riley"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$77,600"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "?"
+      ],
+      [
+       "16 Tax",
+       "—"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$9,242"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$61,500",
+   "numeric": {
+    "value": 61500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$77,600 − $16,100 = $61,500."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-02",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in line 16 (tax) of Marcus's simplified 1040 using the 2026 brackets in the note.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Marcus"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$44,900"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "$28,800"
+      ],
+      [
+       "16 Tax",
+       "?"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$4,198"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,208",
+   "numeric": {
+    "value": 3208,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "10% of the first $12,400 = $1,240.",
+    "12% of $16,400 = $1,968.",
+    "Tax = $3,208."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-03",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Complete Dev's simplified 1040: find line 34, the refund (withholding minus tax). If he owes, give a negative number.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Dev"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$92,550"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "$76,450"
+      ],
+      [
+       "16 Tax",
+       "$11,531"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$11,181"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "−$350",
+   "numeric": {
+    "value": -350,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Line 15 = $76,450; line 16 = $11,531.",
+    "Refund = $11,181 − $11,531 = −$350."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-04",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in line 15 of Priya's simplified 1040. Taxable income = line 1a − line 12.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Priya"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$43,700"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "?"
+      ],
+      [
+       "16 Tax",
+       "—"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$3,354"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$27,600",
+   "numeric": {
+    "value": 27600,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$43,700 − $16,100 = $27,600."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-05",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in line 16 (tax) of Sofia's simplified 1040 using the 2026 brackets in the note.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Sofia"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$56,800"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "$40,700"
+      ],
+      [
+       "16 Tax",
+       "?"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$4,966"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$4,636",
+   "numeric": {
+    "value": 4636,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "10% of the first $12,400 = $1,240.",
+    "12% of $28,300 = $3,396.",
+    "Tax = $4,636."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-06",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Complete Sam's simplified 1040: find line 34, the refund (withholding minus tax). If they owes, give a negative number.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Sam"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$83,150"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "$67,050"
+      ],
+      [
+       "16 Tax",
+       "$9,463"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$10,103"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$640",
+   "numeric": {
+    "value": 640,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Line 15 = $67,050; line 16 = $9,463.",
+    "Refund = $10,103 − $9,463 = $640."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-07",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "support",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in line 15 of Dev's simplified 1040. Taxable income = line 1a − line 12.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Dev"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$50,200"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "?"
+      ],
+      [
+       "16 Tax",
+       "—"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$4,754"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$34,100",
+   "numeric": {
+    "value": 34100,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$50,200 − $16,100 = $34,100."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-08",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "standard",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in line 16 (tax) of Mei's simplified 1040 using the 2026 brackets in the note.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Mei"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$33,350"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "$17,250"
+      ],
+      [
+       "16 Tax",
+       "?"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$3,132"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,822",
+   "numeric": {
+    "value": 1822,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "10% of the first $12,400 = $1,240.",
+    "12% of $4,850 = $582.",
+    "Tax = $1,822."
+   ]
+  },
+  {
+   "id": "fa-income-s04-lv-d-form-1040-09",
+   "unitId": "income",
+   "skillId": "income-skill-04",
+   "level": "advanced",
+   "family": "lv-d-form-1040",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Complete Kofi's simplified 1040: find line 34, the refund (withholding minus tax). If he owes, give a negative number.",
+   "scenario": {
+    "document": {
+     "kind": "form-1040",
+     "title": "Form 1040 (simplified) · 2026 · Single",
+     "meta": [
+      [
+       "Name",
+       "Kofi"
+      ]
+     ],
+     "boxes": [
+      [
+       "1a Wages (W-2 box 1)",
+       "$41,400"
+      ],
+      [
+       "12 Standard deduction",
+       "$16,100"
+      ],
+      [
+       "15 Taxable income",
+       "$25,300"
+      ],
+      [
+       "16 Tax",
+       "$2,788"
+      ],
+      [
+       "25a Federal income tax withheld",
+       "$3,938"
+      ],
+      [
+       "34 Refund (or 37 Amount you owe)",
+       "?"
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use.",
+      "2026 single brackets: 10% to $12,400; 12% to $50,400; 22% to $105,700."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,150",
+   "numeric": {
+    "value": 1150,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Line 15 = $25,300; line 16 = $2,788.",
+    "Refund = $3,938 − $2,788 = $1,150."
+   ]
+  },
+  {
    "id": "fa-income-s01-err-weeks-per-year-01",
    "unitId": "income",
    "skillId": "income-skill-01",

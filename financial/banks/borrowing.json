@@ -9705,6 +9705,618 @@
    ]
   },
   {
+   "id": "fa-borrowing-s04-lv-d-tila-01",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in the Total of Payments box on Imani's disclosure. Total of payments = monthly payment × number of payments.",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Imani"
+      ],
+      [
+       "Cash down payment",
+       "$2,500.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "6.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "$1,875.60"
+      ],
+      [
+       "Amount Financed",
+       "$10,800.00"
+      ],
+      [
+       "Total of Payments",
+       "?"
+      ],
+      [
+       "Your payment schedule",
+       "60 monthly payments of $211.26",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$12,675.60",
+   "numeric": {
+    "value": 12675.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$211.26 × 60 = $12,675.60."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-02",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in the FINANCE CHARGE box: total of payments − amount financed.",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Sofia"
+      ],
+      [
+       "Cash down payment",
+       "$2,500.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "7.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "?"
+      ],
+      [
+       "Amount Financed",
+       "$14,650.00"
+      ],
+      [
+       "Total of Payments",
+       "$16,999.20"
+      ],
+      [
+       "Your payment schedule",
+       "48 monthly payments of $354.15",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,349.20",
+   "numeric": {
+    "value": 2349.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$16,999.20 − $14,650.00 = $2,349.20.",
+    "The finance charge is the dollar cost of the credit."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-03",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "The payment amount is missing. Using the APR, amount financed and number of payments, find the monthly payment, then the total sale price (cash down + total of payments). Give the total sale price. (Payment = P·i ÷ (1 − (1 + i)^−n), i = APR ÷ 12.)",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Kofi"
+      ],
+      [
+       "Cash down payment",
+       "$1,500.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "8.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "$5,260.20"
+      ],
+      [
+       "Amount Financed",
+       "$22,800.00"
+      ],
+      [
+       "Total of Payments",
+       "$28,060.20"
+      ],
+      [
+       "Your payment schedule",
+       "60 monthly payments of ?",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$29,560.20",
+   "numeric": {
+    "value": 29560.2,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.0849 ÷ 12; payment = $467.67.",
+    "Total of payments = $467.67 × 60 = $28,060.20.",
+    "Total sale price = $1,500.00 + $28,060.20 = $29,560.20."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-04",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in the Total of Payments box on Sofia's disclosure. Total of payments = monthly payment × number of payments.",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Sofia"
+      ],
+      [
+       "Cash down payment",
+       "$3,500.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "8.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "$5,686.60"
+      ],
+      [
+       "Amount Financed",
+       "$24,650.00"
+      ],
+      [
+       "Total of Payments",
+       "?"
+      ],
+      [
+       "Your payment schedule",
+       "60 monthly payments of $505.61",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$30,336.60",
+   "numeric": {
+    "value": 30336.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$505.61 × 60 = $30,336.60."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-05",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in the FINANCE CHARGE box: total of payments − amount financed.",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Andre"
+      ],
+      [
+       "Cash down payment",
+       "$3,000.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "7.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "?"
+      ],
+      [
+       "Amount Financed",
+       "$13,500.00"
+      ],
+      [
+       "Total of Payments",
+       "$16,227.00"
+      ],
+      [
+       "Your payment schedule",
+       "60 monthly payments of $270.45",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,727.00",
+   "numeric": {
+    "value": 2727,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$16,227.00 − $13,500.00 = $2,727.00.",
+    "The finance charge is the dollar cost of the credit."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-06",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "The payment amount is missing. Using the APR, amount financed and number of payments, find the monthly payment, then the total sale price (cash down + total of payments). Give the total sale price. (Payment = P·i ÷ (1 − (1 + i)^−n), i = APR ÷ 12.)",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Grace"
+      ],
+      [
+       "Cash down payment",
+       "$4,000.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "7.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "$1,900.08"
+      ],
+      [
+       "Amount Financed",
+       "$11,850.00"
+      ],
+      [
+       "Total of Payments",
+       "$13,750.08"
+      ],
+      [
+       "Your payment schedule",
+       "48 monthly payments of ?",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$17,750.08",
+   "numeric": {
+    "value": 17750.08,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.0749 ÷ 12; payment = $286.46.",
+    "Total of payments = $286.46 × 48 = $13,750.08.",
+    "Total sale price = $4,000.00 + $13,750.08 = $17,750.08."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-07",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "support",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in the Total of Payments box on Luis's disclosure. Total of payments = monthly payment × number of payments.",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Luis"
+      ],
+      [
+       "Cash down payment",
+       "$3,500.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "6.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "$1,849.80"
+      ],
+      [
+       "Amount Financed",
+       "$10,650.00"
+      ],
+      [
+       "Total of Payments",
+       "?"
+      ],
+      [
+       "Your payment schedule",
+       "60 monthly payments of $208.33",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$12,499.80",
+   "numeric": {
+    "value": 12499.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$208.33 × 60 = $12,499.80."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-08",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "standard",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fill in the FINANCE CHARGE box: total of payments − amount financed.",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Imani"
+      ],
+      [
+       "Cash down payment",
+       "$2,500.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "6.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "?"
+      ],
+      [
+       "Amount Financed",
+       "$18,450.00"
+      ],
+      [
+       "Total of Payments",
+       "$21,654.60"
+      ],
+      [
+       "Your payment schedule",
+       "60 monthly payments of $360.91",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,204.60",
+   "numeric": {
+    "value": 3204.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$21,654.60 − $18,450.00 = $3,204.60.",
+    "The finance charge is the dollar cost of the credit."
+   ]
+  },
+  {
+   "id": "fa-borrowing-s04-lv-d-tila-09",
+   "unitId": "borrowing",
+   "skillId": "borrowing-skill-04",
+   "level": "advanced",
+   "family": "lv-d-tila",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "The payment amount is missing. Using the APR, amount financed and number of payments, find the monthly payment, then the total sale price (cash down + total of payments). Give the total sale price. (Payment = P·i ÷ (1 − (1 + i)^−n), i = APR ÷ 12.)",
+   "scenario": {
+    "document": {
+     "kind": "loan-disclosure",
+     "title": "Truth-in-Lending Disclosure — Riverton Auto Credit",
+     "meta": [
+      [
+       "Borrower",
+       "Zara"
+      ],
+      [
+       "Cash down payment",
+       "$2,000.00"
+      ]
+     ],
+     "boxes": [
+      [
+       "ANNUAL PERCENTAGE RATE",
+       "6.49%"
+      ],
+      [
+       "FINANCE CHARGE",
+       "$2,883.20"
+      ],
+      [
+       "Amount Financed",
+       "$16,600.00"
+      ],
+      [
+       "Total of Payments",
+       "$19,483.20"
+      ],
+      [
+       "Your payment schedule",
+       "60 monthly payments of ?",
+       true
+      ]
+     ],
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$21,483.20",
+   "numeric": {
+    "value": 21483.2,
+    "tolerance": 0.1,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "i = 0.0649 ÷ 12; payment = $324.72.",
+    "Total of payments = $324.72 × 60 = $19,483.20.",
+    "Total sale price = $2,000.00 + $19,483.20 = $21,483.20."
+   ]
+  },
+  {
    "id": "fa-borrowing-s01-err-annual-rate-formula-01",
    "unitId": "borrowing",
    "skillId": "borrowing-skill-01",

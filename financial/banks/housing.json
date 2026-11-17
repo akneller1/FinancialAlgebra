@@ -9409,6 +9409,708 @@
    ]
   },
   {
+   "id": "fa-housing-s05-lv-d-lease-01",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "support",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How much must Zara pay at move-in: first month's rent and pet rent plus both deposits?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Zara"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,250"
+       ],
+       [
+        "Security deposit",
+        "$1,250"
+       ],
+       [
+        "Pet deposit",
+        "$250"
+       ],
+       [
+        "Monthly pet rent",
+        "$25"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$50 plus $15 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,775",
+   "numeric": {
+    "value": 2775,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,250 + $25 + $1,250 + $250 = $2,775."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-02",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "standard",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Isaiah pays rent on day 9 of the month. Using the lease, what is the late fee?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Isaiah"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,050"
+       ],
+       [
+        "Security deposit",
+        "$1,050"
+       ],
+       [
+        "Pet deposit",
+        "$250"
+       ],
+       [
+        "Monthly pet rent",
+        "$35"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$75 plus $15 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$135",
+   "numeric": {
+    "value": 135,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Days after the 5th: 9 − 5 = 4.",
+    "$75 + $15 × 4 = $135."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-03",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Elijah also pays $15 a month for renters insurance. What will he spend in the first year on rent, pet rent and insurance (deposits are refunded)?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Elijah"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,625"
+       ],
+       [
+        "Security deposit",
+        "$1,625"
+       ],
+       [
+        "Pet deposit",
+        "$0"
+       ],
+       [
+        "Monthly pet rent",
+        "$0"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$75 plus $15 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$19,680",
+   "numeric": {
+    "value": 19680,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Rent + pet rent = $1,625 × 12 = $19,500.",
+    "Insurance = $15 × 12 = $180.",
+    "Total = $19,680."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-04",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "support",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How much must Zara pay at move-in: first month's rent and pet rent plus both deposits?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Zara"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,350"
+       ],
+       [
+        "Security deposit",
+        "$1,350"
+       ],
+       [
+        "Pet deposit",
+        "$300"
+       ],
+       [
+        "Monthly pet rent",
+        "$25"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$50 plus $15 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$3,025",
+   "numeric": {
+    "value": 3025,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,350 + $25 + $1,350 + $300 = $3,025."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-05",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "standard",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Tyler pays rent on day 7 of the month. Using the lease, what is the late fee?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Tyler"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$900"
+       ],
+       [
+        "Security deposit",
+        "$900"
+       ],
+       [
+        "Pet deposit",
+        "$0"
+       ],
+       [
+        "Monthly pet rent",
+        "$0"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$50 plus $10 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$70",
+   "numeric": {
+    "value": 70,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Days after the 5th: 7 − 5 = 2.",
+    "$50 + $10 × 2 = $70."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-06",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fatima also pays $18 a month for renters insurance. What will she spend in the first year on rent, pet rent and insurance (deposits are refunded)?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Fatima"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,375"
+       ],
+       [
+        "Security deposit",
+        "$1,375"
+       ],
+       [
+        "Pet deposit",
+        "$250"
+       ],
+       [
+        "Monthly pet rent",
+        "$25"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$75 plus $10 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$17,016",
+   "numeric": {
+    "value": 17016,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Rent + pet rent = $1,400 × 12 = $16,800.",
+    "Insurance = $18 × 12 = $216.",
+    "Total = $17,016."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-07",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "support",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How much must Nadia pay at move-in: first month's rent and pet rent plus both deposits?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Nadia"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,150"
+       ],
+       [
+        "Security deposit",
+        "$1,150"
+       ],
+       [
+        "Pet deposit",
+        "$0"
+       ],
+       [
+        "Monthly pet rent",
+        "$0"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$75 plus $15 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$2,300",
+   "numeric": {
+    "value": 2300,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,150 + $0 + $1,150 + $0 = $2,300."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-08",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "standard",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Andre pays rent on day 14 of the month. Using the lease, what is the late fee?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Andre"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,950"
+       ],
+       [
+        "Security deposit",
+        "$1,950"
+       ],
+       [
+        "Pet deposit",
+        "$300"
+       ],
+       [
+        "Monthly pet rent",
+        "$25"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$75 plus $10 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$165",
+   "numeric": {
+    "value": 165,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Days after the 5th: 14 − 5 = 9.",
+    "$75 + $10 × 9 = $165."
+   ]
+  },
+  {
+   "id": "fa-housing-s05-lv-d-lease-09",
+   "unitId": "housing",
+   "skillId": "housing-skill-05",
+   "level": "advanced",
+   "family": "lv-d-lease",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Andre also pays $12 a month for renters insurance. What will he spend in the first year on rent, pet rent and insurance (deposits are refunded)?",
+   "scenario": {
+    "document": {
+     "kind": "lease-summary",
+     "title": "Residential Lease — Key Terms",
+     "meta": [
+      [
+       "Tenant",
+       "Andre"
+      ],
+      [
+       "Term",
+       "12 months"
+      ],
+      [
+       "Rent due",
+       "1st of each month"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Term",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Monthly rent",
+        "$1,125"
+       ],
+       [
+        "Security deposit",
+        "$1,125"
+       ],
+       [
+        "Pet deposit",
+        "$0"
+       ],
+       [
+        "Monthly pet rent",
+        "$0"
+       ],
+       [
+        "Late fee (after the 5th)",
+        "$75 plus $10 per day after the 5th"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Deposits are refundable minus damage beyond normal wear and tear."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$13,644",
+   "numeric": {
+    "value": 13644,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Rent + pet rent = $1,125 × 12 = $13,500.",
+    "Insurance = $12 × 12 = $144.",
+    "Total = $13,644."
+   ]
+  },
+  {
    "id": "fa-housing-s01-err-piti-01",
    "unitId": "housing",
    "skillId": "housing-skill-01",

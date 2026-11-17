@@ -23,7 +23,8 @@ export async function loadContent(id) {
   const { newSkills } = await import(P('financial/content/new-skills-20261116.mjs').href);
   const ns = newSkills[id];
   const { levelFamilies } = await import(P('financial/content/levels-20261117.mjs').href);
-  return { ...content, families: content.families.concat(applied[id] || [], ns ? ns.families : [], levelFamilies[id] || []),
+  const { documentFamilies } = await import(P('financial/content/documents-20261117.mjs').href);
+  return { ...content, families: content.families.concat(applied[id] || [], ns ? ns.families : [], levelFamilies[id] || [], documentFamilies[id] || []),
     vocab: content.vocab.concat(ns ? ns.vocab : []), concepts: (content.concepts || []).concat(ns ? ns.concepts : []),
     claims: (content.claims || []).concat(ns ? ns.claims : []), lessons: content.lessons.concat(ns ? [ns.lesson] : []) };
 }
@@ -34,7 +35,7 @@ function tableText(t) {
 }
 function docText(d) {
   if (!d) return '';
-  return '\n' + d.title + (d.meta ? '\n' + d.meta.map(m => m[0] + ': ' + m[1]).join('; ') : '') + tableText(d.table) + (d.notes ? '\n' + d.notes.join('\n') : '');
+  return '\n' + d.title + (d.meta ? '\n' + d.meta.map(m => m[0] + ': ' + m[1]).join('; ') : '') + (d.boxes ? '\n' + d.boxes.map(b => b[0] + ': ' + b[1]).join('\n') : '') + tableText(d.table) + (d.notes ? '\n' + d.notes.join('\n') : '');
 }
 export function toClassroom(q) {
   const ok = (q.format === 'multiple-choice' || q.format === 'short-answer') ? q.gameEligible : q.format === 'select-all' ? true : q.format === 'open-response' ? (q.parts || []).length >= 4 : false;

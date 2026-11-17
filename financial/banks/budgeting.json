@@ -10843,6 +10843,666 @@
    ]
   },
   {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-01",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "support",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How many kilowatt-hours (kWh) did Fatima use this month? Usage = current reading − previous reading.",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Fatima"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "43,163 kWh"
+      ],
+      [
+       "Current meter reading",
+       "44,133 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$12.00"
+       ],
+       [
+        "Energy rate",
+        "$0.13 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "970 kWh",
+   "numeric": {
+    "value": 970,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "44,133 − 43,163 = 970 kWh."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-02",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What are Dev's charges before tax? (Usage × rate + customer charge)",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Dev"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "22,856 kWh"
+      ],
+      [
+       "Current meter reading",
+       "23,272 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$15.00"
+       ],
+       [
+        "Energy rate",
+        "$0.13 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$69.08",
+   "numeric": {
+    "value": 69.08,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Usage = 416 kWh.",
+    "416 × $0.13 = $54.08.",
+    "+ $15.00 = $69.08."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-03",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "advanced",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Marcus budgets $140.00 a month for electricity. What is the total due with tax, and how far over (positive) or under (negative) budget is it? Give the amount over budget.",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Marcus"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "46,940 kWh"
+      ],
+      [
+       "Current meter reading",
+       "47,811 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$15.00"
+       ],
+       [
+        "Energy rate",
+        "$0.13 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "−$5.36",
+   "numeric": {
+    "value": -5.36,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Charges = 871 × $0.13 + $15.00 = $128.23.",
+    "With 5% tax: $128.23 × 1.05 = $134.64.",
+    "$134.64 − $140.00 = −$5.36."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-04",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "support",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How many kilowatt-hours (kWh) did Owen use this month? Usage = current reading − previous reading.",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Owen"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "55,411 kWh"
+      ],
+      [
+       "Current meter reading",
+       "56,649 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$12.00"
+       ],
+       [
+        "Energy rate",
+        "$0.18 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "1238 kWh",
+   "numeric": {
+    "value": 1238,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "56,649 − 55,411 = 1238 kWh."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-05",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What are Aaliyah's charges before tax? (Usage × rate + customer charge)",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Aaliyah"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "44,385 kWh"
+      ],
+      [
+       "Current meter reading",
+       "44,866 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$12.00"
+       ],
+       [
+        "Energy rate",
+        "$0.16 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$88.96",
+   "numeric": {
+    "value": 88.96,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Usage = 481 kWh.",
+    "481 × $0.16 = $76.96.",
+    "+ $12.00 = $88.96."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-06",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "advanced",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Fatima budgets $110.00 a month for electricity. What is the total due with tax, and how far over (positive) or under (negative) budget is it? Give the amount over budget.",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Fatima"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "47,012 kWh"
+      ],
+      [
+       "Current meter reading",
+       "48,368 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$12.00"
+       ],
+       [
+        "Energy rate",
+        "$0.13 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$87.69",
+   "numeric": {
+    "value": 87.69,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Charges = 1356 × $0.13 + $12.00 = $188.28.",
+    "With 5% tax: $188.28 × 1.05 = $197.69.",
+    "$197.69 − $110.00 = $87.69."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-07",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "support",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How many kilowatt-hours (kWh) did Sam use this month? Usage = current reading − previous reading.",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Sam"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "50,950 kWh"
+      ],
+      [
+       "Current meter reading",
+       "51,845 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$10.00"
+       ],
+       [
+        "Energy rate",
+        "$0.18 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "895 kWh",
+   "numeric": {
+    "value": 895,
+    "tolerance": 0,
+    "unit": "count"
+   },
+   "solutionSteps": [
+    "51,845 − 50,950 = 895 kWh."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-08",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "standard",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What are Zara's charges before tax? (Usage × rate + customer charge)",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Zara"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "54,854 kWh"
+      ],
+      [
+       "Current meter reading",
+       "55,421 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$10.00"
+       ],
+       [
+        "Energy rate",
+        "$0.18 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$112.06",
+   "numeric": {
+    "value": 112.06,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Usage = 567 kWh.",
+    "567 × $0.18 = $102.06.",
+    "+ $10.00 = $112.06."
+   ]
+  },
+  {
+   "id": "fa-budgeting-s02-lv-d-utility-bill-09",
+   "unitId": "budgeting",
+   "skillId": "budgeting-skill-02",
+   "level": "advanced",
+   "family": "lv-d-utility-bill",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Riley budgets $100.00 a month for electricity. What is the total due with tax, and how far over (positive) or under (negative) budget is it? Give the amount over budget.",
+   "scenario": {
+    "document": {
+     "kind": "utility-bill",
+     "title": "Riverton Power & Light — Electric Bill",
+     "meta": [
+      [
+       "Account holder",
+       "Riley"
+      ],
+      [
+       "Service period",
+       "Oct 3 – Nov 2"
+      ],
+      [
+       "Previous meter reading",
+       "37,291 kWh"
+      ],
+      [
+       "Current meter reading",
+       "38,589 kWh"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Charge",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Customer charge (fixed)",
+        "$10.00"
+       ],
+       [
+        "Energy rate",
+        "$0.16 per kWh"
+       ],
+       [
+        "Sales tax",
+        "5% of charges"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$128.56",
+   "numeric": {
+    "value": 128.56,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Charges = 1298 × $0.16 + $10.00 = $217.68.",
+    "With 5% tax: $217.68 × 1.05 = $228.56.",
+    "$228.56 − $100.00 = $128.56."
+   ]
+  },
+  {
    "id": "fa-budgeting-s01-err-biweekly-monthly-01",
    "unitId": "budgeting",
    "skillId": "budgeting-skill-01",
