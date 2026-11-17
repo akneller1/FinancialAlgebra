@@ -21,6 +21,7 @@
     if (!d) return '';
     return '<figure class="fa-doc fa-doc-' + esc(d.kind || 'generic') + '"><figcaption><span class="fa-doc-kind">' + esc((d.kind || 'document').replace(/-/g, ' ')) + ' · fictional</span><strong>' + esc(d.title) + '</strong></figcaption>' +
       (d.meta ? '<dl class="fa-doc-meta">' + d.meta.map(function (m) { return '<div><dt>' + esc(m[0]) + '</dt><dd>' + rich(m[1]) + '</dd></div>'; }).join('') + '</dl>' : '') +
+      (d.boxes ? '<div class="fa-doc-boxes">' + d.boxes.map(function (b) { return '<div class="fa-doc-box' + (b[2] ? ' wide' : '') + '"><span>' + esc(b[0]) + '</span><b>' + rich(b[1]) + '</b></div>'; }).join('') + '</div>' : '') +
       table(d.table) + (d.notes ? '<ul class="fa-doc-notes">' + d.notes.map(function (n) { return '<li>' + rich(n) + '</li>'; }).join('') + '</ul>' : '') + '</figure>';
   }
   function scenario(s) {

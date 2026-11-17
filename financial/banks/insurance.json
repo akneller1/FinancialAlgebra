@@ -7919,6 +7919,1383 @@
    ]
   },
   {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is Noah's total premium for the 6-month term? Add the premium column.",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Noah"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000 / $100,000 / $50,000",
+        "$242"
+       ],
+       [
+        "Collision",
+        "$500 deductible",
+        "$128"
+       ],
+       [
+        "Comprehensive",
+        "$250 deductible",
+        "$98"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000 / $100,000",
+        "$52"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$520",
+   "numeric": {
+    "value": 520,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$242 + $128 + $98 + $52 = $520."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What does Owen's car insurance cost per month, to the cent?",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Owen"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000.00 / $100,000.00 / $50,000.00",
+        "$331.00"
+       ],
+       [
+        "Collision",
+        "$1,000.00 deductible",
+        "$268.00"
+       ],
+       [
+        "Comprehensive",
+        "$250.00 deductible",
+        "$111.00"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000.00 / $100,000.00",
+        "$41.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$125.17",
+   "numeric": {
+    "value": 125.17,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "6-month total = $751.00.",
+    "÷ 6 = $125.17 per month."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Sam causes a crash: $7,600 of damage to their own car and $48,000 to the other driver's car. Using the declarations page, how much does Sam pay out of pocket?",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Sam"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000 / $100,000 / $50,000",
+        "$285"
+       ],
+       [
+        "Collision",
+        "$500 deductible",
+        "$145"
+       ],
+       [
+        "Comprehensive",
+        "$250 deductible",
+        "$102"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000 / $100,000",
+        "$59"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$500",
+   "numeric": {
+    "value": 500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Own car: collision pays after the $500 deductible.",
+    "Other car: property-damage limit $50,000 covers it.",
+    "Out of pocket = $500."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is Imani's total premium for the 6-month term? Add the premium column.",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Imani"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000 / $100,000 / $50,000",
+        "$246"
+       ],
+       [
+        "Collision",
+        "$500 deductible",
+        "$172"
+       ],
+       [
+        "Comprehensive",
+        "$250 deductible",
+        "$118"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000 / $100,000",
+        "$43"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$579",
+   "numeric": {
+    "value": 579,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$246 + $172 + $118 + $43 = $579."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What does Zara's car insurance cost per month, to the cent?",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Zara"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000.00 / $100,000.00 / $25,000.00",
+        "$304.00"
+       ],
+       [
+        "Collision",
+        "$1,000.00 deductible",
+        "$127.00"
+       ],
+       [
+        "Comprehensive",
+        "$250.00 deductible",
+        "$81.00"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000.00 / $100,000.00",
+        "$37.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$91.50",
+   "numeric": {
+    "value": 91.5,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "6-month total = $549.00.",
+    "÷ 6 = $91.50 per month."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Jordan causes a crash: $2,600 of damage to their own car and $50,000 to the other driver's car. Using the declarations page, how much does Jordan pay out of pocket?",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Jordan"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000 / $100,000 / $50,000",
+        "$356"
+       ],
+       [
+        "Collision",
+        "$1,000 deductible",
+        "$145"
+       ],
+       [
+        "Comprehensive",
+        "$250 deductible",
+        "$42"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000 / $100,000",
+        "$50"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,000",
+   "numeric": {
+    "value": 1000,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Own car: collision pays after the $1,000 deductible.",
+    "Other car: property-damage limit $50,000 covers it.",
+    "Out of pocket = $1,000."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "support",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What is Mateo's total premium for the 6-month term? Add the premium column.",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Mateo"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000 / $100,000 / $50,000",
+        "$363"
+       ],
+       [
+        "Collision",
+        "$500 deductible",
+        "$158"
+       ],
+       [
+        "Comprehensive",
+        "$250 deductible",
+        "$119"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000 / $100,000",
+        "$24"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$664",
+   "numeric": {
+    "value": 664,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$363 + $158 + $119 + $24 = $664."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "standard",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "What does Noah's car insurance cost per month, to the cent?",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Noah"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000.00 / $100,000.00 / $50,000.00",
+        "$280.00"
+       ],
+       [
+        "Collision",
+        "$1,000.00 deductible",
+        "$161.00"
+       ],
+       [
+        "Comprehensive",
+        "$250.00 deductible",
+        "$51.00"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000.00 / $100,000.00",
+        "$32.00"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$87.33",
+   "numeric": {
+    "value": 87.33,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "6-month total = $524.00.",
+    "÷ 6 = $87.33 per month."
+   ]
+  },
+  {
+   "id": "fa-insurance-s01-lv-d-auto-declarations-09",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-01",
+   "level": "advanced",
+   "family": "lv-d-auto-declarations",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Mei causes a crash: $3,350 of damage to her own car and $55,500 to the other driver's car. Using the declarations page, how much does Mei pay out of pocket?",
+   "scenario": {
+    "document": {
+     "kind": "auto-declarations",
+     "title": "Auto Policy Declarations — 6-month term",
+     "meta": [
+      [
+       "Named insured",
+       "Mei"
+      ],
+      [
+       "Vehicle",
+       "2019 sedan"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Coverage",
+       "Limits / deductible",
+       "6-month premium"
+      ],
+      "rows": [
+       [
+        "Liability (bodily injury / property damage)",
+        "$50,000 / $100,000 / $50,000",
+        "$283"
+       ],
+       [
+        "Collision",
+        "$1,000 deductible",
+        "$195"
+       ],
+       [
+        "Comprehensive",
+        "$250 deductible",
+        "$75"
+       ],
+       [
+        "Uninsured motorist",
+        "$50,000 / $100,000",
+        "$44"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "Liability limits: per person / per accident / property damage."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$6,500",
+   "numeric": {
+    "value": 6500,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Own car: collision pays after the $1,000 deductible.",
+    "Other car: property-damage limit $50,000, so Mei owes the extra $5,500.",
+    "Out of pocket = $6,500."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-01",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How much does Isaiah owe? You owe = allowed amount − plan paid.",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Isaiah"
+      ],
+      [
+       "Service",
+       "Physical therapy"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$0.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$2,490.00"
+       ],
+       [
+        "Allowed amount",
+        "$1,743.00"
+       ],
+       [
+        "Plan paid",
+        "$1,394.40"
+       ],
+       [
+        "You owe",
+        "?"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$348.60",
+   "numeric": {
+    "value": 348.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,743.00 − $1,394.40 = $348.60."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-02",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Owen's deductible is already met, so he pays 20% coinsurance on the allowed amount. How much does he owe?",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Owen"
+      ],
+      [
+       "Service",
+       "Outpatient imaging"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$0.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$2,380.00"
+       ],
+       [
+        "Allowed amount",
+        "$1,428.00"
+       ],
+       [
+        "Plan paid",
+        "?"
+       ],
+       [
+        "You owe",
+        "—"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$285.60",
+   "numeric": {
+    "value": 285.6,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "20% × $1,428.00 = $285.60.",
+    "The plan pays $1,142.40; the billed amount above the allowed amount is written off."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-03",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Mateo still had part of the deductible left (see the EOB). He pays that part first, then 20% of the rest of the allowed amount. How much does he owe?",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Mateo"
+      ],
+      [
+       "Service",
+       "Lab tests"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$1,270"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$4,200"
+       ],
+       [
+        "Allowed amount",
+        "$2,730"
+       ],
+       [
+        "Plan paid",
+        "?"
+       ],
+       [
+        "You owe",
+        "—"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$1,562",
+   "numeric": {
+    "value": 1562,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible part = $1,270.",
+    "Coinsurance = 20% × ($2,730 − $1,270) = $292.",
+    "Total = $1,562."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-04",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How much does Hana owe? You owe = allowed amount − plan paid.",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Hana"
+      ],
+      [
+       "Service",
+       "Physical therapy"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$0.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$2,120.00"
+       ],
+       [
+        "Allowed amount",
+        "$1,484.00"
+       ],
+       [
+        "Plan paid",
+        "$1,187.20"
+       ],
+       [
+        "You owe",
+        "?"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$296.80",
+   "numeric": {
+    "value": 296.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,484.00 − $1,187.20 = $296.80."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-05",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Grace's deductible is already met, so she pays 20% coinsurance on the allowed amount. How much does she owe?",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Grace"
+      ],
+      [
+       "Service",
+       "Outpatient imaging"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$0.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$970.00"
+       ],
+       [
+        "Allowed amount",
+        "$630.50"
+       ],
+       [
+        "Plan paid",
+        "?"
+       ],
+       [
+        "You owe",
+        "—"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$126.10",
+   "numeric": {
+    "value": 126.1,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "20% × $630.50 = $126.10.",
+    "The plan pays $504.40; the billed amount above the allowed amount is written off."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-06",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Mateo still had part of the deductible left (see the EOB). He pays that part first, then 20% of the rest of the allowed amount. How much does he owe?",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Mateo"
+      ],
+      [
+       "Service",
+       "Physical therapy"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$530.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$2,980.00"
+       ],
+       [
+        "Allowed amount",
+        "$1,639.00"
+       ],
+       [
+        "Plan paid",
+        "?"
+       ],
+       [
+        "You owe",
+        "—"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$751.80",
+   "numeric": {
+    "value": 751.8,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible part = $530.00.",
+    "Coinsurance = 20% × ($1,639.00 − $530.00) = $221.80.",
+    "Total = $751.80."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-07",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "support",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "How much does Nadia owe? You owe = allowed amount − plan paid.",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Nadia"
+      ],
+      [
+       "Service",
+       "Lab tests"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$0.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$1,830.00"
+       ],
+       [
+        "Allowed amount",
+        "$1,281.00"
+       ],
+       [
+        "Plan paid",
+        "$1,024.80"
+       ],
+       [
+        "You owe",
+        "?"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$256.20",
+   "numeric": {
+    "value": 256.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "$1,281.00 − $1,024.80 = $256.20."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-08",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "standard",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Diego's deductible is already met, so he pays 20% coinsurance on the allowed amount. How much does he owe?",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Diego"
+      ],
+      [
+       "Service",
+       "Outpatient imaging"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$0.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$1,610.00"
+       ],
+       [
+        "Allowed amount",
+        "$966.00"
+       ],
+       [
+        "Plan paid",
+        "?"
+       ],
+       [
+        "You owe",
+        "—"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$193.20",
+   "numeric": {
+    "value": 193.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "20% × $966.00 = $193.20.",
+    "The plan pays $772.80; the billed amount above the allowed amount is written off."
+   ]
+  },
+  {
+   "id": "fa-insurance-s02-lv-d-eob-09",
+   "unitId": "insurance",
+   "skillId": "insurance-skill-02",
+   "level": "advanced",
+   "family": "lv-d-eob",
+   "type": "document",
+   "activityTypes": [
+    "worksheet",
+    "assessment",
+    "lesson"
+   ],
+   "gameEligible": false,
+   "prompt": "Nadia still had part of the deductible left (see the EOB). She pays that part first, then 20% of the rest of the allowed amount. How much does she owe?",
+   "scenario": {
+    "document": {
+     "kind": "explanation-of-benefits",
+     "title": "Explanation of Benefits — This is not a bill",
+     "meta": [
+      [
+       "Member",
+       "Nadia"
+      ],
+      [
+       "Service",
+       "Physical therapy"
+      ],
+      [
+       "Deductible remaining before this claim",
+       "$600.00"
+      ],
+      [
+       "Coinsurance after deductible",
+       "20%"
+      ]
+     ],
+     "table": {
+      "headers": [
+       "Line",
+       "Amount"
+      ],
+      "rows": [
+       [
+        "Amount billed",
+        "$2,410.00"
+       ],
+       [
+        "Allowed amount",
+        "$1,446.00"
+       ],
+       [
+        "Plan paid",
+        "?"
+       ],
+       [
+        "You owe",
+        "—"
+       ]
+      ]
+     },
+     "notes": [
+      "Fictional document for classroom use.",
+      "You never pay more than the allowed amount at an in-network provider."
+     ]
+    }
+   },
+   "format": "short-answer",
+   "answer": "$769.20",
+   "numeric": {
+    "value": 769.2,
+    "tolerance": 0.01,
+    "unit": "USD"
+   },
+   "solutionSteps": [
+    "Deductible part = $600.00.",
+    "Coinsurance = 20% × ($1,446.00 − $600.00) = $169.20.",
+    "Total = $769.20."
+   ]
+  },
+  {
    "id": "fa-insurance-s01-err-annual-premium-01",
    "unitId": "insurance",
    "skillId": "insurance-skill-01",
