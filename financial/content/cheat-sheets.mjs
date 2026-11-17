@@ -165,3 +165,35 @@ retirement: sheet('model inflation, real value and retirement accounts', 'compar
  M(['Consider the full match when cash flow and plan terms allow.','Review saving, inflation and return assumptions over time.'],[['Future balance = current wealth','convert purchasing power.'],['Match is always yours immediately','check vesting.'],['Social Security covers every cost','estimate your own gap.'],['A fixed return is certain','test lower-return scenarios.']])
 ]),
 };
+
+/* 2026-11-16: panels for the four new skills and the real 2026 tax figures. Each sheet keeps six panels per page,
+ * so one lower-priority panel is replaced (its key point is folded into the new panel where it still matters). */
+sheets.income.back[3] = { ...sheets.income.back[3], html: sheets.income.back[3].html + '<div class="ex"><b>Real 2026 figures (single filers, IRS):</b> standard deduction $16,100; 10% to $12,400, 12% to $50,400, 22% to $105,700. Social Security 6.2% on wages up to $184,500; Medicare 1.45% on all wages.</div>' };
+sheets.banking.morefocus = 'compare savings options, reconcile a statement and spot scams';
+sheets.banking.back[4] = { title: 'Scams & fraud protection', kind: 'list', color: sheets.banking.back[4].color, items: [
+  'Red flags: pressure to act now, secrecy, payment by gift card, wire or crypto.',
+  'Never send back an “overpayment”: the check can bounce later and you repay it.',
+  'Debit fraud: liability up to $50 if reported within 2 business days, up to $500 within 60 days of the statement.',
+  'Credit cards: liability is at most $50.',
+  'Use alerts, log in through the bank’s own app, and freeze your credit (free) if your identity is stolen; IdentityTheft.gov has a recovery plan.'] };
+sheets.credit.morefocus = 'compare repayment choices and read your credit report';
+sheets.credit.back[4] = { title: 'Credit scores & reports', kind: 'list', color: sheets.credit.back[4].color, items: [
+  'Score factors: payment history (largest), amounts owed and utilization, length of history, new credit, credit mix. Income is not included.',
+  'Free reports from all three bureaus: AnnualCreditReport.com. Checking your own is a soft inquiry with no effect.',
+  'Applying for credit is a hard inquiry and can lower a score a little for a while.',
+  'Dispute wrong items with the bureau; an account you never opened may mean identity theft.',
+  'A better score means a lower APR: $20,000 for 60 months at 6% vs 11% costs about $2,900 less.'] };
+sheets.borrowing.morefocus = 'trace amortization, judge affordability and total the cost of owning a car';
+sheets.borrowing.back[4] = { title: 'Total cost of ownership', kind: 'example', color: sheets.borrowing.back[4].color,
+  text: 'Yearly cost = payments + insurance + fuel + maintenance (+ registration, depreciation). Fuel = ⟨\\dfrac{\\text{miles}}{\\text{MPG}}⟩ × price per gallon.',
+  example: '$350/month loan, $140/month insurance, 12,000 miles at 30 MPG, $3.40/gal, $900 maintenance.',
+  steps: [['Payments + insurance:', '⟨(350+140)(12)=5{,}880⟩'], ['Fuel:', '⟨\\dfrac{12{,}000}{30}(3.40)=1{,}360⟩'], ['Total:', '⟨5{,}880+1{,}360+900=8{,}140⟩']],
+  answer: '$8,140 a year, about $0.68 per mile' };
+sheets.housing.morefocus = 'plan the cost of renting and compare time horizons, equity and opportunity cost';
+sheets.housing.back[4] = { title: 'Renting your first place', kind: 'example', color: sheets.housing.back[4].color,
+  text: 'Guideline: rent ≤ 30% of gross monthly income. Prorated rent = ⟨\\text{rent}\\times\\dfrac{\\text{days lived}}{\\text{days in month}}⟩. Deposits cover damage, not normal wear and tear.',
+  example: 'Earn $19/hour, 40 hours a week, 52 weeks a year.',
+  steps: [['Monthly gross:', '⟨\\dfrac{19(40)(52)}{12}\\approx3{,}293.33⟩'], ['30% guideline:', '⟨0.30(3{,}293.33)\\approx988.00⟩']],
+  answer: 'Keep rent at or below about $988 a month' };
+// Trim the variable list and the zero-rate footnote so the panel fits its box with current Chromium rendering (it overflowed by 3 px).
+sheets.credit.front[4] = { ...sheets.credit.front[4], html: sheets.credit.front[4].html.replace('P = starting debt dollars; i = monthly decimal rate; N = number of monthly payments; D = dollars paid monthly.', 'P = starting debt; i = monthly decimal rate; N = number of monthly payments; D = monthly payment.').replace(' At zero rate, ⟨D=\\tfrac{P}{N}⟩.', '') };
