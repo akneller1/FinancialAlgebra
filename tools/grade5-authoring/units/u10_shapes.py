@@ -375,8 +375,10 @@ def q_count_sides(r, L):
 
 # ============================================================== S4 Shape Hierarchies
 CATS = ["squares", "rectangles", "rhombuses", "parallelograms", "quadrilaterals"]
-SUB = {"squares": {"rectangles", "rhombuses", "parallelograms", "quadrilaterals"}, "rectangles": {"parallelograms", "quadrilaterals"},
-       "rhombuses": {"parallelograms", "quadrilaterals"}, "parallelograms": {"quadrilaterals"}, "quadrilaterals": set()}
+# Lists, not sets: set order depends on the Python version's string hashing, and the bank must rebuild identically in CI.
+# The order is the one the published bank was built with.
+SUB = {"squares": ["parallelograms", "rectangles", "rhombuses", "quadrilaterals"], "rectangles": ["parallelograms", "quadrilaterals"],
+       "rhombuses": ["parallelograms", "quadrilaterals"], "parallelograms": ["quadrilaterals"], "quadrilaterals": []}
 
 
 @fam("012", mode="mc")
