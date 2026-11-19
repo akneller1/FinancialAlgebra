@@ -1618,6 +1618,42 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s1_digit_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-pv-s01-cp1-g01",
+   "skillId": "place-value-number-sense-skill-01",
+   "level": "cp1",
+   "format": "open-response",
+   "prompt": "A store sells stickers for $2.72 each. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "What is the cost of 10 stickers?",
+     "answer": "$27.20"
+    },
+    {
+     "prompt": "What is the cost of 1,000 stickers?",
+     "answer": "$2,720.00"
+    },
+    {
+     "prompt": "Round the price of one sticker to the nearest tenth of the dollar.",
+     "answer": "$2.70"
+    },
+    {
+     "prompt": "Using the rounded price, estimate the cost of 10 stickers.",
+     "answer": "$27.00"
+    }
+   ],
+   "answer": "(a) $27.20; (b) $2,720.00; (c) $2.70; (d) $27.00",
+   "solutionSteps": [
+    "(a) Multiplying by 10 moves the decimal point 1 places right.",
+    "(b) × 1,000 moves it 3 places right.",
+    "(c) Look at the hundredths digit.",
+    "(d) Multiply the rounded price."
+   ],
+   "standards": [
+    "5.NBT.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_pv). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-pv-s01-honors-001",
    "skillId": "place-value-number-sense-skill-01",
    "level": "honors",
@@ -2425,6 +2461,74 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s1_digit_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-pv-s01-honors-g01",
+   "skillId": "place-value-number-sense-skill-01",
+   "level": "honors",
+   "format": "open-response",
+   "prompt": "Gas costs $2.129 per gallon. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "What is the cost of 100 gallons of gas?",
+     "answer": "$212.90"
+    },
+    {
+     "prompt": "What is the cost of 1,000 gallons of gas?",
+     "answer": "$2,129.00"
+    },
+    {
+     "prompt": "Round the price of one gallon of gas to the nearest tenth of the dollar.",
+     "answer": "$2.10"
+    },
+    {
+     "prompt": "Using the rounded price, estimate the cost of 100 gallons of gas.",
+     "answer": "$210.00"
+    }
+   ],
+   "answer": "(a) $212.90; (b) $2,129.00; (c) $2.10; (d) $210.00",
+   "solutionSteps": [
+    "(a) Multiplying by 100 moves the decimal point 2 places right.",
+    "(b) × 1,000 moves it 3 places right.",
+    "(c) Look at the hundredths digit.",
+    "(d) Multiply the rounded price."
+   ],
+   "standards": [
+    "5.NBT.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_pv). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s01-honors-g02",
+   "skillId": "place-value-number-sense-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Hana has 2 boxes. Each box holds 100 bags, and each bag holds 4 marbles. How many marbles does Hana have?",
+   "answer": "800",
+   "solutionSteps": [
+    "One box: 4 × 100 = 400 marbles.",
+    "2 boxes: 400 × 2 = 800 marbles."
+   ],
+   "standards": [
+    "5.NBT.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s01-honors-g03",
+   "skillId": "place-value-number-sense-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Wren has 3 boxes. Each box holds 1,000 bags, and each bag holds 3 marbles. How many marbles does Wren have?",
+   "answer": "9,000",
+   "solutionSteps": [
+    "One box: 3 × 1,000 = 3,000 marbles.",
+    "3 boxes: 3,000 × 3 = 9,000 marbles."
+   ],
+   "standards": [
+    "5.NBT.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-pv-s02-cp2-001",
    "skillId": "place-value-number-sense-skill-02",
    "level": "cp2",
@@ -3188,6 +3292,54 @@
     "5.NBT.A.2"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s2_exp_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s02-cp2-g01",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "The chart shows 2.57. What is 2.57 × 10¹?",
+   "answer": "25.7",
+   "solutionSteps": [
+    "10¹ = 10.",
+    "Multiplying by 10¹ moves each digit 1 place to the left: the decimal point moves 1 place right.",
+    "2.57 × 10¹ = 25.7."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/place-value-number-sense/m5-pv-s02-cp2-g01.png",
+     "alt": "Place‑value chart showing 2.57."
+    }
+   },
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: pt_shift). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s02-cp2-g02",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "The chart shows 0.29. What is 0.29 ÷ 10²?",
+   "answer": "0.0029",
+   "solutionSteps": [
+    "10² = 100.",
+    "Dividing by 10² moves each digit 2 places to the right: the decimal point moves 2 places left.",
+    "0.29 ÷ 10² = 0.0029."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/place-value-number-sense/m5-pv-s02-cp2-g02.png",
+     "alt": "Place‑value chart showing 0.29."
+    }
+   },
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: pt_shift). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-pv-s02-cp1-001",
@@ -3955,6 +4107,54 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s2_exp_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-pv-s02-cp1-g01",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "The chart shows 1.21. What is 1.21 ÷ 10¹?",
+   "answer": "0.121",
+   "solutionSteps": [
+    "10¹ = 10.",
+    "Dividing by 10¹ moves each digit 1 place to the right: the decimal point moves 1 place left.",
+    "1.21 ÷ 10¹ = 0.121."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/place-value-number-sense/m5-pv-s02-cp1-g01.png",
+     "alt": "Place‑value chart showing 1.21."
+    }
+   },
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: pt_shift). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s02-cp1-g02",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "The chart shows 9.57. What is 9.57 × 10¹?",
+   "answer": "95.7",
+   "solutionSteps": [
+    "10¹ = 10.",
+    "Multiplying by 10¹ moves each digit 1 place to the left: the decimal point moves 1 place right.",
+    "9.57 × 10¹ = 95.7."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/place-value-number-sense/m5-pv-s02-cp1-g02.png",
+     "alt": "Place‑value chart showing 9.57."
+    }
+   },
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: pt_shift). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-pv-s02-honors-001",
    "skillId": "place-value-number-sense-skill-02",
    "level": "honors",
@@ -4718,6 +4918,86 @@
     "5.NBT.A.2"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s2_exp_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s02-honors-g01",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "The chart shows 6.118. What is 6.118 × 10²?",
+   "answer": "611.8",
+   "solutionSteps": [
+    "10² = 100.",
+    "Multiplying by 10² moves each digit 2 places to the left: the decimal point moves 2 places right.",
+    "6.118 × 10² = 611.8."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/place-value-number-sense/m5-pv-s02-honors-g01.png",
+     "alt": "Place‑value chart showing 6.118."
+    }
+   },
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: pt_shift). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s02-honors-g02",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "The chart shows 3.023. What is 3.023 × 10¹?",
+   "answer": "30.23",
+   "solutionSteps": [
+    "10¹ = 10.",
+    "Multiplying by 10¹ moves each digit 1 place to the left: the decimal point moves 1 place right.",
+    "3.023 × 10¹ = 30.23."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/place-value-number-sense/m5-pv-s02-honors-g02.png",
+     "alt": "Place‑value chart showing 3.023."
+    }
+   },
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: pt_shift). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s02-honors-g03",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A bead weighs 3.49 grams. A pack has 10³ beads, and one jar holds 3 packs. What is the weight, in grams, of the beads in the jar?",
+   "answer": "10,470 grams",
+   "solutionSteps": [
+    "10³ = 1,000, so one pack weighs 3.49 × 1,000 = 3,490 grams: the decimal point moves 3 places right.",
+    "3 packs: 3,490 × 3 = 10,470 grams."
+   ],
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s02-honors-g04",
+   "skillId": "place-value-number-sense-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A bead weighs 4.57 grams. A pack has 10¹ beads, and one jar holds 5 packs. What is the weight, in grams, of the beads in the jar?",
+   "answer": "228.5 grams",
+   "solutionSteps": [
+    "10¹ = 10, so one pack weighs 4.57 × 10 = 45.7 grams: the decimal point moves 1 place right.",
+    "5 packs: 45.7 × 5 = 228.5 grams."
+   ],
+   "standards": [
+    "5.NBT.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-pv-s03-cp2-001",
@@ -7134,6 +7414,38 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s3_word_to_std_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-pv-s03-honors-g01",
+   "skillId": "place-value-number-sense-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A runner ran 2.228 kilometers on Monday and 8.23 kilometers on Tuesday. How many kilometers did she run in all? Line up the place values before you add.",
+   "answer": "10.458 kilometers",
+   "solutionSteps": [
+    "2.228 + 8.23 = 10.458.",
+    "Add thousandths, hundredths, tenths, then ones."
+   ],
+   "standards": [
+    "5.NBT.A.3.a"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s03-honors-g02",
+   "skillId": "place-value-number-sense-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A runner ran 3.806 kilometers on Monday and 1.95 kilometers on Tuesday. How many kilometers did she run in all? Line up the place values before you add.",
+   "answer": "5.756 kilometers",
+   "solutionSteps": [
+    "3.806 + 1.95 = 5.756.",
+    "Add thousandths, hundredths, tenths, then ones."
+   ],
+   "standards": [
+    "5.NBT.A.3.a"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-pv-s04-cp2-001",
    "skillId": "place-value-number-sense-skill-04",
    "level": "cp2",
@@ -9534,6 +9846,38 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s4_order_match). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-pv-s04-honors-g01",
+   "skillId": "place-value-number-sense-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Long‑jump distances: Maya 1.533 meters, Priya 1.395 meters, Tessa 1.196 meters, Mateo 1.557 meters. How much farther was the longest jump than the shortest?",
+   "answer": "0.361 meters",
+   "solutionSteps": [
+    "Compare place by place: the longest is 1.557 meters and the shortest is 1.196 meters.",
+    "1.557 − 1.196 = 0.361 meters."
+   ],
+   "standards": [
+    "5.NBT.A.3.b"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s04-honors-g02",
+   "skillId": "place-value-number-sense-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Long‑jump distances: Isla 1.415 meters, Dev 1.724 meters, Nia 1.96 meters, Oscar 1.394 meters. How much farther was the longest jump than the shortest?",
+   "answer": "0.566 meters",
+   "solutionSteps": [
+    "Compare place by place: the longest is 1.96 meters and the shortest is 1.394 meters.",
+    "1.96 − 1.394 = 0.566 meters."
+   ],
+   "standards": [
+    "5.NBT.A.3.b"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-pv-s05-cp2-001",
    "skillId": "place-value-number-sense-skill-05",
    "level": "cp2",
@@ -11932,6 +12276,38 @@
     "5.NBT.A.4"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: s5_round_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s05-honors-g01",
+   "skillId": "place-value-number-sense-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Three packages weigh 5.36, 4.49 and 5.67 pounds. Round each weight to the nearest tenth, then add the rounded weights.",
+   "answer": "15.6 pounds",
+   "solutionSteps": [
+    "Rounded: 5.4, 4.5, 5.7.",
+    "Sum: 15.6 pounds."
+   ],
+   "standards": [
+    "5.NBT.A.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv5). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-pv-s05-honors-g02",
+   "skillId": "place-value-number-sense-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Three packages weigh 9.71, 9.29 and 2.79 pounds. Round each weight to the nearest tenth, then add the rounded weights.",
+   "answer": "21.8 pounds",
+   "solutionSteps": [
+    "Rounded: 9.7, 9.3, 2.8.",
+    "Sum: 21.8 pounds."
+   ],
+   "standards": [
+    "5.NBT.A.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_pv5). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   }
  ]
 }

@@ -1393,6 +1393,22 @@
 }
 ]
 },
+"m5-vo-s01-honors-g01": {
+"q": {
+"k": "expr",
+"e": "5*3*3*2",
+"unit": "cubes"
+},
+"family": "ms_vo1"
+},
+"m5-vo-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "4*2*2*2",
+"unit": "cubes"
+},
+"family": "ms_vo1"
+},
 "m5-vo-s02-cp2-001": {
 "q": {
 "k": "fn",
@@ -3154,6 +3170,22 @@
 }
 ]
 },
+"m5-vo-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "6*5*3-10",
+"unit": "cubes"
+},
+"family": "ms_vo2"
+},
+"m5-vo-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "6*3*2-6",
+"unit": "cubes"
+},
+"family": "ms_vo2"
+},
 "m5-vo-s03-cp2-001": {
 "q": {
 "k": "expr",
@@ -4252,6 +4284,22 @@
 }
 ]
 },
+"m5-vo-s03-honors-g01": {
+"q": {
+"k": "expr",
+"e": "10*3*(6-2)",
+"unit": "cubic inches"
+},
+"family": "ms_vo3"
+},
+"m5-vo-s03-honors-g02": {
+"q": {
+"k": "expr",
+"e": "5*6*(7-6)",
+"unit": "cubic inches"
+},
+"family": "ms_vo3"
+},
 "m5-vo-s04-cp2-001": {
 "q": {
 "k": "fn",
@@ -4915,6 +4963,35 @@
 "unit": "cubic feet"
 }
 ]
+},
+"m5-vo-s04-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "5*5*5+2*5*5",
+"unit": "cubic units"
+},
+"family": "fig_comp_two",
+"diagram": {
+"kind": "composite",
+"data": {
+"a": {
+"l": 5,
+"w": 5,
+"h": 5,
+"lt": "5 units",
+"wt": "5 units",
+"ht": "5 units"
+},
+"b": {
+"l": 2,
+"w": 5,
+"h": 5,
+"lt": "2 units",
+"wt": "5 units",
+"ht": "5 units"
+}
+}
+}
 },
 "m5-vo-s04-cp1-001": {
 "q": {
@@ -5669,6 +5746,35 @@
 }
 ]
 },
+"m5-vo-s04-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "5*2*2+5*2*3",
+"unit": "cubic units"
+},
+"family": "fig_comp_two",
+"diagram": {
+"kind": "composite",
+"data": {
+"a": {
+"l": 5,
+"w": 2,
+"h": 2,
+"lt": "5 units",
+"wt": "2 units",
+"ht": "2 units"
+},
+"b": {
+"l": 5,
+"w": 2,
+"h": 3,
+"lt": "5 units",
+"wt": "2 units",
+"ht": "3 units"
+}
+}
+}
+},
 "m5-vo-s04-honors-001": {
 "q": {
 "k": "fn",
@@ -6422,6 +6528,57 @@
 }
 ]
 },
+"m5-vo-s04-honors-g01": {
+"q": {
+"k": "expr",
+"e": "3*4*5+4*4*5",
+"unit": "cubic units"
+},
+"family": "fig_comp_two",
+"diagram": {
+"kind": "composite",
+"data": {
+"a": {
+"l": 3,
+"w": 4,
+"h": 5,
+"lt": "3 units",
+"wt": "4 units",
+"ht": "5 units"
+},
+"b": {
+"l": 4,
+"w": 4,
+"h": 5,
+"lt": "4 units",
+"wt": "4 units",
+"ht": "5 units"
+}
+}
+}
+},
+"m5-vo-s04-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(6*5*3+3*2*3)*3",
+"unit": "$"
+},
+"family": "ms_vo4",
+"consts": [
+"3"
+]
+},
+"m5-vo-s04-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(6*5*6+6*6*4)*3",
+"unit": "$"
+},
+"family": "ms_vo4",
+"consts": [
+"3"
+]
+},
 "m5-vo-s05-cp2-001": {
 "q": {
 "k": "expr",
@@ -6738,6 +6895,25 @@
 "unit": "cubic meters"
 }
 ]
+},
+"m5-vo-s05-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "6*3*2",
+"unit": "cubic feet"
+},
+"family": "fig_vol_word",
+"diagram": {
+"kind": "prism",
+"data": {
+"l": 6,
+"w": 3,
+"h": 2,
+"lt": "6 ft",
+"wt": "3 ft",
+"ht": "2 ft"
+}
+}
 },
 "m5-vo-s05-cp1-001": {
 "q": {
@@ -7061,6 +7237,51 @@
 }
 ]
 },
+"m5-vo-s05-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "5*5*5",
+"unit": "cubic feet"
+},
+"family": "fig_vol_word",
+"diagram": {
+"kind": "prism",
+"data": {
+"l": 5,
+"w": 5,
+"h": 5,
+"lt": "5 ft",
+"wt": "5 ft",
+"ht": "5 ft"
+}
+}
+},
+"m5-vo-s05-cp1-g02": {
+"q": null,
+"family": "cr_vo",
+"parts": [
+{
+"k": "expr",
+"e": "8*3",
+"unit": "square feet"
+},
+{
+"k": "expr",
+"e": "8*3*5",
+"unit": "cubic feet"
+},
+{
+"k": "expr",
+"e": "8*3*(5+4)",
+"unit": "cubic feet"
+},
+{
+"k": "expr",
+"e": "8*3*5+8*3*(5+4)",
+"unit": "cubic feet"
+}
+]
+},
 "m5-vo-s05-honors-001": {
 "q": {
 "k": "expr",
@@ -7377,5 +7598,64 @@
 "unit": "cubic meters"
 }
 ]
+},
+"m5-vo-s05-honors-g01": {
+"q": {
+"k": "expr",
+"e": "6*5*4",
+"unit": "cubic feet"
+},
+"family": "fig_vol_word",
+"diagram": {
+"kind": "prism",
+"data": {
+"l": 6,
+"w": 5,
+"h": 4,
+"lt": "6 ft",
+"wt": "5 ft",
+"ht": "4 ft"
+}
+}
+},
+"m5-vo-s05-honors-g02": {
+"q": null,
+"family": "cr_vo",
+"parts": [
+{
+"k": "expr",
+"e": "7*8",
+"unit": "square feet"
+},
+{
+"k": "expr",
+"e": "7*8*6",
+"unit": "cubic feet"
+},
+{
+"k": "expr",
+"e": "7*8*(6+4)",
+"unit": "cubic feet"
+},
+{
+"k": "expr",
+"e": "7*8*6+7*8*(6+4)",
+"unit": "cubic feet"
+}
+]
+},
+"m5-vo-s05-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(18/2)*(12/2)*(6/2)"
+},
+"family": "ms_vo5"
+},
+"m5-vo-s05-honors-g04": {
+"q": {
+"k": "expr",
+"e": "(12/2)*(8/2)*(6/2)"
+},
+"family": "ms_vo5"
 }
 }

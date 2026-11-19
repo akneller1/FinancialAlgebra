@@ -20,7 +20,7 @@ module.exports = {
    "color": "blue",
    "rows": [
     [
-     "volume-three-dimensional-figures",
+     "volume",
      "The amount of space inside a solid figure.",
      "a box holds 24 cubic units"
     ],

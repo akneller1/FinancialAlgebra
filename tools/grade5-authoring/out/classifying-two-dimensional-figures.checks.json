@@ -3346,6 +3346,28 @@
 }
 ]
 },
+"m5-cs-s01-honors-g01": {
+"q": {
+"k": "expr",
+"e": "6*8*2",
+"unit": "$"
+},
+"family": "ms_cs1",
+"consts": [
+"6"
+]
+},
+"m5-cs-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "6*10*4",
+"unit": "$"
+},
+"family": "ms_cs1",
+"consts": [
+"6"
+]
+},
 "m5-cs-s02-cp2-001": {
 "q": {
 "k": "fn",
@@ -8839,6 +8861,28 @@
 }
 ]
 },
+"m5-cs-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "180-64-70",
+"unit": "°"
+},
+"family": "ms_cs2",
+"consts": [
+"180"
+]
+},
+"m5-cs-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "180-33-63",
+"unit": "°"
+},
+"family": "ms_cs2",
+"consts": [
+"180"
+]
+},
 "m5-cs-s03-cp2-001": {
 "q": {
 "k": "fn",
@@ -10829,6 +10873,38 @@
 "most": true
 }
 ]
+},
+"m5-cs-s03-cp2-g01": {
+"q": {
+"k": "key",
+"accept": [
+"square"
+]
+},
+"family": "fig_quad_props",
+"diagram": {
+"kind": "shape",
+"data": {
+"pts": [
+[
+0,
+0
+],
+[
+4,
+0
+],
+[
+4,
+4
+],
+[
+0,
+4
+]
+]
+}
+}
 },
 "m5-cs-s03-cp1-001": {
 "q": {
@@ -12957,6 +13033,66 @@
 }
 ]
 },
+"m5-cs-s03-cp1-g01": {
+"q": {
+"k": "key",
+"accept": [
+"trapezoid"
+]
+},
+"family": "fig_quad_props",
+"diagram": {
+"kind": "shape",
+"data": {
+"pts": [
+[
+0,
+0
+],
+[
+7,
+0
+],
+[
+5,
+3
+],
+[
+2,
+3
+]
+]
+}
+}
+},
+"m5-cs-s03-cp1-g02": {
+"q": null,
+"family": "cr_cs",
+"parts": [
+{
+"k": "expr",
+"e": "4*9",
+"unit": "cm"
+},
+{
+"k": "expr",
+"e": "2*(15+9)",
+"unit": "cm"
+},
+{
+"k": "expr",
+"e": "2*(15+9)-4*9",
+"unit": "cm"
+},
+{
+"k": "expr",
+"e": "4+4"
+}
+],
+"consts": [
+"4"
+]
+},
 "m5-cs-s03-honors-001": {
 "q": {
 "k": "key",
@@ -14956,6 +15092,88 @@
 }
 ]
 },
+"m5-cs-s03-honors-g01": {
+"q": {
+"k": "key",
+"accept": [
+"rhombus"
+]
+},
+"family": "fig_quad_props",
+"diagram": {
+"kind": "shape",
+"data": {
+"pts": [
+[
+0,
+0
+],
+[
+4,
+0
+],
+[
+6,
+3
+],
+[
+2,
+3
+]
+]
+}
+}
+},
+"m5-cs-s03-honors-g02": {
+"q": null,
+"family": "cr_cs",
+"parts": [
+{
+"k": "expr",
+"e": "4*7",
+"unit": "cm"
+},
+{
+"k": "expr",
+"e": "2*(9+7)",
+"unit": "cm"
+},
+{
+"k": "expr",
+"e": "2*(9+7)-4*7",
+"unit": "cm"
+},
+{
+"k": "expr",
+"e": "4+4"
+}
+],
+"consts": [
+"4"
+]
+},
+"m5-cs-s03-honors-g03": {
+"q": {
+"k": "expr",
+"e": "2*(12+2)/4",
+"unit": "cm"
+},
+"family": "ms_cs3",
+"consts": [
+"4"
+]
+},
+"m5-cs-s03-honors-g04": {
+"q": {
+"k": "expr",
+"e": "2*(8+4)/4",
+"unit": "cm"
+},
+"family": "ms_cs3",
+"consts": [
+"4"
+]
+},
 "m5-cs-s04-cp2-001": {
 "q": {
 "k": "key",
@@ -15277,6 +15495,50 @@
 }
 ]
 },
+"m5-cs-s04-cp2-g01": {
+"q": {
+"k": "key",
+"accept": [
+"Every square is a rhombus."
+]
+},
+"family": "fig_hierarchy",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Shape",
+"Has"
+],
+"rows": [
+[
+"quadrilateral",
+"4 sides"
+],
+[
+"trapezoid",
+"1+ parallel pair"
+],
+[
+"parallelogram",
+"2 parallel pairs"
+],
+[
+"rectangle",
+"+ 4 right angles"
+],
+[
+"rhombus",
+"+ 4 equal sides"
+],
+[
+"square",
+"both of those"
+]
+]
+}
+}
+},
 "m5-cs-s04-cp1-001": {
 "q": {
 "k": "key",
@@ -15592,6 +15854,50 @@
 }
 ]
 },
+"m5-cs-s04-cp1-g01": {
+"q": {
+"k": "key",
+"accept": [
+"square"
+]
+},
+"family": "fig_hierarchy",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Shape",
+"Has"
+],
+"rows": [
+[
+"quadrilateral",
+"4 sides"
+],
+[
+"trapezoid",
+"1+ parallel pair"
+],
+[
+"parallelogram",
+"2 parallel pairs"
+],
+[
+"rectangle",
+"+ 4 right angles"
+],
+[
+"rhombus",
+"+ 4 equal sides"
+],
+[
+"square",
+"both of those"
+]
+]
+}
+}
+},
 "m5-cs-s04-honors-001": {
 "q": {
 "k": "key",
@@ -15894,5 +16200,65 @@
 "b": "rectangles"
 }
 ]
+},
+"m5-cs-s04-honors-g01": {
+"q": {
+"k": "key",
+"accept": [
+"Every rectangle is a parallelogram."
+]
+},
+"family": "fig_hierarchy",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Shape",
+"Has"
+],
+"rows": [
+[
+"quadrilateral",
+"4 sides"
+],
+[
+"trapezoid",
+"1+ parallel pair"
+],
+[
+"parallelogram",
+"2 parallel pairs"
+],
+[
+"rectangle",
+"+ 4 right angles"
+],
+[
+"rhombus",
+"+ 4 equal sides"
+],
+[
+"square",
+"both of those"
+]
+]
+}
+}
+},
+"m5-cs-s04-honors-g02": {
+"q": {
+"k": "expr",
+"e": "4*3",
+"unit": "inches"
+},
+"family": "ms_cs4"
+},
+"m5-cs-s04-honors-g03": {
+"q": {
+"k": "expr",
+"e": "7*6",
+"unit": "inches"
+},
+"family": "ms_cs4"
 }
 }

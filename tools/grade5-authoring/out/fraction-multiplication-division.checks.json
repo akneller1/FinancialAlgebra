@@ -1039,6 +1039,24 @@
 }
 ]
 },
+"m5-fm-s01-honors-g01": {
+"q": {
+"k": "expr",
+"e": "11/6-1",
+"unit": "pound",
+"form": "mixed"
+},
+"family": "ms_fm1"
+},
+"m5-fm-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "19/4-1",
+"unit": "pounds",
+"form": "mixed"
+},
+"family": "ms_fm1"
+},
 "m5-fm-s02-cp2-001": {
 "q": {
 "k": "expr",
@@ -2111,6 +2129,24 @@
 }
 ]
 },
+"m5-fm-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "5*1/4*2",
+"unit": "liters",
+"form": "mixed"
+},
+"family": "ms_fm2"
+},
+"m5-fm-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "8*3/5*2",
+"unit": "liters",
+"form": "mixed"
+},
+"family": "ms_fm2"
+},
 "m5-fm-s03-cp2-001": {
 "q": {
 "k": "expr",
@@ -2499,6 +2535,24 @@
 }
 ]
 },
+"m5-fm-s03-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "1/2*3/4",
+"form": "frac"
+},
+"family": "fig_frac_area",
+"diagram": {
+"kind": "area_grid",
+"data": {
+"rows": 2,
+"cols": 4,
+"sh_rows": 1,
+"sh_cols": 3,
+"mode": "overlap"
+}
+}
+},
 "m5-fm-s03-cp1-001": {
 "q": {
 "k": "expr",
@@ -2879,6 +2933,24 @@
 }
 ]
 },
+"m5-fm-s03-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "1/3*1/2",
+"form": "frac"
+},
+"family": "fig_frac_area",
+"diagram": {
+"kind": "area_grid",
+"data": {
+"rows": 3,
+"cols": 2,
+"sh_rows": 1,
+"sh_cols": 1,
+"mode": "overlap"
+}
+}
+},
 "m5-fm-s03-honors-001": {
 "q": {
 "k": "expr",
@@ -3258,6 +3330,38 @@
 "form": "mixed"
 }
 ]
+},
+"m5-fm-s03-honors-g01": {
+"q": {
+"k": "expr",
+"e": "1/3*1/3",
+"form": "frac"
+},
+"family": "fig_frac_area",
+"diagram": {
+"kind": "area_grid",
+"data": {
+"rows": 3,
+"cols": 3,
+"sh_rows": 1,
+"sh_cols": 1,
+"mode": "overlap"
+}
+}
+},
+"m5-fm-s03-honors-g02": {
+"q": {
+"k": "expr",
+"e": "48*2/5*5/8"
+},
+"family": "ms_fm3"
+},
+"m5-fm-s03-honors-g03": {
+"q": {
+"k": "expr",
+"e": "52*1/2*1/2"
+},
+"family": "ms_fm3"
 },
 "m5-fm-s04-cp2-001": {
 "q": {
@@ -4115,6 +4219,34 @@
 }
 ]
 },
+"m5-fm-s04-cp1-g01": {
+"q": null,
+"family": "cr_fm",
+"parts": [
+{
+"k": "expr",
+"e": "3/4*2/3",
+"unit": "square yard",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "3*3/4*2/3",
+"unit": "square yards",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "3*3/4*2/3-3/4*2/3",
+"unit": "square yard",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "3*3/4*2/3*4"
+}
+]
+},
 "m5-fm-s04-honors-001": {
 "q": {
 "k": "expr",
@@ -4530,6 +4662,50 @@
 }
 ]
 },
+"m5-fm-s04-honors-g01": {
+"q": null,
+"family": "cr_fm",
+"parts": [
+{
+"k": "expr",
+"e": "5/2*4/3",
+"unit": "square yards",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "6*5/2*4/3",
+"unit": "square yards",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "6*5/2*4/3-5/2*4/3",
+"unit": "square yards",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "6*5/2*4/3*4"
+}
+]
+},
+"m5-fm-s04-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(6+1/2)*(1+1/2)*4",
+"unit": "$"
+},
+"family": "ms_fm4"
+},
+"m5-fm-s04-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(3+1/2)*(1+1/2)*4",
+"unit": "$"
+},
+"family": "ms_fm4"
+},
 "m5-fm-s05-cp2-001": {
 "q": {
 "k": "fn",
@@ -4878,6 +5054,32 @@
 "f": "1/2"
 }
 ]
+},
+"m5-fm-s05-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "1/2*10"
+},
+"family": "fig_scaling",
+"diagram": {
+"kind": "number_line",
+"data": {
+"lo": "0",
+"hi": "12",
+"den": 1,
+"label_every": 1,
+"jumps": [
+[
+"0",
+"10"
+],
+[
+"0",
+"5"
+]
+]
+}
+}
 },
 "m5-fm-s05-cp1-001": {
 "q": {
@@ -5241,6 +5443,32 @@
 }
 ]
 },
+"m5-fm-s05-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "(1+1/3)*6"
+},
+"family": "fig_scaling",
+"diagram": {
+"kind": "number_line",
+"data": {
+"lo": "0",
+"hi": "10",
+"den": 1,
+"label_every": 1,
+"jumps": [
+[
+"0",
+"6"
+],
+[
+"0",
+"8"
+]
+]
+}
+}
+},
 "m5-fm-s05-honors-001": {
 "q": {
 "k": "fn",
@@ -5600,6 +5828,48 @@
 "f": "1"
 }
 ]
+},
+"m5-fm-s05-honors-g01": {
+"q": {
+"k": "expr",
+"e": "2/3*12"
+},
+"family": "fig_scaling",
+"diagram": {
+"kind": "number_line",
+"data": {
+"lo": "0",
+"hi": "14",
+"den": 1,
+"label_every": 1,
+"jumps": [
+[
+"0",
+"12"
+],
+[
+"0",
+"8"
+]
+]
+}
+}
+},
+"m5-fm-s05-honors-g02": {
+"q": {
+"k": "expr",
+"e": "48*(1+1/3)-48*3/4",
+"unit": "inches"
+},
+"family": "ms_fm5"
+},
+"m5-fm-s05-honors-g03": {
+"q": {
+"k": "expr",
+"e": "52*(1+1/4)-52*3/4",
+"unit": "inches"
+},
+"family": "ms_fm5"
 },
 "m5-fm-s06-cp2-001": {
 "q": {
@@ -7072,6 +7342,20 @@
 }
 ]
 },
+"m5-fm-s06-honors-g01": {
+"q": {
+"k": "expr",
+"e": "2*2/2"
+},
+"family": "ms_fm6"
+},
+"m5-fm-s06-honors-g02": {
+"q": {
+"k": "expr",
+"e": "4*3/4"
+},
+"family": "ms_fm6"
+},
 "m5-fm-s07-cp2-001": {
 "q": {
 "k": "expr",
@@ -7398,6 +7682,25 @@
 }
 ]
 },
+"m5-fm-s07-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "6*1/4",
+"unit": "pounds",
+"form": "mixed"
+},
+"family": "fig_fm_word",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 6,
+"shaded": 6,
+"each": "1/4",
+"total_label": "?",
+"note": ""
+}
+}
+},
 "m5-fm-s07-cp1-001": {
 "q": {
 "k": "expr",
@@ -7722,6 +8025,25 @@
 }
 ]
 },
+"m5-fm-s07-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "5*1/4",
+"unit": "pounds",
+"form": "mixed"
+},
+"family": "fig_fm_word",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 5,
+"shaded": 5,
+"each": "1/4",
+"total_label": "?",
+"note": ""
+}
+}
+},
 "m5-fm-s07-honors-001": {
 "q": {
 "k": "expr",
@@ -8045,5 +8367,42 @@
 "form": "mixed"
 }
 ]
+},
+"m5-fm-s07-honors-g01": {
+"q": {
+"k": "expr",
+"e": "2*1/2",
+"unit": "pound",
+"form": "mixed"
+},
+"family": "fig_fm_word",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 2,
+"shaded": 2,
+"each": "1/2",
+"total_label": "?",
+"note": ""
+}
+}
+},
+"m5-fm-s07-honors-g02": {
+"q": {
+"k": "expr",
+"e": "5*1/4/3",
+"unit": "cup",
+"form": "mixed"
+},
+"family": "ms_fm7"
+},
+"m5-fm-s07-honors-g03": {
+"q": {
+"k": "expr",
+"e": "3*1/3/3",
+"unit": "cup",
+"form": "mixed"
+},
+"family": "ms_fm7"
 }
 }

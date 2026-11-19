@@ -3844,6 +3844,62 @@
 }
 }
 },
+"m5-dl-s01-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(1/4+1/4+3/4+3/4+3/4+(1+1/2))-(1+1/2)",
+"unit": "inches",
+"form": "mixed"
+},
+"family": "ms_dd1",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"1/4",
+"3/4",
+"3/4",
+"3/4",
+"1 1/2"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+}
+},
+"m5-dl-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(1/2+1/2+3/4+1+1+1+1+(1+1/4))-(1+1/4)",
+"unit": "inches",
+"form": "mixed"
+},
+"family": "ms_dd1",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/2",
+"1/2",
+"3/4",
+"1",
+"1",
+"1",
+"1",
+"1 1/4"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+}
+},
 "m5-dl-s02-cp2-001": {
 "q": {
 "k": "fn",
@@ -5976,6 +6032,71 @@
 }
 ]
 },
+"m5-dl-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(1/4+1/2+3/4+3/4+1+1+(1+1/4)+(1+1/2))/8",
+"unit": "inch",
+"form": "mixed"
+},
+"family": "ms_dd2",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"1/2",
+"3/4",
+"3/4",
+"1",
+"1",
+"1 1/4",
+"1 1/2"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+},
+"consts": [
+"8"
+]
+},
+"m5-dl-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(1/4+1/2+1/2+3/4+3/4+1+1+(1+1/4)+(1+1/4))/9",
+"unit": "inch",
+"form": "mixed"
+},
+"family": "ms_dd2",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"1/2",
+"1/2",
+"3/4",
+"3/4",
+"1",
+"1",
+"1 1/4",
+"1 1/4"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+},
+"consts": [
+"9"
+]
+},
 "m5-dl-s03-cp2-001": {
 "q": {
 "k": "fn",
@@ -7042,6 +7163,64 @@
 ],
 "op": "diff"
 }
+]
+},
+"m5-dl-s03-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "(1/2+1+(1+1/2)+2+2)/5",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "lp_fair_share",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/2",
+"1",
+"1 1/2",
+"2",
+"2"
+],
+"lo": "0",
+"hi": "2",
+"den": 2,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"5"
+]
+},
+"m5-dl-s03-cp2-g02": {
+"q": {
+"k": "expr",
+"e": "(1/2+1+(1+1/2)+(1+3/4)+(1+3/4))/5",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "lp_fair_share",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/2",
+"1",
+"1 1/2",
+"1 3/4",
+"1 3/4"
+],
+"lo": "0",
+"hi": "2",
+"den": 4,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"5"
 ]
 },
 "m5-dl-s03-cp1-001": {
@@ -8252,6 +8431,71 @@
 ],
 "op": "diff"
 }
+]
+},
+"m5-dl-s03-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "(1/4+1/4+1/4+1+(1+1/4)+(1+1/2)+(1+3/4)+(1+3/4)+2)/9",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "lp_fair_share",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"1/4",
+"1/4",
+"1",
+"1 1/4",
+"1 1/2",
+"1 3/4",
+"1 3/4",
+"2"
+],
+"lo": "0",
+"hi": "2",
+"den": 4,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"9"
+]
+},
+"m5-dl-s03-cp1-g02": {
+"q": {
+"k": "expr",
+"e": "(1/2+3/4+3/4+(1+1/4)+(1+1/4)+(1+1/2)+(1+1/2)+2)/8",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "lp_fair_share",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/2",
+"3/4",
+"3/4",
+"1 1/4",
+"1 1/4",
+"1 1/2",
+"1 1/2",
+"2"
+],
+"lo": "0",
+"hi": "2",
+"den": 4,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"8"
 ]
 },
 "m5-dl-s03-honors-001": {
@@ -9473,6 +9717,132 @@
 }
 ]
 },
+"m5-dl-s03-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(1/2+3/4+(1+1/4)+(1+1/4)+(1+1/4)+(1+1/4)+(1+1/2)+(1+1/2)+(1+3/4))/9",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "lp_fair_share",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/2",
+"3/4",
+"1 1/4",
+"1 1/4",
+"1 1/4",
+"1 1/4",
+"1 1/2",
+"1 1/2",
+"1 3/4"
+],
+"lo": "0",
+"hi": "2",
+"den": 4,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"9"
+]
+},
+"m5-dl-s03-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(3/8+1/2+3/4+3/4+7/8+(1+3/8)+(1+5/8)+(1+3/4))/8",
+"unit": "cup",
+"form": "mixed"
+},
+"family": "lp_fair_share",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"3/8",
+"1/2",
+"3/4",
+"3/4",
+"7/8",
+"1 3/8",
+"1 5/8",
+"1 3/4"
+],
+"lo": "0",
+"hi": "2",
+"den": 8,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"8"
+]
+},
+"m5-dl-s03-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(1/4+1/2+1+(1+1/4)+(1+1/4)+(1+1/2))/6",
+"unit": "inch",
+"form": "mixed"
+},
+"family": "ms_dd2",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"1/2",
+"1",
+"1 1/4",
+"1 1/4",
+"1 1/2"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+},
+"consts": [
+"6"
+]
+},
+"m5-dl-s03-honors-g04": {
+"q": {
+"k": "expr",
+"e": "(1/2+1+1+(1+1/2)+(1+1/2)+(1+1/2)+(1+1/2))/7",
+"unit": "inches",
+"form": "mixed"
+},
+"family": "ms_dd2",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/2",
+"1",
+"1",
+"1 1/2",
+"1 1/2",
+"1 1/2",
+"1 1/2"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+},
+"consts": [
+"7"
+]
+},
 "m5-dl-s04-cp2-001": {
 "q": {
 "k": "expr",
@@ -9791,6 +10161,36 @@
 "e": "36*4.04-9.16",
 "form": "money"
 }
+]
+},
+"m5-dl-s04-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "(1/2+1/2+1+(1+1/4)+(1+3/4)+2)/6",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "fig_data_multi",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/2",
+"1/2",
+"1",
+"1 1/4",
+"1 3/4",
+"2"
+],
+"lo": "0",
+"hi": "2",
+"den": 4,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"6"
 ]
 },
 "m5-dl-s04-cp1-001": {
@@ -10113,6 +10513,87 @@
 }
 ]
 },
+"m5-dl-s04-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "(5/8+1+1+(1+1/2)+(1+1/2)+(1+1/2)+(1+7/8)+2)/8",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "fig_data_multi",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"5/8",
+"1",
+"1",
+"1 1/2",
+"1 1/2",
+"1 1/2",
+"1 7/8",
+"2"
+],
+"lo": "0",
+"hi": "2",
+"den": 8,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"8"
+]
+},
+"m5-dl-s04-cp1-g02": {
+"q": null,
+"family": "cr_dd",
+"parts": [
+{
+"k": "expr",
+"e": "1+1+1+1+1+1"
+},
+{
+"k": "expr",
+"e": "1/4+3/8+3/8+5/8+5/8+3/4",
+"unit": "liters",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "3/4-1/4",
+"unit": "liter",
+"form": "frac"
+},
+{
+"k": "expr",
+"e": "(1/4+3/8+3/8+5/8+5/8+3/4)/6",
+"unit": "liter",
+"form": "frac"
+}
+],
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"3/8",
+"3/8",
+"5/8",
+"5/8",
+"3/4"
+],
+"lo": "0",
+"hi": "3/4",
+"den": 8,
+"title": "Water in beakers (liters)",
+"unit": "liters"
+}
+},
+"consts": [
+"6"
+]
+},
 "m5-dl-s04-honors-001": {
 "q": {
 "k": "expr",
@@ -10432,5 +10913,142 @@
 "form": "money"
 }
 ]
+},
+"m5-dl-s04-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(1/4+3/4+1+(1+1/4)+(1+3/4)+2)/6",
+"unit": "cups",
+"form": "mixed"
+},
+"family": "fig_data_multi",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"3/4",
+"1",
+"1 1/4",
+"1 3/4",
+"2"
+],
+"lo": "0",
+"hi": "2",
+"den": 4,
+"title": "Juice in each jar (cups)",
+"unit": "cups"
+}
+},
+"consts": [
+"6"
+]
+},
+"m5-dl-s04-honors-g02": {
+"q": null,
+"family": "cr_dd",
+"parts": [
+{
+"k": "expr",
+"e": "1+1+1+1+1+1+1+1"
+},
+{
+"k": "expr",
+"e": "1/4+3/8+3/8+1/2+1/2+3/4+3/4+3/4",
+"unit": "liters",
+"form": "mixed"
+},
+{
+"k": "expr",
+"e": "3/4-1/4",
+"unit": "liter",
+"form": "frac"
+},
+{
+"k": "expr",
+"e": "(1/4+3/8+3/8+1/2+1/2+3/4+3/4+3/4)/8",
+"unit": "liter",
+"form": "frac"
+}
+],
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"3/8",
+"3/8",
+"1/2",
+"1/2",
+"3/4",
+"3/4",
+"3/4"
+],
+"lo": "0",
+"hi": "3/4",
+"den": 8,
+"title": "Water in beakers (liters)",
+"unit": "liters"
+}
+},
+"consts": [
+"8"
+]
+},
+"m5-dl-s04-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(1/4+1/2+3/4+3/4+(1+1/4)+(1+1/4))-(1+1/4)",
+"unit": "inches",
+"form": "mixed"
+},
+"family": "ms_dd1",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"1/2",
+"3/4",
+"3/4",
+"1 1/4",
+"1 1/4"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+}
+},
+"m5-dl-s04-honors-g04": {
+"q": {
+"k": "expr",
+"e": "(1/4+1/2+1/2+3/4+3/4+1+1+1)-1",
+"unit": "inches",
+"form": "mixed"
+},
+"family": "ms_dd1",
+"diagram": {
+"kind": "lineplot",
+"data": {
+"values": [
+"1/4",
+"1/2",
+"1/2",
+"3/4",
+"3/4",
+"1",
+"1",
+"1"
+],
+"lo": "0",
+"hi": "1 1/2",
+"den": 4,
+"title": "Rainfall (inches)",
+"unit": "inches"
+}
+}
 }
 }

@@ -22,7 +22,10 @@
         { term: 'base', def: 'The number that is multiplied repeatedly in a power.' },
         { term: 'decimal', def: 'A number with one or more digits to the right of the decimal point.' },
         { term: 'thousandth', def: 'One of one thousand equal parts of a whole.' },
-        { term: 'round', def: 'To replace a number with a nearby number that has fewer non-zero digits.' }
+        { term: 'round', def: 'To replace a number with a nearby number that has fewer non-zero digits.' },
+        { term: 'hundredth', def: 'The second place to the right of the decimal point, worth 1/100 of a whole.' },
+        { term: 'word form', def: 'A number written in words.' },
+        { term: 'standard form', def: 'A number written with digits.' }
       ],
       misconceptions: [
         ['The digit 7 in 4.7 is worth 7 ones.', 'In 4.7 the 7 is in the tenths place, so it is worth 7 tenths, or 0.7.'],
@@ -50,7 +53,9 @@
         { term: 'dividend', def: 'The number being divided.' },
         { term: 'remainder', def: 'The amount left over when a number does not divide evenly.' },
         { term: 'estimate', def: 'A close answer found by rounding or using friendly numbers.' },
-        { term: 'partial product', def: 'A product found by multiplying one place-value part at a time.' }
+        { term: 'partial product', def: 'A product found by multiplying one place-value part at a time.' },
+        { term: 'standard algorithm', def: 'The step-by-step written method for multiplying or dividing.' },
+        { term: 'area model', def: 'A rectangle split into parts to show multiplication or division.' }
       ],
       misconceptions: [
         ['A remainder can always be ignored.', 'The situation decides: you may need to round up, drop the remainder, or split it.'],
@@ -78,7 +83,9 @@
         { term: 'quotient', def: 'The answer to a division problem.' },
         { term: 'decimal point', def: 'The dot that separates whole-number places from decimal places.' },
         { term: 'estimate', def: 'A close answer used to judge reasonableness.' },
-        { term: 'reasonable', def: 'Close to an estimate and sensible for the situation.' }
+        { term: 'reasonable', def: 'Close to an estimate and sensible for the situation.' },
+        { term: 'regroup', def: 'Trade 10 of one place for 1 of the next place (or the reverse).' },
+        { term: 'hundredths grid', def: 'A 10 by 10 square that shows one whole split into 100 equal parts.' }
       ],
       misconceptions: [
         ['When adding decimals, line up the last digits.', 'Line up the decimal points so like place values are added.'],
@@ -105,7 +112,11 @@
         { term: 'grouping symbols', def: 'Parentheses, brackets or braces that show which part to calculate first.' },
         { term: 'pattern', def: 'A sequence that follows a rule.' },
         { term: 'rule', def: 'A description of how a pattern changes.' },
-        { term: 'term', def: 'One number or item in a pattern.' }
+        { term: 'term', def: 'One number or item in a pattern.' },
+        { term: 'numerical expression', def: 'Numbers and operation signs with no equals sign.' },
+        { term: 'brackets [ ]', def: 'Grouping symbols used around parentheses.' },
+        { term: 'braces { }', def: 'Grouping symbols used around brackets.' },
+        { term: 'ordered pair', def: 'Two numbers (x, y) that name a point on a graph.' }
       ],
       misconceptions: [
         ['Always calculate left to right.', 'Multiply and divide before adding and subtracting unless grouping symbols say otherwise.'],
@@ -133,7 +144,10 @@
         { term: 'common denominator', def: 'A shared denominator that lets two fractions be added or subtracted.' },
         { term: 'mixed number', def: 'A whole number and a fraction together, such as 2 3/4.' },
         { term: 'benchmark fraction', def: 'A familiar fraction such as 0, 1/4, 1/2, 3/4 or 1 used to estimate.' },
-        { term: 'simplest form', def: 'A fraction whose numerator and denominator have no common factor greater than 1.' }
+        { term: 'simplest form', def: 'A fraction whose numerator and denominator have no common factor greater than 1.' },
+        { term: 'improper fraction', def: 'A fraction greater than or equal to 1, with numerator ≥ denominator.' },
+        { term: 'unlike denominators', def: 'Denominators that are different.' },
+        { term: 'least common denominator', def: 'The smallest common denominator.' }
       ],
       misconceptions: [
         ['Add the denominators: 1/2 + 1/3 = 2/5.', 'Find a common denominator first: 3/6 + 2/6 = 5/6.'],
@@ -162,7 +176,9 @@
         { term: 'factor', def: 'A number being multiplied.' },
         { term: 'product', def: 'The answer to a multiplication problem.' },
         { term: 'quotient', def: 'The answer to a division problem.' },
-        { term: 'reciprocal', def: 'Two numbers whose product is 1, such as 1/4 and 4.' }
+        { term: 'reciprocal', def: 'Two numbers whose product is 1, such as 1/4 and 4.' },
+        { term: 'fraction as division', def: 'a/b means a ÷ b.' },
+        { term: 'mixed number', def: 'A whole number and a fraction together.' }
       ],
       misconceptions: [
         ['Multiplying always makes a number larger.', 'Multiplying by a fraction less than 1 makes the product smaller, such as 8 × 1/2 = 4.'],
@@ -189,7 +205,11 @@
         { term: 'metric system', def: 'A decimal measurement system based on meters, grams and liters.' },
         { term: 'capacity', def: 'The amount a container can hold.' },
         { term: 'weight', def: 'How heavy an object is in the customary system.' },
-        { term: 'mass', def: 'The amount of matter in an object, measured in the metric system.' }
+        { term: 'mass', def: 'The amount of matter in an object, measured in the metric system.' },
+        { term: 'length', def: 'How long something is.' },
+        { term: 'kilo-', def: 'A prefix meaning 1,000.' },
+        { term: 'centi-', def: 'A prefix meaning 1/100.' },
+        { term: 'milli-', def: 'A prefix meaning 1/1000.' }
       ],
       misconceptions: [
         ['A larger unit always means a larger number.', 'A larger unit means fewer of them: 3 feet is 1 yard, not 3 yards.'],
@@ -216,7 +236,11 @@
         { term: 'base', def: 'The face of a solid used as the bottom for volume formulas.' },
         { term: 'height', def: 'The perpendicular distance from the base to the top.' },
         { term: 'composite figure', def: 'A shape made from two or more simpler shapes.' },
-        { term: 'decompose', def: 'To break a figure into smaller parts.' }
+        { term: 'decompose', def: 'To break a figure into smaller parts.' },
+        { term: 'rectangular prism', def: 'A solid figure with 6 rectangular faces.' },
+        { term: 'edge', def: 'The line segment where two faces meet.' },
+        { term: 'face', def: 'A flat surface of a solid figure.' },
+        { term: 'layer', def: 'One level of unit cubes in a prism.' }
       ],
       misconceptions: [
         ['Volume is the same as area.', 'Area measures a flat surface in square units; volume measures space in cubic units.'],
@@ -243,7 +267,9 @@
         { term: 'ordered pair', def: 'Two numbers (x, y) that locate a point.' },
         { term: 'x-coordinate', def: 'The first number in an ordered pair; it tells how far to move right.' },
         { term: 'y-coordinate', def: 'The second number in an ordered pair; it tells how far to move up.' },
-        { term: 'quadrant', def: 'One of the four regions of the coordinate plane.' }
+        { term: 'quadrant', def: 'One of the four regions of the coordinate plane.' },
+        { term: 'horizontal', def: 'Going straight across, side to side.' },
+        { term: 'vertical', def: 'Going straight up and down.' }
       ],
       misconceptions: [
         ['(3, 5) and (5, 3) name the same point.', 'Order matters: the first number is horizontal, the second is vertical.'],
@@ -270,7 +296,13 @@
         { term: 'quadrilateral', def: 'A polygon with four sides.' },
         { term: 'parallel', def: 'Lines that never cross and stay the same distance apart.' },
         { term: 'perpendicular', def: 'Lines that meet at a right angle.' },
-        { term: 'hierarchy', def: 'A system that groups shapes from general to more specific.' }
+        { term: 'hierarchy', def: 'A system that groups shapes from general to more specific.' },
+        { term: 'parallelogram', def: 'A quadrilateral with 2 pairs of parallel sides.' },
+        { term: 'rhombus', def: 'A parallelogram with 4 equal sides.' },
+        { term: 'rectangle', def: 'A parallelogram with 4 right angles.' },
+        { term: 'square', def: 'A rectangle with 4 equal sides. It is also a rhombus.' },
+        { term: 'trapezoid', def: 'A quadrilateral with exactly one pair of parallel sides.' },
+        { term: 'equilateral / isosceles / scalene', def: '3 equal sides / exactly 2 equal sides / no equal sides.' }
       ],
       misconceptions: [
         ['A square is not a rectangle.', 'A square has four right angles, so it is a special rectangle.'],
@@ -296,7 +328,9 @@
         { term: 'outlier', def: 'A value that is far away from most of the other data.' },
         { term: 'range', def: 'The difference between the greatest and least values.' },
         { term: 'fair share', def: 'The amount each group gets when a total is divided equally.' },
-        { term: 'multi-step problem', def: 'A problem that needs more than one calculation to solve.' }
+        { term: 'multi-step problem', def: 'A problem that needs more than one calculation to solve.' },
+        { term: 'scale', def: 'The equal spacing marked on the number line.' },
+        { term: 'measurement data', def: 'Data made by measuring things.' }
       ],
       misconceptions: [
         ['The tallest stack is the total number of measurements.', 'The tallest stack is the most frequent value; add all the Xs for the total.'],

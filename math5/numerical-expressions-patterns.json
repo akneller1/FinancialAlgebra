@@ -769,6 +769,29 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: o_eval_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-ep-s01-cp2-g01",
+   "skillId": "numerical-expressions-patterns-skill-01",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "The table shows two expressions. The second is done for you. What is the value of (3 + 4) × 5?",
+   "answer": "35",
+   "solutionSteps": [
+    "Parentheses first: 3 + 4 = 7.",
+    "7 × 5 = 35."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s01-cp2-g01.png",
+     "alt": "Two tables: (3 + 4) × 5 and 3 + 4 × 5, with their steps."
+    }
+   },
+   "standards": [
+    "5.OA.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_order_ops). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-ep-s01-cp1-001",
    "skillId": "numerical-expressions-patterns-skill-01",
    "level": "cp1",
@@ -1532,6 +1555,29 @@
     "5.OA.A.1"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: o_eval_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s01-cp1-g01",
+   "skillId": "numerical-expressions-patterns-skill-01",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "The table shows two expressions. The second is done for you. What is the value of (2 + 4) × 2?",
+   "answer": "12",
+   "solutionSteps": [
+    "Parentheses first: 2 + 4 = 6.",
+    "6 × 2 = 12."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s01-cp1-g01.png",
+     "alt": "Two tables: (2 + 4) × 2 and 2 + 4 × 2, with their steps."
+    }
+   },
+   "standards": [
+    "5.OA.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_order_ops). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-ep-s01-honors-001",
@@ -2299,6 +2345,65 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: o_eval_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-ep-s01-honors-g01",
+   "skillId": "numerical-expressions-patterns-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "The table shows two expressions. The second is done for you. What is the value of (7 + 4) × 2?",
+   "answer": "22",
+   "solutionSteps": [
+    "Parentheses first: 7 + 4 = 11.",
+    "11 × 2 = 22."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s01-honors-g01.png",
+     "alt": "Two tables: (7 + 4) × 2 and 7 + 4 × 2, with their steps."
+    }
+   },
+   "standards": [
+    "5.OA.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_order_ops). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s01-honors-g02",
+   "skillId": "numerical-expressions-patterns-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Evaluate {[(7 + 6) × 5] − 5} ÷ 2. Then add the value to 15.",
+   "answer": "45",
+   "solutionSteps": [
+    "Parentheses: 7 + 6 = 13.",
+    "Brackets: 13 × 5 = 65.",
+    "Braces: 65 − 5 = 60; 60 ÷ 2 = 30.",
+    "Add to 15: 45."
+   ],
+   "standards": [
+    "5.OA.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s01-honors-g03",
+   "skillId": "numerical-expressions-patterns-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Evaluate {[(5 + 7) × 5] − 18} ÷ 2. Then add the value to 15.",
+   "answer": "36",
+   "solutionSteps": [
+    "Parentheses: 5 + 7 = 12.",
+    "Brackets: 12 × 5 = 60.",
+    "Braces: 60 − 18 = 42; 42 ÷ 2 = 21.",
+    "Add to 15: 36."
+   ],
+   "standards": [
+    "5.OA.A.1"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-ep-s02-cp2-001",
    "skillId": "numerical-expressions-patterns-skill-02",
    "level": "cp2",
@@ -3062,6 +3167,29 @@
     "5.OA.A.2"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: w_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s02-cp2-g01",
+   "skillId": "numerical-expressions-patterns-skill-02",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "The tape diagram has 8 equal parts, each 4 + 4. Write the value of the expression 8 × (4 + 4).",
+   "answer": "64",
+   "solutionSteps": [
+    "Each part is 4 + 4 = 8.",
+    "8 × 8 = 64."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s02-cp2-g01.png",
+     "alt": "Tape diagram: 8 equal parts, each labeled 4 + 4."
+    }
+   },
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_write_expr). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-ep-s02-cp1-001",
@@ -3829,6 +3957,29 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: w_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-ep-s02-cp1-g01",
+   "skillId": "numerical-expressions-patterns-skill-02",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "The tape diagram has 8 equal parts, each 5 + 4. Write the value of the expression 8 × (5 + 4).",
+   "answer": "72",
+   "solutionSteps": [
+    "Each part is 5 + 4 = 9.",
+    "8 × 9 = 72."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s02-cp1-g01.png",
+     "alt": "Tape diagram: 8 equal parts, each labeled 5 + 4."
+    }
+   },
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_write_expr). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-ep-s02-honors-001",
    "skillId": "numerical-expressions-patterns-skill-02",
    "level": "honors",
@@ -4592,6 +4743,61 @@
     "5.OA.A.2"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: w_value_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s02-honors-g01",
+   "skillId": "numerical-expressions-patterns-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "The tape diagram has 9 equal parts, each 9 + 4. Write the value of the expression 9 × (9 + 4).",
+   "answer": "117",
+   "solutionSteps": [
+    "Each part is 9 + 4 = 13.",
+    "9 × 13 = 117."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s02-honors-g01.png",
+     "alt": "Tape diagram: 9 equal parts, each labeled 9 + 4."
+    }
+   },
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_write_expr). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s02-honors-g02",
+   "skillId": "numerical-expressions-patterns-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Leo had 4 stickers and got 6 more. Then his number of stickers became 2 times as many as that. Write an expression, then find how many stickers Leo has now.",
+   "answer": "20",
+   "solutionSteps": [
+    "Expression: 2 × (4 + 6).",
+    "2 × 10 = 20."
+   ],
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s02-honors-g03",
+   "skillId": "numerical-expressions-patterns-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Leo had 8 stickers and got 5 more. Then his number of stickers became 3 times as many as that. Write an expression, then find how many stickers Leo has now.",
+   "answer": "39",
+   "solutionSteps": [
+    "Expression: 3 × (8 + 5).",
+    "3 × 13 = 39."
+   ],
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-ep-s03-cp2-001",
@@ -5359,6 +5565,47 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: i_times_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-ep-s03-cp2-g01",
+   "skillId": "numerical-expressions-patterns-skill-03",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "The tape shows 4 × (598 + 78). Without calculating, how does it compare with 598 + 78?",
+   "answer": "It is 4 times as large.",
+   "options": [
+    {
+     "text": "They are equal.",
+     "correct": false
+    },
+    {
+     "text": "It is 4 times as large.",
+     "correct": true
+    },
+    {
+     "text": "It is 4 more.",
+     "correct": false
+    },
+    {
+     "text": "It is 4 times as small.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The tape is 4 copies of 598 + 78.",
+    "So it is 4 times as large."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s03-cp2-g01.png",
+     "alt": "Two tapes: one labeled 598 + 78, and one 4 times as long labeled 4 × (598 + 78)."
+    }
+   },
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_interpret). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-ep-s03-cp1-001",
    "skillId": "numerical-expressions-patterns-skill-03",
    "level": "cp1",
@@ -6124,6 +6371,47 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: i_times_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-ep-s03-cp1-g01",
+   "skillId": "numerical-expressions-patterns-skill-03",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "The tape shows 2 × (619 + 10). Without calculating, how does it compare with 619 + 10?",
+   "answer": "It is 2 times as large.",
+   "options": [
+    {
+     "text": "They are equal.",
+     "correct": false
+    },
+    {
+     "text": "It is 2 times as small.",
+     "correct": false
+    },
+    {
+     "text": "It is 2 more.",
+     "correct": false
+    },
+    {
+     "text": "It is 2 times as large.",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "The tape is 2 copies of 619 + 10.",
+    "So it is 2 times as large."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s03-cp1-g01.png",
+     "alt": "Two tapes: one labeled 619 + 10, and one 2 times as long labeled 2 × (619 + 10)."
+    }
+   },
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_interpret). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-ep-s03-honors-001",
    "skillId": "numerical-expressions-patterns-skill-03",
    "level": "honors",
@@ -6887,6 +7175,79 @@
     "5.OA.A.2"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: i_times_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s03-honors-g01",
+   "skillId": "numerical-expressions-patterns-skill-03",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "The tape shows 6 × (675 + 62). Without calculating, how does it compare with 675 + 62?",
+   "answer": "It is 6 times as large.",
+   "options": [
+    {
+     "text": "They are equal.",
+     "correct": false
+    },
+    {
+     "text": "It is 6 times as small.",
+     "correct": false
+    },
+    {
+     "text": "It is 6 times as large.",
+     "correct": true
+    },
+    {
+     "text": "It is 6 more.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "The tape is 6 copies of 675 + 62.",
+    "So it is 6 times as large."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/numerical-expressions-patterns/m5-ep-s03-honors-g01.png",
+     "alt": "Two tapes: one labeled 675 + 62, and one 6 times as long labeled 6 × (675 + 62)."
+    }
+   },
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_interpret). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s03-honors-g02",
+   "skillId": "numerical-expressions-patterns-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Without finding either value, how many times as large is 9 × (344 + 77) as 344 + 77? Then check by finding both values: what is the larger value?",
+   "answer": "3,789",
+   "solutionSteps": [
+    "9 × (344 + 77) is 9 times as large as 344 + 77.",
+    "Check: 344 + 77 = 421; × 9 = 3,789."
+   ],
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s03-honors-g03",
+   "skillId": "numerical-expressions-patterns-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Without finding either value, how many times as large is 5 × (621 + 64) as 621 + 64? Then check by finding both values: what is the larger value?",
+   "answer": "3,425",
+   "solutionSteps": [
+    "5 × (621 + 64) is 5 times as large as 621 + 64.",
+    "Check: 621 + 64 = 685; × 5 = 3,425."
+   ],
+   "standards": [
+    "5.OA.A.2"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-ep-s04-cp2-001",
@@ -8503,6 +8864,42 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: p_term_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-ep-s04-cp1-g01",
+   "skillId": "numerical-expressions-patterns-skill-04",
+   "level": "cp1",
+   "format": "open-response",
+   "prompt": "Pattern A starts at 0 and adds 4. Pattern B starts at 0 and adds 12. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "What number does Pattern A reach 4 steps after 0?",
+     "answer": "16"
+    },
+    {
+     "prompt": "What number does Pattern B reach 4 steps after 0?",
+     "answer": "48"
+    },
+    {
+     "prompt": "Each term of Pattern B is how many times the matching term of Pattern A?",
+     "answer": "3"
+    },
+    {
+     "prompt": "Evaluate 3 × (4 × 4) and check that it matches your answer for Pattern B.",
+     "answer": "48"
+    }
+   ],
+   "answer": "(a) 16; (b) 48; (c) 3; (d) 48",
+   "solutionSteps": [
+    "(a) 4, 8, 12, 16.",
+    "(b) 12, …, 48.",
+    "(c) 12 ÷ 4 = 3.",
+    "(d) 3 × 16 = 48."
+   ],
+   "standards": [
+    "5.OA.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_ne). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-ep-s04-honors-001",
    "skillId": "numerical-expressions-patterns-skill-04",
    "level": "honors",
@@ -9308,6 +9705,76 @@
     "5.OA.B.3"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: p_term_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s04-honors-g01",
+   "skillId": "numerical-expressions-patterns-skill-04",
+   "level": "honors",
+   "format": "open-response",
+   "prompt": "Pattern A starts at 0 and adds 3. Pattern B starts at 0 and adds 12. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "What number does Pattern A reach 4 steps after 0?",
+     "answer": "12"
+    },
+    {
+     "prompt": "What number does Pattern B reach 4 steps after 0?",
+     "answer": "48"
+    },
+    {
+     "prompt": "Each term of Pattern B is how many times the matching term of Pattern A?",
+     "answer": "4"
+    },
+    {
+     "prompt": "Evaluate 4 × (4 × 3) and check that it matches your answer for Pattern B.",
+     "answer": "48"
+    }
+   ],
+   "answer": "(a) 12; (b) 48; (c) 4; (d) 48",
+   "solutionSteps": [
+    "(a) 3, 6, 9, 12.",
+    "(b) 12, …, 48.",
+    "(c) 12 ÷ 3 = 4.",
+    "(d) 4 × 12 = 48."
+   ],
+   "standards": [
+    "5.OA.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_ne). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s04-honors-g02",
+   "skillId": "numerical-expressions-patterns-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A pattern starts at 4 and adds 8 each time. A second pattern starts at 0 and adds 16. Add term number 7 of each pattern. What is the sum?",
+   "answer": "148",
+   "solutionSteps": [
+    "First pattern, term 7: 4 + 8 × 6 = 52.",
+    "Second pattern, term 7: 16 × 6 = 96.",
+    "Sum: 148."
+   ],
+   "standards": [
+    "5.OA.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s04-honors-g03",
+   "skillId": "numerical-expressions-patterns-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A pattern starts at 2 and adds 7 each time. A second pattern starts at 0 and adds 14. Add term number 9 of each pattern. What is the sum?",
+   "answer": "170",
+   "solutionSteps": [
+    "First pattern, term 9: 2 + 7 × 8 = 58.",
+    "Second pattern, term 9: 14 × 8 = 112.",
+    "Sum: 170."
+   ],
+   "standards": [
+    "5.OA.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-ep-s05-cp2-001",
@@ -11802,6 +12269,38 @@
     "5.OA.B.3"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: rel_times_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s05-honors-g01",
+   "skillId": "numerical-expressions-patterns-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Pattern A starts at 0 and adds 5. Pattern B starts at 0 and adds 15. When pattern A reaches 40, what number is pattern B at, and how many times as large is it?",
+   "answer": "120",
+   "solutionSteps": [
+    "Pattern A reaches 40 after 8 steps.",
+    "Pattern B after 8 steps: 15 × 8 = 120, which is 3 times 40."
+   ],
+   "standards": [
+    "5.OA.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne5). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-ep-s05-honors-g02",
+   "skillId": "numerical-expressions-patterns-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Pattern A starts at 0 and adds 6. Pattern B starts at 0 and adds 18. When pattern A reaches 42, what number is pattern B at, and how many times as large is it?",
+   "answer": "126",
+   "solutionSteps": [
+    "Pattern A reaches 42 after 7 steps.",
+    "Pattern B after 7 steps: 18 × 7 = 126, which is 3 times 42."
+   ],
+   "standards": [
+    "5.OA.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_ne5). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   }
  ]
 }

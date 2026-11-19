@@ -2404,6 +2404,38 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: m1_std_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-md-s01-honors-g01",
+   "skillId": "multi-digit-multiplication-division-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A theater has 38 rows with 37 seats in each row. Tickets cost $21. How much money is collected if every seat is sold?",
+   "answer": "$29,526",
+   "solutionSteps": [
+    "Seats: 38 × 37 = 1,406.",
+    "Money: 1,406 × $21 = $29,526."
+   ],
+   "standards": [
+    "5.NBT.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s01-honors-g02",
+   "skillId": "multi-digit-multiplication-division-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A theater has 36 rows with 28 seats in each row. Tickets cost $17. How much money is collected if every seat is sold?",
+   "answer": "$17,136",
+   "solutionSteps": [
+    "Seats: 36 × 28 = 1,008.",
+    "Money: 1,008 × $17 = $17,136."
+   ],
+   "standards": [
+    "5.NBT.B.5"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-md-s02-cp2-001",
    "skillId": "multi-digit-multiplication-division-skill-02",
    "level": "cp2",
@@ -3197,6 +3229,30 @@
     "5.NBT.B.6"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: e_product_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s02-cp2-g01",
+   "skillId": "multi-digit-multiplication-division-skill-02",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "Estimate 74 × 85 by rounding each factor to the nearest ten. The area model shows the rounded factors. Is the exact product greater or less than the estimate, and what is the estimate?",
+   "answer": "5,600",
+   "solutionSteps": [
+    "74 rounds to 70; 85 rounds to 80.",
+    "Estimate: 70 × 80 = 5,600 (the exact product 6,290 is greater)."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/multi-digit-multiplication-division/m5-md-s02-cp2-g01.png",
+     "alt": "Area model with side lengths 70 and 80 and area 5,600."
+    }
+   },
+   "standards": [
+    "5.NBT.B.5",
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_estimate_area). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-md-s02-cp1-001",
@@ -3994,6 +4050,30 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: e_product_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-md-s02-cp1-g01",
+   "skillId": "multi-digit-multiplication-division-skill-02",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "Estimate 76 × 89 by rounding each factor to the nearest ten. The area model shows the rounded factors. Is the exact product greater or less than the estimate, and what is the estimate?",
+   "answer": "7,200",
+   "solutionSteps": [
+    "76 rounds to 80; 89 rounds to 90.",
+    "Estimate: 80 × 90 = 7,200 (the exact product 6,764 is less)."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/multi-digit-multiplication-division/m5-md-s02-cp1-g01.png",
+     "alt": "Area model with side lengths 80 and 90 and area 7,200."
+    }
+   },
+   "standards": [
+    "5.NBT.B.5",
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_estimate_area). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-md-s02-honors-001",
    "skillId": "multi-digit-multiplication-division-skill-02",
    "level": "honors",
@@ -4787,6 +4867,64 @@
     "5.NBT.B.6"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: e_product_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s02-honors-g01",
+   "skillId": "multi-digit-multiplication-division-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Estimate 21 × 79 by rounding each factor to the nearest ten. The area model shows the rounded factors. Is the exact product greater or less than the estimate, and what is the estimate?",
+   "answer": "1,600",
+   "solutionSteps": [
+    "21 rounds to 20; 79 rounds to 80.",
+    "Estimate: 20 × 80 = 1,600 (the exact product 1,659 is greater)."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/multi-digit-multiplication-division/m5-md-s02-honors-g01.png",
+     "alt": "Area model with side lengths 20 and 80 and area 1,600."
+    }
+   },
+   "standards": [
+    "5.NBT.B.5",
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_estimate_area). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s02-honors-g02",
+   "skillId": "multi-digit-multiplication-division-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A class of 25 students goes on a trip that costs $43 per student. The class has $1,500. Estimate the cost by rounding each number to the nearest ten, then find the exact cost. What is the exact cost?",
+   "answer": "$1,075",
+   "solutionSteps": [
+    "Estimate: 20 × 40 = 800.",
+    "Exact: 25 × 43 = 1,075, so $1,075 (enough money)."
+   ],
+   "standards": [
+    "5.NBT.B.5",
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s02-honors-g03",
+   "skillId": "multi-digit-multiplication-division-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A class of 31 students goes on a trip that costs $50 per student. The class has $2,000. Estimate the cost by rounding each number to the nearest ten, then find the exact cost. What is the exact cost?",
+   "answer": "$1,550",
+   "solutionSteps": [
+    "Estimate: 30 × 50 = 1,500.",
+    "Exact: 31 × 50 = 1,550, so $1,550 (enough money)."
+   ],
+   "standards": [
+    "5.NBT.B.5",
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-md-s03-cp2-001",
@@ -7182,6 +7320,38 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: d1_divide_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-md-s03-honors-g01",
+   "skillId": "multi-digit-multiplication-division-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A baker made 270 cookies. She packs 9 cookies in each box and ships the boxes in cartons of 3 boxes. How many cartons does she ship?",
+   "answer": "10",
+   "solutionSteps": [
+    "Boxes: 270 ÷ 9 = 30.",
+    "Cartons: 30 ÷ 3 = 10."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s03-honors-g02",
+   "skillId": "multi-digit-multiplication-division-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A baker made 144 cookies. She packs 6 cookies in each box and ships the boxes in cartons of 4 boxes. How many cartons does she ship?",
+   "answer": "6",
+   "solutionSteps": [
+    "Boxes: 144 ÷ 6 = 24.",
+    "Cartons: 24 ÷ 4 = 6."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-md-s04-cp2-001",
    "skillId": "multi-digit-multiplication-division-skill-04",
    "level": "cp2",
@@ -9519,6 +9689,38 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: d2_divide_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-md-s04-honors-g01",
+   "skillId": "multi-digit-multiplication-division-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A farm packs 764 eggs into cartons of 36. Full cartons are sold for $3 each. How much money is that for the full cartons?",
+   "answer": "$63",
+   "solutionSteps": [
+    "764 ÷ 36 = 21 R 8, so 21 full cartons.",
+    "21 × $3 = $63."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s04-honors-g02",
+   "skillId": "multi-digit-multiplication-division-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A farm packs 1,549 eggs into cartons of 29. Full cartons are sold for $3 each. How much money is that for the full cartons?",
+   "answer": "$159",
+   "solutionSteps": [
+    "1,549 ÷ 29 = 53 R 12, so 53 full cartons.",
+    "53 × $3 = $159."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-md-s05-cp2-001",
    "skillId": "multi-digit-multiplication-division-skill-05",
    "level": "cp2",
@@ -10282,6 +10484,29 @@
     "5.NBT.B.6"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: r_interpret_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s05-cp2-g01",
+   "skillId": "multi-digit-multiplication-division-skill-05",
+   "level": "cp2",
+   "format": "short-answer",
+   "prompt": "33 students are going on a trip in vans that hold 8 students each. The tape diagram shows the vans. How many vans are needed so every student rides?",
+   "answer": "5",
+   "solutionSteps": [
+    "33 ÷ 8 = 4 R 1.",
+    "The 1 student left over need one more van: 5 vans."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/multi-digit-multiplication-division/m5-md-s05-cp2-g01.png",
+     "alt": "Tape diagram: 33 students split into groups of 8: 4 full groups and 1 left over."
+    }
+   },
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_remainder_tape). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-md-s05-cp1-001",
@@ -11049,6 +11274,65 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: r_interpret_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-md-s05-cp1-g01",
+   "skillId": "multi-digit-multiplication-division-skill-05",
+   "level": "cp1",
+   "format": "short-answer",
+   "prompt": "40 students are going on a trip in vans that hold 6 students each. The tape diagram shows the vans. How many vans are needed so every student rides?",
+   "answer": "7",
+   "solutionSteps": [
+    "40 ÷ 6 = 6 R 4.",
+    "The 4 students left over need one more van: 7 vans."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/multi-digit-multiplication-division/m5-md-s05-cp1-g01.png",
+     "alt": "Tape diagram: 40 students split into groups of 6: 6 full groups and 4 left over."
+    }
+   },
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_remainder_tape). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s05-cp1-g02",
+   "skillId": "multi-digit-multiplication-division-skill-05",
+   "level": "cp1",
+   "format": "open-response",
+   "prompt": "A school orders 380 pencils. They come in packs of 18, and each pack costs $6. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "How many full packs is that?",
+     "answer": "21"
+    },
+    {
+     "prompt": "How many pencils are left over, not making a full pack?",
+     "answer": "2"
+    },
+    {
+     "prompt": "How many packs must be bought to get at least that many pencils?",
+     "answer": "22"
+    },
+    {
+     "prompt": "What is the cost of those packs?",
+     "answer": "$132"
+    }
+   ],
+   "answer": "(a) 21; (b) 2; (c) 22; (d) $132",
+   "solutionSteps": [
+    "(a) 380 ÷ 18 = 21 R 2.",
+    "(b) The remainder is 2.",
+    "(c) 21 packs are not enough, so 22.",
+    "(d) 22 × $6."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_md). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-md-s05-honors-001",
    "skillId": "multi-digit-multiplication-division-skill-05",
    "level": "honors",
@@ -11812,6 +12096,97 @@
     "5.NBT.B.6"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: r_interpret_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s05-honors-g01",
+   "skillId": "multi-digit-multiplication-division-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "35 students are going on a trip in vans that hold 6 students each. The tape diagram shows the vans. How many vans are needed so every student rides?",
+   "answer": "6",
+   "solutionSteps": [
+    "35 ÷ 6 = 5 R 5.",
+    "The 5 students left over need one more van: 6 vans."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/multi-digit-multiplication-division/m5-md-s05-honors-g01.png",
+     "alt": "Tape diagram: 35 students split into groups of 6: 5 full groups and 5 left over."
+    }
+   },
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_remainder_tape). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s05-honors-g02",
+   "skillId": "multi-digit-multiplication-division-skill-05",
+   "level": "honors",
+   "format": "open-response",
+   "prompt": "A school orders 340 pencils. They come in packs of 29, and each pack costs $4. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "How many full packs is that?",
+     "answer": "11"
+    },
+    {
+     "prompt": "How many pencils are left over, not making a full pack?",
+     "answer": "21"
+    },
+    {
+     "prompt": "How many packs must be bought to get at least that many pencils?",
+     "answer": "12"
+    },
+    {
+     "prompt": "What is the cost of those packs?",
+     "answer": "$48"
+    }
+   ],
+   "answer": "(a) 11; (b) 21; (c) 12; (d) $48",
+   "solutionSteps": [
+    "(a) 340 ÷ 29 = 11 R 21.",
+    "(b) The remainder is 21.",
+    "(c) 11 packs are not enough, so 12.",
+    "(d) 12 × $4."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_md). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s05-honors-g03",
+   "skillId": "multi-digit-multiplication-division-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "288 people are going on a trip. Each bus holds 15 people and costs $83 to rent. What is the cost of the buses if everyone rides?",
+   "answer": "$1,660",
+   "solutionSteps": [
+    "288 ÷ 15 = 19 R 3; the 3 extra people need one more bus, so 20 buses.",
+    "20 × $83 = $1,660."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md5). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-md-s05-honors-g04",
+   "skillId": "multi-digit-multiplication-division-skill-05",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "106 people are going on a trip. Each bus holds 14 people and costs $132 to rent. What is the cost of the buses if everyone rides?",
+   "answer": "$1,056",
+   "solutionSteps": [
+    "106 ÷ 14 = 7 R 8; the 8 extra people need one more bus, so 8 buses.",
+    "8 × $132 = $1,056."
+   ],
+   "standards": [
+    "5.NBT.B.6"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_md5). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   }
  ]
 }

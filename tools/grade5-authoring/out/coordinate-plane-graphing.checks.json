@@ -322,6 +322,29 @@
 }
 ]
 },
+"m5-cp-s01-cp2-g01": {
+"q": {
+"k": "key",
+"accept": [
+"How far P is to the right of the origin, along the x‑axis (1)."
+]
+},
+"family": "fig_axes",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 1,
+"y": 8,
+"label": "P"
+}
+]
+}
+}
+},
 "m5-cp-s01-cp1-001": {
 "q": {
 "k": "fn",
@@ -645,6 +668,29 @@
 }
 ]
 },
+"m5-cp-s01-cp1-g01": {
+"q": {
+"k": "key",
+"accept": [
+"How far P is to the right of the origin, along the x‑axis (3)."
+]
+},
+"family": "fig_axes",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 3,
+"y": 1,
+"label": "P"
+}
+]
+}
+}
+},
 "m5-cp-s01-honors-001": {
 "q": {
 "k": "fn",
@@ -967,6 +1013,43 @@
 "y": "0"
 }
 ]
+},
+"m5-cp-s01-honors-g01": {
+"q": {
+"k": "key",
+"accept": [
+"How far P is to the right of the origin, along the x‑axis (5)."
+]
+},
+"family": "fig_axes",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 8,
+"label": "P"
+}
+]
+}
+}
+},
+"m5-cp-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "1+2+4+4"
+},
+"family": "ms_cp1"
+},
+"m5-cp-s01-honors-g03": {
+"q": {
+"k": "expr",
+"e": "2+1+4+3"
+},
+"family": "ms_cp1"
 },
 "m5-cp-s02-cp2-001": {
 "q": {
@@ -1664,6 +1747,37 @@
 "unit": "units"
 }
 ]
+},
+"m5-cp-s02-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "2+7"
+},
+"family": "fig_plot_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 1,
+"label": "A"
+},
+{
+"x": 4,
+"y": 9,
+"label": "B"
+},
+{
+"x": 2,
+"y": 7,
+"label": "C"
+}
+]
+}
+}
 },
 "m5-cp-s02-cp1-001": {
 "q": {
@@ -2553,6 +2667,37 @@
 "unit": "units"
 }
 ]
+},
+"m5-cp-s02-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "1+2"
+},
+"family": "fig_plot_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 5,
+"y": 1,
+"label": "A"
+},
+{
+"x": 1,
+"y": 2,
+"label": "B"
+},
+{
+"x": 6,
+"y": 5,
+"label": "C"
+}
+]
+}
+}
 },
 "m5-cp-s02-honors-001": {
 "q": {
@@ -3450,6 +3595,51 @@
 "unit": "units"
 }
 ]
+},
+"m5-cp-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "5+5"
+},
+"family": "fig_plot_read",
+"diagram": {
+"kind": "coord",
+"data": {
+"xmax": 10,
+"ymax": 10,
+"points": [
+{
+"x": 9,
+"y": 9,
+"label": "A"
+},
+{
+"x": 5,
+"y": 5,
+"label": "B"
+},
+{
+"x": 5,
+"y": 6,
+"label": "C"
+}
+]
+}
+}
+},
+"m5-cp-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "8+7-3"
+},
+"family": "ms_cp2"
+},
+"m5-cp-s02-honors-g03": {
+"q": {
+"k": "expr",
+"e": "7+5-1"
+},
+"family": "ms_cp2"
 },
 "m5-cp-s03-cp2-001": {
 "q": {
@@ -5836,6 +6026,29 @@
 }
 ]
 },
+"m5-cp-s03-cp1-g01": {
+"q": null,
+"family": "cr_cp",
+"parts": [
+{
+"k": "expr",
+"e": "3+6"
+},
+{
+"k": "expr",
+"e": "1+2"
+},
+{
+"k": "expr",
+"e": "6+2"
+},
+{
+"k": "expr",
+"e": "(6+2)*50",
+"unit": "meters"
+}
+]
+},
 "m5-cp-s03-honors-001": {
 "q": {
 "k": "fn",
@@ -7035,6 +7248,45 @@
 }
 ]
 },
+"m5-cp-s03-honors-g01": {
+"q": null,
+"family": "cr_cp",
+"parts": [
+{
+"k": "expr",
+"e": "1+5"
+},
+{
+"k": "expr",
+"e": "1+3"
+},
+{
+"k": "expr",
+"e": "5+3"
+},
+{
+"k": "expr",
+"e": "(5+3)*50",
+"unit": "meters"
+}
+]
+},
+"m5-cp-s03-honors-g02": {
+"q": {
+"k": "expr",
+"e": "((7-4)+(9-4))*5",
+"unit": "blocks"
+},
+"family": "ms_cp3"
+},
+"m5-cp-s03-honors-g03": {
+"q": {
+"k": "expr",
+"e": "((7-1)+(9-2))*3",
+"unit": "blocks"
+},
+"family": "ms_cp3"
+},
 "m5-cp-s04-cp2-001": {
 "q": {
 "k": "key",
@@ -7771,6 +8023,40 @@
 }
 ]
 },
+"m5-cp-s04-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "8/4*20"
+},
+"family": "fig_pattern_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x (add 4)",
+"y (add 8)"
+],
+"rows": [
+[
+"4",
+"8"
+],
+[
+"8",
+"16"
+],
+[
+"12",
+"24"
+],
+[
+"20",
+"?"
+]
+]
+}
+}
+},
 "m5-cp-s04-cp1-001": {
 "q": {
 "k": "expr",
@@ -8296,6 +8582,40 @@
 }
 ]
 },
+"m5-cp-s04-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "3/1*5"
+},
+"family": "fig_pattern_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x (add 1)",
+"y (add 3)"
+],
+"rows": [
+[
+"1",
+"3"
+],
+[
+"2",
+"6"
+],
+[
+"3",
+"9"
+],
+[
+"5",
+"?"
+]
+]
+}
+}
+},
 "m5-cp-s04-honors-001": {
 "q": {
 "k": "expr",
@@ -8791,5 +9111,53 @@
 "e": "9*5+1"
 }
 ]
+},
+"m5-cp-s04-honors-g01": {
+"q": {
+"k": "expr",
+"e": "6/3*15"
+},
+"family": "fig_pattern_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"x (add 3)",
+"y (add 6)"
+],
+"rows": [
+[
+"3",
+"6"
+],
+[
+"6",
+"12"
+],
+[
+"9",
+"18"
+],
+[
+"15",
+"?"
+]
+]
+}
+}
+},
+"m5-cp-s04-honors-g02": {
+"q": {
+"k": "expr",
+"e": "16*16/4"
+},
+"family": "ms_cp4"
+},
+"m5-cp-s04-honors-g03": {
+"q": {
+"k": "expr",
+"e": "10*20/5"
+},
+"family": "ms_cp4"
 }
 }

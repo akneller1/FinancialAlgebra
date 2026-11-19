@@ -31,7 +31,7 @@ for (const u of units) {
   assert.equal(bank.courseId, 'math5'); assert.equal(bank.unitId, u);
   const count = {};
   for (const q of bank.questions) {
-    total++; byLevel[q.level]++;
+    total++; if (!/-g\d{2}$/.test(q.id)) byLevel[q.level]++;
     for (const k of Object.keys(q)) assert.ok(KEYS.has(k), q.id + ': unexpected field ' + k);
     assert.ok(!ids.has(q.id), 'duplicate id ' + q.id); ids.add(q.id);
     const pk = q.prompt.replace(/\s+/g, ' ').trim().toLowerCase() + '|' + (q.diagram ? q.diagram.spec.alt : '') + '|' + (q.options || []).map(o => o.text).join('~') + '|' + (q.parts || []).map(p => p.prompt).join('~');
@@ -54,7 +54,8 @@ for (const u of units) {
       assert.equal(q.diagram.type, 'image'); assert.ok(q.diagram.spec.alt && q.diagram.spec.alt.length > 10, q.id + ': alt text');
       assert.ok(exists(q.diagram.spec.src), q.id + ': diagram file ' + q.diagram.spec.src);
     }
-    const k = q.skillId + '|' + q.level; count[k] = (count[k] || 0) + 1;
+    // the core 30 per skill and level; the Grade 5 audit (2026-11-19) adds items with ids ending -gNN after them
+    if (!/-g\d{2}$/.test(q.id)) { const k = q.skillId + '|' + q.level; count[k] = (count[k] || 0) + 1; }
   }
   for (const s of skills) for (const l of ['cp2', 'cp1', 'honors']) assert.equal(count[s + '|' + l], 30, `${u} ${s} ${l}: 30 questions`);
 
@@ -68,7 +69,7 @@ for (const u of units) {
   assert.ok(res.some(a => /grade5-flashcards\.html/.test(a.path)) && res.some(a => /grade5-understanding-check\.html/.test(a.path)), u + ': flashcards and Understanding Check');
   assert.ok(res.some(a => a.type === 'Project'), u + ': project');
 }
-assert.equal(byLevel.cp2, byLevel.cp1); assert.equal(byLevel.cp1, byLevel.honors);
+assert.equal(byLevel.cp2, byLevel.cp1); assert.equal(byLevel.cp1, byLevel.honors);  // core items only; the audit adds Advanced multi-step items
 const themes = JSON.parse(read('worksheet-generator/games/escape-themes.json'));
 assert.ok(units.every(u => themes['math5/' + u]), 'escape themes');
 for (const f of ['grade5-games.html', 'grade5-flashcards.html', 'grade5-understanding-check.html', 'grade5/g5-core.js', 'grade5/g5-games.js', 'grade5/flashcards.js', 'grade5/understanding-check.js', 'grade5/g5.css'])

@@ -283,7 +283,7 @@ SHEET[u] = dict(focus="customary conversions for length, weight and capacity", m
 
 # ---------------------------------------------------------------- Unit 8
 u = "volume-three-dimensional-figures"
-V[u] = [("volume-three-dimensional-figures", "The amount of space inside a solid figure.", "a box holds 24 cubic units"),
+V[u] = [("volume", "The amount of space inside a solid figure.", "a box holds 24 cubic units"),
         ("unit cube", "A cube with edges 1 unit long; it has a volume of 1 cubic unit.", "a 1 cm cube"),
         ("cubic unit", "A unit for measuring volume.", "cubic centimeters, cubic inches"),
         ("rectangular prism", "A solid figure with 6 rectangular faces.", "a cereal box"),
@@ -304,7 +304,7 @@ VIS[u] = [("What is the volume in cubic units?", "cubes", {"blocks": [{"l": 4, "
           ("Find the total volume.", "composite", {"a": {"l": 3, "w": 2, "h": 5, "lt": "3 ft", "wt": "2 ft", "ht": "5 ft"}, "b": {"l": 4, "w": 2, "h": 2, "lt": "4 ft", "ht": "2 ft"}}, "30 + 16 = 46 cubic feet")]
 SHEET[u] = dict(focus="unit cubes and counting cubes to find volume", morefocus="volume formulas, composite figures and word problems",
     sides=[dict(big="Volume tells how many unit cubes fill a solid with no gaps or overlaps. Count one layer, then multiply by the number of layers.",
-                vocab=["volume-three-dimensional-figures", "unit cube", "cubic unit", "rectangular prism"],
+                vocab=["volume", "unit cube", "cubic unit", "rectangular prism"],
                 how=dict(text="Find the volume of a box 5 cubes long, 3 wide, 2 tall.", example="Layers of cubes", steps=[["One layer:", "5 × 3 = 15 cubes"], ["2 layers:", "15 × 2"]], answer="30 cubic units", check="5*3*2==30"),
                 fig=("cubes", {"blocks": [{"l": 5, "w": 3, "h": 2}], "labels": True, "unit_word": "cubes"}, "5 × 3 = 15 cubes in each layer; 2 layers make 30 cubes."),
                 remember=["Volume units are cubic: cubic centimeters, cubic inches, cubic feet.", "The order of multiplying does not matter: (5 × 3) × 2 = 5 × (3 × 2)."],
@@ -425,3 +425,58 @@ SHEET[u] = dict(focus="reading and making line plots with fractions", morefocus=
                 remember=["Total = value × number of X’s, added up.", "Fair share = total ÷ number of data values."],
                 watch=[["Adding values once", "count every X"], ["Skipping a step", "find the total BEFORE dividing"]],
                 tryit=[["Total of 1/2, 1/2, 1/2, 1 (pounds)?", "2 1/2 pounds", "0.5*3+1==2.5"], ["Fair share of 3/4 and 1/4?", "1/2", "(0.75+0.25)/2==0.5"]])])
+
+
+# ---------------------------------------------------------------- Grade 5 audit 2026-11-19, fix #11
+# Core Grade 5 terms that were missing from the flashcards and the vocabulary games.
+ADDED_TERMS = {
+    "place-value-number-sense": [
+        ("compare", "Decide which of two numbers is greater, using >, < or =.", "0.45 > 0.4"),
+        ("placeholder zero", "A zero that holds a place so the other digits keep their values.", "In 0.07, the zeros show 0 ones and 0 tenths")],
+    "multi-digit-multiplication-division": [
+        ("multiple", "The product of a number and a whole number.", "24, 36 and 48 are multiples of 12"),
+        ("partial quotients", "A way to divide by taking away easy groups of the divisor, then adding the parts of the quotient.", "672 ÷ 6: 100 + 10 + 2 = 112")],
+    "decimal-operations": [
+        ("product", "The answer to a multiplication problem.", "0.3 × 4 = 1.2"),
+        ("quotient", "The answer to a division problem.", "4.8 ÷ 4 = 1.2")],
+    "numerical-expressions-patterns": [
+        ("grouping symbols", "Parentheses, brackets and braces. They show which part to work first.", "{2 × [3 + (4 − 1)]} = 12"),
+        ("corresponding terms", "Terms in the same position in two patterns.", "Rule add 3: 0, 3, 6. Rule add 6: 0, 6, 12. The 3rd terms are 6 and 12")],
+    "fraction-addition-subtraction": [
+        ("unlike denominators", "Denominators that are different.", "1/3 and 1/4 have unlike denominators"),
+        ("reasonable", "Makes sense when compared with an estimate.", "1/2 + 1/3 is less than 1, so 5/6 is reasonable")],
+    "fraction-multiplication-division": [
+        ("mixed number", "A whole number and a fraction together.", "2 3/4"),
+        ("area model", "A rectangle split into parts to show multiplication.", "2/3 × 3/4: shade 2 of 3 rows and 3 of 4 columns")],
+    "measurement-conversions": [
+        ("inch, foot, yard, mile", "Customary units of length. 12 in = 1 ft, 3 ft = 1 yd, 5,280 ft = 1 mi.", "36 inches = 1 yard"),
+        ("cup, pint, quart, gallon", "Customary units of capacity. 2 c = 1 pt, 2 pt = 1 qt, 4 qt = 1 gal.", "8 pints = 1 gallon"),
+        ("ounce, pound, ton", "Customary units of weight. 16 oz = 1 lb, 2,000 lb = 1 T.", "48 ounces = 3 pounds"),
+        ("meter, liter, gram", "The basic metric units of length, capacity and mass.", "1 kilometer = 1,000 meters")],
+    "volume-three-dimensional-figures": [
+        ("face", "A flat surface of a solid figure.", "a rectangular prism has 6 faces"),
+        ("vertex", "A point where edges meet. The plural is vertices.", "a cube has 8 vertices"),
+        ("layer", "One level of unit cubes in a prism.", "3 layers of 8 cubes = 24 cubes"),
+        ("cube", "A rectangular prism whose edges all have the same length.", "a 3 × 3 × 3 cube has a volume of 27 cubic units")],
+    "coordinate-plane-graphing": [
+        ("horizontal", "Going straight across, side to side.", "the x-axis is horizontal"),
+        ("vertical", "Going straight up and down.", "the y-axis is vertical"),
+        ("first quadrant", "The part of the coordinate plane where both coordinates are 0 or greater.", "(3, 5) is in the first quadrant")],
+    "classifying-two-dimensional-figures": [
+        ("equilateral triangle", "A triangle with all 3 sides the same length.", "sides 4, 4, 4"),
+        ("isosceles triangle", "A triangle with exactly 2 sides the same length.", "sides 5, 5, 3"),
+        ("scalene triangle", "A triangle with no sides the same length.", "sides 3, 4, 5"),
+        ("acute triangle", "A triangle with 3 acute angles.", "angles 60°, 70°, 50°"),
+        ("right triangle", "A triangle with one right angle.", "angles 90°, 30°, 60°"),
+        ("obtuse triangle", "A triangle with one obtuse angle.", "angles 120°, 40°, 20°"),
+        ("trapezoid", "A quadrilateral with exactly one pair of parallel sides.", "a quadrilateral with only its top and bottom sides parallel"),
+        ("rectangle", "A parallelogram with 4 right angles.", "a door"),
+        ("square", "A rectangle with 4 equal sides. It is also a rhombus.", "a checkerboard square")],
+    "data-line-plots-problem-solving": [
+        ("measurement data", "Data made by measuring things.", "lengths of 10 leaves, in inches"),
+        ("X on a line plot", "Each X stands for one data value.", "3 X’s above 1/2 means three values of 1/2")],
+}
+for _u, _rows in ADDED_TERMS.items():
+    _have = {t for t, _, _ in V[_u]}
+    V[_u] += [r for r in _rows if r[0] not in _have]
+

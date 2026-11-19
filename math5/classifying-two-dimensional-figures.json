@@ -2551,6 +2551,38 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: pa_sides_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-cs-s01-honors-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A garden is shaped like a regular hexagon with sides of 8 meters. Fencing costs $2 per meter. What does fencing around the garden cost?",
+   "answer": "$96",
+   "solutionSteps": [
+    "A regular hexagon has 6 equal sides: perimeter 6 × 8 = 48 meters.",
+    "Cost: 48 × $2 = $96."
+   ],
+   "standards": [
+    "5.G.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s01-honors-g02",
+   "skillId": "classifying-two-dimensional-figures-skill-01",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A garden is shaped like a regular hexagon with sides of 10 meters. Fencing costs $4 per meter. What does fencing around the garden cost?",
+   "answer": "$240",
+   "solutionSteps": [
+    "A regular hexagon has 6 equal sides: perimeter 6 × 10 = 60 meters.",
+    "Cost: 60 × $4 = $240."
+   ],
+   "standards": [
+    "5.G.B.3"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs1). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-cs-s02-cp2-001",
    "skillId": "classifying-two-dimensional-figures-skill-02",
    "level": "cp2",
@@ -5384,6 +5416,40 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: tri_angles_match). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-cs-s02-honors-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A triangle has angles of 64° and 70°. Find the third angle. (The angles of the triangle add to 180°.)",
+   "answer": "46°",
+   "solutionSteps": [
+    "180 − 64 − 70 = 46.",
+    "The triangle is acute."
+   ],
+   "standards": [
+    "5.G.B.3",
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s02-honors-g02",
+   "skillId": "classifying-two-dimensional-figures-skill-02",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A triangle has angles of 33° and 63°. Find the third angle. (The angles of the triangle add to 180°.)",
+   "answer": "84°",
+   "solutionSteps": [
+    "180 − 33 − 63 = 84.",
+    "The triangle is acute."
+   ],
+   "standards": [
+    "5.G.B.3",
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs2). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-cs-s03-cp2-001",
    "skillId": "classifying-two-dimensional-figures-skill-03",
    "level": "cp2",
@@ -6249,6 +6315,47 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: q_from_props_match). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-cs-s03-cp2-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-03",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "The quadrilateral has 4 equal sides and 4 right angles. What is the most specific name for it?",
+   "answer": "square",
+   "options": [
+    {
+     "text": "trapezoid",
+     "correct": false
+    },
+    {
+     "text": "square",
+     "correct": true
+    },
+    {
+     "text": "rhombus",
+     "correct": false
+    },
+    {
+     "text": "rectangle",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "It has 4 equal sides and 4 right angles.",
+    "So it is a square."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/classifying-two-dimensional-figures/m5-cs-s03-cp2-g01.png",
+     "alt": "A quadrilateral with 4 equal sides and 4 right angles."
+    }
+   },
+   "standards": [
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_quad_props). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-cs-s03-cp1-001",
    "skillId": "classifying-two-dimensional-figures-skill-03",
    "level": "cp1",
@@ -7098,6 +7205,83 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: q_from_props_match). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-cs-s03-cp1-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-03",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "The quadrilateral has exactly 1 pair of parallel sides. What is the most specific name for it?",
+   "answer": "trapezoid",
+   "options": [
+    {
+     "text": "square",
+     "correct": false
+    },
+    {
+     "text": "rectangle",
+     "correct": false
+    },
+    {
+     "text": "trapezoid",
+     "correct": true
+    },
+    {
+     "text": "rhombus",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "It has exactly 1 pair of parallel sides.",
+    "So it is a trapezoid."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/classifying-two-dimensional-figures/m5-cs-s03-cp1-g01.png",
+     "alt": "A quadrilateral with exactly 1 pair of parallel sides."
+    }
+   },
+   "standards": [
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_quad_props). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s03-cp1-g02",
+   "skillId": "classifying-two-dimensional-figures-skill-03",
+   "level": "cp1",
+   "format": "open-response",
+   "prompt": "A square has sides of 9 cm. A rectangle is 15 cm long and 9 cm wide. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "What is the perimeter of the square?",
+     "answer": "36 cm"
+    },
+    {
+     "prompt": "What is the perimeter of the rectangle?",
+     "answer": "48 cm"
+    },
+    {
+     "prompt": "How much greater is the perimeter of the rectangle?",
+     "answer": "12 cm"
+    },
+    {
+     "prompt": "How many right angles are there in the two shapes in all?",
+     "answer": "8"
+    }
+   ],
+   "answer": "(a) 36 cm; (b) 48 cm; (c) 12 cm; (d) 8",
+   "solutionSteps": [
+    "(a) 4 equal sides.",
+    "(b) 2 lengths + 2 widths.",
+    "(c) Subtract.",
+    "(d) Every square is a rectangle: 4 right angles each."
+   ],
+   "standards": [
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_cs). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-cs-s03-honors-001",
    "skillId": "classifying-two-dimensional-figures-skill-03",
    "level": "honors",
@@ -7926,6 +8110,115 @@
    "sourceNotes": "Original Claude-authored Grade 5 item (family: q_from_props_match). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
+   "id": "m5-cs-s03-honors-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-03",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "The quadrilateral has 4 equal sides but no right angles. What is the most specific name for it?",
+   "answer": "rhombus",
+   "options": [
+    {
+     "text": "square",
+     "correct": false
+    },
+    {
+     "text": "trapezoid",
+     "correct": false
+    },
+    {
+     "text": "rectangle",
+     "correct": false
+    },
+    {
+     "text": "rhombus",
+     "correct": true
+    }
+   ],
+   "solutionSteps": [
+    "It has 4 equal sides but no right angles.",
+    "So it is a rhombus."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/classifying-two-dimensional-figures/m5-cs-s03-honors-g01.png",
+     "alt": "A quadrilateral with 4 equal sides but no right angles."
+    }
+   },
+   "standards": [
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_quad_props). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s03-honors-g02",
+   "skillId": "classifying-two-dimensional-figures-skill-03",
+   "level": "honors",
+   "format": "open-response",
+   "prompt": "A square has sides of 7 cm. A rectangle is 9 cm long and 7 cm wide. Answer each part. Show your work.",
+   "parts": [
+    {
+     "prompt": "What is the perimeter of the square?",
+     "answer": "28 cm"
+    },
+    {
+     "prompt": "What is the perimeter of the rectangle?",
+     "answer": "32 cm"
+    },
+    {
+     "prompt": "How much greater is the perimeter of the rectangle?",
+     "answer": "4 cm"
+    },
+    {
+     "prompt": "How many right angles are there in the two shapes in all?",
+     "answer": "8"
+    }
+   ],
+   "answer": "(a) 28 cm; (b) 32 cm; (c) 4 cm; (d) 8",
+   "solutionSteps": [
+    "(a) 4 equal sides.",
+    "(b) 2 lengths + 2 widths.",
+    "(c) Subtract.",
+    "(d) Every square is a rectangle: 4 right angles each."
+   ],
+   "standards": [
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: cr_cs). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s03-honors-g03",
+   "skillId": "classifying-two-dimensional-figures-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A rectangle and one square have the same perimeter. The rectangle is 12 cm long and 2 cm wide. How long is each side of the square?",
+   "answer": "7 cm",
+   "solutionSteps": [
+    "Rectangle perimeter: 2 × (12 + 2) = 28 cm.",
+    "Square side: 28 ÷ 4 = 7 cm."
+   ],
+   "standards": [
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s03-honors-g04",
+   "skillId": "classifying-two-dimensional-figures-skill-03",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "A rectangle and one square have the same perimeter. The rectangle is 8 cm long and 4 cm wide. How long is each side of the square?",
+   "answer": "6 cm",
+   "solutionSteps": [
+    "Rectangle perimeter: 2 × (8 + 4) = 24 cm.",
+    "Square side: 24 ÷ 4 = 6 cm."
+   ],
+   "standards": [
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs3). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
    "id": "m5-cs-s04-cp2-001",
    "skillId": "classifying-two-dimensional-figures-skill-04",
    "level": "cp2",
@@ -8718,6 +9011,48 @@
     "5.G.B.4"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: h_yes_no_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s04-cp2-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-04",
+   "level": "cp2",
+   "format": "multiple-choice",
+   "prompt": "Use the hierarchy. Which statement is always true?",
+   "answer": "Every square is a rhombus.",
+   "options": [
+    {
+     "text": "Every trapezoid is a parallelogram.",
+     "correct": false
+    },
+    {
+     "text": "Every rectangle is a square.",
+     "correct": false
+    },
+    {
+     "text": "Every square is a rhombus.",
+     "correct": true
+    },
+    {
+     "text": "Every rhombus is a square.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "A square has 4 equal sides, so it fits the definition of the rhombus.",
+    "A rhombus need not have right angles."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/classifying-two-dimensional-figures/m5-cs-s04-cp2-g01.png",
+     "alt": "Hierarchy of quadrilaterals, from most general to most specific: quadrilateral, trapezoid, parallelogram, rectangle and rhombus, square."
+    }
+   },
+   "standards": [
+    "5.G.B.3",
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_hierarchy). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-cs-s04-cp1-001",
@@ -9584,6 +9919,48 @@
     "5.G.B.4"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: h_yes_no_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s04-cp1-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-04",
+   "level": "cp1",
+   "format": "multiple-choice",
+   "prompt": "Use the hierarchy. Which shape is both a rectangle and one rhombus?",
+   "answer": "square",
+   "options": [
+    {
+     "text": "quadrilateral",
+     "correct": false
+    },
+    {
+     "text": "parallelogram",
+     "correct": false
+    },
+    {
+     "text": "square",
+     "correct": true
+    },
+    {
+     "text": "trapezoid",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "A square has 4 right angles and 4 equal sides.",
+    "So it is both."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/classifying-two-dimensional-figures/m5-cs-s04-cp1-g01.png",
+     "alt": "Hierarchy of quadrilaterals, from most general to most specific: quadrilateral, trapezoid, parallelogram, rectangle and rhombus, square."
+    }
+   },
+   "standards": [
+    "5.G.B.3",
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_hierarchy). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   },
   {
    "id": "m5-cs-s04-honors-001",
@@ -10594,6 +10971,82 @@
     "5.G.B.4"
    ],
    "sourceNotes": "Original Claude-authored Grade 5 item (family: h_yes_no_open). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s04-honors-g01",
+   "skillId": "classifying-two-dimensional-figures-skill-04",
+   "level": "honors",
+   "format": "multiple-choice",
+   "prompt": "Use the hierarchy. Which statement is always true?",
+   "answer": "Every rectangle is a parallelogram.",
+   "options": [
+    {
+     "text": "Every parallelogram is a rectangle.",
+     "correct": false
+    },
+    {
+     "text": "Every rectangle is a parallelogram.",
+     "correct": true
+    },
+    {
+     "text": "Every quadrilateral is a trapezoid.",
+     "correct": false
+    },
+    {
+     "text": "Every rhombus is a rectangle.",
+     "correct": false
+    }
+   ],
+   "solutionSteps": [
+    "A rectangle has 2 pairs of parallel sides.",
+    "Not every parallelogram has right angles."
+   ],
+   "diagram": {
+    "type": "image",
+    "spec": {
+     "src": "question-banks/assets/math5/classifying-two-dimensional-figures/m5-cs-s04-honors-g01.png",
+     "alt": "Hierarchy of quadrilaterals, from most general to most specific: quadrilateral, trapezoid, parallelogram, rectangle and rhombus, square."
+    }
+   },
+   "standards": [
+    "5.G.B.3",
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: fig_hierarchy). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s04-honors-g02",
+   "skillId": "classifying-two-dimensional-figures-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Every square is a rhombus. A rhombus‑shaped tile has sides of 4 inches. A border is made from 3 tiles placed side by side in a row. How long is the border?",
+   "answer": "12 inches",
+   "solutionSteps": [
+    "Each tile is 4 inches wide along the row.",
+    "3 × 4 = 12 inches."
+   ],
+   "standards": [
+    "5.G.B.3",
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
+  },
+  {
+   "id": "m5-cs-s04-honors-g03",
+   "skillId": "classifying-two-dimensional-figures-skill-04",
+   "level": "honors",
+   "format": "short-answer",
+   "prompt": "Every square is a rhombus. A rhombus‑shaped tile has sides of 7 inches. A border is made from 6 tiles placed side by side in a row. How long is the border?",
+   "answer": "42 inches",
+   "solutionSteps": [
+    "Each tile is 7 inches wide along the row.",
+    "6 × 7 = 42 inches."
+   ],
+   "standards": [
+    "5.G.B.3",
+    "5.G.B.4"
+   ],
+   "sourceNotes": "Original Claude-authored Grade 5 item (family: ms_cs4). Answer computed by the authoring script and re-derived by the independent verifier (tools/grade5-authoring/verify.py)."
   }
  ]
 }

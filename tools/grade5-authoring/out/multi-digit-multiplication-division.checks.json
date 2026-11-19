@@ -1155,6 +1155,22 @@
 }
 ]
 },
+"m5-md-s01-honors-g01": {
+"q": {
+"k": "expr",
+"e": "38*37*21",
+"unit": "$"
+},
+"family": "ms_md1"
+},
+"m5-md-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "36*28*17",
+"unit": "$"
+},
+"family": "ms_md1"
+},
 "m5-md-s02-cp2-001": {
 "q": {
 "k": "fn",
@@ -1493,6 +1509,29 @@
 "b": 42
 }
 ]
+},
+"m5-md-s02-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "70*80"
+},
+"family": "fig_estimate_area",
+"diagram": {
+"kind": "area_model",
+"data": {
+"rows": [
+"80"
+],
+"cols": [
+"70"
+],
+"cells": [
+[
+"5,600"
+]
+]
+}
+}
 },
 "m5-md-s02-cp1-001": {
 "q": {
@@ -1833,6 +1872,29 @@
 }
 ]
 },
+"m5-md-s02-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "80*90"
+},
+"family": "fig_estimate_area",
+"diagram": {
+"kind": "area_model",
+"data": {
+"rows": [
+"90"
+],
+"cols": [
+"80"
+],
+"cells": [
+[
+"7,200"
+]
+]
+}
+}
+},
 "m5-md-s02-honors-001": {
 "q": {
 "k": "fn",
@@ -2170,6 +2232,45 @@
 "b": 348
 }
 ]
+},
+"m5-md-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "20*80"
+},
+"family": "fig_estimate_area",
+"diagram": {
+"kind": "area_model",
+"data": {
+"rows": [
+"80"
+],
+"cols": [
+"20"
+],
+"cells": [
+[
+"1,600"
+]
+]
+}
+}
+},
+"m5-md-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "25*43",
+"unit": "$"
+},
+"family": "ms_md2"
+},
+"m5-md-s02-honors-g03": {
+"q": {
+"k": "expr",
+"e": "31*50",
+"unit": "$"
+},
+"family": "ms_md2"
 },
 "m5-md-s03-cp2-001": {
 "q": {
@@ -3284,6 +3385,20 @@
 }
 ]
 },
+"m5-md-s03-honors-g01": {
+"q": {
+"k": "expr",
+"e": "270/9/3"
+},
+"family": "ms_md3"
+},
+"m5-md-s03-honors-g02": {
+"q": {
+"k": "expr",
+"e": "144/6/4"
+},
+"family": "ms_md3"
+},
 "m5-md-s04-cp2-001": {
 "q": {
 "k": "expr",
@@ -4237,6 +4352,28 @@
 }
 ]
 },
+"m5-md-s04-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(764-8)/36*3",
+"unit": "$"
+},
+"family": "ms_md4",
+"consts": [
+"8"
+]
+},
+"m5-md-s04-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(1549-12)/29*3",
+"unit": "$"
+},
+"family": "ms_md4",
+"consts": [
+"12"
+]
+},
 "m5-md-s05-cp2-001": {
 "q": {
 "k": "fn",
@@ -4609,6 +4746,24 @@
 "unit": "cartons"
 }
 ]
+},
+"m5-md-s05-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "(33-1)/8+1",
+"form": "whole"
+},
+"family": "fig_remainder_tape",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 5,
+"shaded": 4,
+"total_label": "33 students",
+"each": "",
+"note": "4 full vans of 8, 1 left"
+}
+}
 },
 "m5-md-s05-cp1-001": {
 "q": {
@@ -4986,6 +5141,47 @@
 }
 ]
 },
+"m5-md-s05-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "(40-4)/6+1",
+"form": "whole"
+},
+"family": "fig_remainder_tape",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 7,
+"shaded": 6,
+"total_label": "40 students",
+"each": "",
+"note": "6 full vans of 6, 4 left"
+}
+}
+},
+"m5-md-s05-cp1-g02": {
+"q": null,
+"family": "cr_md",
+"parts": [
+{
+"k": "expr",
+"e": "(380-2)/18"
+},
+{
+"k": "expr",
+"e": "380-18*21"
+},
+{
+"k": "expr",
+"e": "(380-2)/18+1"
+},
+{
+"k": "expr",
+"e": "((380-2)/18+1)*6",
+"unit": "$"
+}
+]
+},
 "m5-md-s05-honors-001": {
 "q": {
 "k": "fn",
@@ -5360,6 +5556,69 @@
 "mode": "down",
 "unit": "pieces"
 }
+]
+},
+"m5-md-s05-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(35-5)/6+1",
+"form": "whole"
+},
+"family": "fig_remainder_tape",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 6,
+"shaded": 5,
+"total_label": "35 students",
+"each": "",
+"note": "5 full vans of 6, 5 left"
+}
+}
+},
+"m5-md-s05-honors-g02": {
+"q": null,
+"family": "cr_md",
+"parts": [
+{
+"k": "expr",
+"e": "(340-21)/29"
+},
+{
+"k": "expr",
+"e": "340-29*11"
+},
+{
+"k": "expr",
+"e": "(340-21)/29+1"
+},
+{
+"k": "expr",
+"e": "((340-21)/29+1)*4",
+"unit": "$"
+}
+]
+},
+"m5-md-s05-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(19+1)*83",
+"unit": "$"
+},
+"family": "ms_md5",
+"consts": [
+"19"
+]
+},
+"m5-md-s05-honors-g04": {
+"q": {
+"k": "expr",
+"e": "(7+1)*132",
+"unit": "$"
+},
+"family": "ms_md5",
+"consts": [
+"7"
 ]
 }
 }

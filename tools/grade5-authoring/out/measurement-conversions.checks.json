@@ -1626,6 +1626,28 @@
 }
 ]
 },
+"m5-mc-s01-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(8*12+2)*3",
+"unit": "inches"
+},
+"family": "ms_mc1",
+"consts": [
+"12"
+]
+},
+"m5-mc-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(9*12+5)*6",
+"unit": "inches"
+},
+"family": "ms_mc1",
+"consts": [
+"12"
+]
+},
 "m5-mc-s02-cp2-001": {
 "q": {
 "k": "fn",
@@ -2016,6 +2038,41 @@
 "to": "cups"
 }
 ]
+},
+"m5-mc-s02-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "4*16",
+"unit": "ounces"
+},
+"family": "fig_weight_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Pounds",
+"Ounces"
+],
+"rows": [
+[
+"1",
+"16"
+],
+[
+"2",
+"32"
+],
+[
+"3",
+"48"
+],
+[
+"4",
+"?"
+]
+]
+}
+}
 },
 "m5-mc-s02-cp1-001": {
 "q": {
@@ -2414,6 +2471,41 @@
 }
 ]
 },
+"m5-mc-s02-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "7*16",
+"unit": "ounces"
+},
+"family": "fig_weight_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Pounds",
+"Ounces"
+],
+"rows": [
+[
+"1",
+"16"
+],
+[
+"2",
+"32"
+],
+[
+"3",
+"48"
+],
+[
+"7",
+"?"
+]
+]
+}
+}
+},
 "m5-mc-s02-honors-001": {
 "q": {
 "k": "fn",
@@ -2811,6 +2903,55 @@
 }
 ]
 },
+"m5-mc-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "6*16",
+"unit": "ounces"
+},
+"family": "fig_weight_table",
+"diagram": {
+"kind": "table",
+"data": {
+"header": [
+"Pounds",
+"Ounces"
+],
+"rows": [
+[
+"1",
+"16"
+],
+[
+"2",
+"32"
+],
+[
+"3",
+"48"
+],
+[
+"6",
+"?"
+]
+]
+}
+}
+},
+"m5-mc-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "2*16/1"
+},
+"family": "ms_mc2"
+},
+"m5-mc-s02-honors-g03": {
+"q": {
+"k": "expr",
+"e": "5*16/2"
+},
+"family": "ms_mc2"
+},
 "m5-mc-s03-cp2-001": {
 "q": {
 "k": "fn",
@@ -3195,6 +3336,29 @@
 }
 ]
 },
+"m5-mc-s03-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "3.5*100",
+"unit": "centimeters"
+},
+"family": "fig_metric_line",
+"diagram": {
+"kind": "number_line",
+"data": {
+"lo": "0",
+"hi": "5",
+"den": 10,
+"label_every": 10,
+"jumps": [
+[
+"0",
+"7/2"
+]
+]
+}
+}
+},
 "m5-mc-s03-cp1-001": {
 "q": {
 "k": "fn",
@@ -3565,6 +3729,29 @@
 "to": "grams"
 }
 ]
+},
+"m5-mc-s03-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "3.2*100",
+"unit": "centimeters"
+},
+"family": "fig_metric_line",
+"diagram": {
+"kind": "number_line",
+"data": {
+"lo": "0",
+"hi": "5",
+"den": 10,
+"label_every": 10,
+"jumps": [
+[
+"0",
+"16/5"
+]
+]
+}
+}
 },
 "m5-mc-s03-honors-001": {
 "q": {
@@ -3938,6 +4125,45 @@
 "to": "millimeters"
 }
 ]
+},
+"m5-mc-s03-honors-g01": {
+"q": {
+"k": "expr",
+"e": "1.1*100",
+"unit": "centimeters"
+},
+"family": "fig_metric_line",
+"diagram": {
+"kind": "number_line",
+"data": {
+"lo": "0",
+"hi": "5",
+"den": 10,
+"label_every": 10,
+"jumps": [
+[
+"0",
+"11/10"
+]
+]
+}
+}
+},
+"m5-mc-s03-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(5*100+95)/4",
+"unit": "centimeters"
+},
+"family": "ms_mc3"
+},
+"m5-mc-s03-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(5*100+83)/5",
+"unit": "centimeters"
+},
+"family": "ms_mc3"
 },
 "m5-mc-s04-cp2-001": {
 "q": {
@@ -4841,6 +5067,37 @@
 }
 ]
 },
+"m5-mc-s04-cp1-g01": {
+"q": null,
+"family": "cr_mc",
+"parts": [
+{
+"k": "expr",
+"e": "5*12+2",
+"unit": "inches"
+},
+{
+"k": "expr",
+"e": "(5*12+2)*4",
+"unit": "inches"
+},
+{
+"k": "expr",
+"e": "((5*12+2)*4-8)/12",
+"unit": "feet"
+},
+{
+"k": "expr",
+"e": "(5*12+2)*4-12*20",
+"unit": "inches"
+}
+],
+"consts": [
+"12",
+"8",
+"20"
+]
+},
 "m5-mc-s04-honors-001": {
 "q": {
 "k": "fn",
@@ -5301,5 +5558,52 @@
 "form": "mixed"
 }
 ]
+},
+"m5-mc-s04-honors-g01": {
+"q": null,
+"family": "cr_mc",
+"parts": [
+{
+"k": "expr",
+"e": "9*12+7",
+"unit": "inches"
+},
+{
+"k": "expr",
+"e": "(9*12+7)*4",
+"unit": "inches"
+},
+{
+"k": "expr",
+"e": "((9*12+7)*4-4)/12",
+"unit": "feet"
+},
+{
+"k": "expr",
+"e": "(9*12+7)*4-12*38",
+"unit": "inches"
+}
+],
+"consts": [
+"12",
+"4",
+"38"
+]
+},
+"m5-mc-s04-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(6*16+10)*7",
+"unit": "ounces"
+},
+"family": "ms_mc4"
+},
+"m5-mc-s04-honors-g03": {
+"q": {
+"k": "expr",
+"e": "(3*16+4)*6",
+"unit": "ounces"
+},
+"family": "ms_mc4"
 }
 }

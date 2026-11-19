@@ -914,6 +914,22 @@
 }
 ]
 },
+"m5-do-s01-honors-g01": {
+"q": {
+"k": "expr",
+"e": "57.58-24.19-9.65",
+"unit": "$"
+},
+"family": "ms_do1"
+},
+"m5-do-s01-honors-g02": {
+"q": {
+"k": "expr",
+"e": "73.97-47.16-4.8",
+"unit": "$"
+},
+"family": "ms_do1"
+},
 "m5-do-s02-cp2-001": {
 "q": {
 "k": "expr",
@@ -2093,6 +2109,22 @@
 }
 ]
 },
+"m5-do-s02-honors-g01": {
+"q": {
+"k": "expr",
+"e": "8.44*8+2*8.44*6",
+"unit": "$"
+},
+"family": "ms_do2"
+},
+"m5-do-s02-honors-g02": {
+"q": {
+"k": "expr",
+"e": "5.35*9+2*5.35*5",
+"unit": "$"
+},
+"family": "ms_do2"
+},
 "m5-do-s03-cp2-001": {
 "q": {
 "k": "expr",
@@ -3108,6 +3140,22 @@
 }
 ]
 },
+"m5-do-s03-honors-g01": {
+"q": {
+"k": "expr",
+"e": "4*3.5*3.6",
+"unit": "$"
+},
+"family": "ms_do3"
+},
+"m5-do-s03-honors-g02": {
+"q": {
+"k": "expr",
+"e": "6.4*2.3*3.75",
+"unit": "$"
+},
+"family": "ms_do3"
+},
 "m5-do-s04-cp2-001": {
 "q": {
 "k": "expr",
@@ -4110,6 +4158,22 @@
 "e": "2.85/3"
 }
 ]
+},
+"m5-do-s04-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(21.18+6)/6",
+"unit": "$"
+},
+"family": "ms_do4"
+},
+"m5-do-s04-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(27.35+7)/5",
+"unit": "$"
+},
+"family": "ms_do4"
 },
 "m5-do-s05-cp2-001": {
 "q": {
@@ -5404,6 +5468,26 @@
 }
 ]
 },
+"m5-do-s05-honors-g01": {
+"q": {
+"k": "expr",
+"e": "(8.4/0.3-0)/2"
+},
+"family": "ms_do5",
+"consts": [
+"0"
+]
+},
+"m5-do-s05-honors-g02": {
+"q": {
+"k": "expr",
+"e": "(7.8/0.6-1)/2"
+},
+"family": "ms_do5",
+"consts": [
+"1"
+]
+},
 "m5-do-s06-cp2-001": {
 "q": {
 "k": "expr",
@@ -5739,6 +5823,24 @@
 "form": "money"
 }
 ]
+},
+"m5-do-s06-cp2-g01": {
+"q": {
+"k": "expr",
+"e": "4.17*5",
+"unit": "$"
+},
+"family": "fig_money_tape",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 5,
+"shaded": 5,
+"each": "$4.17",
+"total_label": "?",
+"note": ""
+}
+}
 },
 "m5-do-s06-cp1-001": {
 "q": {
@@ -6094,6 +6196,50 @@
 "k": "expr",
 "e": "20-5.98-5.92",
 "form": "money"
+}
+]
+},
+"m5-do-s06-cp1-g01": {
+"q": {
+"k": "expr",
+"e": "8.68*4",
+"unit": "$"
+},
+"family": "fig_money_tape",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 4,
+"shaded": 4,
+"each": "$8.68",
+"total_label": "?",
+"note": ""
+}
+}
+},
+"m5-do-s06-cp1-g02": {
+"q": null,
+"family": "cr_do",
+"parts": [
+{
+"k": "expr",
+"e": "1.96*5",
+"unit": "$"
+},
+{
+"k": "expr",
+"e": "1.29*5",
+"unit": "$"
+},
+{
+"k": "expr",
+"e": "1.96*5+1.29*5",
+"unit": "$"
+},
+{
+"k": "expr",
+"e": "20-1.96*5-1.29*5",
+"unit": "$"
 }
 ]
 },
@@ -6453,5 +6599,65 @@
 "form": "money"
 }
 ]
+},
+"m5-do-s06-honors-g01": {
+"q": {
+"k": "expr",
+"e": "2.4*4",
+"unit": "$"
+},
+"family": "fig_money_tape",
+"diagram": {
+"kind": "tape",
+"data": {
+"parts": 4,
+"shaded": 4,
+"each": "$2.40",
+"total_label": "?",
+"note": ""
+}
+}
+},
+"m5-do-s06-honors-g02": {
+"q": null,
+"family": "cr_do",
+"parts": [
+{
+"k": "expr",
+"e": "2.69*3",
+"unit": "$"
+},
+{
+"k": "expr",
+"e": "2.31*5",
+"unit": "$"
+},
+{
+"k": "expr",
+"e": "2.69*3+2.31*5",
+"unit": "$"
+},
+{
+"k": "expr",
+"e": "50-2.69*3-2.31*5",
+"unit": "$"
+}
+]
+},
+"m5-do-s06-honors-g03": {
+"q": {
+"k": "expr",
+"e": "11.89*4-19.63",
+"unit": "$"
+},
+"family": "ms_do6"
+},
+"m5-do-s06-honors-g04": {
+"q": {
+"k": "expr",
+"e": "14.53*9-26.94",
+"unit": "$"
+},
+"family": "ms_do6"
 }
 }

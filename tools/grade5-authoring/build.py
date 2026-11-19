@@ -174,7 +174,7 @@ class Builder:
 
     def emit(self, rec, L, idx, p, fmt, fname, r, pos=None):
         lv = LEVELS[L]
-        qid = f"{PREFIX}-{self.u['abbr']}-s{rec['index']:02d}-{lv}-{idx:03d}"
+        qid = f"{PREFIX}-{self.u['abbr']}-s{rec['index']:02d}-{lv}-{idx if isinstance(idx, str) else format(idx, '03d')}"
         q = {"id": qid, "skillId": rec["id"], "level": lv, "format": fmt,
              "prompt": p.mc_prompt if fmt == "multiple-choice" and p.mc_prompt else p.prompt}
         chk = {"q": p.check, "family": fname}
@@ -362,6 +362,34 @@ class Builder:
                     fails[f.__name__] += 1
                     if fails[f.__name__] > 200:
                         dead.add(f.__name__)
+        out.extend(self.added(rec, L))
+        return out
+
+    def added(self, rec, L):
+        """Grade 5 audit 2026-11-19: items added after the 30 per skill and level, with ids ending -gNN. They are drawn
+        from their own families (units/audit_20261119.py), after the core draws, so the original 30 never change."""
+        import audit_20261119 as AUD
+        out, n = [], 0
+        for f, count in AUD.added(self.u["id"], rec["index"], L):
+            got = tries = 0
+            while got < count and tries < 300:
+                tries += 1
+                p, r = self.make(f, rec, L, 4000 + tries)
+                if p is None:
+                    continue
+                key = pkey(p)
+                if key in SEEN:
+                    continue
+                fmt = "open-response" if p.parts else "multiple-choice" if (p.options or f.mode == "mc") else "short-answer"
+                if fmt == "multiple-choice" and not p.options and mc_options(p, 0, rng("probe", key)) is None:
+                    continue
+                n += 1
+                q, meta, chk = self.emit(rec, L, f"g{n:02d}", p, fmt, f.__name__, r, rng("pos", key).randrange(4))
+                SEEN[key] = q["id"]
+                out.append((q, meta, chk))
+                got += 1
+            if got < count:
+                raise RuntimeError(f"{rec['id']} L{L}: added family {f.__name__} gave {got} of {count}")
         return out
 
     def run(self, draw=True):
