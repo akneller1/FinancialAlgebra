@@ -3,7 +3,7 @@
    display mode, not an authentication/permission boundary. */
 (function (G) {
   'use strict';
-  var levels = { cp2: 'Remedial', cp1: 'Standard', honors: 'Advanced' };
+  var levels = { cp2: 'Support', cp1: 'Standard', honors: 'Advanced' };
   function hasLevel(resource) {
     return resource.type === 'Game' || resource.type === 'Project' || resource.type === 'Printable' ||
       (resource.type === 'Study Guide' && resource.title === 'Understanding Check');

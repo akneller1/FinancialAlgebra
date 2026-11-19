@@ -7,7 +7,7 @@
   var P = new URLSearchParams(G.location.search);
   var COURSE = G.MK_ELEMENTARY_COURSE ? G.MK_ELEMENTARY_COURSE.id : 'math5';
   var COURSE_NAME = G.MK_ELEMENTARY_COURSE ? G.MK_ELEMENTARY_COURSE.shortName : 'Grade 5';
-  var LEVELS = [['cp2', 'Remedial'], ['cp1', 'Standard'], ['honors', 'Advanced']];
+  var LEVELS = [['cp2', 'Support'], ['cp1', 'Standard'], ['honors', 'Advanced']];
   var PRAISE = ['Great thinking!', 'You got it!', 'Nice work!', 'Super job!', 'Way to go!', 'That’s right!', 'Excellent reasoning!', 'You nailed it!'];
   var NUDGE = ['Almost! Let’s try another strategy.', 'Not quite yet. Check each step.', 'Good try! Look at the hint.', 'Keep going — you can do this!', 'Check your place values.', 'Try using a picture to help.'];
 
@@ -48,12 +48,61 @@
     return String(s == null ? '' : s).replace(/[‑−]/g, '-').replace(/[’]/g, "'").toLowerCase().replace(/,(?=\d{3})/g, '')
       .replace(/\s+/g, ' ').replace(/^(the|a|an|point|shape|triangle|box|garden|pack|mix) /, '').replace(/[.!]+$/, '').trim();
   }
-  function unitWord(u) { return norm(u).replace(/feet/g, 'foot').replace(/(ch|sh|x|bus)es\b/g, '$1').replace(/s\b/g, ''); }
+  /* Grade 5 audit 2026-11-19 (#3): common unit abbreviations count as the unit word */
+  var ABBR = { ft: 'foot', 'in': 'inch', yd: 'yard', mi: 'mile', lb: 'pound', lbs: 'pound', oz: 'ounce', 'fl oz': 'fluid ounce', qt: 'quart', pt: 'pint',
+    gal: 'gallon', c: 'cup', t: 'ton', g: 'gram', kg: 'kilogram', mg: 'milligram', m: 'meter', cm: 'centimeter', mm: 'millimeter', km: 'kilometer',
+    l: 'liter', ml: 'milliliter', min: 'minute', hr: 'hour', h: 'hour', sec: 'second', s: 'second' };
+  function unitWord(u) {
+    var w = norm(u).replace(/\./g, '');
+    w = w.replace(/^(cu|cubic|sq|square) /, function (m0, a) { return (a === 'cu' ? 'cubic' : a === 'sq' ? 'square' : a) + ' '; });
+    w = w.replace(/(^|\s)(fl oz|[a-z]+)$/, function (m0, sp, a) { return sp + (ABBR[a] || a); });
+    return w.replace(/feet/g, 'foot').replace(/(ch|sh|x|bus)es\b/g, '$1').replace(/s\b/g, '');
+  }
+  /* The words and symbols for comparisons are the same answer: "greater than" = ">", "less than 1" = "< 1". */
+  var CMP = { 'greater than': '>', 'more than': '>', 'less than': '<', 'equal to': '=', 'equals': '=', 'the same as': '=' };
+  function cmpForm(s) {
+    var t = norm(s).replace(/\s+/g, ' ');
+    for (var w in CMP) if (t === w || t.indexOf(w + ' ') === 0) return CMP[w] + t.slice(w.length).replace(/\s/g, '');
+    return /^[<>=]/.test(t) ? t.replace(/\s/g, '') : null;
+  }
+  /* The form a prompt asks for: simplest form, a mixed number, a decimal or a fraction (audit #2). */
+  function formAsked(prompt) {
+    var t = String(prompt || '').toLowerCase();
+    if (/simplest form|lowest terms|simplify/.test(t)) return 'simplest';
+    if (/as a mixed number/.test(t)) return 'mixed';
+    if (/as a decimal|decimal form/.test(t)) return 'decimal';
+    if (/as a fraction/.test(t)) return 'fraction';
+    return '';
+  }
+  function formOk(typed, key, form) {
+    var t = String(typed).replace(/[‑−]/g, '-').trim(), k = String(key).trim();
+    var mt = /^(-?\d+)\s+(\d+)\s*\/\s*(\d+)/.exec(t), ft = /^(-?\d+)\s*\/\s*(\d+)/.exec(t);
+    var mixedKey = /^\d+\s+\d+\/\d+/.test(k), fracKey = /^\d+\/\d+/.test(k);
+    if (form === 'decimal') return /\./.test(t) || !/\//.test(t);
+    if (form === 'fraction') return /\//.test(t);
+    if (form === 'mixed') return !!mt || (!ft && !/\./.test(t));
+    if (form === 'simplest') {
+      // lowest terms: 2/3 not 4/6, 1 1/2 or 3/2 but not 1 2/4 or 6/4, 2 not 6/3; a decimal is not the fraction asked for
+      if (!mixedKey && !fracKey) return !mt && !ft;
+      var n = mt ? +mt[2] : ft ? +ft[1] : null, d = mt ? +mt[3] : ft ? +ft[2] : null;
+      if (n === null) return false;
+      return gcd(n, d) === 1 && (!mt || n < d);
+    }
+    return true;
+  }
   /* Is a typed answer equivalent to the key? Numbers compare by exact value; units may be left off. */
-  function matches(typed, key) {
+  function matches(typed, key, prompt) {
     var t = String(typed || '').trim(), k = String(key || '').trim();
     if (!t) return false;
+    var form = formAsked(prompt);
+    if (form && !formOk(t, k, form)) return false;
     if (norm(t) === norm(k)) return true;
+    var ck = cmpForm(k), ct = cmpForm(t);
+    if (ck && ct) return ck === ct;
+    var rem = /^([\d,]+)\s*(?:r|rem|remainder)\.?\s*(\d+)$/i.exec(t.replace(/\s+/g, ' '));
+    if (rem && /^[\d,]+\s*R\s*\d+$/i.test(k)) t = rem[1] + ' R ' + rem[2];
+    var ax = /^(?:the )?([xy])[\s‑-]*axis$/i.exec(t), axk = /^(?:the )?([xy])[\s‑-]*axis$/i.exec(k);
+    if (ax && axk) return ax[1].toLowerCase() === axk[1].toLowerCase();
     // ordered pairs, remainders and lists compare piece by piece
     var pair = /^\(?\s*([^,()]+?)\s*,\s*([^,()]+?)\s*\)?$/;
     if (/^\(.+,.+\)$/.test(k)) { var a = pair.exec(t), b = pair.exec(k); return !!(a && b && matches(a[1], b[1]) && matches(a[2], b[2])); }
@@ -198,7 +247,7 @@
       pb.onclick = function () {
         if (done) return; tries++;
         var all = true;
-        inputs.forEach(function (inp, i) { var ok = matches(inp.value, p.parts[i].answer); inp.classList.toggle('right', ok); inp.classList.toggle('wrong', !ok); all = all && ok; });
+        inputs.forEach(function (inp, i) { var ok = matches(inp.value, p.parts[i].answer, p.parts[i].prompt); inp.classList.toggle('right', ok); inp.classList.toggle('wrong', !ok); all = all && ok; });
         var last = all || tries >= maxTries;
         feedback(all, last);
         if (last) { pb.disabled = true; finish(all); }
@@ -212,7 +261,7 @@
       var submit = function () {
         if (done || !input.value.trim()) return;
         tries++;
-        var ok = matches(input.value, p.answer);
+        var ok = matches(input.value, p.answer, p.prompt);
         input.classList.toggle('right', ok); input.classList.toggle('wrong', !ok);
         var last = ok || tries >= maxTries;
         feedback(ok, last);

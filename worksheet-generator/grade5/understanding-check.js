@@ -72,10 +72,10 @@
       };
     } else if (p.kind === 'parts') {
       var ins = p.parts.map(function (pt, i) { var row = el('label', box, 'g5-part'); el('span', row, 'g5-letter', 'abcd'.charAt(i)); g5.math(el('span', row, 'g5-pt'), pt.prompt); var x = el('input', row, 'g5-input'); x.setAttribute('aria-label', 'Part ' + 'abcd'.charAt(i)); return x; });
-      get = function () { return { done: ins.some(function (x) { return x.value.trim(); }), ok: ins.every(function (x, i) { return g5.matches(x.value, p.parts[i].answer); }) }; };
+      get = function () { return { done: ins.some(function (x) { return x.value.trim(); }), ok: ins.every(function (x, i) { return g5.matches(x.value, p.parts[i].answer, p.parts[i].prompt); }) }; };
     } else {
       var inp = el('input', box, 'g5-input'); inp.setAttribute('aria-label', 'Answer to question ' + (idx + 1)); inp.placeholder = 'Type your answer'; inp.autocomplete = 'off';
-      get = function () { return { done: !!inp.value.trim(), ok: g5.matches(inp.value, p.answer) }; };
+      get = function () { return { done: !!inp.value.trim(), ok: g5.matches(inp.value, p.answer, p.prompt) }; };
     }
     return { box: box, get: get };
   }

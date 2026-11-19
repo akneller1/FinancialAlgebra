@@ -159,7 +159,7 @@ test('Student interactive mode hides teacher-view button and excludes the teache
  assert.ok(core.includes('Copy student link'),'Games and study activities have an in-app student sharing button');
  assert.ok(core.includes("url.searchParams.set('student','1')"),'Games and checks share student view');
  for(const page of ['grade5-games.html','grade5-flashcards.html','grade5-understanding-check.html']){
-   assert.ok(read('worksheet-generator/'+page).includes('g5-core.js?v=grade5-home-link-20261112'),page+' needs updated activity chrome');
+   assert.ok(read('worksheet-generator/'+page).includes('g5-core.js?v=g5-audit-20261119'),page+' needs updated activity chrome');
  }
  for(const slug of ['area-model-explorer','coordinate-explorer','expression-builder','fraction-explorer',
    'measurement-converter','place-value-builder','volume-builder']){

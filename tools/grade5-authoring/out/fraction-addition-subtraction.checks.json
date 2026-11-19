@@ -4611,23 +4611,13 @@
 "m5-fa-s05-cp2-011": {
 "q": {
 "k": "fn",
-"fn": "bench_sum",
-"a": "3/5",
-"b": "9/10",
-"op": "+"
-},
-"family": "b_sum"
-},
-"m5-fa-s05-cp2-012": {
-"q": {
-"k": "fn",
 "fn": "sum_cmp",
 "a": "3/4",
 "b": "5/12"
 },
 "family": "b_vs_one"
 },
-"m5-fa-s05-cp2-013": {
+"m5-fa-s05-cp2-012": {
 "q": {
 "k": "key",
 "accept": [
@@ -4636,13 +4626,23 @@
 },
 "family": "b_reasonable"
 },
-"m5-fa-s05-cp2-014": {
+"m5-fa-s05-cp2-013": {
 "q": {
 "k": "fn",
 "fn": "benchmark",
 "x": "4/5"
 },
 "family": "b_nearest"
+},
+"m5-fa-s05-cp2-014": {
+"q": {
+"k": "fn",
+"fn": "bench_sum",
+"a": "5/6",
+"b": "2/3",
+"op": "+"
+},
+"family": "b_sum"
 },
 "m5-fa-s05-cp2-015": {
 "q": {
@@ -4673,12 +4673,11 @@
 "m5-fa-s05-cp2-016": {
 "q": {
 "k": "fn",
-"fn": "bench_sum",
-"a": "5/6",
-"b": "2/3",
-"op": "+"
+"fn": "sum_cmp",
+"a": "1/3",
+"b": "8/9"
 },
-"family": "b_sum"
+"family": "b_vs_one"
 },
 "m5-fa-s05-cp2-017": {
 "q": {
@@ -4693,8 +4692,8 @@
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "1/9",
-"b": "1/10",
+"a": "1/7",
+"b": "5/6",
 "op": "+"
 },
 "family": "b_sum"
@@ -4712,8 +4711,8 @@
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "7/12",
-"b": "3/5",
+"a": "2/3",
+"b": "1/2",
 "op": "+"
 },
 "family": "b_sum"
@@ -4731,8 +4730,8 @@
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "11/12",
-"b": "1/6",
+"a": "2/3",
+"b": "2/5",
 "op": "+"
 },
 "family": "b_sum"
@@ -4750,8 +4749,8 @@
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "3/7",
-"b": "5/8",
+"a": "8/9",
+"b": "9/10",
 "op": "+"
 },
 "family": "b_sum"
@@ -4808,11 +4807,11 @@
 "inner": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "7/12",
-"b": "5/9",
+"a": "6/7",
+"b": "1/9",
 "op": "+"
 },
-"shown": "1 5/36",
+"shown": "1",
 "answer": "1"
 },
 "family": "b_sum_tf"
@@ -5100,22 +5099,22 @@
 },
 "m5-fa-s05-cp1-019": {
 "q": {
-"k": "fn",
-"fn": "bench_sum",
-"a": "2/5",
-"b": "9/10",
-"op": "+"
-},
-"family": "b_sum"
-},
-"m5-fa-s05-cp1-020": {
-"q": {
 "k": "key",
 "accept": [
 "Not reasonable. 3/11 is less than 2/3, but adding a positive fraction should make the sum larger than each fraction."
 ]
 },
 "family": "b_reasonable"
+},
+"m5-fa-s05-cp1-020": {
+"q": {
+"k": "fn",
+"fn": "bench_sum",
+"a": "5/9",
+"b": "7/12",
+"op": "+"
+},
+"family": "b_sum"
 },
 "m5-fa-s05-cp1-021": {
 "q": {
@@ -5131,7 +5130,7 @@
 "k": "fn",
 "fn": "bench_sum",
 "a": "5/9",
-"b": "1/6",
+"b": "1/8",
 "op": "−"
 },
 "family": "b_sum"
@@ -5149,8 +5148,8 @@
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "5/9",
-"b": "7/12",
+"a": "5/12",
+"b": "1/7",
 "op": "+"
 },
 "family": "b_sum"
@@ -5276,23 +5275,13 @@
 "m5-fa-s05-honors-002": {
 "q": {
 "k": "fn",
-"fn": "bench_sum",
-"a": "6/7",
-"b": "3/8",
-"op": "−"
-},
-"family": "b_sum"
-},
-"m5-fa-s05-honors-003": {
-"q": {
-"k": "fn",
 "fn": "sum_cmp",
 "a": "3/5",
 "b": "4/7"
 },
 "family": "b_vs_one"
 },
-"m5-fa-s05-honors-004": {
+"m5-fa-s05-honors-003": {
 "q": {
 "k": "key",
 "accept": [
@@ -5300,6 +5289,16 @@
 ]
 },
 "family": "b_reasonable"
+},
+"m5-fa-s05-honors-004": {
+"q": {
+"k": "fn",
+"fn": "bench_sum",
+"a": "7/12",
+"b": "1/2",
+"op": "−"
+},
+"family": "b_sum"
 },
 "m5-fa-s05-honors-005": {
 "q": {
@@ -5330,23 +5329,13 @@
 "m5-fa-s05-honors-006": {
 "q": {
 "k": "fn",
-"fn": "bench_sum",
-"a": "7/12",
-"b": "1/2",
-"op": "−"
-},
-"family": "b_sum"
-},
-"m5-fa-s05-honors-007": {
-"q": {
-"k": "fn",
 "fn": "sum_cmp",
 "a": "3/8",
 "b": "2/5"
 },
 "family": "b_vs_one"
 },
-"m5-fa-s05-honors-008": {
+"m5-fa-s05-honors-007": {
 "q": {
 "k": "key",
 "accept": [
@@ -5355,7 +5344,7 @@
 },
 "family": "b_reasonable"
 },
-"m5-fa-s05-honors-009": {
+"m5-fa-s05-honors-008": {
 "q": {
 "k": "fn",
 "fn": "benchmark",
@@ -5381,7 +5370,7 @@
 "8"
 ]
 },
-"m5-fa-s05-honors-010": {
+"m5-fa-s05-honors-009": {
 "q": {
 "k": "fn",
 "fn": "benchmark",
@@ -5389,17 +5378,17 @@
 },
 "family": "b_nearest"
 },
-"m5-fa-s05-honors-011": {
+"m5-fa-s05-honors-010": {
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "1/9",
-"b": "3/8",
+"a": "1/3",
+"b": "1/2",
 "op": "+"
 },
 "family": "b_sum"
 },
-"m5-fa-s05-honors-012": {
+"m5-fa-s05-honors-011": {
 "q": {
 "k": "fn",
 "fn": "sum_cmp",
@@ -5408,7 +5397,7 @@
 },
 "family": "b_vs_one"
 },
-"m5-fa-s05-honors-013": {
+"m5-fa-s05-honors-012": {
 "q": {
 "k": "key",
 "accept": [
@@ -5417,7 +5406,7 @@
 },
 "family": "b_reasonable"
 },
-"m5-fa-s05-honors-014": {
+"m5-fa-s05-honors-013": {
 "q": {
 "k": "fn",
 "fn": "benchmark",
@@ -5443,7 +5432,7 @@
 "1"
 ]
 },
-"m5-fa-s05-honors-015": {
+"m5-fa-s05-honors-014": {
 "q": {
 "k": "fn",
 "fn": "benchmark",
@@ -5451,17 +5440,17 @@
 },
 "family": "b_nearest"
 },
-"m5-fa-s05-honors-016": {
+"m5-fa-s05-honors-015": {
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "7/12",
-"b": "1/9",
-"op": "+"
+"a": "7/8",
+"b": "1/2",
+"op": "−"
 },
 "family": "b_sum"
 },
-"m5-fa-s05-honors-017": {
+"m5-fa-s05-honors-016": {
 "q": {
 "k": "fn",
 "fn": "sum_cmp",
@@ -5470,7 +5459,7 @@
 },
 "family": "b_vs_one"
 },
-"m5-fa-s05-honors-018": {
+"m5-fa-s05-honors-017": {
 "q": {
 "k": "key",
 "accept": [
@@ -5479,17 +5468,17 @@
 },
 "family": "b_reasonable"
 },
-"m5-fa-s05-honors-019": {
+"m5-fa-s05-honors-018": {
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "1/3",
-"b": "1/2",
-"op": "+"
+"a": "2/3",
+"b": "1/7",
+"op": "−"
 },
 "family": "b_sum"
 },
-"m5-fa-s05-honors-020": {
+"m5-fa-s05-honors-019": {
 "q": {
 "k": "key",
 "accept": [
@@ -5497,6 +5486,16 @@
 ]
 },
 "family": "b_reasonable"
+},
+"m5-fa-s05-honors-020": {
+"q": {
+"k": "fn",
+"fn": "bench_sum",
+"a": "1/2",
+"b": "3/7",
+"op": "−"
+},
+"family": "b_sum"
 },
 "m5-fa-s05-honors-021": {
 "q": {
@@ -5511,8 +5510,8 @@
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "3/7",
-"b": "1/8",
+"a": "2/3",
+"b": "5/9",
 "op": "−"
 },
 "family": "b_sum"
@@ -5530,8 +5529,8 @@
 "q": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "2/5",
-"b": "1/10",
+"a": "9/10",
+"b": "1/2",
 "op": "−"
 },
 "family": "b_sum"
@@ -5570,11 +5569,11 @@
 "inner": {
 "k": "fn",
 "fn": "bench_sum",
-"a": "1/12",
-"b": "1/7",
-"op": "+"
+"a": "5/8",
+"b": "2/5",
+"op": "−"
 },
-"shown": "0",
+"shown": "9/40",
 "answer": "0"
 },
 "family": "b_sum_tf"

@@ -75,7 +75,7 @@
   function resourceCard(a,category){
     var levelChoices = (G.MK_GRADE5_STUDENT_LINKS && G.MK_GRADE5_STUDENT_LINKS.hasLevel(a)) ?
       '<label class="g5-student-level-label">Student level <select class="g5-student-level" aria-label="Student link level for '+escape(a.title)+'">'+
-      '<option value="cp2">Remedial</option><option value="cp1" selected>Standard</option><option value="honors">Advanced</option>'+
+      '<option value="cp2">Support</option><option value="cp1" selected>Standard</option><option value="honors">Advanced</option>'+
       '</select></label>' : '';
     return '<li class="card g5-resource-card" data-course="math5" data-color="sunshine">'+
       '<a class="thumb g5-resource-image-link" href="'+escape(a.path)+'" aria-label="Open '+escape(a.title)+'">'+
@@ -113,7 +113,7 @@
     var skills=skillNames(u);
     var intro=crumbs([['Home','index.html'],['5th Grade Math','#'],[unitTitle(u),null]])+
       '<h1 tabindex="-1">'+escape(unitTitle(u))+'</h1>'+
-      '<p class="band-meta">'+skills.length+' skills · Remedial · Standard · Advanced</p>';
+      '<p class="band-meta">'+skills.length+' skills · Support · Standard · Advanced</p>';
     var body=unitPager(u)+shortcuts(u)+
       sections.map(function(group){return sectionHtml(u,group);}).join('')+
       '<section class="algebra-unit-section" id="g5-skills"><h2>Skills in this unit</h2>'+

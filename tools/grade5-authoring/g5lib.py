@@ -1,7 +1,7 @@
 """Grade 5 authoring helpers: exact number formatting, the problem record, family registration, derived extras.
 
 Every family is a function f(r, L) -> Item, where r is a seeded random.Random and L is the level
-(0 = Remedial/cp2, 1 = Standard/cp1, 2 = Advanced/honors). A family raises Reject for an unusable draw.
+(0 = Support/cp2, 1 = Standard/cp1, 2 = Advanced/honors). A family raises Reject for an unusable draw.
 Each Item carries a `check` that the independent verifier (verify.py) evaluates WITHOUT importing this module.
 """
 import hashlib, random, re
@@ -9,7 +9,7 @@ from fractions import Fraction as F
 from decimal import Decimal
 
 LEVELS = ["cp2", "cp1", "honors"]
-LABEL = {"cp2": "Remedial", "cp1": "Standard", "honors": "Advanced"}
+LABEL = {"cp2": "Support", "cp1": "Standard", "honors": "Advanced"}
 NAMES = ["Ava", "Ben", "Carmen", "Dev", "Elena", "Femi", "Grace", "Hiro", "Isla", "Jamal", "Kai", "Lena", "Marco", "Nia",
          "Omar", "Priya", "Quinn", "Rosa", "Sam", "Tariq", "Uma", "Leo", "Wren", "Yusuf", "Zoe", "Mateo", "Aisha", "Noah",
          "Sofia", "Liam", "Mei", "Diego", "Hana", "Eli", "Maya", "Jonah", "Lucia", "Ravi", "Tessa", "Oscar"]
@@ -202,6 +202,32 @@ def err_of(core, who=None):
     return f
 
 
+def as_task(claim):
+    """A short claim ("24 ÷ 6", "2 tons in pounds", "Value of 4 in 0.04") as a full instruction sentence."""
+    t = claim.strip()
+    if re.search(r"[?.!]$", t):
+        return t
+    t = re.sub(r"\s*=$", "", t)
+    if re.fullmatch(r"[\d\s.,/×÷+−()\[\]{}]+", t):
+        return f"Find {t}."
+    m = re.fullmatch(r"(.+?) in (cups|pints|quarts|gallons|feet|inches|yards|miles|pounds|ounces|tons|grams|kilograms|milligrams|"
+                     r"centimeters|meters|millimeters|kilometers|liters|milliliters|fluid ounces)", t)
+    if m and re.match(r"[\d.,/ ]+ ", m.group(1)):
+        return f"Convert {m.group(1)} to {m.group(2)}."
+    m = re.fullmatch(r"(.+?) rounded to the nearest (.+)", t)
+    if m:
+        return f"Round {m.group(1)} to the nearest {m.group(2)}."
+    if re.search(r" in (simplest|standard) form$", t):
+        return f"Write {t}."
+    if t.startswith("Estimate of "):
+        return "Estimate " + t[len("Estimate of "):] + "."
+    if re.match(r"(Area|Value|Volume|Perimeter) of ", t):
+        return "Find the " + t[0].lower() + t[1:] + "."
+    if t.startswith("V with "):
+        return "Find the volume V when " + t[len("V with "):] + "."
+    return t + "."
+
+
 def tf_of(core):
     """True or false with reasoning: a claimed answer (correct or a documented misconception) and four reasoned choices."""
     def f(r, L):
@@ -226,7 +252,10 @@ def tf_of(core):
         r.shuffle(opts)
         claim = p.claim or p.prompt
         good = [t for t, c in opts if c][0]
-        it = Item(f"True or false? {claim}\nAnswer shown: {shown}\nChoose the best response.", good,
+        # Grade 5 audit 2026-11-19 (#8): "True or false? 24 + 13.5" read as a fragment; the problem and the answer to judge
+        # are now labeled, and the question is asked in words.
+        lead = as_task(claim)
+        it = Item(f"Is this answer correct?\nProblem: {lead}\nAnswer shown: {shown}\nChoose the best response.", good,
                   p.steps + ([f"The answer {shown} is correct."] if truthful else [f"The answer {shown} is not correct; it should be {p.answer}."]),
                   check=FN("tf", inner=p.check, shown=shown, answer=p.answer), qtype="true-false", tags=p.tags | {"reasoning"},
                   options=opts, mode="mc")

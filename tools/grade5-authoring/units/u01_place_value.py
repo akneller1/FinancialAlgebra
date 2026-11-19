@@ -350,7 +350,8 @@ def s3_std_to_word(r, L):
     a, _, b = s.partition(".")
     good = w_dec(v)
     alt = [int(a) + F(int(b), 10 ** (len(b) + 1)), int(a) + F(int(b), 10 ** max(1, len(b) - 1)) if len(b) > 1 else int(a) * 10 + F(int(b), 10 ** len(b))]
-    bad = [w_dec(x) for x in alt if is_term(x) and w_dec(x) != good]
+    # Grade 5 reads decimals to thousandths; a misread that lands in ten-thousandths is dropped (it used to raise KeyError)
+    bad = [w_dec(x) for x in alt if is_term(x) and len(dec(x).replace(',', '').partition('.')[2]) <= 3 and w_dec(x) != good]
     if int(a):
         bad.append(w_int(a) + " point " + " ".join(ONES[int(c)] for c in b))
     else:

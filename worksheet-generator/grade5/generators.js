@@ -83,7 +83,7 @@
         return '<button type="button" class="g5gen-tab" data-mode="' + k + '" aria-pressed="' + (state.mode === k) + '">' + MODES[k] + '</button>';
       }).join('') + '</div>' +
       field('unit', 'Unit', select('unit', state.course.units.map(function (x) { return [x.id, x.name]; }), u.id)) +
-      field('level', 'Level', select('level', [['cp2', 'Remedial'], ['cp1', 'Standard'], ['honors', 'Advanced'], ['mixed', 'Mixed levels']], o.level)) +
+      field('level', 'Level', select('level', [['cp2', 'Support'], ['cp1', 'Standard'], ['honors', 'Advanced'], ['mixed', 'Mixed levels']], o.level)) +
       '<p class="g5gen-hint">Use with <a href="grade5-games.html?unit=' + encodeURIComponent(u.id) + '">games</a> · <a href="grade5-flashcards.html?unit=' + encodeURIComponent(u.id) + '">flashcards</a> · <a href="grade5-understanding-check.html?unit=' + encodeURIComponent(u.id) + '">Understanding Check</a> · <a href="../grade5.html#math5.' + encodeURIComponent(u.id) + '">unit page</a></p></div>';
 
     h += '<div class="g5gen-card"><h2><span class="g5gen-step">1</span> Choose skills</h2><p class="g5gen-hint">Questions use this course’s bank and the selected skills.</p><div class="g5gen-skills">' +

@@ -1,15 +1,19 @@
 """Build the Grade 5 (math5) question banks from the unit family modules.
 
 Usage: python3 build.py [unit-module ...]          (default: all units, in order; always deterministic)
-Writes (repository-relative):
-  question-banks/math5/<unit>.json                 bank (schemaVersion 1, the shared schema)
-  question-banks/math5/meta/<unit>.meta.json       per-question type, tags, distractor reasons, misconception
+Writes (repository-relative; these are the files the site and manifest.json read):
+  math5/<unit>.json                                bank (schemaVersion 1, the shared schema)
+  math5/meta/<unit>.meta.json                      per-question type, tags, distractor reasons, misconception
   question-banks/assets/math5/<unit>/<qid>.png     diagrams (rendered from SVG drawn by figs.py)
   tools/grade5-authoring/out/<unit>.checks.json    check data for the independent verifier
 Per skill and level: 30 questions = 12 short answer + 12 multiple choice (core families) + 3 error analysis
 + 1 true/false with reasoning + 1 select all + 1 open response / matching. Extras are derived from the core families.
 """
 import importlib, io, json, os, re, subprocess, sys, math
+# Grade 5 audit 2026-11-19 (#6): set iteration in some families depends on Python's string hashing, so the build re-runs
+# itself with a fixed hash seed; the same sources then always give the same bank.
+if os.environ.get("PYTHONHASHSEED") != "0" and __name__ == "__main__":
+    os.execve(sys.executable, [sys.executable] + sys.argv, dict(os.environ, PYTHONHASHSEED="0"))
 from collections import Counter, defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -68,10 +72,17 @@ SING = {"meters": "meter", "liters": "liter", "kilometers": "kilometer", "centim
         "pieces": "piece", "days": "day", "weeks": "week", "tons": "ton", "seconds": "second", "cartons": "carton", "bouquets": "bouquet",
         "rows": "row", "students": "student", "cards": "card", "marbles": "marble", "crayons": "crayon", "books": "book"}
 SING.update({"sandwiches": "sandwich", "pizzas": "pizza", "pans": "pan", "pies": "pie", "bags": "bag", "servings": "serving", "feeders": "feeder"})
+# Grade 5 audit 2026-11-19 (#10): more count nouns that appeared as "1 cubes", "1 layers", "1 columns", "1 tens"
+SING.update({"cubes": "cube", "layers": "layer", "columns": "column", "tens": "ten", "hundreds": "hundred", "tenths": "tenth",
+             "hundredths": "hundredth", "thousandths": "thousandth", "groups": "group",
+             "teams": "team", "tables": "table", "shelves": "shelf", "sides": "side", "angles": "angle", "points": "point",
+             "cubic units": "cubic unit", "square units": "square unit", "cubic inches": "cubic inch", "cubic feet": "cubic foot",
+             "cubic centimeters": "cubic centimeter", "cubic meters": "cubic meter", "square inches": "square inch",
+             "square feet": "square foot", "square meters": "square meter", "square centimeters": "square centimeter"})
 PLUR = {v: k for k, v in SING.items()}
-_SING_RE = re.compile(r"(?<![\d.,/])(1) (" + "|".join(SING) + r")\b")
-_FRAC_RE = re.compile(r"(?<![\d/])(?<!\d )(\d+)/(\d+) (" + "|".join(SING) + r")\b")
-_MIX_RE = re.compile(r"(?<![\d/])(\d+) (\d+)/(\d+) (" + "|".join(PLUR) + r")\b")
+_SING_RE = re.compile(r"(?<![\d.,/])(?<![\d] )(1) (" + "|".join(sorted(SING, key=len, reverse=True)) + r")\b")
+_FRAC_RE = re.compile(r"(?<![\d/])(?<!\d )(\d+)/(\d+) (" + "|".join(sorted(SING, key=len, reverse=True)) + r")\b")
+_MIX_RE = re.compile(r"(?<![\d/])(\d+) (\d+)/(\d+) (" + "|".join(sorted(PLUR, key=len, reverse=True)) + r")\b(?! (?:feet|foot|inch|inches|units?|meters?|centimeters?)\b)")
 
 
 PHRASES = [(r"What number do the base\u2011ten blocks show\?", "What number is shown by the base\u2011ten blocks?"),
@@ -102,6 +113,7 @@ PHRASES = [(r"What number do the base\u2011ten blocks show\?", "What number is s
            (r"\b([Aa])nd a (?=[a-z]{3,})", r"\1nd one "), (r"\bwith a common\b", "using a common"), (r"\bwith a (?=[a-z]{3,})", "that has a "),
            (r"\bfor a (shelf|bow)\b", r"to make a \1"), (r"\b1/(\d+)s\b", r"pieces of size 1/\1"),
            (r"\bdid not go down\b", "did not move down"), (r"the known prism's volume", "the volume of the known prism"), (r"grouping symbols do not change the value", "grouping symbols leave the value unchanged"), (r"Both (\d)s have", r"Both digits \1 have"),
+           (r"\bthere are 1 (?=[a-z])", "there is 1 "), (r"\bThere are 1 (?=[a-z])", "There is 1 "),
            (r"forgot to subtract a regrouped ten / added an extra ten", "added an extra regrouped ten"), (r"\b(\d)s in the\b", r"digits \1 in the")]
 NBH = "\u2011"   # non-breaking hyphen: the site's math display turns ASCII '-' into a minus sign
 
@@ -181,7 +193,7 @@ class Builder:
         q["solutionSteps"] = p.steps
         if p.diagram:
             src = f"question-banks/assets/{COURSE_ID}/{self.u['id']}/{qid}.png"
-            q["diagram"] = {"type": "image", "spec": {"src": src, "alt": p.diagram.alt}}
+            q["diagram"] = {"type": "image", "spec": {"src": src, "alt": fix_text(p.diagram.alt)}}
             chk["diagram"] = {"kind": p.diagram.kind, "data": p.diagram.data}
             self.diagrams.append((src, p.diagram))
         if getattr(p, "consts", None):
@@ -366,7 +378,7 @@ class Builder:
                     self.meta[q["id"]] = meta
                     self.checks[q["id"]] = chk
         bank = {"schemaVersion": 1, "courseId": COURSE_ID, "unitId": self.u["id"], "questions": self.questions}
-        bdir = os.path.join(ROOT, "question-banks", COURSE_ID)
+        bdir = os.path.join(ROOT, COURSE_ID)
         os.makedirs(os.path.join(bdir, "meta"), exist_ok=True)
         json.dump(bank, open(os.path.join(bdir, self.u["id"] + ".json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         json.dump(self.meta, open(os.path.join(bdir, "meta", self.u["id"] + ".meta.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
@@ -398,7 +410,7 @@ def main():
         if mname in mods:
             continue
         u = UNITS[MODS.index(mname)]
-        bf = os.path.join(ROOT, "question-banks", COURSE_ID, u["id"] + ".json")
+        bf = os.path.join(ROOT, COURSE_ID, u["id"] + ".json")
         if os.path.exists(bf):
             for q in json.load(open(bf, encoding="utf-8"))["questions"]:
                 SEEN[" ".join(q["prompt"].lower().split())] = q["id"]

@@ -4,7 +4,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 u = sys.argv[1]
 lv = sys.argv[2] if len(sys.argv) > 2 else None
 n = int(sys.argv[3]) if len(sys.argv) > 3 else 6
-b = json.load(open(os.path.join(HERE, "..", "..", "question-banks", "math5", u + ".json")))
+b = json.load(open(os.path.join(HERE, "..", "..", "math5", u + ".json")))
 c = json.load(open(os.path.join(HERE, "out", u + ".checks.json")))
 seen = {}
 for q in b["questions"]:

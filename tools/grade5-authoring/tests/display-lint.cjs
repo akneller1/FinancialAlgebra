@@ -6,7 +6,7 @@ const ctx = {}; vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(root, 'worksheet-generator/core/math-display.js'), 'utf8').replace('if(G.document)', 'if(false)'), ctx);
 const html = ctx.MK_MATH_DISPLAY.html;
 const OK_SINGLE = new Set(['x', 'y', 'n', 'p', 'l', 'w', 'h', 'V', 'B', 'A', 'C', 'D', 'P', 'R', 'E', 'F', 'G', 'Q', 'S', 'T', 'X']);
-const dir = path.join(root, 'question-banks/math5');
+const dir = path.join(root, 'math5');
 let issues = [], n = 0;
 for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json'))) {
   const bank = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));

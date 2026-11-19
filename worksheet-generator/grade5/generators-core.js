@@ -6,7 +6,7 @@
 (function (G) {
   'use strict';
 
-  var LEVELS = [['cp2', 'Remedial'], ['cp1', 'Standard'], ['honors', 'Advanced']];
+  var LEVELS = [['cp2', 'Support'], ['cp1', 'Standard'], ['honors', 'Advanced']];
   var FORMATS = {
     mixed: 'Mixed review',
     'multiple-choice': 'Multiple choice',

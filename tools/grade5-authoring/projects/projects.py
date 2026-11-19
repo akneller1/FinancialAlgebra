@@ -1,4 +1,4 @@
-"""Grade 5 real-world projects: one per unit, three levels each (cp2 Remedial, cp1 Standard, honors Advanced).
+"""Grade 5 real-world projects: one per unit, three levels each (cp2 Support, cp1 Standard, honors Advanced).
 Every answer is computed here with exact arithmetic (Fractions / integer cents), so the teacher guide and the
 student pages can never disagree. build.py turns these into PDF, Word and PowerPoint files.
 Each level returns: scenario, objectives, skills, materials, tasks [(title, intro, [(question, answer)], table)], extension (q, a)."""
@@ -6,7 +6,7 @@ from fractions import Fraction as F
 import math
 
 LV = ["cp2", "cp1", "honors"]
-LNAME = {"cp2": "Remedial", "cp1": "Standard", "honors": "Advanced"}
+LNAME = {"cp2": "Support", "cp1": "Standard", "honors": "Advanced"}
 
 
 def mx(x):
