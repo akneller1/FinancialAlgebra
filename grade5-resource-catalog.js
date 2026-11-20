@@ -23,11 +23,11 @@
     'multi-digit-multiplication-division':['area-model-explorer'],
     'numerical-expressions-patterns':['expression-builder'],
     'fraction-addition-subtraction':['fraction-explorer'],
-    'fraction-multiplication-division':['fraction-explorer','area-model-explorer'],
+    'fraction-multiplication-division':['fraction-explorer','area-model-explorer','scaling-lab'],
     'measurement-conversions':['measurement-converter'],
     'volume-three-dimensional-figures':['volume-builder'],
     'coordinate-plane-graphing':['coordinate-explorer'],
-    'decimal-operations':['place-value-builder'],
+    'decimal-operations':['place-value-builder','decimal-grid-lab'],
     'classifying-two-dimensional-figures':['quadrilateral-family'],
     'data-line-plots-problem-solving':['line-plot-fair-share']
   };
@@ -83,6 +83,17 @@
       add(mk(title(project),'math5-project-'+project+'/index.html','Project',
         'thumbs/math5-project-'+project+'.jpg','Student packets at three levels, slides and a teacher guide.'));
     }
+    // Grade 5 audit (2026-11-19) #9 and #15: the reference sheet in every unit; the pacing guide with Unit 1; the two
+    // cumulative practice tests with the last unit.
+    add(mk('Grade 5 Reference Sheet','math5-reference-sheet/reference-sheet.pdf','Study Guide','thumbs/math5-reference-sheet.jpg',
+      'Conversions, the volume formula, powers of ten and the order of operations on one page.'));
+    if(id===course.units[0].id)
+      add(mk('Grade 5 Pacing Guide (for teachers)','math5-pacing-guide/pacing-guide.pdf','Study Guide','thumbs/math5-pacing-guide.jpg',
+        'A 180-day plan for the eleven units, with an MCAS review block and the practice tests.'));
+    if(id===course.units[course.units.length-1].id)['a','b'].forEach(function(x){
+      add(mk('Grade 5 Practice Test '+x.toUpperCase(),'math5-practice-test-'+x+'/exam.pdf','Study Guide','thumbs/math5-practice-test-'+x+'.jpg',
+        'Two 20-question sessions in the MCAS style with constructed response; teacher key in the same folder.'));
+    });
     u.artifacts=a;
   });
   G.MK_GRADE5_RESOURCES={course:course,projects:projects,tools:tools,games:gameDefs};

@@ -167,9 +167,12 @@ async function flashcards(ctx, unit) {
 }
 
 async function tools(ctx) {
-  const dirs = fs.readdirSync(path.join(ROOT, 'artifacts')).filter(d => /^math5-/.test(d) && !/cheat-sheet|project-/.test(d));
+  // The tools live at the repository root (math5-<tool>/index.html); this used to read artifacts/, which has none, so no
+  // tool was checked. Every page built on the shared tool shell is checked now, including the 2026-11-19 labs.
+  const dirs = fs.readdirSync(ROOT).filter(d => /^math5-/.test(d) && fs.existsSync(path.join(ROOT, d, 'index.html')) && fs.readFileSync(path.join(ROOT, d, 'index.html'), 'utf8').includes('tool-shell.js'));
+  if (dirs.length < 9) log(false, 'tools', 'only ' + dirs.length + ' tool pages found');
   for (const d of dirs) {
-    const { page, errors } = await open(ctx, `http://localhost:${PORT}/artifacts/${d}/index.html`);
+    const { page, errors } = await open(ctx, `http://localhost:${PORT}/${d}/index.html`);
     try {
       await page.waitForTimeout(600);
       const info = await page.evaluate(() => ({ btns: [...document.querySelectorAll('button')].map(b => b.textContent.trim()).slice(0, 40), svg: document.querySelectorAll('svg').length }));
@@ -180,7 +183,7 @@ async function tools(ctx) {
       const bs = await page.$$('button:not([disabled])');
       for (const b of bs.slice(0, 30)) { try { if (await b.isVisible()) await b.click({ timeout: 800 }); } catch (e) {} }
       await page.waitForTimeout(200);
-      for (const f of ['worksheet.pdf', 'teacher-key.pdf']) if (!fs.existsSync(path.join(ROOT, 'artifacts', d, f))) throw new Error('missing ' + f);
+      for (const f of ['worksheet.pdf', 'teacher-key.pdf']) if (!fs.existsSync(path.join(ROOT, d, f))) throw new Error('missing ' + f);
       if (errors.length) throw new Error(errors.slice(0, 3).join(' | '));
       log(hasZoom && hasMode, 'tool ' + d, `${info.svg} svg, zoom ${hasZoom}, modes ${hasMode}`);
     } catch (e) { log(false, 'tool ' + d, e.message); }

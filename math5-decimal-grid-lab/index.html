@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decimal Grid Lab · 5th Grade Math | Mr. K's Classroom</title><meta name="description" content="Shade tenths of rows and columns on a hundredths grid to see why tenths times tenths makes hundredths.">
+<link rel="stylesheet" href="../worksheet-generator/grade5/g5-tools.css?v=grade5-20261111"><link rel="stylesheet" href="../worksheet-generator/core/math-display.css">
+<style>
+.ts-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(16rem,1fr);gap:1rem;align-items:start}@media(max-width:860px){.ts-grid{grid-template-columns:1fr}}
+.ts-ch{padding-left:1.2rem}.ts-ch li{margin:.35rem 0}.ts-ch li.done{color:#065F46;font-weight:700}.ts-ch .box{font-size:1.15rem}
+.ts-big{font-family:var(--display);font-size:2.4rem;font-weight:800;text-align:center;margin:.3rem 0}
+.ts-model{text-align:center}.ts-model svg{max-width:100%;height:auto;max-height:300px;width:auto}#pvChart svg{max-height:140px}#pvBlocks svg{max-height:150px}#fxModel svg{width:100%;max-height:none}#cpGrid svg{width:100%;max-height:none}
+.ts-step{display:flex;align-items:center;gap:.3rem}.ts-step button{min-width:44px;min-height:44px;border-radius:12px;border:2px solid #CBD5E1;background:#fff;font-weight:800;font-size:1.2rem}
+.ts-out{background:#F8FAFC;border-radius:14px;padding:.6rem .9rem;margin:.6rem 0;font-size:1.1rem}
+.ts-out b{color:var(--purple)}input[type=range]{width:100%;accent-color:var(--purple);min-height:32px}
+details summary{font-weight:800;cursor:pointer;color:var(--purple)}.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;font-size:.9em}.fr .fn{border-bottom:2px solid currentColor;padding:0 .15em}
+</style></head><body>
+<main class="g5"><div class="ts-grid"><section class="g5-card" id="tool"><h1>Decimal Grid Lab</h1><p class="g5-sub">The big square is 1 whole cut into 100 hundredths. Shade tenths of the columns and tenths of the rows: the part shaded twice is the product.</p>
+<div class="g5-row"><div class="g5-field"><label for="dgMode">Model</label><select id="dgMode"><option value="d">Decimal × decimal</option><option value="w">Whole number × decimal</option></select></div></div>
+<div id="dgD" class="g5-row"><div class="g5-field"><label for="dgA">Rows (first factor): <b id="dgAv"></b></label><input type="range" id="dgA" min="1" max="10" value="4"></div><div class="g5-field"><label for="dgB">Columns (second factor): <b id="dgBv"></b></label><input type="range" id="dgB" min="1" max="10" value="3"></div></div>
+<div id="dgW" class="g5-row g5-hidden"><div class="g5-field"><label for="dgN">Number of groups: <b id="dgNv"></b></label><input type="range" id="dgN" min="1" max="4" value="2"></div><div class="g5-field"><label for="dgH">Decimal in each group: <b id="dgHv"></b></label><input type="range" id="dgH" min="5" max="95" step="5" value="35"></div></div>
+<div class="ts-model" id="dgModel"></div><div class="ts-out" id="dgOut" aria-live="polite"></div></section>
+<aside><section class="g5-card" id="challenges"></section><section class="g5-card" id="notice"></section></aside></div></main>
+<script src="../worksheet-generator/grade5/g5-figs.js?v=grade5-20261111"></script><script src="../worksheet-generator/grade5/tool-shell.js?v=games-guides-only-20261112"></script>
+<script>
+function dec(h){return (h/100).toFixed(2).replace(/0$/,'').replace(/\.0$/,'').replace(/^0(?=\.)/,'0');}
+function tenth(t){return t===10?'1':'0.'+t;}
+function grid(r,c,fill,x0){var s='',S=22;for(var i=0;i<10;i++)for(var j=0;j<10;j++){var inR=i>=10-r,inC=j<c,col=fill?(fill(i,j)):(inR&&inC?'#7C3AED':inR?'#BFDBFE':inC?'#FDE68A':'#fff');s+='<rect x="'+(x0+j*S)+'" y="'+(10+i*S)+'" width="'+S+'" height="'+S+'" fill="'+col+'" stroke="#94A3B8" stroke-width=".8"/>';}
+ return s+'<rect x="'+x0+'" y="10" width="'+(10*S)+'" height="'+(10*S)+'" fill="none" stroke="#1E293B" stroke-width="3"/>';}
+function reset(){TOOL.$('dgMode').value='d';TOOL.$('dgA').value=4;TOOL.$('dgB').value=3;TOOL.$('dgN').value=2;TOOL.$('dgH').value=35;draw();}
+function draw(){var m=TOOL.$('dgMode').value;TOOL.$('dgD').classList.toggle('g5-hidden',m!=='d');TOOL.$('dgW').classList.toggle('g5-hidden',m!=='w');
+ if(m==='d'){var a=+TOOL.$('dgA').value,b=+TOOL.$('dgB').value;TOOL.$('dgAv').textContent=tenth(a);TOOL.$('dgBv').textContent=tenth(b);
+  TOOL.$('dgModel').innerHTML='<svg viewBox="0 0 260 240" role="img" aria-label="Hundredths grid with '+a+' rows and '+b+' columns shaded; '+(a*b)+' squares shaded twice">'+grid(a,b,null,20)+'</svg>';
+  TOOL.$('dgOut').innerHTML='<b>'+tenth(a)+' × '+tenth(b)+'</b> = '+(a*b)+' hundredths = <b>'+dec(a*b)+'</b><br><span class="g5-note">'+a+' rows × '+b+' columns = '+(a*b)+' small squares, and each small square is 0.01. '+(a<10&&b<10?'The product is less than both factors.':'Multiplying by 1 leaves the other factor unchanged.')+'</span>';
+  TOOL.update(O,{m:m,a:a,b:b,p:a*b});}
+ else{var n=+TOOL.$('dgN').value,h=+TOOL.$('dgH').value,s='';TOOL.$('dgNv').textContent=n;TOOL.$('dgHv').textContent=dec(h);
+  for(var g=0;g<n;g++)s+=grid(0,0,function(i,j){return (i*10+j)<h?'#7C3AED':'#fff'},10+g*235);
+  TOOL.$('dgModel').innerHTML='<svg viewBox="0 0 '+(20+n*235)+' 240" role="img" aria-label="'+n+' grids with '+h+' hundredths shaded in each">'+s+'</svg>';
+  TOOL.$('dgOut').innerHTML='<b>'+n+' × '+dec(h)+'</b> = '+(n*h)+' hundredths = <b>'+dec(n*h)+'</b><br><span class="g5-note">'+n+' groups of '+h+' hundredths. Every 100 hundredths make 1 whole.</span>';
+  TOOL.update(O,{m:m,n:n,h:h,p:n*h});}}
+['dgMode','dgA','dgB','dgN','dgH'].forEach(function(id){TOOL.$(id).oninput=draw;});
+var O={title:'Decimal Grid Lab',reset:reset,challenges:[
+ {text:'Show 0.4 × 0.3. How many squares are shaded twice?',test:function(s){return s.m==='d'&&s.a===4&&s.b===3}},
+ {text:'Make a product of 0.24 two different ways.',test:function(s){return s.m==='d'&&s.p===24&&!(s.a===4&&s.b===6)}},
+ {text:'Find two tenths whose product is exactly 0.3.',test:function(s){return s.m==='d'&&s.p===30}},
+ {text:'Show that 1 × 0.7 = 0.7.',test:function(s){return s.m==='d'&&((s.a===10&&s.b===7)||(s.a===7&&s.b===10))}},
+ {text:'Switch to whole number × decimal and show 2 × 0.35.',test:function(s){return s.m==='w'&&s.n===2&&s.h===35}},
+ {text:'Make a product greater than 1 with whole number × decimal.',test:function(s){return s.m==='w'&&s.p>100}}],
+ notice:['Tenths of tenths are hundredths: 0.1 × 0.1 = 0.01.','The product of two decimals less than 1 is less than both of them.','Count decimal places only as a check: the grid shows why the answer has hundredths.','Whole number × decimal is repeated addition of the decimal.'],
+ teacher:['Start with the student worksheet task 1 on paper, then confirm on the grid.','Ask students to predict "greater or less than the factor?" before each product.','Connect 12 squares to 12 hundredths, then to 0.12, then to the shortcut of counting decimal places.']};
+TOOL.init(O);reset();
+</script></body></html>

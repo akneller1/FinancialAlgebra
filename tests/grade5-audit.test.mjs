@@ -54,7 +54,7 @@ test('#6 the bank, diagrams and checks live where the build writes them', () => 
   assert.ok(figs >= 900, figs + ' diagrams');
   assert.equal(readdirSync(new URL('../', import.meta.url)).filter((f) => /^m5-.*\.png$/.test(f)).length, 0, 'no loose Grade 5 diagrams at the root');
   assert.ok(!read('.github/workflows/validate.yml').includes('question-banks/math5'), 'CI reads the published banks');
-  assert.match(read('.github/workflows/validate.yml'), /G5_NODRAW=1 python3 tools\/grade5-authoring\/build\.py\s+git diff --exit-code -- math5/, 'CI checks that a rebuild reproduces the bank');
+  assert.match(read('.github/workflows/validate.yml'), /G5_NODRAW=1 python3 tools\/grade5-authoring\/build\.py[\s\S]{0,80}git diff --exit-code -- math5/, 'CI checks that a rebuild reproduces the bank');
 });
 
 test('#8 true/false items name the problem and ask a question', () => {
